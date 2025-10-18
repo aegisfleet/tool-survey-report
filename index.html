@@ -1,0 +1,83 @@
+---
+layout: default
+title: "ホーム"
+---
+
+<div class="content-wrapper">
+  <div class="page-header">
+    <h1 class="page-title">{{ site.title | default: "調査レポートサイト" }}</h1>
+    <p class="page-description">{{ site.description | default: "調査レポートを公開・共有するためのサイトです。" }}</p>
+  </div>
+
+  <section class="recent-reports">
+    <h2>最新のレポート</h2>
+    
+    {% assign recent_reports = site.reports | sort: 'date' | reverse | limit: 6 %}
+    
+    {% if recent_reports.size > 0 %}
+      <div class="row">
+        {% for report in recent_reports %}
+          <div class="col-md-6 col-lg-4 mb-4">
+            <article class="card">
+              <div class="card-body">
+                <h3 class="card-title">
+                  <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
+                </h3>
+                
+                {% if report.description %}
+                  <p class="card-text">{{ report.description | truncate: 120 }}</p>
+                {% endif %}
+                
+                <div class="card-meta">
+                  {% if report.date %}
+                    <small class="text-muted">
+                      <time datetime="{{ report.date | date_to_xmlschema }}">
+                        {{ report.date | date: "%Y年%m月%d日" }}
+                      </time>
+                    </small>
+                  {% endif %}
+                  
+                  {% if report.tags and report.tags.size > 0 %}
+                    <div class="mt-2">
+                      {% for tag in report.tags limit: 3 %}
+                        <span class="badge badge-light">{{ tag }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="{{ '/reports/' | relative_url }}" class="btn btn-primary">すべてのレポートを見る</a>
+      </div>
+    {% else %}
+      <div class="alert alert-info">
+        <p>まだレポートが投稿されていません。</p>
+      </div>
+    {% endif %}
+  </section>
+
+  {% if site.data.navigation.featured_links %}
+    <section class="featured-links mt-6">
+      <h2>おすすめリンク</h2>
+      <div class="row">
+        {% for link in site.data.navigation.featured_links %}
+          <div class="col-md-6 col-lg-4 mb-3">
+            <a href="{{ link.url | relative_url }}" class="card card-link">
+              <div class="card-body">
+                <h4 class="card-title">{{ link.title }}</h4>
+                {% if link.description %}
+                  <p class="card-text">{{ link.description }}</p>
+                {% endif %}
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</div>

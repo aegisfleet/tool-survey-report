@@ -1,0 +1,231 @@
+// Base styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-family-base, $font-family-japanese;
+  line-height: $line-height-base;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base, $font-family-japanese;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: map-get($spacers, 3);
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-sm;
+  color: $primary-color;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+@include media-breakpoint-down(md) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+  h5 { font-size: 1.125rem; }
+  h6 { font-size: 1rem; }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: map-get($spacers, 3);
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: $transition-base;
+  
+  &:hover,
+  &:focus {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+  
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-top: 0;
+  margin-bottom: map-get($spacers, 3);
+  padding-left: map-get($spacers, 4);
+}
+
+li {
+  margin-bottom: map-get($spacers, 1);
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+// Tables
+table {
+  width: 100%;
+  margin-bottom: map-get($spacers, 3);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th, td {
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  text-align: left;
+  border-bottom: 1px solid $border-color;
+}
+
+th {
+  font-weight: $font-weight-semibold;
+  background-color: $light-gray;
+}
+
+// Code
+code, pre {
+  font-family: $font-family-monospace;
+  font-size: 0.875em;
+}
+
+code {
+  padding: 0.125rem 0.25rem;
+  background-color: $light-gray;
+  border-radius: $border-radius-sm;
+  color: $accent-color;
+}
+
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: map-get($spacers, 3);
+  padding: map-get($spacers, 3);
+  background-color: $light-gray;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow-x: auto;
+  
+  code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: 0 0 map-get($spacers, 3);
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  border-left: 4px solid $secondary-color;
+  background-color: $light-gray;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Horizontal rule
+hr {
+  margin: map-get($spacers, 5) 0;
+  border: 0;
+  border-top: 1px solid $border-color;
+}
+
+// Forms
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  @include focus-ring;
+}
+
+// Screen reader text
+.screen-reader-text {
+  @include sr-only;
+}
+
+// Container
+.container {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+// Utility classes
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-muted { color: $text-muted; }
+.text-primary { color: $primary-color; }
+.text-secondary { color: $secondary-color; }
+
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: if($breakpoint == xs, "", "-#{$breakpoint}");
+    
+    .d#{$infix}-none { display: none; }
+    .d#{$infix}-block { display: block; }
+    .d#{$infix}-inline { display: inline; }
+    .d#{$infix}-inline-block { display: inline-block; }
+    .d#{$infix}-flex { display: flex; }
+  }
+}
+
+// Spacing utilities
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    .#{$abbrev}-#{$size} { #{$prop}: $length; }
+    .#{$abbrev}t-#{$size} { #{$prop}-top: $length; }
+    .#{$abbrev}r-#{$size} { #{$prop}-right: $length; }
+    .#{$abbrev}b-#{$size} { #{$prop}-bottom: $length; }
+    .#{$abbrev}l-#{$size} { #{$prop}-left: $length; }
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length;
+      #{$prop}-left: $length;
+    }
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length;
+      #{$prop}-bottom: $length;
+    }
+  }
+}

@@ -1,0 +1,472 @@
+// Button components
+.btn {
+  display: inline-block;
+  padding: map-get($spacers, 2) map-get($spacers, 4);
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  transition: $transition-base;
+  
+  &:focus {
+    @include focus-ring;
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.btn-primary {
+  color: $white;
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+    text-decoration: none;
+  }
+}
+
+.btn-secondary {
+  color: $white;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+    text-decoration: none;
+  }
+}
+
+.btn-outline {
+  color: $primary-color;
+  background-color: transparent;
+  border-color: $primary-color;
+  
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+.btn-sm {
+  padding: map-get($spacers, 1) map-get($spacers, 3);
+  font-size: $font-size-sm;
+}
+
+.btn-lg {
+  padding: map-get($spacers, 3) map-get($spacers, 5);
+  font-size: $font-size-lg;
+}
+
+// Card component
+.card {
+  @include card;
+  
+  &:hover {
+    @include hover-lift;
+  }
+}
+
+.card-header {
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  margin: -#{map-get($spacers, 4)} -#{map-get($spacers, 4)} map-get($spacers, 3);
+  background-color: $light-gray;
+  border-bottom: 1px solid $border-color;
+  border-radius: $border-radius $border-radius 0 0;
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+}
+
+.card-footer {
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  margin: map-get($spacers, 3) -#{map-get($spacers, 4)} -#{map-get($spacers, 4)};
+  background-color: $light-gray;
+  border-top: 1px solid $border-color;
+  border-radius: 0 0 $border-radius $border-radius;
+}
+
+// Alert component
+.alert {
+  position: relative;
+  padding: map-get($spacers, 3) map-get($spacers, 4);
+  margin-bottom: map-get($spacers, 3);
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    margin-bottom: map-get($spacers, 2);
+  }
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.alert-info {
+  color: darken($info-color, 20%);
+  background-color: lighten($info-color, 40%);
+  border-color: lighten($info-color, 30%);
+}
+
+.alert-success {
+  color: darken($success-color, 20%);
+  background-color: lighten($success-color, 40%);
+  border-color: lighten($success-color, 30%);
+}
+
+.alert-warning {
+  color: darken($warning-color, 20%);
+  background-color: lighten($warning-color, 40%);
+  border-color: lighten($warning-color, 30%);
+}
+
+.alert-danger {
+  color: darken($accent-color, 20%);
+  background-color: lighten($accent-color, 40%);
+  border-color: lighten($accent-color, 30%);
+}
+
+// Badge component
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+  font-weight: $font-weight-semibold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: $border-radius-xl;
+}
+
+.badge-primary {
+  color: $white;
+  background-color: $primary-color;
+}
+
+.badge-secondary {
+  color: $white;
+  background-color: $secondary-color;
+}
+
+.badge-light {
+  color: $text-color;
+  background-color: $light-gray;
+}
+
+// Loading spinner
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+  border: 0.125em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Tooltip
+.tooltip {
+  position: relative;
+  display: inline-block;
+  
+  &:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: $black;
+  color: $white;
+  text-align: center;
+  border-radius: $border-radius;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  position: absolute;
+  z-index: $zindex-tooltip;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: $font-size-sm;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $black transparent transparent transparent;
+  }
+}
+
+// Progress bar
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  background-color: $light-gray;
+  border-radius: $border-radius;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $secondary-color;
+  transition: width 0.6s ease;
+}
+
+// Pagination
+.pagination {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: map-get($spacers, 1);
+  margin: map-get($spacers, 5) 0;
+}
+
+.page-item {
+  .page-link {
+    display: block;
+    padding: map-get($spacers, 2) map-get($spacers, 3);
+    color: $link-color;
+    text-decoration: none;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    transition: $transition-base;
+    
+    &:hover,
+    &:focus {
+      color: $link-hover;
+      background-color: $light-gray;
+      border-color: $border-color;
+      text-decoration: none;
+    }
+  }
+  
+  &.active .page-link {
+    color: $white;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  
+  &.disabled .page-link {
+    color: $text-muted;
+    background-color: $white;
+    border-color: $border-color;
+    cursor: not-allowed;
+  }
+}
+
+// Modal (basic styles)
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal-backdrop;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black, 0.5);
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: map-get($spacers, 3);
+  pointer-events: none;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-lg;
+  box-shadow: $box-shadow-lg;
+  outline: 0;
+}
+
+// Responsive utilities
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  
+  &::before {
+    display: block;
+    content: "";
+  }
+  
+  .embed-responsive-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.embed-responsive-16by9::before {
+  padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+  padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+  padding-top: 100%;
+}
+// Home 
+page specific styles
+.recent-reports {
+  margin-bottom: map-get($spacers, 6);
+  
+  h2 {
+    margin-bottom: map-get($spacers, 4);
+    text-align: center;
+    color: $primary-color;
+  }
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: $transition-base;
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-2px);
+    box-shadow: $box-shadow;
+  }
+}
+
+.card-meta {
+  margin-top: map-get($spacers, 3);
+  padding-top: map-get($spacers, 2);
+  border-top: 1px solid $border-light;
+  
+  small {
+    display: inline-flex;
+    align-items: center;
+    gap: map-get($spacers, 1);
+    
+    svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.7;
+    }
+  }
+}
+
+// Reports list page styles
+.reports-list {
+  .card-title {
+    margin-bottom: map-get($spacers, 2);
+    
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      
+      &:hover,
+      &:focus {
+        color: $secondary-color;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .report-tags {
+    h6 {
+      margin-bottom: map-get($spacers, 2);
+      color: $text-muted;
+      font-size: $font-size-sm;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: map-get($spacers, 1);
+    }
+  }
+}
+
+// Featured links section
+.featured-links {
+  h2 {
+    margin-bottom: map-get($spacers, 4);
+    text-align: center;
+    color: $primary-color;
+  }
+}

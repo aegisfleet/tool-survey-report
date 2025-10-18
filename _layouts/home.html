@@ -1,0 +1,190 @@
+---
+layout: default
+---
+
+<div class="home-container">
+  <header class="home-header">
+    <h1 class="site-title">{{ site.title }}</h1>
+    <p class="site-description">{{ site.description }}</p>
+  </header>
+
+  <main class="home-content">
+    {{ content }}
+
+    <section class="reports-section">
+      <div class="reports-header">
+        <h2>最新のレポート</h2>
+        <div class="reports-controls">
+          <div class="search-container">
+            <input type="text" id="report-search" placeholder="レポートを検索..." class="search-input">
+            <button type="button" class="search-clear" id="search-clear" aria-label="検索をクリア">×</button>
+          </div>
+          <div class="filter-container">
+            <select id="tag-filter" class="tag-filter">
+              <option value="">すべてのタグ</option>
+            </select>
+          </div>
+          <div class="sort-container">
+            <select id="sort-select" class="sort-select">
+              <option value="date-desc">新しい順</option>
+              <option value="date-asc">古い順</option>
+              <option value="title-asc">タイトル順</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="reports-grid" id="reports-grid">
+        {% assign sorted_reports = site.reports | sort: 'date' | reverse %}
+        {% for report in sorted_reports %}
+          <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-date="{{ report.date | date: '%Y-%m-%d' }}">
+            <div class="report-card-header">
+              <h3 class="report-title">
+                <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
+              </h3>
+              <time class="report-date" datetime="{{ report.date | date: '%Y-%m-%d' }}">
+                {{ report.date | date: "%Y年%m月%d日" }}
+              </time>
+            </div>
+            
+            {% if report.description %}
+              <p class="report-description">{{ report.description }}</p>
+            {% endif %}
+            
+            {% if report.tags and report.tags.size > 0 %}
+              <div class="report-tags">
+                {% for tag in report.tags %}
+                  <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+            
+            <div class="report-card-footer">
+              <a href="{{ report.url | relative_url }}" class="read-more">続きを読む →</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      {% if site.reports.size == 0 %}
+        <div class="no-reports">
+          <p>まだレポートがありません。</p>
+        </div>
+      {% endif %}
+
+      <div class="no-results" id="no-results" style="display: none;">
+        <p>検索条件に一致するレポートが見つかりませんでした。</p>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">{{ site.reports.size }}</span>
+          <span class="stat-label">総レポート数</span>
+        </div>
+        <div class="stat-item">
+          {% assign unique_tags = site.reports | map: 'tags' | join: ',' | split: ',' | uniq | size %}
+          <span class="stat-number">{{ unique_tags }}</span>
+          <span class="stat-label">タグ数</span>
+        </div>
+        <div class="stat-item">
+          {% assign latest_report = site.reports | sort: 'date' | last %}
+          {% if latest_report %}
+            <span class="stat-number">{{ latest_report.date | date: "%m/%d" }}</span>
+            <span class="stat-label">最新更新</span>
+          {% else %}
+            <span class="stat-number">-</span>
+            <span class="stat-label">最新更新</span>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('report-search');
+  const searchClear = document.getElementById('search-clear');
+  const tagFilter = document.getElementById('tag-filter');
+  const sortSelect = document.getElementById('sort-select');
+  const reportsGrid = document.getElementById('reports-grid');
+  const noResults = document.getElementById('no-results');
+  const reportCards = Array.from(document.querySelectorAll('.report-card'));
+
+  // Populate tag filter options
+  const allTags = new Set();
+  reportCards.forEach(card => {
+    const tags = card.dataset.tags.split(',').filter(tag => tag.trim());
+    tags.forEach(tag => allTags.add(tag.trim()));
+  });
+  
+  Array.from(allTags).sort().forEach(tag => {
+    const option = document.createElement('option');
+    option.value = tag;
+    option.textContent = tag;
+    tagFilter.appendChild(option);
+  });
+
+  // Filter and sort function
+  function filterAndSort() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedTag = tagFilter.value;
+    const sortBy = sortSelect.value;
+
+    let filteredCards = reportCards.filter(card => {
+      const matchesSearch = !searchTerm || card.dataset.title.includes(searchTerm);
+      const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
+      return matchesSearch && matchesTag;
+    });
+
+    // Sort cards
+    filteredCards.sort((a, b) => {
+      switch (sortBy) {
+        case 'date-desc':
+          return new Date(b.dataset.date) - new Date(a.dataset.date);
+        case 'date-asc':
+          return new Date(a.dataset.date) - new Date(b.dataset.date);
+        case 'title-asc':
+          return a.dataset.title.localeCompare(b.dataset.title);
+        default:
+          return 0;
+      }
+    });
+
+    // Hide all cards first
+    reportCards.forEach(card => card.style.display = 'none');
+
+    // Show filtered and sorted cards
+    if (filteredCards.length > 0) {
+      filteredCards.forEach(card => {
+        card.style.display = 'block';
+        reportsGrid.appendChild(card); // Re-append to maintain order
+      });
+      noResults.style.display = 'none';
+    } else {
+      noResults.style.display = 'block';
+    }
+  }
+
+  // Event listeners
+  searchInput.addEventListener('input', filterAndSort);
+  tagFilter.addEventListener('change', filterAndSort);
+  sortSelect.addEventListener('change', filterAndSort);
+
+  searchClear.addEventListener('click', function() {
+    searchInput.value = '';
+    filterAndSort();
+  });
+
+  // Tag click functionality
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('tag')) {
+      const tagValue = e.target.dataset.tag;
+      tagFilter.value = tagValue;
+      filterAndSort();
+    }
+  });
+});
+</script>

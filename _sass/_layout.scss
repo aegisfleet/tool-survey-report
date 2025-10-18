@@ -1,0 +1,232 @@
+// Main layout structure
+.site-header {
+  background-color: $header-bg;
+  border-bottom: 1px solid $border-color;
+  box-shadow: $box-shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+}
+
+.header-container {
+  @include make-container;
+  @include make-container-max-widths;
+  @include flex-between;
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 3);
+  flex-wrap: wrap;
+  gap: map-get($spacers, 3);
+  
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.site-branding {
+  flex: 0 0 auto;
+  
+  @include media-breakpoint-down(lg) {
+    text-align: center;
+  }
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: $font-weight-bold;
+  
+  a {
+    @include link-reset;
+    color: $primary-color;
+    
+    &:hover,
+    &:focus {
+      color: $secondary-color;
+    }
+  }
+  
+  @include media-breakpoint-down(md) {
+    font-size: 1.5rem;
+  }
+}
+
+.site-description {
+  margin: map-get($spacers, 1) 0 0;
+  font-size: $font-size-sm;
+  color: $text-muted;
+}
+
+.header-search {
+  flex: 0 0 auto;
+  
+  @include media-breakpoint-down(lg) {
+    order: 3;
+    width: 100%;
+  }
+}
+
+.main-content {
+  min-height: calc(100vh - 200px);
+  padding: map-get($spacers, 5) 0;
+  
+  @include media-breakpoint-down(md) {
+    padding: map-get($spacers, 4) 0;
+  }
+}
+
+.site-footer {
+  background-color: $footer-bg;
+  color: $text-light;
+  margin-top: auto;
+}
+
+.footer-container {
+  @include make-container;
+  @include make-container-max-widths;
+  padding-top: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: map-get($spacers, 5);
+  margin-bottom: map-get($spacers, 5);
+  
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 4);
+  }
+}
+
+.footer-section {
+  h3, h4 {
+    color: $text-light;
+    margin-bottom: map-get($spacers, 3);
+    font-size: 1.125rem;
+  }
+  
+  p {
+    color: rgba($text-light, 0.8);
+    line-height: $line-height-lg;
+  }
+}
+
+.footer-nav,
+.footer-info {
+  @include list-reset;
+  
+  li {
+    margin-bottom: map-get($spacers, 2);
+  }
+  
+  a {
+    color: rgba($text-light, 0.8);
+    transition: $transition-base;
+    
+    &:hover,
+    &:focus {
+      color: $text-light;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: map-get($spacers, 4);
+  border-top: 1px solid rgba($text-light, 0.2);
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 3);
+  
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright,
+.powered-by {
+  margin: 0;
+  font-size: $font-size-sm;
+  color: rgba($text-light, 0.7);
+  
+  a {
+    color: rgba($text-light, 0.8);
+    
+    &:hover,
+    &:focus {
+      color: $text-light;
+    }
+  }
+}
+
+// Page layouts
+.page-header {
+  margin-bottom: map-get($spacers, 5);
+  text-align: center;
+  
+  @include media-breakpoint-down(md) {
+    margin-bottom: map-get($spacers, 4);
+  }
+}
+
+.page-title {
+  margin-bottom: map-get($spacers, 3);
+  font-size: 2.5rem;
+  color: $primary-color;
+  
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+  }
+}
+
+.page-description {
+  font-size: $font-size-lg;
+  color: $text-muted;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+// Content wrapper
+.content-wrapper {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+// Grid system
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -#{map-get($spacers, 3) * 0.5};
+  margin-left: -#{map-get($spacers, 3) * 0.5};
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-right: map-get($spacers, 3) * 0.5;
+  padding-left: map-get($spacers, 3) * 0.5;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 percentage($i / 12);
+    max-width: percentage($i / 12);
+    padding-right: map-get($spacers, 3) * 0.5;
+    padding-left: map-get($spacers, 3) * 0.5;
+  }
+}
+
+@each $breakpoint in map-keys($breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: if($breakpoint == xs, "", "-#{$breakpoint}");
+    
+    @for $i from 1 through 12 {
+      .col#{$infix}-#{$i} {
+        flex: 0 0 percentage($i / 12);
+        max-width: percentage($i / 12);
+      }
+    }
+  }
+}

@@ -1,0 +1,455 @@
+// Report article layout
+.report-article {
+  @include make-container;
+  @include make-container-max-widths;
+  max-width: 800px;
+}
+
+.report-header {
+  margin-bottom: map-get($spacers, 6);
+  padding-bottom: map-get($spacers, 4);
+  border-bottom: 1px solid $border-color;
+}
+
+.report-title {
+  margin-bottom: map-get($spacers, 4);
+  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+  color: $primary-color;
+  
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    font-size: 1.75rem;
+  }
+}
+
+.report-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 4);
+  margin-bottom: map-get($spacers, 4);
+  
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    gap: map-get($spacers, 2);
+  }
+}
+
+.report-date,
+.report-author {
+  display: flex;
+  align-items: center;
+  gap: map-get($spacers, 2);
+  font-size: $font-size-sm;
+  color: $text-muted;
+  
+  svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.report-tags {
+  display: flex;
+  align-items: center;
+  gap: map-get($spacers, 2);
+  
+  svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    color: $text-muted;
+  }
+}
+
+.tag-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 2);
+  
+  li {
+    margin-bottom: 0;
+  }
+}
+
+.tag-link {
+  display: inline-block;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  background-color: $light-gray;
+  color: $text-color;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  border-radius: $border-radius-xl;
+  transition: $transition-base;
+  
+  &:hover,
+  &:focus {
+    background-color: $secondary-color;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.report-description {
+  padding: map-get($spacers, 4);
+  background-color: $light-gray;
+  border-radius: $border-radius;
+  border-left: 4px solid $secondary-color;
+  
+  p {
+    margin-bottom: 0;
+    font-size: $font-size-lg;
+    color: $text-color;
+    line-height: $line-height-lg;
+  }
+}
+
+// Report content styling
+.report-content {
+  margin-bottom: map-get($spacers, 6);
+  line-height: $line-height-lg;
+  
+  // Typography in content
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 3);
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h2 {
+    padding-bottom: map-get($spacers, 2);
+    border-bottom: 2px solid $border-color;
+  }
+  
+  h3 {
+    color: $secondary-color;
+  }
+  
+  // Paragraphs and text
+  p {
+    margin-bottom: map-get($spacers, 4);
+    text-align: justify;
+    
+    @include media-breakpoint-down(sm) {
+      text-align: left;
+    }
+  }
+  
+  // Lists
+  ul, ol {
+    margin-bottom: map-get($spacers, 4);
+    padding-left: map-get($spacers, 5);
+    
+    li {
+      margin-bottom: map-get($spacers, 2);
+      line-height: $line-height-lg;
+    }
+    
+    ul, ol {
+      margin-top: map-get($spacers, 2);
+      margin-bottom: map-get($spacers, 2);
+    }
+  }
+  
+  // Links
+  a {
+    color: $link-color;
+    font-weight: $font-weight-medium;
+    
+    &:hover,
+    &:focus {
+      color: $link-hover;
+    }
+    
+    // External links
+    &[href^="http"] {
+      &::after {
+        content: " ↗";
+        font-size: 0.8em;
+        opacity: 0.7;
+      }
+    }
+  }
+  
+  // Images
+  img {
+    display: block;
+    margin: map-get($spacers, 5) auto;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-sm;
+    
+    @include media-breakpoint-down(sm) {
+      margin: map-get($spacers, 4) auto;
+    }
+  }
+  
+  // Tables
+  table {
+    margin: map-get($spacers, 5) 0;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: $box-shadow-sm;
+    
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-sm;
+    }
+  }
+  
+  th {
+    background-color: $primary-color;
+    color: $white;
+    font-weight: $font-weight-semibold;
+  }
+  
+  td {
+    border-bottom: 1px solid $border-light;
+    
+    &:not(:last-child) {
+      border-right: 1px solid $border-light;
+    }
+  }
+  
+  tr:nth-child(even) td {
+    background-color: rgba($light-gray, 0.5);
+  }
+  
+  // Code blocks
+  pre {
+    margin: map-get($spacers, 5) 0;
+    padding: map-get($spacers, 4);
+    background-color: $dark-gray;
+    color: $white;
+    border-radius: $border-radius;
+    overflow-x: auto;
+    box-shadow: $box-shadow-sm;
+    
+    code {
+      background-color: transparent;
+      color: inherit;
+      padding: 0;
+    }
+  }
+  
+  // Inline code
+  code {
+    padding: 0.2em 0.4em;
+    background-color: rgba($secondary-color, 0.1);
+    color: $secondary-color;
+    border-radius: $border-radius-sm;
+    font-size: 0.9em;
+  }
+  
+  // Blockquotes
+  blockquote {
+    margin: map-get($spacers, 5) 0;
+    padding: map-get($spacers, 4);
+    background-color: rgba($info-color, 0.05);
+    border-left: 4px solid $info-color;
+    border-radius: 0 $border-radius $border-radius 0;
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+    
+    cite {
+      display: block;
+      margin-top: map-get($spacers, 2);
+      font-size: $font-size-sm;
+      color: $text-muted;
+      font-style: normal;
+      
+      &::before {
+        content: "— ";
+      }
+    }
+  }
+  
+  // Horizontal rules
+  hr {
+    margin: map-get($spacers, 6) 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, $border-color, transparent);
+  }
+  
+  // Definition lists
+  dl {
+    margin-bottom: map-get($spacers, 4);
+  }
+  
+  dt {
+    font-weight: $font-weight-semibold;
+    color: $primary-color;
+    margin-bottom: map-get($spacers, 1);
+  }
+  
+  dd {
+    margin-bottom: map-get($spacers, 3);
+    margin-left: map-get($spacers, 4);
+    
+    @include media-breakpoint-down(sm) {
+      margin-left: map-get($spacers, 2);
+    }
+  }
+}
+
+// Report footer
+.report-footer {
+  border-top: 1px solid $border-color;
+  padding-top: map-get($spacers, 5);
+}
+
+.report-navigation {
+  margin-bottom: map-get($spacers, 6);
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: map-get($spacers, 4);
+  margin-bottom: map-get($spacers, 5);
+  
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 3);
+  }
+}
+
+.nav-previous,
+.nav-next {
+  @include card(map-get($spacers, 4));
+  @include hover-lift;
+  
+  a {
+    @include link-reset;
+    display: block;
+    
+    &:hover,
+    &:focus {
+      .nav-title {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.nav-previous {
+  text-align: left;
+  
+  @include media-breakpoint-down(md) {
+    order: 2;
+  }
+}
+
+.nav-next {
+  text-align: right;
+  
+  @include media-breakpoint-down(md) {
+    order: 1;
+    text-align: left;
+  }
+}
+
+.nav-label {
+  display: block;
+  font-size: $font-size-sm;
+  color: $text-muted;
+  margin-bottom: map-get($spacers, 1);
+}
+
+.nav-title {
+  display: block;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  transition: $transition-base;
+  @include text-truncate;
+}
+
+.back-to-index {
+  text-align: center;
+  
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: map-get($spacers, 2);
+    padding: map-get($spacers, 3) map-get($spacers, 4);
+    background-color: $light-gray;
+    color: $text-color;
+    border-radius: $border-radius;
+    transition: $transition-base;
+    
+    &:hover,
+    &:focus {
+      background-color: $secondary-color;
+      color: $white;
+      text-decoration: none;
+    }
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+// Related reports
+.related-reports {
+  h3 {
+    margin-bottom: map-get($spacers, 4);
+    color: $primary-color;
+    font-size: 1.25rem;
+  }
+}
+
+.related-list {
+  @include list-reset;
+  
+  li {
+    margin-bottom: map-get($spacers, 3);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  a {
+    @include card(map-get($spacers, 3));
+    @include link-reset;
+    display: block;
+    transition: $transition-base;
+    
+    &:hover,
+    &:focus {
+      box-shadow: $box-shadow;
+      transform: translateY(-1px);
+      
+      .related-title {
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.related-title {
+  display: block;
+  font-weight: $font-weight-semibold;
+  color: $text-color;
+  margin-bottom: map-get($spacers, 1);
+  transition: $transition-base;
+}
+
+.related-date {
+  display: block;
+  font-size: $font-size-sm;
+  color: $text-muted;
+}

@@ -1,0 +1,152 @@
+---
+# Main stylesheet
+---
+
+// Import variables and mixins first
+@import "variables";
+@import "mixins";
+
+// Import base styles
+@import "base";
+
+// Import layout components
+@import "layout";
+@import "navigation";
+
+// Import page-specific styles
+@import "reports";
+
+// Import UI components
+@import "components";
+
+// Custom styles for specific elements
+.highlight {
+  background-color: rgba($warning-color, 0.2);
+  padding: 0.125rem 0.25rem;
+  border-radius: $border-radius-sm;
+}
+
+.text-highlight {
+  background: linear-gradient(120deg, rgba($secondary-color, 0.3) 0%, rgba($secondary-color, 0.3) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+}
+
+// Print styles
+@media print {
+  .site-header,
+  .site-footer,
+  .nav-toggle,
+  .search-form,
+  .report-navigation,
+  .related-reports {
+    display: none !important;
+  }
+  
+  .main-content {
+    padding: 0;
+  }
+  
+  .report-article {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .report-content {
+    font-size: 12pt;
+    line-height: 1.4;
+    
+    h1, h2, h3, h4, h5, h6 {
+      page-break-after: avoid;
+    }
+    
+    p, li {
+      orphans: 3;
+      widows: 3;
+    }
+    
+    blockquote {
+      page-break-inside: avoid;
+    }
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+}
+
+// Dark mode support (basic)
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #{$dark-gray};
+    --text-color: #{$light-gray};
+    --border-color: #{lighten($dark-gray, 20%)};
+  }
+  
+  // Only apply if user hasn't set a preference
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme]) {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  }
+}
+
+// Accessibility improvements
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  .btn,
+  .card,
+  .alert {
+    border-width: 2px;
+  }
+  
+  .nav-link:focus,
+  .btn:focus,
+  a:focus {
+    outline: 3px solid;
+    outline-offset: 2px;
+  }
+}
+
+// Focus visible for better keyboard navigation
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+// Selection styles
+::selection {
+  background-color: rgba($secondary-color, 0.3);
+  color: $text-color;
+}
+
+::-moz-selection {
+  background-color: rgba($secondary-color, 0.3);
+  color: $text-color;
+}

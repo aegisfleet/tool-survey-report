@@ -1,0 +1,147 @@
+---
+layout: default
+title: "すべてのレポート"
+description: "公開されているすべての調査レポートの一覧です。"
+---
+
+<div class="content-wrapper">
+  <div class="page-header">
+    <h1 class="page-title">すべてのレポート</h1>
+    <p class="page-description">公開されているすべての調査レポートの一覧です。</p>
+  </div>
+
+  {% assign all_reports = site.reports | sort: 'date' | reverse %}
+  
+  {% if all_reports.size > 0 %}
+    <div class="reports-list">
+      {% for report in all_reports %}
+        <article class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="card-title">
+                  <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
+                </h2>
+                
+                {% if report.description %}
+                  <p class="card-text">{{ report.description }}</p>
+                {% endif %}
+                
+                <div class="card-meta">
+                  {% if report.date %}
+                    <small class="text-muted">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+                      </svg>
+                      <time datetime="{{ report.date | date_to_xmlschema }}">
+                        {{ report.date | date: "%Y年%m月%d日" }}
+                      </time>
+                    </small>
+                  {% endif %}
+                  
+                  {% if report.author %}
+                    <small class="text-muted ml-3">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                      </svg>
+                      {{ report.author }}
+                    </small>
+                  {% endif %}
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                {% if report.tags and report.tags.size > 0 %}
+                  <div class="report-tags">
+                    <h6>タグ:</h6>
+                    <div class="tag-list">
+                      {% for tag in report.tags %}
+                        <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link">
+                          {{ tag }}
+                        </a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-info">
+      <h3>レポートがありません</h3>
+      <p>まだレポートが投稿されていません。最初のレポートを作成してください。</p>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+// Simple client-side filtering by tag
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const tagFilter = urlParams.get('tag');
+  const searchFilter = urlParams.get('search');
+  
+  if (tagFilter || searchFilter) {
+    filterReports(tagFilter, searchFilter);
+  }
+});
+
+function filterReports(tagFilter, searchFilter) {
+  const reports = document.querySelectorAll('.reports-list article');
+  let visibleCount = 0;
+  
+  reports.forEach(function(report) {
+    let shouldShow = true;
+    
+    if (tagFilter) {
+      const tags = Array.from(report.querySelectorAll('.tag-link')).map(link => 
+        link.textContent.trim().toLowerCase()
+      );
+      shouldShow = shouldShow && tags.includes(tagFilter.toLowerCase());
+    }
+    
+    if (searchFilter && shouldShow) {
+      const title = report.querySelector('.card-title').textContent.toLowerCase();
+      const description = report.querySelector('.card-text');
+      const descText = description ? description.textContent.toLowerCase() : '';
+      
+      shouldShow = shouldShow && (
+        title.includes(searchFilter.toLowerCase()) || 
+        descText.includes(searchFilter.toLowerCase())
+      );
+    }
+    
+    if (shouldShow) {
+      report.style.display = 'block';
+      visibleCount++;
+    } else {
+      report.style.display = 'none';
+    }
+  });
+  
+  // Show filter status
+  if (tagFilter || searchFilter) {
+    const header = document.querySelector('.page-header');
+    const filterInfo = document.createElement('div');
+    filterInfo.className = 'alert alert-info mt-3';
+    
+    let filterText = '';
+    if (tagFilter) filterText += `タグ: "${tagFilter}"`;
+    if (searchFilter) {
+      if (filterText) filterText += ', ';
+      filterText += `検索: "${searchFilter}"`;
+    }
+    
+    filterInfo.innerHTML = `
+      <p><strong>フィルター適用中:</strong> ${filterText}</p>
+      <p><strong>表示件数:</strong> ${visibleCount}件</p>
+      <a href="${window.location.pathname}" class="btn btn-sm btn-outline">フィルターをクリア</a>
+    `;
+    
+    header.appendChild(filterInfo);
+  }
+}
+</script>

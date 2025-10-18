@@ -1,19 +1,9 @@
 ---
 layout: home
 title: "調査レポートサイト"
+description: "調査チームが作成した各種レポートを閲覧できるサイトです"
 ---
 
-# 調査レポートサイトへようこそ
+## 調査レポートサイトへようこそ
 
-このサイトでは、調査チームが作成した各種レポートを閲覧できます。
-
-## 最新のレポート
-
-{% assign latest_reports = site.reports | sort: 'date' | reverse | limit: 5 %}
-{% for report in latest_reports %}
-- [{{ report.title }}]({{ report.url }}) - {{ report.date | date: "%Y年%m月%d日" }}
-{% endfor %}
-
-## すべてのレポートを見る
-
-[レポート一覧ページ](/reports/)でより多くのレポートを閲覧できます。
+このサイトでは、調査チームが作成した各種レポートを閲覧できます。検索機能やタグフィルターを使って、お探しのレポートを効率的に見つけることができます。
