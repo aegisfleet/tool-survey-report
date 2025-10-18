@@ -64,44 +64,17 @@ jobs:
               return;
             }
 
-            // If PR is draft, convert to ready_for_review first so the merge can proceed
+            // PRがドラフトの場合、自動マージをスキップしてコメントを残す
             if (pr.draft) {
-              core.info('PR is draft and only touches _reports/ — converting to ready and adding comment.');
-              await github.rest.pulls.update({ owner, repo, pull_number: prNumber, draft: false });
+              core.info('PR is draft and only touches _reports/ — leaving a comment.');
               await github.rest.issues.createComment({ 
                 owner, 
                 repo, 
                 issue_number: prNumber, 
-                body: 'This draft PR only modifies `_reports/` and was automatically converted to ready-to-review; it will be merged automatically.' 
+                body: 'このドラフトPRは `_reports/` のみを変更しています。レビューの準備ができたら「Ready for review」に変更してください。その後、自動的にマージされます。\n\nThis draft PR only modifies `_reports/`. When you\'re ready for review, please mark it as "Ready for review". It will then be merged automatically.' 
               });
-              
-              // 明示的に状態が更新されるまで待機
-              let attempts = 0;
-              const maxAttempts = 5;
-              let updatedPr;
-              
-              while (attempts < maxAttempts) {
-                core.info(`Waiting for PR to be ready (attempt ${attempts + 1}/${maxAttempts})...`);
-                await new Promise(resolve => setTimeout(resolve, 2000)); // 2秒待機
-                
-                const response = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
-                updatedPr = response.data;
-                
-                if (!updatedPr.draft) {
-                  core.info('PR is now ready for review');
-                  break;
-                }
-                
-                attempts++;
-              }
-              
-              if (updatedPr.draft) {
-                core.error('PR is still in draft state after multiple attempts');
-                throw new Error('Failed to convert PR from draft to ready');
-              }
-              
-              // PRの状態を更新
-              pr.draft = updatedPr.draft;
+              core.notice('Skipping auto-merge for draft PR. Waiting for manual "Ready for review".');
+              return;
             }
 
             // Merge the PR. Use 'squash' to keep main tidy; adjust if you prefer 'merge' or 'rebase'.
