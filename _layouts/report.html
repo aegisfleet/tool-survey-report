@@ -81,11 +81,7 @@ layout: default
       {% endif %}
     </div>
     
-    {% if page.summary %}
-      <div class="report-summary" itemprop="description">
-        <p>{{ page.summary }}</p>
-      </div>
-    {% elsif page.description %}
+    {% if page.description %}
       <div class="report-description" itemprop="description">
         <p>{{ page.description }}</p>
       </div>

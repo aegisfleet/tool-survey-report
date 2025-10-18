@@ -115,11 +115,17 @@ touch _reports/tool-name.md
 
 ```yaml
 ---
-layout: report
-title: "ツール名 調査レポート"
-date: 2025-10-18
-tags: [カテゴリー名]
-description: "ツールの概要説明"
+title: "[ツール名] 調査レポート"
+tool_name: "ツール名"
+category: "カテゴリ名"
+developer: "開発元企業名"
+official_site: "公式サイトURL"
+date: "YYYY-MM-DD"
+tags:
+  - "タグ1"
+  - "タグ2"
+  - "タグ3"
+description: "ツールの概要を1-2行で簡潔に記述"
 ---
 ```
 

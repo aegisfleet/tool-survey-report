@@ -23,9 +23,7 @@ description: "公開されているすべての調査レポートの一覧です
                   <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
                 </h2>
                 
-                {% if report.summary %}
-                  <p class="card-text">{{ report.summary }}</p>
-                {% elsif report.description %}
+                {% if report.description %}
                   <p class="card-text">{{ report.description }}</p>
                 {% endif %}
                 
