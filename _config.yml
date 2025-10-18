@@ -1,6 +1,6 @@
 # Site settings
-title: "調査レポートサイト"
-description: "調査レポートを自動公開するJekyllサイト"
+title: "AIエージェント調査レポート"
+description: "AIエージェントが調査したツールの内容把握と比較検討のためのレポートサイト"
 baseurl: ""
 url: ""
 
