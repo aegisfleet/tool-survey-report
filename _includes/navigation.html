@@ -8,16 +8,7 @@
     </span>
   </button>
   
-  <div class="nav-search">
-    <form class="search-form" role="search" aria-label="サイト内検索">
-      <input type="text" id="nav-search-input" class="search-input" placeholder="レポートを検索..." aria-label="検索キーワード">
-      <button type="submit" class="search-button" aria-label="検索実行">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-        </svg>
-      </button>
-    </form>
-  </div>
+
   
   <ul class="nav-menu" id="nav-menu">
     <li class="nav-item">
@@ -38,34 +29,7 @@
       </a>
     </li>
     
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-        カテゴリー
-      </a>
-      <ul class="dropdown-menu">
-        {% assign tags = site.reports | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
-        {% for tag in tags %}
-          {% if tag != '' %}
-            {% assign tag_count = site.reports | where_exp: "report", "report.tags contains tag" | size %}
-            <li>
-              <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="dropdown-link">
-                {{ tag }} <span class="tag-count">({{ tag_count }})</span>
-              </a>
-            </li>
-          {% endif %}
-        {% endfor %}
-        {% if tags.size == 0 %}
-          <li><span class="dropdown-text">カテゴリーがありません</span></li>
-        {% else %}
-          <li class="dropdown-divider"></li>
-          <li>
-            <a href="{{ '/tags/' | relative_url }}" class="dropdown-link view-all">
-              すべてのタグを見る →
-            </a>
-          </li>
-        {% endif %}
-      </ul>
-    </li>
+
     
     {% if site.data.navigation.main_links %}
       {% for link in site.data.navigation.main_links %}
@@ -124,20 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Navigation search functionality
-  const searchForm = document.querySelector('.search-form');
-  const searchInput = document.getElementById('nav-search-input');
-  
-  if (searchForm && searchInput) {
-    searchForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const searchTerm = searchInput.value.trim();
-      if (searchTerm) {
-        // Redirect to reports page with search parameter
-        const reportsUrl = '{{ "/reports/" | relative_url }}';
-        window.location.href = reportsUrl + '?search=' + encodeURIComponent(searchTerm);
-      }
-    });
-  }
+
 });
 </script>
