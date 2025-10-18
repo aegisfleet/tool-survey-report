@@ -411,7 +411,7 @@ function generateTableOfContents() {
       background: #ffffff;
       padding: 1rem 1.5rem;
       border-radius: 0.375rem;
-      border-left: 4px solid #3498db;
+      border-left: 4px solid #ff7733;
       margin: 2rem 0;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     `;
