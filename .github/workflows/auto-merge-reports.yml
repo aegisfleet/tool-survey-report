@@ -1,0 +1,86 @@
+name: Auto-merge reports-only PRs
+
+on:
+  pull_request:
+    types: [opened, synchronize, edited, ready_for_review, reopened]
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  auto-merge:
+    name: Auto-merge reports-only PRs by google-labs-jules
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Check and merge reports-only PRs
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            if (!pr) {
+              core.info('No pull_request payload available. Exiting.');
+              return;
+            }
+
+            const prNumber = pr.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const author = pr.user && pr.user.login;
+
+            core.info(`PR #${prNumber} by ${author}`);
+
+            if (author !== 'google-labs-jules') {
+              core.info('PR author is not google-labs-jules — skipping.');
+              return;
+            }
+
+            // Collect changed files (handle pagination)
+            let files = [];
+            let page = 1;
+            while (true) {
+              const res = await github.rest.pulls.listFiles({ owner, repo, pull_number: prNumber, per_page: 100, page });
+              files = files.concat(res.data.map(f => f.filename));
+              if (res.data.length < 100) break;
+              page += 1;
+            }
+
+            if (files.length === 0) {
+              core.info('No changed files found — skipping.');
+              return;
+            }
+
+            core.info(`Changed files:\n${files.join('\n')}`);
+
+            const allUnderReports = files.every(f => f.startsWith('_reports/'));
+            if (!allUnderReports) {
+              core.info('At least one changed file is outside _reports/ — skipping auto-merge.');
+              return;
+            }
+
+            // If PR is draft, convert to ready_for_review first so the merge can proceed
+            if (pr.draft) {
+              core.info('PR is draft and only touches _reports/ — converting to ready and adding comment.');
+              await github.rest.pulls.update({ owner, repo, pull_number: prNumber, draft: false });
+              await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body: 'This draft PR only modifies `_reports/` and was automatically converted to ready-to-review; it will be merged automatically.' });
+              // Refresh PR data (some fields may be stale in context)
+              const { data: updatedPr } = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
+              pr.draft = updatedPr.draft;
+            }
+
+            // Merge the PR. Use 'squash' to keep main tidy; adjust if you prefer 'merge' or 'rebase'.
+            core.info('Merging PR...');
+            try {
+              await github.rest.pulls.merge({ owner, repo, pull_number: prNumber, merge_method: 'squash' });
+              await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body: 'Auto-merged: changes limited to `_reports/`.' });
+              core.info('PR merged successfully.');
+            } catch (err) {
+              core.error(`Failed to merge PR: ${err}`);
+              throw err;
+            }
