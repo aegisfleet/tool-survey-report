@@ -52,7 +52,10 @@
 }
 
 .report-date,
-.report-author {
+.report-author,
+.report-developer,
+.report-category,
+.report-official-site {
   display: flex;
   align-items: center;
   gap: map-get($spacers, 2);
@@ -64,11 +67,20 @@
     width: 16px;
     height: 16px;
   }
+  
+  a {
+    color: inherit;
+    
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
 }
 
 .report-tags {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: map-get($spacers, 2);
   
   svg {
