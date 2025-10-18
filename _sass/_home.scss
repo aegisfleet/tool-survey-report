@@ -249,11 +249,6 @@
     margin-bottom: map-get($spacers, 3);
     color: $text-color;
     line-height: $line-height-lg;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .report-tags {
