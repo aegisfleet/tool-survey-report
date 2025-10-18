@@ -146,10 +146,10 @@ function filterReports(tagFilter, searchFilter) {
     filterInfo.className = 'alert alert-info mt-3';
     
     let filterText = '';
-    if (tagFilter) filterText += `タグ: "${tagFilter}"`;
+    if (tagFilter) filterText += `タグ: "${escapeHTML(tagFilter)}"`;
     if (searchFilter) {
       if (filterText) filterText += ', ';
-      filterText += `検索: "${searchFilter}"`;
+      filterText += `検索: "${escapeHTML(searchFilter)}"`;
     }
     
     filterInfo.innerHTML = `
@@ -159,6 +159,16 @@ function filterReports(tagFilter, searchFilter) {
     `;
     
     header.appendChild(filterInfo);
+
+// Escapes HTML special characters to prevent XSS
+function escapeHTML(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
   }
 }
 </script>
