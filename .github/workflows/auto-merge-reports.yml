@@ -68,9 +68,39 @@ jobs:
             if (pr.draft) {
               core.info('PR is draft and only touches _reports/ — converting to ready and adding comment.');
               await github.rest.pulls.update({ owner, repo, pull_number: prNumber, draft: false });
-              await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body: 'This draft PR only modifies `_reports/` and was automatically converted to ready-to-review; it will be merged automatically.' });
-              // Refresh PR data (some fields may be stale in context)
-              const { data: updatedPr } = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
+              await github.rest.issues.createComment({ 
+                owner, 
+                repo, 
+                issue_number: prNumber, 
+                body: 'This draft PR only modifies `_reports/` and was automatically converted to ready-to-review; it will be merged automatically.' 
+              });
+              
+              // 明示的に状態が更新されるまで待機
+              let attempts = 0;
+              const maxAttempts = 5;
+              let updatedPr;
+              
+              while (attempts < maxAttempts) {
+                core.info(`Waiting for PR to be ready (attempt ${attempts + 1}/${maxAttempts})...`);
+                await new Promise(resolve => setTimeout(resolve, 2000)); // 2秒待機
+                
+                const response = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
+                updatedPr = response.data;
+                
+                if (!updatedPr.draft) {
+                  core.info('PR is now ready for review');
+                  break;
+                }
+                
+                attempts++;
+              }
+              
+              if (updatedPr.draft) {
+                core.error('PR is still in draft state after multiple attempts');
+                throw new Error('Failed to convert PR from draft to ready');
+              }
+              
+              // PRの状態を更新
               pr.draft = updatedPr.draft;
             }
 
