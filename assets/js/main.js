@@ -427,20 +427,20 @@ function generateTableOfContents() {
       link.href = '#' + id;
       link.textContent = heading.textContent;
       link.style.textDecoration = 'none';
-      
+
       // スムーズスクロールとヘッダー高さを考慮した位置調整
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', function (e) {
         e.preventDefault();
         const targetElement = document.getElementById(id);
         if (targetElement) {
           const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
           const targetPosition = targetElement.offsetTop - headerHeight - 20;
-          
+
           window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
           });
-          
+
           // URLを更新（履歴に追加）
           history.pushState(null, null, '#' + id);
         }
@@ -452,12 +452,20 @@ function generateTableOfContents() {
 
     toc.appendChild(tocList);
 
-    // Insert TOC after the first paragraph or at the beginning
-    const firstParagraph = reportContent.querySelector('p');
-    if (firstParagraph) {
-      firstParagraph.parentElement.insertBefore(toc, firstParagraph.nextSibling);
+    // 目次の挿入位置を一貫させる - 最初のh2見出しの直前に挿入
+    const firstH2 = reportContent.querySelector('h2');
+    if (firstH2) {
+      // 最初のh2見出しの直前に目次を挿入
+      firstH2.parentElement.insertBefore(toc, firstH2);
     } else {
-      reportContent.insertBefore(toc, reportContent.firstChild);
+      // h2見出しがない場合は、最初のh1見出しの後に挿入
+      const firstH1 = reportContent.querySelector('h1');
+      if (firstH1 && firstH1.nextSibling) {
+        firstH1.parentElement.insertBefore(toc, firstH1.nextSibling);
+      } else {
+        // h1もない場合は、コンテンツの最初に挿入
+        reportContent.insertBefore(toc, reportContent.firstChild);
+      }
     }
   }
 }
