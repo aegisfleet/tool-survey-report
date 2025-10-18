@@ -23,11 +23,11 @@
         <h4>情報</h4>
         <ul class="footer-info">
           <li>最終更新: {{ site.time | date: "%Y年%m月%d日" }}</li>
-          {% if site.author %}
-            <li>管理者: {{ site.author }}</li>
+          {% if site.author.name %}
+            <li>管理者: {{ site.author.name }}</li>
           {% endif %}
-          {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">お問い合わせ</a></li>
+          {% if site.author.email %}
+            <li><a href="mailto:{{ site.author.email }}">お問い合わせ</a></li>
           {% endif %}
         </ul>
       </div>

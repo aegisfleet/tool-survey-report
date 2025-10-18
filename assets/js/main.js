@@ -240,8 +240,6 @@ function initSmoothScrolling() {
 
 // Focus management for accessibility
 function initFocusManagement() {
-  // Skip link is now handled in the HTML template
-  
   // Add main content ID if it doesn't exist
   const mainContent = document.querySelector('.main-content');
   if (mainContent && !mainContent.id) {
@@ -258,6 +256,8 @@ function initFocusManagement() {
   document.addEventListener('mousedown', function() {
     document.body.classList.remove('keyboard-navigation');
   });
+  
+
 }
 
 // Focus trap for modal/mobile menu

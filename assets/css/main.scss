@@ -190,24 +190,7 @@ html {
   }
 }
 
-// Skip link for screen readers
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: $primary-color;
-  color: $white;
-  padding: 12px 16px;
-  text-decoration: none;
-  border-radius: 0 0 8px 8px;
-  z-index: 10000;
-  font-weight: $font-weight-semibold;
-  box-shadow: $box-shadow-lg;
-  
-  &:focus {
-    top: 0;
-  }
-}
+
 
 // Keyboard navigation improvements
 .keyboard-navigation {
