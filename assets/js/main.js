@@ -240,38 +240,24 @@ function initSmoothScrolling() {
 
 // Focus management for accessibility
 function initFocusManagement() {
-  // Skip to main content link
-  const skipLink = document.createElement('a');
-  skipLink.href = '#main-content';
-  skipLink.textContent = 'メインコンテンツにスキップ';
-  skipLink.className = 'skip-link screen-reader-text';
-  skipLink.style.cssText = `
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #000;
-    color: #fff;
-    padding: 8px 16px;
-    text-decoration: none;
-    z-index: 100000;
-    border-radius: 0 0 4px 4px;
-  `;
-  
-  skipLink.addEventListener('focus', function() {
-    this.style.top = '0';
-  });
-  
-  skipLink.addEventListener('blur', function() {
-    this.style.top = '-40px';
-  });
-  
-  document.body.insertBefore(skipLink, document.body.firstChild);
+  // Skip link is now handled in the HTML template
   
   // Add main content ID if it doesn't exist
   const mainContent = document.querySelector('.main-content');
   if (mainContent && !mainContent.id) {
     mainContent.id = 'main-content';
   }
+  
+  // Improve focus visibility
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-navigation');
+    }
+  });
+  
+  document.addEventListener('mousedown', function() {
+    document.body.classList.remove('keyboard-navigation');
+  });
 }
 
 // Focus trap for modal/mobile menu

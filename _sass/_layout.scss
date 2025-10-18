@@ -12,14 +12,20 @@
   @include make-container;
   @include make-container-max-widths;
   @include flex-between;
-  padding-top: map-get($spacers, 3);
-  padding-bottom: map-get($spacers, 3);
+  padding-top: map-get($spacers, 4);
+  padding-bottom: map-get($spacers, 4);
   flex-wrap: wrap;
   gap: map-get($spacers, 3);
   
   @include media-breakpoint-down(lg) {
     flex-direction: column;
     align-items: stretch;
+    gap: map-get($spacers, 4);
+  }
+  
+  @include media-breakpoint-down(sm) {
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 3);
   }
 }
 
@@ -76,9 +82,20 @@
 }
 
 .site-footer {
-  background-color: $footer-bg;
+  background: linear-gradient(135deg, $footer-bg 0%, darken($footer-bg, 10%) 100%);
   color: $text-light;
   margin-top: auto;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $secondary-color 0%, $primary-color 100%);
+  }
 }
 
 .footer-container {

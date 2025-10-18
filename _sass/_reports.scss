@@ -114,6 +114,7 @@
 .report-content {
   margin-bottom: map-get($spacers, 6);
   line-height: $line-height-lg;
+  font-size: 1.1rem;
   
   // Typography in content
   h1, h2, h3, h4, h5, h6 {
@@ -127,11 +128,28 @@
   
   h2 {
     padding-bottom: map-get($spacers, 2);
-    border-bottom: 2px solid $border-color;
+    border-bottom: 3px solid $secondary-color;
+    color: $primary-color;
+    font-size: 1.75rem;
   }
   
   h3 {
     color: $secondary-color;
+    font-size: 1.5rem;
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      left: -#{map-get($spacers, 3)};
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: $secondary-color;
+      border-radius: 2px;
+    }
+    
+    padding-left: map-get($spacers, 3);
   }
   
   // Paragraphs and text

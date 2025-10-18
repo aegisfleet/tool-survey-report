@@ -1,25 +1,47 @@
 // Button components
 .btn {
   display: inline-block;
-  padding: map-get($spacers, 2) map-get($spacers, 4);
+  padding: map-get($spacers, 3) map-get($spacers, 5);
   font-size: $font-size-base;
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-semibold;
   line-height: 1.5;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: $border-radius;
   transition: $transition-base;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  &:hover::before {
+    left: 100%;
+  }
   
   &:focus {
-    @include focus-ring;
+    outline: 3px solid rgba($secondary-color, 0.5);
+    outline-offset: 2px;
   }
   
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+    
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -78,9 +100,28 @@
 // Card component
 .card {
   @include card;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, $secondary-color 0%, $primary-color 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
   
   &:hover {
     @include hover-lift;
+    
+    &::before {
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -384,8 +425,279 @@
 .embed-responsive-1by1::before {
   padding-top: 100%;
 }
-// Home 
-page specific styles
+// Home page specific styles
+.home-container {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.home-header {
+  text-align: center;
+  padding: map-get($spacers, 6) 0;
+  background: linear-gradient(135deg, rgba($primary-color, 0.05) 0%, rgba($secondary-color, 0.05) 100%);
+  border-radius: $border-radius-lg;
+  margin-bottom: map-get($spacers, 6);
+  
+  .site-title {
+    font-size: 3rem;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-bottom: map-get($spacers, 3);
+    
+    @include media-breakpoint-down(md) {
+      font-size: 2.5rem;
+    }
+    
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
+  }
+  
+  .site-description {
+    font-size: $font-size-lg;
+    color: $text-muted;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: $line-height-lg;
+  }
+}
+
+.reports-section {
+  margin-bottom: map-get($spacers, 6);
+}
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: map-get($spacers, 5);
+  gap: map-get($spacers, 4);
+  
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  h2 {
+    margin: 0;
+    color: $primary-color;
+    font-size: 2rem;
+    
+    @include media-breakpoint-down(md) {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  }
+}
+
+.reports-controls {
+  display: flex;
+  gap: map-get($spacers, 3);
+  align-items: center;
+  flex-wrap: wrap;
+  
+  @include media-breakpoint-down(lg) {
+    justify-content: center;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.search-container,
+.filter-container,
+.sort-container {
+  position: relative;
+  
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.search-input,
+.tag-filter,
+.sort-select {
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  border: 2px solid $border-color;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+  transition: $transition-base;
+  background-color: $white;
+  
+  &:focus {
+    outline: none;
+    border-color: $secondary-color;
+    box-shadow: 0 0 0 3px rgba($secondary-color, 0.1);
+  }
+  
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+.search-clear {
+  position: absolute;
+  right: map-get($spacers, 2);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: $text-muted;
+  cursor: pointer;
+  padding: map-get($spacers, 1);
+  border-radius: 50%;
+  transition: $transition-base;
+  
+  &:hover,
+  &:focus {
+    background-color: $light-gray;
+    color: $text-color;
+  }
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: map-get($spacers, 4);
+  
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+    gap: map-get($spacers, 3);
+  }
+}
+
+.report-card {
+  @include card;
+  transition: $transition-base;
+  height: fit-content;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $box-shadow-lg;
+  }
+}
+
+.report-card-header {
+  margin-bottom: map-get($spacers, 3);
+  
+  .report-title {
+    margin: 0 0 map-get($spacers, 2) 0;
+    
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: $font-weight-semibold;
+      font-size: 1.25rem;
+      line-height: $line-height-sm;
+      
+      &:hover,
+      &:focus {
+        color: $secondary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .report-date {
+    font-size: $font-size-sm;
+    color: $text-muted;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.report-description {
+  color: $text-color;
+  line-height: $line-height-lg;
+  margin-bottom: map-get($spacers, 3);
+}
+
+.report-tags {
+  margin-bottom: map-get($spacers, 3);
+  
+  .tag {
+    display: inline-block;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    background-color: rgba($secondary-color, 0.1);
+    color: $secondary-color;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    border-radius: $border-radius-xl;
+    margin-right: map-get($spacers, 1);
+    margin-bottom: map-get($spacers, 1);
+    cursor: pointer;
+    transition: $transition-base;
+    
+    &:hover {
+      background-color: $secondary-color;
+      color: $white;
+    }
+  }
+}
+
+.report-card-footer {
+  margin-top: auto;
+  padding-top: map-get($spacers, 3);
+  border-top: 1px solid $border-light;
+  
+  .read-more {
+    color: $secondary-color;
+    text-decoration: none;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    
+    &:hover,
+    &:focus {
+      color: $link-hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+.no-reports,
+.no-results {
+  text-align: center;
+  padding: map-get($spacers, 6);
+  color: $text-muted;
+  font-style: italic;
+}
+
+.stats-section {
+  background: linear-gradient(135deg, $light-gray 0%, rgba($secondary-color, 0.05) 100%);
+  border-radius: $border-radius-lg;
+  padding: map-get($spacers, 5);
+  margin-top: map-get($spacers, 6);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: map-get($spacers, 4);
+  text-align: center;
+}
+
+.stat-item {
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    line-height: 1;
+    margin-bottom: map-get($spacers, 1);
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: $font-size-sm;
+    color: $text-muted;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
 .recent-reports {
   margin-bottom: map-get($spacers, 6);
   

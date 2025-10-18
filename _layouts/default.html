@@ -34,9 +34,10 @@
   {% feed_meta %}
 </head>
 <body>
+  <a href="#main-content" class="skip-link">メインコンテンツにスキップ</a>
   {% include header.html %}
   
-  <main class="main-content" role="main">
+  <main id="main-content" class="main-content" role="main">
     {{ content }}
   </main>
   

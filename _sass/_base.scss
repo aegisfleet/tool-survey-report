@@ -182,6 +182,11 @@ button:focus {
 .container {
   @include make-container;
   @include make-container-max-widths;
+  
+  @include media-breakpoint-down(sm) {
+    padding-left: map-get($spacers, 3);
+    padding-right: map-get($spacers, 3);
+  }
 }
 
 // Utility classes

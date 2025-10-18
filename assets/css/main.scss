@@ -79,18 +79,61 @@
   }
 }
 
-// Dark mode support (basic)
+// Dark mode support
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #{$dark-gray};
+    --bg-color: #{$black};
+    --content-bg: #{$dark-gray};
     --text-color: #{$light-gray};
+    --text-muted: #{lighten($gray, 20%)};
     --border-color: #{lighten($dark-gray, 20%)};
+    --primary-color: #{lighten($primary-color, 20%)};
+    --secondary-color: #{lighten($secondary-color, 20%)};
+    --header-bg: #{$dark-gray};
+    --footer-bg: #{$black};
   }
   
-  // Only apply if user hasn't set a preference
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme]) {
-      background-color: var(--bg-color);
+  body:not([data-theme]) {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    
+    .site-header {
+      background-color: var(--header-bg);
+      border-bottom-color: var(--border-color);
+    }
+    
+    .site-footer {
+      background: var(--footer-bg);
+    }
+    
+    .card,
+    .report-card {
+      background-color: var(--content-bg);
+      border-color: var(--border-color);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--primary-color);
+    }
+    
+    .text-muted {
+      color: var(--text-muted);
+    }
+    
+    .nav-link {
+      color: var(--text-color);
+      
+      &:hover,
+      &:focus {
+        color: var(--secondary-color);
+      }
+    }
+    
+    .search-input,
+    .tag-filter,
+    .sort-select {
+      background-color: var(--content-bg);
+      border-color: var(--border-color);
       color: var(--text-color);
     }
   }
@@ -129,6 +172,13 @@
   outline: none;
 }
 
+// Enhanced focus styles for accessibility
+:focus-visible {
+  outline: 3px solid $secondary-color;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 // Smooth scrolling
 html {
   scroll-behavior: smooth;
@@ -137,6 +187,40 @@ html {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+// Skip link for screen readers
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: $primary-color;
+  color: $white;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 0 0 8px 8px;
+  z-index: 10000;
+  font-weight: $font-weight-semibold;
+  box-shadow: $box-shadow-lg;
+  
+  &:focus {
+    top: 0;
+  }
+}
+
+// Keyboard navigation improvements
+.keyboard-navigation {
+  *:focus {
+    outline: 3px solid $secondary-color !important;
+    outline-offset: 2px !important;
+  }
+}
+
+// Hide focus outline for mouse users
+body:not(.keyboard-navigation) {
+  *:focus {
+    outline: none;
   }
 }
 

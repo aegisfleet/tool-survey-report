@@ -1,36 +1,36 @@
-// Color Variables
-$primary-color: #2c3e50;
-$secondary-color: #3498db;
-$accent-color: #e74c3c;
-$success-color: #27ae60;
-$warning-color: #f39c12;
-$info-color: #17a2b8;
+// Color Variables - Improved accessibility and contrast
+$primary-color: #1a365d;
+$secondary-color: #2b6cb0;
+$accent-color: #c53030;
+$success-color: #2f855a;
+$warning-color: #d69e2e;
+$info-color: #2c5aa0;
 
 // Neutral Colors
 $white: #ffffff;
-$light-gray: #f8f9fa;
-$gray: #6c757d;
-$dark-gray: #495057;
-$black: #212529;
+$light-gray: #f7fafc;
+$gray: #718096;
+$dark-gray: #2d3748;
+$black: #1a202c;
 
 // Background Colors
 $body-bg: #ffffff;
 $content-bg: #ffffff;
-$sidebar-bg: #f8f9fa;
+$sidebar-bg: #f7fafc;
 $header-bg: #ffffff;
-$footer-bg: #2c3e50;
+$footer-bg: #1a365d;
 
-// Text Colors
-$text-color: #333333;
-$text-muted: #6c757d;
+// Text Colors - Better contrast ratios
+$text-color: #2d3748;
+$text-muted: #718096;
 $text-light: #ffffff;
-$link-color: #3498db;
-$link-hover: #2980b9;
+$link-color: #2b6cb0;
+$link-hover: #2c5aa0;
 
 // Border Colors
-$border-color: #dee2e6;
-$border-light: #e9ecef;
-$border-dark: #adb5bd;
+$border-color: #cbd5e0;
+$border-light: #e2e8f0;
+$border-dark: #a0aec0;
 
 // Typography
 $font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
