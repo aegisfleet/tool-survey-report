@@ -1,4 +1,4 @@
-name: Auto-merge reports-only PRs
+name: Auto Merge Reports only PRs
 
 on:
   pull_request:
@@ -7,19 +7,20 @@ on:
 
 permissions:
   contents: write
+  actions: write
   pull-requests: write
   issues: write
 
 jobs:
   auto-merge:
-    name: Auto-merge reports-only PRs by google-labs-jules
+    name: Auto merge reports only PRs by google-labs-jules
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v5
 
-      - name: Check and merge reports-only PRs
+      - name: Check and merge reports only PRs
         uses: actions/github-script@v6
         with:
           script: |
@@ -83,6 +84,24 @@ jobs:
               await github.rest.pulls.merge({ owner, repo, pull_number: prNumber, merge_method: 'squash' });
               await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body: 'Auto-merged: changes limited to `_reports/`.' });
               core.info('PR merged successfully.');
+              // Wait 10 seconds before triggering the jekyll workflow to give GitHub a moment to settle
+              core.info('Waiting 10 seconds before dispatching jekyll.yml...');
+              await new Promise(resolve => setTimeout(resolve, 10000));
+
+              // Trigger jekyll.yml via workflow_dispatch on the default branch (main)
+              try {
+                core.info('Dispatching jekyll.yml workflow...');
+                await github.rest.actions.createWorkflowDispatch({
+                  owner,
+                  repo,
+                  workflow_id: 'jekyll.yml',
+                  ref: 'main',
+                  inputs: {}
+                });
+                core.info('jekyll.yml dispatched successfully.');
+              } catch (dispatchErr) {
+                core.warning(`Failed to dispatch jekyll.yml: ${dispatchErr}`);
+              }
             } catch (err) {
               core.error(`Failed to merge PR: ${err}`);
               throw err;
