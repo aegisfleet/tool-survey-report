@@ -36,7 +36,7 @@ jobs:
 
             core.info(`PR #${prNumber} by ${author}`);
 
-            if (author !== 'google-labs-jules') {
+            if (!author || !author.startsWith('google-labs-jules')) {
               core.info('PR author is not google-labs-jules — skipping.');
               return;
             }
