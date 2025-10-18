@@ -441,59 +441,60 @@ function generateTableOfContents() {
       reportContent.insertBefore(toc, reportContent.firstChild);
     }
   }
-}/
-  / Announce page changes for screen readers
-function announcePageChanges() {
-    // Create live region for announcements
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
+}
 
-    // Function to announce messages
-    window.announceToScreenReader = function (message) {
-      liveRegion.textContent = message;
-      setTimeout(function () {
-        liveRegion.textContent = '';
-      }, 1000);
-    };
-  }
+// Announce page changes for screen readers
+function announcePageChanges() {
+  // Create live region for announcements
+  const liveRegion = document.createElement('div');
+  liveRegion.setAttribute('aria-live', 'polite');
+  liveRegion.setAttribute('aria-atomic', 'true');
+  liveRegion.className = 'sr-only';
+  liveRegion.id = 'live-region';
+  document.body.appendChild(liveRegion);
+
+  // Function to announce messages
+  window.announceToScreenReader = function (message) {
+    liveRegion.textContent = message;
+    setTimeout(function () {
+      liveRegion.textContent = '';
+    }, 1000);
+  };
+}
 
 // Enhance form accessibility
 function enhanceFormAccessibility() {
-    // Add required field indicators
-    const requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
-    requiredFields.forEach(function (field) {
-      const label = document.querySelector('label[for="' + field.id + '"]');
-      if (label && !label.querySelector('.required-indicator')) {
-        const indicator = document.createElement('span');
-        indicator.className = 'required-indicator';
-        indicator.textContent = ' *';
-        indicator.setAttribute('aria-label', '必須項目');
-        indicator.style.color = '#dc3545';
-        label.appendChild(indicator);
-      }
-    });
+  // Add required field indicators
+  const requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
+  requiredFields.forEach(function (field) {
+    const label = document.querySelector('label[for="' + field.id + '"]');
+    if (label && !label.querySelector('.required-indicator')) {
+      const indicator = document.createElement('span');
+      indicator.className = 'required-indicator';
+      indicator.textContent = ' *';
+      indicator.setAttribute('aria-label', '必須項目');
+      indicator.style.color = '#dc3545';
+      label.appendChild(indicator);
+    }
+  });
 
-    // Add error message containers
-    const formFields = document.querySelectorAll('input, select, textarea');
-    formFields.forEach(function (field) {
-      if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('error-message')) {
-        const errorContainer = document.createElement('div');
-        errorContainer.className = 'error-message';
-        errorContainer.style.cssText = `
+  // Add error message containers
+  const formFields = document.querySelectorAll('input, select, textarea');
+  formFields.forEach(function (field) {
+    if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('error-message')) {
+      const errorContainer = document.createElement('div');
+      errorContainer.className = 'error-message';
+      errorContainer.style.cssText = `
         color: #dc3545;
         font-size: 0.875rem;
         margin-top: 0.25rem;
         display: none;
       `;
-        errorContainer.setAttribute('role', 'alert');
-        field.parentElement.insertBefore(errorContainer, field.nextSibling);
-      }
-    });
-  }
+      errorContainer.setAttribute('role', 'alert');
+      field.parentElement.insertBefore(errorContainer, field.nextSibling);
+    }
+  });
+}
 
 // Color contrast checker (development helper)
 function checkColorContrast() {
