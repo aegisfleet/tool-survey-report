@@ -1,0 +1,54 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>{{ site.title | default: "調査レポートサイト" }}</h3>
+        <p>{{ site.description | default: "調査レポートを公開・共有するためのサイトです。" }}</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>ナビゲーション</h4>
+        <ul class="footer-nav">
+          <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
+          <li><a href="{{ '/reports/' | relative_url }}">すべてのレポート</a></li>
+          {% if site.data.navigation.footer_links %}
+            {% for link in site.data.navigation.footer_links %}
+              <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>情報</h4>
+        <ul class="footer-info">
+          <li>最終更新: {{ site.time | date: "%Y年%m月%d日" }}</li>
+          {% if site.author %}
+            <li>管理者: {{ site.author }}</li>
+          {% endif %}
+          {% if site.email %}
+            <li><a href="mailto:{{ site.email }}">お問い合わせ</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; {{ site.time | date: "%Y" }} {{ site.title | default: "調査レポートサイト" }}. 
+        {% if site.license %}
+          <span class="license">{{ site.license }}</span>
+        {% else %}
+          All rights reserved.
+        {% endif %}
+      </p>
+      
+      {% if site.github_username %}
+        <p class="powered-by">
+          Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> & 
+          <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,151 @@
+---
+layout: default
+---
+
+<article class="report-article" itemscope itemtype="http://schema.org/Article">
+  <header class="report-header">
+    <div class="report-breadcrumb">
+      <nav aria-label="パンくずリスト">
+        <ol class="breadcrumb">
+          <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
+          <li><a href="{{ '/reports/' | relative_url }}">レポート</a></li>
+          <li aria-current="page">{{ page.title }}</li>
+        </ol>
+      </nav>
+    </div>
+    
+    <h1 class="report-title" itemprop="headline">{{ page.title }}</h1>
+    
+    <div class="report-meta">
+      {% if page.date %}
+        <div class="report-date">
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            </svg>
+            {{ page.date | date: "%Y年%m月%d日" }}
+          </time>
+        </div>
+      {% endif %}
+      
+      {% if page.author %}
+        <div class="report-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+          <span itemprop="name">{{ page.author }}</span>
+        </div>
+      {% endif %}
+      
+      {% if page.tags and page.tags.size > 0 %}
+        <div class="report-tags">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+          </svg>
+          <ul class="tag-list">
+            {% for tag in page.tags %}
+              <li>
+                <a href="{{ '/reports/tag/' | append: tag | slugify | relative_url }}" class="tag-link" rel="tag">
+                  {{ tag }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+    
+    {% if page.description %}
+      <div class="report-description" itemprop="description">
+        <p>{{ page.description }}</p>
+      </div>
+    {% endif %}
+  </header>
+  
+  <div class="report-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  
+  <footer class="report-footer">
+    <div class="report-navigation">
+      {% assign reports = site.reports | sort: 'date' | reverse %}
+      {% assign current_index = nil %}
+      {% for report in reports %}
+        {% if report.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if current_index %}
+        <div class="nav-links">
+          {% assign prev_index = current_index | plus: 1 %}
+          {% assign next_index = current_index | minus: 1 %}
+          
+          {% if next_index >= 0 %}
+            {% assign next_report = reports[next_index] %}
+            <div class="nav-previous">
+              <a href="{{ next_report.url | relative_url }}" rel="prev">
+                <span class="nav-label">前のレポート</span>
+                <span class="nav-title">{{ next_report.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+          
+          {% if prev_index < reports.size %}
+            {% assign prev_report = reports[prev_index] %}
+            <div class="nav-next">
+              <a href="{{ prev_report.url | relative_url }}" rel="next">
+                <span class="nav-label">次のレポート</span>
+                <span class="nav-title">{{ prev_report.title }}</span>
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      
+      <div class="back-to-index">
+        <a href="{{ '/reports/' | relative_url }}" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+          レポート一覧に戻る
+        </a>
+      </div>
+    </div>
+    
+    {% if page.tags and page.tags.size > 0 %}
+      <div class="related-reports">
+        <h3>関連するレポート</h3>
+        {% assign related_reports = site.reports | where_exp: "report", "report.url != page.url" %}
+        {% assign related_by_tags = "" | split: "" %}
+        
+        {% for report in related_reports %}
+          {% assign common_tags = page.tags | intersect: report.tags %}
+          {% if common_tags.size > 0 %}
+            {% assign related_by_tags = related_by_tags | push: report %}
+          {% endif %}
+        {% endfor %}
+        
+        {% assign related_by_tags = related_by_tags | sort: 'date' | reverse | slice: 0, 3 %}
+        
+        {% if related_by_tags.size > 0 %}
+          <ul class="related-list">
+            {% for report in related_by_tags %}
+              <li>
+                <a href="{{ report.url | relative_url }}">
+                  <span class="related-title">{{ report.title }}</span>
+                  {% if report.date %}
+                    <span class="related-date">{{ report.date | date: "%Y年%m月%d日" }}</span>
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>関連するレポートはありません。</p>
+        {% endif %}
+      </div>
+    {% endif %}
+  </footer>
+</article>

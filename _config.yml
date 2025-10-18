@@ -1,0 +1,81 @@
+# Site settings
+title: "調査レポートサイト"
+description: "調査レポートを自動公開するJekyllサイト"
+baseurl: ""
+url: ""
+
+# Author information
+author:
+  name: "Research Team"
+  email: "research@example.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections configuration
+collections:
+  reports:
+    output: true
+    permalink: "/reports/:name/"
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "reports"
+    values:
+      layout: "report"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# GitHub Pages compatibility
+github: [metadata]
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# SEO settings
+lang: ja
+timezone: Asia/Tokyo
+
+# Navigation
+navigation:
+  - title: "ホーム"
+    url: "/"
+  - title: "レポート一覧"
+    url: "/reports/"
+  - title: "タグ"
+    url: "/tags/"
+
+# Site configuration
+show_excerpts: true
+paginate: 10

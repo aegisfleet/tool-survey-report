@@ -1,0 +1,102 @@
+<nav class="main-navigation" role="navigation" aria-label="メインナビゲーション">
+  <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false">
+    <span class="screen-reader-text">メニューを開く</span>
+    <span class="nav-toggle-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+  
+  <ul class="nav-menu" id="nav-menu">
+    <li class="nav-item">
+      <a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}current{% endif %}">
+        ホーム
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a href="{{ '/reports/' | relative_url }}" class="nav-link {% if page.url contains '/reports/' %}current{% endif %}">
+        すべてのレポート
+      </a>
+    </li>
+    
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+        カテゴリー
+      </a>
+      <ul class="dropdown-menu">
+        {% assign tags = site.reports | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
+        {% for tag in tags %}
+          {% if tag != '' %}
+            <li>
+              <a href="{{ '/reports/tag/' | append: tag | slugify | relative_url }}" class="dropdown-link">
+                {{ tag }}
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+        {% if tags.size == 0 %}
+          <li><span class="dropdown-text">カテゴリーがありません</span></li>
+        {% endif %}
+      </ul>
+    </li>
+    
+    {% if site.data.navigation.main_links %}
+      {% for link in site.data.navigation.main_links %}
+        <li class="nav-item">
+          <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}current{% endif %}">
+            {{ link.title }}
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ul>
+</nav>
+
+<script>
+// Mobile navigation toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('active');
+    });
+  }
+  
+  // Dropdown functionality
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      
+      // Close all other dropdowns
+      dropdownToggles.forEach(function(otherToggle) {
+        if (otherToggle !== toggle) {
+          otherToggle.setAttribute('aria-expanded', 'false');
+          otherToggle.parentElement.classList.remove('active');
+        }
+      });
+      
+      // Toggle current dropdown
+      toggle.setAttribute('aria-expanded', !isExpanded);
+      toggle.parentElement.classList.toggle('active');
+    });
+  });
+  
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+      dropdownToggles.forEach(function(toggle) {
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.parentElement.classList.remove('active');
+      });
+    }
+  });
+});
+</script>
