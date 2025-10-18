@@ -406,7 +406,7 @@ function generateTableOfContents() {
     toc.className = 'table-of-contents';
     toc.innerHTML = '<h3>目次</h3>';
 
-    const tocList = document.createElement('ol');
+    const tocList = document.createElement('ul');
     tocList.style.cssText = `
       background: #f8f9fa;
       padding: 1rem 1.5rem;
