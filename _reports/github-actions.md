@@ -18,7 +18,7 @@ description: "GitHubに統合されたCI/CDプラットフォーム。ビルド�
 
 * **ツール名**: GitHub Actions
 * **開発元**: GitHub
-* **公式サイト**: https://github.com/features/actions
+* **公式サイト**: <https://github.com/features/actions>
 * **カテゴリ**: CI/CD, ワークフロー自動化
 * **概要**: GitHubリポジトリ内でソフトウェア開発ワークフローを自動化するためのプラットフォーム。ビルド、テスト、デプロイなどのCI/CDパイプラインをコードとして定義し、GitHubイベント（push, pull_requestなど）をトリガーに自動実行できる。
 
