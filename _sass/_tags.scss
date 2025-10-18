@@ -1,0 +1,263 @@
+// Tags page styles
+.tags-index-container {
+    @include make-container;
+    @include make-container-max-widths;
+    padding: map-get($spacers, 5) 0;
+
+    @include media-breakpoint-down(md) {
+        padding: map-get($spacers, 4) 0;
+    }
+}
+
+.tags-overview {
+    margin-bottom: map-get($spacers, 5);
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+        margin-bottom: map-get($spacers, 4);
+    }
+}
+
+.tags-stats {
+    display: flex;
+    justify-content: center;
+    gap: map-get($spacers, 4);
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        gap: map-get($spacers, 2);
+    }
+}
+
+.stat-item {
+    padding: map-get($spacers, 2) map-get($spacers, 3);
+    background: linear-gradient(135deg, rgba($primary-color, 0.1) 0%, rgba($secondary-color, 0.1) 100%);
+    border: 2px solid rgba($primary-color, 0.2);
+    border-radius: $border-radius-lg;
+    font-size: $font-size-base;
+    color: $text-color;
+
+    strong {
+        font-size: 1.5rem;
+        font-weight: $font-weight-bold;
+        color: $primary-color;
+        display: block;
+        line-height: 1;
+        margin-bottom: map-get($spacers, 1);
+    }
+}
+
+.tags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: map-get($spacers, 4);
+    margin-bottom: map-get($spacers, 5);
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: map-get($spacers, 3);
+    }
+
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: 1fr;
+        gap: map-get($spacers, 3);
+    }
+}
+
+.tag-card {
+    @include card;
+    padding: map-get($spacers, 4);
+    transition: $transition-base;
+    height: fit-content;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $box-shadow-lg;
+        border-color: $primary-color;
+    }
+}
+
+.tag-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: map-get($spacers, 3);
+    gap: map-get($spacers, 2);
+
+    .tag-name {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: $font-weight-bold;
+        color: $primary-color;
+        background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
+        padding: 2px 4px;
+        border-radius: 2px;
+        flex: 1;
+        word-break: break-word;
+    }
+
+    .tag-count {
+        background-color: $secondary-color;
+        color: $white;
+        padding: map-get($spacers, 1) map-get($spacers, 2);
+        border-radius: $border-radius-xl;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+.tag-reports {
+    margin-bottom: map-get($spacers, 3);
+}
+
+.tag-report-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: map-get($spacers, 2);
+    padding: map-get($spacers, 2) 0;
+    border-bottom: 1px solid $border-light;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .report-link {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: $font-weight-medium;
+        line-height: $line-height-sm;
+        flex: 1;
+
+        &:hover,
+        &:focus {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+
+    .report-date {
+        font-size: $font-size-sm;
+        color: $text-muted;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
+.more-reports {
+    padding-top: map-get($spacers, 2);
+    text-align: center;
+
+    .view-all-link {
+        color: $secondary-color;
+        text-decoration: none;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+
+        &:hover,
+        &:focus {
+            color: $link-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+.tag-actions {
+    padding-top: map-get($spacers, 3);
+    border-top: 1px solid $border-light;
+    text-align: center;
+
+    .tag-view-all {
+        display: inline-block;
+        padding: map-get($spacers, 2) map-get($spacers, 4);
+        background-color: $primary-color;
+        color: $white;
+        text-decoration: none;
+        border-radius: $border-radius;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-sm;
+        transition: $transition-base;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary-color;
+            color: $white;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba($primary-color, 0.3);
+        }
+
+        &:focus {
+            outline: 3px solid rgba($primary-color, 0.5);
+            outline-offset: 2px;
+        }
+    }
+}
+
+.no-tags {
+    text-align: center;
+    padding: map-get($spacers, 6);
+    color: $text-muted;
+    font-style: italic;
+
+    p {
+        font-size: $font-size-lg;
+        margin: 0;
+    }
+}
+
+.back-to-reports {
+    text-align: center;
+    padding-top: map-get($spacers, 4);
+    border-top: 1px solid $border-light;
+
+    .back-link {
+        color: $secondary-color;
+        text-decoration: none;
+        font-weight: $font-weight-medium;
+
+        &:hover,
+        &:focus {
+            color: $link-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Responsive adjustments
+@include media-breakpoint-down(sm) {
+    .tags-index-container {
+        padding: map-get($spacers, 3) map-get($spacers, 2);
+    }
+
+    .tag-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: map-get($spacers, 2);
+
+        .tag-name {
+            font-size: 1.125rem;
+        }
+
+        .tag-count {
+            align-self: flex-start;
+        }
+    }
+
+    .tag-report-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: map-get($spacers, 1);
+
+        .report-date {
+            font-size: $font-size-xs;
+        }
+    }
+
+    .tag-card {
+        padding: map-get($spacers, 3);
+    }
+}
