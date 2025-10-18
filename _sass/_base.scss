@@ -8,6 +8,7 @@
 html {
   font-family: $font-family-base, $font-family-japanese;
   line-height: $line-height-base;
+  background-color: #ffffff !important;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -19,7 +20,7 @@ body {
   font-weight: $font-weight-normal;
   line-height: $line-height-base;
   color: $text-color;
-  background-color: $body-bg;
+  background-color: #ffffff !important;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -30,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: map-get($spacers, 3);
   font-weight: $font-weight-semibold;
   line-height: $line-height-sm;
-  color: $primary-color;
+  color: $text-color;
 }
 
 h1 { font-size: 2.5rem; }
@@ -54,21 +55,45 @@ p {
   margin-bottom: map-get($spacers, 3);
 }
 
-// Links
+// Links - Improved accessibility
 a {
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
   transition: $transition-base;
   
   &:hover,
   &:focus {
     color: $link-hover;
-    text-decoration: underline;
+    text-decoration-thickness: 3px;
   }
   
   &:focus {
-    @include focus-ring;
+    outline: 3px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
+}
+
+// Highlight/marker style for emphasis
+.highlight,
+mark,
+.marker {
+  background: linear-gradient(180deg, transparent 60%, rgba($primary-color, 0.3) 60%);
+  padding: 0 2px;
+  border-radius: 2px;
+  color: $text-color;
+  font-weight: $font-weight-medium;
+}
+
+// Strong emphasis with marker line
+strong,
+.emphasis {
+  font-weight: $font-weight-bold;
+  background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.4) 70%);
+  padding: 0 1px;
+  color: $text-color;
 }
 
 // Lists
@@ -233,4 +258,47 @@ button:focus {
       #{$prop}-bottom: $length;
     }
   }
+}
+// Accessibility improvements
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+  a {
+    text-decoration-thickness: 3px;
+  }
+  
+  .btn {
+    border-width: 3px;
+  }
+  
+  .card {
+    border-width: 2px;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Focus visible improvements
+:focus-visible {
+  outline: 3px solid $primary-color;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+// Better button focus states
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid $primary-color;
+  outline-offset: 2px;
 }

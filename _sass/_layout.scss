@@ -1,7 +1,7 @@
 // Main layout structure
 .site-header {
   background-color: $header-bg;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 3px solid $primary-color;
   box-shadow: $box-shadow-sm;
   position: sticky;
   top: 0;
@@ -43,12 +43,22 @@
   font-weight: $font-weight-bold;
   
   a {
-    @include link-reset;
-    color: $primary-color;
+    color: $text-color;
+    text-decoration: none;
+    background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
+    padding: 2px 4px;
+    border-radius: 2px;
+    transition: $transition-base;
     
     &:hover,
     &:focus {
-      color: $secondary-color;
+      background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.5) 70%);
+      text-decoration: none;
+    }
+    
+    &:focus {
+      outline: 3px solid rgba($primary-color, 0.5);
+      outline-offset: 2px;
     }
   }
   
@@ -75,6 +85,7 @@
 .main-content {
   min-height: calc(100vh - 200px);
   padding: map-get($spacers, 5) 0;
+  background-color: #ffffff;
   
   @include media-breakpoint-down(md) {
     padding: map-get($spacers, 4) 0;
@@ -192,7 +203,11 @@
 .page-title {
   margin-bottom: map-get($spacers, 3);
   font-size: 2.5rem;
-  color: $primary-color;
+  color: $text-color;
+  background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
+  display: inline-block;
+  padding: 0 map-get($spacers, 2);
+  border-radius: 4px;
   
   @include media-breakpoint-down(md) {
     font-size: 2rem;
@@ -210,6 +225,7 @@
 .content-wrapper {
   @include make-container;
   @include make-container-max-widths;
+  background-color: $white;
 }
 
 // Grid system

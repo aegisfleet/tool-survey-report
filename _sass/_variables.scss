@@ -1,31 +1,31 @@
-// Color Variables - Improved accessibility and contrast
-$primary-color: #1a365d;
-$secondary-color: #2b6cb0;
-$accent-color: #c53030;
+// Color Variables - Accessibility focused with #ff7733 theme
+$primary-color: #ff7733;
+$secondary-color: #cc5500;
+$accent-color: #ff9966;
 $success-color: #2f855a;
 $warning-color: #d69e2e;
-$info-color: #2c5aa0;
+$info-color: #0066cc;
 
 // Neutral Colors
 $white: #ffffff;
-$light-gray: #f7fafc;
-$gray: #718096;
-$dark-gray: #2d3748;
-$black: #1a202c;
+$light-gray: #f8f9fa;
+$gray: #6c757d;
+$dark-gray: #343a40;
+$black: #212529;
 
-// Background Colors
+// Background Colors - White based theme
 $body-bg: #ffffff;
 $content-bg: #ffffff;
-$sidebar-bg: #f7fafc;
+$sidebar-bg: #ffffff;
 $header-bg: #ffffff;
-$footer-bg: #1a365d;
+$footer-bg: #343a40;
 
-// Text Colors - Better contrast ratios
-$text-color: #2d3748;
-$text-muted: #718096;
+// Text Colors - High contrast for accessibility
+$text-color: #212529;
+$text-muted: #6c757d;
 $text-light: #ffffff;
-$link-color: #2b6cb0;
-$link-hover: #2c5aa0;
+$link-color: #cc5500;
+$link-hover: #ff7733;
 
 // Border Colors
 $border-color: #cbd5e0;

@@ -173,3 +173,39 @@
     content: "";
   }
 }
+
+// Accessibility mixins
+@mixin focus-visible($color: $primary-color) {
+  &:focus-visible {
+    outline: 3px solid rgba($color, 0.5);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+@mixin high-contrast-border($color: $text-color) {
+  @media (prefers-contrast: high) {
+    border: 2px solid $color;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+// Marker/highlight effect for emphasis
+@mixin marker-highlight($color: $primary-color, $opacity: 0.3) {
+  background: linear-gradient(180deg, transparent 70%, rgba($color, $opacity) 70%);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+@mixin marker-underline($color: $primary-color, $thickness: 3px) {
+  text-decoration: underline;
+  text-decoration-color: $color;
+  text-decoration-thickness: $thickness;
+  text-underline-offset: 3px;
+}

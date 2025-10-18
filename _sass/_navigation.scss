@@ -117,20 +117,30 @@
   display: block;
   padding: map-get($spacers, 2) map-get($spacers, 3);
   color: $text-color;
-  font-weight: $font-weight-medium;
+  font-weight: $font-weight-semibold;
   border-radius: $border-radius;
   transition: $transition-base;
+  text-decoration: none;
+  border: 2px solid transparent;
   
   &:hover,
   &:focus {
-    color: $secondary-color;
-    background-color: $light-gray;
+    color: $text-color;
+    background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
     text-decoration: none;
+    border-color: rgba($primary-color, 0.2);
+  }
+  
+  &:focus {
+    outline: 3px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
   }
   
   &.current {
-    color: $secondary-color;
-    background-color: rgba($secondary-color, 0.1);
+    color: $text-color;
+    background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.4) 70%);
+    border-color: $primary-color;
+    font-weight: $font-weight-bold;
   }
   
   @include media-breakpoint-down(lg) {
@@ -253,15 +263,22 @@
 .search-input {
   flex: 1;
   padding: map-get($spacers, 2) map-get($spacers, 6) map-get($spacers, 2) map-get($spacers, 3);
-  border: 1px solid $border-color;
+  border: 2px solid $border-color;
   border-radius: $border-radius;
-  font-size: $font-size-sm;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
   transition: $transition-base;
+  background-color: $white;
   
   &:focus {
-    outline: none;
-    border-color: $secondary-color;
-    box-shadow: 0 0 0 2px rgba($secondary-color, 0.25);
+    outline: 3px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+  
+  &:hover {
+    border-color: $primary-color;
   }
   
   &::placeholder {

@@ -49,13 +49,21 @@
   color: $white;
   background-color: $primary-color;
   border-color: $primary-color;
+  font-weight: $font-weight-semibold;
   
   &:hover,
   &:focus {
     color: $white;
-    background-color: darken($primary-color, 10%);
-    border-color: darken($primary-color, 10%);
+    background-color: $secondary-color;
+    border-color: $secondary-color;
     text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba($primary-color, 0.3);
+  }
+  
+  &:focus {
+    outline: 3px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
   }
 }
 
@@ -63,20 +71,25 @@
   color: $white;
   background-color: $secondary-color;
   border-color: $secondary-color;
+  font-weight: $font-weight-semibold;
   
   &:hover,
   &:focus {
     color: $white;
-    background-color: darken($secondary-color, 10%);
-    border-color: darken($secondary-color, 10%);
+    background-color: darken($secondary-color, 15%);
+    border-color: darken($secondary-color, 15%);
     text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba($secondary-color, 0.3);
   }
 }
 
 .btn-outline {
   color: $primary-color;
-  background-color: transparent;
+  background-color: $white;
   border-color: $primary-color;
+  border-width: 2px;
+  font-weight: $font-weight-semibold;
   
   &:hover,
   &:focus {
@@ -84,6 +97,8 @@
     background-color: $primary-color;
     border-color: $primary-color;
     text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba($primary-color, 0.3);
   }
 }
 
@@ -97,9 +112,14 @@
   font-size: $font-size-lg;
 }
 
-// Card component
+// Card component - Improved accessibility
 .card {
-  @include card;
+  background-color: $white;
+  border: 2px solid $light-gray;
+  border-radius: $border-radius;
+  padding: map-get($spacers, 4);
+  box-shadow: $box-shadow-sm;
+  transition: $transition-base;
   position: relative;
   overflow: hidden;
   
@@ -110,18 +130,26 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, $secondary-color 0%, $primary-color 100%);
+    background: linear-gradient(90deg, $primary-color 0%, $accent-color 100%);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
   }
   
-  &:hover {
-    @include hover-lift;
+  &:hover,
+  &:focus-within {
+    border-color: $primary-color;
+    box-shadow: $box-shadow;
+    transform: translateY(-2px);
     
     &::before {
       transform: scaleX(1);
     }
+  }
+  
+  &:focus-within {
+    outline: 3px solid rgba($primary-color, 0.3);
+    outline-offset: 2px;
   }
 }
 
@@ -429,20 +457,26 @@
 .home-container {
   @include make-container;
   @include make-container-max-widths;
+  background-color: $white;
 }
 
 .home-header {
   text-align: center;
   padding: map-get($spacers, 6) 0;
-  background: linear-gradient(135deg, rgba($primary-color, 0.05) 0%, rgba($secondary-color, 0.05) 100%);
+  background: $white;
   border-radius: $border-radius-lg;
   margin-bottom: map-get($spacers, 6);
+  border: 2px solid rgba($primary-color, 0.2);
+  box-shadow: $box-shadow-sm;
   
   .site-title {
     font-size: 3rem;
     font-weight: $font-weight-bold;
-    color: $primary-color;
+    color: $text-color;
     margin-bottom: map-get($spacers, 3);
+    background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
+    display: inline-block;
+    padding: 0 map-get($spacers, 2);
     
     @include media-breakpoint-down(md) {
       font-size: 2.5rem;
@@ -455,10 +489,11 @@
   
   .site-description {
     font-size: $font-size-lg;
-    color: $text-muted;
+    color: $text-color;
     max-width: 600px;
     margin: 0 auto;
     line-height: $line-height-lg;
+    font-weight: $font-weight-medium;
   }
 }
 
@@ -522,14 +557,21 @@
   padding: map-get($spacers, 2) map-get($spacers, 3);
   border: 2px solid $border-color;
   border-radius: $border-radius;
-  font-size: $font-size-sm;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
   transition: $transition-base;
   background-color: $white;
+  color: $text-color;
   
   &:focus {
-    outline: none;
-    border-color: $secondary-color;
-    box-shadow: 0 0 0 3px rgba($secondary-color, 0.1);
+    outline: 3px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+  
+  &:hover {
+    border-color: $primary-color;
   }
   
   @include media-breakpoint-down(sm) {
@@ -587,16 +629,21 @@
     margin: 0 0 map-get($spacers, 2) 0;
     
     a {
-      color: $primary-color;
+      color: $text-color;
       text-decoration: none;
-      font-weight: $font-weight-semibold;
+      font-weight: $font-weight-bold;
       font-size: 1.25rem;
       line-height: $line-height-sm;
+      background: linear-gradient(180deg, transparent 80%, rgba($primary-color, 0.3) 80%);
+      padding: 2px 4px;
+      border-radius: 2px;
+      transition: $transition-base;
       
       &:hover,
       &:focus {
-        color: $secondary-color;
-        text-decoration: underline;
+        color: $text-color;
+        background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.5) 70%);
+        text-decoration: none;
       }
     }
   }
@@ -620,19 +667,28 @@
   .tag {
     display: inline-block;
     padding: map-get($spacers, 1) map-get($spacers, 2);
-    background-color: rgba($secondary-color, 0.1);
-    color: $secondary-color;
+    background-color: rgba($primary-color, 0.1);
+    color: $text-color;
     font-size: $font-size-xs;
-    font-weight: $font-weight-medium;
+    font-weight: $font-weight-semibold;
     border-radius: $border-radius-xl;
+    border: 2px solid rgba($primary-color, 0.2);
     margin-right: map-get($spacers, 1);
     margin-bottom: map-get($spacers, 1);
     cursor: pointer;
     transition: $transition-base;
     
-    &:hover {
-      background-color: $secondary-color;
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
       color: $white;
+      border-color: $primary-color;
+      transform: translateY(-1px);
+    }
+    
+    &:focus {
+      outline: 2px solid rgba($primary-color, 0.5);
+      outline-offset: 2px;
     }
   }
 }
@@ -665,10 +721,12 @@
 }
 
 .stats-section {
-  background: linear-gradient(135deg, $light-gray 0%, rgba($secondary-color, 0.05) 100%);
+  background: $white;
+  border: 2px solid rgba($primary-color, 0.1);
   border-radius: $border-radius-lg;
   padding: map-get($spacers, 5);
   margin-top: map-get($spacers, 6);
+  box-shadow: $box-shadow-sm;
 }
 
 .stats-grid {

@@ -19,18 +19,35 @@
 // Import UI components
 @import "components";
 
-// Custom styles for specific elements
+// Custom styles for specific elements with new color scheme
 .highlight {
-  background-color: rgba($warning-color, 0.2);
-  padding: 0.125rem 0.25rem;
-  border-radius: $border-radius-sm;
+  @include marker-highlight($primary-color, 0.3);
+  font-weight: $font-weight-medium;
 }
 
 .text-highlight {
-  background: linear-gradient(120deg, rgba($secondary-color, 0.3) 0%, rgba($secondary-color, 0.3) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: 0 88%;
+  @include marker-highlight($primary-color, 0.4);
+  font-weight: $font-weight-semibold;
+}
+
+// Enhanced marker styles for emphasis
+.marker-light {
+  @include marker-highlight($primary-color, 0.2);
+}
+
+.marker-medium {
+  @include marker-highlight($primary-color, 0.3);
+}
+
+.marker-strong {
+  @include marker-highlight($primary-color, 0.5);
+  font-weight: $font-weight-bold;
+}
+
+// Underline marker styles
+.underline-marker {
+  @include marker-underline($primary-color, 3px);
+  font-weight: $font-weight-semibold;
 }
 
 // Print styles
@@ -79,65 +96,7 @@
   }
 }
 
-// Dark mode support
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #{$black};
-    --content-bg: #{$dark-gray};
-    --text-color: #{$light-gray};
-    --text-muted: #{lighten($gray, 20%)};
-    --border-color: #{lighten($dark-gray, 20%)};
-    --primary-color: #{lighten($primary-color, 20%)};
-    --secondary-color: #{lighten($secondary-color, 20%)};
-    --header-bg: #{$dark-gray};
-    --footer-bg: #{$black};
-  }
-  
-  body:not([data-theme]) {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    
-    .site-header {
-      background-color: var(--header-bg);
-      border-bottom-color: var(--border-color);
-    }
-    
-    .site-footer {
-      background: var(--footer-bg);
-    }
-    
-    .card,
-    .report-card {
-      background-color: var(--content-bg);
-      border-color: var(--border-color);
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--primary-color);
-    }
-    
-    .text-muted {
-      color: var(--text-muted);
-    }
-    
-    .nav-link {
-      color: var(--text-color);
-      
-      &:hover,
-      &:focus {
-        color: var(--secondary-color);
-      }
-    }
-    
-    .search-input,
-    .tag-filter,
-    .sort-select {
-      background-color: var(--content-bg);
-      border-color: var(--border-color);
-      color: var(--text-color);
-    }
-  }
-}
+// Light theme only - no dark mode support
 
 // Accessibility improvements
 @media (prefers-reduced-motion: reduce) {
@@ -174,7 +133,7 @@
 
 // Enhanced focus styles for accessibility
 :focus-visible {
-  outline: 3px solid $secondary-color;
+  outline: 3px solid $primary-color;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -195,7 +154,7 @@ html {
 // Keyboard navigation improvements
 .keyboard-navigation {
   *:focus {
-    outline: 3px solid $secondary-color !important;
+    outline: 3px solid $primary-color !important;
     outline-offset: 2px !important;
   }
 }
@@ -207,13 +166,13 @@ body:not(.keyboard-navigation) {
   }
 }
 
-// Selection styles
+// Selection styles with new color scheme
 ::selection {
-  background-color: rgba($secondary-color, 0.3);
+  background-color: rgba($primary-color, 0.3);
   color: $text-color;
 }
 
 ::-moz-selection {
-  background-color: rgba($secondary-color, 0.3);
+  background-color: rgba($primary-color, 0.3);
   color: $text-color;
 }
