@@ -85,7 +85,7 @@
 .main-content {
   min-height: calc(100vh - 200px);
   padding: map-get($spacers, 5) 0;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   
   @include media-breakpoint-down(md) {
     padding: map-get($spacers, 4) 0;
@@ -225,7 +225,7 @@
 .content-wrapper {
   @include make-container;
   @include make-container-max-widths;
-  background-color: $white;
+  background-color: transparent;
 }
 
 // Grid system

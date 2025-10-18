@@ -3,11 +3,23 @@
   @include make-container;
   @include make-container-max-widths;
   max-width: 800px;
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+  margin: map-get($spacers, 4) auto;
+  overflow: hidden; // ヘッダーの角丸を適用するため
+  
+  @include media-breakpoint-down(md) {
+    margin: map-get($spacers, 3) auto;
+  }
 }
 
 .report-header {
   margin-bottom: map-get($spacers, 6);
+  padding: map-get($spacers, 4);
   padding-bottom: map-get($spacers, 4);
+  background-color: $white;
+  border-radius: $border-radius $border-radius 0 0;
   border-bottom: 1px solid $border-color;
 }
 
@@ -98,9 +110,10 @@
 
 .report-description {
   padding: map-get($spacers, 4);
-  background-color: $light-gray;
+  background-color: rgba($secondary-color, 0.05);
   border-radius: $border-radius;
   border-left: 4px solid $secondary-color;
+  margin: map-get($spacers, 3) 0;
   
   p {
     margin-bottom: 0;
@@ -113,13 +126,20 @@
 // Report content styling
 .report-content {
   margin-bottom: map-get($spacers, 6);
+  padding: 0 map-get($spacers, 4) map-get($spacers, 4);
   line-height: $line-height-lg;
   font-size: 1.1rem;
+  background-color: $white;
+  
+  @include media-breakpoint-down(md) {
+    padding: 0 map-get($spacers, 3) map-get($spacers, 3);
+  }
   
   // Typography in content
   h1, h2, h3, h4, h5, h6 {
     margin-top: map-get($spacers, 5);
     margin-bottom: map-get($spacers, 3);
+    scroll-margin-top: 100px; // スティッキーヘッダーの高さを考慮
     
     &:first-child {
       margin-top: 0;
@@ -324,7 +344,13 @@
 // Report footer
 .report-footer {
   border-top: 1px solid $border-color;
-  padding-top: map-get($spacers, 5);
+  padding: map-get($spacers, 5) map-get($spacers, 4) map-get($spacers, 4);
+  background-color: $white;
+  border-radius: 0 0 $border-radius $border-radius;
+  
+  @include media-breakpoint-down(md) {
+    padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 3);
+  }
 }
 
 .report-navigation {

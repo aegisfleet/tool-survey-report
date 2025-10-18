@@ -408,11 +408,12 @@ function generateTableOfContents() {
 
     const tocList = document.createElement('ul');
     tocList.style.cssText = `
-      background: #f8f9fa;
+      background: #ffffff;
       padding: 1rem 1.5rem;
       border-radius: 0.375rem;
       border-left: 4px solid #3498db;
       margin: 2rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     `;
 
     headings.forEach(function (heading, index) {
@@ -426,6 +427,24 @@ function generateTableOfContents() {
       link.href = '#' + id;
       link.textContent = heading.textContent;
       link.style.textDecoration = 'none';
+      
+      // スムーズスクロールとヘッダー高さを考慮した位置調整
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetElement = document.getElementById(id);
+        if (targetElement) {
+          const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // URLを更新（履歴に追加）
+          history.pushState(null, null, '#' + id);
+        }
+      });
 
       listItem.appendChild(link);
       tocList.appendChild(listItem);
