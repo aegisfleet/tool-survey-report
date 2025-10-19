@@ -89,16 +89,6 @@ layout: default
           <span class="stat-number">{{ unique_tags }}</span>
           <span class="stat-label">タグ数</span>
         </div>
-        <div class="stat-item">
-          {% assign latest_report = site.reports | sort: 'date' | last %}
-          {% if latest_report %}
-            <span class="stat-number">{{ latest_report.date | date: "%m/%d" }}</span>
-            <span class="stat-label">最新更新</span>
-          {% else %}
-            <span class="stat-number">-</span>
-            <span class="stat-label">最新更新</span>
-          {% endif %}
-        </div>
       </div>
     </section>
   </main>
