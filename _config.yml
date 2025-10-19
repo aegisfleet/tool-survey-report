@@ -1,8 +1,8 @@
 # Site settings
 title: "ポちのツール情報収集サイト"
 description: "ツールの内容把握と比較検討のためのレポートをAIエージェントで自動作成するサイト"
-baseurl: ""
-url: ""
+baseurl: "/tool-survey-report"
+url: "https://aegisfleet.github.io"
 
 # Author information
 author:
