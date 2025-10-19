@@ -20,14 +20,16 @@
   
   @include media-breakpoint-down(lg) {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start; // 上揃えに変更してsite-descriptionの配置を改善
     justify-content: space-between;
     gap: map-get($spacers, 3);
+    min-height: 60px; // 最小高さを設定してナビゲーションボタンのスペースを確保
   }
   
   @include media-breakpoint-down(sm) {
     padding-top: map-get($spacers, 3);
     padding-bottom: map-get($spacers, 3);
+    min-height: 50px;
   }
 }
 
@@ -37,6 +39,7 @@
   @include media-breakpoint-down(lg) {
     text-align: left;
     flex: 1;
+    margin-right: map-get($spacers, 6); // ナビゲーションボタンとの間隔を確保
   }
 }
 
@@ -74,6 +77,17 @@
   margin: map-get($spacers, 1) 0 0;
   font-size: $font-size-sm;
   color: $text-muted;
+  
+  @include media-breakpoint-down(lg) {
+    margin-top: map-get($spacers, 2);
+    padding-right: map-get($spacers, 6); // ナビゲーションボタンとの重なりを防ぐ
+    line-height: $line-height-sm;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    font-size: $font-size-xs;
+    padding-right: map-get($spacers, 8); // より小さい画面では更に余白を確保
+  }
 }
 
 .header-search {
