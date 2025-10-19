@@ -79,17 +79,17 @@ jobs:
             const toolName = toolNameMatch ? toolNameMatch[1] : oldestReport.filename.replace('.md', '');
 
             // Jules API用のプロンプトを作成
-            const prompt = `AGENTS.mdに従い、${toolName}の調査レポートを最新情報に更新してください。`;
+            const prompt = `AGENTS.mdに従い、${oldestReport.path}の調査レポートを最新情報に更新して。作業が完了したらプルリクエストを作成する。`;
 
             // Jules APIを呼び出し
             const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
             const apiKey = process.env.JULES_API_KEY;
-            
+
             if (!apiKey) {
               core.error('JULES_API_KEY secret is not set');
               return;
             }
-            
+
             const requestBody = {
               prompt: prompt,
               sourceContext: {
