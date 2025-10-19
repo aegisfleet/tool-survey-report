@@ -35,13 +35,13 @@ description: "タグ別にレポートを閲覧できます"
           </div>
           
           <div class="tag-reports">
-            {% assign recent_reports = tagged_reports | sort: 'date' | reverse | limit: 3 %}
+            {% assign recent_reports = tagged_reports | sort: 'last_updated' | reverse | limit: 3 %}
             {% for report in recent_reports %}
               <div class="tag-report-item">
                 <a href="{{ report.url | relative_url }}" class="report-link">
                   {{ report.title }}
                 </a>
-                <time class="report-date">{{ report.date | date: "%Y/%m/%d" }}</time>
+                <time class="report-date">{{ report.last_updated | date: "%Y/%m/%d" }}</time>
               </div>
             {% endfor %}
             

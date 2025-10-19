@@ -17,13 +17,13 @@ layout: default
     <h1 class="report-title" itemprop="headline">{{ page.title }}</h1>
     
     <div class="report-meta">
-      {% if page.date %}
+      {% if page.last_updated %}
         <div class="report-date">
-          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          <time datetime="{{ page.last_updated | date_to_xmlschema }}" itemprop="datePublished">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
               <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
             </svg>
-            {{ page.date | date: "%Y年%m月%d日" }}
+            {{ page.last_updated | date: "%Y年%m月%d日" }}
           </time>
         </div>
       {% endif %}
@@ -94,7 +94,7 @@ layout: default
   
   <footer class="report-footer">
     <div class="report-navigation">
-      {% assign reports = site.reports | sort: 'date' | reverse %}
+      {% assign reports = site.reports | sort: 'last_updated' | reverse %}
       {% assign current_index = nil %}
       {% for report in reports %}
         {% if report.url == page.url %}
@@ -153,7 +153,7 @@ layout: default
           {% endif %}
         {% endfor %}
         
-        {% assign related_by_tags = related_by_tags | sort: 'date' | reverse | slice: 0, 3 %}
+        {% assign related_by_tags = related_by_tags | sort: 'last_updated' | reverse | slice: 0, 3 %}
         
         {% if related_by_tags.size > 0 %}
           <ul class="related-list">
@@ -161,8 +161,8 @@ layout: default
               <li>
                 <a href="{{ report.url | relative_url }}">
                   <span class="related-title">{{ report.title }}</span>
-                  {% if report.date %}
-                    <span class="related-date">{{ report.date | date: "%Y年%m月%d日" }}</span>
+                  {% if report.last_updated %}
+                    <span class="related-date">{{ report.last_updated | date: "%Y年%m月%d日" }}</span>
                   {% endif %}
                 </a>
               </li>

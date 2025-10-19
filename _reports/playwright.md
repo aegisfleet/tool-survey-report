@@ -5,6 +5,7 @@ category: "テスト自動化フレームワーク"
 developer: "Microsoft"
 official_site: "https://playwright.dev/"
 date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "テスト自動化"
   - "E2Eテスト"

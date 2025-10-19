@@ -5,6 +5,7 @@ category: "AIコーディングエージェント"
 developer: "OpenAI"
 official_site: "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
 date: "2025-10-19"
+last_updated: "2025-10-19"
 tags:
   - "AI"
   - "コード生成"

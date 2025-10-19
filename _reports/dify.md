@@ -5,6 +5,7 @@ category: "AIアプリケーション開発プラットフォーム"
 developer: "LangGenius"
 official_site: "https://dify.ai/"
 date: "2025-10-19"
+last_updated: "2025-10-19"
 tags:
   - "LLMOps"
   - "オープンソース"

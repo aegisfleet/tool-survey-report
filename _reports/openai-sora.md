@@ -5,6 +5,7 @@ category: "動画生成AI"
 developer: "OpenAI"
 official_site: "https://openai.com/sora"
 date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "動画生成"
   - "生成AI"

@@ -103,7 +103,8 @@ tool_name: "ツール名"
 category: "カテゴリ名"
 developer: "開発元企業名"
 official_site: "公式サイトURL"
-date: "YYYY-MM-DD" (更新日)
+date: "YYYY-MM-DD" (作成日)
+last_updated: "YYYY-MM-DD" (更新日)
 tags:
   - "タグ1"
   - "タグ2"
@@ -114,7 +115,8 @@ description: "ツールの概要を1-2行で簡潔に記述"
 
 **フロントマター記入時の注意点：**
 
-- `date`: 日本時間のレポート作成日（更新時は日本時間で最終更新日に変更）
+- `date`: レポート作成日（日本時間）
+- `last_updated`: 最終更新日（日本時間）
 - `tags`: ツールの特徴を表すタグ（例: "CI/CD", "オープンソース", "クラウド"）
 - `description`: 検索やインデックス用の簡潔な説明
 

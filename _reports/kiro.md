@@ -5,6 +5,7 @@ category: "AI IDE"
 developer: "AWS"
 official_site: "https://kiro.dev/"
 date: "2025-10-19"
+last_updated: "2025-10-19"
 tags:
   - "AI IDE"
   - "AWS"

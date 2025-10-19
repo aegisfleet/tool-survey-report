@@ -5,6 +5,7 @@ category: "開発者ツール"
 developer: "Microsoft"
 official_site: "https://github.com"
 date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "バージョン管理"
   - "CI/CD"

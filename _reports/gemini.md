@@ -5,6 +5,7 @@ category: "AIアシスタント"
 developer: "Google"
 official_site: "https://gemini.google.com/"
 date: "2025-10-19"
+last_updated: "2025-10-19"
 tags:
   - "AI"
   - "大規模言語モデル"

@@ -4,6 +4,7 @@ tool_name: "n8n"
 category: "ワークフロー自動化"
 developer: "n8n GmbH"
 official_site: "https://n8n.io/"
+date: "2025-10-19"
 last_updated: "2025-10-19"
 tags:
   - "iPaaS"
