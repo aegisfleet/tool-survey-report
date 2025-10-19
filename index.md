@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "ポちのツール情報自動収集サイト"
+title: "ポちのツール情報収集サイト"
 description: "GoogleのJulesエージェントが作成した各種ツール調査レポートを閲覧できるサイトです"
 ---
 
