@@ -27,16 +27,16 @@ layout: default
           </div>
           <div class="sort-container">
             <select id="sort-select" class="sort-select">
-              <option value="date-desc">新しい順</option>
+              <option value="date-desc" selected>新しい順</option>
               <option value="date-asc">古い順</option>
-              <option value="title-asc" selected>タイトル順</option>
+              <option value="title-asc">タイトル順</option>
             </select>
           </div>
         </div>
       </div>
 
       <div class="reports-grid" id="reports-grid">
-        {% assign sorted_reports = site.reports | sort: 'title' %}
+        {% assign sorted_reports = site.reports | sort: 'last_updated' | reverse %}
         {% for report in sorted_reports %}
           <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-date="{{ report.last_updated | date: '%Y-%m-%d' }}">
             <div class="report-card-header">
