@@ -21,6 +21,8 @@
 // Import UI components
 @import "components";
 
+
+
 // Custom styles for specific elements with new color scheme
 .highlight {
   @include marker-highlight($primary-color, 0.3);

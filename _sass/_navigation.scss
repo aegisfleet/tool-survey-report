@@ -5,8 +5,8 @@
   
   @include media-breakpoint-down(lg) {
     order: 2;
-    width: 100%;
-    margin-top: map-get($spacers, 3);
+    flex: 0 0 auto;
+    margin-top: 0;
   }
 }
 
@@ -23,7 +23,7 @@
   transition: $transition-base;
   
   @include media-breakpoint-down(lg) {
-    display: flex;
+    display: flex !important;
     position: absolute;
     top: 0;
     right: 0;
@@ -91,7 +91,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: $header-bg;
+    background-color: $white;
     border: 2px solid $border-color;
     border-radius: $border-radius;
     box-shadow: $box-shadow-lg;
@@ -100,7 +100,7 @@
     z-index: $zindex-dropdown;
     
     &.active {
-      display: flex;
+      display: flex !important;
     }
   }
 }
