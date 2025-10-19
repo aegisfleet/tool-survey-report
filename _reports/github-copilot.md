@@ -4,7 +4,7 @@ tool_name: "GitHub Copilot"
 category: "開発者ツール"
 developer: "GitHub (Microsoft)"
 official_site: "https://github.com/features/copilot"
-date: "2025-10-18"
+date: "2025-10-19"
 tags:
   - "AI"
   - "コーディング支援"
