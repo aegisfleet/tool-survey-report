@@ -98,7 +98,7 @@ jobs:
                   startingBranch: "main"
                 }
               },
-              requirePlanApproval: true,
+              requirePlanApproval: false,
               automationMode: `AUTO_CREATE_PR`,
               title: `Update ${toolName} Report - ${new Date().toISOString().split('T')[0]}`
             };
