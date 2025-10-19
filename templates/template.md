@@ -1,3 +1,17 @@
+---
+title: "[ツール名] 調査レポート"
+tool_name: "ツール名"
+category: "カテゴリ名"
+developer: "開発元企業名"
+official_site: "公式サイトURL"
+last_updated: "YYYY-MM-DD"
+tags:
+  - "タグ1"
+  - "タグ2"
+  - "タグ3"
+description: "ツールの概要を1-2行で簡潔に記述"
+---
+
 # **[ツール名] 調査レポート**
 
 ## **1. 基本情報**
