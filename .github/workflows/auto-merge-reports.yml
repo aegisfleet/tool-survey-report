@@ -1,7 +1,7 @@
 name: Auto Merge Reports only PRs
 
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize, edited, ready_for_review, reopened]
     branches: [main]
 
@@ -68,7 +68,18 @@ jobs:
             // If PR is draft, convert to ready_for_review first so the merge can proceed
             if (pr.draft) {
               core.info('PR is draft and only touches _reports/ — converting to ready and adding comment.');
-              await github.rest.pulls.update({ owner, repo, pull_number: prNumber, draft: false });
+
+              // GitHub CLIを使用してPRの状態を変更（gh認証は自動的に設定される）
+              const exec = require('node:util').promisify(require('node:child_process').exec);
+              try {
+                const { stdout, stderr } = await exec(`gh pr ready ${prNumber}`);
+                core.info(`gh pr ready output: ${stdout}`);
+                if (stderr) core.warning(`gh pr ready stderr: ${stderr}`);
+              } catch (error) {
+                core.error(`Failed to mark PR as ready: ${error}`);
+                throw error;
+              }
+
               await github.rest.issues.createComment({ 
                 owner, 
                 repo, 
