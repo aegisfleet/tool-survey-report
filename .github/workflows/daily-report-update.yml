@@ -1,0 +1,135 @@
+name: Daily Report Update with Jules
+
+on:
+  schedule:
+    # 毎日日本時間 18:00 (UTC 09:00) に実行
+    - cron: '0 9 * * *'
+  workflow_dispatch: # 手動実行も可能
+
+permissions:
+  contents: read
+
+jobs:
+  update-oldest-report:
+    name: Update oldest report using Jules API
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Find oldest report and call Jules API
+        uses: actions/github-script@v7
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            // _reportsディレクトリ内のすべてのMarkdownファイルを取得
+            const reportsDir = '_reports';
+            const files = fs.readdirSync(reportsDir).filter(file => file.endsWith('.md'));
+
+            if (files.length === 0) {
+              core.info('No report files found in _reports directory');
+              return;
+            }
+
+            let oldestReport = null;
+            let oldestDate = new Date();
+
+            // 各レポートファイルのlast_updatedを確認
+            for (const file of files) {
+              const filePath = path.join(reportsDir, file);
+              const content = fs.readFileSync(filePath, 'utf8');
+
+              // YAMLフロントマターからlast_updatedを抽出
+              const frontMatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+              if (frontMatterMatch) {
+                const frontMatter = frontMatterMatch[1];
+                const lastUpdatedMatch = frontMatter.match(/last_updated:\s*["']?([^"'\r\n]+)["']?/);
+
+                if (lastUpdatedMatch) {
+                  const lastUpdated = new Date(lastUpdatedMatch[1]);
+                  core.info(`${file}: last_updated = ${lastUpdated.toISOString()}`);
+
+                  if (lastUpdated < oldestDate) {
+                    oldestDate = lastUpdated;
+                    oldestReport = {
+                      filename: file,
+                      path: filePath,
+                      lastUpdated: lastUpdated,
+                      content: content
+                    };
+                  }
+                }
+              }
+            }
+
+            if (!oldestReport) {
+              core.error('No report with valid last_updated date found');
+              return;
+            }
+
+            core.info(`Oldest report: ${oldestReport.filename} (last updated: ${oldestReport.lastUpdated.toISOString()})`);
+
+            // ツール名を抽出
+            const toolNameMatch = oldestReport.content.match(/tool_name:\s*["']?([^"'\r\n]+)["']?/);
+            const toolName = toolNameMatch ? toolNameMatch[1] : oldestReport.filename.replace('.md', '');
+
+            // Jules API用のプロンプトを作成
+            const prompt = `AGENTS.mdに従い、${toolName}の調査レポートを最新情報に更新してください。`;
+
+            // Jules APIを呼び出し
+            const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
+            const apiKey = process.env.JULES_API_KEY;
+            
+            if (!apiKey) {
+              core.error('JULES_API_KEY secret is not set');
+              return;
+            }
+            
+            const requestBody = {
+              prompt: prompt,
+              sourceContext: {
+                source: `sources/github/${context.repo.owner}/${context.repo.repo}`,
+                githubRepoContext: {
+                  startingBranch: "main"
+                }
+              },
+              title: `Update ${toolName} Report - ${new Date().toISOString().split('T')[0]}`
+            };
+
+            core.info('Calling Jules API...');
+            core.info(`Request body: ${JSON.stringify(requestBody, null, 2)}`);
+
+            try {
+              const response = await fetch(julesApiUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-Goog-Api-Key': apiKey
+                },
+                body: JSON.stringify(requestBody)
+              });
+
+              if (!response.ok) {
+                const errorText = await response.text();
+                core.error(`Jules API call failed: ${response.status} ${response.statusText}`);
+                core.error(`Error response: ${errorText}`);
+                return;
+              }
+
+              const result = await response.json();
+              core.info('Jules API call successful!');
+              core.info(`Response: ${JSON.stringify(result, null, 2)}`);
+
+              // 成功をGitHub Actionsの出力として設定
+              core.setOutput('updated_report', oldestReport.filename);
+              core.setOutput('tool_name', toolName);
+              core.setOutput('jules_session_id', result.sessionId || 'unknown');
+            } catch (error) {
+              core.error(`Error calling Jules API: ${error.message}`);
+              throw error;
+            }
