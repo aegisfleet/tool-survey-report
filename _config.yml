@@ -84,4 +84,4 @@ navigation:
 
 # Site configuration
 show_excerpts: true
-paginate: 10
+paginate: 30
