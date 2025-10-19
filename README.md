@@ -205,6 +205,32 @@ layout: report
 - **サイトマップ**: 自動生成されるXMLサイトマップ
 - **RSSフィード**: 更新情報の配信
 
+### 自動更新フロー
+
+サイトは以下の流れで自動更新されます：
+
+```mermaid
+sequenceDiagram
+    participant GA as GitHub Actions
+    participant JA as Jules API
+    participant J as Jules
+    participant GR as GitHub Repository
+    participant GP as GitHub Pages
+
+    GA->>JA: 1. Jules APIを呼び出し
+    JA->>J: 2. タスクを実行
+    J->>J: 3. レポート作成
+    J->>GR: 4. プルリクエストを自動作成
+    GR->>GA: 5. プルリクエスト作成をトリガー
+    GA->>GR: 6. プルリクエストを自動マージ
+    GR->>GP: 7. サイト再ビルド・更新
+```
+
+1. **GitHub Actions**からJules APIを呼び出し、Julesでタスクを実行
+2. **Jules**が自動でGitHubにプルリクエストを作成
+3. **GitHub Actions**でJulesが作ったプルリクエストを自動マージ
+4. マージ後、GitHub Pagesが自動的にサイトを更新
+
 ## 動作確認方法
 
 ### 基本的な動作確認
