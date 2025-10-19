@@ -79,7 +79,7 @@ jobs:
             const toolName = toolNameMatch ? toolNameMatch[1] : oldestReport.filename.replace('.md', '');
 
             // Jules API用のプロンプトを作成
-            const prompt = `AGENTS.mdに従い、${toolName}(${oldestReport.path})の調査レポートを最新情報に更新して。作業が完了したらプルリクエストを作成する。`;
+            const prompt = `AGENTS.mdに従い、${toolName}(${oldestReport.path})の調査レポートを最新情報に更新して。`;
 
             // Jules APIを呼び出し
             const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
