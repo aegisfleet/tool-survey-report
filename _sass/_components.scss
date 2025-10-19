@@ -462,11 +462,11 @@
 
 .home-header {
   text-align: center;
-  padding: map-get($spacers, 6) 0;
+  padding: map-get($spacers, 3) 0;
   background: $white;
   border-radius: $border-radius-lg;
-  margin-bottom: map-get($spacers, 6);
-  border: 2px solid rgba($primary-color, 0.2);
+  margin-bottom: map-get($spacers, 3);
+  border: 3px solid rgba($primary-color, 0.2);
   box-shadow: $box-shadow-sm;
   
   .site-title {

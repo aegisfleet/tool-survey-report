@@ -37,37 +37,24 @@
 
 .home-header {
     text-align: center;
-    margin-bottom: map-get($spacers, 5);
-    padding: map-get($spacers, 5);
-    background-color: $white;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-sm;
+    margin-bottom: map-get($spacers, 3);
+    padding: 0;
+    background-color: transparent;
 
     @include media-breakpoint-down(md) {
-        padding: map-get($spacers, 4);
-        margin-bottom: map-get($spacers, 4);
+        margin-bottom: map-get($spacers, 2);
     }
 
-    .site-title {
-        margin-bottom: map-get($spacers, 3);
-        font-size: 2.5rem;
-        font-weight: $font-weight-bold;
-        color: $primary-color;
-        background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
-        display: inline-block;
-        padding: 0 map-get($spacers, 2);
-        border-radius: 4px;
+    .header-image {
+        margin: 0;
 
-        @include media-breakpoint-down(md) {
-            font-size: 2rem;
+        .ogp-image {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
-    }
-
-    .site-description {
-        font-size: $font-size-lg;
-        color: $text-muted;
-        max-width: 600px;
-        margin: 0 auto;
     }
 }
 

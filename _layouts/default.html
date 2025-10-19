@@ -15,11 +15,15 @@
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="{% if page.layout == 'report' %}article{% else %}website{% endif %}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.image | absolute_url }}{% endif %}">
+  <meta property="og:image:alt" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   
   <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="{% if site.twitter.card %}{{ site.twitter.card }}{% else %}summary_large_image{% endif %}">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.image | absolute_url }}{% endif %}">
+  {% if site.twitter.username %}<meta name="twitter:site" content="@{{ site.twitter.username }}">{% endif %}
   
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.url | absolute_url }}">
