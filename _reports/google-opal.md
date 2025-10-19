@@ -4,7 +4,7 @@ tool_name: "Google Opal"
 category: "ノーコードAIアプリ開発"
 developer: "Google"
 official_site: "https://labs.google/opal/"
-last_updated: "2024-10-18"
+date: "2024-10-18"
 tags:
   - "AI"
   - "ノーコード"

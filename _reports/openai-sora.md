@@ -4,7 +4,7 @@ tool_name: "Sora (Sora 2)"
 category: "動画生成AI"
 developer: "OpenAI"
 official_site: "https://openai.com/sora"
-last_updated: "2025-10-18"
+date: "2025-10-18"
 tags:
   - "動画生成"
   - "生成AI"

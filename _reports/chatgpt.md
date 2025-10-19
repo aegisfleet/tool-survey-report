@@ -4,7 +4,7 @@ tool_name: "ChatGPT"
 category: "生成AI"
 developer: "OpenAI"
 official_site: "https://openai.com/chatgpt"
-last_updated: "2025-10-19"
+date: "2025-10-19"
 tags:
   - "AI"
   - "大規模言語モデル"

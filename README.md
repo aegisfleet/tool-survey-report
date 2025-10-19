@@ -145,7 +145,7 @@ tool_name: "ツール名"
 category: "カテゴリ名"
 developer: "開発元企業名"
 official_site: "公式サイトURL"
-last_updated: "YYYY-MM-DD"
+date: "YYYY-MM-DD"
 tags:
   - "AI・機械学習"
   - "開発ツール"

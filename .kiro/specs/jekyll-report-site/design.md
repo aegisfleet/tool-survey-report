@@ -80,7 +80,7 @@ GitHub Pages Flow:
 ---
 layout: report
 title: "Report Title"
-last_updated: YYYY-MM-DD
+date: YYYY-MM-DD
 author: "Author Name"
 tags: [tag1, tag2]
 description: "Brief description"
@@ -110,7 +110,7 @@ description: "Brief description"
 ```yaml
 Report:
   title: string (required)
-  last_updated: date (required)
+  date: date (required)
   author: string (optional)
   tags: array of strings (optional)
   description: string (optional)

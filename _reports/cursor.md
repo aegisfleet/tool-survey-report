@@ -4,7 +4,7 @@ tool_name: "Cursor"
 category: "AIコードエディタ"
 developer: "Anysphere, Inc."
 official_site: "https://cursor.com/"
-last_updated: "2025-10-19"
+date: "2025-10-19"
 tags:
   - "AI"
   - "コードエディタ"

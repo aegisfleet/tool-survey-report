@@ -4,7 +4,7 @@ tool_name: "Kiro"
 category: "AI IDE"
 developer: "AWS"
 official_site: "https://kiro.dev/"
-last_updated: "2025-10-19"
+date: "2025-10-19"
 tags:
   - "AI IDE"
   - "AWS"
