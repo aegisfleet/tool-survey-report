@@ -4,7 +4,7 @@ tool_name: "Jenkins"
 category: "CI/CD"
 developer: "Kohsuke Kawaguchi, CloudBees, and community"
 official_site: "https://www.jenkins.io/"
-date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "CI/CD"
   - "オープンソース"

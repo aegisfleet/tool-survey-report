@@ -4,7 +4,7 @@ tool_name: "GitHub Actions"
 category: "CI/CD"
 developer: "GitHub"
 official_site: "https://github.com/features/actions"
-date: "2024-10-18"
+last_updated: "2024-10-18"
 tags:
   - "CI/CD"
   - "ワークフロー自動化"

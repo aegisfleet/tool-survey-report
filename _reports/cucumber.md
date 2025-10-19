@@ -4,7 +4,7 @@ tool_name: "Cucumber"
 category: "テスト自動化"
 developer: "SmartBear"
 official_site: "https://cucumber.io/"
-date: "2025-10-19"
+last_updated: "2025-10-19"
 tags:
   - "テスト自動化"
   - "BDD"

@@ -38,13 +38,13 @@ layout: default
       <div class="reports-grid" id="reports-grid">
         {% assign sorted_reports = site.reports | sort: 'title' %}
         {% for report in sorted_reports %}
-          <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-date="{{ report.date | date: '%Y-%m-%d' }}">
+          <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-date="{{ report.last_updated | date: '%Y-%m-%d' }}">
             <div class="report-card-header">
               <h3 class="report-title">
                 <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
               </h3>
-              <time class="report-date" datetime="{{ report.date | date: '%Y-%m-%d' }}">
-                {{ report.date | date: "%Y年%m月%d日" }}
+              <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
+                {{ report.last_updated | date: "%Y年%m月%d日" }}
               </time>
             </div>
             

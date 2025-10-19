@@ -103,7 +103,7 @@ tool_name: "ツール名"
 category: "カテゴリ名"
 developer: "開発元企業名"
 official_site: "公式サイトURL"
-date: "YYYY-MM-DD"
+last_updated: "YYYY-MM-DD"
 tags:
   - "タグ1"
   - "タグ2"

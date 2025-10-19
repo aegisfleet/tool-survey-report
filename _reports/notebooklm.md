@@ -4,7 +4,7 @@ tool_name: "NotebookLM"
 category: "AI搭載リサーチ・ライティングアシスタント"
 developer: "Google"
 official_site: "https://notebooklm.google.com/"
-date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "AI"
   - "リサーチ"

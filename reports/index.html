@@ -10,7 +10,7 @@ description: "公開されているすべての調査レポートの一覧です
     <p class="page-description">公開されているすべての調査レポートの一覧です。</p>
   </div>
 
-  {% assign all_reports = site.reports | sort: 'date' | reverse %}
+  {% assign all_reports = site.reports | sort: 'last_updated' | reverse %}
   
   {% if all_reports.size > 0 %}
     <div class="reports-list">
@@ -28,13 +28,13 @@ description: "公開されているすべての調査レポートの一覧です
                 {% endif %}
                 
                 <div class="card-meta">
-                  {% if report.date %}
+                  {% if report.last_updated %}
                     <small class="text-muted">
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                         <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                       </svg>
-                      <time datetime="{{ report.date | date_to_xmlschema }}">
-                        {{ report.date | date: "%Y年%m月%d日" }}
+                      <time datetime="{{ report.last_updated | date_to_xmlschema }}">
+                        {{ report.last_updated | date: "%Y年%m月%d日" }}
                       </time>
                     </small>
                   {% endif %}

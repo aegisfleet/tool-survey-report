@@ -4,7 +4,7 @@ tool_name: "Apache JMeter"
 category: "負荷テストツール"
 developer: "Apache Software Foundation"
 official_site: "https://jmeter.apache.org/"
-date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "負荷テスト"
   - "オープンソース"

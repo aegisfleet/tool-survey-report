@@ -4,7 +4,7 @@ tool_name: "GitLab"
 category: "DevSecOpsプラットフォーム"
 developer: "GitLab Inc."
 official_site: "https://about.gitlab.com/"
-date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "CI/CD"
   - "バージョン管理"

@@ -4,7 +4,7 @@ tool_name: "CodeceptJS"
 category: "テスト自動化フレームワーク"
 developer: "CodeceptJS Team (Originally by DavertMik)"
 official_site: "https://codecept.io/"
-date: "2025-10-19"
+last_updated: "2025-10-19"
 tags:
   - "E2Eテスト"
   - "テスト自動化"

@@ -4,7 +4,7 @@ tool_name: "Claude (コーディング支援)"
 category: "開発者ツール"
 developer: "Anthropic"
 official_site: "https://docs.claude.com/ja/docs/claude-code/overview"
-date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "AI"
   - "コーディング支援"

@@ -4,7 +4,7 @@ tool_name: "Google Jules"
 category: "AIコーディング支援"
 developer: "Google"
 official_site: "https://jules.google/"
-date: "2025-10-18"
+last_updated: "2025-10-18"
 tags:
   - "AI"
   - "開発者ツール"
