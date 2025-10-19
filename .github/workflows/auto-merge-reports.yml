@@ -1,7 +1,7 @@
 name: Auto Merge Reports only PRs
 
 on:
-  pull_request:
+  pull_request_target:
     types: [opened, synchronize, edited, ready_for_review, reopened]
     branches: [main]
 
@@ -65,17 +65,51 @@ jobs:
               return;
             }
 
-            // PRがドラフトの場合、自動マージをスキップしてコメントを残す
+            // If PR is draft, convert to ready_for_review first so the merge can proceed
             if (pr.draft) {
-              core.info('PR is draft and only touches _reports/ — leaving a comment.');
+              core.info('PR is draft and only touches _reports/ — converting to ready and adding comment.');
+              await github.rest.pulls.update({ owner, repo, pull_number: prNumber, draft: false });
               await github.rest.issues.createComment({ 
                 owner, 
                 repo, 
                 issue_number: prNumber, 
-                body: 'このドラフトPRは `_reports/` のみを変更しています。レビューの準備ができたら「Ready for review」に変更してください。その後、自動的にマージされます。\n\nThis draft PR only modifies `_reports/`. When you\'re ready for review, please mark it as "Ready for review". It will then be merged automatically.' 
+                body: 'このドラフトPRは `_reports/` のみを変更しているため、自動的にレビュー準備完了状態に変更され、マージされます。\n\nThis draft PR only modifies `_reports/` and was automatically converted to ready-to-review; it will be merged automatically.' 
               });
-              core.notice('Skipping auto-merge for draft PR. Waiting for manual "Ready for review".');
-              return;
+
+              // 明示的に状態が更新されるまで待機
+              let attempts = 0;
+              const maxAttempts = 3;
+              let updatedPr;
+              
+              while (attempts < maxAttempts) {
+                core.info(`Waiting for PR to be ready (attempt ${attempts + 1}/${maxAttempts})...`);
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                
+                try {
+                  const response = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
+                  updatedPr = response.data;
+                  
+                  if (!updatedPr.draft) {
+                    core.info('PR is now ready for review');
+                    break;
+                  }
+                  
+                  core.info(`PR state: draft=${updatedPr.draft}, state=${updatedPr.state}`);
+                } catch (err) {
+                  core.warning(`Failed to get PR state (attempt ${attempts + 1}): ${err}`);
+                }
+                
+                attempts++;
+              }
+              
+              if (!updatedPr || updatedPr.draft) {
+                core.error('Failed to convert PR from draft to ready');
+                core.error(`PR state: ${JSON.stringify(updatedPr)}`);
+                throw new Error('Failed to convert PR from draft to ready');
+              }
+              
+              // PRの状態を更新
+              pr.draft = updatedPr.draft;
             }
 
             // Merge the PR. Use 'squash' to keep main tidy; adjust if you prefer 'merge' or 'rebase'.
