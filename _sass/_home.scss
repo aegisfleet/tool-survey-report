@@ -357,6 +357,16 @@
         background-color: $secondary-color;
         color: $white;
     }
+
+    &.active {
+        background-color: $primary-color !important;
+        color: $white !important;
+        
+        &:hover {
+            background-color: darken($primary-color, 10%) !important;
+            color: $white !important;
+        }
+    }
 }
 
 .report-card-footer {

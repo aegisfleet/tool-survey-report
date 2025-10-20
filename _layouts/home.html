@@ -147,6 +147,21 @@ layout: default
       tagFilter.appendChild(option);
     });
 
+    // Update tag visual states
+    function updateTagStates() {
+      const selectedTag = tagFilter.value;
+      const allTagElements = document.querySelectorAll('.tag');
+
+      allTagElements.forEach(tagElement => {
+        const tagValue = tagElement.dataset.tag;
+        if (tagValue === selectedTag && selectedTag !== '') {
+          tagElement.classList.add('active');
+        } else {
+          tagElement.classList.remove('active');
+        }
+      });
+    }
+
     // Filter and sort function
     function filterAndSort() {
       const searchTerm = searchInput.value.toLowerCase().trim();
@@ -189,6 +204,11 @@ layout: default
       } else {
         noResults.style.display = 'block';
       }
+
+      // Update tag visual states after DOM manipulation
+      setTimeout(() => {
+        updateTagStates();
+      }, 0);
     }
 
     // Event listeners
@@ -213,13 +233,23 @@ layout: default
     if (tagParam) {
       tagFilter.value = tagParam;
       filterAndSort();
+    } else {
+      // 初期状態でもタグの状態を更新
+      updateTagStates();
     }
 
     // Tag click functionality
     document.addEventListener('click', function (e) {
       if (e.target.classList.contains('tag')) {
         const tagValue = e.target.dataset.tag;
-        tagFilter.value = tagValue;
+
+        // 同じタグが既に選択されている場合はフィルタを解除
+        if (tagFilter.value === tagValue) {
+          tagFilter.value = '';
+        } else {
+          tagFilter.value = tagValue;
+        }
+
         filterAndSort();
       }
     });
