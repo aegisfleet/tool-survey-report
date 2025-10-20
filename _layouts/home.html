@@ -17,7 +17,7 @@ layout: default
         <h2>最新のレポート</h2>
         <div class="reports-controls">
           <div class="search-container">
-            <input type="text" id="report-search" placeholder="レポートを検索..." class="search-input">
+            <input type="text" id="report-search" placeholder="ツール名、説明で検索..." class="search-input">
             <button type="button" class="search-clear" id="search-clear" aria-label="検索をクリア">×</button>
           </div>
           <div class="filter-container">
@@ -38,7 +38,7 @@ layout: default
       <div class="reports-grid" id="reports-grid">
         {% assign sorted_reports = site.reports | sort: 'last_updated' | reverse %}
         {% for report in sorted_reports %}
-          <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-date="{{ report.last_updated | date: '%Y-%m-%d' }}">
+          <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}" data-description="{{ report.description | downcase }}" data-date="{{ report.last_updated | date: '%Y-%m-%d' }}">
             <div class="report-card-header">
               <h3 class="report-title">
                 <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
@@ -125,7 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const sortBy = sortSelect.value;
 
     let filteredCards = reportCards.filter(card => {
-      const matchesSearch = !searchTerm || card.dataset.title.includes(searchTerm);
+      const matchesSearch = !searchTerm || 
+        (card.dataset.toolName && card.dataset.toolName.includes(searchTerm)) ||
+        (card.dataset.description && card.dataset.description.includes(searchTerm));
       const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
       return matchesSearch && matchesTag;
     });

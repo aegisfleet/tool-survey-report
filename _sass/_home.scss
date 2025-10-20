@@ -88,12 +88,14 @@
         @include media-breakpoint-down(md) {
             width: 100%;
             text-align: center;
+            margin-bottom: map-get($spacers, 3);
         }
     }
 
     @include media-breakpoint-down(lg) {
         flex-direction: column;
         align-items: stretch;
+        gap: map-get($spacers, 3);
     }
 }
 
@@ -101,23 +103,29 @@
     display: flex;
     gap: map-get($spacers, 3);
     flex-wrap: wrap;
+    align-items: flex-start;
 
     @include media-breakpoint-down(md) {
         justify-content: center;
+        gap: map-get($spacers, 2);
     }
 
     @include media-breakpoint-down(sm) {
         flex-direction: column;
+        gap: map-get($spacers, 3);
     }
 }
 
 .search-container {
     position: relative;
-    min-width: 250px;
+    min-width: 200px;
+    flex: 1;
+    max-width: 300px;
 
     @include media-breakpoint-down(sm) {
         min-width: auto;
         width: 100%;
+        max-width: none;
     }
 }
 
@@ -130,6 +138,8 @@
     font-size: $font-size-sm;
     background-color: $white;
     transition: $transition-base;
+    height: 40px;
+    box-sizing: border-box;
 
     &:focus {
         outline: none;
@@ -141,8 +151,7 @@
 .search-clear {
     position: absolute;
     right: map-get($spacers, 2);
-    top: 50%;
-    transform: translateY(-50%);
+    top: 10px; // 検索入力フィールドの中央に配置
     background: none;
     border: none;
     font-size: 1.2rem;
@@ -160,6 +169,16 @@
     }
 }
 
+.filter-container,
+.sort-container {
+    display: flex;
+    flex-direction: column;
+    
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
 .tag-filter,
 .sort-select {
     padding: map-get($spacers, 2) map-get($spacers, 3);
@@ -168,6 +187,7 @@
     font-size: $font-size-sm;
     background-color: $white;
     min-width: 150px;
+    height: 40px; // 検索入力と同じ高さに統一
 
     &:focus {
         outline: none;
