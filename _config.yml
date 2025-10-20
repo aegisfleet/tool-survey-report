@@ -77,8 +77,6 @@ twitter:
 navigation:
   - title: "ホーム"
     url: "/"
-  - title: "レポート一覧"
-    url: "/reports/"
   - title: "タグ"
     url: "/tags/"
 

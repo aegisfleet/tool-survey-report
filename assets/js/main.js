@@ -125,9 +125,9 @@ function initSearchFunctionality() {
 
 // Simple client-side search
 function performSearch(searchTerm) {
-  // For now, redirect to reports page with search parameter
-  const reportsUrl = '/reports/';
-  const searchUrl = reportsUrl + '?search=' + encodeURIComponent(searchTerm);
+  // Redirect to home page with search parameter
+  const homeUrl = '/';
+  const searchUrl = homeUrl + '?search=' + encodeURIComponent(searchTerm);
   window.location.href = searchUrl;
 }
 
