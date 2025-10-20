@@ -112,11 +112,6 @@ layout: default
           <span class="stat-label">総レポート数</span>
         </div>
         <div class="stat-item">
-          {% assign unique_categories = site.reports | map: 'category' | uniq | size %}
-          <span class="stat-number">{{ unique_categories }}</span>
-          <span class="stat-label">カテゴリ数</span>
-        </div>
-        <div class="stat-item">
           {% assign unique_tags = site.reports | map: 'tags' | join: ',' | split: ',' | uniq | size %}
           <span class="stat-number">{{ unique_tags }}</span>
           <span class="stat-label">タグ数</span>
