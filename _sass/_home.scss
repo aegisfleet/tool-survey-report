@@ -118,9 +118,9 @@
 
 .search-container {
     position: relative;
-    min-width: 200px;
+    min-width: 270px;
     flex: 1;
-    max-width: 300px;
+    max-width: 410px;
 
     @include media-breakpoint-down(sm) {
         min-width: auto;
