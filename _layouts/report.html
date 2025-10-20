@@ -13,165 +13,199 @@ layout: default
         </ol>
       </nav>
     </div>
-    
+
     <h1 class="report-title" itemprop="headline">{{ page.title }}</h1>
-    
+
     <div class="report-meta">
       {% if page.last_updated %}
-        <div class="report-date">
-          <time datetime="{{ page.last_updated | date_to_xmlschema }}" itemprop="datePublished">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-            </svg>
-            {{ page.last_updated | date: "%Y年%m月%d日" }}
-          </time>
-        </div>
+      <div class="report-date">
+        <time datetime="{{ page.last_updated | date_to_xmlschema }}" itemprop="datePublished">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+          </svg>
+          {{ page.last_updated | date: "%Y年%m月%d日" }}
+        </time>
+      </div>
       {% endif %}
-      
+
       {% if page.developer %}
-        <div class="report-developer">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
-            <path d="M3 3h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/>
-          </svg>
-          開発元: {{ page.developer }}
-        </div>
+      <div class="report-developer">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path
+            d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+          <path d="M3 3h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
+        </svg>
+        開発元: {{ page.developer }}
+      </div>
       {% elsif page.author %}
-        <div class="report-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-          </svg>
-          <span itemprop="name">{{ page.author }}</span>
-        </div>
+      <div class="report-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+        </svg>
+        <span itemprop="name">{{ page.author }}</span>
+      </div>
       {% endif %}
-      
+
       {% if page.category %}
-        <div class="report-category">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-          </svg>
-          カテゴリ: {{ page.category }}
-        </div>
+      <div class="report-category">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path
+            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+        </svg>
+        カテゴリ: {{ page.category }}
+      </div>
       {% endif %}
-      
+
       {% if page.official_site %}
-        <div class="report-official-site">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm.312-5.5h2.49a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
-          </svg>
-          <a href="{{ page.official_site }}" target="_blank" rel="noopener">公式サイト</a>
-        </div>
+      <div class="report-official-site">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm.312-5.5h2.49a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+        </svg>
+        <a href="{{ page.official_site }}" target="_blank" rel="noopener">公式サイト</a>
+      </div>
       {% endif %}
-      
+
       {% if page.tags and page.tags.size > 0 %}
-        <div class="report-tags">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-          </svg>
-          <ul class="tag-list">
-            {% for tag in page.tags %}
-              <li>
-                <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link" rel="tag">
-                  {{ tag }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
+      <div class="report-tags">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path
+            d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+        </svg>
+        <ul class="tag-list">
+          {% for tag in page.tags %}
+          <li>
+            <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link" rel="tag">
+              {{ tag }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
       {% endif %}
     </div>
-    
+
     {% if page.description %}
-      <div class="report-description" itemprop="description">
-        <p>{{ page.description }}</p>
-      </div>
+    <div class="report-description" itemprop="description">
+      <p>{{ page.description }}</p>
+    </div>
     {% endif %}
   </header>
-  
+
   <div class="report-content" itemprop="articleBody">
     {{ content }}
   </div>
-  
+
   <footer class="report-footer">
     <div class="report-navigation">
       {% assign reports = site.reports | sort: 'last_updated' | reverse %}
       {% assign current_index = nil %}
       {% for report in reports %}
-        {% if report.url == page.url %}
-          {% assign current_index = forloop.index0 %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-      
-      {% if current_index %}
-        <div class="nav-links">
-          {% assign prev_index = current_index | plus: 1 %}
-          {% assign next_index = current_index | minus: 1 %}
-          
-          {% if next_index >= 0 %}
-            {% assign next_report = reports[next_index] %}
-            <div class="nav-previous">
-              <a href="{{ next_report.url | relative_url }}" rel="prev">
-                <span class="nav-label">前のレポート</span>
-                <span class="nav-title">{{ next_report.title }}</span>
-              </a>
-            </div>
-          {% endif %}
-          
-          {% if prev_index < reports.size %}
-            {% assign prev_report = reports[prev_index] %}
-            <div class="nav-next">
-              <a href="{{ prev_report.url | relative_url }}" rel="next">
-                <span class="nav-label">次のレポート</span>
-                <span class="nav-title">{{ prev_report.title }}</span>
-              </a>
-            </div>
-          {% endif %}
-        </div>
+      {% if report.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
       {% endif %}
-      
-      <div class="back-to-index">
-        <a href="{{ '/reports/' | relative_url }}" class="back-link">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-          </svg>
-          レポート一覧に戻る
-        </a>
-      </div>
-    </div>
-    
-    {% if page.tags and page.tags.size > 0 %}
-      <div class="related-reports">
-        <h3>関連するレポート</h3>
-        {% assign related_reports = site.reports | where_exp: "report", "report.url != page.url" %}
-        {% assign related_by_tags = "" | split: "" %}
-        
-        {% for report in related_reports %}
-          {% assign common_tags = page.tags | intersect: report.tags %}
-          {% if common_tags.size > 0 %}
-            {% assign related_by_tags = related_by_tags | push: report %}
-          {% endif %}
-        {% endfor %}
-        
-        {% assign related_by_tags = related_by_tags | sort: 'last_updated' | reverse | slice: 0, 3 %}
-        
-        {% if related_by_tags.size > 0 %}
-          <ul class="related-list">
-            {% for report in related_by_tags %}
-              <li>
-                <a href="{{ report.url | relative_url }}">
-                  <span class="related-title">{{ report.title }}</span>
-                  {% if report.last_updated %}
-                    <span class="related-date">{{ report.last_updated | date: "%Y年%m月%d日" }}</span>
-                  {% endif %}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        {% else %}
-          <p>関連するレポートはありません。</p>
+      {% endfor %}
+
+      {% if current_index %}
+      <div class="nav-links">
+        {% assign prev_index = current_index | plus: 1 %}
+        {% assign next_index = current_index | minus: 1 %}
+
+        {% if next_index >= 0 %}
+        {% assign next_report = reports[next_index] %}
+        <div class="nav-previous">
+          <a href="{{ next_report.url | relative_url }}" rel="prev">
+            <span class="nav-label">前のレポート</span>
+            <span class="nav-title">{{ next_report.title }}</span>
+          </a>
+        </div>
         {% endif %}
+
+        {% if prev_index < reports.size %} {% assign prev_report=reports[prev_index] %} <div class="nav-next">
+          <a href="{{ prev_report.url | relative_url }}" rel="next">
+            <span class="nav-label">次のレポート</span>
+            <span class="nav-title">{{ prev_report.title }}</span>
+          </a>
       </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="back-to-index">
+      <a href="{{ '/reports/' | relative_url }}" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        レポート一覧に戻る
+      </a>
+    </div>
+    </div>
+
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="related-reports">
+      <h3>関連するレポート</h3>
+      {% assign related_reports = site.reports | where_exp: "report", "report.url != page.url" %}
+      {% assign related_with_scores = "" | split: "" %}
+
+      {% for report in related_reports %}
+      {% if report.tags and report.tags.size > 0 %}
+      {% assign common_count = 0 %}
+      {% for page_tag in page.tags %}
+      {% if report.tags contains page_tag %}
+      {% assign common_count = common_count | plus: 1 %}
+      {% endif %}
+      {% endfor %}
+      {% if common_count > 0 %}
+      {% assign match_ratio = common_count | times: 100 | divided_by: page.tags.size %}
+      {% assign report_with_score = report.title | append: "|" | append: match_ratio | append: "|" | append:
+      common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated %}
+      {% assign related_with_scores = related_with_scores | push: report_with_score %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+
+      {% comment %} Sort by match ratio (descending), then by common count (descending) {% endcomment %}
+      {% assign sorted_related = "" | split: "" %}
+      {% for score_item in related_with_scores %}
+      {% assign parts = score_item | split: "|" %}
+      {% assign ratio = parts[1] | plus: 0 %}
+      {% assign count = parts[2] | plus: 0 %}
+      {% if ratio < 10 %} {% assign padded_ratio="0" | append: ratio %} {% else %} {% assign padded_ratio=ratio %} {%
+        endif %} {% assign sort_key=padded_ratio | append: "." | append: count | append: "." | append: parts[0] %} {%
+        assign sorted_item=sort_key | append: "###" | append: score_item %} {% assign sorted_related=sorted_related |
+        push: sorted_item %} {% endfor %} {% assign sorted_related=sorted_related | sort | reverse %} {% assign
+        top_related=sorted_related | slice: 0, 3 %} {% if top_related.size> 0 %}
+        <ul class="related-list">
+          {% for item in top_related %}
+          {% assign sort_parts = item | split: "###" %}
+          {% assign original_item = sort_parts[1] %}
+          {% assign parts = original_item | split: "|" %}
+          {% assign report_title = parts[0] %}
+          {% assign match_ratio = parts[1] %}
+          {% assign common_count = parts[2] %}
+          {% assign report_url = parts[3] %}
+          {% assign report_date = parts[4] %}
+          <li>
+            <a href="{{ report_url | relative_url }}">
+              <span class="related-title">{{ report_title }}</span>
+              {% if report_date %}
+              <span class="related-date">{{ report_date | date: "%Y年%m月%d日" }}</span>
+              {% endif %}
+              <span class="match-info" style="font-size: 0.8em; color: #666; margin-left: 8px;">
+                (共通タグ: {{ common_count }}個, 一致率: {{ match_ratio }}%)
+              </span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>関連するレポートはありません。</p>
+        {% endif %}
+    </div>
     {% endif %}
   </footer>
 </article>
