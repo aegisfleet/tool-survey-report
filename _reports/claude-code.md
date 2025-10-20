@@ -1,5 +1,5 @@
 ---
-title: "Claude コーディング支援機能 調査レポート"
+title: "Claude Code 調査レポート"
 tool_name: "Claude (コーディング支援)"
 category: "開発者ツール"
 developer: "Anthropic"
@@ -13,7 +13,7 @@ tags:
 description: "Anthropic社のAIモデル「Claude」が提供する、ターミナル上で動作し自然言語の指示でコーディングタスクを自動化するエージェント的な機能群についてのレポートです。"
 ---
 
-# **Claude コーディング支援機能 調査レポート**
+# **Claude Code 調査レポート**
 
 ## **1. 基本情報**
 
