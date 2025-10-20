@@ -44,20 +44,6 @@ description: "タグ別にレポートを閲覧できます"
                 <time class="report-date">{{ report.last_updated | date: "%Y/%m/%d" }}</time>
               </div>
             {% endfor %}
-            
-            {% if tag_count > 3 %}
-              <div class="more-reports">
-                <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="view-all-link">
-                  他 {{ tag_count | minus: 3 }} 件を見る →
-                </a>
-              </div>
-            {% endif %}
-          </div>
-          
-          <div class="tag-actions">
-            <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-view-all">
-              すべて見る
-            </a>
           </div>
         </div>
       {% endif %}
