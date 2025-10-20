@@ -169,7 +169,16 @@
     }
 }
 
-.filter-container,
+.filter-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
 .sort-container {
     display: flex;
     flex-direction: column;
@@ -179,7 +188,27 @@
     }
 }
 
-.tag-filter,
+.tag-filter {
+    padding: map-get($spacers, 2) map-get($spacers, 5) map-get($spacers, 2) map-get($spacers, 3);
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    background-color: $white;
+    min-width: 150px;
+    height: 40px; // 検索入力と同じ高さに統一
+
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+
+    @include media-breakpoint-down(sm) {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
 .sort-select {
     padding: map-get($spacers, 2) map-get($spacers, 3);
     border: 1px solid $border-color;
@@ -198,6 +227,27 @@
     @include media-breakpoint-down(sm) {
         min-width: auto;
         width: 100%;
+    }
+}
+
+.filter-clear {
+    position: absolute;
+    right: map-get($spacers, 3);
+    top: 10px; // タグフィルタの中央に配置
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: $text-muted;
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        color: $text-color;
     }
 }
 

@@ -25,6 +25,7 @@ layout: default
             <select id="tag-filter" class="tag-filter">
               <option value="">すべてのタグ</option>
             </select>
+            <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
           </div>
           <div class="sort-container">
             <select id="sort-select" class="sort-select">
@@ -126,6 +127,7 @@ layout: default
     const searchInput = document.getElementById('report-search');
     const searchClear = document.getElementById('search-clear');
     const tagFilter = document.getElementById('tag-filter');
+    const tagFilterClear = document.getElementById('tag-filter-clear');
     const sortSelect = document.getElementById('sort-select');
     const reportsGrid = document.getElementById('reports-grid');
     const noResults = document.getElementById('no-results');
@@ -196,6 +198,11 @@ layout: default
 
     searchClear.addEventListener('click', function () {
       searchInput.value = '';
+      filterAndSort();
+    });
+
+    tagFilterClear.addEventListener('click', function () {
+      tagFilter.value = '';
       filterAndSort();
     });
 
