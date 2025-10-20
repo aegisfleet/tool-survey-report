@@ -178,7 +178,7 @@ layout: default
         endif %} {% assign sort_key=padded_ratio | append: "." | append: count | append: "." | append: parts[0] %} {%
         assign sorted_item=sort_key | append: "###" | append: score_item %} {% assign sorted_related=sorted_related |
         push: sorted_item %} {% endfor %} {% assign sorted_related=sorted_related | sort | reverse %} {% assign
-        top_related=sorted_related | slice: 0, 3 %} {% if top_related.size> 0 %}
+        top_related=sorted_related | slice: 0, 5 %} {% if top_related.size> 0 %}
         <ul class="related-list">
           {% for item in top_related %}
           {% assign sort_parts = item | split: "###" %}
