@@ -258,6 +258,33 @@
     line-height: $line-height-lg;
 }
 
+.report-meta {
+    margin-bottom: map-get($spacers, 3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: map-get($spacers, 2);
+    
+    .meta-item {
+        display: inline-flex;
+        align-items: center;
+        gap: map-get($spacers, 1);
+        font-size: $font-size-sm;
+        color: $text-muted;
+        
+        svg {
+            flex-shrink: 0;
+        }
+        
+        &.developer {
+            color: $primary-color;
+        }
+        
+        &.category {
+            color: $secondary-color;
+        }
+    }
+}
+
 .report-tags {
     margin-bottom: map-get($spacers, 3);
     display: flex;
@@ -326,7 +353,7 @@
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: map-get($spacers, 4);
     text-align: center;
 }

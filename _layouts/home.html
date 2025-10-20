@@ -20,6 +20,7 @@ layout: default
             <input type="text" id="report-search" placeholder="ツール名、説明で検索..." class="search-input">
             <button type="button" class="search-clear" id="search-clear" aria-label="検索をクリア">×</button>
           </div>
+
           <div class="filter-container">
             <select id="tag-filter" class="tag-filter">
               <option value="">すべてのタグ</option>
@@ -38,39 +39,65 @@ layout: default
       <div class="reports-grid" id="reports-grid">
         {% assign sorted_reports = site.reports | sort: 'last_updated' | reverse %}
         {% for report in sorted_reports %}
-          <article class="report-card" data-tags="{{ report.tags | join: ',' }}" data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}" data-description="{{ report.description | downcase }}" data-date="{{ report.last_updated | date: '%Y-%m-%d' }}">
-            <div class="report-card-header">
-              <h3 class="report-title">
-                <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
-              </h3>
-              <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
-                {{ report.last_updated | date: "%Y年%m月%d日" }}
-              </time>
-            </div>
-            
-            {% if report.description %}
-              <p class="report-description">{{ report.description }}</p>
+        <article class="report-card" data-tags="{{ report.tags | join: ',' }}"
+          data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
+          data-description="{{ report.description | downcase }}"
+          data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
+          data-developer="{{ report.developer | downcase }}">
+          <div class="report-card-header">
+            <h3 class="report-title">
+              <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
+            </h3>
+            <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
+              {{ report.last_updated | date: "%Y年%m月%d日" }}
+            </time>
+          </div>
+
+          {% if report.description %}
+          <p class="report-description">{{ report.description }}</p>
+          {% endif %}
+
+          <div class="report-meta">
+            {% if report.developer %}
+            <span class="meta-item developer">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
+                <path d="M3 3h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
+              </svg>
+              {{ report.developer }}
+            </span>
             {% endif %}
-            
-            {% if report.tags and report.tags.size > 0 %}
-              <div class="report-tags">
-                {% for tag in report.tags %}
-                  <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-                {% endfor %}
-              </div>
+            {% if report.category %}
+            <span class="meta-item category">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+              </svg>
+              {{ report.category }}
+            </span>
             {% endif %}
-            
-            <div class="report-card-footer">
-              <a href="{{ report.url | relative_url }}" class="read-more">続きを読む →</a>
-            </div>
-          </article>
+          </div>
+
+          {% if report.tags and report.tags.size > 0 %}
+          <div class="report-tags">
+            {% for tag in report.tags %}
+            <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="report-card-footer">
+            <a href="{{ report.url | relative_url }}" class="read-more">続きを読む →</a>
+          </div>
+        </article>
         {% endfor %}
       </div>
 
       {% if site.reports.size == 0 %}
-        <div class="no-reports">
-          <p>まだレポートがありません。</p>
-        </div>
+      <div class="no-reports">
+        <p>まだレポートがありません。</p>
+      </div>
       {% endif %}
 
       <div class="no-results" id="no-results" style="display: none;">
@@ -85,6 +112,11 @@ layout: default
           <span class="stat-label">総レポート数</span>
         </div>
         <div class="stat-item">
+          {% assign unique_categories = site.reports | map: 'category' | uniq | size %}
+          <span class="stat-number">{{ unique_categories }}</span>
+          <span class="stat-label">カテゴリ数</span>
+        </div>
+        <div class="stat-item">
           {% assign unique_tags = site.reports | map: 'tags' | join: ',' | split: ',' | uniq | size %}
           <span class="stat-number">{{ unique_tags }}</span>
           <span class="stat-label">タグ数</span>
@@ -95,89 +127,99 @@ layout: default
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('report-search');
-  const searchClear = document.getElementById('search-clear');
-  const tagFilter = document.getElementById('tag-filter');
-  const sortSelect = document.getElementById('sort-select');
-  const reportsGrid = document.getElementById('reports-grid');
-  const noResults = document.getElementById('no-results');
-  const reportCards = Array.from(document.querySelectorAll('.report-card'));
+  document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('report-search');
+    const searchClear = document.getElementById('search-clear');
+    const tagFilter = document.getElementById('tag-filter');
+    const sortSelect = document.getElementById('sort-select');
+    const reportsGrid = document.getElementById('reports-grid');
+    const noResults = document.getElementById('no-results');
+    const reportCards = Array.from(document.querySelectorAll('.report-card'));
 
-  // Populate tag filter options
-  const allTags = new Set();
-  reportCards.forEach(card => {
-    const tags = card.dataset.tags.split(',').filter(tag => tag.trim());
-    tags.forEach(tag => allTags.add(tag.trim()));
-  });
-  
-  Array.from(allTags).sort().forEach(tag => {
-    const option = document.createElement('option');
-    option.value = tag;
-    option.textContent = tag;
-    tagFilter.appendChild(option);
-  });
-
-  // Filter and sort function
-  function filterAndSort() {
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const selectedTag = tagFilter.value;
-    const sortBy = sortSelect.value;
-
-    let filteredCards = reportCards.filter(card => {
-      const matchesSearch = !searchTerm || 
-        (card.dataset.toolName && card.dataset.toolName.includes(searchTerm)) ||
-        (card.dataset.description && card.dataset.description.includes(searchTerm));
-      const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
-      return matchesSearch && matchesTag;
+    // Populate tag filter options
+    const allTags = new Set();
+    reportCards.forEach(card => {
+      const tags = card.dataset.tags.split(',').filter(tag => tag.trim());
+      tags.forEach(tag => allTags.add(tag.trim()));
     });
 
-    // Sort cards
-    filteredCards.sort((a, b) => {
-      switch (sortBy) {
-        case 'date-desc':
-          return new Date(b.dataset.date) - new Date(a.dataset.date);
-        case 'date-asc':
-          return new Date(a.dataset.date) - new Date(b.dataset.date);
-        case 'title-asc':
-          return a.dataset.title.localeCompare(b.dataset.title);
-        default:
-          return 0;
-      }
+    Array.from(allTags).sort().forEach(tag => {
+      const option = document.createElement('option');
+      option.value = tag;
+      option.textContent = tag;
+      tagFilter.appendChild(option);
     });
 
-    // Hide all cards first
-    reportCards.forEach(card => card.style.display = 'none');
+    // Filter and sort function
+    function filterAndSort() {
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const selectedTag = tagFilter.value;
+      const sortBy = sortSelect.value;
 
-    // Show filtered and sorted cards
-    if (filteredCards.length > 0) {
-      filteredCards.forEach(card => {
-        card.style.display = 'block';
-        reportsGrid.appendChild(card); // Re-append to maintain order
+      let filteredCards = reportCards.filter(card => {
+        const matchesSearch = !searchTerm ||
+          (card.dataset.toolName && card.dataset.toolName.includes(searchTerm)) ||
+          (card.dataset.description && card.dataset.description.includes(searchTerm)) ||
+          (card.dataset.developer && card.dataset.developer.includes(searchTerm));
+        const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
+        return matchesSearch && matchesTag;
       });
-      noResults.style.display = 'none';
-    } else {
-      noResults.style.display = 'block';
+
+      // Sort cards
+      filteredCards.sort((a, b) => {
+        switch (sortBy) {
+          case 'date-desc':
+            return new Date(b.dataset.date) - new Date(a.dataset.date);
+          case 'date-asc':
+            return new Date(a.dataset.date) - new Date(b.dataset.date);
+          case 'title-asc':
+            return a.dataset.title.localeCompare(b.dataset.title);
+          default:
+            return 0;
+        }
+      });
+
+      // Hide all cards first
+      reportCards.forEach(card => card.style.display = 'none');
+
+      // Show filtered and sorted cards
+      if (filteredCards.length > 0) {
+        filteredCards.forEach(card => {
+          card.style.display = 'block';
+          reportsGrid.appendChild(card); // Re-append to maintain order
+        });
+        noResults.style.display = 'none';
+      } else {
+        noResults.style.display = 'block';
+      }
     }
-  }
 
-  // Event listeners
-  searchInput.addEventListener('input', filterAndSort);
-  tagFilter.addEventListener('change', filterAndSort);
-  sortSelect.addEventListener('change', filterAndSort);
+    // Event listeners
+    searchInput.addEventListener('input', filterAndSort);
+    tagFilter.addEventListener('change', filterAndSort);
+    sortSelect.addEventListener('change', filterAndSort);
 
-  searchClear.addEventListener('click', function() {
-    searchInput.value = '';
-    filterAndSort();
-  });
+    searchClear.addEventListener('click', function () {
+      searchInput.value = '';
+      filterAndSort();
+    });
 
-  // Tag click functionality
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('tag')) {
-      const tagValue = e.target.dataset.tag;
-      tagFilter.value = tagValue;
+    // Handle URL parameters for tag filtering
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get('tag');
+
+    if (tagParam) {
+      tagFilter.value = tagParam;
       filterAndSort();
     }
+
+    // Tag click functionality
+    document.addEventListener('click', function (e) {
+      if (e.target.classList.contains('tag')) {
+        const tagValue = e.target.dataset.tag;
+        tagFilter.value = tagValue;
+        filterAndSort();
+      }
+    });
   });
-});
 </script>

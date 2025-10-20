@@ -57,7 +57,7 @@ description: "タグ別にレポートを閲覧できます"
   {% endif %}
 
   <div class="back-to-reports">
-    <a href="{{ '/reports/' | relative_url }}" class="back-link">← レポート一覧に戻る</a>
+    <a href="{{ '/' | relative_url }}" class="back-link">← ホームに戻る</a>
   </div>
 </div>
 
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const tagParam = urlParams.get('tag');
   
   if (tagParam) {
-    // If a tag parameter is present, redirect to reports page with filter
-    window.location.href = '/reports/?tag=' + encodeURIComponent(tagParam);
+    // If a tag parameter is present, redirect to home page with tag filter
+    window.location.href = '/?tag=' + encodeURIComponent(tagParam);
   }
 });
 </script>
