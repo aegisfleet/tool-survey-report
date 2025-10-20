@@ -71,7 +71,7 @@ layout: default
           <ul class="tag-list">
             {% for tag in page.tags %}
               <li>
-                <a href="{{ '/reports/tag/' | append: tag | slugify | relative_url }}" class="tag-link" rel="tag">
+                <a href="{{ '/reports/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link" rel="tag">
                   {{ tag }}
                 </a>
               </li>
