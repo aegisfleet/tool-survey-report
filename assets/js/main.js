@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Report content enhancements
   initReportEnhancements();
+
+  // トップに戻るボタンの初期化
+  initBackToTopButton();
 });
 
 // Mobile navigation functionality
@@ -606,3 +609,85 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// トップに戻るボタンの機能
+function initBackToTopButton() {
+  const backToTopButton = document.getElementById('back-to-top');
+
+  if (!backToTopButton) return;
+
+  // スクロール位置に応じてボタンの表示/非表示を制御
+  function toggleButtonVisibility() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // 300px以上スクロールした場合に表示
+    if (scrollTop > 300) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  }
+
+  // スクロールイベントリスナー（パフォーマンス最適化のためthrottle）
+  let ticking = false;
+  function handleScroll() {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        toggleButtonVisibility();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  // ボタンクリック時の動作
+  function scrollToTop() {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      // アニメーション無効化設定の場合は即座にトップへ
+      window.scrollTo(0, 0);
+    } else {
+      // スムーズスクロール
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // フォーカスをページトップの適切な要素に移動
+    const skipLink = document.querySelector('.skip-link');
+    const mainHeading = document.querySelector('h1');
+    const mainContent = document.getElementById('main-content');
+
+    if (skipLink) {
+      skipLink.focus();
+    } else if (mainHeading) {
+      mainHeading.setAttribute('tabindex', '-1');
+      mainHeading.focus();
+    } else if (mainContent) {
+      mainContent.setAttribute('tabindex', '-1');
+      mainContent.focus();
+    }
+
+    // スクリーンリーダーへの通知
+    if (window.announceToScreenReader) {
+      window.announceToScreenReader('ページの先頭に戻りました');
+    }
+  }
+
+  // イベントリスナーの設定
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  backToTopButton.addEventListener('click', scrollToTop);
+
+  // キーボードサポート
+  backToTopButton.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      scrollToTop();
+    }
+  });
+
+  // 初期状態の設定
+  toggleButtonVisibility();
+}

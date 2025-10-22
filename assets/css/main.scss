@@ -180,3 +180,82 @@ body:not(.keyboard-navigation) {
   background-color: rgba($primary-color, 0.3);
   color: $text-color;
 }
+
+// トップに戻るボタンのスタイル
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: translateY(0) scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  &:focus {
+    outline: 3px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
+  }
+  
+  &:active {
+    transform: translateY(0) scale(0.95);
+  }
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+// レスポンシブ対応
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+// アニメーション無効化設定に対応
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top {
+    transition: opacity 0.1s ease;
+    
+    &:hover {
+      transform: none;
+    }
+    
+    &:active {
+      transform: none;
+    }
+  }
+}
