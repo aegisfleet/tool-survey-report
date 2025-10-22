@@ -579,7 +579,8 @@
   }
 }
 
-.search-clear {
+.search-clear,
+.filter-clear {
   position: absolute;
   right: map-get($spacers, 2);
   top: 50%;
@@ -592,11 +593,17 @@
   padding: map-get($spacers, 1);
   border-radius: 50%;
   transition: $transition-base;
+  -webkit-tap-highlight-color: transparent; // スマートフォンでのタップハイライトを無効化
   
   &:hover,
   &:focus {
     background-color: $light-gray;
     color: $text-color;
+  }
+  
+  &:focus {
+    outline: 2px solid rgba($primary-color, 0.5);
+    outline-offset: 2px;
   }
 }
 
@@ -677,6 +684,8 @@
     margin-bottom: map-get($spacers, 1);
     cursor: pointer;
     transition: $transition-base;
+    user-select: none; // テキスト選択を防ぐ
+    -webkit-tap-highlight-color: transparent; // スマートフォンでのタップハイライトを無効化
     
     &:hover,
     &:focus {
@@ -689,6 +698,20 @@
     &:focus {
       outline: 2px solid rgba($primary-color, 0.5);
       outline-offset: 2px;
+    }
+    
+    // アクティブ状態（選択されたタグ）
+    &.active {
+      background-color: $primary-color;
+      color: $white;
+      border-color: $primary-color;
+      box-shadow: 0 2px 4px rgba($primary-color, 0.3);
+    }
+    
+    // スマートフォンでのタップ時の一時的なアクティブ状態を制御
+    &:active {
+      transform: translateY(0);
+      transition: none;
     }
   }
 }

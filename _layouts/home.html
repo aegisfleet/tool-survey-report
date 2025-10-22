@@ -205,10 +205,8 @@ layout: default
         noResults.style.display = 'block';
       }
 
-      // Update tag visual states after DOM manipulation
-      setTimeout(() => {
-        updateTagStates();
-      }, 0);
+      // Update tag visual states immediately
+      updateTagStates();
     }
 
     // Event listeners
@@ -241,17 +239,39 @@ layout: default
     // Tag click functionality
     document.addEventListener('click', function (e) {
       if (e.target.classList.contains('tag')) {
-        const tagValue = e.target.dataset.tag;
-
-        // 同じタグが既に選択されている場合はフィルタを解除
-        if (tagFilter.value === tagValue) {
-          tagFilter.value = '';
-        } else {
-          tagFilter.value = tagValue;
-        }
-
-        filterAndSort();
+        e.preventDefault(); // タップ時のデフォルト動作を防ぐ
+        handleTagClick(e.target);
       }
     });
+
+    // タッチイベントも処理（スマートフォン対応）
+    document.addEventListener('touchend', function (e) {
+      if (e.target.classList.contains('tag')) {
+        e.preventDefault();
+        handleTagClick(e.target);
+      }
+    });
+
+    // タグクリック処理を共通化
+    function handleTagClick(tagElement) {
+      const tagValue = tagElement.dataset.tag;
+
+      // 同じタグが既に選択されている場合はフィルタを解除
+      if (tagFilter.value === tagValue) {
+        tagFilter.value = '';
+      } else {
+        tagFilter.value = tagValue;
+      }
+
+      filterAndSort();
+      
+      // タップ後すぐにアクティブ状態をクリア（スマートフォン対応）
+      tagElement.blur();
+      
+      // 一時的にアクティブクラスを削除して再適用（視覚的フィードバック）
+      setTimeout(() => {
+        updateTagStates();
+      }, 50);
+    }
   });
 </script>
