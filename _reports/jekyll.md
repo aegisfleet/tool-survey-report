@@ -19,7 +19,7 @@ description: "Jekyllは、シンプルなテキストを静的なウェブサイ
 
 * **ツール名**: Jekyll
 * **開発元**: Tom Preston-Werner and a team of volunteers
-* **公式サイト**: ([https://jekyllrb.com/](https://jekyllrb.com/))
+* **公式サイト**: [https://jekyllrb.com/](https://jekyllrb.com/)
 * **カテゴリ**: 静的サイトジェネレーター
 * **概要**: Jekyllは、Markdown、Liquid、HTML & CSSを解釈し、静的なウェブサイトやブログを生成するオープンソースのツールです。データベースを必要とせず、シンプルな運用が可能です。
 

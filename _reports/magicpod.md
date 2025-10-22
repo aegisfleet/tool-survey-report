@@ -21,7 +21,7 @@ description: "AIを活用したノーコードのテスト自動化プラット�
 
 * **ツール名**: MagicPod (マジックポッド)
 * **開発元**: MagicPod Inc.
-* **公式サイト**: ([https://magicpod.com/](https://magicpod.com/))
+* **公式サイト**: [https://magicpod.com/](https://magicpod.com/)
 * **カテゴリ**: テスト自動化
 * **概要**: AIの技術を活用し、モバイルアプリ・ブラウザ（ウェブアプリ）のテスト自動化を支援するクラウドサービス。ノーコードでテスト作成が可能で、メンテナンス性の高さが特徴。
 

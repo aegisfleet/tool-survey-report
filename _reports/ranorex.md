@@ -21,7 +21,7 @@ description: "Ranorex Studioは、デスクトップ、Web、モバイルアプ�
 
 * **ツール名**: Ranorex Studio
 * **開発元**: Ranorex GmbH (Idera, Inc.の子会社)
-* **公式サイト**: ([https://www.ranorex.com/](https://www.ranorex.com/))
+* **公式サイト**: [https://www.ranorex.com/](https://www.ranorex.com/)
 * **カテゴリ**: GUIテスト自動化
 * **概要**: Ranorex Studioは、デスクトップ、Web、モバイルアプリケーションのUIテストを自動化するための包括的なツールです。ローコードのアプローチとフルコードの柔軟性を両立させ、幅広い技術をサポートします。
 

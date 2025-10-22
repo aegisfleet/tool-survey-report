@@ -20,7 +20,7 @@ description: "Playwright, WebDriver, Puppeteerなどを利用してE2Eテスト�
 
 * **ツール名**: CodeceptJS
 * **開発元**: CodeceptJS Team (Originally by DavertMik, Commercial support by [sdclabs](https://sdclabs.com/))
-* **公式サイト**: ([https://codecept.io/](https://codecept.io/))
+* **公式サイト**: [https://codecept.io/](https://codecept.io/)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: CodeceptJSは、Playwright, WebDriver, Puppeteer, TestCafe, Appiumなどの様々なテストバックエンドを統一されたAPIで操作できる、Node.jsベースのE2E(End-to-End)テストフレームワークです。「ユーザーの視点」からテストシナリオを記述することに重点を置いており、可読性が高くメンテナンスしやすいテストコードの作成を目指しています。
 

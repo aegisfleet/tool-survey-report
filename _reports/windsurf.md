@@ -20,7 +20,7 @@ description: "Windsurfは、開発者がフロー状態を維持できるよう�
 
 * **ツール名**: Windsurf
 * **開発元**: Cognition, Inc.
-* **公式サイト**: ([https://windsurf.com](https://windsurf.com))
+* **公式サイト**: [https://windsurf.com](https://windsurf.com)
 * **カテゴリ**: AIコーディング支援
 * **概要**: Windsurfは、開発者とそのチームがフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。独自のAIネイティブIDEのほか、既存のIDE（VS Code, JetBrainsなど40以上）と連携するプラグインも提供しています。
 

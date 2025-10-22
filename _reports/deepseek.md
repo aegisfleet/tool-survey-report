@@ -20,7 +20,7 @@ description: "AGIの実現を目指す中国のAI企業DeepSeekが開発する�
 
 * **ツール名**: DeepSeek
 * **開発元**: DeepSeek (深度求索) (Hangzhou DeepSeek Artificial Intelligence Co., Ltd.)
-* **公式サイト**: ([https://www.deepseek.com/](https://www.deepseek.com/))
+* **公式サイト**: [https://www.deepseek.com/](https://www.deepseek.com/)
 * **カテゴリ**: AI / 大規模言語モデル, 開発者ツール
 * **概要**: DeepSeekは、2023年に設立された中国のAI企業。「AGI（汎用人工知能）の実現」をミッションに掲げ、テキスト生成、コーディング、画像認識など、多岐にわたる高性能な大規模言語モデル（LLM）を開発・提供している。オープンソースモデルも積極的に公開しており、世界中の開発者から注目を集めている。
 
