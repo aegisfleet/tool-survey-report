@@ -9,7 +9,6 @@ last_updated: "2025-10-23"
 tags:
   - "AI"
   - "LLM"
-  - "AGI"
   - "開発者ツール"
 description: "AGIの実現を目指す中国のAI企業DeepSeekが開発する、高性能な大規模言語モデル群に関する調査レポート。"
 ---
