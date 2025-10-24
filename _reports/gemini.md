@@ -8,8 +8,9 @@ date: "2025-10-19"
 last_updated: "2025-10-19"
 tags:
   - "AI"
+  - "生成AI"
   - "大規模言語モデル"
-  - "Google"
+  - "会話型AI"
 description: "Googleによって開発された、マルチモーダルな生成AIモデルファミリー"
 ---
 
