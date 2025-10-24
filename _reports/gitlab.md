@@ -1,7 +1,7 @@
 ---
 title: "GitLab 調査レポート"
 tool_name: "GitLab"
-category: "DevSecOpsプラットフォーム"
+category: "バージョン管理"
 developer: "GitLab Inc."
 official_site: "https://about.gitlab.com/"
 date: "2025-10-18"
@@ -11,7 +11,6 @@ tags:
   - "ソースコード管理"
   - "CI/CD"
   - "DevOps"
-  - "DevSecOps"
 description: "GitLabは、ソフトウェア開発ライフサイクル全体をカバーする単一のアプリケーションとして提供される、AI搭載のDevSecOpsプラットフォームです。"
 ---
 
