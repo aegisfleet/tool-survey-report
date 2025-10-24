@@ -1,7 +1,7 @@
 ---
 title: "GitHub 調査レポート"
 tool_name: "GitHub"
-category: "開発者ツール"
+category: "バージョン管理"
 developer: "Microsoft"
 official_site: "https://github.com"
 date: "2025-10-18"

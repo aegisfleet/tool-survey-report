@@ -1,7 +1,7 @@
 ---
 title: "Gemini 調査レポート"
 tool_name: "Gemini"
-category: "AIアシスタント"
+category: "生成AI"
 developer: "Google"
 official_site: "https://gemini.google.com/"
 date: "2025-10-19"
