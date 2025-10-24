@@ -7,10 +7,11 @@ official_site: "https://about.gitlab.com/"
 date: "2025-10-18"
 last_updated: "2025-10-20"
 tags:
-  - "CI/CD"
   - "バージョン管理"
-  - "DevSecOps"
   - "ソースコード管理"
+  - "CI/CD"
+  - "DevOps"
+  - "DevSecOps"
 description: "GitLabは、ソフトウェア開発ライフサイクル全体をカバーする単一のアプリケーションとして提供される、AI搭載のDevSecOpsプラットフォームです。"
 ---
 
