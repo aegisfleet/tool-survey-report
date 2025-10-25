@@ -2,7 +2,6 @@
 
 - [x] 1. Create core relationship processing system
 
-
   - Implement Liquid template logic to process relationship metadata from front matter
   - Create tool name to report object resolution system
   - Build bidirectional relationship mapping logic
@@ -10,12 +9,7 @@
 
 - [x] 2. Develop related tools UI component
 
-
-
-
-
   - [x] 2.1 Create _includes/related-tools.html template
-
 
     - Design HTML structure for parent, child, and sibling tool sections
     - Implement conditional rendering based on relationship data
@@ -24,19 +18,22 @@
 
   - [x] 2.2 Add CSS styling for related tools section
 
-
     - Create visual hierarchy for different relationship types
     - Implement responsive design for mobile devices
     - Add color coding for parent (green), child (orange), sibling (purple) relationships
     - _Requirements: 2.1, 2.2, 2.3, 2.4_
 
-- [ ] 3. Integrate relationship system into report layout
-  - [ ] 3.1 Modify _layouts/report.html to include related-tools component
+- [x] 3. Integrate relationship system into report layout
+
+  - [x] 3.1 Modify _layouts/report.html to include related-tools component
+
     - Insert related-tools include before existing related reports section
     - Ensure proper positioning and spacing
     - _Requirements: 2.1, 2.5, 4.2, 4.4_
 
-  - [ ] 3.2 Update main CSS file with related tools styling
+
+  - [x] 3.2 Update main CSS file with related tools styling
+
     - Add new CSS rules to assets/css/main.css or appropriate SCSS file
     - Ensure styling consistency with existing design
     - _Requirements: 2.1, 4.2, 4.4_

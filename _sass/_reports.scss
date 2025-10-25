@@ -442,6 +442,72 @@
   }
 }
 
+// Related tools section
+.related-tools-section {
+  margin: map-get($spacers, 6) 0;
+  padding: map-get($spacers, 4);
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: rgba($light-gray, 0.3);
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: map-get($spacers, 4);
+    color: $primary-color;
+    font-size: 1.25rem;
+    border-bottom: 2px solid $secondary-color;
+    padding-bottom: map-get($spacers, 2);
+  }
+  
+  .parent-tool, .child-tools, .sibling-tools {
+    margin: map-get($spacers, 4) 0;
+    
+    h4 {
+      font-size: 1rem;
+      color: $text-color;
+      margin-bottom: map-get($spacers, 2);
+      font-weight: $font-weight-semibold;
+    }
+    
+    ul {
+      @extend %list-reset;
+      
+      li {
+        margin: map-get($spacers, 2) 0;
+        
+        a {
+          color: $link-color;
+          font-weight: $font-weight-medium;
+          
+          &:hover,
+          &:focus {
+            color: $link-hover;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  .parent-tool {
+    border-left: 4px solid $success-color;
+    padding-left: map-get($spacers, 3);
+    background-color: rgba($success-color, 0.05);
+  }
+  
+  .child-tools {
+    border-left: 4px solid $warning-color;
+    padding-left: map-get($spacers, 3);
+    background-color: rgba($warning-color, 0.05);
+  }
+  
+  .sibling-tools {
+    border-left: 4px solid #9f7aea;
+    padding-left: map-get($spacers, 3);
+    background-color: rgba(159, 122, 234, 0.05);
+  }
+}
+
 // Related reports
 .related-reports {
   h3 {
