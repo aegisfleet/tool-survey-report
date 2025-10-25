@@ -1,15 +1,16 @@
 ---
 title: "Devin 調査レポート"
 tool_name: "Devin"
-category: "AI開発者ツール"
+category: "自律型AIエージェント"
 developer: "Cognition Labs"
 official_site: "https://devin.ai/"
 date: "2025-10-21"
 last_updated: "2025-10-21"
 tags:
   - "AI"
+  - "エージェント"
+  - "自律型"
   - "開発者ツール"
-  - "自律型AI"
   - "ソフトウェア開発"
 description: "世界初の完全自律型AIソフトウェアエンジニアと称されるDevin。ソフトウェア開発タスクを自律的に実行し、タスクの計画、コーディング、デバッグ、テスト、デプロイまでを一貫して処理する能力を持つAI開発者ツールです。"
 ---
