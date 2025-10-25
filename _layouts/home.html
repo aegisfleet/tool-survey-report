@@ -17,7 +17,7 @@ layout: default
         <h2>最新のレポート</h2>
         <div class="reports-controls">
           <div class="search-container">
-            <input type="text" id="report-search" placeholder="ツール名、説明で検索..." class="search-input">
+            <input type="text" id="report-search" placeholder="ツール名、説明、タグで検索..." class="search-input">
             <button type="button" class="search-clear" id="search-clear" aria-label="検索をクリア">×</button>
           </div>
 
@@ -172,7 +172,8 @@ layout: default
         const matchesSearch = !searchTerm ||
           (card.dataset.toolName && card.dataset.toolName.includes(searchTerm)) ||
           (card.dataset.description && card.dataset.description.includes(searchTerm)) ||
-          (card.dataset.developer && card.dataset.developer.includes(searchTerm));
+          (card.dataset.developer && card.dataset.developer.includes(searchTerm)) ||
+          (card.dataset.tags && card.dataset.tags.toLowerCase().includes(searchTerm));
         const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
         return matchesSearch && matchesTag;
       });
