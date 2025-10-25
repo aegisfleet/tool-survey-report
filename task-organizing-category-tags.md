@@ -15,8 +15,8 @@
 
 ## 適用対象
 
-- 基本的に `_reports/*.md` のフロントマター（YAML）の `category` と `tags` を対象とする。
-- ドキュメント本文の内容は原則不変更。タグによる関連度向上が目的。
+- 基本的に `_reports/*.md` のフロントマター（YAML）の `category`、`tags`、および新規追加の `relationships` を対象とする。
+- ドキュメント本文の内容は原則不変更。タグと関連付けによる関連度向上が目的。
 
 ### 定義（標準語彙）
 
@@ -38,6 +38,30 @@
   - **技術関連**: セキュリティ, クラウド, コンテナ, マイクロサービス
   - **その他**: 日本語対応, オープンソース, エンタープライズ
 
+- **レポート関連付け（relationships）**
+  - **目的**: レポート間の階層関係や関連性を明示し、ユーザーが関連ツールを発見しやすくする
+  - **構造**: 以下の3つのフィールドで構成される階層的関連付けシステム
+
+    ```yaml
+    relationships:
+      parent: "tool_name"        # 親レポート（1つのみ）
+      children:                  # 子レポート（複数可）
+        - "tool_name1"
+        - "tool_name2"
+      related_tools:             # 関連レポート（複数可）
+        - "tool_name3"
+        - "tool_name4"
+    ```
+  
+  - **各フィールドの定義**:
+    - **parent**: このツールの上位概念や基盤となるツール（例：GitHub Copilotの親はGitHub）
+    - **children**: このツールから派生した、または密接に関連する下位ツール（例：GitHubの子はGitHub Copilot）
+    - **related_tools**: 同等レベルで関連性の高いツール（競合製品、代替ツール、補完ツールなど）
+  
+  - **参照方法**: 全て `tool_name`（ファイル名から `.md` を除いた部分）で参照する
+    - 例：`_reports/github-copilot.md` → `"github-copilot"`
+    - 例：`_reports/gitlab-duo.md` → `"gitlab-duo"`
+
 ### ルール（変更ポリシー）
 
 1. 最小変更: 既存の `category` が意味的に近い場合は上書きせず、補助的な `tags` を追加して関連づける。
@@ -48,6 +72,28 @@
 4. 統一表記: 同義の英語/日本語タグが混在している場合は日本語に統一する（例: "Agent" -> "エージェント"）。
 5. キーワード衝突回避: 既にタグ数が多い場合は関連性の高い上位3つに絞る。
 
+#### レポート関連付け（relationships）のルール
+
+1. **関連付けの基準**:
+   - **parent**: 明確な階層関係がある場合のみ設定（例：プラットフォームとその機能、基盤ツールと拡張機能）
+   - **children**: 直接的な派生関係や密接な統合関係がある場合のみ設定
+   - **related_tools**: 同じ問題領域を解決する競合ツール、補完的なツール、代替ツールを設定
+
+2. **関連付けの妥当性確認**:
+   - 参照先のレポートファイルが実際に存在することを確認
+   - 双方向の関連性を考慮（AがBの親なら、BはAの子として設定）
+   - 循環参照を避ける（A→B→A のような関係は禁止）
+
+3. **関連付けの優先順位**:
+   - **高優先度**: 公式に関連が明示されているツール（同一開発元、公式統合など）
+   - **中優先度**: 機能的に密接に関連するツール（同じ用途、類似機能）
+   - **低優先度**: 間接的に関連するツール（同じ技術スタック、同じ業界など）
+
+4. **関連付けの数の制限**:
+   - **parent**: 1つのみ（複数の親は設定しない）
+   - **children**: 最大5つまで（多すぎる場合は最も関連性の高いものを選択）
+   - **related_tools**: 最大7つまで（ユーザビリティを考慮した適切な数に制限）
+
 ### チェックリスト（編集前）
 
 - [ ] フロントマターが YAML 形式で正しくパースできる
@@ -55,8 +101,11 @@
 - [ ] **カテゴリの妥当性**: 業界標準の分類と一致している（例：CI/CDツール、バージョン管理ツール、IDEなど）
 - [ ] **機能との整合性**: 追加するタグが本文中の記述（機能説明）と整合している
 - [ ] **類似ツールとの一貫性**: 同じカテゴリの他のツールと分類が一貫している
+- [ ] **関連付けの妥当性**: relationships フィールドの各参照が適切で、参照先ファイルが存在する
+- [ ] **関連付けの双方向性**: parent/children の関係が双方向で整合している
+- [ ] **循環参照の回避**: relationships に循環参照がないことを確認
 - [ ] 変更点は最小である（カテゴリ変更は最小限）
-- [ ] 変更一覧を変更コミットメッセージに明記する（例: "standardize tags: add エージェント to github-copilot"）
+- [ ] 変更一覧を変更コミットメッセージに明記する（例: "standardize tags: add エージェント to github-copilot, add relationships"）
 - [ ] `task-organizing-category-tags.md` の進捗状況セクションを更新
 
 ## 実務手順（段階的アプローチ）
@@ -73,12 +122,15 @@
 
 1. **対象ファイル数の確認**: `ls _reports/ | grep -E "(対象パターン)" | wc -l`
 2. **現在のタグ/カテゴリ状況の把握**: `grep -h "^tags:\|^category:" _reports/対象ファイル*.md`
-3. **ツールの正確な特定と調査**:
+3. **既存の関連付け状況の確認**: `grep -A 10 "^relationships:" _reports/対象ファイル*.md`
+4. **ツールの正確な特定と調査**:
    - 公式サイトでツールの主要機能を確認
    - ツールの説明文書（README、About）を読み、主要な用途を特定
    - 類似ツールとの比較情報を調査
    - 業界での一般的な分類を確認（例：「GitHub Actions」→「CI/CD」、「Git」→「バージョン管理」）
-4. **作業ログファイルの作成**: `echo "作業開始: $(date)" > work-log-$(date +%Y%m%d).txt`
+   - **関連ツールの特定**: 同一開発元、公式統合、競合製品、代替ツールを調査
+5. **参照先ファイルの存在確認**: 関連付けで参照予定のツール名に対応するレポートファイルが存在するかチェック
+6. **作業ログファイルの作成**: `echo "作業開始: $(date)" > work-log-$(date +%Y%m%d).txt`
 
 ### ステップ3: 安全な変更実行
 
@@ -89,9 +141,13 @@
 
 ### ステップ4: 検証とコミット
 
-1. YAML構文チェック: 全対象ファイルのパース確認
-2. 変更差分の確認: `git diff` で意図しない変更がないかチェック
-3. コミット: 変更内容を明確に記述したメッセージでコミット
+1. **YAML構文チェック**: 全対象ファイルのパース確認
+2. **関連付けの整合性チェック**:
+   - 参照先ファイルの存在確認: `ls _reports/参照先tool_name.md`
+   - 双方向関係の確認: parent/children の関係が双方で設定されているかチェック
+   - 循環参照の確認: A→B→A のような循環がないかチェック
+3. **変更差分の確認**: `git diff` で意図しない変更がないかチェック
+4. **コミット**: 変更内容を明確に記述したメッセージでコミット
 
 ### ステップ5: 進捗の記録
 
@@ -173,7 +229,17 @@ grep -l "自律\|エージェント\|Agent" _reports/*.md | head -4
 - メインファイル `jules.md`:
   - 変更前 tags: `["AI", "開発者ツール", "コーディング支援", "CLI", "自律型エージェント"]`
   - 変更後 tags: `["AI", "エージェント", "自律型", "コーディング支援", "開発者ツール", "CLI"]`
-- 関連ファイル: 同様の統一ルールを適用（最大3ファイル）
+  - 関連付け追加:
+
+    ```yaml
+    relationships:
+      related_tools:
+        - "devin"
+        - "openhands"
+        - "github-copilot"
+    ```
+
+- 関連ファイル: 同様の統一ルールを適用し、双方向の関連付けを設定（最大3ファイル）
 
 ### 例2: カテゴリ統一作業
 
@@ -184,6 +250,86 @@ grep -l "自律\|エージェント\|Agent" _reports/*.md | head -4
 ```bash
 grep -l "category.*AI.*コーディング" _reports/*.md
 ```
+
+## レポート関連付けの具体例
+
+### 例1: GitHubエコシステムの関連付け
+
+```yaml
+# _reports/github.md
+relationships:
+  children:
+    - "github-copilot"
+    - "github-actions"
+  related_tools:
+    - "gitlab"
+    - "bitbucket"
+
+# _reports/github-copilot.md  
+relationships:
+  parent: "github"
+  related_tools:
+    - "cursor"
+    - "gitlab-duo"
+    - "coderabbit"
+```
+
+### 例2: CI/CDツールの関連付け
+
+```yaml
+# _reports/jenkins.md
+relationships:
+  related_tools:
+    - "github-actions"
+    - "gitlab-ci"
+    - "circleci"
+
+# _reports/github-actions.md
+relationships:
+  parent: "github"
+  related_tools:
+    - "jenkins"
+    - "gitlab-ci"
+```
+
+### 例3: AIコーディング支援ツールの関連付け
+
+```yaml
+# _reports/cursor.md
+relationships:
+  related_tools:
+    - "github-copilot"
+    - "coderabbit"
+    - "tabnine"
+
+# _reports/devin.md
+relationships:
+  related_tools:
+    - "openhands"
+    - "jules"
+    - "github-copilot"
+```
+
+### 関連付けの判断基準（詳細ガイド）
+
+#### parent/children 関係の設定基準
+
+- **同一開発元の製品**: GitHub → GitHub Copilot, GitLab → GitLab Duo
+- **プラットフォームと機能**: AWS → AWS CodeCommit, Azure → Azure DevOps
+- **基盤ツールと拡張**: Git → GitHub/GitLab, Docker → Docker Compose
+
+#### related_tools の設定基準
+
+- **直接競合**: GitHub Copilot ↔ Cursor ↔ GitLab Duo（同じ機能を提供）
+- **補完関係**: GitHub Actions ↔ Jenkins（CI/CDの選択肢）
+- **代替ツール**: Git ↔ Mercurial（同じ問題を異なる方法で解決）
+- **統合可能**: VS Code ↔ GitHub Copilot（よく一緒に使用される）
+
+#### 関連付けを避けるべきケース
+
+- **間接的すぎる関係**: Docker と Kubernetes（関連はあるが直接的でない）
+- **異なる問題領域**: テストツールとデプロイツール（用途が異なる）
+- **一時的な関係**: 単発のコラボレーションや統合
 
 ## 進捗状況
 
