@@ -148,7 +148,7 @@ layout: default
 
     {% if page.tags and page.tags.size > 0 %}
     <div class="related-reports">
-      <h3>関連するレポート</h3>
+      <h3>一致するタグが多いレポート</h3>
       {% assign related_reports = site.reports | where_exp: "report", "report.url != page.url" %}
       {% assign related_with_scores = "" | split: "" %}
 
@@ -204,7 +204,7 @@ layout: default
           {% endfor %}
         </ul>
         {% else %}
-        <p>関連するレポートはありません。</p>
+        <p>タグが一致するレポートはありません。</p>
         {% endif %}
     </div>
     {% endif %}
