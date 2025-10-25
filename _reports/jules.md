@@ -1,17 +1,19 @@
 ---
 title: "Google Jules 調査レポート"
 tool_name: "Google Jules"
-category: "AIコーディング支援"
+category: "自律型AIエージェント"
 developer: "Google"
 official_site: "https://jules.google/"
 date: "2025-10-18"
 last_updated: "2025-10-22"
 tags:
   - "AI"
-  - "開発者ツール"
+  - "エージェント"
+  - "自律型"
   - "コーディング支援"
+  - "開発者ツール"
   - "CLI"
-  - "自律型エージェント"
+  - "API"
 description: "Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。"
 ---
 # **Google Jules 調査レポート**
