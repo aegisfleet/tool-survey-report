@@ -102,7 +102,7 @@
 .main-content {
   min-height: calc(100vh - 200px);
   padding: map-get($spacers, 5) 0;
-  background-color: #f8f9fa;
+  background-color: $main-bg;
   
   @include media-breakpoint-down(md) {
     padding: map-get($spacers, 4) 0;

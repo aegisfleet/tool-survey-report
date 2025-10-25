@@ -1,17 +1,7 @@
 // Button components
 .btn {
-  display: inline-block;
+  @extend %button-base;
   padding: map-get($spacers, 3) map-get($spacers, 5);
-  font-size: $font-size-base;
-  font-weight: $font-weight-semibold;
-  line-height: 1.5;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: $border-radius;
-  transition: $transition-base;
   position: relative;
   overflow: hidden;
   
@@ -114,12 +104,8 @@
 
 // Card component - Improved accessibility
 .card {
-  background-color: $white;
+  @include card;
   border: 2px solid $light-gray;
-  border-radius: $border-radius;
-  padding: map-get($spacers, 4);
-  box-shadow: $box-shadow-sm;
-  transition: $transition-base;
   position: relative;
   overflow: hidden;
   
@@ -457,13 +443,13 @@
 .home-container {
   @include make-container;
   @include make-container-max-widths;
-  background-color: $white;
+  background-color: transparent;
 }
 
 .home-header {
   text-align: center;
   padding: map-get($spacers, 3) 0;
-  background: $white;
+  background-color: $content-bg;
   border-radius: $border-radius-lg;
   margin-bottom: map-get($spacers, 3);
   border: 3px solid rgba($primary-color, 0.2);
@@ -554,25 +540,7 @@
 .search-input,
 .tag-filter,
 .sort-select {
-  padding: map-get($spacers, 2) map-get($spacers, 3);
-  border: 2px solid $border-color;
-  border-radius: $border-radius;
-  font-size: $font-size-base;
-  font-weight: $font-weight-medium;
-  transition: $transition-base;
-  background-color: $white;
-  color: $text-color;
-  
-  &:focus {
-    outline: 3px solid rgba($primary-color, 0.5);
-    outline-offset: 2px;
-    border-color: $primary-color;
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
-  }
-  
-  &:hover {
-    border-color: $primary-color;
-  }
+  @extend %form-input-base;
   
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -744,12 +712,10 @@
 }
 
 .stats-section {
-  background: $white;
+  @include card(map-get($spacers, 5));
   border: 2px solid rgba($primary-color, 0.1);
   border-radius: $border-radius-lg;
-  padding: map-get($spacers, 5);
   margin-top: map-get($spacers, 6);
-  box-shadow: $box-shadow-sm;
 }
 
 .stats-grid {

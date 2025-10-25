@@ -140,11 +140,12 @@
 
 // Card component
 @mixin card($padding: map-get($spacers, 4)) {
-  background: $content-bg;
+  background-color: $content-bg;
   border: 1px solid $border-color;
   border-radius: $border-radius;
   box-shadow: $box-shadow-sm;
   padding: $padding;
+  transition: $transition-base;
 }
 
 // Hover effects

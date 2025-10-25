@@ -266,24 +266,14 @@
 }
 
 .search-input {
+  @extend %form-input-base;
   flex: 1;
   padding: map-get($spacers, 2) map-get($spacers, 6) map-get($spacers, 2) map-get($spacers, 3);
   border: 2px solid $border-color;
-  border-radius: $border-radius;
-  font-size: $font-size-base;
-  font-weight: $font-weight-medium;
-  transition: $transition-base;
-  background-color: $white;
   
   &:focus {
     outline: 3px solid rgba($primary-color, 0.5);
     outline-offset: 2px;
-    border-color: $primary-color;
-    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
-  }
-  
-  &:hover {
-    border-color: $primary-color;
   }
   
   &::placeholder {

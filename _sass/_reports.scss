@@ -2,10 +2,8 @@
 .report-article {
   @include make-container;
   @include make-container-max-widths;
+  @include card;
   max-width: 800px;
-  background-color: $white;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow-sm;
   margin: map-get($spacers, 4) auto;
   overflow: hidden; // ヘッダーの角丸を適用するため
   
@@ -18,7 +16,7 @@
   margin-bottom: map-get($spacers, 6);
   padding: map-get($spacers, 4);
   padding-bottom: map-get($spacers, 4);
-  background-color: $white;
+  background-color: $content-bg;
   border-radius: $border-radius $border-radius 0 0;
   border-bottom: 1px solid $border-color;
 }
@@ -141,7 +139,7 @@
   padding: 0 map-get($spacers, 4) map-get($spacers, 4);
   line-height: $line-height-lg;
   font-size: 1.1rem;
-  background-color: $white;
+  background-color: $content-bg;
   
   @include media-breakpoint-down(md) {
     padding: 0 map-get($spacers, 3) map-get($spacers, 3);
@@ -357,7 +355,7 @@
 .report-footer {
   border-top: 1px solid $border-color;
   padding: map-get($spacers, 5) map-get($spacers, 4) map-get($spacers, 4);
-  background-color: $white;
+  background-color: $content-bg;
   border-radius: 0 0 $border-radius $border-radius;
   
   @include media-breakpoint-down(md) {

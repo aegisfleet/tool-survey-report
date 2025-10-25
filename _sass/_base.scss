@@ -8,21 +8,17 @@
 html {
   font-family: $font-family-base, $font-family-japanese;
   line-height: $line-height-base;
-  background-color: #f8f9fa !important;
+  background-color: $main-bg;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
   margin: 0;
-  font-family: $font-family-base, $font-family-japanese;
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
-  line-height: $line-height-base;
   color: $text-color;
-  background-color: #f8f9fa !important;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: $main-bg;
 }
 
 // Typography
@@ -269,10 +265,6 @@ button:focus {
   
   .btn {
     border-width: 3px;
-  }
-  
-  .card {
-    border-width: 2px;
   }
 }
 
