@@ -31,7 +31,6 @@
     - Ensure proper positioning and spacing
     - _Requirements: 2.1, 2.5, 4.2, 4.4_
 
-
   - [x] 3.2 Update main CSS file with related tools styling
 
     - Add new CSS rules to assets/css/main.css or appropriate SCSS file
@@ -39,8 +38,11 @@
     - _Requirements: 2.1, 4.2, 4.4_
 
 - [ ] 4. Implement relationship validation system
-  - [ ] 4.1 Create validation logic for relationship references
+
+  - [x] 4.1 Create validation logic for relationship references
+
     - Detect missing tool_name references
+
     - Identify inconsistent bidirectional relationships
     - Generate warning messages for validation errors
     - _Requirements: 1.4, 3.3, 3.4, 3.5_

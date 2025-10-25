@@ -181,12 +181,24 @@ It resolves tool_name references to actual report objects and builds relationshi
   {% endif %}
 {% endfor %}
 
+{% comment %} Include comprehensive validation system {% endcomment %}
+{% include relationship-validator.html %}
+
 {% comment %} Output validation warnings for missing references {% endcomment %}
 {% if missing_refs.size > 0 %}
   {% comment %} In development, you could output these warnings {% endcomment %}
   <!-- Relationship validation warnings:
   {% for missing_ref in missing_refs %}
     Warning: Missing tool_name reference "{{ missing_ref }}"
+  {% endfor %}
+  -->
+{% endif %}
+
+{% comment %} Enhanced validation warnings using the validator {% endcomment %}
+{% if relationship_validation_errors.size > 0 %}
+  <!-- Relationship Validation Errors ({{ relationship_validation_errors.size }}):
+  {% for error in relationship_validation_errors %}
+    - {{ error }}
   {% endfor %}
   -->
 {% endif %}
