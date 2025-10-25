@@ -1,7 +1,7 @@
 ---
 title: "GitHub Copilot 調査レポート"
 tool_name: "GitHub Copilot"
-category: "開発者ツール"
+category: "AIコーディング支援"
 developer: "GitHub (Microsoft)"
 official_site: "https://github.com/features/copilot"
 date: "2025-10-19"

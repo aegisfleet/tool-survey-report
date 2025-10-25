@@ -88,6 +88,10 @@
 2. 変更差分の確認: `git diff` で意図しない変更がないかチェック
 3. コミット: 変更内容を明確に記述したメッセージでコミット
 
+### ステップ5: 進捗の記録
+
+1. **進捗状況の更新**: このファイル(`task-organizing-category-tags.md`)の末尾にある`進捗状況`セクションに、実施した作業内容を簡潔に記載する。
+
 ## 安全ガード（例外・回復）
 
 ### エラー対応手順
@@ -130,3 +134,18 @@ grep -l "自律\|エージェント\|Agent" _reports/*.md | head -4
 ```bash
 grep -l "category.*AI.*コーディング" _reports/*.md
 ```
+
+## 進捗状況
+
+- **2025-10-25**:
+  - **作業内容**: AIコーディング支援ツールのカテゴリとタグを標準化。
+  - **対象ファイル**:
+    - `_reports/cursor.md`
+    - `_reports/coderabbit.md`
+    - `_reports/openhands.md`
+    - `_reports/github-copilot.md`
+  - **変更概要**:
+    - `coderabbit.md`: `category` を `AIコーディング支援` に変更、`コーディング支援` タグを追加。
+    - `openhands.md`: `category` を `自律型AIエージェント` に変更、`コーディング支援`, `エージェント`, `自律型` タグを追加。
+    - `github-copilot.md`: `category` を `AIコーディング支援` に変更。
+    - `cursor.md`: `コーディング支援` タグを追加。
