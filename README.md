@@ -40,28 +40,26 @@ AIエージェントを用いてツールの情報を収集して公開するサ
 │   ├── footer.html      # フッター
 │   └── navigation.html  # ナビゲーション
 ├── _reports/            # レポートファイル（Markdownコレクション）
-│   ├── template.md      # レポート作成用テンプレート
 │   ├── chatgpt.md       # ChatGPT調査レポート
-│   ├── claude-code.md   # Claude調査レポート
-│   └── ...              # その他17件のレポート
+│   └── ...              # その他のレポート
 ├── _sass/               # Sassスタイルシート
 │   ├── _base.scss       # ベーススタイル
 │   ├── _layout.scss     # レイアウト
-│   ├── _components.scss # コンポーネント
-│   ├── _home.scss       # ホームページ専用
-│   ├── _reports.scss    # レポートページ専用
 │   └── ...              # その他スタイルファイル
 ├── assets/              # 静的ファイル
 │   ├── css/             # コンパイル済みCSS
 │   ├── js/              # JavaScript
 │   └── images/          # 画像ファイル
-│       ├── default-ogp.png    # OGP画像
-│       ├── favicon-16x16.png  # ファビコン
-│       └── favicon-32x32.png  # ファビコン
 ├── reports/             # レポート一覧ページ
 ├── tags/                # タグ一覧ページ
+├── templates/           # テンプレートファイル
+│   └── template.md      # レポート作成用テンプレート
+├── .gitignore           # Git無視ファイル
+├── AGENTS.md            # エージェントへの指示書
 ├── Gemfile              # Ruby依存関係
-└── README.md            # このファイル
+├── LICENSE              # ライセンス
+├── README.md            # このファイル
+└── SECURITY.md          # セキュリティポリシー
 ```
 
 ## ローカル開発環境のセットアップ
@@ -159,7 +157,7 @@ layout: report
 
 ### 3. コンテンツの記述
 
-フロントマターの後にMarkdown形式でレポート内容を記述。詳細な構成は `_reports/template.md` を参照してください。
+フロントマターの後にMarkdown形式でレポート内容を記述。詳細な構成は `templates/template.md` を参照してください。
 
 **基本構成**:
 
