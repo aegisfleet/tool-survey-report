@@ -171,29 +171,9 @@
     text-align: center;
 
     .tag-view-all {
-        display: inline-block;
+        @extend .btn-primary;
         padding: map-get($spacers, 2) map-get($spacers, 4);
-        background-color: $primary-color;
-        color: $white;
-        text-decoration: none;
-        border-radius: $border-radius;
-        font-weight: $font-weight-medium;
         font-size: $font-size-sm;
-        transition: $transition-base;
-
-        &:hover,
-        &:focus {
-            background-color: $secondary-color;
-            color: $white;
-            text-decoration: none;
-            transform: translateY(-1px);
-            box-shadow: 0 2px 4px rgba($primary-color, 0.3);
-        }
-
-        &:focus {
-            outline: 3px solid rgba($primary-color, 0.5);
-            outline-offset: 2px;
-        }
     }
 }
 

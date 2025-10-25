@@ -133,24 +133,10 @@
 }
 
 .search-clear {
-    position: absolute;
+    @extend %clear-button;
     right: map-get($spacers, 2);
-    top: 10px; // 検索入力フィールドの中央に配置
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    color: $text-muted;
-    cursor: pointer;
+    top: 10px;
     padding: 0;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        color: $text-color;
-    }
 }
 
 .filter-container {
@@ -198,24 +184,10 @@
 }
 
 .filter-clear {
-    position: absolute;
+    @extend %clear-button;
     right: map-get($spacers, 3);
-    top: 10px; // タグフィルタの中央に配置
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    color: $text-muted;
-    cursor: pointer;
+    top: 10px;
     padding: 0;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        color: $text-color;
-    }
 }
 
 // Reports grid
@@ -308,30 +280,7 @@
 }
 
 .tag {
-    display: inline-block;
-    padding: map-get($spacers, 1) map-get($spacers, 2);
-    background-color: $light-gray;
-    color: $text-color;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-medium;
-    border-radius: $border-radius-xl;
-    cursor: pointer;
-    transition: $transition-base;
-
-    &:hover {
-        background-color: $secondary-color;
-        color: $white;
-    }
-
-    &.active {
-        background-color: $primary-color !important;
-        color: $white !important;
-        
-        &:hover {
-            background-color: darken($primary-color, 10%) !important;
-            color: $white !important;
-        }
-    }
+    @extend %tag-interactive;
 }
 
 .report-card-footer {
@@ -473,44 +422,16 @@
     }
 
     .btn {
-        display: inline-block;
-        padding: map-get($spacers, 3) map-get($spacers, 4);
-        background-color: $secondary-color;
-        color: $white;
-        text-decoration: none;
-        border-radius: $border-radius;
-        font-weight: $font-weight-medium;
-        transition: $transition-base;
-        border: none;
-        cursor: pointer;
-
-        &:hover,
-        &:focus {
-            background-color: darken($secondary-color, 10%);
-            color: $white;
-            text-decoration: none;
-        }
-
-        &.btn-primary {
-            background-color: $primary-color;
-
-            &:hover,
-            &:focus {
-                background-color: darken($primary-color, 10%);
-            }
+        @extend %button-base;
+        
+        &:not(.btn-primary):not(.btn-outline) {
+            @extend .btn-secondary;
         }
     }
 
     .alert {
-        padding: map-get($spacers, 4);
-        border-radius: $border-radius;
-        margin-bottom: map-get($spacers, 4);
-
-        &.alert-info {
-            background-color: rgba($info-color, 0.1);
-            border: 1px solid rgba($info-color, 0.2);
-            color: darken($info-color, 20%);
-        }
+        // アラートスタイルは_components.scssで定義済み
+        // 追加のスタイルが必要な場合のみここに記述
     }
 }
 

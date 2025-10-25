@@ -160,7 +160,7 @@
 
 .footer-nav,
 .footer-info {
-  @include list-reset;
+  @extend %list-reset;
   
   li {
     margin-bottom: map-get($spacers, 2);

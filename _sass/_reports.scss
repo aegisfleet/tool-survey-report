@@ -90,7 +90,7 @@
 }
 
 .tag-list {
-  @include list-reset;
+  @extend %list-reset;
   display: flex;
   flex-wrap: wrap;
   gap: map-get($spacers, 2);
@@ -101,21 +101,7 @@
 }
 
 .tag-link {
-  display: inline-block;
-  padding: map-get($spacers, 1) map-get($spacers, 2);
-  background-color: $light-gray;
-  color: $text-color;
-  font-size: $font-size-xs;
-  font-weight: $font-weight-medium;
-  border-radius: $border-radius-xl;
-  transition: $transition-base;
-  
-  &:hover,
-  &:focus {
-    background-color: $secondary-color;
-    color: $white;
-    text-decoration: none;
-  }
+  @extend %tag-interactive;
 }
 
 .report-description {
@@ -466,7 +452,7 @@
 }
 
 .related-list {
-  @include list-reset;
+  @extend %list-reset;
   
   li {
     margin-bottom: map-get($spacers, 3);
