@@ -12,6 +12,11 @@ tags:
   - "GitHub"
   - "DevOps"
 description: "GitHubに統合されたCI/CDプラットフォーム。ビルド、テスト、デプロイなどのソフトウェア開発ワークフローを自動化します。"
+relationships:
+  parent: "GitHub"
+  related_tools:
+    - "GitLab"
+    - "Jenkins"
 ---
 
 # **GitHub Actions 調査レポート**

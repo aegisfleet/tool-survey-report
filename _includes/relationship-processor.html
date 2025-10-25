@@ -1,0 +1,192 @@
+{% comment %}
+Core Relationship Processing System
+This include processes relationship metadata from front matter and creates bidirectional mappings.
+It resolves tool_name references to actual report objects and builds relationship data structures.
+{% endcomment %}
+
+{% comment %} Initialize relationship data structures {% endcomment %}
+{% assign all_relationships = "" | split: "" %}
+{% assign tool_lookup = "" | split: "" %}
+{% assign missing_refs = "" | split: "" %}
+
+{% comment %} Build tool_name to report object lookup table {% endcomment %}
+{% for report in site.reports %}
+  {% if report.tool_name %}
+    {% assign lookup_entry = report.tool_name | append: "###" | append: forloop.index0 %}
+    {% assign tool_lookup = tool_lookup | push: lookup_entry %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Helper function to resolve tool_name to report object {% endcomment %}
+{% assign resolve_tool_name_result = nil %}
+{% if include.resolve_tool_name %}
+  {% assign target_tool_name = include.resolve_tool_name %}
+  {% for lookup_item in tool_lookup %}
+    {% assign parts = lookup_item | split: "###" %}
+    {% assign lookup_tool_name = parts[0] %}
+    {% assign report_index = parts[1] | plus: 0 %}
+    {% if lookup_tool_name == target_tool_name %}
+      {% assign resolve_tool_name_result = site.reports[report_index] %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% comment %} Process relationships for current page {% endcomment %}
+{% if page.relationships %}
+  {% assign current_relationships = "" | split: "" %}
+  
+  {% comment %} Process parent relationship {% endcomment %}
+  {% if page.relationships.parent %}
+    {% assign parent_tool_name = page.relationships.parent %}
+    {% assign parent_report = nil %}
+    {% for lookup_item in tool_lookup %}
+      {% assign parts = lookup_item | split: "###" %}
+      {% assign lookup_tool_name = parts[0] %}
+      {% assign report_index = parts[1] | plus: 0 %}
+      {% if lookup_tool_name == parent_tool_name %}
+        {% assign parent_report = site.reports[report_index] %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if parent_report %}
+      {% assign parent_data = "parent###" | append: parent_report.tool_name | append: "###" | append: parent_report.title | append: "###" | append: parent_report.url %}
+      {% assign current_relationships = current_relationships | push: parent_data %}
+    {% else %}
+      {% assign missing_refs = missing_refs | push: parent_tool_name %}
+    {% endif %}
+  {% endif %}
+  
+  {% comment %} Process children relationships {% endcomment %}
+  {% if page.relationships.children %}
+    {% for child_tool_name in page.relationships.children %}
+      {% assign child_report = nil %}
+      {% for lookup_item in tool_lookup %}
+        {% assign parts = lookup_item | split: "###" %}
+        {% assign lookup_tool_name = parts[0] %}
+        {% assign report_index = parts[1] | plus: 0 %}
+        {% if lookup_tool_name == child_tool_name %}
+          {% assign child_report = site.reports[report_index] %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if child_report %}
+        {% assign child_data = "child###" | append: child_report.tool_name | append: "###" | append: child_report.title | append: "###" | append: child_report.url %}
+        {% assign current_relationships = current_relationships | push: child_data %}
+      {% else %}
+        {% assign missing_refs = missing_refs | push: child_tool_name %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  
+  {% comment %} Process related_tools (sibling) relationships {% endcomment %}
+  {% if page.relationships.related_tools %}
+    {% for related_tool_name in page.relationships.related_tools %}
+      {% assign related_report = nil %}
+      {% for lookup_item in tool_lookup %}
+        {% assign parts = lookup_item | split: "###" %}
+        {% assign lookup_tool_name = parts[0] %}
+        {% assign report_index = parts[1] | plus: 0 %}
+        {% if lookup_tool_name == related_tool_name %}
+          {% assign related_report = site.reports[report_index] %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if related_report %}
+        {% assign related_data = "sibling###" | append: related_report.tool_name | append: "###" | append: related_report.title | append: "###" | append: related_report.url %}
+        {% assign current_relationships = current_relationships | push: related_data %}
+      {% else %}
+        {% assign missing_refs = missing_refs | push: related_tool_name %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  
+  {% assign page_relationships = current_relationships %}
+{% endif %}
+
+{% comment %} Build bidirectional relationship mapping for all reports {% endcomment %}
+{% assign bidirectional_relationships = "" | split: "" %}
+
+{% for report in site.reports %}
+  {% if report.relationships %}
+    {% assign report_tool_name = report.tool_name %}
+    
+    {% comment %} Process parent relationships to create reverse child relationships {% endcomment %}
+    {% if report.relationships.parent %}
+      {% assign parent_tool_name = report.relationships.parent %}
+      {% assign parent_report = nil %}
+      {% for lookup_item in tool_lookup %}
+        {% assign parts = lookup_item | split: "###" %}
+        {% assign lookup_tool_name = parts[0] %}
+        {% assign report_index = parts[1] | plus: 0 %}
+        {% if lookup_tool_name == parent_tool_name %}
+          {% assign parent_report = site.reports[report_index] %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if parent_report %}
+        {% comment %} Add reverse child relationship {% endcomment %}
+        {% assign reverse_child = parent_report.tool_name | append: "###child###" | append: report_tool_name | append: "###" | append: report.title | append: "###" | append: report.url %}
+        {% assign bidirectional_relationships = bidirectional_relationships | push: reverse_child %}
+      {% endif %}
+    {% endif %}
+    
+    {% comment %} Process children relationships to create reverse parent relationships {% endcomment %}
+    {% if report.relationships.children %}
+      {% for child_tool_name in report.relationships.children %}
+        {% assign child_report = nil %}
+        {% for lookup_item in tool_lookup %}
+          {% assign parts = lookup_item | split: "###" %}
+          {% assign lookup_tool_name = parts[0] %}
+          {% assign report_index = parts[1] | plus: 0 %}
+          {% if lookup_tool_name == child_tool_name %}
+            {% assign child_report = site.reports[report_index] %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if child_report %}
+          {% comment %} Add reverse parent relationship {% endcomment %}
+          {% assign reverse_parent = child_report.tool_name | append: "###parent###" | append: report_tool_name | append: "###" | append: report.title | append: "###" | append: report.url %}
+          {% assign bidirectional_relationships = bidirectional_relationships | push: reverse_parent %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    
+    {% comment %} Process sibling relationships (these are already bidirectional by nature) {% endcomment %}
+    {% if report.relationships.related_tools %}
+      {% for related_tool_name in report.relationships.related_tools %}
+        {% assign related_report = nil %}
+        {% for lookup_item in tool_lookup %}
+          {% assign parts = lookup_item | split: "###" %}
+          {% assign lookup_tool_name = parts[0] %}
+          {% assign report_index = parts[1] | plus: 0 %}
+          {% if lookup_tool_name == related_tool_name %}
+            {% assign related_report = site.reports[report_index] %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% if related_report %}
+          {% comment %} Add bidirectional sibling relationship {% endcomment %}
+          {% assign sibling_rel = related_report.tool_name | append: "###sibling###" | append: report_tool_name | append: "###" | append: report.title | append: "###" | append: report.url %}
+          {% assign bidirectional_relationships = bidirectional_relationships | push: sibling_rel %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Output validation warnings for missing references {% endcomment %}
+{% if missing_refs.size > 0 %}
+  {% comment %} In development, you could output these warnings {% endcomment %}
+  <!-- Relationship validation warnings:
+  {% for missing_ref in missing_refs %}
+    Warning: Missing tool_name reference "{{ missing_ref }}"
+  {% endfor %}
+  -->
+{% endif %}

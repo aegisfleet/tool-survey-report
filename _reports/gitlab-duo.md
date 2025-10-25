@@ -12,6 +12,10 @@ tags:
   - "コーディング支援"
   - "CI/CD"
 description: "GitLabに統合されたAIアシスタントで、コード生成、レビュー、脆弱性スキャンなど開発ライフサイクル全体を支援します。"
+relationships:
+  parent: "GitLab"
+  related_tools:
+    - "GitHub Copilot"
 ---
 
 # **GitLab Duo 調査レポート**

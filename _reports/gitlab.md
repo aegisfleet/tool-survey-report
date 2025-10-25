@@ -12,6 +12,12 @@ tags:
   - "CI/CD"
   - "DevOps"
 description: "GitLabは、ソフトウェア開発ライフサイクル全体をカバーする単一のアプリケーションとして提供される、AI搭載のDevSecOpsプラットフォームです。"
+relationships:
+  children:
+    - "GitLab Duo"
+  related_tools:
+    - "GitHub"
+    - "GitHub Actions"
 ---
 
 # **GitLab 調査レポート**

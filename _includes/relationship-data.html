@@ -1,0 +1,93 @@
+{% comment %}
+Relationship Data Extractor
+This include extracts and processes relationship data for the current page.
+It builds arrays of parent, child, and sibling tools that can be used by UI components.
+{% endcomment %}
+
+{% comment %} Include the core relationship processor {% endcomment %}
+{% include relationship-processor.html %}
+
+{% comment %} Initialize arrays for different relationship types {% endcomment %}
+{% assign parent_tools = "" | split: "" %}
+{% assign child_tools = "" | split: "" %}
+{% assign sibling_tools = "" | split: "" %}
+
+{% comment %} Process direct relationships from current page {% endcomment %}
+{% if page_relationships %}
+  {% for relationship in page_relationships %}
+    {% assign parts = relationship | split: "###" %}
+    {% assign rel_type = parts[0] %}
+    {% assign tool_name = parts[1] %}
+    {% assign title = parts[2] %}
+    {% assign url = parts[3] %}
+    
+    {% assign tool_data = tool_name | append: "|||" | append: title | append: "|||" | append: url %}
+    
+    {% if rel_type == "parent" %}
+      {% assign parent_tools = parent_tools | push: tool_data %}
+    {% elsif rel_type == "child" %}
+      {% assign child_tools = child_tools | push: tool_data %}
+    {% elsif rel_type == "sibling" %}
+      {% assign sibling_tools = sibling_tools | push: tool_data %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% comment %} Process bidirectional relationships that affect current page {% endcomment %}
+{% if bidirectional_relationships and page.tool_name %}
+  {% for relationship in bidirectional_relationships %}
+    {% assign parts = relationship | split: "###" %}
+    {% assign target_tool_name = parts[0] %}
+    {% assign rel_type = parts[1] %}
+    {% assign source_tool_name = parts[2] %}
+    {% assign source_title = parts[3] %}
+    {% assign source_url = parts[4] %}
+    
+    {% comment %} Check if this relationship affects the current page {% endcomment %}
+    {% if target_tool_name == page.tool_name %}
+      {% assign tool_data = source_tool_name | append: "|||" | append: source_title | append: "|||" | append: source_url %}
+      
+      {% comment %} Check if this relationship is not already in the direct relationships {% endcomment %}
+      {% assign already_exists = false %}
+      {% if rel_type == "parent" %}
+        {% for existing_parent in parent_tools %}
+          {% assign existing_parts = existing_parent | split: "|||" %}
+          {% if existing_parts[0] == source_tool_name %}
+            {% assign already_exists = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% unless already_exists %}
+          {% assign parent_tools = parent_tools | push: tool_data %}
+        {% endunless %}
+      {% elsif rel_type == "child" %}
+        {% for existing_child in child_tools %}
+          {% assign existing_parts = existing_child | split: "|||" %}
+          {% if existing_parts[0] == source_tool_name %}
+            {% assign already_exists = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% unless already_exists %}
+          {% assign child_tools = child_tools | push: tool_data %}
+        {% endunless %}
+      {% elsif rel_type == "sibling" %}
+        {% for existing_sibling in sibling_tools %}
+          {% assign existing_parts = existing_sibling | split: "|||" %}
+          {% if existing_parts[0] == source_tool_name %}
+            {% assign already_exists = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% unless already_exists %}
+          {% assign sibling_tools = sibling_tools | push: tool_data %}
+        {% endunless %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% comment %} Sort tools alphabetically by title {% endcomment %}
+{% assign parent_tools = parent_tools | sort %}
+{% assign child_tools = child_tools | sort %}
+{% assign sibling_tools = sibling_tools | sort %}
