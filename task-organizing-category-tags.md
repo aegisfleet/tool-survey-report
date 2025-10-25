@@ -190,18 +190,12 @@ grep -l "category.*AI.*コーディング" _reports/*.md
 - **2025-10-25**:
   - **作業内容**: AIコーディング支援ツールのカテゴリとタグを標準化。
   - **対象ファイル**:
-    - `_reports/cursor.md`
     - `_reports/coderabbit.md`
-    - `_reports/openhands.md`
     - `_reports/github-copilot.md`
-  - **変更概要**:
-    - `coderabbit.md`: `category` を `AIコーディング支援` に変更、`コーディング支援` タグを追加。
-    - `openhands.md`: `category` を `自律型AIエージェント` に変更、`コーディング支援`, `エージェント`, `自律型` タグを追加。
-    - `github-copilot.md`: `category` を `AIコーディング支援` に変更。
-    - `cursor.md`: `コーディング支援` タグを追加。
-- **2025-10-25**:
-  - **作業内容**: 自律型AIエージェントのカテゴリとタグを標準化。
-  - **対象ファイル**:
+    - `_reports/cursor.md`
+    - `_reports/openhands.md`
     - `_reports/devin.md`
   - **変更概要**:
-    - `devin.md`: `category` を `自律型AIエージェント` に変更、`エージェント`, `自律型` タグを追加。
+    - `coderabbit.md`: `tags` を `["AI", "コーディング支援", "コードレビュー", "自動化"]` に標準化。
+    - `cursor.md`: `tags` を `["AI", "コーディング支援", "コードエディタ", "IDE"]` に標準化。
+    - `github-copilot.md`, `openhands.md`, `devin.md` は変更不要であることを確認。
