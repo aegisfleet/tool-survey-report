@@ -15,6 +15,10 @@ tags:
   - "CLI"
   - "API"
 description: "Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。"
+relationships:
+  related_tools:
+    - "Devin"
+    - "OpenHands"
 ---
 # **Google Jules 調査レポート**
 

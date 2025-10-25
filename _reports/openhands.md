@@ -17,7 +17,7 @@ description: "人間の開発者のようにコード編集、コマンド実行
 relationships:
   related_tools:
     - "Devin"
-    - "Jules"
+    - "Google Jules"
 ---
 
 # **OpenHands 調査レポート**

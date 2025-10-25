@@ -16,7 +16,7 @@ description: "世界初の完全自律型AIソフトウェアエンジニアと�
 relationships:
   related_tools:
     - "OpenHands"
-    - "Jules"
+    - "Google Jules"
 ---
 
 # **Devin 調査レポート**
