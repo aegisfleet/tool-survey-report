@@ -17,13 +17,13 @@ tool_name: "ツール名"
 # ... 他の既存フィールド
 
 relationships:
-  parent: "親ツールのtool_name"
+  parent: "親レポートのtool_name"
   children:
-    - "子ツール1のtool_name"
-    - "子ツール2のtool_name"
+    - "子レポート1のtool_name"
+    - "子レポート2のtool_name"
   related_tools:
-    - "関連ツール1のtool_name"
-    - "関連ツール2のtool_name"
+    - "関連レポート1のtool_name"
+    - "関連レポート2のtool_name"
 ---
 ```
 
@@ -32,13 +32,13 @@ relationships:
 #### `parent` (文字列、オプション)
 
 - **用途**: このツールの親となるツールを指定
-- **値**: 親ツールの`tool_name`フィールドの値
+- **値**: 親レポートの`tool_name`フィールドの値
 - **例**: `parent: "GitHub"`
 
 #### `children` (配列、オプション)
 
 - **用途**: このツールの子となるツールのリストを指定
-- **値**: 子ツールの`tool_name`フィールドの値の配列
+- **値**: 子レポートの`tool_name`フィールドの値の配列
 - **例**:
 
   ```yaml
@@ -50,7 +50,7 @@ relationships:
 #### `related_tools` (配列、オプション)
 
 - **用途**: このツールと関連する兄弟ツールのリストを指定
-- **値**: 関連ツールの`tool_name`フィールドの値の配列
+- **値**: 関連レポートの`tool_name`フィールドの値の配列
 - **例**:
 
   ```yaml
@@ -213,16 +213,16 @@ relationships:
 関係性が定義されたレポートでは、以下のような「関連ツール」セクションが自動生成されます：
 
 ```text
-関連ツール
+関連レポート
 
-親ツール
+親レポート
 ├─ GitHub
 
-子ツール
+子レポート
 ├─ GitHub Actions
 └─ GitHub Copilot
 
-関連ツール
+関連レポート
 ├─ GitLab
 ├─ Bitbucket
 └─ Azure DevOps

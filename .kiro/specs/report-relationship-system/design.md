@@ -42,10 +42,10 @@ category: "CI/CD"
 
 # 新規追加フィールド
 relationships:
-  parent: "github"  # 親ツール（tool_nameで参照）
-  children:         # 子ツール（tool_nameで参照）
+  parent: "github"  # 親レポート（tool_nameで参照）
+  children:         # 子レポート（tool_nameで参照）
     - "github-copilot"
-  related_tools:    # 関連ツール（tool_nameで参照）
+  related_tools:    # 関連レポート（tool_nameで参照）
     - "gitlab-duo"
     - "jenkins"
 ```
@@ -71,18 +71,18 @@ Jekyll Liquidテンプレートで関係性を処理：
 
 ```html
 <div class="related-tools-section">
-  <h3>関連ツール</h3>
+  <h3>関連レポート</h3>
   
   {% if parent_tool %}
   <div class="parent-tool">
-    <h4>親ツール</h4>
+    <h4>親レポート</h4>
     <a href="{{ parent_tool.url }}">{{ parent_tool.title }}</a>
   </div>
   {% endif %}
   
   {% if child_tools.size > 0 %}
   <div class="child-tools">
-    <h4>子ツール</h4>
+    <h4>子レポート</h4>
     <ul>
       {% for child in child_tools %}
       <li><a href="{{ child.url }}">{{ child.title }}</a></li>
@@ -93,7 +93,7 @@ Jekyll Liquidテンプレートで関係性を処理：
   
   {% if sibling_tools.size > 0 %}
   <div class="sibling-tools">
-    <h4>関連ツール</h4>
+    <h4>関連レポート</h4>
     <ul>
       {% for sibling in sibling_tools %}
       <li><a href="{{ sibling.url }}">{{ sibling.title }}</a></li>
