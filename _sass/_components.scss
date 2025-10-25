@@ -840,7 +840,8 @@
       text-decoration: none;
       color: $text-color;
       transition: all 0.3s ease;
-      border: 1px solid transparent;
+      border: 1px solid rgba($primary-color, 0.2);
+      background-color: rgba($primary-color, 0.05);
       
       &:hover,
       &:focus {
@@ -848,6 +849,8 @@
         color: $text-color;
         transform: translateX(4px);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        background-color: rgba($primary-color, 0.1);
+        border-color: rgba($primary-color, 0.3);
       }
       
       &:focus {
@@ -899,6 +902,9 @@
     }
     
     .tool-link {
+      background-color: rgba(72, 187, 120, 0.05);
+      border-color: rgba(72, 187, 120, 0.2);
+      
       &:hover,
       &:focus {
         background-color: rgba(72, 187, 120, 0.1);
@@ -923,6 +929,9 @@
     }
     
     .tool-link {
+      background-color: rgba(237, 137, 54, 0.05);
+      border-color: rgba(237, 137, 54, 0.2);
+      
       &:hover,
       &:focus {
         background-color: rgba(237, 137, 54, 0.1);
@@ -947,6 +956,9 @@
     }
     
     .tool-link {
+      background-color: rgba(159, 122, 234, 0.05);
+      border-color: rgba(159, 122, 234, 0.2);
+      
       &:hover,
       &:focus {
         background-color: rgba(159, 122, 234, 0.1);
