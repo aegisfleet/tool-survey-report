@@ -785,3 +785,285 @@
     color: $primary-color;
   }
 }
+
+// Related Tools Component
+.related-tools-section {
+  margin: map-get($spacers, 5) 0;
+  padding: map-get($spacers, 4);
+  border: 2px solid rgba($primary-color, 0.1);
+  border-radius: $border-radius-lg;
+  background-color: rgba($primary-color, 0.02);
+  
+  h3 {
+    margin-top: 0;
+    margin-bottom: map-get($spacers, 4);
+    color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: $font-weight-bold;
+    border-bottom: 3px solid $primary-color;
+    padding-bottom: map-get($spacers, 2);
+    display: flex;
+    align-items: center;
+    gap: map-get($spacers, 2);
+    
+    &::before {
+      content: "🔗";
+      font-size: 1.25rem;
+    }
+  }
+  
+  .parent-tool,
+  .child-tools,
+  .sibling-tools {
+    margin: map-get($spacers, 4) 0;
+    
+    h4 {
+      font-size: 1.1rem;
+      color: $text-color;
+      margin-bottom: map-get($spacers, 3);
+      font-weight: $font-weight-semibold;
+      display: flex;
+      align-items: center;
+      gap: map-get($spacers, 2);
+      
+      svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.8;
+      }
+    }
+    
+    .tool-link {
+      display: block;
+      padding: map-get($spacers, 3);
+      border-radius: $border-radius;
+      text-decoration: none;
+      color: $text-color;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $text-color;
+        transform: translateX(4px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      &:focus {
+        outline: 3px solid rgba($primary-color, 0.3);
+        outline-offset: 2px;
+      }
+      
+      .tool-title {
+        display: block;
+        font-weight: $font-weight-semibold;
+        font-size: 1rem;
+        margin-bottom: map-get($spacers, 1);
+      }
+      
+      .tool-description {
+        display: block;
+        font-size: $font-size-sm;
+        color: $text-muted;
+        line-height: $line-height-base;
+      }
+    }
+    
+    .tools-list {
+      @extend %list-reset;
+      
+      li {
+        margin-bottom: map-get($spacers, 2);
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  // Parent tool styling (green theme)
+  .parent-tool {
+    border-left: 4px solid #48bb78;
+    padding-left: map-get($spacers, 3);
+    background-color: rgba(72, 187, 120, 0.05);
+    border-radius: 0 $border-radius $border-radius 0;
+    
+    h4 {
+      color: #2f855a;
+      
+      svg {
+        color: #48bb78;
+      }
+    }
+    
+    .tool-link {
+      &:hover,
+      &:focus {
+        background-color: rgba(72, 187, 120, 0.1);
+        border-color: rgba(72, 187, 120, 0.3);
+      }
+    }
+  }
+  
+  // Child tools styling (orange theme)
+  .child-tools {
+    border-left: 4px solid #ed8936;
+    padding-left: map-get($spacers, 3);
+    background-color: rgba(237, 137, 54, 0.05);
+    border-radius: 0 $border-radius $border-radius 0;
+    
+    h4 {
+      color: #c05621;
+      
+      svg {
+        color: #ed8936;
+      }
+    }
+    
+    .tool-link {
+      &:hover,
+      &:focus {
+        background-color: rgba(237, 137, 54, 0.1);
+        border-color: rgba(237, 137, 54, 0.3);
+      }
+    }
+  }
+  
+  // Sibling tools styling (purple theme)
+  .sibling-tools {
+    border-left: 4px solid #9f7aea;
+    padding-left: map-get($spacers, 3);
+    background-color: rgba(159, 122, 234, 0.05);
+    border-radius: 0 $border-radius $border-radius 0;
+    
+    h4 {
+      color: #6b46c1;
+      
+      svg {
+        color: #9f7aea;
+      }
+    }
+    
+    .tool-link {
+      &:hover,
+      &:focus {
+        background-color: rgba(159, 122, 234, 0.1);
+        border-color: rgba(159, 122, 234, 0.3);
+      }
+    }
+  }
+}
+
+// Responsive design for related tools
+@include media-breakpoint-down(md) {
+  .related-tools-section {
+    margin: map-get($spacers, 4) 0;
+    padding: map-get($spacers, 3);
+    
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: map-get($spacers, 3);
+    }
+    
+    .parent-tool,
+    .child-tools,
+    .sibling-tools {
+      margin: map-get($spacers, 3) 0;
+      padding-left: map-get($spacers, 2);
+      
+      h4 {
+        font-size: 1rem;
+        margin-bottom: map-get($spacers, 2);
+      }
+      
+      .tool-link {
+        padding: map-get($spacers, 2);
+        
+        &:hover,
+        &:focus {
+          transform: translateX(2px);
+        }
+        
+        .tool-title {
+          font-size: 0.95rem;
+        }
+        
+        .tool-description {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .related-tools-section {
+    margin: map-get($spacers, 3) 0;
+    padding: map-get($spacers, 2);
+    
+    h3 {
+      font-size: 1.1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: map-get($spacers, 1);
+      
+      &::before {
+        font-size: 1rem;
+      }
+    }
+    
+    .parent-tool,
+    .child-tools,
+    .sibling-tools {
+      border-left-width: 3px;
+      padding-left: map-get($spacers, 2);
+      
+      h4 {
+        font-size: 0.9rem;
+        gap: map-get($spacers, 1);
+        
+        svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}
+
+// High contrast mode support for related tools
+@media (prefers-contrast: high) {
+  .related-tools-section {
+    border-width: 3px;
+    
+    .parent-tool,
+    .child-tools,
+    .sibling-tools {
+      border-left-width: 6px;
+      
+      .tool-link {
+        border-width: 2px;
+        
+        &:focus {
+          outline-width: 4px;
+        }
+      }
+    }
+  }
+}
+
+// Reduced motion support for related tools
+@media (prefers-reduced-motion: reduce) {
+  .related-tools-section {
+    .tool-link {
+      transition: none;
+      
+      &:hover,
+      &:focus {
+        transform: none;
+      }
+    }
+  }
+}
