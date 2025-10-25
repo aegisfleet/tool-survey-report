@@ -11,6 +11,11 @@ tags:
   - "オープンソース"
   - "開発環境"
 description: "Microsoftが開発した、無料で高機能なオープンソースのコードエディタ。豊富な拡張機能により、あらゆる言語での開発に対応可能です。"
+relationships:
+  related_tools:
+    - "Cursor"
+    - "Kiro"
+    - "GitHub Copilot"
 ---
 
 # **Visual Studio Code 調査レポート**
