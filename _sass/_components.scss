@@ -582,7 +582,7 @@
 .search-clear,
 .filter-clear {
   position: absolute;
-  right: map-get($spacers, 2);
+  right: map-get($spacers, 3);
   top: 50%;
   transform: translateY(-50%);
   background: none;
