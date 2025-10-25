@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: /scripts/validate-relationships.json
+---
+{% comment %}
+Relationship Validation Script
+This generates a JSON report of validation results that can be used by development tools
+{% endcomment %}
+
+{% include relationship-validator.html %}
+
+{
+  "validation_summary": {
+    "total_reports": {{ site.reports.size }},
+    "reports_with_relationships": {% assign reports_with_relationships = 0 %}{% for report in site.reports %}{% if report.relationships %}{% assign reports_with_relationships = reports_with_relationships | plus: 1 %}{% endif %}{% endfor %}{{ reports_with_relationships }},
+    "total_errors": {{ relationship_validation_errors.size }},
+    "total_warnings": {{ relationship_validation_warnings.size }}
+  },
+  "errors": [
+    {% for error in relationship_validation_errors %}
+    "{{ error | escape }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "warnings": [
+    {% for warning in relationship_validation_warnings %}
+    "{{ warning | escape }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "available_tools": [
+    {% for report in site.reports %}
+    {% if report.tool_name %}
+    "{{ report.tool_name | escape }}"{% unless forloop.last %},{% endunless %}
+    {% endif %}
+    {% endfor %}
+  ]
+}

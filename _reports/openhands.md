@@ -14,6 +14,10 @@ tags:
   - "エージェント"
   - "自律型"
 description: "人間の開発者のようにコード編集、コマンド実行、Webブラウジングが可能なオープンソースのAIコーディングエージェント"
+relationships:
+  related_tools:
+    - "Devin"
+    - "Google Jules"
 ---
 
 # **OpenHands 調査レポート**

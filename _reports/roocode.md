@@ -12,6 +12,11 @@ tags:
   - "VS Code"
   - "オープンソース"
 description: "VS Code内で動作するオープンソースのAI搭載コーディングアシスタント。複数のファイルを横断したコードの読み書き、コマンド実行、ワークフローへの適応が可能です。"
+relationships:
+  related_tools:
+    - "GitHub Copilot"
+    - "Cursor"
+    - "Visual Studio Code"
 ---
 
 # **Roo Code 調査レポート**

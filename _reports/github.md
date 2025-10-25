@@ -12,6 +12,12 @@ tags:
   - "CI/CD"
   - "DevOps"
 description: "GitHubは、Gitを使用したソフトウェア開発とバージョン管理のためのAI搭載開発者プラットフォームです。"
+relationships:
+  children:
+    - "GitHub Actions"
+    - "GitHub Copilot"
+  related_tools:
+    - "GitLab"
 ---
 
 # **GitHub 調査レポート**

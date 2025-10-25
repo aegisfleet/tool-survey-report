@@ -12,6 +12,11 @@ tags:
   - "コードエディタ"
   - "IDE"
 description: "Cursorは、AIを搭載したコードエディタで、開発者の生産性を向上させるために設計されています。VS Codeのフォークであり、多くのAI機能が追加されています。"
+relationships:
+  related_tools:
+    - "Kiro"
+    - "Visual Studio Code"
+    - "GitHub Copilot"
 ---
 
 # **Cursor 調査レポート**

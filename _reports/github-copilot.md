@@ -13,6 +13,12 @@ tags:
   - "コード生成"
   - "エージェント"
 description: "GitHub Copilotは、AIを活用してコーディングを高速化し、開発者の生産性を向上させるためのAIペアプログラマーです。"
+relationships:
+  parent: "GitHub"
+  related_tools:
+    - "GitLab Duo"
+    - "Cursor"
+    - "Kiro"
 ---
 
 # **GitHub Copilot 調査レポート**

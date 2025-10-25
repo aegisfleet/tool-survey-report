@@ -12,6 +12,9 @@ tags:
   - "自動化"
   - "DevOps"
 description: "Jenkinsは、ビルド、テスト、デプロイを自動化するオープンソースのCI/CDサーバーです。"
+relationships:
+  related_tools:
+    - "GitHub Actions"
 ---
 
 # **Jenkins 調査レポート**

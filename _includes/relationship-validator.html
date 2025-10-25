@@ -1,0 +1,121 @@
+{% comment %}
+Relationship Validation System
+This include validates relationship metadata and generates warning messages for validation errors.
+{% endcomment %}
+
+{% comment %} Initialize validation data structures {% endcomment %}
+{% assign validation_errors = "" | split: "" %}
+{% assign validation_warnings = "" | split: "" %}
+{% assign missing_references = "" | split: "" %}
+
+{% comment %} Build tool_name lookup table for validation {% endcomment %}
+{% assign tool_lookup_map = "" | split: "" %}
+{% for report in site.reports %}
+  {% if report.tool_name %}
+    {% assign lookup_entry = report.tool_name | append: "###" | append: forloop.index0 %}
+    {% assign tool_lookup_map = tool_lookup_map | push: lookup_entry %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Validate all reports for missing references {% endcomment %}
+{% for report in site.reports %}
+  {% if report.relationships %}
+    {% assign current_tool_name = report.tool_name %}
+    {% assign current_report_path = report.path %}
+    
+    {% comment %} Validate parent relationship {% endcomment %}
+    {% if report.relationships.parent %}
+      {% assign parent_tool_name = report.relationships.parent %}
+      {% assign parent_exists = false %}
+      
+      {% comment %} Check if parent tool exists {% endcomment %}
+      {% for lookup_item in tool_lookup_map %}
+        {% assign parts = lookup_item | split: "###" %}
+        {% assign lookup_tool_name = parts[0] %}
+        {% if lookup_tool_name == parent_tool_name %}
+          {% assign parent_exists = true %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% unless parent_exists %}
+        {% assign missing_ref_error = "Missing parent reference: '" | append: parent_tool_name | append: "' in " | append: current_report_path %}
+        {% assign missing_references = missing_references | push: missing_ref_error %}
+      {% endunless %}
+    {% endif %}
+    
+    {% comment %} Validate children relationships {% endcomment %}
+    {% if report.relationships.children %}
+      {% for child_tool_name in report.relationships.children %}
+        {% assign child_exists = false %}
+        
+        {% comment %} Check if child tool exists {% endcomment %}
+        {% for lookup_item in tool_lookup_map %}
+          {% assign parts = lookup_item | split: "###" %}
+          {% assign lookup_tool_name = parts[0] %}
+          {% if lookup_tool_name == child_tool_name %}
+            {% assign child_exists = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% unless child_exists %}
+          {% assign missing_ref_error = "Missing child reference: '" | append: child_tool_name | append: "' in " | append: current_report_path %}
+          {% assign missing_references = missing_references | push: missing_ref_error %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+    
+    {% comment %} Validate related_tools relationships {% endcomment %}
+    {% if report.relationships.related_tools %}
+      {% for related_tool_name in report.relationships.related_tools %}
+        {% assign related_exists = false %}
+        
+        {% comment %} Check if related tool exists {% endcomment %}
+        {% for lookup_item in tool_lookup_map %}
+          {% assign parts = lookup_item | split: "###" %}
+          {% assign lookup_tool_name = parts[0] %}
+          {% if lookup_tool_name == related_tool_name %}
+            {% assign related_exists = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        
+        {% unless related_exists %}
+          {% assign missing_ref_error = "Missing related_tools reference: '" | append: related_tool_name | append: "' in " | append: current_report_path %}
+          {% assign missing_references = missing_references | push: missing_ref_error %}
+        {% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} Combine all validation results {% endcomment %}
+{% assign validation_errors = validation_errors | concat: missing_references %}
+
+{% comment %} Output validation results if requested {% endcomment %}
+{% if include.output_validation %}
+  {% if validation_errors.size > 0 %}
+    <div class="relationship-validation-results" style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px; padding: 1rem; margin: 1rem 0;">
+      <h4 style="color: #856404; margin-top: 0;">Relationship Validation Results</h4>
+      
+      <div class="validation-errors" style="margin-bottom: 1rem;">
+        <h5 style="color: #dc3545; margin-bottom: 0.5rem;">Errors ({{ validation_errors.size }}):</h5>
+        <ul style="color: #dc3545; margin: 0;">
+          {% for error in validation_errors %}
+            <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% else %}
+    <div class="relationship-validation-success" style="background-color: #d4edda; border: 1px solid #c3e6cb; border-radius: 4px; padding: 1rem; margin: 1rem 0;">
+      <p style="color: #155724; margin: 0;">✅ All relationship references are valid.</p>
+    </div>
+  {% endif %}
+{% endif %}
+
+{% comment %} Make validation results available as variables {% endcomment %}
+{% assign relationship_validation_errors = validation_errors %}
+{% assign relationship_validation_warnings = validation_warnings %}
+{% assign relationship_missing_references = missing_references %}

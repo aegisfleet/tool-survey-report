@@ -12,6 +12,10 @@ tags:
   - "コードレビュー"
   - "自動化"
 description: "CodeRabbitは、AIを活用してコードレビューを自動化するツールです。開発者のレビュー時間を削減し、バグの早期発見を支援します。"
+relationships:
+  related_tools:
+    - "GitHub Copilot"
+    - "GitHub"
 ---
 
 # **CodeRabbit 調査レポート**

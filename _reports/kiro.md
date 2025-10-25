@@ -14,6 +14,11 @@ tags:
   - "開発者ツール"
   - "VS Code"
 description: "Kiroは、プロトタイプから本番まで対応するAIネイティブな統合開発環境（IDE）です。"
+relationships:
+  related_tools:
+    - "Cursor"
+    - "Visual Studio Code"
+    - "GitHub Copilot"
 ---
 
 # **Kiro 調査レポート**
