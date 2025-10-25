@@ -1,7 +1,7 @@
 ---
 title: "CodeRabbit 調査レポート"
 tool_name: "CodeRabbit"
-category: "AIコードレビュー"
+category: "AIコーディング支援"
 developer: "CodeRabbit Inc."
 official_site: "https://www.coderabbit.ai/"
 date: "2025-10-19"
@@ -12,6 +12,7 @@ tags:
   - "開発者ツール"
   - "GitHub"
   - "GitLab"
+  - "コーディング支援"
 description: "CodeRabbitは、AIを活用してコードレビューを自動化するツールです。開発者のレビュー時間を削減し、バグの早期発見を支援します。"
 ---
 

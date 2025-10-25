@@ -1,7 +1,7 @@
 ---
 title: "OpenHands 調査レポート"
 tool_name: "OpenHands"
-category: "AIコーディングエージェント"
+category: "自律型AIエージェント"
 developer: "Daytona Platform Inc."
 official_site: "https://openhands.daytona.io/"
 date: "2025-10-23"
@@ -10,7 +10,9 @@ tags:
   - "AI"
   - "開発者ツール"
   - "オープンソース"
-  - "コーディングエージェント"
+  - "コーディング支援"
+  - "エージェント"
+  - "自律型"
 description: "人間の開発者のようにコード編集、コマンド実行、Webブラウジングが可能なオープンソースのAIコーディングエージェント"
 ---
 
