@@ -16,6 +16,7 @@ relationships:
   related_tools:
     - "ChatGPT"
     - "Gemini"
+    - "Grok"
 ---
 
 # **Claude 調査レポート**
