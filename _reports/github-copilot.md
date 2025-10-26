@@ -19,6 +19,7 @@ relationships:
     - "GitLab Duo"
     - "Cursor"
     - "Kiro"
+    - "Windsurf"
 ---
 
 # **GitHub Copilot 調査レポート**

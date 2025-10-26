@@ -320,3 +320,11 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `claude.md` の `category` を `開発者ツール` から `生成AI` に変更し、他の2ツールと統一。
     - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
+- **2025-10-26**:
+  - **作業内容**: Windsurfを基軸としたAIコーディング支援ツールの関連付けを整理。
+  - **対象ファイル**:
+    - `_reports/windsurf.md`
+    - `_reports/cursor.md`
+    - `_reports/github-copilot.md`
+  - **変更概要**:
+    - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。カテゴリとタグは変更なし。

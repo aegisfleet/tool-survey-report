@@ -12,6 +12,10 @@ tags:
   - "開発者ツール"
   - "IDE"
 description: "Windsurfは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。"
+relationships:
+  related_tools:
+    - "Cursor"
+    - "GitHub Copilot"
 ---
 
 # **Windsurf 調査レポート**
