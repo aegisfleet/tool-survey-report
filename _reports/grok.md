@@ -1,16 +1,22 @@
 ---
 title: "Grok 調査レポート"
 tool_name: "Grok"
-category: "AIアシスタント"
+category: "生成AI"
 developer: "xAI"
 official_site: "https://x.ai/grok"
 date: "2025-10-23"
 last_updated: "2025-10-23"
 tags:
   - "AI"
-  - "Chatbot"
-  - "xAI"
+  - "生成AI"
+  - "大規模言語モデル"
+  - "会話型AI"
 description: "xAIによって開発された、高度な推論、コーディング、視覚処理能力を持つAIアシスタント。"
+relationships:
+  related_tools:
+    - "ChatGPT"
+    - "Gemini"
+    - "Claude"
 ---
 
 # **Grok 調査レポート**

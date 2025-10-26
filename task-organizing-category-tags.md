@@ -390,3 +390,13 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - 3つのレポートの `category` を `ワークフロー自動化` に統一。
     - `microsoft-power-automate.md` の `tags` を修正。
     - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
+- **2025-10-26**:
+  - **作業内容**: Grokを基軸とした生成AIツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/grok.md`
+    - `_reports/chatgpt.md`
+    - `_reports/gemini.md`
+    - `_reports/claude.md`
+  - **変更概要**:
+    - `grok.md` の `category` を `AIアシスタント` から `生成AI` に変更し、`tags` を標準化。
+    - 上記4つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
