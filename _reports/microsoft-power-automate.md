@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Power Automate 調査レポート"
 tool_name: "Microsoft Power Automate"
-category: "RPA (Robotic Process Automation)"
+category: "ワークフロー自動化"
 developer: "Microsoft"
 official_site: "https://powerautomate.microsoft.com/"
 date: "2025-10-19"
@@ -10,8 +10,12 @@ tags:
   - "RPA"
   - "ローコード"
   - "自動化"
-  - "Microsoft"
+  - "iPaaS"
 description: "ローコードとAIを活用し、ビジネスプロセスを最適化するMicrosoftの包括的な自動化ソリューション。"
+relationships:
+  related_tools:
+    - "Zapier"
+    - "n8n"
 ---
 
 # **Microsoft Power Automate 調査レポート**

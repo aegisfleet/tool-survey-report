@@ -380,3 +380,13 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `appium.md` に `relationships` を追加。
     - 既存のテスト自動化ツールレポート5つに `Appium` への関連付けを追加し、双方向の関係を確立。
+- **2025-10-26**:
+  - **作業内容**: Zapierを基軸としたワークフロー自動化ツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/zapier.md`
+    - `_reports/microsoft-power-automate.md`
+    - `_reports/n8n.md`
+  - **変更概要**:
+    - 3つのレポートの `category` を `ワークフロー自動化` に統一。
+    - `microsoft-power-automate.md` の `tags` を修正。
+    - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
