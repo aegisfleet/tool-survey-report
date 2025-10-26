@@ -346,3 +346,14 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `_reports/openhands.md`
   - **変更概要**:
     - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。カテゴリとタグは変更なし。
+- **2025-10-26**:
+  - **作業内容**: Cucumberを基軸としたテスト自動化ツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/cucumber.md`
+    - `_reports/selenium.md`
+    - `_reports/playwright.md`
+    - `_reports/cypress.md`
+    - `_reports/codeceptjs.md`
+  - **変更概要**:
+    - `cucumber.md` の `category` を `テスト自動化` から `テスト/QA` に変更。
+    - 上記5つのレポート間に相互の `related_tools` を追加し、関連性を明示した。

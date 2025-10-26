@@ -1,7 +1,7 @@
 ---
 title: "Cucumber 調査レポート"
 tool_name: "Cucumber"
-category: "テスト自動化"
+category: "テスト/QA"
 developer: "SmartBear"
 official_site: "https://cucumber.io/"
 date: "2025-10-19"
@@ -11,6 +11,12 @@ tags:
   - "BDD"
   - "オープンソース"
 description: "自然言語で記述された仕様書を基に、自動化された受け入れテストを実行するためのツール。"
+relationships:
+  related_tools:
+    - "Selenium"
+    - "Playwright"
+    - "Cypress"
+    - "CodeceptJS"
 ---
 # **Cucumber 調査レポート**
 
