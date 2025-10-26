@@ -16,6 +16,7 @@ relationships:
     - "Playwright"
     - "Selenium"
     - "CodeceptJS"
+    - "Cucumber"
 ---
 
 # **Cypress 調査レポート**
