@@ -17,6 +17,7 @@ relationships:
     - "ChatGPT"
     - "Claude"
     - "Grok"
+    - "Rakuten AI"
 ---
 
 # **Gemini 調査レポート**

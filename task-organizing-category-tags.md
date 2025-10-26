@@ -400,3 +400,14 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `grok.md` の `category` を `AIアシスタント` から `生成AI` に変更し、`tags` を標準化。
     - 上記4つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
+- **2025-10-26**:
+  - **作業内容**: Rakuten AIを基軸とした生成AIツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/rakuten-ai.md`
+    - `_reports/chatgpt.md`
+    - `_reports/gemini.md`
+    - `_reports/claude.md`
+    - `_reports/grok.md`
+  - **変更概要**:
+    - `rakuten-ai.md` の `category` を `AI` から `生成AI` に変更。
+    - 上記5つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
