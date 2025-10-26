@@ -328,3 +328,13 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `_reports/github-copilot.md`
   - **変更概要**:
     - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。カテゴリとタグは変更なし。
+- **2025-10-26**:
+  - **作業内容**: CodeceptJSを基軸としたテスト自動化ツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/codeceptjs.md`
+    - `_reports/playwright.md`
+    - `_reports/cypress.md`
+    - `_reports/selenium.md`
+  - **変更概要**:
+    - `codeceptjs.md` の `category` を `テスト自動化フレームワーク` から `テスト/QA` に変更。
+    - 上記4つのレポート間に相互の `related_tools` を追加し、関連性を明示した。
