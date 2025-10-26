@@ -13,6 +13,12 @@ tags:
   - "ノーコード"
   - "品質保証"
 description: "AIを活用したテスト自動化プラットフォーム。ノーコードでのテスト作成、AIによるメンテナンス、モバイルアプリテストなどを提供し、開発の生産性向上を支援します。"
+relationships:
+  related_tools:
+    - "MagicPod"
+    - "Selenium"
+    - "Playwright"
+    - "Cypress"
 ---
 
 # **Autify 調査レポート**

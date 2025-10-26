@@ -13,6 +13,12 @@ tags:
   - "ノーコード"
   - "モバイルテスト"
 description: "AIを活用したノーコードのテスト自動化プラットフォーム。モバイルアプリとウェブアプリの両方に対応し、開発サイクルの高速化と品質向上を実現します。"
+relationships:
+  related_tools:
+    - "Autify"
+    - "Selenium"
+    - "Playwright"
+    - "Cypress"
 ---
 
 # **MagicPod 調査レポート**
