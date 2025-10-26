@@ -12,6 +12,10 @@ tags:
   - "大規模言語モデル"
   - "会話型AI"
 description: "Googleによって開発された、マルチモーダルな生成AIモデルファミリー"
+relationships:
+  related_tools:
+    - "ChatGPT"
+    - "Claude"
 ---
 
 # **Gemini 調査レポート**

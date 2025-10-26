@@ -1,7 +1,7 @@
 ---
 title: "Claude 調査レポート"
 tool_name: "Claude"
-category: "開発者ツール"
+category: "生成AI"
 developer: "Anthropic"
 official_site: "https://claude.ai/"
 date: "2025-10-18"
@@ -12,6 +12,10 @@ tags:
   - "開発自動化"
   - "LLM"
 description: "Anthropic社が開発した、大規模言語モデル（LLM）およびそれを活用したAIアシスタント。自然言語処理、高度なコーディング支援、そして「スキル」による機能拡張が特徴で、開発者から一般ユーザーまで幅広く利用されています。"
+relationships:
+  related_tools:
+    - "ChatGPT"
+    - "Gemini"
 ---
 
 # **Claude 調査レポート**

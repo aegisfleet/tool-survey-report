@@ -311,3 +311,12 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `github-actions.md`, `gitlab-ci.md`, `jenkins.md` の `category` が `CI/CD` であることを確認。
     - `github-actions.md` の `related_tools` を修正し、`GitLab` への参照をより具体的な `GitLab CI/CD` に変更。
     - 上記のCI/CDツール間で双方向の `related_tools` が設定されていることを確認。
+- **2025-10-26**:
+  - **作業内容**: 主要な生成AIツール（ChatGPT、Gemini、Claude）のカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/chatgpt.md`
+    - `_reports/gemini.md`
+    - `_reports/claude.md`
+  - **変更概要**:
+    - `claude.md` の `category` を `開発者ツール` から `生成AI` に変更し、他の2ツールと統一。
+    - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
