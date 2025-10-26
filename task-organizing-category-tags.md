@@ -357,3 +357,14 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `cucumber.md` の `category` を `テスト自動化` から `テスト/QA` に変更。
     - 上記5つのレポート間に相互の `related_tools` を追加し、関連性を明示した。
+- **2025-10-26**:
+  - **作業内容**: MagicPodを基軸としたテスト/QAツールの関連付けを整理。
+  - **対象ファイル**:
+    - `_reports/magicpod.md`
+    - `_reports/autify.md`
+    - `_reports/selenium.md`
+    - `_reports/cypress.md`
+    - `_reports/playwright.md`
+  - **変更概要**:
+    - `magicpod.md` と `autify.md` に `relationships` を追加。
+    - 既存のテスト自動化ツールレポート（`selenium.md`, `cypress.md`, `playwright.md`）に `MagicPod` と `Autify` への関連付けを追加し、双方向の関係を確立。

@@ -17,6 +17,8 @@ relationships:
     - "Selenium"
     - "CodeceptJS"
     - "Cucumber"
+    - "MagicPod"
+    - "Autify"
 ---
 
 # **Cypress 調査レポート**

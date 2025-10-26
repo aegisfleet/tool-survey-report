@@ -18,6 +18,8 @@ relationships:
     - "Selenium"
     - "CodeceptJS"
     - "Cucumber"
+    - "MagicPod"
+    - "Autify"
 ---
 
 # **Playwright 調査レポート**
