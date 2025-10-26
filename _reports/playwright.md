@@ -1,7 +1,7 @@
 ---
 title: "Playwright 調査レポート"
 tool_name: "Playwright"
-category: "テスト自動化フレームワーク"
+category: "テスト/QA"
 developer: "Microsoft"
 official_site: "https://playwright.dev/"
 date: "2025-10-18"
@@ -12,6 +12,10 @@ tags:
   - "ブラウザテスト"
   - "オープンソース"
 description: "Playwrightは、最新のWebアプリケーション向けの高速で信頼性の高いエンドツーエンドのテストを可能にするオープンソースのフレームワークです。"
+relationships:
+  related_tools:
+    - "Cypress"
+    - "Selenium"
 ---
 
 # **Playwright 調査レポート**

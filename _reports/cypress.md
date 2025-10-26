@@ -1,7 +1,7 @@
 ---
 title: "Cypress 調査レポート"
 tool_name: "Cypress"
-category: "テスト自動化フレームワーク"
+category: "テスト/QA"
 developer: "Cypress.io"
 official_site: "https://www.cypress.io/"
 date: "2025-10-24"
@@ -11,6 +11,10 @@ tags:
   - "E2Eテスト"
   - "フロントエンド開発"
 description: "モダンなWebアプリケーションのための次世代フロントエンドテストツール。ローカルでのテスト実行とデバッグを効率化するCypress Appと、テスト結果の分析や大規模な並列実行を可能にするCypress Cloudから構成される。"
+relationships:
+  related_tools:
+    - "Playwright"
+    - "Selenium"
 ---
 
 # **Cypress 調査レポート**

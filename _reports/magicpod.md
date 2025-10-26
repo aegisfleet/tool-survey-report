@@ -1,17 +1,17 @@
 ---
 title: "MagicPod 調査レポート"
 tool_name: "MagicPod"
-category: "テスト自動化"
+category: "テスト/QA"
 developer: "MagicPod Inc."
 official_site: "https://magicpod.com/"
 date: "2025-10-21"
 last_updated: "2025-10-21"
 tags:
   - "テスト自動化"
-  - "ノーコード"
-  - "AI"
-  - "モバイルテスト"
   - "E2Eテスト"
+  - "AI"
+  - "ノーコード"
+  - "モバイルテスト"
 description: "AIを活用したノーコードのテスト自動化プラットフォーム。モバイルアプリとウェブアプリの両方に対応し、開発サイクルの高速化と品質向上を実現します。"
 ---
 

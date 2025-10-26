@@ -1,16 +1,16 @@
 ---
 title: "Autify 調査レポート"
 tool_name: "Autify"
-category: "テスト自動化"
+category: "テスト/QA"
 developer: "オーティファイ株式会社"
 official_site: "https://autify.jp/"
 date: "2025-10-21"
 last_updated: "2025-10-21"
 tags:
   - "テスト自動化"
+  - "E2Eテスト"
   - "AI"
   - "ノーコード"
-  - "E2Eテスト"
   - "品質保証"
 description: "AIを活用したテスト自動化プラットフォーム。ノーコードでのテスト作成、AIによるメンテナンス、モバイルアプリテストなどを提供し、開発の生産性向上を支援します。"
 ---
