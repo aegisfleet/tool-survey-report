@@ -1,7 +1,7 @@
 ---
 title: "Rakuten AI 調査レポート"
 tool_name: "Rakuten AI"
-category: "AI"
+category: "生成AI"
 developer: "Rakuten Group, Inc."
 official_site: "https://ai.rakuten.co.jp/"
 date: "2025-10-25"
@@ -13,6 +13,12 @@ tags:
   - "BtoB"
   - "BtoC"
 description: "楽天グループの多様なサービスにAIを統合し、ビジネスと消費者の両方にソリューションを提供する全社的なAIイニシアチブ。"
+relationships:
+  related_tools:
+    - "ChatGPT"
+    - "Gemini"
+    - "Claude"
+    - "Grok"
 ---
 
 # **Rakuten AI 調査レポート**
