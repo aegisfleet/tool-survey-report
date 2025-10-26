@@ -11,7 +11,12 @@ tags:
   - "オープンソース"
   - "ローコード"
   - "セルフホスト"
+  - "自動化"
 description: "オープンソースを基盤とした柔軟性の高いワークフロー自動化ツール。ノーコードとローコードを組み合わせ、複雑なプロセスにも対応可能。"
+relationships:
+  related_tools:
+    - "Zapier"
+    - "Microsoft Power Automate"
 ---
 
 # **n8n 調査レポート**

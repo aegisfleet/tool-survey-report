@@ -11,6 +11,10 @@ tags:
   - "iPaaS"
   - "ノーコード"
 description: "Zapierは、AIワークフロー、エージェント、アプリを自動化するプラットフォームです。プログラミングの知識がなくても、数千種類のアプリケーション間でワークフローを自動化することができます。"
+relationships:
+  related_tools:
+    - "Microsoft Power Automate"
+    - "n8n"
 ---
 
 # **Zapier 調査レポート**
