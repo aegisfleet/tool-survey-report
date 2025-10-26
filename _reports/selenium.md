@@ -16,6 +16,7 @@ relationships:
   related_tools:
     - "Cypress"
     - "Playwright"
+    - "CodeceptJS"
 ---
 
 # **Selenium 調査レポート**

@@ -1,7 +1,7 @@
 ---
 title: "CodeceptJS 調査レポート"
 tool_name: "CodeceptJS"
-category: "テスト自動化フレームワーク"
+category: "テスト/QA"
 developer: "CodeceptJS Team (Originally by DavertMik)"
 official_site: "https://codecept.io/"
 date: "2025-10-19"
@@ -12,6 +12,11 @@ tags:
   - "Node.js"
   - "オープンソース"
 description: "Playwright, WebDriver, Puppeteerなどを利用してE2Eテストをシンプルに記述できる、シナリオ駆動のテスト自動化フレームワーク。"
+relationships:
+  related_tools:
+    - "Playwright"
+    - "Cypress"
+    - "Selenium"
 ---
 
 # **CodeceptJS 調査レポート**
