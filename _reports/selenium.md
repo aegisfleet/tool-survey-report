@@ -20,6 +20,7 @@ relationships:
     - "Cucumber"
     - "MagicPod"
     - "Autify"
+    - "Appium"
 ---
 
 # **Selenium 調査レポート**

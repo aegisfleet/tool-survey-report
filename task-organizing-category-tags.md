@@ -368,3 +368,15 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `magicpod.md` と `autify.md` に `relationships` を追加。
     - 既存のテスト自動化ツールレポート（`selenium.md`, `cypress.md`, `playwright.md`）に `MagicPod` と `Autify` への関連付けを追加し、双方向の関係を確立。
+- **2025-10-26**:
+  - **作業内容**: Appiumを基軸としたテスト/QAツールの関連付けを整理。
+  - **対象ファイル**:
+    - `_reports/appium.md`
+    - `_reports/selenium.md`
+    - `_reports/playwright.md`
+    - `_reports/cypress.md`
+    - `_reports/magicpod.md`
+    - `_reports/autify.md`
+  - **変更概要**:
+    - `appium.md` に `relationships` を追加。
+    - 既存のテスト自動化ツールレポート5つに `Appium` への関連付けを追加し、双方向の関係を確立。

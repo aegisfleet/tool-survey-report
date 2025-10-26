@@ -20,6 +20,7 @@ relationships:
     - "Cucumber"
     - "MagicPod"
     - "Autify"
+    - "Appium"
 ---
 
 # **Playwright 調査レポート**
