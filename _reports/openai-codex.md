@@ -1,7 +1,7 @@
 ---
 title: "OpenAI Codex 調査レポート"
 tool_name: "OpenAI Codex"
-category: "AIコーディングエージェント"
+category: "AIコーディング支援"
 developer: "OpenAI"
 official_site: "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
 date: "2025-10-19"
@@ -10,8 +10,13 @@ tags:
   - "AI"
   - "コード生成"
   - "開発支援"
-  - "AIエージェント"
+  - "エージェント"
 description: "OpenAIが開発するAIコーディングエージェント。CLI、IDE拡張、クラウド環境を通じて、コードの作成、レビュー、実行を支援し、開発者とペアを組んで自律的にコーディングタスクを実行します。"
+relationships:
+  related_tools:
+    - "GitHub Copilot"
+    - "Gemini"
+    - "Cursor"
 ---
 
 # **OpenAI Codex 調査レポート**
