@@ -355,3 +355,11 @@ relationships:
     - `kiro.md`: `category` を `AI IDE` から `AIコードエディタ` に変更。
     - `cline.md`: `category` を `AIコーディングエージェント` から `自律型AIエージェント` に変更し、`tags` を標準化。`relationships` を追加。
     - `openai-codex.md`: `category` を `AIコーディングエージェント` から `AIコーディング支援` に変更し、`tags` を標準化。`relationships` を追加。
+- **2025-10-26**:
+  - **作業内容**: 勤怠管理ツールのカテゴリとタグを標準化。
+  - **対象ファイル**:
+    - `_reports/king-of-time.md`
+    - `_reports/jobcan-kinmu-kanri.md`
+  - **変更概要**:
+    - `king-of-time.md`: `category` を `勤怠管理システム` から `勤怠管理` に変更。
+    - `jobcan-kinmu-kanri.md`: `tags` の `労務管理` を `人事労務` に変更。

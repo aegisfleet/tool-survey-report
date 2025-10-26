@@ -1,7 +1,7 @@
 ---
 title: "KING OF TIME 調査レポート"
 tool_name: "KING OF TIME"
-category: "勤怠管理システム"
+category: "勤怠管理"
 developer: "株式会社ヒューマンテクノロジーズ"
 official_site: "https://www.kingoftime.jp/"
 date: "2025-10-24"
