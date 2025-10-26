@@ -18,7 +18,6 @@ relationships:
     - "GitLab CI/CD"
   related_tools:
     - "GitHub"
-    - "GitHub Actions"
 ---
 
 # **GitLab 調査レポート**
