@@ -1,17 +1,23 @@
 ---
 title: "COMPANY 調査レポート"
 tool_name: "COMPANY"
-category: "統合人事システム"
+category: "人事労務"
 developer: "株式会社Works Human Intelligence"
 official_site: "https://www.works-hi.co.jp/products"
 date: "2025-10-24"
 last_updated: "2025-10-24"
 tags:
-  - "人事管理"
+  - "人事労務"
   - "給与計算"
   - "勤怠管理"
   - "タレントマネジメント"
 description: "大手法人向け統合型人事システム。人事管理、給与計算、勤怠管理、タレントマネジメント等の人的資本マネジメントにまつわる業務領域を広くカバーします。"
+relationships:
+  related_tools:
+    - "SmartHR"
+    - "KING OF TIME"
+    - "ジョブカン勤怠管理"
+    - "マネーフォワード クラウド勤怠"
 ---
 
 # **COMPANY 調査レポート**

@@ -11,6 +11,12 @@ tags:
   - "人事労務"
   - "SaaS"
 description: "市場シェアNo.1を誇るクラウド型勤怠管理システム。多彩な打刻方法と柔軟な設定で、あらゆる業種・規模の企業に対応。"
+relationships:
+  related_tools:
+    - "COMPANY"
+    - "SmartHR"
+    - "ジョブカン勤怠管理"
+    - "マネーフォワード クラウド勤怠"
 ---
 
 # **KING OF TIME 調査レポート**
