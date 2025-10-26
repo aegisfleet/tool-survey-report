@@ -345,3 +345,13 @@ relationships:
     - `coderabbit.md`: `tags` を `["AI", "コーディング支援", "コードレビュー", "自動化"]` に標準化。
     - `cursor.md`: `tags` を `["AI", "コーディング支援", "コードエディタ", "IDE"]` に標準化。
     - `github-copilot.md`, `openhands.md`, `devin.md` は変更不要であることを確認。
+- **2025-10-26**:
+  - **作業内容**: AI関連ツールのカテゴリ統一と関連付けの追加。
+  - **対象ファイル**:
+    - `_reports/kiro.md`
+    - `_reports/cline.md`
+    - `_reports/openai-codex.md`
+  - **変更概要**:
+    - `kiro.md`: `category` を `AI IDE` から `AIコードエディタ` に変更。
+    - `cline.md`: `category` を `AIコーディングエージェント` から `自律型AIエージェント` に変更し、`tags` を標準化。`relationships` を追加。
+    - `openai-codex.md`: `category` を `AIコーディングエージェント` から `AIコーディング支援` に変更し、`tags` を標準化。`relationships` を追加。

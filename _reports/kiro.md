@@ -1,7 +1,7 @@
 ---
 title: "Kiro 調査レポート"
 tool_name: "Kiro"
-category: "AI IDE"
+category: "AIコードエディタ"
 developer: "AWS"
 official_site: "https://kiro.dev/"
 date: "2025-10-19"
