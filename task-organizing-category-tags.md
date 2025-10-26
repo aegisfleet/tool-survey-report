@@ -58,9 +58,9 @@
     - **children**: このツールから派生した、または密接に関連する下位ツール（例：GitHubの子はGitHub Copilot）
     - **related_tools**: 同等レベルで関連性の高いツール（競合製品、代替ツール、補完ツールなど）
   
-  - **参照方法**: 全て `tool_name`（ファイル名から `.md` を除いた部分）で参照する
-    - 例：`_reports/github-copilot.md` → `"github-copilot"`
-    - 例：`_reports/gitlab-duo.md` → `"gitlab-duo"`
+  - **参照方法**: 全て各レポートのフロントマターで定義された `tool_name` の値（文字列）で参照する
+    - 例： `_reports/github-copilot.md` の `tool_name: "GitHub Copilot"` → `"GitHub Copilot"`
+    - 例： `_reports/gitlab-duo.md` の `tool_name: "GitLab Duo"` → `"GitLab Duo"`
 
 ### ルール（変更ポリシー）
 
