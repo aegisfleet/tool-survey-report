@@ -338,3 +338,11 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `codeceptjs.md` の `category` を `テスト自動化フレームワーク` から `テスト/QA` に変更。
     - 上記4つのレポート間に相互の `related_tools` を追加し、関連性を明示した。
+- **2025-10-26**:
+  - **作業内容**: Manusを基軸とした自律型AIエージェントの関連付けを整理。
+  - **対象ファイル**:
+    - `_reports/manus.md`
+    - `_reports/devin.md`
+    - `_reports/openhands.md`
+  - **変更概要**:
+    - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。カテゴリとタグは変更なし。
