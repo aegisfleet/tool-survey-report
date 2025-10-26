@@ -285,3 +285,16 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `autify.md`, `magicpod.md`, `selenium.md` の `category` を `テスト自動化` から `テスト/QA` に変更。
     - `cypress.md`, `playwright.md` の `category` を `テスト自動化フレームワーク` から `テスト/QA` に変更。
     - `cypress.md`, `playwright.md`, `selenium.md` に相互の `related_tools` を追加。
+- **2025-10-26**:
+  - **作業内容**: 人事・勤怠管理ツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/works-hi-company.md`
+    - `_reports/smarthr.md`
+    - `_reports/king-of-time.md`
+    - `_reports/jobcan-kinmu-kanri.md`
+    - `_reports/moneyforward-cloud-kinmu.md`
+  - **変更概要**:
+    - `_reports/company.md` を `_reports/works-hi-company.md` にリネーム。
+    - `works-hi-company.md`, `smarthr.md` の `category` を `人事労務` に統一。
+    - `king-of-time.md`, `jobcan-kinmu-kanri.md`, `moneyforward-cloud-kinmu.md` の `category` が `勤怠管理` であることを確認。
+    - 上記5つのファイルに相互の `related_tools` を追加。

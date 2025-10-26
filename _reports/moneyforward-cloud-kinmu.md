@@ -8,9 +8,15 @@ date: "2025-10-24"
 last_updated: "2025-10-24"
 tags:
   - "勤怠管理"
-  - "労務"
+  - "人事労務"
   - "SaaS"
 description: "勤怠管理から給与計算までをシステム連携で効率化するクラウド勤怠管理システム。"
+relationships:
+  related_tools:
+    - "COMPANY"
+    - "SmartHR"
+    - "KING OF TIME"
+    - "ジョブカン勤怠管理"
 ---
 
 # **マネーフォワード クラウド勤怠 調査レポート**

@@ -11,6 +11,12 @@ tags:
   - "人事労務"
   - "SaaS"
 description: "多様な勤務形態に対応し、シンプルな操作性を実現したクラウド勤怠管理システム。"
+relationships:
+  related_tools:
+    - "COMPANY"
+    - "SmartHR"
+    - "KING OF TIME"
+    - "マネーフォワード クラウド勤怠"
 ---
 
 # **ジョブカン勤怠管理 調査レポート**

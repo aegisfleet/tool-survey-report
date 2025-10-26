@@ -1,7 +1,7 @@
 ---
 title: "SmartHR 調査レポート"
 tool_name: "SmartHR"
-category: "労務管理、タレントマネジメント"
+category: "人事労務"
 developer: "株式会社SmartHR"
 official_site: "https://smarthr.jp/"
 date: "2025-10-24"
@@ -12,6 +12,12 @@ tags:
   - "人事"
   - "SaaS"
 description: "SmartHRは、労務管理とタレントマネジメントを効率化し、従業員データの一元管理を実現するクラウド型ソフトウェアです。"
+relationships:
+  related_tools:
+    - "COMPANY"
+    - "KING OF TIME"
+    - "ジョブカン勤怠管理"
+    - "マネーフォワード クラウド勤怠"
 ---
 
 # **SmartHR 調査レポート**
