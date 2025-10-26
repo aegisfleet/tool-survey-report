@@ -93,6 +93,8 @@ layout: default
     {% endif %}
   </header>
 
+  {% include related-tools.html %}
+
   <div class="report-content" itemprop="articleBody">
     {{ content }}
   </div>
@@ -143,8 +145,6 @@ layout: default
       </a>
     </div>
     </div>
-
-    {% include related-tools.html %}
 
     {% if page.tags and page.tags.size > 0 %}
     <div class="related-reports">
