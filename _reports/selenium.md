@@ -1,7 +1,7 @@
 ---
 title: "Selenium 調査レポート"
 tool_name: "Selenium"
-category: "テスト自動化"
+category: "テスト/QA"
 developer: "Software Freedom Conservancy"
 official_site: "https://www.selenium.dev/"
 date: "2025-10-24"
@@ -12,6 +12,10 @@ tags:
   - "Webブラウザ"
   - "E2Eテスト"
 description: "Webブラウザの操作を自動化するためのオープンソースフレームワーク群。主にWebアプリケーションのテストに利用される。"
+relationships:
+  related_tools:
+    - "Cypress"
+    - "Playwright"
 ---
 
 # **Selenium 調査レポート**
