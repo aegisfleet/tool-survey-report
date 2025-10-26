@@ -220,65 +220,6 @@ grep -l "自律\|エージェント\|Agent" _reports/*.md | head -4
 grep -l "category.*AI.*コーディング" _reports/*.md
 ```
 
-## レポート関連付けの具体例
-
-### 例1: GitHubエコシステムの関連付け
-
-```yaml
-# _reports/github.md
-relationships:
-  children:
-    - "github-copilot"
-    - "github-actions"
-  related_tools:
-    - "gitlab"
-    - "bitbucket"
-
-# _reports/github-copilot.md  
-relationships:
-  parent: "github"
-  related_tools:
-    - "cursor"
-    - "gitlab-duo"
-    - "coderabbit"
-```
-
-### 例2: CI/CDツールの関連付け
-
-```yaml
-# _reports/jenkins.md
-relationships:
-  related_tools:
-    - "github-actions"
-    - "gitlab-ci"
-    - "circleci"
-
-# _reports/github-actions.md
-relationships:
-  parent: "github"
-  related_tools:
-    - "jenkins"
-    - "gitlab-ci"
-```
-
-### 例3: AIコーディング支援ツールの関連付け
-
-```yaml
-# _reports/cursor.md
-relationships:
-  related_tools:
-    - "github-copilot"
-    - "coderabbit"
-    - "tabnine"
-
-# _reports/devin.md
-relationships:
-  related_tools:
-    - "openhands"
-    - "jules"
-    - "github-copilot"
-```
-
 ### 関連付け判断基準
 
 #### parent/children 設定基準
