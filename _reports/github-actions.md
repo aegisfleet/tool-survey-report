@@ -15,7 +15,6 @@ description: "GitHubに統合されたCI/CDプラットフォーム。ビルド�
 relationships:
   parent: "GitHub"
   related_tools:
-    - "GitLab"
     - "Jenkins"
     - "GitLab CI/CD"
 ---

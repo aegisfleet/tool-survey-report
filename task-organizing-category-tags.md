@@ -298,3 +298,16 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `works-hi-company.md`, `smarthr.md` の `category` を `人事労務` に統一。
     - `king-of-time.md`, `jobcan-kinmu-kanri.md`, `moneyforward-cloud-kinmu.md` の `category` が `勤怠管理` であることを確認。
     - 上記5つのファイルに相互の `related_tools` を追加。
+- **2025-10-26**:
+  - **作業内容**: バージョン管理およびCI/CDツールのカテゴリと関連付けを整理。
+  - **対象ファイル**:
+    - `_reports/github.md`
+    - `_reports/gitlab.md`
+    - `_reports/github-actions.md`
+    - `_reports/gitlab-ci.md`
+    - `_reports/jenkins.md`
+  - **変更概要**:
+    - `github.md` と `gitlab.md` の `category` が `バージョン管理` であることを確認。
+    - `github-actions.md`, `gitlab-ci.md`, `jenkins.md` の `category` が `CI/CD` であることを確認。
+    - `github-actions.md` の `related_tools` を修正し、`GitLab` への参照をより具体的な `GitLab CI/CD` に変更。
+    - 上記のCI/CDツール間で双方向の `related_tools` が設定されていることを確認。
