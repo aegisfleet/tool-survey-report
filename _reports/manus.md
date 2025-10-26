@@ -12,6 +12,10 @@ tags:
   - "生産性向上"
   - "GPT-5"
 description: "Manusは、人間の監督なしに複雑なタスクを自律的に実行するために設計されたAIエージェントです。2025年には大幅なアップデートが行われました。"
+relationships:
+  related_tools:
+    - "Devin"
+    - "OpenHands"
 ---
 
 # **Manus 調査レポート**

@@ -18,6 +18,7 @@ relationships:
   related_tools:
     - "Devin"
     - "Google Jules"
+    - "Manus"
 ---
 
 # **OpenHands 調査レポート**
