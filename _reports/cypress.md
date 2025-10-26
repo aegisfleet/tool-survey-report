@@ -19,6 +19,7 @@ relationships:
     - "Cucumber"
     - "MagicPod"
     - "Autify"
+    - "Appium"
 ---
 
 # **Cypress 調査レポート**

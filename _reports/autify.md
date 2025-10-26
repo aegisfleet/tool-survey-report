@@ -19,6 +19,7 @@ relationships:
     - "Selenium"
     - "Playwright"
     - "Cypress"
+    - "Appium"
 ---
 
 # **Autify 調査レポート**

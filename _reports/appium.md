@@ -11,6 +11,13 @@ tags:
   - "オープンソース"
   - "モバイル"
 description: "ネイティブ、ハイブリッド、モバイルWebアプリ向けのオープンソースのテスト自動化フレームワーク。"
+relationships:
+  related_tools:
+    - "Selenium"
+    - "Playwright"
+    - "Cypress"
+    - "MagicPod"
+    - "Autify"
 ---
 
 # **Appium 調査レポート**
