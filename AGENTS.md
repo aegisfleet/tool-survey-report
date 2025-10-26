@@ -8,4 +8,4 @@
 ## タスク指示書一覧
 
 - レポートの作成/更新: [task-report-create-or-update.md](./task-report-create-or-update.md)
-- カテゴリ/タグ整理: [task-organizing-category-tags.md](./task-organizing-category-tags.md)
+- カテゴリ/タグ/関連付けの整理: [task-organizing-category-tags.md](./task-organizing-category-tags.md)
