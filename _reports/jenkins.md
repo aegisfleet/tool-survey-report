@@ -15,6 +15,7 @@ description: "Jenkinsは、ビルド、テスト、デプロイを自動化す�
 relationships:
   related_tools:
     - "GitHub Actions"
+    - "GitLab CI/CD"
 ---
 
 # **Jenkins 調査レポート**

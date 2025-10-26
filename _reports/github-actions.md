@@ -17,6 +17,7 @@ relationships:
   related_tools:
     - "GitLab"
     - "Jenkins"
+    - "GitLab CI/CD"
 ---
 
 # **GitHub Actions 調査レポート**

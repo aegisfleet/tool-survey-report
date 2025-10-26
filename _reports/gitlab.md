@@ -15,6 +15,7 @@ description: "GitLabは、ソフトウェア開発ライフサイクル全体を
 relationships:
   children:
     - "GitLab Duo"
+    - "GitLab CI/CD"
   related_tools:
     - "GitHub"
     - "GitHub Actions"
