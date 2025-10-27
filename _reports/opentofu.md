@@ -8,11 +8,17 @@ date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
   - "IaC"
-  - "Infrastructure"
-  - "Automation"
-  - "Cloud"
-  - "Open Source"
+  - "構成管理"
+  - "自動化"
+  - "クラウド"
+  - "オープンソース"
 description: "OpenTofuは、Terraformのオープンソースフォークであり、コードとしてのインフラストラクチャ(IaC)を宣言的に管理します。"
+relationships:
+  parent: "Terraform"
+  related_tools:
+    - "Pulumi"
+    - "AWS CloudFormation"
+    - "Ansible"
 ---
 
 # **OpenTofu 調査レポート**

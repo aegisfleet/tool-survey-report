@@ -8,7 +8,6 @@ date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
   - "IaC"
-  - "Infrastructure as Code"
   - "構成管理"
   - "クラウド"
   - "DevOps"
@@ -19,6 +18,7 @@ relationships:
     - "Terraform"
     - "AWS CloudFormation"
     - "Ansible"
+    - "OpenTofu"
 ---
 
 # **Pulumi 調査レポート**
