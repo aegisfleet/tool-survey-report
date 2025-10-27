@@ -1,7 +1,7 @@
 ---
 title: "Pulumi 調査レポート"
 tool_name: "Pulumi"
-category: "Infrastructure as Code"
+category: "構成管理"
 developer: "Pulumi Corp."
 official_site: "https://www.pulumi.com/"
 date: "2025-10-27"
@@ -9,9 +9,16 @@ last_updated: "2025-10-27"
 tags:
   - "IaC"
   - "Infrastructure as Code"
-  - "Cloud"
+  - "構成管理"
+  - "クラウド"
   - "DevOps"
+  - "オープンソース"
 description: "使い慣れたプログラミング言語でインフラをコードとして管理できるオープンソースのIaCツール"
+relationships:
+  related_tools:
+    - "Terraform"
+    - "AWS CloudFormation"
+    - "Ansible"
 ---
 
 # **Pulumi 調査レポート**

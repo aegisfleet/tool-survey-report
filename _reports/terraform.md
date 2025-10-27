@@ -12,6 +12,11 @@ tags:
   - "Automation"
   - "Cloud"
 description: "Terraformは、コードとしてのインフラストラクチャ(IaC)ツールで、インフラのプロビジョニングと管理を安全かつ効率的に行います。"
+relationships:
+  related_tools:
+    - "Pulumi"
+    - "AWS CloudFormation"
+    - "Ansible"
 ---
 
 # **Terraform 調査レポート**
