@@ -421,3 +421,15 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `pulumi.md` の `category` を `Infrastructure as Code` から `構成管理` に変更し、`tags` を標準化。
     - 上記4つのレポート間に相互の `related_tools` を追加し、競合・関連関係を明示した。
+- **2025-10-27**:
+  - **作業内容**: OpenTofuを基軸とした構成管理ツールのタグ標準化と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/opentofu.md`
+    - `_reports/terraform.md`
+    - `_reports/pulumi.md`
+    - `_reports/aws-cloudformation.md`
+    - `_reports/ansible.md`
+  - **変更概要**:
+    - `opentofu.md`: `tags` を日本語に標準化し、`parent: Terraform` および `related_tools` を追加。
+    - `terraform.md`: `tags` を日本語に標準化し、`children: [OpenTofu]` を追加して親子関係を双方向に設定。
+    - `pulumi.md`, `aws-cloudformation.md`, `ansible.md`: `tags` を標準化し、`related_tools` に `OpenTofu` を追加。

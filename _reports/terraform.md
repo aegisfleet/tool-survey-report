@@ -8,11 +8,13 @@ date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
   - "IaC"
-  - "Infrastructure"
-  - "Automation"
-  - "Cloud"
+  - "構成管理"
+  - "自動化"
+  - "クラウド"
 description: "Terraformは、コードとしてのインフラストラクチャ(IaC)ツールで、インフラのプロビジョニングと管理を安全かつ効率的に行います。"
 relationships:
+  children:
+    - "OpenTofu"
   related_tools:
     - "Pulumi"
     - "AWS CloudFormation"

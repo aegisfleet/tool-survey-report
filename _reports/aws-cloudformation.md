@@ -16,6 +16,7 @@ relationships:
     - "Terraform"
     - "Pulumi"
     - "Ansible"
+    - "OpenTofu"
 ---
 
 # **AWS CloudFormation 調査レポート**
