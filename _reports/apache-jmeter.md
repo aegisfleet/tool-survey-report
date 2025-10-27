@@ -5,7 +5,7 @@ category: "負荷テストツール"
 developer: "Apache Software Foundation"
 official_site: "https://jmeter.apache.org/"
 date: "2025-10-18"
-last_updated: "2025-10-19"
+last_updated: "2025-10-27"
 tags:
   - "負荷テスト"
   - "オープンソース"
@@ -101,14 +101,47 @@ description: "Apache JMeterは、Webアプリケーションのパフォーマ�
 
 ## **13. 直近半年のアップデート情報**
 
-* **最新バージョン**: 5.6.3 (2024年1月時点)
-* **v5.6系統 (2023年後半～)**:
-  * **パフォーマンスと安定性の向上**: 主にバグ修正と、多数のライブラリ（依存関係）のアップデートが中心。
-  * **利便性の向上**: TransactionControllerやThreadGroupGuiなど、GUIの様々なチェックボックスで変数(${...})が使用可能になり、テスト計画の動的な設定が容易になった。
-  * **Open Model Thread Group (v5.5で導入)**: 可変負荷をより柔軟に定義できる新しいスレッドグループが追加され、より現実的な負荷パターンのシミュレーションが可能になった。
-  * **Kotlin DSL (v5.6で導入)**: テスト計画をプログラム的に生成するための実験的なKotlin DSLが追加された。
+* **[https://jmeter.apache.org/changes.html](https://jmeter.apache.org/changes.html) および [https://jmeter.apache.org/changes_history.html](https://jmeter.apache.org/changes_history.html) を参照**
 
-総じて、メジャーな新機能の追加よりも、既存機能の改善、パフォーマンス向上、開発体験の向上に焦点が当てられています。
+* **最新バージョン**: 5.6.3 (2024年1月リリース)
+  * 主にバグ修正が中心のリリース。
+  * **改善点**:
+    * `TransactionController`、`ThreadGroupGui`、`HTTP Request` のGUI要素で `${...}` 形式の変数が利用可能になり、テスト計画の動的な設定が容易になった。
+  * **主なバグ修正**:
+    * サマリーレポートで最小応答時間が `0` と表示される問題の修正。
+    * `Constant Throughput Timer` と `Constant Timer` が変数使用時に `NullPointerException` をスローする問題の修正。
+
+* **バージョン 5.6.2** (2023年11月リリース)
+  * バグ修正のみのマイナーリリース。
+  * **主なバグ修正**:
+    * Maven の `pom.xml` パーサーとの互換性の問題（`com.google.auto.service:auto-service-annotations` のバージョンが明示されていなかった）を修正。
+
+* **バージョン 5.6.1** (2023年7月リリース)
+  * バグ修正と改善を含むリリース。
+  * **改善点**:
+    * HTTP Sampler と Test Script Recorder で、デフォルトのエンコーディングがUTF-8になった。
+  * **主なバグ修正**:
+    * 非GUIモードでスレッドグループが無限に実行されるリグレッションの修正。
+    * UIで一度無効にすると再度有効にできなかったJava Request Samplerの問題を修正。
+
+* **バージョン 5.6** (2023年5月リリース)
+  * **新機能と改善点**:
+    * **Kotlin DSL**: テスト計画をプログラムで生成するための実験的なKotlin DSLが追加された。
+    * **パフォーマンス向上**:
+      * `caffeine` をキャッシュに利用することで、HTTPヘッダーやJSR223スクリプトのパフォーマンスが向上。
+      * `ServiceLoader` を利用したプラグイン読み込みによる起動時間の短縮。
+      * `__time` 関数の日付フォーマッターのキャッシュによる高速化。
+    * **利便性の向上**:
+      * Test Script Recorderで、サンプラー名をURLやメソッドなどのテンプレート変数で柔軟に設定できるようになった。
+      * チェックボックスコントロールで `${...}` 形式の変数が使用可能になった。
+
+* **バージョン 5.5** (2022年5月リリース)
+  * **新機能と改善点**:
+    * **Open Model Thread Group**: 可変負荷をより柔軟にモデル化できる新しいスレッドグループが導入された。これにより、`rate(0/sec) random_arrivals(1 minute) rate(10/sec)` のように、より現実に近い負荷パターンを簡単にシミュレーションできるようになった。
+    * **Java 17のサポート**: JMeter 5.5 は Java 17 での実行をサポート。
+    * **Core改善**: Kotlin言語が一部のコアクラスとテストに導入された。
+
+総じて、最近のアップデートはメジャーな新機能の追加よりも、既存機能の改善、パフォーマンスの向上、そして開発体験の向上に重点を置いている傾向があります。特に、Kotlin DSLの導入やOpen Model Thread Groupの追加は、より複雑で現実的なテストシナリオをコードベースで効率的に管理したい上級ユーザーにとって重要な進歩です。
 
 ## **14. 類似ツールとの比較**
 
