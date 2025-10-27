@@ -13,6 +13,8 @@ tags:
   - "会話型AI"
   - "Google Cloud"
 description: "Google Cloud上で生成AIモデルのプロトタイピングとテストを迅速に行うためのWebベースのUIツール"
+relationships:
+  parent: "Gemini"
 ---
 
 # **Google AI Studio 調査レポート**
