@@ -411,3 +411,13 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `rakuten-ai.md` の `category` を `AI` から `生成AI` に変更。
     - 上記5つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
+- **2025-10-27**:
+  - **作業内容**: Pulumiを基軸とした構成管理ツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/pulumi.md`
+    - `_reports/terraform.md`
+    - `_reports/aws-cloudformation.md`
+    - `_reports/ansible.md`
+  - **変更概要**:
+    - `pulumi.md` の `category` を `Infrastructure as Code` から `構成管理` に変更し、`tags` を標準化。
+    - 上記4つのレポート間に相互の `related_tools` を追加し、競合・関連関係を明示した。

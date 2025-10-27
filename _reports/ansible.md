@@ -12,6 +12,11 @@ tags:
   - "CI/CD"
   - "構成管理"
 description: "Ansibleは、プロビジョニング、構成管理、アプリケーションのデプロイメント、オーケストレーションを自動化するオープンソースのIT自動化エンジンです。"
+relationships:
+  related_tools:
+    - "Terraform"
+    - "Pulumi"
+    - "AWS CloudFormation"
 ---
 
 # **Ansible 調査レポート**

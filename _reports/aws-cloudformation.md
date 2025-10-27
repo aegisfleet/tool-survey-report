@@ -11,6 +11,11 @@ tags:
   - "AWS"
   - "構成管理"
 description: "AWSリソースのプロビジョニングと管理を自動化するInfrastructure as Code (IaC) サービス"
+relationships:
+  related_tools:
+    - "Terraform"
+    - "Pulumi"
+    - "Ansible"
 ---
 
 # **AWS CloudFormation 調査レポート**
