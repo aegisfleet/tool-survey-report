@@ -16,6 +16,7 @@ tags:
   - "API"
 description: "Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。"
 relationships:
+  parent: "Gemini"
   related_tools:
     - "Devin"
     - "OpenHands"

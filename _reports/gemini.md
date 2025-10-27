@@ -13,6 +13,9 @@ tags:
   - "会話型AI"
 description: "Googleによって開発された、マルチモーダルな生成AIモデルファミリー"
 relationships:
+  children:
+    - "Google AI Studio"
+    - "Google Jules"
   related_tools:
     - "ChatGPT"
     - "Claude"
