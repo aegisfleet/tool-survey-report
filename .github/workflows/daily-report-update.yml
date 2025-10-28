@@ -18,7 +18,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
         
-      - name: Find oldest report and call Jules API
+      - name: Find oldest report and call Jules API with retry
         uses: actions/github-script@v8
         env:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
@@ -69,7 +69,7 @@ jobs:
 
             if (!oldestReport) {
               core.error('No report with valid last_updated date found');
-              return;
+              process.exit(1);
             }
 
             core.info(`Oldest report: ${oldestReport.filename} (last updated: ${oldestReport.lastUpdated.toISOString()})`);
@@ -87,7 +87,7 @@ jobs:
 
             if (!apiKey) {
               core.error('JULES_API_KEY secret is not set');
-              return;
+              process.exit(1);
             }
 
             const requestBody = {
@@ -103,35 +103,71 @@ jobs:
               title: `Update ${toolName} Report - ${new Date().toISOString().split('T')[0]}`
             };
 
-            core.info('Calling Jules API...');
-            core.info(`Request body: ${JSON.stringify(requestBody, null, 2)}`);
+            // リトライ機能付きのJules API呼び出し
+            const maxRetries = 3;
+            const retryDelay = 30000; // 30秒
+            let lastError = null;
 
-            try {
-              const response = await fetch(julesApiUrl, {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
-                  'X-Goog-Api-Key': apiKey
-                },
-                body: JSON.stringify(requestBody)
-              });
-
-              if (!response.ok) {
-                const errorText = await response.text();
-                core.error(`Jules API call failed: ${response.status} ${response.statusText}`);
-                core.error(`Error response: ${errorText}`);
-                return;
+            for (let attempt = 1; attempt <= maxRetries; attempt++) {
+              core.info(`Jules API call attempt ${attempt}/${maxRetries}...`);
+              
+              if (attempt > 1) {
+                core.info(`Waiting ${retryDelay/1000} seconds before retry...`);
+                await new Promise(resolve => setTimeout(resolve, retryDelay));
               }
 
-              const result = await response.json();
-              core.info('Jules API call successful!');
-              core.info(`Response: ${JSON.stringify(result, null, 2)}`);
+              try {
+                const response = await fetch(julesApiUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'X-Goog-Api-Key': apiKey
+                  },
+                  body: JSON.stringify(requestBody)
+                });
 
-              // 成功をGitHub Actionsの出力として設定
-              core.setOutput('updated_report', oldestReport.filename);
-              core.setOutput('tool_name', toolName);
-              core.setOutput('jules_session_id', result.sessionId || 'unknown');
-            } catch (error) {
-              core.error(`Error calling Jules API: ${error.message}`);
-              throw error;
+                if (!response.ok) {
+                  const errorText = await response.text();
+                  const errorMessage = `Jules API call failed: ${response.status} ${response.statusText}`;
+                  core.error(errorMessage);
+                  core.error(`Error response: ${errorText}`);
+                  
+                  lastError = new Error(`${errorMessage}\nResponse: ${errorText}`);
+                  
+                  // 5xx系エラーの場合はリトライ、4xx系エラーの場合は即座に失敗
+                  if (response.status >= 400 && response.status < 500) {
+                    core.error('Client error (4xx) detected. Not retrying.');
+                    throw lastError;
+                  }
+                  
+                  if (attempt === maxRetries) {
+                    throw lastError;
+                  }
+                  
+                  core.warning(`Server error (5xx) detected. Will retry (${attempt}/${maxRetries})`);
+                  continue;
+                }
+
+                const result = await response.json();
+                core.info('Jules API call successful!');
+                core.info(`Response: ${JSON.stringify(result, null, 2)}`);
+
+                // 成功をGitHub Actionsの出力として設定
+                core.setOutput('updated_report', oldestReport.filename);
+                core.setOutput('tool_name', toolName);
+                core.setOutput('jules_session_id', result.sessionId || 'unknown');
+                
+                return; // 成功したので関数を終了
+
+              } catch (error) {
+                lastError = error;
+                core.error(`Error calling Jules API (attempt ${attempt}): ${error.message}`);
+                
+                if (attempt === maxRetries) {
+                  core.error(`All ${maxRetries} attempts failed. Failing the workflow.`);
+                  throw error;
+                }
+                
+                core.warning(`Will retry (${attempt}/${maxRetries})`);
+              }
             }
