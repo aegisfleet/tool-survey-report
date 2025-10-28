@@ -5,7 +5,7 @@ category: "生成AI"
 developer: "OpenAI"
 official_site: "https://openai.com/chatgpt"
 date: "2025-10-18"
-last_updated: "2025-10-23"
+last_updated: "2025-10-29"
 tags:
   - "AI"
   - "生成AI"
@@ -50,6 +50,9 @@ relationships:
 * **カスタムGPTs**: 特定の目的やタスクに合わせてカスタマイズされたGPTを作成・利用できる「GPTストア」。
 * **高度な音声モード**: より自然で直感的な音声対話を実現。
 * **API連携**: 外部アプリケーションやサービスにChatGPTの機能を組み込むことが可能。
+* **Company Knowledge**:
+    *   **概要**: Google Drive, Slack, SharePointなどの社内ツールと連携し、組織の内部情報に基づいた回答を生成する機能。
+    *   **対象プラン**: Business, Enterprise, Eduプランで利用可能。
 
 ## **4. 特徴・強み (Pros)**
 
