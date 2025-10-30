@@ -433,3 +433,12 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `opentofu.md`: `tags` を日本語に標準化し、`parent: Terraform` および `related_tools` を追加。
     - `terraform.md`: `tags` を日本語に標準化し、`children: [OpenTofu]` を追加して親子関係を双方向に設定。
     - `pulumi.md`, `aws-cloudformation.md`, `ansible.md`: `tags` を標準化し、`related_tools` に `OpenTofu` を追加。
+- **2025-10-30**:
+  - **作業内容**: Dockerを基軸としたコンテナ関連ツールのタグ標準化と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/docker.md`
+    - `_reports/kubernetes.md`
+    - `_reports/podman.md`
+  - **変更概要**:
+    - `kubernetes.md`: `tags` に `コンテナ` を追加し、他のツールとの共通性を確保。
+    - 3つのレポート間に相互の `related_tools` を追加し、関連性を明示した。

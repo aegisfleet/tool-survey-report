@@ -7,10 +7,14 @@ official_site: "https://kubernetes.io"
 date: "2025-10-30"
 last_updated: "2025-10-30"
 tags:
+  - "コンテナ"
   - "コンテナオーケストレーション"
   - "オープンソース"
   - "クラウドネイティブ"
 description: "コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションシステム。"
+relationships:
+  related_tools:
+    - "Docker"
 ---
 
 # **Kubernetes 調査レポート**
