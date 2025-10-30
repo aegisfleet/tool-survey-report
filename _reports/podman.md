@@ -14,6 +14,9 @@ tags:
   - "DevOps"
   - "Docker互換"
 description: "デーモンレスアーキテクチャを採用した、OCI準拠のコンテナ管理ツールです。"
+relationships:
+  related_tools:
+    - "Docker"
 ---
 
 # **Podman 調査レポート**

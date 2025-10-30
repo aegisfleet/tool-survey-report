@@ -13,6 +13,10 @@ tags:
   - "オープンソース"
   - "DevOps"
 description: "アプリケーションをコンテナとして構築、共有、実行するためのオープンソースプラットフォームです。"
+relationships:
+  related_tools:
+    - "Podman"
+    - "Kubernetes"
 ---
 
 # **Docker 調査レポート**
