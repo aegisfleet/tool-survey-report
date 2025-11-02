@@ -5,7 +5,7 @@ category: "生成AI"
 developer: "Google"
 official_site: "https://gemini.google.com/"
 date: "2025-10-19"
-last_updated: "2025-10-19"
+last_updated: "2025-11-02"
 tags:
   - "AI"
   - "生成AI"
@@ -54,6 +54,7 @@ relationships:
   * **2.5 Flash**: 日常的なタスクで高速なパフォーマンスを発揮するモデル。
   * **2.5 Flash-Lite**: 大量処理に適したコスト効率の高い軽量モデル。
 * **APIと開発者ツール**: Google AI StudioやGemini APIを通じて、開発者が自身のアプリケーションにGeminiを統合可能。
+* **Agent Mode (Preview)**: 開発者向け機能(Gemini Code Assist)の一部として提供。対話を通じて、複数ステップにわたる複雑なタスクや目標の達成を支援する。
 
 ## **4. 特徴・強み (Pros)**
 
@@ -134,6 +135,8 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025年10月14日**: 開発者向け支援機能「Gemini Code Assist」において、従来のツール機能が「**Agent Mode (Preview)**」に置き換えられた。対話形式でより複雑なタスクの実行を支援する。
+* **2025年10月13日**: GitHubリポジトリのコードレビューを支援する「**Gemini Code Assist on GitHub**」のエンタープライズ版（Preview）が利用可能になった。
 * **Gemini 2.5 ファミリーの発表**: Pro, Flash, Flash-Liteなど、用途別のモデルラインナップを拡充。
 * **思考チェーン(Reasoning)能力の強化**: より複雑な問題解決能力が向上。
 * **ネイティブオーディオ機能**: 音声会話や音声生成機能の高度化。
