@@ -12,6 +12,10 @@ tags:
   - "写真編集"
   - "DTP"
   - "無料"
+relationships:
+  parent: "Canva"
+  related_tools:
+    - "GIMP"
 description: "Affinityは、写真編集、グラフィックデザイン、ページレイアウトの機能を統合した、プロフェッショナル向けの無料クリエイティブソフトウェアです。"
 ---
 

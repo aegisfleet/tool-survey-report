@@ -11,6 +11,10 @@ tags:
   - "オープンソース"
   - "フォトレタッチ"
   - "グラフィックデザイン"
+relationships:
+  related_tools:
+    - "Affinity"
+    - "Canva"
 description: "GIMP (GNU Image Manipulation Program) は、写真のレタッチ、画像の合成、画像オーサリングなどのタスクに対応する、高機能な無料のオープンソース画像編集ソフトウェアです。"
 ---
 

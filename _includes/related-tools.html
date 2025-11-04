@@ -113,7 +113,7 @@ Processes relationship metadata from front matter and displays parent, child, an
 {% comment %} Render the related tools section if any relationships exist {% endcomment %}
 {% if parent_tool or child_tools.size > 0 or sibling_tools.size > 0 %}
 <section class="related-tools-section" aria-labelledby="related-tools-heading">
-  <h3 id="related-tools-heading">関連レポート</h3>
+  <h3 id="related-tools-heading">関連ツール</h3>
   
   {% if parent_tool %}
   <div class="parent-tool" role="region" aria-labelledby="parent-tool-heading">
@@ -121,7 +121,7 @@ Processes relationship metadata from front matter and displays parent, child, an
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
       </svg>
-      親レポート
+      親ツール
     </h4>
     <a href="{{ parent_tool.url | relative_url }}" class="tool-link">
       <span class="tool-title">{{ parent_tool.title }}</span>
@@ -138,7 +138,7 @@ Processes relationship metadata from front matter and displays parent, child, an
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
       </svg>
-      子レポート
+      子ツール
     </h4>
     <ul class="tools-list">
       {% for child in child_tools %}
@@ -161,7 +161,7 @@ Processes relationship metadata from front matter and displays parent, child, an
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
         <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
       </svg>
-      関連レポート
+      関連ツール
     </h4>
     <ul class="tools-list">
       {% for sibling in sibling_tools %}
