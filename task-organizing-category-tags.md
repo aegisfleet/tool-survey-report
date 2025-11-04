@@ -441,3 +441,13 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `kubernetes.md`: `tags` に `コンテナ` を追加し、他のツールとの共通性を確保。
     - 3つのレポート間に相互の `related_tools` を追加し、関連性を明示した。
+- **2025-11-04**:
+  - **作業内容**: GIMPを基軸としたデザインツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/gimp.md`
+    - `_reports/affinity.md`
+    - `_reports/canva.md`
+  - **変更概要**:
+    - 3つのレポートの `category` を `デザインツール` に統一。
+    - `tags` を `デザインツール` を含むように標準化。
+    - CanvaとAffinityの親子関係、および3ツール間の双方向の `related_tools` を追加。

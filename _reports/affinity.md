@@ -7,11 +7,15 @@ official_site: "https://affinity.serif.com/"
 date: "2025-11-04"
 last_updated: "2025-11-04"
 tags:
-  - "デザイン"
+  - "デザインツール"
   - "グラフィックデザイン"
   - "写真編集"
   - "DTP"
   - "無料"
+relationships:
+  parent: "Canva"
+  related_tools:
+    - "GIMP"
 description: "Affinityは、写真編集、グラフィックデザイン、ページレイアウトの機能を統合した、プロフェッショナル向けの無料クリエイティブソフトウェアです。"
 ---
 
