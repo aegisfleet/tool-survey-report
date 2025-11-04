@@ -1,16 +1,21 @@
 ---
 title: "GIMP 調査レポート"
 tool_name: "GIMP"
-category: "画像編集ソフトウェア"
+category: "デザインツール"
 developer: "The GIMP Team"
 official_site: "https://www.gimp.org/"
 date: "2025-11-04"
 last_updated: "2025-11-04"
 tags:
-  - "画像編集"
-  - "オープンソース"
-  - "フォトレタッチ"
+  - "デザインツール"
   - "グラフィックデザイン"
+  - "写真編集"
+  - "フォトレタッチ"
+  - "オープンソース"
+relationships:
+  related_tools:
+    - "Affinity"
+    - "Canva"
 description: "GIMP (GNU Image Manipulation Program) は、写真のレタッチ、画像の合成、画像オーサリングなどのタスクに対応する、高機能な無料のオープンソース画像編集ソフトウェアです。"
 ---
 
