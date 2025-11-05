@@ -1,17 +1,20 @@
 ---
 title: "LilysAI 調査レポート"
 tool_name: "LilysAI"
-category: "AI要約"
+category: "生成AI"
 developer: "TeamLilys"
 official_site: "https://lilys.ai/"
 date: "2025-11-05"
 last_updated: "2025-11-05"
 tags:
   - "AI"
+  - "生成AI"
   - "要約"
-  - "動画"
-  - "PDF"
+  - "大規模言語モデル"
 description: "動画、PDF、Webページなど、さまざまな形式のコンテンツから要点を抽出するAI要約ツール。"
+relationships:
+  related_tools:
+    - "NotebookLM"
 ---
 
 # **LilysAI 調査レポート**
