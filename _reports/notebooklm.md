@@ -1,7 +1,7 @@
 ---
 title: "NotebookLM 調査レポート"
 tool_name: "NotebookLM"
-category: "AI搭載リサーチ・ライティングアシスタント"
+category: "生成AI"
 developer: "Google"
 official_site: "https://notebooklm.google.com/"
 date: "2025-10-18"
@@ -12,6 +12,9 @@ tags:
   - "ライティング"
   - "Google"
 description: "アップロードした資料に基づいて、AIが質問への回答、要約、アイデア出しなどをサポートするGoogle製の次世代リサーチ・ライティングツール。"
+relationships:
+  related_tools:
+    - "LilysAI"
 ---
 
 # **NotebookLM 調査レポート**

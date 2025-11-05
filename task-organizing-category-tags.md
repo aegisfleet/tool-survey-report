@@ -451,3 +451,15 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - 3つのレポートの `category` を `デザインツール` に統一。
     - `tags` を `デザインツール` を含むように標準化。
     - CanvaとAffinityの親子関係、および3ツール間の双方向の `related_tools` を追加。
+- **2025-11-05**:
+  - **作業内容**: LilysAIを基軸とした生成AIツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/lilysai.md`
+    - `_reports/notebooklm.md`
+    - `_reports/chatgpt.md`
+    - `_reports/gemini.md`
+    - `_reports/claude.md`
+  - **変更概要**:
+    - `lilysai.md`: `category` を `生成AI` に変更し、`tags` を標準化。`related_tools` に `NotebookLM` を追加。
+    - `notebooklm.md`: `category` を `生成AI` に変更し、`related_tools` に `LilysAI` を追加して双方向の関係を確立。
+    - ユーザーからのフィードバックに基づき、当初追加した `ChatGPT`, `Gemini`, `Claude` との関連付けは、機能の焦点が異なるため削除。
