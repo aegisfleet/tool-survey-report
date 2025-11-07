@@ -13,6 +13,10 @@ tags:
   - "Google Workspace"
   - "ノーコード"
 description: "Gemini AIを活用してGoogle Workspace内の反復作業を自動化し、ビジネスプロセスを効率化するノーコードプラットフォーム。"
+relationships:
+  related_tools:
+    - "Zapier"
+    - "Microsoft Power Automate"
 ---
 
 # **Google Workspace Flows 調査レポート**
