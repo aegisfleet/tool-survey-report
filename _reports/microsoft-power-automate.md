@@ -16,6 +16,7 @@ relationships:
   related_tools:
     - "Zapier"
     - "n8n"
+    - "Google Workspace Flows"
 ---
 
 # **Microsoft Power Automate 調査レポート**

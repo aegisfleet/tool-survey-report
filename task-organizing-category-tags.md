@@ -463,3 +463,11 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `lilysai.md`: `category` を `生成AI` に変更し、`tags` を標準化。`related_tools` に `NotebookLM` を追加。
     - `notebooklm.md`: `category` を `生成AI` に変更し、`related_tools` に `LilysAI` を追加して双方向の関係を確立。
     - ユーザーからのフィードバックに基づき、当初追加した `ChatGPT`, `Gemini`, `Claude` との関連付けは、機能の焦点が異なるため削除。
+- **2025-11-07**:
+  - **作業内容**: Google Workspace Flowsを基軸としたワークフロー自動化ツールの関連付けを整理。
+  - **対象ファイル**:
+    - `_reports/google-workspace-flows.md`
+    - `_reports/zapier.md`
+    - `_reports/microsoft-power-automate.md`
+  - **変更概要**:
+    - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
