@@ -3,7 +3,7 @@ title: "Google Workspace Flows 調査レポート"
 tool_name: "Google Workspace Flows"
 category: "ワークフロー自動化"
 developer: "Google"
-official_site: "https://workspace.google.com/solutions/flows/"
+official_site: "https://developers.google.com/workspace/add-ons/workflows"
 date: "2025-11-07"
 last_updated: "2025-11-07"
 tags:
@@ -25,7 +25,7 @@ relationships:
 
 * **ツール名**: Google Workspace Flows
 * **開発元**: Google
-* **公式サイト**: [https://workspace.google.com/solutions/flows/](https://workspace.google.com/solutions/flows/)
+* **公式サイト**: [https://developers.google.com/workspace/add-ons/workflows](https://developers.google.com/workspace/add-ons/workflows)
 * **カテゴリ**: ワークフロー自動化
 * **概要**: Google Workspace Flowsは、Gemini AIの能力を活用して、Google Workspaceアプリケーション間のタスクを自動化するノーコードプラットフォームです。ユーザーは自然言語プロンプトを使用して、コーディングの知識なしに複雑なワークフローを構築し、反復的なプロセスを効率化できます。
 
