@@ -5,7 +5,7 @@ category: "ウェブフレームワーク"
 developer: "Astro"
 official_site: "https://astro.build/"
 date: "2025-10-20"
-last_updated: "2025-10-20"
+last_updated: "2025-11-12"
 tags:
   - "静的サイトジェネレーター"
   - "Jamstack"
@@ -54,6 +54,12 @@ description: "Astroは、高速なコンテンツ駆動型ウェブサイトを�
   ブラウザネイティブのView Transitions APIを簡単に利用でき、ページ間のシームレスなアニメーションを実装できます。
 * **ファイルベースルーティング**:
   `src/pages/` ディレクトリ内のファイル構造がそのままサイトのURLパスに対応する、直感的なルーティングシステムを採用しています。
+* **React 19 Actionsの統合**:
+  React 19の`useActionState`フックと連携し、プログレッシブエンハンスメントを適用したフォームアクションを容易に構築できます。
+* **Svelteの非同期レンダリング対応**:
+  Svelteコンポーネント内での非同期処理をサーバーサイドレンダリングでサポートします。
+* **Netlifyスキュー保護**:
+  Netlifyへのデプロイ時に、クライアントとサーバーのアセットバージョンを自動的に同期させ、デプロイ中のバージョン不整合によるエラーを防ぎます。
 
 ## **4. 特徴・強み (Pros)**
 
@@ -102,7 +108,7 @@ description: "Astroは、高速なコンテンツ駆動型ウェブサイトを�
 * **API**:
   `src/pages/api/` ディレクトリにファイルを作成することで、簡単にAPIルートを構築できます。
 * **外部サービス連携**:
-  インテグレーション機能により、VercelやNetlifyへのデプロイ、Tailwind CSSの導入、各種CMS（Contentful, Storyblokなど）との連携が簡単に行えます。
+  インテグレーション機能により、VercelやNetlifyへのデプロイ、Tailwind CSSの導入、各種CMS（Contentful, Storyblokなど）との連携が簡単に行えます。Mux, Webflow, Cloudflareといった企業とのパートナーシップも発表されており、エコシステムの拡大が続いています。
 
 ## **10. セキュリティとコンプライアンス**
 
@@ -134,6 +140,47 @@ description: "Astroは、高速なコンテンツ駆動型ウェブサイトを�
 ## **13. 直近半年のアップデート情報**
 
 Astroは継続的にアップデートされており、新機能の追加やパフォーマンス改善が頻繁に行われています。詳細は公式ブログやGitHubのリリースノートで確認できます。
+
+* **2025年11月5日: Stainless社のスポンサー就任とAstro製ドキュメントプラットフォームの発表**
+  - API/SDKドキュメント生成プラットフォームのStainlessがAstroの公式スポンサーとなりました。
+  - Stainlessは、Astroの公式ドキュメントテーマであるStarlightをベースにした新しいドキュメントプラットフォーム「Stainless Docs Platform」を発表しました。これにより、Astro製の高速でアクセシブルなドキュメントサイトが自動生成されます。
+  - [出典](https://astro.build/blog/stainless-astro-launch/)
+
+* **2025年10月31日: 2025年10月の最新情報**
+  - Astroファイル形式の完全サポートを発表したBiomeとの連携。
+  - GitHubのOctoverse 2025で、Astroが3番目に急成長している言語として紹介されました。
+  - [出典](https://astro.build/blog/whats-new-october-2025/)
+
+* **2025年10月23日: Astro 5.15 リリース**
+  - Netlifyデプロイ時の自動スキュー保護機能を導入。クライアントとサーバーのアセットバージョンを同期させ、デプロイ時の不整合によるバグを防ぎます。
+  - アダプターがヘッダーやアセットのクエリパラメータをカスタマイズできる新しいAPIを追加。
+  - フォントのプリロードをより詳細に制御できるようになり、特定のウェイトやスタイル、サブセットのみをプリロード可能に。
+  - [出典](https://astro.build/blog/astro-5150/)
+
+* **2025年9月30日: 2025年9月の最新情報**
+  - Mux、Webflow、Cloudflareとの新たなパートナーシップを発表。
+  - 月間npmインストール数が300万を突破。
+  - Webflowで構築されたAIコード生成アプリがAstroによって強化されることが発表されました。
+  - [出典](https://astro.build/blog/whats-new-september-2025/)
+
+* **2025年9月25日: Astro 5.14 リリース**
+  - `getStaticPaths` で `routePattern` プロパティが利用可能になり、複雑な動的ルートの扱いが容易に。
+  - Svelteコンポーネントの非同期レンダリングをサポート。
+  - React 19のActions（`useActionState`）との統合を実現。
+  - SVGコンポーネントの型として `SvgComponent` がエクスポートされるようになりました。
+  - [出典](https://astro.build/blog/astro-5140/)
+
+* **2025年8月31日: 2025年8月の最新情報**
+  - AstroのVSCode拡張機能が100万インストールを達成。
+  - Astroの最も人気のあるインテグレーションが月間100万ダウンロードを突破。
+  - [出典](https://astro.build/blog/whats-new-august-2025/)
+
+* **2025年8月14日: Astro 5.13 リリース**
+  - `import.meta.env` の挙動をViteと揃える静的な環境変数ハンドリングを実験的に導入。
+  - Chrome DevToolsワークスペースのサポートを実験的に追加し、ブラウザから直接ソースコードを編集可能に。
+  - 複数の外部サイトマップをインデックスに含める `customSitemaps` オプションを追加。
+  - Astro DBでEnum型がサポートされました。
+  - [出典](https://astro.build/blog/astro-5130/)
 
 ## **14. 類似ツールとの比較**
 
