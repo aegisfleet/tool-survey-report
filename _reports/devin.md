@@ -18,6 +18,7 @@ relationships:
     - "OpenHands"
     - "Google Jules"
     - "Manus"
+    - "Google Antigravity"
 ---
 
 # **Devin 調査レポート**

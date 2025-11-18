@@ -18,6 +18,7 @@ relationships:
     - "Visual Studio Code"
     - "GitHub Copilot"
     - "Windsurf"
+    - "Google Antigravity"
 ---
 
 # **Cursor 調査レポート**

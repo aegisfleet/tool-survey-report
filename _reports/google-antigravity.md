@@ -13,6 +13,12 @@ tags:
   - "コーディング支援"
   - "開発者ツール"
 description: "Googleが開発した、Gemini 3を搭載したAIファーストの統合開発環境（IDE）。"
+relationships:
+  parent: "Gemini"
+  related_tools:
+    - "Google Jules"
+    - "Devin"
+    - "Cursor"
 ---
 
 # **Google Antigravity 調査レポート**
