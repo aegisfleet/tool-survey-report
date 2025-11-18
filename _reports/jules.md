@@ -20,6 +20,7 @@ relationships:
   related_tools:
     - "Devin"
     - "OpenHands"
+    - "Google Antigravity"
 ---
 # **Google Jules 調査レポート**
 
