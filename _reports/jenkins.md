@@ -5,7 +5,7 @@ category: "CI/CD"
 developer: "Kohsuke Kawaguchi, CloudBees, and community"
 official_site: "https://www.jenkins.io/"
 date: "2025-10-18"
-last_updated: "2025-10-21"
+last_updated: "2025-11-24"
 tags:
   - "CI/CD"
   - "オープンソース"
@@ -116,6 +116,9 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025年11月 (LTS 2.528.2)**:
+  * **依存関係の更新**: JDK 21を`21.0.9+10`に、JDK 17を`17.0.17+10`にそれぞれアップデート。
+  * **Dockerイメージの更新**: Debian Trixieベースイメージを`20251103`バージョンに更新。
 * **2025年10月 (LTS 2.528.1)**:
   * **広範囲なUI改善**: ヘッダー、サイドパネル、ボタン、カラーリングなど、UIの多くの要素がモダンなデザインに更新された。
   * **JUnitプラグインのUI刷新**: テスト結果表示画面が全面的に再設計され、視認性と分析の容易さが大幅に向上。
