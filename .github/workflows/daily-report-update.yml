@@ -16,7 +16,7 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         
       - name: Find oldest report and call Jules API with retry
         uses: actions/github-script@v8
