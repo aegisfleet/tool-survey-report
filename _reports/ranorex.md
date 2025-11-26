@@ -5,7 +5,7 @@ category: "GUIテスト自動化"
 developer: "Ranorex GmbH (Idera, Inc.)"
 official_site: "https://www.ranorex.com/"
 date: "2025-10-21"
-last_updated: "2025-10-21"
+last_updated: "2025-11-26"
 tags:
   - "テスト自動化"
   - "GUIテスト"
@@ -58,7 +58,7 @@ description: "Ranorex Studioは、デスクトップ、Web、モバイルアプ�
 ## **6. 料金プラン**
 
 * **無料プラン**: なし。
-* **有料プラン**: ライセンスは買い切り型で、価格は公開されていません。公式サイトからの見積もりが必要です。
+* **有料プラン**: ライセンスは買い切り型に加え、サブスクリプション型も利用可能です。価格は公開されておらず、公式サイトからの見積もりが必要です。
 * **無料トライアル**: 14日間の無料トライアルが提供されています。クレジットカードの登録は不要です。
 
 ## **7. 導入実績・事例**
@@ -101,7 +101,20 @@ description: "Ranorex Studioは、デスクトップ、Web、モバイルアプ�
 
 ## **13. 直近半年のアップデート情報**
 
-* (公式サイトのリリースノート等で具体的な情報を追跡する必要があるが、継続的な機能改善や新技術への対応が行われていると推測されます)
+* **[Ranorex Studio 12.5.0 (2025年11月19日)](https://support.ranorex.com/hc/en-us/articles/38006092728465-Ranorex-Studio-Release-Notes)**
+    * **セルフホスト型サブスクリプションライセンス**: オンプレミス環境でライセンスのアクティベーションと管理が可能になるセルフホスト型サブスクリプションを導入しました。
+    * **APIドキュメントサイト**: テスト開発をサポートするため、クラス、メソッド、プロパティを迅速に検索できるAPIドキュメントサイトが公開されました。
+* **[Ranorex Studio 12.4.4 (2025年10月8日)](https://support.ranorex.com/hc/en-us/articles/38006112520081-Ranorex-Studio-Previous-Release-Notes)**
+    * **安定性の向上**: AndroidおよびFlutterベースのアプリの安定性が向上しました。
+    * **不具合修正**: CefSharp WinForms .NET 6での要素認識の問題や、.rxlogレポートでの実行時間の不整合などが修正されました。
+* **[Ranorex Studio 12.4.2 (2025年8月21日)](https://support.ranorex.com/hc/en-us/articles/38006112520081-Ranorex-Studio-Previous-Release-Notes)**
+    * **TestRail連携の改善**: テスト結果をTestRailにプッシュする際に、成功・失敗の両方のテストにスクリーンショットを添付できるようになりました。
+* **[Ranorex Studio 12.4.0 (2025年7月2日)](https://support.ranorex.com/hc/en-us/articles/38006112520081-Ranorex-Studio-Previous-Release-Notes)**
+    * **Android Jetpackサポート**: Android Jetpackで構築されたアプリケーションのUI要素の認識と操作をサポートしました。
+* **[Ranorex Studio 12.3.0 (2025年6月4日)](https://support.ranorex.com/hc/en-us/articles/38006112520081-Ranorex-Studio-Previous-Release-Notes)**
+    * **WPF CoreのCEFサポート**: WPF CoreアプリケーションでCEFベースのウィンドウを認識できるようになりました。
+* **[Ranorex Studio 12.2.0 (2025年5月21日)](https://support.ranorex.com/hc/en-us/articles/38006112520081-Ranorex-Studio-Previous-Release-Notes)**
+    * **Flutterの統合**: iOSとAndroidの両方でFlutterの統合を導入し、クロスプラットフォームのテスト能力を拡張しました。Flutterアプリ内の要素、コントロール、プロパティを正確に検出できます。
 
 ## **14. 類似ツールとの比較**
 
