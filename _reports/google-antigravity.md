@@ -16,8 +16,6 @@ description: "Googleが開発した、Gemini 3を搭載したAIファースト�
 relationships:
   parent: "Gemini"
   related_tools:
-    - "Google Jules"
-    - "Devin"
     - "Cursor"
 ---
 

@@ -16,8 +16,6 @@ description: "複雑な作業のための協調型コーディングエージェ
 relationships:
   related_tools:
     - "Devin"
-    - "Cursor"
-    - "GitHub Copilot"
 ---
 
 # **Cline 調査レポート**
