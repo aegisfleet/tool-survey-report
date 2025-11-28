@@ -16,6 +16,7 @@ relationships:
   related_tools:
     - "Cursor"
     - "GitHub Copilot"
+    - "Google Antigravity"
 ---
 
 # **Windsurf 調査レポート**
