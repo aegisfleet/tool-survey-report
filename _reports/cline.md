@@ -1,7 +1,7 @@
 ---
 title: "Cline 調査レポート"
 tool_name: "Cline"
-category: "自律型AIエージェント"
+category: "AIコーディングエージェント"
 developer: "Cline Bot Inc."
 official_site: "https://cline.bot/"
 date: "2025-10-23"
@@ -11,8 +11,8 @@ tags:
   - "開発者ツール"
   - "オープンソース"
   - "エージェント"
-  - "自律型"
-description: "複雑な作業のための協調型コーディングエージェント。コードベース全体を理解し、人間と協力して計画を立て、変更を実行する。"
+  - "IDE拡張機能"
+description: "VS CodeなどのIDE内で動作する協調型コーディングエージェント。ブラウザベースのツールとは異なり、ローカルのコードベース全体を直接理解し、人間と協力して計画を立て、変更を実行する。"
 relationships:
   related_tools:
     - "Devin"
