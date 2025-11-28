@@ -471,3 +471,11 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `_reports/microsoft-power-automate.md`
   - **変更概要**:
     - 3つのレポート間に相互の `related_tools` を追加し、競合関係を明示した。
+- **2025-11-28**:
+  - **作業内容**: ManusおよびClineのタグ・カテゴリの整理と統一。
+  - **対象ファイル**:
+    - `_reports/manus.md`
+    - `_reports/cline.md`
+  - **変更概要**:
+    - `manus.md`: `tags` の `自律型エージェント` を `自律型` と `エージェント` に分割して標準化。
+    - `cline.md`: `category` を `自律型AIエージェント` から `AIコーディングエージェント` に変更。`tags` の `自律型` を削除し `IDE拡張機能` を追加して、ツール特性を明確化。
