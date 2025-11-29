@@ -10,6 +10,9 @@ tags:
   - "静的サイトジェネレーター"
   - "オープンソース"
   - "ブログ"
+relationships:
+  related_tools:
+    - Hugo
 description: "Jekyllは、シンプルなテキストを静的なウェブサイトやブログに変換するツールです。"
 ---
 
