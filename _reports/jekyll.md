@@ -5,7 +5,7 @@ category: "静的サイトジェネレーター"
 developer: "Tom Preston-Werner and volunteers"
 official_site: "https://jekyllrb.com/"
 date: "2025-10-22"
-last_updated: "2025-10-22"
+last_updated: "2023-11-29"
 tags:
   - "静的サイトジェネレーター"
   - "オープンソース"
@@ -66,11 +66,15 @@ description: "Jekyllは、シンプルなテキストを静的なウェブサイ
 ## **7. 導入実績・事例**
 
 * **Ruby on Rails**: 公式ウェブサイト
-* **Sketch**: デザインツールのウェブサイト
+* **GitHub Documentation**: GitHubの公式ドキュメント
 * **Spotify for Developers**: 開発者向けドキュメンテーション
 * **Twitch Developer Documentation**: 開発者向けドキュメンテーション
-* **Netflix Devices**: デバイスごとの情報サイト
-* **IBM MobileFirst Foundation**: モバイルアプリ開発基盤のドキュメンテーション
+* **United Nations**: 国際連合の統計サイト
+* **Bitcoin.org**: ビットコイン公式サイト
+* **U.S. Web Design System**: 米国ウェブデザインシステム
+* **gov.uk**: 英国政府の公式サイト
+* **CloudCannon**: JekyllベースのCMS
+* **Auth0 Blog**: 認証プラットフォームのブログ
 
 ## **8. サポート体制**
 
