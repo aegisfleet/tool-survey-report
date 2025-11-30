@@ -5,7 +5,7 @@ category: "静的サイトジェネレーター"
 developer: "Tom Preston-Werner and volunteers"
 official_site: "https://jekyllrb.com/"
 date: "2025-10-22"
-last_updated: "2023-11-29"
+last_updated: "2025-11-29"
 tags:
   - "静的サイトジェネレーター"
   - "オープンソース"
