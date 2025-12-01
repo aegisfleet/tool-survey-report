@@ -34,3 +34,4 @@ playwright_script.py
 screenshot*.png
 verify_*.png
 temp_*.html
+verification/
