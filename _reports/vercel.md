@@ -5,7 +5,7 @@ category: "フロントエンド開発・ホスティング"
 developer: "Vercel Inc."
 official_site: "https://vercel.com"
 date: "2025-10-22"
-last_updated: "2025-10-22"
+last_updated: "2025-12-03"
 tags:
   - "Next.js"
   - "Jamstack"
@@ -118,6 +118,12 @@ description: "Vercelは、フロントエンド開発者が高速でスケーラ
 
 ## **13. 直近半年のアップデート情報**
 
+* **Vercel AgentによるWeb AnalyticsとSpeed Insightsの自動設定 (2025年12月)**: Vercel AgentがAIを活用して、プロジェクトにWeb AnalyticsとSpeed Insightsを自動でインストールし、設定変更のプルリクエストを作成する機能がPublic Betaとしてリリースされました。
+* **AI Gatewayでの新モデル対応 (2025年12月)**: Mistralの「Mistral Large 3」、Arcee AIの「Trinity Mini」、DeepSeekの「DeepSeek V3.2」シリーズなど、複数の新しいAIモデルがVercel AI Gatewayで利用可能になりました。
+* **ランタイムログの表示速度が6倍に向上 (2025年12月)**: ログ基盤の改善により、ダッシュボードでのログ表示が最大6倍高速化され、90%のエントリが5秒以内に表示されるようになりました。
+* **AI Gatewayでの画像生成専用モデル対応 (2025年11月)**: Black Forest Labsの「FLUX」シリーズやGoogleの「Imagen 4.0」など、画像生成に特化したモデルがAI Gatewayで利用可能になりました。
+* **Prime Intellect AIの「Intellect-3」モデルがAI Gatewayで利用可能に (2025年11月)**: 106Bパラメータを持つ高性能なオープンソースモデル「Intellect-3」がAI Gatewayに追加されました。
+* **Sign in with VercelがGAに (2025年11月)**: 開発者が自身のアプリケーションにVercelアカウントでのサインイン機能を組み込める「Sign in with Vercel」が一般利用可能になりました。
 * **Vercel Sandboxのタイムアウト動的延長 (2025年10月)**: 実行中のVercel SandboxのタイムアウトをAPI経由で延長できるようになり、長時間かかるAIタスクなどの処理をサポートしやすくなりました。
 * **マイクロフロントエンドのプレビュー体験向上 (2025年10月)**: マイクロフロントエンド構成において、どのサービスのプレビューリンクからでも、関連する全てのサービスのパスにアクセス可能になり、統合的なテストが容易になりました。
 * **NestJSのゼロコンフィグレーションサポート (2025年10月)**: Node.jsの人気フレームワークであるNestJSが、特別な設定なしでVercelにデプロイ可能になりました。
