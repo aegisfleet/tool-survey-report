@@ -27,12 +27,12 @@ node_modules/
 
 # Logs
 *.log
-verification.png
+
 # Verification scripts and artifacts
+verification/
 verify_*.py
 playwright_script.py
 *_verification.py
 screenshot*.png
+verification.png
 verify_*.png
-temp_*.html
-verification/
