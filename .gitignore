@@ -27,6 +27,7 @@ node_modules/
 
 # Logs
 *.log
+verification.png
 # Verification scripts and artifacts
 verify_*.py
 playwright_script.py
