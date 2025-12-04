@@ -5,7 +5,7 @@ category: "AIコーディングエージェント"
 developer: "Cline Bot Inc."
 official_site: "https://cline.bot/"
 date: "2025-10-23"
-last_updated: "2025-10-23"
+last_updated: "2025-12-04"
 tags:
   - "AI"
   - "開発者ツール"
@@ -43,18 +43,21 @@ relationships:
 
 * **Plan Mode**: 変更を加える前に、コードベースを調査し、開発者と協力して包括的な実行計画を作成する。
 * **Agent Loop**: 計画に基づき、ファイルの読み取り、コードの編集、コマンドの実行といった一連のタスクを自律的に実行する。
-* **Model Freedom**: Claude, GPT, Geminiなど、主要な大規模言語モデルを自由に切り替えて利用可能。ユーザー自身のAPIキーを使用する(BYOK)。
+* **Model Freedom**: Claude (Opus 4.5), GPT (5.1), Gemini (3.0 Pro), Grok (4.1)など、最新の主要な大規模言語モデルを自由に切り替えて利用可能。ユーザー自身のAPIキーを使用する(BYOK)。
 * **Client-side Architecture**: ユーザーのコードは外部サーバーに送信されず、ローカル環境で実行されるため、セキュリティが高い。
 * **.clinerules**: プロジェクト固有のコーディング規約やアーキテクチャパターンを定義し、Clineに遵守させることができる。
+* **Hooks & Workflows**: `TaskStart`, `TaskComplete`などのフックを利用して、外部ツールとの連携やカスタムワークフローの構築が可能。
+* **AGENTS.md Support**: プロジェクトルートの`AGENTS.md`ファイルに指示を記述することで、エージェントの振る舞いをリポジトリレベルで制御できる。
 * **Terminal Mastery**: ターミナル内で直接コマンドを実行し、その出力を解釈して次のアクションに繋げることができる。
 
 ## **4. 特徴・強み (Pros)**
 
 * **オープンソース**: エージェントの動作が完全に透明であり、監査やカスタマイズが可能。
 * **高いコンテキスト理解能力**: コードベース全体を把握し、複雑な依存関係を考慮した上で変更を計画・実行できる。
-* **モデルの自由度**: 特定のAIモデルにロックインされず、タスクに最適なモデルを自由に選択・組み合わせできる。
+* **最新モデルへの迅速な対応**: Claude 4.5, GPT-5.1, Gemini 3.0といった最新・高性能モデルへの追随が非常に早い。
 * **Bring Your Own Key (BYOK) モデル**: 推論コストがプロバイダーへの直接支払いとなり、中間マージンが発生しないため、コストを予測・管理しやすい。
 * **セキュリティ**: コードがローカル環境から出ないため、企業の厳しいセキュリティ要件にも対応可能。SOC 2 Type I, GDPRに準拠。
+* **拡張性**: Hooks機能やリモートワークフローにより、CI/CDパイプラインへの統合や、独自の開発プロセスに合わせたカスタマイズが容易。
 
 ## **5. 弱み・注意点 (Cons)**
 
@@ -87,7 +90,8 @@ relationships:
 * **API**: Cline自体のAPI提供はないが、MCP (Model Context Protocol) を通じて外部APIやデータベースとの連携が可能。
 * **外部サービス連携**:
   * **IDE**: VS Code, JetBrains, Cursor, Windsurfに対応。
-  * **モデルプロバイダー**: Claude, GPT, Gemini, Bedrock, Vertex AI, Azure OpenAIなど、多数のモデルプロバイダーと連携可能。
+  * **モデルプロバイダー**: Claude, GPT, Gemini, Grok, Perplexity, Bedrock, Vertex AI, Azure OpenAI, SAP AI Coreなど、主要なモデルプロバイダーと幅広く連携可能。
+  * **Observability**: OpenTelemetryとの連携により、エージェントの利用状況やパフォーマンスを監視できる。
 
 ## **10. セキュリティとコンプライアンス**
 
@@ -120,6 +124,31 @@ relationships:
 ## **13. 直近半年のアップデート情報**
 
 * **出典**: [Cline GitHub Releases](https://github.com/cline/cline/releases)
+* **v3.40.0 (2025-12-04)**:
+  * Gemini 3 Proモデルのデフォルト思考レベルを設定。
+  * `apply_patch`コマンドの自動承認機能を追加。
+  * 破損したタスク履歴を自動回復する機能を追加。
+  * OpenTelemetryイベントのログ出力を抑制し、スパムを削減。
+* **v3.39.0 (2025-12-02)**:
+  * Claude CodeのGitHubワークフローを追加。
+  * リモートのルールとワークフローをエディタで表示する機能。
+  * `/`コマンドをメッセージ入力のどこでも利用可能に。
+  * コードレビューのための変更点を説明する`Explain Changes`機能を追加。
+  * Grok 4.1 と Grok Code モデルをサポート。
+* **v3.38.3 (2025-11-27)**:
+  * OpenAI-nativeプロバイダー向けのResponses APIをサポート。
+  * `TaskComplete`フックを実装。
+  * Perplexity sonar, sonar-proモデルをSAP AI Core Providerに追加。
+  * Claude Opus 4.5をサポート。
+* **v3.38.0 (2025-11-18)**:
+  * Firebase認証を廃止。
+  * 複数のプロバイダー（Bedrock, Gemini）でコンテキストウィンドウエラーの検知と再試行をサポート。
+  * Gemini 3.0 Proをサポートし、オンボーディングリストに追加。
+* **v3.37.0 (2025-11-13)**:
+  * 新しいオンボーディングフローを導入。
+  * ターミナル実行モードのデフォルトをバックグラウンドに変更（後にリバート）。
+  * OpenAI GPT 5.1をサポート。
+  * AGENTS.mdのサポートを追加。
 * **v3.34.0 (2025-10-23)**:
   * Hooks機能の追加 (TaskStart, TaskResume, TaskCancel)。
   * CLIの自動アップデート機能。
