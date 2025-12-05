@@ -5,12 +5,13 @@ category: "AI / 大規模言語モデル"
 developer: "DeepSeek (深度求索)"
 official_site: "https://www.deepseek.com/"
 date: "2025-10-23"
-last_updated: "2025-10-23"
+last_updated: "2025-12-05"
 tags:
   - "AI"
   - "LLM"
   - "開発者ツール"
-description: "AGIの実現を目指す中国のAI企業DeepSeekが開発する、高性能な大規模言語モデル群。テキスト生成、コーディング、画像認識など多岐にわたるタスクを高精度で処理するAIモデルです。"
+  - "オープンソース"
+description: "AGIの実現を目指す中国のAI企業DeepSeekが開発する、高性能な大規模言語モデル群。最新のDeepSeek-V3.2モデルは、エージェント向けに構築された推論第一のモデルで、テキスト生成、コーディング、画像認識など多岐にわたるタスクを高精度で処理します。"
 ---
 
 # **DeepSeek 調査レポート**
@@ -38,6 +39,7 @@ description: "AGIの実現を目指す中国のAI企業DeepSeekが開発する�
 
 Hugging Faceで公開されているモデルを中心に、以下のような機能が提供されている。
 
+* **DeepSeek-V3.2 / DeepSeek-V3.2-Speciale**: エージェント向けに構築された推論第一（Reasoning-first）の最新モデル群。`V3.2`はGPT-5レベルの性能を持つ汎用モデルで、`V3.2-Speciale`はGemini-3.0-Proに匹敵する最高峰の推論能力を持つAPI限定モデル。
 * **DeepSeek-V2/V3**: 汎用的なテキスト生成モデル。チャット、要約、翻訳など幅広いタスクに対応。
 * **DeepSeek Coder**: コーディングに特化したモデル。コードの生成、補完、バグ修正などを高速かつ正確に行う。
 * **DeepSeek-VL**: 画像とテキストの両方を理解できるマルチモーダルモデル。画像の内容を説明したり、画像に関する質問に答えたりすることが可能。
@@ -59,7 +61,7 @@ Hugging Faceで公開されているモデルを中心に、以下のような�
 
 ## **6. 料金プラン**
 
-* **API利用料 (DeepSeek-V3.2-Exp)**:
+* **API利用料 (DeepSeek-V3.2)**:
   * **モデル**: `deepseek-chat` (Non-thinking Mode), `deepseek-reasoner` (Thinking Mode)
   * **入力 (Input)**:
     * \$0.28 / 100万トークン (キャッシュミス時)
@@ -107,8 +109,13 @@ Hugging Faceで公開されているモデルを中心に、以下のような�
 
 ## **13. 直近半年のアップデート情報**
 
-* (Hugging Faceの更新履歴から、数週間〜1ヶ月程度の頻度で新しいモデルやモデルのアップデート版がリリースされており、開発が活発であることがわかる。)
-* (例: DeepSeek-V3.2-Exp のリリースなど)
+* **2025年12月1日**: `DeepSeek-V3.2` および `DeepSeek-V3.2-Speciale` をリリース。エージェント向けに構築された推論第一のモデルで、`V3.2-Speciale`は最高峰の推論能力を持つとされている。
+* **2025年9月29日**: `DeepSeek-V3.2-Exp` をリリース。
+* **2025年9月22日**: `DeepSeek V3.1` をアップデート。
+* **2025年8月21日**: `DeepSeek V3.1` をリリース。
+* **2025年5月28日**: `DeepSeek-R1-0528` をリリース。
+
+出典: [DeepSeek API Docs - News](https://api-docs.deepseek.com/news/news251201)
 
 ## **14. 類似ツールとの比較**
 
