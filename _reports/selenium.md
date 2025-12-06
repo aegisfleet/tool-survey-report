@@ -21,6 +21,7 @@ relationships:
     - "MagicPod"
     - "Autify"
     - "Appium"
+    - "Robot Framework"
 ---
 
 # **Selenium 調査レポート**

@@ -18,6 +18,7 @@ relationships:
     - "Cypress"
     - "MagicPod"
     - "Autify"
+    - "Robot Framework"
 ---
 
 # **Appium 調査レポート**

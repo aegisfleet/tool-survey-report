@@ -17,6 +17,7 @@ relationships:
     - "Playwright"
     - "Cypress"
     - "CodeceptJS"
+    - "Robot Framework"
 ---
 # **Cucumber 調査レポート**
 

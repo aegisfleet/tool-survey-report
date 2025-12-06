@@ -21,6 +21,7 @@ relationships:
     - "MagicPod"
     - "Autify"
     - "Appium"
+    - "Robot Framework"
 ---
 
 # **Playwright 調査レポート**
