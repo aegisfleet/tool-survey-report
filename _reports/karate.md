@@ -18,7 +18,6 @@ relationships:
   related_tools:
     - "Selenium"
     - "Playwright"
-    - "Postman"
     - "Apache JMeter"
     - "Cucumber"
 ---
