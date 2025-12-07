@@ -13,6 +13,11 @@ tags:
   - "オープンソース"
   - "キーワード駆動テスト"
 description: "キーワード駆動型で読みやすい構文を持つ、オープンソースの汎用テスト自動化・RPAフレームワーク"
+relationships:
+  related_tools:
+    - "Microsoft Power Automate"
+    - "Selenium"
+    - "Cucumber"
 ---
 
 # **Robot Framework 調査レポート**

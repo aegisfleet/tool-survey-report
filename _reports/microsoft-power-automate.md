@@ -17,6 +17,7 @@ relationships:
     - "Zapier"
     - "n8n"
     - "Google Workspace Flows"
+    - "Robot Framework"
 ---
 
 # **Microsoft Power Automate 調査レポート**
