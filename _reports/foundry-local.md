@@ -1,19 +1,22 @@
 ---
 title: "Foundry Local 調査レポート"
 tool_name: "Foundry Local"
-category: "AI"
+category: "開発者ツール"
 developer: "Microsoft"
 official_site: "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic"
 date: "2025-12-07"
 last_updated: "2025-12-07"
 tags:
   - "AI"
-  - "Edge AI"
-  - "On-Device"
+  - "ローカルAI"
+  - "エッジAI"
   - "推論"
   - "Microsoft"
-  - "NPU"
 description: "Microsoft Foundry (旧 Azure AI Studio) の一部として提供される、オンデバイスAI推論ソリューション。クラウドコストを削減し、データのプライバシーを保護しながら、ローカルハードウェア上でAIモデルを実行できる。"
+relationships:
+  related_tools:
+    - "Ollama"
+    - "LM Studio"
 ---
 
 # **Foundry Local 調査レポート**

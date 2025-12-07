@@ -7,10 +7,15 @@ official_site: "https://ollama.com/"
 date: "2025-10-24"
 last_updated: "2025-10-24"
 tags:
-  - "LLM"
-  - "オープンソース"
+  - "AI"
   - "ローカルAI"
+  - "大規模言語モデル"
+  - "オープンソース"
 description: "オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのツール"
+relationships:
+  related_tools:
+    - "Foundry Local"
+    - "LM Studio"
 ---
 
 # **Ollama 調査レポート**
