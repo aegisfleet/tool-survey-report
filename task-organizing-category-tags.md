@@ -517,3 +517,14 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `karate.md`: `tags` の `OSS` を `オープンソース` に、`APIテスト` を `API` に標準化。
     - `apache-jmeter.md` から `Karate` への関連付けを追加。
     - `playwright.md`, `selenium.md`, `cucumber.md`, `cypress.md` に `Karate` への関連付けを追加。
+- **2025-12-07**:
+  - **作業内容**: UiPathのレポート追加およびRPAツール(Microsoft Power Automate, Robot Framework)のカテゴリ・タグ・関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/uipath.md`
+    - `_reports/microsoft-power-automate.md`
+    - `_reports/robot-framework.md`
+  - **変更概要**:
+    - `uipath.md`: 新規作成。`category: ワークフロー自動化`, `tags: [RPA, 自動化, AI, ローコード, エンタープライズ]`。
+    - `microsoft-power-automate.md`: `related_tools` に `UiPath` を追加。
+    - `robot-framework.md`: `related_tools` に `UiPath` を追加。
+    - 3ツール間で双方向の関連付けを確立し、`RPA` タグでの整合性を確認。

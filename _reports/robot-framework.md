@@ -15,6 +15,7 @@ tags:
 description: "キーワード駆動型で読みやすい構文を持つ、オープンソースの汎用テスト自動化・RPAフレームワーク"
 relationships:
   related_tools:
+    - "UiPath"
     - "Microsoft Power Automate"
     - "Selenium"
     - "Cucumber"
