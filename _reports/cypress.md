@@ -18,6 +18,7 @@ relationships:
     - "CodeceptJS"
     - "Cucumber"
     - "Appium"
+    - "Karate"
 ---
 
 # **Cypress 調査レポート**
