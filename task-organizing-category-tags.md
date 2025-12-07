@@ -493,3 +493,13 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - `mabl.md`, `magicpod.md`, `autify.md`: `tags` に `クラウド`, `SaaS` を追加し、相互に `relationships` を設定（クラウドツール同士の連携）。
     - `magicpod.md`, `autify.md`: ローカル実行ツール（Selenium, Playwright等）へのリンクを削除。
     - `selenium.md`, `playwright.md`, `cypress.md`, `appium.md`: クラウドツール（MagicPod, Autify）へのリンクを削除し、関連付けを分離。
+- **2025-12-07**:
+  - **作業内容**: ローカルLLM実行ツールのカテゴリ統一と関連付けの整理。
+  - **対象ファイル**:
+    - `_reports/foundry-local.md`
+    - `_reports/ollama.md`
+    - `_reports/lm-studio.md`
+  - **変更概要**:
+    - 3つのレポートの `category` を `開発者ツール` に統一。
+    - `tags` を `AI`, `ローカルAI`, `推論`, `大規模言語モデル` などに標準化。
+    - 3つのレポート間に相互の `related_tools` を追加し、競合・関連関係を明示した。
