@@ -17,8 +17,6 @@ relationships:
     - "Selenium"
     - "CodeceptJS"
     - "Cucumber"
-    - "MagicPod"
-    - "Autify"
     - "Appium"
 ---
 

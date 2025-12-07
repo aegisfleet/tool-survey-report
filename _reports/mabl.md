@@ -12,9 +12,14 @@ tags:
   - "AI"
   - "ローコード"
   - "SaaS"
+  - "クラウド"
   - "モバイルアプリテスト"
   - "APIテスト"
 description: "AIを活用したローコードテスト自動化プラットフォーム。Web、モバイル、API、アクセシビリティ、パフォーマンステストを統一環境で管理可能。"
+relationships:
+  related_tools:
+    - "MagicPod"
+    - "Autify"
 ---
 
 # **mabl 調査レポート**

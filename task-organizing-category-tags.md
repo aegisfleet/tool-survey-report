@@ -479,3 +479,17 @@ grep -l "category.*AI.*コーディング" _reports/*.md
   - **変更概要**:
     - `manus.md`: `tags` の `自律型エージェント` を `自律型` と `エージェント` に分割して標準化。
     - `cline.md`: `category` を `自律型AIエージェント` から `AIコーディングエージェント` に変更。`tags` の `自律型` を削除し `IDE拡張機能` を追加して、ツール特性を明確化。
+- **2025-12-07**:
+  - **作業内容**: クラウドベースのテストツール（mabl, MagicPod, Autify）のカテゴリ、タグ、関連ページを整理。
+  - **対象ファイル**:
+    - `_reports/mabl.md`
+    - `_reports/magicpod.md`
+    - `_reports/autify.md`
+    - `_reports/selenium.md`
+    - `_reports/playwright.md`
+    - `_reports/cypress.md`
+    - `_reports/appium.md`
+  - **変更概要**:
+    - `mabl.md`, `magicpod.md`, `autify.md`: `tags` に `クラウド`, `SaaS` を追加し、相互に `relationships` を設定（クラウドツール同士の連携）。
+    - `magicpod.md`, `autify.md`: ローカル実行ツール（Selenium, Playwright等）へのリンクを削除。
+    - `selenium.md`, `playwright.md`, `cypress.md`, `appium.md`: クラウドツール（MagicPod, Autify）へのリンクを削除し、関連付けを分離。
