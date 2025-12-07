@@ -8,10 +8,13 @@ date: "2025-10-24"
 last_updated: "2025-10-24"
 tags:
   - "AI"
-  - "LLM"
-  - "ローカル開発環境"
-  - "オープンソース"
+  - "ローカルAI"
+  - "大規模言語モデル"
 description: "オープンソースの大規模言語モデル（LLM）をローカルPC上で、オフラインで実行するためのデスクトップアプリケーション。"
+relationships:
+  related_tools:
+    - "Foundry Local"
+    - "Ollama"
 ---
 
 # **LM Studio 調査レポート**
