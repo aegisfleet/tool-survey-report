@@ -16,8 +16,6 @@ relationships:
     - "Selenium"
     - "Playwright"
     - "Cypress"
-    - "MagicPod"
-    - "Autify"
 ---
 
 # **Appium 調査レポート**

@@ -18,8 +18,6 @@ relationships:
     - "Playwright"
     - "CodeceptJS"
     - "Cucumber"
-    - "MagicPod"
-    - "Autify"
     - "Appium"
 ---
 

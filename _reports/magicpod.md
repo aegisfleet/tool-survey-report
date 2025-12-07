@@ -11,15 +11,14 @@ tags:
   - "E2Eテスト"
   - "AI"
   - "ノーコード"
+  - "SaaS"
+  - "クラウド"
   - "モバイルテスト"
 description: "AIを活用したノーコードのテスト自動化プラットフォーム。モバイルアプリとウェブアプリの両方に対応し、開発サイクルの高速化と品質向上を実現します。"
 relationships:
   related_tools:
+    - "mabl"
     - "Autify"
-    - "Selenium"
-    - "Playwright"
-    - "Cypress"
-    - "Appium"
 ---
 
 # **MagicPod 調査レポート**
