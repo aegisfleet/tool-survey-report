@@ -8,11 +8,11 @@ date: "2025-12-06"
 last_updated: "2025-12-06"
 tags:
   - "テスト自動化"
-  - "APIテスト"
+  - "API"
   - "E2Eテスト"
   - "負荷テスト"
+  - "オープンソース"
   - "BDD"
-  - "OSS"
 description: "APIテスト、UIテスト、負荷テストを統合したオープンソースのテスト自動化フレームワーク。Gherkin記法を用いたローコードなテスト記述が特徴で、開発者とQAエンジニアのコラボレーションを促進します。"
 relationships:
   related_tools:
@@ -20,6 +20,7 @@ relationships:
     - "Playwright"
     - "Apache JMeter"
     - "Cucumber"
+    - "Cypress"
 ---
 
 # **Karate 調査レポート**

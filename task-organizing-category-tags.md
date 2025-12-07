@@ -503,3 +503,17 @@ grep -l "category.*AI.*コーディング" _reports/*.md
     - 3つのレポートの `category` を `開発者ツール` に統一。
     - `tags` を `AI`, `ローカルAI`, `推論`, `大規模言語モデル` などに標準化。
     - 3つのレポート間に相互の `related_tools` を追加し、競合・関連関係を明示した。
+- **2025-12-07**:
+  - **作業内容**: APIテストツール(Karate, Apache JMeter)のカテゴリ、タグ、関連ページの整理。
+  - **対象ファイル**:
+    - `_reports/karate.md`
+    - `_reports/apache-jmeter.md`
+    - `_reports/playwright.md`
+    - `_reports/selenium.md`
+    - `_reports/cucumber.md`
+    - `_reports/cypress.md`
+  - **変更概要**:
+    - `apache-jmeter.md`: `category` を `テスト/QA` に統一。`tags` に `API`, `テスト` を追加。
+    - `karate.md`: `tags` の `OSS` を `オープンソース` に、`APIテスト` を `API` に標準化。
+    - `apache-jmeter.md` から `Karate` への関連付けを追加。
+    - `playwright.md`, `selenium.md`, `cucumber.md`, `cypress.md` に `Karate` への関連付けを追加。

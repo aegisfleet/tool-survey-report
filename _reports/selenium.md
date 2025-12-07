@@ -19,6 +19,7 @@ relationships:
     - "CodeceptJS"
     - "Cucumber"
     - "Appium"
+    - "Karate"
 ---
 
 # **Selenium 調査レポート**

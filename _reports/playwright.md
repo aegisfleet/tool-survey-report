@@ -19,6 +19,7 @@ relationships:
     - "CodeceptJS"
     - "Cucumber"
     - "Appium"
+    - "Karate"
 ---
 
 # **Playwright 調査レポート**
