@@ -5,7 +5,7 @@ category: "自律型AIエージェント"
 developer: "Daytona Platform Inc."
 official_site: "https://openhands.daytona.io/"
 date: "2024-07-29"
-last_updated: "2024-07-29"
+last_updated: "2024-12-09"
 tags:
   - "AI"
   - "開発者ツール"
@@ -74,16 +74,10 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
     *   **内容**: 自身のインフラ（ローカルPC、クラウドサーバー等）上で、全ての機能を自由に利用可能。LLMのAPIキーは自身で用意する必要がある。
 
 *   **OpenHands Cloud**:
-    *   **Pay-as-you-goプラン**:
-        *   **月額料金**: 無料（コミットメントなし）
-        *   **初期クレジット**: 新規サインアップ時に$20の無料クレジットが付与される。
-        *   **LLM利用**: Claude Sonnet 4モデルに固定。LLMのAPI料金は通常の2倍で課金され、これが実質的なランタイム費用となる。
-    *   **Proプラン**:
-        *   **月額料金**: $20
-        *   **内容**: ランタイムのコンピューティング費用が含まれる。自身のLLM APIキー（OpenAI, Anthropic, Mistral等）を利用可能（BYOK）。LLM利用料はマークアップなし（API実費のみ）。
-*   **無料トライアル**: OpenHands Cloudの$20初期クレジットが無料トライアルに相当する。
-
-**情報源**: [OpenHands Cloud Pro Subscription Docs](https://docs.openhands.dev/openhands/usage/cloud/pro-subscription)
+    *   無料プランと有料のProプランが提供されています。
+    *   無料プランでは、サインアップ時に利用可能なクレジットが付与されます。
+    *   有料プランでは、自身のLLM APIキーを利用できるなどの追加機能があります。
+    *   （注: 2024年12月現在、公式サイト上で料金プランの詳細ページが確認できないため、最新の情報は公式の案内をご確認ください。）
 
 ## **7. 導入実績・事例**
 
@@ -125,29 +119,35 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 
 ## **12. ユーザーの声（レビュー分析）**
 
-*   **調査対象**: 開発者ブログ、GitHub Issues
+*   **調査対象**: 開発者ブログ、GitHub Issues、Reddit、技術系メディア
 *   **ポジティブな評価**:
+    *   「有能で高速だが、時々間違う。指導しながら使うのがベストな、パワフルなインターンのようだ」と評価されており、適切な制約のもとで実際のエンジニアリング作業を効率化できる。（Sider.AIレビューより）
     *   「明確な指示を与えれば、期待通りにタスクをこなしてくれる。開発のサイドキックとして非常に優秀」（開発者ブログより）
-    *   「多様なLLMを選択できる柔軟性が良い」（GitHub上のコメント）
-    *   オープンソースであり、コミュニティが活発な点を評価する声が多い。
+    *   多様なLLMを選択できる柔軟性や、活発なオープンソースコミュニティを評価する声が多い。
 *   **ネガティブな評価 / 改善要望**:
-    *   「Kubernetesへのデプロイが公式にサポートされておらず、有料版でのみ提供されているのは残念」（開発者ブログより）
-    *   「ローカル実行時のDockerソケットのマウントはセキュリティリスクがあるため、改善を望む」（GitHub Issuesより）
+    *   Dockerを使ったローカルでのインストールが煩雑で、全体的にまだ洗練されていないという意見がある。（Redditより）
+    *   タスクの成功が「当たり外れがある（hit or miss）」状態で、いずれにせよ多くのトークンを消費するとの指摘がある。（Redditより）
+    *   エージェントが誤った仮定に基づくとループに陥り、トークンを浪費してしまうことがある。（Redditより）
+    *   ローカル実行時のDockerソケットのマウントはセキュリティリスクがあるため、改善を望む声がある。（GitHub Issuesより）
 *   **特徴的なユースケース**:
     *   Dockerコンテナでの実行だけでなく、セキュリティを考慮してKubernetesクラスタ上で`Docker in Docker (dind)`サイドカーを用いて実行する試みが行われている。
 
-**情報源**: [Srujan Reddy's Blog Post](https://srujanpakanati.com/openhands-the-flawless-open-source-ai-coding-companion)
+**情報源**:
+*   [Srujan Reddy's Blog Post](https://srujanpakanati.com/openhands-the-flawless-open-source-ai-coding-companion)
+*   [Sider.AI Review](https://sider.ai/blog/ai-tools/ai-openhands-review-can-this-open-source-ai-developer-really-ship-code)
+*   [Reddit Discussion](https://www.reddit.com/r/ChatGPTCoding/comments/1icbrua/your_thoughts_on_openhands_formerly_opendevin/)
 
 ## **13. 直近半年のアップデート情報**
 
 OpenHandsは非常に活発に開発されており、頻繁にリリースが行われています。
 
+*   **2024-11-11 (v1.0.7-cli)**: 会話開始時のCLI出力クリーンアップ、セキュリティリスクのあるツール呼び出し時のクラッシュを防止。
 *   **2024-11-11 (v0.62.0)**: 会話タブのピン留め機能、プロファイルメニューへのドキュメントリンク追加。
 *   **2024-11-07 (v1.0.6-cli)**: UV使用時のエントリーポイント修正、MCP設定の永続化バグ修正など。
 *   **2024-11-05 (v0.61.0)**: ターミナルタブの読み取り専用化、Jupyterタブの削除。
 *   **2024-10-31 (v1.0.5-cli)**: 会話開始前の設定構成を許可、コンデンサー呼び出し時のクラッシュ修正。
-*   **2024-10-29 (v0.60.0)**: V0 CLIの削除（サポート終了）、Clarifaiプロバイダーのサポート追加、サンドボックスのライフサイクル管理追加。
-*   **GitHub Orgの名称変更**: GitHub Organizationが`All-Hands-AI`から`OpenHands-AI`へ、さらに`OpenHands`へと変更された。
+*   **2024-10-29 (v0.60.0)**: V0 CLIのサポート終了、Clarifaiプロバイダーのサポート追加、サンドボックスのライフサイクル管理追加。
+*   **GitHub Orgの名称変更**: GitHub Organizationが`All-Hands-AI`から`OpenHands-AI`へ、さらに`OpenHands`へと変更されました。（注: 2024年12月現在も、公式サイトやドキュメントの一部では古い名称へのリンクが残っている場合があります。）
 
 **情報源**: [GitHub Releases](https://github.com/OpenHands/OpenHands/releases)
 
