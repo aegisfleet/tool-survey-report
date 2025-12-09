@@ -4,8 +4,8 @@ tool_name: "OpenHands"
 category: "自律型AIエージェント"
 developer: "Daytona Platform Inc."
 official_site: "https://openhands.daytona.io/"
-date: "2025-10-23"
-last_updated: "2025-10-23"
+date: "2024-07-29"
+last_updated: "2024-07-29"
 tags:
   - "AI"
   - "開発者ツール"
@@ -87,7 +87,7 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 
 ## **7. 導入実績・事例**
 
-公式ウェブサイトやドキュメントには、特定の企業名や具体的な導入事例は掲載されていません（2025年10月時点）。GitHubのスター数（64.4k以上）やフォーク数（7.8k以上）から、個人開発者や小規模チームでの利用、評価が活発に行われていることが伺えます。
+公式ウェブサイトやドキュメントには、特定の企業名や具体的な導入事例は掲載されていません（2024年7月時点）。GitHubのスター数（65.5k以上）やフォーク数（8k以上）から、個人開発者や小規模チームでの利用、評価が活発に行われていることが伺えます。
 
 有志の開発者がブログで、Kubernetesへのデプロイを試みるなど、実践的なユースケースを公開しています。
 
@@ -97,8 +97,8 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 
 *   **ドキュメント**: [公式ドキュメントサイト](https://docs.openhands.dev/)があり、インストール方法、使い方、設定、開発者向け情報などが詳細に記載されている。
 *   **コミュニティ**:
-    *   **Slack**: 活発な[公式Slackコミュニティ](https://all-hands.dev/joinslack)が存在し、開発者やユーザーが情報交換や議論を行っている。
-    *   **GitHub**: [GitHub Issues](https://github.com/OpenHands-AI/OpenHands/issues)にて、バグ報告や機能要望、ディスカッションが行われている。
+    *   **Slack**: 活発な[公式Slackコミュニティ](https://dub.sh/openhands)が存在し、開発者やユーザーが情報交換や議論を行っている。
+    *   **GitHub**: [GitHub Issues](https://github.com/OpenHands/OpenHands/issues)にて、バグ報告や機能要望、ディスカッションが行われている。
 *   **公式サポート**: 有料のエンタープライズ向けサポートについては、開発元への問い合わせが必要。
 
 ## **9. 連携機能 (API・インテグレーション)**
@@ -116,7 +116,7 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 *   **準拠規格**: 公式サイトには、特定のセキュリティ認証（ISO27001, SOC2など）に関する記載はない。エンタープライズ利用の場合は、個別の確認が必要。
 *   **ライセンス**: プロジェクト本体はMITライセンスだが、`enterprise/`ディレクトリ以下のコードは別ライセンス。
 
-**情報源**: [GitHub Repository](https://github.com/OpenHands-AI/OpenHands)
+**情報源**: [GitHub Repository](https://github.com/OpenHands/OpenHands)
 
 ## **11. 操作性 (UI/UX) と学習コスト**
 
@@ -142,11 +142,14 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 
 OpenHandsは非常に活発に開発されており、頻繁にリリースが行われています。
 
-*   **2025-10-21 (v1.0.2-cli)**: CLIランチャーの改善。
-*   **GitHub Orgの名称変更**: 2025年10月20日に、GitHub Organizationが`All-Hands-AI`から`OpenHands-AI`に変更された。
-*   **継続的な改善**: LLMサポートの拡充、エージェントの能力向上、バグ修正などが継続的に行われている。
+*   **2024-11-11 (v0.62.0)**: 会話タブのピン留め機能、プロファイルメニューへのドキュメントリンク追加。
+*   **2024-11-07 (v1.0.6-cli)**: UV使用時のエントリーポイント修正、MCP設定の永続化バグ修正など。
+*   **2024-11-05 (v0.61.0)**: ターミナルタブの読み取り専用化、Jupyterタブの削除。
+*   **2024-10-31 (v1.0.5-cli)**: 会話開始前の設定構成を許可、コンデンサー呼び出し時のクラッシュ修正。
+*   **2024-10-29 (v0.60.0)**: V0 CLIの削除（サポート終了）、Clarifaiプロバイダーのサポート追加、サンドボックスのライフサイクル管理追加。
+*   **GitHub Orgの名称変更**: GitHub Organizationが`All-Hands-AI`から`OpenHands-AI`へ、さらに`OpenHands`へと変更された。
 
-**情報源**: [GitHub Releases](https://github.com/OpenHands-AI/OpenHands/releases)
+**情報源**: [GitHub Releases](https://github.com/OpenHands/OpenHands/releases)
 
 ## **14. 類似ツールとの比較**
 
