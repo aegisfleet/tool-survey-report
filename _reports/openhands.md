@@ -5,7 +5,7 @@ category: "自律型AIエージェント"
 developer: "Daytona Platform Inc."
 official_site: "https://openhands.daytona.io/"
 date: "2025-10-23"
-last_updated: "2025-10-23"
+last_updated: "2025-12-10"
 tags:
   - "AI"
   - "開発者ツール"
@@ -142,11 +142,18 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 
 OpenHandsは非常に活発に開発されており、頻繁にリリースが行われています。
 
+*   **2025-11-11 (v1.0.7-cli)**: CLIの出力クリーンアップ、セキュリティリスクのあるツールコールのクラッシュを防止。
+*   **2025-11-11 (v0.62.0)**: 会話タブのピン留め機能、プロファイルメニューへのドキュメントリンク追加。
+*   **2025-11-07 (v1.0.6-cli)**: UV使用時のエントリーポイント修正、CLIの会話読み込みを遅延実行にするなどの改善。
+*   **2025-11-05 (v0.61.0)**: ターミナルタブを読み取り専用に変更し、Jupyterタブを削除。
+*   **2025-10-31 (v1.0.5-cli, v1.0.4-cli)**: CLIで会話開始前に設定を変更可能にし、GUIを起動する`serve`コマンドを修正。
+*   **2025-10-30 (v1.0.3-cli)**: LLMの引数に関する非推奨警告を修正。
+*   **2025-10-29 (v0.60.0)**: Clarifaiプロバイダーのサポート追加、サンドボックスの自動ライフサイクル管理を導入。**破壊的変更**としてV0 CLIのサポートを終了。
 *   **2025-10-21 (v1.0.2-cli)**: CLIランチャーの改善。
 *   **GitHub Orgの名称変更**: 2025年10月20日に、GitHub Organizationが`All-Hands-AI`から`OpenHands-AI`に変更された。
 *   **継続的な改善**: LLMサポートの拡充、エージェントの能力向上、バグ修正などが継続的に行われている。
 
-**情報源**: [GitHub Releases](https://github.com/OpenHands-AI/OpenHands/releases)
+**情報源**: [GitHub Releases](https://github.com/OpenHands/OpenHands/releases)
 
 ## **14. 類似ツールとの比較**
 
