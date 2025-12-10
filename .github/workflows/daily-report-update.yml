@@ -79,7 +79,8 @@ jobs:
             const toolName = toolNameMatch ? toolNameMatch[1] : oldestReport.filename.replace('.md', '');
 
             // Jules API用のプロンプトを作成
-            const prompt = `task-report-create-or-update.mdに従い、${toolName}(${oldestReport.path})の調査レポートを最新情報に更新して。`;
+            const todayJST = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
+            const prompt = `task-report-create-or-update.mdに従い、${toolName}(${oldestReport.path})の調査レポートを最新情報に更新して。本日は${todayJST}です。`;
 
             // Jules APIを呼び出し
             const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
