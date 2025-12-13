@@ -79,7 +79,19 @@ jobs:
             const toolName = toolNameMatch ? toolNameMatch[1] : latestReport.filename.replace('.md', '');
 
             // Jules API用のプロンプトを作成
-            const prompt = `task-organizing-category-tags.mdに従い、${toolName}(${latestReport.path})のカテゴリ、タグ、関連レポートを整理して。`;
+            const promptLines = [
+              `task-organizing-category-tags.mdに従い、${toolName}(${latestReport.path})のカテゴリ、タグ、関連レポートを整理して。`,
+              '',
+              '作業範囲:',
+              `- メイン対象: ${latestReport.path}`,
+              `- 関連レポート: ${toolName}と同カテゴリまたはrelated_toolsに含まれるレポートも確認し、双方向の整合性を確保すること`,
+              '',
+              '注意事項:',
+              `- related_toolsを設定した場合、参照先レポートにも${toolName}への参照を追加すること`,
+              '- 同カテゴリの他レポートとタグの統一性を確認すること',
+              '- last_updatedは更新しないこと'
+            ];
+            const prompt = promptLines.join('\n');
 
             // Jules APIを呼び出し
             const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
