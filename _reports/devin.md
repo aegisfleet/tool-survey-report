@@ -18,6 +18,7 @@ relationships:
     - "OpenHands"
     - "Google Jules"
     - "Manus"
+    - "AGENTIC STAR"
 ---
 
 # **Devin 調査レポート**
