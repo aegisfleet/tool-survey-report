@@ -7,10 +7,12 @@ developer: SoftBank
 official_site: https://www.softbank.jp/biz/services/ai/agentic-star/
 date: "2025-12-13"
 last_updated: "2025-12-13"
-tags: [自律型, エージェント, MCP, 法人向け, SoftBank, SaaS]
+tags: [自律型, エージェント, MCP, 法人向け, SaaS]
 description: "ソフトバンクが提供する法人向け自律型AIエージェントプラットフォーム。業務ゴールの達成に向けて自律的に思考・実行し、企業のデジタル変革を加速します。"
 relationships:
-  related_tools: []
+  related_tools:
+    - "Devin"
+    - "Microsoft 365 Copilot"
 ---
 
 # **AGENTIC STAR 調査レポート**
