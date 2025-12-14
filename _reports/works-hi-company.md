@@ -15,7 +15,6 @@ description: "大手法人向け統合型人事システム。人事管理、給
 relationships:
   related_tools:
     - "SmartHR"
-    - "KING OF TIME"
     - "ジョブカン勤怠管理"
     - "マネーフォワード クラウド勤怠"
 ---
