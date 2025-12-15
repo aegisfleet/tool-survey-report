@@ -1,5 +1,5 @@
 ---
-title: "さくらのAI"
+title: "さくらのAI 調査レポート"
 tool_name: "さくらのAI"
 category: "生成AI"
 developer: "さくらインターネット"
