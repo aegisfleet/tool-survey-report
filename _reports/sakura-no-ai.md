@@ -1,5 +1,5 @@
 ---
-title: "[さくらのAI] 調査レポート"
+title: "さくらのAI"
 tool_name: "さくらのAI"
 category: "生成AI"
 developer: "さくらインターネット"
@@ -21,7 +21,7 @@ relationships:
     - "Amazon Bedrock"
 ---
 
-# **[さくらのAI] 調査レポート**
+# **さくらのAI**
 
 ## **1. 基本情報**
 
