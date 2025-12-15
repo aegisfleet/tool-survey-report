@@ -1,7 +1,7 @@
 ---
 title: "Circleback 調査レポート"
 tool_name: "Circleback"
-category: "AI議事録・会議アシスタント"
+category: "ワークフロー自動化"
 developer: "Circleback AI, Inc."
 official_site: "https://circleback.ai/"
 date: "2025-12-15"
@@ -9,16 +9,14 @@ last_updated: "2025-12-15"
 tags:
   - "AI"
   - "生成AI"
-  - "議事録"
   - "自動化"
+  - "議事録"
   - "会議"
   - "タスク管理"
 description: "会議の録音、文字起こし、要約、アクションアイテムの抽出を自動化するAIミーティングアシスタント。"
 relationships:
   related_tools:
     - "Microsoft 365 Copilot"
-    - "Notion"
-    - "Zapier"
 ---
 
 # **Circleback 調査レポート**
