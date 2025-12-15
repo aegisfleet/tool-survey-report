@@ -5,7 +5,7 @@ category: "開発者ツール"
 developer: "Element Labs, Inc."
 official_site: "https://lmstudio.ai/"
 date: "2025-10-24"
-last_updated: "2025-10-24"
+last_updated: "2025-12-15"
 tags:
   - "AI"
   - "ローカルAI"
@@ -107,6 +107,9 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025-12-12 (v0.3.35)**: Devstral-2とGLM-4.6Vモデル（MLX経由）のサポートを追加。デフォルトシステムプロンプトやツール呼び出しに関する複数のバグを修正。
+* **2025-12-10 (v0.3.34)**: EssentialAIのrnj-1モデルをサポート。Jinjaプロンプトフォーマットのバグを修正。
+* **2025-11-19 (v0.3.32)**: GLM 4.5のツール呼び出しとolmOCR-2をサポート。OpenAI互換APIエンドポイントでbase64画像の入力をサポート。Flash AttentionがVulkanとMetalでデフォルト有効に。
 * **2025-10-14**: Linux on ARMに対応し、NVIDIA DGX Sparkで利用可能に。
 * **2025-10-08 (v0.3.30)**: Qwenツール呼び出しやVulkan iGPUに関するバグを修正。
 * **2025-10-06 (v0.3.29)**: OpenAI互換の`/v1/responses`エンドポイントを追加。
@@ -114,7 +117,6 @@ relationships:
 * **2025-08-05**: OpenAIの`gpt-oss`モデルに対応。
 * **2025-07-08**: 職場での利用が完全に無料化。
 * **2025-06-25 (v0.3.17)**: Model Context Protocol (MCP) をサポート。
-* **2025-04-24 (v0.3.15)**: NVIDIA RTX 50シリーズGPUとCUDA 12をサポート。
 
 ## **14. 類似ツールとの比較**
 
