@@ -10,6 +10,7 @@ tags:
   - "勤怠管理"
   - "人事労務"
   - "SaaS"
+  - "自動化"
 description: "勤怠管理から給与計算までをシステム連携で効率化するクラウド勤怠管理システム。"
 relationships:
   related_tools:

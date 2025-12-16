@@ -7,9 +7,8 @@ official_site: "https://smarthr.jp/"
 date: "2025-10-24"
 last_updated: "2025-10-24"
 tags:
-  - "労務管理"
+  - "人事労務"
   - "タレントマネジメント"
-  - "人事"
   - "SaaS"
 description: "SmartHRは、労務管理とタレントマネジメントを効率化し、従業員データの一元管理を実現するクラウド型ソフトウェアです。"
 relationships:
