@@ -1,7 +1,7 @@
 ---
 title: "Node.js 調査レポート"
 tool_name: "Node.js"
-category: "JavaScriptランタイム環境"
+category: "開発者ツール"
 developer: "OpenJS Foundation"
 official_site: "https://nodejs.org/"
 date: "2025-10-24"
@@ -10,7 +10,12 @@ tags:
   - "JavaScript"
   - "サーバーサイド"
   - "オープンソース"
+  - "開発者ツール"
 description: "非同期イベント駆動型のJavaScriptランタイム環境で、スケーラブルなネットワークアプリケーションの構築に使用されます。"
+relationships:
+  related_tools:
+    - "Deno"
+    - "Bun"
 ---
 
 # **Node.js 調査レポート**
@@ -20,7 +25,7 @@ description: "非同期イベント駆動型のJavaScriptランタイム環境�
 * **ツール名**: Node.js
 * **開発元**: OpenJS Foundation
 * **公式サイト**: [https://nodejs.org/](https://nodejs.org/)
-* **カテゴリ**: JavaScriptランタイム環境
+* **カテゴリ**: 開発者ツール
 * **概要**: Chrome V8 JavaScriptエンジンでビルドされた、非同期イベント駆動型のJavaScriptランタイム環境です。主にサーバーサイドで利用されますが、コマンドラインツールの作成などにも使用できます。
 
 ## **2. 目的と主な利用シーン**
