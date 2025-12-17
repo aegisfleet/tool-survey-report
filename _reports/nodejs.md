@@ -12,10 +12,6 @@ tags:
   - "オープンソース"
   - "開発者ツール"
 description: "非同期イベント駆動型のJavaScriptランタイム環境で、スケーラブルなネットワークアプリケーションの構築に使用されます。"
-relationships:
-  related_tools:
-    - "Deno"
-    - "Bun"
 ---
 
 # **Node.js 調査レポート**
