@@ -5,7 +5,7 @@ category: "JavaScriptランタイム環境"
 developer: "OpenJS Foundation"
 official_site: "https://nodejs.org/"
 date: "2025-10-24"
-last_updated: "2025-10-24"
+last_updated: "2025-12-17"
 tags:
   - "JavaScript"
   - "サーバーサイド"
@@ -101,10 +101,16 @@ description: "非同期イベント駆動型のJavaScriptランタイム環境�
 
 ## **13. 直近半年のアップデート情報**
 
-Node.jsは定期的にアップデートされており、LTS（長期サポート）版とCurrent（最新）版がリリースされています。
-* **v22.x (LTS)**: 安定性を重視したバージョンで、エンタープライズ環境での利用が推奨されます。
-* **v24.x, v25.x (Current)**: 最新の機能が追加されたバージョンで、新しい機能を試したい開発者向けです。
-詳細は[公式ブログのリリース情報](https://nodejs.org/en/blog/release)を参照。
+Node.jsは定期的にアップデートされており、LTS（長期サポート）版とCurrent（最新）版がリリースされています。詳細は[公式ブログのリリース情報](https://nodejs.org/en/blog/release)を参照。
+
+* **2025-12-10, v24.12.0 (LTS)**:
+    * HTTPサーバーのパフォーマンスを向上させる`optimizeEmptyRequests`オプションの追加。
+    * `module`の`type`ストリッピング機能が安定版としてマーク。
+    * V8エンジンにCPUプロファイリング機能を追加。
+* **2025-11-25, v20.19.6 (LTS)**: 依存関係の更新とセキュリティ修正を含むメンテナンスリリース。
+* **2025-11-17, v25.2.1 (Current)**: 試験的APIであった`localStorage`の互換性を破壊する変更をv26.0.0に延期。
+* **2025-11-11, v24.11.1 (LTS) & v25.2.0 (Current)**: 主にバグ修正と依存関係の更新。
+* **2025-10-28, v25.1.0 (Current)**: 新機能の追加と改善。
 
 ## **14. 類似ツールとの比較**
 
