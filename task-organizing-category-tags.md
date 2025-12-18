@@ -240,3 +240,14 @@ grep -l "自律\|エージェント\|Agent" _reports/*.md | head -4
 ```bash
 grep -l "category.*AI.*コーディング" _reports/*.md
 ```
+
+## 進捗状況
+
+### 2025-12-19
+
+- **対象**: `_reports/ollama.md`
+- **作業内容**:
+  - `category` を `開発者ツール` から `AI開発基盤` に変更
+  - `tags` に `開発者ツール`, `推論` を追加
+  - `developer` を `Ollama Inc.` から `Ollama` に修正
+  - 関連ツール (`foundry-local.md`, `lm-studio.md`) との双方向リンクを確認

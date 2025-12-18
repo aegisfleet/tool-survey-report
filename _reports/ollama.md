@@ -1,8 +1,8 @@
 ---
 title: "Ollama 調査レポート"
 tool_name: "Ollama"
-category: "開発者ツール"
-developer: "Ollama Inc."
+category: "AI開発基盤"
+developer: "Ollama"
 official_site: "https://ollama.com/"
 date: "2025-10-24"
 last_updated: "2025-12-18"
@@ -11,6 +11,8 @@ tags:
   - "ローカルAI"
   - "大規模言語モデル"
   - "オープンソース"
+  - "開発者ツール"
+  - "推論"
 description: "オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのツール"
 relationships:
   related_tools:
