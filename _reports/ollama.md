@@ -5,7 +5,7 @@ category: "開発者ツール"
 developer: "Ollama Inc."
 official_site: "https://ollama.com/"
 date: "2025-10-24"
-last_updated: "2025-10-24"
+last_updated: "2025-12-18"
 tags:
   - "AI"
   - "ローカルAI"
@@ -105,6 +105,8 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025-10-29: OpenAI gpt-oss-safeguard** - OpenAIおよびROOSTとの提携により、安全性分類タスク向けのgpt-oss-safeguard推論モデルを追加
+* **2025-10-28: MiniMax M2** - コーディングとエージェントワークフローに特化したMiniMax M2モデルがOllama Cloudで利用可能に
 * **2025-10-23: NVIDIA DGX Spark performance** - NVIDIA DGX Sparkでのパフォーマンス測定結果を公開
 * **2025-10-16: New coding models & integrations** - 新しいコーディングモデルの追加とインテグレーションの拡充
 * **2025-09-24: Web search** - Web検索APIの追加
