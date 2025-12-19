@@ -12,6 +12,9 @@ tags:
   - "動画生成"
   - "3D"
 description: "テキストや画像から高品質な動画や3Dモデルを生成するAIプラットフォーム。"
+relationships:
+  related_tools:
+    - "Sora (Sora 2)"
 ---
 
 # **Luma AI 調査レポート**

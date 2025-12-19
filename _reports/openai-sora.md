@@ -1,17 +1,22 @@
 ---
 title: "OpenAI Sora 調査レポート"
 tool_name: "Sora (Sora 2)"
-category: "動画生成AI"
+category: "動画/メディア"
 developer: "OpenAI"
 official_site: "https://openai.com/sora"
 date: "2025-10-18"
 last_updated: "2025-12-19"
 tags:
+  - "AI"
   - "動画生成"
   - "生成AI"
   - "OpenAI"
   - "マルチモーダル"
 description: "テキストや画像から高品質でリアルな動画を生成するOpenAIのAIモデル。最新版Sora 2では音声生成や物理法則の理解も向上。"
+relationships:
+  parent: "ChatGPT"
+  related_tools:
+    - "Luma AI"
 ---
 
 # **OpenAI Sora 調査レポート**
