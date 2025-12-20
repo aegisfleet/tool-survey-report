@@ -4,6 +4,9 @@ tool_name: "ツール名"
 category: "カテゴリ名"
 developer: "開発元企業名"
 official_site: "公式サイトURL"
+links:
+  github: "GitHubリポジトリURL（該当する場合）"
+  documentation: "ドキュメントサイトURL（公式サイトと異なる場合）"
 date: "YYYY-MM-DD"
 last_updated: "YYYY-MM-DD"
 tags:
@@ -20,6 +23,10 @@ description: "ツールの概要を1-2行で簡潔に記述"
 * **ツール名**: (正式名称)
 * **開発元**: (企業名)
 * **公式サイト**: [URL](URL)
+* **関連リンク**:
+  * GitHub: [リポジトリURL](URL) （オープンソースの場合）
+  * ドキュメント: [URL](URL) （公式サイトと異なる場合）
+  * レビューサイト: [G2](URL) | [Capterra](URL) | [ITreview](URL) （該当するもののみ）
 * **カテゴリ**: (例: プロジェクト管理, BIツール, コミュニケーション, 開発者ツール)
 * **概要**: (このツールが何であるかを簡潔に説明)
 
