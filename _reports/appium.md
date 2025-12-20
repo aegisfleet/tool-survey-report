@@ -10,6 +10,9 @@ tags:
   - "テスト自動化"
   - "オープンソース"
   - "モバイル"
+  - "Java"
+  - "Python"
+  - "JavaScript"
 description: "ネイティブ、ハイブリッド、モバイルWebアプリ向けのオープンソースのテスト自動化フレームワーク。"
 relationships:
   related_tools:

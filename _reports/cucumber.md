@@ -10,6 +10,8 @@ tags:
   - "テスト自動化"
   - "BDD"
   - "オープンソース"
+  - "Java"
+  - "JavaScript"
 description: "自然言語で記述された仕様書を基に、自動化された受け入れテストを実行するためのツール。"
 relationships:
   related_tools:

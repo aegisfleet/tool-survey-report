@@ -11,6 +11,9 @@ tags:
   - "E2Eテスト"
   - "ブラウザテスト"
   - "オープンソース"
+  - "JavaScript"
+  - "Python"
+  - "Java"
 description: "Playwrightは、最新のWebアプリケーション向けの高速で信頼性の高いエンドツーエンドのテストを可能にするオープンソースのフレームワークです。"
 relationships:
   related_tools:

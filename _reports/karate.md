@@ -13,6 +13,7 @@ tags:
   - "負荷テスト"
   - "オープンソース"
   - "BDD"
+  - "Java"
 description: "APIテスト、UIテスト、負荷テストを統合したオープンソースのテスト自動化フレームワーク。Gherkin記法を用いたローコードなテスト記述が特徴で、開発者とQAエンジニアのコラボレーションを促進します。"
 relationships:
   related_tools:
