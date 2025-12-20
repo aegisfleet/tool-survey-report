@@ -34,7 +34,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/Stability-AI](https://github.com/Stability-AI)
   * ドキュメント: [https://platform.stability.ai/docs](https://platform.stability.ai/docs)
-  * レビューサイト: [G2](https://www.g2.com/products/stable-diffusion/reviews) | [Capterra](https://www.capterra.com/p/244304/Stable-Diffusion/)
+  * レビューサイト: [G2](https://www.g2.com/products/stable-diffusion/reviews)
 * **カテゴリ**: 生成AI (画像生成)
 * **概要**: テキストプロンプトから高品質な画像を生成するオープンソースの生成AIモデル。ユーザー自身のハードウェア（ローカル環境）で動作させることができ、プライバシー保護やカスタマイズ性に優れている。
 
