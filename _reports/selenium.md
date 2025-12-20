@@ -11,6 +11,8 @@ tags:
   - "オープンソース"
   - "Webブラウザ"
   - "E2Eテスト"
+  - "Java"
+  - "Python"
 description: "Webブラウザの操作を自動化するためのオープンソースフレームワーク群。主にWebアプリケーションのテストに利用される。"
 relationships:
   related_tools:

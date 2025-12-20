@@ -11,6 +11,7 @@ tags:
   - "テスト自動化"
   - "Node.js"
   - "オープンソース"
+  - "JavaScript"
 description: "Playwright, WebDriver, Puppeteerなどを利用してE2Eテストをシンプルに記述できる、シナリオ駆動のテスト自動化フレームワーク。"
 relationships:
   related_tools:
