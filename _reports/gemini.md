@@ -22,6 +22,7 @@ relationships:
     - "Claude"
     - "Grok"
     - "Rakuten AI"
+    - "Stable Diffusion"
 ---
 
 # **Gemini 調査レポート**
