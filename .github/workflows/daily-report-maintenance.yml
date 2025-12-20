@@ -1,24 +1,24 @@
-name: Daily Report Update with Jules
+name: Daily Report Maintenance with Jules
 
 on:
   schedule:
-    # 毎日日本時間 16:00 (UTC 07:00) に実行
-    - cron: '0 7 * * *'
+    # 毎日日本時間 17:00 (UTC 08:00) に実行
+    - cron: '0 8 * * *'
   workflow_dispatch: # 手動実行も可能
 
 permissions:
   contents: read
 
 jobs:
-  update-oldest-report:
-    name: Update oldest report using Jules API
+  update-report-and-organize:
+    name: Update report and organize category/tags using Jules API
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
         
-      - name: Find oldest report and call Jules API with retry
+      - name: Find oldest report and call Jules API
         uses: actions/github-script@v8
         env:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
@@ -79,8 +79,27 @@ jobs:
             const toolName = toolNameMatch ? toolNameMatch[1] : oldestReport.filename.replace('.md', '');
 
             // Jules API用のプロンプトを作成
+            // AGENTS.mdの「レポート作成・更新の手順」を参照する形式
             const todayJST = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
-            const prompt = `task-report-create-or-update.mdに従い、${toolName}(${oldestReport.path})の調査レポートを最新情報に更新して。本日は${todayJST}です。`;
+            const promptLines = [
+              `AGENTS.mdの「レポート作成・更新の手順」に従い、${toolName}(${oldestReport.path})の調査レポートを更新してください。`,
+              '',
+              '## 作業内容',
+              '',
+              '### ステップ1: レポートの作成・更新',
+              `- 対象: ${oldestReport.path}`,
+              `- 本日の日付: ${todayJST}`,
+              '- task-report-create-or-update.mdに従い、レポート情報を最新化する',
+              '',
+              '### ステップ2: 関連レポートの整理',
+              '- task-organizing-category-tags.mdに従い、カテゴリ・タグ・関連付けを整理する',
+              `- ${toolName}と同カテゴリまたはrelated_toolsに含まれるレポートとの双方向整合性を確保する`,
+              '',
+              '### 注意事項',
+              '- 両ステップを必ずこの順序で実行すること',
+              '- 関連レポートへの変更は最小限に留めること'
+            ];
+            const prompt = promptLines.join('\n');
 
             // Jules APIを呼び出し
             const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
@@ -101,7 +120,7 @@ jobs:
               },
               requirePlanApproval: false,
               automationMode: `AUTO_CREATE_PR`,
-              title: `Update ${toolName} Report - ${new Date().toISOString().split('T')[0]}`
+              title: `Update ${toolName} Report and Organize - ${new Date().toISOString().split('T')[0]}`
             };
 
             // リトライ機能付きのJules API呼び出し
