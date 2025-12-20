@@ -20,6 +20,7 @@ relationships:
     - "Claude"
     - "Grok"
     - "Rakuten AI"
+    - "Stable Diffusion"
 ---
 
 # **ChatGPT 調査レポート**

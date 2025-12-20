@@ -12,6 +12,9 @@ tags:
   - "大規模言語モデル"
   - "会話型AI"
 description: "機械学習のモデル、データセット、アプリケーションで協力するプラットフォームです。"
+relationships:
+  related_tools:
+    - "Stable Diffusion"
 ---
 
 # **Hugging Face 調査レポート**
