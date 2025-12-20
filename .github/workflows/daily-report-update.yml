@@ -2,8 +2,8 @@ name: Daily Report Update with Jules
 
 on:
   schedule:
-    # 毎日日本時間 18:00 (UTC 09:00) に実行
-    - cron: '0 9 * * *'
+    # 毎日日本時間 16:00 (UTC 07:00) に実行
+    - cron: '0 7 * * *'
   workflow_dispatch: # 手動実行も可能
 
 permissions:
