@@ -5,7 +5,7 @@ category: "テスト/QA"
 developer: "Software Freedom Conservancy"
 official_site: "https://www.selenium.dev/"
 date: "2025-10-24"
-last_updated: "2025-10-24"
+last_updated: "2025-12-20"
 tags:
   - "テスト自動化"
   - "オープンソース"
@@ -110,7 +110,11 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025-12-06: Selenium 4.39 リリース**
+* **2025-10-25: Selenium 4.38 リリース**
+* **2025-10-17: Selenium 4.37 リリース**
 * **2025-10-08: Python 3.9のサポート終了**: Python WebDriver言語バインディングにおけるPython 3.9のサポートを終了。
+* **2025-10-02: Selenium 4.36 リリース**
 * **2025-09-14: Selenium Managerの利用状況に関する分析**: 特定のChromeバージョン（127.0.6533.99）に固定されたユーザーが多数いるという異常なパターンをテレメトリから発見し、その原因を調査。
 * **2025-08-12: Selenium 4.35 リリース**
 * **2025-06-29: Selenium 4.34 リリース**
