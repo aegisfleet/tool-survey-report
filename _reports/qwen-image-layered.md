@@ -32,7 +32,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/QwenLM/Qwen-Image-Layered](https://github.com/QwenLM/Qwen-Image-Layered)
   * ドキュメント: [https://huggingface.co/Qwen/Qwen-Image-Layered](https://huggingface.co/Qwen/Qwen-Image-Layered)
-  * ブログ: [https://qwenlm.github.io/blog/qwen-image-layered/](https://qwenlm.github.io/blog/qwen-image-layered/)
   * デモ: [https://huggingface.co/spaces/Qwen/Qwen-Image-Layered](https://huggingface.co/spaces/Qwen/Qwen-Image-Layered)
   * 論文: [https://arxiv.org/abs/2512.15603](https://arxiv.org/abs/2512.15603)
 * **カテゴリ**: 生成AI
