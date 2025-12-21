@@ -4,6 +4,8 @@ tool_name: "Kubernetes"
 category: "構成管理"
 developer: "Cloud Native Computing Foundation"
 official_site: "https://kubernetes.io"
+links:
+  github: "https://github.com/kubernetes/kubernetes"
 date: "2025-10-30"
 last_updated: "2025-10-30"
 tags:
@@ -24,6 +26,8 @@ relationships:
 * **ツール名**: Kubernetes (k8s)
 * **開発元**: Cloud Native Computing Foundation (CNCF)
 * **公式サイト**: [https://kubernetes.io](https://kubernetes.io)
+* **関連リンク**:
+  * GitHub: [https://github.com/kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
 * **カテゴリ**: 構成管理
 * **概要**: コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するためのオープンソースのコンテナオーケストレーションシステム。Googleによって設計され、現在はCNCFによってメンテナンスされている。
 

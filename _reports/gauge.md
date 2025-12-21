@@ -4,6 +4,8 @@ tool_name: "Gauge"
 category: "テスト/QA"
 developer: "ThoughtWorks"
 official_site: "https://gauge.org/"
+links:
+  github: "https://github.com/getgauge/gauge"
 date: "2025-12-06"
 last_updated: "2025-12-06"
 tags:
@@ -22,6 +24,8 @@ description: "Markdownベースの仕様書でテストを作成できる、軽�
 * **ツール名**: Gauge
 * **開発元**: ThoughtWorks (オープンソース)
 * **公式サイト**: [https://gauge.org/](https://gauge.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/getgauge/gauge](https://github.com/getgauge/gauge)
 * **カテゴリ**: テスト/QA
 * **概要**: Markdownを使用して実行可能なテスト仕様書を作成できる、軽量でクロスプラットフォームなテスト自動化フレームワークです。
 

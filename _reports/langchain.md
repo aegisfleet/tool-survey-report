@@ -4,6 +4,8 @@ tool_name: "LangChain"
 category: "AI・LLM開発フレームワーク"
 developer: "LangChain"
 official_site: "https://www.langchain.com/"
+links:
+  github: "https://github.com/langchain-ai/langchain"
 date: "2025-11-01"
 last_updated: "2025-11-01"
 tags:
@@ -22,6 +24,8 @@ description: "大規模言語モデル（LLM）を活用したアプリケーシ
 * **ツール名**: LangChain
 * **開発元**: LangChain
 * **公式サイト**: [https://www.langchain.com/](https://www.langchain.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/langchain-ai/langchain](https://github.com/langchain-ai/langchain)
 * **カテゴリ**: AI・LLM開発フレームワーク
 * **概要**: LangChainは、大規模言語モデル（LLM）を活用したアプリケーション開発を簡素化し、加速させるためのオープンソースフレームワークです。データ連携、エージェント機能、実行監視などを抽象化されたインターフェースで提供し、開発者が複雑なAIアプリケーションを効率的に構築できるよう支援します。
 

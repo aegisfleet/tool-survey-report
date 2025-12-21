@@ -4,6 +4,8 @@ tool_name: "JaCoCo"
 category: "コードカバレッジ"
 developer: "Mountainminds GmbH & Co. KG and Contributors"
 official_site: "https://www.jacoco.org/"
+links:
+  github: "https://github.com/jacoco/jacoco"
 date: "2025-10-22"
 last_updated: "2025-11-28"
 tags:
@@ -21,6 +23,8 @@ description: "JaCoCoは、Java VMベースの環境でコードカバレッジ�
 * **ツール名**: JaCoCo (Java Code Coverage)
 * **開発元**: Mountainminds GmbH & Co. KG and Contributors
 * **公式サイト**: [https://www.jacoco.org/](https://www.jacoco.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/jacoco/jacoco](https://github.com/jacoco/jacoco)
 * **カテゴリ**: 開発者ツール、コードカバレッジ
 * **概要**: JaCoCoは、Java VMベースの環境におけるコードカバレッジ分析の標準技術を提供することを目的とした、無料のオープンソースライブラリです。様々なビルドツールや開発ツールと統合しやすいように、軽量かつ柔軟に設計されています。
 

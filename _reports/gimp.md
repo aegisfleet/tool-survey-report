@@ -4,6 +4,8 @@ tool_name: "GIMP"
 category: "デザインツール"
 developer: "The GIMP Team"
 official_site: "https://www.gimp.org/"
+links:
+  github: "https://github.com/GNOME/gimp"
 date: "2025-11-04"
 last_updated: "2025-11-04"
 tags:
@@ -26,6 +28,8 @@ description: "GIMP (GNU Image Manipulation Program) は、写真のレタッチ�
 * **ツール名**: GIMP (GNU Image Manipulation Program)
 * **開発元**: The GIMP Team (コミュニティによる開発)
 * **公式サイト**: [https://www.gimp.org/](https://www.gimp.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/GNOME/gimp](https://github.com/GNOME/gimp)
 * **カテゴリ**: 画像編集ソフトウェア
 * **概要**: GIMPは、無料で利用できるオープンソースの画像編集ソフトウェアです。有償のソフトウェアであるAdobe Photoshopの代替として広く知られており、写真のレタッチ、画像の合成・作成、フォーマット変換など、プロレベルの高度な機能を多数備えています。GNU/Linux、macOS、Windowsなど、多くのオペレーティングシステムで動作します。
 

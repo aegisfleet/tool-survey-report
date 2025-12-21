@@ -4,6 +4,8 @@ tool_name: "Playwright"
 category: "テスト/QA"
 developer: "Microsoft"
 official_site: "https://playwright.dev/"
+links:
+  github: "https://github.com/microsoft/playwright"
 date: "2025-10-18"
 last_updated: "2025-10-25"
 tags:
@@ -32,6 +34,8 @@ relationships:
 * **ツール名**: Playwright
 * **開発元**: Microsoft
 * **公式サイト**: [https://playwright.dev/](https://playwright.dev/)
+* **関連リンク**:
+  * GitHub: [https://github.com/microsoft/playwright](https://github.com/microsoft/playwright)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: Playwrightは、最新のWebアプリケーション向けの高速で信頼性の高いエンドツーエンドのテストを可能にするオープンソースのフレームワークです。単一のAPIで、Chromium、Firefox、WebKitを含むすべての最新レンダリングエンジンをサポートします。
 

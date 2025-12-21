@@ -4,6 +4,8 @@ tool_name: "Cucumber"
 category: "テスト/QA"
 developer: "The Cucumber Open Source Project"
 official_site: "https://cucumber.io/"
+links:
+  github: "https://github.com/cucumber/cucumber"
 date: "2025-10-19"
 last_updated: "2025-10-30"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: Cucumber
 * **開発元**: The Cucumber Open Source Project
 * **公式サイト**: [https://cucumber.io/](https://cucumber.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/cucumber/cucumber](https://github.com/cucumber/cucumber)
 * **カテゴリ**: テスト自動化, BDD (Behavior-Driven Development)
 * **概要**: Cucumberは、自然言語（Gherkin）で記述された仕様書を基に、自動化された受け入れテストを実行するためのコミュニティ主導のオープンソースツールです。2024年12月にSmartBear社からコミュニティへ所有権が移管され、現在は独立したオープンソースプロジェクトとして開発が続けられています。ビジネス側と開発側のコミュニケーションを円滑にし、共通の理解を促進することを目的としています。
 

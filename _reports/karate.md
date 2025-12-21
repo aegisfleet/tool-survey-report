@@ -4,6 +4,8 @@ tool_name: "Karate"
 category: "テスト/QA"
 developer: "Karate Labs Inc."
 official_site: "https://www.karatelabs.io/"
+links:
+  github: "https://github.com/karatelabs/karate"
 date: "2025-12-06"
 last_updated: "2025-12-06"
 tags:
@@ -31,6 +33,8 @@ relationships:
 * **ツール名**: Karate (Karate Framework)
 * **開発元**: Karate Labs Inc.
 * **公式サイト**: [https://www.karatelabs.io/](https://www.karatelabs.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/karatelabs/karate](https://github.com/karatelabs/karate)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: Karateは、APIテスト、APIモック、UIテスト（ブラウザ操作）、そして負荷テスト（パフォーマンス）を単一のフレームワークで実現するオープンソースツールです。CucumberのGherkin記法（Given-When-Then）を拡張した独自のDSLを採用しており、プログラミングの詳細を隠蔽しつつ、直感的にテストシナリオを記述できる点が特徴です。
 

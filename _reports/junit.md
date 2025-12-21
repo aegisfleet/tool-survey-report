@@ -4,6 +4,8 @@ tool_name: "JUnit"
 category: "テスト自動化フレームワーク"
 developer: "Kent Beck, Erich Gamma, David Saff"
 official_site: "https://junit.org/"
+links:
+  github: "https://github.com/junit-team/junit5"
 date: "2025-10-22"
 last_updated: "2025-12-01"
 tags:
@@ -20,6 +22,8 @@ description: "Javaプログラミング言語向けの、繰り返し可能な�
 * **ツール名**: JUnit
 * **開発元**: Kent Beck, Erich Gamma, David Saff
 * **公式サイト**: [https://junit.org/](https://junit.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/junit-team/junit5](https://github.com/junit-team/junit5)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: Javaプログラミング言語で単体テスト（ユニットテスト）を記述・実行するためのフレームワーク。xUnitファミリーの一つであり、Java開発におけるテストのデファクトスタンダードとなっています。
 

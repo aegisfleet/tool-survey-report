@@ -4,6 +4,8 @@ tool_name: "Appium"
 category: "テスト/QA"
 developer: "OpenJS Foundation"
 official_site: "http://appium.io/"
+links:
+  github: "https://github.com/appium/appium"
 date: "2025-10-26"
 last_updated: "2025-10-26"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: Appium
 * **開発元**: OpenJS Foundation
 * **公式サイト**: [http://appium.io/](http://appium.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/appium/appium](https://github.com/appium/appium)
 * **カテゴリ**: テスト/QA
 * **概要**: Appiumは、ネイティブ、ハイブリッド、モバイルWebアプリ向けのオープンソースのテスト自動化フレームワークです。WebDriverプロトコルを使用して、iOS、Android、Windowsアプリを操作します。
 

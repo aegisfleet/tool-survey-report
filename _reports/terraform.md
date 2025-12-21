@@ -4,6 +4,8 @@ tool_name: "Terraform"
 category: "構成管理"
 developer: "HashiCorp"
 official_site: "https://www.hashicorp.com/en/products/terraform"
+links:
+  github: "https://github.com/hashicorp/terraform"
 date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: Terraform
 * **開発元**: HashiCorp
 * **公式サイト**: [https://www.hashicorp.com/en/products/terraform](https://www.hashicorp.com/en/products/terraform)
+* **関連リンク**:
+  * GitHub: [https://github.com/hashicorp/terraform](https://github.com/hashicorp/terraform)
 * **カテゴリ**: 構成管理 (Infrastructure as Code)
 * **概要**: Terraformは、HashiCorpによって開発されたオープンソースのInfrastructure as Code (IaC) ツールです。HCL (HashiCorp Configuration Language) という宣言的な設定言語を用いて、クラウドやオンプレミスのインフラストラクチャをコードとして定義し、プロビジョニングと管理を自動化します。
 

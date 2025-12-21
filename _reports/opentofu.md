@@ -4,6 +4,8 @@ tool_name: "OpenTofu"
 category: "構成管理"
 developer: "Linux Foundation"
 official_site: "https://opentofu.org/"
+links:
+  github: "https://github.com/opentofu/opentofu"
 date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: OpenTofu
 * **開発元**: Linux Foundation
 * **公式サイト**: [https://opentofu.org/](https://opentofu.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/opentofu/opentofu](https://github.com/opentofu/opentofu)
 * **カテゴリ**: 構成管理 (Infrastructure as Code)
 * **概要**: OpenTofuは、Terraformのオープンソースフォークであり、コミュニティ主導で開発されているInfrastructure as Code (IaC) ツールです。宣言的な設定ファイルを用いて、クラウドやオンプレミスのインフラを安全かつ効率的に構築、変更、バージョン管理します。
 

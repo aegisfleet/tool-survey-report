@@ -4,6 +4,8 @@ tool_name: "Node.js"
 category: "開発者ツール"
 developer: "OpenJS Foundation"
 official_site: "https://nodejs.org/"
+links:
+  github: "https://github.com/nodejs/node"
 date: "2025-10-24"
 last_updated: "2025-12-17"
 tags:
@@ -24,6 +26,8 @@ relationships:
 * **ツール名**: Node.js
 * **開発元**: OpenJS Foundation
 * **公式サイト**: [https://nodejs.org/](https://nodejs.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/nodejs/node](https://github.com/nodejs/node)
 * **カテゴリ**: 開発者ツール
 * **概要**: Chrome V8 JavaScriptエンジンでビルドされた、非同期イベント駆動型のJavaScriptランタイム環境です。主にサーバーサイドで利用されますが、コマンドラインツールの作成などにも使用できます。
 

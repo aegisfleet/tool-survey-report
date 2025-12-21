@@ -4,6 +4,8 @@ tool_name: "PyInstaller"
 category: "開発者ツール"
 developer: "PyInstaller Development Team"
 official_site: "https://pyinstaller.org/"
+links:
+  github: "https://github.com/pyinstaller/pyinstaller"
 date: "2025-12-06"
 last_updated: "2025-12-06"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: PyInstaller
 * **開発元**: PyInstaller Development Team
 * **公式サイト**: [https://pyinstaller.org/](https://pyinstaller.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/pyinstaller/pyinstaller](https://github.com/pyinstaller/pyinstaller)
 * **カテゴリ**: 開発者ツール
 * **概要**: Pythonプログラムとその依存ライブラリ、Pythonインタープリタ自体を解析・収集し、単一のパッケージ（フォルダまたは単一ファイル）にまとめるツールです。これにより、ユーザーはPythonをインストールすることなくアプリケーションを実行できます。Windows, macOS, Linuxなど主要なOSに対応しています。
 

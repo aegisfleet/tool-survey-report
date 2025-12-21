@@ -4,6 +4,8 @@ tool_name: "Podman"
 category: "構成管理"
 developer: "Red Hat"
 official_site: "https://podman.io/"
+links:
+  github: "https://github.com/containers/podman"
 date: "2025-10-30"
 last_updated: "2025-10-30"
 tags:
@@ -26,6 +28,8 @@ relationships:
 * **ツール名**: Podman (Pod Manager)
 * **開発元**: Red Hat
 * **公式サイト**: [https://podman.io/](https://podman.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/containers/podman](https://github.com/containers/podman)
 * **カテゴリ**: 構成管理
 * **概要**: Podmanは、OCI(Open Container Initiative)準拠のコンテナエンジンであり、コンテナ、Pod、イメージ、ボリュームの管理に使用されます。最大の特徴は、Dockerのような中央集権的なデーモンプロセスを必要としない「デーモンレス」アーキテクチャを採用している点です。これにより、セキュリティが向上し、root権限なしでのコンテナ実行が容易になります。
 

@@ -4,6 +4,8 @@ tool_name: "Astro"
 category: "ウェブフレームワーク"
 developer: "Astro"
 official_site: "https://astro.build/"
+links:
+  github: "https://github.com/withastro/astro"
 date: "2025-10-20"
 last_updated: "2025-11-12"
 tags:
@@ -21,6 +23,8 @@ description: "Astroは、高速なコンテンツ駆動型ウェブサイトを�
 * **ツール名**: Astro
 * **開発元**: Astro
 * **公式サイト**: [https://astro.build/](https://astro.build/)
+* **関連リンク**:
+  * GitHub: [https://github.com/withastro/astro](https://github.com/withastro/astro)
 * **カテゴリ**: ウェブフレームワーク, 静的サイトジェネレーター
 * **概要**: Astroは、高速なコンテンツ駆動型ウェブサイト（マーケティングサイト、ブログ、Eコマースサイトなど）を構築するために設計されたモダンなウェブフレームワークです。サーバーファーストのアプローチと「アイランドアーキテクチャ」により、デフォルトでJavaScriptをほとんど送信しないことで、優れたパフォーマンスを実現します。
 

@@ -4,6 +4,8 @@ tool_name: "Karpenter"
 category: "構成管理"
 developer: "AWS"
 official_site: "https://karpenter.sh/"
+links:
+  github: "https://github.com/aws/karpenter"
 date: "2025-11-18"
 last_updated: "2025-11-18"
 tags:
@@ -22,6 +24,8 @@ description: "柔軟性、パフォーマンス、シンプルさを追求して
 * **ツール名**: Karpenter
 * **開発元**: AWS (現在はCloud Native Computing Foundation (CNCF)のプロジェクト)
 * **公式サイト**: [https://karpenter.sh/](https://karpenter.sh/)
+* **関連リンク**:
+  * GitHub: [https://github.com/aws/karpenter](https://github.com/aws/karpenter)
 * **カテゴリ**: 構成管理、Kubernetes、オートスケーリング
 * **概要**: Karpenterは、Kubernetesクラスタ向けのオープンソースなオートスケーラーです。アプリケーションの負荷に応じて、適切なコンピューティングリソースをジャストインタイムで起動することで、アプリケーションの可用性向上とインフラコストの削減を実現します。
 

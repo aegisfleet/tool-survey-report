@@ -4,6 +4,8 @@ tool_name: "Jekyll"
 category: "静的サイトジェネレーター"
 developer: "Tom Preston-Werner and volunteers"
 official_site: "https://jekyllrb.com/"
+links:
+  github: "https://github.com/jekyll/jekyll"
 date: "2025-10-22"
 last_updated: "2025-11-29"
 tags:
@@ -23,6 +25,8 @@ description: "Jekyllは、シンプルなテキストを静的なウェブサイ
 * **ツール名**: Jekyll
 * **開発元**: Tom Preston-Werner and a team of volunteers
 * **公式サイト**: [https://jekyllrb.com/](https://jekyllrb.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
 * **カテゴリ**: 静的サイトジェネレーター
 * **概要**: Jekyllは、Markdown、Liquid、HTML & CSSを解釈し、静的なウェブサイトやブログを生成するオープンソースのツールです。データベースを必要とせず、シンプルな運用が可能です。
 
