@@ -5,9 +5,9 @@ category: "自律型AIエージェント"
 developer: "Daytona Platform Inc."
 official_site: "https://openhands.daytona.io/"
 links:
-  github: "https://github.com/All-Hands-AI/OpenHands"
+  github: "https://github.com/OpenHands/OpenHands"
 date: "2025-10-23"
-last_updated: "2025-12-10"
+last_updated: "2025-12-21"
 tags:
   - "AI"
   - "開発者ツール"
@@ -31,7 +31,7 @@ relationships:
 *   **開発元**: Daytona Platform Inc. ([https://www.daytona.io/](https://www.daytona.io/))
 *   **公式サイト**: [https://openhands.daytona.io/](https://openhands.daytona.io/)
 *   **関連リンク**:
-    *   GitHub: [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
+    *   GitHub: [https://github.com/OpenHands/OpenHands](https://github.com/OpenHands/OpenHands)
 *   **カテゴリ**: AIコーディングエージェント, 開発者ツール
 *   **概要**: OpenHandsは、コードの編集、コマンドの実行、Webブラウジング、APIの呼び出しなど、人間の開発者が行うほぼ全てのタスクを自律的に実行できるオープンソースのAIコーディングエージェントです。自然言語による指示を理解し、開発ワークフローの自動化と効率化を目指します。
 
@@ -101,8 +101,8 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 
 *   **ドキュメント**: [公式ドキュメントサイト](https://docs.openhands.dev/)があり、インストール方法、使い方、設定、開発者向け情報などが詳細に記載されている。
 *   **コミュニティ**:
-    *   **Slack**: 活発な[公式Slackコミュニティ](https://all-hands.dev/joinslack)が存在し、開発者やユーザーが情報交換や議論を行っている。
-    *   **GitHub**: [GitHub Issues](https://github.com/OpenHands-AI/OpenHands/issues)にて、バグ報告や機能要望、ディスカッションが行われている。
+    *   **Slack**: 活発な[公式Slackコミュニティ](https://openhands.dev/joinslack)が存在し、開発者やユーザーが情報交換や議論を行っている。
+    *   **GitHub**: [GitHub Issues](https://github.com/OpenHands/OpenHands/issues)にて、バグ報告や機能要望、ディスカッションが行われている。
 *   **公式サポート**: 有料のエンタープライズ向けサポートについては、開発元への問い合わせが必要。
 
 ## **9. 連携機能 (API・インテグレーション)**
@@ -120,7 +120,7 @@ OpenHandsはオープンソースのため無料で利用可能ですが、す�
 *   **準拠規格**: 公式サイトには、特定のセキュリティ認証（ISO27001, SOC2など）に関する記載はない。エンタープライズ利用の場合は、個別の確認が必要。
 *   **ライセンス**: プロジェクト本体はMITライセンスだが、`enterprise/`ディレクトリ以下のコードは別ライセンス。
 
-**情報源**: [GitHub Repository](https://github.com/OpenHands-AI/OpenHands)
+**情報源**: [GitHub Repository](https://github.com/OpenHands/OpenHands)
 
 ## **11. 操作性 (UI/UX) と学習コスト**
 
@@ -154,7 +154,7 @@ OpenHandsは非常に活発に開発されており、頻繁にリリースが�
 *   **2025-10-30 (v1.0.3-cli)**: LLMの引数に関する非推奨警告を修正。
 *   **2025-10-29 (v0.60.0)**: Clarifaiプロバイダーのサポート追加、サンドボックスの自動ライフサイクル管理を導入。**破壊的変更**としてV0 CLIのサポートを終了。
 *   **2025-10-21 (v1.0.2-cli)**: CLIランチャーの改善。
-*   **GitHub Orgの名称変更**: 2025年10月20日に、GitHub Organizationが`All-Hands-AI`から`OpenHands-AI`に変更された。
+*   **GitHub Orgの名称変更**: 2025年10月20日に、GitHub Organizationが`All-Hands-AI`から`OpenHands`に変更された。
 *   **継続的な改善**: LLMサポートの拡充、エージェントの能力向上、バグ修正などが継続的に行われている。
 
 **情報源**: [GitHub Releases](https://github.com/OpenHands/OpenHands/releases)
