@@ -4,6 +4,8 @@ tool_name: "Docker"
 category: "構成管理"
 developer: "Docker, Inc."
 official_site: "https://www.docker.com/"
+links:
+  github: "https://github.com/docker/cli"
 date: "2025-10-30"
 last_updated: "2025-10-30"
 tags:
@@ -26,6 +28,8 @@ relationships:
 * **ツール名**: Docker
 * **開発元**: Docker, Inc.
 * **公式サイト**: [https://www.docker.com/](https://www.docker.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/docker/cli](https://github.com/docker/cli)
 * **カテゴリ**: 構成管理
 * **概要**: Dockerは、アプリケーションをコンテナと呼ばれる軽量でポータブルな独立した環境にパッケージ化し、ビルド、テスト、デプロイを迅速に行うためのオープンソースプラットフォームです。
 

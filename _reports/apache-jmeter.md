@@ -4,6 +4,8 @@ tool_name: "Apache JMeter"
 category: "テスト/QA"
 developer: "Apache Software Foundation"
 official_site: "https://jmeter.apache.org/"
+links:
+  github: "https://github.com/apache/jmeter"
 date: "2025-10-18"
 last_updated: "2025-10-27"
 tags:
@@ -25,6 +27,8 @@ relationships:
 * **ツール名**: Apache JMeter™
 * **開発元**: Apache Software Foundation
 * **公式サイト**: [https://jmeter.apache.org/](https://jmeter.apache.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/apache/jmeter](https://github.com/apache/jmeter)
 * **カテゴリ**: 開発者ツール、負荷テストツール
 * **概要**: Webアプリケーションや多様なサービスに対し、機能的な振る舞いの負荷テストとパフォーマンス測定を行うために設計された、100% Pure Javaのオープンソースソフトウェアです。
 

@@ -4,6 +4,8 @@ tool_name: "Robot Framework"
 category: "テスト/QA"
 developer: "Robot Framework Foundation"
 official_site: "https://robotframework.org/"
+links:
+  github: "https://github.com/robotframework/robotframework"
 date: "2025-12-07"
 last_updated: "2025-12-07"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: Robot Framework
 * **開発元**: Robot Framework Foundation
 * **公式サイト**: [https://robotframework.org/](https://robotframework.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/robotframework/robotframework](https://github.com/robotframework/robotframework)
 * **カテゴリ**: テスト/QA
 * **概要**: Robot Frameworkは、受け入れテスト（Acceptance Testing）、受け入れテスト駆動開発（ATDD）、およびRPA（Robotic Process Automation）のための汎用的なオープンソース自動化フレームワークです。キーワード駆動のアプローチを採用しており、技術者以外でも理解しやすいテストケースを作成できるのが特徴です。
 

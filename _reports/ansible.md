@@ -4,6 +4,8 @@ tool_name: "Ansible"
 category: "構成管理"
 developer: "Red Hat"
 official_site: "https://www.ansible.com/"
+links:
+  github: "https://github.com/ansible/ansible"
 date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
@@ -27,6 +29,8 @@ relationships:
 * **ツール名**: Ansible
 * **開発元**: Red Hat
 * **公式サイト**: [https://www.ansible.com/](https://www.ansible.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/ansible/ansible](https://github.com/ansible/ansible)
 * **カテゴリ**: 構成管理
 * **概要**: Ansibleは、プロビジョニング、構成管理、アプリケーションのデプロイメント、オーケストレーションなど、さまざまなITプロセスを自動化するオープンソースのIT自動化エンジンです。
 

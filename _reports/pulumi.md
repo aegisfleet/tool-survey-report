@@ -4,6 +4,8 @@ tool_name: "Pulumi"
 category: "構成管理"
 developer: "Pulumi Corp."
 official_site: "https://www.pulumi.com/"
+links:
+  github: "https://github.com/pulumi/pulumi"
 date: "2025-10-27"
 last_updated: "2025-10-27"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: Pulumi
 * **開発元**: Pulumi Corp.
 * **公式サイト**: [https://www.pulumi.com/](https://www.pulumi.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/pulumi/pulumi](https://github.com/pulumi/pulumi)
 * **カテゴリ**: Infrastructure as Code (IaC)
 * **概要**: Pulumiは、TypeScript, Python, Go, C#, Javaなどの汎用プログラミング言語を使用して、クラウドインフラストラクチャを定義、デプロイ、管理できるオープンソースのInfrastructure as Code (IaC) ツールです。
 

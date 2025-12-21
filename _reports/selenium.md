@@ -4,6 +4,8 @@ tool_name: "Selenium"
 category: "テスト/QA"
 developer: "Software Freedom Conservancy"
 official_site: "https://www.selenium.dev/"
+links:
+  github: "https://github.com/SeleniumHQ/selenium"
 date: "2025-10-24"
 last_updated: "2025-12-20"
 tags:
@@ -31,6 +33,8 @@ relationships:
 * **ツール名**: Selenium
 * **開発元**: Software Freedom Conservancy (元はThoughtWorksのJason Huggins)
 * **公式サイト**: [https://www.selenium.dev/](https://www.selenium.dev/)
+* **関連リンク**:
+  * GitHub: [https://github.com/SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium)
 * **カテゴリ**: テスト自動化
 * **概要**: Webブラウザの操作を自動化するためのオープンソースのフレームワーク群。主にWebアプリケーションの機能テストや回帰テストの自動化に利用されるが、Webベースの管理タスクの自動化など、その用途は多岐にわたる。
 

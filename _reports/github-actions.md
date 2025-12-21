@@ -4,6 +4,8 @@ tool_name: "GitHub Actions"
 category: "CI/CD"
 developer: "GitHub"
 official_site: "https://github.com/features/actions"
+links:
+  github: "https://github.com/actions/runner"
 date: "2025-10-18"
 last_updated: "2025-11-03"
 tags:
@@ -26,6 +28,8 @@ relationships:
 * **ツール名**: GitHub Actions
 * **開発元**: GitHub
 * **公式サイト**: <https://github.com/features/actions>
+* **関連リンク**:
+  * GitHub: [https://github.com/actions/runner](https://github.com/actions/runner)
 * **カテゴリ**: CI/CD, ワークフロー自動化
 * **概要**: GitHubリポジトリ内でソフトウェア開発ワークフローを自動化するためのプラットフォーム。ビルド、テスト、デプロイなどのCI/CDパイプラインをコードとして定義し、GitHubイベント（push, pull_requestなど）をトリガーに自動実行できる。
 

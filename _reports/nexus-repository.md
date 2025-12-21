@@ -4,6 +4,8 @@ tool_name: "Nexus Repository"
 category: "構成管理"
 developer: "Sonatype"
 official_site: "https://www.sonatype.com/products/sonatype-nexus-repository"
+links:
+  github: "https://github.com/sonatype/nexus-public"
 date: "2025-12-07"
 last_updated: "2025-12-07"
 tags:
@@ -30,6 +32,8 @@ relationships:
 * **ツール名**: Nexus Repository (Sonatype Nexus Repository)
 * **開発元**: Sonatype
 * **公式サイト**: [https://www.sonatype.com/products/sonatype-nexus-repository](https://www.sonatype.com/products/sonatype-nexus-repository)
+* **関連リンク**:
+  * GitHub: [https://github.com/sonatype/nexus-public](https://github.com/sonatype/nexus-public)
 * **カテゴリ**: 構成管理
 * **概要**: Nexus Repositoryは、開発プロセスで生成されるバイナリファイル、ビルドアーティファクト、コンテナイメージなどを一元管理するためのリポジトリマネージャーです。Maven, npm, NuGet, PyPI, Dockerなど、世界中で利用されている主要なパッケージフォーマットを幅広くサポートし、チーム間の共有やリリースの管理を効率化します。
 

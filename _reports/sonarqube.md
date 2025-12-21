@@ -4,6 +4,8 @@ tool_name: "SonarQube"
 category: "静的コード解析"
 developer: "SonarSource"
 official_site: "https://www.sonarsource.com/products/sonarqube/"
+links:
+  github: "https://github.com/SonarSource/sonarqube"
 date: "2025-10-19"
 last_updated: "2025-11-11"
 tags:
@@ -22,6 +24,8 @@ description: "SonarQubeは、継続的なコード品質とセキュリティの
 * **ツール名**: SonarQube (ソナーキューブ)
 * **開発元**: SonarSource
 * **公式サイト**: [https://www.sonarsource.com/products/sonarqube/](https://www.sonarsource.com/products/sonarqube/)
+* **関連リンク**:
+  * GitHub: [https://github.com/SonarSource/sonarqube](https://github.com/SonarSource/sonarqube)
 * **カテゴリ**: 静的コード解析, コード品質管理, セキュリティ脆弱性検出
 * **概要**: SonarQubeは、継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォームです。30以上のプログラミング言語に対応し、バグ、コードの臭い(保守性の低いコード)、セキュリティ脆弱性を開発プロセスの早い段階で検出します。
 

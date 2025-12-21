@@ -4,6 +4,8 @@ tool_name: "CodeceptJS"
 category: "テスト/QA"
 developer: "CodeceptJS Team (Originally by DavertMik)"
 official_site: "https://codecept.io/"
+links:
+  github: "https://github.com/codeceptjs/CodeceptJS"
 date: "2025-10-19"
 last_updated: "2025-10-28"
 tags:
@@ -28,6 +30,8 @@ relationships:
 * **ツール名**: CodeceptJS
 * **開発元**: CodeceptJS Team (Originally by DavertMik, Commercial support by [sdclabs](https://sdclabs.com/))
 * **公式サイト**: [https://codecept.io/](https://codecept.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/codeceptjs/CodeceptJS](https://github.com/codeceptjs/CodeceptJS)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: CodeceptJSは、Playwright, WebDriver, Puppeteer, TestCafe, Appiumなどの様々なテストバックエンドを統一されたAPIで操作できる、Node.jsベースのE2E(End-to-End)テストフレームワークです。「ユーザーの視点」からテストシナリオを記述することに重点を置いており、可読性が高くメンテナンスしやすいテストコードの作成を目指しています。
 

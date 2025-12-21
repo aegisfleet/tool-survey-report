@@ -4,6 +4,8 @@ tool_name: "Cypress"
 category: "テスト/QA"
 developer: "Cypress.io"
 official_site: "https://www.cypress.io/"
+links:
+  github: "https://github.com/cypress-io/cypress"
 date: "2025-10-24"
 last_updated: "2025-12-12"
 tags:
@@ -29,6 +31,8 @@ relationships:
 * **ツール名**: Cypress
 * **開発元**: Cypress.io
 * **公式サイト**: [https://www.cypress.io/](https://www.cypress.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/cypress-io/cypress](https://github.com/cypress-io/cypress)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: Cypressは、モダンなWebアプリケーション開発に特化したエンドツーエンド（E2E）のテスト自動化ツール。開発者がブラウザで直接テストを書き、実行し、デバッグできるインタラクティブなGUIを提供し、テストの信頼性と開発速度を向上させる。
 

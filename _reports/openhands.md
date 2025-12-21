@@ -4,6 +4,8 @@ tool_name: "OpenHands"
 category: "自律型AIエージェント"
 developer: "Daytona Platform Inc."
 official_site: "https://openhands.daytona.io/"
+links:
+  github: "https://github.com/All-Hands-AI/OpenHands"
 date: "2025-10-23"
 last_updated: "2025-12-10"
 tags:
@@ -28,6 +30,8 @@ relationships:
 *   **ツール名**: OpenHands
 *   **開発元**: Daytona Platform Inc. ([https://www.daytona.io/](https://www.daytona.io/))
 *   **公式サイト**: [https://openhands.daytona.io/](https://openhands.daytona.io/)
+*   **関連リンク**:
+    *   GitHub: [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
 *   **カテゴリ**: AIコーディングエージェント, 開発者ツール
 *   **概要**: OpenHandsは、コードの編集、コマンドの実行、Webブラウジング、APIの呼び出しなど、人間の開発者が行うほぼ全てのタスクを自律的に実行できるオープンソースのAIコーディングエージェントです。自然言語による指示を理解し、開発ワークフローの自動化と効率化を目指します。
 

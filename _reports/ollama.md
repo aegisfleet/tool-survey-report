@@ -4,6 +4,8 @@ tool_name: "Ollama"
 category: "AI開発基盤"
 developer: "Ollama"
 official_site: "https://ollama.com/"
+links:
+  github: "https://github.com/ollama/ollama"
 date: "2025-10-24"
 last_updated: "2025-12-18"
 tags:
@@ -27,6 +29,8 @@ relationships:
 * **ツール名**: Ollama
 * **開発元**: Ollama Inc.
 * **公式サイト**: [https://ollama.com/](https://ollama.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/ollama/ollama](https://github.com/ollama/ollama)
 * **カテゴリ**: 開発者ツール
 * **概要**: オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのツール。macOS, Windows, Linuxに対応し、NVIDIAやAMDのGPUを利用した高速化もサポートしている。
 

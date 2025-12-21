@@ -4,6 +4,8 @@ tool_name: "n8n"
 category: "ワークフロー自動化"
 developer: "n8n GmbH"
 official_site: "https://n8n.io/"
+links:
+  github: "https://github.com/n8n-io/n8n"
 date: "2025-10-19"
 last_updated: "2025-11-08"
 tags:
@@ -26,6 +28,8 @@ relationships:
 * **ツール名**: n8n (エヌエイトエヌ)
 * **開発元**: n8n GmbH (ドイツ)
 * **公式サイト**: [https://n8n.io/](https://n8n.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
 * **カテゴリ**: ワークフロー自動化、iPaaS (Integration Platform as a Service)
 * **概要**: オープンソースを基盤としたワークフロー自動化ツール。多数のアプリケーションやサービスを連携させ、ノーコード/ローコードで複雑な業務プロセスを自動化することが可能。
 

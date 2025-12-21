@@ -4,6 +4,8 @@ tool_name: "Visual Studio Code"
 category: "開発者ツール"
 developer: "Microsoft"
 official_site: "https://code.visualstudio.com/"
+links:
+  github: "https://github.com/microsoft/vscode"
 date: "2025-10-18"
 last_updated: "2025-10-26"
 tags:
@@ -25,6 +27,8 @@ relationships:
 * **ツール名**: Visual Studio Code (VS Code)
 * **開発元**: Microsoft
 * **公式サイト**: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+* **関連リンク**:
+  * GitHub: [https://github.com/microsoft/vscode](https://github.com/microsoft/vscode)
 * **カテゴリ**: 開発者ツール（ソースコードエディタ）
 * **概要**: Microsoftが開発している、Windows、Linux、macOS、Webで利用可能な無料のソースコードエディタです。軽量でありながら、デバッグ、Git連携、シンタックスハイライト、インテリジェントなコード補完（IntelliSense）など、多くの機能を標準で備えています。
 

@@ -4,6 +4,8 @@ tool_name: "Database Rider"
 category: "テスト/QA"
 developer: "Rafael M. Pestano and Community"
 official_site: "https://database-rider.github.io/database-rider/"
+links:
+  github: "https://github.com/database-rider/database-rider"
 date: "2025-12-06"
 last_updated: "2025-12-06"
 tags:
@@ -23,7 +25,8 @@ description: "JUnitとDBUnitを統合し、データベーステストのため�
 * **ツール名**: Database Rider
 * **開発元**: Rafael M. Pestano and Community
 * **公式サイト**: [https://database-rider.github.io/database-rider/](https://database-rider.github.io/database-rider/)
-* **リポジトリ**: [https://github.com/database-rider/database-rider](https://github.com/database-rider/database-rider)
+* **関連リンク**:
+  * GitHub: [https://github.com/database-rider/database-rider](https://github.com/database-rider/database-rider)
 * **カテゴリ**: テスト/QA
 * **概要**: Database Riderは、DBUnitとJUnit（JUnit 4および5）を統合し、データベーステストを効率化するためのオープンソースツールです。アノテーションベースの設定により、テスト実行時のデータセットの準備（シーディング）やクリーンアップを簡単に行うことができます。
 

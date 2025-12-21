@@ -4,6 +4,8 @@ tool_name: "Dify"
 category: "AIアプリケーション開発プラットフォーム"
 developer: "LangGenius"
 official_site: "https://dify.ai/"
+links:
+  github: "https://github.com/langgenius/dify"
 date: "2025-10-19"
 last_updated: "2025-11-01"
 tags:
@@ -22,6 +24,8 @@ description: "エージェントワークフロー開発のための本番環境
 * **ツール名**: Dify
 * **開発元**: LangGenius
 * **公式サイト**: [https://dify.ai/](https://dify.ai/)
+* **関連リンク**:
+  * GitHub: [https://github.com/langgenius/dify](https://github.com/langgenius/dify)
 * **カテゴリ**: AIアプリケーション開発プラットフォーム (LLMOps)
 * **概要**: Difyは、LLM（大規模言語モデル）を活用したAIアプリケーションを迅速に開発・運用するためのオープンソースプラットフォームです。直感的なUIを通じて、AIワークフローの構築、RAG（Retrieval-Augmented Generation）パイプラインの作成、AIエージェントの開発、モデル管理、運用監視（オブザーバビリティ）などを一元的に行えます。ノーコード・ローコードでの開発に対応しており、プロトタイピングから本番運用までをシームレスに支援します。
 

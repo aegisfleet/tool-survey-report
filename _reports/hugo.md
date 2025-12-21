@@ -4,6 +4,8 @@ tool_name: "Hugo"
 category: "静的サイトジェネレーター"
 developer: "The Hugo Authors"
 official_site: "https://gohugo.io/"
+links:
+  github: "https://github.com/gohugoio/hugo"
 date: "2025-11-29"
 last_updated: "2025-11-29"
 tags:
@@ -24,6 +26,8 @@ description: "Hugoは、Go言語で書かれた世界最速クラスの静的サ
 * **ツール名**: Hugo
 * **開発元**: The Hugo Authors (Steve Francia, Bjørn Erik Pedersen他)
 * **公式サイト**: [https://gohugo.io/](https://gohugo.io/)
+* **関連リンク**:
+  * GitHub: [https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
 * **カテゴリ**: 静的サイトジェネレーター
 * **概要**: Hugoは、Go言語で開発されたオープンソースの静的サイトジェネレーターです。「世界最速のウェブサイト構築フレームワーク」を謳っており、驚異的なビルド速度と柔軟性を特徴としています。単一のバイナリファイルとして提供されるため、依存関係の管理が不要で導入が容易です。
 

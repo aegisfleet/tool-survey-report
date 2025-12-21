@@ -4,6 +4,8 @@ tool_name: "Flutter"
 category: "モバイル開発"
 developer: "Google"
 official_site: "https://flutter.dev/"
+links:
+  github: "https://github.com/flutter/flutter"
 date: "2025-11-01"
 last_updated: "2025-11-01"
 tags:
@@ -22,6 +24,8 @@ description: "単一のコードベースから、モバイル、ウェブ、デ
 * **ツール名**: Flutter
 * **開発元**: Google
 * **公式サイト**: [https://flutter.dev/](https://flutter.dev/)
+* **関連リンク**:
+  * GitHub: [https://github.com/flutter/flutter](https://github.com/flutter/flutter)
 * **カテゴリ**: モバイル開発
 * **概要**: 単一のコードベースから、モバイル、ウェブ、デスクトップ、組み込みの美しいアプリをビルド、テスト、デプロイするためのGoogle製のオープンソースフレームワークです。プログラミング言語としてDartを採用しています。
 

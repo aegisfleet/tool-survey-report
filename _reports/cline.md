@@ -4,6 +4,8 @@ tool_name: "Cline"
 category: "AIコーディングエージェント"
 developer: "Cline Bot Inc."
 official_site: "https://cline.bot/"
+links:
+  github: "https://github.com/cline/cline"
 date: "2025-10-23"
 last_updated: "2025-12-04"
 tags:
@@ -25,6 +27,8 @@ relationships:
 * **ツール名**: Cline
 * **開発元**: Cline Bot Inc.
 * **公式サイト**: [https://cline.bot/](https://cline.bot/)
+* **関連リンク**:
+  * GitHub: [https://github.com/cline/cline](https://github.com/cline/cline)
 * **カテゴリ**: AIコーディングエージェント
 * **概要**: Clineは、IDE（VS Code, JetBrainsなど）やCLIで動作するオープンソースのAIコーディングエージェント。単なるコード補完ツールとは異なり、コードベース全体を理解し、開発者と対話しながら複雑なタスクの計画を立て、複数ステップの変更を実行する能力を持つ。
 

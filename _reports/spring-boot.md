@@ -4,6 +4,8 @@ tool_name: "Spring Boot"
 category: "Webフレームワーク"
 developer: "Broadcom"
 official_site: "https://spring.io/projects/spring-boot"
+links:
+  github: "https://github.com/spring-projects/spring-boot"
 date: "2025-10-24"
 last_updated: "2025-12-21"
 tags:
@@ -21,6 +23,8 @@ description: "本番環境に対応したスタンドアロンなSpringベース
 * **ツール名**: Spring Boot
 * **開発元**: Broadcom
 * **公式サイト**: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
+* **関連リンク**:
+  * GitHub: [https://github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot)
 * **カテゴリ**: Webフレームワーク
 * **概要**: Spring Bootは、本番環境に対応したスタンドアロンなSpringベースのアプリケーションを最小限の設定で簡単に作成できるフレームワークです。Tomcat、Jetty、UndertowなどのWebサーバーを内蔵しており、WARファイルをデプロイすることなくアプリケーションを実行できます。
 

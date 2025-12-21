@@ -4,6 +4,8 @@ tool_name: "Jenkins"
 category: "CI/CD"
 developer: "Kohsuke Kawaguchi, CloudBees, and community"
 official_site: "https://www.jenkins.io/"
+links:
+  github: "https://github.com/jenkinsci/jenkins"
 date: "2025-10-18"
 last_updated: "2025-11-24"
 tags:
@@ -25,6 +27,8 @@ relationships:
 * **ツール名**: Jenkins
 * **開発元**: Kohsuke Kawaguchi (initial author), CloudBees and the community
 * **公式サイト**: <https://www.jenkins.io/>
+* **関連リンク**:
+  * GitHub: [https://github.com/jenkinsci/jenkins](https://github.com/jenkinsci/jenkins)
 * **カテゴリ**: 開発者ツール (CI/CD, オートメーションサーバー)
 * **概要**: Jenkinsは、<mark class="marker-strong">オープンソースのオートメーションサーバー</mark>です。ソフトウェア開発における<span class="highlight">ビルド、テスト、デプロイ</span>といったプロセスを自動化し、<strong>継続的インテグレーション(CI)と継続的デリバリー(CD)</strong>を支援します。
 

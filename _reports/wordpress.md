@@ -4,6 +4,8 @@ tool_name: "WordPress"
 category: "CMS"
 developer: "WordPress Foundation"
 official_site: "https://wordpress.org"
+links:
+  github: "https://github.com/WordPress/WordPress"
 date: "2025-10-20"
 last_updated: "2025-11-21"
 tags:
@@ -20,6 +22,8 @@ description: "世界で最も人気のあるオープンソースのコンテン
 * **ツール名**: WordPress
 * **開発元**: WordPress Foundation
 * **公式サイト**: [https://wordpress.org](https://wordpress.org)
+* **関連リンク**:
+  * GitHub: [https://github.com/WordPress/WordPress](https://github.com/WordPress/WordPress)
 * **カテゴリ**: コンテンツ管理システム (CMS)
 * **概要**: 世界中の何百万ものウェブサイトで利用されている、オープンソースのコンテンツ管理システムです。個人ブログから大企業のコーポレートサイトまで、あらゆる規模のウェブサイトを構築・管理できます。
 

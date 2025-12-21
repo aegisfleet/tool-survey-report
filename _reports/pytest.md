@@ -4,6 +4,8 @@ tool_name: "PyTest"
 category: "テスト自動化"
 developer: "pytest-dev team"
 official_site: "https://pytest.org/"
+links:
+  github: "https://github.com/pytest-dev/pytest"
 date: "2025-10-22"
 last_updated: "2025-12-02"
 tags:
@@ -20,6 +22,8 @@ description: "Pythonで広く利用されている、シンプルかつ強力な
 * **ツール名**: PyTest (pytest)
 * **開発元**: pytest-dev team
 * **公式サイト**: [https://pytest.org/](https://pytest.org/)
+* **関連リンク**:
+  * GitHub: [https://github.com/pytest-dev/pytest](https://github.com/pytest-dev/pytest)
 * **カテゴリ**: 開発者ツール（テスト自動化フレームワーク）
 * **概要**: Pythonで広く利用されている、シンプルかつ強力なテスト自動化フレームワーク。ユニットテストから複雑な機能テストまで、幅広いテストに対応できます。
 
