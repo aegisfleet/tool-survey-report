@@ -1,7 +1,7 @@
 ---
 title: "Flutter 調査レポート"
 tool_name: "Flutter"
-category: "アプリケーションフレームワーク"
+category: "モバイル開発"
 developer: "Google"
 official_site: "https://flutter.dev/"
 date: "2025-11-01"
@@ -22,7 +22,7 @@ description: "単一のコードベースから、モバイル、ウェブ、デ
 * **ツール名**: Flutter
 * **開発元**: Google
 * **公式サイト**: [https://flutter.dev/](https://flutter.dev/)
-* **カテゴリ**: アプリケーションフレームワーク
+* **カテゴリ**: モバイル開発
 * **概要**: 単一のコードベースから、モバイル、ウェブ、デスクトップ、組み込みの美しいアプリをビルド、テスト、デプロイするためのGoogle製のオープンソースフレームワークです。プログラミング言語としてDartを採用しています。
 
 ## **2. 目的と主な利用シーン**
