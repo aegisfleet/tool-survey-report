@@ -17,6 +17,7 @@ relationships:
     - "SmartHR"
     - "KING OF TIME"
     - "ジョブカン勤怠管理"
+    - "COMPANY"
 ---
 
 # **マネーフォワード クラウド勤怠 調査レポート**
