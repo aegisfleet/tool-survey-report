@@ -21,6 +21,7 @@ relationships:
     - "Grok"
     - "Rakuten AI"
     - "Stable Diffusion"
+    - "Amazon Bedrock"
 ---
 
 # **ChatGPT 調査レポート**

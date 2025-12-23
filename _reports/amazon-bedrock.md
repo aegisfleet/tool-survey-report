@@ -1,17 +1,27 @@
 ---
 title: "Amazon Bedrock 調査レポート"
 tool_name: "Amazon Bedrock"
-category: "AI"
+category: "AI開発基盤"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/bedrock/"
+links:
+  documentation: "https://docs.aws.amazon.com/bedrock/"
 date: "2025-10-25"
-last_updated: "2025-10-25"
+last_updated: "2025-12-23"
 tags:
   - "AI"
   - "生成AI"
   - "大規模言語モデル"
-  - "AI開発プラットフォーム"
+  - "AI開発基盤"
+  - "クラウド"
+  - "SaaS"
 description: "Amazon Bedrockは、主要なAI企業の多様な基盤モデル（FM）を単一のAPIを介して提供する、AWSのフルマネージドサービスです。"
+relationships:
+  related_tools:
+    - "Hugging Face"
+    - "Dify"
+    - "LangChain"
+    - "ChatGPT"
 ---
 
 # **Amazon Bedrock 調査レポート**
@@ -21,7 +31,10 @@ description: "Amazon Bedrockは、主要なAI企業の多様な基盤モデル�
 * **ツール名**: Amazon Bedrock
 * **開発元**: Amazon Web Services (AWS)
 * **公式サイト**: [https://aws.amazon.com/bedrock/](https://aws.amazon.com/bedrock/)
-* **カテゴリ**: 生成AI, AI開発プラットフォーム
+* **関連リンク**:
+  * ドキュメント: [https://docs.aws.amazon.com/bedrock/](https://docs.aws.amazon.com/bedrock/)
+  * レビューサイト: [G2](https://www.g2.com/products/amazon-bedrock/reviews) | [ITreview](https://www.itreview.jp/products/amazon-bedrock/reviews)
+* **カテゴリ**: AI開発基盤
 * **概要**: Amazon Bedrockは、主要なAI企業の高性能な基盤モデル（FM）を単一のAPIを介して提供するフルマネージドサービスです。セキュリティ、プライバシー、責任あるAIを考慮して設計されており、開発者はインフラを管理することなく生成AIアプリケーションを迅速に構築・デプロイできます。
 
 ## **2. 目的と主な利用シーン**
@@ -38,7 +51,7 @@ description: "Amazon Bedrockは、主要なAI企業の多様な基盤モデル�
 
 ## **3. 主要機能**
 
-* **モデル選択の多様性**: Anthropic (Claude), Meta (Llama), AI21 Labs (Jurassic), Stability AI, Cohere, Amazon (Titan) など、主要なAI企業のFMを選択可能。
+* **モデル選択の多様性**: Anthropic (Claude), Meta (Llama), Mistral AI, Stability AI, Cohere, Amazon (Titan) など、主要AI企業の最新モデルを含む約100種類の基盤モデル（FM）を選択可能。
 * **データによるカスタマイズ**: ナレッジベース、プロンプトエンジニアリング、ファインチューニングといったツールを用いて、自社データでモデルを安全にカスタマイズ。
 * **エージェント構築**: `Agents for Amazon Bedrock` を使用して、企業のデータソースに安全に接続し、自律的にタスクを実行するエージェントを構築。
 * **サーバーレス体験**: インフラのプロビジョニングや管理が不要で、すぐに利用を開始できる。
@@ -63,9 +76,12 @@ description: "Amazon Bedrockは、主要なAI企業の多様な基盤モデル�
 
 * **課金体系**:
   * **オンデマンド**: コミットメントなしの従量課金制。テキストモデルは入出力のトークン数、画像モデルは生成枚数に応じて課金。
-  * **バッチ**: 大量の入力を一度に処理するためのモード。オンデマンドと比較して割引価格で提供。
   * **プロビジョニング済みスループット**: 大量かつ安定した推論ワークロード向け。モデルユニットを時間単位で購入し、1ヶ月または6ヶ月のコミットメントで割引が適用される。
-* **モデルごとの価格**: 料金はモデルプロバイダー（Amazon, Anthropic, Cohere, Meta, Stability AIなど）とモデルの種類によって大きく異なる。
+* **サービス階層 (Service Tiers)**: 2025年11月より、ワークロードの要件に応じてパフォーマンスとコストを最適化する3つのサービス階層が導入された。
+  * **Priority**: ミッションクリティカルなアプリケーション向け。他の階層より優先的に処理され、低レイテンシーを実現するが、料金は割高になる。
+  * **Standard**: 通常のAIタスク向け。一貫したパフォーマンスを標準料金で提供。
+  * **Flex**: 緊急性の低いワークロード向け。より長いレイテンシーを許容できる場合に、コストを抑えて利用可能。
+* **モデルごとの価格**: 料金はモデルプロバイダー、モデルの種類、選択したサービス階層によって大きく異なる。
 * **無料トライアル**: AWS無料利用枠の一部として、特定のモデルを一定量まで無料で試すことが可能。
 
 ## **7. 導入実績・事例**
@@ -109,7 +125,12 @@ description: "Amazon Bedrockは、主要なAI企業の多様な基盤モデル�
 
 ## **13. 直近半年のアップデート情報**
 
-* (現時点では情報が不足しているため、このセクションは今後の調査で追記する)
+* **2025年12月2日: オープンウェイトモデルの大幅な追加**
+  * Mistral AIの`Mistral Large 3`やGoogleの`Gemma 3`ファミリーなど、新たに18種類のフルマネージド・オープンウェイトモデルが追加された。
+  * これにより、Amazon Bedrockで利用可能なモデルの総数は約100種類となった。
+* **2025年11月18日: 新しいサービス階層の導入**
+  * ワークロードの要件に応じてコストとパフォーマンスを最適化するため、`Priority`, `Standard`, `Flex`の3つのサービス階層が導入された。
+  * これにより、ユーザーはリアルタイム応答性が求められるタスクには`Priority`を、コストを重視するバッチ処理などには`Flex`を選択できるようになった。
 
 ## **14. 類似ツールとの比較**
 

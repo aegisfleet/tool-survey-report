@@ -1,7 +1,7 @@
 ---
 title: "LangChain 調査レポート"
 tool_name: "LangChain"
-category: "AI・LLM開発フレームワーク"
+category: "AI開発基盤"
 developer: "LangChain"
 official_site: "https://www.langchain.com/"
 links:
@@ -15,6 +15,10 @@ tags:
   - "オープンソース"
   - "エージェント"
 description: "大規模言語モデル（LLM）を活用したアプリケーション開発を容易にするためのオープンソースフレームワーク。"
+relationships:
+  related_tools:
+    - "Dify"
+    - "Amazon Bedrock"
 ---
 
 # **LangChain 調査レポート**
