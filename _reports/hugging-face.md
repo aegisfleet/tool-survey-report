@@ -16,6 +16,7 @@ relationships:
   related_tools:
     - "Stable Diffusion"
     - "Amazon Bedrock"
+    - "TensorFlow"
 ---
 
 # **Hugging Face 調査レポート**
