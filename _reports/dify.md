@@ -1,7 +1,7 @@
 ---
 title: "Dify 調査レポート"
 tool_name: "Dify"
-category: "AIアプリケーション開発プラットフォーム"
+category: "AI開発基盤"
 developer: "LangGenius"
 official_site: "https://dify.ai/"
 links:
@@ -15,6 +15,10 @@ tags:
   - "ローコード"
   - "AIエージェント"
 description: "エージェントワークフロー開発のための本番環境対応プラットフォーム。AIワークフロー、RAGパイプライン、エージェント機能、モデル管理、オブザーバビリティ機能などを組み合わせ、プロトタイプから本番環境へ迅速に移行可能。"
+relationships:
+  related_tools:
+    - "LangChain"
+    - "Amazon Bedrock"
 ---
 
 # **Dify 調査レポート**

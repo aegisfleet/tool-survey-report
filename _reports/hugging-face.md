@@ -1,7 +1,7 @@
 ---
 title: "Hugging Face 調査レポート"
 tool_name: "Hugging Face"
-category: "AI"
+category: "AI開発基盤"
 developer: "Hugging Face"
 official_site: "https://huggingface.co/"
 date: "2025-10-25"
@@ -15,6 +15,7 @@ description: "機械学習のモデル、データセット、アプリケーシ
 relationships:
   related_tools:
     - "Stable Diffusion"
+    - "Amazon Bedrock"
 ---
 
 # **Hugging Face 調査レポート**
