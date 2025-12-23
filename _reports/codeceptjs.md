@@ -86,7 +86,7 @@ relationships:
 ## **8. サポート体制**
 
 * **ドキュメント**: 公式サイトに非常に詳細なドキュメント、チュートリアル、APIリファレンスが整備されています。
-* **コミュニティ**: [GitHub Discussions](https://github.com/codeceptjs/CodeceptJS/discussions)や[Slack](https://bit.ly/codeceptjs-slack)、[公式フォーラム](https://codecept.discourse.group/)があり、開発者や他のユーザーと活発に情報交換が行われています。
+* **コミュニティ**: [GitHub Discussions](https://github.com/codeceptjs/CodeceptJS/discussions)や[Slack](https://bit.ly/codeceptjs-slack)があり、開発者や他のユーザーと活発に情報交換が行われています。
 * **公式サポート**: オープンソースのため公式の無料サポートはありませんが、前述の通り有償の商用サポートを利用できます。
 
 ## **9. 連携機能 (API・インテグレーション)**

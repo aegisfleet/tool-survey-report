@@ -33,7 +33,7 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/bedrock/](https://aws.amazon.com/bedrock/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/bedrock/](https://docs.aws.amazon.com/bedrock/)
-  * レビューサイト: [G2](https://www.g2.com/products/amazon-bedrock/reviews) | [ITreview](https://www.itreview.jp/products/amazon-bedrock/reviews)
+  * レビューサイト: [G2](https://www.g2.com/products/aws-bedrock/reviews)
 * **カテゴリ**: AI開発基盤
 * **概要**: Amazon Bedrockは、主要なAI企業の高性能な基盤モデル（FM）を単一のAPIを介して提供するフルマネージドサービスです。セキュリティ、プライバシー、責任あるAIを考慮して設計されており、開発者はインフラを管理することなく生成AIアプリケーションを迅速に構築・デプロイできます。
 
@@ -88,7 +88,7 @@ relationships:
 
 * **Robinhood**: 6ヶ月でトークン使用量を5億から50億に拡大しつつ、AIコストを80%削減、開発時間を半分に短縮。
 * **IdenX**: OpenAIで成功しなかった研究プロセスの効率化を、BedrockとAnthropic Claudeを用いて実現。
-* (出典: [https://aws.amazon.com/bedrock/customers/](https://aws.amazon.com/bedrock/customers/), [https://caylent.com/blog/open-ai-vs-bedrock-optimizing-generative-ai-on-aws](https://caylent.com/blog/open-ai-vs-bedrock-optimizing-generative-ai-on-aws))
+* (出典: [https://aws.amazon.com/bedrock/customers/](https://aws.amazon.com/bedrock/customers/))
 
 ## **8. サポート体制**
 
