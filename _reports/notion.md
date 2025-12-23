@@ -13,6 +13,9 @@ tags:
   - "AI"
   - "AIエージェント"
 description: "Notionは、ドキュメント、ナレッジベース、タスク管理を一つのワークスペースに統合したAI搭載のコラボレーションツールです。AIエージェントが反復作業を自動化します。"
+relationships:
+  related_tools:
+    - "Obsidian"
 ---
 
 # **Notion 調査レポート**
