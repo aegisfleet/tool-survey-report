@@ -370,13 +370,18 @@ function enhanceTablesResponsiveness() {
 
   tables.forEach(function (table) {
     if (!table.parentElement.classList.contains('table-responsive')) {
+      // 小さいテーブル（2行以下）はラッパーを追加しない
+      const rowCount = table.querySelectorAll('tr').length;
+      if (rowCount <= 2) {
+        return;
+      }
+
       const wrapper = document.createElement('div');
       wrapper.className = 'table-responsive';
       wrapper.style.cssText = `
         overflow-x: auto;
-        margin: 1.5rem 0;
+        margin: 1rem 0;
         border-radius: 0.375rem;
-        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
       `;
 
       table.parentElement.insertBefore(wrapper, table);
