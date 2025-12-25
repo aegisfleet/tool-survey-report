@@ -19,7 +19,7 @@ relationships:
     - "Google Jules"
     - "Manus"
     - "AGENTIC STAR"
-    - "Opcode"
+    - "AutoGPT"
 ---
 
 # **Devin 調査レポート**
