@@ -6,6 +6,7 @@ developer: "Stition AI (Mufeed VH)"
 official_site: "https://opcode.sh/"
 links:
   old_github: "https://github.com/stitionai/devika"
+  github: "https://github.com/winfunc/opcode"
 date: "2025-12-25"
 last_updated: "2025-12-25"
 tags:
@@ -32,6 +33,7 @@ relationships:
 * **公式サイト**: [https://opcode.sh/](https://opcode.sh/)
 * **関連リンク**:
   * GitHub: [https://github.com/stitionai/devika](https://github.com/stitionai/devika) (旧Devika)
+  * GitHub: [https://github.com/winfunc/opcode](https://github.com/winfunc/opcode)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: Opcodeは、Devikaの後継として開発されている自律型AIソフトウェアエンジニアです。高レベルの人間の指示を理解し、計画、調査、コーディングを行って目標を達成します。Cognition AIの「Devin」のオープンソース代替を目指したDevikaのコンセプトを引き継ぎつつ、さらなる機能強化と安定性の向上を目指しています。
 
