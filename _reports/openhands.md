@@ -22,6 +22,7 @@ relationships:
     - "Google Jules"
     - "Manus"
     - "Opcode"
+    - "AutoGPT"
 ---
 
 # **OpenHands 調査レポート**
