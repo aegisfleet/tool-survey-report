@@ -21,6 +21,7 @@ relationships:
     - "Devin"
     - "Google Jules"
     - "Manus"
+    - "Devika"
 ---
 
 # **OpenHands 調査レポート**
