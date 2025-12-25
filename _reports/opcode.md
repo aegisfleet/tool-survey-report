@@ -1,11 +1,11 @@
 ---
-title: "Devika (Opcode) 調査レポート"
-tool_name: "Devika"
+title: "Opcode (旧 Devika) 調査レポート"
+tool_name: "Opcode"
 category: "自律型AIエージェント"
 developer: "Stition AI (Mufeed VH)"
-official_site: "https://github.com/stitionai/devika"
+official_site: "https://opcode.sh/"
 links:
-  github: "https://github.com/stitionai/devika"
+  old_github: "https://github.com/stitionai/devika"
 date: "2025-12-25"
 last_updated: "2025-12-25"
 tags:
@@ -14,7 +14,7 @@ tags:
   - "自律型"
   - "オープンソース"
   - "コーディング支援"
-description: "Devinのオープンソース代替を目指す自律型AIソフトウェアエンジニア。現在はOpcodeという名称で開発が進行中。"
+description: "Devikaの後継となる自律型AIソフトウェアエンジニア。Cognition AIの「Devin」のオープンソース代替を目指す。"
 relationships:
   parent: ""
   children: []
@@ -23,18 +23,17 @@ relationships:
     - "OpenHands"
 ---
 
-# **Devika (Opcode) 調査レポート**
+# **Opcode (旧 Devika) 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: Devika (現在は Opcode に名称変更/移行中)
+* **ツール名**: Opcode (旧称: Devika)
 * **開発元**: Stition AI (Mufeed VH)
-* **公式サイト**: [https://github.com/stitionai/devika](https://github.com/stitionai/devika)
+* **公式サイト**: [https://opcode.sh/](https://opcode.sh/)
 * **関連リンク**:
-  * GitHub: [https://github.com/stitionai/devika](https://github.com/stitionai/devika)
-  * Opcode公式サイト: [https://opcode.sh/](https://opcode.sh/)
+  * GitHub: [https://github.com/stitionai/devika](https://github.com/stitionai/devika) (旧Devika)
 * **カテゴリ**: 自律型AIエージェント
-* **概要**: Devikaは、高レベルの人間の指示を理解し、計画、調査、コーディングを行って目標を達成できる自律型AIソフトウェアエンジニアです。Cognition AIの「Devin」のオープンソース代替を目指して開発されました。現在は「Opcode」という名称での次期バージョンの開発が進められています。
+* **概要**: Opcodeは、Devikaの後継として開発されている自律型AIソフトウェアエンジニアです。高レベルの人間の指示を理解し、計画、調査、コーディングを行って目標を達成します。Cognition AIの「Devin」のオープンソース代替を目指したDevikaのコンセプトを引き継ぎつつ、さらなる機能強化と安定性の向上を目指しています。
 
 ## **2. 目的と主な利用シーン**
 
@@ -65,8 +64,7 @@ relationships:
 
 ## **5. 弱み・注意点 (Cons)**
 
-* **開発段階**: 開発初期/実験的な段階であり、未実装の機能やバグが含まれる可能性があります。
-* **移行期間**: 現在「Opcode」への移行期間中であり、名称や仕様が変更される可能性があります。
+* **開発段階**: まだ開発初期/移行段階であり、未実装の機能やバグが含まれる可能性があります。
 * **環境構築の複雑さ**: Python, Node.js, Bunなどの環境構築が必要であり、WebベースのSaaSツールと比較すると導入ハードルが高めです。
 * **APIコスト**: ツール自体は無料ですが、GPT-4やClaude 3などの高性能モデルを利用する場合、各プロバイダーのAPI利用料が発生します。
 
@@ -78,7 +76,7 @@ relationships:
 
 ## **7. 導入実績・事例**
 
-* **GitHubでの人気**: リポジトリ公開後、短期間で多数のStar（約1.9万）を獲得しており、開発者コミュニティからの注目度が非常に高いです。
+* **GitHubでの人気**: 前身のDevikaは短期間で多数のStarを獲得しており、Opcodeも引き続き高い注目を集めています。
 * **具体的な企業導入**: オープンソースプロジェクトであるため、特定の企業導入事例は公開されていませんが、多くの個人開発者や研究者が実験的に利用しています。
 
 ## **8. サポート体制**
@@ -116,7 +114,6 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
   * 「まだ動作が不安定な部分がある」
   * 「複雑なタスクだとループに陥ることがある」
-  * 「Opcodeへの移行でどう変わるのか情報が欲しい」
 
 ## **13. 直近半年のアップデート情報**
 
@@ -126,12 +123,12 @@ relationships:
 
 ## **14. 類似ツールとの比較**
 
-* **Devin (Cognition AI)**: 先駆的な自律型エンジニア。高い性能を誇るがクローズドベータで有料。DevikaはこれのOSSクローンを目指しています。
-* **OpenHands (旧 OpenDevin)**: 同じくDevinのOSS代替を目指すプロジェクト。コミュニティ規模が大きく、Dockerベースのサンドボックス環境が強力です。Devikaと比較して機能実装が進んでいる面もあります。
-* **AutoGPT**: 自律型エージェントの草分け的存在ですが、コーディングに特化しているわけではありません。Devikaはよりソフトウェア開発に特化しています。
+* **Devin (Cognition AI)**: 先駆的な自律型エンジニア。高い性能を誇るがクローズドベータで有料。OpcodeはこれのOSSクローンを目指しています。
+* **OpenHands (旧 OpenDevin)**: 同じくDevinのOSS代替を目指すプロジェクト。コミュニティ規模が大きく、Dockerベースのサンドボックス環境が強力です。Opcodeと比較して機能実装が進んでいる面もあります。
+* **AutoGPT**: 自律型エージェントの草分け的存在ですが、コーディングに特化しているわけではありません。Opcodeはよりソフトウェア開発に特化しています。
 
 ## **15. 総評**
 
-* **総合的な評価**: Devikaは、Devinのような自律型AIエンジニアをオープンソースで実現しようとする意欲的なプロジェクトです。モジュラーな設計と多様なLLMサポートが魅力ですが、現在はOpcodeへの移行期にあり、今後の発展が待たれるフェーズです。
+* **総合的な評価**: Opcode (旧 Devika) は、Devinのような自律型AIエンジニアをオープンソースで実現しようとする意欲的なプロジェクトです。モジュラーな設計と多様なLLMサポートが魅力です。
 * **推奨されるチームやプロジェクト**: AIエージェントの仕組みを研究したい開発者や、クローズドなツールにデータを渡したくない（ローカルLLMを使いたい）プロジェクトに適しています。
-* **選択時のポイント**: すぐに実務でバリバリ使える完成度を求めるならGitHub Copilot等の支援ツールが確実ですが、未来の自律開発を体験・実験したい場合はDevikaやOpenHandsが良い選択肢となります。OpenHandsと比較して、Pythonベースで軽量に動かしたい場合にDevikaが好まれる場合があります。
+* **選択時のポイント**: すぐに実務でバリバリ使える完成度を求めるならGitHub Copilot等の支援ツールが確実ですが、未来の自律開発を体験・実験したい場合はOpcodeやOpenHandsが良い選択肢となります。OpenHandsと比較して、Pythonベースで軽量に動かしたい場合にOpcodeが好まれる場合があります。
