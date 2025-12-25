@@ -19,7 +19,7 @@ relationships:
     - "Google Jules"
     - "Manus"
     - "AGENTIC STAR"
-    - "Devika"
+    - "Opcode"
 ---
 
 # **Devin 調査レポート**
