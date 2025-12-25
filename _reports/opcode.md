@@ -1,5 +1,5 @@
 ---
-title: "Opcode (旧 Devika) 調査レポート"
+title: "Opcode調査レポート"
 tool_name: "Opcode"
 category: "自律型AIエージェント"
 developer: "Stition AI (Mufeed VH)"
@@ -24,11 +24,11 @@ relationships:
     - "OpenHands"
 ---
 
-# **Opcode (旧 Devika) 調査レポート**
+# **Opcode調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: Opcode (旧称: Devika)
+* **ツール名**: Opcode
 * **開発元**: Stition AI (Mufeed VH)
 * **公式サイト**: [https://opcode.sh/](https://opcode.sh/)
 * **関連リンク**:
@@ -131,6 +131,6 @@ relationships:
 
 ## **15. 総評**
 
-* **総合的な評価**: Opcode (旧 Devika) は、Devinのような自律型AIエンジニアをオープンソースで実現しようとする意欲的なプロジェクトです。モジュラーな設計と多様なLLMサポートが魅力です。
+* **総合的な評価**: Opcodeは、Devinのような自律型AIエンジニアをオープンソースで実現しようとする意欲的なプロジェクトです。モジュラーな設計と多様なLLMサポートが魅力です。
 * **推奨されるチームやプロジェクト**: AIエージェントの仕組みを研究したい開発者や、クローズドなツールにデータを渡したくない（ローカルLLMを使いたい）プロジェクトに適しています。
 * **選択時のポイント**: すぐに実務でバリバリ使える完成度を求めるならGitHub Copilot等の支援ツールが確実ですが、未来の自律開発を体験・実験したい場合はOpcodeやOpenHandsが良い選択肢となります。OpenHandsと比較して、Pythonベースで軽量に動かしたい場合にOpcodeが好まれる場合があります。
