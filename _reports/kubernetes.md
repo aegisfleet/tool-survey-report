@@ -17,6 +17,7 @@ description: "コンテナ化されたアプリケーションのデプロイ、
 relationships:
   related_tools:
     - "Docker"
+    - "Datadog"
 ---
 
 # **Kubernetes 調査レポート**
