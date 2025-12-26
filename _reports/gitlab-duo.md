@@ -5,12 +5,13 @@ category: "AIコーディング支援"
 developer: "GitLab Inc."
 official_site: "https://about.gitlab.com/gitlab-duo/"
 date: "2025-10-25"
-last_updated: "2025-10-25"
+last_updated: "2025-12-26"
 tags:
   - "AI"
   - "DevSecOps"
   - "コーディング支援"
   - "CI/CD"
+  - "エージェント"
 description: "GitLabに統合されたAIアシスタントで、コード生成、レビュー、脆弱性スキャンなど開発ライフサイクル全体を支援します。"
 relationships:
   parent: "GitLab"
@@ -49,6 +50,7 @@ relationships:
 * **根本原因分析 (Root Cause Analysis)**: 失敗したCI/CDパイプラインのログを分析し、原因を特定する。
 * **GitLab Duo Planner Agent**: プロダクトマネージャー向けに、バックログの分析や優先順位付けを支援するエージェント。(Beta)
 * **GitLab Duo Security Analyst Agent**: セキュリティ担当者向けに、脆弱性のリストアップやステータス更新などを自動化するエージェント。(Beta)
+* **GitLab Duo Agent Platform**: 開発ライフサイクル全体で人間とAIエージェントのコラボレーションを促進するDevSecOpsオーケストレーションプラットフォーム。
 
 ## **4. 特徴・強み (Pros)**
 
@@ -114,10 +116,18 @@ GitLab Duo単体での大規模な導入事例はまだ多く公開されてい�
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025-12 (GitLab 18.7)**:
+    * **GitLab Duo Analytics Dashboardの改善**: 利用状況や効果を可視化するダッシュボードが強化された。
+    * **シークレットの有効性チェック**: コミットされたシークレットが有効かどうかをスキャン時に確認する機能が追加された。
+    * **チャットとエージェントのモデル選択**: ユーザーが対話やタスク実行に利用するAIモデルを選択できるようになった。
+    * (出典: [GitLab 18.7 Release Notes](https://about.gitlab.com/releases/2025/12/18/gitlab-18-7-released/))
 * **2025-10 (GitLab 18.5)**:
     * **GitLab Duo Planner Agent (Beta)**: プロダクトマネージャー向けにバックログ分析などを支援するエージェント機能を追加。
     * **GitLab Duo Security Analyst Agent (Beta)**: 脆弱性管理を自動化するセキュリティアナリスト向けエージェント機能を追加。
     * (出典: [GitLab 18.5 Release Notes](https://about.gitlab.com/releases/2025/10/16/gitlab-18-5-released/))
+* **2025-05 (GitLab 18.0)**:
+    * **GitLab Duo Agent Platformの導入**: 人間とAIエージェントのコラボレーションを促進するDevSecOpsオーケストレーションプラットフォームが導入された。
+    * (出典: [What's new in GitLab 18.0](https://about.gitlab.com/releases/whats-new/))
 * **その他**: GitLabは月次でリリースを行っており、AI機能も継続的に改善・追加されている。
 
 ## **14. 類似ツールとの比較**
