@@ -24,6 +24,8 @@ relationships:
     - "Apache JMeter"
     - "Cucumber"
     - "Cypress"
+    - "CodeceptJS"
+    - "Appium"
 ---
 
 # **Karate 調査レポート**

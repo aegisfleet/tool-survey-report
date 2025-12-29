@@ -21,6 +21,8 @@ relationships:
     - "Cypress"
     - "Selenium"
     - "Cucumber"
+    - "Appium"
+    - "Karate"
 ---
 
 # **CodeceptJS 調査レポート**

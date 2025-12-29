@@ -21,6 +21,7 @@ relationships:
     - "Playwright"
     - "Cypress"
     - "CodeceptJS"
+    - "Appium"
     - "Karate"
 ---
 # **Cucumber 調査レポート**

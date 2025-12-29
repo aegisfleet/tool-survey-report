@@ -21,6 +21,9 @@ relationships:
     - "Selenium"
     - "Playwright"
     - "Cypress"
+    - "CodeceptJS"
+    - "Cucumber"
+    - "Karate"
 ---
 
 # **Appium 調査レポート**
