@@ -7,7 +7,7 @@ official_site: "https://playwright.dev/"
 links:
   github: "https://github.com/microsoft/playwright"
 date: "2025-10-18"
-last_updated: "2025-10-25"
+last_updated: "2025-12-29"
 tags:
   - "テスト自動化"
   - "E2Eテスト"
@@ -36,6 +36,7 @@ relationships:
 * **公式サイト**: [https://playwright.dev/](https://playwright.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/playwright](https://github.com/microsoft/playwright)
+  * レビューサイト: [G2](https://www.g2.com/products/playwright/reviews)
 * **カテゴリ**: テスト自動化フレームワーク
 * **概要**: Playwrightは、最新のWebアプリケーション向けの高速で信頼性の高いエンドツーエンドのテストを可能にするオープンソースのフレームワークです。単一のAPIで、Chromium、Firefox、WebKitを含むすべての最新レンダリングエンジンをサポートします。
 
@@ -127,6 +128,11 @@ relationships:
 
 Playwrightは月に1〜2回の頻度で頻繁にアップデートされており、継続的に機能改善や新機能の追加が行われています。直近の主要なアップデートは以下の通りです。（出典: [Playwright GitHub Releases](https://github.com/microsoft/playwright/releases))
 
+* **v1.57 (2025年11月25日)**:
+  * **Speedboard**: HTMLレポーターにテストの実行速度を分析するための新しいタブが追加。
+  * **Chrome for Testing**: PlaywrightがChromiumからChrome for Testingビルドを使用するように変更。
+  * **Webサーバー出力の待機**: `testConfig.webServer`に`wait`オプションが追加され、サーバーログの特定の出力を待機可能に。
+  * **非推奨APIの削除**: 3年間非推奨だった `Page#accessibility` がAPIから削除。
 * **v1.56.1 (2025年10月17日)**:
   * Chromiumで`local-network-access`権限を許可するなど、いくつかのバグ修正と改善。
 * **v1.56.0 (2025年10月6日)**:
