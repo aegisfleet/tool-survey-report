@@ -17,6 +17,7 @@ relationships:
   parent: "ChatGPT"
   related_tools:
     - "Luma AI"
+    - "Suno"
 ---
 
 # **OpenAI Sora 調査レポート**
