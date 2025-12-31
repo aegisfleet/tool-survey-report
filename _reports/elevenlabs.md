@@ -15,7 +15,8 @@ tags:
   - "Dubbing"
 description: "感情表現豊かな高品質な音声を生成できるAI音声合成プラットフォーム。テキスト読み上げ、ボイスクローン、多言語吹き替えなど多彩な機能を備える。"
 relationships:
-  related_tools: []
+  related_tools:
+    - "Suno"
 ---
 
 # **ElevenLabs 調査レポート**
