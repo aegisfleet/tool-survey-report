@@ -3,11 +3,11 @@ title: "Appium 調査レポート"
 tool_name: "Appium"
 category: "テスト/QA"
 developer: "OpenJS Foundation"
-official_site: "http://appium.io/"
+official_site: "https://appium.io/"
 links:
   github: "https://github.com/appium/appium"
 date: "2025-10-26"
-last_updated: "2025-10-26"
+last_updated: "2026-01-01"
 tags:
   - "テスト自動化"
   - "オープンソース"
@@ -32,7 +32,7 @@ relationships:
 
 * **ツール名**: Appium
 * **開発元**: OpenJS Foundation
-* **公式サイト**: [http://appium.io/](http://appium.io/)
+* **公式サイト**: [https://appium.io/](https://appium.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/appium/appium](https://github.com/appium/appium)
 * **カテゴリ**: テスト/QA
@@ -107,7 +107,10 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
-* Appiumは継続的にアップデートされており、最新情報は公式サイトのブログやGitHubのリリースページで確認できます。
+* **Appium 3.1.0 (2025-10-08)**: 安定性の向上と新しいドライバの追加を含むメジャーアップデート。
+* **Appium 2.19.0 (2025-06-26)**: いくつかのバグ修正とパフォーマンス改善が行われました。
+
+Appiumは継続的にアップデートされており、詳細な変更履歴はGitHubのリリースページで確認できます。
 
 ## **14. 類似ツールとの比較**
 
