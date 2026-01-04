@@ -22,6 +22,7 @@ relationships:
     - "Cucumber"
     - "Appium"
     - "Karate"
+    - "Apache JMeter"
 ---
 
 # **Cypress 調査レポート**

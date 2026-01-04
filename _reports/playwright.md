@@ -25,6 +25,7 @@ relationships:
     - "Cucumber"
     - "Appium"
     - "Karate"
+    - "Apache JMeter"
 ---
 
 # **Playwright 調査レポート**
