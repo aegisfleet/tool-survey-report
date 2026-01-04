@@ -6,10 +6,10 @@ Processes relationship metadata from front matter and displays parent, child, an
 {% comment %} Build tool lookup map for efficient tool_name to report resolution {% endcomment %}
 {% assign tool_lookup = "" | split: "" %}
 {% for report in site.reports %}
-  {% if report.tool_name %}
-    {% assign lookup_entry = report.tool_name | append: ":" | append: forloop.index0 %}
-    {% assign tool_lookup = tool_lookup | push: lookup_entry %}
-  {% endif %}
+{% if report.tool_name %}
+{% assign lookup_entry = report.tool_name | append: ":" | append: forloop.index0 %}
+{% assign tool_lookup = tool_lookup | push: lookup_entry %}
+{% endif %}
 {% endfor %}
 
 {% comment %} Helper function to find report by tool_name {% endcomment %}
@@ -19,94 +19,94 @@ Processes relationship metadata from front matter and displays parent, child, an
 
 {% comment %} Process parent relationship {% endcomment %}
 {% if page.relationships.parent %}
-  {% for lookup in tool_lookup %}
-    {% assign parts = lookup | split: ":" %}
-    {% if parts[0] == page.relationships.parent %}
-      {% assign parent_index = parts[1] | plus: 0 %}
-      {% assign parent_tool = site.reports[parent_index] %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
+{% for lookup in tool_lookup %}
+{% assign parts = lookup | split: ":" %}
+{% if parts[0] == page.relationships.parent %}
+{% assign parent_index = parts[1] | plus: 0 %}
+{% assign parent_tool = site.reports[parent_index] %}
+{% break %}
+{% endif %}
+{% endfor %}
 {% endif %}
 
 {% comment %} Process children relationships {% endcomment %}
 {% if page.relationships.children %}
-  {% for child_name in page.relationships.children %}
-    {% for lookup in tool_lookup %}
-      {% assign parts = lookup | split: ":" %}
-      {% if parts[0] == child_name %}
-        {% assign child_index = parts[1] | plus: 0 %}
-        {% assign child_tools = child_tools | push: site.reports[child_index] %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
+{% for child_name in page.relationships.children %}
+{% for lookup in tool_lookup %}
+{% assign parts = lookup | split: ":" %}
+{% if parts[0] == child_name %}
+{% assign child_index = parts[1] | plus: 0 %}
+{% assign child_tools = child_tools | push: site.reports[child_index] %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endfor %}
 {% endif %}
 
 {% comment %} Process sibling/related tools relationships {% endcomment %}
 {% if page.relationships.related_tools %}
-  {% for sibling_name in page.relationships.related_tools %}
-    {% for lookup in tool_lookup %}
-      {% assign parts = lookup | split: ":" %}
-      {% if parts[0] == sibling_name %}
-        {% assign sibling_index = parts[1] | plus: 0 %}
-        {% assign sibling_tools = sibling_tools | push: site.reports[sibling_index] %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
+{% for sibling_name in page.relationships.related_tools %}
+{% for lookup in tool_lookup %}
+{% assign parts = lookup | split: ":" %}
+{% if parts[0] == sibling_name %}
+{% assign sibling_index = parts[1] | plus: 0 %}
+{% assign sibling_tools = sibling_tools | push: site.reports[sibling_index] %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endfor %}
 {% endif %}
 
 {% comment %} Auto-discover bidirectional relationships {% endcomment %}
 {% comment %} Find tools that list this tool as parent (children) {% endcomment %}
 {% for report in site.reports %}
-  {% if report.relationships.parent == page.tool_name and report.url != page.url %}
-    {% assign child_tools = child_tools | push: report %}
-  {% endif %}
+{% if report.relationships.parent == page.tool_name and report.url != page.url %}
+{% assign child_tools = child_tools | push: report %}
+{% endif %}
 {% endfor %}
 
 {% comment %} Find tools that list this tool as child (parents) {% endcomment %}
 {% if page.relationships.children == nil and parent_tool == nil %}
-  {% for report in site.reports %}
-    {% if report.relationships.children %}
-      {% for child_name in report.relationships.children %}
-        {% if child_name == page.tool_name %}
-          {% assign parent_tool = report %}
-          {% break %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
+{% for report in site.reports %}
+{% if report.relationships.children %}
+{% for child_name in report.relationships.children %}
+{% if child_name == page.tool_name %}
+{% assign parent_tool = report %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
 {% endif %}
 
 {% comment %} Remove duplicates from arrays {% endcomment %}
 {% assign unique_children = "" | split: "" %}
 {% for child in child_tools %}
-  {% assign found = false %}
-  {% for unique_child in unique_children %}
-    {% if unique_child.url == child.url %}
-      {% assign found = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% unless found %}
-    {% assign unique_children = unique_children | push: child %}
-  {% endunless %}
+{% assign found = false %}
+{% for unique_child in unique_children %}
+{% if unique_child.url == child.url %}
+{% assign found = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% unless found %}
+{% assign unique_children = unique_children | push: child %}
+{% endunless %}
 {% endfor %}
 {% assign child_tools = unique_children %}
 
 {% assign unique_siblings = "" | split: "" %}
 {% for sibling in sibling_tools %}
-  {% assign found = false %}
-  {% for unique_sibling in unique_siblings %}
-    {% if unique_sibling.url == sibling.url %}
-      {% assign found = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-  {% unless found %}
-    {% assign unique_siblings = unique_siblings | push: sibling %}
-  {% endunless %}
+{% assign found = false %}
+{% for unique_sibling in unique_siblings %}
+{% if unique_sibling.url == sibling.url %}
+{% assign found = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% unless found %}
+{% assign unique_siblings = unique_siblings | push: sibling %}
+{% endunless %}
 {% endfor %}
 {% assign sibling_tools = unique_siblings %}
 
@@ -114,29 +114,31 @@ Processes relationship metadata from front matter and displays parent, child, an
 {% if parent_tool or child_tools.size > 0 or sibling_tools.size > 0 %}
 <section class="related-tools-section" aria-labelledby="related-tools-heading">
   <h3 id="related-tools-heading">関連レポート</h3>
-  
+
   {% if parent_tool %}
   <div class="parent-tool" role="region" aria-labelledby="parent-tool-heading">
     <h4 id="parent-tool-heading">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        <path
+          d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
       </svg>
       親レポート
     </h4>
     <a href="{{ parent_tool.url | relative_url }}" class="tool-link">
-      <span class="tool-title">{{ parent_tool.title }}</span>
+      <span class="tool-title">{{ parent_tool.tool_name | default: parent_tool.title }}</span>
       {% if parent_tool.description %}
-        <span class="tool-description">{{ parent_tool.description }}</span>
+      <span class="tool-description">{{ parent_tool.description }}</span>
       {% endif %}
     </a>
   </div>
   {% endif %}
-  
+
   {% if child_tools.size > 0 %}
   <div class="child-tools" role="region" aria-labelledby="child-tools-heading">
     <h4 id="child-tools-heading">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        <path
+          d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
       </svg>
       子レポート
     </h4>
@@ -144,9 +146,9 @@ Processes relationship metadata from front matter and displays parent, child, an
       {% for child in child_tools %}
       <li>
         <a href="{{ child.url | relative_url }}" class="tool-link">
-          <span class="tool-title">{{ child.title }}</span>
+          <span class="tool-title">{{ child.tool_name | default: child.title }}</span>
           {% if child.description %}
-            <span class="tool-description">{{ child.description }}</span>
+          <span class="tool-description">{{ child.description }}</span>
           {% endif %}
         </a>
       </li>
@@ -154,12 +156,13 @@ Processes relationship metadata from front matter and displays parent, child, an
     </ul>
   </div>
   {% endif %}
-  
+
   {% if sibling_tools.size > 0 %}
   <div class="sibling-tools" role="region" aria-labelledby="sibling-tools-heading">
     <h4 id="sibling-tools-heading">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+        <path
+          d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
       </svg>
       関連レポート
     </h4>
@@ -167,9 +170,9 @@ Processes relationship metadata from front matter and displays parent, child, an
       {% for sibling in sibling_tools %}
       <li>
         <a href="{{ sibling.url | relative_url }}" class="tool-link">
-          <span class="tool-title">{{ sibling.title }}</span>
+          <span class="tool-title">{{ sibling.tool_name | default: sibling.title }}</span>
           {% if sibling.description %}
-            <span class="tool-description">{{ sibling.description }}</span>
+          <span class="tool-description">{{ sibling.description }}</span>
           {% endif %}
         </a>
       </li>

@@ -31,7 +31,7 @@ layout: default
             <select id="sort-select" class="sort-select">
               <option value="date-desc" selected>新しい順</option>
               <option value="date-asc">古い順</option>
-              <option value="title-asc">タイトル順</option>
+              <option value="title-asc">ツール名順</option>
             </select>
           </div>
         </div>
@@ -186,7 +186,7 @@ layout: default
           case 'date-asc':
             return new Date(a.dataset.date) - new Date(b.dataset.date);
           case 'title-asc':
-            return a.dataset.title.localeCompare(b.dataset.title);
+            return a.dataset.toolName.localeCompare(b.dataset.toolName);
           default:
             return 0;
         }
@@ -265,10 +265,10 @@ layout: default
       }
 
       filterAndSort();
-      
+
       // タップ後すぐにアクティブ状態をクリア（スマートフォン対応）
       tagElement.blur();
-      
+
       // 一時的にアクティブクラスを削除して再適用（視覚的フィードバック）
       setTimeout(() => {
         updateTagStates();
