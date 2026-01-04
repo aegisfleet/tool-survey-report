@@ -8,7 +8,7 @@ layout: default
       <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
           <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
-          <li aria-current="page">{{ page.title }}</li>
+          <li aria-current="page">{{ page.tool_name | default: page.title }}</li>
         </ol>
       </nav>
     </div>
@@ -120,7 +120,7 @@ layout: default
         <div class="nav-previous">
           <a href="{{ next_report.url | relative_url }}" rel="prev">
             <span class="nav-label">前のレポート</span>
-            <span class="nav-title">{{ next_report.title }}</span>
+            <span class="nav-title">{{ next_report.tool_name | default: next_report.title }}</span>
           </a>
         </div>
         {% endif %}
@@ -128,7 +128,7 @@ layout: default
         {% if prev_index < reports.size %} {% assign prev_report=reports[prev_index] %} <div class="nav-next">
           <a href="{{ prev_report.url | relative_url }}" rel="next">
             <span class="nav-label">次のレポート</span>
-            <span class="nav-title">{{ prev_report.title }}</span>
+            <span class="nav-title">{{ prev_report.tool_name | default: prev_report.title }}</span>
           </a>
       </div>
       {% endif %}
@@ -162,7 +162,8 @@ layout: default
       {% endfor %}
       {% if common_count > 0 %}
       {% assign match_ratio = common_count | times: 100 | divided_by: page.tags.size %}
-      {% assign report_with_score = report.title | append: "|" | append: match_ratio | append: "|" | append:
+      {% assign report_with_score = report.tool_name | default: report.title | append: "|" | append: match_ratio |
+      append: "|" | append:
       common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated %}
       {% assign related_with_scores = related_with_scores | push: report_with_score %}
       {% endif %}
