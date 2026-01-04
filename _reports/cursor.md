@@ -19,6 +19,7 @@ relationships:
     - "GitHub Copilot"
     - "Windsurf"
     - "Google Antigravity"
+    - "Mobile Next"
 ---
 
 # **Cursor 調査レポート**

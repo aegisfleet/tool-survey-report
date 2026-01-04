@@ -19,6 +19,7 @@ relationships:
     - "Gemini"
     - "Grok"
     - "Rakuten AI"
+    - "Mobile Next"
 ---
 
 # **Claude 調査レポート**
