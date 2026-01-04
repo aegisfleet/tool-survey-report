@@ -123,7 +123,7 @@ relationships:
 
 ## **14. 類似ツールとの比較**
 
-* **[Luma AI](luma-ai.md)**: 動画からの高品質なNeRF/Gaussian Splatting生成に強みを持つ商用サービス。Hunyuanは生成AIによるゼロからの生成に重点。
+* **Luma AI**: 動画からの高品質なNeRF/Gaussian Splatting生成に強みを持つ商用サービス。Hunyuanは生成AIによるゼロからの生成に重点。
 * **Meshy**: Webベースの3D生成ツール。使いやすいが、Hunyuanはローカル実行可能でカスタマイズ性が高い。
 * **TripoSR / Stability AI**: 画像から高速に3Dモデルを生成するオープンソースモデル。Hunyuan3Dはより高解像度・高品質なテクスチャ（PBR含む）を目指している点で差別化される。
 
