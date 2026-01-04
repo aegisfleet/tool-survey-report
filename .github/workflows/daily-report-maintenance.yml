@@ -2,8 +2,8 @@ name: Daily Report Maintenance with Jules
 
 on:
   schedule:
-    # 毎日日本時間 17:00 (UTC 08:00) に実行
-    - cron: '0 8 * * *'
+    # 毎日日本時間 07:00 (UTC 22:00) に実行
+    - cron: '0 22 * * *'
   workflow_dispatch: # 手動実行も可能
 
 permissions:
@@ -36,8 +36,7 @@ jobs:
               return;
             }
 
-            let oldestReport = null;
-            let oldestDate = new Date();
+            const reportsWithDates = [];
 
             // 各レポートファイルのlast_updatedを確認
             for (const file of files) {
@@ -54,52 +53,30 @@ jobs:
                   const lastUpdated = new Date(lastUpdatedMatch[1]);
                   core.info(`${file}: last_updated = ${lastUpdated.toISOString()}`);
 
-                  if (lastUpdated < oldestDate) {
-                    oldestDate = lastUpdated;
-                    oldestReport = {
-                      filename: file,
-                      path: filePath,
-                      lastUpdated: lastUpdated,
-                      content: content
-                    };
-                  }
+                  reportsWithDates.push({
+                    filename: file,
+                    path: filePath,
+                    lastUpdated: lastUpdated,
+                    content: content
+                  });
                 }
               }
             }
 
-            if (!oldestReport) {
+            if (reportsWithDates.length === 0) {
               core.error('No report with valid last_updated date found');
               process.exit(1);
             }
 
-            core.info(`Oldest report: ${oldestReport.filename} (last updated: ${oldestReport.lastUpdated.toISOString()})`);
+            // 更新日時が古い順にソートして上位3件を取得
+            const oldestReports = reportsWithDates
+              .sort((a, b) => a.lastUpdated - b.lastUpdated)
+              .slice(0, 3);
 
-            // ツール名を抽出
-            const toolNameMatch = oldestReport.content.match(/tool_name:\s*["']?([^"'\r\n]+)["']?/);
-            const toolName = toolNameMatch ? toolNameMatch[1] : oldestReport.filename.replace('.md', '');
-
-            // Jules API用のプロンプトを作成
-            // AGENTS.mdの「レポート作成・更新の手順」を参照する形式
-            const todayJST = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
-            const promptLines = [
-              `AGENTS.mdの「レポート作成・更新の手順」に従い、${toolName}(${oldestReport.path})の調査レポートを更新してください。`,
-              '',
-              '## 作業内容',
-              '',
-              '### ステップ1: レポートの作成・更新',
-              `- 対象: ${oldestReport.path}`,
-              `- 本日の日付: ${todayJST}`,
-              '- task-report-create-or-update.mdに従い、レポート情報を最新化する',
-              '',
-              '### ステップ2: 関連レポートの整理',
-              '- task-organizing-category-tags.mdに従い、カテゴリ・タグ・関連付けを整理する',
-              `- ${toolName}と同カテゴリまたはrelated_toolsに含まれるレポートとの双方向整合性を確保する`,
-              '',
-              '### 注意事項',
-              '- 両ステップを必ずこの順序で実行すること',
-              '- 関連レポートへの変更は最小限に留めること'
-            ];
-            const prompt = promptLines.join('\n');
+            core.info(`Found ${oldestReports.length} oldest reports to update:`);
+            for (const report of oldestReports) {
+              core.info(`  - ${report.filename} (last updated: ${report.lastUpdated.toISOString()})`);
+            }
 
             // Jules APIを呼び出し
             const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
@@ -110,84 +87,163 @@ jobs:
               process.exit(1);
             }
 
-            const requestBody = {
-              prompt: prompt,
-              sourceContext: {
-                source: `sources/github/${context.repo.owner}/${context.repo.repo}`,
-                githubRepoContext: {
-                  startingBranch: "main"
-                }
-              },
-              requirePlanApproval: false,
-              automationMode: `AUTO_CREATE_PR`,
-              title: `Update ${toolName} Report and Organize - ${new Date().toISOString().split('T')[0]}`
-            };
+            const todayJST = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
+            const updatedReports = [];
+            const failedReports = [];
 
-            // リトライ機能付きのJules API呼び出し
-            const maxRetries = 3;
-            const retryDelay = 30000; // 30秒
-            let lastError = null;
+            // 各レポートに対してJules APIを呼び出し
+            for (const currentReport of oldestReports) {
+              // ツール名を抽出
+              const toolNameMatch = currentReport.content.match(/tool_name:\s*["']?([^"'\r\n]+)["']?/);
+              const toolName = toolNameMatch ? toolNameMatch[1] : currentReport.filename.replace('.md', '');
 
-            for (let attempt = 1; attempt <= maxRetries; attempt++) {
-              core.info(`Jules API call attempt ${attempt}/${maxRetries}...`);
-              
-              if (attempt > 1) {
-                core.info(`Waiting ${retryDelay/1000} seconds before retry...`);
-                await new Promise(resolve => setTimeout(resolve, retryDelay));
-              }
+              core.info(`\n--- Processing: ${toolName} (${currentReport.filename}) ---`);
 
-              try {
-                const response = await fetch(julesApiUrl, {
-                  method: 'POST',
-                  headers: {
-                    'Content-Type': 'application/json',
-                    'X-Goog-Api-Key': apiKey
-                  },
-                  body: JSON.stringify(requestBody)
-                });
+              // Jules API用のプロンプトを作成
+              const promptLines = [
+                `AGENTS.mdの「レポート作成・更新の手順」に従い、${toolName}(${currentReport.path})の調査レポートを更新してください。`,
+                '',
+                '## 作業内容',
+                '',
+                '### ステップ1: レポートの作成・更新',
+                `- 対象: ${currentReport.path}`,
+                `- 本日の日付: ${todayJST}`,
+                '- task-report-create-or-update.mdに従い、レポート情報を最新化する',
+                '',
+                '### ステップ2: 関連レポートの整理',
+                '- task-organizing-category-tags.mdに従い、カテゴリ・タグ・関連付けを整理する',
+                `- ${toolName}と同カテゴリまたはrelated_toolsに含まれるレポートとの双方向整合性を確保する`,
+                '',
+                '### 注意事項',
+                '- 両ステップを必ずこの順序で実行すること',
+                '- 関連レポートへの変更は最小限に留めること'
+              ];
+              const prompt = promptLines.join('\n');
 
-                if (!response.ok) {
-                  const errorText = await response.text();
-                  const errorMessage = `Jules API call failed: ${response.status} ${response.statusText}`;
-                  core.error(errorMessage);
-                  core.error(`Error response: ${errorText}`);
-                  
-                  lastError = new Error(`${errorMessage}\nResponse: ${errorText}`);
-                  
-                  // 5xx系エラーの場合はリトライ、4xx系エラーの場合は即座に失敗
-                  if (response.status >= 400 && response.status < 500) {
-                    core.error('Client error (4xx) detected. Not retrying.');
-                    throw lastError;
+              const requestBody = {
+                prompt: prompt,
+                sourceContext: {
+                  source: `sources/github/${context.repo.owner}/${context.repo.repo}`,
+                  githubRepoContext: {
+                    startingBranch: "main"
                   }
+                },
+                requirePlanApproval: false,
+                automationMode: `AUTO_CREATE_PR`,
+                title: `Update ${toolName} Report and Organize - ${new Date().toISOString().split('T')[0]}`
+              };
+
+              // リトライ機能付きのJules API呼び出し
+              const maxRetries = 3;
+              const retryDelay = 30000; // 30秒
+              let lastError = null;
+              let success = false;
+
+              for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                core.info(`Jules API call attempt ${attempt}/${maxRetries} for ${toolName}...`);
+                
+                if (attempt > 1) {
+                  core.info(`Waiting ${retryDelay/1000} seconds before retry...`);
+                  await new Promise(resolve => setTimeout(resolve, retryDelay));
+                }
+
+                try {
+                  const response = await fetch(julesApiUrl, {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                      'X-Goog-Api-Key': apiKey
+                    },
+                    body: JSON.stringify(requestBody)
+                  });
+
+                  if (!response.ok) {
+                    const errorText = await response.text();
+                    const errorMessage = `Jules API call failed: ${response.status} ${response.statusText}`;
+                    core.error(errorMessage);
+                    core.error(`Error response: ${errorText}`);
+                    
+                    lastError = new Error(`${errorMessage}\nResponse: ${errorText}`);
+                    
+                    // 4xx系エラーの場合はリトライしない
+                    if (response.status >= 400 && response.status < 500) {
+                      core.error('Client error (4xx) detected. Not retrying.');
+                      break;
+                    }
+                    
+                    if (attempt === maxRetries) {
+                      break;
+                    }
+                    
+                    core.warning(`Server error (5xx) detected. Will retry (${attempt}/${maxRetries})`);
+                    continue;
+                  }
+
+                  const result = await response.json();
+                  core.info(`Jules API call successful for ${toolName}!`);
+                  core.info(`Response: ${JSON.stringify(result, null, 2)}`);
+
+                  updatedReports.push({
+                    filename: currentReport.filename,
+                    toolName: toolName,
+                    sessionId: result.sessionId || 'unknown'
+                  });
+                  success = true;
+                  break; // 成功したのでリトライループを抜ける
+
+                } catch (error) {
+                  lastError = error;
+                  core.error(`Error calling Jules API (attempt ${attempt}): ${error.message}`);
                   
                   if (attempt === maxRetries) {
-                    throw lastError;
+                    core.error(`All ${maxRetries} attempts failed for ${toolName}.`);
+                  } else {
+                    core.warning(`Will retry (${attempt}/${maxRetries})`);
                   }
-                  
-                  core.warning(`Server error (5xx) detected. Will retry (${attempt}/${maxRetries})`);
-                  continue;
                 }
+              }
 
-                const result = await response.json();
-                core.info('Jules API call successful!');
-                core.info(`Response: ${JSON.stringify(result, null, 2)}`);
+              if (!success) {
+                failedReports.push({
+                  filename: currentReport.filename,
+                  toolName: toolName,
+                  error: lastError ? lastError.message : 'Unknown error'
+                });
+              }
 
-                // 成功をGitHub Actionsの出力として設定
-                core.setOutput('updated_report', oldestReport.filename);
-                core.setOutput('tool_name', toolName);
-                core.setOutput('jules_session_id', result.sessionId || 'unknown');
-                
-                return; // 成功したので関数を終了
-
-              } catch (error) {
-                lastError = error;
-                core.error(`Error calling Jules API (attempt ${attempt}): ${error.message}`);
-                
-                if (attempt === maxRetries) {
-                  core.error(`All ${maxRetries} attempts failed. Failing the workflow.`);
-                  throw error;
-                }
-                
-                core.warning(`Will retry (${attempt}/${maxRetries})`);
+              // 次のレポート処理前に少し待機（API制限対策）
+              if (oldestReports.indexOf(currentReport) < oldestReports.length - 1) {
+                core.info('Waiting 10 seconds before processing next report...');
+                await new Promise(resolve => setTimeout(resolve, 10000));
               }
             }
+
+            // サマリーを出力
+            core.info('\n=== Update Summary ===');
+            core.info(`Successfully updated: ${updatedReports.length}/${oldestReports.length} reports`);
+            
+            if (updatedReports.length > 0) {
+              core.info('Updated reports:');
+              for (const report of updatedReports) {
+                core.info(`  - ${report.toolName} (${report.filename}): session ${report.sessionId}`);
+              }
+            }
+
+            if (failedReports.length > 0) {
+              core.warning('Failed reports:');
+              for (const report of failedReports) {
+                core.warning(`  - ${report.toolName} (${report.filename}): ${report.error}`);
+              }
+            }
+
+            // 成功をGitHub Actionsの出力として設定
+            core.setOutput('updated_reports', updatedReports.map(r => r.filename).join(','));
+            core.setOutput('updated_count', updatedReports.length);
+            core.setOutput('failed_count', failedReports.length);
+
+            // 全て失敗した場合はワークフローを失敗させる
+            if (updatedReports.length === 0 && oldestReports.length > 0) {
+              core.error('All report updates failed. Failing the workflow.');
+              process.exit(1);
+            }
+
