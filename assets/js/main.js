@@ -431,6 +431,14 @@ function generateTableOfContents() {
       const listItem = document.createElement('li');
       listItem.style.marginBottom = '0.5rem';
 
+      // 階層（H2, H3, H4）に応じたインデントの設定
+      const tagName = heading.tagName.toLowerCase();
+      if (tagName === 'h3') {
+        listItem.style.marginLeft = '1.5rem';
+      } else if (tagName === 'h4') {
+        listItem.style.marginLeft = '3rem';
+      }
+
       const link = document.createElement('a');
       link.href = '#' + id;
       link.textContent = heading.textContent;
