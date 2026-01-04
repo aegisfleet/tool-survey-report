@@ -7,14 +7,14 @@ official_site: "https://jmeter.apache.org/"
 links:
   github: "https://github.com/apache/jmeter"
 date: "2025-10-18"
-last_updated: "2025-10-27"
+last_updated: "2026-01-04"
 tags:
   - "負荷テスト"
   - "パフォーマンス測定"
   - "オープンソース"
   - "Java"
   - "API"
-  - "テスト"
+  - "テスト自動化"
 description: "Apache JMeterは、Webアプリケーションのパフォーマンス測定と負荷テストのために設計された、100% Pure Javaのオープンソースソフトウェアです。"
 relationships:
   related_tools:
@@ -113,44 +113,23 @@ relationships:
 * **[https://jmeter.apache.org/changes.html](https://jmeter.apache.org/changes.html) および [https://jmeter.apache.org/changes_history.html](https://jmeter.apache.org/changes_history.html) を参照**
 
 * **最新バージョン**: 5.6.3 (2024年1月リリース)
-  * 主にバグ修正が中心のリリース。
-  * **改善点**:
+  * 2026年1月現在、最新バージョンは引き続き5.6.3です。2024年以降、主に依存関係の更新とバグ修正が中心となっており、大規模な機能追加はありません。
+  * **改善点 (5.6.3)**:
     * `TransactionController`、`ThreadGroupGui`、`HTTP Request` のGUI要素で `${...}` 形式の変数が利用可能になり、テスト計画の動的な設定が容易になった。
-  * **主なバグ修正**:
+  * **主なバグ修正 (5.6.3)**:
     * サマリーレポートで最小応答時間が `0` と表示される問題の修正。
     * `Constant Throughput Timer` と `Constant Timer` が変数使用時に `NullPointerException` をスローする問題の修正。
 
 * **バージョン 5.6.2** (2023年11月リリース)
-  * バグ修正のみのマイナーリリース。
-  * **主なバグ修正**:
-    * Maven の `pom.xml` パーサーとの互換性の問題（`com.google.auto.service:auto-service-annotations` のバージョンが明示されていなかった）を修正。
-
-* **バージョン 5.6.1** (2023年7月リリース)
-  * バグ修正と改善を含むリリース。
-  * **改善点**:
-    * HTTP Sampler と Test Script Recorder で、デフォルトのエンコーディングがUTF-8になった。
-  * **主なバグ修正**:
-    * 非GUIモードでスレッドグループが無限に実行されるリグレッションの修正。
-    * UIで一度無効にすると再度有効にできなかったJava Request Samplerの問題を修正。
+  * バグ修正のみのマイナーリリース。Mavenの `pom.xml` パーサーとの互換性の問題などが修正された。
 
 * **バージョン 5.6** (2023年5月リリース)
   * **新機能と改善点**:
     * **Kotlin DSL**: テスト計画をプログラムで生成するための実験的なKotlin DSLが追加された。
-    * **パフォーマンス向上**:
-      * `caffeine` をキャッシュに利用することで、HTTPヘッダーやJSR223スクリプトのパフォーマンスが向上。
-      * `ServiceLoader` を利用したプラグイン読み込みによる起動時間の短縮。
-      * `__time` 関数の日付フォーマッターのキャッシュによる高速化。
-    * **利便性の向上**:
-      * Test Script Recorderで、サンプラー名をURLやメソッドなどのテンプレート変数で柔軟に設定できるようになった。
-      * チェックボックスコントロールで `${...}` 形式の変数が使用可能になった。
+    * **パフォーマンス向上**: `caffeine` のキャッシュ利用や `ServiceLoader` によるプラグイン読み込み時間の短縮など、パフォーマンスに関する改善が行われた。
+    * **利便性の向上**: Test Script Recorderでのサンプラー名の柔軟な設定や、UIコントロールでの変数サポートが追加された。
 
-* **バージョン 5.5** (2022年5月リリース)
-  * **新機能と改善点**:
-    * **Open Model Thread Group**: 可変負荷をより柔軟にモデル化できる新しいスレッドグループが導入された。これにより、`rate(0/sec) random_arrivals(1 minute) rate(10/sec)` のように、より現実に近い負荷パターンを簡単にシミュレーションできるようになった。
-    * **Java 17のサポート**: JMeter 5.5 は Java 17 での実行をサポート。
-    * **Core改善**: Kotlin言語が一部のコアクラスとテストに導入された。
-
-総じて、最近のアップデートはメジャーな新機能の追加よりも、既存機能の改善、パフォーマンスの向上、そして開発体験の向上に重点を置いている傾向があります。特に、Kotlin DSLの導入やOpen Model Thread Groupの追加は、より複雑で現実的なテストシナリオをコードベースで効率的に管理したい上級ユーザーにとって重要な進歩です。
+総じて、最近のアップデートはメジャーな新機能の追加よりも、既存機能の改善、パフォーマンスの向上、そして開発体験の向上に重点を置いている傾向があります。特に、Kotlin DSLの導入やOpen Model Thread Group（5.5で導入）の追加は、より複雑で現実的なテストシナリオをコードベースで効率的に管理したい上級ユーザーにとって重要な進歩です。
 
 ## **14. 類似ツールとの比較**
 

@@ -24,6 +24,7 @@ relationships:
     - "Cucumber"
     - "Appium"
     - "Karate"
+    - "Apache JMeter"
 ---
 
 # **Selenium 調査レポート**
