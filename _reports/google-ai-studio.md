@@ -5,7 +5,7 @@ category: "生成AI"
 developer: "Google"
 official_site: "https://cloud.google.com/generative-ai-studio"
 date: "2025-10-27"
-last_updated: "2025-10-27"
+last_updated: "2026-01-05"
 tags:
   - "AI"
   - "生成AI"
@@ -113,13 +113,20 @@ Vertex AI Studio自体の利用料金はかからないが、バックエンド�
 
 Vertex AIのリリースノートより、直近の主要なアップデートを抜粋。
 
-* **2025-10-23**: Model Gardenに[DeepSeek-OCR](https://console.cloud.google.com/vertex-ai/publishers/deepseek-ai/model-garden/deepseek-ocr), [Qwen3-VL](https://console.cloud.google.com/vertex-ai/publishers/qwen/model-garden/qwen3-vl), [Earth AI](https://console.cloud.google.com/vertex-ai/model-garden/google/earth-ai)が追加。
-* **2025-10-16**: Mistralの[Codestral 2](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/partner-models/mistral/codestral-2)がModel Gardenで利用可能に。
-* **2025-10-15**: Anthropicの[Claude Haiku 4.5](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/partner-models/claude/haiku-4-5)がModel Gardenで利用可能に。
-* **2025-10-07**: Vertex AI Studioでプロンプトの保存と共有が可能に。
-* **2025-10-02**: [Gemini 2.5 Flash Image](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash#image-generation)が一般提供開始。アスペクト比制御、バッチ予測、複数参照画像からの画像生成などの機能が追加。
-* **2025-09-24**: Gemini 1.5 ProおよびGemini 1.5 Flashの新しい安定版（002）が一般提供開始。多言語理解、SQL生成、音声・ドキュメント理解などが大幅に改善。
-* **2025-08-14**: Imagen 4が一般提供開始。
+*   **2025-12-18**: Model GardenにFunctionGemma, T5Gemma 2が追加。
+*   **2025-12-18**: Vertex AI Studioでプロンプトの保存と共有機能がGAに。
+*   **2025-12-17**: Cloud API RegistryがPreviewで利用可能になり、エージェントが利用するツールやAPIの管理が容易に。
+*   **2025-12-17**: Gemini 3 FlashがPublic Previewで利用可能に。
+*   **2025-12-16**: Vertex AI Agent EngineのSessionsとMemory BankがGAに。オブザーバビリティ機能やPlaygroundもPreviewで追加され、エージェント開発のライフサイクル全体が強化。
+*   **2025-12-10**: Model GardenにDeepSeek-V3.2が追加。
+*   **2025-12-05**: Model GardenでvLLMコンテナを使ったモデルの co-hosting が可能になり、リソース使用効率が向上。
+*   **2025-11-18**: BigQuery MLとの連携が強化され、AI.GENERATE, AI.EMBED, AI.SIMILARITYなどの生成AI関数が追加・GAに。SQLから直接Gemini 3.0を利用可能に。
+*   **2025-10-23**: Model GardenにDeepSeek-OCR, Qwen3-VL, Earth AIが追加。
+*   **2025-10-16**: MistralのCodestral 2がModel Gardenで利用可能に。
+*   **2025-10-15**: AnthropicのClaude Haiku 4.5がModel Gardenで利用可能に。
+*   **2025-10-02**: Gemini 2.5 Flash Imageが一般提供開始。アスペクト比制御、バッチ予測、複数参照画像からの画像生成などの機能が追加。
+*   **2025-09-24**: Gemini 1.5 ProおよびGemini 1.5 Flashの新しい安定版（002）が一般提供開始。多言語理解、SQL生成、音声・ドキュメント理解などが大幅に改善。
+*   **2025-08-14**: Imagen 4が一般提供開始。
 
 ## **14. 類似ツールとの比較**
 

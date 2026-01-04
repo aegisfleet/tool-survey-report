@@ -22,6 +22,7 @@ relationships:
     - "Dify"
     - "LangChain"
     - "ChatGPT"
+    - "Google AI Studio"
 ---
 
 # **Amazon Bedrock 調査レポート**
