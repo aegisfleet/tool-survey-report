@@ -47,7 +47,7 @@ layout: default
           data-developer="{{ report.developer | downcase }}">
           <div class="report-card-header">
             <h3 class="report-title">
-              <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
+              <a href="{{ report.url | relative_url }}">{{ report.tool_name | default: report.title }}</a>
             </h3>
             <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
               {{ report.last_updated | date: "%Y年%m月%d日" }}
