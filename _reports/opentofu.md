@@ -7,7 +7,7 @@ official_site: "https://opentofu.org/"
 links:
   github: "https://github.com/opentofu/opentofu"
 date: "2025-10-27"
-last_updated: "2025-10-27"
+last_updated: "2026-01-05"
 tags:
   - "IaC"
   - "構成管理"
@@ -122,11 +122,11 @@ OpenTofuはTerraformのコア機能をすべて継承しつつ、コミュニテ
 
 OpenTofuは活発に開発が続けられており、定期的にリリースが行われています。
 
-* **v1.7 (Stable)**: クライアントサイドでのState暗号化機能が導入されました。
-* **v1.8 (Stable)**: `count`や`for_each`内での変数・ローカル値の早期評価が可能になりました。
-* **v1.9 (Stable)**: プロバイダーの`for_each`対応や、`-exclude`フラグが追加されました。
-* **v1.10 (Stable)**: OCIレジストリのサポート改善や、S3バックエンドでのネイティブなStateロックなどが追加されました。
-* **v1.11 (Beta)**: 新機能のテストとフィードバックを募集中です。
+*   **v1.7 (Stable)**: クライアントサイドでのState暗号化機能が導入されました。
+*   **v1.8 (Stable)**: `count`や`for_each`内での変数・ローカル値の早期評価が可能になりました。
+*   **v1.9 (Stable)**: プロバイダーの`for_each`対応や、`-exclude`フラグが追加されました。
+*   **v1.10 (Stable)**: OCIレジストリのサポート改善や、S3バックエンドでのネイティブなStateロックなどが追加されました。
+*   **v1.11 (Stable)**: ループ可能な`import`ブロック、`removed`ブロック内での`for_each`サポートなど、リファクタリングを容易にするための機能が強化されました。
 
 アップデートの傾向として、コミュニティから長年要望されていたがTerraformでは実装されてこなかった機能を中心に、実用性を高める改善が積極的に行われています。
 
