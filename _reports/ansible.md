@@ -7,12 +7,14 @@ official_site: "https://www.ansible.com/"
 links:
   github: "https://github.com/ansible/ansible"
 date: "2025-10-27"
-last_updated: "2025-10-27"
+last_updated: "2026-01-04"
 tags:
   - "自動化"
   - "オープンソース"
   - "CI/CD"
   - "構成管理"
+  - "DevOps"
+  - "IaC"
 description: "Ansibleは、プロビジョニング、構成管理、アプリケーションのデプロイメント、オーケストレーションを自動化するオープンソースのIT自動化エンジンです。"
 relationships:
   related_tools:
@@ -128,9 +130,11 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
-* **ansible-core**: 年に2回のメジャーバージョンアップが行われ、継続的に新機能の追加や改善が行われています。
-* **Red Hat Ansible Automation Platform**: 定期的なアップデートにより、AIを活用したPlaybook生成支援機能（Ansible Lightspeed with IBM watsonx Code Assistant）や、セキュリティとコンプライアンスを自動化する機能などが強化されています。
-* **アップデートの傾向**: 近年では、クラウドネイティブ環境（Kubernetesなど）との連携強化、ネットワーク自動化機能の拡充、セキュリティ自動化（Security Automation）、そしてAIを活用した自動化の簡素化に注力しています。
+*   **ansible-core 2.20 (2025年11月)**: 2025年後半のメジャーリリース。Python 3.11から3.13のサポートが追加され、ネットワークおよびセキュリティ自動化に関するモジュールの機能強化が多数行われました。最新のパッチバージョンは2.20.1です（2025年12月リリース）。
+*   **ansible-core 2.19 (2025年7月)**: 2025年前半のメジャーリリース。クラウドプロバイダー向けモジュールの改善や、パフォーマンスの最適化が含まれています。
+*   **Red Hat Ansible Automation Platform 2.6 (2025年後半)**: イベント駆動型の自動化（Event-Driven Ansible）の機能がさらに強化され、監視システムやセキュリティツールからのアラートをトリガーとした、より高度な自動修復ワークフローが構築可能になりました。また、2025年12月にはセキュリティ修正を含むパッチリリースが行われています。
+*   **Ansible Lightspeed with IBM watsonx Code Assistant**: AIによるPlaybook生成支援機能が継続的に強化されており、自然言語のプロンプトからより複雑で精度の高いPlaybookコードを生成できるようになっています。
+*   **アップデートの傾向**: 引き続き、クラウドネイティブ環境（Kubernetes）との連携、ネットワーク自動化、セキュリティ自動化（Security Automation）が重視されています。特に、AIを活用した自動化（AIOps）とイベント駆動型アーキテクチャへの注力が顕著です。
 
 ## **14. 類似ツールとの比較**
 
