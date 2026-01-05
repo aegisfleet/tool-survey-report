@@ -1,17 +1,25 @@
 ---
 title: "DeepWiki-Open 調査レポート"
 tool_name: "DeepWiki-Open"
-category: "AI"
+tool_reading: "ディープウィキ オープン"
+category: "開発者ツール"
 developer: "AsyncFuncAI"
 official_site: "https://github.com/AsyncFuncAI/deepwiki-open"
+links:
+  github: "https://github.com/AsyncFuncAI/deepwiki-open"
+  documentation: "https://asyncfunc.mintlify.app/"
 date: "2025-10-28"
-last_updated: "2025-10-28"
+last_updated: "2026-01-06"
 tags:
   - "AI"
   - "オープンソース"
   - "ドキュメント生成"
   - "wiki"
+  - "開発者ツール"
 description: "GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェネレーター"
+relationships:
+  related_tools:
+    - "Cline"
 ---
 
 # **DeepWiki-Open 調査レポート**
@@ -19,9 +27,13 @@ description: "GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェ�
 ## **1. 基本情報**
 
 * **ツール名**: DeepWiki-Open
+* **ツールの読み方**: ディープウィキ オープン
 * **開発元**: AsyncFuncAI
 * **公式サイト**: [https://github.com/AsyncFuncAI/deepwiki-open](https://github.com/AsyncFuncAI/deepwiki-open)
-* **カテゴリ**: AI, 開発者ツール
+* **関連リンク**:
+  * GitHub: [https://github.com/AsyncFuncAI/deepwiki-open](https://github.com/AsyncFuncAI/deepwiki-open)
+  * ドキュメント: [https://asyncfunc.mintlify.app/](https://asyncfunc.mintlify.app/)
+* **カテゴリ**: 開発者ツール
 * **概要**: GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェネレーター。コード構造を分析し、包括的なドキュメント、視覚的な図を生成し、ナビゲートしやすいWikiに整理します。
 
 ## **2. 目的と主な利用シーン**
@@ -62,7 +74,7 @@ description: "GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェ�
 * **セットアップの複雑さ**: セルフホストが前提のため、DockerやPython/Node.js環境の知識が必要。APIキーの設定など、非開発者にとっては導入のハードルが高い可能性がある。
 * **リソース要件**: ローカルでLLMやエンベディングモデルを実行する場合、相応のマシンリソース（CPU/GPU、メモリ）が必要になる可能性がある。
 * **日本語の精度**: READMEには日本語版も用意されているが、UIやAIによる生成コンテンツの日本語の精度については、モデルに依存するため、常に高い品質が保証されるわけではない可能性がある。
-* **公式リリースがない**: 2025年10月時点で、GitHubリポジトリには公式のリリースバージョンが公開されていない。開発の安定性やバージョン管理の観点では注意が必要。
+* **公式リリースがない**: 2026年1月時点で、GitHubリポジトリには公式のリリースバージョンが公開されていない。開発の安定性やバージョン管理の観点では注意が必要。
 
 ## **6. 料金プラン**
 
@@ -118,7 +130,7 @@ description: "GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェ�
   * **データ永続化**: クローンしたリポジトリ、エンベディング、キャッシュされたWikiコンテンツは、ローカルの指定ディレクトリ（デフォルト `~/.adalflow`）に保存される。
   * **LLM API経由のデータ送信**: 外部のLLMプロバイダーを利用する場合、コードの一部がAPI経由で送信される可能性があるため、各プロバイダーのプライバシーポリシーを確認する必要がある。Ollamaをローカルで利用すれば、データを完全にローカルに保つことが可能。
 * **準拠規格**:
-  * オープンソースソフトウェアのため、特定のセキュリティ認証（ISO27001など）は取得していない。セキュリティは、デプロイする環境の構築と運用に依存する。
+  * オープンソースソフトウェアのため、特定のセキュリティ認証（ISO27017など）は取得していない。セキュリティは、デプロイする環境の構築と運用に依存する。
 
 ## **11. 操作性 (UI/UX) と学習コスト**
 
@@ -132,7 +144,7 @@ description: "GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェ�
 
 ## **12. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, ITreviewなどの主要なレビューサイトでは、オープンソースプロジェクトであるためか、まとまったレビューは見つからなかった。GitHubのStar数（11.5k）やFork数（1.2k）から、開発者コミュニティからの高い関心が伺える。
+* **調査対象**: G2, Capterra, ITreviewなどの主要なレビューサイトでは、オープンソースプロジェクトであるためか、まとまったレビューは見つからなかった。GitHubのStar数（13.3k）やFork数（1.5k）から、開発者コミュニティからの高い関心が伺える。
 * **ポジティブな評価**:
   * Skywork.aiの記事では、「巨大なコードベースを午後だけで手なずけることができた」と評価されており、特にコード理解の迅速化に貢献する点が強調されている。
   * よく構造化され、型付けがされたコードベースほど、高品質なドキュメントが生成されるとの指摘がある。
@@ -145,21 +157,18 @@ description: "GitHub/Gitlab/Bitbucketリポジトリ向けのAI搭載Wikiジェ�
 
 公式のリリースノートはないが、GitHubのコミット履歴から活発な開発が確認できる。以下は直近半年の主要なアップデート。
 
+* **2026年1月**:
+  * APIのインストール手順とプロジェクト構造のドキュメントを修正 (`#433`)
+* **2025年12月**:
+  * Amazon Bedrockのサポートを拡充し、より多くのモデルに対応 (`#420`)
+  * Amazon Bedrockをエンベディングプロバイダーとして使用する機能を追加 (`#419`)
+  * データベースが無効な場合の診断機能を改善 (`#423`)
+* **2025年11月**:
+  * 特殊文字を含むアクセストークンをURLエンコードするように修正 (`#401`)
 * **2025年10月**:
   * Poetryによる依存関係管理の追加 (`#380`)
   * セルフホスト環境でのリポジトリタイプ検出の修正 (`#381`)
-* **2025年10月**:
-  * Mermaid.jsのシンタックスガイドラインをドキュメントに追記 (`#362`)
-* **2025年10月**:
   * Googleのエンベディングモデルをサポート (`#192`)
-* **2025年8月**:
-  * ログローテーション機能の追加 (`#312`)
-  * OpenAIとGoogleのモデルリストを更新 (`#318`)
-  * `git clone`の速度を最適化 (`#307`)
-* **2025年7月**:
-  * RAG（Retrieval Augmented Generation）のメモリリークを修正 (`#294`)
-  * レスポンスをMarkdownファイルとしてダウンロードする機能を追加 (`#293`)
-  * Bitbucket/GitLabリポジトリへのアクセスを修正 (`#279`, `#280`)
 
 **アップデートの傾向**:
 * 機能改善（パフォーマンス向上、バグ修正）と、対応モデルやプラットフォームの拡充（Google Embedder, Bitbucket修正など）が継続的に行われている。

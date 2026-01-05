@@ -18,6 +18,7 @@ description: "VS CodeなどのIDE内で動作する協調型コーディング�
 relationships:
   related_tools:
     - "Devin"
+    - "DeepWiki-Open"
 ---
 
 # **Cline 調査レポート**
