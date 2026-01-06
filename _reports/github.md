@@ -19,6 +19,7 @@ relationships:
     - "GitHub Copilot"
   related_tools:
     - "GitLab"
+    - "CodeRabbit"
 ---
 
 # **GitHub 調査レポート**
