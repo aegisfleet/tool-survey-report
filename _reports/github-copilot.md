@@ -21,6 +21,7 @@ relationships:
     - "Kiro"
     - "Windsurf"
     - "Visual Studio Code"
+    - "CodeRabbit"
 ---
 
 # **GitHub Copilot 調査レポート**

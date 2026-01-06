@@ -15,6 +15,9 @@ tags:
   - "SAST"
   - "SCA"
 description: "SonarQubeは、継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォームです。AIを活用したコード修正提案や、30以上の言語に対応したSAST、SCA機能を提供します。"
+relationships:
+  related_tools:
+    - "CodeRabbit"
 ---
 
 # **SonarQube 調査レポート**
