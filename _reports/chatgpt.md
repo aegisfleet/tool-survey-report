@@ -1,11 +1,16 @@
 ---
 title: "ChatGPT 調査レポート"
 tool_name: "ChatGPT"
+tool_reading: "チャットジーピーティー"
 category: "生成AI"
 developer: "OpenAI"
 official_site: "https://openai.com/chatgpt"
+links:
+  documentation: "https://help.openai.com/en/"
+  g2: "https://www.g2.com/products/chatgpt/reviews"
+  itreview: "https://www.itreview.jp/products/chatgpt/reviews"
 date: "2025-10-18"
-last_updated: "2025-10-29"
+last_updated: "2026-01-07"
 tags:
   - "AI"
   - "生成AI"
@@ -29,8 +34,12 @@ relationships:
 ## **1. 基本情報**
 
 * **ツール名**: ChatGPT
+* **ツールの読み方**: チャットジーピーティー
 * **開発元**: OpenAI
 * **公式サイト**: [https://openai.com/chatgpt](https://openai.com/chatgpt)
+* **関連リンク**:
+  * ドキュメント: [https://help.openai.com/en/](https://help.openai.com/en/)
+  * レビューサイト: [G2](https://www.g2.com/products/chatgpt/reviews) | [ITreview](https://www.itreview.jp/products/chatgpt/reviews)
 * **カテゴリ**: 生成AI, 会話型AI
 * **概要**: 自然言語を理解し生成するために設計された、OpenAIが開発した先進的な大規模言語モデル。文章作成、アイデア出し、コーディング、翻訳など、多岐にわたるタスクを対話形式で実行できる。
 
@@ -131,6 +140,12 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025年12月19日 - パーソナライズ機能の強化**:
+    *   応答のスタイル（例：丁寧さ、熱心さ）やフォーマット（例：箇条書き、絵文字の使用）をユーザーが細かく調整できる機能が追加された。
+* **2025年12月18日 - App Directoryの導入**:
+    *   承認されたサードパーティ製アプリを検索し、会話内で直接利用できる「App Directory」がリリースされた。これにより、外部ツールとの連携がより簡単になった。
+* **2025年12月 - Your Year with ChatGPT**:
+    *   2025年の利用状況を振り返るパーソナライズされた年末レポート機能が一部ユーザー向けに提供された。
 * **2025年10月21日 - ChatGPT Atlas Browserのリリース**:
     *   ChatGPTを組み込んだ新しいWebブラウザ「Atlas」がmacOS向けにリリースされた。
     *   Webページの内容を要約・分析したり、フォームへの入力を支援したりするなど、ブラウジング体験とAIの融合を目指す。
