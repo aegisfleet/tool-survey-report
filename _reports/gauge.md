@@ -15,6 +15,9 @@ tags:
   - "オープンソース"
   - "クロスプラットフォーム"
 description: "Markdownベースの仕様書でテストを作成できる、軽量でクロスプラットフォームなテスト自動化ツール"
+relationships:
+  related_tools:
+    - "Cucumber"
 ---
 
 # **Gauge 調査レポート**
