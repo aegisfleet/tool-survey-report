@@ -7,7 +7,7 @@ official_site: "https://kubernetes.io"
 links:
   github: "https://github.com/kubernetes/kubernetes"
 date: "2025-10-30"
-last_updated: "2025-10-30"
+last_updated: "2026-01-08"
 tags:
   - "コンテナ"
   - "コンテナオーケストレーション"
@@ -114,6 +114,11 @@ relationships:
   * **オーバーヘッド**: 小規模なプロジェクトやシンプルなアプリケーションにとっては、過剰な機能であり、管理コストが見合わない場合がある。
 
 ## **13. 直近半年のアップデート情報**
+
+* **v1.35 (2025-12-17)**:
+  * **Security Profiles for Nodes (GA)**: ノードレベルでのセキュリティプロファイルを一般提供開始。Seccomp、AppArmor、SELinuxの適用をより厳格に制御し、本番環境のハーデニングを強化。
+  * **Sidecar Containers (Beta)**: init containerの仕組みを拡張し、メインコンテナとライフサイクルを共にするサイドカーコンテナがベータに昇格。サービスメッシュなどの実装がより容易に。
+  * **In-place Pod Vertical Scaling (Alpha)**: Podを再起動することなく、CPUやメモリのリソース要求・制限を変更できる機能がアルファとして導入。
 
 * **v1.34 (2025-08-27)**:
   * **Dynamic Resource Allocation (DRA)**: GPUやTPUなどの特殊なハードウェアリソースの動的な割り当てを可能にする機能がGA（General Availability）に。
