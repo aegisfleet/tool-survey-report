@@ -1,7 +1,7 @@
 ---
 title: "Docker 調査レポート"
 tool_name: "Docker"
-category: "構成管理"
+category: "開発者ツール"
 developer: "Docker, Inc."
 official_site: "https://www.docker.com/"
 links:
