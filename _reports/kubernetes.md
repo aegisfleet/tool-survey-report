@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes 調査レポート"
 tool_name: "Kubernetes"
-category: "構成管理"
+category: "インフラ/クラウド"
 developer: "Cloud Native Computing Foundation"
 official_site: "https://kubernetes.io"
 links:
@@ -29,7 +29,7 @@ relationships:
 * **公式サイト**: [https://kubernetes.io](https://kubernetes.io)
 * **関連リンク**:
   * GitHub: [https://github.com/kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
-* **カテゴリ**: 構成管理
+* **カテゴリ**: インフラ/クラウド
 * **概要**: コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するためのオープンソースのコンテナオーケストレーションシステム。Googleによって設計され、現在はCNCFによってメンテナンスされている。
 
 ## **2. 目的と主な利用シーン**
