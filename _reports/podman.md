@@ -1,7 +1,7 @@
 ---
 title: "Podman 調査レポート"
 tool_name: "Podman"
-category: "構成管理"
+category: "開発者ツール"
 developer: "Red Hat"
 official_site: "https://podman.io/"
 links:

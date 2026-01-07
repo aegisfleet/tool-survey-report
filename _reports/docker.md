@@ -1,13 +1,13 @@
 ---
 title: "Docker 調査レポート"
 tool_name: "Docker"
-category: "構成管理"
+category: "開発者ツール"
 developer: "Docker, Inc."
 official_site: "https://www.docker.com/"
 links:
   github: "https://github.com/docker/cli"
 date: "2025-10-30"
-last_updated: "2025-10-30"
+last_updated: "2026-01-08"
 tags:
   - "コンテナ"
   - "仮想化"
@@ -30,7 +30,7 @@ relationships:
 * **公式サイト**: [https://www.docker.com/](https://www.docker.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/docker/cli](https://github.com/docker/cli)
-* **カテゴリ**: 構成管理
+* **カテゴリ**: 開発者ツール
 * **概要**: Dockerは、アプリケーションをコンテナと呼ばれる軽量でポータブルな独立した環境にパッケージ化し、ビルド、テスト、デプロイを迅速に行うためのオープンソースプラットフォームです。
 
 ## **2. 目的と主な利用シーン**
@@ -72,13 +72,13 @@ relationships:
 ## **6. 料金プラン**
 
 * **無料**:
-  * **Docker Personal**: 個人の開発者、教育関係者、非商用オープンソースプロジェクト向け。Docker Desktopの全機能、Docker Hubの無制限パブリックリポジトリなどが無料で利用できます。
+  * **Docker Personal**: 個人の開発者、教育関係者、非商用オープンソースプロジェクト向け。Docker Desktop、Docker Engine、Docker Hub（プライベートリポジトリ1つ）、Docker Scout（リポジトリ1つ）などの基本機能が無料で利用できます。
 * **有料**:
-  * **Pro**: 月額$5/ユーザー。Docker Personalの機能に加え、Docker Hubのプライベートリポジトリ数が増加し、より多くのイメージプルが可能です。
-  * **Team**: 月額$7/ユーザー。Proの機能に加え、チーム管理機能、ロールベースのアクセス制御（RBAC）、監査ログなどが提供されます。
-  * **Business**: 月額$21/ユーザー。Teamの機能に加え、シングルサインオン（SSO）、イメージアクセス管理、セキュリティスキャン（Docker Scout）などの高度なセキュリティ・管理機能が利用できます。
+  * **Pro**: 月額$9/ユーザー（年払い）。個人プロフェッショナル向け。Docker Build CloudやTestcontainers Cloudの無料利用枠、より多くのDocker Scoutリポジトリなどが追加されます。
+  * **Team**: 月額$15/ユーザー（年払い）。小規模チーム向け。無制限のプライベートリポジトリ、チーム管理機能、監査ログなどが提供されます。
+  * **Business**: 月額$24/ユーザー。より大規模な組織向け。シングルサインオン（SSO）、SCIM、Hardened Docker Desktopなどの高度なセキュリティ・管理機能が利用できます。
 * **無料トライアル**:
-  * 有料プランには無料トライアルが提供されています。
+  * Docker Build CloudとTestcontainers Cloudには無料トライアルが提供されています。
 
 ## **7. 導入実績・事例**
 
@@ -131,10 +131,12 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
-* **Docker AI**: 開発者が生成AIアプリケーションを容易に構築・実行できるように支援する新機能群。ローカルで大規模言語モデル（LLM）を実行するためのツールなどが含まれます。
-* **Docker Build Cloud**: ビルドプロセスをクラウドにオフロードし、チームでのビルドを高速化・効率化するサービス。
-* **Testcontainersの統合強化**: テストコードから直接コンテナを管理できるライブラリ「Testcontainers」との連携を深め、開発・テストサイクルをさらに効率化しています。
-* **アップデートの傾向**: 従来のコンテナランタイムとしての機能に加え、AI/ML開発、ソフトウェアサプライチェーンセキュリティ（Docker Scout）、クラウドネイティブなテスト（Testcontainers）など、開発ライフサイクル全体をサポートする方向へと進化を続けています。
+* **Docker Engine v27.x**: 最新の安定版エンジンとしてリリースされ、パフォーマンスの改善やセキュリティ強化が行われています。
+* **Docker AIの進化**: AI/ML開発者向けのツールセットが拡充され、ローカルでの大規模言語モデル（LLM）の実行やエージェント開発を簡素化する「Docker Model Runner」などが導入されています。
+* **Docker Build Cloudの機能強化**: チームでのビルド高速化を実現するクラウドビルドサービスが強化され、より多くのビルド時間と高度なキャッシュ機能が各プランに組み込まれました。
+* **Docker Scoutの一般提供**: ソフトウェアサプライチェーンのセキュリティを確保するため、コンテナイメージの脆弱性分析や依存関係の可視化を行うDocker Scoutが全プランで利用可能になりました。
+* **Testcontainers Cloud**: ローカルやCI環境での依存関係テストをクラウドにオフロードし、リソースの制約なく高速に実行できるTestcontainers Cloudが提供開始されました。
+* **アップデートの傾向**: コアであるコンテナランタイムの安定性を維持しつつ、AI開発、セキュリティ（Scout）、ビルド高速化（Build Cloud）、クラウドネイティブテスト（Testcontainers）といった、開発ライフサイクル全体を支援するPaaSとしての機能を急速に強化しています。
 
 ## **14. 類似ツールとの比較**
 
