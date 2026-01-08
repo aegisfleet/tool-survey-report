@@ -7,18 +7,40 @@ official_site: "https://github.com/features/actions"
 links:
   github: "https://github.com/actions/runner"
 date: "2025-10-18"
-last_updated: "2025-11-03"
+last_updated: "2026-01-08"
 tags:
   - "CI/CD"
   - "ワークフロー自動化"
   - "GitHub"
   - "DevOps"
+  - "SaaS"
 description: "GitHubに統合されたCI/CDプラットフォーム。ビルド、テスト、デプロイなどのソフトウェア開発ワークフローを自動化します。"
+quick_summary:
+  has_free_plan: true
+  starting_price: "無料"
+  target_users:
+    - "開発者"
+    - "DevOpsエンジニア"
+  latest_highlight: "継続的なランナー環境の更新とセキュリティ強化"
+  update_frequency: "高"
+evaluation:
+  score: 73
+  base_score: 70
+  plus_points:
+    - point: 5
+      reason: "GitHubとの完全な統合と豊富なMarketplaceアクション"
+    - point: 3
+      reason: "OIDC連携などモダンな認証によるセキュリティ強化"
+  minus_points:
+    - point: -3
+      reason: "複雑なパイプラインにおけるYAMLの管理コスト"
+    - point: -2
+      reason: "ホステッドランナーの実行パフォーマンスが不安定な場合がある"
+  summary: "GitHubとの統合が強力だが、複雑なワークフローでは管理コストが課題となる"
 relationships:
   parent: "GitHub"
   related_tools:
     - "Jenkins"
-    - "GitLab CI/CD"
 ---
 
 # **GitHub Actions 調査レポート**
@@ -153,11 +175,13 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
-* **macOSランナーのアップデート (2025年8月〜11月)**:
-  * `macos-latest` ラベルがmacOS 15に移行されます。 (2025年8月4日〜9月1日)
-  * macOS 13 ランナーが廃止されます。 (2025年9月1日〜11月14日)
-  * VMイメージに含まれるXcodeのシミュレータが最大3つのランタイムに制限されます。(2025年8月11日以降)
-  * (出典: [Macfleet Blog](https://www.macfleet.cloud/blog/github-actions-macos-runners-changes-2025), 2025-07-11)
+GitHub Actionsは継続的にアップデートされており、直近では主にランナー環境の更新やセキュリティ強化が中心となっています。
+
+* **ランナー環境の定期更新**: GitHubホステッドランナーの仮想環境（OS、プリインストールされるソフトウェア）は常に最新化されており、開発者は最新のツールチェインを利用できます。
+* **セキュリティ強化**: OIDC (OpenID Connect) サポートの拡充や、きめ細やかなアクセスコントロール機能の追加など、サプライチェーンセキュリティを強化するための改善が継続的にリリースされています。
+* **パフォーマンスと信頼性の向上**: 大規模なワークフローの安定実行や、実行時間の短縮に向けたプラットフォーム全体のパフォーマンス改善が常に行われています。
+
+(出典: [GitHub Changelog](https://github.blog/changelog/category/actions/))
 
 ## **14. 類似ツールとの比較**
 
