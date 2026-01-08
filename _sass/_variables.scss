@@ -92,10 +92,19 @@ $border-radius-sm: 0.25rem;
 $border-radius-lg: 0.5rem;
 $border-radius-xl: 1rem;
 
-// Shadows
-$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+// Shadows - Enhanced for visual depth
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+$box-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+$box-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+$box-shadow-hover: 0 12px 32px rgba(255, 119, 51, 0.25);
+
+// Gradients
+$gradient-primary: linear-gradient(135deg, #ff7733 0%, #ff5566 100%);
+$gradient-secondary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+$gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+$gradient-card-hover: linear-gradient(135deg, rgba(255, 119, 51, 0.05) 0%, rgba(255, 85, 102, 0.05) 100%);
 
 // Transitions
 $transition-base: all 0.2s ease-in-out;

@@ -114,28 +114,85 @@
     }
 }
 
-// Random picks section
+// Random picks section - Featured design
 .random-picks {
-    @include card(map-get($spacers, 4));
-    margin-bottom: map-get($spacers, 4);
-    background: linear-gradient(135deg, lighten($secondary-color, 40%), $white);
+    @include card(map-get($spacers, 5));
+    margin-bottom: map-get($spacers, 5);
+    background: $gradient-primary;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        pointer-events: none;
+    }
 
     h2 {
         margin: 0 0 map-get($spacers, 1) 0;
-        color: $secondary-color;
-        font-size: 1.5rem;
+        color: $white;
+        font-size: 1.75rem;
+        font-weight: $font-weight-bold;
+        display: flex;
+        align-items: center;
+        gap: map-get($spacers, 2);
+    }
+
+    .picks-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: map-get($spacers, 3);
+        flex-wrap: wrap;
+        gap: map-get($spacers, 2);
     }
 
     .picks-desc {
-        color: $text-muted;
+        color: rgba($white, 0.9);
+        font-size: $font-size-base;
+        margin: 0;
+    }
+
+    .refresh-btn {
+        background: rgba($white, 0.2);
+        border: 2px solid rgba($white, 0.5);
+        color: $white;
+        padding: map-get($spacers, 2) map-get($spacers, 3);
+        border-radius: $border-radius-xl;
+        cursor: pointer;
+        font-weight: $font-weight-medium;
         font-size: $font-size-sm;
-        margin: 0 0 map-get($spacers, 3) 0;
+        transition: $transition-base;
+        display: flex;
+        align-items: center;
+        gap: map-get($spacers, 1);
+
+        &:hover {
+            background: rgba($white, 0.3);
+            transform: scale(1.05);
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
     }
 
     .picks-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: map-get($spacers, 3);
+        gap: map-get($spacers, 4);
+        position: relative;
+        z-index: 1;
+
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         @include media-breakpoint-down(md) {
             grid-template-columns: 1fr;
@@ -143,34 +200,77 @@
     }
 
     .pick-card {
-        @include card(map-get($spacers, 3));
+        background: $white;
+        border-radius: $border-radius-lg;
+        padding: map-get($spacers, 4);
         display: flex;
         flex-direction: column;
-        gap: map-get($spacers, 1);
+        gap: map-get($spacers, 2);
         text-decoration: none;
-        transition: $transition-base;
-        background-color: $white;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: $box-shadow-lg;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: $gradient-primary;
+        }
 
         &:hover {
-            transform: translateY(-2px);
-            box-shadow: $box-shadow;
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: $box-shadow-xl;
         }
 
         .pick-title {
             color: $text-color;
             font-weight: $font-weight-bold;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
+            line-height: $line-height-sm;
         }
 
         .pick-category {
             color: $secondary-color;
             font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
+            display: flex;
+            align-items: center;
+            gap: map-get($spacers, 1);
+
+            &::before {
+                content: '📁';
+            }
         }
 
         .pick-score {
-            color: #f5a623;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: $gradient-primary;
+            color: $white;
             font-weight: $font-weight-bold;
-            font-size: $font-size-sm;
+            font-size: $font-size-base;
+            padding: map-get($spacers, 1) map-get($spacers, 3);
+            border-radius: $border-radius-xl;
+            margin-top: auto;
+            align-self: flex-start;
+        }
+
+        .pick-free-badge {
+            position: absolute;
+            top: map-get($spacers, 3);
+            right: map-get($spacers, 3);
+            background: $gradient-success;
+            color: $white;
+            font-size: $font-size-xs;
+            font-weight: $font-weight-bold;
+            padding: map-get($spacers, 1) map-get($spacers, 2);
+            border-radius: $border-radius;
         }
     }
 }
@@ -263,7 +363,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    
+
     @include media-breakpoint-down(sm) {
         width: 100%;
     }
@@ -272,7 +372,7 @@
 .sort-container {
     display: flex;
     flex-direction: column;
-    
+
     @include media-breakpoint-down(sm) {
         width: 100%;
     }
@@ -325,11 +425,31 @@
 
 .report-card {
     @include card(map-get($spacers, 4));
-    @include hover-lift;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 4px solid transparent;
+    position: relative;
 
     &:hover {
-        box-shadow: $box-shadow;
-        transform: translateY(-2px);
+        box-shadow: $box-shadow-hover;
+        transform: translateY(-6px);
+        border-left-color: $primary-color;
+        background: $gradient-card-hover;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: $gradient-primary;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
     }
 }
 
@@ -370,22 +490,22 @@
     display: flex;
     flex-wrap: wrap;
     gap: map-get($spacers, 2);
-    
+
     .meta-item {
         display: inline-flex;
         align-items: center;
         gap: map-get($spacers, 1);
         font-size: $font-size-sm;
         color: $text-muted;
-        
+
         svg {
             flex-shrink: 0;
         }
-        
+
         &.developer {
             color: $primary-color;
         }
-        
+
         &.category {
             color: $secondary-color;
         }
@@ -543,7 +663,7 @@
 
     .btn {
         @extend %button-base;
-        
+
         &:not(.btn-primary):not(.btn-outline) {
             @extend .btn-secondary;
         }

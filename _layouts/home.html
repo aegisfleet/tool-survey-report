@@ -14,13 +14,26 @@ layout: default
 
     <!-- ランダムピックアップ -->
     <section class="random-picks">
-      <h2>🎲 おすすめピックアップ</h2>
-      <p class="picks-desc">ランダムに選ばれた3つのレポートをご紹介</p>
+      <div class="picks-header">
+        <div>
+          <h2>🎲 おすすめピックアップ</h2>
+          <p class="picks-desc">ランダムに選ばれた3つのレポートをご紹介</p>
+        </div>
+        <button type="button" class="refresh-btn" id="refresh-picks" aria-label="別のレポートを表示">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+          </svg>
+          シャッフル
+        </button>
+      </div>
       <div class="picks-grid" id="random-picks-grid">
         {% assign all_reports = site.reports | sort: 'last_updated' | reverse %}
         {% for report in all_reports limit: 3 %}
         <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
           data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
+          {% if report.quick_summary.has_free_plan %}
+          <span class="pick-free-badge">無料プランあり</span>
+          {% endif %}
           <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
           <span class="pick-category">{{ report.category }}</span>
           {% if report.evaluation.score %}
@@ -326,5 +339,18 @@ layout: default
 
     // ページロード時にランダムシャッフル
     shuffleRandomPicks();
+
+    // リフレッシュボタンのクリックイベント
+    const refreshBtn = document.getElementById('refresh-picks');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', function () {
+        shuffleRandomPicks();
+        // ボタンを一瞬回転させるアニメーション
+        this.style.transform = 'scale(1.1) rotate(180deg)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 300);
+      });
+    }
   });
 </script>
