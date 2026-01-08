@@ -20,6 +20,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install js-yaml
+        run: npm install js-yaml
+
       - name: Check and merge reports only PRs
         uses: actions/github-script@v8
         env:
@@ -66,6 +69,81 @@ jobs:
               core.info('At least one changed file is outside _reports/ — skipping auto-merge.');
               return;
             }
+
+            // Validate frontmatter of changed Markdown files
+            const fs = require('fs');
+            const yaml = require('js-yaml');
+            const mdFiles = files.filter(f => f.endsWith('.md'));
+            
+            for (const file of mdFiles) {
+              core.info(`Validating frontmatter: ${file}`);
+              
+              let content;
+              try {
+                content = fs.readFileSync(file, 'utf8');
+              } catch (err) {
+                // File might be deleted in this PR, skip validation
+                if (err.code === 'ENOENT') {
+                  core.info(`  File ${file} not found (possibly deleted) — skipping validation.`);
+                  continue;
+                }
+                throw err;
+              }
+              
+              // Check frontmatter structure
+              if (!content.startsWith('---\n') && !content.startsWith('---\r\n')) {
+                const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nファイルが「---」で始まっていません。フロントマターの開始マーカーがありません。`;
+                core.error(errorMsg);
+                await github.rest.issues.createComment({ 
+                  owner, 
+                  repo, 
+                  issue_number: prNumber, 
+                  body: errorMsg + '\n\n自動マージを中止しました。フロントマターを修正してください。'
+                });
+                throw new Error(`Frontmatter validation failed for ${file}: missing opening ---`);
+              }
+              
+              // Find the closing ---
+              const lines = content.split(/\r?\n/);
+              let closingIndex = -1;
+              for (let i = 1; i < lines.length; i++) {
+                if (lines[i] === '---') {
+                  closingIndex = i;
+                  break;
+                }
+              }
+              
+              if (closingIndex === -1) {
+                const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nフロントマターの終了マーカー「---」が見つかりません。`;
+                core.error(errorMsg);
+                await github.rest.issues.createComment({ 
+                  owner, 
+                  repo, 
+                  issue_number: prNumber, 
+                  body: errorMsg + '\n\n自動マージを中止しました。フロントマターを修正してください。'
+                });
+                throw new Error(`Frontmatter validation failed for ${file}: missing closing ---`);
+              }
+              
+              // Extract and validate YAML
+              const frontmatterContent = lines.slice(1, closingIndex).join('\n');
+              try {
+                yaml.load(frontmatterContent);
+                core.info(`  ✅ Frontmatter is valid.`);
+              } catch (yamlErr) {
+                const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nYAML構文エラー: ${yamlErr.message}`;
+                core.error(errorMsg);
+                await github.rest.issues.createComment({ 
+                  owner, 
+                  repo, 
+                  issue_number: prNumber, 
+                  body: errorMsg + '\n\n自動マージを中止しました。フロントマターを修正してください。'
+                });
+                throw new Error(`Frontmatter validation failed for ${file}: ${yamlErr.message}`);
+              }
+            }
+            
+            core.info('All frontmatter validations passed.');
 
             // If PR is draft, convert to ready_for_review first so the merge can proceed
             if (pr.draft) {
