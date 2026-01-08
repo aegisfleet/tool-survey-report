@@ -17,7 +17,6 @@ description: "ツールの概要を1-2行で簡潔に記述（『〜に関する
 
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
-  score: 4.0  # 5点満点の総合スコア（調査者評価）
   has_free_plan: true  # 無料プランの有無
   starting_price: "$10/月"  # 最低価格（無料の場合は「無料」）
   target_users:  # 想定ユーザー（1-3項目）
@@ -25,6 +24,20 @@ quick_summary:
     - "スタートアップ"
   latest_highlight: "2025年12月にAIエージェント機能を追加"  # 直近1ヶ月の注目アップデート
   update_frequency: "高"  # 更新頻度（高/中/低/不定期）
+
+# 【ツール評価】100点満点、基準点70点からの加減算方式
+evaluation:
+  score: 75  # 最終スコア（0-100点）
+  base_score: 70  # 基準点（固定）
+  plus_points:  # 加点項目（各項目: 点数と理由）
+    - point: 5
+      reason: "機能が豊富で競合より優れている"
+    - point: 3
+      reason: "日本語対応が充実"
+  minus_points:  # 減点項目（各項目: 点数と理由）
+    - point: -3
+      reason: "料金が競合より高め"
+  summary: "機能面では優れているが、コスト面での検討が必要"  # 評価の要約（1文）
 
 # 【任意項目】該当するもののみ記載
 links:

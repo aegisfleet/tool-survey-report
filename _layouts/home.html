@@ -52,8 +52,8 @@ layout: default
           data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
           <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
           <span class="pick-category">{{ report.category }}</span>
-          {% if report.quick_summary.score %}
-          <span class="pick-score">★ {{ report.quick_summary.score }}</span>
+          {% if report.evaluation.score %}
+          <span class="pick-score">{{ report.evaluation.score }}点</span>
           {% endif %}
         </a>
         {% endfor %}
