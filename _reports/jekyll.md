@@ -15,6 +15,9 @@ tags:
 relationships:
   related_tools:
     - Hugo
+quick_summary:
+  is_oss: true
+
 description: "Jekyllは、シンプルなテキストを静的なウェブサイトやブログに変換するツールです。"
 ---
 

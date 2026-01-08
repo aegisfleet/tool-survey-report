@@ -15,6 +15,9 @@ tags:
   - "構成管理"
   - "DevOps"
   - "IaC"
+quick_summary:
+  is_oss: true
+
 description: "Ansibleは、プロビジョニング、構成管理、アプリケーションのデプロイメント、オーケストレーションを自動化するオープンソースのIT自動化エンジンです。"
 relationships:
   related_tools:

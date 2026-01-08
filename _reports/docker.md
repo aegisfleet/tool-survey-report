@@ -14,6 +14,9 @@ tags:
   - "開発環境"
   - "オープンソース"
   - "DevOps"
+quick_summary:
+  is_oss: true
+
 description: "アプリケーションをコンテナとして構築、共有、実行するためのオープンソースプラットフォームです。"
 relationships:
   related_tools:

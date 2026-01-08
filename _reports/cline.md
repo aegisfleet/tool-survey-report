@@ -14,6 +14,9 @@ tags:
   - "オープンソース"
   - "エージェント"
   - "IDE拡張機能"
+quick_summary:
+  is_oss: true
+
 description: "VS CodeなどのIDE内で動作する協調型コーディングエージェント。ブラウザベースのツールとは異なり、ローカルのコードベース全体を直接理解し、人間と協力して計画を立て、変更を実行する。"
 relationships:
   related_tools:

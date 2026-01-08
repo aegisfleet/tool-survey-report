@@ -13,6 +13,9 @@ tags:
   - "E2Eテスト"
   - "フロントエンド開発"
   - "JavaScript"
+quick_summary:
+  is_oss: true
+
 description: "モダンなWebアプリケーションのための次世代フロントエンドテストツール。ローカルでのテスト実行とデバッグを効率化するCypress Appと、テスト結果の分析や大規模な並列実行を可能にするCypress Cloudから構成される。"
 relationships:
   related_tools:

@@ -15,6 +15,9 @@ tags:
   - "Java"
   - "API"
   - "テスト自動化"
+quick_summary:
+  is_oss: true
+
 description: "Apache JMeterは、Webアプリケーションのパフォーマンス測定と負荷テストのために設計された、100% Pure Javaのオープンソースソフトウェアです。"
 relationships:
   related_tools:

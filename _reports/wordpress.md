@@ -12,6 +12,9 @@ tags:
   - "CMS"
   - "オープンソース"
   - "ブログ"
+quick_summary:
+  is_oss: true
+
 description: "世界で最も人気のあるオープンソースのコンテンツ管理システム（CMS）"
 ---
 

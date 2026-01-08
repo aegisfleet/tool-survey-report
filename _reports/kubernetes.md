@@ -13,6 +13,9 @@ tags:
   - "コンテナオーケストレーション"
   - "オープンソース"
   - "クラウドネイティブ"
+quick_summary:
+  is_oss: true
+
 description: "コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションシステム。"
 relationships:
   related_tools:

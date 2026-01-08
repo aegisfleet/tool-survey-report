@@ -13,6 +13,9 @@ tags:
   - "Jamstack"
   - "パフォーマンス"
   - "アイランドアーキテクチャ"
+quick_summary:
+  is_oss: true
+
 description: "Astroは、高速なコンテンツ駆動型ウェブサイトを構築するために最適化されたJavaScriptウェブフレームワークです。"
 ---
 

@@ -15,6 +15,9 @@ tags:
   - "オープンソース"
   - "JavaScript"
   - "BDD"
+quick_summary:
+  is_oss: true
+
 description: "Playwright, WebDriver, Puppeteerなどを利用してE2Eテストをシンプルに記述できる、シナリオ駆動のテスト自動化フレームワーク。"
 relationships:
   related_tools:

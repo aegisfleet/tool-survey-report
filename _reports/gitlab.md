@@ -11,6 +11,9 @@ tags:
   - "ソースコード管理"
   - "CI/CD"
   - "DevOps"
+quick_summary:
+  is_oss: true
+
 description: "GitLabは、ソフトウェア開発ライフサイクル全体をカバーする単一のアプリケーションとして提供される、AI搭載のDevSecOpsプラットフォームです。"
 relationships:
   children:

@@ -17,6 +17,9 @@ tags:
   - "自動化"
   - "Python"
   - "大規模言語モデル"
+quick_summary:
+  is_oss: true
+
 description: "目標を設定するだけでタスクを自律的に実行するAIエージェント構築プラットフォーム"
 relationships:
   related_tools:

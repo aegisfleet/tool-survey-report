@@ -12,6 +12,9 @@ tags:
   - "Python"
   - "テストフレームワーク"
   - "オープンソース"
+quick_summary:
+  is_oss: true
+
 description: "Pythonで広く利用されている、シンプルかつ強力なテスト自動化フレームワーク。"
 ---
 

@@ -12,6 +12,9 @@ tags:
   - "プロジェクト管理"
   - "課題管理"
   - "オープンソース"
+quick_summary:
+  is_oss: true
+
 description: "Redmineは、オープンソースの柔軟なプロジェクト管理・課題管理ツールです。"
 ---
 

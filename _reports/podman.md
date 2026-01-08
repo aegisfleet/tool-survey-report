@@ -15,6 +15,9 @@ tags:
   - "オープンソース"
   - "DevOps"
   - "Docker互換"
+quick_summary:
+  is_oss: true
+
 description: "デーモンレスアーキテクチャを採用した、OCI準拠のコンテナ管理ツールです。"
 relationships:
   related_tools:

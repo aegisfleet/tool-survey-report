@@ -15,6 +15,9 @@ tags:
   - "E2Eテスト"
   - "Java"
   - "Python"
+quick_summary:
+  is_oss: true
+
 description: "Webブラウザの操作を自動化するためのオープンソースフレームワーク群。主にWebアプリケーションのテストに利用される。"
 relationships:
   related_tools:

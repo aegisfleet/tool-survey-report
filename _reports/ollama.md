@@ -15,6 +15,9 @@ tags:
   - "オープンソース"
   - "開発者ツール"
   - "推論"
+quick_summary:
+  is_oss: true
+
 description: "オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのツール"
 relationships:
   related_tools:

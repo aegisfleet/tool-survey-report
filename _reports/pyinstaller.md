@@ -15,6 +15,9 @@ tags:
   - "配布"
   - "クロスプラットフォーム"
   - "開発者ツール"
+quick_summary:
+  is_oss: true
+
 description: "Pythonアプリケーションとその依存関係をまとめ、Python環境のないコンピュータでも実行可能な単一の実行ファイル等に変換するバンドルツール。"
 relationships:
   related_tools:

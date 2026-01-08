@@ -14,6 +14,9 @@ tags:
   - "Python"
   - "オープンソース"
   - "キーワード駆動テスト"
+quick_summary:
+  is_oss: true
+
 description: "キーワード駆動型で読みやすい構文を持つ、オープンソースの汎用テスト自動化・RPAフレームワーク"
 relationships:
   related_tools:

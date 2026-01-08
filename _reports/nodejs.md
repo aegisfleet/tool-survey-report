@@ -13,6 +13,9 @@ tags:
   - "サーバーサイド"
   - "オープンソース"
   - "開発者ツール"
+quick_summary:
+  is_oss: true
+
 description: "非同期イベント駆動型のJavaScriptランタイム環境で、スケーラブルなネットワークアプリケーションの構築に使用されます。"
 relationships:
   related_tools:

@@ -16,6 +16,9 @@ tags:
   - "JavaScript"
   - "Python"
   - "Java"
+quick_summary:
+  is_oss: true
+
 description: "Playwrightは、最新のWebアプリケーション向けの高速で信頼性の高いエンドツーエンドのテストを可能にするオープンソースのフレームワークです。"
 relationships:
   related_tools:

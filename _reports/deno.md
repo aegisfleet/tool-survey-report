@@ -16,6 +16,9 @@ tags:
   - "開発者ツール"
   - "サーバーレス"
   - "WebAssembly"
+quick_summary:
+  is_oss: true
+
 description: "セキュリティと開発者体験を重視した、モダンなJavaScript/TypeScriptランタイム"
 relationships:
   related_tools:

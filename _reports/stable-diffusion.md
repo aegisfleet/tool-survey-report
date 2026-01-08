@@ -15,6 +15,9 @@ tags:
   - "生成AI"
   - "画像生成"
   - "ローカルAI"
+quick_summary:
+  is_oss: true
+
 description: "テキストから高品質な画像を生成できる、オープンソースの画像生成AIモデル。ローカル環境での実行や柔軟なカスタマイズが可能。"
 relationships:
   parent: ""

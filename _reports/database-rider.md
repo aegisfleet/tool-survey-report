@@ -15,6 +15,9 @@ tags:
   - "データベース"
   - "テスト"
   - "オープンソース"
+quick_summary:
+  is_oss: true
+
 description: "JUnitとDBUnitを統合し、データベーステストのためのデータセット管理とライフサイクル制御を簡素化するJava向けテストツール。"
 ---
 

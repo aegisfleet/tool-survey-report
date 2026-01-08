@@ -18,7 +18,8 @@ description: "写真のレタッチ、画像の合成、画像オーサリング
 
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
-  has_free_plan: true
+  
+  is_oss: truehas_free_plan: true
   starting_price: "無料"
   target_users:
     - "デザイナー"

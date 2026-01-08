@@ -11,6 +11,9 @@ tags:
   - "開発者ツール"
   - "VS Code"
   - "オープンソース"
+quick_summary:
+  is_oss: true
+
 description: "VS Code内で動作するオープンソースのAI搭載コーディングアシスタント。メタデータ駆動のサブタスク管理や15以上のプロバイダーに対応したネイティブツール呼び出しにより、複雑な開発ワークフローを自動化します。"
 relationships:
   related_tools:

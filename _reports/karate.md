@@ -16,6 +16,9 @@ tags:
   - "オープンソース"
   - "BDD"
   - "Java"
+quick_summary:
+  is_oss: true
+
 description: "APIテスト、UIテスト、負荷テストを統合したオープンソースのテスト自動化フレームワーク。Gherkin記法を用いたローコードなテスト記述が特徴で、開発者とQAエンジニアのコラボレーションを促進します。"
 relationships:
   related_tools:

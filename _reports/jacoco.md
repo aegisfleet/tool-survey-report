@@ -13,6 +13,9 @@ tags:
   - "コードカバレッジ"
   - "オープンソース"
   - "CI/CD"
+quick_summary:
+  is_oss: true
+
 description: "JaCoCoは、Java VMベースの環境でコードカバレッジ分析を行うための、無料で軽量、柔軟かつ文書化されたライブラリです。"
 ---
 

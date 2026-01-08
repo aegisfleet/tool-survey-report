@@ -13,6 +13,9 @@ tags:
   - "オープンソース"
   - "自動化"
   - "DevOps"
+quick_summary:
+  is_oss: true
+
 description: "Jenkinsは、ビルド、テスト、デプロイを自動化するオープンソースのCI/CDサーバーです。"
 relationships:
   related_tools:

@@ -16,6 +16,9 @@ tags:
   - "ディープラーニング"
   - "MLOps"
   - "Python"
+quick_summary:
+  is_oss: true
+
 description: "Googleが開発した、機械学習モデルの構築・トレーニング・デプロイのための包括的なエンドツーエンドのオープンソースプラットフォーム。"
 relationships:
   related_tools:

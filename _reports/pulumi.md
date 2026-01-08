@@ -16,6 +16,9 @@ tags:
   - "DevOps"
   - "オープンソース"
   - "AI"
+quick_summary:
+  is_oss: true
+
 description: "使い慣れたプログラミング言語やHCLでインフラをコードとして管理できる、AI搭載のオープンソースIaCプラットフォーム"
 relationships:
   related_tools:

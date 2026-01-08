@@ -14,6 +14,9 @@ tags:
   - "オープンソース"
   - "構成管理"
   - "AWS"
+quick_summary:
+  is_oss: true
+
 description: "柔軟性、パフォーマンス、シンプルさを追求して構築された、Kubernetes向けのオープンソースノードオートスケーラー"
 ---
 

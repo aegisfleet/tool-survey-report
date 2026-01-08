@@ -14,6 +14,9 @@ tags:
   - "自動化"
   - "クラウド"
   - "オープンソース"
+quick_summary:
+  is_oss: true
+
 description: "OpenTofuは、Terraformのオープンソースフォークであり、コードとしてのインフラストラクチャ(IaC)を宣言的に管理します。"
 relationships:
   parent: "Terraform"

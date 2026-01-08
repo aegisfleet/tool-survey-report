@@ -15,6 +15,9 @@ tags:
   - "Java"
   - "Python"
   - "JavaScript"
+quick_summary:
+  is_oss: true
+
 description: "ネイティブ、ハイブリッド、モバイルWebアプリ向けのオープンソースのテスト自動化フレームワーク。"
 relationships:
   related_tools:

@@ -12,6 +12,9 @@ tags:
   - "Java"
   - "単体テスト"
   - "xUnit"
+quick_summary:
+  is_oss: true
+
 description: "Javaプログラミング言語向けの、繰り返し可能なテストを作成するためのシンプルなオープンソースのテスト自動化フレームワークです。"
 ---
 
