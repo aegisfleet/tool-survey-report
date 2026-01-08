@@ -22,6 +22,7 @@ relationships:
   related_tools:
     - "Hugging Face"
     - "ChatGPT"
+    - "Gemini"
 ---
 
 # **Stable Diffusion 調査レポート**
