@@ -333,6 +333,18 @@ layout: default
           card.href = shuffled[index].url;
           card.querySelector('.pick-title').textContent = shuffled[index].title;
           card.querySelector('.pick-category').textContent = shuffled[index].category;
+
+          // スコアバッジを非表示にする（シャッフル後はスコア情報がないため）
+          const scoreEl = card.querySelector('.pick-score');
+          if (scoreEl) {
+            scoreEl.style.display = 'none';
+          }
+
+          // 無料プランバッジを非表示にする
+          const freeBadge = card.querySelector('.pick-free-badge');
+          if (freeBadge) {
+            freeBadge.style.display = 'none';
+          }
         }
       });
     }
