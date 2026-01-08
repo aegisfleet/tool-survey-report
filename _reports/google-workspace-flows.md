@@ -17,6 +17,7 @@ relationships:
   related_tools:
     - "Zapier"
     - "Microsoft Power Automate"
+    - "Google Opal"
 ---
 
 # **Google Workspace Flows 調査レポート**
