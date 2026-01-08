@@ -305,14 +305,6 @@ layout: default
       }
     });
 
-    // タッチイベントも処理（スマートフォン対応）
-    document.addEventListener('touchend', function (e) {
-      if (e.target.classList.contains('tag')) {
-        e.preventDefault();
-        handleTagClick(e.target);
-      }
-    });
-
     // タグクリック処理を共通化
     function handleTagClick(tagElement) {
       const tagValue = tagElement.dataset.tag;
