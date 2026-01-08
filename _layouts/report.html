@@ -93,6 +93,119 @@ layout: default
     {% endif %}
   </header>
 
+  <!-- クイックサマリーカード -->
+  {% if page.quick_summary or page.evaluation %}
+  <section class="quick-summary-section">
+    <div class="quick-summary-grid">
+
+      {% if page.evaluation.score %}
+      <div class="summary-card score-card">
+        <div class="summary-icon">📊</div>
+        <div class="summary-content">
+          <div class="summary-label">総合評価</div>
+          <div class="summary-value score-value">{{ page.evaluation.score }}点</div>
+          <div class="summary-note">基準点70点からの評価</div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.quick_summary.has_free_plan != nil %}
+      <div class="summary-card">
+        <div class="summary-icon">{% if page.quick_summary.has_free_plan %}💚{% else %}💰{% endif %}</div>
+        <div class="summary-content">
+          <div class="summary-label">無料プラン</div>
+          <div class="summary-value">{% if page.quick_summary.has_free_plan %}あり{% else %}なし{% endif %}</div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.quick_summary.starting_price %}
+      <div class="summary-card">
+        <div class="summary-icon">💵</div>
+        <div class="summary-content">
+          <div class="summary-label">最低価格</div>
+          <div class="summary-value">{{ page.quick_summary.starting_price }}</div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 %}
+      <div class="summary-card">
+        <div class="summary-icon">👥</div>
+        <div class="summary-content">
+          <div class="summary-label">対象ユーザー</div>
+          <div class="summary-value target-users">
+            {% for user in page.quick_summary.target_users %}
+            <span class="target-user-tag">{{ user }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.quick_summary.update_frequency %}
+      <div class="summary-card">
+        <div class="summary-icon">🔄</div>
+        <div class="summary-content">
+          <div class="summary-label">更新頻度</div>
+          <div class="summary-value">{{ page.quick_summary.update_frequency }}</div>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+
+    {% if page.quick_summary.latest_highlight %}
+    <div class="latest-highlight">
+      <span class="highlight-label">🆕 最新情報:</span>
+      <span class="highlight-text">{{ page.quick_summary.latest_highlight }}</span>
+    </div>
+    {% endif %}
+
+    <!-- 評価の詳細 -->
+    {% if page.evaluation.plus_points or page.evaluation.minus_points %}
+    <div class="evaluation-details">
+      <h3 class="evaluation-title">📋 評価の詳細</h3>
+
+      {% if page.evaluation.plus_points and page.evaluation.plus_points.size > 0 %}
+      <div class="evaluation-group plus-points">
+        <h4>👍 加点項目</h4>
+        <ul>
+          {% for item in page.evaluation.plus_points %}
+          <li>
+            <span class="eval-point plus">+{{ item.point }}</span>
+            <span class="eval-reason">{{ item.reason }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.evaluation.minus_points and page.evaluation.minus_points.size > 0 %}
+      <div class="evaluation-group minus-points">
+        <h4>👎 減点項目</h4>
+        <ul>
+          {% for item in page.evaluation.minus_points %}
+          <li>
+            <span class="eval-point minus">{{ item.point }}</span>
+            <span class="eval-reason">{{ item.reason }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.evaluation.summary %}
+      <div class="evaluation-summary">
+        <strong>総評:</strong> {{ page.evaluation.summary }}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </section>
+  {% endif %}
+
   {% include related-tools.html %}
 
   <div class="report-content" itemprop="articleBody">

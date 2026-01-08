@@ -6,7 +6,7 @@
   max-width: 800px;
   margin: map-get($spacers, 4) auto;
   overflow: hidden; // ヘッダーの角丸を適用するため
-  
+
   @include media-breakpoint-down(md) {
     margin: map-get($spacers, 3) auto;
   }
@@ -27,11 +27,11 @@
   font-weight: $font-weight-bold;
   line-height: $line-height-sm;
   color: $primary-color;
-  
+
   @include media-breakpoint-down(md) {
     font-size: 2rem;
   }
-  
+
   @include media-breakpoint-down(sm) {
     font-size: 1.75rem;
   }
@@ -42,7 +42,7 @@
   flex-wrap: wrap;
   gap: map-get($spacers, 4);
   margin-bottom: map-get($spacers, 4);
-  
+
   @include media-breakpoint-down(sm) {
     flex-direction: column;
     gap: map-get($spacers, 2);
@@ -59,16 +59,16 @@
   gap: map-get($spacers, 2);
   font-size: $font-size-sm;
   color: $text-muted;
-  
+
   svg {
     flex-shrink: 0;
     width: 16px;
     height: 16px;
   }
-  
+
   a {
     color: inherit;
-    
+
     &:hover,
     &:focus {
       color: $link-color;
@@ -80,7 +80,7 @@
   display: flex;
   align-items: flex-start;
   gap: map-get($spacers, 2);
-  
+
   svg {
     flex-shrink: 0;
     width: 16px;
@@ -94,7 +94,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: map-get($spacers, 2);
-  
+
   li {
     margin-bottom: 0;
   }
@@ -110,7 +110,7 @@
   border-radius: $border-radius;
   border-left: 4px solid $secondary-color;
   margin: map-get($spacers, 3) 0;
-  
+
   p {
     margin-bottom: 0;
     font-size: $font-size-lg;
@@ -126,34 +126,39 @@
   line-height: $line-height-lg;
   font-size: 1.1rem;
   background-color: $content-bg;
-  
+
   @include media-breakpoint-down(md) {
     padding: 0 map-get($spacers, 3) map-get($spacers, 3);
   }
-  
+
   // Typography in content
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-top: map-get($spacers, 5);
     margin-bottom: map-get($spacers, 3);
     scroll-margin-top: 100px; // スティッキーヘッダーの高さを考慮
-    
+
     &:first-child {
       margin-top: 0;
     }
   }
-  
+
   h2 {
     padding-bottom: map-get($spacers, 2);
     border-bottom: 3px solid $secondary-color;
     color: $primary-color;
     font-size: 1.75rem;
   }
-  
+
   h3 {
     color: $secondary-color;
     font-size: 1.5rem;
     position: relative;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -164,46 +169,48 @@
       background-color: $secondary-color;
       border-radius: 2px;
     }
-    
+
     padding-left: map-get($spacers, 3);
   }
-  
+
   // Paragraphs and text
   p {
     margin-bottom: map-get($spacers, 4);
     text-align: justify;
-    
+
     @include media-breakpoint-down(sm) {
       text-align: left;
     }
   }
-  
+
   // Lists
-  ul, ol {
+  ul,
+  ol {
     margin-bottom: map-get($spacers, 4);
     padding-left: map-get($spacers, 5);
-    
+
     li {
       margin-bottom: map-get($spacers, 2);
       line-height: $line-height-lg;
     }
-    
-    ul, ol {
+
+    ul,
+    ol {
       margin-top: map-get($spacers, 2);
       margin-bottom: map-get($spacers, 2);
     }
   }
-  
+
   // Links
   a {
     color: $link-color;
     font-weight: $font-weight-medium;
-    
+
     &:hover,
     &:focus {
       color: $link-hover;
     }
-    
+
     // External links
     &[href^="http"] {
       &::after {
@@ -213,19 +220,19 @@
       }
     }
   }
-  
+
   // Images
   img {
     display: block;
     margin: map-get($spacers, 5) auto;
     border-radius: $border-radius;
     box-shadow: $box-shadow-sm;
-    
+
     @include media-breakpoint-down(sm) {
       margin: map-get($spacers, 4) auto;
     }
   }
-  
+
   // Tables
   table {
     margin: map-get($spacers, 5) 0;
@@ -233,30 +240,30 @@
     border-radius: $border-radius;
     overflow: hidden;
     box-shadow: $box-shadow-sm;
-    
+
     @include media-breakpoint-down(sm) {
       font-size: $font-size-sm;
     }
   }
-  
+
   th {
     background-color: $primary-color;
     color: $white;
     font-weight: $font-weight-semibold;
   }
-  
+
   td {
     border-bottom: 1px solid $border-light;
-    
+
     &:not(:last-child) {
       border-right: 1px solid $border-light;
     }
   }
-  
+
   tr:nth-child(even) td {
     background-color: rgba($light-gray, 0.5);
   }
-  
+
   // Code blocks
   pre {
     margin: map-get($spacers, 5) 0;
@@ -266,14 +273,14 @@
     border-radius: $border-radius;
     overflow-x: auto;
     box-shadow: $box-shadow-sm;
-    
+
     code {
       background-color: transparent;
       color: inherit;
       padding: 0;
     }
   }
-  
+
   // Inline code
   code {
     padding: 0.2em 0.4em;
@@ -282,7 +289,7 @@
     border-radius: $border-radius-sm;
     font-size: 0.9em;
   }
-  
+
   // Blockquotes
   blockquote {
     margin: map-get($spacers, 5) 0;
@@ -290,24 +297,24 @@
     background-color: rgba($info-color, 0.05);
     border-left: 4px solid $info-color;
     border-radius: 0 $border-radius $border-radius 0;
-    
+
     p:last-child {
       margin-bottom: 0;
     }
-    
+
     cite {
       display: block;
       margin-top: map-get($spacers, 2);
       font-size: $font-size-sm;
       color: $text-muted;
       font-style: normal;
-      
+
       &::before {
         content: "— ";
       }
     }
   }
-  
+
   // Horizontal rules
   hr {
     margin: map-get($spacers, 6) 0;
@@ -315,22 +322,22 @@
     height: 2px;
     background: linear-gradient(to right, transparent, $border-color, transparent);
   }
-  
+
   // Definition lists
   dl {
     margin-bottom: map-get($spacers, 4);
   }
-  
+
   dt {
     font-weight: $font-weight-semibold;
     color: $primary-color;
     margin-bottom: map-get($spacers, 1);
   }
-  
+
   dd {
     margin-bottom: map-get($spacers, 3);
     margin-left: map-get($spacers, 4);
-    
+
     @include media-breakpoint-down(sm) {
       margin-left: map-get($spacers, 2);
     }
@@ -343,7 +350,7 @@
   padding: map-get($spacers, 5) map-get($spacers, 4) map-get($spacers, 4);
   background-color: $content-bg;
   border-radius: 0 0 $border-radius $border-radius;
-  
+
   @include media-breakpoint-down(md) {
     padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 3);
   }
@@ -358,7 +365,7 @@
   grid-template-columns: 1fr 1fr;
   gap: map-get($spacers, 4);
   margin-bottom: map-get($spacers, 5);
-  
+
   @include media-breakpoint-down(md) {
     grid-template-columns: 1fr;
     gap: map-get($spacers, 3);
@@ -369,11 +376,11 @@
 .nav-next {
   @include card(map-get($spacers, 4));
   @include hover-lift;
-  
+
   a {
     @include link-reset;
     display: block;
-    
+
     &:hover,
     &:focus {
       .nav-title {
@@ -385,7 +392,7 @@
 
 .nav-previous {
   text-align: left;
-  
+
   @include media-breakpoint-down(md) {
     order: 2;
   }
@@ -393,7 +400,7 @@
 
 .nav-next {
   text-align: right;
-  
+
   @include media-breakpoint-down(md) {
     order: 1;
     text-align: left;
@@ -417,7 +424,7 @@
 
 .back-to-index {
   text-align: center;
-  
+
   .back-link {
     display: inline-flex;
     align-items: center;
@@ -427,14 +434,14 @@
     color: $text-color;
     border-radius: $border-radius;
     transition: $transition-base;
-    
+
     &:hover,
     &:focus {
       background-color: $secondary-color;
       color: $white;
       text-decoration: none;
     }
-    
+
     svg {
       width: 16px;
       height: 16px;
@@ -449,7 +456,7 @@
   border: 1px solid $border-color;
   border-radius: $border-radius;
   background-color: rgba($light-gray, 0.3);
-  
+
   h3 {
     margin-top: 0;
     margin-bottom: map-get($spacers, 4);
@@ -458,27 +465,29 @@
     border-bottom: 2px solid $secondary-color;
     padding-bottom: map-get($spacers, 2);
   }
-  
-  .parent-tool, .child-tools, .sibling-tools {
+
+  .parent-tool,
+  .child-tools,
+  .sibling-tools {
     margin: map-get($spacers, 4) 0;
-    
+
     h4 {
       font-size: 1rem;
       color: $text-color;
       margin-bottom: map-get($spacers, 2);
       font-weight: $font-weight-semibold;
     }
-    
+
     ul {
       @extend %list-reset;
-      
+
       li {
         margin: map-get($spacers, 2) 0;
-        
+
         a {
           color: $link-color;
           font-weight: $font-weight-medium;
-          
+
           &:hover,
           &:focus {
             color: $link-hover;
@@ -488,19 +497,19 @@
       }
     }
   }
-  
+
   .parent-tool {
     border-left: 4px solid $success-color;
     padding-left: map-get($spacers, 3);
     background-color: rgba($success-color, 0.05);
   }
-  
+
   .child-tools {
     border-left: 4px solid $warning-color;
     padding-left: map-get($spacers, 3);
     background-color: rgba($warning-color, 0.05);
   }
-  
+
   .sibling-tools {
     border-left: 4px solid #9f7aea;
     padding-left: map-get($spacers, 3);
@@ -519,26 +528,26 @@
 
 .related-list {
   @extend %list-reset;
-  
+
   li {
     margin-bottom: map-get($spacers, 3);
-    
+
     &:last-child {
       margin-bottom: 0;
     }
   }
-  
+
   a {
     @include card(map-get($spacers, 3));
     @include link-reset;
     display: block;
     transition: $transition-base;
-    
+
     &:hover,
     &:focus {
       box-shadow: $box-shadow;
       transform: translateY(-1px);
-      
+
       .related-title {
         color: $secondary-color;
       }
@@ -558,4 +567,199 @@
   display: block;
   font-size: $font-size-sm;
   color: $text-muted;
+}
+
+// Quick Summary Section
+.quick-summary-section {
+  margin: 0 map-get($spacers, 4) map-get($spacers, 5);
+  padding: map-get($spacers, 4);
+  background: linear-gradient(135deg, rgba($primary-color, 0.05) 0%, rgba($secondary-color, 0.05) 100%);
+  border-radius: $border-radius-lg;
+  border: 1px solid rgba($primary-color, 0.1);
+
+  @include media-breakpoint-down(md) {
+    margin: 0 map-get($spacers, 3) map-get($spacers, 4);
+    padding: map-get($spacers, 3);
+  }
+}
+
+.quick-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: map-get($spacers, 3);
+  margin-bottom: map-get($spacers, 3);
+}
+
+.summary-card {
+  background: $white;
+  padding: map-get($spacers, 3);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+  display: flex;
+  align-items: flex-start;
+  gap: map-get($spacers, 2);
+
+  &.score-card {
+    background: $gradient-primary;
+    color: $white;
+
+    .summary-label,
+    .summary-note {
+      color: rgba($white, 0.9);
+    }
+
+    .summary-value {
+      color: $white;
+    }
+  }
+}
+
+.summary-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.summary-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.summary-label {
+  font-size: $font-size-xs;
+  color: $text-muted;
+  font-weight: $font-weight-medium;
+  margin-bottom: map-get($spacers, 1);
+}
+
+.summary-value {
+  font-size: 1.1rem;
+  font-weight: $font-weight-bold;
+  color: $text-color;
+
+  &.score-value {
+    font-size: 1.5rem;
+  }
+
+  &.target-users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: map-get($spacers, 1);
+  }
+}
+
+.summary-note {
+  font-size: $font-size-xs;
+  color: $text-muted;
+  margin-top: map-get($spacers, 1);
+}
+
+.target-user-tag {
+  display: inline-block;
+  background: rgba($secondary-color, 0.1);
+  color: $secondary-color;
+  padding: 2px 8px;
+  border-radius: $border-radius;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+}
+
+.latest-highlight {
+  padding: map-get($spacers, 3);
+  background: rgba($info-color, 0.1);
+  border-radius: $border-radius;
+  border-left: 4px solid $info-color;
+  margin-bottom: map-get($spacers, 4);
+
+  .highlight-label {
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    margin-right: map-get($spacers, 2);
+  }
+
+  .highlight-text {
+    color: $text-color;
+  }
+}
+
+// Evaluation Details
+.evaluation-details {
+  background: $white;
+  padding: map-get($spacers, 4);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+}
+
+.evaluation-title {
+  margin: 0 0 map-get($spacers, 3) 0 !important;
+  font-size: 1.25rem !important;
+  color: $primary-color;
+  padding-bottom: map-get($spacers, 2);
+  border-bottom: 2px solid $border-color;
+}
+
+.evaluation-group {
+  margin-bottom: map-get($spacers, 4);
+
+  h4 {
+    margin: 0 0 map-get($spacers, 2) 0;
+    font-size: 1rem;
+    color: $text-color;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: map-get($spacers, 2);
+    padding: map-get($spacers, 2) 0;
+    border-bottom: 1px solid $border-light;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.eval-point {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  border-radius: $border-radius;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-sm;
+  flex-shrink: 0;
+
+  &.plus {
+    background: rgba($success-color, 0.1);
+    color: $success-color;
+  }
+
+  &.minus {
+    background: rgba(#e53e3e, 0.1);
+    color: #e53e3e;
+  }
+}
+
+.eval-reason {
+  color: $text-color;
+  line-height: $line-height-base;
+}
+
+.evaluation-summary {
+  padding: map-get($spacers, 3);
+  background: rgba($secondary-color, 0.05);
+  border-radius: $border-radius;
+  border-left: 4px solid $secondary-color;
+  color: $text-color;
+
+  strong {
+    color: $secondary-color;
+  }
 }
