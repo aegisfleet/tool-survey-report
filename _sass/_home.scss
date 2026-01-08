@@ -473,10 +473,43 @@
         }
     }
 
+    .report-header-meta {
+        display: flex;
+        align-items: center;
+        gap: map-get($spacers, 2);
+        flex-wrap: wrap;
+    }
+
     .report-date {
         font-size: $font-size-sm;
         color: $text-muted;
     }
+}
+
+// Card badges
+.card-score-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $gradient-primary;
+    color: $white;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xs;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius-xl;
+}
+
+.card-free-badge {
+    position: absolute;
+    top: map-get($spacers, 2);
+    right: map-get($spacers, 2);
+    background: $gradient-success;
+    color: $white;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius;
+    z-index: 1;
 }
 
 .report-description {

@@ -77,13 +77,23 @@ layout: default
           data-description="{{ report.description | downcase }}"
           data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
           data-developer="{{ report.developer | downcase }}">
+
+          {% if report.quick_summary.has_free_plan %}
+          <span class="card-free-badge">💚 無料プランあり</span>
+          {% endif %}
+
           <div class="report-card-header">
             <h3 class="report-title">
               <a href="{{ report.url | relative_url }}">{{ report.tool_name | default: report.title }}</a>
             </h3>
-            <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
-              {{ report.last_updated | date: "%Y年%m月%d日" }}
-            </time>
+            <div class="report-header-meta">
+              <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
+                {{ report.last_updated | date: "%Y年%m月%d日" }}
+              </time>
+              {% if report.evaluation.score %}
+              <span class="card-score-badge">{{ report.evaluation.score }}点</span>
+              {% endif %}
+            </div>
           </div>
 
           {% if report.description %}
