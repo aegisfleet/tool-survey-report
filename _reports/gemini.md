@@ -21,7 +21,7 @@ quick_summary:
     - "一般ユーザー"
     - "開発者"
     - "研究者"
-  latest_highlight: "2026年1月に最新モデルGemini 3 Proを発表"
+  latest_highlight: "2025年11月に最新モデルGemini 3 Proを発表"
   update_frequency: "高"
 
 evaluation:
@@ -171,7 +171,7 @@ relationships:
 
 * **2026年01月08日**: Gemini 3 Proを発表。前世代と比較して推論能力と処理速度が飛躍的に向上。
 * **2026年01月06日**: CES 2026にて、Google TVにGeminiを統合し、自然言語での検索や情報表示機能を提供することを発表。
-* **2025年12月05日**: Gemini 2.5 Proを発表。推論能力、コーディング性能が大幅に向上。
+* **2025年11月18日**: Gemini 3 Proを発表。前世代と比較して推論能力と処理速度が飛躍的に向上。
 * **2025年10月14日**: 開発者向け支援機能「Gemini Code Assist」において、従来のツール機能が「**Agent Mode (Preview)**」に置き換えられた。
 * **2025年10月13日**: GitHubリポジトリのコードレビューを支援する「**Gemini Code Assist on GitHub**」のエンタープライズ版（Preview）が利用可能になった。
 * **2025年08月20日**: Google Workspaceとの連携を強化し、メールの下書きやドキュメント要約の精度が向上。
