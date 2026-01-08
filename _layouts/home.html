@@ -79,6 +79,7 @@ layout: default
         <article class="report-card" data-tags="{{ report.tags | join: ',' }}"
           data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
           data-description="{{ report.description | downcase }}"
+          data-latest-highlight="{{ report.quick_summary.latest_highlight | downcase }}"
           data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
           data-developer="{{ report.developer | downcase }}"
           data-is-oss="{{ report.quick_summary.is_oss | default: false }}">
@@ -107,6 +108,13 @@ layout: default
 
           {% if report.description %}
           <p class="report-description">{{ report.description }}</p>
+          {% endif %}
+
+          {% if report.quick_summary.latest_highlight %}
+          <div class="report-latest-highlight">
+            <span class="highlight-label">最新情報</span>
+            <p class="highlight-content">📢 {{ report.quick_summary.latest_highlight }}</p>
+          </div>
           {% endif %}
 
           <div class="report-meta">
@@ -223,6 +231,7 @@ layout: default
         const matchesSearch = !searchTerm ||
           (card.dataset.toolName && card.dataset.toolName.includes(searchTerm)) ||
           (card.dataset.description && card.dataset.description.includes(searchTerm)) ||
+          (card.dataset.latestHighlight && card.dataset.latestHighlight.includes(searchTerm)) ||
           (card.dataset.developer && card.dataset.developer.includes(searchTerm)) ||
           (card.dataset.tags && card.dataset.tags.toLowerCase().includes(searchTerm));
         const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);

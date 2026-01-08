@@ -551,6 +551,32 @@
     line-height: $line-height-lg;
 }
 
+.report-latest-highlight {
+    margin-bottom: map-get($spacers, 3);
+    padding: map-get($spacers, 2);
+    background: rgba($primary-color, 0.03);
+    border-left: 3px solid $primary-color;
+    border-radius: 0 $border-radius $border-radius 0;
+
+    .highlight-label {
+        display: block;
+        font-size: $font-size-xs;
+        font-weight: $font-weight-bold;
+        color: $primary-color;
+        margin-bottom: map-get($spacers, 1);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .highlight-content {
+        margin: 0;
+        font-size: $font-size-sm;
+        color: $text-color;
+        line-height: $line-height-sm;
+        font-weight: $font-weight-medium;
+    }
+}
+
 .report-meta {
     margin-bottom: map-get($spacers, 3);
     display: flex;
