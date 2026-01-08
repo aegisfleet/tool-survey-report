@@ -327,12 +327,14 @@ layout: default
 
       if (allReportCards.length <= 3) return;
 
-      // すべてのレポートからランダムに3つ選択
+      // すべてのレポートからランダムに3つ選択（スコアと無料プラン情報も取得）
       const shuffled = allReportCards
         .map(card => ({
           url: card.querySelector('a')?.href || '#',
           title: card.querySelector('.report-title a')?.textContent?.trim() || 'Unknown',
-          category: card.querySelector('.meta-item.category')?.textContent?.trim() || ''
+          category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
+          score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
+          hasFreePlan: !!card.querySelector('.card-free-badge')
         }))
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
@@ -344,15 +346,33 @@ layout: default
           card.querySelector('.pick-title').textContent = shuffled[index].title;
           card.querySelector('.pick-category').textContent = shuffled[index].category;
 
-          // スコアバッジを非表示にする（シャッフル後はスコア情報がないため）
-          const scoreEl = card.querySelector('.pick-score');
-          if (scoreEl) {
+          // スコアバッジの表示を更新
+          let scoreEl = card.querySelector('.pick-score');
+          if (shuffled[index].score) {
+            if (!scoreEl) {
+              // スコア要素がなければ作成
+              scoreEl = document.createElement('span');
+              scoreEl.className = 'pick-score';
+              card.appendChild(scoreEl);
+            }
+            scoreEl.textContent = shuffled[index].score;
+            scoreEl.style.display = '';
+          } else if (scoreEl) {
             scoreEl.style.display = 'none';
           }
 
-          // 無料プランバッジを非表示にする
-          const freeBadge = card.querySelector('.pick-free-badge');
-          if (freeBadge) {
+          // 無料プランバッジの表示を更新
+          let freeBadge = card.querySelector('.pick-free-badge');
+          if (shuffled[index].hasFreePlan) {
+            if (!freeBadge) {
+              // バッジ要素がなければ作成
+              freeBadge = document.createElement('span');
+              freeBadge.className = 'pick-free-badge';
+              freeBadge.textContent = '無料プランあり';
+              card.insertBefore(freeBadge, card.firstChild);
+            }
+            freeBadge.style.display = '';
+          } else if (freeBadge) {
             freeBadge.style.display = 'none';
           }
         }
