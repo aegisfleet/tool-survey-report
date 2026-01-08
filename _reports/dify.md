@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "LangChain"
     - "Amazon Bedrock"
+---
 
 # **Dify 調査レポート**
 
