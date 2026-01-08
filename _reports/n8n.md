@@ -19,6 +19,7 @@ relationships:
   related_tools:
     - "Zapier"
     - "Microsoft Power Automate"
+    - "Google Opal"
 ---
 
 # **n8n 調査レポート**

@@ -16,6 +16,7 @@ relationships:
     - "Microsoft Power Automate"
     - "n8n"
     - "Google Workspace Flows"
+    - "Google Opal"
 ---
 
 # **Zapier 調査レポート**

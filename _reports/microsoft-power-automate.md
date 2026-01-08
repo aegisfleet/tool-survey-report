@@ -19,6 +19,7 @@ relationships:
     - "n8n"
     - "Google Workspace Flows"
     - "Robot Framework"
+    - "Google Opal"
 ---
 
 # **Microsoft Power Automate 調査レポート**
