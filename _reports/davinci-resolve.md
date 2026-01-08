@@ -1,7 +1,7 @@
 ---
 title: "DaVinci Resolve 調査レポート"
 tool_name: "DaVinci Resolve"
-category: "動画編集ソフト"
+category: "動画/メディア"
 developer: "Blackmagic Design"
 official_site: "https://www.blackmagicdesign.com/products/davinciresolve"
 date: "2025-11-06"
@@ -13,6 +13,10 @@ tags:
   - "音声編集"
   - "ポストプロダクション"
 description: "編集、カラーコレクション、VFX、モーショングラフィックス、オーディオポストプロダクションを統合した、プロフェッショナル向けオールインワン動画編集ソフトウェア。"
+
+relationships:
+  related_tools:
+    - "AviUtl"
 ---
 
 # **DaVinci Resolve 調査レポート**
