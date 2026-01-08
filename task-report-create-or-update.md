@@ -170,6 +170,17 @@ tags:
   - "タグ3"
 description: "ツールの概要を1-2行で簡潔に記述"
 
+# 【クイックサマリー】ホーム画面のカード表示用
+quick_summary:
+  score: 4.0  # 5点満点の総合スコア
+  has_free_plan: true  # 無料プランの有無
+  starting_price: "$10/月"  # 最低価格
+  target_users:
+    - "開発者"
+    - "スタートアップ"
+  latest_highlight: "直近1ヶ月の注目アップデート"
+  update_frequency: "高"  # 高/中/低/不定期
+
 # 【任意項目】該当するもののみ記載
 links:
   github: "GitHubリポジトリURL"
@@ -193,6 +204,13 @@ relationships:
   - 「〜に関するレポートです」「〜の調査レポート」などの表現は使用しない
   - ツール自体の機能や特徴を直接説明する（例: "高性能なAIコーディングエージェント"）
   - ツールが解決する課題や提供する価値を簡潔に記述する
+- `quick_summary`: ホーム画面のカード表示用のサマリー情報
+  - `score`: 総合スコア（1.0〜5.0、0.5刻み）。調査結果を元に客観的に評価
+  - `has_free_plan`: 無料プランの有無（true/false）
+  - `starting_price`: 最低価格（例: "$10/月"、"¥1,000/月"、"無料"）
+  - `target_users`: 想定ユーザー（1-3項目。例: "開発者", "スタートアップ", "大企業"）
+  - `latest_highlight`: 直近1ヶ月の注目アップデート（1文で簡潔に）
+  - `update_frequency`: 更新頻度（"高"/"中"/"低"/"不定期"）
 - `links`: 関連リンクを記載（該当するもののみ）
   - `github`: オープンソースツールの場合、GitHubリポジトリURL
   - `documentation`: 公式ドキュメントサイトURL（公式サイトと異なる場合）

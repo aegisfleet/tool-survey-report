@@ -55,6 +55,126 @@
     }
 }
 
+// Weekly highlights section
+.weekly-highlights {
+    @include card(map-get($spacers, 4));
+    margin-bottom: map-get($spacers, 4);
+    background: linear-gradient(135deg, lighten($primary-color, 45%), $white);
+
+    h2 {
+        margin: 0 0 map-get($spacers, 3) 0;
+        color: $primary-color;
+        font-size: 1.5rem;
+    }
+
+    .highlights-grid {
+        display: flex;
+        gap: map-get($spacers, 3);
+        overflow-x: auto;
+        padding-bottom: map-get($spacers, 2);
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+        }
+    }
+
+    .highlight-card {
+        @include card(map-get($spacers, 3));
+        min-width: 200px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacers, 1);
+        text-decoration: none;
+        transition: $transition-base;
+        border-left: 3px solid $secondary-color;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $box-shadow;
+        }
+
+        .highlight-title {
+            color: $text-color;
+            font-weight: $font-weight-bold;
+            font-size: 1rem;
+        }
+
+        .highlight-date {
+            color: $secondary-color;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-medium;
+        }
+
+        .highlight-update {
+            color: $text-muted;
+            font-size: $font-size-sm;
+            line-height: $line-height-base;
+        }
+    }
+}
+
+// Random picks section
+.random-picks {
+    @include card(map-get($spacers, 4));
+    margin-bottom: map-get($spacers, 4);
+    background: linear-gradient(135deg, lighten($secondary-color, 40%), $white);
+
+    h2 {
+        margin: 0 0 map-get($spacers, 1) 0;
+        color: $secondary-color;
+        font-size: 1.5rem;
+    }
+
+    .picks-desc {
+        color: $text-muted;
+        font-size: $font-size-sm;
+        margin: 0 0 map-get($spacers, 3) 0;
+    }
+
+    .picks-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: map-get($spacers, 3);
+
+        @include media-breakpoint-down(md) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .pick-card {
+        @include card(map-get($spacers, 3));
+        display: flex;
+        flex-direction: column;
+        gap: map-get($spacers, 1);
+        text-decoration: none;
+        transition: $transition-base;
+        background-color: $white;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $box-shadow;
+        }
+
+        .pick-title {
+            color: $text-color;
+            font-weight: $font-weight-bold;
+            font-size: 1.1rem;
+        }
+
+        .pick-category {
+            color: $secondary-color;
+            font-size: $font-size-sm;
+        }
+
+        .pick-score {
+            color: #f5a623;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-sm;
+        }
+    }
+}
+
 // Reports section
 .reports-section {
     @include card(map-get($spacers, 5));

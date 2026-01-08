@@ -12,6 +12,55 @@ layout: default
   <main class="home-content">
     {{ content }}
 
+    <!-- 今週更新されたレポート -->
+    {% assign today_timestamp = 'now' | date: '%s' | plus: 0 %}
+    {% assign seven_days_ago = today_timestamp | minus: 604800 %}
+    {% assign recent_reports = "" | split: "" %}
+    {% for report in site.reports %}
+    {% assign report_timestamp = report.last_updated | date: '%s' | plus: 0 %}
+    {% if report_timestamp >= seven_days_ago %}
+    {% assign recent_reports = recent_reports | push: report %}
+    {% endif %}
+    {% endfor %}
+
+    {% if recent_reports.size > 0 %}
+    <section class="weekly-highlights">
+      <h2>📰 今週の更新</h2>
+      <div class="highlights-grid">
+        {% assign sorted_recent = recent_reports | sort: 'last_updated' | reverse %}
+        {% for report in sorted_recent limit: 5 %}
+        <a href="{{ report.url | relative_url }}" class="highlight-card">
+          <span class="highlight-title">{{ report.tool_name | default: report.title }}</span>
+          <span class="highlight-date">{{ report.last_updated | date: "%m/%d" }}</span>
+          {% if report.quick_summary.latest_highlight %}
+          <span class="highlight-update">{{ report.quick_summary.latest_highlight }}</span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- ランダムピックアップ -->
+    <section class="random-picks">
+      <h2>🎲 おすすめピックアップ</h2>
+      <p class="picks-desc">ランダムに選ばれた3つのレポートをご紹介</p>
+      <div class="picks-grid" id="random-picks-grid">
+        {% assign all_reports = site.reports | sort: 'last_updated' | reverse %}
+        {% for report in all_reports limit: 3 %}
+        <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
+          data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
+          <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
+          <span class="pick-category">{{ report.category }}</span>
+          {% if report.quick_summary.score %}
+          <span class="pick-score">★ {{ report.quick_summary.score }}</span>
+          {% endif %}
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+
+
     <section class="reports-section">
       <div class="reports-header">
         <h2>最新のレポート</h2>
@@ -274,5 +323,39 @@ layout: default
         updateTagStates();
       }, 50);
     }
+
+    // ランダムピックアップのシャッフル処理
+    function shuffleRandomPicks() {
+      const picksGrid = document.getElementById('random-picks-grid');
+      if (!picksGrid) return;
+
+      const pickCards = Array.from(picksGrid.querySelectorAll('.pick-card'));
+      const allReportCards = Array.from(document.querySelectorAll('.report-card'));
+
+      if (allReportCards.length <= 3) return;
+
+      // すべてのレポートからランダムに3つ選択
+      const shuffled = allReportCards
+        .map(card => ({
+          url: card.querySelector('a')?.href || '#',
+          title: card.dataset.toolName || card.querySelector('.report-title a')?.textContent || 'Unknown',
+          category: card.dataset.category || '',
+          desc: card.dataset.description || ''
+        }))
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+
+      // ピックカードを更新
+      pickCards.forEach((card, index) => {
+        if (shuffled[index]) {
+          card.href = shuffled[index].url;
+          card.querySelector('.pick-title').textContent = shuffled[index].title;
+          card.querySelector('.pick-category').textContent = shuffled[index].category;
+        }
+      });
+    }
+
+    // ページロード時にランダムシャッフル
+    shuffleRandomPicks();
   });
 </script>
