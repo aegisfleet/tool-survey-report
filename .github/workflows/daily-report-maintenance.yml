@@ -27,6 +27,16 @@ jobs:
             const fs = require('fs');
             const path = require('path');
 
+            // テンプレートファイルを読み込み
+            const templatePath = 'templates/template.md';
+            let templateContent = '';
+            try {
+              templateContent = fs.readFileSync(templatePath, 'utf8');
+              core.info(`Template loaded: ${templatePath} (${templateContent.length} bytes)`);
+            } catch (error) {
+              core.warning(`Failed to load template: ${error.message}`);
+            }
+
             // _reportsディレクトリ内のすべてのMarkdownファイルを取得
             const reportsDir = '_reports';
             const files = fs.readdirSync(reportsDir).filter(file => file.endsWith('.md'));
@@ -99,7 +109,7 @@ jobs:
 
               core.info(`\n--- Processing: ${toolName} (${currentReport.filename}) ---`);
 
-              // Jules API用のプロンプトを作成
+              // Jules API用のプロンプトを作成（テンプレート内容を含む）
               const promptLines = [
                 `AGENTS.mdの「レポート作成・更新の手順」に従い、${toolName}(${currentReport.path})の調査レポートを更新してください。`,
                 '',
@@ -108,7 +118,8 @@ jobs:
                 '### ステップ1: レポートの作成・更新',
                 `- 対象: ${currentReport.path}`,
                 `- 本日の日付: ${todayJST}`,
-                '- task-report-create-or-update.mdに従い、レポート情報を最新化する',
+                '- task-report-create-or-update.mdの指示に従い、レポート情報を最新化する',
+                '- **重要**: 以下のテンプレートの構成・セクション順序・形式に厳密に準拠すること',
                 '',
                 '### ステップ2: 関連レポートの整理',
                 '- task-organizing-category-tags.mdに従い、カテゴリ・タグ・関連付けを整理する',
@@ -116,8 +127,25 @@ jobs:
                 '',
                 '### 注意事項',
                 '- 両ステップを必ずこの順序で実行すること',
-                '- 関連レポートへの変更は最小限に留めること'
+                '- 関連レポートへの変更は最小限に留めること',
+                '- レポートの構成はテンプレートに厳密に従うこと（セクションの追加・削除・順序変更は禁止）',
+                '- 各セクションの記載形式（表形式、箇条書き等）もテンプレートに従うこと',
               ];
+
+              // テンプレート内容を追加
+              if (templateContent) {
+                promptLines.push('');
+                promptLines.push('---');
+                promptLines.push('');
+                promptLines.push('## レポートテンプレート（厳守）');
+                promptLines.push('');
+                promptLines.push('以下のテンプレートに厳密に従ってレポートを作成・更新してください:');
+                promptLines.push('');
+                promptLines.push('```markdown');
+                promptLines.push(templateContent);
+                promptLines.push('```');
+              }
+
               const prompt = promptLines.join('\n');
 
               const requestBody = {
