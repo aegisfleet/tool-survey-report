@@ -34,8 +34,7 @@ layout: default
           <div class="pick-badges">
             {% if report.quick_summary.is_oss %}
             <span class="pick-oss-badge">OSS</span>
-            {% endif %}
-            {% if report.quick_summary.has_free_plan %}
+            {% elsif report.quick_summary.has_free_plan %}
             <span class="pick-free-badge">無料プランあり</span>
             {% endif %}
           </div>
@@ -87,8 +86,7 @@ layout: default
           <div class="card-badges">
             {% if report.quick_summary.is_oss %}
             <span class="card-oss-badge">OSS</span>
-            {% endif %}
-            {% if report.quick_summary.has_free_plan %}
+            {% elsif report.quick_summary.has_free_plan %}
             <span class="card-free-badge">💚 無料プランあり</span>
             {% endif %}
           </div>
@@ -373,40 +371,31 @@ layout: default
             scoreEl.style.display = 'none';
           }
 
-          // 無料プランバッジの表示を更新
-          let freeBadge = card.querySelector('.pick-free-badge');
-          if (shuffled[index].hasFreePlan) {
-            if (!freeBadge) {
-              // バッジ要素がなければ作成
-              freeBadge = document.createElement('span');
-              freeBadge.className = 'pick-free-badge';
-              freeBadge.textContent = '無料プランあり';
-              card.insertBefore(freeBadge, card.firstChild);
-            }
-            freeBadge.style.display = '';
-          } else if (freeBadge) {
-            freeBadge.style.display = 'none';
+          // バッジの表示順序を管理するコンテナ
+          let badgesContainer = card.querySelector('.pick-badges');
+          if (!badgesContainer) {
+            // もしコンテナがなければ作成（基本的にはLiquidで生成されているはず）
+            badgesContainer = document.createElement('div');
+            badgesContainer.className = 'pick-badges';
+            card.insertBefore(badgesContainer, card.firstChild);
           }
 
-          // OSSバッジの表示を更新
-          let ossBadge = card.querySelector('.pick-oss-badge');
+          // バッジを一旦クリアして再描画
+          badgesContainer.innerHTML = '';
+
+          // OSS バッジを最優先
           if (shuffled[index].isOss) {
-            if (!ossBadge) {
-              // バッジ要素がなければ作成
-              ossBadge = document.createElement('span');
-              ossBadge.className = 'pick-oss-badge';
-              ossBadge.textContent = 'OSS';
-              let badgesContainer = card.querySelector('.pick-badges');
-              if (!badgesContainer) {
-                badgesContainer = document.createElement('div');
-                badgesContainer.className = 'pick-badges';
-                card.insertBefore(badgesContainer, card.firstChild);
-              }
-              badgesContainer.insertBefore(ossBadge, badgesContainer.firstChild);
-            }
-            ossBadge.style.display = '';
-          } else if (ossBadge) {
-            ossBadge.style.display = 'none';
+            const ossBadge = document.createElement('span');
+            ossBadge.className = 'pick-oss-badge';
+            ossBadge.textContent = 'OSS';
+            badgesContainer.appendChild(ossBadge);
+          }
+          // OSSでない場合にのみ無料プランバッジ
+          else if (shuffled[index].hasFreePlan) {
+            const freeBadge = document.createElement('span');
+            freeBadge.className = 'pick-free-badge';
+            freeBadge.textContent = '無料プランあり';
+            badgesContainer.appendChild(freeBadge);
           }
         }
       });
