@@ -12,35 +12,6 @@ layout: default
   <main class="home-content">
     {{ content }}
 
-    <!-- 今週更新されたレポート -->
-    {% assign today_timestamp = 'now' | date: '%s' | plus: 0 %}
-    {% assign seven_days_ago = today_timestamp | minus: 604800 %}
-    {% assign recent_reports = "" | split: "" %}
-    {% for report in site.reports %}
-    {% assign report_timestamp = report.last_updated | date: '%s' | plus: 0 %}
-    {% if report_timestamp >= seven_days_ago %}
-    {% assign recent_reports = recent_reports | push: report %}
-    {% endif %}
-    {% endfor %}
-
-    {% if recent_reports.size > 0 %}
-    <section class="weekly-highlights">
-      <h2>📰 今週の更新</h2>
-      <div class="highlights-grid">
-        {% assign sorted_recent = recent_reports | sort: 'last_updated' | reverse %}
-        {% for report in sorted_recent limit: 5 %}
-        <a href="{{ report.url | relative_url }}" class="highlight-card">
-          <span class="highlight-title">{{ report.tool_name | default: report.title }}</span>
-          <span class="highlight-date">{{ report.last_updated | date: "%m/%d" }}</span>
-          {% if report.quick_summary.latest_highlight %}
-          <span class="highlight-update">{{ report.quick_summary.latest_highlight }}</span>
-          {% endif %}
-        </a>
-        {% endfor %}
-      </div>
-    </section>
-    {% endif %}
-
     <!-- ランダムピックアップ -->
     <section class="random-picks">
       <h2>🎲 おすすめピックアップ</h2>
@@ -59,7 +30,6 @@ layout: default
         {% endfor %}
       </div>
     </section>
-
 
     <section class="reports-section">
       <div class="reports-header">
@@ -338,9 +308,8 @@ layout: default
       const shuffled = allReportCards
         .map(card => ({
           url: card.querySelector('a')?.href || '#',
-          title: card.dataset.toolName || card.querySelector('.report-title a')?.textContent || 'Unknown',
-          category: card.dataset.category || '',
-          desc: card.dataset.description || ''
+          title: card.querySelector('.report-title a')?.textContent?.trim() || 'Unknown',
+          category: card.querySelector('.meta-item.category')?.textContent?.trim() || ''
         }))
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
