@@ -20,6 +20,7 @@ description: "AIを第一に考えて作られたコードエディタ。VS Code
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
   has_free_plan: true
+  is_oss: false
   starting_price: "$20/月"
   target_users:
     - "ソフトウェア開発者"

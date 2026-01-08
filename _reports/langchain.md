@@ -20,6 +20,7 @@ description: "大規模言語モデル（LLM）を活用したアプリケーシ
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
   has_free_plan: true
+  is_oss: false
   starting_price: "無料"
   target_users:
     - "AIエンジニア"

@@ -31,9 +31,14 @@ layout: default
         {% for report in all_reports limit: 3 %}
         <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
           data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
-          {% if report.quick_summary.has_free_plan %}
-          <span class="pick-free-badge">無料プランあり</span>
-          {% endif %}
+          <div class="pick-badges">
+            {% if report.quick_summary.is_oss %}
+            <span class="pick-oss-badge">OSS</span>
+            {% endif %}
+            {% if report.quick_summary.has_free_plan %}
+            <span class="pick-free-badge">無料プランあり</span>
+            {% endif %}
+          </div>
           <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
           <span class="pick-category">{{ report.category }}</span>
           {% if report.evaluation.score %}
@@ -76,11 +81,17 @@ layout: default
           data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
           data-description="{{ report.description | downcase }}"
           data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
-          data-developer="{{ report.developer | downcase }}">
+          data-developer="{{ report.developer | downcase }}"
+          data-is-oss="{{ report.quick_summary.is_oss | default: false }}">
 
-          {% if report.quick_summary.has_free_plan %}
-          <span class="card-free-badge">💚 無料プランあり</span>
-          {% endif %}
+          <div class="card-badges">
+            {% if report.quick_summary.is_oss %}
+            <span class="card-oss-badge">OSS</span>
+            {% endif %}
+            {% if report.quick_summary.has_free_plan %}
+            <span class="card-free-badge">💚 無料プランあり</span>
+            {% endif %}
+          </div>
 
           <div class="report-card-header">
             <h3 class="report-title">
@@ -334,7 +345,8 @@ layout: default
           title: card.querySelector('.report-title a')?.textContent?.trim() || 'Unknown',
           category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
           score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
-          hasFreePlan: !!card.querySelector('.card-free-badge')
+          hasFreePlan: !!card.querySelector('.card-free-badge'),
+          isOss: card.dataset.isOss === 'true'
         }))
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
@@ -374,6 +386,27 @@ layout: default
             freeBadge.style.display = '';
           } else if (freeBadge) {
             freeBadge.style.display = 'none';
+          }
+
+          // OSSバッジの表示を更新
+          let ossBadge = card.querySelector('.pick-oss-badge');
+          if (shuffled[index].isOss) {
+            if (!ossBadge) {
+              // バッジ要素がなければ作成
+              ossBadge = document.createElement('span');
+              ossBadge.className = 'pick-oss-badge';
+              ossBadge.textContent = 'OSS';
+              let badgesContainer = card.querySelector('.pick-badges');
+              if (!badgesContainer) {
+                badgesContainer = document.createElement('div');
+                badgesContainer.className = 'pick-badges';
+                card.insertBefore(badgesContainer, card.firstChild);
+              }
+              badgesContainer.insertBefore(ossBadge, badgesContainer.firstChild);
+            }
+            ossBadge.style.display = '';
+          } else if (ossBadge) {
+            ossBadge.style.display = 'none';
           }
         }
       });

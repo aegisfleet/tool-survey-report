@@ -22,6 +22,7 @@ description: "エージェントワークフロー開発のための本番環境
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
   has_free_plan: true
+  is_oss: true
   starting_price: "$59/月"
   target_users:
     - "AIエンジニア"

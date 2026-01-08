@@ -16,6 +16,7 @@ description: "Googleによって開発された、テキスト、画像、音声
 
 quick_summary:
   has_free_plan: true
+  is_oss: false
   starting_price: "無料"
   target_users:
     - "一般ユーザー"

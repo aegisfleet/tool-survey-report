@@ -261,11 +261,28 @@
             align-self: flex-start;
         }
 
-        .pick-free-badge {
+        .pick-badges {
             position: absolute;
             top: map-get($spacers, 3);
             right: map-get($spacers, 3);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: map-get($spacers, 1);
+            z-index: 1;
+        }
+
+        .pick-free-badge {
             background: $gradient-success;
+            color: $white;
+            font-size: $font-size-xs;
+            font-weight: $font-weight-bold;
+            padding: map-get($spacers, 1) map-get($spacers, 2);
+            border-radius: $border-radius;
+        }
+
+        .pick-oss-badge {
+            background: $gradient-secondary;
             color: $white;
             font-size: $font-size-xs;
             font-weight: $font-weight-bold;
@@ -487,6 +504,17 @@
 }
 
 // Card badges
+.card-badges {
+    position: absolute;
+    top: map-get($spacers, 2);
+    right: map-get($spacers, 2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: map-get($spacers, 1);
+    z-index: 1;
+}
+
 .card-score-badge {
     display: inline-flex;
     align-items: center;
@@ -500,16 +528,21 @@
 }
 
 .card-free-badge {
-    position: absolute;
-    top: map-get($spacers, 2);
-    right: map-get($spacers, 2);
     background: $gradient-success;
     color: $white;
     font-size: $font-size-xs;
     font-weight: $font-weight-bold;
     padding: map-get($spacers, 1) map-get($spacers, 2);
     border-radius: $border-radius;
-    z-index: 1;
+}
+
+.card-oss-badge {
+    background: $gradient-secondary;
+    color: $white;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    padding: map-get($spacers, 1) map-get($spacers, 2);
+    border-radius: $border-radius;
 }
 
 .report-description {

@@ -18,6 +18,7 @@ description: "ツールの概要を1-2行で簡潔に記述（『〜に関する
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
   has_free_plan: true  # 無料プランの有無
+  is_oss: false  # OSS（オープンソース）かどうか
   starting_price: "$10/月"  # 最低価格（無料の場合は「無料」）
   target_users:  # 想定ユーザー（1-3項目）
     - "開発者"

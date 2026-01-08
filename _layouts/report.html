@@ -109,6 +109,16 @@ layout: default
       </div>
       {% endif %}
 
+      {% if page.quick_summary.is_oss != nil %}
+      <div class="summary-card">
+        <div class="summary-icon">{% if page.quick_summary.is_oss %}🌐{% else %}🏢{% endif %}</div>
+        <div class="summary-content">
+          <div class="summary-label">オープンソース</div>
+          <div class="summary-value">{% if page.quick_summary.is_oss %}OSS{% else %}非公式・商用{% endif %}</div>
+        </div>
+      </div>
+      {% endif %}
+
       {% if page.quick_summary.has_free_plan != nil %}
       <div class="summary-card">
         <div class="summary-icon">{% if page.quick_summary.has_free_plan %}💚{% else %}💰{% endif %}</div>

@@ -17,6 +17,7 @@ tags:
 description: "GitHubに統合されたCI/CDプラットフォーム。ビルド、テスト、デプロイなどのソフトウェア開発ワークフローを自動化します。"
 quick_summary:
   has_free_plan: true
+  is_oss: false
   starting_price: "無料"
   target_users:
     - "開発者"
