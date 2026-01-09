@@ -57,6 +57,7 @@ relationships:
     - "GitHub Copilot"
     - "Windsurf"
     - "Kiro"
+    - "Amazon Q Developer"
 ---
 
 # **Cursor 調査レポート**
