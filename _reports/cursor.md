@@ -56,6 +56,7 @@ relationships:
     - "Visual Studio Code"
     - "GitHub Copilot"
     - "Windsurf"
+    - "Kiro"
 ---
 
 # **Cursor 調査レポート**
