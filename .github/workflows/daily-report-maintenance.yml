@@ -2,9 +2,15 @@ name: Daily Report Maintenance with Jules
 
 on:
   schedule:
-    # 毎日日本時間 07:00 (UTC 22:00) に実行
-    - cron: '0 22 * * *'
-  workflow_dispatch: # 手動実行も可能
+    # 毎時実行 (UTC)
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      report_count:
+        description: '更新するレポート数'
+        required: false
+        default: '1'
+        type: string
 
 permissions:
   contents: read
@@ -78,10 +84,11 @@ jobs:
               process.exit(1);
             }
 
-            // 更新日時が古い順にソートして上位3件を取得
+            // 更新日時が古い順にソートして上位N件を取得（inputパラメータで制御、デフォルト1）
+            const reportCount = parseInt('${{ github.event.inputs.report_count || '1' }}', 10);
             const oldestReports = reportsWithDates
               .sort((a, b) => a.lastUpdated - b.lastUpdated)
-              .slice(0, 3);
+              .slice(0, reportCount);
 
             core.info(`Found ${oldestReports.length} oldest reports to update:`);
             for (const report of oldestReports) {
