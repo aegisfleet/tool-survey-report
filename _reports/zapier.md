@@ -15,6 +15,7 @@ relationships:
   related_tools:
     - "Microsoft Power Automate"
     - "n8n"
+    - "Workato"
     - "Google Workspace Flows"
     - "Google Opal"
 ---
