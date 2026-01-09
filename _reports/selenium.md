@@ -23,6 +23,7 @@ relationships:
   related_tools:
     - "Cypress"
     - "Playwright"
+    - "axe DevTools"
     - "CodeceptJS"
     - "Cucumber"
     - "Appium"

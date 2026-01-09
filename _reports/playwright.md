@@ -24,6 +24,7 @@ relationships:
   related_tools:
     - "Cypress"
     - "Selenium"
+    - "axe DevTools"
     - "CodeceptJS"
     - "Cucumber"
     - "Appium"
