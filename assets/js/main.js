@@ -316,7 +316,47 @@ function initReportEnhancements() {
   markExternalLinks();
 
   // Initialize table of contents if needed
+  applyEmojisToHeadings();
   generateTableOfContents();
+}
+
+/**
+ * レポートの主要セクション見出しに絵文字を動的に付加する
+ */
+function applyEmojisToHeadings() {
+  const reportContent = document.querySelector('.report-content');
+  if (!reportContent) return;
+
+  const emojiMap = {
+    '基本情報': '📋',
+    '目的と主な利用シーン': '🎯',
+    '主要機能': '🛠️',
+    '特徴・強み': '💪',
+    '弱み・注意点': '⚠️',
+    '料金プラン': '💰',
+    '導入実績・事例': '🏢',
+    'サポート体制': '📞',
+    '連携機能': '🔌',
+    'セキュリティとコンプライアンス': '🛡️',
+    '操作性': '🖱️',
+    'ユーザーの声': '💬',
+    '直近半年のアップデート情報': '🆙',
+    '類似ツールとの比較': '⚔️',
+    '総評': '📝'
+  };
+
+  const headings = reportContent.querySelectorAll('h2');
+  headings.forEach(h => {
+    const text = h.textContent;
+    for (const [key, emoji] of Object.entries(emojiMap)) {
+      // 絵文字がまだ付いておらず、キーワードが含まれる場合に付与
+      if (text.includes(key) && !text.includes(emoji)) {
+        // テキストの先頭（番号の前後など）ではなく、見出し全体の先頭に挿入
+        h.innerHTML = emoji + ' ' + h.innerHTML;
+        break;
+      }
+    }
+  });
 }
 
 function addCopyButtonsToCodeBlocks() {

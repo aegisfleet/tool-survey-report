@@ -172,64 +172,6 @@
       background-color: $secondary-color;
       border-radius: 2px;
     }
-
-    // Keyword based emoji accents
-    &.header-benefits::after {
-      content: " ✨";
-      font-size: 0.8em;
-    }
-
-    &.header-drawbacks::after {
-      content: " ⚠️";
-      font-size: 0.8em;
-    }
-
-    &.header-features::after {
-      content: " 🚀";
-      font-size: 0.8em;
-    }
-
-    &.header-pricing::after {
-      content: " 💰";
-      font-size: 0.8em;
-    }
-
-    &.header-usage::after {
-      content: " 📱";
-      font-size: 0.8em;
-    }
-  }
-
-  h2 {
-
-    &.header-benefits::after,
-    &.header-drawbacks::after,
-    &.header-features::after,
-    &.header-pricing::after,
-    &.header-usage::after {
-      font-size: 0.7em;
-      margin-left: 0.5rem;
-    }
-
-    &.header-benefits::after {
-      content: " ✨";
-    }
-
-    &.header-drawbacks::after {
-      content: " ⚠️";
-    }
-
-    &.header-features::after {
-      content: " 🚀";
-    }
-
-    &.header-pricing::after {
-      content: " 💰";
-    }
-
-    &.header-usage::after {
-      content: " 📱";
-    }
   }
 
   // Paragraphs and text
