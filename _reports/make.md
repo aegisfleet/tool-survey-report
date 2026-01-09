@@ -1,5 +1,5 @@
 ---
-title: "[Make] 調査レポート"
+title: "Make 調査レポート"
 tool_name: "Make"
 tool_reading: "メイク"
 category: "ワークフロー自動化"
