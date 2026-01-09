@@ -21,6 +21,7 @@ relationships:
   related_tools:
     - "Playwright"
     - "Selenium"
+    - "axe DevTools"
     - "CodeceptJS"
     - "Cucumber"
     - "Appium"
