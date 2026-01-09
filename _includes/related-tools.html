@@ -126,6 +126,16 @@ Processes relationship metadata from front matter and displays parent, child, an
     </h4>
     <a href="{{ parent_tool.url | relative_url }}" class="tool-link">
       <span class="tool-title">{{ parent_tool.tool_name | default: parent_tool.title }}</span>
+      <span class="tool-badges">
+        {% if parent_tool.quick_summary.is_oss %}
+        <span class="related-oss-badge">OSS</span>
+        {% elsif parent_tool.quick_summary.has_free_plan %}
+        <span class="related-free-badge">💚 無料プランあり</span>
+        {% endif %}
+        {% if parent_tool.evaluation.score %}
+        <span class="related-score-badge">{{ parent_tool.evaluation.score }}点</span>
+        {% endif %}
+      </span>
       {% if parent_tool.description %}
       <span class="tool-description">{{ parent_tool.description }}</span>
       {% endif %}
@@ -147,6 +157,16 @@ Processes relationship metadata from front matter and displays parent, child, an
       <li>
         <a href="{{ child.url | relative_url }}" class="tool-link">
           <span class="tool-title">{{ child.tool_name | default: child.title }}</span>
+          <span class="tool-badges">
+            {% if child.quick_summary.is_oss %}
+            <span class="related-oss-badge">OSS</span>
+            {% elsif child.quick_summary.has_free_plan %}
+            <span class="related-free-badge">💚 無料プランあり</span>
+            {% endif %}
+            {% if child.evaluation.score %}
+            <span class="related-score-badge">{{ child.evaluation.score }}点</span>
+            {% endif %}
+          </span>
           {% if child.description %}
           <span class="tool-description">{{ child.description }}</span>
           {% endif %}
@@ -171,6 +191,16 @@ Processes relationship metadata from front matter and displays parent, child, an
       <li>
         <a href="{{ sibling.url | relative_url }}" class="tool-link">
           <span class="tool-title">{{ sibling.tool_name | default: sibling.title }}</span>
+          <span class="tool-badges">
+            {% if sibling.quick_summary.is_oss %}
+            <span class="related-oss-badge">OSS</span>
+            {% elsif sibling.quick_summary.has_free_plan %}
+            <span class="related-free-badge">💚 無料プランあり</span>
+            {% endif %}
+            {% if sibling.evaluation.score %}
+            <span class="related-score-badge">{{ sibling.evaluation.score }}点</span>
+            {% endif %}
+          </span>
           {% if sibling.description %}
           <span class="tool-description">{{ sibling.description }}</span>
           {% endif %}

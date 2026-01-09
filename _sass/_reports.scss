@@ -515,6 +515,13 @@
     padding-left: map-get($spacers, 3);
     background-color: rgba(159, 122, 234, 0.05);
   }
+
+  .tool-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: map-get($spacers, 1);
+    margin-top: map-get($spacers, 1);
+  }
 }
 
 // Related reports
@@ -564,8 +571,86 @@
 }
 
 .related-date {
-  display: block;
   font-size: $font-size-sm;
+  color: $text-muted;
+}
+
+// Related reports badges and meta
+.related-item {
+  margin-bottom: map-get($spacers, 3);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.related-link {
+  @include card(map-get($spacers, 3));
+  @include link-reset;
+  display: block;
+  transition: $transition-base;
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+    transform: translateY(-1px);
+
+    .related-title {
+      color: $secondary-color;
+    }
+  }
+}
+
+.related-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 1);
+  margin-bottom: map-get($spacers, 2);
+}
+
+.related-oss-badge {
+  display: inline-flex;
+  align-items: center;
+  background: $gradient-secondary;
+  color: $white;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  border-radius: $border-radius;
+}
+
+.related-free-badge {
+  display: inline-flex;
+  align-items: center;
+  background: $gradient-success;
+  color: $white;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  border-radius: $border-radius;
+}
+
+.related-score-badge {
+  display: inline-flex;
+  align-items: center;
+  background: $gradient-primary;
+  color: $white;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-bold;
+  padding: map-get($spacers, 1) map-get($spacers, 2);
+  border-radius: $border-radius-xl;
+}
+
+.related-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: map-get($spacers, 2);
+  margin-top: map-get($spacers, 2);
+}
+
+.match-info {
+  font-size: 0.8em;
   color: $text-muted;
 }
 

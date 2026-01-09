@@ -285,9 +285,13 @@ layout: default
       {% endfor %}
       {% if common_count > 0 %}
       {% assign match_ratio = common_count | times: 100 | divided_by: page.tags.size %}
+      {% assign is_oss = report.quick_summary.is_oss | default: false %}
+      {% assign has_free_plan = report.quick_summary.has_free_plan | default: false %}
+      {% assign score = report.evaluation.score | default: "" %}
       {% assign report_with_score = report.tool_name | default: report.title | append: "|" | append: match_ratio |
       append: "|" | append:
-      common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated %}
+      common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated | append: "|" |
+      append: is_oss | append: "|" | append: has_free_plan | append: "|" | append: score %}
       {% assign related_with_scores = related_with_scores | push: report_with_score %}
       {% endif %}
       {% endif %}
@@ -314,14 +318,29 @@ layout: default
           {% assign common_count = parts[2] %}
           {% assign report_url = parts[3] %}
           {% assign report_date = parts[4] %}
-          <li>
-            <a href="{{ report_url | relative_url }}">
+          {% assign is_oss = parts[5] %}
+          {% assign has_free_plan = parts[6] %}
+          {% assign eval_score = parts[7] %}
+          <li class="related-item">
+            <a href="{{ report_url | relative_url }}" class="related-link">
               <span class="related-title">{{ report_title }}</span>
-              {% if report_date %}
-              <span class="related-date">{{ report_date | date: "%Y年%m月%d日" }}</span>
-              {% endif %}
-              <span class="match-info" style="font-size: 0.8em; color: #666; margin-left: 8px;">
-                (共通タグ: {{ common_count }}個, 一致率: {{ match_ratio }}%)
+              <span class="related-badges">
+                {% if is_oss == "true" %}
+                <span class="related-oss-badge">OSS</span>
+                {% elsif has_free_plan == "true" %}
+                <span class="related-free-badge">💚 無料プランあり</span>
+                {% endif %}
+                {% if eval_score and eval_score != "" and eval_score != "nil" and eval_score != "false" %}
+                <span class="related-score-badge">{{ eval_score }}点</span>
+                {% endif %}
+              </span>
+              <span class="related-meta">
+                {% if report_date %}
+                <span class="related-date">{{ report_date | date: "%Y年%m月%d日" }}</span>
+                {% endif %}
+                <span class="match-info">
+                  (共通タグ: {{ common_count }}個, 一致率: {{ match_ratio }}%)
+                </span>
               </span>
             </a>
           </li>
