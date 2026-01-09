@@ -138,9 +138,11 @@
   h4,
   h5,
   h6 {
-    margin-top: map-get($spacers, 5);
+    margin-top: map-get($spacers, 6); // セクション間の余白を拡大
     margin-bottom: map-get($spacers, 3);
     scroll-margin-top: 100px; // スティッキーヘッダーの高さを考慮
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
 
     &:first-child {
       margin-top: 0;
@@ -176,28 +178,63 @@
   // Paragraphs and text
   p {
     margin-bottom: map-get($spacers, 4);
-    text-align: justify;
+    text-align: left; // justifyは隙間が不規則になるためleftに変更
+    line-height: $line-height-lg;
+  }
 
-    @include media-breakpoint-down(sm) {
-      text-align: left;
-    }
+  // Emphasis
+  strong {
+    font-weight: $font-weight-bold;
+    color: $primary-color;
+    // マーカー風のハイライト（薄い黄色）
+    background: linear-gradient(transparent 60%, rgba($secondary-color, 0.2) 60%);
+    padding: 0 2px;
   }
 
   // Lists
   ul,
   ol {
-    margin-bottom: map-get($spacers, 4);
-    padding-left: map-get($spacers, 5);
+    margin: map-get($spacers, 4) 0 map-get($spacers, 5) map-get($spacers, 4);
+    padding-left: 0;
 
     li {
-      margin-bottom: map-get($spacers, 2);
+      margin-bottom: map-get($spacers, 3); // 行間の余白を拡大
       line-height: $line-height-lg;
+      position: relative;
     }
+  }
 
-    ul,
-    ol {
-      margin-top: map-get($spacers, 2);
-      margin-bottom: map-get($spacers, 2);
+  ul {
+    list-style: none;
+
+    li::before {
+      content: "•";
+      color: $secondary-color;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    list-style: none;
+
+    li {
+      counter-increment: item;
+      padding-left: 0.5em;
+
+      &::before {
+        content: counter(item) ".";
+        color: $secondary-color;
+        font-weight: $font-weight-bold;
+        display: inline-block;
+        width: 1.5em;
+        margin-left: -1.5em;
+        text-align: right;
+        margin-right: 0.5em;
+      }
     }
   }
 
@@ -388,14 +425,34 @@
 
   // Blockquotes
   blockquote {
-    margin: map-get($spacers, 5) 0;
-    padding: map-get($spacers, 4);
-    background-color: rgba($info-color, 0.05);
-    border-left: 4px solid $info-color;
-    border-radius: 0 $border-radius $border-radius 0;
+    margin: map-get($spacers, 6) 0;
+    padding: map-get($spacers, 4) map-get($spacers, 5);
+    background-color: rgba($light-gray, 0.3);
+    border-left: 4px solid $secondary-color;
+    border-radius: $border-radius-sm;
+    position: relative;
+    font-style: italic;
 
-    p:last-child {
-      margin-bottom: 0;
+    &::before {
+      content: "“";
+      position: absolute;
+      top: 0;
+      left: 10px;
+      font-size: 3rem;
+      color: rgba($secondary-color, 0.1);
+      font-family: serif;
+      line-height: 1;
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+      color: $text-color;
+      margin-bottom: map-get($spacers, 3);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     cite {
@@ -404,6 +461,7 @@
       font-size: $font-size-sm;
       color: $text-muted;
       font-style: normal;
+      text-align: right;
 
       &::before {
         content: "— ";
@@ -415,8 +473,23 @@
   hr {
     margin: map-get($spacers, 6) 0;
     border: none;
-    height: 2px;
-    background: linear-gradient(to right, transparent, $border-color, transparent);
+    height: 1px;
+    background-color: $border-color;
+    position: relative;
+    overflow: visible;
+
+    &::after {
+      content: "•••";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $content-bg;
+      padding: 0 map-get($spacers, 3);
+      color: $border-color;
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+    }
   }
 
   // Definition lists
