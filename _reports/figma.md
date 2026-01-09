@@ -49,7 +49,7 @@ relationships:
     - "figjam"
   related_tools:
     - "miro"
-    - "canva"
+    - "Canva"
 ---
 
 # **Figma 調査レポート**
