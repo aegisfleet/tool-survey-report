@@ -55,9 +55,8 @@ relationships:
     - "UiPath"
     - "Zapier"
     - "n8n"
-    - "Google Workspace Flows"
+    - "Google Gemini Flows"
     - "Robot Framework"
-    - "Google Opal"
 ---
 
 # **Microsoft Power Automate 調査レポート**

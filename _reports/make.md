@@ -48,6 +48,7 @@ relationships:
     - "n8n"
     - "Workato"
     - "Microsoft Power Automate"
+    - "Google Gemini Flows"
 ---
 
 # **Make 調査レポート**
@@ -178,6 +179,7 @@ relationships:
 | **Zapier** | 最も有名な簡単自動化ツール | 圧倒的な連携数、初心者でも即座に使える | コストが高い、複雑な処理は苦手 | シンプルな連携を素早く実装したい場合。非エンジニア。 |
 | **n8n** | オープンソース・セルフホスト | データ管理権限、コード(JS)利用の自由度 | サーバー管理の手間（セルフホスト時） | データを自社管理したい場合。エンジニア中心のチーム。 |
 | **Workato** | エンタープライズiPaaS | 強固なセキュリティとガバナンス | 導入コストが非常に高い | 大企業での全社導入。セキュリティ要件が厳しい場合。 |
+| **Google Gemini Flows** | Google WorkspaceネイティブAI自動化 | Workspaceとの深い統合、AI活用 | サードパーティ連携が限定的 | Google Workspace内の業務自動化が中心の場合。 |
 
 ## **15. 総評**
 
