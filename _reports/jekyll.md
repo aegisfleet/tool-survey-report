@@ -1,26 +1,25 @@
 ---
-title: "Jekyll 調査レポート"
-tool_name: "Jekyll"
-category: "静的サイトジェネレーター"
-developer: "Tom Preston-Werner and volunteers"
-official_site: "https://jekyllrb.com/"
+title: Jekyll 調査レポート
+tool_name: Jekyll
+category: 静的サイトジェネレーター
+developer: Tom Preston-Werner and volunteers
+official_site: https://jekyllrb.com/
 links:
-  github: "https://github.com/jekyll/jekyll"
-date: "2025-10-22"
-last_updated: "2025-11-29"
+  github: https://github.com/jekyll/jekyll
+date: '2025-10-22'
+last_updated: '2025-11-29'
 tags:
-  - "静的サイトジェネレーター"
-  - "オープンソース"
-  - "ブログ"
+- 静的サイトジェネレーター
+- オープンソース
+- ブログ
 relationships:
   related_tools:
-    - Hugo
+  - Astro
+  - Hugo
 quick_summary:
   is_oss: true
-
-description: "Jekyllは、シンプルなテキストを静的なウェブサイトやブログに変換するツールです。"
+description: Jekyllは、シンプルなテキストを静的なウェブサイトやブログに変換するツールです。
 ---
-
 # **Jekyll 調査レポート**
 
 ## **1. 基本情報**
