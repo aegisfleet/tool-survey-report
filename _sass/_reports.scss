@@ -10,6 +10,10 @@
   @include media-breakpoint-down(md) {
     margin: map-get($spacers, 3) auto;
   }
+
+  @include media-breakpoint-down(sm) {
+    margin: map-get($spacers, 2) auto;
+  }
 }
 
 .report-header {
@@ -19,6 +23,10 @@
   background-color: $content-bg;
   border-radius: $border-radius $border-radius 0 0;
   border-bottom: 1px solid $border-color;
+
+  @include media-breakpoint-down(sm) {
+    padding: map-get($spacers, 3);
+  }
 }
 
 .report-title {
@@ -119,7 +127,6 @@
   }
 }
 
-// Report content styling
 .report-content {
   margin-bottom: map-get($spacers, 6);
   padding: 0 map-get($spacers, 4) map-get($spacers, 4);
@@ -129,6 +136,10 @@
 
   @include media-breakpoint-down(md) {
     padding: 0 map-get($spacers, 3) map-get($spacers, 3);
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 map-get($spacers, 2) map-get($spacers, 2);
   }
 
   // Typography in content
@@ -864,6 +875,11 @@
   @include media-breakpoint-down(md) {
     margin: 0 map-get($spacers, 3) map-get($spacers, 4);
     padding: map-get($spacers, 3);
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 0 map-get($spacers, 2) map-get($spacers, 4);
+    padding: map-get($spacers, 2);
   }
 }
 
