@@ -47,6 +47,7 @@ links:
   documentation: "https://docs.workato.com/"
 relationships:
   related_tools:
+    - "Make"
     - "Zapier"
     - "n8n"
     - "Microsoft Power Automate"
