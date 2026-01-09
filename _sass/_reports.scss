@@ -235,14 +235,110 @@
 
   // Tables
   table {
+    width: 100%;
     margin: map-get($spacers, 5) 0;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     overflow: hidden;
     box-shadow: $box-shadow-sm;
+    border-collapse: separate; // border-radiusを適用するため
 
     @include media-breakpoint-down(sm) {
       font-size: $font-size-sm;
+    }
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: map-get($spacers, 4) 0;
+    border-radius: $border-radius;
+    position: relative;
+    box-shadow: $box-shadow-sm;
+
+    // スクロールヒントの影
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 30px;
+      background: linear-gradient(to right, transparent, rgba($black, 0.05));
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &.has-scroll::after {
+      opacity: 1;
+    }
+
+    // カード形式の場合は影とラッパーのシャドウ、スクロールヒントを無効化
+    &.responsive-cards-wrapper {
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    table {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+
+  // 料金プランなどで使用するカード形式表示
+  .table-as-cards {
+    @include media-breakpoint-down(sm) {
+      display: block;
+      border: none;
+      box-shadow: none;
+      background: transparent;
+
+      thead {
+        display: none; // ヘッダーを隠す
+      }
+
+      tbody {
+        display: block;
+      }
+
+      tr {
+        display: block;
+        @include card(map-get($spacers, 3));
+        margin-bottom: map-get($spacers, 3);
+        border: 1px solid $border-color;
+      }
+
+      td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: map-get($spacers, 2) 0;
+        border: none !important; // 縦の線を確実に取り除く
+        border-bottom: 1px solid $border-light !important;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        // データのラベルを表示するための擬似要素
+        &::before {
+          content: attr(data-label);
+          font-weight: $font-weight-bold;
+          color: $primary-color;
+          margin-right: map-get($spacers, 2);
+          font-size: $font-size-xs;
+        }
+
+        &:not([data-label])::before {
+          display: none;
+        }
+      }
     }
   }
 

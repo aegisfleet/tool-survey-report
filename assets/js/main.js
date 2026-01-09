@@ -369,23 +369,74 @@ function enhanceTablesResponsiveness() {
   const tables = document.querySelectorAll('.report-content table');
 
   tables.forEach(function (table) {
-    if (!table.parentElement.classList.contains('table-responsive')) {
-      // 小さいテーブル（2行以下）はラッパーを追加しない
-      const rowCount = table.querySelectorAll('tr').length;
-      if (rowCount <= 2) {
-        return;
-      }
+    // 1. セルの内容をdata-label属性にセット（カード表示用）
+    const thead = table.querySelector('thead');
+    if (thead) {
+      const headers = Array.from(thead.querySelectorAll('th')).map(th => th.textContent.trim());
+      const rows = table.querySelectorAll('tbody tr');
+      rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        cells.forEach((cell, index) => {
+          if (headers[index]) {
+            cell.setAttribute('data-label', headers[index]);
+          }
+        });
+      });
+    }
 
+    // 2. 特定のキーワード（料金、比較など）が見つかった場合にカード形式クラスを付与
+    let shouldBeCards = false;
+    const keywords = ['料金', 'プラン', '比較', '価格'];
+    
+    // 直前の見出しを確認
+    let prev = table.previousElementSibling;
+    while (prev && !['H2', 'H3', 'H4'].includes(prev.tagName)) {
+      prev = prev.previousElementSibling;
+    }
+    
+    if (prev) {
+      const headingText = prev.textContent;
+      if (keywords.some(k => headingText.includes(k))) {
+        shouldBeCards = true;
+      }
+    }
+
+    if (shouldBeCards) {
+      table.classList.add('table-as-cards');
+    }
+
+    // 3. レスポンシブラッパーでラップ
+    if (!table.parentElement.classList.contains('table-responsive')) {
       const wrapper = document.createElement('div');
       wrapper.className = 'table-responsive';
-      wrapper.style.cssText = `
-        overflow-x: auto;
-        margin: 1rem 0;
-        border-radius: 0.375rem;
-      `;
+      if (shouldBeCards) {
+        wrapper.classList.add('responsive-cards-wrapper');
+      }
 
       table.parentElement.insertBefore(wrapper, table);
       wrapper.appendChild(table);
+
+      // スクロールが必要かどうかを判定
+      const checkScroll = () => {
+        if (wrapper.scrollWidth > wrapper.clientWidth) {
+          wrapper.classList.add('has-scroll');
+        } else {
+          wrapper.classList.remove('has-scroll');
+        }
+      };
+
+      // 初期実行とリサイズ時に実行
+      checkScroll();
+      window.addEventListener('resize', checkScroll);
+      
+      // スクロール時にも判定を更新（一番右まで行ったら影を消すなどの拡張が可能）
+      wrapper.addEventListener('scroll', function() {
+        if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5) {
+          wrapper.classList.remove('has-scroll');
+        } else {
+          wrapper.classList.add('has-scroll');
+        }
+      });
     }
   });
 }
