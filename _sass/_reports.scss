@@ -260,6 +260,8 @@
   a {
     color: $link-color;
     font-weight: $font-weight-medium;
+    word-break: break-all;
+    overflow-wrap: break-word;
 
     &:hover,
     &:focus {
