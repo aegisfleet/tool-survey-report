@@ -17,6 +17,7 @@ relationships:
     - "Pulumi"
     - "Ansible"
     - "OpenTofu"
+    - "Amazon Q Developer"
 ---
 
 # **AWS CloudFormation 調査レポート**

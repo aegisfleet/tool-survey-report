@@ -58,6 +58,7 @@ relationships:
     - "Windsurf"
     - "Visual Studio Code"
     - "CodeRabbit"
+    - "Amazon Q Developer"
 ---
 
 # **GitHub Copilot 調査レポート**

@@ -44,6 +44,7 @@ relationships:
     - "Cursor"
     - "Visual Studio Code"
     - "GitHub Copilot"
+    - "Amazon Q Developer"
 ---
 
 # **Kiro 調査レポート**
