@@ -427,13 +427,13 @@ function enhanceTablesResponsiveness() {
     // 2. 特定のキーワード（料金、比較など）が見つかった場合にカード形式クラスを付与
     let shouldBeCards = false;
     const keywords = ['料金', 'プラン', '比較', '価格'];
-    
+
     // 直前の見出しを確認
     let prev = table.previousElementSibling;
     while (prev && !['H2', 'H3', 'H4'].includes(prev.tagName)) {
       prev = prev.previousElementSibling;
     }
-    
+
     if (prev) {
       const headingText = prev.textContent;
       if (keywords.some(k => headingText.includes(k))) {
@@ -468,9 +468,9 @@ function enhanceTablesResponsiveness() {
       // 初期実行とリサイズ時に実行
       checkScroll();
       window.addEventListener('resize', checkScroll);
-      
+
       // スクロール時にも判定を更新（一番右まで行ったら影を消すなどの拡張が可能）
-      wrapper.addEventListener('scroll', function() {
+      wrapper.addEventListener('scroll', function () {
         if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5) {
           wrapper.classList.remove('has-scroll');
         } else {
@@ -508,7 +508,7 @@ function generateTableOfContents() {
     const tocList = document.createElement('ul');
     tocList.style.cssText = `
       background: #ffffff;
-      padding: 1rem 1.5rem;
+      padding: 1rem 2.5rem;
       border-radius: 0.375rem;
       border-left: 4px solid #ff7733;
       margin: 2rem 0;
