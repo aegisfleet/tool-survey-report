@@ -17,8 +17,7 @@ relationships:
     - "Microsoft Power Automate"
     - "n8n"
     - "Workato"
-    - "Google Workspace Flows"
-    - "Google Opal"
+    - "Google Gemini Flows"
 ---
 
 # **Zapier 調査レポート**
@@ -136,6 +135,7 @@ relationships:
 * **Make (旧Integromat)**: Zapierと同様に多くのアプリと連携できるが、より複雑なシナリオを視覚的に構築できる点が特徴。料金体系がZapierより安価な傾向にある。
 * **Microsoft Power Automate**: Microsoft製品との連携に強みを持つ。RPA機能も統合されており、デスクトップ操作の自動化も可能。
 * **n8n**: オープンソースでセルフホストも可能なワークフロー自動化ツール。カスタマイズ性が高く、エンジニア向けの機能が豊富。
+* **Google Gemini Flows**: Google Workspace製品とのネイティブな連携に特化。Gemini AIを活用した高度な自動化が可能だが、サードパーティ連携はまだ限定的。
 
 ## **15. 総評**
 
