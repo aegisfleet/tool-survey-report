@@ -1,27 +1,26 @@
 ---
-title: "Hugo 調査レポート"
-tool_name: "Hugo"
-category: "静的サイトジェネレーター"
-developer: "The Hugo Authors"
-official_site: "https://gohugo.io/"
+title: Hugo 調査レポート
+tool_name: Hugo
+category: 静的サイトジェネレーター
+developer: The Hugo Authors
+official_site: https://gohugo.io/
 links:
-  github: "https://github.com/gohugoio/hugo"
-date: "2025-11-29"
-last_updated: "2025-11-29"
+  github: https://github.com/gohugoio/hugo
+date: '2025-11-29'
+last_updated: '2025-11-29'
 tags:
-  - "静的サイトジェネレーター"
-  - "Go"
-  - "オープンソース"
-  - "高速"
+- 静的サイトジェネレーター
+- Go
+- オープンソース
+- 高速
 relationships:
   related_tools:
-    - Jekyll
+  - Astro
+  - Jekyll
 quick_summary:
   is_oss: true
-
-description: "Hugoは、Go言語で書かれた世界最速クラスの静的サイトジェネレーターです。依存関係が少なく、インストールが容易で、大規模なサイトでも数秒でビルドできます。"
+description: Hugoは、Go言語で書かれた世界最速クラスの静的サイトジェネレーターです。依存関係が少なく、インストールが容易で、大規模なサイトでも数秒でビルドできます。
 ---
-
 # **Hugo 調査レポート**
 
 ## **1. 基本情報**
