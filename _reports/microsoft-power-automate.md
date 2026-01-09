@@ -17,9 +17,8 @@ relationships:
     - "UiPath"
     - "Zapier"
     - "n8n"
-    - "Google Workspace Flows"
+    - "Google Gemini Flows"
     - "Robot Framework"
-    - "Google Opal"
 ---
 
 # **Microsoft Power Automate 調査レポート**
@@ -125,6 +124,7 @@ MicrosoftはPower Platform全体に対して継続的にアップデートを行
 
 * **UiPath**: RPA市場のリーダーであり、より高度で複雑なRPA機能に強みを持ちます。エンタープライズ向けの機能が非常に豊富です。
 * **Automation Anywhere**: UiPathと並ぶRPAの主要プレイヤー。クラウドネイティブなプラットフォームとAI機能に注力しています。
+* **Google Gemini Flows**: Google Workspaceエコシステム内での自動化に特化しており、Gemini AIを活用したインテリジェントなフロー構築が可能です。Microsoft 365に対するPower Automateと同様の位置づけのツールです。
 * **比較**: Power Automateの最大の強みは、Microsoft 365やAzureとの圧倒的な連携力と、比較的安価なライセンスコストです。既にMicrosoftエコシステムを導入している企業にとっては、最も親和性が高く、導入しやすい選択肢となります。
 
 ## **15. 総評**
