@@ -50,6 +50,7 @@ relationships:
     - "Claude"
     - "Grok"
     - "Stable Diffusion"
+    - "OpenAI Codex"
 ---
 
 # **Gemini 調査レポート**
