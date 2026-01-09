@@ -19,6 +19,7 @@ relationships:
   related_tools:
     - "Zapier"
     - "Microsoft Power Automate"
+    - "Workato"
     - "Google Opal"
 ---
 
