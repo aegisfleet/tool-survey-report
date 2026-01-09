@@ -27,15 +27,15 @@
 
 
 
-    {% if site.data.navigation.main_links %}
-    {% for link in site.data.navigation.main_links %}
+    {%- if site.data.navigation.main_links -%}
+    {%- for link in site.data.navigation.main_links -%}
     <li class="nav-item">
       <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}current{% endif %}">
         {{ link.title }}
       </a>
     </li>
-    {% endfor %}
-    {% endif %}
+    {%- endfor -%}
+    {%- endif -%}
   </ul>
 </nav>
 

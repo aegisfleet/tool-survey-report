@@ -27,24 +27,24 @@ layout: default
         </button>
       </div>
       <div class="picks-grid" id="random-picks-grid">
-        {% assign all_reports = site.reports | sort: 'last_updated' | reverse %}
-        {% for report in all_reports limit: 3 %}
+        {%- assign all_reports = site.reports | sort: 'last_updated' | reverse -%}
+        {%- for report in all_reports limit: 3 -%}
         <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
           data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
           <div class="pick-badges">
-            {% if report.quick_summary.is_oss %}
+            {%- if report.quick_summary.is_oss -%}
             <span class="pick-oss-badge">OSS</span>
-            {% elsif report.quick_summary.has_free_plan %}
+            {%- elsif report.quick_summary.has_free_plan -%}
             <span class="pick-free-badge">無料プランあり</span>
-            {% endif %}
+            {%- endif -%}
           </div>
           <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
           <span class="pick-category">{{ report.category }}</span>
-          {% if report.evaluation.score %}
+          {%- if report.evaluation.score -%}
           <span class="pick-score">{{ report.evaluation.score }}点</span>
-          {% endif %}
+          {%- endif -%}
         </a>
-        {% endfor %}
+        {%- endfor -%}
       </div>
     </section>
 
@@ -74,8 +74,8 @@ layout: default
       </div>
 
       <div class="reports-grid" id="reports-grid">
-        {% assign sorted_reports = site.reports | sort: 'last_updated' | reverse %}
-        {% for report in sorted_reports %}
+        {%- assign sorted_reports = site.reports | sort: 'last_updated' | reverse -%}
+        {%- for report in sorted_reports -%}
         <article class="report-card" data-tags="{{ report.tags | join: ',' }}"
           data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
           data-description="{{ report.description | downcase }}"
@@ -85,11 +85,11 @@ layout: default
           data-is-oss="{{ report.quick_summary.is_oss | default: false }}">
 
           <div class="card-badges">
-            {% if report.quick_summary.is_oss %}
+            {%- if report.quick_summary.is_oss -%}
             <span class="card-oss-badge">OSS</span>
-            {% elsif report.quick_summary.has_free_plan %}
+            {%- elsif report.quick_summary.has_free_plan -%}
             <span class="card-free-badge">💚 無料プランあり</span>
-            {% endif %}
+            {%- endif -%}
           </div>
 
           <div class="report-card-header">
@@ -100,9 +100,9 @@ layout: default
               <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
                 {{ report.last_updated | date: "%Y年%m月%d日" }}
               </time>
-              {% if report.evaluation.score %}
+              {%- if report.evaluation.score -%}
               <span class="card-score-badge">{{ report.evaluation.score }}点</span>
-              {% endif %}
+              {%- endif -%}
             </div>
           </div>
 
@@ -139,13 +139,13 @@ layout: default
             {% endif %}
           </div>
 
-          {% if report.tags and report.tags.size > 0 %}
+          {%- if report.tags and report.tags.size > 0 -%}
           <div class="report-tags">
-            {% for tag in report.tags %}
+            {%- for tag in report.tags -%}
             <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-            {% endfor %}
+            {%- endfor -%}
           </div>
-          {% endif %}
+          {%- endif -%}
 
           <div class="report-card-footer">
             <a href="{{ report.url | relative_url }}" class="read-more">続きを読む →</a>

@@ -16,7 +16,7 @@ layout: default
     <h1 class="report-title" itemprop="headline">{{ page.title }}</h1>
 
     <div class="report-meta">
-      {% if page.last_updated %}
+      {%- if page.last_updated -%}
       <div class="report-date">
         <time datetime="{{ page.last_updated | date_to_xmlschema }}" itemprop="datePublished">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -26,9 +26,9 @@ layout: default
           {{ page.last_updated | date: "%Y年%m月%d日" }}
         </time>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.developer %}
+      {%- if page.developer -%}
       <div class="report-developer">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path
@@ -37,7 +37,7 @@ layout: default
         </svg>
         開発元: {{ page.developer }}
       </div>
-      {% elsif page.author %}
+      {%- elsif page.author -%}
       <div class="report-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path
@@ -45,9 +45,9 @@ layout: default
         </svg>
         <span itemprop="name">{{ page.author }}</span>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.category %}
+      {%- if page.category -%}
       <div class="report-category">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path
@@ -55,9 +55,9 @@ layout: default
         </svg>
         カテゴリ: {{ page.category }}
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.official_site %}
+      {%- if page.official_site -%}
       <div class="report-official-site">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path
@@ -65,25 +65,25 @@ layout: default
         </svg>
         <a href="{{ page.official_site }}" target="_blank" rel="noopener">公式サイト</a>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.tags and page.tags.size > 0 %}
+      {%- if page.tags and page.tags.size > 0 -%}
       <div class="report-tags">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
           <path
             d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
         </svg>
         <ul class="tag-list">
-          {% for tag in page.tags %}
+          {%- for tag in page.tags -%}
           <li>
             <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link" rel="tag">
               {{ tag }}
             </a>
           </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
       </div>
-      {% endif %}
+      {%- endif -%}
     </div>
 
     {% if page.description %}
@@ -98,7 +98,7 @@ layout: default
   <section class="quick-summary-section">
     <div class="quick-summary-grid">
 
-      {% if page.evaluation.score %}
+      {%- if page.evaluation.score -%}
       <div class="summary-card score-card">
         <div class="summary-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -112,9 +112,9 @@ layout: default
           <div class="summary-note">基準点70点からの評価</div>
         </div>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.quick_summary.is_oss != nil %}
+      {%- if page.quick_summary.is_oss != nil -%}
       <div class="summary-card">
         <div class="summary-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -127,9 +127,9 @@ layout: default
           <div class="summary-value">{% if page.quick_summary.is_oss %}OSS{% else %}非公式・商用{% endif %}</div>
         </div>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.quick_summary.has_free_plan != nil %}
+      {%- if page.quick_summary.has_free_plan != nil -%}
       <div class="summary-card">
         <div class="summary-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -142,9 +142,9 @@ layout: default
           <div class="summary-value">{% if page.quick_summary.has_free_plan %}あり{% else %}なし{% endif %}</div>
         </div>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.quick_summary.starting_price %}
+      {%- if page.quick_summary.starting_price -%}
       <div class="summary-card">
         <div class="summary-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -157,9 +157,9 @@ layout: default
           <div class="summary-value">{{ page.quick_summary.starting_price }}</div>
         </div>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 %}
+      {%- if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 -%}
       <div class="summary-card">
         <div class="summary-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -170,13 +170,13 @@ layout: default
         <div class="summary-content">
           <div class="summary-label">対象ユーザー</div>
           <div class="summary-value target-users">
-            {% for user in page.quick_summary.target_users %}
+            {%- for user in page.quick_summary.target_users -%}
             <span class="target-user-tag">{{ user }}</span>
-            {% endfor %}
+            {%- endfor -%}
           </div>
         </div>
       </div>
-      {% endif %}
+      {%- endif -%}
 
       {% if page.quick_summary.update_frequency %}
       <div class="summary-card">
@@ -195,58 +195,56 @@ layout: default
 
     </div>
 
-    {% if page.quick_summary.latest_highlight %}
+    {%- if page.quick_summary.latest_highlight -%}
     <div class="latest-highlight">
       <span class="highlight-label">🆕 最新情報:</span>
       <span class="highlight-text">{{ page.quick_summary.latest_highlight }}</span>
     </div>
-    {% endif %}
+    {%- endif -%}
 
     <!-- 評価の詳細 -->
-    {% if page.evaluation.plus_points or page.evaluation.minus_points %}
+    {%- if page.evaluation.plus_points or page.evaluation.minus_points or page.evaluation.summary -%}
     <div class="evaluation-details">
       <h3 class="evaluation-title">📋 評価の詳細</h3>
 
-      {% if page.evaluation.plus_points and page.evaluation.plus_points.size > 0 %}
+      {%- if page.evaluation.plus_points and page.evaluation.plus_points.size > 0 -%}
       <div class="evaluation-group plus-points">
         <h4>👍 加点項目</h4>
         <ul>
-          {% for item in page.evaluation.plus_points %}
+          {%- for item in page.evaluation.plus_points -%}
           <li>
             <span class="eval-point plus">+{{ item.point }}</span>
             <span class="eval-reason">{{ item.reason }}</span>
           </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.evaluation.minus_points and page.evaluation.minus_points.size > 0 %}
+      {%- if page.evaluation.minus_points and page.evaluation.minus_points.size > 0 -%}
       <div class="evaluation-group minus-points">
         <h4>👎 減点項目</h4>
         <ul>
-          {% for item in page.evaluation.minus_points %}
+          {%- for item in page.evaluation.minus_points -%}
           <li>
             <span class="eval-point minus">{{ item.point }}</span>
             <span class="eval-reason">{{ item.reason }}</span>
           </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
       </div>
-      {% endif %}
+      {%- endif -%}
 
-      {% if page.evaluation.summary %}
+      {%- if page.evaluation.summary -%}
       <div class="evaluation-summary">
         <strong>総評:</strong> {{ page.evaluation.summary }}
       </div>
-      {% endif %}
+      {%- endif -%}
     </div>
-    {% endif %}
-
+    {%- endif -%}
   </section>
-  {% endif %}
-
-  {% include related-tools.html %}
+  {%- endif -%}
+  {%- include related-tools.html -%}
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {

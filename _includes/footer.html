@@ -5,30 +5,30 @@
         <h3>{{ site.title | default: "調査レポートサイト" }}</h3>
         <p>{{ site.description | default: "調査レポートを公開・共有するためのサイトです。" }}</p>
       </div>
-      
+
       <div class="footer-section">
         <h4>ナビゲーション</h4>
         <ul class="footer-nav">
           <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
           <li><a href="{{ '/tags/' | relative_url }}">タグ一覧</a></li>
-          {% if site.data.navigation.footer_links %}
-            {% for link in site.data.navigation.footer_links %}
-              <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          {% endif %}
+          {%- if site.data.navigation.footer_links -%}
+          {%- for link in site.data.navigation.footer_links -%}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+          {%- endfor -%}
+          {%- endif -%}
         </ul>
       </div>
-      
+
       <div class="footer-section">
         <h4>情報</h4>
         <ul class="footer-info">
           <li>最終更新: {{ site.time | date: "%Y年%m月%d日" }}</li>
-          {% if site.author.name %}
-            <li>管理者: {{ site.author.name }}</li>
-          {% endif %}
-          {% if site.author.twitter_url %}
-            <li><a href="{{ site.author.twitter_url }}" target="_blank" rel="noopener">お問い合わせ</a></li>
-          {% endif %}
+          {%- if site.author.name -%}
+          <li>管理者: {{ site.author.name }}</li>
+          {%- endif -%}
+          {%- if site.author.twitter_url -%}
+          <li><a href="{{ site.author.twitter_url }}" target="_blank" rel="noopener">お問い合わせ</a></li>
+          {%- endif -%}
         </ul>
       </div>
     </div>
@@ -38,6 +38,7 @@
 <!-- トップに戻るボタン -->
 <button id="back-to-top" class="back-to-top" aria-label="ページの先頭に戻る" title="ページの先頭に戻る">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
   </svg>
 </button>
