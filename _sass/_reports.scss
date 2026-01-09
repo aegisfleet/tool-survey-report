@@ -160,19 +160,76 @@
     color: $secondary-color;
     font-size: 1.5rem;
     position: relative;
+    padding-left: map-get($spacers, 4);
 
     &::before {
       content: "";
       position: absolute;
-      left: -#{map-get($spacers, 3)};
-      top: 0;
-      bottom: 0;
+      left: 0;
+      top: 0.2em;
+      bottom: 0.2em;
       width: 4px;
       background-color: $secondary-color;
       border-radius: 2px;
     }
 
-    padding-left: map-get($spacers, 3);
+    // Keyword based emoji accents
+    &.header-benefits::after {
+      content: " ✨";
+      font-size: 0.8em;
+    }
+
+    &.header-drawbacks::after {
+      content: " ⚠️";
+      font-size: 0.8em;
+    }
+
+    &.header-features::after {
+      content: " 🚀";
+      font-size: 0.8em;
+    }
+
+    &.header-pricing::after {
+      content: " 💰";
+      font-size: 0.8em;
+    }
+
+    &.header-usage::after {
+      content: " 📱";
+      font-size: 0.8em;
+    }
+  }
+
+  h2 {
+
+    &.header-benefits::after,
+    &.header-drawbacks::after,
+    &.header-features::after,
+    &.header-pricing::after,
+    &.header-usage::after {
+      font-size: 0.7em;
+      margin-left: 0.5rem;
+    }
+
+    &.header-benefits::after {
+      content: " ✨";
+    }
+
+    &.header-drawbacks::after {
+      content: " ⚠️";
+    }
+
+    &.header-features::after {
+      content: " 🚀";
+    }
+
+    &.header-pricing::after {
+      content: " 💰";
+    }
+
+    &.header-usage::after {
+      content: " 📱";
+    }
   }
 
   // Paragraphs and text
@@ -208,12 +265,20 @@
     list-style: none;
 
     li::before {
-      content: "•";
-      color: $secondary-color;
-      font-weight: bold;
+      content: "";
       display: inline-block;
-      width: 1em;
-      margin-left: -1em;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: -1.5rem;
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      background-color: $secondary-color;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
     }
   }
 
@@ -249,11 +314,24 @@
     }
 
     // External links
-    &[href^="http"] {
+    &[href^="http"]:not([href*="{{ site.url }}"]) {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+
       &::after {
-        content: " ↗";
-        font-size: 0.8em;
-        opacity: 0.7;
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        background-color: currentColor;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' /%3E%3C/svg%3E");
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' /%3E%3C/svg%3E");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        opacity: 0.6;
       }
     }
   }
@@ -442,6 +520,16 @@
       color: rgba($secondary-color, 0.1);
       font-family: serif;
       line-height: 1;
+    }
+
+    &::after {
+      content: "💡";
+      position: absolute;
+      bottom: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      opacity: 0.2;
+      font-style: normal;
     }
 
     p {
@@ -850,12 +938,22 @@
   border-radius: $border-radius;
   box-shadow: $box-shadow-sm;
   display: flex;
-  align-items: flex-start;
-  gap: map-get($spacers, 2);
+  align-items: center; // flex-startからcenterに変更
+  gap: map-get($spacers, 3);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 
   &.score-card {
     background: $gradient-primary;
     color: $white;
+
+    .summary-icon {
+      background: rgba($white, 0.2);
+      color: $white;
+    }
 
     .summary-label,
     .summary-note {
@@ -869,8 +967,20 @@
 }
 
 .summary-icon {
-  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($secondary-color, 0.1);
+  color: $secondary-color;
+  border-radius: 50%;
   flex-shrink: 0;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .summary-content {

@@ -100,7 +100,12 @@ layout: default
 
       {% if page.evaluation.score %}
       <div class="summary-card score-card">
-        <div class="summary-icon">📊</div>
+        <div class="summary-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
         <div class="summary-content">
           <div class="summary-label">総合評価</div>
           <div class="summary-value score-value">{{ page.evaluation.score }}点</div>
@@ -111,7 +116,12 @@ layout: default
 
       {% if page.quick_summary.is_oss != nil %}
       <div class="summary-card">
-        <div class="summary-icon">{% if page.quick_summary.is_oss %}🌐{% else %}🏢{% endif %}</div>
+        <div class="summary-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 2a10 10 0 1010 10 10 10 0 00-10-10zm0 4a6 6 0 11-6 6 6 6 0 016-6zm0 2a4 4 0 00-4 4h8a4 4 0 00-4-4z" />
+          </svg>
+        </div>
         <div class="summary-content">
           <div class="summary-label">オープンソース</div>
           <div class="summary-value">{% if page.quick_summary.is_oss %}OSS{% else %}非公式・商用{% endif %}</div>
@@ -121,7 +131,12 @@ layout: default
 
       {% if page.quick_summary.has_free_plan != nil %}
       <div class="summary-card">
-        <div class="summary-icon">{% if page.quick_summary.has_free_plan %}💚{% else %}💰{% endif %}</div>
+        <div class="summary-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+          </svg>
+        </div>
         <div class="summary-content">
           <div class="summary-label">無料プラン</div>
           <div class="summary-value">{% if page.quick_summary.has_free_plan %}あり{% else %}なし{% endif %}</div>
@@ -131,7 +146,12 @@ layout: default
 
       {% if page.quick_summary.starting_price %}
       <div class="summary-card">
-        <div class="summary-icon">💵</div>
+        <div class="summary-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
         <div class="summary-content">
           <div class="summary-label">最低価格</div>
           <div class="summary-value">{{ page.quick_summary.starting_price }}</div>
@@ -141,7 +161,12 @@ layout: default
 
       {% if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 %}
       <div class="summary-card">
-        <div class="summary-icon">👥</div>
+        <div class="summary-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </div>
         <div class="summary-content">
           <div class="summary-label">対象ユーザー</div>
           <div class="summary-value target-users">
@@ -155,7 +180,12 @@ layout: default
 
       {% if page.quick_summary.update_frequency %}
       <div class="summary-card">
-        <div class="summary-icon">🔄</div>
+        <div class="summary-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+        </div>
         <div class="summary-content">
           <div class="summary-label">更新頻度</div>
           <div class="summary-value">{{ page.quick_summary.update_frequency }}</div>
@@ -217,6 +247,20 @@ layout: default
   {% endif %}
 
   {% include related-tools.html %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const headers = document.querySelectorAll('.report-content h2, .report-content h3');
+      headers.forEach(h => {
+        const text = h.textContent;
+        if (text.includes('メリット') || text.includes('長所') || text.includes('強み') || text.includes('Pros')) h.classList.add('header-benefits');
+        if (text.includes('デメリット') || text.includes('短所') || text.includes('弱み') || text.includes('Cons')) h.classList.add('header-drawbacks');
+        if (text.includes('機能') || text.includes('特徴') || text.includes('シーン')) h.classList.add('header-features');
+        if (text.includes('料金') || text.includes('プラン') || text.includes('価格') || text.includes('コスト')) h.classList.add('header-pricing');
+        if (text.includes('使い方') || text.includes('操作') || text.includes('実績')) h.classList.add('header-usage');
+      });
+    });
+  </script>
 
   <div class="report-content" itemprop="articleBody">
     {{ content }}
