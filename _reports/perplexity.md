@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "Genspark"
     - "Felo"
+    - "Google Disco"
 ---
 
 # **Perplexity 調査レポート**
