@@ -29,6 +29,7 @@ relationships:
     - "Appium"
     - "Karate"
     - "Apache JMeter"
+    - "MagicPod"
 ---
 
 # **Selenium 調査レポート**
