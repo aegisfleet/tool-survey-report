@@ -4,7 +4,7 @@
 title: "GitHub 調査レポート"
 tool_name: "GitHub"
 tool_reading: "ギットハブ"
-category: "バージョン管理"
+category: "開発者ツール"
 developer: "Microsoft"
 official_site: "https://github.com"
 date: "2025-10-18"
@@ -62,7 +62,6 @@ relationships:
     - "GitHub Copilot"
   related_tools:
     - "GitLab"
-    - "CodeRabbit"
 ---
 
 # **GitHub 調査レポート**
@@ -75,7 +74,7 @@ relationships:
 * **公式サイト**: [https://github.com](https://github.com)
 * **関連リンク**:
   * ドキュメント: [https://docs.github.com/](https://docs.github.com/)
-  * レビューサイト: [G2](https://www.g2.com/products/github/reviews) | [Capterra](https://www.capterra.com/p/131233/GitHub/) | [ITreview](https://www.itreview.jp/products/github/reviews)
+  * レビューサイト: [G2](https://www.g2.com/products/github/reviews) | [ITreview](https://www.itreview.jp/products/github/reviews)
 * **カテゴリ**: バージョン管理
 * **概要**: GitHubは、Gitを利用したソースコードのホスティングおよびバージョン管理プラットフォームです。単なるコード管理に留まらず、GitHub ActionsによるCI/CD、Issuesによるプロジェクト管理、そしてCopilotをはじめとする強力なAI機能を提供し、ソフトウェア開発のライフサイクル全体をサポートします。
 
