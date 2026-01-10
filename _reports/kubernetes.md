@@ -18,6 +18,8 @@ quick_summary:
 
 description: "コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションシステム。"
 relationships:
+  children:
+    - "Karpenter"
   related_tools:
     - "Docker"
     - "Datadog"
