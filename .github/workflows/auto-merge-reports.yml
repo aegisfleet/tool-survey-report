@@ -125,11 +125,25 @@ jobs:
                 throw new Error(`Frontmatter validation failed for ${file}: missing closing ---`);
               }
               
+              // Check for empty frontmatter (closing --- immediately after opening ---)
+              if (closingIndex === 1) {
+                const errorMsg = `❌ フロントマター検証エラー: ${file}\n\n空のフロントマターが検出されました（開始「---」の直後に終了「---」があります）。\nフロントマターの内容が本文に漏れ出している可能性があります。`;
+                core.error(errorMsg);
+                await github.rest.issues.createComment({ 
+                  owner, 
+                  repo, 
+                  issue_number: prNumber, 
+                  body: errorMsg + '\n\n自動マージを中止しました。フロントマターを修正してください。'
+                });
+                throw new Error(`Frontmatter validation failed for ${file}: empty frontmatter detected`);
+              }
+              
               // Extract and validate YAML
               const frontmatterContent = lines.slice(1, closingIndex).join('\n');
+              let parsedFrontmatter;
               try {
-                yaml.load(frontmatterContent);
-                core.info(`  ✅ Frontmatter is valid.`);
+                parsedFrontmatter = yaml.load(frontmatterContent);
+                core.info(`  ✅ YAML syntax is valid.`);
               } catch (yamlErr) {
                 const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nYAML構文エラー: ${yamlErr.message}`;
                 core.error(errorMsg);
@@ -141,6 +155,22 @@ jobs:
                 });
                 throw new Error(`Frontmatter validation failed for ${file}: ${yamlErr.message}`);
               }
+              
+              // Validate required fields exist
+              const requiredFields = ['title', 'tool_name'];
+              const missingFields = requiredFields.filter(field => !parsedFrontmatter || !parsedFrontmatter[field]);
+              if (missingFields.length > 0) {
+                const errorMsg = `❌ フロントマター検証エラー: ${file}\n\n必須フィールドが見つかりません: ${missingFields.join(', ')}\n\nフロントマターの形式が正しくない可能性があります。`;
+                core.error(errorMsg);
+                await github.rest.issues.createComment({ 
+                  owner, 
+                  repo, 
+                  issue_number: prNumber, 
+                  body: errorMsg + '\n\n自動マージを中止しました。フロントマターを修正してください。'
+                });
+                throw new Error(`Frontmatter validation failed for ${file}: missing required fields: ${missingFields.join(', ')}`);
+              }
+              core.info(`  ✅ Required fields present: ${requiredFields.join(', ')}`);
             }
             
             core.info('All frontmatter validations passed.');
