@@ -57,7 +57,8 @@ links:
   github: "https://github.com/flutter/flutter"
   documentation: "https://docs.flutter.dev/"
 relationships:
-  related_tools: []
+  related_tools:
+    - "Android Studio"
 ---
 
 # **Flutter 調査レポート**
