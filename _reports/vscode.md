@@ -21,6 +21,7 @@ relationships:
     - "Cursor"
     - "Kiro"
     - "GitHub Copilot"
+    - "Android Studio"
 ---
 
 # **Visual Studio Code 調査レポート**
