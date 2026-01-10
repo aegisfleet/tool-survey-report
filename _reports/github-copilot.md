@@ -61,6 +61,7 @@ relationships:
     - "Amazon Q Developer"
     - "OpenAI Codex (CLI)"
     - "Devin"
+    - "Microsoft 365 Copilot"
 ---
 
 # **GitHub Copilot 調査レポート**

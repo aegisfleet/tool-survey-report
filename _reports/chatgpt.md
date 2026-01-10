@@ -27,6 +27,7 @@ relationships:
     - "Rakuten AI"
     - "Stable Diffusion"
     - "Amazon Bedrock"
+    - "Microsoft 365 Copilot"
 ---
 
 # **ChatGPT 調査レポート**
