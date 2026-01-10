@@ -15,6 +15,7 @@ description: "大規模言語モデルとリアルタイムのWeb検索を組み
 
 relationships:
   related_tools:
+    - "Genspark"
     - "Felo"
     - "Google"
     - "Microsoft Copilot"
