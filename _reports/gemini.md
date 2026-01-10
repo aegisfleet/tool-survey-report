@@ -45,6 +45,7 @@ evaluation:
 relationships:
   children:
     - "Google AI Studio"
+    - "Google Antigravity"
   related_tools:
     - "ChatGPT"
     - "Claude"
