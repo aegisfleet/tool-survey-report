@@ -59,7 +59,7 @@ relationships:
     - "Visual Studio Code"
     - "CodeRabbit"
     - "Amazon Q Developer"
-    - "OpenAI Codex"
+    - "OpenAI Codex (CLI)"
 ---
 
 # **GitHub Copilot 調査レポート**

@@ -58,7 +58,7 @@ relationships:
     - "Windsurf"
     - "Kiro"
     - "Amazon Q Developer"
-    - "OpenAI Codex"
+    - "OpenAI Codex (CLI)"
 ---
 
 # **Cursor 調査レポート**
