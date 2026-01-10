@@ -30,6 +30,7 @@ relationships:
     - "Karate"
     - "Apache JMeter"
     - "MagicPod"
+    - "Ranorex Studio"
 ---
 
 # **Selenium 調査レポート**
