@@ -503,18 +503,6 @@
     }
 }
 
-// Card badges
-.card-badges {
-    position: absolute;
-    top: map-get($spacers, 2);
-    right: map-get($spacers, 2);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: map-get($spacers, 1);
-    z-index: 1;
-}
-
 .card-score-badge {
     display: inline-flex;
     align-items: center;

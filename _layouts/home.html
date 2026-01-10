@@ -84,14 +84,6 @@ layout: default
           data-developer="{{ report.developer | downcase }}"
           data-is-oss="{{ report.quick_summary.is_oss | default: false }}">
 
-          <div class="card-badges">
-            {%- if report.quick_summary.is_oss -%}
-            <span class="card-oss-badge">OSS</span>
-            {%- elsif report.quick_summary.has_free_plan -%}
-            <span class="card-free-badge">💚 無料プランあり</span>
-            {%- endif -%}
-          </div>
-
           <div class="report-card-header">
             <h3 class="report-title">
               <a href="{{ report.url | relative_url }}">{{ report.tool_name | default: report.title }}</a>
@@ -100,6 +92,11 @@ layout: default
               <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
                 {{ report.last_updated | date: "%Y年%m月%d日" }}
               </time>
+              {%- if report.quick_summary.is_oss -%}
+              <span class="card-oss-badge">OSS</span>
+              {%- elsif report.quick_summary.has_free_plan -%}
+              <span class="card-free-badge">💚 無料プランあり</span>
+              {%- endif -%}
               {%- if report.evaluation.score -%}
               <span class="card-score-badge">{{ report.evaluation.score }}点</span>
               {%- endif -%}
