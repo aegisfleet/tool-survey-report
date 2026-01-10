@@ -59,6 +59,7 @@ relationships:
     - "Kiro"
     - "Amazon Q Developer"
     - "OpenAI Codex (CLI)"
+    - "Google Antigravity"
 ---
 
 # **Cursor 調査レポート**
