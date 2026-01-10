@@ -12,6 +12,12 @@ tags:
   - "対話型AI"
   - "生成AI"
 description: "大規模言語モデルとリアルタイムのWeb検索を組み合わせ、出典付きで正確かつ信頼性の高い回答を提供するAIパワード検索エンジン。"
+
+relationships:
+  related_tools:
+    - "Felo"
+    - "Google"
+    - "Microsoft Copilot"
 ---
 
 # **Perplexity 調査レポート**

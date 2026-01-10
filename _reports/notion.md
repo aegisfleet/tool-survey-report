@@ -16,6 +16,7 @@ description: "Notionは、ドキュメント、ナレッジベース、タスク
 relationships:
   related_tools:
     - "Obsidian"
+    - "Felo"
 ---
 
 # **Notion 調査レポート**
