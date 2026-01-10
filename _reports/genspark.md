@@ -52,6 +52,7 @@ relationships:
   related_tools:
     - "Perplexity"
     - "Devin"
+    - "Google Disco"
 ---
 
 # **Genspark 調査レポート**

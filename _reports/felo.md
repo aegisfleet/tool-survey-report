@@ -55,6 +55,7 @@ relationships:
     - "iAsk"
     - "Komo"
     - "Notion"
+    - "Google Disco"
 ---
 
 # **Felo 調査レポート**
