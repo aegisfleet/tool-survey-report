@@ -52,6 +52,8 @@ links:
   documentation: "https://docs.sonarsource.com/sonarqube/latest/"
 relationships:
   related_tools:
+    - "JaCoCo"
+    - "JaCoCo"
     - "CodeRabbit"
 ---
 
