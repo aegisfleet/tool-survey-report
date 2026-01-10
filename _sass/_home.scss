@@ -254,22 +254,17 @@
             background: $gradient-primary;
             color: $white;
             font-weight: $font-weight-bold;
-            font-size: $font-size-base;
-            padding: map-get($spacers, 1) map-get($spacers, 3);
+            font-size: $font-size-sm;
+            padding: map-get($spacers, 1) map-get($spacers, 2);
             border-radius: $border-radius-xl;
-            margin-top: auto;
-            align-self: flex-start;
         }
 
-        .pick-badges {
-            position: absolute;
-            top: map-get($spacers, 3);
-            right: map-get($spacers, 3);
+        .pick-meta {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: map-get($spacers, 1);
-            z-index: 1;
+            align-items: center;
+            gap: map-get($spacers, 2);
+            margin-top: auto;
+            flex-wrap: wrap;
         }
 
         .pick-free-badge {

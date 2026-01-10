@@ -31,18 +31,18 @@ layout: default
         {%- for report in all_reports limit: 3 -%}
         <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
           data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
-          <div class="pick-badges">
+          <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
+          <span class="pick-category">{{ report.category }}</span>
+          <div class="pick-meta">
             {%- if report.quick_summary.is_oss -%}
             <span class="pick-oss-badge">OSS</span>
             {%- elsif report.quick_summary.has_free_plan -%}
-            <span class="pick-free-badge">無料プランあり</span>
+            <span class="pick-free-badge">💚 無料プランあり</span>
+            {%- endif -%}
+            {%- if report.evaluation.score -%}
+            <span class="pick-score">{{ report.evaluation.score }}点</span>
             {%- endif -%}
           </div>
-          <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
-          <span class="pick-category">{{ report.category }}</span>
-          {%- if report.evaluation.score -%}
-          <span class="pick-score">{{ report.evaluation.score }}点</span>
-          {%- endif -%}
         </a>
         {%- endfor -%}
       </div>
@@ -354,46 +354,38 @@ layout: default
           card.querySelector('.pick-title').textContent = shuffled[index].title;
           card.querySelector('.pick-category').textContent = shuffled[index].category;
 
-          // スコアバッジの表示を更新
-          let scoreEl = card.querySelector('.pick-score');
-          if (shuffled[index].score) {
-            if (!scoreEl) {
-              // スコア要素がなければ作成
-              scoreEl = document.createElement('span');
-              scoreEl.className = 'pick-score';
-              card.appendChild(scoreEl);
-            }
-            scoreEl.textContent = shuffled[index].score;
-            scoreEl.style.display = '';
-          } else if (scoreEl) {
-            scoreEl.style.display = 'none';
+          // メタコンテナを取得または作成
+          let metaContainer = card.querySelector('.pick-meta');
+          if (!metaContainer) {
+            metaContainer = document.createElement('div');
+            metaContainer.className = 'pick-meta';
+            card.appendChild(metaContainer);
           }
 
-          // バッジの表示順序を管理するコンテナ
-          let badgesContainer = card.querySelector('.pick-badges');
-          if (!badgesContainer) {
-            // もしコンテナがなければ作成（基本的にはLiquidで生成されているはず）
-            badgesContainer = document.createElement('div');
-            badgesContainer.className = 'pick-badges';
-            card.insertBefore(badgesContainer, card.firstChild);
-          }
-
-          // バッジを一旦クリアして再描画
-          badgesContainer.innerHTML = '';
+          // メタコンテナを一旦クリアして再描画
+          metaContainer.innerHTML = '';
 
           // OSS バッジを最優先
           if (shuffled[index].isOss) {
             const ossBadge = document.createElement('span');
             ossBadge.className = 'pick-oss-badge';
             ossBadge.textContent = 'OSS';
-            badgesContainer.appendChild(ossBadge);
+            metaContainer.appendChild(ossBadge);
           }
           // OSSでない場合にのみ無料プランバッジ
           else if (shuffled[index].hasFreePlan) {
             const freeBadge = document.createElement('span');
             freeBadge.className = 'pick-free-badge';
-            freeBadge.textContent = '無料プランあり';
-            badgesContainer.appendChild(freeBadge);
+            freeBadge.textContent = '💚 無料プランあり';
+            metaContainer.appendChild(freeBadge);
+          }
+
+          // スコアバッジを追加
+          if (shuffled[index].score) {
+            const scoreEl = document.createElement('span');
+            scoreEl.className = 'pick-score';
+            scoreEl.textContent = shuffled[index].score;
+            metaContainer.appendChild(scoreEl);
           }
         }
       });
