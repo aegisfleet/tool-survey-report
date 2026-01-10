@@ -11,6 +11,8 @@ tags:
   - "ソースコード管理"
   - "CI/CD"
   - "DevOps"
+  - "AI"
+  - "コーディング支援"
 quick_summary:
   is_oss: true
 
