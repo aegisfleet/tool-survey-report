@@ -15,6 +15,7 @@ tags:
 description: "世界初の完全自律型AIソフトウェアエンジニア。自然言語の指示に基づき、ソフトウェア開発の計画、コーディング、デバッグ、テスト、デプロイまでを一貫して自律的に実行する能力を持つAI開発者ツールです。"
 relationships:
   related_tools:
+    - "Genspark"
     - "OpenHands"
     - "Google Jules"
     - "Manus"
