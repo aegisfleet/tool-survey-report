@@ -60,6 +60,7 @@ relationships:
     - "Amazon Q Developer"
     - "OpenAI Codex (CLI)"
     - "Google Antigravity"
+    - "Devin"
 ---
 
 # **Cursor 調査レポート**
