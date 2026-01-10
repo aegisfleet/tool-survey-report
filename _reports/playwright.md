@@ -30,6 +30,7 @@ relationships:
     - "Appium"
     - "Karate"
     - "Apache JMeter"
+    - "Ranorex Studio"
 ---
 
 # **Playwright 調査レポート**
