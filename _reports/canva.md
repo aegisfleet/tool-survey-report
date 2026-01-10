@@ -58,6 +58,7 @@ relationships:
   related_tools:
     - "GIMP"
     - "Figma"
+    - "Gamma"
 ---
 
 # **Canva 調査レポート**
