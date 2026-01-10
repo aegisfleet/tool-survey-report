@@ -171,6 +171,21 @@ jobs:
                 throw new Error(`Frontmatter validation failed for ${file}: missing required fields: ${missingFields.join(', ')}`);
               }
               core.info(`  ✅ Required fields present: ${requiredFields.join(', ')}`);
+              
+              // Check for duplicate frontmatter (frontmatter content appearing in body)
+              const bodyContent = lines.slice(closingIndex + 1).join('\n');
+              if (bodyContent.includes('# === フロントマター ===') || bodyContent.includes('title: "') && bodyContent.includes('tool_name: "')) {
+                const errorMsg = `❌ フロントマター検証エラー: ${file}\n\n本文内にフロントマターの内容が重複して存在します。\nフロントマターが2回記述されている可能性があります。`;
+                core.error(errorMsg);
+                await github.rest.issues.createComment({ 
+                  owner, 
+                  repo, 
+                  issue_number: prNumber, 
+                  body: errorMsg + '\n\n自動マージを中止しました。重複を削除してください。'
+                });
+                throw new Error(`Frontmatter validation failed for ${file}: duplicate frontmatter content in body`);
+              }
+              core.info(`  ✅ No duplicate frontmatter detected.`);
             }
             
             core.info('All frontmatter validations passed.');
