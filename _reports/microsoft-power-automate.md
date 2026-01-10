@@ -57,6 +57,7 @@ relationships:
     - "n8n"
     - "Google Gemini Flows"
     - "Robot Framework"
+    - "Microsoft 365 Copilot"
 ---
 
 # **Microsoft Power Automate 調査レポート**

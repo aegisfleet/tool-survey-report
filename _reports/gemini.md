@@ -52,6 +52,7 @@ relationships:
     - "Grok"
     - "Stable Diffusion"
     - "OpenAI Codex (CLI)"
+    - "Microsoft 365 Copilot"
 ---
 
 # **Gemini 調査レポート**
