@@ -26,6 +26,7 @@ relationships:
     - "Hugging Face"
     - "ChatGPT"
     - "Gemini"
+    - "Niji Journey"
 ---
 
 # **Stable Diffusion 調査レポート**
