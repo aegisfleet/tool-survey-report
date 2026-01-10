@@ -58,6 +58,7 @@ relationships:
   related_tools:
     - "Hugo"
     - "Jekyll"
+    - "WordPress"
 ---
 
 # **Astro 調査レポート**

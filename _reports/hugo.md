@@ -17,6 +17,7 @@ relationships:
   related_tools:
   - Astro
   - Jekyll
+  - WordPress
 quick_summary:
   is_oss: true
 description: Hugoは、Go言語で書かれた世界最速クラスの静的サイトジェネレーターです。依存関係が少なく、インストールが容易で、大規模なサイトでも数秒でビルドできます。
