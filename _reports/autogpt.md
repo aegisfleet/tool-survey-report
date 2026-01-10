@@ -25,6 +25,7 @@ relationships:
   related_tools:
     - "BabyAGI"
     - "MetaGPT"
+    - "Devin"
 ---
 
 # **AutoGPT 調査レポート**
