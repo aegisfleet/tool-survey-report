@@ -55,7 +55,6 @@ relationships:
     - "iAsk"
     - "Komo"
     - "Notion"
-    - "Notion"
 ---
 
 # **Felo 調査レポート**
