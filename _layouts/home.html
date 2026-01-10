@@ -68,6 +68,8 @@ layout: default
               <option value="date-desc" selected>新しい順</option>
               <option value="date-asc">古い順</option>
               <option value="title-asc">ツール名順</option>
+              <option value="score-desc">総合評価順</option>
+              <option value="oss-free">OSS・無料順</option>
             </select>
           </div>
         </div>
@@ -82,7 +84,9 @@ layout: default
           data-latest-highlight="{{ report.quick_summary.latest_highlight | downcase }}"
           data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
           data-developer="{{ report.developer | downcase }}"
-          data-is-oss="{{ report.quick_summary.is_oss | default: false }}">
+          data-is-oss="{{ report.quick_summary.is_oss | default: false }}"
+          data-has-free-plan="{{ report.quick_summary.has_free_plan | default: false }}"
+          data-score="{{ report.evaluation.score | default: 0 }}">
 
           <div class="report-card-header">
             <h3 class="report-title">
@@ -244,6 +248,22 @@ layout: default
             return new Date(a.dataset.date) - new Date(b.dataset.date);
           case 'title-asc':
             return a.dataset.toolName.localeCompare(b.dataset.toolName);
+          case 'score-desc':
+            // スコアが高い順でソート（スコアがない場合は0として扱う）
+            const scoreA = parseFloat(a.dataset.score) || 0;
+            const scoreB = parseFloat(b.dataset.score) || 0;
+            return scoreB - scoreA;
+          case 'oss-free':
+            // OSS > 無料プラン > その他の順でソート
+            const getPriority = (card) => {
+              if (card.dataset.isOss === 'true') return 2;
+              if (card.dataset.hasFreePlan === 'true') return 1;
+              return 0;
+            };
+            const priorityDiff = getPriority(b) - getPriority(a);
+            // 同じ優先度の場合はスコアでソート
+            if (priorityDiff !== 0) return priorityDiff;
+            return (parseFloat(b.dataset.score) || 0) - (parseFloat(a.dataset.score) || 0);
           default:
             return 0;
         }
