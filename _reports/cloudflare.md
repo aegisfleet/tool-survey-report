@@ -13,6 +13,9 @@ tags:
   - "Zero Trust"
   - "DNS"
 description: "Webサイトのパフォーマンス向上とセキュリティ対策を統合したグローバルクラウドネットワーク"
+relationships:
+  related_tools:
+    - "Vercel"
 ---
 
 # **Cloudflare 調査レポート**
