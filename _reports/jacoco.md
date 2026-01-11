@@ -51,6 +51,7 @@ links:
 relationships:
   related_tools:
     - "SonarQube"
+    - "JUnit"
 ---
 
 # **JaCoCo 調査レポート**
