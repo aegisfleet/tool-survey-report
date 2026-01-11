@@ -31,6 +31,7 @@ relationships:
     - "Karate"
     - "Apache JMeter"
     - "Ranorex Studio"
+    - "PyTest"
 ---
 
 # **Playwright 調査レポート**
