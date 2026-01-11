@@ -58,6 +58,7 @@ relationships:
     - "Cursor"
     - "OpenHands"
     - "AutoGPT"
+    - "Google Jules"
 ---
 
 # **Devin 調査レポート**

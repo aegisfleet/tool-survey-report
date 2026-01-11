@@ -26,6 +26,7 @@ relationships:
     - "BabyAGI"
     - "MetaGPT"
     - "Devin"
+    - "Google Jules"
 ---
 
 # **AutoGPT 調査レポート**
