@@ -57,6 +57,7 @@ relationships:
     - "GitHub Actions"
     - "GitLab CI/CD"
     - "CircleCI"
+    - "Nexus Repository"
 ---
 
 # **Jenkins 調査レポート**
@@ -70,7 +71,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/jenkinsci/jenkins](https://github.com/jenkinsci/jenkins)
   * ドキュメント: [https://www.jenkins.io/doc/](https://www.jenkins.io/doc/)
-  * レビューサイト: [G2](https://www.g2.com/products/jenkins/reviews) | [Capterra](https://www.capterra.com/p/132128/Jenkins/) | [ITreview](https://www.itreview.jp/products/jenkins/reviews)
+  * レビューサイト: [G2](https://www.g2.com/products/jenkins/reviews) | [ITreview](https://www.itreview.jp/products/jenkins/reviews)
 * **カテゴリ**: CI/CD
 * **概要**: Jenkinsは、オープンソースのオートメーションサーバーです。ソフトウェア開発におけるビルド、テスト、デプロイといったプロセスを自動化し、継続的インテグレーション(CI)と継続的デリバリー(CD)を実現します。2000を超える豊富なプラグインにより、あらゆる開発環境やツールと連携できる高い拡張性を誇ります。
 

@@ -22,6 +22,7 @@ relationships:
   related_tools:
     - "Podman"
     - "Kubernetes"
+    - "Nexus Repository"
 ---
 
 # **Docker 調査レポート**
