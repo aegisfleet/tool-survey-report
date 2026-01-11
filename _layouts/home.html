@@ -17,7 +17,7 @@ layout: default
       <div class="picks-header">
         <div>
           <h2>🎲 おすすめピックアップ</h2>
-          <p class="picks-desc">ランダムに選ばれた3つのレポートをご紹介</p>
+          <p class="picks-desc">ランダムに選ばれた4つのレポートをご紹介</p>
         </div>
         <button type="button" class="refresh-btn" id="refresh-picks" aria-label="別のレポートを表示">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -28,7 +28,7 @@ layout: default
       </div>
       <div class="picks-grid" id="random-picks-grid">
         {%- assign all_reports = site.reports | sort: 'last_updated' | reverse -%}
-        {%- for report in all_reports limit: 3 -%}
+        {%- for report in all_reports limit: 4 -%}
         <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
           data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
           <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
@@ -352,9 +352,9 @@ layout: default
       const pickCards = Array.from(picksGrid.querySelectorAll('.pick-card'));
       const allReportCards = Array.from(document.querySelectorAll('.report-card'));
 
-      if (allReportCards.length <= 3) return;
+      if (allReportCards.length <= 4) return;
 
-      // すべてのレポートからランダムに3つ選択（スコアと無料プラン情報も取得）
+      // すべてのレポートからランダムに4つ選択（スコアと無料プラン情報も取得）
       const shuffled = allReportCards
         .map(card => ({
           url: card.querySelector('a')?.href || '#',
@@ -365,7 +365,7 @@ layout: default
           isOss: card.dataset.isOss === 'true'
         }))
         .sort(() => Math.random() - 0.5)
-        .slice(0, 3);
+        .slice(0, 4);
 
       // ピックカードを更新
       pickCards.forEach((card, index) => {
