@@ -25,6 +25,7 @@ relationships:
     - "Selenium"
     - "Cucumber"
     - "PyTest"
+    - "Gauge"
 ---
 
 # **Robot Framework 調査レポート**
