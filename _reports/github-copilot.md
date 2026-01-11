@@ -60,6 +60,7 @@ relationships:
     - "CodeRabbit"
     - "Amazon Q Developer"
     - "OpenAI Codex (CLI)"
+    - "OpenCode"
     - "Devin"
     - "Microsoft 365 Copilot"
 ---

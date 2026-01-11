@@ -21,6 +21,7 @@ relationships:
     - "Rakuten AI"
     - "Mobile Next"
     - "DeepSeek"
+    - "OpenCode"
 ---
 
 # **Claude 調査レポート**
