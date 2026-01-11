@@ -31,6 +31,7 @@ relationships:
     - "Apache JMeter"
     - "MagicPod"
     - "Ranorex Studio"
+    - "PyTest"
 ---
 
 # **Selenium 調査レポート**

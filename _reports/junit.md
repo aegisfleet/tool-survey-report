@@ -47,6 +47,7 @@ links:
 relationships:
   related_tools:
     - "JaCoCo"
+    - "PyTest"
 ---
 
 # **JUnit 調査レポート**

@@ -24,6 +24,7 @@ relationships:
     - "Microsoft Power Automate"
     - "Selenium"
     - "Cucumber"
+    - "PyTest"
 ---
 
 # **Robot Framework 調査レポート**
