@@ -20,6 +20,7 @@ relationships:
     - "Grok"
     - "Rakuten AI"
     - "Mobile Next"
+    - "DeepSeek"
 ---
 
 # **Claude 調査レポート**

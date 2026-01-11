@@ -28,6 +28,7 @@ relationships:
     - "Stable Diffusion"
     - "Amazon Bedrock"
     - "Microsoft 365 Copilot"
+    - "DeepSeek"
 ---
 
 # **ChatGPT 調査レポート**
