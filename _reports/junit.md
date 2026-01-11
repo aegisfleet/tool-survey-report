@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - "JaCoCo"
     - "PyTest"
+    - "Database Rider"
 ---
 
 # **JUnit 調査レポート**

@@ -17,6 +17,10 @@ quick_summary:
   is_oss: true
 
 description: "本番環境に対応したスタンドアロンなSpringベースのアプリケーションを最小限の設定で簡単に作成できるWebフレームワーク。"
+
+relationships:
+  related_tools:
+    - "Database Rider"
 ---
 
 # **Spring Boot 調査レポート**
