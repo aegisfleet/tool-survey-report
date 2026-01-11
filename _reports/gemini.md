@@ -46,6 +46,7 @@ relationships:
   children:
     - "Google AI Studio"
     - "Google Antigravity"
+    - "Google Jules"
   related_tools:
     - "ChatGPT"
     - "Claude"
