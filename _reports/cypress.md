@@ -21,6 +21,7 @@ relationships:
   related_tools:
     - "Playwright"
     - "Selenium"
+    - "Robot Framework"
     - "axe DevTools"
     - "CodeceptJS"
     - "Cucumber"

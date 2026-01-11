@@ -23,6 +23,7 @@ relationships:
     - "Selenium"
     - "Playwright"
     - "Cypress"
+    - "Robot Framework"
     - "CodeceptJS"
     - "Appium"
     - "Karate"
