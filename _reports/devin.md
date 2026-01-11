@@ -59,6 +59,7 @@ relationships:
     - "OpenHands"
     - "AutoGPT"
     - "Google Jules"
+    - "Cline"
 ---
 
 # **Devin 調査レポート**
