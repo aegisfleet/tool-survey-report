@@ -60,6 +60,7 @@ relationships:
   related_tools:
     - "GitHub"
     - "Jenkins"
+    - "Nexus Repository"
 ---
 
 # **GitLab 調査レポート**
