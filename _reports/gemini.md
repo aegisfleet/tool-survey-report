@@ -54,6 +54,7 @@ relationships:
     - "Stable Diffusion"
     - "OpenAI Codex (CLI)"
     - "Microsoft 365 Copilot"
+    - "DeepSeek"
 ---
 
 # **Gemini 調査レポート**
