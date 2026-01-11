@@ -23,6 +23,7 @@ relationships:
   related_tools:
     - "Cypress"
     - "Playwright"
+    - "mabl"
     - "axe DevTools"
     - "CodeceptJS"
     - "Cucumber"
