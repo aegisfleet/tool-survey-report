@@ -60,6 +60,7 @@ relationships:
     - "AutoGPT"
     - "Google Jules"
     - "Cline"
+    - "AGENTIC STAR"
 ---
 
 # **Devin 調査レポート**

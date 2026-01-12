@@ -58,6 +58,7 @@ relationships:
     - "Gemini"
     - "GitHub Copilot"
     - "Microsoft Power Automate"
+    - "AGENTIC STAR"
 ---
 
 # **Microsoft 365 Copilot 調査レポート**

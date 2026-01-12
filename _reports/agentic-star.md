@@ -1,14 +1,54 @@
 ---
-layout: report
-title: AGENTIC STAR 調査レポート
-tool_name: AGENTIC STAR
-category: 自律型AIエージェント
-developer: SoftBank
-official_site: https://www.softbank.jp/biz/services/ai/agentic-star/
+# === フロントマター ===
+# 【必須項目】
+title: "AGENTIC STAR 調査レポート"
+tool_name: "AGENTIC STAR"
+tool_reading: "エージェンティック・スター"
+category: "自律型AIエージェント"
+developer: "SoftBank"
+official_site: "https://www.softbank.jp/biz/services/ai/agentic-star/"
 date: "2025-12-13"
-last_updated: "2025-12-13"
-tags: [自律型, エージェント, MCP, 法人向け, SaaS]
+last_updated: "2026-01-12"
+tags:
+  - "自律型"
+  - "エージェント"
+  - "MCP"
+  - "法人向け"
+  - "SaaS"
 description: "ソフトバンクが提供する法人向け自律型AIエージェントプラットフォーム。業務ゴールの達成に向けて自律的に思考・実行し、企業のデジタル変革を加速します。"
+
+# 【クイックサマリー】ホーム画面のカード表示用
+quick_summary:
+  has_free_plan: false
+  is_oss: false
+  starting_price: "個別見積もり"
+  target_users:
+    - "大企業"
+    - "DX推進担当者"
+    - "企画・マーケティング部門"
+  latest_highlight: "2025年12月に法人向けSaaSモデルの提供を開始"
+  update_frequency: "中"
+
+# 【ツール評価】100点満点、基準点70点からの加減算方式
+evaluation:
+  score: 77
+  base_score: 70
+  plus_points:
+    - point: 5
+      reason: "法人利用に特化した堅牢なセキュリティとガバナンス機能"
+    - point: 5
+      reason: "ソフトバンクによる日本語での手厚いサポート体制"
+    - point: 3
+      reason: "オープン標準「MCP」への早期対応による高い将来性"
+  minus_points:
+    - point: -3
+      reason: "料金が非公開で、導入前のコスト試算が困難"
+    - point: -3
+      reason: "リリース直後で導入実績やユーザーレビューが少ない"
+  summary: "セキュリティとサポートを重視する国内大企業に適しているが、料金の透明性と実績には課題が残る。"
+
+# 【任意項目】該当するもののみ記載
+links: {}
 relationships:
   related_tools:
     - "Devin"
@@ -19,7 +59,8 @@ relationships:
 
 ## **1. 基本情報**
 
-* **ツール名**: AGENTIC STAR（エージェンティック・スター）
+* **ツール名**: AGENTIC STAR
+* **ツールの読み方**: エージェンティック・スター
 * **開発元**: ソフトバンク株式会社 (SoftBank Corp.)
 * **公式サイト**: [https://www.softbank.jp/biz/services/ai/agentic-star/](https://www.softbank.jp/biz/services/ai/agentic-star/)
 * **カテゴリ**: 自律型AIエージェント
@@ -57,11 +98,15 @@ relationships:
 
 ## **6. 料金プラン**
 
-詳細な料金体系は公開されておらず、個別見積もりとなります。
+| プラン名 | 料金 | 主な特徴 |
+|---|---|---|
+| **SaaSモデル** | 個別見積もり | ブラウザから利用できる標準モデル。2025年12月提供開始。 |
+| **カスタマイズモデル** | 個別見積もり | 顧客の専用環境にAIエージェントを構築するモデル。 |
+| **外部接続モデル** | 個別見積もり | 既存システムにAPI/MCP連携で組み込むモデル。2026年3月提供予定。 |
+| **開発基盤提供モデル** | 個別見積もり | AIエージェントの実行環境やSDKを提供するモデル。2026年3月提供予定。 |
 
-* **SaaSモデル**: ブラウザから利用できる標準モデル（2025年12月提供開始）。
-* **カスタマイズモデル**: 顧客の専用環境に構築するモデル。
-* **無料トライアル**: 公式サイトに明記なし（問い合わせが必要）。
+* **課金体系**: 公式サイトでは公開されていない。個別の問い合わせが必要。
+* **無料トライアル**: 公式サイトに明記なし。問い合わせが必要。
 
 ## **7. 導入実績・事例**
 
