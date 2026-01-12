@@ -29,6 +29,7 @@ relationships:
     - "Amazon Bedrock"
     - "Microsoft 365 Copilot"
     - "DeepSeek"
+    - "さくらのAI"
 ---
 
 # **ChatGPT 調査レポート**

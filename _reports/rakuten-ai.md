@@ -19,6 +19,7 @@ relationships:
     - "Gemini"
     - "Claude"
     - "Grok"
+    - "さくらのAI"
 ---
 
 # **Rakuten AI 調査レポート**
