@@ -53,6 +53,7 @@ relationships:
   related_tools:
     - "Microsoft Power Automate"
     - "Robot Framework"
+    - "Android Use"
 ---
 
 # **UiPath 調査レポート**
