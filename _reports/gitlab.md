@@ -61,6 +61,7 @@ relationships:
     - "GitHub"
     - "Jenkins"
     - "Nexus Repository"
+    - "Jira"
 ---
 
 # **GitLab 調査レポート**

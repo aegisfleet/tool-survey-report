@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Obsidian"
     - "Felo"
+    - "Jira"
 ---
 
 # **Notion 調査レポート**
