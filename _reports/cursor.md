@@ -61,6 +61,7 @@ relationships:
     - "OpenAI Codex (CLI)"
     - "Google Antigravity"
     - "Devin"
+    - "Roo Code"
 ---
 
 # **Cursor 調査レポート**

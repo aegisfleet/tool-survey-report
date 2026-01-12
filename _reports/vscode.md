@@ -22,6 +22,7 @@ relationships:
     - "Kiro"
     - "GitHub Copilot"
     - "Android Studio"
+    - "Roo Code"
 ---
 
 # **Visual Studio Code 調査レポート**

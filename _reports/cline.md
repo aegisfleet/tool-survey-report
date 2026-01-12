@@ -59,6 +59,7 @@ relationships:
   related_tools:
     - "Devin"
     - "DeepWiki-Open"
+    - "Roo Code"
 ---
 
 # **Cline 調査レポート**
