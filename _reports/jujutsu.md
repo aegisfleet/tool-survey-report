@@ -1,5 +1,5 @@
 ---
-title: "[Jujutsu (jj)] 調査レポート"
+title: "Jujutsu (jj) 調査レポート"
 tool_name: "Jujutsu"
 tool_reading: "ジュジュツ"
 category: "バージョン管理"
