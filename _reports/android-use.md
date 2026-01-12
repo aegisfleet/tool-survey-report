@@ -1,20 +1,64 @@
 ---
+# === フロントマター ===
+# 【必須項目】
 title: "Android Use 調査レポート"
 tool_name: "Android Use"
-category: "開発者ツール"
+tool_reading: "アンドロイド ユース"
+category: "自律型AIエージェント"
 developer: "Action State Labs"
 official_site: "https://github.com/actionstatelabs/android-action-kernel"
 date: "2025-12-13"
-last_updated: "2025-12-13"
+last_updated: "2026-01-12"
 tags:
-  - "Android"
   - "AI"
   - "エージェント"
+  - "自律型"
   - "オープンソース"
   - "自動化"
+  - "Android"
   - "Python"
-  - "自律型AIエージェント"
 description: "Androidネイティブアプリを操作するためのオープンソースのAIエージェントライブラリ。アクセシビリティツリーを利用して低コストかつ高速な操作を実現。"
+
+# 【クイックサマリー】ホーム画面のカード表示用
+quick_summary:
+  has_free_plan: true
+  is_oss: true
+  starting_price: "無料"
+  target_users:
+    - "開発者"
+    - "QAエンジニア"
+    - "業務自動化担当者"
+  latest_highlight: "2025年12月に初期バージョンが公開"
+  update_frequency: "高"
+
+# 【ツール評価】100点満点、基準点70点からの加減算方式
+evaluation:
+  score: 79
+  base_score: 70
+  plus_points:
+    - point: 10
+      reason: "Visionモデルに依存しないアプローチにより、低コスト・高速動作を実現している点"
+    - point: 5
+      reason: "モバイルネイティブ環境の自動化というユニークな着眼点"
+    - point: 5
+      reason: "オープンソースで誰でも無料で利用・改変できる点"
+  minus_points:
+    - point: -5
+      reason: "初期段階のプロジェクトであり、機能の安定性やドキュメントが発展途上"
+    - point: -3
+      reason: "利用にADBのセットアップなど、一定の技術的知識が必要"
+    - point: -3
+      reason: "日本語に非対応であり、日本語アプリの操作精度は未知数"
+  summary: "モバイル環境の自動化に革命を起こす可能性を秘めた、低コスト・高速なAIエージェント"
+
+# 【任意項目】該当するもののみ記載
+links:
+  github: "https://github.com/actionstatelabs/android-action-kernel"
+relationships:
+  related_tools:
+    - "Appium"
+    - "UiPath"
+    - "Devin"
 ---
 
 # **Android Use 調査レポート**
@@ -22,9 +66,12 @@ description: "Androidネイティブアプリを操作するためのオープ�
 ## **1. 基本情報**
 
 * **ツール名**: Android Use (Android Action Kernel)
+* **ツールの読み方**: アンドロイド ユース
 * **開発元**: Action State Labs (Ethan Lim)
 * **公式サイト**: [https://github.com/actionstatelabs/android-action-kernel](https://github.com/actionstatelabs/android-action-kernel)
-* **カテゴリ**: 開発者ツール
+* **関連リンク**:
+  * GitHub: [https://github.com/actionstatelabs/android-action-kernel](https://github.com/actionstatelabs/android-action-kernel)
+* **カテゴリ**: 自律型AIエージェント
 * **概要**: Androidネイティブアプリを操作するためのオープンソースのAIエージェントライブラリ。ADB (Android Debug Bridge) とアクセシビリティAPIを利用し、Visionモデル（画像認識）ではなくXMLベースのUI構造データ（アクセシビリティツリー）を解析することで、低コストかつ高速な操作を実現している。
 
 ## **2. 目的と主な利用シーン**
@@ -61,8 +108,13 @@ description: "Androidネイティブアプリを操作するためのオープ�
 
 ## **6. 料金プラン**
 
-* **無料プラン**: オープンソース（MITライセンス）としてGitHubで公開されており、誰でも無料で利用・改変が可能。
-* **有料プラン**: 現時点では存在しないが、将来的には「Cloud API」（ホスティング版）の提供が予定されている（ウェイトリスト登録受付中）。
+| プラン名 | 料金 | 主な特徴 |
+|---|---|---|
+| **オープンソース** | 無料 | MITライセンスで提供。全機能が利用可能。 |
+| **Cloud API (予定)** | 未定 | ホスティング版APIの提供が予定されている。 |
+
+* **課金体系**: (オープンソースのため、なし)
+* **無料トライアル**: (オープンソースのため、なし)
 
 ## **7. 導入実績・事例**
 
@@ -108,9 +160,12 @@ description: "Androidネイティブアプリを操作するためのオープ�
 
 ## **14. 類似ツールとの比較**
 
-* **Computer Use (Anthropic)**: デスクトップ環境の自動化に特化しており、スクリーンショットの画像解析を行うためコストが高くレイテンシも大きい。Androidアプリの直接操作はできない。
-* **Browser Use**: Webブラウザ上の操作自動化に特化している。ネイティブアプリの操作はできない。
-* **Appium**: モバイルアプリのテスト自動化フレームワークとして定評があるが、テストシナリオを事前に記述する必要があり、Android Useのような自律的な判断（AIエージェント）機能は標準では持たない。
+| ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
+|---|---|---|---|---|
+| **Android Use** | **Androidネイティブアプリ操作**に特化したAIエージェント。アクセシビリティツリーを解析。 | 低コスト、高速（1秒未満）、モバイル実機で動作。 | 初期段階、環境構築が必要、アクセシビリティ依存。 | モバイルネイティブアプリの業務フローを低コストで自動化したい場合。 |
+| **Computer Use** | デスクトップGUI操作の自動化エージェント。**Visionモデル**で画面を認識。 | PC上のあらゆるアプリを操作可能。 | 高コスト（$0.01/アクション）、低速、モバイル非対応。 | デスクトップ環境での多様なアプリケーション操作を自動化したい場合。 |
+| **Appium** | モバイルアプリの**テスト自動化フレームワーク**。コードで操作を定義。 | 堅牢で実績豊富、クロスプラットフォーム（iOS/Android）。 | 自律的な判断能力はなく、シナリオベースの操作のみ。 | モバイルアプリの品質保証（QA）で、厳密なテストケースを繰り返し実行したい場合。 |
+| **UiPath** | **RPAプラットフォーム**。GUI操作の自動化に強み。 | 豊富な連携機能、エンタープライズ向けの管理機能。 | ライセンス費用が高い、AIの自律性は限定的。 | 企業の基幹システム連携など、大規模で複雑な業務プロセス全体を自動化したい場合。 |
 
 ## **15. 総評**
 

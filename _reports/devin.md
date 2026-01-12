@@ -61,6 +61,7 @@ relationships:
     - "Google Jules"
     - "Cline"
     - "AGENTIC STAR"
+    - "Android Use"
 ---
 
 # **Devin 調査レポート**
