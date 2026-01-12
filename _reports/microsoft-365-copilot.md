@@ -59,6 +59,7 @@ relationships:
     - "GitHub Copilot"
     - "Microsoft Power Automate"
     - "AGENTIC STAR"
+    - "Circleback"
 ---
 
 # **Microsoft 365 Copilot 調査レポート**
