@@ -62,6 +62,7 @@ relationships:
     - "Google Antigravity"
     - "Devin"
     - "Roo Code"
+    - "Claude"
 ---
 
 # **Cursor 調査レポート**

@@ -48,6 +48,7 @@ relationships:
     - "GitHub Copilot"
     - "Cursor"
     - "AWS CloudFormation"
+    - "Claude"
 ---
 
 # **Amazon Q Developer 調査レポート**

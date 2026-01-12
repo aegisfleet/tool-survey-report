@@ -64,6 +64,7 @@ relationships:
     - "Devin"
     - "Microsoft 365 Copilot"
     - "Roo Code"
+    - "Claude"
 ---
 
 # **GitHub Copilot 調査レポート**
