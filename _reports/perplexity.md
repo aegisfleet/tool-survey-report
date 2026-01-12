@@ -55,6 +55,7 @@ relationships:
     - "Genspark"
     - "Felo"
     - "Google Disco"
+    - "NotebookLM"
 ---
 
 # **Perplexity 調査レポート**

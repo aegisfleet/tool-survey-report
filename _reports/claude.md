@@ -19,6 +19,7 @@ relationships:
     - "Gemini"
     - "Grok"
     - "Rakuten AI"
+    - "NotebookLM"
     - "Mobile Next"
     - "DeepSeek"
     - "OpenCode"

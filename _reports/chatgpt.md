@@ -23,6 +23,7 @@ relationships:
   related_tools:
     - "Gemini"
     - "Claude"
+    - "NotebookLM"
     - "Grok"
     - "Rakuten AI"
     - "Stable Diffusion"
