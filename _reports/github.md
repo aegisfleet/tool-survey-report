@@ -62,6 +62,7 @@ relationships:
     - "GitHub Copilot"
   related_tools:
     - "GitLab"
+    - "Jira"
 ---
 
 # **GitHub 調査レポート**
