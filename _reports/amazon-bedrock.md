@@ -23,6 +23,7 @@ relationships:
     - "LangChain"
     - "ChatGPT"
     - "Google AI Studio"
+    - "さくらのAI"
 ---
 
 # **Amazon Bedrock 調査レポート**
