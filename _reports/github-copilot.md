@@ -63,6 +63,7 @@ relationships:
     - "OpenCode"
     - "Devin"
     - "Microsoft 365 Copilot"
+    - "Roo Code"
 ---
 
 # **GitHub Copilot 調査レポート**
