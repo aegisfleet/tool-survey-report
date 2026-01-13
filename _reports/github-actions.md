@@ -42,6 +42,7 @@ relationships:
   parent: "GitHub"
   related_tools:
     - "Jenkins"
+    - "act"
 ---
 
 # **GitHub Actions 調査レポート**
