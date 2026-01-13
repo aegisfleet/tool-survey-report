@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "mabl"
     - "MagicPod"
+    - "Selenium"
 ---
 
 # **Autify 調査レポート**
