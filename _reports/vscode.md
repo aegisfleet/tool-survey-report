@@ -24,6 +24,7 @@ relationships:
     - "Android Studio"
     - "Roo Code"
     - "Obsidian"
+    - "IntelliJ IDEA"
 ---
 
 # **Visual Studio Code 調査レポート**

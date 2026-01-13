@@ -52,10 +52,10 @@ evaluation:
 links:
   documentation: "https://developer.android.com/studio/docs"
 relationships:
+  parent: "IntelliJ IDEA"
   related_tools:
     - "Flutter"
     - "Visual Studio Code"
-    - "IntelliJ IDEA"
 ---
 
 # **Android Studio 調査レポート**
