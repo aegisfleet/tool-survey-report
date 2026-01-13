@@ -52,7 +52,7 @@ relationships:
     - "GitLab"
 ---
 
-# **[Jujutsu (jj)] 調査レポート**
+# **Jujutsu (jj) 調査レポート**
 
 ## **1. 基本情報**
 
