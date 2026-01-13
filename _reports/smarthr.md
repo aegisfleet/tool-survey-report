@@ -57,6 +57,7 @@ links:
   documentation: "https://support.smarthr.jp/ja/"
 relationships:
   related_tools:
+    - "COMPANY"
     - "KING OF TIME"
     - "ジョブカン勤怠管理"
     - "マネーフォワード クラウド勤怠"
