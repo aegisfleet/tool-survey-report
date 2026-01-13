@@ -27,6 +27,7 @@ relationships:
     - "MetaGPT"
     - "Devin"
     - "Google Jules"
+    - "OpenHands"
 ---
 
 # **AutoGPT 調査レポート**
