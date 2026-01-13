@@ -47,6 +47,7 @@ relationships:
   children: []
   related_tools:
     - "Stable Diffusion"
+    - "Qwen-Image-Layered"
 ---
 
 # **Niji Journey 調査レポート**
