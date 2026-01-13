@@ -1,11 +1,14 @@
 ---
+# === フロントマター ===
+# 【必須項目】
 title: "OpenAI Sora 調査レポート"
 tool_name: "Sora (Sora 2)"
+tool_reading: "ソラ"
 category: "動画/メディア"
 developer: "OpenAI"
 official_site: "https://openai.com/sora"
 date: "2025-10-18"
-last_updated: "2025-12-19"
+last_updated: "2026-01-13"
 tags:
   - "AI"
   - "動画生成"
@@ -13,6 +16,34 @@ tags:
   - "OpenAI"
   - "マルチモーダル"
 description: "テキストや画像から高品質でリアルな動画を生成するOpenAIのAIモデル。最新版Sora 2では音声生成や物理法則の理解も向上。"
+
+# 【クイックサマリー】ホーム画面のカード表示用
+quick_summary:
+  has_free_plan: true
+  is_oss: false
+  starting_price: "無料"
+  target_users:
+    - "クリエイター"
+    - "マーケティング担当者"
+    - "映像作家"
+  latest_highlight: "継続的なパフォーマンス改善と安定性向上が中心"
+  update_frequency: "高"
+
+# 【ツール評価】100点満点、基準点70点からの加減算方式
+evaluation:
+  score: 82
+  base_score: 70
+  plus_points:
+    - point: 10
+      reason: "物理法則を理解した圧倒的なリアリズムと、音声の同時生成能力は競合を大きく引き離している"
+    - point: 5
+      reason: "SNSアプリを通じたインタラクティブな創作コミュニティの形成という独自のアプローチ"
+  minus_points:
+    - point: -3
+      reason: "招待制であり、利用できるユーザーが限られている（2026年1月時点）"
+  summary: "世界シミュレーターの到来を予感させる革命的な動画生成能力を持つが、利用アクセスと倫理的課題が今後の鍵"
+
+# 【任意項目】該当するもののみ記載
 relationships:
   parent: "ChatGPT"
   related_tools:
@@ -154,6 +185,9 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2025年12月-2026年1月: パフォーマンス改善と安定性向上**
+  * **主な動向**:
+    * この期間、目立った新機能の追加は報告されていない。OpenAIのリリース情報によると、主に既存機能のパフォーマンス改善、生成される動画の安定性向上、および安全性に関する継続的な取り組み（モデルスペックの更新など）に焦点が当てられている。
 * **2025年11月24日: ビデオスタイル機能の導入**
   * **主な新機能・改善点**:
     * 「Thankful」「Vintage」「Comic」「News」「Musical」「Selfie」といった6種類のプリセットスタイルを追加。プロンプトを細かく調整しなくても、手軽に特定のテーマや雰囲気を持つ動画を生成できるようになった。
