@@ -1,27 +1,64 @@
 ---
-title: "Opcode調査レポート"
+# === フロントマター ===
+# 【必須項目】
+title: "Opcode 調査レポート"
 tool_name: "Opcode"
-category: "自律型AIエージェント"
-developer: "Stition AI (Mufeed VH)"
+tool_reading: "オペコード"
+category: "AIコードエディタ"
+developer: "winfunc"
 official_site: "https://opcode.sh/"
-links:
-  old_github: "https://github.com/stitionai/devika"
-  github: "https://github.com/winfunc/opcode"
 date: "2025-12-25"
-last_updated: "2025-12-25"
+last_updated: "2026-01-14"
 tags:
   - "AI"
-  - "エージェント"
-  - "自律型"
+  - "開発者ツール"
   - "オープンソース"
-  - "コーディング支援"
-description: "Devikaの後継となる自律型AIソフトウェアエンジニア。Cognition AIの「Devin」のオープンソース代替を目指す。"
+  - "IDE"
+  - "エージェント"
+  - "Claude"
+description: "Claude Codeと連携するための強力なGUIデスクトップアプリ。カスタムエージェントの作成、コーディングセッションの管理、使用状況の追跡機能などを提供する。"
+
+# 【クイックサマリー】ホーム画面のカード表示用
+quick_summary:
+  has_free_plan: true
+  is_oss: true
+  starting_price: "無料"
+  target_users:
+    - "開発者"
+    - "Claude Codeユーザー"
+  latest_highlight: "v0.2.0リリース、Claude Code連携を強化"
+  update_frequency: "高"
+
+# 【ツール評価】100点満点、基準点70点からの加減算方式
+evaluation:
+  score: 76
+  base_score: 70
+  plus_points:
+    - point: 8
+      reason: "セッション管理、カスタムエージェント、使用状況分析など機能が非常に豊富"
+    - point: 5
+      reason: "オープンソースであり、無料で利用できる"
+    - point: 3
+      reason: "Tauriベースのモダンで直感的なUI"
+  minus_points:
+    - point: -5
+      reason: "別途『Claude Code CLI』の導入が必須であり、単体で完結しない"
+    - point: -3
+      reason: "RustやBunなど、ビルドに必要な環境構築の難易度が高い"
+    - point: -2
+      reason: "ドキュメントがREADMEに限られており、詳細情報が不足している"
+  summary: "Claude Codeとの連携に特化した高機能OSSだが、利用には別途CLIの導入が必要。"
+
+# 【任意項目】該当するもののみ記載
+links:
+  github: "https://github.com/winfunc/opcode"
 relationships:
   parent: ""
   children: []
   related_tools:
     - "Devin"
     - "OpenHands"
+    - "Cursor"
 ---
 
 # **Opcode調査レポート**
@@ -29,13 +66,12 @@ relationships:
 ## **1. 基本情報**
 
 * **ツール名**: Opcode
-* **開発元**: Stition AI (Mufeed VH)
+* **開発元**: winfunc
 * **公式サイト**: [https://opcode.sh/](https://opcode.sh/)
 * **関連リンク**:
-  * GitHub: [https://github.com/stitionai/devika](https://github.com/stitionai/devika) (旧Devika)
   * GitHub: [https://github.com/winfunc/opcode](https://github.com/winfunc/opcode)
-* **カテゴリ**: 自律型AIエージェント
-* **概要**: Opcodeは、Devikaの後継として開発されている自律型AIソフトウェアエンジニアです。高レベルの人間の指示を理解し、計画、調査、コーディングを行って目標を達成します。Cognition AIの「Devin」のオープンソース代替を目指したDevikaのコンセプトを引き継ぎつつ、さらなる機能強化と安定性の向上を目指しています。
+* **カテゴリ**: AIコードエディタ
+* **概要**: Opcodeは、Anthropic社の「Claude Code」と連携して動作する、オープンソースの強力なGUIデスクトップアプリケーションです。コーディングセッションの管理、カスタムAIエージェントの作成、API使用状況の追跡など、AIを活用した開発をより直感的かつ生産的に行うための豊富な機能を提供します。
 
 ## **2. 目的と主な利用シーン**
 
