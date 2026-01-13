@@ -25,6 +25,7 @@ relationships:
     - "Pulumi"
     - "AWS CloudFormation"
     - "Ansible"
+    - "LocalStack"
 ---
 
 # **Terraform 調査レポート**
