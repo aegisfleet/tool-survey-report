@@ -60,6 +60,7 @@ relationships:
     - "Figma"
     - "Gamma"
     - "Miro"
+    - "Qwen-Image-Layered"
 ---
 
 # **Canva 調査レポート**

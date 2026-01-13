@@ -27,6 +27,7 @@ relationships:
     - "ChatGPT"
     - "Gemini"
     - "Niji Journey"
+    - "Qwen-Image-Layered"
 ---
 
 # **Stable Diffusion 調査レポート**
