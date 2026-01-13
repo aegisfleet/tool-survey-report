@@ -15,6 +15,8 @@ tags:
 description: "Google Cloud上で生成AIモデルのプロトタイピングとテストを迅速に行うためのWebベースのUIツール"
 relationships:
   parent: "Gemini"
+  related_tools:
+    - "Amazon Bedrock"
 ---
 
 # **Google AI Studio 調査レポート**
