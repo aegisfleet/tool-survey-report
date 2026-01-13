@@ -1,6 +1,7 @@
 ---
 title: "Circleback 調査レポート"
 tool_name: "Circleback"
+tool_reading: "サークルバック"
 category: "AI議事録・会議アシスタント"
 developer: "Circleback AI, Inc."
 official_site: "https://circleback.ai/"
@@ -14,9 +15,43 @@ tags:
   - "会議"
   - "タスク管理"
 description: "会議の録音、文字起こし、要約、アクションアイテムの抽出を自動化するAIミーティングアシスタント。"
+
+quick_summary:
+  has_free_plan: false
+  is_oss: false
+  starting_price: "$25/月"
+  target_users:
+    - "営業チーム"
+    - "プロダクトマネージャー"
+    - "経営者"
+  latest_highlight: "2026年1月にキーボード操作でのフィルタリング機能を高速化"
+  update_frequency: "高"
+
+evaluation:
+  score: 85
+  base_score: 70
+  plus_points:
+    - point: 5
+      reason: "高い日本語精度とアクションアイテムの自動検出"
+    - point: 5
+      reason: "強力な外部ツール連携（CRM, Notion, Linearなど）"
+    - point: 5
+      reason: "ボットレス録画や対面会議への柔軟な対応"
+  minus_points:
+    - point: -3
+      reason: "無料プランがなく、コストがやや高め"
+    - point: -2
+      reason: "リアルタイム翻訳などの機能は限定的"
+  summary: "議事録作成とタスク管理を高度に自動化できるが、コストはやや高め。"
+
+links:
+  documentation: "https://support.circleback.ai/"
+
 relationships:
   related_tools:
     - "Microsoft 365 Copilot"
+    - "Otter.ai"
+    - "Zoom AI Companion"
 ---
 
 # **Circleback 調査レポート**
@@ -24,15 +59,19 @@ relationships:
 ## **1. 基本情報**
 
 * **ツール名**: Circleback (サークルバック)
+* **ツールの読み方**: サークルバック
 * **開発元**: Circleback AI, Inc.
 * **公式サイト**: [https://circleback.ai/](https://circleback.ai/) (日本語: [https://circleback.ai/ja/](https://circleback.ai/ja/))
+* **関連リンク**:
+  * ドキュメント: [https://support.circleback.ai/](https://support.circleback.ai/)
+  * レビューサイト: [G2](https://www.g2.com/products/circleback-ai-inc-circleback/reviews) | [Product Hunt](https://www.producthunt.com/products/circleback-3)
 * **カテゴリ**: AI議事録・会議アシスタント
 * **概要**: Zoom、Google Meet、Microsoft Teams、Slackハドル、および対面での会議に対応したAIミーティングアシスタント。会議の録音、高精度な文字起こし、要約、アクションアイテムの抽出を自動化し、議事録作成の時間を大幅に削減する。
 
 ## **2. 目的と主な利用シーン**
 
-* **目的**: 会議内容の正確な記録、議事録作成の自動化、アクションアイテムの追跡漏れ防止、および会議データからのインサイト抽出。
-* **主な利用者**: 営業チーム、カスタマーサクセス、プロダクトマネージャー、経営者、フリーランス。
+* **解決する課題**: 会議内容の正確な記録、議事録作成の自動化、アクションアイテムの追跡漏れ防止、および会議データからのインサイト抽出。
+* **想定利用者**: 営業チーム、カスタマーサクセス、プロダクトマネージャー、経営者、フリーランス。
 * **利用シーン**:
     * 顧客との商談の記録とCRMへの自動入力。
     * チームの定例会議（スタンドアップ）でのタスク抽出。
@@ -74,28 +113,26 @@ relationships:
 
 ## **7. 導入実績・事例**
 
-* **採用企業**: TIME誌により「Best AI Meeting Tool」に選出された実績あり。RunwayなどのAI企業幹部からの推薦も公式サイトに掲載。
-* **ユースケース**: 営業チームでの商談記録の自動CRM連携、エンジニアチームでの仕様検討会議のLinearタスク化など。
+* **導入企業**: TIME誌により「Best AI Meeting Tool」に選出された実績あり。RunwayなどのAI企業幹部からの推薦も公式サイトに掲載。
+* **導入事例**: 営業チームでの商談記録の自動CRM連携、エンジニアチームでの仕様検討会議のLinearタスク化など。
+* **対象業界**: 営業、エンジニアリング、経営企画など、幅広い業界で利用されている。
 
 ## **8. サポート体制**
 
 * **ドキュメント**: ヘルプセンター（英語）が充実しており、機能ごとのガイドがある。
+* **コミュニティ**: 公式コミュニティは確認できず
 * **公式サポート**: メールおよびアプリ内チャットでのサポートを提供。
 
 ## **9. 連携機能 (API・インテグレーション)**
 
-* **カレンダー**: Google Calendar, Outlook Calendar。
-* **CRM/SFA**: HubSpot, Salesforce, Attio, Zoho CRM。
-* **プロジェクト管理**: Notion, Linear, Monday.com。
-* **コミュニケーション**: Slack (ハドル対応、チャンネル通知)。
-* **自動化**: Zapier, Webhook。
-* **その他**: Raycast (拡張機能)。
+* **API**: Webhook (ミーティングデータのエクスポートが可能)
+* **外部サービス連携**: Notion, HubSpot, Salesforce, Linear, Slack, Google/Outlook Calendar, Zapier など。
 
 ## **10. セキュリティとコンプライアンス**
 
 * **認証**: SOC 2 Type II 認証取得済み。
-* **準拠規格**: GDPR（一般データ保護規則）、HIPAA（医療保険の相互運用性と説明責任に関する法律）に準拠。
 * **データ管理**: データの暗号化（保存時および転送時）。EU-U.S. データプライバシーフレームワークに準拠。
+* **準拠規格**: GDPR（一般データ保護規則）、HIPAA（医療保険の相互運用性と説明責任に関する法律）に準拠。
 
 ## **11. 操作性 (UI/UX) と学習コスト**
 
@@ -105,6 +142,7 @@ relationships:
 ## **12. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Product Hunt, Reddit, 公式サイト。
+* **総合評価**: G2 4.8/5.0
 * **ポジティブな評価**:
     * 「文字起こしの精度が驚くほど高く、修正の手間がほとんどない」
     * 「アクションアイテムが自動でタスク管理ツール（LinearやNotion）に同期されるのが便利」
@@ -112,6 +150,8 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
     * 「無料プランがないため、個人の軽い用途では導入しづらい」
     * 「時々、話者の分離が不正確になることがある（手動修正は可能）」
+* **特徴的なユースケース**:
+    * 採用面接での記録と、採用管理システムへの自動フィードバック入力。
 
 ## **13. 直近半年のアップデート情報**
 
@@ -129,9 +169,12 @@ relationships:
 
 ## **14. 類似ツールとの比較**
 
-* **Microsoft 365 Copilot**: Microsoftエコシステム（Teams, Outlook, Word）内でのシームレスな統合が強みだが、ZoomやGoogle Meetなど外部ツールとの連携の柔軟性ではCirclebackが優れる場合がある。
-* **Zoom AI Companion**: Zoomユーザーには追加費用なしで利用できる点が強みだが、対面会議や他の会議ツール（Teams, Meet）への対応範囲でCirclebackが勝る。
-* **Otter.ai**: リアルタイム文字起こしと英語圏での知名度が強み。Circlebackは構造化された要約やワークフロー自動化（CRM連携など）に重点を置いている点で差別化される。
+| ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
+|---------|------|------|------|------------------|
+| **Circleback** | マルチプラットフォーム対応のAI議事録・ワークフロー自動化ツール。 | 高い日本語精度、強力なタスク管理・CRM連携、ボットレス録画。 | 無料プランがない、比較的コストが高い。 | 商談、定例会議、対面会議など、あらゆる会議の議事録とタスク管理を高度に自動化したい場合。 |
+| **Microsoft 365 Copilot** | Microsoft 365エコシステムに統合されたAIアシスタント。 | Teams, Outlook, Wordなどとのシームレスな連携。 | ZoomやGoogle Meetなど外部ツールとの連携の柔軟性に欠ける。 | 組織全体でMicrosoft 365をメインに利用しており、エコシステム内で完結させたい場合。 |
+| **Zoom AI Companion** | Zoomに統合されたAIアシスタント。 | Zoomユーザーには追加費用なしで利用可能。 | Zoom以外の会議（対面、他ツール）への対応が弱い。 | Zoomでの会議がメインで、追加コストを抑えてAI機能を利用したい場合。 |
+| **Otter.ai** | リアルタイム文字起こしと要約に特化したAIツール。 | 英語圏での高い知名度とリアルタイム性。 | 日本語対応の精度や、構造化された要約・ワークフロー連携でCirclebackに劣る場合がある。 | 英語での会議が多く、リアルタイムでの文字起こしを重視する場合。 |
 
 ## **15. 総評**
 
