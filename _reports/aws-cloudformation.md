@@ -18,6 +18,7 @@ relationships:
     - "Ansible"
     - "OpenTofu"
     - "Amazon Q Developer"
+    - "LocalStack"
 ---
 
 # **AWS CloudFormation 調査レポート**

@@ -23,6 +23,7 @@ relationships:
     - "Podman"
     - "Kubernetes"
     - "Nexus Repository"
+    - "LocalStack"
 ---
 
 # **Docker 調査レポート**
