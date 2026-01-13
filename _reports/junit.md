@@ -49,6 +49,7 @@ relationships:
     - "JaCoCo"
     - "PyTest"
     - "Database Rider"
+    - "Spring Boot"
 ---
 
 # **JUnit 調査レポート**
