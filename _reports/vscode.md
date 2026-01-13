@@ -23,6 +23,7 @@ relationships:
     - "GitHub Copilot"
     - "Android Studio"
     - "Roo Code"
+    - "Obsidian"
 ---
 
 # **Visual Studio Code 調査レポート**
