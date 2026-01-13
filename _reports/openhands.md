@@ -55,8 +55,8 @@ relationships:
     - "Devin"
     - "Jules"
     - "Manus"
-    - "Opcode"
     - "AutoGPT"
+    - "Opcode"
 ---
 
 # **OpenHands 調査レポート**

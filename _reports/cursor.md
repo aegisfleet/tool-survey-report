@@ -63,6 +63,7 @@ relationships:
     - "Devin"
     - "Roo Code"
     - "Claude"
+    - "Opcode"
 ---
 
 # **Cursor 調査レポート**
