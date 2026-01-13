@@ -18,7 +18,7 @@ tags:
 description: "あらゆるマシンデータを収集・検索・分析・可視化する統合データプラットフォーム"
 relationships:
   related_tools:
-    - "datadog"
+    - "Datadog"
     - "sumo-logic"
 ---
 
