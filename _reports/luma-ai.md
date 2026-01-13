@@ -15,7 +15,7 @@ tags:
 description: "テキストや画像から高品質な動画や3Dモデルを生成するAIプラットフォーム。最新のRay3モデルを搭載。"
 relationships:
   related_tools:
-    - "Sora (Sora 2)"
+    - "Sora"
 ---
 
 # **Luma AI 調査レポート**

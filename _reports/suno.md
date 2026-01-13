@@ -15,7 +15,7 @@ description: "テキストプロンプトからボーカルや楽器を含む独
 relationships:
   related_tools:
     - "ElevenLabs"
-    - "Sora (Sora 2)"
+    - "Sora"
 ---
 
 # **Suno 調査レポート**

@@ -2,7 +2,7 @@
 # === フロントマター ===
 # 【必須項目】
 title: "OpenAI Sora 調査レポート"
-tool_name: "Sora (Sora 2)"
+tool_name: "Sora"
 tool_reading: "ソラ"
 category: "動画/メディア"
 developer: "OpenAI"
@@ -55,7 +55,7 @@ relationships:
 
 ## **1. 基本情報**
 
-* **ツール名**: Sora (Sora 2)
+* **ツール名**: Sora
 * **開発元**: OpenAI
 * **公式サイト**: [https://openai.com/sora](https://openai.com/sora)
 * **カテゴリ**: 動画生成AI
