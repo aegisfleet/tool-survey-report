@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - "Kiro"
     - "GitHub Copilot"
+    - "GitLab Duo"
     - "Cursor"
     - "AWS CloudFormation"
     - "Claude"
