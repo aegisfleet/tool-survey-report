@@ -59,6 +59,7 @@ relationships:
     - "mabl"
     - "MagicPod"
     - "Autify"
+    - "CodeceptJS"
 ---
 
 # **Selenium 調査レポート**
