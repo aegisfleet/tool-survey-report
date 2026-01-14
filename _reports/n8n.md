@@ -73,7 +73,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
   * ドキュメント: [https://docs.n8n.io/](https://docs.n8n.io/)
-  * レビューサイト: [G2](https://www.g2.com/products/n8n/reviews) | [Capterra](https://www.capterra.com/p/1010708/n8n/)
+  * レビューサイト: [G2](https://www.g2.com/products/n8n/reviews)
 * **カテゴリ**: ワークフロー自動化 (iPaaS)
 * **概要**: オープンソースを基盤としたAIネイティブのワークフロー自動化ツール。ビジュアルエディタによる直感的な操作と、JavaScript/Pythonによるコード記述の柔軟性を両立しており、単純なタスク自動化から複雑なAIエージェントの構築まで幅広く対応する。
 
@@ -184,7 +184,7 @@ relationships:
 * **2025-07-14: `[email protected]`**
   * **AI Agent Toolノード**: 複数のAIエージェントを連携させ、より複雑な階層構造のAIシステムを構築可能に。
 
-(出典: [n8n Release Notes Blog](https://n8n.io/blog/category/product/))
+(出典: [n8n Release Notes](https://docs.n8n.io/release-notes/))
 
 ## **14. 類似ツールとの比較**
 

@@ -48,7 +48,7 @@ evaluation:
 
 # 【任意項目】該当するもののみ記載
 links:
-  github: "https://github.com/roocode/roocode"
+  github: "https://github.com/RooCodeInc/Roo-Code"
 relationships:
   related_tools:
     - "GitHub Copilot"
@@ -66,7 +66,7 @@ relationships:
 * **開発元**: Roo Code
 * **公式サイト**: [https://roocode.com/](https://roocode.com/)
 * **関連リンク**:
-  * GitHub: [https://github.com/roocode/roocode](https://github.com/roocode/roocode)
+  * GitHub: [https://github.com/RooCodeInc/Roo-Code](https://github.com/RooCodeInc/Roo-Code)
 * **カテゴリ**: AIコーディング支援
 * **概要**: Roo Codeは、VS Code内で動作するオープンソースのAI搭載コーディングアシスタントです。単なるオートコンプリートを超え、複数のファイルを横断したコードの読み書き、コマンド実行、開発者のワークフローへの適応が可能です。
 
@@ -172,7 +172,7 @@ relationships:
 * **2025-11-03 (v3.30)**: OpenRouter Embeddingsを追加。
 * **2025-10-31 (v3.29)**: MiniMaxプロバイダーを追加。ファイル検索を高速化。
 
-(出典: [Roo Code Blog](https://roocode.com/blog))
+(出典: [Roo Code GitHub Releases](https://github.com/RooCodeInc/Roo-Code/releases))
 
 ## **14. 類似ツールとの比較**
 

@@ -174,7 +174,7 @@ Datadogは製品ごとに複数の料金プランを提供しており、柔軟�
 * **2025-10-28 (DASH 2025)**: AIアシスタント「Bits AI」の機能強化。SRE向けの自律的なインシデント対応機能や、開発者向けのAIエージェント機能を追加。(出典: Datadog Blog)
 * **2025-09-15**: Mobile Session ReplayがiOS, Android, React Nativeをサポート。モバイルアプリのユーザー操作を動画で再現し、バグの特定を容易にする。(出典: Datadog Release Notes)
 
-(出典: [Datadog Blog](https://www.datadoghq.com/blog/), [Release Notes](https://www.datadoghq.com/product/release-notes/))
+(出典: [Datadog Blog](https://www.datadoghq.com/blog/))
 
 ## **14. 類似ツールとの比較**
 
