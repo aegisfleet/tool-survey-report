@@ -22,6 +22,7 @@ description: "Apache JMeterは、Webアプリケーションのパフォーマ�
 relationships:
   related_tools:
     - "Karate"
+    - "Playwright"
 ---
 # **Apache JMeter 調査レポート**
 
