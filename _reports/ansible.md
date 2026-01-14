@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "Terraform"
     - "OpenTofu"
+    - "AWS CloudFormation"
 ---
 
 # **Ansible 調査レポート**
