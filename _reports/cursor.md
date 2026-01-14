@@ -53,17 +53,17 @@ links:
   documentation: "https://cursor.com/docs"
 relationships:
   related_tools:
-    - "Visual Studio Code"
-    - "GitHub Copilot"
-    - "Windsurf"
-    - "Kiro"
     - "Amazon Q Developer"
-    - "OpenAI Codex (CLI)"
-    - "Google Antigravity"
-    - "Devin"
-    - "Roo Code"
     - "Claude"
+    - "Devin"
+    - "GitHub Copilot"
+    - "Google Antigravity"
+    - "Kiro"
     - "Opcode"
+    - "OpenAI Codex (CLI)"
+    - "Roo Code"
+    - "Visual Studio Code"
+    - "Windsurf"
 ---
 
 # **Cursor 調査レポート**
