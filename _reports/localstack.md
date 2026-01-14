@@ -50,6 +50,7 @@ relationships:
     - "Docker"
     - "Terraform"
     - "AWS CloudFormation"
+    - "OpenTofu"
 ---
 
 # **LocalStack 調査レポート**

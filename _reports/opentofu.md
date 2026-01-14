@@ -55,6 +55,7 @@ relationships:
     - "Pulumi"
     - "AWS CloudFormation"
     - "Ansible"
+    - "LocalStack"
 ---
 
 # **OpenTofu 調査レポート**
