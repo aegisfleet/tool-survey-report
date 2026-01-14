@@ -55,6 +55,7 @@ relationships:
     - "OpenAI Codex (CLI)"
     - "Microsoft 365 Copilot"
     - "DeepSeek"
+    - "Rakuten AI"
 ---
 
 # **Gemini 調査レポート**
