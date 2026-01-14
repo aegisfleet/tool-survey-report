@@ -22,9 +22,9 @@ relationships:
   children:
     - "OpenTofu"
   related_tools:
+    - "Ansible"
     - "Pulumi"
     - "AWS CloudFormation"
-    - "Ansible"
     - "LocalStack"
 ---
 
