@@ -55,6 +55,7 @@ relationships:
     - "GitHub Copilot"
     - "Cursor"
     - "Amazon Q Developer"
+    - "Rakuten AI"
 ---
 
 # **Claude 調査レポート**
