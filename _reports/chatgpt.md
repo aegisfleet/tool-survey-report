@@ -30,6 +30,7 @@ relationships:
     - "Microsoft 365 Copilot"
     - "DeepSeek"
     - "さくらのAI"
+    - "Vertex AI Studio"
 ---
 
 # **ChatGPT 調査レポート**
