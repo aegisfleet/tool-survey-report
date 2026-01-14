@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "Playwright"
     - "Selenium"
+    - "Appium"
 ---
 
 # **Cypress 調査レポート**
