@@ -57,6 +57,7 @@ relationships:
   children:
     - "Android Studio"
   related_tools:
+    - "Cursor"
     - "Visual Studio Code"
 ---
 
