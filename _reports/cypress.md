@@ -55,6 +55,7 @@ relationships:
     - "Playwright"
     - "Selenium"
     - "Appium"
+    - "CodeceptJS"
 ---
 
 # **Cypress 調査レポート**
