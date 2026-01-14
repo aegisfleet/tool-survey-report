@@ -70,7 +70,6 @@ relationships:
 * **公式サイト**: [https://antigravity.google/](https://antigravity.google/)
 * **関連リンク**:
   * ドキュメント: [https://antigravity.google/docs](https://antigravity.google/docs)
-  * レビューサイト: [G2](https://www.g2.com/products/google-antigravity) | [Capterra](https://www.capterra.com/p/12345/Google-Antigravity/)
 * **カテゴリ**: AIコードエディタ
 * **概要**: Googleが2025年11月18日に発表した、AIファーストの統合開発環境（IDE）。最新AIモデル「Gemini 3」を中核に据え、自律型エージェントが自然言語の指示だけで開発タスクを実行する、次世代の開発体験を提供する。
 
