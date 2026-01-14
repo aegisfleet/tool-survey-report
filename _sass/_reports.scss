@@ -880,9 +880,9 @@
 
   &:hover,
   &:focus {
-    background-color: lighten($secondary-color, 10%);
-    color: $white;
-    border-color: lighten($secondary-color, 10%);
+    background-color: mix($secondary-color, $white, 10%);
+    color: $secondary-color;
+    border-color: $secondary-color;
     transform: translateY(-2px);
     box-shadow: $box-shadow;
     text-decoration: none;
