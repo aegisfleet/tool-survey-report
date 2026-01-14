@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   documentation: "https://antigravity.google/docs"
+  changelog: "https://antigravity.google/changelog"
 relationships:
   parent: "Gemini"
   related_tools:
@@ -162,10 +163,15 @@ relationships:
 ## **13. 直近半年のアップデート情報**
 
 * **2026-01-05**: セキュリティとコンプライアンスに関する情報を更新。SOC 2, ISO 27001準拠を発表。
+* **2025-12-19 (v1.13.3)**: Google Workspace連携を強化。AI Ultra for Business契約者向けのリミット緩和。
+* **2025-12-17 (v1.12.4)**: Gemini 3 Flashモデルのサポート追加。エージェントのネイティブ音声対応、パフォーマンス改善。
 * **2025-12-15**: リアルタイム共同編集機能のプレビュー版をリリース。
-* **2025-11-18**: Google Antigravityが正式に発表された。
+* **2025-12-08 (v1.11.17)**: セキュアモードの追加。エージェントの自律実行を制限し、人間によるレビューを強制する設定が可能に。
+* **2025-12-04 (v1.11.14)**: Google One連携。AI Premium契約者向けのリミット緩和。
+* **2025-11-26 (v1.11.9)**: 認証フローのバグ修正とエラー表示の改善。
+* **2025-11-18 (v1.11.2)**: Google Antigravity パブリックプレビュー版リリース。
 
-(出典: [公式ブログ](https://antigravity.google/blog))
+(出典: [公式ブログ](https://antigravity.google/blog), [Changelog](https://antigravity.google/changelog))
 
 ## **14. 類似ツールとの比較**
 
