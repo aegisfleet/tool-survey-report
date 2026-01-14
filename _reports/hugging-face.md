@@ -58,6 +58,7 @@ relationships:
     - "Stable Diffusion"
     - "Amazon Bedrock"
     - "TensorFlow"
+    - "Hunyuan 3D"
 ---
 
 # **Hugging Face 調査レポート**

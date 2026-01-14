@@ -54,6 +54,7 @@ relationships:
     - "Hugging Face"
     - "ChatGPT"
     - "Gemini"
+    - "Hunyuan 3D"
 ---
 
 # **Stable Diffusion 調査レポート**
