@@ -4,7 +4,7 @@ tool_name: "Mobile Next"
 tool_reading: "モバイルネクスト"
 category: "モバイル開発"
 developer: "Mobile Next"
-official_site: "https://github.com/mobile-next"
+official_site: "https://mobilenexthq.com/"
 date: "2026-01-04"
 last_updated: "2026-01-15"
 tags:
@@ -25,7 +25,7 @@ quick_summary:
   latest_highlight: "2026年1月にCLIツールがアップデート"
   update_frequency: "中"
 evaluation:
-  score: 75
+  score: 80
   base_score: 70
   plus_points:
     - point: 8
@@ -33,8 +33,6 @@ evaluation:
     - point: 5
       reason: "VS Code統合やCLIにより開発者のコンテキストスイッチを削減できる点"
   minus_points:
-    - point: -5
-      reason: "公式サイトがアクセス不能であり、プロジェクトの持続性に懸念がある点"
     - point: -3
       reason: "発展途上のプロジェクトであり、iOS実機設定など学習コストを要する点"
   summary: "AIエージェント連携という先進的な機能を持つが、プロジェクトの現状や学習コストには注意が必要"
@@ -57,7 +55,7 @@ relationships:
 * **ツール名**: Mobile Next (Mobile Next Platform)
 * **ツールの読み方**: モバイルネクスト
 * **開発元**: Mobile Next
-* **公式サイト**: [https://github.com/mobile-next](https://github.com/mobile-next)
+* **公式サイト**: [https://mobilenexthq.com/](https://mobilenexthq.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/mobile-next](https://github.com/mobile-next)
   * ドキュメント: [https://github.com/mobile-next/mobile-mcp/wiki](https://github.com/mobile-next/mobile-mcp/wiki)
