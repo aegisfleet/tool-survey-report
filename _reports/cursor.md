@@ -64,6 +64,7 @@ relationships:
     - "Roo Code"
     - "Visual Studio Code"
     - "Windsurf"
+    - "Mobile Next"
 ---
 
 # **Cursor 調査レポート**

@@ -56,6 +56,7 @@ relationships:
     - "Cursor"
     - "Amazon Q Developer"
     - "Rakuten AI"
+    - "Mobile Next"
 ---
 
 # **Claude 調査レポート**

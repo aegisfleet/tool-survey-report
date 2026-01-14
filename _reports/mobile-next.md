@@ -1,14 +1,12 @@
 ---
 title: "Mobile Next 調査レポート"
 tool_name: "Mobile Next"
+tool_reading: "モバイルネクスト"
 category: "モバイル開発"
 developer: "Mobile Next"
-official_site: "https://mobilenexthq.com/"
-links:
-  github: "https://github.com/mobile-next"
-  documentation: "https://github.com/mobile-next/mobile-mcp/wiki"
+official_site: "https://github.com/mobile-next"
 date: "2026-01-04"
-last_updated: "2026-01-04"
+last_updated: "2026-01-15"
 tags:
   - "モバイル開発"
   - "AI"
@@ -17,6 +15,32 @@ tags:
   - "オープンソース"
   - "MCP"
 description: "AIエージェントによるモバイルアプリ操作やテスト自動化を実現する、MCPサーバーやCLI、VS Code拡張機能を含むモバイル開発プラットフォーム"
+quick_summary:
+  has_free_plan: true
+  is_oss: true
+  starting_price: "無料"
+  target_users:
+    - "モバイル開発者"
+    - "QAエンジニア"
+  latest_highlight: "2026年1月にCLIツールがアップデート"
+  update_frequency: "中"
+evaluation:
+  score: 75
+  base_score: 70
+  plus_points:
+    - point: 8
+      reason: "AIエージェント連携を前提とした先進的な設計とオープンソースである点"
+    - point: 5
+      reason: "VS Code統合やCLIにより開発者のコンテキストスイッチを削減できる点"
+  minus_points:
+    - point: -5
+      reason: "公式サイトがアクセス不能であり、プロジェクトの持続性に懸念がある点"
+    - point: -3
+      reason: "発展途上のプロジェクトであり、iOS実機設定など学習コストを要する点"
+  summary: "AIエージェント連携という先進的な機能を持つが、プロジェクトの現状や学習コストには注意が必要"
+links:
+  github: "https://github.com/mobile-next"
+  documentation: "https://github.com/mobile-next/mobile-mcp/wiki"
 relationships:
   related_tools:
     - "Claude"
@@ -31,45 +55,32 @@ relationships:
 ## **1. 基本情報**
 
 * **ツール名**: Mobile Next (Mobile Next Platform)
+* **ツールの読み方**: モバイルネクスト
 * **開発元**: Mobile Next
-* **公式サイト**: [https://mobilenexthq.com/](https://mobilenexthq.com/)
+* **公式サイト**: [https://github.com/mobile-next](https://github.com/mobile-next)
 * **関連リンク**:
   * GitHub: [https://github.com/mobile-next](https://github.com/mobile-next)
   * ドキュメント: [https://github.com/mobile-next/mobile-mcp/wiki](https://github.com/mobile-next/mobile-mcp/wiki)
-* **カテゴリ**: モバイル開発 (AIオートメーション)
+* **カテゴリ**: モバイル開発
 * **概要**: Mobile Nextは、AIエージェント（Claude, Cursor, GitHub Copilotなど）がモバイルアプリやデバイス（iOS/Android）を直接操作・テストできるようにするためのオープンソースプラットフォームです。MCP (Model Context Protocol) サーバー、CLIツール、VS Code拡張機能などのツール群で構成されています。
 
 ## **2. 目的と主な利用シーン**
 
-* **目的**: モバイルアプリ開発におけるAI活用（コーディング、テスト、デバッグ）の障壁を取り除き、自然言語による指示で実機やエミュレータを操作可能にすること。
-* **主な利用者**: モバイルアプリ開発者、QAエンジニア、AIエージェントを活用したいエンジニア。
+* **解決する課題**: モバイルアプリ開発におけるAI活用（コーディング、テスト、デバッグ）の障壁を取り除き、自然言語による指示で実機やエミュレータを操作可能にすること。
+* **想定利用者**: モバイルアプリ開発者、QAエンジニア、AIエージェントを活用したいエンジニア。
 * **利用シーン**:
-  * **AIによるE2Eテスト**: 「ログイン画面でユーザー名とパスワードを入力してログインボタンを押す」といった自然言語の指示でテストを実行。
-  * **デバッグ支援**: エラー発生時のスクリーンショット取得やログ確認をAIエージェント経由で行う。
-  * **VS Code内でのデバイス操作**: IDEから離れずにデバイス画面を確認・操作し、開発効率を向上。
-  * **コスト管理**: Claude CodeなどのAIツールの利用コストをリアルタイムで追跡。
+  * AIエージェント（Claude, Cursor等）と連携したE2Eテストの自動化
+  * 自然言語による指示ベースでのデバッグ作業支援
+  * VS Code内でIDEから離れずにデバイスを直接操作
 
 ## **3. 主要機能**
 
-### **Mobile MCP (`mobile-mcp`)**
-* **AIエージェント連携**: MCPプロトコルを通じて、ClaudeやCursorなどのAIエージェントにモバイル操作能力を提供。
-* **クロスプラットフォーム操作**: iOS（シミュレーター/実機）とAndroid（エミュレーター/実機）の両方を統一的なAPIで操作可能。
-* **ネイティブアクセシビリティ連携**: 画像認識だけでなく、OSのアクセシビリティツリー（UI構造情報）を利用して正確に要素を特定・操作。
-* **スクリーンショット解析**: アクセシビリティ情報が取得できない場合、視覚情報（スクリーンショット）に基づいた操作もサポート。
-
-### **Mobile CLI (`mobilecli`)**
-* **デバイス管理**: コマンドラインからデバイスの一覧表示、起動、シャットダウン、再起動が可能。
-* **アプリ操作**: アプリのインストール、起動、停止、アンインストール。
-* **画面操作**: スクリーンショットの撮影（PNG/JPEG）、画面の動画ストリーミング、タップやスワイプなどの操作。
-* **ハードウェアボタン操作**: ホームボタン、戻るボタン、音量ボタンなどの操作。
-
-### **Mobile Deck (`mobiledeck`)**
-* **VS Code統合**: VS Code内にデバイスの画面をミラーリング表示し、マウス操作でタップやスワイプが可能。
-* **マルチデバイス管理**: 複数のデバイスを同時に表示・操作可能。
-* **MCPワンクリックインストール**: VS Codeから簡単にMobile MCPサーバーをセットアップ可能。
-
-### **PriceyApp**
-* **コスト追跡**: macOSのメニューバー常駐型アプリで、Claude Codeの使用コストをリアルタイムに表示・監視。
+* **AIエージェント連携 (MCP)**: MCPプロトコルを通じて、ClaudeやCursorなどのAIエージェントにモバイル操作能力を提供します。
+* **クロスプラットフォーム操作**: iOS（シミュレーター/実機）とAndroid（エミュレーター/実機）の両方を統一的なAPIで操作可能です。
+* **UI要素の高度な特定**: OSのアクセシビリティツリーを活用し、画像認識よりも高速かつ正確にUI要素を特定・操作します。
+* **CLIによるデバイス・アプリ管理**: コマンドラインからデバイスの管理（起動、停止）やアプリの操作（インストール、起動）が可能です。
+* **VS Code統合 (Mobile Deck)**: VS Code内にデバイス画面をミラーリング表示し、マウスで直接操作できます。
+* **AI利用コスト追跡 (PriceyApp)**: Claude Codeなどのツールの利用コストをリアルタイムで監視します。
 
 ## **4. 特徴・強み (Pros)**
 
@@ -86,11 +97,12 @@ relationships:
 
 ## **6. 料金プラン**
 
-* **オープンソース**: 全てのツール（Mobile MCP, Mobile CLI, Mobile Deck, PriceyApp）は無料で利用可能。
-  * `mobile-mcp`: Apache-2.0 License
-  * `mobilecli`: AGPL-3.0 License
-  * `mobiledeck`: AGPL-3.0 License
-  * `PriceyApp`: Apache-2.0 License
+| プラン名 | 料金 | 主な特徴 |
+|---|---|---|
+| **オープンソース** | 無料 | 全てのツールが無料で利用可能（Apache-2.0 / AGPL-3.0 License）。 |
+
+* **課金体系**: なし
+* **無料トライアル**: なし（常に無料）
 
 ## **7. 導入実績・事例**
 
@@ -138,24 +150,22 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
-* **2026-01-01**: `mobilecli` v0.0.49 リリース。安定性向上とバグ修正。
-* **2025-12-09**: `mobile-mcp` v0.0.38 リリース。MCPプロトコルへの準拠強化と機能追加。
-* **2025-12**: `mobiledeck` v0.0.23 リリース。VS Code拡張機能の機能改善。
+* **2026-01-13**: `mobilecli` v0.0.50 リリース。JSON-RPC経由でのアプリ一覧取得やUI構造ダンプ機能を追加。
+* **2025-12-09**: `mobile-mcp` v0.0.38 リリース。iOSシミュレーターの操作パフォーマンス向上とWebDriverAgentの自動インストール機能を追加。
+* **2025-12-01**: `mobiledeck` v0.0.23 リリース。VS Code拡張機能の機能改善。
 * **ロードマップ**:
   * MobileWright (プラットフォーム非依存の自動化スクリプト) の開発。
   * Mobile Deckへのリモートデバイスファーム接続機能、画面録画機能の実装予定。
 
+(出典: [GitHub Releases](https://github.com/mobile-next))
+
 ## **14. 類似ツールとの比較**
 
-* **Appium**:
-  * **特徴**: モバイルテスト自動化のデファクトスタンダード。
-  * **比較**: Appiumはテストスクリプト作成が主目的だが、Mobile NextはAIエージェントによる「対話的な操作・探索」に最適化されている。MCP対応という点でMobile NextがAI時代に適している。
-* **Maestro**:
-  * **特徴**: YAMLベースのシンプルで高速なモバイルUIテストツール。
-  * **比較**: Maestroはテスト定義が容易だが、AIとの連携（MCP）機能は持たない。Mobile NextはAIに操作させるためのインターフェースを提供する点が異なる。
-* **Android Studio / Xcode**:
-  * **特徴**: 純正の統合開発環境。
-  * **比較**: これらは必須ツールだが、Mobile Nextはこれらを補完し、CLIやVS Code、AIエージェントからの操作を可能にするレイヤーとして機能する。
+| ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
+|---|---|---|---|---|
+| **Mobile Next (本ツール)** | AIエージェントによる対話的な操作に特化 | ・MCPプロトコルに完全対応<br>・アクセシビリティツリー活用による高精度な操作 | ・発展途上であり機能が限定的<br>・テストスクリプト管理機能は持たない | AIエージェントを活用した新しい開発・テスト手法を試したい場合。 |
+| **Appium** | モバイルテスト自動化のデファクトスタンダード | ・多言語、多プラットフォーム対応<br>・巨大なエコシステム | ・AI連携機能は標準で持たない<br>・環境構築が複雑 | 既存のテスト資産を活かしつつ、スクリプトベースの厳密なテストを行いたい場合。 |
+| **Maestro** | YAMLベースのシンプルで高速なモバイルUIテストツール | ・テスト定義が非常に容易<br>・高速な実行と安定性 | ・AIとの連携機能は持たない<br>・スクリプト言語による複雑なロジック記述は不向き | シンプルなUIフローのテストを、迅速かつ簡単に自動化したい場合。 |
 
 ## **15. 総評**
 

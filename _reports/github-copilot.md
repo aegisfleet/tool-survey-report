@@ -65,6 +65,7 @@ relationships:
     - "Microsoft 365 Copilot"
     - "Roo Code"
     - "Claude"
+    - "Mobile Next"
 ---
 
 # **GitHub Copilot 調査レポート**
