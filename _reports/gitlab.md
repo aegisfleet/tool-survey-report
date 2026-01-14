@@ -57,6 +57,7 @@ links:
 relationships:
   children:
     - "GitLab Duo"
+    - "GitLab CI/CD"
   related_tools:
     - "GitHub"
     - "Jenkins"
