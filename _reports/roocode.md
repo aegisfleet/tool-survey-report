@@ -55,6 +55,7 @@ relationships:
     - "Cursor"
     - "Visual Studio Code"
     - "Cline"
+    - "DeepWiki-Open"
 ---
 
 # **Roo Code 調査レポート**
