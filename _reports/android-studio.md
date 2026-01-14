@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Flutter"
     - "Visual Studio Code"
+    - "Mobile Next"
 ---
 
 # **Android Studio 調査レポート**

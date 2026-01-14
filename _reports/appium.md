@@ -59,6 +59,7 @@ relationships:
     - "CodeceptJS"
     - "Cucumber"
     - "Karate"
+    - "Mobile Next"
 ---
 
 # **Appium 調査レポート**
