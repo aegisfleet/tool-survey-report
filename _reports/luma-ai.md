@@ -55,6 +55,7 @@ links:
 relationships:
   related_tools:
     - "Sora"
+    - "Hunyuan 3D"
 ---
 
 # **Luma AI 調査レポート**
