@@ -57,7 +57,7 @@ relationships:
     - "Dify"
     - "LangChain"
     - "ChatGPT"
-    - "Google AI Studio"
+    - "Vertex AI Studio"
     - "さくらのAI"
 ---
 
