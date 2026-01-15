@@ -50,6 +50,7 @@ relationships:
   related_tools:
     - "miro"
     - "Canva"
+    - "Affinity"
 ---
 
 # **Figma 調査レポート**
