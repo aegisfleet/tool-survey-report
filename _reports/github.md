@@ -63,6 +63,7 @@ relationships:
   related_tools:
     - "GitLab"
     - "Jira"
+    - "CodeRabbit"
 ---
 
 # **GitHub 調査レポート**
