@@ -56,6 +56,7 @@ relationships:
     - "Selenium"
     - "Appium"
     - "CodeceptJS"
+    - "Cucumber"
 ---
 
 # **Cypress 調査レポート**

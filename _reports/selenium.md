@@ -60,6 +60,7 @@ relationships:
     - "MagicPod"
     - "Autify"
     - "CodeceptJS"
+    - "Cucumber"
 ---
 
 # **Selenium 調査レポート**
