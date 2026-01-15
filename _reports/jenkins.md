@@ -53,6 +53,8 @@ links:
   github: "https://github.com/jenkinsci/jenkins"
   documentation: "https://www.jenkins.io/doc/"
 relationships:
+  children:
+    - "Plugin Installation Manager Tool"
   related_tools:
     - "GitHub Actions"
     - "GitLab CI/CD"
