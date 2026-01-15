@@ -57,6 +57,7 @@ links:
 relationships:
   related_tools:
     - "Splunk"
+    - "Splunk AppDynamics"
     - "Kubernetes"
 ---
 
