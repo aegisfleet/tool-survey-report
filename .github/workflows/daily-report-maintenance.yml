@@ -2,8 +2,8 @@ name: Daily Report Maintenance with Jules
 
 on:
   schedule:
-    # 毎時実行 (UTC)
-    - cron: '0 * * * *'
+    # 日本時間の6時を起点に8時間毎 (UTC: 21, 5, 13)
+    - cron: '0 5,13,21 * * *'
   workflow_dispatch:
     inputs:
       report_count:
