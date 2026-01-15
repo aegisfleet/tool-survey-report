@@ -55,6 +55,7 @@ relationships:
   related_tools:
     - "GIMP"
     - "Figma"
+    - "Apple Creator Studio"
 ---
 
 # **Affinity 調査レポート**
