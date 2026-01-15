@@ -25,6 +25,7 @@ relationships:
     - "act"
     - "Nexus Repository"
     - "LocalStack"
+    - "Wine"
 ---
 
 # **Docker 調査レポート**

@@ -22,6 +22,7 @@ description: "デーモンレスアーキテクチャを採用した、OCI準拠
 relationships:
   related_tools:
     - "Docker"
+    - "Wine"
 ---
 
 # **Podman 調査レポート**
