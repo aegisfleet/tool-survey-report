@@ -61,6 +61,7 @@ relationships:
     - "Gamma"
     - "Miro"
     - "Qwen-Image-Layered"
+    - "Apple Creator Studio"
 ---
 
 # **Canva 調査レポート**

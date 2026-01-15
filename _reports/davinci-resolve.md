@@ -57,8 +57,7 @@ links:
 relationships:
   related_tools:
     - "AviUtl"
-    - "Adobe Premiere Pro"
-    - "Final Cut Pro"
+    - "Apple Creator Studio"
 ---
 
 # **DaVinci Resolve 調査レポート**
