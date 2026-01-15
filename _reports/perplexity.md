@@ -52,6 +52,7 @@ links:
   documentation: "https://docs.perplexity.ai/"
 relationships:
   related_tools:
+    - "ChatGPT"
     - "Genspark"
     - "Felo"
     - "Google Disco"
