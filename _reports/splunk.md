@@ -54,6 +54,7 @@ links:
   documentation: "https://docs.splunk.com/Documentation/Splunk"
 relationships:
   related_tools:
+    - "Splunk AppDynamics"
     - "Datadog"
     - "sumo-logic"
 ---
