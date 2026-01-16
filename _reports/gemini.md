@@ -4,8 +4,9 @@ tool_name: "Gemini"
 category: "生成AI"
 developer: "Google"
 official_site: "https://gemini.google.com/"
+tool_reading: "ジェミニ"
 date: "2025-10-19"
-last_updated: "2026-01-08"
+last_updated: "2026-01-16"
 tags:
   - "AI"
   - "生成AI"
@@ -22,7 +23,7 @@ quick_summary:
     - "一般ユーザー"
     - "開発者"
     - "研究者"
-  latest_highlight: "2025年11月に最新モデルGemini 3 Proを発表"
+  latest_highlight: "2026年1月にGoogle TVとの統合を発表"
   update_frequency: "高"
 
 evaluation:
@@ -67,7 +68,8 @@ relationships:
 * **開発元**: Google
 * **公式サイト**: [https://gemini.google.com/](https://gemini.google.com/)
 * **関連リンク**:
-  * ドキュメント: [https://ai.google.dev/docs](https://ai.google.dev/docs)
+  * ドキュメント: [https://ai.google.dev/gemini-api/docs/quickstart](https://ai.google.dev/gemini-api/docs/quickstart)
+  * レビューサイト: [G2](https://www.g2.com/products/google-gemini/reviews)
 * **カテゴリ**: 生成AI
 * **概要**: Googleが開発した、テキスト、画像、音声、動画などをネイティブに理解し、生成することができるマルチモーダルAIモデルファミリー。
 
@@ -131,7 +133,7 @@ relationships:
 
 ## **8. サポート体制**
 
-* **ドキュメント**: [Google AI for Developers](https://ai.google.dev/docs)サイトに、APIリファレンス、クイックスタート、チュートリアルなど詳細な公式ドキュメントが整備されている。
+* **ドキュメント**: [Google AI for Developers](https://ai.google.dev/gemini-api/docs/quickstart)サイトに、APIリファレンス、クイックスタート、チュートリアルなど詳細な公式ドキュメントが整備されている。
 * **コミュニティ**: Google Developer Communityや、Stack Overflow、GitHubなどで開発者コミュニティが活発。
 * **公式サポート**: Google Cloudのサポートプランを通じて、技術的なサポートを受けることが可能。
 
@@ -160,7 +162,7 @@ relationships:
 
 ## **12. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, 技術系ブログ, X(Twitter), Reddit
+* **調査対象**: G2, 技術系ブログ, X(Twitter), Reddit (Capterra, ITreviewには登録なし)
 * **総合評価**: 4.7/5.0 (G2) - 非常に高い評価。特にマルチモーダル性能と長文コンテキスト処理能力が注目されている。
 * **ポジティブな評価**:
   * 「大量のPDF資料を読み込ませて要約させるのが非常に便利」
@@ -176,6 +178,7 @@ relationships:
 
 ## **13. 直近半年のアップデート情報**
 
+* **2026年01月16日**: iOS 18において、Siriの一部機能にGeminiを利用するパートナーシップが正式に有効化されたと報じられる。
 * **2026年01月06日**: CES 2026にて、Google TVにGeminiを統合し、自然言語での検索や情報表示機能を提供することを発表。
 * **2025年11月18日**: Gemini 3 Proを発表。前世代と比較して推論能力と処理速度が飛躍的に向上。
 * **2025年10月14日**: 開発者向け支援機能「Gemini Code Assist」において、従来のツール機能が「**Agent Mode (Preview)**」に置き換えられた。
@@ -189,8 +192,8 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **本ツール (Gemini)** | Google製。ネイティブなマルチモーダル性能と巨大なコンテキストが特徴。 | Googleエコシステムとの深い連携、業界トップクラスの長文処理能力。 | 最新情報の正確性は発展途上。 | Googleサービス中心の業務、大規模ドキュメント分析が必要な場合。 |
-| **ChatGPT (GPT-5/4o)** | OpenAI製。最も普及している会話型AI。強力なエコシステムを持つ。 | 自然な対話能力、高度な推論（GPT-5/o1）、豊富なサードパーティ連携。 | Googleエコシステムとのネイティブ連携ではGeminiに劣る。 | 汎用的な対話AIやコンテンツ生成、高度な推論を主目的とする場合。 |
-| **Claude (Opus 4.5)** | Anthropic製。安全性と倫理性を重視。エージェント機能とコーディングに強み。 | 巨大なコンテキストウィンドウ(200K以上)、エージェント的なタスク実行能力。 | マルチモーダル性能（特に動画生成）はまだ発展途上。 | コーディング、タスクの自動化、セキュリティ要件が厳しいビジネスユースケースで有力。 |
+| **ChatGPT (GPT-4.5)** | OpenAI製。最も普及している会話型AI。強力なエコシステムを持つ。 | 自然な対話能力、高度な推論能力、豊富なサードパーティ連携（GPTs）。 | Googleエコシステムとのネイティブ連携ではGeminiに劣る。 | 汎用的な対話AIやコンテンツ生成、高度な推論を主目的とする場合。 |
+| **Claude (Sonnet 4.5)** | Anthropic製。安全性と倫理性を重視。エージェント機能とコーディングに強み。 | 巨大なコンテキストウィンドウ(200K以上)、エージェント的なタスク実行能力と高いコスト効率。 | マルチモーダル性能（特に動画生成）はまだ発展途上。 | コーディング、タスクの自動化、セキュリティ要件が厳しいビジネスユースケースで有力。 |
 | **Grok (Grok 4.1)** | xAI製。X (旧Twitter) との連携によるリアルタイム性が特徴。 | 最新情報へのリアルタイムアクセス、フィルタリングの少ない率直な回答。 | 情報源がXに偏る可能性、実績が比較的少ない。 | 最新の話題やトレンドに関する情報を重視する場合。 |
 
 ## **15. 総評**
