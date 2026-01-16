@@ -122,6 +122,10 @@
     position: relative;
     overflow: hidden;
 
+    @include media-breakpoint-down(sm) {
+        padding: map-get($spacers, 3);
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -212,6 +216,11 @@
         box-shadow: $box-shadow-lg;
         position: relative;
         overflow: hidden;
+
+        @include media-breakpoint-down(sm) {
+            padding: map-get($spacers, 2);
+            gap: map-get($spacers, 1);
+        }
 
         &::before {
             content: '';
