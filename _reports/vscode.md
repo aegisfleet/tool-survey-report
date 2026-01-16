@@ -59,6 +59,7 @@ relationships:
     - "Roo Code"
     - "Obsidian"
     - "IntelliJ IDEA"
+    - "Flutter"
 ---
 
 # **Visual Studio Code 調査レポート**
