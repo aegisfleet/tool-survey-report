@@ -51,6 +51,7 @@ relationships:
     - "miro"
     - "Canva"
     - "Affinity"
+    - "GIMP"
 ---
 
 # **Figma 調査レポート**
