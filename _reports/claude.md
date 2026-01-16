@@ -51,6 +51,7 @@ evaluation:
 links: {}
 relationships:
   related_tools:
+    - "Gemini"
     - "ChatGPT"
     - "GitHub Copilot"
     - "Cursor"
