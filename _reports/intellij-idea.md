@@ -59,6 +59,7 @@ relationships:
   related_tools:
     - "Cursor"
     - "Visual Studio Code"
+    - "Flutter"
 ---
 
 # **IntelliJ IDEA 調査レポート**
