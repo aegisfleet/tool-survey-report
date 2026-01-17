@@ -8,7 +8,7 @@ category: "モバイル開発"
 developer: "Google"
 official_site: "https://flutter.dev/"
 date: "2025-11-01"
-last_updated: "2026-01-16"
+last_updated: "2026-01-17"
 tags:
   - "クロスプラットフォーム"
   - "モバイル開発"
@@ -192,6 +192,25 @@ Flutterはオープンソースのフレームワークであり、すべての�
 (出典: [Flutter official blog](https://blog.flutter.dev/), [Somnio Software Blog](https://somniosoftware.com/blog/flutter-updates-news-november2025))
 
 ## **14. 類似ツールとの比較**
+
+### **機能比較表（星取表）**
+
+| 評価項目 | Flutter (本ツール) | React Native | .NET MAUI | Kotlin Multiplatform |
+| :--- | :---: | :---: | :---: | :---: |
+| **開発効率** | ◎<br><small>単一コードで完結</small> | ◎<br><small>Web技術を流用可</small> | ◯<br><small>VS連携が強力</small> | △<br><small>設定・構築が複雑</small> |
+| **UIの一貫性** | ◎<br><small>独自エンジンで統一</small> | △<br><small>OS依存あり</small> | ◯<br><small>標準UIを利用</small> | ◯<br><small>Compose/Native選択</small> |
+| **パフォーマンス** | ◯<br><small>ネイティブに近い</small> | △<br><small>ブリッジ負荷あり</small> | ◯<br><small>標準的</small> | ◎<br><small>完全ネイティブ</small> |
+| **ネイティブ連携** | △<br><small>要プラグイン/実装</small> | △<br><small>要ネイティブ知識</small> | ◯<br><small>API充実</small> | ◎<br><small>直接呼出可</small> |
+| **学習の容易さ** | ◯<br><small>Dart学習が必要</small> | ◎<br><small>JS/TS利用者が多い</small> | △<br><small>C#/.NET</small> | △<br><small>Kotlin+Swift知識要</small> |
+| **エコシステム** | ◎<br><small>巨大で活発</small> | ◎<br><small>非常に巨大</small> | ◯<br><small>MS経済圏</small> | ◯<br><small>急成長中</small> |
+
+**記号の定義**:
+* **◎**: 業界最高水準、独自の強み
+* **◯**: 標準的に対応・良好
+* **△**: 制限付き対応、または課題あり
+* **×**: 非対応
+
+### **詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
