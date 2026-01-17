@@ -54,6 +54,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/flutter/flutter"
+  deepwiki: "https://deepwiki.com/flutter/flutter"
   documentation: "https://docs.flutter.dev/"
 relationships:
   related_tools:
@@ -74,6 +75,7 @@ relationships:
 * **公式サイト**: [https://flutter.dev/](https://flutter.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/flutter/flutter](https://github.com/flutter/flutter)
+  * DeepWiki: [https://deepwiki.com/flutter/flutter](https://deepwiki.com/flutter/flutter)
   * ドキュメント: [https://docs.flutter.dev/](https://docs.flutter.dev/)
   * レビューサイト: [G2](https://www.g2.com/products/flutter/reviews)
 * **カテゴリ**: モバイル開発
