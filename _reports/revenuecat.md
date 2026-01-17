@@ -49,6 +49,12 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   documentation: "https://www.revenuecat.com/docs/"
+relationships:
+  related_tools:
+    - "Flutter"
+    - "Qonversion"
+    - "Adapty"
+    - "Glassfy"
 ---
 
 # **RevenueCat 調査レポート**
