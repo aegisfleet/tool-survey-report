@@ -56,6 +56,7 @@ relationships:
     - "AWS CloudFormation"
     - "Ansible"
     - "LocalStack"
+    - "Kubernetes"
 ---
 
 # **OpenTofu 調査レポート**
