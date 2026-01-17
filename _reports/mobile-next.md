@@ -46,6 +46,7 @@ relationships:
     - "GitHub Copilot"
     - "Appium"
     - "Android Studio"
+    - "Flutter"
 ---
 
 # **Mobile Next 調査レポート**
