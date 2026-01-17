@@ -58,7 +58,6 @@ relationships:
   related_tools:
     - "GitHub Actions"
     - "GitLab CI/CD"
-    - "CircleCI"
     - "Nexus Repository"
 ---
 
