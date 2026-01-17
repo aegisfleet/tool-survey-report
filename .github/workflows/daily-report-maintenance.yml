@@ -11,6 +11,10 @@ on:
         required: false
         default: '1'
         type: string
+      target_report:
+        description: '更新する特定のレポート名 (ファイル名またはツール名)'
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -84,11 +88,64 @@ jobs:
               process.exit(1);
             }
 
-            // 更新日時が古い順にソートして上位N件を取得（inputパラメータで制御、デフォルト1）
-            const reportCount = parseInt('${{ github.event.inputs.report_count || '1' }}', 10);
-            const oldestReports = reportsWithDates
-              .sort((a, b) => a.lastUpdated - b.lastUpdated)
-              .slice(0, reportCount);
+            // target_report入力があるかどうか確認
+            const targetReportInput = '${{ github.event.inputs.target_report }}';
+            let targetReports = [];
+
+            if (targetReportInput && targetReportInput.trim() !== '') {
+              core.info(`Target report specified: "${targetReportInput}"`);
+              const targetInput = targetReportInput.trim();
+              const lowerTargetInput = targetInput.toLowerCase();
+
+              // 1. 完全一致チェック (ファイル名)
+              let matchedReport = reportsWithDates.find(r => 
+                r.filename === targetInput || r.filename.replace('.md', '') === targetInput
+              );
+
+              if (!matchedReport) {
+                // 2. 完全一致チェック (ツール名 - ケースインセンシティブ)
+                matchedReport = reportsWithDates.find(r => {
+                  const toolNameMatch = r.content.match(/tool_name:\s*["']?([^"'\r\n]+)["']?/);
+                  const toolName = toolNameMatch ? toolNameMatch[1] : '';
+                  return toolName.toLowerCase() === lowerTargetInput;
+                });
+              }
+
+              if (matchedReport) {
+                core.info(`Found exact match: ${matchedReport.filename}`);
+                targetReports = [matchedReport];
+              } else {
+                // 3. 部分一致チェック
+                const partialMatches = reportsWithDates.filter(r => {
+                  const fileNameMatch = r.filename.toLowerCase().includes(lowerTargetInput);
+                  
+                  const toolNameMatch = r.content.match(/tool_name:\s*["']?([^"'\r\n]+)["']?/);
+                  const toolName = toolNameMatch ? toolNameMatch[1] : '';
+                  const nameMatch = toolName.toLowerCase().includes(lowerTargetInput);
+
+                  return fileNameMatch || nameMatch;
+                });
+
+                if (partialMatches.length === 1) {
+                  core.info(`Found single partial match: ${partialMatches[0].filename}`);
+                  targetReports = [partialMatches[0]];
+                } else if (partialMatches.length > 1) {
+                  core.error(`Multiple reports matched "${targetInput}": ${partialMatches.map(r => r.filename).join(', ')}. Please specify a more precise name.`);
+                  process.exit(1);
+                } else {
+                  core.error(`No report found matching "${targetInput}"`);
+                  process.exit(1);
+                }
+              }
+            } else {
+              // 更新日時が古い順にソートして上位N件を取得（inputパラメータで制御、デフォルト1）
+              const reportCount = parseInt('${{ github.event.inputs.report_count || '1' }}', 10);
+              targetReports = reportsWithDates
+                .sort((a, b) => a.lastUpdated - b.lastUpdated)
+                .slice(0, reportCount);
+            }
+
+            const oldestReports = targetReports;
 
             core.info(`Found ${oldestReports.length} oldest reports to update:`);
             for (const report of oldestReports) {
