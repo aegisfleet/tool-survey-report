@@ -256,10 +256,10 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | [本ツール] | [競合A] | [競合B] | [競合C] |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 機能1 | ◎ | ◯ | ◯ | △ |
-| **カテゴリ特定** | 機能2 | ◯ | ◎ | × | ◯ |
-| **エンタープライズ** | SSO | △ | ◯ | ◎ | ◎ |
-| **非機能要件** | 日本語対応 | ◯ | △ | ◎ | × |
+| **基本機能** | 機能1 | ◎<br><small>補足説明</small> | ◯<br><small>補足説明</small> | ◯<br><small>補足説明</small> | △<br><small>補足説明</small> |
+| **カテゴリ特定** | 機能2 | ◯<br><small>補足説明</small> | ◎<br><small>補足説明</small> | ×<br><small>補足説明</small> | ◯<br><small>補足説明</small> |
+| **エンタープライズ** | SSO | △<br><small>補足説明</small> | ◯<br><small>補足説明</small> | ◎<br><small>補足説明</small> | ◎<br><small>補足説明</small> |
+| **非機能要件** | 日本語対応 | ◯<br><small>補足説明</small> | △<br><small>補足説明</small> | ◎<br><small>補足説明</small> | ×<br><small>補足説明</small> |
 
 **記号の定義**:
 * **◎**: 業界最高水準、独自の強み
