@@ -258,43 +258,6 @@ layout: default
         if (text.includes('料金') || text.includes('プラン') || text.includes('価格') || text.includes('コスト')) h.classList.add('header-pricing');
         if (text.includes('使い方') || text.includes('操作') || text.includes('実績')) h.classList.add('header-usage');
       });
-
-      // Review Site formatting
-      const listItems = document.querySelectorAll('.report-content li');
-      listItems.forEach(li => {
-        // Safe check: Only process list items that do NOT contain sub-lists (leaf nodes)
-        if (li.querySelectorAll('ul, ol').length === 0) {
-          // Check text content. Using trim() to handle potential whitespace.
-          if (li.textContent.trim().includes('レビューサイト:')) {
-            const links = li.querySelectorAll('a');
-            if (links.length > 0) {
-              const container = document.createElement('div');
-              container.className = 'review-site-container';
-
-              const label = document.createElement('span');
-              label.className = 'review-site-label';
-              label.textContent = 'レビューサイト:';
-              container.appendChild(label);
-
-              const linkWrapper = document.createElement('div');
-              linkWrapper.className = 'review-site-links';
-
-              links.forEach(link => {
-                const newLink = link.cloneNode(true);
-                newLink.className = 'review-site-link';
-                linkWrapper.appendChild(newLink);
-              });
-
-              container.appendChild(linkWrapper);
-
-              // Clear and append new structure
-              li.innerHTML = '';
-              li.appendChild(container);
-              li.classList.add('review-site-item');
-            }
-          }
-        }
-      });
     });
   </script>
 
