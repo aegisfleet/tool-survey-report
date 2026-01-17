@@ -1,7 +1,7 @@
 ---
 title: "Windsurf 調査レポート"
 tool_name: "Windsurf"
-category: "AIコーディング支援"
+category: "AIコードエディタ"
 developer: "Cognition, Inc."
 official_site: "https://windsurf.com"
 tool_reading: "ウィンドサーフ"

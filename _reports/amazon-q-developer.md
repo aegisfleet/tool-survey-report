@@ -2,7 +2,7 @@
 title: "Amazon Q Developer 調査レポート"
 tool_name: "Amazon Q Developer"
 tool_reading: "アマゾン キュー デベロッパー"
-category: "AIコーディングアシスタント"
+category: "AIコーディング支援"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/q/developer/"
 date: "2026-01-09"
