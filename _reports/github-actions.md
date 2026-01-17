@@ -172,7 +172,7 @@ relationships:
 
 ### **14.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | [本ツール] GitHub Actions | [競合A] Jenkins | [競合B] GitLab CI/CD | [競合C] CircleCI |
+| 機能カテゴリ | 機能項目 | GitHub Actions | Jenkins | GitLab CI/CD | CircleCI |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | セットアップの容易さ | ◎<br><small>YAMLを置くだけ</small> | △<br><small>サーバー構築必要</small> | ◯<br><small>GitLabなら容易</small> | ◎<br><small>SaaSで容易</small> |
 | **統合** | リポジトリ連携 | ◎<br><small>GitHubネイティブ</small> | ◯<br><small>プラグインで対応</small> | ◎<br><small>GitLab完全統合</small> | ◯<br><small>GitHub/BB連携</small> |
