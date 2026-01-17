@@ -143,10 +143,22 @@ Flutterはオープンソースのフレームワークであり、すべての�
 * **コミュニティ**: GitHub, Stack Overflow, Reddit, Discordなどで巨大かつ活発なコミュニティが形成されており、問題解決のための情報を得やすい。
 * **公式サポート**: 法人向けの有償サポートは提供されていないが、Googleが開発を主導しており、GitHubのIssueトラッカーを通じてバグ報告や機能要望が可能。
 
-## **9. 連携機能 (API・インテグレーション)**
+## **9. エコシステムと連携**
 
-* **API**: Platform Channelsを通じて、各プラットフォームのネイティブAPI（Java/Kotlin, Objective-C/Swift）を呼び出すことが可能。
+### **9.1 API・外部サービス連携**
+
+* **API**: Platform Channelsを通じて、各プラットフォームのネイティブAPI（Java/Kotlin, Objective-C/Swift）を呼び出すことが可能。また、REST, GraphQL, gRPCなどの標準的なプロトコルに対応したライブラリが豊富。
 * **外部サービス連携**: パッケージ管理システム「pub.dev」には、Firebase, Google Maps, AWS, Stripe, 各種SNS認証など、数多くの外部サービスと連携するためのライブラリが公開されている。
+
+### **9.2 技術スタックとの相性**
+
+| 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
+|:---|:---:|:---|:---|
+| **Firebase** | ◎ | Google公式サポート、FlutterFireプラグインの品質が高い。 | NoSQL設計が必要。大規模利用時のコスト管理。 |
+| **Supabase** | ◎ | 公式SDKがあり、PostgreSQLベースでRDB派に最適。 | オフライン対応など一部機能はFirebaseに及ばない場合がある。 |
+| **Native (Add-to-App)** | ◯ | 既存のネイティブアプリの一部をFlutter化できる。 | アプリサイズが増加する。複数のFlutterエンジンを動かすとメモリ消費大。 |
+| **Web (既存サイトへの埋込)** | △ | Element Embeddingにより`<div>`タグへの埋め込みは可能。 | Canvas描画のためSEOやアクセシビリティに特有の課題がある。 |
+| **GraphQL** | ◯ | `graphql_flutter`や`ferry`などのクライアントが充実。 | 公式ライブラリではないため、メンテナンス状況の確認が必要。 |
 
 ## **10. セキュリティとコンプライアンス**
 
