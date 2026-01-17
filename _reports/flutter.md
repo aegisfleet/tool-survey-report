@@ -208,7 +208,7 @@ Flutterはオープンソースのフレームワークであり、すべての�
 
 ### **14.1 機能比較表 (星取表)**
 
-| 評価項目 | Flutter (本ツール) | React Native | .NET MAUI | Kotlin Multiplatform |
+| 評価項目 | Flutter | React Native | .NET MAUI | Kotlin Multiplatform |
 | :--- | :---: | :---: | :---: | :---: |
 | **開発効率** | ◎<br><small>単一コードで完結</small> | ◎<br><small>Web技術を流用可</small> | ◯<br><small>VS連携が強力</small> | △<br><small>設定・構築が複雑</small> |
 | **UIの一貫性** | ◎<br><small>独自エンジンで統一</small> | △<br><small>OS依存あり</small> | ◯<br><small>標準UIを利用</small> | ◯<br><small>Compose/Native選択</small> |
@@ -227,7 +227,7 @@ Flutterはオープンソースのフレームワークであり、すべての�
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
-| **Flutter (本ツール)** | Dart言語と独自のレンダリングエンジンを使用。UIの表現力とパフォーマンスを両立。 | 高速な開発サイクル、一貫したUI/UX、ネイティブに近いパフォーマンス。 | アプリサイズが大きい、UIがOSネイティブではないため僅かな違和感が生じることがある。 | 高いUI忠実度とブランド統一が求められる場合。迅速なMVP開発。 |
+| **Flutter** | Dart言語と独自のレンダリングエンジンを使用。UIの表現力とパフォーマンスを両立。 | 高速な開発サイクル、一貫したUI/UX、ネイティブに近いパフォーマンス。 | アプリサイズが大きい、UIがOSネイティブではないため僅かな違和感が生じることがある。 | 高いUI忠実度とブランド統一が求められる場合。迅速なMVP開発。 |
 | **React Native** | JavaScript/TypeScriptとReactで開発。ネイティブUIコンポーネントを利用。 | Web技術者の参入障壁が低い、巨大なコミュニティと豊富なライブラリ。 | OSアップデートによる影響を受けやすい、パフォーマンスがFlutterに劣る場合がある。 | 既存のReact資産やWeb開発チームを活用したい場合。 |
 | **.NET MAUI** | C#と.NETで開発。Microsoftエコシステムとの親和性が高い。 | Windowsデスクトップアプリに強い、エンタープライズ向けの豊富な機能。 | Flutter/React Nativeに比べコミュニティ規模が小さい、モバイルでの実績が少ない。 | 既存の.NET資産を持つ企業や、Windows開発が中心の場合。 |
 | **Kotlin Multiplatform** | ビジネスロジックをKotlinで共通化し、UIは各プラットフォームのネイティブUIを直接利用。 | UIは完全ネイティブであり最高のパフォーマンスとUXを実現。OSの最新機能を即時利用可能。 | UIコードは共通化できず開発コストが高い（Compose Multiplatformの利用で緩和可能）。 | パフォーマンスやOSとの深い統合が最優先で、完全なネイティブUI/UXを追求したい場合。 |
