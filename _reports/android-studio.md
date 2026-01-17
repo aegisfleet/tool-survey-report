@@ -8,7 +8,7 @@ category: "モバイル開発"
 developer: "Google"
 official_site: "https://developer.android.com/studio"
 date: "2025-11-28"
-last_updated: "2026-01-11"
+last_updated: "2026-01-14"
 tags:
   - "IDE"
   - "Android"
@@ -174,12 +174,27 @@ relationships:
 
 ## **14. 類似ツールとの比較**
 
+### **機能比較表（星取表）**
+
+| 評価項目 | Android Studio | Visual Studio Code | IntelliJ IDEA |
+| :--- | :---: | :---: | :---: |
+| **Android開発最適化** | ◎ (公式・必須) | △ (要拡張・制限あり) | ○ (可能だがAS推奨) |
+| **コード編集・補完** | ◎ (IntelliJベース) | ○ (軽量・良好) | ◎ (最強のJava/Kotlin支援) |
+| **デバッグ・解析** | ◎ (専用プロファイラ) | ○ (基本機能のみ) | ◎ (強力) |
+| **起動・動作の軽快さ** | △ (重い) | ◎ (非常に軽い) | △ (やや重い) |
+| **拡張性 (プラグイン)** | ◎ | ◎ (圧倒的数) | ◎ |
+| **クロスプラットフォーム** | ○ (KMP/Flutter) | ◎ (Flutter/React Native) | ○ (KMP) |
+| **導入コスト (金銭)** | ◎ (完全無料) | ◎ (完全無料) | △ (Ultimateは有料) |
+
+* **記号の意味**: ◎: 非常に優れている/公式推奨、○: 良好/標準的、△: 可能だが制限あり/劣る、×: 不可
+
+### **詳細比較と選択ガイド**
+
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
-| **Android Studio** | Android開発の公式IDE。ネイティブ開発に最適化。 | 公式サポート、最新機能への追随、豊富な専用ツール群。 | 高いシステム要件。 | Androidネイティブアプリを開発する場合。 |
-| **Visual Studio Code** | 軽量なコードエディタ。拡張機能でAndroid開発に対応。 | 軽快な動作、豊富な拡張機能、Flutter開発で人気。 | IDEとしての統合環境（デバッガ、プロファイラ等）はAndroid Studioに劣る。 | Flutter開発や、簡単なコード編集を行いたい場合。 |
-| **IntelliJ IDEA** | Android Studioのベースとなった多言語対応IDE。 | Java/Kotlinでのバックエンド開発等も行う場合に一貫した環境が使える。 | Android特化機能はAndroid Studioが先行して搭載される。 | Android以外のJava/Kotlin開発も並行して行う場合。 |
-| **Flutter** | フレームワーク。Android Studioは公式推奨IDEの一つ。 | クロスプラットフォーム開発が可能。 | ネイティブ機能へのアクセスには制約がある場合がある。 | iOS/Android両対応のアプリを単一コードベースで開発したい場合。 |
+| **Android Studio** | **【公式・標準】**<br>Googleが提供するAndroid開発専用IDE。 | ・最新API/OSへの即日対応<br>・Jetpack Composeのプレビュー機能<br>・高度なプロファイラとエミュレータ | ・システム要件が高い（メモリ消費大）<br>・Android以外には使いにくい | **Androidネイティブアプリ開発の全て**。<br>Flutter開発でもビルド環境として必須。 |
+| **Visual Studio Code** | **【軽量・汎用】**<br>世界で最も人気のある高機能エディタ。 | ・圧倒的に動作が軽い<br>・Flutter開発において非常に人気<br>・多言語対応が容易 | ・ネイティブ機能（メモリ解析等）が弱い<br>・GUIデザイナーがない | **Flutterを用いたクロスプラットフォーム開発**。<br>PCスペックが低い場合や、テキスト編集中心の作業。 |
+| **IntelliJ IDEA** | **【多機能・統合】**<br>JetBrains製の強力な汎用IDE。 | ・サーバーサイド(Kotlin/Java)とアプリを同一環境で開発可能<br>・リファクタリング機能が最強 | ・Android特化機能の搭載がASより遅れる場合がある<br>・Ultimate版は有料 | **Androidアプリとサーバーサイド(Ktor/Spring)を同時開発する場合**。 |
 
 ## **15. 総評**
 
