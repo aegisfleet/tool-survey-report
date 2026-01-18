@@ -60,14 +60,10 @@ relationships:
     - "Cypress"
     - "Selenium"
     - "Robot Framework"
-    - "axe DevTools"
-    - "CodeceptJS"
     - "Cucumber"
     - "Appium"
-    - "Karate"
-    - "Apache JMeter"
-    - "Ranorex Studio"
     - "PyTest"
+    - "Allure Report"
 ---
 
 # **Playwright 調査レポート**

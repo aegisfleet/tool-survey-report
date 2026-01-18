@@ -57,6 +57,7 @@ relationships:
     - "Appium"
     - "CodeceptJS"
     - "Cucumber"
+    - "Allure Report"
 ---
 
 # **Cypress 調査レポート**

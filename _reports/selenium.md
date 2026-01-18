@@ -59,8 +59,7 @@ relationships:
     - "mabl"
     - "MagicPod"
     - "Autify"
-    - "CodeceptJS"
-    - "Cucumber"
+    - "Allure Report"
 ---
 
 # **Selenium 調査レポート**
