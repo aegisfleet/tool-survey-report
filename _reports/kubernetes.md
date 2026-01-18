@@ -52,6 +52,7 @@ relationships:
     - "Karpenter"
   related_tools:
     - "Docker"
+    - "Podman"
     - "Datadog"
     - "OpenTofu"
     - "Terraform"

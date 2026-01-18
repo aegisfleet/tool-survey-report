@@ -57,6 +57,7 @@ relationships:
     - "AWS CloudFormation"
     - "Pulumi"
     - "Kubernetes"
+    - "Podman"
 ---
 
 # **Ansible 調査レポート**
