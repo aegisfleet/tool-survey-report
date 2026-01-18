@@ -59,7 +59,7 @@ relationships:
     - "Cypress"
     - "Robot Framework"
     - "Appium"
-    - "Gauge"
+    - "Allure Report"
     - "Karate"
 ---
 

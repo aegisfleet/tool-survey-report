@@ -1,20 +1,22 @@
 ---
+# === フロントマター ===
+# 【必須項目】
 title: "Allure Report 調査レポート"
 tool_name: "Allure Report"
 tool_reading: "アリュール レポート"
-category: "テスト、レポーティング"
+category: "テスト/QA"
 developer: "Qameta Software"
 official_site: "https://allurereport.org/"
-date: "2026-01-09"
-last_updated: "2026-01-09"
+date: "2026-01-19"
+last_updated: "2026-01-19"
 tags:
-  - "Test Reporting"
-  - "Open Source"
-  - "Multi-language"
+  - "テスト自動化"
+  - "オープンソース"
   - "CI/CD"
-  - "TypeScript"
+  - "E2Eテスト"
 description: "テスト結果を視覚的に分かりやすく表示するためのオープンソースのテストレポーティングツール。多言語対応やCI/CD連携が容易で、詳細なステップやスクリーンショットを含めたレポートを作成できる。"
 
+# 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -26,6 +28,7 @@ quick_summary:
   latest_highlight: "2025年にTypeScriptで再構築されたv3.0が登場"
   update_frequency: "高"
 
+# 【ツール評価】100点満点、基準点70点からの加減算方式
 evaluation:
   score: 85
   base_score: 70
@@ -41,14 +44,19 @@ evaluation:
       reason: "特になし（OSSとして十分な機能を持つ）"
   summary: "テストレポートツールのデファクトスタンダードとして、機能・使いやすさ共に非常に高水準。"
 
+# 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/allure-framework/allure2"
   documentation: "https://allurereport.org/docs/"
 relationships:
+  parent:
+  children:
   related_tools:
     - "junit"
     - "selenium"
     - "playwright"
+    - "cypress"
+    - "cucumber"
 ---
 
 # **Allure Report 調査レポート**
@@ -62,7 +70,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/allure-framework/allure2](https://github.com/allure-framework/allure2)
   * ドキュメント: [https://allurereport.org/docs/](https://allurereport.org/docs/)
-* **カテゴリ**: テスト、レポーティング
+* **カテゴリ**: テスト/QA
 * **概要**: 多くのプログラミング言語やテストフレームワークに対応した、軽量で柔軟なテストレポート生成ツール。テストの実行結果を、ステークホルダーが見やすい形式（HTMLレポート）で可視化します。
 
 ## **2. 目的と主な利用シーン**
@@ -104,6 +112,7 @@ relationships:
 | **Allure TestOps** | 商用価格 | 企業向け製品。リアルタイムダッシュボード、テストケース管理、分析機能、エンタープライズサポート。 |
 
 * **課金体系**: TestOpsはユーザー数やインスタンス規模による（要問い合わせ）。Allure Reportは完全無料。
+* **無料トライアル**: Allure TestOpsには無料トライアルあり（公式サイトより申請）。
 
 ## **7. 導入実績・事例**
 
@@ -117,17 +126,28 @@ relationships:
 * **コミュニティ**: GitHub Issues, Gitter, Stack Overflowなどで活発なコミュニティサポートが得られる。
 * **公式サポート**: OSS版には商用サポートはないが、開発元のQameta SoftwareがTestOpsを通じてエンタープライズサポートを提供している。
 
-## **9. 連携機能 (API・インテグレーション)**
+## **9. エコシステムと連携**
+
+### **9.1 API・外部サービス連携**
 
 * **API**: レポート生成のためのCLIツールや、各種言語向けのアダプターライブラリがAPIとして機能する。
 * **外部サービス連携**:
   * **テストフレームワーク**: JUnit, TestNG, Pytest, Cucumber, Playwright, Cypress, WebdriverIO, SpecFlowなど。
   * **CIツール**: Jenkins, GitHub Actions, GitLab CI, TeamCity, Bamboo, CircleCI。
 
+### **9.2 技術スタックとの相性**
+
+| 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
+|:---|:---:|:---|:---|
+| **Java (JUnit/TestNG)** | ◎ | 元々Javaベースで開発されており、最も安定している。 | 特になし |
+| **Python (Pytest)** | ◎ | `allure-pytest`プラグインが非常に強力で使いやすい。 | 特になし |
+| **JavaScript/TypeScript** | ◎ | PlaywrightやCypressとの統合が進んでおり、v3でさらに親和性が向上。 | フレームワークごとの設定差異に注意。 |
+| **C# / .NET** | ◯ | SpecFlowなどのBDDツールとの相性が良い。 | セットアップが少し複雑な場合がある。 |
+
 ## **10. セキュリティとコンプライアンス**
 
+* **認証**: OSS版には認証機能なし。Webサーバー側（Nginx/Apache等）でBasic認証などを設定する必要がある。
 * **データ管理**: レポートはローカルまたは自社のCIサーバー上で生成・管理されるため、データが外部（開発元のサーバー等）に送信されることはない。データの管理責任はユーザーにある。
-* **アクセス制御**: 静的HTMLとして出力されるため、公開する場合はWebサーバー側でのBasic認証やIP制限などのアクセス制御が必要。
 * **準拠規格**: OSS版自体が特定のセキュリティ規格を取得しているわけではないが、自社環境内でセキュアに運用可能。
 
 ## **11. 操作性 (UI/UX) と学習コスト**
@@ -135,7 +155,19 @@ relationships:
 * **UI/UX**: 非常に洗練されており、左側のナビゲーションと右側の詳細パネルという構成で、迷うことなく操作できる。グラフやチャートも自動生成され、視認性が高い。
 * **学習コスト**: 低い。各テストフレームワークへの導入はアダプターパッケージを入れるだけで済み、基本的なレポートは設定なしでも生成される。リッチな情報を付加するためのアノテーション（`@Step`, `@Description`など）も直感的。
 
-## **12. ユーザーの声（レビュー分析）**
+## **12. ベストプラクティス**
+
+* **効果的な活用法 (Modern Practices)**:
+  * **ローカルとCIの使い分け**: ローカルでのデバッグ時は`allure serve`で即座に確認し、CI環境では`allure generate`で静的ファイルを生成してアーカイブする運用が推奨される。
+  * **添付ファイルの積極活用**: テスト失敗時にスクリーンショットやDOMスナップショット、ログファイルを自動添付するように設定することで、デバッグ効率が格段に向上する。
+  * **コンテキスト情報の付与**: `@Step`, `@Description`, `@Link`などのアノテーションを活用し、テストケースに十分なメタデータを付与することで、レポートの可読性を高める。
+  * **環境情報の定義**: `environment.properties`ファイルを作成し、テスト実行時のOS、ブラウザバージョン、環境名（Staging/Prod）などをレポートに表示させる。
+* **陥りやすい罠 (Antipatterns)**:
+  * **結果のコミット**: `allure-results`フォルダをGitリポジトリにコミットしてしまう（`.gitignore`に追加すべき）。
+  * **直接ファイルを開く**: 生成されたレポートの`index.html`をブラウザで直接開く（CORS制限により正しく表示されないため、必ずWebサーバー経由で開く）。
+  * **結果の混合**: 前回のテスト実行結果（`allure-results`）を削除せずに次のテストを実行すると、新旧の結果が混ざり合ってしまう（実行前に`--clean`オプションや削除処理を入れる）。
+
+## **13. ユーザーの声（レビュー分析）**
 
 * **調査対象**: 技術ブログ, GitHub, Qiita, Zenn, Stack Overflowなどの開発者コミュニティ
 * **総合評価**: 非常に高い。テストレポートツールの「定番」として広く認知されている。
@@ -148,7 +180,7 @@ relationships:
   * 「大規模なテストスイートの場合、レポート生成（generate）に時間がかかることがある。」
   * 「履歴（History）の保持設定がCI環境によっては少し複雑。」
 
-## **13. 直近半年のアップデート情報**
+## **14. 直近半年のアップデート情報**
 
 * **2025-12-19**: **Allure TestOps 25.4.2**
   * PDFエクスポートエンジンの更新によるレイアウト安定化、メモリ消費の改善。セキュリティ脆弱性の修正。
@@ -160,7 +192,18 @@ relationships:
 
 (出典: [Release Notes | Allure TestOps Docs](https://docs.qameta.io/allure-testops/release-notes/), [Allure Report 3.0 Webinar](https://allurereport.org/events/allure3-prerelease-webinar-2025/))
 
-## **14. 類似ツールとの比較**
+## **15. 類似ツールとの比較**
+
+### **15.1 機能比較表 (星取表)**
+
+| 機能カテゴリ | 機能項目 | 本ツール | JUnit Report | ReportPortal | ExtentReports |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | HTMLレポート | ◎<br><small>リッチで対話的</small> | ◯<br><small>簡素</small> | ◎<br><small>ダッシュボード</small> | ◎<br><small>リッチ</small> |
+| **カテゴリ特定** | ログ/添付 | ◎<br><small>スクショ等容易</small> | △<br><small>テキストのみ</small> | ◎<br><small>ログ分析可</small> | ◎<br><small>ログ埋め込み可</small> |
+| **エンタープライズ** | 履歴管理 | ◯<br><small>History機能</small> | ×<br><small>なし</small> | ◎<br><small>DB管理</small> | △<br><small>要設定</small> |
+| **非機能要件** | 言語対応 | ◎<br><small>ほぼ全て</small> | ◯<br><small>Java中心</small> | ◎<br><small>多数対応</small> | △<br><small>Java/.NET</small> |
+
+### **15.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -169,7 +212,7 @@ relationships:
 | **ReportPortal** | AI分析機能付きサーバー型ツール | リアルタイム集計、AIによる失敗分析、履歴管理 | サーバー構築・運用が必要で重い | 大規模な自動テスト基盤を構築する場合 |
 | **JUnit Report** | JUnit標準のXML/HTMLレポート | 標準機能で追加インストール不要 | 見た目が簡素、デバッグ情報が少ない | とにかく手軽に結果だけ見たい場合 |
 
-## **15. 総評**
+## **16. 総評**
 
 * **総合的な評価**:
   * テスト自動化を行う上で「とりあえずこれを入れておけば間違いない」と言える標準的なレポートツール。機能の豊富さ、UIの良さ、導入のしやすさのバランスが素晴らしく、OSSであるためコストもかからない。v3でのモダン化により、将来性も確保されている。

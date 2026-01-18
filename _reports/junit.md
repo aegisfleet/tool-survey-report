@@ -50,6 +50,7 @@ relationships:
     - "PyTest"
     - "Database Rider"
     - "Spring Boot"
+    - "Allure Report"
 ---
 
 # **JUnit 調査レポート**
