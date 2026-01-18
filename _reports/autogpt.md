@@ -57,6 +57,7 @@ links:
   documentation: "https://docs.agpt.co/"
 relationships:
   related_tools:
+    - "LangChain"
     - "Devin"
     - "OpenHands"
 ---

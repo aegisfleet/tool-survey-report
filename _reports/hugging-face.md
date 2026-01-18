@@ -55,6 +55,7 @@ links:
   documentation: "https://huggingface.co/docs"
 relationships:
   related_tools:
+    - "LangChain"
     - "Stable Diffusion"
     - "Amazon Bedrock"
     - "TensorFlow"
