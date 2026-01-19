@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "Playwright"
     - "Cypress"
+    - "axe DevTools"
     - "Appium"
     - "Robot Framework"
     - "mabl"
