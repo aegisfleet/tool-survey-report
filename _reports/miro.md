@@ -61,6 +61,7 @@ links:
 relationships:
   related_tools:
     - "Canva"
+    - "Figma"
 ---
 
 # **Miro 調査レポート**
