@@ -8,13 +8,14 @@ category: "IDE/エディタ"
 developer: "Embarcadero"
 official_site: "https://www.embarcadero.com/jp/products/delphi"
 date: "2025-01-21"
-last_updated: "2025-01-21"
+last_updated: "2026-01-21"
 tags:
   - "IDE"
   - "開発者ツール"
   - "Windows"
   - "モバイル開発"
   - "クロスプラットフォーム"
+  - "ローコード"
 description: "Object Pascal言語を使用した統合開発環境（IDE）。コンポーネントによるビジュアル開発（RAD）と、単一コードからのWindows/macOS/iOS/Android/Linux向けネイティブアプリ生成が特徴。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -26,7 +27,7 @@ quick_summary:
     - "業務アプリ開発者"
     - "Windowsアプリ開発者"
     - "モバイルアプリ開発者"
-  latest_highlight: "2025年にRAD Studio 13 Florenceがリリースされ、AI機能やWebStencilsが強化"
+  latest_highlight: "2025年11月にDelphi 13 Update 1がリリースされ、Android 16対応やAI機能が強化"
   update_frequency: "中"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -188,14 +189,15 @@ relationships:
 
 ## **14. 直近半年のアップデート情報**
 
+* **2025-11-15**: **Delphi 13 Update 1 リリース**
+  * Android 16 (Baklava) への早期対応サポート。
+  * WebStencilsのパフォーマンス向上と新コンポーネント追加。
+  * AIコード補完の精度向上とClaude 3.5 Sonnetサポート。
 * **2025-01-XX**: **Delphi 13 (Florence) リリース**
   * 新しいWeb開発技術「WebStencils」の導入。
   * スマートコードインサイトの強化（AI対応）。
   * Windows 11 UIスタイルの完全対応強化。
   * パフォーマンスと安定性の向上。
-* **2024-11-XX**: **Delphi 12.2 Athens Update**
-  * AIコーディング支援機能の拡張。
-  * コンパイラの品質改善。
 
 (出典: [Embarcadero Blogs](https://blogs.embarcadero.com/))
 
