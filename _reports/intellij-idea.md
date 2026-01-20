@@ -60,6 +60,7 @@ relationships:
     - "Cursor"
     - "Visual Studio Code"
     - "Flutter"
+    - "Delphi"
 ---
 
 # **IntelliJ IDEA 調査レポート**

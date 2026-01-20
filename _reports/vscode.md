@@ -58,6 +58,7 @@ relationships:
     - "Android Studio"
     - "Roo Code"
     - "Obsidian"
+    - "Delphi"
     - "IntelliJ IDEA"
     - "Flutter"
 ---
