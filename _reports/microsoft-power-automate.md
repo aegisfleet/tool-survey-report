@@ -58,6 +58,7 @@ relationships:
     - "Google Gemini Flows"
     - "Robot Framework"
     - "Microsoft 365 Copilot"
+    - "Google Opal"
 ---
 
 # **Microsoft Power Automate 調査レポート**
