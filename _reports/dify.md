@@ -61,6 +61,7 @@ relationships:
   related_tools:
     - "LangChain"
     - "Amazon Bedrock"
+    - "Google Opal"
 ---
 
 # **Dify 調査レポート**

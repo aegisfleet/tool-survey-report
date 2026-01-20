@@ -56,6 +56,7 @@ relationships:
     - "Zapier"
     - "Make"
     - "Microsoft Power Automate"
+    - "Google Opal"
 ---
 
 # **Google Gemini Flows 調査レポート**
