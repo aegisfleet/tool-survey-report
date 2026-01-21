@@ -55,8 +55,8 @@ relationships:
     - "UiPath"
     - "Zapier"
     - "n8n"
+    - "Workato"
     - "Google Gemini Flows"
-    - "Robot Framework"
     - "Microsoft 365 Copilot"
     - "Google Opal"
 ---
