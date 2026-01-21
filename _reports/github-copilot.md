@@ -57,6 +57,7 @@ relationships:
     - "Cursor"
     - "GitLab Duo"
     - "Amazon Q Developer"
+    - "Kiro"
     - "Windsurf"
     - "Visual Studio Code"
     - "OpenAI Codex"
