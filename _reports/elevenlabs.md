@@ -54,6 +54,7 @@ links:
 relationships:
   related_tools:
     - "Suno"
+    - "Waves Place"
 ---
 
 # **ElevenLabs 調査レポート**
