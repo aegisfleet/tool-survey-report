@@ -53,8 +53,6 @@ relationships:
   related_tools:
     - "Astro"
     - "Jekyll"
-    - "Next.js"
-    - "Gatsby"
     - "WordPress"
 ---
 
