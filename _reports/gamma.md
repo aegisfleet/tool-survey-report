@@ -4,7 +4,7 @@
 title: "Gamma 調査レポート"
 tool_name: "Gamma"
 tool_reading: "ガンマ"
-category: "プレゼンテーション作成"
+category: "デザインツール"
 developer: "Gamma Tech, Inc."
 official_site: "https://gamma.app/"
 date: "2025-11-13"
@@ -15,6 +15,7 @@ tags:
   - "資料作成"
   - "自動化"
   - "生成AI"
+  - "デザインツール"
 description: "AIがテキスト入力からプレゼンテーション、ドキュメント、Webページを自動生成するツール。デザインスキルがなくても、洗練された資料を数分で作成可能。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -63,7 +64,7 @@ relationships:
 * **公式サイト**: [https://gamma.app/](https://gamma.app/)
 * **関連リンク**:
   * レビューサイト: [Capterra (3.7/5.0)](https://www.capterra.com/p/10002120/Gamma/) | [Trustpilot (2.0/5.0)](https://www.trustpilot.com/review/gamma.app)
-* **カテゴリ**: プレゼンテーション作成
+* **カテゴリ**: デザインツール
 * **概要**: AIを活用して、テキスト入力から自動でプレゼンテーション、ドキュメント、Webページを生成するツール。デザインの専門知識がなくても、視覚的に美しく、一貫性のある資料を迅速に作成できる。
 
 ## **2. 目的と主な利用シーン**

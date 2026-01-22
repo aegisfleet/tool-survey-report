@@ -65,7 +65,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://help.figma.com/hc/ja](https://help.figma.com/hc/ja)
   * レビューサイト: [G2](https://www.g2.com/products/figma/reviews) | [Capterra](https://www.capterra.com/p/175027/Figma/) | [ITreview](https://www.itreview.jp/products/figma/reviews)
-* **カテゴリ**: UI/UXデザイン, プロトタイピング
+* **カテゴリ**: デザインツール
 * **概要**: ブラウザ上で動作するクラウドベースのデザインプラットフォーム。リアルタイムコラボレーションを核とし、UIデザイン、プロトタイピング、開発ハンドオフ、そしてWebサイト構築までをシームレスに行える。
 
 ## **2. 目的と主な利用シーン**
