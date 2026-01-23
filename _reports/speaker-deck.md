@@ -46,6 +46,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 relationships:
   related_tools:
+    - "Docswell"
     - "Gamma"
     - "Canva"
     - "GitHub"
