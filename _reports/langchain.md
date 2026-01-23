@@ -58,6 +58,7 @@ relationships:
     - "Amazon Bedrock"
     - "Hugging Face"
     - "AutoGPT"
+    - "Agent Lightning"
 ---
 
 # **LangChain 調査レポート**
