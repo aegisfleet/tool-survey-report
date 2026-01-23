@@ -61,6 +61,7 @@ relationships:
     - "Windsurf"
     - "Visual Studio Code"
     - "OpenAI Codex"
+    - "Roo Code"
 ---
 
 # **GitHub Copilot 調査レポート**

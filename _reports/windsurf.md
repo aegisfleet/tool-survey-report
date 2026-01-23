@@ -50,6 +50,7 @@ relationships:
     - "Cursor"
     - "GitHub Copilot"
     - "Google Antigravity"
+    - "Roo Code"
 ---
 
 # **Windsurf 調査レポート**
