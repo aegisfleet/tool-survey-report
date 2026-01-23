@@ -58,11 +58,10 @@ relationships:
     - "Cursor"
     - "OpenHands"
     - "AutoGPT"
-    - "Google Jules"
+    - "Jules"
     - "Cline"
     - "AGENTIC STAR"
-    - "Android Use"
-    - "Opcode"
+    - "Genspark"
 ---
 
 # **Devin 調査レポート**
