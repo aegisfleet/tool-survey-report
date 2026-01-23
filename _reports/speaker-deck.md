@@ -8,7 +8,7 @@ category: "ドキュメント/ナレッジ"
 developer: "Speaker Deck, LLC"
 official_site: "https://speakerdeck.com/"
 date: "2026-01-23"
-last_updated: "2026-01-23"
+last_updated: "2026-01-24"
 tags:
   - "SaaS"
   - "ドキュメント共有"
@@ -38,18 +38,25 @@ evaluation:
       reason: "PDFベースでフォント崩れがなく、ビューアが非常に軽量・シンプル"
     - point: 3
       reason: "広告が少なく（Proは完全なし）、コンテンツに集中できるデザイン"
+    - point: 3
+      reason: "スライド内のリンクがクリック可能になり、利便性が向上した"
   minus_points:
-    - point: -2
+    - point: -3
       reason: "アニメーションや画面切り替え効果に対応していない（PDFのみ）"
+    - point: -2
+      reason: "日本語検索の精度や機能が競合（Docswell）に比べて弱い"
   summary: "機能はシンプルだが、PDFスライドの共有において最も信頼性と表示品質が高いツールの一つ"
 
 # 【任意項目】該当するもののみ記載
+links:
+  documentation: "https://help.speakerdeck.com/"
 relationships:
+  parent: null
+  children: []
   related_tools:
     - "Docswell"
     - "Gamma"
     - "Canva"
-    - "GitHub"
 ---
 
 # **Speaker Deck 調査レポート**
@@ -84,7 +91,7 @@ relationships:
 * **PDFアップロード**: PDFファイルをドラッグ＆ドロップするだけで、ページごとに分割されたスライドプレイヤーを生成。
 * **高品質な埋め込みプレイヤー**: レスポンシブ対応で、モバイルでもPCでも美しく表示される軽量なプレイヤー。
 * **ソーシャル共有**: Twitter (X) やFacebookへのOGP対応共有。
-* **スライド内リンク (New)**: PDF内のハイパーリンクを認識し、スライド上でクリック可能にする機能（2025年12月追加）。
+* **スライド内リンク**: PDF内のハイパーリンクを認識し、スライド上でクリック可能にする機能。
 * **Pro機能（有料）**:
   * パスワード保護
   * 限定公開URL (Private URLs)

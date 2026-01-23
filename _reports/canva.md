@@ -62,6 +62,7 @@ relationships:
     - "Microsoft Designer"
     - "Gamma"
     - "Miro"
+    - "Speaker Deck"
 ---
 
 # **Canva 調査レポート**
