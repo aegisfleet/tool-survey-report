@@ -59,6 +59,7 @@ relationships:
   related_tools:
     - "Canva"
     - "Microsoft 365 Copilot"
+    - "Speaker Deck"
 ---
 
 # **Gamma 調査レポート**
