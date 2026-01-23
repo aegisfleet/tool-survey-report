@@ -1077,6 +1077,11 @@
     background: rgba(#e53e3e, 0.1);
     color: #e53e3e;
   }
+
+  &.zero {
+    background: rgba($gray, 0.1);
+    color: $gray;
+  }
 }
 
 .eval-reason {

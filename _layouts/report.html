@@ -203,7 +203,7 @@ layout: default
     {%- endif -%}
 
     <!-- 評価の詳細 -->
-    {%- if page.evaluation.plus_points or page.evaluation.minus_points or page.evaluation.summary -%}
+    {%- if page.evaluation.plus_points or page.evaluation.minus_points or page.evaluation.zero_points or page.evaluation.summary -%}
     <div class="evaluation-details">
       <h3 class="evaluation-title">📋 評価の詳細</h3>
 
@@ -214,6 +214,20 @@ layout: default
           {%- for item in page.evaluation.plus_points -%}
           <li>
             <span class="eval-point plus">+{{ item.point }}</span>
+            <span class="eval-reason">{{ item.reason }}</span>
+          </li>
+          {%- endfor -%}
+        </ul>
+      </div>
+      {%- endif -%}
+
+      {%- if page.evaluation.zero_points and page.evaluation.zero_points.size > 0 -%}
+      <div class="evaluation-group zero-points">
+        <h4>⚖️ 基準項目</h4>
+        <ul>
+          {%- for item in page.evaluation.zero_points -%}
+          <li>
+            <span class="eval-point zero">{{ item.point }}</span>
             <span class="eval-reason">{{ item.reason }}</span>
           </li>
           {%- endfor -%}
