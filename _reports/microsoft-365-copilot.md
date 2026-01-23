@@ -60,6 +60,7 @@ relationships:
     - "Microsoft Power Automate"
     - "AGENTIC STAR"
     - "Circleback"
+    - "Gamma"
 ---
 
 # **Microsoft 365 Copilot 調査レポート**
