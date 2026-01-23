@@ -1,7 +1,7 @@
 ---
 # === フロントマター ===
 # 【必須項目】
-title: "[Keepa] 調査レポート"
+title: "Keepa 調査レポート"
 tool_name: "Keepa"
 tool_reading: "キーパ"
 category: "EC・マーケットプレイス分析"
@@ -53,7 +53,7 @@ links:
 relationships:
 ---
 
-# **[Keepa] 調査レポート**
+# **Keepa 調査レポート**
 
 ## **1. 基本情報**
 
