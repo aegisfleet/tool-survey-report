@@ -53,6 +53,7 @@ relationships:
     - "Perplexity"
     - "Devin"
     - "Google Disco"
+    - "Felo"
 ---
 
 # **Genspark 調査レポート**
