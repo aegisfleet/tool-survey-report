@@ -8,7 +8,7 @@ category: "生成AI"
 developer: "Anthropic"
 official_site: "https://claude.ai/"
 date: "2025-10-18"
-last_updated: "2026-01-12"
+last_updated: "2026-01-24"
 tags:
   - "AI"
   - "大規模言語モデル"
@@ -69,6 +69,7 @@ relationships:
 * **開発元**: Anthropic
 * **公式サイト**: [https://claude.ai/](https://claude.ai/)
 * **関連リンク**:
+  * Claude Code ベストプラクティス: [https://claude-code-best-practices.manus.space/](https://claude-code-best-practices.manus.space/)
   * レビューサイト: 公式サイト以外にG2やITreviewのような体系的なレビューサイトでの評価はまだ確立されていない
 * **カテゴリ**: 生成AI, AIアシスタント, 開発者ツール
 * **概要**: Anthropic社が開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。特に2025年11月にリリースされたClaude Opus 4.5は、コーディング、エージェント機能、そしてスプレッドシートやスライド作成などの日常的な業務タスクにおいて、世界最高水準の性能を誇る。自然言語での指示に基づき、多様なタスクをエージェント的に実行する能力が特徴。
