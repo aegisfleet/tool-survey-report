@@ -54,6 +54,7 @@ links:
 relationships:
   parent: "GitHub"
   related_tools:
+    - "Claude"
     - "Cursor"
     - "GitLab Duo"
     - "Amazon Q Developer"
