@@ -58,18 +58,13 @@ links:
   documentation: "https://cursor.com/docs"
 relationships:
   related_tools:
-    - "Amazon Q Developer"
+    - "Claude Code"
+    - "GitHub Copilot"
     - "Claude"
     - "Devin"
-    - "GitHub Copilot"
-    - "Google Antigravity"
-    - "Kiro"
-    - "Opcode"
-    - "OpenAI Codex"
+    - "Amazon Q Developer"
     - "Roo Code"
-    - "Visual Studio Code"
     - "Windsurf"
-    - "Mobile Next"
 ---
 
 # **Cursor 調査レポート**

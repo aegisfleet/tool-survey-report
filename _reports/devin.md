@@ -54,14 +54,13 @@ links:
   documentation: "https://docs.devin.ai/"
 relationships:
   related_tools:
+    - "Claude Code"
     - "GitHub Copilot"
     - "Cursor"
     - "OpenHands"
     - "AutoGPT"
     - "Jules"
     - "Cline"
-    - "AGENTIC STAR"
-    - "Genspark"
 ---
 
 # **Devin 調査レポート**
