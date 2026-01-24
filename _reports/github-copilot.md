@@ -54,15 +54,12 @@ links:
 relationships:
   parent: "GitHub"
   related_tools:
+    - "Claude Code"
     - "Claude"
     - "Cursor"
     - "GitLab Duo"
     - "Amazon Q Developer"
-    - "Kiro"
     - "Windsurf"
-    - "Visual Studio Code"
-    - "OpenAI Codex"
-    - "Roo Code"
 ---
 
 # **GitHub Copilot 調査レポート**
