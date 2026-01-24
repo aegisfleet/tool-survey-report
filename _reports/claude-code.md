@@ -64,6 +64,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.claude.com/en/docs/claude-code](https://docs.claude.com/en/docs/claude-code)
   * ベストプラクティス: [https://code.claude.com/docs/en/best-practices](https://code.claude.com/docs/en/best-practices)
+  * Claude Code ベストプラクティス: [https://claude-code-best-practices.manus.space/](https://claude-code-best-practices.manus.space/)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: Anthropic社が開発した、ターミナル、IDE、Web、Slack上で動作する自律型コーディングエージェント。最新のClaude 4.5モデル（Opus/Sonnet/Haiku）を搭載し、自然言語での指示に基づいて、コードベースの探索、計画立案、コードの記述、テスト実行、Git操作までを自律的に行う。
 
