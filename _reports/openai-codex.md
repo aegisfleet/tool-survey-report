@@ -50,6 +50,7 @@ links:
   github: "https://github.com/openai/codex"
 relationships:
   related_tools:
+    - "SkillsMP"
     - "GitHub Copilot"
     - "Windsurf"
     - "Cursor"
