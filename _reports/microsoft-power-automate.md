@@ -56,7 +56,7 @@ relationships:
     - "Zapier"
     - "n8n"
     - "Workato"
-    - "Google Gemini Flows"
+    - "Google Workspace Studio"
     - "Microsoft 365 Copilot"
     - "Google Opal"
 ---
