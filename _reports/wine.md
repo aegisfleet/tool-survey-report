@@ -50,6 +50,7 @@ relationships:
   related_tools:
     - "Docker"
     - "Podman"
+    - "Ubuntu"
 ---
 
 # **Wine (WineHQ) 調査レポート**
