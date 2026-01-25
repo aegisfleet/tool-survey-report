@@ -60,6 +60,7 @@ relationships:
   related_tools:
     - "Claude Code"
     - "GitHub Copilot"
+    - "Google Antigravity"
     - "Claude"
     - "Devin"
     - "Amazon Q Developer"
