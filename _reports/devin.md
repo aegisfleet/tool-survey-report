@@ -57,6 +57,7 @@ relationships:
     - "Claude Code"
     - "GitHub Copilot"
     - "Cursor"
+    - "Google Antigravity"
     - "OpenHands"
     - "AutoGPT"
     - "Jules"
