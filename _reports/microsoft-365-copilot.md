@@ -53,6 +53,8 @@ links:
   documentation: "https://learn.microsoft.com/ja-jp/microsoft-365-copilot/"
 relationships:
   parent: "Microsoft 365"
+  children:
+    - "Microsoft Work IQ"
   related_tools:
     - "ChatGPT"
     - "Gemini"
