@@ -59,6 +59,7 @@ relationships:
     - "Nexus Repository"
     - "LocalStack"
     - "Wine"
+    - "Ubuntu"
 ---
 
 # **Docker 調査レポート**

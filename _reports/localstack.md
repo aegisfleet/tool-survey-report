@@ -51,6 +51,7 @@ relationships:
     - "Terraform"
     - "AWS CloudFormation"
     - "OpenTofu"
+    - "Ubuntu"
 ---
 
 # **LocalStack 調査レポート**
