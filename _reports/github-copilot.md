@@ -60,6 +60,7 @@ relationships:
     - "GitLab Duo"
     - "Amazon Q Developer"
     - "Windsurf"
+    - "Microsoft Work IQ"
 ---
 
 # **GitHub Copilot 調査レポート**
