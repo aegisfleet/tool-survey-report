@@ -49,7 +49,7 @@ relationships:
     - "n8n"
     - "Workato"
     - "Microsoft Power Automate"
-    - "Google Gemini Flows"
+    - "Google Workspace Studio"
 ---
 
 # **Make 調査レポート**
