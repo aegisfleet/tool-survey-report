@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "Playwright"
     - "Cypress"
+    - "Ranorex Studio"
     - "axe DevTools"
     - "Appium"
     - "Robot Framework"
