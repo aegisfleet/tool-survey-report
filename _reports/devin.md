@@ -60,7 +60,7 @@ relationships:
     - "Cursor"
     - "OpenHands"
     - "AutoGPT"
-    - "Jules"
+    - "Google Jules"
     - "Cline"
     - "Manus"
 ---

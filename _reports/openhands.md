@@ -54,7 +54,7 @@ relationships:
   related_tools:
     - "Claude Code"
     - "Devin"
-    - "Jules"
+    - "Google Jules"
     - "Manus"
     - "AutoGPT"
     - "Opcode"
