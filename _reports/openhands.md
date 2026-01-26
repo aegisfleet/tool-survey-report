@@ -58,6 +58,7 @@ relationships:
     - "Manus"
     - "AutoGPT"
     - "Opcode"
+    - "OpenCode"
 ---
 
 # **OpenHands 調査レポート**
