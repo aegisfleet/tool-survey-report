@@ -8,13 +8,13 @@ category: "テスト/QA"
 developer: "pytest-dev team"
 official_site: "https://pytest.org/"
 date: "2025-10-22"
-last_updated: "2026-01-11"
+last_updated: "2026-01-27"
 tags:
-  - "Python"
-  - "テストフレームワーク"
+  - "テスト自動化"
   - "オープンソース"
   - "開発者ツール"
-  - "テスト自動化"
+  - "Python"
+  - "テストフレームワーク"
 description: "Pythonで広く利用されている、シンプルかつ強力なテスト自動化フレームワーク。ユニットテストから複雑な機能テストまで幅広く対応。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
