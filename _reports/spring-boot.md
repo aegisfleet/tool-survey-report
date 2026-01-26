@@ -53,7 +53,7 @@ links:
   documentation: "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/"
 relationships:
   related_tools:
-    - "junit"
+    - "JUnit"
     - "Database Rider"
 ---
 

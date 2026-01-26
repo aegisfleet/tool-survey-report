@@ -52,7 +52,7 @@ relationships:
   parent:
   children:
   related_tools:
-    - "junit"
+    - "JUnit"
     - "selenium"
     - "playwright"
     - "cypress"
