@@ -246,21 +246,6 @@ layout: default
   {%- endif -%}
   {%- include related-tools.html -%}
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Headers decoration
-      const headers = document.querySelectorAll('.report-content h2, .report-content h3');
-      headers.forEach(h => {
-        const text = h.textContent;
-        if (text.includes('メリット') || text.includes('長所') || text.includes('強み') || text.includes('Pros')) h.classList.add('header-benefits');
-        if (text.includes('デメリット') || text.includes('短所') || text.includes('弱み') || text.includes('Cons')) h.classList.add('header-drawbacks');
-        if (text.includes('機能') || text.includes('特徴') || text.includes('シーン')) h.classList.add('header-features');
-        if (text.includes('料金') || text.includes('プラン') || text.includes('価格') || text.includes('コスト')) h.classList.add('header-pricing');
-        if (text.includes('使い方') || text.includes('操作') || text.includes('実績')) h.classList.add('header-usage');
-      });
-    });
-  </script>
-
   <div class="report-content" itemprop="articleBody">
     {{ content }}
   </div>
