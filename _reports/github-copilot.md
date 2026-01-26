@@ -59,7 +59,7 @@ relationships:
   related_tools:
     - "OpenAI Codex"
     - "Claude Code"
-    - "Claude"
+    - "Devin"
     - "Cursor"
     - "GitLab Duo"
     - "Amazon Q Developer"
