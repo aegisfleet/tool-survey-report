@@ -59,6 +59,7 @@ relationships:
   related_tools:
     - "Cypress"
     - "Selenium"
+    - "Ranorex Studio"
     - "axe DevTools"
     - "Robot Framework"
     - "Cucumber"
