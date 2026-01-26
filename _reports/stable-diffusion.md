@@ -51,6 +51,7 @@ links:
   documentation: "https://platform.stability.ai/docs"
 relationships:
   related_tools:
+    - "Niji Journey"
     - "Hugging Face"
     - "ChatGPT"
     - "Gemini"
