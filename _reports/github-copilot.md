@@ -55,6 +55,7 @@ relationships:
   parent: "GitHub"
   children:
     - "GitHub Copilot SDK"
+    - "GitHub Copilot CLI"
   related_tools:
     - "Claude Code"
     - "Claude"
