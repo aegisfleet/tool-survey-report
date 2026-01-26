@@ -62,6 +62,7 @@ relationships:
     - "DeepWiki-Open"
     - "Cursor"
     - "GitHub Copilot"
+    - "OpenCode"
 ---
 
 # **Cline 調査レポート**

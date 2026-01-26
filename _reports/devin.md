@@ -63,6 +63,7 @@ relationships:
     - "Jules"
     - "Cline"
     - "Manus"
+    - "OpenCode"
 ---
 
 # **Devin 調査レポート**
