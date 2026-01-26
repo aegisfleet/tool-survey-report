@@ -8,7 +8,7 @@ category: "動画/メディア"
 developer: "OpenAI"
 official_site: "https://openai.com/sora"
 date: "2025-10-18"
-last_updated: "2026-01-13"
+last_updated: "2026-01-27"
 tags:
   - "AI"
   - "動画生成"
@@ -49,6 +49,7 @@ relationships:
   related_tools:
     - "Luma AI"
     - "Suno"
+    - "ElevenLabs"
 ---
 
 # **OpenAI Sora 調査レポート**
