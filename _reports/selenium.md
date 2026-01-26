@@ -53,6 +53,7 @@ links:
 relationships:
   related_tools:
     - "Playwright"
+    - "PyTest"
     - "Cypress"
     - "axe DevTools"
     - "Appium"
