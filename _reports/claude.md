@@ -55,6 +55,7 @@ relationships:
   related_tools:
     - "Gemini"
     - "ChatGPT"
+    - "DeepSeek"
     - "GitHub Copilot"
     - "Cursor"
     - "Amazon Q Developer"
