@@ -58,7 +58,7 @@ relationships:
     - "GitHub Copilot CLI"
   related_tools:
     - "Claude Code"
-    - "Claude"
+    - "Devin"
     - "Cursor"
     - "GitLab Duo"
     - "Amazon Q Developer"
