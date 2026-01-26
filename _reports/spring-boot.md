@@ -54,6 +54,7 @@ links:
 relationships:
   related_tools:
     - "junit"
+    - "Database Rider"
 ---
 
 # **Spring Boot 調査レポート**
