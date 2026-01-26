@@ -53,6 +53,8 @@ links:
   documentation: "https://docs.github.com/en/copilot"
 relationships:
   parent: "GitHub"
+  children:
+    - "GitHub Copilot SDK"
   related_tools:
     - "Claude Code"
     - "Claude"
