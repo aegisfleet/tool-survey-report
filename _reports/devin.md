@@ -62,6 +62,7 @@ relationships:
     - "AutoGPT"
     - "Jules"
     - "Cline"
+    - "Manus"
 ---
 
 # **Devin 調査レポート**
