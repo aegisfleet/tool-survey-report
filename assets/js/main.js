@@ -346,8 +346,7 @@ function applyEmojisToHeadings() {
     '類似ツールとの比較': '⚔️',
     '総評': '📝',
     '開始手順': '🚀',
-    'セットアップ': '🚀',
-    'Getting Started': '🚀'
+    'セットアップ': '🚀'
   };
 
   const headings = reportContent.querySelectorAll('h2');
