@@ -8,7 +8,7 @@ category: "コード品質"
 developer: "SonarSource"
 official_site: "https://www.sonarsource.com/products/sonarqube/"
 date: "2025-10-19"
-last_updated: "2026-01-10"
+last_updated: "2026-01-27"
 tags:
   - "コード品質"
   - "静的解析"
@@ -22,12 +22,12 @@ description: "継続的なコード品質とセキュリティの自動レビュ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: "$32/月 (Cloud Team)"
   target_users:
     - "開発者"
     - "DevOpsエンジニア"
     - "品質保証(QA)チーム"
-  latest_highlight: "2026年1月にJava 17のサポート終了予定を発表"
+  latest_highlight: "2025年12月にSonarQube Server 2025.6をリリース"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -49,10 +49,9 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/SonarSource/sonarqube"
-  documentation: "https://docs.sonarsource.com/sonarqube/latest/"
+  documentation: "https://docs.sonarsource.com/sonarqube-server/latest/"
 relationships:
   related_tools:
-    - "JaCoCo"
     - "JaCoCo"
     - "CodeRabbit"
 ---
@@ -67,7 +66,7 @@ relationships:
 * **公式サイト**: [https://www.sonarsource.com/products/sonarqube/](https://www.sonarsource.com/products/sonarqube/)
 * **関連リンク**:
   * GitHub: [https://github.com/SonarSource/sonarqube](https://github.com/SonarSource/sonarqube)
-  * ドキュメント: [https://docs.sonarsource.com/sonarqube/latest/](https://docs.sonarsource.com/sonarqube/latest/)
+  * ドキュメント: [https://docs.sonarsource.com/sonarqube-server/latest/](https://docs.sonarsource.com/sonarqube-server/latest/)
   * レビューサイト: [G2](https://www.g2.com/products/sonarqube/reviews) | [Capterra](https://www.capterra.com/p/134552/SonarQube/) | [ITreview](https://www.itreview.jp/products/sonarqube)
 * **カテゴリ**: コード品質
 * **概要**: SonarQubeは、継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォームです。30以上のプログラミング言語に対応し、バグ、コードの臭い(保守性の低いコード)、セキュリティ脆弱性を開発プロセスの早い段階で検出します。
@@ -91,64 +90,102 @@ relationships:
 * **シークレット検出**: ソースコードや設定ファイルに含まれるAPIキーやパスワードなどの機密情報を検出。
 * **マルチ言語サポート**: Java, C#, Python, JavaScript, TypeScript, C++, Goなど30以上の言語をサポート。
 * **品質ゲート (Quality Gates)**: コードがリリース可能かどうかを判定するための品質基準を定義・強制。
-* **IDE連携 (SonarLint)**: VS Code, IntelliJ IDEAなどのIDE内でリアルタイムに問題を検出・修正提案。
+* **IDE連携 (SonarQube for IDE)**: VS Code, IntelliJ IDEAなどのIDE内でリアルタイムに問題を検出・修正提案 (旧 SonarLint)。
 * **レポートとダッシュボード**: プロジェクトやポートフォリオ全体の品質とセキュリティの状態を視覚的に表示。
 
-## **4. 特徴・強み (Pros)**
+## **4. 開始手順・セットアップ**
+
+* **前提条件**:
+  * Docker Engine (推奨) または Java 17+ (ZIP版の場合)
+  * 最低 2GB RAM (4GB以上推奨)
+* **インストール/導入 (Docker)**:
+  ```bash
+  # Community Edition (無料版) の実行
+  docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:community
+  ```
+* **初期設定**:
+  * ブラウザで `http://localhost:9000` にアクセス
+  * 初期ログイン ID: `admin`, パスワード: `admin` (初回ログイン時に変更)
+* **クイックスタート**:
+  * "Create Project" から "Manually" を選択し、プロジェクトキーとトークンを生成
+  * 表示される手順に従い、ローカルスキャナーまたはCIツールを設定して解析を実行
+
+## **5. 特徴・強み (Pros)**
 
 * **幅広い言語サポート**: 業界トップクラスの対応言語数を誇り、多様な技術スタックを持つ組織でも統一的な品質管理が可能。
 * **強力なコミュニティとエコシステム**: オープンソース版は無料で利用でき、活発なコミュニティと豊富なプラグインによって支えられている。
 * **CI/CDとの容易な統合**: Jenkins, GitLab CI, GitHub Actions, Azure DevOpsなど、主要なCI/CDツールとシームレスに連携できる。
 * **先進的なAI機能**: AIによるコード修正提案やAI生成コードの分析など、最新の開発手法に対応。
 
-## **5. 弱み・注意点 (Cons)**
+## **6. 弱み・注意点 (Cons)**
 
 * **セットアップと運用コスト**: オンプレミスで運用する場合、サーバーのセットアップ、データベース管理、バージョンアップ対応などに専門知識と工数が必要。
 * **高度な機能は有償**: ブランチ解析、高度なAI・セキュリティ機能、ポートフォリオ管理などは有償版でのみ利用可能。
 * **誤検知の可能性**: 静的解析の性質上、コンテキストによっては誤検知が発生することがあるため、プロジェクトに合わせたルールのチューニングが必要。
 * **日本語情報の限定性**: 公式ドキュメントは主に英語。日本語の情報はコミュニティベースのものが中心となる。
 
-## **6. 料金プラン**
+## **7. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---|---|---|
 | **Community** | 無料 | オープンソース。基本的な静的コード解析機能。 |
-| **Developer** | $720/年〜 | ブランチ解析、プルリクエスト解析、AI Code Assuranceなど。 |
-| **Enterprise** | 要問い合わせ | ポートフォリオ管理、高度なセキュリティレポート、AI CodeFixなど。 |
-| **Data Center** | 要問い合わせ | 高可用性(HA)とスケーラビリティを求める大規模組織向け。 |
+| **Developer** | $160/年〜 | ブランチ解析、プルリクエスト解析、AI Code Assuranceなど。 |
+| **Enterprise** | $21,000/年〜 | ポートフォリオ管理、高度なセキュリティレポート、AI CodeFixなど。 |
+| **Data Center** | $140,000/年〜 | 高可用性(HA)とスケーラビリティを求める大規模組織向け。 |
+| **SonarQube Cloud Team** | $32/月〜 | クラウド版 (SaaS)。無料トライアルあり。 |
 
-* **課金体系**: コード行数に応じた年間ライセンス。
+* **課金体系**: コード行数(LOC)に応じた年間ライセンス (Server版) / ユーザー数または行数 (Cloud版)。
 * **無料トライアル**: 有償版の全機能を14日間試せる無料トライアルが提供されている。
 
-## **7. 導入実績・事例**
+## **8. 導入実績・事例**
 
 * **導入企業**: Microsoft, IBM, Bosch, SAP, T-Mobile, BMW Groupなど、全世界で40万以上の組織が導入。
 * **導入事例**: 金融、ヘルスケア、自動車、ITサービスなど、品質とセキュリティが重視される幅広い業界でデファクトスタンダードとなっている。
 * **対象業界**: 業界を問わず、ソフトウェア開発を行うあらゆる組織。
 
-## **8. サポート体制**
+## **9. サポート体制**
 
 * **ドキュメント**: 公式サイトに詳細なドキュメント、インストールガイド、APIリファレンスが整備されている (主に英語)。
 * **コミュニティ**: SonarSource Community Forumがあり、ユーザー同士での質疑応答や情報交換が活発に行われている。
 * **公式サポート**: 有償版ユーザーは、SonarSourceによる公式のテクニカルサポートを利用可能。
 
-## **9. 連携機能 (API・インテグレーション)**
+## **10. エコシステムと連携**
+
+### **10.1 API・外部サービス連携**
 
 * **API**: 包括的なWeb APIが提供されており、外部ツールからのデータ取得やカスタムレポートの作成が可能。
 * **外部サービス連携**: Jenkins, GitLab, GitHub Actions, Azure DevOps, Dockerなど、ほぼ全ての主要CI/CD・DevOpsツールと連携可能。
 
-## **10. セキュリティとコンプライアンス**
+### **10.2 技術スタックとの相性**
+
+| 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
+|:---|:---:|:---|:---|
+| **Java (Maven/Gradle)** | ◎ | 公式スキャナープラグインが充実しており設定が容易 | 特になし |
+| **JavaScript/TypeScript** | ◎ | フロントエンドフレームワークの解析に対応 | 解析時間が長くなる場合がある |
+| **C/C++** | ◯ | 高度な静的解析が可能 | ビルド環境との統合設定が必要 |
+| **Python** | ◯ | 一般的なルールセットが豊富 | 一部の動的特性は解析困難 |
+
+## **11. セキュリティとコンプライアンス**
 
 * **認証**: SSO (SAML, Azure AD, GitHub), 2段階認証(2FA)に対応。
 * **データ管理**: オンプレミス版では全てのコードと解析結果を自社環境内で管理可能。
 * **準拠規格**: OWASP Top 10, CWE Top 25, SANS Top 25などのセキュリティ標準に準拠したルールセットを提供。
 
-## **11. 操作性 (UI/UX) と学習コスト**
+## **12. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: Webベースのダッシュボードは直感的で、問題のドリルダウンや原因分析が容易。グラフやチャートが多く、視覚的に理解しやすい。
 * **学習コスト**: 基本的な導入と利用は容易だが、品質プロファイルやカスタムルールの作成など、高度な活用には一定の学習が必要。
 
-## **12. ユーザーの声（レビュー分析）**
+## **13. ベストプラクティス**
+
+* **効果的な活用法 (Modern Practices)**:
+  * **Clean as You Code**: 全体の技術的負債を一気に解消しようとせず、「新しいコード (New Code)」の品質を厳格に管理し、自然に全体の品質を向上させるアプローチ。
+  * **Connected Mode**: SonarQube for IDEとサーバーを連携させ、開発者のIDE上でリアルタイムにサーバーと同じルールで解析を行う。
+* **陥りやすい罠 (Antipatterns)**:
+  * **過剰なルール設定**: 最初から全てのルールを有効にすると、大量の警告が出て開発者のやる気を削ぐ原因になる。デフォルトのプロファイルから始め、徐々に調整する。
+  * **レガシーコードの全量修正**: 既存の大量の警告を一度に修正しようとすると、開発がストップしてしまう。
+
+## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, ITreview
 * **総合評価**: 各サイトで5段階中4.5以上の高評価を獲得。
@@ -163,26 +200,40 @@ relationships:
 * **特徴的なユースケース**:
   * レガシーコードのリファクタリングプロジェクトで、技術的負債を定量的に測定し、改善の進捗を可視化するために活用されている。
 
-## **13. 直近半年のアップデート情報**
+## **15. 直近半年のアップデート情報**
 
-* **2026-01-08**: 2026 State of Code Developer Surveyが公開。
-* **2025-12-04**: SonarQube Server 10.8 リリース。AI Code AssuranceとAI CodeFixの機能強化、新しいアーキテクチャルール、Ansible IaCのサポートが追加。
-* **2025-11-01**: Java 17のサポートが2026年7月のSonarQube 2026.3で終了することが発表。
-* **2025-05-29**: SonarQube Server 2025 Release 3 リリース。SCA & 高度なSASTのGA、KotlinのSASTサポート、MISRA C++:2023準拠などの機能強化。
+* **2025-12-11 (2025.6)**: Jira CloudおよびSlackとの統合強化。JavaScript/TypeScriptの解析速度が最大40%向上。Swift 6.2およびPython 3.14のサポート追加。
+* **2025-09-24 (2025.5)**: GitHub Actionsの脆弱性検出機能追加。WPFフレームワークのセキュリティ検出対応。Python解析の大幅なパフォーマンス向上。
+* **2025-07-31 (2025.4 LTA)**: 長期サポート版(LTA)リリース。Go言語のSAST対応、VB.NETの汚染解析、YAML/JSON/Kotlinでのシークレット検出強化。
+* **2025-05-29 (2025 Release 3)**: Advanced Security (SCA & 高度なSAST) のGA。KotlinのSASTサポート、MISRA C++:2023準拠。
 
-(出典: [What's new in SonarQube](https://www.sonarsource.com/products/sonarqube/whats-new/), [Release notes](https://docs.sonarsource.com/sonarqube-server/server-update-and-maintenance/release-notes/))
+(出典: [SonarQube Server Release Announcements](https://www.sonarsource.com/products/sonarqube/whats-new/))
 
-## **14. 類似ツールとの比較**
+## **16. 類似ツールとの比較**
+
+### **16.1 機能比較表 (星取表)**
+
+| 機能カテゴリ | 機能項目 | SonarQube | Checkmarx | Veracode | Snyk |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | SAST (静的解析) | ◎<br><small>30+言語対応</small> | ◎<br><small>高精度・広範囲</small> | ◎<br><small>包括的AppSec</small> | ◯<br><small>開発者向け</small> |
+| **カテゴリ特定** | コード品質 (Bug/Smell) | ◎<br><small>得意領域</small> | △<br><small>セキュリティ特化</small> | ◯<br><small>対応あり</small> | △<br><small>SCA中心</small> |
+| **セキュリティ** | SCA (OSS管理) | ◯<br><small>機能強化中</small> | ◯<br><small>対応あり</small> | ◎<br><small>強力</small> | ◎<br><small>業界リーダー</small> |
+| **非機能要件** | 日本語対応 | △<br><small>コミュニティ頼み</small> | ◯<br><small>パートナー多し</small> | ◯<br><small>国内代理店あり</small> | ◯<br><small>日本語UIあり</small> |
+
+### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
-|---|---|---|---|---|
+|---------|------|------|------|------------------|
 | **SonarQube** | コード品質とセキュリティの統合管理プラットフォーム | 圧倒的な言語サポート、強力なエコシステム、OSS版の存在 | オンプレミス版の運用コスト、高度な機能は有償 | 品質とセキュリティをバランス良く管理したい場合 |
 | **Checkmarx** | SASTに特化したエンタープライズ向けセキュリティツール | 高度なセキュリティ脆弱性検出能力、コンプライアンスレポート | 高価、コード品質管理機能は限定的 | セキュリティ脆弱性スキャンを最優先する場合 |
 | **Veracode** | クラウドベースの包括的なAppSecプラットフォーム | SAST, DAST, SCAなどを統合的に提供 | SonarQubeより高価、オンプレミス環境での利用に制約 | クラウドネイティブな環境で包括的なセキュリティテストを求める場合 |
 | **Snyk** | 開発者中心のセキュリティプラットフォーム | オープンソースライブラリの脆弱性管理(SCA)に強み | SAST機能はSonarQubeに及ばない場合がある | OSSのセキュリティ管理を重視する場合 |
 
-## **15. 総評**
+## **17. 総評**
 
-* **総合的な評価**: SonarQubeは、コード品質とセキュリティを統合的に管理するための業界標準ツールと言える。オープンソース版でも十分な機能を持つが、DevSecOpsを本格的に推進する組織にとっては、有償版が強力な選択肢となる。
-* **推奨されるチームやプロジェクト**: 複数のプログラミング言語を使用するプロジェクト、CI/CDを導入済みのチーム、コード品質とセキュリティを継続的に改善したいすべての組織。
-* **選択時のポイント**: 無料で始められる手軽さと、エンタープライズレベルまでスケールできる拡張性が最大の魅力。純粋なセキュリティ機能のみを追求する場合は特化ツールとの比較検討も有効だが、品質とセキュリティの両方をバランス良く管理したい場合には最適なツールである。
+* **総合的な評価**:
+  SonarQubeは、コード品質とセキュリティを統合的に管理するための業界標準ツールと言える。オープンソース版でも十分な機能を持つが、DevSecOpsを本格的に推進する組織にとっては、有償版が強力な選択肢となる。
+* **推奨されるチームやプロジェクト**:
+  複数のプログラミング言語を使用するプロジェクト、CI/CDを導入済みのチーム、コード品質とセキュリティを継続的に改善したいすべての組織。
+* **選択時のポイント**:
+  無料で始められる手軽さと、エンタープライズレベルまでスケールできる拡張性が最大の魅力。純粋なセキュリティ機能のみを追求する場合は特化ツールとの比較検討も有効だが、品質とセキュリティの両方をバランス良く管理したい場合には最適なツールである。
