@@ -54,6 +54,7 @@ relationships:
   parent: ""
   children: []
   related_tools:
+    - "GitHub Copilot SDK"
     - "Dify"
     - "Amazon Bedrock"
     - "Hugging Face"
