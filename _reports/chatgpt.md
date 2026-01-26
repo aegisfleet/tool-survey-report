@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Gemini"
     - "Claude"
+    - "DeepSeek"
     - "Grok"
     - "Microsoft 365 Copilot"
     - "Perplexity"
