@@ -64,6 +64,7 @@ relationships:
     - "Cline"
     - "Manus"
     - "OpenCode"
+    - "AGENTIC STAR"
 ---
 
 # **Devin 調査レポート**
