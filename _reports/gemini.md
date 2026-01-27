@@ -57,6 +57,7 @@ relationships:
     - "Microsoft 365 Copilot"
     - "DeepSeek"
     - "Rakuten AI"
+    - "Z.ai"
 ---
 
 # **Gemini 調査レポート**
