@@ -52,6 +52,7 @@ links:
   github: "https://github.com/microsoft/vscode"
 relationships:
   related_tools:
+    - "MCP Apps"
     - "Cursor"
     - "Kiro"
     - "GitHub Copilot"

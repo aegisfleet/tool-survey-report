@@ -53,6 +53,7 @@ relationships:
   children:
     - "Claude Code"
   related_tools:
+    - "MCP Apps"
     - "Gemini"
     - "ChatGPT"
     - "DeepSeek"

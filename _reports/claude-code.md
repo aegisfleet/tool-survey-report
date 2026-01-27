@@ -47,6 +47,7 @@ relationships:
   parent: "Claude"
   children: []
   related_tools:
+    - "MCP Apps"
     - "SkillsMP"
     - "Cursor"
     - "GitHub Copilot"
