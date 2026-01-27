@@ -54,6 +54,7 @@ relationships:
     - "ChatGPT"
     - "Claude"
     - "Gemini"
+    - "Z.ai"
 ---
 
 # **DeepSeek 調査レポート**

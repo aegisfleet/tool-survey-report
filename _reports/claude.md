@@ -62,6 +62,7 @@ relationships:
     - "Amazon Q Developer"
     - "Rakuten AI"
     - "Mobile Next"
+    - "Z.ai"
 ---
 
 # **Claude 調査レポート**
