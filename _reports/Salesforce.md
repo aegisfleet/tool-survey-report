@@ -48,6 +48,7 @@ relationships:
     - "HubSpot"
     - "Zoho CRM"
     - "Microsoft Dynamics 365"
+    - "AGENTIC STAR"
 ---
 
 # **Salesforce 調査レポート**
