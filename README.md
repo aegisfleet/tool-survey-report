@@ -139,7 +139,7 @@ touch _reports/tool-name.md
 
 ```yaml
 ---
-title: "[ツール名] 調査レポート"
+title: "ツール名 調査レポート"
 tool_name: "ツール名"
 category: "カテゴリ名"
 developer: "開発元企業名"

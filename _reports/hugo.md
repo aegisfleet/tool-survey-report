@@ -1,7 +1,7 @@
 ---
 # === フロントマター ===
 # 【必須項目】
-title: "[Hugo] 調査レポート"
+title: "Hugo 調査レポート"
 tool_name: "Hugo"
 tool_reading: "ヒューゴ"
 category: "Webフレームワーク"
@@ -57,7 +57,7 @@ relationships:
     - "WordPress"
 ---
 
-# **[Hugo] 調査レポート**
+# **Hugo 調査レポート**
 
 ## **1. 基本情報**
 

@@ -1,7 +1,7 @@
 ---
 # === フロントマター ===
 # 【必須項目】
-title: "[Waves Place] 調査レポート"
+title: "Waves Place 調査レポート"
 tool_name: "Waves Place"
 tool_reading: "ウェイブス プレース"
 category: "AI効果音生成"
@@ -55,7 +55,7 @@ relationships:
     - "ElevenLabs"
 ---
 
-# **[Waves Place] 調査レポート**
+# **Waves Place 調査レポート**
 
 ## **1. 基本情報**
 
