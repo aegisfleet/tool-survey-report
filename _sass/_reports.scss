@@ -436,18 +436,42 @@
   // Code blocks
   pre {
     margin: map-get($spacers, 5) 0;
-    padding: map-get($spacers, 4);
+    padding: map-get($spacers, 6) map-get($spacers, 4) map-get($spacers, 4); // 上部パディングを増やして飾り分のスペースを確保
     background-color: $dark-gray;
     color: $white;
     border-radius: $border-radius;
     overflow-x: auto;
     box-shadow: $box-shadow-sm;
+    position: relative; // デザイン線（装飾）の上に表示するため
+    z-index: 5;
+    background-image: none; // ベーススタイルのhighlightクラスの影響を除外
+
+    // macOS window decoration (Traffic lights)
+    &::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ff5f56; // Red button
+      box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f; // Yellow and Green buttons
+    }
 
     code {
       background-color: transparent;
       color: inherit;
       padding: 0;
     }
+  }
+
+  // Code block wrappers
+  .highlighter-rouge,
+  .highlight {
+    position: relative;
+    z-index: 5;
+    background-image: none; // ベーススタイルのhighlightクラスの影響を除外
   }
 
   // Inline code
