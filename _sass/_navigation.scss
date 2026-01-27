@@ -1,56 +1,52 @@
 // Main navigation
 .main-navigation {
-  flex: 1 1 auto;
-  position: relative;
-  
+  display: flex;
+  align-items: center;
+
   @include media-breakpoint-down(lg) {
     order: 2;
-    flex: 0 0 auto;
-    margin-top: 0;
+    margin-left: auto; // Push to right on mobile
   }
 }
 
+// Navigation Toggle (Hamburger)
 .nav-toggle {
   @include button-reset;
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: $border-radius;
   background-color: transparent;
+  color: $text-color;
   transition: $transition-base;
-  
+  z-index: $zindex-fixed + 1; // Above menu
+  position: relative;
+
   @include media-breakpoint-down(lg) {
-    display: flex !important;
-    position: absolute;
-    top: map-get($spacers, 2);
-    right: 0;
-    z-index: $zindex-dropdown + 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  @include media-breakpoint-down(sm) {
-    top: map-get($spacers, 1);
-    right: map-get($spacers, 1);
+
+  &:hover,
+  &:focus {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
   }
-  
-  &:hover {
-    background-color: $light-gray;
-  }
-  
+
   &[aria-expanded="true"] {
     .nav-toggle-icon {
       span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: translateY(7px) rotate(45deg);
       }
-      
+
       span:nth-child(2) {
         opacity: 0;
+        transform: translateX(-10px);
       }
-      
+
       span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+        transform: translateY(-7px) rotate(-45deg);
       }
     }
   }
@@ -60,247 +56,173 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 20px;
-  height: 14px;
-  
+  width: 24px;
+  height: 16px;
+
   span {
     display: block;
     height: 2px;
     width: 100%;
-    background-color: $primary-color;
-    border-radius: 1px;
-    transition: $transition-base;
+    background-color: currentColor;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
   }
 }
 
-.nav-search {
-  display: none;
-  
-  @include media-breakpoint-down(lg) {
-    display: block;
-    margin-bottom: map-get($spacers, 3);
-  }
-}
-
+// Navigation Menu
 .nav-menu {
   @extend %list-reset;
   display: flex;
   align-items: center;
-  gap: map-get($spacers, 2);
-  
+  gap: map-get($spacers, 1);
+  margin: 0;
+
   @include media-breakpoint-down(lg) {
-    display: none;
+    display: block !important; // Override display:none
+    position: fixed;
+    top: 60px; // Match header min-height (approx)
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); // Fill rest of screen
+    background-color: rgba($white, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow-y: auto;
+    padding: map-get($spacers, 3);
+    z-index: $zindex-fixed; // Ensure it overlaps other content
+
+    // Animation - Slide Down / Fade
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    pointer-events: none;
+
+    // Reset layout for vertical list
     flex-direction: column;
     align-items: stretch;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: $white;
-    border: 2px solid $border-color;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-lg;
-    padding: map-get($spacers, 4);
-    margin-top: map-get($spacers, 2);
-    z-index: $zindex-dropdown;
-    
+    justify-content: flex-start;
+    gap: 0;
+    border-top: 1px solid $border-light;
+
     &.active {
-      display: flex !important;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
     }
+  }
+
+  @include media-breakpoint-down(sm) {
+    top: 50px; // Match smaller header
+    height: calc(100vh - 50px);
   }
 }
 
 .nav-item {
   position: relative;
-  
+
   @include media-breakpoint-down(lg) {
     width: 100%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: 0.1s; // Stagger effect
+
+    .active & {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.05}s;
+      }
+    }
   }
 }
 
 .nav-link {
-  display: block;
-  padding: map-get($spacers, 2) map-get($spacers, 3);
+  display: inline-block;
+  padding: 0.75rem 1rem;
   color: $text-color;
-  font-weight: $font-weight-semibold;
-  border-radius: $border-radius;
-  transition: $transition-base;
+  font-weight: $font-weight-medium;
   text-decoration: none;
-  border: 2px solid transparent;
-  
-  &:hover,
-  &:focus {
-    color: $text-color;
-    background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
-    text-decoration: none;
-    border-color: rgba($primary-color, 0.2);
+  border-radius: $border-radius;
+  transition: all 0.2s ease;
+  position: relative;
+
+  // Desktop Hover Horizontal Line
+  @include media-breakpoint-up(lg) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.5rem;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background-color: $primary-color;
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+      transform-origin: center;
+    }
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+      text-decoration: none;
+      background-color: transparent;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &.current {
+      color: $primary-color;
+      font-weight: $font-weight-bold;
+
+      &::after {
+        transform: scaleX(1);
+        background-color: $primary-color;
+      }
+    }
   }
-  
-  &:focus {
-    outline: 3px solid rgba($primary-color, 0.5);
-    outline-offset: 2px;
-  }
-  
-  &.current {
-    color: $text-color;
-    background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.4) 70%);
-    border-color: $primary-color;
-    font-weight: $font-weight-bold;
-  }
-  
+
+  // Mobile Styling
   @include media-breakpoint-down(lg) {
-    padding: map-get($spacers, 3);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.125rem;
     border-bottom: 1px solid $border-light;
     border-radius: 0;
-    
-    &:last-child {
-      border-bottom: none;
+
+    &:hover,
+    &:focus {
+      background-color: $light-gray;
+      color: $primary-color;
+      padding-left: 1.25rem; // Subtle movement
+    }
+
+    &.current {
+      color: $primary-color;
+      font-weight: $font-weight-bold;
+      background-color: rgba($primary-color, 0.05);
+      border-left: 4px solid $primary-color;
     }
   }
 }
 
-// Dropdown functionality
-.dropdown {
-  .dropdown-toggle {
-    position: relative;
-    
-    &::after {
-      content: "";
-      display: inline-block;
-      margin-left: map-get($spacers, 2);
-      vertical-align: middle;
-      border-top: 4px solid;
-      border-right: 4px solid transparent;
-      border-bottom: 0;
-      border-left: 4px solid transparent;
-      transition: $transition-base;
-    }
-    
-    &[aria-expanded="true"]::after {
-      transform: rotate(180deg);
-    }
-  }
-  
-  &.active .dropdown-menu {
-    display: block;
-  }
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 200px;
-  background-color: $content-bg;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  z-index: $zindex-dropdown;
-  
-  @include media-breakpoint-down(lg) {
-    position: static;
-    width: 100%;
-    min-width: auto;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    background-color: $light-gray;
-    margin-top: map-get($spacers, 2);
-  }
-  
-  li {
-    margin-bottom: 0;
-  }
-}
-
-.dropdown-link {
-  display: block;
-  padding: map-get($spacers, 2) map-get($spacers, 3);
-  color: $text-color;
-  transition: $transition-base;
-  
-  &:hover,
-  &:focus {
-    color: $secondary-color;
-    background-color: $light-gray;
-    text-decoration: none;
-  }
-  
-  &.view-all {
-    font-weight: $font-weight-medium;
-    color: $secondary-color;
-  }
-}
-
-.dropdown-text {
-  display: block;
-  padding: map-get($spacers, 2) map-get($spacers, 3);
-  color: $text-muted;
-  font-style: italic;
-}
-
-.dropdown-divider {
-  height: 0;
-  margin: map-get($spacers, 2) 0;
-  overflow: hidden;
-  border-top: 1px solid $border-color;
-}
-
-.tag-count {
-  font-size: $font-size-xs;
-  color: $text-muted;
-  font-weight: $font-weight-normal;
-}
-
-// Search form
+// Search form (keep basic styling for now, hidden on simple header)
 .search-form {
   position: relative;
   display: flex;
   align-items: center;
-  max-width: 300px;
-  
+
   @include media-breakpoint-down(lg) {
-    max-width: none;
-  }
-}
-
-.search-input {
-  @extend %form-input-base;
-  flex: 1;
-  padding: map-get($spacers, 2) map-get($spacers, 6) map-get($spacers, 2) map-get($spacers, 3);
-  border: 2px solid $border-color;
-  
-  &:focus {
-    outline: 3px solid rgba($primary-color, 0.5);
-    outline-offset: 2px;
-  }
-  
-  &::placeholder {
-    color: $text-muted;
-  }
-}
-
-.search-button,
-.search-submit {
-  @include button-reset;
-  position: absolute;
-  right: map-get($spacers, 2);
-  top: 50%;
-  transform: translateY(-50%);
-  padding: map-get($spacers, 1);
-  color: $text-muted;
-  transition: $transition-base;
-  
-  &:hover,
-  &:focus {
-    color: $secondary-color;
-  }
-  
-  svg {
-    display: block;
-    width: 16px;
-    height: 16px;
+    display: none; // Hide in pure nav, expected to be in mobile menu content if needed, but simplified structure removes it from header
   }
 }
 
@@ -316,20 +238,20 @@
   align-items: center;
   font-size: $font-size-sm;
   color: $text-muted;
-  
+
   li {
     margin-bottom: 0;
-    
+
     &:not(:last-child)::after {
       content: ">";
       margin: 0 map-get($spacers, 2);
       color: $text-muted;
     }
   }
-  
+
   a {
     color: $link-color;
-    
+
     &:hover,
     &:focus {
       color: $link-hover;

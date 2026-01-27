@@ -24,37 +24,55 @@ document.addEventListener('DOMContentLoaded', function () {
 function initMobileNavigation() {
   const navToggle = document.querySelector('.nav-toggle');
   const navMenu = document.querySelector('.nav-menu');
+  const body = document.body;
 
   if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function () {
+    // Toggle menu
+    navToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
       const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', !isExpanded);
-      navMenu.classList.toggle('active');
+      toggleMenu(!isExpanded);
+    });
 
-      // Trap focus in mobile menu when open
-      if (!isExpanded) {
+    // Function to toggle menu state
+    function toggleMenu(show) {
+      navToggle.setAttribute('aria-expanded', show);
+      
+      if (show) {
+        navMenu.classList.add('active');
+        body.style.overflow = 'hidden'; // Lock body scroll
         trapFocus(navMenu);
       } else {
+        navMenu.classList.remove('active');
+        body.style.overflow = ''; // Unlock body scroll
         removeFocusTrap();
       }
+    }
+
+    // Close mobile menu when clicking a link
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        toggleMenu(false);
+      });
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function (e) {
-      if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navMenu.classList.remove('active');
-        removeFocusTrap();
+      if (navMenu.classList.contains('active') && 
+          !navToggle.contains(e.target) && 
+          !navMenu.contains(e.target)) {
+        toggleMenu(false);
       }
     });
 
     // Close mobile menu on escape key
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-        navToggle.setAttribute('aria-expanded', 'false');
-        navMenu.classList.remove('active');
+        toggleMenu(false);
         navToggle.focus();
-        removeFocusTrap();
       }
     });
   }

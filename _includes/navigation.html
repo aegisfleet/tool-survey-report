@@ -1,14 +1,11 @@
 <nav class="main-navigation" role="navigation" aria-label="メインナビゲーション">
-  <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false">
-    <span class="screen-reader-text">メニューを開く</span>
+  <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="メニューを開く">
     <span class="nav-toggle-icon">
       <span></span>
       <span></span>
       <span></span>
     </span>
   </button>
-
-
 
   <ul class="nav-menu" id="nav-menu">
     <li class="nav-item">
@@ -17,15 +14,11 @@
       </a>
     </li>
 
-
-
     <li class="nav-item">
       <a href="{{ '/tags/' | relative_url }}" class="nav-link {% if page.url contains '/tags/' %}current{% endif %}">
         タグ一覧
       </a>
     </li>
-
-
 
     {%- if site.data.navigation.main_links -%}
     {%- for link in site.data.navigation.main_links -%}
@@ -38,115 +31,3 @@
     {%- endif -%}
   </ul>
 </nav>
-
-<script>
-  // Mobile navigation toggle
-  document.addEventListener('DOMContentLoaded', function () {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (navToggle && navMenu) {
-      // メニューのリンクをクリックした際にメニューを閉じる
-      const navLinks = navMenu.querySelectorAll('.nav-link');
-      navLinks.forEach(function (link) {
-        link.addEventListener('click', function () {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navMenu.classList.remove('active');
-          navMenu.removeAttribute('style');
-        });
-      });
-
-      navToggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-
-        const isMenuOpen = navMenu.style.display === 'flex' || navMenu.classList.contains('active');
-
-        if (isMenuOpen) {
-          // メニューを閉じる
-          navToggle.setAttribute('aria-expanded', 'false');
-          navMenu.classList.remove('active');
-          navMenu.removeAttribute('style');
-          navMenu.style.setProperty('display', 'none', 'important');
-
-          // 確実にaria-expandedをfalseに保持
-          setTimeout(function () {
-            navToggle.setAttribute('aria-expanded', 'false');
-          }, 50);
-        } else {
-          // メニューを開く
-          navToggle.setAttribute('aria-expanded', 'true');
-          navMenu.classList.add('active');
-          navMenu.style.display = 'flex';
-          navMenu.style.position = 'fixed';
-          navMenu.style.top = '80px';
-          navMenu.style.left = '10px';
-          navMenu.style.right = '10px';
-          navMenu.style.background = 'white';
-          navMenu.style.border = '2px solid #cbd5e0';
-          navMenu.style.borderRadius = '0.375rem';
-          navMenu.style.boxShadow = '0 1rem 3rem rgba(0, 0, 0, 0.175)';
-          navMenu.style.zIndex = '1000';
-          navMenu.style.padding = '1.5rem';
-          navMenu.style.flexDirection = 'column';
-        }
-      });
-
-      // Close mobile menu when clicking outside
-      document.addEventListener('click', function (e) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navMenu.classList.remove('active');
-          navMenu.removeAttribute('style');
-
-          setTimeout(function () {
-            navToggle.setAttribute('aria-expanded', 'false');
-          }, 10);
-        }
-      });
-
-      // Close mobile menu on escape key
-      document.addEventListener('keydown', function (e) {
-        const isMenuOpen = navMenu.style.display === 'flex' || navMenu.classList.contains('active');
-        if (e.key === 'Escape' && isMenuOpen) {
-          navToggle.setAttribute('aria-expanded', 'false');
-          navMenu.classList.remove('active');
-          navToggle.focus();
-          navMenu.removeAttribute('style');
-        }
-      });
-    }
-
-    // Dropdown functionality
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-    dropdownToggles.forEach(function (toggle) {
-      toggle.addEventListener('click', function (e) {
-        e.preventDefault();
-        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-
-        // Close all other dropdowns
-        dropdownToggles.forEach(function (otherToggle) {
-          if (otherToggle !== toggle) {
-            otherToggle.setAttribute('aria-expanded', 'false');
-            otherToggle.parentElement.classList.remove('active');
-          }
-        });
-
-        // Toggle current dropdown
-        toggle.setAttribute('aria-expanded', !isExpanded);
-        toggle.parentElement.classList.toggle('active');
-      });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.dropdown')) {
-        dropdownToggles.forEach(function (toggle) {
-          toggle.setAttribute('aria-expanded', 'false');
-          toggle.parentElement.classList.remove('active');
-        });
-      }
-    });
-  });
-</script>
