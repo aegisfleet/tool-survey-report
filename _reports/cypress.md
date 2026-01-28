@@ -52,6 +52,7 @@ links:
   documentation: "https://docs.cypress.io/"
 relationships:
   related_tools:
+    - "mabl"
     - "Playwright"
     - "Selenium"
     - "axe DevTools"
