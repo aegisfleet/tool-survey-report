@@ -62,6 +62,7 @@ relationships:
     - "AGENTIC STAR"
     - "Circleback"
     - "Gamma"
+    - "LITRON CORE"
 ---
 
 # **Microsoft 365 Copilot 調査レポート**

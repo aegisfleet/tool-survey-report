@@ -54,6 +54,7 @@ relationships:
     - "Microsoft Power Automate"
     - "Robot Framework"
     - "Android Use"
+    - "LITRON CORE"
 ---
 
 # **UiPath 調査レポート**

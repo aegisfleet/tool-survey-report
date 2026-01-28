@@ -62,6 +62,7 @@ relationships:
     - "LangChain"
     - "Amazon Bedrock"
     - "Google Opal"
+    - "LITRON CORE"
 ---
 
 # **Dify 調査レポート**
