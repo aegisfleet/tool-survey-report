@@ -61,6 +61,7 @@ relationships:
     - "Karate"
     - "Mobile Next"
     - "Android Use"
+    - "Robot Framework"
 ---
 
 # **Appium 調査レポート**

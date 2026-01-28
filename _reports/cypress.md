@@ -60,6 +60,7 @@ relationships:
     - "CodeceptJS"
     - "Cucumber"
     - "Allure Report"
+    - "Robot Framework"
 ---
 
 # **Cypress 調査レポート**
