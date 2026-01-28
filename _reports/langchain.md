@@ -60,6 +60,7 @@ relationships:
     - "Hugging Face"
     - "AutoGPT"
     - "Agent Lightning"
+    - "Letta"
 ---
 
 # **LangChain 調査レポート**
