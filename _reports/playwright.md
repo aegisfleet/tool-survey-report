@@ -75,6 +75,7 @@ relationships:
     - "Robot Framework"
     - "Appium"
     - "Allure Report"
+    - "Gauge"
 ---
 
 # **Playwright 調査レポート**

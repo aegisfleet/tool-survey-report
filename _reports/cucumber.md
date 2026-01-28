@@ -61,6 +61,7 @@ relationships:
     - "Appium"
     - "Allure Report"
     - "Karate"
+    - "Gauge"
 ---
 
 # **Cucumber 調査レポート**
