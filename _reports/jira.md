@@ -52,6 +52,9 @@ relationships:
   related_tools:
     - "Redmine"
     - "Backlog"
+    - "GitHub"
+    - "GitLab"
+    - "Notion"
 ---
 
 # **Jira 調査レポート**
