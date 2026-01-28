@@ -55,6 +55,7 @@ links:
   documentation: "https://docs.devin.ai/"
 relationships:
   related_tools:
+    - "AWS Frontier Agents"
     - "Claude Code"
     - "GitHub Copilot"
     - "Cursor"

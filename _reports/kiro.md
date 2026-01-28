@@ -44,6 +44,7 @@ links:
   documentation: "https://docs.kiro.dev/"
 relationships:
   related_tools:
+    - "AWS Frontier Agents"
     - "Amazon Q Developer"
     - "Cursor"
     - "Visual Studio Code"
