@@ -56,6 +56,7 @@ links:
 relationships:
   related_tools:
     - "Ollama"
+    - "Foundry Local"
 ---
 
 # **LM Studio 調査レポート**
