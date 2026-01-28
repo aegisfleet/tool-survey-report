@@ -15,7 +15,6 @@ tags:
   - "オープンソース"
   - "開発者ツール"
   - "サーバーレス"
-  - "WebAssembly"
 description: "セキュリティと開発者体験を重視した、モダンなJavaScript/TypeScriptランタイム"
 
 # 【クイックサマリー】ホーム画面のカード表示用
