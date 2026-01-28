@@ -58,6 +58,7 @@ relationships:
     - "Zapier"
     - "n8n"
     - "Microsoft Power Automate"
+    - "UiPath"
 ---
 
 # **Workato 調査レポート**
