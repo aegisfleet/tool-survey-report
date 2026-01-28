@@ -64,6 +64,7 @@ relationships:
     - "Jenkins"
     - "Nexus Repository"
     - "Jira"
+    - "JFrog Artifactory"
 ---
 
 # **GitLab 調査レポート**

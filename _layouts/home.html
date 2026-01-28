@@ -193,6 +193,36 @@ layout: default
     const noResults = document.getElementById('no-results');
     const reportCards = Array.from(document.querySelectorAll('.report-card'));
 
+    // フィルタ状態をsessionStorageに保存するキー
+    const FILTER_STATE_KEY = 'homeFilterState';
+
+    // フィルタ状態を保存する関数
+    function saveFilterState() {
+      const state = {
+        search: searchInput.value,
+        tag: tagFilter.value,
+        sort: sortSelect.value
+      };
+      sessionStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state));
+    }
+
+    // フィルタ状態を復元する関数
+    function restoreFilterState() {
+      const savedState = sessionStorage.getItem(FILTER_STATE_KEY);
+      if (savedState) {
+        try {
+          const state = JSON.parse(savedState);
+          if (state.search) searchInput.value = state.search;
+          if (state.tag) tagFilter.value = state.tag;
+          if (state.sort) sortSelect.value = state.sort;
+          return true;
+        } catch (e) {
+          console.warn('Failed to restore filter state:', e);
+        }
+      }
+      return false;
+    }
+
     // Populate tag filter options
     const allTags = new Set();
     reportCards.forEach(card => {
@@ -223,7 +253,7 @@ layout: default
     }
 
     // Filter and sort function
-    function filterAndSort() {
+    function filterAndSort(shouldSave = true) {
       const searchTerm = searchInput.value.toLowerCase().trim();
       const selectedTag = tagFilter.value;
       const sortBy = sortSelect.value;
@@ -285,12 +315,17 @@ layout: default
 
       // Update tag visual states immediately
       updateTagStates();
+
+      // フィルタ状態を保存
+      if (shouldSave) {
+        saveFilterState();
+      }
     }
 
     // Event listeners
-    searchInput.addEventListener('input', filterAndSort);
-    tagFilter.addEventListener('change', filterAndSort);
-    sortSelect.addEventListener('change', filterAndSort);
+    searchInput.addEventListener('input', function() { filterAndSort(); });
+    tagFilter.addEventListener('change', function() { filterAndSort(); });
+    sortSelect.addEventListener('change', function() { filterAndSort(); });
 
     searchClear.addEventListener('click', function () {
       searchInput.value = '';
@@ -307,12 +342,30 @@ layout: default
     const tagParam = urlParams.get('tag');
 
     if (tagParam) {
+      // URLパラメータがある場合は優先
       tagFilter.value = tagParam;
       filterAndSort();
     } else {
-      // 初期状態でもタグの状態を更新
-      updateTagStates();
+      // URLパラメータがない場合はsessionStorageから復元を試みる
+      const restored = restoreFilterState();
+      if (restored) {
+        filterAndSort(false); // 復元時は保存しない
+      } else {
+        // 初期状態でもタグの状態を更新
+        updateTagStates();
+      }
     }
+
+    // ブラウザバック/フォワード時にフィルタ状態を復元
+    window.addEventListener('pageshow', function(event) {
+      // bfcacheから復元された場合（event.persisted === true）
+      if (event.persisted) {
+        const restored = restoreFilterState();
+        if (restored) {
+          filterAndSort(false); // 復元時は保存しない
+        }
+      }
+    });
 
     // Tag click functionality
     document.addEventListener('click', function (e) {

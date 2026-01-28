@@ -60,6 +60,7 @@ relationships:
     - "Cucumber"
     - "Karate"
     - "Mobile Next"
+    - "Android Use"
 ---
 
 # **Appium 調査レポート**

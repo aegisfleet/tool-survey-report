@@ -55,6 +55,7 @@ relationships:
   related_tools:
     - "MCP Apps"
     - "Gemini"
+    - "Grok"
     - "ChatGPT"
     - "DeepSeek"
     - "GitHub Copilot"
@@ -62,6 +63,7 @@ relationships:
     - "Amazon Q Developer"
     - "Rakuten AI"
     - "Mobile Next"
+    - "NotebookLM"
     - "Z.ai"
 ---
 

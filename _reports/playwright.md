@@ -8,7 +8,7 @@ category: "テスト/QA"
 developer: "Microsoft"
 official_site: "https://playwright.dev/"
 date: "2025-10-18"
-last_updated: "2026-01-14"
+last_updated: "2026-01-28"
 tags:
   - "テスト自動化"
   - "E2Eテスト"
@@ -56,7 +56,10 @@ links:
   github: "https://github.com/microsoft/playwright"
   documentation: "https://playwright.dev/docs/intro"
 relationships:
+  children:
+    - "Playwright Test Agents"
   related_tools:
+    - "mabl"
     - "Cypress"
     - "Selenium"
     - "Ranorex Studio"

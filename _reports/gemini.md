@@ -48,6 +48,7 @@ relationships:
     - "Google AI Studio"
     - "Google Antigravity"
     - "Google Jules"
+    - "NotebookLM"
   related_tools:
     - "ChatGPT"
     - "Claude"
