@@ -54,6 +54,7 @@ links:
 relationships:
   related_tools:
     - "Amazon Bedrock"
+    - "Tableau"
 ---
 
 # **Amazon QuickSight 調査レポート**
