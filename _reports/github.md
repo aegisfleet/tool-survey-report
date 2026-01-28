@@ -63,6 +63,7 @@ relationships:
     - "GitLab"
     - "Jira"
     - "CodeRabbit"
+    - "JFrog Artifactory"
 ---
 
 # **GitHub 調査レポート**
