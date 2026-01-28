@@ -59,6 +59,7 @@ relationships:
     - "n8n"
     - "Workato"
     - "Google Opal"
+    - "UiPath"
 ---
 
 # **Zapier 調査レポート**
