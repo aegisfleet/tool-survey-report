@@ -286,7 +286,7 @@ layout: default
     }
 
     // Filter and sort function
-    function filterAndSort(shouldSave = true) {
+    window.filterAndSort = function (shouldSave = true) {
       const searchTerm = searchInput.value.toLowerCase().trim();
       const selectedTag = tagFilter.value;
       const selectedCategory = categoryFilter.value;

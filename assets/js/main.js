@@ -18,6 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // トップに戻るボタンの初期化
   initBackToTopButton();
+
+  // フィルタのリセット機能の初期化
+  initFilterReset();
 });
 
 // Mobile navigation functionality
@@ -31,7 +34,7 @@ function initMobileNavigation() {
     navToggle.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
-      
+
       const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
       toggleMenu(!isExpanded);
     });
@@ -39,7 +42,7 @@ function initMobileNavigation() {
     // Function to toggle menu state
     function toggleMenu(show) {
       navToggle.setAttribute('aria-expanded', show);
-      
+
       if (show) {
         navMenu.classList.add('active');
         body.style.overflow = 'hidden'; // Lock body scroll
@@ -53,17 +56,17 @@ function initMobileNavigation() {
 
     // Close mobile menu when clicking a link
     const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
         toggleMenu(false);
       });
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', function (e) {
-      if (navMenu.classList.contains('active') && 
-          !navToggle.contains(e.target) && 
-          !navMenu.contains(e.target)) {
+      if (navMenu.classList.contains('active') &&
+        !navToggle.contains(e.target) &&
+        !navMenu.contains(e.target)) {
         toggleMenu(false);
       }
     });
@@ -816,4 +819,44 @@ function initBackToTopButton() {
 
   // 初期状態の設定
   toggleButtonVisibility();
+}
+/**
+ * サイトタイトルやホームボタンをクリックした際にフィルタをリセットする
+ */
+function initFilterReset() {
+  const resetLinks = document.querySelectorAll('.reset-filter-link');
+  const FILTER_STATE_KEY = 'homeFilterState';
+
+  resetLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      // フィルタ状態を保存しているsessionStorageをクリア
+      sessionStorage.removeItem(FILTER_STATE_KEY);
+
+      const searchInput = document.getElementById('report-search');
+      const tagFilter = document.getElementById('tag-filter');
+      const categoryFilter = document.getElementById('category-filter');
+      const sortSelect = document.getElementById('sort-select');
+
+      // ホーム画面にいる場合
+      if (searchInput || tagFilter || categoryFilter || sortSelect) {
+        // UI上の値をすべて初期値にリセット
+        if (searchInput) searchInput.value = '';
+        if (tagFilter) tagFilter.value = '';
+        if (categoryFilter) categoryFilter.value = '';
+        if (sortSelect) sortSelect.value = 'date-desc'; // 初期値（新しい順）
+
+        // _layouts/home.html 内で定義されている filterAndSort 関数があれば実行（画面更新）
+        if (typeof window.filterAndSort === 'function') {
+          // sessionStorageのクリアを反映させるため、URLパラメータの影響も排除
+          if (window.location.search) {
+            // URLにパラメータがある場合は、クリーンな状態でリダイレクト
+            e.preventDefault();
+            window.location.href = window.location.pathname;
+            return;
+          }
+          window.filterAndSort(false);
+        }
+      }
+    });
+  });
 }

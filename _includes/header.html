@@ -2,15 +2,16 @@
   <div class="header-container">
     <div class="site-branding">
       <h1 class="site-title">
-        <a href="{{ '/' | relative_url }}" rel="home">{{ site.title | default: "調査レポートサイト" }}</a>
+        <a href="{{ '/' | relative_url }}" rel="home" class="reset-filter-link">{{ site.title | default: "調査レポートサイト"
+          }}</a>
       </h1>
       {%- if site.description -%}
-        <p class="site-description">{{ site.description }}</p>
+      <p class="site-description">{{ site.description }}</p>
       {%- endif -%}
     </div>
-    
+
     {% include navigation.html %}
-    
+
 
   </div>
 </header>
