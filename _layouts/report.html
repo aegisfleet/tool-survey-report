@@ -8,6 +8,9 @@ layout: default
       <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
           <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
+          {%- if page.category -%}
+          <li><a href="{{ '/' | relative_url }}?category={{ page.category | url_encode }}">{{ page.category }}</a></li>
+          {%- endif -%}
           <li aria-current="page">{{ page.tool_name | default: page.title }}</li>
         </ol>
       </nav>

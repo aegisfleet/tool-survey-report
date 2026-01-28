@@ -20,6 +20,7 @@
 @import "home";
 @import "reports";
 @import "tags";
+@import "categories";
 
 // Import UI components
 @import "components";
@@ -59,6 +60,7 @@
 
 // Print styles
 @media print {
+
   .site-header,
   .site-footer,
   .nav-toggle,
@@ -67,35 +69,41 @@
   .related-reports {
     display: none !important;
   }
-  
+
   .main-content {
     padding: 0;
   }
-  
+
   .report-article {
     max-width: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .report-content {
     font-size: 12pt;
     line-height: 1.4;
-    
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       page-break-after: avoid;
     }
-    
-    p, li {
+
+    p,
+    li {
       orphans: 3;
       widows: 3;
     }
-    
+
     blockquote {
       page-break-inside: avoid;
     }
   }
-  
+
   a[href^="http"]:after {
     content: " (" attr(href) ")";
     font-size: 10pt;
@@ -107,6 +115,7 @@
 
 // Accessibility improvements
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -119,12 +128,13 @@
 
 // High contrast mode support
 @media (prefers-contrast: high) {
+
   .btn,
   .card,
   .alert {
     border-width: 2px;
   }
-  
+
   .nav-link:focus,
   .btn:focus,
   a:focus {
@@ -205,28 +215,28 @@ body:not(.keyboard-navigation) {
   transform: translateY(20px);
   transition: all 0.3s ease;
   z-index: 1000;
-  
+
   &:hover {
     background-color: darken($primary-color, 10%);
     transform: translateY(0) scale(1.1);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   }
-  
+
   &:focus {
     outline: 3px solid rgba($primary-color, 0.5);
     outline-offset: 2px;
   }
-  
+
   &:active {
     transform: translateY(0) scale(0.95);
   }
-  
+
   &.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-  
+
   svg {
     width: 1.5rem;
     height: 1.5rem;
@@ -240,7 +250,7 @@ body:not(.keyboard-navigation) {
     right: 1.5rem;
     width: 2.5rem;
     height: 2.5rem;
-    
+
     svg {
       width: 1.25rem;
       height: 1.25rem;
@@ -252,11 +262,11 @@ body:not(.keyboard-navigation) {
 @media (prefers-reduced-motion: reduce) {
   .back-to-top {
     transition: opacity 0.1s ease;
-    
+
     &:hover {
       transform: none;
     }
-    
+
     &:active {
       transform: none;
     }

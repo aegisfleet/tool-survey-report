@@ -1,0 +1,70 @@
+---
+layout: default
+title: "カテゴリ一覧"
+description: "カテゴリ別にレポートを閲覧できます"
+---
+
+<div class="categories-index-container">
+    <header class="page-header">
+        <h1>カテゴリ一覧</h1>
+        <p class="page-description">カテゴリを選んでレポートを探しましょう。</p>
+    </header>
+
+    <div class="categories-overview">
+        <div class="categories-stats">
+            {% assign all_categories = site.reports | map: 'category' | uniq | sort %}
+            {% assign category_count = all_categories | size %}
+            <span class="stat-item">
+                <strong>{{ category_count }}</strong> 個のカテゴリ
+            </span>
+            <span class="stat-item">
+                <strong>{{ site.reports.size }}</strong> 個のレポート
+            </span>
+        </div>
+    </div>
+
+    <div class="categories-grid">
+        {% for category in all_categories %}
+        {% if category and category != '' %}
+        {% assign category_reports = site.reports | where: "category", category %}
+        {% assign report_count = category_reports | size %}
+        <div class="category-card">
+            <div class="category-header">
+                <h2 class="category-name">
+                    <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
+                </h2>
+                <span class="category-count">{{ report_count }} 件</span>
+            </div>
+
+            <div class="category-reports">
+                {% assign recent_reports = category_reports | sort: 'last_updated' | reverse | limit: 3 %}
+                {% for report in recent_reports %}
+                <div class="category-report-item">
+                    <a href="{{ report.url | relative_url }}" class="report-link">
+                        {{ report.tool_name | default: report.title }}
+                    </a>
+                    <time class="report-date">{{ report.last_updated | date: "%Y/%m/%d" }}</time>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="category-view-all">
+                <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}" class="view-all-link">
+                    すべて見る →
+                </a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    {% if all_categories.size == 0 %}
+    <div class="no-categories">
+        <p>まだカテゴリが設定されたレポートがありません。</p>
+    </div>
+    {% endif %}
+
+    <div class="back-to-reports">
+        <a href="{{ '/' | relative_url }}" class="back-link">← ホームに戻る</a>
+    </div>
+</div>

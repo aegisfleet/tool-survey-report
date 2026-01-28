@@ -400,7 +400,8 @@
     }
 }
 
-.tag-filter {
+.tag-filter,
+.category-filter {
     @extend %form-input-base;
     padding: map-get($spacers, 2) map-get($spacers, 5) map-get($spacers, 2) map-get($spacers, 3);
     font-size: $font-size-sm;

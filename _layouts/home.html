@@ -63,6 +63,18 @@ layout: default
             </select>
             <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
           </div>
+          <div class="filter-container">
+            <select id="category-filter" class="category-filter">
+              <option value="">すべてのカテゴリ</option>
+              {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
+              {%- for category in all_categories -%}
+              {%- if category and category != '' -%}
+              <option value="{{ category | downcase }}">{{ category }}</option>
+              {%- endif -%}
+              {%- endfor -%}
+            </select>
+            <button type="button" class="filter-clear" id="category-filter-clear" aria-label="カテゴリフィルタをクリア">×</button>
+          </div>
           <div class="sort-container">
             <select id="sort-select" class="sort-select">
               <option value="date-desc" selected>新しい順</option>
@@ -188,6 +200,8 @@ layout: default
     const searchClear = document.getElementById('search-clear');
     const tagFilter = document.getElementById('tag-filter');
     const tagFilterClear = document.getElementById('tag-filter-clear');
+    const categoryFilter = document.getElementById('category-filter');
+    const categoryFilterClear = document.getElementById('category-filter-clear');
     const sortSelect = document.getElementById('sort-select');
     const reportsGrid = document.getElementById('reports-grid');
     const noResults = document.getElementById('no-results');
@@ -201,6 +215,7 @@ layout: default
       const state = {
         search: searchInput.value,
         tag: tagFilter.value,
+        category: categoryFilter.value,
         sort: sortSelect.value
       };
       sessionStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state));
@@ -214,6 +229,7 @@ layout: default
           const state = JSON.parse(savedState);
           if (state.search) searchInput.value = state.search;
           if (state.tag) tagFilter.value = state.tag;
+          if (state.category) categoryFilter.value = state.category;
           if (state.sort) sortSelect.value = state.sort;
           return true;
         } catch (e) {
@@ -256,6 +272,7 @@ layout: default
     function filterAndSort(shouldSave = true) {
       const searchTerm = searchInput.value.toLowerCase().trim();
       const selectedTag = tagFilter.value;
+      const selectedCategory = categoryFilter.value;
       const sortBy = sortSelect.value;
 
       let filteredCards = reportCards.filter(card => {
@@ -266,7 +283,8 @@ layout: default
           (card.dataset.developer && card.dataset.developer.includes(searchTerm)) ||
           (card.dataset.tags && card.dataset.tags.toLowerCase().includes(searchTerm));
         const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
-        return matchesSearch && matchesTag;
+        const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
+        return matchesSearch && matchesTag && matchesCategory;
       });
 
       // Sort cards
@@ -323,9 +341,10 @@ layout: default
     }
 
     // Event listeners
-    searchInput.addEventListener('input', function() { filterAndSort(); });
-    tagFilter.addEventListener('change', function() { filterAndSort(); });
-    sortSelect.addEventListener('change', function() { filterAndSort(); });
+    searchInput.addEventListener('input', function () { filterAndSort(); });
+    tagFilter.addEventListener('change', function () { filterAndSort(); });
+    categoryFilter.addEventListener('change', function () { filterAndSort(); });
+    sortSelect.addEventListener('change', function () { filterAndSort(); });
 
     searchClear.addEventListener('click', function () {
       searchInput.value = '';
@@ -337,13 +356,24 @@ layout: default
       filterAndSort();
     });
 
-    // Handle URL parameters for tag filtering
+    categoryFilterClear.addEventListener('click', function () {
+      categoryFilter.value = '';
+      filterAndSort();
+    });
+
+    // Handle URL parameters for tag/category filtering
     const urlParams = new URLSearchParams(window.location.search);
     const tagParam = urlParams.get('tag');
+    const categoryParam = urlParams.get('category');
 
-    if (tagParam) {
+    if (tagParam || categoryParam) {
       // URLパラメータがある場合は優先
-      tagFilter.value = tagParam;
+      if (tagParam) tagFilter.value = tagParam;
+      if (categoryParam) {
+        // URLパラメータは元のカテゴリ名でエンコードされているので、
+        // ドロップダウン値（小文字）に変換して設定
+        categoryFilter.value = categoryParam.toLowerCase();
+      }
       filterAndSort();
     } else {
       // URLパラメータがない場合はsessionStorageから復元を試みる
@@ -357,7 +387,7 @@ layout: default
     }
 
     // ブラウザバック/フォワード時にフィルタ状態を復元
-    window.addEventListener('pageshow', function(event) {
+    window.addEventListener('pageshow', function (event) {
       // bfcacheから復元された場合（event.persisted === true）
       if (event.persisted) {
         const restored = restoreFilterState();
