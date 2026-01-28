@@ -55,6 +55,7 @@ relationships:
   related_tools:
     - "MCP Apps"
     - "Gemini"
+    - "Grok"
     - "ChatGPT"
     - "DeepSeek"
     - "GitHub Copilot"
