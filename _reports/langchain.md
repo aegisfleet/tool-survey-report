@@ -60,6 +60,7 @@ relationships:
     - "Hugging Face"
     - "AutoGPT"
     - "Agent Lightning"
+    - "Amazon Bedrock AgentCore Runtime"
 ---
 
 # **LangChain 調査レポート**
