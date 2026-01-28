@@ -57,6 +57,7 @@ links:
   documentation: "https://playwright.dev/docs/intro"
 relationships:
   related_tools:
+    - "mabl"
     - "Cypress"
     - "Selenium"
     - "Ranorex Studio"
