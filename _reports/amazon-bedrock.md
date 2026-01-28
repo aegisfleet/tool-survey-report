@@ -52,6 +52,8 @@ evaluation:
 links:
   documentation: "https://docs.aws.amazon.com/bedrock/"
 relationships:
+  children:
+    - "Amazon Bedrock AgentCore Runtime"
   related_tools:
     - "Hugging Face"
     - "Dify"
