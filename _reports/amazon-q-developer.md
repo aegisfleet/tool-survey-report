@@ -44,6 +44,7 @@ links:
   documentation: "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"
 relationships:
   related_tools:
+    - "AWS Frontier Agents"
     - "Kiro"
     - "GitHub Copilot"
     - "GitLab Duo"
