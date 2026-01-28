@@ -56,6 +56,7 @@ relationships:
     - "ChatGPT"
     - "Genspark"
     - "Felo"
+    - "NotebookLM"
     - "Google Disco"
 ---
 
