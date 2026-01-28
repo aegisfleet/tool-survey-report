@@ -27,16 +27,18 @@ description: "タグ別にレポートを閲覧できます"
     {% for tag in all_tags %}
     {% if tag != '' %}
     {% assign tagged_reports = site.reports | where_exp: "report", "report.tags contains tag" %}
-    {% assign tag_count = tagged_reports | size %}
+    {% assign report_count = tagged_reports | size %}
     <div class="tag-card">
       <div class="tag-header">
-        <h2 class="tag-name">{{ tag }}</h2>
-        <span class="tag-count">{{ tag_count }} 件</span>
+        <h2 class="tag-name">
+          <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>
+        </h2>
+        <span class="tag-count">{{ report_count }} 件</span>
       </div>
 
       <div class="tag-reports">
-        {% assign recent_reports = tagged_reports | sort: 'last_updated' | reverse | limit: 3 %}
-        {% for report in recent_reports %}
+        {% assign recent_reports = tagged_reports | sort: 'last_updated' | reverse %}
+        {% for report in recent_reports limit: 3 %}
         <div class="tag-report-item">
           <a href="{{ report.url | relative_url }}" class="report-link">
             {{ report.tool_name | default: report.title }}
@@ -44,6 +46,12 @@ description: "タグ別にレポートを閲覧できます"
           <time class="report-date">{{ report.last_updated | date: "%Y/%m/%d" }}</time>
         </div>
         {% endfor %}
+      </div>
+
+      <div class="tag-view-all">
+        <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}" class="view-all-link">
+          すべて見る →
+        </a>
       </div>
     </div>
     {% endif %}

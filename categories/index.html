@@ -37,8 +37,8 @@ description: "カテゴリ別にレポートを閲覧できます"
             </div>
 
             <div class="category-reports">
-                {% assign recent_reports = category_reports | sort: 'last_updated' | reverse | limit: 3 %}
-                {% for report in recent_reports %}
+                {% assign recent_reports = category_reports | sort: 'last_updated' | reverse %}
+                {% for report in recent_reports limit: 3 %}
                 <div class="category-report-item">
                     <a href="{{ report.url | relative_url }}" class="report-link">
                         {{ report.tool_name | default: report.title }}
