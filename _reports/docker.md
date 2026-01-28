@@ -58,7 +58,7 @@ relationships:
     - "act"
     - "Nexus Repository"
     - "LocalStack"
-    - "Wine"
+    - "JFrog Artifactory"
     - "Ubuntu"
 ---
 
