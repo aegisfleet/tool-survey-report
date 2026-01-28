@@ -60,6 +60,7 @@ relationships:
     - "LangChain"
     - "Devin"
     - "OpenHands"
+    - "Letta"
 ---
 
 # **AutoGPT 調査レポート**
