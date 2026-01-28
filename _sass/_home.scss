@@ -251,9 +251,28 @@
             display: flex;
             align-items: center;
             gap: map-get($spacers, 1);
+            transition: $transition-base;
 
             &::before {
                 content: '📁';
+            }
+
+            &.clickable-category {
+                cursor: pointer;
+                padding: 2px 8px;
+                margin: -2px -8px;
+                border-radius: $border-radius-xl;
+
+                &:hover {
+                    background: rgba($secondary-color, 0.1);
+                    transform: translateY(-1px);
+                }
+
+                &.active {
+                    background: $secondary-color;
+                    color: $white !important;
+                    box-shadow: $box-shadow-sm;
+                }
             }
         }
 
@@ -598,6 +617,28 @@
 
         &.category {
             color: $secondary-color;
+
+            &.clickable-category {
+                cursor: pointer;
+                padding: 2px 6px;
+                margin: -2px -6px;
+                border-radius: $border-radius-sm;
+                transition: $transition-base;
+
+                &:hover {
+                    background: rgba($secondary-color, 0.1);
+                    color: darken($secondary-color, 10%);
+                }
+
+                &.active {
+                    background: $secondary-color;
+                    color: $white !important;
+
+                    svg {
+                        fill: $white;
+                    }
+                }
+            }
         }
     }
 }
