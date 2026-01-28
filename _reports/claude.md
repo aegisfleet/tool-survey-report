@@ -63,6 +63,7 @@ relationships:
     - "Amazon Q Developer"
     - "Rakuten AI"
     - "Mobile Next"
+    - "NotebookLM"
     - "Z.ai"
 ---
 

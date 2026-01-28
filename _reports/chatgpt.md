@@ -60,6 +60,7 @@ relationships:
     - "Grok"
     - "Microsoft 365 Copilot"
     - "Perplexity"
+    - "NotebookLM"
     - "Z.ai"
 ---
 
