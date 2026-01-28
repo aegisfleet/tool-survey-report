@@ -32,25 +32,83 @@
     }
 }
 
-.home-header {
-    text-align: center;
-    margin-bottom: map-get($spacers, 3);
-    padding: 0;
-    background-color: transparent;
+// Home Hero section (Image + Description)
+.home-hero {
+    display: flex;
+    align-items: center;
+    gap: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 5);
+    @include card(map-get($spacers, 5));
+    background: $white;
+    overflow: hidden;
 
     @include media-breakpoint-down(md) {
-        margin-bottom: map-get($spacers, 2);
+        flex-direction: column;
+        padding: map-get($spacers, 4) map-get($spacers, 3);
+        gap: map-get($spacers, 4);
+        text-align: center;
     }
 
-    .header-image {
-        margin: 0;
+    .hero-image {
+        flex: 1;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media-breakpoint-down(md) {
+            max-width: 80%;
+            margin: 0 auto;
+        }
 
         .ogp-image {
-            max-width: 800px;
             width: 100%;
+            max-width: 500px;
             height: auto;
+            border-radius: $border-radius-lg;
             display: block;
-            margin: 0 auto;
+        }
+    }
+
+    .hero-content {
+        flex: 1;
+
+        .hero-text {
+            color: $text-color;
+
+            p {
+                margin: 0;
+                font-size: $font-size-lg;
+                line-height: $line-height-lg;
+                font-weight: $font-weight-medium;
+
+                @include media-breakpoint-down(md) {
+                    font-size: 1rem;
+                }
+            }
+
+            strong {
+                color: $primary-color;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 2px;
+                    left: 0;
+                    width: 100%;
+                    height: 8px;
+                    background-color: rgba($primary-color, 0.2);
+                    z-index: -1;
+                    border-radius: 2px;
+                }
+            }
+
+            u {
+                text-decoration: none;
+                border-bottom: 2px dashed rgba($primary-color, 0.5);
+            }
         }
     }
 }
@@ -799,15 +857,10 @@
             @extend .btn-secondary;
         }
     }
-
-    .alert {
-        // アラートスタイルは_components.scssで定義済み
-        // 追加のスタイルが必要な場合のみここに記述
-    }
 }
 
-// 
-Ensure home container has transparent background with high specificity #main-content .home-container {
+// Ensure home container has transparent background with high specificity
+#main-content .home-container {
     background-color: transparent !important;
 }
 

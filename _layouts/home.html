@@ -3,14 +3,18 @@ layout: default
 ---
 
 <div class="home-container">
-  <header class="home-header">
-    <div class="header-image">
+  <section class="home-hero">
+    <div class="hero-image">
       <img src="{{ '/assets/images/default-ogp.png' | relative_url }}" alt="{{ site.title }}" class="ogp-image">
     </div>
-  </header>
+    <div class="hero-content">
+      <div class="hero-text">
+        {{ content }}
+      </div>
+    </div>
+  </section>
 
   <main class="home-content">
-    {{ content }}
 
     <!-- ランダムピックアップ -->
     <section class="random-picks">
