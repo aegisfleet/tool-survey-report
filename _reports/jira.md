@@ -55,6 +55,7 @@ relationships:
     - "Jira Product Discovery"
   related_tools:
     - "Redmine"
+    - "Backlog"
     - "GitHub"
     - "GitLab"
     - "Notion"
