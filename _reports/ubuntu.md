@@ -52,7 +52,6 @@ relationships:
   related_tools:
     - "Docker"
     - "Wine"
-    - "LocalStack"
 ---
 
 # **Ubuntu 調査レポート**
