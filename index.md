@@ -1,6 +1,5 @@
 ---
 layout: home
-title: "ホーム"
 description: "GoogleのJulesが作成した各種ツールの調査レポートを閲覧できるサイト"
 ---
 
