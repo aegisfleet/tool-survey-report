@@ -368,21 +368,28 @@ layout: default
     }
 
     // URLを更新する関数（カテゴリフィルタの状態を反映）
+    const defaultTitle = document.title;
     function updateURL(category) {
       const url = new URL(window.location);
-      
+
       if (category) {
         // カテゴリ名を元の表記で取得（セレクトボックスのオプションテキストから）
         const categoryOption = categoryFilter.querySelector(`option[value="${category}"]`);
         const originalCategoryName = categoryOption ? categoryOption.textContent : category;
         url.searchParams.set('category', originalCategoryName);
+
+        // ページタイトルを更新
+        document.title = `${originalCategoryName} | ${defaultTitle}`;
       } else {
         url.searchParams.delete('category');
+
+        // ページタイトルをデフォルトに戻す
+        document.title = defaultTitle;
       }
-      
+
       // タグパラメータは削除（カテゴリと併用しない設計）
       url.searchParams.delete('tag');
-      
+
       // URLを更新（ブラウザ履歴にはreplaceで上書き）
       history.replaceState(null, '', url.toString());
     }
