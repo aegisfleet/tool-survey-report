@@ -368,7 +368,7 @@ layout: default
     }
 
     // URLを更新する関数（カテゴリフィルタの状態を反映）
-    const defaultTitle = document.title;
+    const siteName = '{{ site.title }}';
     function updateURL(category) {
       const url = new URL(window.location);
 
@@ -379,12 +379,12 @@ layout: default
         url.searchParams.set('category', originalCategoryName);
 
         // ページタイトルを更新
-        document.title = `${originalCategoryName} | ${defaultTitle}`;
+        document.title = `${originalCategoryName} | ${siteName}`;
       } else {
         url.searchParams.delete('category');
 
-        // ページタイトルをデフォルトに戻す
-        document.title = defaultTitle;
+        // ページタイトルをサイト名に戻す
+        document.title = siteName;
       }
 
       // タグパラメータは削除（カテゴリと併用しない設計）
