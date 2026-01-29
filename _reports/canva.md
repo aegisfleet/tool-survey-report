@@ -57,6 +57,7 @@ relationships:
   children:
     - "Affinity"
   related_tools:
+    - "Qwen-Image-Layered"
     - "Figma"
     - "Adobe Creative Cloud"
     - "Microsoft Designer"
