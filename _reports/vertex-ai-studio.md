@@ -54,7 +54,7 @@ evaluation:
 links:
   documentation: "https://cloud.google.com/vertex-ai/docs"
 relationships:
-  parent: "Vertex AI"
+  parent: "Google Cloud"
   related_tools:
     - "Amazon Bedrock"
     - "Azure AI Studio"

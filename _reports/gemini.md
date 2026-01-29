@@ -44,6 +44,7 @@ evaluation:
   summary: "業界最高水準のマルチモーダル性能と長文処理能力を誇り、Googleエコシステムとの連携で圧倒的な利便性を提供する"
 
 relationships:
+  parent: "Google Cloud"
   children:
     - "Google AI Studio"
     - "Google Antigravity"
