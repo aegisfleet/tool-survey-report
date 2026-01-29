@@ -54,7 +54,7 @@ links:
   documentation: "https://cloud.google.com/docs"
 relationships:
   children:
-    - "Vertex AI Studio"
+    - "Vertex AI"
     - "Gemini"
     - "BigQuery"
     - "Kubernetes"
