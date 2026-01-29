@@ -53,6 +53,7 @@ links:
 relationships:
   parent: "Gemini"
   related_tools:
+    - "Moltbot"
     - "Devin"
     - "OpenHands"
     - "Manus"
