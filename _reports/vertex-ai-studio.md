@@ -60,6 +60,7 @@ relationships:
     - "Amazon Bedrock"
     - "Azure AI Studio"
     - "OpenAI Playground"
+    - "さくらのAI"
 ---
 
 # **Vertex AI Studio 調査レポート**

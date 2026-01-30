@@ -62,6 +62,7 @@ relationships:
     - "Perplexity"
     - "NotebookLM"
     - "Z.ai"
+    - "さくらのAI"
 ---
 
 # **ChatGPT 調査レポート**
