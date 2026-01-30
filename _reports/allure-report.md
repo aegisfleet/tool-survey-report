@@ -53,10 +53,10 @@ relationships:
   children:
   related_tools:
     - "JUnit"
-    - "selenium"
-    - "playwright"
-    - "cypress"
-    - "cucumber"
+    - "Selenium"
+    - "Playwright"
+    - "Cypress"
+    - "Cucumber"
 ---
 
 # **Allure Report 調査レポート**
