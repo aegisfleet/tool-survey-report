@@ -53,6 +53,7 @@ links:
   documentation: "https://support.ta.kingoftime.jp/hc/ja"
 relationships:
   related_tools:
+    - "COMPANY"
     - "SmartHR"
     - "ジョブカン勤怠管理"
     - "マネーフォワード クラウド勤怠"
