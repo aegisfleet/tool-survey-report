@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Jira"
     - "Redmine"
+    - "Quality Tracker"
 ---
 
 # **Backlog 調査レポート**

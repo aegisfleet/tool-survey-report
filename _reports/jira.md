@@ -56,6 +56,7 @@ relationships:
     - "GitHub"
     - "GitLab"
     - "Notion"
+    - "Quality Tracker"
 ---
 
 # **Jira 調査レポート**
