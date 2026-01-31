@@ -8,7 +8,7 @@ category: "インフラ/クラウド"
 developer: "Vercel Inc."
 official_site: "https://vercel.com"
 date: "2025-10-22"
-last_updated: "2026-01-27"
+last_updated: "2026-01-31"
 tags:
   - "Next.js"
   - "AI"
@@ -51,6 +51,7 @@ links:
 relationships:
   related_tools:
     - "Cloudflare"
+    - "Render"
 ---
 
 # **Vercel 調査レポート**
