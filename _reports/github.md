@@ -64,6 +64,7 @@ relationships:
     - "Jira"
     - "CodeRabbit"
     - "JFrog Artifactory"
+    - "Quality Tracker"
 ---
 
 # **GitHub 調査レポート**

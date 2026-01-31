@@ -65,6 +65,7 @@ relationships:
     - "Nexus Repository"
     - "Jira"
     - "JFrog Artifactory"
+    - "Quality Tracker"
 ---
 
 # **GitLab 調査レポート**
