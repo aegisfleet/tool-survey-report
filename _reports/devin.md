@@ -54,6 +54,8 @@ evaluation:
 links:
   documentation: "https://docs.devin.ai/"
 relationships:
+  children:
+    - "DeepWiki"
   related_tools:
     - "AWS Frontier Agents"
     - "Claude Code"
