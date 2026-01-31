@@ -60,6 +60,7 @@ relationships:
   related_tools:
     - "Cline"
     - "Roo Code"
+    - "DeepWiki"
 ---
 
 # **DeepWiki-Open 調査レポート**
