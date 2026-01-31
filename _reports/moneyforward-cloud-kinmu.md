@@ -51,6 +51,7 @@ links:
   documentation: "https://biz.moneyforward.com/support/attendance/"
 relationships:
   related_tools:
+    - "COMPANY"
     - "SmartHR"
     - "KING OF TIME"
     - "ジョブカン勤怠管理"

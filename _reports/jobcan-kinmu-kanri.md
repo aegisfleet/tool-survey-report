@@ -52,6 +52,7 @@ links:
   documentation: "https://jobcan.zendesk.com/hc/ja"
 relationships:
   related_tools:
+    - "COMPANY"
     - "KING OF TIME"
     - "マネーフォワード クラウド勤怠"
     - "freee勤怠管理Plus"
