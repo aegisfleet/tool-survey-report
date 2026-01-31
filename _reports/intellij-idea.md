@@ -57,6 +57,7 @@ relationships:
   children:
     - "Android Studio"
   related_tools:
+    - "Spring Boot"
     - "Cursor"
     - "Visual Studio Code"
     - "Flutter"
