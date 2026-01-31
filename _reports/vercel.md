@@ -51,6 +51,7 @@ links:
 relationships:
   related_tools:
     - "Cloudflare"
+    - "Render"
 ---
 
 # **Vercel 調査レポート**
