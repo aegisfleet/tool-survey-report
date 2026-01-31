@@ -52,6 +52,7 @@ relationships:
   related_tools:
     - "Redmine"
     - "Backlog"
+    - "Linear"
     - "GitHub"
     - "GitLab"
     - "Notion"
