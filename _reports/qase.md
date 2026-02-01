@@ -48,6 +48,7 @@ relationships:
     - "CAT"
     - "QualityForward"
     - "TestRail"
+    - "TestLink"
     - "Xray"
     - "Jira"
 ---

@@ -43,6 +43,7 @@ relationships:
     - "CAT"
     - "QualityForward"
     - "Qase"
+    - "TestLink"
     - "Jira"
     - "Ranorex"
     - "Selenium"
