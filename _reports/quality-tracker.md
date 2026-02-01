@@ -52,6 +52,9 @@ links:
   documentation: "https://service.valtes.co.jp/qualitytracker/#faq"
 relationships:
   related_tools:
+    - "CAT"
+    - "QualityForward"
+    - "TestRail"
     - "Jira"
     - "Redmine"
     - "Backlog"

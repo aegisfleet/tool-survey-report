@@ -4,7 +4,7 @@
 title: "Remotion 調査レポート"
 tool_name: "Remotion"
 tool_reading: "リモーション"
-category: "動画生成・編集 / 開発者ツール"
+category: "動画/メディア"
 developer: "Remotion AG"
 official_site: "https://www.remotion.dev/"
 date: "2026-01-22"

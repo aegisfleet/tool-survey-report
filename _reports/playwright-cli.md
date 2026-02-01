@@ -2,7 +2,7 @@
 title: "Playwright CLI 調査レポート"
 tool_name: "Playwright CLI"
 tool_reading: "プレイライト シーエルアイ"
-category: "AIエージェント/開発ツール"
+category: "テスト/QA"
 developer: "Microsoft"
 official_site: "https://github.com/microsoft/playwright-cli"
 date: "2026-01-24"

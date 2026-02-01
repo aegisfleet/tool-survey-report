@@ -2,7 +2,7 @@
 title: "TestRail 調査レポート"
 tool_name: "TestRail"
 tool_reading: "テストレール"
-category: "テスト管理ツール"
+category: "テスト管理"
 developer: "Gurock (Sembi)"
 official_site: "https://www.testrail.com/"
 date: "2026-02-01"
@@ -40,6 +40,9 @@ links:
   documentation: "https://support.testrail.com/hc/en-us/"
 relationships:
   related_tools:
+    - "CAT"
+    - "QualityForward"
+    - "Qase"
     - "Jira"
     - "Ranorex"
     - "Selenium"
