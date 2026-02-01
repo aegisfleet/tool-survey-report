@@ -53,6 +53,8 @@ links:
   github: "https://github.com/redmine/redmine"
   documentation: "https://www.redmine.org/guide"
 relationships:
+  children:
+    - "Testcase Management"
   related_tools:
     - "Jira"
     - "Backlog"
