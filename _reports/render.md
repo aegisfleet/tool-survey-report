@@ -4,7 +4,7 @@
 title: "Render 調査レポート"
 tool_name: "Render"
 tool_reading: "レンダー"
-category: "PaaS / クラウド"
+category: "インフラ/クラウド"
 developer: "Render, Inc."
 official_site: "https://render.com"
 date: "2026-01-31"

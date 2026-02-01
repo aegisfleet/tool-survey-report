@@ -48,6 +48,8 @@ links:
   documentation: "https://qualityforward.zendesk.com/hc/ja"
 relationships:
   related_tools:
+    - "TestRail"
+    - "Qangaroo"
     - "Redmine"
     - "Jira"
 ---

@@ -49,6 +49,8 @@ links:
   documentation: "https://qangaroo.jp/support/"
 relationships:
   related_tools:
+    - "QualityForward"
+    - "TestRail"
     - "Backlog"
     - "Jira"
     - "Redmine"

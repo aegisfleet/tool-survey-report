@@ -4,7 +4,7 @@
 title: "GitHub Copilot CLI 調査レポート"
 tool_name: "GitHub Copilot CLI"
 tool_reading: "ギットハブ コパイロット シーエルアイ"
-category: "CLI / AI開発支援"
+category: "AIコーディング支援"
 developer: "GitHub (Microsoft)"
 official_site: "https://github.com/github/copilot-cli"
 date: "2026-01-26"

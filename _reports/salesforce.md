@@ -2,7 +2,7 @@
 title: "Salesforce 調査レポート"
 tool_name: "Salesforce"
 tool_reading: "セールスフォース"
-category: "CRM / SFA"
+category: "顧客管理"
 developer: "Salesforce, Inc."
 official_site: "https://www.salesforce.com/jp/"
 date: "2026-01-13"

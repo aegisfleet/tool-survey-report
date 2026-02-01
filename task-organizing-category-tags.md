@@ -40,6 +40,7 @@
 
   **テスト/品質**
   - **テスト/QA**: テスト自動化・品質保証ツール全般（例：Selenium, Playwright, Cypress）
+  - **テスト管理**: テスト計画・実行・進捗管理ツール（例：TestRail, QualityForward, Qase）
   - **コード品質**: 静的解析・コードカバレッジツール（例：SonarQube, JaCoCo）
   - **CI/CD**: 継続的インテグレーション・デプロイメントツール（例：GitHub Actions, Jenkins）
 
@@ -50,6 +51,7 @@
   - **CDN/セキュリティ**: CDN・WAF・セキュリティサービス（例：Cloudflare）
 
   **業務系ツール**
+  - **顧客管理**: CRM・営業支援システム（例：Salesforce, HubSpot）
   - **勤怠管理**: 勤怠管理・タイムトラッキングツール（例：KING OF TIME）
   - **人事労務**: 人事・労務管理システム（例：SmartHR, freee人事労務）
   - **プロジェクト管理**: タスク・プロジェクト管理ツール（例：Jira, Linear）
