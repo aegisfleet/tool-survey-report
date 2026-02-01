@@ -65,6 +65,7 @@ relationships:
     - "Amazon Q Developer"
     - "Roo Code"
     - "Windsurf"
+    - "Android Studio"
 ---
 
 # **Cursor 調査レポート**
