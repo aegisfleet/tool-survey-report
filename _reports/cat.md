@@ -2,7 +2,7 @@
 title: "CAT (Computer Aided Test) 調査レポート"
 tool_name: "CAT"
 tool_reading: "キャット"
-category: "テスト/QA"
+category: "テスト管理"
 developer: "株式会社SHIFT"
 official_site: "https://www.catcloud.net/"
 date: "2026-02-01"
@@ -48,6 +48,11 @@ links:
   documentation: "https://catcloud.zendesk.com/hc/ja"
 relationships:
   related_tools:
+    - "TestRail"
+    - "QualityForward"
+    - "Qase"
+    - "Qangaroo"
+    - "Quality Tracker"
     - "Jira"
     - "Redmine"
     - "Backlog"

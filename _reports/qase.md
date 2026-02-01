@@ -45,6 +45,7 @@ links:
   documentation: "https://docs.qase.io/"
 relationships:
   related_tools:
+    - "CAT"
     - "QualityForward"
     - "TestRail"
     - "Xray"

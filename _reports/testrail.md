@@ -40,6 +40,7 @@ links:
   documentation: "https://support.testrail.com/hc/en-us/"
 relationships:
   related_tools:
+    - "CAT"
     - "QualityForward"
     - "Qase"
     - "Jira"

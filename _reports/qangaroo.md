@@ -49,6 +49,7 @@ links:
   documentation: "https://qangaroo.jp/support/"
 relationships:
   related_tools:
+    - "CAT"
     - "QualityForward"
     - "TestRail"
     - "Backlog"

@@ -48,6 +48,7 @@ links:
   documentation: "https://qualityforward.zendesk.com/hc/ja"
 relationships:
   related_tools:
+    - "CAT"
     - "TestRail"
     - "Qangaroo"
     - "Redmine"
