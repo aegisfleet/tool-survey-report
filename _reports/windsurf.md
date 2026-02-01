@@ -58,6 +58,7 @@ relationships:
     - "Devin"
     - "Google Antigravity"
     - "Roo Code"
+    - "Android Studio"
 ---
 
 # **Windsurf 調査レポート**
