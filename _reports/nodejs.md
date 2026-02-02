@@ -6,7 +6,7 @@ category: "開発者ツール"
 developer: "OpenJS Foundation"
 official_site: "https://nodejs.org/"
 date: "2026-01-29"
-last_updated: "2026-01-29"
+last_updated: "2026-02-02"
 tags:
   - "JavaScript"
   - "開発者ツール"
@@ -47,6 +47,7 @@ relationships:
   parent: "OpenJS Foundation"
   related_tools:
     - "Deno"
+    - "Bun"
 ---
 
 # **Node.js 調査レポート**
