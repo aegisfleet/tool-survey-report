@@ -56,6 +56,7 @@ relationships:
     - "Autify"
     - "mabl"
     - "Selenium"
+    - "Appium"
 ---
 
 # **MagicPod 調査レポート**
