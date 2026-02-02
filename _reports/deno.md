@@ -8,7 +8,7 @@ category: "開発者ツール"
 developer: "Deno Land Inc."
 official_site: "https://deno.com/"
 date: "2025-12-20"
-last_updated: "2026-01-29"
+last_updated: "2026-02-02"
 tags:
   - "JavaScript"
   - "TypeScript"
@@ -56,6 +56,7 @@ links:
 relationships:
   related_tools:
     - "Node.js"
+    - "Bun"
 ---
 
 # **Deno 調査レポート**
