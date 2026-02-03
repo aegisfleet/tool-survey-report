@@ -49,6 +49,7 @@ links:
   # documentation: ""
 relationships:
   related_tools:
+    - "Android"
     - "gemini"
     - "android-studio"
 ---
