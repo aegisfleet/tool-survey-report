@@ -58,6 +58,7 @@ links:
   documentation: "https://docs.flutter.dev/"
 relationships:
   related_tools:
+    - "React"
     - "Kotlin Multiplatform"
     - "Android Studio"
     - "Visual Studio Code"

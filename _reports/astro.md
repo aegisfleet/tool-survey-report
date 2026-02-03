@@ -55,6 +55,7 @@ links:
   documentation: "https://docs.astro.build/"
 relationships:
   related_tools:
+    - "React"
     - "Hugo"
     - "Jekyll"
     - "WordPress"

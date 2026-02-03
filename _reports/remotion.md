@@ -55,6 +55,7 @@ links:
   github: "https://github.com/remotion-dev/remotion"
   documentation: "https://www.remotion.dev/docs/"
 relationships:
+  parent: "React"
   related_tools:
     - "Motion Canvas"
     - "Revideo"
