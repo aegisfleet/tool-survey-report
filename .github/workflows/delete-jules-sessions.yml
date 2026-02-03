@@ -2,8 +2,8 @@ name: Delete Jules Sessions
 
 on:
   schedule:
-    # 毎日午前3時（JST）= UTC 18:00 に実行
-    - cron: '0 18 * * *'
+    # 毎日午前2時（JST）に実行
+    - cron: '0 17 * * *'
   workflow_dispatch:
     inputs:
       delete_all:
