@@ -334,6 +334,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "GitHubリポジトリURL"
+  deepwiki: "DeepWiki URL"
   documentation: "ドキュメントサイトURL"
 relationships:
   parent: "親ツールのツール名"
