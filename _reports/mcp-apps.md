@@ -54,6 +54,7 @@ relationships:
     - "Claude"
     - "Visual Studio Code"
     - "Claude Code"
+    - "Agent Skills"
 ---
 
 # **MCP Apps 調査レポート**

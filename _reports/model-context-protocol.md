@@ -50,6 +50,7 @@ relationships:
     - "Cursor"
     - "Windsurf"
     - "Cline"
+    - "Agent Skills"
 ---
 
 # **Model Context Protocol (MCP) 調査レポート**
