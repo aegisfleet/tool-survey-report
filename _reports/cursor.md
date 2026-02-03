@@ -57,6 +57,7 @@ links:
   documentation: "https://cursor.com/docs"
 relationships:
   related_tools:
+    - "Model Context Protocol"
     - "Claude Code"
     - "GitHub Copilot"
     - "Google Antigravity"
