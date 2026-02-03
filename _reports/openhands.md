@@ -53,6 +53,7 @@ links:
 relationships:
   related_tools:
     - "Devin"
+    - "AutoGPT"
     - "Google Jules"
     - "GitHub Copilot"
     - "Cursor"
