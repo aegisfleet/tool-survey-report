@@ -8,13 +8,13 @@ category: "構成管理"
 developer: "Amazon Web Services"
 official_site: "https://aws.amazon.com/cloudformation/"
 date: "2025-10-27"
-last_updated: "2026-01-14"
+last_updated: "2026-02-03"
 tags:
-  - "IaC"
-  - "AWS"
   - "構成管理"
-  - "クラウド"
+  - "IaC"
   - "DevOps"
+  - "自動化"
+  - "クラウド"
 description: "AWSリソースのプロビジョニングと管理を自動化するInfrastructure as Code (IaC) サービス"
 
 # 【クイックサマリー】ホーム画面のカード表示用
