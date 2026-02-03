@@ -49,6 +49,7 @@ links:
   documentation: "https://yew.rs/docs/getting-started/introduction"
 relationships:
   related_tools:
+    - "React"
     - "VS Code"
     - "IntelliJ IDEA"
 ---
