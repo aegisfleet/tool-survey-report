@@ -53,6 +53,7 @@ relationships:
   children:
     - "Claude Code"
   related_tools:
+    - "Model Context Protocol"
     - "MCP Apps"
     - "Gemini"
     - "Grok"
