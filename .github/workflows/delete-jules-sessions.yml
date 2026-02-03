@@ -1,0 +1,149 @@
+name: Delete Jules Sessions
+
+on:
+  schedule:
+    # 毎日午前3時（JST）= UTC 18:00 に実行
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+    inputs:
+      delete_all:
+        description: '全リポジトリのセッションを削除する'
+        required: false
+        type: boolean
+        default: false
+      debug_mode:
+        description: 'デバッグモード（最初の1件のAPIレスポンスを出力）'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  delete-sessions:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Delete Jules sessions
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          DELETE_ALL: ${{ inputs.delete_all || 'false' }}
+          DEBUG_MODE: ${{ inputs.debug_mode || 'false' }}
+          TARGET_REPO: ${{ github.repository }}
+        run: |
+          set -e
+          
+          TOTAL_DELETED=0
+          TOTAL_SKIPPED=0
+          PAGE_TOKEN=""
+          DEBUG_DONE=false
+          
+          if [ "$DELETE_ALL" = "true" ]; then
+            echo "🗑️ 全リポジトリのJulesセッション削除を開始します..."
+          else
+            echo "🗑️ リポジトリ '$TARGET_REPO' のJulesセッション削除を開始します..."
+          fi
+          
+          while true; do
+            # セッション一覧を取得
+            if [ -z "$PAGE_TOKEN" ]; then
+              RESPONSE=$(curl -s -H "x-goog-api-key: $JULES_API_KEY" \
+                "https://jules.googleapis.com/v1alpha/sessions?pageSize=100")
+            else
+              RESPONSE=$(curl -s -H "x-goog-api-key: $JULES_API_KEY" \
+                "https://jules.googleapis.com/v1alpha/sessions?pageSize=100&pageToken=$PAGE_TOKEN")
+            fi
+            
+            # セッションをJSONとして処理
+            SESSIONS_JSON=$(echo "$RESPONSE" | jq -c '.sessions[]? // empty' 2>/dev/null || echo "")
+            
+            if [ -z "$SESSIONS_JSON" ]; then
+              echo "✅ 削除対象のセッションがありません"
+              break
+            fi
+            
+            # 各セッションを処理
+            echo "$SESSIONS_JSON" | while IFS= read -r session; do
+              if [ -n "$session" ]; then
+                session_name=$(echo "$session" | jq -r '.name')
+                
+                # リポジトリフィルタリング（DELETE_ALLがfalseの場合）
+                if [ "$DELETE_ALL" != "true" ]; then
+                  # セッションの詳細を取得してリポジトリを確認
+                  SESSION_DETAIL=$(curl -s -H "x-goog-api-key: $JULES_API_KEY" \
+                    "https://jules.googleapis.com/v1alpha/$session_name")
+                  
+                  # デバッグモード: 最初のセッションのJSON構造を出力
+                  if [ "$DEBUG_MODE" = "true" ] && [ ! -f /tmp/debug_done.txt ]; then
+                    echo "🔍 デバッグ: セッション詳細のJSON構造"
+                    echo "$SESSION_DETAIL" | jq '.'
+                    echo "---"
+                    touch /tmp/debug_done.txt
+                  fi
+                  
+                  # 複数のフィールドパスを試行
+                  SESSION_REPO=""
+                  
+                  # パターン1: .sourceContext.source (メイン: "sources/github/owner/repo" 形式)
+                  if [ -z "$SESSION_REPO" ] || [ "$SESSION_REPO" = "/" ] || [ "$SESSION_REPO" = "null" ] || [ "$SESSION_REPO" = "" ]; then
+                    SOURCE_PATH=$(echo "$SESSION_DETAIL" | jq -r '.sourceContext.source // ""' 2>/dev/null || echo "")
+                    if [ -n "$SOURCE_PATH" ]; then
+                      # "sources/github/owner/repo" から "owner/repo" を抽出
+                      SESSION_REPO=$(echo "$SOURCE_PATH" | sed 's|^sources/github/||')
+                    fi
+                  fi
+                  
+                  # パターン2: .source.gitHubRepository (フォールバック)
+                  if [ -z "$SESSION_REPO" ] || [ "$SESSION_REPO" = "/" ] || [ "$SESSION_REPO" = "null" ]; then
+                    SESSION_REPO=$(echo "$SESSION_DETAIL" | jq -r '(.source.gitHubRepository.owner // "") + "/" + (.source.gitHubRepository.name // "")' 2>/dev/null || echo "")
+                  fi
+                  
+                  if [ "$SESSION_REPO" != "$TARGET_REPO" ]; then
+                    echo "  スキップ: $session_name (リポジトリ: $SESSION_REPO)"
+                    continue
+                  fi
+                  
+                  # 実行中・待機中のセッションは削除しない（COMPLETED/FAILEDのみ削除対象）
+                  # 公式ステータス: QUEUED, PLANNING, AWAITING_PLAN_APPROVAL, AWAITING_USER_FEEDBACK,
+                  #                 IN_PROGRESS, PAUSED, FAILED, COMPLETED, STATE_UNSPECIFIED
+                  SESSION_STATE=$(echo "$SESSION_DETAIL" | jq -r '.state // ""' 2>/dev/null || echo "")
+                  if [ "$SESSION_STATE" != "COMPLETED" ] && [ "$SESSION_STATE" != "FAILED" ]; then
+                    echo "  スキップ: $session_name (状態: $SESSION_STATE)"
+                    continue
+                  fi
+                fi
+                
+                echo "  削除中: $session_name"
+                DELETE_RESPONSE=$(curl -s -X DELETE \
+                  -H "x-goog-api-key: $JULES_API_KEY" \
+                  "https://jules.googleapis.com/v1alpha/$session_name" \
+                  -w "\n%{http_code}")
+                
+                HTTP_CODE=$(echo "$DELETE_RESPONSE" | tail -n1)
+                
+                if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "204" ]; then
+                  echo "DELETED" >> /tmp/deleted_count.txt
+                else
+                  echo "  ⚠️ 削除失敗 (HTTP $HTTP_CODE): $session_name"
+                fi
+                
+                # レート制限対策
+                sleep 0.5
+              fi
+            done
+            
+            # 次のページトークンを取得
+            PAGE_TOKEN=$(echo "$RESPONSE" | jq -r '.nextPageToken // empty' 2>/dev/null || echo "")
+            
+            if [ -z "$PAGE_TOKEN" ]; then
+              break
+            fi
+            
+            echo "📄 次のページを取得中..."
+          done
+          
+          # 削除数をカウント
+          if [ -f /tmp/deleted_count.txt ]; then
+            TOTAL_DELETED=$(wc -l < /tmp/deleted_count.txt)
+          fi
+          
+          echo ""
+          echo "🎉 完了！削除されたセッション数: $TOTAL_DELETED"
