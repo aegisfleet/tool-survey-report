@@ -44,7 +44,9 @@
 - 関連リンクの収集
   - GitHubリポジトリの有無を確認（オープンソースの場合）
   - DeepWikiの有無を確認（オープンソースの場合）
-    - `site:deepwiki.com "ツール名"` で検索し、ページが存在するか確認
+    - GitHubリポジトリが `https://github.com/{owner}/{repo}` の場合、DeepWikiのURLは `https://deepwiki.com/{owner}/{repo}` となる
+    - 上記URLにアクセスしてページが存在するか確認する（または `site:deepwiki.com "{owner}/{repo}"` で検索）
+    - 存在する場合は `links.deepwiki` に記載する
   - 公式ドキュメントサイトのURLを収集（公式サイトと異なる場合）
   - 主要レビューサイト（G2, Capterra, ITreview等）のツールページURLを収集
 
@@ -409,6 +411,7 @@ relationships:
 - [ ] 類似ツール比較が「機能比較表（星取表）」と「詳細比較」で構成されている
 - [ ] セキュリティ情報が「不明」のみで済まされていない
 - [ ] リンク切れがない（`python scripts/check_links.py` で確認）
+- [ ] オープンソースの場合、DeepWikiリンクの有無を確認済み（GitHubがあれば `deepwiki.com/{owner}/{repo}` を確認）
 
 ### 品質チェック
 
