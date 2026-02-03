@@ -56,6 +56,7 @@ links:
 relationships:
   parent: "IntelliJ IDEA"
   related_tools:
+    - "Android"
     - "Flutter"
     - "Visual Studio Code"
     - "Mobile Next"

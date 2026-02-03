@@ -56,6 +56,7 @@ links:
   github: "https://github.com/actionstatelabs/android-action-kernel"
 relationships:
   related_tools:
+    - "Android"
     - "Appium"
     - "UiPath"
     - "Devin"

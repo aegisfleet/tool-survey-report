@@ -2,7 +2,7 @@
 title: "Ubuntu 調査レポート"
 tool_name: "Ubuntu"
 tool_reading: "ウブントゥ"
-category: "インフラ/クラウド"
+category: "オペレーティングシステム"
 developer: "Canonical Ltd."
 official_site: "https://ubuntu.com/"
 date: "2026-01-25"
