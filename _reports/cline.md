@@ -63,6 +63,7 @@ relationships:
     - "Cursor"
     - "GitHub Copilot"
     - "OpenCode"
+    - "AGENTS.md"
 ---
 
 # **Cline 調査レポート**
