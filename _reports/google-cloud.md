@@ -62,6 +62,7 @@ relationships:
     - "Amazon Web Services"
     - "Microsoft Azure"
     - "Terraform"
+    - "Cloudflare"
 ---
 
 # **Google Cloud 調査レポート**
