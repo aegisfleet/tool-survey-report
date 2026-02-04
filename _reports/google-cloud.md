@@ -63,6 +63,7 @@ relationships:
     - "Microsoft Azure"
     - "Terraform"
     - "Cloudflare"
+    - "Google Maps Platform"
 ---
 
 # **Google Cloud 調査レポート**
