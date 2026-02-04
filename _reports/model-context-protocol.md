@@ -43,6 +43,7 @@ links:
 relationships:
   parent: ""
   children:
+    - "AWS MCP Servers"
     - "Context7"
     - "MCP Apps"
   related_tools:
