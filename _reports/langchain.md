@@ -61,6 +61,7 @@ relationships:
     - "AutoGPT"
     - "Agent Lightning"
     - "Letta"
+    - "Strands Agents"
 ---
 
 # **LangChain 調査レポート**
