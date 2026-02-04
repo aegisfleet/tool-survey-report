@@ -64,6 +64,7 @@ relationships:
     - "Vertex AI Studio"
     - "Microsoft 365 Copilot"
     - "さくらのAI"
+    - "Strands Agents"
 ---
 
 # **Amazon Bedrock 調査レポート**
