@@ -52,15 +52,7 @@ evaluation:
 links:
   documentation: "https://openid.net/developers/specs/"
 relationships:
-  children:
-    - "OpenID Connect"
-    - "FAPI"
-  related_tools:
-    - "OAuth 2.0"
-    - "SAML"
-    - "Auth0"
-    - "Okta"
-    - "Keycloak"
+  parent: "OAuth"
 ---
 
 # **OpenID 調査レポート**
