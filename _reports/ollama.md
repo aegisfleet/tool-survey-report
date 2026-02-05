@@ -55,6 +55,7 @@ links:
   documentation: "https://ollama.com/docs"
 relationships:
   related_tools:
+    - "UI-TARS Desktop"
     - "LM Studio"
     - "Foundry Local"
 ---
