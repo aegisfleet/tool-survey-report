@@ -55,6 +55,7 @@ relationships:
   related_tools:
     - "Vercel"
     - "Google Cloud"
+    - "Hono"
 ---
 
 # **Cloudflare 調査レポート**
