@@ -53,6 +53,7 @@ relationships:
   children:
     - "Claude Code"
   related_tools:
+    - "UI-TARS Desktop"
     - "Model Context Protocol"
     - "MCP Apps"
     - "Gemini"

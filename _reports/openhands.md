@@ -52,6 +52,7 @@ links:
   documentation: "https://docs.openhands.dev/"
 relationships:
   related_tools:
+    - "UI-TARS Desktop"
     - "Devin"
     - "AutoGPT"
     - "Google Jules"
