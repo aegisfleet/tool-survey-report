@@ -52,6 +52,8 @@ links:
   github: "https://github.com/docker/cli"
   documentation: "https://docs.docker.com/"
 relationships:
+  children:
+    - "dockur/windows"
   related_tools:
     - "Podman"
     - "Kubernetes"
