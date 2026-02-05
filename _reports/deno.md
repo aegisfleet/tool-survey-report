@@ -57,6 +57,7 @@ relationships:
   related_tools:
     - "Node.js"
     - "Bun"
+    - "Hono"
 ---
 
 # **Deno 調査レポート**
