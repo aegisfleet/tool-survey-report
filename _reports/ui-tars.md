@@ -16,6 +16,7 @@ tags:
   - "GUI"
   - "デスクトップ操作"
   - "ByteDance"
+  - "MCP"
 description: "VLMを活用し、人間のようにPC画面を見て操作する自律型GUIエージェント。アクセシビリティツリーと視覚情報の両方を利用して高精度な操作を実現。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -27,7 +28,7 @@ quick_summary:
     - "開発者"
     - "AI研究者"
     - "自動化エンジニア"
-  latest_highlight: "2025年1月に論文公開、デスクトップアプリとしてリリース"
+  latest_highlight: "2025年11月にAgent TARS CLI v0.3.0リリース、MCPに完全対応"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -49,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/bytedance/UI-TARS-desktop"
+  deepwiki: "https://deepwiki.com/bytedance/UI-TARS-desktop"
   documentation: "https://github.com/bytedance/UI-TARS-desktop/tree/main/docs"
 relationships:
   parent: null
@@ -58,6 +60,7 @@ relationships:
     - "OpenHands"
     - "Ollama"
     - "Hugging Face"
+    - "Model Context Protocol (MCP)"
 ---
 
 # **UI-TARS Desktop 調査レポート**
@@ -75,6 +78,8 @@ relationships:
 * **開発元**: ByteDance
 * **公式サイト**: [https://github.com/bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop)
 * **関連リンク**:
+  * GitHub: [https://github.com/bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop)
+  * DeepWiki: [https://deepwiki.com/bytedance/UI-TARS-desktop](https://deepwiki.com/bytedance/UI-TARS-desktop)
   * モデルリポジトリ: [https://github.com/bytedance/UI-TARS](https://github.com/bytedance/UI-TARS)
   * 論文 (arXiv): [UI-TARS: Pioneering Automated GUI Interaction with Native Agents](https://arxiv.org/abs/2501.12326)
 * **カテゴリ**: 自律型AIエージェント, 自動化ツール
@@ -110,8 +115,38 @@ relationships:
 * **マルチプラットフォーム**: Windows, macOS, Linux (Docker) で動作し、クロスプラットフォームな操作が可能。
 * **リモートデスクトップ操作**: ローカルマシンだけでなく、リモート環境のブラウザやデスクトップも操作可能。
 * **柔軟なモデル選択**: 自社のUI-TARSモデル（Doubaoベースなど）だけでなく、Hugging Face上のモデルやOpenAI互換APIを持つモデルとも連携可能。
+* **MCP対応**: Model Context Protocol (MCP) に準拠しており、外部ツールとの連携や機能拡張が容易。
 
-## **4. 特徴・強み (Pros)**
+## **4. 開始手順・セットアップ**
+
+<!--
+【ガイドライン】
+- アカウント作成から「Hello World」的な最初の動作確認までの手順
+- 主要なコマンドや設定項目を記載
+-->
+
+* **前提条件**:
+  * macOS, Windows, または Linux
+  * Node.js v22以上 (CLI版を利用する場合)
+  * バックエンドとしてのLLM環境 (Ollama, vLLM, またはAPIキー)
+* **インストール/導入**:
+  * **デスクトップアプリ版**: [GitHub Releases](https://github.com/bytedance/UI-TARS-desktop/releases) から最新版のインストーラ（`.dmg`, `.exe`）をダウンロードして実行。
+  * **CLI版**:
+    ```bash
+    # npm経由でCLIをインストール
+    npm install @agent-tars/cli@latest -g
+    ```
+* **初期設定**:
+  * アプリ起動後、設定画面でモデルプロバイダ（Ollama, VolcEngine, Anthropic等）を選択し、必要に応じてAPIキーやエンドポイントを入力する。
+  * ローカル実行の場合、Ollama等で `ui-tars` モデルを事前にpullしておく。
+* **クイックスタート**:
+  * デスクトップアプリを起動し、チャット欄に「ブラウザを開いて今日の天気を調べて」と入力して送信する。
+  * CLIの場合:
+    ```bash
+    agent-tars
+    ```
+
+## **5. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -124,7 +159,7 @@ relationships:
 * **オープンソース**: Apache 2.0ライセンスで公開されており、企業内でのカスタマイズや組み込みが容易。
 * **コスト効率**: API課金が発生するクラウド型サービス（Claude Computer Useなど）と異なり、ローカル実行ならランニングコストは電気代のみ。
 
-## **5. 弱み・注意点 (Cons)**
+## **6. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -137,7 +172,7 @@ relationships:
 * **モデルの成熟度**: 2025年1月リリースの比較的新しいプロジェクトであり、エコシステムやコミュニティの知見は発展途上。
 * **日本語対応**: UI自体は多言語対応が進んでいるが、ドキュメントやプロンプトの調整が必要な場合がある（基本は英語/中国語中心）。
 
-## **6. 料金プラン**
+## **7. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -152,7 +187,7 @@ relationships:
 
 * **課金体系**: ソフトウェア自体は無料。APIを利用する場合（例：VolcEngineなど）は別途モデル利用料が発生。
 
-## **7. 導入実績・事例**
+## **8. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -163,7 +198,7 @@ relationships:
 * **導入企業**: ByteDance（開発元）での社内利用や実証実験が主と考えられる。
 * **導入事例**: 2025年リリースのため、公開された第三者の大規模導入事例はまだ少ないが、GitHubでのStar数は急速に伸びており、個人の開発者や研究者による試用報告が多い。
 
-## **8. サポート体制**
+## **9. サポート体制**
 
 <!--
 【ガイドライン】
@@ -172,17 +207,17 @@ relationships:
 -->
 
 * **ドキュメント**: GitHubリポジトリ内の `docs/` にセットアップガイドや設定例が含まれている。
-* **コミュニティ**: GitHub IssuesやDiscussionsでのやり取りが活発。
+* **コミュニティ**: GitHub IssuesやDiscussions、Discordでのやり取りが活発。
 * **公式サポート**: オープンソースプロジェクトのため、商用サポートは提供されていない（コミュニティベース）。
 
-## **9. エコシステムと連携**
+## **10. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **9.1 API・外部サービス連携**
+### **10.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -192,8 +227,9 @@ relationships:
 
 * **モデルプロバイダ**: Ollama, vLLM, Hugging Face, VolcEngine (Doubao) と連携可能。
 * **API互換性**: OpenAI互換のAPIエンドポイントを持つバックエンドであれば接続可能。
+* **MCP**: Model Context Protocolに対応しており、様々なツールをエージェントに追加可能。
 
-### **9.2 技術スタックとの相性**
+### **10.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -207,7 +243,7 @@ relationships:
 | **Electron** | ◎ | デスクトップアプリ自体がElectronベースで開発されているため、フロントエンド技術でカスタマイズ可能。 | 特になし。 |
 | **Docker** | ◯ | Dockerコンテナ内での実行もサポートされており、環境分離が容易。 | GPUパススルーの設定が必要。 |
 
-## **10. セキュリティとコンプライアンス**
+## **11. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -220,7 +256,7 @@ relationships:
 * **認証**: デスクトップアプリ自体にはユーザー認証機能はない（OSのログインに依存）。
 * **準拠規格**: 特に明記なし。オープンソースソフトウェアとしての提供。
 
-## **11. 操作性 (UI/UX) と学習コスト**
+## **12. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -230,7 +266,7 @@ relationships:
 * **UI/UX**: モダンなチャットインターフェースを備え、指示を入力するとエージェントが画面操作を開始する。操作内容はリアルタイムで確認可能。
 * **学習コスト**: アプリの操作自体はシンプルだが、バックエンド（Ollama等）の適切なモデル設定やプロンプトエンジニアリングには一定の知識が必要。
 
-## **12. ベストプラクティス**
+## **13. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -238,14 +274,14 @@ relationships:
 - 公式ドキュメントのBest Practicesや、熟練エンジニアの知見を参考にする
 -->
 
-* **Modern Practices**:
+* **効果的な活用法 (Modern Practices)**:
   * **適切なモデルの選択**: タスクの難易度に応じて、軽量なローカルモデルか、高精度なクラウドモデル（API経由）を使い分ける。
   * **具体的な指示**: 「メールを送って」ではなく「Gmailを開いて、宛先X、件名Yで本文Zのメールを作成して送信して」のように具体的かつ手順を追って指示する。
-* **Anti-patterns**:
+* **陥りやすい罠 (Antipatterns)**:
   * **複雑すぎる指示の丸投げ**: 抽象度が高すぎるタスクは失敗しやすいため、サブタスクに分解せずに一度に依頼することは避ける。
   * **スクリーンショットのみへの依存**: アクセシビリティツリーが利用可能な場合は、視覚情報だけに頼らない設定を確認する。
 
-## **13. ユーザーの声（レビュー分析）**
+## **14. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -266,23 +302,30 @@ relationships:
   * 「対応しているモデルが重く、ハイスペックなPCが必要」
   * 「日本語入力周りでトラブルが起きることがある」
 
-## **14. 直近半年のアップデート情報**
+## **15. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
 - 日付の降順（新しいものが上）
 - 3-10項目をリストアップ
 - 各項目に日付と概要を含める
+- 情報源の優先順位:
+  1. GitHubリポジトリの `CHANGELOG.md`
+  2. GitHub Releases
+  3. 公式ブログ / ニュース
 - 情報源のURLを記載
 -->
 
-* **2025-01-22**: arXivにて論文「UI-TARS: Pioneering Automated GUI Interaction with Native Agents」が公開。
-* **2025-01**: GitHubにて `UI-TARS` および `UI-TARS-desktop` リポジトリが公開・開発開始。
-* **2025-01**: 初期バージョン v0.1 リリース。macOS, Windows版のインストーラ提供開始。
+* **2025-11-05**: **Agent TARS CLI v0.3.0 リリース**
+  ストリーミングサポートの追加、複数ツールの並列実行、AIOエージェントサンドボックスのサポートなど、エンジニアリング面での強化が行われた。
+* **2025-09-04**: **UI-TARS-2 モデル公開**
+  UI-TARS-1.5からのメジャーアップグレード。「All In One」エージェントモデルとして、GUI操作、ゲーム、コーディング、ツール使用の能力が統合された。
+* **2025-06-12**: **UI-TARS Desktop v0.2.0 リリース**
+  リモートコンピュータ操作機能およびリモートブラウザ操作機能が追加され、手元のマシンから遠隔地の環境を制御可能になった。
 
-(出典: [GitHub Releases](https://github.com/bytedance/UI-TARS-desktop/releases), [arXiv](https://arxiv.org/abs/2501.12326))
+(出典: [GitHub Releases](https://github.com/bytedance/UI-TARS-desktop/releases))
 
-## **15. 類似ツールとの比較**
+## **16. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -290,25 +333,25 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **15.1 機能比較表 (星取表)**
+### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (UI-TARS) | Claude (Computer Use) | OpenHands | OmniParser |
+| 機能カテゴリ | 機能項目 | 本ツール (UI-TARS) | Claude 3.7 | OpenHands | OmniParser |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **実行環境** | ローカル実行 | ◎<br><small>完全対応</small> | ×<br><small>APIのみ</small> | ◯<br><small>Docker等</small> | ◯<br><small>モデルのみ</small> |
 | **操作対象** | ネイティブアプリ | ◎<br><small>OS全体</small> | ◯<br><small>仮想環境推奨</small> | △<br><small>ブラウザ中心</small> | -<br><small>解析のみ</small> |
 | **コスト** | 利用料 | ◎<br><small>無料 (OSS)</small> | △<br><small>従量課金</small> | ◎<br><small>無料 (OSS)</small> | ◎<br><small>無料 (OSS)</small> |
 | **認識技術** | ハイブリッド認識 | ◎<br><small>Vision + Accessibility</small> | ◯<br><small>Vision中心</small> | ◯<br><small>各種</small> | ◎<br><small>Vision解析特化</small> |
 
-### **15.2 詳細比較**
+### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **UI-TARS** | ByteDance発のネイティブGUIエージェント。視覚と構造情報の両方を利用。 | ローカルで動作し、プライバシーとコストに優れる。OS全体の操作が可能。 | ハイスペックなローカルマシンが必要。発展途上。 | コストを抑えたい、ローカルで完結させたい、OS操作を行いたい場合。 |
-| **Claude** | AnthropicのComputer Use機能。API経由でスクリーンショットを送り操作指示を受け取る。 | モデルの推論能力が非常に高く、複雑なタスクの計画能力に優れる。 | APIコストがかかる。画面データを送信する必要がある。 | 最高精度の推論が必要で、クラウド利用が許容される場合。 |
+| **Claude 3.7** | AnthropicのComputer Use機能。API経由で操作指示を受け取る。 | モデルの推論能力が非常に高く、複雑なタスクの計画能力に優れる。 | APIコストがかかる。画面データを送信する必要がある。 | 最高精度の推論が必要で、クラウド利用が許容される場合。 |
 | **OpenHands** | オープンソースの自律型開発エージェント。旧OpenDevin。 | 開発タスク（コーディング、コマンド実行）に特化しており、コミュニティが活発。 | 一般的なGUI操作（ExcelやOS設定など）よりは、開発環境の操作がメイン。 | ソフトウェア開発の自動化を目的とする場合。 |
 | **OmniParser** | Microsoftの画面解析モデル。スクリーンショットからUI要素を構造化データに変換。 | UI要素の検出・解析精度が非常に高い。 | これ自体は「エージェント」ではなく「目」の役割。操作機能はない。 | 自作のエージェントに画面認識機能を組み込みたい場合。 |
 
-## **16. 総評**
+## **17. 総評**
 
 <!--
 【ガイドライン】
@@ -321,4 +364,4 @@ relationships:
 * **推奨されるチームやプロジェクト**:
   プライバシーコンプライアンスが厳しく外部への画面データ送信が難しい企業や、APIコストを気にせず常時稼働させたい自動化プロジェクトに推奨される。
 * **選択時のポイント**:
-  「セットアップの手軽さと最高精度の推論」を求めるならClaude Computer Useが勝るが、「ランニングコストの安さ」「ローカル完結の安心感」「OSSとしての拡張性」を重視するならUI-TARSが最適な選択肢となる。
+  「セットアップの手軽さと最高精度の推論」を求めるならClaude 3.7 (Computer Use) が勝るが、「ランニングコストの安さ」「ローカル完結の安心感」「OSSとしての拡張性」を重視するならUI-TARSが最適な選択肢となる。

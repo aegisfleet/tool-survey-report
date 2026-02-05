@@ -52,6 +52,7 @@ relationships:
     - "Windsurf"
     - "Cline"
     - "Agent Skills"
+    - "UI-TARS Desktop"
 ---
 
 # **Model Context Protocol (MCP) 調査レポート**
