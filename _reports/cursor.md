@@ -67,6 +67,7 @@ relationships:
     - "Roo Code"
     - "Windsurf"
     - "Android Studio"
+    - "IntelliJ IDEA"
 ---
 
 # **Cursor 調査レポート**
