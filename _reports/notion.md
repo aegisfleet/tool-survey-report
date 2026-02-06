@@ -56,7 +56,7 @@ links:
   documentation: "https://www.notion.so/help"
 relationships:
   related_tools:
-    - "Wasurenai"
+    - "ワスレナイ"
     - "Obsidian"
     - "Felo"
     - "Jira"

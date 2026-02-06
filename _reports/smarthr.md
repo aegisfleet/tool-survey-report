@@ -57,7 +57,7 @@ links:
   documentation: "https://support.smarthr.jp/ja/"
 relationships:
   related_tools:
-    - "Wasurenai"
+    - "ワスレナイ"
     - "COMPANY"
     - "KING OF TIME"
     - "ジョブカン勤怠管理"
