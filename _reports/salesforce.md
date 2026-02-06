@@ -49,6 +49,7 @@ relationships:
   children:
     - "Tableau"
   related_tools:
+    - "Wasurenai"
     - "AGENTIC STAR"
 ---
 

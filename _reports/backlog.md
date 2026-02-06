@@ -54,6 +54,7 @@ links:
   documentation: "https://support-ja.backlog.com/hc/ja"
 relationships:
   related_tools:
+    - "Wasurenai"
     - "Jira"
     - "Redmine"
     - "Quality Tracker"
