@@ -58,6 +58,7 @@ relationships:
   parent: null
   children: []
   related_tools:
+    - "Wasurenai"
     - "Figma"
     - "Canva"
     - "Mural"
