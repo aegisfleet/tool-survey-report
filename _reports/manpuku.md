@@ -5,7 +5,7 @@ title: "まん福 調査レポート"
 tool_name: "まん福"
 tool_reading: "マンプク"
 category: "人事労務"
-developer: "株式会社まん福ホールディングス"
+developer: "株式会社SHIFT"
 official_site: "https://www.manpuku.app/"
 date: "2026-02-06"
 last_updated: "2026-02-06"
@@ -54,7 +54,7 @@ relationships:
 
 * **ツール名**: まん福
 * **ツールの読み方**: マンプク
-* **開発元**: 株式会社まん福ホールディングス
+* **開発元**: 株式会社SHIFT
 * **公式サイト**: [https://www.manpuku.app/](https://www.manpuku.app/)
 * **関連リンク**:
   * 公式サイト: [https://www.manpuku.app/](https://www.manpuku.app/)
