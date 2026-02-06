@@ -47,6 +47,7 @@ relationships:
   parent: "Claude"
   children: []
   related_tools:
+    - "Opcode"
     - "MCP Apps"
     - "SkillsMP"
     - "Cursor"
