@@ -4,7 +4,7 @@
 title: "まん福 調査レポート"
 tool_name: "まん福"
 tool_reading: "マンプク"
-category: "人事労務"
+category: "ふるさと納税"
 developer: "株式会社SHIFT"
 official_site: "https://www.manpuku.app/"
 date: "2026-02-06"
@@ -58,7 +58,7 @@ relationships:
 * **公式サイト**: [https://www.manpuku.app/](https://www.manpuku.app/)
 * **関連リンク**:
   * 公式サイト: [https://www.manpuku.app/](https://www.manpuku.app/)
-* **カテゴリ**: 人事労務
+* **カテゴリ**: ふるさと納税
 * **概要**: 従業員向けの福利厚生型ふるさと納税サービス。企業が導入することで、従業員は簡単にふるさと納税を利用でき、企業は退職率の低下防止やESG経営の一助として活用できる。初期費用や月額費用がかからないプランもあり、手軽に導入できるのが特徴。
 
 ## **2. 目的と主な利用シーン**
