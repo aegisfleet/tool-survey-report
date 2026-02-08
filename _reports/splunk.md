@@ -53,8 +53,9 @@ evaluation:
 links:
   documentation: "https://docs.splunk.com/Documentation/Splunk"
 relationships:
-  related_tools:
+  children:
     - "Splunk AppDynamics"
+  related_tools:
     - "Datadog"
     - "sumo-logic"
     - "Grafana"

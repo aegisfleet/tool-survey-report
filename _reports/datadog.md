@@ -61,7 +61,6 @@ relationships:
     - "Splunk AppDynamics"
     - "New Relic"
     - "Grafana"
-    - "Dynatrace"
 ---
 
 # **Datadog 調査レポート**
