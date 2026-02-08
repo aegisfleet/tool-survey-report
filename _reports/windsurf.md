@@ -53,6 +53,7 @@ links:
   documentation: "https://docs.windsurf.com/"
 relationships:
   related_tools:
+    - "Visual Studio Code"
     - "Cursor"
     - "GitHub Copilot"
     - "Devin"

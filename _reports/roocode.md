@@ -53,6 +53,7 @@ links:
   documentation: "https://docs.roocode.com/"
 relationships:
   related_tools:
+    - "Visual Studio Code"
     - "Cline"
     - "Cursor"
     - "Windsurf"
