@@ -57,17 +57,13 @@ links:
   documentation: "https://cursor.com/docs"
 relationships:
   related_tools:
-    - "Model Context Protocol"
-    - "Claude Code"
+    - "Visual Studio Code"
     - "GitHub Copilot"
-    - "Google Antigravity"
-    - "Claude"
-    - "Devin"
-    - "Amazon Q Developer"
-    - "Roo Code"
     - "Windsurf"
-    - "Android Studio"
+    - "Roo Code"
     - "IntelliJ IDEA"
+    - "Android Studio"
+    - "Claude Code"
 ---
 
 # **Cursor 調査レポート**

@@ -57,14 +57,13 @@ relationships:
     - "GitHub Copilot SDK"
     - "GitHub Copilot CLI"
   related_tools:
-    - "OpenAI Codex"
-    - "Claude Code"
-    - "Devin"
+    - "Visual Studio Code"
     - "Cursor"
+    - "Windsurf"
     - "GitLab Duo"
     - "Amazon Q Developer"
-    - "Windsurf"
-    - "Microsoft Work IQ"
+    - "Devin"
+    - "Claude Code"
 ---
 
 # **GitHub Copilot 調査レポート**
