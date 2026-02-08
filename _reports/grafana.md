@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Datadog"
     - "Splunk"
+    - "Splunk AppDynamics"
 ---
 
 # **Grafana 調査レポート**
