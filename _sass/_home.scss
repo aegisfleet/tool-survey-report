@@ -39,7 +39,7 @@
     gap: map-get($spacers, 5);
     margin-bottom: map-get($spacers, 5);
     @include card(map-get($spacers, 5));
-    background: $white;
+    background: var(--color-bg-content);
     overflow: hidden;
 
     @include media-breakpoint-down(md) {
@@ -74,7 +74,7 @@
         flex: 1;
 
         .hero-text {
-            color: $text-color;
+            color: var(--color-text);
 
             p {
                 margin: 0;
@@ -263,7 +263,7 @@
     }
 
     .pick-card {
-        background: $white;
+        background: var(--color-bg-content);
         border-radius: $border-radius-lg;
         padding: map-get($spacers, 4);
         display: flex;
@@ -296,7 +296,7 @@
         }
 
         .pick-title {
-            color: $text-color;
+            color: var(--color-text);
             font-weight: $font-weight-bold;
             font-size: 1.25rem;
             line-height: $line-height-sm;
