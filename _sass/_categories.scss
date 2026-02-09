@@ -173,7 +173,11 @@
     align-items: center;
     gap: 0.25rem;
     cursor: pointer;
+    cursor: pointer;
     color: var(--color-text);
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1rem; // nav-linkと同じパディングを確保
     transition: $transition-base;
 
     &:hover {

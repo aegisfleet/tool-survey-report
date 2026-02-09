@@ -52,8 +52,8 @@
 }
 
 .tag-card {
-    background: $white;
-    border: 1px solid $border-light;
+    background: var(--color-bg-content);
+    border: 1px solid var(--color-border-light);
     border-radius: $border-radius-lg;
     padding: map-get($spacers, 4);
     box-shadow: $box-shadow-sm;
@@ -82,7 +82,7 @@
     font-weight: $font-weight-bold;
 
     a {
-        color: $text-color;
+        color: var(--color-text);
         text-decoration: none;
         transition: color 0.2s ease;
 
@@ -118,7 +118,7 @@
     }
 
     .report-link {
-        color: $text-color;
+        color: var(--color-text);
         text-decoration: none;
         font-weight: $font-weight-medium;
         transition: color 0.2s ease;
