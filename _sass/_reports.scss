@@ -430,14 +430,14 @@
   }
 
   tr:nth-child(even) td {
-    background-color: rgba($light-gray, 0.5);
+    background-color: var(--color-bg-table-stripe);
   }
 
   // Code blocks
   pre {
     margin: map-get($spacers, 5) 0;
     padding: map-get($spacers, 6) map-get($spacers, 4) map-get($spacers, 4); // 上部パディングを増やして飾り分のスペースを確保
-    background-color: $dark-gray;
+    background-color: var(--color-bg-pre);
     color: $white;
     border-radius: $border-radius;
     overflow-x: auto;

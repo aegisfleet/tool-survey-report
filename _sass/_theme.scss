@@ -40,6 +40,8 @@
 
     // Code block background
     --color-code-bg: #{$light-gray};
+    --color-bg-pre: #{$dark-gray};
+    --color-bg-table-stripe: rgba(#{$light-gray}, 0.5);
 
     // Theme icon visibility
     --theme-icon-light-display: none;
@@ -77,6 +79,8 @@
         --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
 
         --color-code-bg: #{$dark-light-gray};
+        --color-bg-pre: #252526;
+        --color-bg-table-stripe: rgba(255, 255, 255, 0.05);
 
         --theme-icon-light-display: block;
         --theme-icon-dark-display: none;
@@ -113,6 +117,8 @@
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
 
     --color-code-bg: #{$dark-light-gray};
+    --color-bg-pre: #252526;
+    --color-bg-table-stripe: rgba(255, 255, 255, 0.05);
 
     --theme-icon-light-display: block;
     --theme-icon-dark-display: none;

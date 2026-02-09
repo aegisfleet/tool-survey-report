@@ -535,7 +535,7 @@ function generateTableOfContents() {
 
     const tocList = document.createElement('ul');
     tocList.style.cssText = `
-      background: #ffffff;
+      background: var(--color-bg-content);
       padding: 1rem 2.5rem;
       border-radius: 0.375rem;
       border-left: 4px solid #ff7733;
