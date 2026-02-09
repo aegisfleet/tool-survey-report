@@ -440,7 +440,7 @@
     margin: map-get($spacers, 5) 0;
     padding: map-get($spacers, 6) map-get($spacers, 4) map-get($spacers, 4); // 上部パディングを増やして飾り分のスペースを確保
     background-color: var(--color-bg-pre);
-    color: $white;
+    color: var(--color-text-pre);
     border-radius: $border-radius;
     overflow-x: auto;
     box-shadow: $box-shadow-sm;

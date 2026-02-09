@@ -40,7 +40,8 @@
 
     // Code block background
     --color-code-bg: #{$light-gray};
-    --color-bg-pre: #{$dark-gray};
+    --color-bg-pre: #{$light-gray};
+    --color-text-pre: #{$text-color};
     --color-bg-table-stripe: rgba(#{$light-gray}, 0.5);
     --color-bg-blockquote: rgba(#{$light-gray}, 0.3);
     --color-text-blockquote: #{$text-color};
@@ -122,6 +123,7 @@
 
     --color-code-bg: #{$dark-light-gray};
     --color-bg-pre: #252526;
+    --color-text-pre: #ffffff;
     --color-bg-table-stripe: rgba(255, 255, 255, 0.05);
     --color-bg-blockquote: #151515;
     --color-text-blockquote: #ffffff;
