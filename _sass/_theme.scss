@@ -42,6 +42,8 @@
     --color-code-bg: #{$light-gray};
     --color-bg-pre: #{$dark-gray};
     --color-bg-table-stripe: rgba(#{$light-gray}, 0.5);
+    --color-bg-blockquote: rgba(#{$light-gray}, 0.3);
+    --color-text-blockquote: #{$text-color};
 
     // Theme icon visibility
     --theme-icon-light-display: none;
@@ -119,6 +121,8 @@
     --color-code-bg: #{$dark-light-gray};
     --color-bg-pre: #252526;
     --color-bg-table-stripe: rgba(255, 255, 255, 0.05);
+    --color-bg-blockquote: #151515;
+    --color-text-blockquote: #ffffff;
 
     --theme-icon-light-display: block;
     --theme-icon-dark-display: none;

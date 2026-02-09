@@ -487,7 +487,7 @@
   blockquote {
     margin: map-get($spacers, 6) 0;
     padding: map-get($spacers, 4) map-get($spacers, 5);
-    background-color: rgba($light-gray, 0.3);
+    background-color: var(--color-bg-blockquote);
     border-left: 4px solid $secondary-color;
     border-radius: $border-radius-sm;
     position: relative;
@@ -517,7 +517,7 @@
     p {
       position: relative;
       z-index: 1;
-      color: $text-color;
+      color: var(--color-text-blockquote);
       margin-bottom: map-get($spacers, 3);
 
       &:last-child {
