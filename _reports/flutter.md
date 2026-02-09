@@ -64,6 +64,7 @@ relationships:
     - "Visual Studio Code"
     - "RevenueCat"
     - "Mobile Next"
+    - "Fluorite Game Engine"
 ---
 
 # **Flutter 調査レポート**
