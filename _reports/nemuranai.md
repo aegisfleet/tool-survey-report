@@ -1,9 +1,9 @@
 ---
 # === フロントマター ===
 # 【必須項目】
-title: "SHIFT AIテストセンター「ネムラナイ」 調査レポート"
-tool_name: "SHIFT AIテストセンター「ネムラナイ」"
-tool_reading: "シフト エーアイ テストセンター ネムラナイ"
+title: "ネムラナイ 調査レポート"
+tool_name: "ネムラナイ"
+tool_reading: "ネムラナイ"
 category: "AIテスト / QAサービス"
 developer: "株式会社SHIFT"
 official_site: "https://contents.shiftinc.jp/nemuranai/"
@@ -52,12 +52,12 @@ relationships:
     - "mabl"
 ---
 
-# **SHIFT AIテストセンター「ネムラナイ」 調査レポート**
+# **ネムラナイ 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: SHIFT AIテストセンター「ネムラナイ」
-* **ツールの読み方**: シフト エーアイ テストセンター ネムラナイ
+* **ツール名**: ネムラナイ
+* **ツールの読み方**: ネムラナイ
 * **開発元**: 株式会社SHIFT
 * **公式サイト**: [https://contents.shiftinc.jp/nemuranai/](https://contents.shiftinc.jp/nemuranai/)
 * **関連リンク**:
