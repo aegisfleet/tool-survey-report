@@ -55,6 +55,7 @@ relationships:
   parent: ""
   children: []
   related_tools:
+    - "CodeceptJS"
     - "Selenium"
     - "Playwright"
     - "MagicPod"

@@ -52,6 +52,7 @@ links:
   documentation: "https://www.selenium.dev/documentation/"
 relationships:
   related_tools:
+    - "CodeceptJS"
     - "Playwright"
     - "PyTest"
     - "Cypress"
