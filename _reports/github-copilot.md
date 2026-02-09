@@ -57,6 +57,7 @@ relationships:
     - "GitHub Copilot SDK"
     - "GitHub Copilot CLI"
   related_tools:
+    - "CodeRabbit"
     - "Visual Studio Code"
     - "Cursor"
     - "Windsurf"
