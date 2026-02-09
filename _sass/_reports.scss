@@ -310,7 +310,7 @@
   table {
     width: 100%;
     margin: map-get($spacers, 5) 0;
-    border: 1px solid $border-color;
+    border: 1px solid var(--color-border-table);
     border-radius: $border-radius;
     overflow: hidden;
     box-shadow: $box-shadow-sm;
@@ -393,7 +393,9 @@
         align-items: center;
         padding: map-get($spacers, 2) 0;
         border: none !important; // 縦の線を確実に取り除く
-        border-bottom: 1px solid $border-light !important;
+        padding: map-get($spacers, 2) 0;
+        border: none !important; // 縦の線を確実に取り除く
+        border-bottom: 1px solid var(--color-border-table-inner) !important;
 
         &:last-child {
           border-bottom: none;
@@ -422,10 +424,10 @@
   }
 
   td {
-    border-bottom: 1px solid $border-light;
+    border-bottom: 1px solid var(--color-border-table-inner);
 
     &:not(:last-child) {
-      border-right: 1px solid $border-light;
+      border-right: 1px solid var(--color-border-table-inner);
     }
   }
 
