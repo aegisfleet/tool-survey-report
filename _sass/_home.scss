@@ -622,7 +622,7 @@
 
 .report-description {
     margin-bottom: map-get($spacers, 3);
-    color: $text-color;
+    color: var(--color-text);
     line-height: $line-height-lg;
 }
 
@@ -646,7 +646,7 @@
     .highlight-content {
         margin: 0;
         font-size: $font-size-sm;
-        color: $text-color;
+        color: var(--color-text);
         line-height: $line-height-sm;
         font-weight: $font-weight-medium;
     }
