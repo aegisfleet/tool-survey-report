@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // フィルタのリセット機能の初期化
   initFilterReset();
+
+  // スクロール連動ヘッダーの初期化
+  initSmartHeader();
 });
 
 // Mobile navigation functionality
@@ -937,4 +940,36 @@ function initThemeToggle() {
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
+}
+
+// Smart Header functionality
+function initSmartHeader() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  let lastScrollTop = 0;
+  const delta = 10;
+  const headerHeight = header.offsetHeight;
+
+  window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Ignore bounce scrolling
+    if (scrollTop < 0) return;
+
+    // Check if scroll is significant
+    if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
+
+    // Scroll Down -> Hide
+    // Scroll Up -> Show
+    if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+      header.classList.add('header-hidden');
+      // Dropdownを閉じる処理も入れた方が親切かも？
+      // ただし、スクロールしてる時点でマウスは外れていることが多い
+    } else {
+      header.classList.remove('header-hidden');
+    }
+
+    lastScrollTop = scrollTop;
+  }, { passive: true });
 }
