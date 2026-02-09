@@ -32,90 +32,45 @@ bundle exec jekyll server &
 
 ```bash
 // turbo
-python3 -c "
-from playwright.sync_api import sync_playwright
-URL = 'http://127.0.0.1:4000/tool-survey-report/'  # basepathを含める
-OUTPUT = '/tmp/screenshot.png'
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
-    page = browser.new_page(viewport={'width': 1280, 'height': 720})
-    page.goto(URL)
-    page.wait_for_load_state('networkidle')
-    page.screenshot(path=OUTPUT)
-    print(f'Title: {page.title()}')
-    print(f'Screenshot saved: {OUTPUT}')
-    browser.close()
-"
+python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "/tmp/screenshot.png"
 ```
 
 ### 2. 特定の要素を確認
 
-要素セレクタを指定して存在確認・テキスト取得を行う:
+要素セレクタを指定して存在確認を行う:
 
 ```bash
 // turbo
-python3 -c "
-from playwright.sync_api import sync_playwright
-URL = 'http://127.0.0.1:4000/tool-survey-report/'
-SELECTOR = 'h1'  # 確認する要素のセレクタ
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    page = browser.new_page()
-    page.goto(URL)
-    page.wait_for_load_state('networkidle')
-    element = page.query_selector(SELECTOR)
-    if element:
-        print(f'Found: {element.inner_text()}')
-    else:
-        print(f'Element not found: {SELECTOR}')
-    browser.close()
-"
+python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action check --selector "h1"
 ```
 
-### 3. クリック操作
+### 3. ダークモードで確認
 
 ```bash
-python3 -c "
-from playwright.sync_api import sync_playwright
-import time
-URL = 'http://127.0.0.1:4000/tool-survey-report/'
-CLICK_SELECTOR = '#search-input'  # クリックする要素
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
-    page = browser.new_page(viewport={'width': 1280, 'height': 720})
-    page.goto(URL)
-    page.wait_for_load_state('networkidle')
-    page.click(CLICK_SELECTOR)
-    time.sleep(1)  # アニメーション待ち
-    page.screenshot(path='/tmp/after_click.png')
-    browser.close()
-"
+// turbo
+python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "/tmp/dark_mode.png" --dark-mode
 ```
 
-### 4. フォーム入力
+### 4. モバイル表示で確認
 
 ```bash
-python3 -c "
-from playwright.sync_api import sync_playwright
-URL = 'http://127.0.0.1:4000/tool-survey-report/'
-INPUT_SELECTOR = '#search-input'
-INPUT_VALUE = '検索テキスト'
-
-with sync_playwright() as p:
-    browser = p.chromium.launch(headless=False)
-    page = browser.new_page(viewport={'width': 1280, 'height': 720})
-    page.goto(URL)
-    page.wait_for_load_state('networkidle')
-    page.fill(INPUT_SELECTOR, INPUT_VALUE)
-    page.screenshot(path='/tmp/after_input.png')
-    browser.close()
-"
+// turbo
+python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "/tmp/mobile.png" --mobile
 ```
 
-### 5. Jekyllサーバーの停止
+### 5. クリック操作
+
+```bash
+python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action click --selector "#search-input" --output "/tmp/after_click.png"
+```
+
+### 6. フォーム入力
+
+```bash
+python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action input --selector "#search-input" --input-text "検索テキスト" --output "/tmp/after_input.png"
+```
+
+### 7. Jekyllサーバーの停止
 
 テスト完了後、サーバーを停止:
 
@@ -124,10 +79,15 @@ with sync_playwright() as p:
 pkill -f "jekyll"
 ```
 
-## 注意事項
+## オプション一覧
 
-- `headless=True` にするとGUIなしで実行（高速）
-- `headless=False` にするとGUIあり（目視確認可能）
-- スクリーンショットは `/tmp/` 以下に保存される
-- アニメーションがある場合は `time.sleep()` で待機する
-- URLは必ず basepath `/tool-survey-report/` を含める
+- `--url`: ターゲットURL (必須)
+- `--action`: 実行アクション (`screenshot` (default), `check`, `text`, `click`, `input`)
+- `--selector`: ターゲット要素のCSSセレクタ
+- `--output`: スクリーンショット保存パス
+- `--input-text`: 入力テキスト (`input`アクション用)
+- `--wait`: 待機時間 (秒)
+- `--dark-mode`: ダークモードを有効化
+- `--mobile`: モバイルビューポートで実行
+- `--full-page`: フルページスクリーンショットを撮影
+- `--show-browser`: ブラウザGUIを表示 (デフォルトはヘッドレス)
