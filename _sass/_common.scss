@@ -4,13 +4,13 @@
 // Form input placeholder styles
 %form-input-base {
     padding: map-get($spacers, 2) map-get($spacers, 3);
-    border: 1px solid $border-color;
+    border: 1px solid var(--color-border);
     border-radius: $border-radius;
     font-size: $font-size-base;
     font-weight: $font-weight-medium;
     transition: $transition-base;
-    background-color: $content-bg;
-    color: $text-color;
+    background-color: var(--color-bg-content);
+    color: var(--color-text);
 
     &:focus {
         outline: none;
@@ -23,7 +23,7 @@
     }
 
     &::placeholder {
-        color: $text-muted;
+        color: var(--color-text-muted);
     }
 }
 
@@ -54,8 +54,8 @@
 // Interactive tag (clickable)
 %tag-interactive {
     @extend %tag-base;
-    background-color: $light-gray;
-    color: $text-color;
+    background-color: var(--color-light-gray);
+    color: var(--color-text);
 
     &:hover,
     &:focus {
@@ -77,7 +77,7 @@
 %tag-display {
     @extend %tag-base;
     background-color: rgba($primary-color, 0.1);
-    color: $text-color;
+    color: var(--color-text);
     border: 2px solid rgba($primary-color, 0.2);
     cursor: default;
 
@@ -119,7 +119,7 @@
     background: none;
     border: none;
     font-size: 1.2rem;
-    color: $text-muted;
+    color: var(--color-text-muted);
     cursor: pointer;
     padding: map-get($spacers, 1);
     border-radius: 50%;
@@ -133,8 +133,8 @@
 
     &:hover,
     &:focus {
-        background-color: $light-gray;
-        color: $text-color;
+        background-color: var(--color-light-gray);
+        color: var(--color-text);
     }
 
     &:focus {

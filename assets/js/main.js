@@ -1,6 +1,9 @@
 // Main JavaScript functionality
 document.addEventListener('DOMContentLoaded', function () {
 
+  // Theme toggle (run early to avoid flash)
+  initThemeToggle();
+
   // Mobile navigation toggle
   initMobileNavigation();
 
@@ -858,5 +861,80 @@ function initFilterReset() {
         }
       }
     });
+  });
+}
+
+// テーマ切替機能
+function initThemeToggle() {
+  const STORAGE_KEY = 'theme-preference';
+
+  // 保存されたテーマ設定を取得
+  function getStoredTheme() {
+    return localStorage.getItem(STORAGE_KEY);
+  }
+
+  // テーマ設定を保存
+  function setStoredTheme(theme) {
+    localStorage.setItem(STORAGE_KEY, theme);
+  }
+
+  // システム設定を取得
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  // 現在のテーマを取得（優先順位: 保存済み > システム設定）
+  function getCurrentTheme() {
+    const stored = getStoredTheme();
+    if (stored) {
+      return stored;
+    }
+    return getSystemTheme();
+  }
+
+  // テーマを適用
+  function applyTheme(theme) {
+    const root = document.documentElement;
+
+    if (theme === 'dark') {
+      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.setAttribute('data-theme', 'light');
+    }
+
+    // スクリーンリーダー向けにテーマ変更をアナウンス
+    if (typeof window.announceToScreenReader === 'function') {
+      const message = theme === 'dark' ? 'ダークモードに切り替えました' : 'ライトモードに切り替えました';
+      window.announceToScreenReader(message);
+    }
+  }
+
+  // テーマを切り替え
+  function toggleTheme() {
+    const current = getCurrentTheme();
+    const next = current === 'dark' ? 'light' : 'dark';
+    setStoredTheme(next);
+    applyTheme(next);
+  }
+
+  // 初期テーマを適用
+  applyTheme(getCurrentTheme());
+
+  // テーマ切替ボタンのイベントリスナー
+  const themeToggleButtons = document.querySelectorAll('.theme-toggle');
+  themeToggleButtons.forEach(function (button) {
+    button.addEventListener('click', function (e) {
+      e.preventDefault();
+      toggleTheme();
+    });
+  });
+
+  // システム設定の変更を監視（ユーザーが手動設定していない場合のみ反映）
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  mediaQuery.addEventListener('change', function (e) {
+    // 手動設定がない場合のみシステム設定に追従
+    if (!getStoredTheme()) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
   });
 }

@@ -1,0 +1,190 @@
+// Theme System - CSS Custom Properties
+// Supports: System preference detection + Manual toggle
+
+// ========================================
+// Light Theme (Default)
+// ========================================
+:root {
+    // Background colors
+    --color-bg-body: #{$body-bg};
+    --color-bg-content: #{$content-bg};
+    --color-bg-sidebar: #{$sidebar-bg};
+    --color-bg-header: #{$header-bg};
+    --color-bg-footer: #{$footer-bg};
+    --color-bg-main: #{$main-bg};
+
+    // Text colors
+    --color-text: #{$text-color};
+    --color-text-muted: #{$text-muted};
+    --color-text-light: #{$text-light};
+
+    // Link colors
+    --color-link: #{$link-color};
+    --color-link-hover: #{$link-hover};
+
+    // Border colors
+    --color-border: #{$border-color};
+    --color-border-light: #{$border-light};
+    --color-border-dark: #{$border-dark};
+
+    // Neutral colors
+    --color-light-gray: #{$light-gray};
+    --color-gray: #{$gray};
+    --color-white: #{$white};
+    --color-black: #{$black};
+
+    // Shadows (adjusted for theme)
+    --shadow-sm: #{$box-shadow-sm};
+    --shadow: #{$box-shadow};
+    --shadow-lg: #{$box-shadow-lg};
+
+    // Code block background
+    --color-code-bg: #{$light-gray};
+
+    // Theme icon visibility
+    --theme-icon-light-display: none;
+    --theme-icon-dark-display: block;
+}
+
+// ========================================
+// Dark Theme - System Preference
+// ========================================
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --color-bg-body: #{$dark-body-bg};
+        --color-bg-content: #{$dark-content-bg};
+        --color-bg-sidebar: #{$dark-sidebar-bg};
+        --color-bg-header: #{$dark-header-bg};
+        --color-bg-footer: #{$dark-footer-bg};
+        --color-bg-main: #{$dark-main-bg};
+
+        --color-text: #{$dark-text-color};
+        --color-text-muted: #{$dark-text-muted};
+        --color-text-light: #{$dark-text-light};
+
+        --color-link: #{$dark-link-color};
+        --color-link-hover: #{$dark-link-hover};
+
+        --color-border: #{$dark-border-color};
+        --color-border-light: #{$dark-border-light};
+        --color-border-dark: #{$dark-border-dark};
+
+        --color-light-gray: #{$dark-light-gray};
+        --color-gray: #{$dark-gray};
+
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+        --color-code-bg: #{$dark-light-gray};
+
+        --theme-icon-light-display: block;
+        --theme-icon-dark-display: none;
+    }
+}
+
+// ========================================
+// Dark Theme - Manual Override
+// ========================================
+[data-theme="dark"] {
+    --color-bg-body: #{$dark-body-bg};
+    --color-bg-content: #{$dark-content-bg};
+    --color-bg-sidebar: #{$dark-sidebar-bg};
+    --color-bg-header: #{$dark-header-bg};
+    --color-bg-footer: #{$dark-footer-bg};
+    --color-bg-main: #{$dark-main-bg};
+
+    --color-text: #{$dark-text-color};
+    --color-text-muted: #{$dark-text-muted};
+    --color-text-light: #{$dark-text-light};
+
+    --color-link: #{$dark-link-color};
+    --color-link-hover: #{$dark-link-hover};
+
+    --color-border: #{$dark-border-color};
+    --color-border-light: #{$dark-border-light};
+    --color-border-dark: #{$dark-border-dark};
+
+    --color-light-gray: #{$dark-light-gray};
+    --color-gray: #{$dark-gray};
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    --color-code-bg: #{$dark-light-gray};
+
+    --theme-icon-light-display: block;
+    --theme-icon-dark-display: none;
+}
+
+// ========================================
+// Light Theme - Manual Override
+// ========================================
+[data-theme="light"] {
+    --theme-icon-light-display: none;
+    --theme-icon-dark-display: block;
+}
+
+// ========================================
+// Theme Toggle Button Styles
+// ========================================
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: $transition-base;
+    color: var(--color-text);
+
+    &:hover,
+    &:focus {
+        background-color: rgba($primary-color, 0.1);
+        color: $primary-color;
+    }
+
+    &:focus {
+        outline: 3px solid rgba($primary-color, 0.5);
+        outline-offset: 2px;
+    }
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+
+    &-light {
+        display: var(--theme-icon-light-display);
+    }
+
+    &-dark {
+        display: var(--theme-icon-dark-display);
+    }
+}
+
+// Mobile theme toggle item styling
+.nav-item-theme {
+    @include media-breakpoint-down(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: map-get($spacers, 3) 0;
+        border-bottom: none;
+        margin-top: auto;
+    }
+
+    .theme-toggle {
+        @include media-breakpoint-down(lg) {
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--color-border);
+            border-radius: $border-radius-lg;
+        }
+    }
+}

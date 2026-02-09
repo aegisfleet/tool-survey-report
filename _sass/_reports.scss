@@ -23,9 +23,9 @@
   margin-bottom: map-get($spacers, 6);
   padding: map-get($spacers, 4);
   padding-bottom: map-get($spacers, 4);
-  background-color: $content-bg;
+  background-color: var(--color-bg-content);
   border-radius: $border-radius $border-radius 0 0;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--color-border);
 
   @include media-breakpoint-down(sm) {
     padding: map-get($spacers, 3);
@@ -125,7 +125,7 @@
   p {
     margin-bottom: 0;
     font-size: $font-size-lg;
-    color: $text-color;
+    color: var(--color-text);
     line-height: $line-height-lg;
   }
 }
@@ -135,7 +135,7 @@
   padding: 0 map-get($spacers, 4) map-get($spacers, 4);
   line-height: $line-height-lg;
   font-size: 1.1rem;
-  background-color: $content-bg;
+  background-color: var(--color-bg-content);
 
   @include media-breakpoint-down(md) {
     padding: 0 map-get($spacers, 3) map-get($spacers, 3);
@@ -544,7 +544,7 @@
     margin: map-get($spacers, 6) 0;
     border: none;
     height: 1px;
-    background-color: $border-color;
+    background-color: var(--color-border);
     position: relative;
     overflow: visible;
 
@@ -554,9 +554,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: $content-bg;
+      background-color: var(--color-bg-content);
       padding: 0 map-get($spacers, 3);
-      color: $border-color;
+      color: var(--color-border);
       font-size: 0.8rem;
       letter-spacing: 4px;
     }
@@ -585,9 +585,9 @@
 
 // Report footer
 .report-footer {
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--color-border);
   padding: map-get($spacers, 5) map-get($spacers, 4) map-get($spacers, 4);
-  background-color: $content-bg;
+  background-color: var(--color-bg-content);
   border-radius: 0 0 $border-radius $border-radius;
 
   @include media-breakpoint-down(md) {
@@ -649,14 +649,14 @@
 .nav-label {
   display: block;
   font-size: $font-size-sm;
-  color: $text-muted;
+  color: var(--color-text-muted);
   margin-bottom: map-get($spacers, 1);
 }
 
 .nav-title {
   display: block;
   font-weight: $font-weight-semibold;
-  color: $text-color;
+  color: var(--color-text);
   transition: $transition-base;
   @include text-truncate;
 }
@@ -669,8 +669,8 @@
     align-items: center;
     gap: map-get($spacers, 2);
     padding: map-get($spacers, 3) map-get($spacers, 4);
-    background-color: $light-gray;
-    color: $text-color;
+    background-color: var(--color-light-gray);
+    color: var(--color-text);
     border-radius: $border-radius;
     transition: $transition-base;
 
@@ -692,9 +692,9 @@
 .related-tools-section {
   margin: map-get($spacers, 6) 0;
   padding: map-get($spacers, 4);
-  border: 1px solid $border-color;
+  border: 1px solid var(--color-border);
   border-radius: $border-radius;
-  background-color: rgba($light-gray, 0.3);
+  background-color: var(--color-bg-content);
 
   h3 {
     margin-top: 0;
@@ -712,7 +712,7 @@
 
     h4 {
       font-size: 1rem;
-      color: $text-color;
+      color: var(--color-text);
       margin-bottom: map-get($spacers, 2);
       font-weight: $font-weight-semibold;
     }
@@ -724,12 +724,12 @@
         margin: map-get($spacers, 2) 0;
 
         a {
-          color: $link-color;
+          color: var(--color-link);
           font-weight: $font-weight-medium;
 
           &:hover,
           &:focus {
-            color: $link-hover;
+            color: var(--color-link-hover);
             text-decoration: underline;
           }
         }
@@ -804,14 +804,14 @@
 .related-title {
   display: block;
   font-weight: $font-weight-semibold;
-  color: $text-color;
+  color: var(--color-text);
   margin-bottom: map-get($spacers, 1);
   transition: $transition-base;
 }
 
 .related-date {
   font-size: $font-size-sm;
-  color: $text-muted;
+  color: var(--color-text-muted);
 }
 
 // Related reports badges and meta
@@ -928,7 +928,7 @@
 }
 
 .summary-card {
-  background: $white;
+  background: var(--color-bg-content);
   padding: map-get($spacers, 3);
   border-radius: $border-radius;
   box-shadow: $box-shadow-sm;
@@ -985,7 +985,7 @@
 
 .summary-label {
   font-size: $font-size-xs;
-  color: $text-muted;
+  color: var(--color-text-muted);
   font-weight: $font-weight-medium;
   margin-bottom: map-get($spacers, 1);
 }
@@ -993,7 +993,7 @@
 .summary-value {
   font-size: 1.1rem;
   font-weight: $font-weight-bold;
-  color: $text-color;
+  color: var(--color-text);
 
   &.score-value {
     font-size: 1.5rem;
@@ -1008,7 +1008,7 @@
 
 .summary-note {
   font-size: $font-size-xs;
-  color: $text-muted;
+  color: var(--color-text-muted);
   margin-top: map-get($spacers, 1);
 }
 
@@ -1036,13 +1036,13 @@
   }
 
   .highlight-text {
-    color: $text-color;
+    color: var(--color-text);
   }
 }
 
 // Evaluation Details
 .evaluation-details {
-  background: $white;
+  background: var(--color-bg-content);
   padding: map-get($spacers, 4);
   border-radius: $border-radius;
   box-shadow: $box-shadow-sm;
@@ -1053,7 +1053,7 @@
   font-size: 1.25rem !important;
   color: $primary-color;
   padding-bottom: map-get($spacers, 2);
-  border-bottom: 2px solid $border-color;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .evaluation-group {
@@ -1062,7 +1062,7 @@
   h4 {
     margin: 0 0 map-get($spacers, 2) 0;
     font-size: 1rem;
-    color: $text-color;
+    color: var(--color-text);
   }
 
   ul {
@@ -1076,7 +1076,7 @@
     align-items: flex-start;
     gap: map-get($spacers, 2);
     padding: map-get($spacers, 2) 0;
-    border-bottom: 1px solid $border-light;
+    border-bottom: 1px solid var(--color-border-light);
 
     &:last-child {
       border-bottom: none;
@@ -1107,7 +1107,7 @@
 }
 
 .eval-reason {
-  color: $text-color;
+  color: var(--color-text);
   line-height: $line-height-base;
 }
 
@@ -1116,7 +1116,7 @@
   background: rgba($secondary-color, 0.05);
   border-radius: $border-radius;
   border-left: 4px solid $secondary-color;
-  color: $text-color;
+  color: var(--color-text);
 
   strong {
     color: $secondary-color;

@@ -4,7 +4,7 @@
   padding: map-get($spacers, 3) map-get($spacers, 5);
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -15,20 +15,20 @@
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.5s;
   }
-  
+
   &:hover::before {
     left: 100%;
   }
-  
+
   &:focus {
     outline: 3px solid rgba($secondary-color, 0.5);
     outline-offset: 2px;
   }
-  
+
   &:disabled {
     opacity: 0.6;
     cursor: not-allowed;
-    
+
     &::before {
       display: none;
     }
@@ -40,7 +40,7 @@
   background-color: $primary-color;
   border-color: $primary-color;
   font-weight: $font-weight-semibold;
-  
+
   &:hover,
   &:focus {
     color: $white;
@@ -50,7 +50,7 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba($primary-color, 0.3);
   }
-  
+
   &:focus {
     outline: 3px solid rgba($primary-color, 0.5);
     outline-offset: 2px;
@@ -62,7 +62,7 @@
   background-color: $secondary-color;
   border-color: $secondary-color;
   font-weight: $font-weight-semibold;
-  
+
   &:hover,
   &:focus {
     color: $white;
@@ -76,11 +76,11 @@
 
 .btn-outline {
   color: $primary-color;
-  background-color: $white;
+  background-color: var(--color-bg-content);
   border-color: $primary-color;
   border-width: 2px;
   font-weight: $font-weight-semibold;
-  
+
   &:hover,
   &:focus {
     color: $white;
@@ -108,7 +108,7 @@
   border: 2px solid $light-gray;
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: "";
     position: absolute;
@@ -121,18 +121,18 @@
     transform-origin: left;
     transition: transform 0.3s ease;
   }
-  
+
   &:hover,
   &:focus-within {
     border-color: $primary-color;
     box-shadow: $box-shadow;
     transform: translateY(-2px);
-    
+
     &::before {
       transform: scaleX(1);
     }
   }
-  
+
   &:focus-within {
     outline: 3px solid rgba($primary-color, 0.3);
     outline-offset: 2px;
@@ -142,11 +142,16 @@
 .card-header {
   padding: map-get($spacers, 3) map-get($spacers, 4);
   margin: -#{map-get($spacers, 4)} -#{map-get($spacers, 4)} map-get($spacers, 3);
-  background-color: $light-gray;
+  background-color: var(--color-light-gray);
   border-bottom: 1px solid $border-color;
   border-radius: $border-radius $border-radius 0 0;
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 0;
   }
 }
@@ -158,7 +163,7 @@
 .card-footer {
   padding: map-get($spacers, 3) map-get($spacers, 4);
   margin: map-get($spacers, 3) -#{map-get($spacers, 4)} -#{map-get($spacers, 4)};
-  background-color: $light-gray;
+  background-color: var(--color-light-gray);
   border-top: 1px solid $border-color;
   border-radius: 0 0 $border-radius $border-radius;
 }
@@ -170,12 +175,17 @@
   margin-bottom: map-get($spacers, 3);
   border: 1px solid transparent;
   border-radius: $border-radius;
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: inherit;
     margin-bottom: map-get($spacers, 2);
   }
-  
+
   p:last-child {
     margin-bottom: 0;
   }
@@ -255,7 +265,7 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  
+
   &:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
@@ -265,8 +275,8 @@
 .tooltip-text {
   visibility: hidden;
   width: 120px;
-  background-color: $black;
-  color: $white;
+  background-color: var(--color-bg-footer);
+  color: var(--color-text-inverse);
   text-align: center;
   border-radius: $border-radius;
   padding: map-get($spacers, 1) map-get($spacers, 2);
@@ -278,7 +288,7 @@
   opacity: 0;
   transition: opacity 0.3s;
   font-size: $font-size-sm;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -331,25 +341,25 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
     transition: $transition-base;
-    
+
     &:hover,
     &:focus {
       color: $link-hover;
-      background-color: $light-gray;
+      background-color: var(--color-light-gray);
       border-color: $border-color;
       text-decoration: none;
     }
   }
-  
+
   &.active .page-link {
     color: $white;
     background-color: $secondary-color;
     border-color: $secondary-color;
   }
-  
+
   &.disabled .page-link {
-    color: $text-muted;
-    background-color: $white;
+    color: var(--color-text-muted);
+    background-color: var(--color-bg-content);
     border-color: $border-color;
     cursor: not-allowed;
   }
@@ -391,7 +401,7 @@
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: $white;
+  background-color: var(--color-bg-content);
   background-clip: padding-box;
   border: 1px solid $border-color;
   border-radius: $border-radius-lg;
@@ -411,12 +421,12 @@
   width: 100%;
   padding: 0;
   overflow: hidden;
-  
+
   &::before {
     display: block;
     content: "";
   }
-  
+
   .embed-responsive-item {
     position: absolute;
     top: 0;
@@ -439,6 +449,7 @@
 .embed-responsive-1by1::before {
   padding-top: 100%;
 }
+
 // Home page specific styles
 .home-container {
   @include make-container;
@@ -449,33 +460,33 @@
 .home-header {
   text-align: center;
   padding: map-get($spacers, 3) 0;
-  background-color: $content-bg;
+  background-color: var(--color-bg-content);
   border-radius: $border-radius-lg;
   margin-bottom: map-get($spacers, 3);
   border: 3px solid rgba($primary-color, 0.2);
   box-shadow: $box-shadow-sm;
-  
+
   .site-title {
     font-size: 3rem;
     font-weight: $font-weight-bold;
-    color: $text-color;
+    color: var(--color-text);
     margin-bottom: map-get($spacers, 3);
     background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
     display: inline-block;
     padding: 0 map-get($spacers, 2);
-    
+
     @include media-breakpoint-down(md) {
       font-size: 2.5rem;
     }
-    
+
     @include media-breakpoint-down(sm) {
       font-size: 2rem;
     }
   }
-  
+
   .site-description {
     font-size: $font-size-lg;
-    color: $text-color;
+    color: var(--color-text);
     max-width: 600px;
     margin: 0 auto;
     line-height: $line-height-lg;
@@ -493,17 +504,17 @@
   align-items: flex-start;
   margin-bottom: map-get($spacers, 5);
   gap: map-get($spacers, 4);
-  
+
   @include media-breakpoint-down(lg) {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   h2 {
     margin: 0;
     color: $primary-color;
     font-size: 2rem;
-    
+
     @include media-breakpoint-down(md) {
       font-size: 1.75rem;
       text-align: center;
@@ -516,11 +527,11 @@
   gap: map-get($spacers, 3);
   align-items: center;
   flex-wrap: wrap;
-  
+
   @include media-breakpoint-down(lg) {
     justify-content: center;
   }
-  
+
   @include media-breakpoint-down(sm) {
     flex-direction: column;
     width: 100%;
@@ -531,7 +542,7 @@
 .filter-container,
 .sort-container {
   position: relative;
-  
+
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
@@ -541,7 +552,7 @@
 .tag-filter,
 .sort-select {
   @extend %form-input-base;
-  
+
   @include media-breakpoint-down(sm) {
     width: 100%;
   }
@@ -559,7 +570,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: map-get($spacers, 4);
-  
+
   @include media-breakpoint-down(sm) {
     grid-template-columns: 1fr;
     gap: map-get($spacers, 3);
@@ -570,7 +581,7 @@
   @include card;
   transition: $transition-base;
   height: fit-content;
-  
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: $box-shadow-lg;
@@ -579,12 +590,12 @@
 
 .report-card-header {
   margin-bottom: map-get($spacers, 3);
-  
+
   .report-title {
     margin: 0 0 map-get($spacers, 2) 0;
-    
+
     a {
-      color: $text-color;
+      color: var(--color-text);
       text-decoration: none;
       font-weight: $font-weight-bold;
       font-size: 1.25rem;
@@ -593,46 +604,46 @@
       padding: 2px 4px;
       border-radius: 2px;
       transition: $transition-base;
-      
+
       &:hover,
       &:focus {
-        color: $text-color;
+        color: var(--color-text);
         background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.5) 70%);
         text-decoration: none;
       }
     }
   }
-  
+
   .report-date {
     font-size: $font-size-sm;
-    color: $text-muted;
+    color: var(--color-text-muted);
     font-weight: $font-weight-medium;
   }
 }
 
 .report-description {
-  color: $text-color;
+  color: var(--color-text);
   line-height: $line-height-lg;
   margin-bottom: map-get($spacers, 3);
 }
 
 .report-tags {
   margin-bottom: map-get($spacers, 3);
-  
+
   .tag {
     @extend %tag-display;
     margin-right: map-get($spacers, 1);
     margin-bottom: map-get($spacers, 1);
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    
+
     &.active {
       background-color: $primary-color;
       color: $white;
       border-color: $primary-color;
       box-shadow: 0 2px 4px rgba($primary-color, 0.3);
     }
-    
+
     &:active {
       transform: translateY(0);
       transition: none;
@@ -644,13 +655,13 @@
   margin-top: auto;
   padding-top: map-get($spacers, 3);
   border-top: 1px solid $border-light;
-  
+
   .read-more {
-    color: $secondary-color;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: $font-weight-medium;
     font-size: $font-size-sm;
-    
+
     &:hover,
     &:focus {
       color: $link-hover;
@@ -690,11 +701,11 @@
     line-height: 1;
     margin-bottom: map-get($spacers, 1);
   }
-  
+
   .stat-label {
     display: block;
     font-size: $font-size-sm;
-    color: $text-muted;
+    color: var(--color-text-muted);
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -703,7 +714,7 @@
 
 .recent-reports {
   margin-bottom: map-get($spacers, 6);
-  
+
   h2 {
     margin-bottom: map-get($spacers, 4);
     text-align: center;
@@ -715,7 +726,7 @@
   text-decoration: none;
   color: inherit;
   transition: $transition-base;
-  
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -729,12 +740,12 @@
   margin-top: map-get($spacers, 3);
   padding-top: map-get($spacers, 2);
   border-top: 1px solid $border-light;
-  
+
   small {
     display: inline-flex;
     align-items: center;
     gap: map-get($spacers, 1);
-    
+
     svg {
       width: 14px;
       height: 14px;
@@ -747,11 +758,11 @@
 .reports-list {
   .card-title {
     margin-bottom: map-get($spacers, 2);
-    
+
     a {
       color: $primary-color;
       text-decoration: none;
-      
+
       &:hover,
       &:focus {
         color: $secondary-color;
@@ -759,7 +770,7 @@
       }
     }
   }
-  
+
   .report-tags {
     h6 {
       margin-bottom: map-get($spacers, 2);
@@ -768,7 +779,7 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-    
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -790,10 +801,10 @@
 .related-tools-section {
   margin: map-get($spacers, 5) 0;
   padding: map-get($spacers, 4);
-  border: 2px solid rgba($primary-color, 0.1);
+  border: 2px solid var(--color-border-light);
   border-radius: $border-radius-lg;
-  background-color: rgba($primary-color, 0.02);
-  
+  background-color: var(--color-bg-content);
+
   h3 {
     margin-top: 0;
     margin-bottom: map-get($spacers, 4);
@@ -805,106 +816,106 @@
     display: flex;
     align-items: center;
     gap: map-get($spacers, 2);
-    
+
     &::before {
       content: "🔗";
       font-size: 1.25rem;
     }
   }
-  
+
   .parent-tool,
   .child-tools,
   .sibling-tools {
     margin: map-get($spacers, 4) 0;
-    
+
     h4 {
       font-size: 1.1rem;
-      color: $text-color;
+      color: var(--color-text);
       margin-bottom: map-get($spacers, 3);
       font-weight: $font-weight-semibold;
       display: flex;
       align-items: center;
       gap: map-get($spacers, 2);
-      
+
       svg {
         width: 16px;
         height: 16px;
         opacity: 0.8;
       }
     }
-    
+
     .tool-link {
       display: block;
       padding: map-get($spacers, 3);
       border-radius: $border-radius;
       text-decoration: none;
-      color: $text-color;
+      color: var(--color-text);
       transition: all 0.3s ease;
       border: 1px solid rgba($primary-color, 0.2);
       background-color: rgba($primary-color, 0.05);
-      
+
       &:hover,
       &:focus {
         text-decoration: none;
-        color: $text-color;
+        color: var(--color-text);
         transform: translateX(4px);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         background-color: rgba($primary-color, 0.1);
         border-color: rgba($primary-color, 0.3);
       }
-      
+
       &:focus {
         outline: 3px solid rgba($primary-color, 0.3);
         outline-offset: 2px;
       }
-      
+
       .tool-title {
         display: block;
         font-weight: $font-weight-semibold;
         font-size: 1rem;
         margin-bottom: map-get($spacers, 1);
       }
-      
+
       .tool-description {
         display: block;
         font-size: $font-size-sm;
-        color: $text-muted;
+        color: var(--color-text-muted);
         line-height: $line-height-base;
       }
     }
-    
+
     .tools-list {
       @extend %list-reset;
-      
+
       li {
         margin-bottom: map-get($spacers, 2);
-        
+
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
   }
-  
+
   // Parent tool styling (green theme)
   .parent-tool {
     border-left: 4px solid #48bb78;
     padding-left: map-get($spacers, 3);
     background-color: rgba(72, 187, 120, 0.05);
     border-radius: 0 $border-radius $border-radius 0;
-    
+
     h4 {
-      color: #2f855a;
-      
+      color: var(--color-text);
+
       svg {
         color: #48bb78;
       }
     }
-    
+
     .tool-link {
       background-color: rgba(72, 187, 120, 0.05);
       border-color: rgba(72, 187, 120, 0.2);
-      
+
       &:hover,
       &:focus {
         background-color: rgba(72, 187, 120, 0.1);
@@ -912,26 +923,26 @@
       }
     }
   }
-  
+
   // Child tools styling (orange theme)
   .child-tools {
     border-left: 4px solid #ed8936;
     padding-left: map-get($spacers, 3);
     background-color: rgba(237, 137, 54, 0.05);
     border-radius: 0 $border-radius $border-radius 0;
-    
+
     h4 {
-      color: #c05621;
-      
+      color: var(--color-text);
+
       svg {
         color: #ed8936;
       }
     }
-    
+
     .tool-link {
       background-color: rgba(237, 137, 54, 0.05);
       border-color: rgba(237, 137, 54, 0.2);
-      
+
       &:hover,
       &:focus {
         background-color: rgba(237, 137, 54, 0.1);
@@ -939,26 +950,26 @@
       }
     }
   }
-  
+
   // Sibling tools styling (purple theme)
   .sibling-tools {
     border-left: 4px solid #9f7aea;
     padding-left: map-get($spacers, 3);
     background-color: rgba(159, 122, 234, 0.05);
     border-radius: 0 $border-radius $border-radius 0;
-    
+
     h4 {
-      color: #6b46c1;
-      
+      color: var(--color-text);
+
       svg {
         color: #9f7aea;
       }
     }
-    
+
     .tool-link {
       background-color: rgba(159, 122, 234, 0.05);
       border-color: rgba(159, 122, 234, 0.2);
-      
+
       &:hover,
       &:focus {
         background-color: rgba(159, 122, 234, 0.1);
@@ -973,35 +984,35 @@
   .related-tools-section {
     margin: map-get($spacers, 4) 0;
     padding: map-get($spacers, 3);
-    
+
     h3 {
       font-size: 1.25rem;
       margin-bottom: map-get($spacers, 3);
     }
-    
+
     .parent-tool,
     .child-tools,
     .sibling-tools {
       margin: map-get($spacers, 3) 0;
       padding-left: map-get($spacers, 2);
-      
+
       h4 {
         font-size: 1rem;
         margin-bottom: map-get($spacers, 2);
       }
-      
+
       .tool-link {
         padding: map-get($spacers, 2);
-        
+
         &:hover,
         &:focus {
           transform: translateX(2px);
         }
-        
+
         .tool-title {
           font-size: 0.95rem;
         }
-        
+
         .tool-description {
           font-size: 0.8rem;
         }
@@ -1014,28 +1025,28 @@
   .related-tools-section {
     margin: map-get($spacers, 3) 0;
     padding: map-get($spacers, 2);
-    
+
     h3 {
       font-size: 1.1rem;
       flex-direction: column;
       align-items: flex-start;
       gap: map-get($spacers, 1);
-      
+
       &::before {
         font-size: 1rem;
       }
     }
-    
+
     .parent-tool,
     .child-tools,
     .sibling-tools {
       border-left-width: 3px;
       padding-left: map-get($spacers, 2);
-      
+
       h4 {
         font-size: 0.9rem;
         gap: map-get($spacers, 1);
-        
+
         svg {
           width: 14px;
           height: 14px;
@@ -1049,15 +1060,15 @@
 @media (prefers-contrast: high) {
   .related-tools-section {
     border-width: 3px;
-    
+
     .parent-tool,
     .child-tools,
     .sibling-tools {
       border-left-width: 6px;
-      
+
       .tool-link {
         border-width: 2px;
-        
+
         &:focus {
           outline-width: 4px;
         }
@@ -1071,7 +1082,7 @@
   .related-tools-section {
     .tool-link {
       transition: none;
-      
+
       &:hover,
       &:focus {
         transform: none;

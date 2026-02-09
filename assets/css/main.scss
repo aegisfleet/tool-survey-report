@@ -1,5 +1,4 @@
 ---
-# Main stylesheet
 ---
 
 // Import variables and mixins first
@@ -25,7 +24,8 @@
 // Import UI components
 @import "components";
 
-
+// Import theme system (CSS custom properties)
+@import "theme";
 
 // Custom styles for specific elements with new color scheme
 .highlight {
@@ -60,7 +60,6 @@
 
 // Print styles
 @media print {
-
   .site-header,
   .site-footer,
   .nav-toggle,
@@ -111,11 +110,8 @@
   }
 }
 
-// Light theme only - no dark mode support
-
 // Accessibility improvements
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -128,7 +124,6 @@
 
 // High contrast mode support
 @media (prefers-contrast: high) {
-
   .btn,
   .card,
   .alert {
@@ -165,8 +160,6 @@ html {
     scroll-behavior: auto;
   }
 }
-
-
 
 // Keyboard navigation improvements
 .keyboard-navigation {

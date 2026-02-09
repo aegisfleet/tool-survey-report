@@ -8,7 +8,7 @@
 html {
   font-family: $font-family-base, $font-family-japanese;
   line-height: $line-height-base;
-  background-color: $main-bg;
+  background-color: var(--color-bg-main);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -17,33 +17,72 @@ body {
   margin: 0;
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
-  color: $text-color;
-  background-color: $main-bg;
+  color: var(--color-text);
+  background-color: var(--color-bg-main);
 }
 
 // Typography
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: map-get($spacers, 3);
   font-weight: $font-weight-semibold;
   line-height: $line-height-sm;
-  color: $text-color;
+  color: var(--color-text);
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
 
 @include media-breakpoint-down(md) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
-  h4 { font-size: 1.25rem; }
-  h5 { font-size: 1.125rem; }
-  h6 { font-size: 1rem; }
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
 }
 
 p {
@@ -53,18 +92,18 @@ p {
 
 // Links - Improved accessibility
 a {
-  color: $link-color;
+  color: var(--color-link);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   transition: $transition-base;
-  
+
   &:hover,
   &:focus {
-    color: $link-hover;
+    color: var(--color-link-hover);
     text-decoration-thickness: 3px;
   }
-  
+
   &:focus {
     outline: 3px solid rgba($primary-color, 0.5);
     outline-offset: 2px;
@@ -79,7 +118,7 @@ mark,
   background: linear-gradient(180deg, transparent 60%, rgba($primary-color, 0.3) 60%);
   padding: 0 2px;
   border-radius: 2px;
-  color: $text-color;
+  color: var(--color-text);
   font-weight: $font-weight-medium;
 }
 
@@ -89,11 +128,12 @@ strong,
   font-weight: $font-weight-bold;
   background: linear-gradient(180deg, transparent 70%, rgba($primary-color, 0.4) 70%);
   padding: 0 1px;
-  color: $text-color;
+  color: var(--color-text);
 }
 
 // Lists
-ul, ol {
+ul,
+ol {
   margin-top: 0;
   margin-bottom: map-get($spacers, 3);
   padding-left: map-get($spacers, 4);
@@ -118,26 +158,28 @@ table {
   border-spacing: 0;
 }
 
-th, td {
+th,
+td {
   padding: map-get($spacers, 2) map-get($spacers, 3);
   text-align: left;
-  border-bottom: 1px solid $border-color;
+  border-bottom: 1px solid var(--color-border);
 }
 
 th {
   font-weight: $font-weight-semibold;
-  background-color: $light-gray;
+  background-color: var(--color-light-gray);
 }
 
 // Code
-code, pre {
+code,
+pre {
   font-family: $font-family-monospace;
   font-size: 0.875em;
 }
 
 code {
   padding: 0.125rem 0.25rem;
-  background-color: $light-gray;
+  background-color: var(--color-code-bg);
   border-radius: $border-radius-sm;
   color: $accent-color;
 }
@@ -147,11 +189,11 @@ pre {
   margin-top: 0;
   margin-bottom: map-get($spacers, 3);
   padding: map-get($spacers, 3);
-  background-color: $light-gray;
-  border: 1px solid $border-color;
+  background-color: var(--color-code-bg);
+  border: 1px solid var(--color-border);
   border-radius: $border-radius;
   overflow-x: auto;
-  
+
   code {
     padding: 0;
     background-color: transparent;
@@ -165,8 +207,8 @@ blockquote {
   margin: 0 0 map-get($spacers, 3);
   padding: map-get($spacers, 3) map-get($spacers, 4);
   border-left: 4px solid $secondary-color;
-  background-color: $light-gray;
-  
+  background-color: var(--color-light-gray);
+
   p:last-child {
     margin-bottom: 0;
   }
@@ -176,11 +218,14 @@ blockquote {
 hr {
   margin: map-get($spacers, 5) 0;
   border: 0;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid var(--color-border);
 }
 
 // Forms
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -203,7 +248,7 @@ button:focus {
 .container {
   @include make-container;
   @include make-container-max-widths;
-  
+
   @include media-breakpoint-down(sm) {
     padding-left: map-get($spacers, 3);
     padding-right: map-get($spacers, 3);
@@ -211,50 +256,111 @@ button:focus {
 }
 
 // Utility classes
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+  text-align: center;
+}
 
-.text-muted { color: $text-muted; }
-.text-primary { color: $primary-color; }
-.text-secondary { color: $secondary-color; }
+.text-left {
+  text-align: left;
+}
 
-.d-none { display: none; }
-.d-block { display: block; }
-.d-inline { display: inline; }
-.d-inline-block { display: inline-block; }
-.d-flex { display: flex; }
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-flex {
+  display: flex;
+}
 
 @each $breakpoint in map-keys($breakpoints) {
   @include media-breakpoint-up($breakpoint) {
-    $infix: if($breakpoint == xs, "", "-#{$breakpoint}");
-    
-    .d#{$infix}-none { display: none; }
-    .d#{$infix}-block { display: block; }
-    .d#{$infix}-inline { display: inline; }
-    .d#{$infix}-inline-block { display: inline-block; }
-    .d#{$infix}-flex { display: flex; }
+    $infix: if($breakpoint ==xs, "", "-#{$breakpoint}");
+
+    .d#{$infix}-none {
+      display: none;
+    }
+
+    .d#{$infix}-block {
+      display: block;
+    }
+
+    .d#{$infix}-inline {
+      display: inline;
+    }
+
+    .d#{$infix}-inline-block {
+      display: inline-block;
+    }
+
+    .d#{$infix}-flex {
+      display: flex;
+    }
   }
 }
 
 // Spacing utilities
 @each $prop, $abbrev in (margin: m, padding: p) {
   @each $size, $length in $spacers {
-    .#{$abbrev}-#{$size} { #{$prop}: $length; }
-    .#{$abbrev}t-#{$size} { #{$prop}-top: $length; }
-    .#{$abbrev}r-#{$size} { #{$prop}-right: $length; }
-    .#{$abbrev}b-#{$size} { #{$prop}-bottom: $length; }
-    .#{$abbrev}l-#{$size} { #{$prop}-left: $length; }
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length;
+    }
+
+    .#{$abbrev}t-#{$size} {
+      #{$prop}-top: $length;
+    }
+
+    .#{$abbrev}r-#{$size} {
+      #{$prop}-right: $length;
+    }
+
+    .#{$abbrev}b-#{$size} {
+      #{$prop}-bottom: $length;
+    }
+
+    .#{$abbrev}l-#{$size} {
+      #{$prop}-left: $length;
+    }
+
     .#{$abbrev}x-#{$size} {
       #{$prop}-right: $length;
       #{$prop}-left: $length;
     }
+
     .#{$abbrev}y-#{$size} {
       #{$prop}-top: $length;
       #{$prop}-bottom: $length;
     }
   }
 }
+
 // Accessibility improvements
 
 // High contrast mode support
@@ -262,7 +368,7 @@ button:focus {
   a {
     text-decoration-thickness: 3px;
   }
-  
+
   .btn {
     border-width: 3px;
   }
@@ -270,6 +376,7 @@ button:focus {
 
 // Reduced motion support
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

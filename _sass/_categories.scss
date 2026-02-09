@@ -40,8 +40,8 @@
 }
 
 .category-card {
-    background: $white;
-    border: 1px solid $border-light;
+    background: var(--color-bg-content);
+    border: 1px solid var(--color-border-light);
     border-radius: $border-radius-lg;
     padding: map-get($spacers, 4);
     box-shadow: $box-shadow-sm;
@@ -69,7 +69,7 @@
     font-weight: $font-weight-bold;
 
     a {
-        color: $text-color;
+        color: var(--color-text);
         text-decoration: none;
         transition: color 0.2s ease;
 
@@ -104,7 +104,7 @@
     }
 
     .report-link {
-        color: $text-color;
+        color: var(--color-text);
         text-decoration: none;
         font-weight: $font-weight-medium;
         transition: color 0.2s ease;
@@ -149,7 +149,7 @@
 .no-categories {
     text-align: center;
     padding: map-get($spacers, 6) 0;
-    color: $text-muted;
+    color: var(--color-text-muted);
     font-size: $font-size-lg;
 }
 
@@ -173,6 +173,12 @@
     align-items: center;
     gap: 0.25rem;
     cursor: pointer;
+    color: var(--color-text);
+    transition: $transition-base;
+
+    &:hover {
+        color: var(--color-link-hover);
+    }
 
     .dropdown-arrow {
         width: 12px;
@@ -193,8 +199,8 @@
         min-width: 280px;
         max-height: 400px;
         overflow-y: auto;
-        background: $white;
-        border: 1px solid $border-light;
+        background: var(--color-bg-content);
+        border: 1px solid var(--color-border-light);
         border-radius: $border-radius-lg;
         box-shadow: $box-shadow-lg;
         padding: map-get($spacers, 2) 0;
@@ -210,7 +216,7 @@
         }
 
         &::-webkit-scrollbar-track {
-            background: $light-gray;
+            background: var(--color-light-gray);
             border-radius: 4px;
         }
 
@@ -227,7 +233,7 @@
     @include media-breakpoint-down(lg) {
         display: none;
         padding-left: map-get($spacers, 3);
-        background: rgba($light-gray, 0.5);
+        background: rgba($light-gray, 0.1);
         margin: 0 (- map-get($spacers, 3));
         padding: map-get($spacers, 2) map-get($spacers, 4);
 
@@ -242,7 +248,7 @@
     justify-content: space-between;
     align-items: center;
     padding: map-get($spacers, 2) map-get($spacers, 4);
-    color: $text-color;
+    color: var(--color-text);
     text-decoration: none;
     transition: all 0.15s ease;
     border-left: 3px solid transparent;
@@ -255,8 +261,8 @@
 
     .dropdown-count {
         font-size: $font-size-xs;
-        color: $text-muted;
-        background: $light-gray;
+        color: var(--color-text-muted);
+        background: var(--color-light-gray);
         padding: 2px 8px;
         border-radius: 10px;
     }
@@ -276,9 +282,9 @@
     padding: map-get($spacers, 2) map-get($spacers, 4);
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
-    color: $text-muted;
-    background: $light-gray;
-    border-bottom: 1px solid $border-light;
+    color: var(--color-text-muted);
+    background: var(--color-light-gray);
+    border-bottom: 1px solid var(--color-border-light);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,6 +1,6 @@
 // Main layout structure
 .site-header {
-  background-color: $header-bg;
+  background-color: var(--color-bg-header);
   border-bottom: 3px solid $primary-color;
   box-shadow: $box-shadow-sm;
   position: sticky;
@@ -50,7 +50,7 @@
   white-space: nowrap; // Prevent wrapping
 
   a {
-    color: $text-color;
+    color: var(--color-text);
     text-decoration: none;
     background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
     padding: 2px 4px;
@@ -78,7 +78,7 @@
 .site-description {
   margin: map-get($spacers, 1) 0 0;
   font-size: $font-size-sm;
-  color: $text-muted;
+  color: var(--color-text-muted);
 
   @include media-breakpoint-down(lg) {
     margin-top: map-get($spacers, 2);
@@ -104,7 +104,7 @@
 .main-content {
   min-height: calc(100vh - 200px);
   padding: map-get($spacers, 5) 0;
-  background-color: $main-bg;
+  background-color: var(--color-bg-main);
 
   @include media-breakpoint-down(md) {
     padding: map-get($spacers, 4) 0;
@@ -112,7 +112,7 @@
 }
 
 .site-footer {
-  background: linear-gradient(135deg, $footer-bg 0%, darken($footer-bg, 10%) 100%);
+  background: linear-gradient(135deg, var(--color-bg-footer) 0%, #{darken($footer-bg, 10%)} 100%);
   color: $text-light;
   margin-top: auto;
   position: relative;
@@ -224,7 +224,7 @@
 .page-title {
   margin-bottom: map-get($spacers, 3);
   font-size: 2.5rem;
-  color: $text-color;
+  color: var(--color-text);
   background: linear-gradient(180deg, transparent 75%, rgba($primary-color, 0.3) 75%);
   display: inline-block;
   padding: 0 map-get($spacers, 2);
@@ -237,7 +237,7 @@
 
 .page-description {
   font-size: $font-size-lg;
-  color: $text-muted;
+  color: var(--color-text-muted);
   max-width: 600px;
   margin: 0 auto;
 }
