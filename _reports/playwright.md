@@ -65,6 +65,7 @@ relationships:
     - "Playwright Test Agents"
     - "Playwright CLI"
   related_tools:
+    - "CodeceptJS"
     - "Cypress"
     - "Selenium"
     - "Puppeteer"
