@@ -113,6 +113,15 @@ jobs:
                     continue
                   fi
                 fi
+
+                # PR作成済みかチェック (全モード共通)
+                # outputs配列内にpullRequestオブジェクトが含まれているか確認
+                HAS_PR=$(echo "$SESSION_DETAIL" | jq -r 'if (.outputs // []) | map(select(.pullRequest != null)) | length > 0 then "true" else "false" end' 2>/dev/null || echo "false")
+                
+                if [ "$HAS_PR" != "true" ]; then
+                  echo "  スキップ: $session_name (PR未作成)"
+                  continue
+                fi
                 
                 echo "  削除中: $session_name"
                 DELETE_RESPONSE=$(curl -s -X DELETE \
