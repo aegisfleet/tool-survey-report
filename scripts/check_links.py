@@ -9,6 +9,7 @@ try:
     HAS_PLAYWRIGHT = True
 except ImportError:
     HAS_PLAYWRIGHT = False
+    sync_playwright = None
     import urllib.request
     import urllib.error
     import socket
@@ -16,6 +17,11 @@ except ImportError:
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+}
+
+BROWSER_CONFIG = {
+    'viewport': {'width': 1280, 'height': 720},
+    'user_agent': HEADERS['User-Agent']
 }
 
 # Keywords indicating 404 pages
@@ -32,56 +38,65 @@ def find_links_in_file(filepath):
     return links
 
 
-def check_link_with_playwright(url):
+def check_link_with_playwright(url, browser_context=None):
     """Check link using Playwright browser for better accuracy."""
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            viewport={'width': 1280, 'height': 720},
-            user_agent=HEADERS['User-Agent']
-        )
-        page = context.new_page()
-        
+    if browser_context:
+        page = browser_context.new_page()
         try:
-            response = page.goto(url, wait_until='networkidle', timeout=30000)
-            status = response.status if response else 0
-            
-            # Wait extra time for JS to render
-            page.wait_for_timeout(3000)
-            
-            # Check page content for 404 indicators
+            return _check_link_logic(page, url)
+        finally:
+            page.close()
+    else:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(**BROWSER_CONFIG)
+            page = context.new_page()
             try:
-                body_text = page.inner_text('body').lower()
-                title_text = page.title().lower()
-                
-                has_404_keywords = any(kw in body_text or kw in title_text for kw in NOT_FOUND_KEYWORDS)
-                
-                # Check for bot detection pages (which should be treated as 403 warnings, not success)
-                is_bot_blocked = any(kw in body_text for kw in [
-                    'access blocked', 'access denied', 'you have been blocked',
-                    'unusual activity', 'security service', 'cloudflare'
-                ])
-                
-                # If status is 200/403 but page shows 404 content, it's a soft 404
-                if has_404_keywords and status != 404:
-                    return 404, "Soft 404 (page shows not found message)"
-                
-                # If bot blocked, return 403 with clear message
-                if is_bot_blocked:
-                    return 403, "Bot detection blocked (manual verification needed)"
-                    
-            except Exception as e:
-                pass
+                return _check_link_logic(page, url)
+            finally:
+                browser.close()
+
+
+def _check_link_logic(page, url):
+    """Internal logic to check a link using a Playwright page."""
+    try:
+        response = page.goto(url, wait_until='networkidle', timeout=30000)
+        status = response.status if response else 0
+
+        # Wait extra time for JS to render
+        page.wait_for_timeout(3000)
+        
+        # Check page content for 404 indicators
+        try:
+            body_text = page.inner_text('body').lower()
+            title_text = page.title().lower()
             
-            if status == 200:
-                return status, "OK"
-            else:
-                return status, f"HTTP {status}"
+            has_404_keywords = any(kw in body_text or kw in title_text for kw in NOT_FOUND_KEYWORDS)
+            
+            # Check for bot detection pages (which should be treated as 403 warnings, not success)
+            is_bot_blocked = any(kw in body_text for kw in [
+                'access blocked', 'access denied', 'you have been blocked',
+                'unusual activity', 'security service', 'cloudflare'
+            ])
+            
+            # If status is 200/403 but page shows 404 content, it's a soft 404
+            if has_404_keywords and status != 404:
+                return 404, "Soft 404 (page shows not found message)"
+
+            # If bot blocked, return 403 with clear message
+            if is_bot_blocked:
+                return 403, "Bot detection blocked (manual verification needed)"
                 
         except Exception as e:
-            return 0, str(e)
-        finally:
-            browser.close()
+            pass
+
+        if status == 200:
+            return status, "OK"
+        else:
+            return status, f"HTTP {status}"
+
+    except Exception as e:
+        return 0, str(e)
 
 
 def check_link_with_urllib(url):
@@ -110,10 +125,10 @@ def check_link_with_urllib(url):
         return 0, str(e)
 
 
-def check_link(url, use_browser=False):
+def check_link(url, use_browser=False, browser_context=None):
     """Check a single link."""
     if use_browser and HAS_PLAYWRIGHT:
-        return check_link_with_playwright(url)
+        return check_link_with_playwright(url, browser_context=browser_context)
     else:
         return check_link_with_urllib(url)
 
@@ -151,23 +166,14 @@ def main():
 
     print(f"\nChecking links in {len(files_to_check)} files...\n")
 
-    for filepath in files_to_check:
-        print(f"Checking {filepath}...")
-        links = find_links_in_file(filepath)
-        for url in links:
-            # Skip local links or anchors
-            if not url.startswith('http'):
-                continue
-
-            print(f"  Checking {url}...", end='', flush=True)
-            status, reason = check_link(url, use_browser=use_browser)
-            print(f" {status} {reason}")
-
-            if status == 404:
-                broken_links.append((filepath, url, status, reason))
-            elif status != 200:
-                # 403, 500, etc. might be temporary or anti-bot, but worth noting.
-                warnings.append((filepath, url, status, reason))
+    if use_browser and HAS_PLAYWRIGHT:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            context = browser.new_context(**BROWSER_CONFIG)
+            _process_files(files_to_check, use_browser, context, broken_links, warnings)
+            browser.close()
+    else:
+        _process_files(files_to_check, use_browser, None, broken_links, warnings)
 
     print("\n--- Report ---")
     if broken_links:
@@ -185,6 +191,27 @@ def main():
     else:
         print("\nNo broken links found.")
         sys.exit(0)
+
+
+def _process_files(files_to_check, use_browser, browser_context, broken_links, warnings):
+    """Process files and check links within them."""
+    for filepath in files_to_check:
+        print(f"Checking {filepath}...")
+        links = find_links_in_file(filepath)
+        for url in links:
+            # Skip local links or anchors
+            if not url.startswith('http'):
+                continue
+
+            print(f"  Checking {url}...", end='', flush=True)
+            status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context)
+            print(f" {status} {reason}")
+
+            if status == 404:
+                broken_links.append((filepath, url, status, reason))
+            elif status != 200:
+                # 403, 500, etc. might be temporary or anti-bot, but worth noting.
+                warnings.append((filepath, url, status, reason))
 
 if __name__ == "__main__":
     main()
