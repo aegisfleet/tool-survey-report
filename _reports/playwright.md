@@ -69,14 +69,9 @@ relationships:
     - "Cypress"
     - "Selenium"
     - "Puppeteer"
-    - "mabl"
-    - "Autify"
-    - "MagicPod"
-    - "Ranorex Studio"
-    - "Robot Framework"
     - "Appium"
-    - "Allure Report"
-    - "Gauge"
+    - "Robot Framework"
+    - "Cucumber"
 ---
 
 # **Playwright 調査レポート**
