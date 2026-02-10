@@ -32,6 +32,8 @@ jobs:
         uses: actions/github-script@v8
         env:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          REPORT_COUNT: ${{ github.event.inputs.report_count || '1' }}
+          TARGET_REPORT: ${{ github.event.inputs.target_report }}
         with:
           script: |
             const fs = require('fs');
@@ -89,7 +91,7 @@ jobs:
             }
 
             // target_report入力があるかどうか確認
-            const targetReportInput = '${{ github.event.inputs.target_report }}';
+            const targetReportInput = process.env.TARGET_REPORT;
             let targetReports = [];
 
             if (targetReportInput && targetReportInput.trim() !== '') {
@@ -139,7 +141,7 @@ jobs:
               }
             } else {
               // 更新日時が古い順にソートして上位N件を取得（inputパラメータで制御、デフォルト1）
-              const reportCount = parseInt('${{ github.event.inputs.report_count || '1' }}', 10);
+              const reportCount = parseInt(process.env.REPORT_COUNT, 10);
               targetReports = reportsWithDates
                 .sort((a, b) => a.lastUpdated - b.lastUpdated)
                 .slice(0, reportCount);
