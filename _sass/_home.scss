@@ -312,7 +312,7 @@
             transition: $transition-base;
 
             &::before {
-                content: '📁';
+                content: attr(data-emoji);
             }
 
             &.clickable-category {
@@ -675,6 +675,15 @@
 
         &.category {
             color: $secondary-color;
+
+            svg {
+                display: none;
+            }
+
+            &::before {
+                content: attr(data-emoji);
+                font-size: 1.1em;
+            }
 
             &.clickable-category {
                 cursor: pointer;

@@ -216,6 +216,97 @@ layout: default
     // フィルタ状態をsessionStorageに保存するキー
     const FILTER_STATE_KEY = 'homeFilterState';
 
+    // カテゴリごとの絵文字マッピングルール（上から順にマッチしたものが適用される）
+    const categoryEmojiRules = [
+      { keywords: ['ai', 'エージェント', '機械学習', 'ml', '生成'], emoji: '🤖' },
+      { keywords: ['テスト', 'qa', '品質'], emoji: '🧪' },
+      { keywords: ['開発者ツール', 'ide', 'エディタ', 'バージョン管理'], emoji: '🔧' },
+      { keywords: ['インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化'], emoji: '☁️' },
+      { keywords: ['web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
+      { keywords: ['モバイル', 'オペレーティングシステム'], emoji: '📱' },
+      { keywords: ['ワークフロー', '自動化'], emoji: '⚡' },
+      { keywords: ['デザイン', '動画', 'メディア'], emoji: '🎨' },
+      { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ'], emoji: '📋' },
+      { keywords: ['監視', 'セキュリティ', '認証', '脅威'], emoji: '🛡️' },
+      { keywords: ['bi', '広告', '顧客', 'マーケットプレイス', 'saas', '分析'], emoji: '📊' },
+      { keywords: ['勤怠', '人事', '労務'], emoji: '🏢' },
+      { keywords: ['ふるさと納税', '互換'], emoji: '🔹' },
+    ];
+
+    // カテゴリに対応する絵文字を取得するヘルパー関数（キーワード部分一致）
+    function getEmojiForCategory(category) {
+      if (!category) return '🔹';
+      const lowerCat = category.toLowerCase();
+
+      for (const rule of categoryEmojiRules) {
+        if (rule.keywords.some(kw => lowerCat.includes(kw))) {
+          return rule.emoji;
+        }
+      }
+      return '🔹';
+    }
+
+    // カテゴリ要素およびタイトルに絵文字を適用する関数
+    // カテゴリ要素およびタイトルに絵文字を適用する関数
+    function applyEmojisToCategories() {
+      // レポートカード
+      document.querySelectorAll('.report-card').forEach(card => {
+        const categoryEl = card.querySelector('.meta-item.category');
+        if (!categoryEl) return;
+
+        const category = categoryEl.textContent.trim();
+        const emoji = getEmojiForCategory(category);
+
+        // カテゴリ表示への絵文字付与
+        categoryEl.setAttribute('data-emoji', emoji);
+
+        // タイトルへの絵文字付与
+        const titleLink = card.querySelector('.report-title a');
+        if (titleLink) {
+          const currentTitle = titleLink.textContent.trim();
+          // シンプルに絵文字が含まれていない場合のみ付与
+          if (!currentTitle.includes(emoji)) {
+            titleLink.textContent = `${emoji} ${currentTitle}`;
+          }
+        }
+      });
+
+      // ピックアップカード
+      document.querySelectorAll('.pick-card').forEach(card => {
+        const categoryEl = card.querySelector('.pick-category');
+        if (!categoryEl) return;
+
+        // data-category または テキストから取得
+        const displayCategory = categoryEl.textContent.trim();
+        const emoji = getEmojiForCategory(displayCategory);
+
+        // カテゴリ表示への絵文字付与
+        categoryEl.setAttribute('data-emoji', emoji);
+
+        // タイトルへの絵文字付与
+        const titleEl = card.querySelector('.pick-title');
+        if (titleEl) {
+          const currentTitle = titleEl.textContent.trim();
+          if (!currentTitle.includes(emoji)) {
+            titleEl.textContent = `${emoji} ${currentTitle}`;
+          }
+        }
+      });
+    }
+
+    // カテゴリフィルタのオプションに絵文字を追加する関数
+    function updateCategoryFilterOptions() {
+      const options = categoryFilter.querySelectorAll('option');
+      options.forEach(option => {
+        if (option.value === '') return; // "すべてのカテゴリ" はスキップ
+        const category = categoryFilter.querySelector(`option[value="${option.value}"]`).textContent.trim().replace(/^[\p{Emoji}\s]+/u, ''); // 既存絵文字を除去して判定
+        const emoji = getEmojiForCategory(category);
+
+        // 常に最新の絵文字で上書き（キーワードルール変更に対応するため）
+        option.textContent = `${emoji} ${category}`;
+      });
+    }
+
     // フィルタ状態を保存する関数
     function saveFilterState() {
       const state = {
@@ -375,7 +466,14 @@ layout: default
       if (category) {
         // カテゴリ名を元の表記で取得（セレクトボックスのオプションテキストから）
         const categoryOption = categoryFilter.querySelector(`option[value="${category}"]`);
-        const originalCategoryName = categoryOption ? categoryOption.textContent : category;
+        // 絵文字が含まれている可能性があるので除去するか、元の値を使うロジックが必要だが
+        // ここでは simple に category value (slug) を使うわけにいかないので、
+        // option text から絵文字を除去して取得する
+        let originalCategoryName = category;
+        if (categoryOption) {
+          originalCategoryName = categoryOption.textContent.replace(/^[\p{Emoji}\s]+/u, '').trim();
+        }
+
         url.searchParams.set('category', originalCategoryName);
 
         // ページタイトルを更新
@@ -515,7 +613,8 @@ layout: default
       const shuffled = allReportCards
         .map(card => ({
           url: card.querySelector('a')?.href || '#',
-          title: card.querySelector('.report-title a')?.textContent?.trim() || 'Unknown',
+          // タイトルから既存の絵文字を除去して取得
+          title: card.querySelector('.report-title a')?.textContent?.replace(/^[\p{Emoji}\s]+/u, '').trim() || 'Unknown',
           category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
           score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
           hasFreePlan: !!card.querySelector('.card-free-badge'),
@@ -528,10 +627,19 @@ layout: default
       pickCards.forEach((card, index) => {
         if (shuffled[index]) {
           card.href = shuffled[index].url;
-          card.querySelector('.pick-title').textContent = shuffled[index].title;
+
+          // カテゴリと絵文字の決定
+          const category = shuffled[index].category;
+          const emoji = getEmojiForCategory(category);
+
+          // タイトル設定（絵文字付き）
+          card.querySelector('.pick-title').textContent = `${emoji} ${shuffled[index].title}`;
+
+          // カテゴリ設定
           const pc = card.querySelector('.pick-category');
-          pc.textContent = shuffled[index].category;
-          pc.dataset.category = (shuffled[index].category || '').toLowerCase();
+          pc.textContent = category;
+          pc.dataset.category = (category || '').toLowerCase();
+          pc.setAttribute('data-emoji', emoji);
 
           // メタコンテナを取得または作成
           let metaContainer = card.querySelector('.pick-meta');
@@ -574,6 +682,19 @@ layout: default
 
     // ページロード時にランダムシャッフル
     shuffleRandomPicks();
+
+    // 初期化処理（絵文字適用とフィルタ更新）
+    function initEmojiApplication() {
+      applyEmojisToCategories();
+      updateCategoryFilterOptions();
+    }
+
+    // DOMContentLoadedで実行（すでにDOMContentLoaded内のため即時実行とおなじだが、念のため）
+    initEmojiApplication();
+
+    // 画像読み込み完了など、少し遅れてレイアウトが変わる可能性も考慮し、
+    // window.onloadのタイミングでも再適用を試みる（既存チェックがあるため安全）
+    window.addEventListener('load', initEmojiApplication);
 
     // リフレッシュボタンのクリックイベント
     const refreshBtn = document.getElementById('refresh-picks');
