@@ -7,8 +7,9 @@ tool_reading: "ラノレックス スタジオ"
 category: "テスト/QA"
 developer: "Ranorex GmbH (Idera, Inc.)"
 official_site: "https://www.ranorex.com/"
+official_site_ja: "https://ranorex.techmatrix.jp/"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-02-10"
 tags:
   - "テスト自動化"
   - "GUIテスト"
@@ -17,7 +18,7 @@ tags:
   - "モバイル"
   - "E2Eテスト"
   - "RPA"
-description: "デスクトップ、Web、モバイルアプリケーション向けの堅牢なGUIテスト自動化ツール。ローコードとフルコードの両アプローチに対応し、高精度なオブジェクト認識を特徴とする。"
+description: "デスクトップ、Web、モバイルアプリケーション向けの堅牢なGUIテスト自動化ツール。ローコードとフルコードの両アプローチに対応し、高精度なオブジェクト認識を特徴とする。日本国内ではテクマトリックス株式会社が販売・サポートを提供。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
@@ -65,6 +66,7 @@ relationships:
 * **ツールの読み方**: ラノレックス スタジオ
 * **開発元**: Ranorex GmbH (Idera, Inc.の子会社)
 * **公式サイト**: [https://www.ranorex.com/](https://www.ranorex.com/)
+* **日本国内販売元**: テクマトリックス株式会社 [https://ranorex.techmatrix.jp/](https://ranorex.techmatrix.jp/)
 * **関連リンク**:
   * ドキュメント: [https://support.ranorex.com/hc/en-us](https://support.ranorex.com/hc/en-us)
   * レビューサイト: [G2](https://www.g2.com/products/ranorex-studio/reviews)
@@ -120,6 +122,7 @@ relationships:
 ## **7. 料金プラン**
 
 価格は公式サイトで公開されておらず、個別見積もりが必要です。ライセンスは買い切り型（Perpetual）とサブスクリプション型が提供されています。
+日本国内では、テクマトリックス株式会社から購入可能です。
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -141,6 +144,7 @@ relationships:
 * **ドキュメント**: [公式ドキュメントサイト](https://support.ranorex.com/hc/en-us)に詳細なユーザーガイド、チュートリアル、APIリファレンスが整備されています。
 * **コミュニティ**: [公式ユーザーフォーラム](https://www.ranorex.info/)があり、ユーザー同士での情報交換やRanorexのモデレーターからの回答を得られます。
 * **公式サポート**: 有効なメンテナンス契約を持つライセンス購入者は、メールやポータルを通じたテクニカルサポートを利用できます。
+* **日本国内サポート**: テクマトリックス株式会社より、日本語でのテクニカルサポート、トレーニング、導入支援サービスが提供されています。
 
 ## **10. エコシステムと連携**
 
