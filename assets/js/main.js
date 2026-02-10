@@ -1,6 +1,7 @@
-// Main JavaScript functionality
-document.addEventListener('DOMContentLoaded', function () {
-
+/**
+ * Initialize all site functionality
+ */
+function initAll() {
   // Theme toggle (run early to avoid flash)
   initThemeToggle();
 
@@ -19,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // Report content enhancements
   initReportEnhancements();
 
+  // Initialize accessibility enhancements
+  initAccessibilityEnhancements();
+
   // トップに戻るボタンの初期化
   initBackToTopButton();
 
@@ -27,7 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // スクロール連動ヘッダーの初期化
   initSmartHeader();
-});
+
+  // Initialize color contrast checker in development
+  checkColorContrast();
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initAll);
+} else {
+  initAll();
+}
 
 // Mobile navigation functionality
 function initMobileNavigation() {
@@ -672,12 +686,7 @@ function checkColorContrast() {
   }
 }
 
-// Initialize color contrast checker in development
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', checkColorContrast);
-} else {
-  checkColorContrast();
-}
+
 
 // Keyboard shortcuts for better navigation
 document.addEventListener('keydown', function (e) {
@@ -715,35 +724,6 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// Improve button and link accessibility
-document.addEventListener('DOMContentLoaded', function () {
-  // Add role and aria-label to buttons without text
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach(function (button) {
-    if (!button.textContent.trim() && !button.getAttribute('aria-label')) {
-      const icon = button.querySelector('svg, .icon');
-      if (icon) {
-        button.setAttribute('aria-label', 'ボタン');
-      }
-    }
-  });
-
-  // Ensure all interactive elements are keyboard accessible
-  const interactiveElements = document.querySelectorAll('.tag, .card-link, .dropdown-toggle');
-  interactiveElements.forEach(function (element) {
-    if (!element.getAttribute('tabindex') && element.tagName !== 'A' && element.tagName !== 'BUTTON') {
-      element.setAttribute('tabindex', '0');
-      element.setAttribute('role', 'button');
-
-      element.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          element.click();
-        }
-      });
-    }
-  });
-});
 
 // トップに戻るボタンの機能
 function initBackToTopButton() {
@@ -938,6 +918,38 @@ function initThemeToggle() {
     // 手動設定がない場合のみシステム設定に追従
     if (!getStoredTheme()) {
       applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+}
+
+/**
+ * Improve button and link accessibility
+ */
+function initAccessibilityEnhancements() {
+  // Add role and aria-label to buttons without text
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(function (button) {
+    if (!button.textContent.trim() && !button.getAttribute('aria-label')) {
+      const icon = button.querySelector('svg, .icon');
+      if (icon) {
+        button.setAttribute('aria-label', 'ボタン');
+      }
+    }
+  });
+
+  // Ensure all interactive elements are keyboard accessible
+  const interactiveElements = document.querySelectorAll('.tag, .card-link, .dropdown-toggle');
+  interactiveElements.forEach(function (element) {
+    if (!element.getAttribute('tabindex') && element.tagName !== 'A' && element.tagName !== 'BUTTON') {
+      element.setAttribute('tabindex', '0');
+      element.setAttribute('role', 'button');
+
+      element.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          element.click();
+        }
+      });
     }
   });
 }
