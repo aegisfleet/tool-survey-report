@@ -56,14 +56,9 @@ relationships:
     - "Playwright"
     - "PyTest"
     - "Cypress"
-    - "Ranorex Studio"
-    - "axe DevTools"
     - "Appium"
     - "Robot Framework"
-    - "mabl"
-    - "MagicPod"
-    - "Autify"
-    - "Allure Report"
+    - "Cucumber"
 ---
 
 # **Selenium 調査レポート**

@@ -60,6 +60,7 @@ relationships:
     - "Playwright"
     - "MagicPod"
     - "Mobile Next"
+    - "Cucumber"
 ---
 
 # **Appium 調査レポート**
