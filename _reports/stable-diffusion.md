@@ -55,6 +55,7 @@ relationships:
   parent: null
   children: []
   related_tools:
+    - "Seedance 2.0"
     - "Niji Journey"
     - "Hugging Face"
     - "ChatGPT"

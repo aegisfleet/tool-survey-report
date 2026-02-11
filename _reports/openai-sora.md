@@ -47,6 +47,7 @@ evaluation:
 relationships:
   parent: "ChatGPT"
   related_tools:
+    - "Seedance 2.0"
     - "Luma AI"
     - "Suno"
     - "ElevenLabs"
