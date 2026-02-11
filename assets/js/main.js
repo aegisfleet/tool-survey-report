@@ -456,6 +456,26 @@ function addCopyButtonsToCodeBlocks() {
 function enhanceTablesResponsiveness() {
   const tables = document.querySelectorAll('.report-content table');
 
+  // Shared scroll check logic
+  const checkScroll = (wrapper) => {
+    const isScrollable = wrapper.scrollWidth > wrapper.clientWidth;
+    // Check if scrolled to the end (approximate for cross-browser safety)
+    const isAtEnd = wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5;
+
+    if (isScrollable && !isAtEnd) {
+      wrapper.classList.add('has-scroll');
+    } else {
+      wrapper.classList.remove('has-scroll');
+    }
+  };
+
+  // Single ResizeObserver for all tables
+  const resizeObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      checkScroll(entry.target);
+    }
+  });
+
   tables.forEach(function (table) {
     // 1. セルの内容をdata-label属性にセット（カード表示用）
     const thead = table.querySelector('thead');
@@ -504,27 +524,23 @@ function enhanceTablesResponsiveness() {
       table.parentElement.insertBefore(wrapper, table);
       wrapper.appendChild(table);
 
-      // スクロールが必要かどうかを判定
-      const checkScroll = () => {
-        if (wrapper.scrollWidth > wrapper.clientWidth) {
-          wrapper.classList.add('has-scroll');
-        } else {
-          wrapper.classList.remove('has-scroll');
-        }
-      };
+      // Initial check
+      checkScroll(wrapper);
 
-      // 初期実行とリサイズ時に実行
-      checkScroll();
-      window.addEventListener('resize', checkScroll);
+      // Observe resize on wrapper
+      resizeObserver.observe(wrapper);
 
-      // スクロール時にも判定を更新（一番右まで行ったら影を消すなどの拡張が可能）
+      // Throttled scroll listener
+      let ticking = false;
       wrapper.addEventListener('scroll', function () {
-        if (wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5) {
-          wrapper.classList.remove('has-scroll');
-        } else {
-          wrapper.classList.add('has-scroll');
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            checkScroll(wrapper);
+            ticking = false;
+          });
+          ticking = true;
         }
-      });
+      }, { passive: true });
     }
   });
 }
