@@ -37,3 +37,4 @@ playwright_script.py
 screenshot*.png
 verification.png
 verify_*.png
+__pycache__/
