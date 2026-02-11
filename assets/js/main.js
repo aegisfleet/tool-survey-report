@@ -32,6 +32,9 @@ function initAll() {
   // スクロール連動ヘッダーの初期化
   initSmartHeader();
 
+  // Initialize keyboard shortcuts
+  initKeyboardShortcuts();
+
   // Initialize color contrast checker in development
   checkColorContrast();
 }
@@ -689,40 +692,42 @@ function checkColorContrast() {
 
 
 // Keyboard shortcuts for better navigation
-document.addEventListener('keydown', function (e) {
-  // Alt + M: Focus main content
-  if (e.altKey && e.key === 'm') {
-    e.preventDefault();
-    const mainContent = document.getElementById('main-content');
-    if (mainContent) {
-      mainContent.focus();
-      announceToScreenReader('メインコンテンツにフォーカスしました');
-    }
-  }
-
-  // Alt + N: Focus navigation
-  if (e.altKey && e.key === 'n') {
-    e.preventDefault();
-    const navigation = document.querySelector('.main-navigation');
-    if (navigation) {
-      const firstLink = navigation.querySelector('a, button');
-      if (firstLink) {
-        firstLink.focus();
-        announceToScreenReader('ナビゲーションにフォーカスしました');
+function initKeyboardShortcuts() {
+  document.addEventListener('keydown', function (e) {
+    // Alt + M: Focus main content
+    if (e.altKey && e.key === 'm') {
+      e.preventDefault();
+      const mainContent = document.getElementById('main-content');
+      if (mainContent) {
+        mainContent.focus();
+        announceToScreenReader('メインコンテンツにフォーカスしました');
       }
     }
-  }
 
-  // Alt + S: Focus search
-  if (e.altKey && e.key === 's') {
-    e.preventDefault();
-    const searchInput = document.querySelector('.search-input, #search-input');
-    if (searchInput) {
-      searchInput.focus();
-      announceToScreenReader('検索フィールドにフォーカスしました');
+    // Alt + N: Focus navigation
+    if (e.altKey && e.key === 'n') {
+      e.preventDefault();
+      const navigation = document.querySelector('.main-navigation');
+      if (navigation) {
+        const firstLink = navigation.querySelector('a, button');
+        if (firstLink) {
+          firstLink.focus();
+          announceToScreenReader('ナビゲーションにフォーカスしました');
+        }
+      }
     }
-  }
-});
+
+    // Alt + S: Focus search
+    if (e.altKey && e.key === 's') {
+      e.preventDefault();
+      const searchInput = document.querySelector('.search-input, #search-input');
+      if (searchInput) {
+        searchInput.focus();
+        announceToScreenReader('検索フィールドにフォーカスしました');
+      }
+    }
+  });
+}
 
 
 // トップに戻るボタンの機能
