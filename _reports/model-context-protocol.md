@@ -53,6 +53,7 @@ relationships:
     - "Cline"
     - "Agent Skills"
     - "UI-TARS Desktop"
+    - "Mobile Next"
 ---
 
 # **Model Context Protocol (MCP) 調査レポート**

@@ -64,6 +64,7 @@ relationships:
     - "IntelliJ IDEA"
     - "Android Studio"
     - "Claude Code"
+    - "Mobile Next"
 ---
 
 # **Cursor 調査レポート**
