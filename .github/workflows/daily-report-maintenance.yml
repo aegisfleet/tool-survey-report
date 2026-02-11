@@ -91,6 +91,7 @@ jobs:
             }
 
             // target_report入力があるかどうか確認
+            // SECURITY: Use process.env to prevent script injection via github.event.inputs.target_report
             const targetReportInput = process.env.TARGET_REPORT;
             let targetReports = [];
 
