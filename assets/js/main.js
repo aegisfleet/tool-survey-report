@@ -983,26 +983,39 @@ function initSmartHeader() {
   let lastScrollTop = 0;
   const delta = 10;
   const headerHeight = header.offsetHeight;
+  let ticking = false;
 
   window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    // Ignore bounce scrolling
-    if (scrollTop < 0) return;
+        // Ignore bounce scrolling
+        if (scrollTop < 0) {
+          ticking = false;
+          return;
+        }
 
-    // Check if scroll is significant
-    if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
+        // Check if scroll is significant
+        if (Math.abs(lastScrollTop - scrollTop) <= delta) {
+          ticking = false;
+          return;
+        }
 
-    // Scroll Down -> Hide
-    // Scroll Up -> Show
-    if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
-      header.classList.add('header-hidden');
-      // Dropdownを閉じる処理も入れた方が親切かも？
-      // ただし、スクロールしてる時点でマウスは外れていることが多い
-    } else {
-      header.classList.remove('header-hidden');
+        // Scroll Down -> Hide
+        // Scroll Up -> Show
+        if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+          header.classList.add('header-hidden');
+          // Dropdownを閉じる処理も入れた方が親切かも？
+          // ただし、スクロールしてる時点でマウスは外れていることが多い
+        } else {
+          header.classList.remove('header-hidden');
+        }
+
+        lastScrollTop = scrollTop;
+        ticking = false;
+      });
+      ticking = true;
     }
-
-    lastScrollTop = scrollTop;
   }, { passive: true });
 }
