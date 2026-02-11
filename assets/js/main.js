@@ -780,15 +780,48 @@ function initBackToTopButton() {
   function scrollToTop() {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // スマートヘッダーとの干渉を防止:
+    isScrollingToTop = true;
+
+    const header = document.querySelector('.site-header');
+    if (header) {
+      header.classList.remove('header-hidden');
+      // トランジションを一時的に無効化して即時適用
+      header.style.transition = 'none';
+
+      // レイアウト再計算を強制（オプショナルだが念のため）
+      void header.offsetHeight;
+    }
+
     if (prefersReducedMotion) {
-      // アニメーション無効化設定の場合は即座にトップへ
       window.scrollTo(0, 0);
+      isScrollingToTop = false;
+      if (header) header.style.transition = '';
     } else {
-      // スムーズスクロール
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+      // DOM更新が確実に適用されてからスクロール開始
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
       });
+
+      // Safety check & Cleanup
+      const checkIfScrollFinished = setInterval(() => {
+        // トップに到達したかチェック（マージンを少し持たせる）
+        if (window.pageYOffset < 1) {
+          isScrollingToTop = false;
+          if (header) header.style.transition = '';
+          clearInterval(checkIfScrollFinished);
+        }
+      }, 100);
+
+      // Force reset after 2 seconds
+      setTimeout(() => {
+        isScrollingToTop = false;
+        if (header) header.style.transition = '';
+        if (checkIfScrollFinished) clearInterval(checkIfScrollFinished);
+      }, 2000);
     }
 
     // フォーカスをページトップの適切な要素に移動
@@ -975,6 +1008,9 @@ function initAccessibilityEnhancements() {
   });
 }
 
+// Global variable to track scroll state
+let isScrollingToTop = false;
+
 // Smart Header functionality
 function initSmartHeader() {
   const header = document.querySelector('.site-header');
@@ -985,9 +1021,12 @@ function initSmartHeader() {
   const headerHeight = header.offsetHeight;
   let ticking = false;
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
+    // Skip logic immediately during auto-scroll to top
+    if (isScrollingToTop) return;
+
     if (!ticking) {
-      window.requestAnimationFrame(function() {
+      window.requestAnimationFrame(function () {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
         // Ignore bounce scrolling
@@ -1006,8 +1045,6 @@ function initSmartHeader() {
         // Scroll Up -> Show
         if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
           header.classList.add('header-hidden');
-          // Dropdownを閉じる処理も入れた方が親切かも？
-          // ただし、スクロールしてる時点でマウスは外れていることが多い
         } else {
           header.classList.remove('header-hidden');
         }
