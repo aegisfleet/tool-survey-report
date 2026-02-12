@@ -65,6 +65,7 @@ relationships:
     - "Microsoft 365 Copilot"
     - "さくらのAI"
     - "Strands Agents"
+    - "Amazon OpenSearch Service"
 ---
 
 # **Amazon Bedrock 調査レポート**
