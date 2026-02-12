@@ -57,6 +57,7 @@ links:
   documentation: "https://docs.datadoghq.com/"
 relationships:
   related_tools:
+    - "Kibana"
     - "Splunk"
     - "Splunk AppDynamics"
     - "New Relic"

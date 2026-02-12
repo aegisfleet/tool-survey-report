@@ -54,6 +54,7 @@ links:
   documentation: "https://grafana.com/docs/grafana/latest/"
 relationships:
   related_tools:
+    - "Kibana"
     - "Datadog"
     - "Splunk"
     - "Splunk AppDynamics"

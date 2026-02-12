@@ -56,6 +56,7 @@ relationships:
   children:
     - "Splunk AppDynamics"
   related_tools:
+    - "Kibana"
     - "Datadog"
     - "sumo-logic"
     - "Grafana"
