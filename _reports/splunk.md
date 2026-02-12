@@ -60,6 +60,7 @@ relationships:
     - "Datadog"
     - "sumo-logic"
     - "Grafana"
+    - "Amazon OpenSearch Service"
 ---
 
 # **Splunk 調査レポート**

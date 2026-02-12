@@ -58,6 +58,7 @@ relationships:
     - "Grafana"
     - "Splunk"
     - "Datadog"
+    - "Amazon OpenSearch Service"
 ---
 
 # **Kibana 調査レポート**

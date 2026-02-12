@@ -62,6 +62,7 @@ relationships:
     - "Splunk AppDynamics"
     - "New Relic"
     - "Grafana"
+    - "Amazon OpenSearch Service"
 ---
 
 # **Datadog 調査レポート**
