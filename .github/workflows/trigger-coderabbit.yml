@@ -1,0 +1,21 @@
+name: Trigger CodeRabbit for Jules
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  trigger:
+    if: startsWith(github.actor, 'google-labs-jules')
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '@coderabbitai review'
+            })
