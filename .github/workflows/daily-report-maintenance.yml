@@ -96,7 +96,9 @@ jobs:
             let targetReports = [];
 
             if (targetReportInput && targetReportInput.trim() !== '') {
-              core.info(`Target report specified: "${targetReportInput}"`);
+              // Sanitize input for logging to prevent log injection
+              const safeTargetReportInput = targetReportInput.replace(/[\r\n]+/g, ' ');
+              core.info(`Target report specified: "${safeTargetReportInput}"`);
               const targetInput = targetReportInput.trim();
               const lowerTargetInput = targetInput.toLowerCase();
 
@@ -146,7 +148,9 @@ jobs:
               // This prevents malicious input from breaking out of the script context.
               let reportCount = parseInt(process.env.REPORT_COUNT, 10);
               if (isNaN(reportCount) || reportCount < 1) {
-                core.warning(`Invalid report_count "${process.env.REPORT_COUNT}", defaulting to 1`);
+                // Sanitize input for logging
+                const safeReportCount = (process.env.REPORT_COUNT || '').replace(/[\r\n]+/g, ' ');
+                core.warning(`Invalid report_count "${safeReportCount}", defaulting to 1`);
                 reportCount = 1;
               }
               targetReports = reportsWithDates
