@@ -212,6 +212,8 @@ function showSearchSuggestions(searchTerm, inputElement) {
   );
 
   if (exampleSuggestions.length > 0) {
+    const fragment = document.createDocumentFragment();
+
     exampleSuggestions.forEach(function (suggestion) {
       const item = document.createElement('div');
       item.className = 'search-suggestion-item';
@@ -235,8 +237,10 @@ function showSearchSuggestions(searchTerm, inputElement) {
         item.style.backgroundColor = '';
       });
 
-      suggestions.appendChild(item);
+      fragment.appendChild(item);
     });
+
+    suggestions.appendChild(fragment);
 
     // Position relative to input
     const form = inputElement.closest('.search-form');
