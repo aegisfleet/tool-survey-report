@@ -92,6 +92,7 @@ jobs:
 
             // target_report入力があるかどうか確認
             // SECURITY: Use process.env to prevent script injection via github.event.inputs.target_report
+            // Verified by tests/test_workflow_security.js
             const targetReportInput = process.env.TARGET_REPORT;
             let targetReports = [];
 
@@ -144,6 +145,7 @@ jobs:
               // 更新日時が古い順にソートして上位N件を取得（inputパラメータで制御、デフォルト1）
               // SECURITY: Use process.env to prevent script injection.
               // This prevents malicious input from breaking out of the script context.
+              // Verified by tests/test_workflow_security.js
               let reportCount = parseInt(process.env.REPORT_COUNT, 10);
               if (isNaN(reportCount) || reportCount < 1) {
                 core.warning(`Invalid report_count "${process.env.REPORT_COUNT}", defaulting to 1`);
