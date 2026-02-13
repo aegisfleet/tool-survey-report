@@ -51,6 +51,7 @@ links:
 relationships:
   parent: "Devin"
   related_tools:
+    - "Code Wiki"
     - "DeepWiki-Open"
     - "Greptile"
     - "Sourcegraph"

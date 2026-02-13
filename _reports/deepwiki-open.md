@@ -59,6 +59,7 @@ links:
 relationships:
   related_tools:
     - "DeepWiki"
+    - "Code Wiki"
 ---
 
 # **DeepWiki-Open 調査レポート**

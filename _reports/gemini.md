@@ -50,6 +50,7 @@ relationships:
     - "Google Antigravity"
     - "Google Jules"
     - "NotebookLM"
+    - "Code Wiki"
   related_tools:
     - "ChatGPT"
     - "Claude"
