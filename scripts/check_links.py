@@ -2,6 +2,7 @@ import os
 import re
 import argparse
 import sys
+import atexit
 
 # Check for playwright availability
 try:
@@ -30,6 +31,48 @@ NOT_FOUND_KEYWORDS = [
     "couldn't find", 'ページが見つかりません', 'could not be found'
 ]
 
+# Global Playwright instances
+_PLAYWRIGHT = None
+_BROWSER = None
+_CONTEXT = None
+
+def _get_global_context():
+    """Lazily initialize and return the global Playwright context."""
+    global _PLAYWRIGHT, _BROWSER, _CONTEXT
+
+    if _CONTEXT:
+        return _CONTEXT
+
+    if HAS_PLAYWRIGHT:
+        if not _PLAYWRIGHT:
+            _PLAYWRIGHT = sync_playwright().start()
+
+        if not _BROWSER:
+            _BROWSER = _PLAYWRIGHT.chromium.launch(headless=True)
+
+        if not _CONTEXT:
+            _CONTEXT = _BROWSER.new_context(**BROWSER_CONFIG)
+
+    return _CONTEXT
+
+def _cleanup_global_context():
+    """Cleanup global Playwright resources."""
+    global _PLAYWRIGHT, _BROWSER, _CONTEXT
+
+    if _CONTEXT:
+        _CONTEXT.close()
+        _CONTEXT = None
+
+    if _BROWSER:
+        _BROWSER.close()
+        _BROWSER = None
+
+    if _PLAYWRIGHT:
+        _PLAYWRIGHT.stop()
+        _PLAYWRIGHT = None
+
+atexit.register(_cleanup_global_context)
+
 def find_links_in_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -40,21 +83,17 @@ def find_links_in_file(filepath):
 
 def check_link_with_playwright(url, browser_context=None):
     """Check link using Playwright browser for better accuracy."""
-    if browser_context:
-        page = browser_context.new_page()
-        try:
-            return _check_link_logic(page, url)
-        finally:
-            page.close()
-    else:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            context = browser.new_context(**BROWSER_CONFIG)
-            page = context.new_page()
-            try:
-                return _check_link_logic(page, url)
-            finally:
-                browser.close()
+    # Use provided context or fall back to global singleton
+    context = browser_context or _get_global_context()
+
+    if not context:
+        return 0, "Playwright context not available"
+
+    page = context.new_page()
+    try:
+        return _check_link_logic(page, url)
+    finally:
+        page.close()
 
 
 def _check_link_logic(page, url):
@@ -166,14 +205,8 @@ def main():
 
     print(f"\nChecking links in {len(files_to_check)} files...\n")
 
-    if use_browser and HAS_PLAYWRIGHT:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            context = browser.new_context(**BROWSER_CONFIG)
-            _process_files(files_to_check, use_browser, context, broken_links, warnings)
-            browser.close()
-    else:
-        _process_files(files_to_check, use_browser, None, broken_links, warnings)
+    # Process files (context is managed globally if needed)
+    _process_files(files_to_check, use_browser, None, broken_links, warnings)
 
     print("\n--- Report ---")
     if broken_links:
