@@ -176,7 +176,7 @@
 .random-picks {
     @include card(map-get($spacers, 5));
     margin-bottom: map-get($spacers, 5);
-    background: $gradient-primary;
+    background: linear-gradient(135deg, darken(#ff7733, 30%) 0%, darken(#ff5566, 30%) 100%);
     position: relative;
     overflow: hidden;
 
