@@ -57,6 +57,7 @@ relationships:
   children:
     - "Affinity"
   related_tools:
+    - "Apple Creator Studio"
     - "Qwen-Image-Layered"
     - "Figma"
     - "Adobe Creative Cloud"
