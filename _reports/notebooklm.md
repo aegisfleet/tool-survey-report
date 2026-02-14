@@ -52,7 +52,7 @@ evaluation:
 links:
   documentation: "https://notebooklm.google.com/"
 relationships:
-  parent: "Google Gemini"
+  parent: "Gemini"
   children: []
   related_tools:
     - "ChatGPT"
