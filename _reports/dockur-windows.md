@@ -2,7 +2,7 @@
 title: "dockur/windows 調査レポート"
 tool_name: "dockur/windows"
 tool_reading: "ドッカー・ウィンドウズ"
-category: "開発環境 / 仮想化"
+category: "開発者ツール"
 developer: "dockur"
 official_site: "https://github.com/dockur/windows"
 date: "2026-02-05"
@@ -11,8 +11,8 @@ tags:
   - "Docker"
   - "Windows"
   - "KVM"
-  - "仮想化"
-  - "OSS"
+  - "コンテナ"
+  - "オープンソース"
 description: "Dockerコンテナ内でWindowsを動作させるためのツール。KVMアクセラレーションを利用し、ISOのダウンロードからインストールまでを全自動で行う。"
 
 quick_summary:
@@ -48,7 +48,8 @@ evaluation:
 links:
   github: "https://github.com/dockur/windows"
 relationships:
-  parent: "Docker"
+  related_tools:
+    - "Docker"
 ---
 
 # **dockur/windows 調査レポート**
@@ -62,7 +63,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/dockur/windows](https://github.com/dockur/windows)
   * Docker Hub: [https://hub.docker.com/r/dockurr/windows](https://hub.docker.com/r/dockurr/windows)
-* **カテゴリ**: 開発環境 / 仮想化
+* **カテゴリ**: 開発者ツール
 * **概要**: dockur/windowsは、Dockerコンテナ内でWindows OSを実行するためのオープンソースツールです。QEMUとKVM技術をバックエンドに使用し、ISOイメージのダウンロードからWindowsのインストール、初期設定までを自動化します。
 
 ## **2. 目的と主な利用シーン**
