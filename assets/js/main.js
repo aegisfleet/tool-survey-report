@@ -154,6 +154,9 @@ function initSearchFunctionality() {
       });
 
       // Real-time search suggestions (basic implementation)
+      // Inject styles once
+      injectSearchStyles();
+
       let searchTimeout;
       searchInput.addEventListener('input', function () {
         clearTimeout(searchTimeout);
@@ -168,6 +171,35 @@ function initSearchFunctionality() {
       });
     }
   });
+}
+
+// Inject styles for search suggestions
+function injectSearchStyles() {
+  if (document.getElementById('search-suggestion-styles')) return;
+
+  const style = document.createElement('style');
+  style.id = 'search-suggestion-styles';
+  style.textContent = `
+    .search-suggestion-item {
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      border-bottom: 1px solid #f8f9fa;
+    }
+    .search-suggestion-item:hover {
+      background-color: #f8f9fa;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+// Escape HTML special characters
+function escapeHtml(text) {
+  return String(text ?? '')
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 
 // Simple client-side search
@@ -212,35 +244,25 @@ function showSearchSuggestions(searchTerm, inputElement) {
   );
 
   if (exampleSuggestions.length > 0) {
-    const fragment = document.createDocumentFragment();
+    // Build HTML string for better performance
+    const suggestionsHtml = exampleSuggestions.map(function(suggestion) {
+      const safeSuggestion = escapeHtml(suggestion);
+      // Store the suggestion value in a data attribute for retrieval
+      return '<div class="search-suggestion-item" data-value="' + safeSuggestion + '">' + safeSuggestion + '</div>';
+    }).join('');
 
-    exampleSuggestions.forEach(function (suggestion) {
-      const item = document.createElement('div');
-      item.className = 'search-suggestion-item';
-      item.style.cssText = `
-        padding: 0.5rem 0.75rem;
-        cursor: pointer;
-        border-bottom: 1px solid #f8f9fa;
-      `;
-      item.textContent = suggestion;
+    suggestions.innerHTML = suggestionsHtml;
 
-      item.addEventListener('click', function () {
+    // Add event delegation for click handling
+    // Note: Since suggestions element is recreated on each call, this listener does not accumulate
+    suggestions.addEventListener('click', function(e) {
+      const item = e.target.closest('.search-suggestion-item');
+      if (item) {
+        const suggestion = item.textContent;
         inputElement.value = suggestion;
         performSearch(suggestion);
-      });
-
-      item.addEventListener('mouseenter', function () {
-        item.style.backgroundColor = '#f8f9fa';
-      });
-
-      item.addEventListener('mouseleave', function () {
-        item.style.backgroundColor = '';
-      });
-
-      fragment.appendChild(item);
+      }
     });
-
-    suggestions.appendChild(fragment);
 
     // Position relative to input
     const form = inputElement.closest('.search-form');
