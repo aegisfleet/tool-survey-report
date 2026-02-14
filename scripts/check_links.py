@@ -81,19 +81,23 @@ def find_links_in_file(filepath):
     return links
 
 
-def check_link_with_playwright(url, browser_context=None):
+def check_link_with_playwright(url, browser_context=None, page=None):
     """Check link using Playwright browser for better accuracy."""
+    # Use provided page if available
+    if page:
+        return _check_link_logic(page, url)
+
     # Use provided context or fall back to global singleton
     context = browser_context or _get_global_context()
 
     if not context:
         return 0, "Playwright context not available"
 
-    page = context.new_page()
+    new_page = context.new_page()
     try:
-        return _check_link_logic(page, url)
+        return _check_link_logic(new_page, url)
     finally:
-        page.close()
+        new_page.close()
 
 
 def _check_link_logic(page, url):
@@ -102,9 +106,6 @@ def _check_link_logic(page, url):
         response = page.goto(url, wait_until='networkidle', timeout=30000)
         status = response.status if response else 0
 
-        # Wait extra time for JS to render
-        page.wait_for_timeout(3000)
-        
         # Check page content for 404 indicators
         try:
             body_text = page.inner_text('body').lower()
@@ -164,10 +165,10 @@ def check_link_with_urllib(url):
         return 0, str(e)
 
 
-def check_link(url, use_browser=False, browser_context=None):
+def check_link(url, use_browser=False, browser_context=None, page=None):
     """Check a single link."""
     if use_browser and HAS_PLAYWRIGHT:
-        return check_link_with_playwright(url, browser_context=browser_context)
+        return check_link_with_playwright(url, browser_context=browser_context, page=page)
     else:
         return check_link_with_urllib(url)
 
@@ -228,23 +229,32 @@ def main():
 
 def _process_files(files_to_check, use_browser, browser_context, broken_links, warnings):
     """Process files and check links within them."""
-    for filepath in files_to_check:
-        print(f"Checking {filepath}...")
-        links = find_links_in_file(filepath)
-        for url in links:
-            # Skip local links or anchors
-            if not url.startswith('http'):
-                continue
+    page = None
+    if use_browser and HAS_PLAYWRIGHT:
+        context = browser_context or _get_global_context()
+        if context:
+            page = context.new_page()
 
-            print(f"  Checking {url}...", end='', flush=True)
-            status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context)
-            print(f" {status} {reason}")
+    try:
+        for filepath in files_to_check:
+            print(f"Checking {filepath}...")
+            links = find_links_in_file(filepath)
+            for url in links:
+                # Skip local links or anchors
+                if not url.startswith('http'):
+                    continue
 
-            if status == 404:
-                broken_links.append((filepath, url, status, reason))
-            elif status != 200:
-                # 403, 500, etc. might be temporary or anti-bot, but worth noting.
-                warnings.append((filepath, url, status, reason))
+                print(f"  Checking {url}...", end='', flush=True)
+                status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context, page=page)
+                print(f" {status} {reason}")
+
+                if status == 404:
+                    broken_links.append((filepath, url, status, reason))
+                elif status != 200:
+                    warnings.append((filepath, url, status, reason))
+    finally:
+        if page:
+            page.close()
 
 if __name__ == "__main__":
     main()
