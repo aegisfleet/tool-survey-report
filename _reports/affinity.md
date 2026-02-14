@@ -52,6 +52,7 @@ relationships:
   parent: "Canva"
   children: []
   related_tools:
+    - "Apple Creator Studio"
     - "Figma"
     - "GIMP"
 ---
