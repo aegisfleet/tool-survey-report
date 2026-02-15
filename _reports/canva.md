@@ -60,7 +60,7 @@ relationships:
     - "Apple Creator Studio"
     - "Qwen-Image-Layered"
     - "Figma"
-    - "Adobe Creative Cloud"
+    - "GIMP"
     - "Microsoft Designer"
     - "Gamma"
     - "Miro"
