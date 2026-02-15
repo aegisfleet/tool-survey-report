@@ -58,6 +58,7 @@ relationships:
   related_tools:
     - "Android"
     - "Flutter"
+    - "Kotlin Multiplatform"
     - "Visual Studio Code"
     - "Mobile Next"
     - "Delphi"
