@@ -63,6 +63,7 @@ relationships:
     - "Eclipse IDE"
     - "Spring Boot"
     - "Flutter"
+    - "Kotlin Multiplatform"
 ---
 
 # **IntelliJ IDEA 調査レポート**
