@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home-container" data-site-title="{{ site.title }}">
+<div class="home-container" data-site-title="{{ site.title | escape }}">
   <section class="home-hero">
     <div class="hero-image">
       <img src="{{ '/assets/images/default-ogp.png' | relative_url }}" alt="{{ site.title }}" class="ogp-image">
