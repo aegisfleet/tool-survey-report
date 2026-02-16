@@ -8,14 +8,13 @@ category: "AIコーディング支援"
 developer: "GitHub (Microsoft)"
 official_site: "https://github.com/features/copilot"
 date: "2026-01-17"
-last_updated: "2026-01-17"
+last_updated: "2026-02-16"
 tags:
   - "AI"
   - "コーディング支援"
   - "開発者ツール"
-  - "生成AI"
   - "エージェント"
-  - "CLI"
+  - "生成AI"
 description: "GitHub Copilotは、GPT-5やClaude 4.5などの最新モデルを搭載し、IDEやCLIでコーディング全般を支援するAIペアプログラマーです。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -200,9 +199,9 @@ relationships:
 * **2026-01-06**: **Gemini 3 Flash 対応**: 高速かつ低コストなGemini 3 Flashモデルが各IDEで利用可能に。(出典: [GitHub Changelog](https://github.blog/changelog))
 * **2025-11-XX**: **Copilot Edits**: 複数ファイル同時編集機能がリリースされ、Cursor Composerに対抗。(出典: [GitHub Blog](https://github.blog))
 
-## **15. 類似ツールとの比較**
+## **16. 類似ツールとの比較**
 
-### **15.1 機能比較表 (星取表)**
+### **16.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | 本ツール (Copilot) | Cursor | GitLab Duo | Amazon Q |
 |:---:|:---|:---:|:---:|:---:|:---:|
@@ -212,7 +211,7 @@ relationships:
 | **プラットフォーム** | IDE統合 | ◎<br><small>VS Code, JB, VS, Xcode等</small> | ◎<br><small>VS Codeフォーク (独自)</small> | ◯<br><small>VS Code, JB, GitLab Web</small> | ◯<br><small>VS Code, JB, AWS Console</small> |
 | **非機能要件** | 無料プラン | ◎<br><small>あり</small> | ◎<br><small>あり</small> | ×<br><small>なし (Entのみ)</small> | ◎<br><small>あり</small> |
 
-### **15.2 詳細比較**
+### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -221,7 +220,7 @@ relationships:
 | **GitLab Duo** | GitLabのDevSecOpsプラットフォームに統合されたAI。 | セキュリティスキャンやGitLabのイシュートラッキングとの連携。 | 個人向けプランがなく、GitLab Enterpriseユーザー限定。モデル選択肢は少なめ。 | GitLabをメインのDevOps基盤として利用している企業。 |
 | **Amazon Q Developer** | AWS環境に特化したAIアシスタント。 | AWSリソースの知識、コンソールでの利用、AWS CDK等の生成に強い。 | AWS以外の汎用的な開発ではCopilot/Cursorに劣る場合がある。 | AWSを中心としたクラウドネイティブ開発を行うチーム。 |
 
-## **16. 総評**
+## **17. 総評**
 
 * **総合的な評価**:
   * GitHub Copilotは、2026年現在において最も包括的かつ先進的なAIコーディングアシスタントです。GPT-5やClaude 4.5といった最高峰のモデルを自由に選択できる点、IDEだけでなくCLIやGitHub Web UIまでカバーする範囲の広さ、そして「Copilot Edits」によるマルチファイル編集能力は、開発者の生産性を新たな次元に引き上げます。
