@@ -510,21 +510,47 @@ function enhanceTablesResponsiveness() {
 
   // Shared scroll check logic
   const checkScroll = (wrapper) => {
-    const isScrollable = wrapper.scrollWidth > wrapper.clientWidth;
-    // Check if scrolled to the end (approximate for cross-browser safety)
-    const isAtEnd = wrapper.scrollLeft + wrapper.clientWidth >= wrapper.scrollWidth - 5;
+    // Use cached values if available, otherwise read from DOM
+    const scrollWidth = wrapper._scrollWidth || wrapper.scrollWidth;
+    const clientWidth = wrapper._clientWidth || wrapper.clientWidth;
+    const scrollLeft = wrapper.scrollLeft;
 
-    if (isScrollable && !isAtEnd) {
+    const isScrollable = scrollWidth > clientWidth;
+    // Check if scrolled to the end (approximate for cross-browser safety)
+    const isAtEnd = scrollLeft + clientWidth >= scrollWidth - 5;
+
+    // Only write to DOM if state needs to change
+    const hasClass = wrapper.classList.contains('has-scroll');
+    const shouldHaveClass = isScrollable && !isAtEnd;
+
+    if (shouldHaveClass && !hasClass) {
       wrapper.classList.add('has-scroll');
-    } else {
+    } else if (!shouldHaveClass && hasClass) {
       wrapper.classList.remove('has-scroll');
     }
   };
 
   // Single ResizeObserver for all tables
   const resizeObserver = new ResizeObserver(entries => {
+    const wrappersToUpdate = new Set();
     for (const entry of entries) {
-      checkScroll(entry.target);
+      let wrapper = null;
+      if (entry.target.classList.contains('table-responsive')) {
+        wrapper = entry.target;
+      } else if (entry.target.tagName === 'TABLE' && entry.target.parentElement?.classList.contains('table-responsive')) {
+        wrapper = entry.target.parentElement;
+      }
+
+      if (wrapper) {
+        wrappersToUpdate.add(wrapper);
+      }
+    }
+
+    for (const wrapper of wrappersToUpdate) {
+      // Update cache
+      wrapper._scrollWidth = wrapper.scrollWidth;
+      wrapper._clientWidth = wrapper.clientWidth;
+      checkScroll(wrapper);
     }
   });
 
@@ -579,8 +605,9 @@ function enhanceTablesResponsiveness() {
       // Initial check
       checkScroll(wrapper);
 
-      // Observe resize on wrapper
+      // Observe resize on wrapper AND table (to catch content size changes)
       resizeObserver.observe(wrapper);
+      resizeObserver.observe(table);
 
       // Throttled scroll listener
       let ticking = false;
