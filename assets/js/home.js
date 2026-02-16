@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const homeContainer = document.querySelector('.home-container');
   const searchInput = document.getElementById('report-search');
   const searchClear = document.getElementById('search-clear');
   const tagFilter = document.getElementById('tag-filter');
@@ -253,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // URLを更新する関数（カテゴリフィルタの状態を反映）
-  const siteName = window.jekyllSiteTitle || document.title;
+  const siteName = (homeContainer && homeContainer.dataset.siteTitle) || document.title;
   function updateURL(category) {
     const url = new URL(window.location);
 

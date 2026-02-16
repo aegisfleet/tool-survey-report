@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="home-container">
+<div class="home-container" data-site-title="{{ site.title | escape }}">
   <section class="home-hero">
     <div class="hero-image">
       <img src="{{ '/assets/images/default-ogp.png' | relative_url }}" alt="{{ site.title }}" class="ogp-image">
@@ -200,7 +200,4 @@ layout: default
   </main>
 </div>
 
-<script>
-  window.jekyllSiteTitle = "{{ site.title }}";
-</script>
 <script src="{{ '/assets/js/home.js' | relative_url }}"></script>
