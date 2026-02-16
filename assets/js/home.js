@@ -175,20 +175,31 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Helper function to convert Katakana to Hiragana
+  function toHiragana(str) {
+    if (!str) return '';
+    return str.replace(/[\u30a1-\u30f6]/g, function (match) {
+      var chr = match.charCodeAt(0) - 0x60;
+      return String.fromCharCode(chr);
+    });
+  }
+
   // Filter and sort function
   window.filterAndSort = function (shouldSave = true) {
-    const searchTerm = searchInput.value.toLowerCase().trim();
+    const rawSearchTerm = searchInput.value.toLowerCase().trim();
+    const searchTerm = toHiragana(rawSearchTerm);
     const selectedTag = tagFilter.value;
     const selectedCategory = categoryFilter.value;
     const sortBy = sortSelect.value;
 
     let filteredCards = reportCards.filter(card => {
       const matchesSearch = !searchTerm ||
-        (card.dataset.toolName && card.dataset.toolName.includes(searchTerm)) ||
-        (card.dataset.description && card.dataset.description.includes(searchTerm)) ||
-        (card.dataset.latestHighlight && card.dataset.latestHighlight.includes(searchTerm)) ||
-        (card.dataset.developer && card.dataset.developer.includes(searchTerm)) ||
-        (card.dataset.tags && card.dataset.tags.toLowerCase().includes(searchTerm));
+        (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(searchTerm)) ||
+        (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(searchTerm)) ||
+        (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(searchTerm)) ||
+        (card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(searchTerm)) ||
+        (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(searchTerm)) ||
+        (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(searchTerm));
       const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
       const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
       return matchesSearch && matchesTag && matchesCategory;

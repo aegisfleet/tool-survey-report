@@ -97,12 +97,13 @@ layout: default
         {%- for report in sorted_reports -%}
         <article class="report-card" data-tags="{{ report.tags | join: ',' }}"
           data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
+          data-tool-reading="{{ report.tool_reading | default: '' }}"
           data-description="{{ report.description | downcase }}"
           data-latest-highlight="{{ report.quick_summary.latest_highlight | downcase }}"
           data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
           data-developer="{{ report.developer | downcase }}"
           data-is-oss="{{ report.quick_summary.is_oss | default: false }}"
-          data-has-free-plan="{{ report.quick_summary.has_free_plan | default: false }}"
+          data-has-free_plan="{{ report.quick_summary.has_free_plan | default: false }}"
           data-score="{{ report.evaluation.score | default: 0 }}">
 
           <div class="report-card-header">

@@ -91,11 +91,23 @@ class BrowserTestRunner:
         if not self.args.selector:
             raise BrowserTestError("--selector is required for check action")
 
-        count = self.page.locator(self.args.selector).count()
-        if count > 0:
-            print(f"Found {count} element(s) matching '{self.args.selector}'")
+        # Wait for at least one element to be attached
+        try:
+            self.page.wait_for_selector(self.args.selector, state='attached', timeout=5000)
+        except:
+            pass # Continue to check count
+
+        # Check for visible elements
+        elements = self.page.locator(self.args.selector).all()
+        visible_count = sum(1 for el in elements if el.is_visible())
+        
+        if visible_count > 0:
+            print(f"Found {visible_count} visible element(s) matching '{self.args.selector}'")
         else:
-            raise BrowserTestError(f"Element not found: {self.args.selector}")
+            # Also report total count for debugging
+            total_count = len(elements)
+            msg = f"No visible elements found matching: {self.args.selector} (Total attached: {total_count})"
+            raise BrowserTestError(msg)
 
     def _action_text(self):
         if not self.args.selector:
