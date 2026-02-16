@@ -4,7 +4,13 @@ import sys
 from playwright.sync_api import sync_playwright
 import time
 
+class BrowserTestError(Exception):
+    pass
+
 class BrowserTestRunner:
+    VIEWPORT_DESKTOP = {'width': 1280, 'height': 720}
+    VIEWPORT_MOBILE = {'width': 375, 'height': 667}
+
     def __init__(self, args):
         self.args = args
         self.page = None
@@ -22,9 +28,9 @@ class BrowserTestRunner:
             browser.close()
 
     def setup_page(self, browser):
-        viewport = {'width': 1280, 'height': 720}
+        viewport = self.VIEWPORT_DESKTOP
         if self.args.mobile:
-            viewport = {'width': 375, 'height': 667}
+            viewport = self.VIEWPORT_MOBILE
             
         return browser.new_page(viewport=viewport)
 
@@ -34,8 +40,7 @@ class BrowserTestRunner:
             self.page.goto(self.args.url)
             self.page.wait_for_load_state('networkidle')
         except Exception as e:
-            print(f"Error navigating to URL: {e}")
-            sys.exit(1)
+            raise BrowserTestError(f"Error navigating to URL: {e}")
 
     def apply_dark_mode(self):
         if self.args.dark_mode:
@@ -62,53 +67,46 @@ class BrowserTestRunner:
         if handler:
             handler()
         else:
-            print(f"Unknown action: {self.args.action}")
-            sys.exit(1)
+            raise BrowserTestError(f"Unknown action: {self.args.action}")
+
+    def _get_element(self, selector):
+        element = self.page.locator(selector).first
+        if not element.is_visible():
+            raise BrowserTestError(f"Element not found or not visible: {selector}")
+        return element
 
     def _action_screenshot(self):
         if not self.args.output:
-            print("Error: --output is required for screenshot action")
-            sys.exit(1)
+            raise BrowserTestError("--output is required for screenshot action")
 
         if self.args.selector:
-            element = self.page.locator(self.args.selector).first
-            if element.is_visible():
-                element.screenshot(path=self.args.output)
-                print(f"Element screenshot saved to {self.args.output}")
-            else:
-                print(f"Element not found or not visible: {self.args.selector}")
+            element = self._get_element(self.args.selector)
+            element.screenshot(path=self.args.output)
+            print(f"Element screenshot saved to {self.args.output}")
         else:
             self.page.screenshot(path=self.args.output, full_page=self.args.full_page)
             print(f"Screenshot saved to {self.args.output}")
 
     def _action_check(self):
         if not self.args.selector:
-            print("Error: --selector is required for check action")
-            sys.exit(1)
+            raise BrowserTestError("--selector is required for check action")
 
         count = self.page.locator(self.args.selector).count()
         if count > 0:
             print(f"Found {count} element(s) matching '{self.args.selector}'")
         else:
-            print(f"Element not found: {self.args.selector}")
-            sys.exit(1)
+            raise BrowserTestError(f"Element not found: {self.args.selector}")
 
     def _action_text(self):
         if not self.args.selector:
-            print("Error: --selector is required for text action")
-            sys.exit(1)
+            raise BrowserTestError("--selector is required for text action")
 
-        element = self.page.locator(self.args.selector).first
-        if element.is_visible():
-            print(f"Text content: {element.inner_text()}")
-        else:
-            print(f"Element not found or not visible: {self.args.selector}")
-            sys.exit(1)
+        element = self._get_element(self.args.selector)
+        print(f"Text content: {element.inner_text()}")
 
     def _action_click(self):
         if not self.args.selector:
-            print("Error: --selector is required for click action")
-            sys.exit(1)
+            raise BrowserTestError("--selector is required for click action")
 
         try:
             self.page.click(self.args.selector)
@@ -121,13 +119,11 @@ class BrowserTestRunner:
                 self.page.screenshot(path=self.args.output)
                 print(f"Post-click screenshot saved to {self.args.output}")
         except Exception as e:
-            print(f"Error clicking element: {e}")
-            sys.exit(1)
+            raise BrowserTestError(f"Error clicking element: {e}")
 
     def _action_input(self):
         if not self.args.selector or self.args.input_text is None:
-            print("Error: --selector and --input-text are required for input action")
-            sys.exit(1)
+            raise BrowserTestError("--selector and --input-text are required for input action")
 
         try:
             self.page.fill(self.args.selector, self.args.input_text)
@@ -137,12 +133,18 @@ class BrowserTestRunner:
                 self.page.screenshot(path=self.args.output)
                 print(f"Post-input screenshot saved to {self.args.output}")
         except Exception as e:
-            print(f"Error inputting text: {e}")
-            sys.exit(1)
+            raise BrowserTestError(f"Error inputting text: {e}")
 
 def run_browser_test(args):
-    runner = BrowserTestRunner(args)
-    runner.run()
+    try:
+        runner = BrowserTestRunner(args)
+        runner.run()
+    except BrowserTestError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        sys.exit(1)
 
 def main():
     parser = argparse.ArgumentParser(description='Browser testing utility using Playwright')
