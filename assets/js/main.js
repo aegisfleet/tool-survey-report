@@ -240,25 +240,40 @@ function performSearch(searchTerm) {
 function showSearchSuggestions(searchTerm, inputElement) {
   // This would typically fetch from an API or search index
   // For now, we'll implement a basic version
-  hideSearchSuggestions();
 
-  // Create suggestions dropdown
-  const suggestions = document.createElement('div');
-  suggestions.className = 'search-suggestions';
-  suggestions.style.cssText = `
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    border: 1px solid #dee2e6;
-    border-top: none;
-    border-radius: 0 0 0.375rem 0.375rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-    max-height: 200px;
-    overflow-y: auto;
-  `;
+  const form = inputElement.closest('.search-form');
+  let suggestions = form ? form.querySelector('.search-suggestions') : null;
+  const isNew = !suggestions;
+
+  if (isNew) {
+    // Create suggestions dropdown
+    suggestions = document.createElement('div');
+    suggestions.className = 'search-suggestions';
+    suggestions.style.cssText = `
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid #dee2e6;
+      border-top: none;
+      border-radius: 0 0 0.375rem 0.375rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      max-height: 200px;
+      overflow-y: auto;
+    `;
+
+    // Add event delegation for click handling
+    suggestions.addEventListener('click', function(e) {
+      const item = e.target.closest('.search-suggestion-item');
+      if (item) {
+        const suggestion = item.textContent;
+        inputElement.value = suggestion;
+        performSearch(suggestion);
+      }
+    });
+  }
 
   // Add some example suggestions (in a real implementation, this would be dynamic)
   const exampleSuggestions = [
@@ -279,22 +294,15 @@ function showSearchSuggestions(searchTerm, inputElement) {
 
     suggestions.innerHTML = suggestionsHtml;
 
-    // Add event delegation for click handling
-    // Note: Since suggestions element is recreated on each call, this listener does not accumulate
-    suggestions.addEventListener('click', function(e) {
-      const item = e.target.closest('.search-suggestion-item');
-      if (item) {
-        const suggestion = item.textContent;
-        inputElement.value = suggestion;
-        performSearch(suggestion);
-      }
-    });
-
-    // Position relative to input
-    const form = inputElement.closest('.search-form');
-    if (form) {
+    // Position relative to input if it's new or not yet attached
+    if (isNew && form) {
       form.style.position = 'relative';
       form.appendChild(suggestions);
+    }
+  } else {
+    // Remove suggestions if no match and it exists in DOM
+    if (!isNew && suggestions.parentNode) {
+      suggestions.remove();
     }
   }
 }
