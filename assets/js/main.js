@@ -1,4 +1,39 @@
 /**
+ * ScrollManager: Centralized scroll event handling
+ * Optimizes performance by using a single scroll listener and requestAnimationFrame loop
+ */
+const ScrollManager = (function() {
+  const handlers = new Set();
+  let ticking = false;
+
+  function handleScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        handlers.forEach(handler => handler(scrollTop));
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
+  return {
+    register: function(handler) {
+      handlers.add(handler);
+      if (handlers.size === 1) {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+      }
+    },
+    unregister: function(handler) {
+      handlers.delete(handler);
+      if (handlers.size === 0) {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    }
+  };
+})();
+
+/**
  * Initialize all site functionality
  */
 function initAll() {
@@ -805,26 +840,16 @@ function initBackToTopButton() {
   if (!backToTopButton) return;
 
   // スクロール位置に応じてボタンの表示/非表示を制御
-  function toggleButtonVisibility() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  function toggleButtonVisibility(scrollTop) {
+    if (scrollTop === undefined) {
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    }
 
     // 300px以上スクロールした場合に表示
     if (scrollTop > 300) {
       backToTopButton.classList.add('visible');
     } else {
       backToTopButton.classList.remove('visible');
-    }
-  }
-
-  // スクロールイベントリスナー（パフォーマンス最適化のためthrottle）
-  let ticking = false;
-  function handleScroll() {
-    if (!ticking) {
-      requestAnimationFrame(function () {
-        toggleButtonVisibility();
-        ticking = false;
-      });
-      ticking = true;
     }
   }
 
@@ -898,7 +923,7 @@ function initBackToTopButton() {
   }
 
   // イベントリスナーの設定
-  window.addEventListener('scroll', handleScroll, { passive: true });
+  ScrollManager.register(toggleButtonVisibility);
   backToTopButton.addEventListener('click', scrollToTop);
 
   // キーボードサポート
@@ -1071,40 +1096,27 @@ function initSmartHeader() {
   let lastScrollTop = 0;
   const delta = 10;
   const headerHeight = header.offsetHeight;
-  let ticking = false;
 
-  window.addEventListener('scroll', function () {
+  function handleSmartHeaderScroll(scrollTop) {
     // Skip logic immediately during auto-scroll to top
     if (isScrollingToTop) return;
 
-    if (!ticking) {
-      window.requestAnimationFrame(function () {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Ignore bounce scrolling
+    if (scrollTop < 0) return;
 
-        // Ignore bounce scrolling
-        if (scrollTop < 0) {
-          ticking = false;
-          return;
-        }
+    // Check if scroll is significant
+    if (Math.abs(lastScrollTop - scrollTop) <= delta) return;
 
-        // Check if scroll is significant
-        if (Math.abs(lastScrollTop - scrollTop) <= delta) {
-          ticking = false;
-          return;
-        }
-
-        // Scroll Down -> Hide
-        // Scroll Up -> Show
-        if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
-          header.classList.add('header-hidden');
-        } else {
-          header.classList.remove('header-hidden');
-        }
-
-        lastScrollTop = scrollTop;
-        ticking = false;
-      });
-      ticking = true;
+    // Scroll Down -> Hide
+    // Scroll Up -> Show
+    if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+      header.classList.add('header-hidden');
+    } else {
+      header.classList.remove('header-hidden');
     }
-  }, { passive: true });
+
+    lastScrollTop = scrollTop;
+  }
+
+  ScrollManager.register(handleSmartHeaderScroll);
 }
