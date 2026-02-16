@@ -59,6 +59,7 @@ relationships:
     - "OpenTofu"
     - "Pulumi"
     - "AWS CloudFormation"
+    - "Kubernetes"
 ---
 
 # **Ansible 調査レポート**

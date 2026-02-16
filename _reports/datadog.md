@@ -63,6 +63,7 @@ relationships:
     - "New Relic"
     - "Grafana"
     - "Amazon OpenSearch Service"
+    - "Kubernetes"
 ---
 
 # **Datadog 調査レポート**

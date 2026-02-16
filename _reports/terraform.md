@@ -62,6 +62,7 @@ relationships:
     - "Pulumi"
     - "AWS CloudFormation"
     - "LocalStack"
+    - "Kubernetes"
 ---
 
 # **Terraform 調査レポート**

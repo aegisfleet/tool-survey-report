@@ -58,6 +58,7 @@ relationships:
     - "Datadog"
     - "Splunk"
     - "Splunk AppDynamics"
+    - "Kubernetes"
 ---
 
 # **Grafana 調査レポート**
