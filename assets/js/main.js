@@ -8,6 +8,9 @@ function initAll() {
   // Mobile navigation toggle
   initMobileNavigation();
 
+  // Navigation dropdown toggle
+  initNavigationDropdown();
+
   // Search functionality
   initSearchFunctionality();
 
@@ -133,6 +136,29 @@ function initMobileNavigation() {
       });
     }
   });
+}
+
+// Navigation dropdown functionality
+function initNavigationDropdown() {
+  const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+  const dropdown = document.querySelector('.nav-dropdown');
+
+  if (dropdownToggle && dropdown) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !isExpanded);
+      dropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!dropdownToggle.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+        dropdown.classList.remove('active');
+      }
+    });
+  }
 }
 
 // Search functionality
