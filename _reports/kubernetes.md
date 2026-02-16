@@ -1,12 +1,14 @@
 ---
+# === フロントマター ===
+# 【必須項目】
 title: "Kubernetes 調査レポート"
 tool_name: "Kubernetes"
 tool_reading: "クバネティス / クーべネティス"
 category: "インフラ/クラウド"
-developer: "Cloud Native Computing Foundation"
+developer: "Cloud Native Computing Foundation (CNCF)"
 official_site: "https://kubernetes.io"
-date: "2026-01-18"
-last_updated: "2026-01-18"
+date: "2026-02-17"
+last_updated: "2026-02-17"
 tags:
   - "コンテナ"
   - "オーケストレーション"
@@ -18,7 +20,7 @@ description: "コンテナ化されたアプリケーションのデプロイ、
 
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
-  has_free_plan: true  # OSSとして無料、マネージドサービスは無料枠あり
+  has_free_plan: true
   is_oss: true
   starting_price: "無料"
   target_users:
@@ -44,6 +46,7 @@ evaluation:
       reason: "学習コストが非常に高い"
   summary: "学習コストは高いが、拡張性、移植性、エコシステムの充実度は他を圧倒しており、モダンなインフラ基盤として最適。"
 
+# 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/kubernetes/kubernetes"
   documentation: "https://kubernetes.io/docs/home/"
@@ -57,6 +60,7 @@ relationships:
     - "OpenTofu"
     - "Terraform"
     - "Ansible"
+    - "Grafana"
 ---
 
 # **Kubernetes 調査レポート**
@@ -71,7 +75,7 @@ relationships:
   * GitHub: [https://github.com/kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
   * ドキュメント: [https://kubernetes.io/docs/home/](https://kubernetes.io/docs/home/)
 * **カテゴリ**: インフラ/クラウド
-* **概要**: Googleによって設計され、現在はCNCFによって管理されているオープンソースのコンテナオーケストレーションシステム。コンテナ化されたアプリケーションのデプロイ、スケーリング、および管理を自動化するためのプラットフォーム。
+* **概要**: Googleによって設計され、現在はCNCFによって管理されているオープンソースのコンテナオーケストレーションシステム。コンテナ化されたアプリケーションのデプロイ、スケーリング、および管理を自動化するためのプラットフォームとして広く採用されている。
 
 ## **2. 目的と主な利用シーン**
 
@@ -95,20 +99,42 @@ relationships:
 * **自己修復 (Self-healing)**: 失敗したコンテナの再起動、ノード障害時のコンテナの再スケジューリング、ヘルスチェックに応答しないコンテナの強制終了を行う。
 * **Secretと構成管理**: パスワード、OAuthトークン、SSHキーなどの機密情報を、コンテナイメージを再構築することなく更新・管理する。
 
-## **4. 特徴・強み (Pros)**
+## **4. 開始手順・セットアップ**
+
+* **前提条件**:
+  * コンテナランタイム (Docker, containerdなど)
+  * `kubectl` コマンドラインツール
+* **インストール/導入**:
+  ```bash
+  # ローカル環境での簡易セットアップ (minikube)
+  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+  ```
+* **初期設定**:
+  * `minikube start` でクラスタを起動
+* **クイックスタート**:
+  ```bash
+  # Nginxのデプロイ
+  kubectl create deployment nginx --image=nginx
+  kubectl expose deployment nginx --type=NodePort --port=80
+  minikube service nginx
+  ```
+
+## **5. 特徴・強み (Pros)**
 
 * **圧倒的なエコシステム**: CNCFの中核プロジェクトであり、監視、セキュリティ、CI/CDなど、周辺ツールが極めて豊富。
 * **高い移植性 (Portability)**: ほぼ全ての主要パブリッククラウド(AWS, Google Cloud, Azure)およびオンプレミスで動作し、ベンダーロックインを回避できる。
 * **宣言的API**: インフラの「あるべき状態」を定義することで、Kubernetesが自動的にその状態を維持・収束させる仕組み（Reconciliation Loop）が堅牢。
 * **拡張性**: Custom Resource Definitions (CRD) やOperatorパターンにより、独自の機能やリソースを定義してKubernetes APIを拡張できる。
 
-## **5. 弱み・注意点 (Cons)**
+## **6. 弱み・注意点 (Cons)**
 
 * **高い学習コスト**: 概念（Pod, Service, Ingress, PV/PVC等）が多く、アーキテクチャも複雑で、習熟には時間がかかる。
 * **運用の複雑さ**: クラスタ自体のアップグレードやセキュリティパッチの適用、ネットワーク設定などが難しく、専任の運用チームが必要になることが多い（マネージドサービスの利用で緩和可能）。
 * **スモールスタートには不向き**: 小規模なアプリケーションや単純な構成の場合、Kubernetesのオーバーヘッドが過大になる可能性がある。
+* **日本語対応**: ドキュメントは日本語訳があるが、最新情報は英語が中心となることが多い。
 
-## **6. 料金プラン**
+## **7. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -120,24 +146,24 @@ relationships:
 * **課金体系**: クラウドのマネージドサービスを利用する場合、主に「クラスタ管理手数料（時間課金）」と「ワーカーノードのリソース費用（EC2/Compute Engine等）」が発生する。
 * **無料トライアル**: 各クラウドプロバイダーの無料枠内で試用可能（GKEには月額$74.40分の管理手数料無料枠がある）。
 
-## **7. 導入実績・事例**
+## **8. 導入実績・事例**
 
-* **導入企業**: Spotify, Adidas, OpenAI, Mercedes-Benz, The New York Times, Yahoo! JAPAN
+* **導入企業**: Spotify, OpenAI, Mercedes-Benz, The New York Times, Yahoo! JAPAN
 * **導入事例**:
-  * **Spotify**: 数千のマイクロサービスを管理し、開発者のデプロイ頻度を劇的に向上。
-  * **OpenAI**: 大規模なAIモデルのトレーニングと推論ワークロードをKubernetes上でスケーリング。
-  * **Yahoo! JAPAN**: 大規模なプライベートクラウド基盤としてKubernetesを活用し、インフラコストを削減。
+  * **Spotify**: 数千のマイクロサービスを管理し、開発者のデプロイ頻度を劇的に向上させた。
+  * **OpenAI**: 大規模なAIモデルのトレーニングと推論ワークロードをKubernetes上でスケーリングしている。
+  * **Yahoo! JAPAN**: 大規模なプライベートクラウド基盤としてKubernetesを活用し、インフラコストを削減した。
 * **対象業界**: Webサービス、金融、製造、通信など全業界。特にマイクロサービスを採用する企業で標準的。
 
-## **8. サポート体制**
+## **9. サポート体制**
 
-* **ドキュメント**: [公式ドキュメント](https://kubernetes.io/docs/)は非常に詳細で多言語対応（日本語も充実）。
+* **ドキュメント**: [公式ドキュメント](https://kubernetes.io/docs/)は非常に詳細で多言語対応（日本語も充実しているが、一部古い場合あり）。
 * **コミュニティ**: 世界最大級のオープンソースコミュニティを持つ。Slack, Stack Overflow, GitHub Discussionsが非常に活発。
 * **公式サポート**: OSS自体の商用サポートはないが、Red Hat (OpenShift), VMware (Tanzu), クラウドベンダー各社がエンタープライズサポートを提供している。
 
-## **9. エコシステムと連携**
+## **10. エコシステムと連携**
 
-### **9.1 API・外部サービス連携**
+### **10.1 API・外部サービス連携**
 
 * **API**: RESTful APIを提供し、`kubectl`や各種クライアントライブラリから操作可能。全ての操作がAPI経由で行われる。
 * **外部サービス連携**:
@@ -146,7 +172,7 @@ relationships:
   * **サービスメッシュ**: Istio, Linkerd
   * **セキュリティ**: Falco, Trivy, OPA (Open Policy Agent)
 
-### **9.2 技術スタックとの相性**
+### **10.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -156,18 +182,18 @@ relationships:
 | **Python (Django/FastAPI)** | ◯ | AI/MLワークロードでの利用が標準的。 | 特になし。 |
 | **Terraform** | ◎ | EKS/GKE等のクラスタ構築からK8sリソース管理まで統一的に行える。 | State管理の複雑化に注意。 |
 
-## **10. セキュリティとコンプライアンス**
+## **11. セキュリティとコンプライアンス**
 
 * **認証**: サービスアカウント、X.509証明書、OpenID Connect (OIDC) トークンなど多彩な認証方式をサポート。
 * **データ管理**: Secretリソースによる機密情報の管理（デフォルトではetcd内でBase64エンコードのみ、暗号化設定推奨）。
 * **準拠規格**: Kubernetes自体はツールだが、マネージドサービス（EKS/AKS/GKE）はSOC2, ISO27001, PCI DSS, HIPAAなどの主要なコンプライアンス認証を取得済み。
 
-## **11. 操作性 (UI/UX) と学習コスト**
+## **12. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: 基本はCLI (`kubectl`) 操作。公式ダッシュボードもあるが、LensやK9sといったサードパーティ製GUI/TUIツールが人気で、操作性を大きく向上させている。
 * **学習コスト**: **非常に高い**。独自の抽象化概念が多く、ネットワークやストレージの知識も求められる。習得には数ヶ月〜年単位の経験が必要とされることが多い。
 
-## **12. ベストプラクティス**
+## **13. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **GitOps**: Argo CDやFluxを使用し、Gitリポジトリを信頼できる唯一の情報源としてクラスタの状態を同期する。
@@ -178,10 +204,10 @@ relationships:
   * **Liveness/Readiness Probeの未設定**: アプリケーションの状態をk8sが把握できず、障害時に適切な再起動が行われない。
   * **巨大なモノリスの単純移行**: コンテナ化するだけでメリットを得られるとは限らず、適切な分割や設計変更が必要。
 
-## **13. ユーザーの声（レビュー分析）**
+## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, Techブログ (2025-2026年のレビュー中心)
-* **総合評価**: 4.6/5.0 (業界標準として不動の地位)
+* **総合評価**: 4.6/5.0 (G2)
 * **ポジティブな評価**:
   * 「**スケーラビリティの確保**に不可欠。大規模なトラフィック増減にも自動で対応できる安心感がある。」
   * 「エコシステムが成熟しており、困ったときに解決策が見つからないことがない。」
@@ -190,24 +216,20 @@ relationships:
   * 「**複雑すぎる**。専任のSREチームがいないと運用が回らない。」
   * 「頻繁なアップデート（年3回）への追従が負担。特にAPI廃止への対応が大変。」
   * 「小規模なWebサイトにはオーバースペック。コストと手間に見合わない。」
+* **特徴的なユースケース**:
+  * AI/ML分野での活用が進んでおり、Kubeflowなどを用いた機械学習基盤としての利用が増加している。
 
-## **14. 直近半年のアップデート情報**
+## **15. 直近半年のアップデート情報**
 
-* **v1.35 (Timbernetes) - 2025-12-17**:
-  * **In-place Pod Vertical Scaling (GA)**: Podを再起動することなくCPU/メモリのリソース要求・制限を変更可能に。AI/MLワークロードやJavaアプリの運用に革新をもたらす。
-  * **Restart All Containers (Alpha)**: Pod全体を作り直さずに、Pod内の全コンテナを再起動する機能が追加。
-  * **Security Profiles for Nodes**: ノードレベルのセキュリティ設定が強化。
-* **v1.34 - 2025-08-27**:
-  * **VolumeAttributesClass (Beta)**: ストレージの性能（IOPS等）を動的に変更する機能がベータに。
-  * **Job ManagedBy (Alpha)**: Jobコントローラー以外のカスタムコントローラーでJobを管理するための仕組み。
-* **v1.33 - 2025-04**:
-  * **Sidecar Containers (GA)**: サイドカーコンテナのライフサイクル管理機能が正式版に。ログ収集やプロキシの運用が安定。
+* **2025-12-17 (v1.35)**: **In-place Pod Vertical Scaling (GA)**: Podを再起動することなくCPU/メモリのリソース要求・制限を変更可能に。AI/MLワークロードやJavaアプリの運用に革新をもたらす。
+* **2025-08-27 (v1.34)**: **VolumeAttributesClass (Beta)**: ストレージの性能（IOPS等）を動的に変更する機能がベータに。Job ManagedBy (Alpha)も導入。
+* **2025-04-15 (v1.33)**: **Sidecar Containers (GA)**: サイドカーコンテナのライフサイクル管理機能が正式版に。ログ収集やプロキシの運用が安定。
 
 (出典: [Kubernetes Release Notes](https://kubernetes.io/releases/))
 
-## **15. 類似ツールとの比較**
+## **16. 類似ツールとの比較**
 
-### **15.1 機能比較表 (星取表)**
+### **16.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Kubernetes | Docker Swarm | Amazon ECS | Red Hat OpenShift |
 |:---:|:---|:---:|:---:|:---:|:---:|
@@ -216,7 +238,7 @@ relationships:
 | **運用** | 管理の容易さ | △<br><small>難しい</small> | ◎<br><small>容易</small> | ◯<br><small>フルマネージド</small> | ◯<br><small>統合コンソール</small> |
 | **エコシステム** | 周辺ツール | ◎<br><small>最大</small> | △<br><small>Docker依存</small> | ◯<br><small>AWS/一部OSS</small> | ◎<br><small>Enterpirse向け</small> |
 
-### **15.2 詳細比較**
+### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -225,7 +247,7 @@ relationships:
 | **Amazon ECS** | AWS専用のマネージドサービス | AWSの他サービスとの連携が強力で、運用が楽。Fargateと相性が良い。 | AWSにロックインされる。K8sほど柔軟ではない。 | AWSのみを利用し、運用の手間を最小限にしたい場合。 |
 | **Red Hat OpenShift** | エンタープライズ向けK8s | 開発者向け機能（CI/CD、カタログ）が統合され、セキュリティ機能が強力。商用サポートあり。 | ライセンス費用がかかる。独自の作法がある。 | 大企業、金融・公共系など、手厚いサポートとセキュリティが必要な場合。 |
 
-## **16. 総評**
+## **17. 総評**
 
 * **総合的な評価**:
   * Kubernetesは、コンテナオーケストレーションの**絶対的な王者**であり、現代のクラウドネイティブ開発において避けては通れない存在。v1.35での「In-place Pod Vertical Scaling」のGA化など、運用現場の課題（AIワークロード対応やコスト最適化）解決に向けた進化を続けており、信頼性は揺るがない。
