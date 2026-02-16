@@ -33,6 +33,35 @@ class TestBrowserTest(unittest.TestCase):
                 self.assertTrue(args.mobile)
                 self.assertEqual(args.wait, 2.5)
 
+    def test_main_missing_url(self):
+        test_args = ['scripts/browser_test.py']
+        with patch.object(sys, 'argv', test_args):
+            with patch('sys.stderr', new_callable=MagicMock): # Suppress stderr
+                with self.assertRaises(SystemExit):
+                    main()
+
+    def test_main_invalid_action(self):
+        test_args = ['scripts/browser_test.py', '--url', 'http://example.com', '--action', 'invalid']
+        with patch.object(sys, 'argv', test_args):
+            with patch('sys.stderr', new_callable=MagicMock): # Suppress stderr
+                with self.assertRaises(SystemExit):
+                    main()
+
+    def test_main_default_args(self):
+        test_args = ['scripts/browser_test.py', '--url', 'http://example.com']
+        with patch.object(sys, 'argv', test_args):
+            with patch('scripts.browser_test.run_browser_test') as mock_run:
+                main()
+                mock_run.assert_called_once()
+                args = mock_run.call_args[0][0]
+                self.assertEqual(args.url, 'http://example.com')
+                self.assertEqual(args.action, 'screenshot')
+                self.assertEqual(args.wait, 0)
+                self.assertFalse(args.dark_mode)
+                self.assertFalse(args.mobile)
+                self.assertFalse(args.full_page)
+                self.assertFalse(args.show_browser)
+
     @patch('scripts.browser_test.sync_playwright')
     def test_run_browser_test_screenshot(self, mock_playwright):
         # Mock playwright objects
