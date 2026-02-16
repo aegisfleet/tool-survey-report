@@ -37,7 +37,12 @@ _BROWSER = None
 _CONTEXT = None
 
 def _get_global_context():
-    """Lazily initialize and return the global Playwright context."""
+    """Lazily initialize and return the global Playwright context.
+
+    This function implements a singleton pattern for the Playwright browser instance
+    and context. This is a performance optimization to avoid launching a new
+    browser instance for every link check, which is an expensive operation.
+    """
     global _PLAYWRIGHT, _BROWSER, _CONTEXT
 
     if _CONTEXT:
@@ -82,7 +87,12 @@ def find_links_in_file(filepath):
 
 
 def check_link_with_playwright(url, browser_context=None, page=None):
-    """Check link using Playwright browser for better accuracy."""
+    """Check link using Playwright browser for better accuracy.
+
+    If a 'page' object is provided, it is reused to avoid the overhead of
+    creating a new page for each request. This is critical for performance
+    when checking many links.
+    """
     # Use provided page if available
     if page:
         return _check_link_logic(page, url)
@@ -230,6 +240,8 @@ def main():
 def _process_files(files_to_check, use_browser, browser_context, broken_links, warnings):
     """Process files and check links within them."""
     page = None
+    # PERFORMANCE: Create a single page and reuse it for all link checks in this batch.
+    # This avoids creating/closing pages repeatedly, which saves time.
     if use_browser and HAS_PLAYWRIGHT:
         context = browser_context or _get_global_context()
         if context:
