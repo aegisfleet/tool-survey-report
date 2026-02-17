@@ -8,7 +8,7 @@ module ListPipeEscaper
 
     new_lines = lines.map do |line|
       # Check for code block toggle (fenced code blocks)
-      if line.strip.start_with?('```')
+      if line.match?(/^\s*```/)
         in_code_block = !in_code_block
         next line
       end
