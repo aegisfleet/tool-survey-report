@@ -1002,7 +1002,7 @@ function initFilterReset() {
         if (categoryFilter) categoryFilter.value = '';
         if (sortSelect) sortSelect.value = 'date-desc'; // 初期値（新しい順）
 
-        // _layouts/home.html 内で定義されている filterAndSort 関数があれば実行（画面更新）
+        // assets/js/home.js 内で定義されている filterAndSort 関数があれば実行（画面更新）
         if (typeof window.filterAndSort === 'function') {
           // sessionStorageのクリアを反映させるため、URLパラメータの影響も排除
           if (window.location.search) {
