@@ -50,7 +50,7 @@ class HTMLElement {
   appendChild(child) {
     if (child.tagName === 'DOCUMENT_FRAGMENT') {
       this.children.push(...child.children);
-      child.children.forEach(c => c.parentNode = this);
+      child.children.forEach(c => { c.parentNode = this; });
       child.children = [];
     } else {
       this.children.push(child);
