@@ -49,6 +49,7 @@ relationships:
     - "AWS Frontier Agents"
     - "Devin"
     - "Google Gemini"
+    - "LangChain"
 ---
 
 # **OpenAI Frontier 調査レポート**
