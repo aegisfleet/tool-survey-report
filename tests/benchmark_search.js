@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 // Mock DOM
 class HTMLElement {
@@ -11,10 +11,17 @@ class HTMLElement {
     this._textContent = '';
     this.className = '';
     this.classList = {
-      add: (c) => { this.className += ' ' + c; },
-      remove: (c) => { this.className = this.className.replace(c, '').trim(); },
+      add: (c) => {
+        this.className += ` ${c}`;
+      },
+      remove: (c) => {
+        this.className = this.className.replace(c, '').trim();
+      },
       contains: (c) => this.className.includes(c),
-      toggle: (c) => { if (this.classList.contains(c)) this.classList.remove(c); else this.classList.add(c); }
+      toggle: (c) => {
+        if (this.classList.contains(c)) this.classList.remove(c);
+        else this.classList.add(c);
+      },
     };
     this.listeners = {};
     this.parentNode = null;
@@ -24,18 +31,20 @@ class HTMLElement {
 
   get innerHTML() {
     if (this.children.length > 0) {
-      return this.children.map(c => {
-        let html = `<${c.tagName.toLowerCase()}`;
-        if (c.className) html += ` class="${c.className}"`;
-        for (let key in c.attributes) {
-          html += ` ${key}="${c.attributes[key]}"`;
-        }
-        html += `>`;
-        if (c._textContent) html += c._textContent;
-        else if (c.innerHTML) html += c.innerHTML;
-        html += `</${c.tagName.toLowerCase()}>`;
-        return html;
-      }).join('');
+      return this.children
+        .map((c) => {
+          let html = `<${c.tagName.toLowerCase()}`;
+          if (c.className) html += ` class="${c.className}"`;
+          for (const key in c.attributes) {
+            html += ` ${key}="${c.attributes[key]}"`;
+          }
+          html += '>';
+          if (c._textContent) html += c._textContent;
+          else if (c.innerHTML) html += c.innerHTML;
+          html += `</${c.tagName.toLowerCase()}>`;
+          return html;
+        })
+        .join('');
     }
     return this._innerHTML;
   }
@@ -44,13 +53,19 @@ class HTMLElement {
     this.children = []; // Clear children when setting innerHTML
   }
 
-  get textContent() { return this._textContent; }
-  set textContent(val) { this._textContent = val; }
+  get textContent() {
+    return this._textContent;
+  }
+  set textContent(val) {
+    this._textContent = val;
+  }
 
   appendChild(child) {
     if (child.tagName === 'DOCUMENT_FRAGMENT') {
       this.children.push(...child.children);
-      child.children.forEach(c => { c.parentNode = this; });
+      child.children.forEach((c) => {
+        c.parentNode = this;
+      });
       child.children = [];
     } else {
       this.children.push(child);
@@ -60,7 +75,7 @@ class HTMLElement {
 
   remove() {
     if (this.parentNode) {
-      this.parentNode.children = this.parentNode.children.filter(c => c !== this);
+      this.parentNode.children = this.parentNode.children.filter((c) => c !== this);
       this.parentNode = null;
     }
   }
@@ -77,15 +92,19 @@ class HTMLElement {
   }
 
   querySelector(selector) {
-    return this.children.find(c => c.className && c.className.includes(selector.replace('.', ''))) || null;
+    return this.children.find((c) => c.className?.includes(selector.replace('.', ''))) || null;
   }
 
-  querySelectorAll(selector) {
+  querySelectorAll(_selector) {
     return [];
   }
 
-  getAttribute(name) { return this.attributes[name]; }
-  setAttribute(name, value) { this.attributes[name] = value; }
+  getAttribute(name) {
+    return this.attributes[name];
+  }
+  setAttribute(name, value) {
+    this.attributes[name] = value;
+  }
 }
 
 const form = new HTMLElement('form');
@@ -107,42 +126,42 @@ global.document = {
     const el = new HTMLElement('DOCUMENT_FRAGMENT');
     return el;
   },
-  getElementById: (id) => null,
+  getElementById: (_id) => null,
   querySelector: (selector) => {
     if (selector === '.search-suggestions') {
-      return form.children.find(c => c.className === 'search-suggestions') || null;
+      return form.children.find((c) => c.className === 'search-suggestions') || null;
     }
     return null;
   },
-  querySelectorAll: (selector) => [],
+  querySelectorAll: (_selector) => [],
   head: new HTMLElement('head'),
   body: new HTMLElement('body'),
   documentElement: new HTMLElement('html'),
   addEventListener: () => {},
-  readyState: 'complete'
+  readyState: 'complete',
 };
 
 global.window = {
   location: { href: '' },
   matchMedia: () => ({ matches: false, addEventListener: () => {} }),
   requestAnimationFrame: (cb) => cb(),
-  announceToScreenReader: () => {}
+  announceToScreenReader: () => {},
 };
 
 global.localStorage = {
   getItem: () => null,
   setItem: () => {},
-  removeItem: () => {}
+  removeItem: () => {},
 };
 
 global.sessionStorage = {
   getItem: () => null,
   setItem: () => {},
-  removeItem: () => {}
+  removeItem: () => {},
 };
 
 global.navigator = {
-  clipboard: { writeText: () => Promise.resolve() }
+  clipboard: { writeText: () => Promise.resolve() },
 };
 
 global.ResizeObserver = class {
@@ -196,7 +215,7 @@ console.log(`Execution time for ${iterations} iterations: ${timeInMs}ms`);
 console.log(`createElement calls: ${createElementCount}`);
 
 // Check result
-const suggestions = form.children.find(c => c.className === 'search-suggestions');
+const suggestions = form.children.find((c) => c.className === 'search-suggestions');
 if (suggestions) {
   // console.log('Final HTML:', suggestions.innerHTML);
   if (suggestions.innerHTML.includes('Jenkins')) {

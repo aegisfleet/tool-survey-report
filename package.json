@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  },
+  "scripts": {
+    "lint": "biome lint .",
+    "format:check": "biome format --check .",
+    "check": "biome ci ."
+  }
+}

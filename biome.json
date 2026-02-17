@@ -1,0 +1,75 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noForEach": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "warn"
+      },
+      "style": {
+        "noParameterAssign": "off",
+        "useNodejsImportProtocol": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noAssignInExpressions": "off",
+        "noMisleadingCharacterClass": "off"
+      },
+      "security": {
+        "noGlobalEval": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 120
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "always"
+    },
+    "globals": [
+      "document",
+      "window",
+      "navigator",
+      "localStorage",
+      "sessionStorage",
+      "URLSearchParams",
+      "URL",
+      "ResizeObserver",
+      "ScrollManager",
+      "requestAnimationFrame",
+      "setTimeout",
+      "setInterval",
+      "clearTimeout",
+      "clearInterval",
+      "console",
+      "alert",
+      "confirm",
+      "fetch",
+      "HTMLElement",
+      "NodeList",
+      "MutationObserver",
+      "IntersectionObserver",
+      "getComputedStyle",
+      "matchMedia",
+      "Event",
+      "CustomEvent",
+      "performance"
+    ]
+  },
+  "files": {
+    "include": ["assets/js/**/*.js", "tests/**/*.js"],
+    "ignore": ["node_modules", "_site", "vendor", ".sass-cache", ".jekyll-cache"]
+  }
+}

@@ -3,7 +3,7 @@
  * Handles the logic for the home page, including filtering, sorting, and random picks.
  * Originally extracted from an inline script in _layouts/home.html.
  */
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const homeContainer = document.querySelector('.home-container');
   const searchInput = document.getElementById('report-search');
   const searchClear = document.getElementById('search-clear');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const lowerCat = category.toLowerCase();
 
     for (const rule of categoryEmojiRules) {
-      if (rule.keywords.some(kw => lowerCat.includes(kw))) {
+      if (rule.keywords.some((kw) => lowerCat.includes(kw))) {
         return rule.emoji;
       }
     }
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
     // レポートカード
-    document.querySelectorAll('.report-card').forEach(card => {
+    document.querySelectorAll('.report-card').forEach((card) => {
       const categoryEl = card.querySelector('.meta-item.category');
       if (!categoryEl) return;
 
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ピックアップカード
-    document.querySelectorAll('.pick-card').forEach(card => {
+    document.querySelectorAll('.pick-card').forEach((card) => {
       const categoryEl = card.querySelector('.pick-category');
       if (!categoryEl) return;
 
@@ -97,9 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // カテゴリフィルタのオプションに絵文字を追加する関数
   function updateCategoryFilterOptions() {
     const options = categoryFilter.querySelectorAll('option');
-    options.forEach(option => {
+    options.forEach((option) => {
       if (option.value === '') return; // "すべてのカテゴリ" はスキップ
-      const category = categoryFilter.querySelector(`option[value="${option.value}"]`).textContent.trim().replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, ''); // 既存絵文字を除去して判定
+      const category = categoryFilter
+        .querySelector(`option[value="${option.value}"]`)
+        .textContent.trim()
+        .replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, ''); // 既存絵文字を除去して判定
       const emoji = getEmojiForCategory(category);
 
       // 常に最新の絵文字で上書き（キーワードルール変更に対応するため）
@@ -113,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
       search: searchInput.value,
       tag: tagFilter.value,
       category: categoryFilter.value,
-      sort: sortSelect.value
+      sort: sortSelect.value,
     };
     sessionStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state));
   }
@@ -138,24 +141,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Populate tag filter options
   const allTags = new Set();
-  reportCards.forEach(card => {
-    const tags = card.dataset.tags.split(',').filter(tag => tag.trim());
-    tags.forEach(tag => allTags.add(tag.trim()));
+  reportCards.forEach((card) => {
+    const tags = card.dataset.tags.split(',').filter((tag) => tag.trim());
+    tags.forEach((tag) => allTags.add(tag.trim()));
   });
 
-  Array.from(allTags).sort().forEach(tag => {
-    const option = document.createElement('option');
-    option.value = tag;
-    option.textContent = tag;
-    tagFilter.appendChild(option);
-  });
+  Array.from(allTags)
+    .sort()
+    .forEach((tag) => {
+      const option = document.createElement('option');
+      option.value = tag;
+      option.textContent = tag;
+      tagFilter.appendChild(option);
+    });
 
   // Update tag visual states
   function updateTagStates() {
     const selectedTag = tagFilter.value;
     const allTagElements = document.querySelectorAll('.tag');
 
-    allTagElements.forEach(tagElement => {
+    allTagElements.forEach((tagElement) => {
       const tagValue = tagElement.dataset.tag;
       if (tagValue === selectedTag && selectedTag !== '') {
         tagElement.classList.add('active');
@@ -170,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectedCategory = categoryFilter.value;
     const allCategoryElements = document.querySelectorAll('.clickable-category');
 
-    allCategoryElements.forEach(el => {
+    allCategoryElements.forEach((el) => {
       const categoryValue = el.dataset.category;
       if (categoryValue === selectedCategory && selectedCategory !== '') {
         el.classList.add('active');
@@ -183,29 +188,35 @@ document.addEventListener('DOMContentLoaded', function () {
   // Helper function to convert Katakana to Hiragana
   function toHiragana(str) {
     if (!str) return '';
-    return str.replace(/[\u30a1-\u30f6]/g, function (match) {
-      var chr = match.charCodeAt(0) - 0x60;
+    return str.replace(/[\u30a1-\u30f6]/g, (match) => {
+      const chr = match.charCodeAt(0) - 0x60;
       return String.fromCharCode(chr);
     });
   }
 
   // Filter and sort function
-  window.filterAndSort = function (shouldSave = true) {
+  window.filterAndSort = (shouldSave = true) => {
     const rawSearchTerm = searchInput.value.toLowerCase().trim();
     const searchTerm = toHiragana(rawSearchTerm);
     const selectedTag = tagFilter.value;
     const selectedCategory = categoryFilter.value;
     const sortBy = sortSelect.value;
 
-    let filteredCards = reportCards.filter(card => {
-      const matchesSearch = !searchTerm ||
+    const filteredCards = reportCards.filter((card) => {
+      const matchesSearch =
+        !searchTerm ||
         (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(searchTerm)) ||
         (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(searchTerm)) ||
         (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(searchTerm)) ||
         (card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(searchTerm)) ||
         (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(searchTerm)) ||
         (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(searchTerm));
-      const matchesTag = !selectedTag || card.dataset.tags.split(',').map(t => t.trim()).includes(selectedTag);
+      const matchesTag =
+        !selectedTag ||
+        card.dataset.tags
+          .split(',')
+          .map((t) => t.trim())
+          .includes(selectedTag);
       const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
       return matchesSearch && matchesTag && matchesCategory;
     });
@@ -219,12 +230,13 @@ document.addEventListener('DOMContentLoaded', function () {
           return new Date(a.dataset.date) - new Date(b.dataset.date);
         case 'title-asc':
           return a.dataset.toolName.localeCompare(b.dataset.toolName);
-        case 'score-desc':
+        case 'score-desc': {
           // スコアが高い順でソート（スコアがない場合は0として扱う）
-          const scoreA = parseFloat(a.dataset.score) || 0;
-          const scoreB = parseFloat(b.dataset.score) || 0;
+          const scoreA = Number.parseFloat(a.dataset.score) || 0;
+          const scoreB = Number.parseFloat(b.dataset.score) || 0;
           return scoreB - scoreA;
-        case 'oss-free':
+        }
+        case 'oss-free': {
           // OSS > 無料プラン > その他の順でソート
           const getPriority = (card) => {
             if (card.dataset.isOss === 'true') return 2;
@@ -234,18 +246,19 @@ document.addEventListener('DOMContentLoaded', function () {
           const priorityDiff = getPriority(b) - getPriority(a);
           // 同じ優先度の場合はスコアでソート
           if (priorityDiff !== 0) return priorityDiff;
-          return (parseFloat(b.dataset.score) || 0) - (parseFloat(a.dataset.score) || 0);
+          return (Number.parseFloat(b.dataset.score) || 0) - (Number.parseFloat(a.dataset.score) || 0);
+        }
         default:
           return 0;
       }
     });
 
     // Hide all cards first
-    reportCards.forEach(card => card.style.display = 'none');
+    reportCards.forEach((card) => (card.style.display = 'none'));
 
     // Show filtered and sorted cards
     if (filteredCards.length > 0) {
-      filteredCards.forEach(card => {
+      filteredCards.forEach((card) => {
         card.style.display = 'block';
         reportsGrid.appendChild(card); // Re-append to maintain order
       });
@@ -267,10 +280,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (shouldSave) {
       updateURL(selectedCategory);
     }
-  }
+  };
 
   // URLを更新する関数（カテゴリフィルタの状態を反映）
-  const siteName = (homeContainer && homeContainer.dataset.siteTitle) || document.title;
+  const siteName = homeContainer?.dataset.siteTitle || document.title;
   function updateURL(category) {
     const url = new URL(window.location);
 
@@ -282,7 +295,9 @@ document.addEventListener('DOMContentLoaded', function () {
       // option text から絵文字を除去して取得する
       let originalCategoryName = category;
       if (categoryOption) {
-        originalCategoryName = categoryOption.textContent.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
+        originalCategoryName = categoryOption.textContent
+          .replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '')
+          .trim();
       }
 
       url.searchParams.set('category', originalCategoryName);
@@ -304,22 +319,30 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Event listeners
-  searchInput.addEventListener('input', function () { filterAndSort(); });
-  tagFilter.addEventListener('change', function () { filterAndSort(); });
-  categoryFilter.addEventListener('change', function () { filterAndSort(); });
-  sortSelect.addEventListener('change', function () { filterAndSort(); });
+  searchInput.addEventListener('input', () => {
+    filterAndSort();
+  });
+  tagFilter.addEventListener('change', () => {
+    filterAndSort();
+  });
+  categoryFilter.addEventListener('change', () => {
+    filterAndSort();
+  });
+  sortSelect.addEventListener('change', () => {
+    filterAndSort();
+  });
 
-  searchClear.addEventListener('click', function () {
+  searchClear.addEventListener('click', () => {
     searchInput.value = '';
     filterAndSort();
   });
 
-  tagFilterClear.addEventListener('click', function () {
+  tagFilterClear.addEventListener('click', () => {
     tagFilter.value = '';
     filterAndSort();
   });
 
-  categoryFilterClear.addEventListener('click', function () {
+  categoryFilterClear.addEventListener('click', () => {
     categoryFilter.value = '';
     filterAndSort();
   });
@@ -351,7 +374,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ブラウザバック/フォワード時にフィルタ状態を復元
-  window.addEventListener('pageshow', function (event) {
+  window.addEventListener('pageshow', (event) => {
     // bfcacheから復元された場合（event.persisted === true）
     if (event.persisted) {
       const restored = restoreFilterState();
@@ -362,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Tag/Category click functionality
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', (e) => {
     if (e.target.classList.contains('tag')) {
       e.preventDefault(); // タップ時のデフォルト動作を防ぐ
       handleTagClick(e.target);
@@ -422,14 +445,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // すべてのレポートからランダムに4つ選択（スコアと無料プラン情報も取得）
     const shuffled = allReportCards
-      .map(card => ({
+      .map((card) => ({
         url: card.querySelector('a')?.href || '#',
         // タイトルから既存の絵文字を除去して取得
-        title: card.querySelector('.report-title a')?.textContent?.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim() || 'Unknown',
+        title:
+          card
+            .querySelector('.report-title a')
+            ?.textContent?.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '')
+            .trim() || 'Unknown',
         category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
         score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
         hasFreePlan: !!card.querySelector('.card-free-badge'),
-        isOss: card.dataset.isOss === 'true'
+        isOss: card.dataset.isOss === 'true',
       }))
       .sort(() => Math.random() - 0.5)
       .slice(0, 4);

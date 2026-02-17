@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 // Mock DOM
 class HTMLElement {
@@ -11,13 +11,16 @@ class HTMLElement {
     this.className = '';
     this.classList = {
       add: (c) => {
-        if (!this.className.includes(c)) this.className += ' ' + c;
+        if (!this.className.includes(c)) this.className += ` ${c}`;
       },
       remove: (c) => {
-        this.className = this.className.replace(new RegExp('\\b' + c + '\\b', 'g'), '').trim();
+        this.className = this.className.replace(new RegExp(`\\b${c}\\b`, 'g'), '').trim();
       },
       contains: (c) => this.className.includes(c),
-      toggle: (c) => { if (this.classList.contains(c)) this.classList.remove(c); else this.classList.add(c); }
+      toggle: (c) => {
+        if (this.classList.contains(c)) this.classList.remove(c);
+        else this.classList.add(c);
+      },
     };
     this.listeners = {};
     this.parentNode = null;
@@ -26,14 +29,22 @@ class HTMLElement {
     this.dataset = {};
   }
 
-  get innerHTML() { return this._innerHTML; }
-  set innerHTML(val) { this._innerHTML = val; }
-  get textContent() { return this._innerHTML.replace(/[<>]/g, ''); } // Simple text extraction
-  set textContent(val) { this._innerHTML = val; }
+  get innerHTML() {
+    return this._innerHTML;
+  }
+  set innerHTML(val) {
+    this._innerHTML = val;
+  }
+  get textContent() {
+    return this._innerHTML.replace(/[<>]/g, '');
+  } // Simple text extraction
+  set textContent(val) {
+    this._innerHTML = val;
+  }
 
   appendChild(child) {
     if (child.parentNode) {
-      child.parentNode.children = child.parentNode.children.filter(c => c !== child);
+      child.parentNode.children = child.parentNode.children.filter((c) => c !== child);
     }
     this.children.push(child);
     child.parentNode = this;
@@ -41,7 +52,7 @@ class HTMLElement {
 
   remove() {
     if (this.parentNode) {
-      this.parentNode.children = this.parentNode.children.filter(c => c !== this);
+      this.parentNode.children = this.parentNode.children.filter((c) => c !== this);
       this.parentNode = null;
     }
   }
@@ -59,39 +70,43 @@ class HTMLElement {
   querySelector(selector) {
     if (selector.startsWith('.')) {
       const className = selector.substring(1);
-      return this.children.find(c => c.className && c.className.includes(className)) || null;
+      return this.children.find((c) => c.className?.includes(className)) || null;
     }
     if (selector.startsWith('#')) {
       // Not implemented for children search by ID in this simple mock
       return null;
     }
     // Tag name search
-    return this.children.find(c => c.tagName && c.tagName.toLowerCase() === selector.toLowerCase()) || null;
+    return this.children.find((c) => c.tagName && c.tagName.toLowerCase() === selector.toLowerCase()) || null;
   }
 
   querySelectorAll(selector) {
     if (selector === 'option') {
-      return this.children.filter(c => c.tagName === 'OPTION');
+      return this.children.filter((c) => c.tagName === 'OPTION');
     }
     if (selector === '.pick-card') {
-      return this.children.filter(c => c.className && c.className.includes('pick-card'));
+      return this.children.filter((c) => c.className?.includes('pick-card'));
     }
     if (selector === '.report-card') {
-       // Search recursively
-       let results = [];
-       if (this.className && this.className.includes('report-card')) {
-         results.push(this);
-       }
-       for (const child of this.children) {
-         results = results.concat(child.querySelectorAll(selector));
-       }
-       return results;
+      // Search recursively
+      let results = [];
+      if (this.className?.includes('report-card')) {
+        results.push(this);
+      }
+      for (const child of this.children) {
+        results = results.concat(child.querySelectorAll(selector));
+      }
+      return results;
     }
     return [];
   }
 
-  getAttribute(name) { return this.attributes[name]; }
-  setAttribute(name, value) { this.attributes[name] = value; }
+  getAttribute(name) {
+    return this.attributes[name];
+  }
+  setAttribute(name, value) {
+    this.attributes[name] = value;
+  }
 
   blur() {}
 }
@@ -104,24 +119,24 @@ global.window = {
   location: {
     href: 'http://localhost/',
     search: '',
-    pathname: '/'
+    pathname: '/',
   },
   history: {
-    replaceState: (state, title, url) => {
+    replaceState: (_state, _title, url) => {
       global.window.location.href = url;
-    }
+    },
   },
   sessionStorage: {
     getItem: () => null,
     setItem: () => {},
-    removeItem: () => {}
+    removeItem: () => {},
   },
   addEventListener: (event, callback) => {
     if (!windowListeners[event]) windowListeners[event] = [];
     windowListeners[event].push(callback);
   },
   matchMedia: () => ({ matches: false, addEventListener: () => {} }),
-  requestAnimationFrame: (cb) => cb()
+  requestAnimationFrame: (cb) => cb(),
 };
 
 global.sessionStorage = global.window.sessionStorage;
@@ -131,7 +146,9 @@ global.URL = class {
     this.href = url;
     this.searchParams = new URLSearchParams();
   }
-  toString() { return this.href; }
+  toString() {
+    return this.href;
+  }
 };
 
 global.URLSearchParams = class {
@@ -139,42 +156,53 @@ global.URLSearchParams = class {
     this.params = {};
     if (search) {
       // Simple parsing
-      search.replace('?', '').split('&').forEach(pair => {
-        const [key, value] = pair.split('=');
-        if (key) this.params[key] = decodeURIComponent(value || '');
-      });
+      search
+        .replace('?', '')
+        .split('&')
+        .forEach((pair) => {
+          const [key, value] = pair.split('=');
+          if (key) this.params[key] = decodeURIComponent(value || '');
+        });
     }
   }
-  get(key) { return this.params[key] || null; }
-  set(key, value) { this.params[key] = value; }
-  delete(key) { delete this.params[key]; }
+  get(key) {
+    return this.params[key] || null;
+  }
+  set(key, value) {
+    this.params[key] = value;
+  }
+  delete(key) {
+    delete this.params[key];
+  }
   toString() {
-    return Object.entries(this.params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`).join('&');
+    return Object.entries(this.params)
+      .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
+      .join('&');
   }
 };
 
 // Create mock elements
 const searchInput = new HTMLElement('input');
-searchInput.attributes['id'] = 'report-search';
+searchInput.attributes.id = 'report-search';
 searchInput.value = '';
 
 const tagFilter = new HTMLElement('select');
-tagFilter.attributes['id'] = 'tag-filter';
+tagFilter.attributes.id = 'tag-filter';
 tagFilter.value = '';
 
 const categoryFilter = new HTMLElement('select');
-categoryFilter.attributes['id'] = 'category-filter';
+categoryFilter.attributes.id = 'category-filter';
 categoryFilter.value = '';
 
 const sortSelect = new HTMLElement('select');
-sortSelect.attributes['id'] = 'sort-select';
+sortSelect.attributes.id = 'sort-select';
 sortSelect.value = 'date-desc';
 
 const reportsGrid = new HTMLElement('div');
-reportsGrid.attributes['id'] = 'reports-grid';
+reportsGrid.attributes.id = 'reports-grid';
 
 const noResults = new HTMLElement('div');
-noResults.attributes['id'] = 'no-results';
+noResults.attributes.id = 'no-results';
 noResults.style.display = 'none';
 
 // Create a report card
@@ -184,7 +212,7 @@ function createReportCard(title, tags, category, date, score) {
   card.dataset = {
     toolName: title,
     toolReading: title, // Simplified
-    description: 'Description for ' + title,
+    description: `Description for ${title}`,
     latestHighlight: '',
     developer: 'Developer',
     tags: tags.join(','),
@@ -192,7 +220,7 @@ function createReportCard(title, tags, category, date, score) {
     category: category,
     score: score || '0',
     isOss: 'false',
-    hasFreePlan: 'false'
+    hasFreePlan: 'false',
   };
 
   // Add title element for category emoji application
@@ -250,7 +278,7 @@ global.document = {
     documentListeners[event].push(callback);
   },
   createElement: (tag) => new HTMLElement(tag),
-  title: 'Test Site'
+  title: 'Test Site',
 };
 
 // Load and execute script
@@ -261,8 +289,8 @@ try {
   eval(scriptContent);
 
   // Trigger DOMContentLoaded
-  if (documentListeners['DOMContentLoaded']) {
-    documentListeners['DOMContentLoaded'].forEach(cb => cb());
+  if (documentListeners.DOMContentLoaded) {
+    documentListeners.DOMContentLoaded.forEach((cb) => cb());
   }
 
   // Verification Tests
@@ -271,7 +299,7 @@ try {
 
   // Test 1: Initial state (all cards visible)
   if (reportsGrid.children.length !== 3) {
-    console.error('Test 1 Failed: Expected 3 cards initially, got ' + reportsGrid.children.length);
+    console.error(`Test 1 Failed: Expected 3 cards initially, got ${reportsGrid.children.length}`);
     passed = false;
   } else {
     console.log('Test 1 Passed: Initial state correct.');
@@ -281,7 +309,7 @@ try {
   searchInput.value = 'Tool A';
   window.filterAndSort(false);
 
-  const visibleCardsSearch = reportsGrid.children.filter(c => c.style.display !== 'none');
+  const visibleCardsSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsSearch.length !== 1 || visibleCardsSearch[0].dataset.toolName !== 'Tool A') {
     console.error('Test 2 Failed: Search filter failed.');
     passed = false;
@@ -297,9 +325,11 @@ try {
   tagFilter.value = 'tag3';
   window.filterAndSort(false);
 
-  const visibleCardsTag = reportsGrid.children.filter(c => c.style.display !== 'none');
+  const visibleCardsTag = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsTag.length !== 1 || visibleCardsTag[0].dataset.toolName !== 'Tool B') {
-    console.error('Test 3 Failed: Tag filter failed. Expected Tool B, got ' + (visibleCardsTag[0]?.dataset?.toolName || 'none'));
+    console.error(
+      `Test 3 Failed: Tag filter failed. Expected Tool B, got ${visibleCardsTag[0]?.dataset?.toolName || 'none'}`,
+    );
     passed = false;
   } else {
     console.log('Test 3 Passed: Tag filter correct.');
@@ -315,10 +345,10 @@ try {
 
   window.filterAndSort(false);
 
-  const visibleCardsCat = reportsGrid.children.filter(c => c.style.display !== 'none');
+  const visibleCardsCat = reportsGrid.children.filter((c) => c.style.display !== 'none');
   // Should be Tool A and Tool C
   if (visibleCardsCat.length !== 2) {
-    console.error('Test 4 Failed: Category filter failed. Expected 2 cards, got ' + visibleCardsCat.length);
+    console.error(`Test 4 Failed: Category filter failed. Expected 2 cards, got ${visibleCardsCat.length}`);
     passed = false;
   } else {
     console.log('Test 4 Passed: Category filter correct.');
@@ -331,13 +361,15 @@ try {
 
   // Order should be: Tool C (Mar), Tool B (Feb), Tool A (Jan)
   const cardsDateDesc = reportsGrid.children;
-  if (cardsDateDesc[0].dataset.toolName === 'Tool C' &&
-      cardsDateDesc[1].dataset.toolName === 'Tool B' &&
-      cardsDateDesc[2].dataset.toolName === 'Tool A') {
+  if (
+    cardsDateDesc[0].dataset.toolName === 'Tool C' &&
+    cardsDateDesc[1].dataset.toolName === 'Tool B' &&
+    cardsDateDesc[2].dataset.toolName === 'Tool A'
+  ) {
     console.log('Test 5 Passed: Sort date-desc correct.');
   } else {
     console.error('Test 5 Failed: Sort date-desc failed.');
-    console.log(cardsDateDesc.map(c => c.dataset.toolName));
+    console.log(cardsDateDesc.map((c) => c.dataset.toolName));
     passed = false;
   }
 
@@ -348,7 +380,6 @@ try {
     console.error('Some tests failed.');
     process.exit(1);
   }
-
 } catch (e) {
   console.error('Error executing script:', e);
   process.exit(1);

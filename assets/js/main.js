@@ -2,7 +2,7 @@
  * ScrollManager: Centralized scroll event handling
  * Optimizes performance by using a single scroll listener and requestAnimationFrame loop
  */
-const ScrollManager = (function() {
+const ScrollManager = (() => {
   const handlers = new Set();
   let ticking = false;
 
@@ -10,7 +10,7 @@ const ScrollManager = (function() {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        handlers.forEach(handler => handler(scrollTop));
+        handlers.forEach((handler) => handler(scrollTop));
         ticking = false;
       });
       ticking = true;
@@ -18,18 +18,18 @@ const ScrollManager = (function() {
   }
 
   return {
-    register: function(handler) {
+    register: (handler) => {
       handlers.add(handler);
       if (handlers.size === 1) {
         window.addEventListener('scroll', handleScroll, { passive: true });
       }
     },
-    unregister: function(handler) {
+    unregister: (handler) => {
       handlers.delete(handler);
       if (handlers.size === 0) {
         window.removeEventListener('scroll', handleScroll);
       }
-    }
+    },
   };
 })();
 
@@ -92,7 +92,7 @@ function initMobileNavigation() {
 
   if (navToggle && navMenu) {
     // Toggle menu
-    navToggle.addEventListener('click', function (e) {
+    navToggle.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
 
@@ -117,23 +117,21 @@ function initMobileNavigation() {
 
     // Close mobile menu when clicking a link
     const navLinks = navMenu.querySelectorAll('a');
-    navLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
         toggleMenu(false);
       });
     });
 
     // Close mobile menu when clicking outside
-    document.addEventListener('click', function (e) {
-      if (navMenu.classList.contains('active') &&
-        !navToggle.contains(e.target) &&
-        !navMenu.contains(e.target)) {
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
         toggleMenu(false);
       }
     });
 
     // Close mobile menu on escape key
-    document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         toggleMenu(false);
         navToggle.focus();
@@ -143,13 +141,13 @@ function initMobileNavigation() {
 
   // Dropdown functionality
   const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  dropdownToggles.forEach(function (toggle) {
-    toggle.addEventListener('click', function (e) {
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener('click', (e) => {
       e.preventDefault();
       const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
 
       // Close all other dropdowns
-      dropdownToggles.forEach(function (otherToggle) {
+      dropdownToggles.forEach((otherToggle) => {
         if (otherToggle !== toggle) {
           otherToggle.setAttribute('aria-expanded', 'false');
           otherToggle.parentElement.classList.remove('active');
@@ -163,9 +161,9 @@ function initMobileNavigation() {
   });
 
   // Close dropdowns when clicking outside
-  document.addEventListener('click', function (e) {
+  document.addEventListener('click', (e) => {
     if (!e.target.closest('.dropdown')) {
-      dropdownToggles.forEach(function (toggle) {
+      dropdownToggles.forEach((toggle) => {
         toggle.setAttribute('aria-expanded', 'false');
         toggle.parentElement.classList.remove('active');
       });
@@ -187,7 +185,7 @@ function initNavigationDropdown() {
     });
 
     // Close dropdown when clicking outside
-    document.addEventListener('click', function (e) {
+    document.addEventListener('click', (e) => {
       if (!dropdownToggle.contains(e.target) && !dropdown.contains(e.target)) {
         dropdownToggle.setAttribute('aria-expanded', 'false');
         dropdown.classList.remove('active');
@@ -200,11 +198,11 @@ function initNavigationDropdown() {
 function initSearchFunctionality() {
   const searchForms = document.querySelectorAll('.search-form');
 
-  searchForms.forEach(function (form) {
+  searchForms.forEach((form) => {
     const searchInput = form.querySelector('.search-input, #search-input, #nav-search-input');
 
     if (searchInput) {
-      form.addEventListener('submit', function (e) {
+      form.addEventListener('submit', (e) => {
         e.preventDefault();
         const searchTerm = searchInput.value.trim();
 
@@ -219,9 +217,9 @@ function initSearchFunctionality() {
       injectSearchStyles();
 
       let searchTimeout;
-      searchInput.addEventListener('input', function () {
+      searchInput.addEventListener('input', () => {
         clearTimeout(searchTimeout);
-        searchTimeout = setTimeout(function () {
+        searchTimeout = setTimeout(() => {
           const searchTerm = searchInput.value.trim();
           if (searchTerm.length > 2) {
             showSearchSuggestions(searchTerm, searchInput);
@@ -256,18 +254,18 @@ function injectSearchStyles() {
 // Escape HTML special characters
 function escapeHtml(text) {
   return String(text ?? '')
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
 }
 
 // Simple client-side search
 function performSearch(searchTerm) {
   // Redirect to home page with search parameter
   const homeUrl = '/';
-  const searchUrl = homeUrl + '?search=' + encodeURIComponent(searchTerm);
+  const searchUrl = `${homeUrl}?search=${encodeURIComponent(searchTerm)}`;
   window.location.href = searchUrl;
 }
 
@@ -300,7 +298,7 @@ function showSearchSuggestions(searchTerm, inputElement) {
     `;
 
     // Add event delegation for click handling
-    suggestions.addEventListener('click', function(e) {
+    suggestions.addEventListener('click', (e) => {
       const item = e.target.closest('.search-suggestion-item');
       if (item) {
         const suggestion = item.textContent;
@@ -311,19 +309,15 @@ function showSearchSuggestions(searchTerm, inputElement) {
   }
 
   // Add some example suggestions (in a real implementation, this would be dynamic)
-  const exampleSuggestions = [
-    'Jenkins レポート',
-    'NotebookLM 調査',
-    'システム分析'
-  ].filter(suggestion =>
-    suggestion.toLowerCase().includes(searchTerm.toLowerCase())
+  const exampleSuggestions = ['Jenkins レポート', 'NotebookLM 調査', 'システム分析'].filter((suggestion) =>
+    suggestion.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   if (exampleSuggestions.length > 0) {
     // Use DocumentFragment for better performance and security
     const fragment = document.createDocumentFragment();
 
-    exampleSuggestions.forEach(function(suggestion) {
+    exampleSuggestions.forEach((suggestion) => {
       const item = document.createElement('div');
       item.className = 'search-suggestion-item';
       item.setAttribute('data-value', suggestion);
@@ -358,7 +352,7 @@ function hideSearchSuggestions() {
 function initSmoothScrolling() {
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
-  anchorLinks.forEach(function (link) {
+  anchorLinks.forEach((link) => {
     link.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
@@ -371,7 +365,7 @@ function initSmoothScrolling() {
 
         targetElement.scrollIntoView({
           behavior: prefersReducedMotion ? 'auto' : 'smooth',
-          block: 'start'
+          block: 'start',
         });
 
         // Update focus for accessibility
@@ -394,17 +388,15 @@ function initFocusManagement() {
   }
 
   // Improve focus visibility - detect keyboard navigation
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       document.body.classList.add('keyboard-navigation');
     }
   });
 
-  document.addEventListener('mousedown', function () {
+  document.addEventListener('mousedown', () => {
     document.body.classList.remove('keyboard-navigation');
   });
-
-
 
   // Announce page changes for screen readers
   announcePageChanges();
@@ -416,7 +408,7 @@ function initFocusManagement() {
 // Focus trap for modal/mobile menu
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll(
-    'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+    'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select',
   );
 
   if (focusableElements.length === 0) return;
@@ -424,7 +416,7 @@ function trapFocus(element) {
   const firstFocusableElement = focusableElements[0];
   const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
-  element.addEventListener('keydown', function (e) {
+  element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusableElement) {
@@ -472,35 +464,35 @@ function applyEmojisToHeadings() {
   if (!reportContent) return;
 
   const emojiMap = {
-    '基本情報': '📋',
-    '目的と主な利用シーン': '🎯',
-    '主要機能': '🛠️',
-    '特徴・強み': '💪',
-    '弱み・注意点': '⚠️',
-    '料金プラン': '💰',
-    '導入実績・事例': '🏢',
-    'サポート体制': '📞',
-    '連携機能': '🔌',
-    'エコシステムと連携': '🔌',
-    'ベストプラクティス': '✨',
-    'セキュリティとコンプライアンス': '🛡️',
-    '操作性': '🖱️',
-    'ユーザーの声': '💬',
-    '直近半年のアップデート情報': '🆙',
-    '類似ツールとの比較': '⚔️',
-    '総評': '📝',
-    '開始手順': '🚀',
-    'セットアップ': '🚀'
+    基本情報: '📋',
+    目的と主な利用シーン: '🎯',
+    主要機能: '🛠️',
+    特徴・強み: '💪',
+    弱み・注意点: '⚠️',
+    料金プラン: '💰',
+    導入実績・事例: '🏢',
+    サポート体制: '📞',
+    連携機能: '🔌',
+    エコシステムと連携: '🔌',
+    ベストプラクティス: '✨',
+    セキュリティとコンプライアンス: '🛡️',
+    操作性: '🖱️',
+    ユーザーの声: '💬',
+    直近半年のアップデート情報: '🆙',
+    類似ツールとの比較: '⚔️',
+    総評: '📝',
+    開始手順: '🚀',
+    セットアップ: '🚀',
   };
 
   const headings = reportContent.querySelectorAll('h2');
-  headings.forEach(h => {
+  headings.forEach((h) => {
     const text = h.textContent;
     for (const [key, emoji] of Object.entries(emojiMap)) {
       // 絵文字がまだ付いておらず、キーワードが含まれる場合に付与
       if (text.includes(key) && !text.includes(emoji)) {
         // テキストの先頭（番号の前後など）ではなく、見出し全体の先頭に挿入
-        h.innerHTML = emoji + ' ' + h.innerHTML;
+        h.innerHTML = `${emoji} ${h.innerHTML}`;
         break;
       }
     }
@@ -510,7 +502,7 @@ function applyEmojisToHeadings() {
 function addCopyButtonsToCodeBlocks() {
   const codeBlocks = document.querySelectorAll('pre code');
 
-  codeBlocks.forEach(function (codeBlock) {
+  codeBlocks.forEach((codeBlock) => {
     const pre = codeBlock.parentElement;
     const button = document.createElement('button');
     button.className = 'copy-code-btn';
@@ -532,18 +524,18 @@ function addCopyButtonsToCodeBlocks() {
 
     pre.style.position = 'relative';
 
-    pre.addEventListener('mouseenter', function () {
+    pre.addEventListener('mouseenter', () => {
       button.style.opacity = '1';
     });
 
-    pre.addEventListener('mouseleave', function () {
+    pre.addEventListener('mouseleave', () => {
       button.style.opacity = '0';
     });
 
-    button.addEventListener('click', function () {
-      navigator.clipboard.writeText(codeBlock.textContent).then(function () {
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(codeBlock.textContent).then(() => {
         button.textContent = 'コピー済み!';
-        setTimeout(function () {
+        setTimeout(() => {
           button.textContent = 'コピー';
         }, 2000);
       });
@@ -579,13 +571,16 @@ function enhanceTablesResponsiveness() {
   };
 
   // Single ResizeObserver for all tables
-  const resizeObserver = new ResizeObserver(entries => {
+  const resizeObserver = new ResizeObserver((entries) => {
     const wrappersToUpdate = new Set();
     for (const entry of entries) {
       let wrapper = null;
       if (entry.target.classList.contains('table-responsive')) {
         wrapper = entry.target;
-      } else if (entry.target.tagName === 'TABLE' && entry.target.parentElement?.classList.contains('table-responsive')) {
+      } else if (
+        entry.target.tagName === 'TABLE' &&
+        entry.target.parentElement?.classList.contains('table-responsive')
+      ) {
         wrapper = entry.target.parentElement;
       }
 
@@ -602,13 +597,13 @@ function enhanceTablesResponsiveness() {
     }
   });
 
-  tables.forEach(function (table) {
+  tables.forEach((table) => {
     // 1. セルの内容をdata-label属性にセット（カード表示用）
     const thead = table.querySelector('thead');
     if (thead) {
-      const headers = Array.from(thead.querySelectorAll('th')).map(th => th.textContent.trim());
+      const headers = Array.from(thead.querySelectorAll('th')).map((th) => th.textContent.trim());
       const rows = table.querySelectorAll('tbody tr');
-      rows.forEach(row => {
+      rows.forEach((row) => {
         const cells = row.querySelectorAll('td');
         cells.forEach((cell, index) => {
           if (headers[index]) {
@@ -630,7 +625,7 @@ function enhanceTablesResponsiveness() {
 
     if (prev) {
       const headingText = prev.textContent;
-      if (keywords.some(k => headingText.includes(k))) {
+      if (keywords.some((k) => headingText.includes(k))) {
         shouldBeCards = true;
       }
     }
@@ -659,15 +654,19 @@ function enhanceTablesResponsiveness() {
 
       // Throttled scroll listener
       let ticking = false;
-      wrapper.addEventListener('scroll', function () {
-        if (!ticking) {
-          window.requestAnimationFrame(function () {
-            checkScroll(wrapper);
-            ticking = false;
-          });
-          ticking = true;
-        }
-      }, { passive: true });
+      wrapper.addEventListener(
+        'scroll',
+        () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              checkScroll(wrapper);
+              ticking = false;
+            });
+            ticking = true;
+          }
+        },
+        { passive: true },
+      );
     }
   });
 }
@@ -676,13 +675,13 @@ function markExternalLinks() {
   const links = document.querySelectorAll('.report-content a[href^="http"]');
   const currentDomain = window.location.hostname;
 
-  links.forEach(function (link) {
+  links.forEach((link) => {
     const linkDomain = new URL(link.href).hostname;
 
     if (linkDomain !== currentDomain) {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
-      link.setAttribute('aria-label', link.textContent + ' (新しいタブで開く)');
+      link.setAttribute('aria-label', `${link.textContent} (新しいタブで開く)`);
     }
   });
 }
@@ -706,8 +705,8 @@ function generateTableOfContents() {
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     `;
 
-    headings.forEach(function (heading, index) {
-      const id = 'heading-' + index;
+    headings.forEach((heading, index) => {
+      const id = `heading-${index}`;
       heading.id = id;
 
       const listItem = document.createElement('li');
@@ -722,12 +721,12 @@ function generateTableOfContents() {
       }
 
       const link = document.createElement('a');
-      link.href = '#' + id;
+      link.href = `#${id}`;
       link.textContent = heading.textContent;
       link.style.textDecoration = 'none';
 
       // スムーズスクロールとヘッダー高さを考慮した位置調整
-      link.addEventListener('click', function (e) {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetElement = document.getElementById(id);
         if (targetElement) {
@@ -736,11 +735,11 @@ function generateTableOfContents() {
 
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
 
           // URLを更新（履歴に追加）
-          history.pushState(null, null, '#' + id);
+          history.pushState(null, null, `#${id}`);
         }
       });
 
@@ -758,7 +757,7 @@ function generateTableOfContents() {
     } else {
       // h2見出しがない場合は、最初のh1見出しの後に挿入
       const firstH1 = reportContent.querySelector('h1');
-      if (firstH1 && firstH1.nextSibling) {
+      if (firstH1?.nextSibling) {
         firstH1.parentElement.insertBefore(toc, firstH1.nextSibling);
       } else {
         // h1もない場合は、コンテンツの最初に挿入
@@ -779,9 +778,9 @@ function announcePageChanges() {
   document.body.appendChild(liveRegion);
 
   // Function to announce messages
-  window.announceToScreenReader = function (message) {
+  window.announceToScreenReader = (message) => {
     liveRegion.textContent = message;
-    setTimeout(function () {
+    setTimeout(() => {
       liveRegion.textContent = '';
     }, 1000);
   };
@@ -791,8 +790,8 @@ function announcePageChanges() {
 function enhanceFormAccessibility() {
   // Add required field indicators
   const requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
-  requiredFields.forEach(function (field) {
-    const label = document.querySelector('label[for="' + field.id + '"]');
+  requiredFields.forEach((field) => {
+    const label = document.querySelector(`label[for="${field.id}"]`);
     if (label && !label.querySelector('.required-indicator')) {
       const indicator = document.createElement('span');
       indicator.className = 'required-indicator';
@@ -805,7 +804,7 @@ function enhanceFormAccessibility() {
 
   // Add error message containers
   const formFields = document.querySelectorAll('input, select, textarea');
-  formFields.forEach(function (field) {
+  formFields.forEach((field) => {
     if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('error-message')) {
       const errorContainer = document.createElement('div');
       errorContainer.className = 'error-message';
@@ -832,11 +831,9 @@ function checkColorContrast() {
   }
 }
 
-
-
 // Keyboard shortcuts for better navigation
 function initKeyboardShortcuts() {
-  document.addEventListener('keydown', function (e) {
+  document.addEventListener('keydown', (e) => {
     // Alt + M: Focus main content
     if (e.altKey && e.key === 'm') {
       e.preventDefault();
@@ -871,7 +868,6 @@ function initKeyboardShortcuts() {
     }
   });
 }
-
 
 // トップに戻るボタンの機能
 function initBackToTopButton() {
@@ -919,7 +915,7 @@ function initBackToTopButton() {
       requestAnimationFrame(() => {
         window.scrollTo({
           top: 0,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       });
 
@@ -967,7 +963,7 @@ function initBackToTopButton() {
   backToTopButton.addEventListener('click', scrollToTop);
 
   // キーボードサポート
-  backToTopButton.addEventListener('keydown', function (e) {
+  backToTopButton.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       scrollToTop();
@@ -984,8 +980,8 @@ function initFilterReset() {
   const resetLinks = document.querySelectorAll('.reset-filter-link');
   const FILTER_STATE_KEY = 'homeFilterState';
 
-  resetLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
+  resetLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
       // フィルタ状態を保存しているsessionStorageをクリア
       sessionStorage.removeItem(FILTER_STATE_KEY);
 
@@ -1076,8 +1072,8 @@ function initThemeToggle() {
 
   // テーマ切替ボタンのイベントリスナー
   const themeToggleButtons = document.querySelectorAll('.theme-toggle');
-  themeToggleButtons.forEach(function (button) {
-    button.addEventListener('click', function (e) {
+  themeToggleButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
       e.preventDefault();
       toggleTheme();
     });
@@ -1085,7 +1081,7 @@ function initThemeToggle() {
 
   // システム設定の変更を監視（ユーザーが手動設定していない場合のみ反映）
   const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-  mediaQuery.addEventListener('change', function (e) {
+  mediaQuery.addEventListener('change', (e) => {
     // 手動設定がない場合のみシステム設定に追従
     if (!getStoredTheme()) {
       applyTheme(e.matches ? 'dark' : 'light');
@@ -1099,7 +1095,7 @@ function initThemeToggle() {
 function initAccessibilityEnhancements() {
   // Add role and aria-label to buttons without text
   const buttons = document.querySelectorAll('button');
-  buttons.forEach(function (button) {
+  buttons.forEach((button) => {
     if (!button.textContent.trim() && !button.getAttribute('aria-label')) {
       const icon = button.querySelector('svg, .icon');
       if (icon) {
@@ -1110,12 +1106,12 @@ function initAccessibilityEnhancements() {
 
   // Ensure all interactive elements are keyboard accessible
   const interactiveElements = document.querySelectorAll('.tag, .card-link, .dropdown-toggle');
-  interactiveElements.forEach(function (element) {
+  interactiveElements.forEach((element) => {
     if (!element.getAttribute('tabindex') && element.tagName !== 'A' && element.tagName !== 'BUTTON') {
       element.setAttribute('tabindex', '0');
       element.setAttribute('role', 'button');
 
-      element.addEventListener('keydown', function (e) {
+      element.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
           element.click();
