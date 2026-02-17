@@ -1,3 +1,8 @@
+/**
+ * assets/js/home.js
+ * Handles the logic for the home page, including filtering, sorting, and random picks.
+ * Originally extracted from an inline script in _layouts/home.html.
+ */
 document.addEventListener('DOMContentLoaded', function () {
   const homeContainer = document.querySelector('.home-container');
   const searchInput = document.getElementById('report-search');
