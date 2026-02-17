@@ -320,14 +320,19 @@ function showSearchSuggestions(searchTerm, inputElement) {
   );
 
   if (exampleSuggestions.length > 0) {
-    // Build HTML string for better performance
-    const suggestionsHtml = exampleSuggestions.map(function(suggestion) {
-      const safeSuggestion = escapeHtml(suggestion);
-      // Store the suggestion value in a data attribute for retrieval
-      return '<div class="search-suggestion-item" data-value="' + safeSuggestion + '">' + safeSuggestion + '</div>';
-    }).join('');
+    // Use DocumentFragment for better performance and security
+    const fragment = document.createDocumentFragment();
 
-    suggestions.innerHTML = suggestionsHtml;
+    exampleSuggestions.forEach(function(suggestion) {
+      const item = document.createElement('div');
+      item.className = 'search-suggestion-item';
+      item.setAttribute('data-value', suggestion);
+      item.textContent = suggestion;
+      fragment.appendChild(item);
+    });
+
+    suggestions.innerHTML = '';
+    suggestions.appendChild(fragment);
 
     // Position relative to input if it's new or not yet attached
     if (isNew && form) {

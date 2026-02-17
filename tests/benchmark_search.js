@@ -8,6 +8,7 @@ class HTMLElement {
     this.style = {};
     this.children = [];
     this._innerHTML = '';
+    this._textContent = '';
     this.className = '';
     this.classList = {
       add: (c) => { this.className += ' ' + c; },
@@ -21,12 +22,40 @@ class HTMLElement {
     this.attributes = {};
   }
 
-  get innerHTML() { return this._innerHTML; }
-  set innerHTML(val) { this._innerHTML = val; }
+  get innerHTML() {
+    if (this.children.length > 0) {
+      return this.children.map(c => {
+        let html = `<${c.tagName.toLowerCase()}`;
+        if (c.className) html += ` class="${c.className}"`;
+        for (let key in c.attributes) {
+          html += ` ${key}="${c.attributes[key]}"`;
+        }
+        html += `>`;
+        if (c._textContent) html += c._textContent;
+        else if (c.innerHTML) html += c.innerHTML;
+        html += `</${c.tagName.toLowerCase()}>`;
+        return html;
+      }).join('');
+    }
+    return this._innerHTML;
+  }
+  set innerHTML(val) {
+    this._innerHTML = val;
+    this.children = []; // Clear children when setting innerHTML
+  }
+
+  get textContent() { return this._textContent; }
+  set textContent(val) { this._textContent = val; }
 
   appendChild(child) {
-    this.children.push(child);
-    child.parentNode = this;
+    if (child.tagName === 'DOCUMENT_FRAGMENT') {
+      this.children.push(...child.children);
+      child.children.forEach(c => c.parentNode = this);
+      child.children = [];
+    } else {
+      this.children.push(child);
+      child.parentNode = this;
+    }
   }
 
   remove() {
@@ -72,6 +101,10 @@ global.document = {
     createElementCount++;
     const el = new HTMLElement(tag);
     if (tag === 'div') el.tagName = 'DIV';
+    return el;
+  },
+  createDocumentFragment: () => {
+    const el = new HTMLElement('DOCUMENT_FRAGMENT');
     return el;
   },
   getElementById: (id) => null,
