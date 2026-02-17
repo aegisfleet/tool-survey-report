@@ -28,7 +28,7 @@ class HTMLElement {
 
   get innerHTML() { return this._innerHTML; }
   set innerHTML(val) { this._innerHTML = val; }
-  get textContent() { return this._innerHTML.replace(/<[^>]*>/g, ''); } // Simple text extraction
+  get textContent() { return this._innerHTML.replace(/[<>]/g, ''); } // Simple text extraction
   set textContent(val) { this._innerHTML = val; }
 
   appendChild(child) {
