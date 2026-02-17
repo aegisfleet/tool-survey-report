@@ -59,6 +59,7 @@ relationships:
     - "Appium"
     - "Robot Framework"
     - "Cucumber"
+    - "Allure Report"
 ---
 
 # **Selenium 調査レポート**

@@ -72,6 +72,7 @@ relationships:
     - "Appium"
     - "Robot Framework"
     - "Cucumber"
+    - "Allure Report"
 ---
 
 # **Playwright 調査レポート**
