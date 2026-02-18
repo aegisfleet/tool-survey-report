@@ -247,6 +247,10 @@ def _process_files(files_to_check, use_browser, browser_context, broken_links, w
         if context:
             page = context.new_page()
 
+    # Cache for checked URLs to avoid redundant checks
+    # Map: url -> (status, reason)
+    checked_url_cache = {}
+
     try:
         for filepath in files_to_check:
             print(f"Checking {filepath}...")
@@ -256,9 +260,14 @@ def _process_files(files_to_check, use_browser, browser_context, broken_links, w
                 if not url.startswith('http'):
                     continue
 
-                print(f"  Checking {url}...", end='', flush=True)
-                status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context, page=page)
-                print(f" {status} {reason}")
+                if url in checked_url_cache:
+                    status, reason = checked_url_cache[url]
+                    print(f"  Checking {url}... (cached) {status} {reason}")
+                else:
+                    print(f"  Checking {url}...", end='', flush=True)
+                    status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context, page=page)
+                    checked_url_cache[url] = (status, reason)
+                    print(f" {status} {reason}")
 
                 if status == 404:
                     broken_links.append((filepath, url, status, reason))
