@@ -53,6 +53,7 @@ links:
 relationships:
   related_tools:
     - "CodeceptJS"
+    - "axe DevTools"
     - "Playwright"
     - "PyTest"
     - "Cypress"

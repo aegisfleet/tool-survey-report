@@ -66,6 +66,7 @@ relationships:
     - "Playwright CLI"
   related_tools:
     - "CodeceptJS"
+    - "axe DevTools"
     - "Cypress"
     - "Selenium"
     - "Puppeteer"
