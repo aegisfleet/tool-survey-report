@@ -6,7 +6,8 @@ module ListPipeEscaper
     lines = doc.content.split("\n", -1)
     in_code_block = false
 
-    new_lines = lines.map do |line|
+    # Optimization: Use map! to modify the array in place, avoiding allocation of a new array
+    lines.map! do |line|
       # Check for code block toggle (fenced code blocks)
       if line.match?(/^\s*```/)
         in_code_block = !in_code_block
@@ -16,23 +17,26 @@ module ListPipeEscaper
       # Process only if NOT in a code block and line is a list item
       if !in_code_block && line.match?(/^\s*[-*+]\s+/)
         # Regex explanation:
-        # (`+.*?\1) : Matches content specifically enclosed in backticks (inline code)
-        #             `+ matches one or more backticks
-        #             .*? matches any character non-greedily
-        #             \1 matches the same number of backticks as the start
-        # (|)       : Matches the pipe character
-        line.gsub(/(`+.*?\1)|(\|)/) do |match|
+        # ((`+).*?\2) : Matches content specifically enclosed in backticks (inline code)
+        #               (`+) matches one or more backticks (Group 2)
+        #               .*? matches any character non-greedily
+        #               \2 matches the same backticks as Group 2
+        # (|)         : Matches the pipe character (Group 3)
+
+        # Optimization: Use gsub! to modify the string in place if possible
+        # gsub! returns nil if no changes are made, so we fallback to line
+        line.gsub!(/((`+).*?\2)|(\|)/) do |match|
           if $1
-            match # Return the code span as is
+            match # Return the code span as is (Group 1 matched)
           else
             '&#124;' # Replace the pipe with HTML entity
           end
-        end
+        end || line
       else
         line
       end
     end
 
-    doc.content = new_lines.join("\n")
+    doc.content = lines.join("\n")
   end
 end
