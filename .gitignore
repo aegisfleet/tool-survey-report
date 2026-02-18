@@ -41,3 +41,9 @@ verify_*.png
 # Python
 __pycache__/
 *.py[cod]
+
+# Coverage
+.coverage
+coverage.xml
+.nyc_output/
+coverage/

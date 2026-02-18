@@ -92,7 +92,11 @@ class TestBrowserTest(unittest.TestCase):
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
-        mock_page.locator.return_value.count.return_value = 1
+
+        # Mock element for locator().all()
+        mock_element = MagicMock()
+        mock_element.is_visible.return_value = True
+        mock_page.locator.return_value.all.return_value = [mock_element]
 
         args = argparse.Namespace(
             url='http://example.com',
