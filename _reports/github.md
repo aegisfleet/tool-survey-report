@@ -59,6 +59,7 @@ relationships:
   children:
     - "GitHub Actions"
     - "GitHub Copilot"
+    - "Dependabot"
   related_tools:
     - "GitLab"
     - "Jira"
