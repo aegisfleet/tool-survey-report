@@ -51,6 +51,7 @@ links:
 relationships:
   related_tools:
     - "SonarQube"
+    - "Dependabot"
 ---
 
 # **CodeQL 調査レポート**
