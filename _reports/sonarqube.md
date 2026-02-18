@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - "JaCoCo"
     - "CodeRabbit"
+    - "SonarQube Cloud"
 ---
 
 # **SonarQube 調査レポート**
