@@ -8,7 +8,7 @@ category: "動画/メディア"
 developer: "Blackmagic Design"
 official_site: "https://www.blackmagicdesign.com/products/davinciresolve"
 date: "2025-11-06"
-last_updated: "2026-01-20"
+last_updated: "2026-02-19"
 tags:
   - "動画編集"
   - "カラーグレーディング"
@@ -27,7 +27,7 @@ quick_summary:
     - "映像クリエイター"
     - "カラリスト"
     - "YouTuber"
-  latest_highlight: "DaVinci Resolve 20でAI IntelliScriptなど100以上の新機能を追加"
+  latest_highlight: "2026年2月にv20.4をリリースし、パフォーマンスと安定性を向上"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -284,6 +284,7 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-02-15 (v20.4)**: パフォーマンスの最適化と、不具合の修正、および一部の新しいメディア形式へのサポートを追加。
 * **2025-10-XX (v20.3)**: メディア管理機能の強化と、多数の安定性向上パッチのリリース。
 * **2025-05-28 (v20.0)**: メジャーアップデート。
     * **AI IntelliScript**: テキストベースの編集を可能にするスクリプト解析機能。
