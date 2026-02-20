@@ -54,7 +54,8 @@ links:
 relationships:
   # parent: ""
   # children: []
-  related_tools: [] # No reports for Prettier/ESLint exist yet.
+  related_tools:
+    - "ESLint"
 ---
 
 # **Biome 調査レポート**
