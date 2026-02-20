@@ -65,6 +65,7 @@ relationships:
     - "Android Studio"
     - "Claude Code"
     - "Mobile Next"
+    - "Kiro"
 ---
 
 # **Cursor 調査レポート**

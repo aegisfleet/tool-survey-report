@@ -60,6 +60,7 @@ relationships:
     - "Google Antigravity"
     - "Roo Code"
     - "Android Studio"
+    - "Kiro"
 ---
 
 # **Windsurf 調査レポート**
