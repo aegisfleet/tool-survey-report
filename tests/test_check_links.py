@@ -6,6 +6,36 @@ import os
 # Add the root directory to sys.path to import scripts
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.check_links import find_links_in_file
+from scripts import check_links
+
+class TestLinkCaching(unittest.TestCase):
+
+    @patch('scripts.check_links.find_links_in_file')
+    @patch('scripts.check_links.check_link')
+    def test_duplicate_checks_cached(self, mock_check_link, mock_find_links):
+        """Test that duplicate links are checked only once."""
+        # Setup
+        files_to_check = ['dummy.md']
+        broken_links = []
+        warnings = []
+
+        # Mock find_links_in_file to return duplicate links
+        mock_find_links.return_value = ['http://example.com', 'http://example.com', 'http://example.org']
+
+        # Mock check_link to return 200 OK
+        mock_check_link.return_value = (200, "OK")
+
+        # Run
+        check_links._process_files(files_to_check, False, None, broken_links, warnings)
+
+        # Verify
+        # check_link should be called once for http://example.com and once for http://example.org
+        self.assertEqual(mock_check_link.call_count, 2)
+
+        calls = [args[0] for args, _ in mock_check_link.call_args_list]
+        self.assertIn('http://example.com', calls)
+        self.assertIn('http://example.org', calls)
+        self.assertEqual(calls.count('http://example.com'), 1)
 
 class TestFindLinksInFile(unittest.TestCase):
 
