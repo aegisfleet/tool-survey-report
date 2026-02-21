@@ -27,7 +27,7 @@ quick_summary:
     - "Webサイト運営者"
     - "開発者"
     - "企業のIT担当者"
-  latest_highlight: "2025年12月にAI開発企業Replicateの買収を発表し、AIプラットフォームを強化"
+  latest_highlight: "2026年1月にWebフレームワーク「Astro」の開発元を買収し、エコシステムを拡大"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -56,6 +56,7 @@ relationships:
     - "Vercel"
     - "Google Cloud"
     - "Hono"
+    - "Astro"
 ---
 
 # **Cloudflare 調査レポート**
