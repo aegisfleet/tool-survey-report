@@ -57,6 +57,7 @@ relationships:
     - "NotebookLM"
     - "Code Wiki"
     - "Google Jules"
+    - "Google Stitch"
   related_tools:
     - "ChatGPT"
     - "Claude"
