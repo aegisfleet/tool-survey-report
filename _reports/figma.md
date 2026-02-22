@@ -52,6 +52,7 @@ relationships:
   parent: null
   children: []
   related_tools:
+    - "Google Stitch"
     - "Miro"
     - "Canva"
     - "Affinity"
