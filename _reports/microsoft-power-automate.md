@@ -57,6 +57,7 @@ relationships:
   related_tools:
     - "UiPath"
     - "Zapier"
+    - "Make"
     - "n8n"
     - "Workato"
 ---
