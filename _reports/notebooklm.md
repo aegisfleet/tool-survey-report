@@ -56,6 +56,7 @@ relationships:
   children: []
   related_tools:
     - "Google Learning"
+    - "Google Illuminate"
     - "ChatGPT"
     - "Perplexity"
     - "Claude"
