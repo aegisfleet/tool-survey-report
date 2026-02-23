@@ -59,6 +59,7 @@ relationships:
     - "Google Jules"
     - "Google Stitch"
   related_tools:
+    - "Google Learning"
     - "ChatGPT"
     - "Claude"
     - "Grok"

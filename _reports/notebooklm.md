@@ -55,6 +55,7 @@ relationships:
   parent: "Gemini"
   children: []
   related_tools:
+    - "Google Learning"
     - "Google Illuminate"
     - "ChatGPT"
     - "Perplexity"
