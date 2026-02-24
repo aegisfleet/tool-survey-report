@@ -64,6 +64,7 @@ relationships:
     - "Speaker Deck"
     - "Apple Creator Studio"
     - "Qwen-Image-Layered"
+    - "Felo"
 ---
 
 # **Canva 調査レポート**
