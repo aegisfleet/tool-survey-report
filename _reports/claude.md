@@ -59,6 +59,7 @@ relationships:
     - "MCP Apps"
     - "Cursor"
     - "GitHub Copilot"
+    - "Playwright CLI"
 ---
 
 # **Claude 調査レポート**

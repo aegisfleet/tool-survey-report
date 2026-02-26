@@ -64,6 +64,7 @@ relationships:
     - "Amazon Q Developer"
     - "Devin"
     - "Claude Code"
+    - "Playwright CLI"
 ---
 
 # **GitHub Copilot 調査レポート**
