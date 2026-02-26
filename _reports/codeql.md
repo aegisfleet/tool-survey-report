@@ -49,9 +49,9 @@ links:
   github: "https://github.com/github/codeql"
   documentation: "https://codeql.github.com/docs/"
 relationships:
+  parent: "GitHub"
   related_tools:
     - "SonarQube"
-    - "Dependabot"
 ---
 
 # **CodeQL 調査レポート**
