@@ -3,6 +3,9 @@ import argparse
 import sys
 from playwright.sync_api import sync_playwright
 import time
+import socket
+import ipaddress
+import urllib.parse
 
 class BrowserTestError(Exception):
     pass
@@ -34,9 +37,87 @@ class BrowserTestRunner:
             
         return browser.new_page(viewport=viewport)
 
+    def validate_url(self, url):
+        """
+        Validates the URL to prevent SSRF attacks.
+        Checks if the resolved IP address is a private, loopback, or link-local address.
+        """
+        if self.args.allow_internal_ips:
+            return
+
+        try:
+            parsed_url = urllib.parse.urlparse(url)
+            hostname = parsed_url.hostname
+            if not hostname:
+                 # If we can't parse a hostname, it might be a malformed URL.
+                 # In the context of page.route, 'url' is the full request URL.
+                 # In the context of initial navigation, it's what the user provided.
+                 # We'll allow it if it's not starting with http/https (e.g. data: or file: - wait, file: is dangerous too)
+                 # Actually, Playwright handles non-http schemes.
+                 # Let's enforce that if it looks like an absolute URL with a hostname, we check it.
+                 # If it doesn't have a hostname, assume it's relative or safe scheme unless we want to block file:// too.
+                 # For SSRF, we care about http/https to internal IPs.
+                 if parsed_url.scheme in ['http', 'https']:
+                     # Malformed http url?
+                     raise BrowserTestError(f"Invalid URL (no hostname): {url}")
+                 return
+
+            # Resolve hostname to IP
+            # We use getaddrinfo to support IPv6 and get all addresses
+            # We filter for AF_INET and AF_INET6 to avoid other socket types
+            addr_info = socket.getaddrinfo(hostname, None)
+
+            for family, type, proto, canonname, sockaddr in addr_info:
+                ip_str = sockaddr[0]
+                # socket.getaddrinfo might return IPv6 with scope id (e.g. fe80::1%lo0)
+                # ipaddress module handles standard formats.
+                # Strip scope id if present for IPv6
+                if '%' in ip_str:
+                    ip_str = ip_str.split('%')[0]
+
+                try:
+                    ip = ipaddress.ip_address(ip_str)
+                except ValueError:
+                    continue # Skip if not a valid IP (shouldn't happen with getaddrinfo)
+
+                if ip.is_private or ip.is_loopback or ip.is_link_local:
+                     raise BrowserTestError(f"Access to internal IP address {ip_str} is restricted.")
+
+        except (socket.gaierror, ValueError) as e:
+            # If we can't resolve it, it might be an internal name that only resolves internally,
+            # or just a bad domain.
+            # To be safe, if we can't resolve it, we could block it, or let Playwright fail.
+            # However, if it resolves internally but not on the machine running this check (unlikely in this context),
+            # it implies split DNS.
+            # Best practice for SSRF is to block if resolution fails or if it resolves to internal.
+            # But valid external domains might transiently fail.
+            # Let's log and allow if it's a resolution error? No, fail secure.
+            # But gaierror is common.
+            # The review said "fail securely (closed) if resolution fails".
+            raise BrowserTestError(f"Error resolving URL {url}: {e}")
+
+    def _handle_route(self, route):
+        request = route.request
+        try:
+            self.validate_url(request.url)
+            route.continue_()
+        except BrowserTestError as e:
+            print(f"Blocked request to {request.url}: {e}")
+            route.abort()
+
     def navigate(self):
         print(f"Navigating to {self.args.url}...")
+
+        # Setup request interception to validate all requests (including redirects)
+        # We only do this if we are not allowing internal IPs
+        if not self.args.allow_internal_ips:
+             # Match all requests
+             self.page.route("**/*", self._handle_route)
+
         try:
+            # We still validate the initial URL before even trying to navigate
+            # This catches the initial request before Playwright spins up the network stack
+            self.validate_url(self.args.url)
             self.page.goto(self.args.url)
             self.page.wait_for_load_state('networkidle')
         except Exception as e:
@@ -171,6 +252,7 @@ def main():
     parser.add_argument('--mobile', action='store_true', help='Use mobile viewport')
     parser.add_argument('--full-page', action='store_true', help='Capture full page screenshot')
     parser.add_argument('--show-browser', action='store_true', help='Show browser GUI (headless=False)')
+    parser.add_argument('--allow-internal-ips', action='store_true', help='Allow access to internal/private IP addresses')
 
     args = parser.parse_args()
     run_browser_test(args)
