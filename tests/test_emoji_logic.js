@@ -28,12 +28,12 @@ class HTMLElement {
   querySelector(selector) {
     // Handle the specific selector used in the code
     if (selector === '.meta-item.category') {
-        return this.children.find(c => c.className && c.className.includes('category')) || null;
+      return this.children.find(c => c.className?.includes('category')) || null;
     }
 
     // Very simple implementation for specific test cases
     if (selector === '.report-title a') {
-      const title = this.children.find(c => c.className && c.className.includes('report-title'));
+      const title = this.children.find(c => c.className?.includes('report-title'));
       if (title) {
         return title.children[0]; // Assuming 'a' is the first child
       }
@@ -43,20 +43,20 @@ class HTMLElement {
     if (selector.startsWith('.')) {
       const className = selector.substring(1);
       // Simple include check - might be enough for simple selectors
-      return this.children.find((c) => c.className && c.className.includes(className)) || null;
+      return this.children.find((c) => c.className?.includes(className)) || null;
     }
 
     return null;
   }
 
-  querySelectorAll(selector) {
+  querySelectorAll(_selector) {
     return [];
   }
 
   getAttribute(name) { return this.attributes[name]; }
   setAttribute(name, value) { this.attributes[name] = value; }
 
-  addEventListener() {}
+  addEventListener() { }
 }
 
 // Setup minimal global environment
@@ -67,7 +67,7 @@ global.window = {
   },
   matchMedia: () => ({ matches: false }),
 };
-global.sessionStorage = { getItem: () => null, setItem: () => {} };
+global.sessionStorage = { getItem: () => null, setItem: () => { } };
 global.URL = class { constructor(u) { this.href = u; this.searchParams = { get: () => null }; } };
 
 // Create test cards
@@ -127,26 +127,26 @@ try {
     // Check Card 1: Should have emoji added
     // AI category maps to 🤖
     if (link1.textContent === '🤖 Simple Title') {
-        console.log('Test 1 Passed: Emoji added to simple title');
+      console.log('Test 1 Passed: Emoji added to simple title');
     } else {
-        console.error(`Test 1 Failed: Expected "🤖 Simple Title", got "${link1.textContent}"`);
-        passed = false;
+      console.error(`Test 1 Failed: Expected "🤖 Simple Title", got "${link1.textContent}"`);
+      passed = false;
     }
 
     // Check Card 2: Should have emoji normalized (not duplicated)
     // "🤖 Emoji Title" should become "🤖 Emoji Title", not "🤖 🤖 Emoji Title"
     if (link2.textContent === '🤖 Emoji Title') {
-        console.log('Test 2 Passed: Emoji not duplicated');
+      console.log('Test 2 Passed: Emoji not duplicated');
     } else {
-        console.error(`Test 2 Failed: Expected "🤖 Emoji Title", got "${link2.textContent}"`);
-        passed = false;
+      console.error(`Test 2 Failed: Expected "🤖 Emoji Title", got "${link2.textContent}"`);
+      passed = false;
     }
 
     if (passed) {
-        console.log('All emoji tests passed!');
-        process.exit(0);
+      console.log('All emoji tests passed!');
+      process.exit(0);
     } else {
-        process.exit(1);
+      process.exit(1);
     }
   }, 100);
 } catch (e) {

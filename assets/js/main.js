@@ -251,15 +251,6 @@ function injectSearchStyles() {
   document.head.appendChild(style);
 }
 
-// Escape HTML special characters
-function escapeHtml(text) {
-  return String(text ?? '')
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
 
 // Simple client-side search
 function performSearch(searchTerm) {

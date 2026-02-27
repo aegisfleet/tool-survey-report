@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
 
       - name: Run Biome CI with Auto Fix
-        run: npx biome check --write .
+        run: npx biome check --write --unsafe .
 
       - name: Commit and Push Changes
         if: success()
