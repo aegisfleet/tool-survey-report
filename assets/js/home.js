@@ -52,7 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return '🔹';
   }
 
-  // カテゴリ要素およびタイトルに絵文字を適用する関数
+  // 既存の絵文字や特殊マーク、先頭スペースを除去するヘルパー関数
+  function stripEmoji(text) {
+    return text.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
+  }
+
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
     // レポートカード
@@ -70,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const titleLink = card.querySelector('.report-title a');
       if (titleLink) {
         // 既存の絵文字や特殊マーク、先頭スペースを一度すべて除去して再付与（べき等性を確保）
-        const currentTitle = titleLink.textContent.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
+        const currentTitle = stripEmoji(titleLink.textContent);
         titleLink.textContent = `${emoji} ${currentTitle}`;
       }
     });
@@ -91,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const titleEl = card.querySelector('.pick-title');
       if (titleEl) {
         // 既存の絵文字や特殊マーク、先頭スペースを一度すべて除去して再付与（べき等性を確保）
-        const currentTitle = titleEl.textContent.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
+        const currentTitle = stripEmoji(titleEl.textContent);
         titleEl.textContent = `${emoji} ${currentTitle}`;
       }
     });
@@ -102,10 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = categoryFilter.querySelectorAll('option');
     options.forEach((option) => {
       if (option.value === '') return; // "すべてのカテゴリ" はスキップ
-      const category = categoryFilter
-        .querySelector(`option[value="${option.value}"]`)
-        .textContent.trim()
-        .replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, ''); // 既存絵文字を除去して判定
+      const category = stripEmoji(
+        categoryFilter.querySelector(`option[value="${option.value}"]`).textContent,
+      ); // 既存絵文字を除去して判定
       const emoji = getEmojiForCategory(category);
 
       // 常に最新の絵文字で上書き（キーワードルール変更に対応するため）
@@ -298,9 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // option text から絵文字を除去して取得する
       let originalCategoryName = category;
       if (categoryOption) {
-        originalCategoryName = categoryOption.textContent
-          .replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '')
-          .trim();
+        originalCategoryName = stripEmoji(categoryOption.textContent);
       }
 
       url.searchParams.set('category', originalCategoryName);
@@ -452,10 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
         url: card.querySelector('a')?.href || '#',
         // タイトルから既存の絵文字を除去して取得
         title:
-          card
-            .querySelector('.report-title a')
-            ?.textContent?.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '')
-            .trim() || 'Unknown',
+          stripEmoji(card.querySelector('.report-title a')?.textContent || '') || 'Unknown',
         category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
         score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
         hasFreePlan: !!card.querySelector('.card-free-badge'),
