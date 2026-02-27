@@ -28,12 +28,12 @@ class HTMLElement {
   querySelector(selector) {
     // Handle the specific selector used in the code
     if (selector === '.meta-item.category') {
-      return this.children.find(c => c.className?.includes('category')) || null;
+      return this.children.find((c) => c.className?.includes('category')) || null;
     }
 
     // Very simple implementation for specific test cases
     if (selector === '.report-title a') {
-      const title = this.children.find(c => c.className?.includes('report-title'));
+      const title = this.children.find((c) => c.className?.includes('report-title'));
       if (title) {
         return title.children[0]; // Assuming 'a' is the first child
       }
@@ -53,10 +53,14 @@ class HTMLElement {
     return [];
   }
 
-  getAttribute(name) { return this.attributes[name]; }
-  setAttribute(name, value) { this.attributes[name] = value; }
+  getAttribute(name) {
+    return this.attributes[name];
+  }
+  setAttribute(name, value) {
+    this.attributes[name] = value;
+  }
 
-  addEventListener() { }
+  addEventListener() {}
 }
 
 // Setup minimal global environment
@@ -67,8 +71,13 @@ global.window = {
   },
   matchMedia: () => ({ matches: false }),
 };
-global.sessionStorage = { getItem: () => null, setItem: () => { } };
-global.URL = class { constructor(u) { this.href = u; this.searchParams = { get: () => null }; } };
+global.sessionStorage = { getItem: () => null, setItem: () => {} };
+global.URL = class {
+  constructor(u) {
+    this.href = u;
+    this.searchParams = { get: () => null };
+  }
+};
 
 // Create test cards
 const cards = [];
@@ -76,10 +85,14 @@ const cards = [];
 const card1 = new HTMLElement('div');
 card1.className = 'report-card';
 card1.dataset = { tags: 'tag1' };
-const title1 = new HTMLElement('h3'); title1.className = 'report-title';
-const link1 = new HTMLElement('a'); link1.textContent = 'Simple Title';
+const title1 = new HTMLElement('h3');
+title1.className = 'report-title';
+const link1 = new HTMLElement('a');
+link1.textContent = 'Simple Title';
 title1.appendChild(link1);
-const cat1 = new HTMLElement('span'); cat1.className = 'meta-item category'; cat1.textContent = 'AI';
+const cat1 = new HTMLElement('span');
+cat1.className = 'meta-item category';
+cat1.textContent = 'AI';
 card1.appendChild(title1);
 card1.appendChild(cat1);
 cards.push(card1);
@@ -87,10 +100,14 @@ cards.push(card1);
 const card2 = new HTMLElement('div');
 card2.className = 'report-card';
 card2.dataset = { tags: 'tag2' };
-const title2 = new HTMLElement('h3'); title2.className = 'report-title';
-const link2 = new HTMLElement('a'); link2.textContent = '🤖 Emoji Title';
+const title2 = new HTMLElement('h3');
+title2.className = 'report-title';
+const link2 = new HTMLElement('a');
+link2.textContent = '🤖 Emoji Title';
 title2.appendChild(link2);
-const cat2 = new HTMLElement('span'); cat2.className = 'meta-item category'; cat2.textContent = 'AI';
+const cat2 = new HTMLElement('span');
+cat2.className = 'meta-item category';
+cat2.textContent = 'AI';
 card2.appendChild(title2);
 card2.appendChild(cat2);
 cards.push(card2);

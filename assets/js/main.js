@@ -251,7 +251,6 @@ function injectSearchStyles() {
   document.head.appendChild(style);
 }
 
-
 // Simple client-side search
 function performSearch(searchTerm) {
   // Redirect to home page with search parameter

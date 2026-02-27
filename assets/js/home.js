@@ -106,9 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = categoryFilter.querySelectorAll('option');
     options.forEach((option) => {
       if (option.value === '') return; // "すべてのカテゴリ" はスキップ
-      const category = stripEmoji(
-        categoryFilter.querySelector(`option[value="${option.value}"]`).textContent,
-      ); // 既存絵文字を除去して判定
+      const category = stripEmoji(categoryFilter.querySelector(`option[value="${option.value}"]`).textContent); // 既存絵文字を除去して判定
       const emoji = getEmojiForCategory(category);
 
       // 常に最新の絵文字で上書き（キーワードルール変更に対応するため）
@@ -452,8 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map((card) => ({
         url: card.querySelector('a')?.href || '#',
         // タイトルから既存の絵文字を除去して取得
-        title:
-          stripEmoji(card.querySelector('.report-title a')?.textContent || '') || 'Unknown',
+        title: stripEmoji(card.querySelector('.report-title a')?.textContent || '') || 'Unknown',
         category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
         score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
         hasFreePlan: !!card.querySelector('.card-free-badge'),
