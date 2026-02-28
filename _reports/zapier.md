@@ -63,6 +63,7 @@ relationships:
     - "Workato"
     - "Google Opal"
     - "UiPath"
+    - "Google Workspace Studio"
 ---
 
 # **Zapier 調査レポート**

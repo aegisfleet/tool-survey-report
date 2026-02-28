@@ -51,6 +51,7 @@ relationships:
     - "n8n"
     - "Workato"
     - "Microsoft Power Automate"
+    - "Google Workspace Studio"
 ---
 
 # **Make 調査レポート**
