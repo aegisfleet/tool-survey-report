@@ -24,7 +24,7 @@ quick_summary:
   starting_price: "無料"
   target_users:
     - "開発者"
-  latest_highlight: "開発プラットフォームにエージェントファーストなインターフェースを導入し、エディタ、ターミナル、ブラウザにまたがる複雑なタスクを自律的に計画・実行可能"
+  latest_highlight: "2026年2月にAccount Remediation Pathwayを追加（v1.19.6）"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -194,9 +194,25 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-11-20**: Google Antigravityをパブリックプレビューとして発表。Agent Manager機能、ブラウザ連携機能、Gemini 3 Pro等のモデルサポートを開始。
+* **2026-02-26 (v1.19.6)**: Account Remediation Pathway
+* **2026-02-26 (v1.19.5)**: Browser Fix
+* **2026-02-25 (v1.19.4)**: Stability and UI Improvements
+* **2026-02-21 (v1.18.4)**: Fix for Windows Auto-updater
+* **2026-02-19 (v1.18.3)**: Settings, Artifacts, and Stability
+* **2026-02-03 (v1.16.5)**: Bug Fixes
+* **2026-01-24 (v1.15.8)**: Performance Improvements
+* **2026-01-23 (v1.15.6)**: Terminal Sandboxing
+* **2026-01-13 (v1.14.2)**: Agent Skills
+* **2025-12-19 (v1.13.3)**: Google Workspace Support
+* **2025-12-17 (v1.12.4)**: Gemini 3 Flash
+* **2025-12-08 (v1.11.17)**: Secure Mode and Security Fixes
+* **2025-12-04 (v1.11.14)**: Google One Support
+* **2025-11-26 (v1.11.9)**: Stability and Bug Fixes
+* **2025-11-20 (v1.11.5)**: Nano Banana Pro
+* **2025-11-18 (v1.11.3)**: Launch Day Feedback
+* **2025-11-18 (v1.11.2)**: Google Antigravity
 
-(出典: [公式ブログ](https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/))
+(出典: [公式ブログ](https://developers.googleblog.com/build-with-google-antigravity-our-new-agentic-development-platform/) / [Changelog](https://antigravity.google/changelog))
 
 ## **16. 類似ツールとの比較**
 
