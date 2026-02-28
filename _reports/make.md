@@ -11,7 +11,6 @@ tags:
   - "iPaaS"
   - "ノーコード"
   - "自動化"
-  - "ワークフロー自動化"
   - "AI"
 description: "直感的なビジュアル操作で複雑なワークフローを構築できるiPaaSプラットフォーム。旧Integromatとして知られ、高い柔軟性とコストパフォーマンスが特徴。"
 
@@ -51,6 +50,7 @@ relationships:
     - "n8n"
     - "Workato"
     - "Microsoft Power Automate"
+    - "Google Workspace Studio"
 ---
 
 # **Make 調査レポート**

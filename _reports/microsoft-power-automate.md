@@ -60,6 +60,7 @@ relationships:
     - "Make"
     - "n8n"
     - "Workato"
+    - "Google Workspace Studio"
 ---
 
 # **Microsoft Power Automate 調査レポート**
