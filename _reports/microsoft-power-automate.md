@@ -55,6 +55,7 @@ relationships:
   parent: null
   children: []
   related_tools:
+    - "Google Workspace Studio"
     - "UiPath"
     - "Zapier"
     - "Make"
