@@ -60,7 +60,7 @@ class HTMLElement {
     this.attributes[name] = value;
   }
 
-  addEventListener() {}
+  addEventListener() { }
 }
 
 // Setup minimal global environment
@@ -70,8 +70,15 @@ global.window = {
     if (event === 'load') setTimeout(cb, 0);
   },
   matchMedia: () => ({ matches: false }),
+  crypto: {
+    getRandomValues: (arr) => {
+      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+      return arr;
+    }
+  }
 };
-global.sessionStorage = { getItem: () => null, setItem: () => {} };
+global.sessionStorage = { getItem: () => null, setItem: () => { } };
+global.crypto = global.window.crypto;
 global.URL = class {
   constructor(u) {
     this.href = u;
@@ -131,11 +138,14 @@ global.document = {
 const scriptPath = path.join(__dirname, '../assets/js/home.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
+const vm = require('node:vm');
+const context = vm.createContext(global);
+
 console.log('Running emoji logic tests...');
 
 // We need to wait for DOMContentLoaded
 try {
-  eval(scriptContent);
+  vm.runInContext(scriptContent, context);
 
   // Wait a bit for the event loop
   setTimeout(() => {

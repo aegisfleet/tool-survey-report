@@ -137,27 +137,33 @@ global.document = {
   head: new HTMLElement('head'),
   body: new HTMLElement('body'),
   documentElement: new HTMLElement('html'),
-  addEventListener: () => {},
+  addEventListener: () => { },
   readyState: 'complete',
 };
 
 global.window = {
   location: { href: '' },
-  matchMedia: () => ({ matches: false, addEventListener: () => {} }),
+  matchMedia: () => ({ matches: false, addEventListener: () => { } }),
   requestAnimationFrame: (cb) => cb(),
-  announceToScreenReader: () => {},
+  announceToScreenReader: () => { },
+  crypto: {
+    getRandomValues: (arr) => {
+      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+      return arr;
+    }
+  }
 };
 
 global.localStorage = {
   getItem: () => null,
-  setItem: () => {},
-  removeItem: () => {},
+  setItem: () => { },
+  removeItem: () => { },
 };
 
 global.sessionStorage = {
   getItem: () => null,
-  setItem: () => {},
-  removeItem: () => {},
+  setItem: () => { },
+  removeItem: () => { },
 };
 
 global.navigator = {
@@ -165,33 +171,36 @@ global.navigator = {
 };
 
 global.ResizeObserver = class {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
+  observe() { }
+  unobserve() { }
+  disconnect() { }
 };
 
 // Mock functions to avoid errors during eval
-global.initAll = () => {};
-global.initThemeToggle = () => {};
-global.initMobileNavigation = () => {};
-global.initNavigationDropdown = () => {};
-global.initSearchFunctionality = () => {};
-global.initSmoothScrolling = () => {};
-global.initFocusManagement = () => {};
-global.initReportEnhancements = () => {};
-global.initAccessibilityEnhancements = () => {};
-global.initBackToTopButton = () => {};
-global.initFilterReset = () => {};
-global.initSmartHeader = () => {};
-global.initKeyboardShortcuts = () => {};
-global.checkColorContrast = () => {};
+global.initAll = () => { };
+global.initThemeToggle = () => { };
+global.initMobileNavigation = () => { };
+global.initNavigationDropdown = () => { };
+global.initSearchFunctionality = () => { };
+global.initSmoothScrolling = () => { };
+global.initFocusManagement = () => { };
+global.initReportEnhancements = () => { };
+global.initAccessibilityEnhancements = () => { };
+global.initBackToTopButton = () => { };
+global.initFilterReset = () => { };
+global.initSmartHeader = () => { };
+global.initKeyboardShortcuts = () => { };
+global.checkColorContrast = () => { };
 
 // Load the script content
 const scriptPath = path.join(__dirname, '../assets/js/main.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
+const vm = require('node:vm');
+const context = vm.createContext(global);
+
 // Execute script
-eval(scriptContent);
+vm.runInContext(scriptContent, context);
 
 // Verification: Ensure showSearchSuggestions is defined
 if (typeof showSearchSuggestions !== 'function') {

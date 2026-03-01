@@ -9,6 +9,10 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.check_links import is_safe_url
 
+# SonarCloud: The following tests intentionally use insecure protocols and local IPs
+# to verify that the SSRF protection logic correctly blocks them.
+# NOSONAR is used for line-level silencing where appropriate in SonarCloud.
+
 class TestSSRFValidation(unittest.TestCase):
 
     def test_unsafe_local_ips(self):
