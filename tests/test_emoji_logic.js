@@ -60,7 +60,7 @@ class HTMLElement {
     this.attributes[name] = value;
   }
 
-  addEventListener() { }
+  addEventListener() {}
 }
 
 // Setup minimal global environment
@@ -72,12 +72,12 @@ global.window = {
   matchMedia: () => ({ matches: false }),
   crypto: {
     getRandomValues: (arr) => {
-      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xffffffff);
       return arr;
-    }
-  }
+    },
+  },
 };
-global.sessionStorage = { getItem: () => null, setItem: () => { } };
+global.sessionStorage = { getItem: () => null, setItem: () => {} };
 global.crypto = global.window.crypto;
 global.URL = class {
   constructor(u) {

@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .sort(() => {
         const array = new Uint32Array(1);
         window.crypto.getRandomValues(array);
-        return array[0] / 0xFFFFFFFF - 0.5;
+        return array[0] / 0xffffffff - 0.5;
       })
       .slice(0, 4);
 

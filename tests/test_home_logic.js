@@ -108,7 +108,7 @@ class HTMLElement {
     this.attributes[name] = value;
   }
 
-  blur() { }
+  blur() {}
 }
 
 // Setup global environment
@@ -128,21 +128,21 @@ global.window = {
   },
   sessionStorage: {
     getItem: () => null,
-    setItem: () => { },
-    removeItem: () => { },
+    setItem: () => {},
+    removeItem: () => {},
   },
   addEventListener: (event, callback) => {
     if (!windowListeners[event]) windowListeners[event] = [];
     windowListeners[event].push(callback);
   },
-  matchMedia: () => ({ matches: false, addEventListener: () => { } }),
+  matchMedia: () => ({ matches: false, addEventListener: () => {} }),
   requestAnimationFrame: (cb) => cb(),
   crypto: {
     getRandomValues: (arr) => {
-      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xffffffff);
       return arr;
-    }
-  }
+    },
+  },
 };
 
 global.sessionStorage = global.window.sessionStorage;
