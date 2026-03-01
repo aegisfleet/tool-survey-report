@@ -7,8 +7,8 @@ tool_reading: "グラファナ"
 category: "監視/可観測性"
 developer: "Grafana Labs"
 official_site: "https://grafana.com/"
-date: "2026-01-25"
-last_updated: "2026-01-25"
+date: "2026-03-01"
+last_updated: "2026-03-01"
 tags:
   - "監視"
   - "オブザーバビリティ"
@@ -57,7 +57,6 @@ relationships:
     - "Kibana"
     - "Datadog"
     - "Splunk"
-    - "Splunk AppDynamics"
     - "Kubernetes"
 ---
 
@@ -72,7 +71,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/grafana/grafana](https://github.com/grafana/grafana)
   * ドキュメント: [https://grafana.com/docs/grafana/latest/](https://grafana.com/docs/grafana/latest/)
-  * レビューサイト: [G2](https://www.g2.com/products/grafana-labs/reviews)
 * **カテゴリ**: 監視/可観測性
 * **概要**: Grafanaは、あらゆる場所に保存されているメトリクス、ログ、トレースをクエリ、可視化、アラート通知、探索するためのオープンソースのプラットフォームです。時系列データの可視化に特化しており、Prometheus、Loki、Elasticsearch、InfluxDB、PostgreSQLなど、多様なデータソースを単一のダッシュボードに統合して表示できます。
 
@@ -102,20 +100,43 @@ relationships:
 * **ログ (Loki) とトレース (Tempo) の統合**: メトリクスだけでなく、ログやトレースデータともシームレスに連携し、相関分析が可能。
 * **Transformation**: クエリ結果に対して、リネーム、集計、結合、計算などのデータ加工をUI上で適用可能。
 
-## **4. 特徴・強み (Pros)**
+## **4. 開始手順・セットアップ**
+
+* **前提条件**:
+  * Debian または Ubuntu OS
+  * インターネット接続
+* **インストール/導入**:
+  ```bash
+  # 依存パッケージのインストール
+  sudo apt-get install -y apt-transport-https wget gnupg
+
+  # Grafanaパッケージのインストール
+  sudo apt-get install grafana
+  ```
+* **初期設定**:
+  * インストール後、systemdを使ってサービスを起動・有効化する
+* **クイックスタート**:
+  ```bash
+  # Grafanaサーバーの起動
+  sudo systemctl start grafana-server
+  ```
+  * 起動後、ブラウザで `http://localhost:3000` にアクセス
+  * デフォルトのログイン情報は admin / admin
+
+## **5. 特徴・強み (Pros)**
 
 * **圧倒的な柔軟性とデータソース対応**: 特定のベンダーにロックインされず、既存のあらゆるデータベースや監視ツール（Prometheus, AWS CloudWatch, Azure Monitor, Google Cloud Monitoring, SQLなど）と接続できる。
 * **強力なコミュニティとエコシステム**: 世界中で広く使われており、公式・コミュニティ製のダッシュボードテンプレートやプラグインが数千種類公開されている。
 * **オープンソースとコスト効率**: OSS版は無料で使用でき、自社サーバーで運用可能。クラウド版（Grafana Cloud）も無料枠が充実している。
 * **美しいUIとカスタマイズ性**: エンジニア好みのダークモード標準のUIで、非常に細かいカスタマイズが可能。
 
-## **5. 弱み・注意点 (Cons)**
+## **6. 弱み・注意点 (Cons)**
 
 * **データストア機能は持たない**: Grafana自体はデータを保存しない（可視化のみ）。別途Prometheusなどのデータソースを用意・運用する必要がある（Grafana Cloudなどのマネージドサービスを除く）。
 * **設定の複雑さ**: 自由度が高い反面、高度なクエリ（PromQL, LogQLなど）を書くには各データソースの知識が必要。
 * **日本語対応**: 管理画面の一部は日本語化されているが、ドキュメントや多くのリソースは英語が中心。
 
-## **6. 料金プラン**
+## **7. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---|---|---|
@@ -128,7 +149,7 @@ relationships:
 * **課金体系**: クラウド版はアクティブユーザー数 ＋ メトリクス/ログ/トレースのデータ量に応じた従量課金。
 * **無料トライアル**: Grafana Cloud Proの14日間トライアルあり。Freeプランは期限なし。
 
-## **7. 導入実績・事例**
+## **8. 導入実績・事例**
 
 * **導入企業**: PayPal, eBay, Intel, Salesforce, Bloombergなど、世界中のテック企業や金融機関で採用。
 * **導入事例**:
@@ -136,22 +157,22 @@ relationships:
   * **JP Morgan Chase**: 大規模な金融取引システムのモニタリング基盤として採用。
 * **対象業界**: IT、通信、金融、製造、宇宙開発（NASAも利用）など全業界。
 
-## **8. サポート体制**
+## **9. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントは非常に詳細で網羅的。チュートリアルやウェビナーも豊富。
 * **コミュニティ**: GitHub、Community Forum、Slackが非常に活発。日本にもユーザーグループ（Grafana Japan Community）があり、知見が共有されている。
 * **公式サポート**: 有償プラン（Pro, Advanced, Enterprise）ではSLA付きの公式サポートが提供される。
 
-## **9. エコシステムと連携**
+## **10. エコシステムと連携**
 
-### **9.1 API・外部サービス連携**
+### **10.1 API・外部サービス連携**
 
 * **API**: HTTP APIを通じて、ダッシュボードの作成、ユーザー管理、データソース設定などを完全に自動化可能。Terraformプロバイダーも公式提供されている。
 * **外部サービス連携**:
   * **データソース**: Prometheus, Graphite, InfluxDB, Elasticsearch, AWS CloudWatch, Azure Monitor, Google Cloud Monitoring, MySQL, PostgreSQL, Splunk, Datadogなど多数。
   * **通知先**: Slack, Microsoft Teams, PagerDuty, OpsGenie, Webhookなど。
 
-### **9.2 技術スタックとの相性**
+### **10.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -160,18 +181,18 @@ relationships:
 | **AWS/Azure/GCP** | ◯ | クラウドネイティブのメトリクスを直接可視化可能。 | APIリクエスト制限やコストに注意が必要な場合がある。 |
 | **Python/Go** | ◯ | アプリケーションに計装（Instrumentation）を行い、Prometheus形式でエクスポートすることで容易に可視化可能。 | SDKの導入が必要。 |
 
-## **10. セキュリティとコンプライアンス**
+## **11. セキュリティとコンプライアンス**
 
 * **認証**: Google, GitHub, OAuth, LDAP, SAMLなど多様な認証プロバイダーに対応。
 * **データ管理**: OSS版は自社管理のためデータガバナンスを完全に制御可能。Cloud版はコンプライアンス準拠のデータセンターで管理。
 * **準拠規格**: Grafana Cloudは SOC 2 Type 2, ISO 27001, GDPR, HIPAA などに準拠。
 
-## **11. 操作性 (UI/UX) と学習コスト**
+## **12. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: ダークモードを基調とした洗練されたUI。パネルエディタは機能豊富だが、初見では設定項目が多く感じる場合がある。
 * **学習コスト**: シンプルなグラフ作成は簡単だが、複雑なクエリ（PromQLなど）や変数を使いこなして動的なダッシュボードを作るには学習が必要。最近は「Visualization Suggestions」などの支援機能で敷居が下がっている。
 
-## **12. ベストプラクティス**
+## **13. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **Infrastructure as Code (IaC)**: ダッシュボードやデータソース設定をTerraformやJSONで管理し、バージョン管理する。
@@ -180,10 +201,10 @@ relationships:
   * **重すぎるクエリ**: 期間を長くしすぎたり、大量のデータポイントを一度に描画しようとしてブラウザやDBに負荷をかける。
   * **ダッシュボードの乱立**: 似たようなダッシュボードが量産され、どれを見ればよいかわからなくなる（フォルダ管理やタグ付けが重要）。
 
-## **13. ユーザーの声（レビュー分析）**
+## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, Twitter
-* **総合評価**: 4.5/5.0 (G2)
+* **総合評価**: 4.5/5.0 (Google検索からの引用: G2)
 * **ポジティブな評価**:
   * 「複数のデータソースを一つの画面に並べられるのが最高。トラブルシューティングが格段に早くなった。」
   * 「見た目が美しく、経営層へのプレゼンにもそのまま使える。」
@@ -196,18 +217,19 @@ relationships:
   * 工場のIoTセンサーデータを可視化し、設備の予知保全に活用。
   * 個人の資産管理や電力消費量の可視化（ホームダッシュボード）。
 
-## **14. 直近半年のアップデート情報**
+## **15. 直近半年のアップデート情報**
 
+* **2026-02-25**: Grafana 12.4.0 リリース。(出典: GitHub Releases)
 * **2026-01-22**: Visualization Suggestionsがアップデートされ、パネル可視化のデフォルトの選択方法となる。より適切な提案が可能に。(出典: Grafana Whats New)
 * **2025-12-19**: Suggested Dashboards機能の導入。接続されたデータソースに基づいて、事前に構築されたダッシュボードを提案し、初期構築の手間を削減。(出典: Grafana Whats New)
 * **2025-11-19**: Grafana 12.3 リリース。キャンバスパネルの強化や、アラート管理のUI改善が含まれる。(出典: Grafana Release Notes)
 * **2025-09-23**: Grafana 12.2 リリース。相関付け（Correlations）機能の強化により、異なるデータソース間のドリルダウンが容易に。(出典: Grafana Release Notes)
 
-(出典: [Grafana What's New](https://grafana.com/whats-new/))
+(出典: [Grafana What's New](https://grafana.com/whats-new/), [GitHub Releases](https://github.com/grafana/grafana/releases))
 
-## **15. 類似ツールとの比較**
+## **16. 類似ツールとの比較**
 
-### **15.1 機能比較表 (星取表)**
+### **16.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Grafana | Datadog | Splunk |
 |:---:|:---|:---:|:---:|:---:|
@@ -216,7 +238,7 @@ relationships:
 | **エンタープライズ** | SaaS / マネージド | ◯<br><small>Grafana Cloud</small> | ◎<br><small>SaaSネイティブ</small> | ◎<br><small>Cloud / On-prem</small> |
 | **非機能要件** | コスト | ◎<br><small>OSSは無料、Cloudも安価</small> | △<br><small>積み上げ式で高くなりがち</small> | △<br><small>データ量で高額化</small> |
 
-### **15.2 詳細比較**
+### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
@@ -224,7 +246,7 @@ relationships:
 | **Datadog** | 統合オブザーバビリティSaaS | エージェントを入れるだけで収集から可視化まで完結。UXが優れる。 | コストが高くなりがち。独自形式へのロックイン。 | 運用負荷を下げたい、オールインワンで完結させたい、予算に余裕がある場合。 |
 | **Splunk** | ログ分析・SIEMの巨塔 | 非構造化データの検索・分析能力が圧倒的。セキュリティ用途に強い。 | 非常に高価。学習コストが高い。 | セキュリティ要件（SIEM）がメイン、または大規模なログ分析が必要な場合。 |
 
-## **16. 総評**
+## **17. 総評**
 
 * **総合的な評価**:
   Grafanaは、可観測性（Observability）の「可視化」レイヤーにおいて、間違いなく世界で最もポピュラーで強力なツールである。特定のベンダーにロックインされず、あらゆるデータを好きなように表示できる自由度は、エンジニアにとって大きな魅力である。データ収集・保存を他のベスト・オブ・ブリードのツール（Prometheusなど）に任せ、それらを統合する「窓」としての役割を完璧にこなす。

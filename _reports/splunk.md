@@ -62,6 +62,7 @@ relationships:
     - "New Relic"
     - "Kibana"
     - "Amazon OpenSearch Service"
+    - "Grafana"
 ---
 
 # **Splunk 調査レポート**
