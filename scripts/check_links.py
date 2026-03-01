@@ -146,7 +146,8 @@ def find_links_in_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     # Regex for markdown links: [text](url)
-    links = re.findall(r'\[.*?\]\((https?://[^\)]+)\)', content)
+    # Refined to avoid potential ReDoS from nested backtracking
+    links = re.findall(r'\[[^\]]+\]\((https?://[^\s\)]+)\)', content)
     return links
 
 
@@ -217,44 +218,6 @@ def _check_link_logic(page, url):
         return 0, str(e)
 
 
-def is_safe_url(url):
-    """
-    Check if a URL is safe to request (SSRF protection).
-    Blocks private, loopback, and link-local IP addresses.
-    """
-    import socket
-    import ipaddress
-    from urllib.parse import urlparse
-
-    try:
-        parsed = urlparse(url)
-        hostname = parsed.hostname
-        if not hostname:
-            return False
-
-        # Resolve hostname to IP(s)
-        # getaddrinfo handles both IPv4 and IPv6
-        addr_info = socket.getaddrinfo(hostname, None)
-
-        for af, socktype, proto, canonname, sa in addr_info:
-            ip_str = sa[0]
-            ip_obj = ipaddress.ip_address(ip_str)
-
-            # Check for unsafe IP ranges
-            if (ip_obj.is_private or
-                ip_obj.is_loopback or
-                ip_obj.is_link_local or
-                ip_obj.is_multicast or
-                ip_obj.is_reserved):
-                return False
-
-        return True
-    except Exception:
-        # If resolution fails or any other error, consider it unsafe or broken
-        # For the purpose of SSRF, if we can't resolve it, we can't verify it's safe.
-        # However, for a link checker, if it doesn't resolve, it's a broken link anyway.
-        # But we should return False to be safe.
-        return False
 
 def check_link_with_urllib(url):
     """Fallback: Check link using urllib (less accurate for bot-protected sites)."""
@@ -265,9 +228,6 @@ def check_link_with_urllib(url):
     import urllib.request
     import urllib.error
     
-    if not is_safe_url(url):
-        return 0, "Blocked: Potential SSRF (Private/Loopback IP)"
-
     try:
         req = urllib.request.Request(url, headers=HEADERS)
         req.method = 'HEAD'
