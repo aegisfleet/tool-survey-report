@@ -15,7 +15,6 @@ tags:
   - "ワークフロー自動化"
   - "ノーコード"
   - "エージェント"
-  - "ノーコード"
   - "SaaS"
 description: "Gemini AIを活用し、自然言語でGoogle Workspace内の反復作業を自動化するノーコードプラットフォーム。旧称または関連機能として「Gemini Flows」とも呼ばれる。"
 
