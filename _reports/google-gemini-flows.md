@@ -14,7 +14,7 @@ tags:
   - "生成AI"
   - "エージェント"
   - "ノーコード"
-  - "SaaS"
+  - "自動化"
 description: "Gemini AIを活用し、自然言語でGoogle Workspace内の反復作業を自動化するノーコードプラットフォーム。旧称または関連機能として「Gemini Flows」とも呼ばれる。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -50,7 +50,7 @@ evaluation:
 links:
   documentation: "https://developers.google.com/workspace/add-ons/studio"
 relationships:
-  parent: "Google Workspace"
+  parent: null
   children: []
   related_tools:
     - "Microsoft Power Automate"
@@ -179,16 +179,18 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: Google Workspace Updates Blog, Reddit, Tech系ニュースサイト (Limited Previewのため大規模なレビューサイトへの掲載はまだ少ない)
-* **総合評価**: 期待値: 高
+* **調査対象**: G2, Capterra, ITreview, Google Workspace Updates Blog, Reddit
+* **総合評価**: 評価なし（Limited Preview段階のため、主要なレビューサイトにユーザーレビューの登録はまだありません。）
 * **ポジティブな評価**:
-  * 「Google Workspace内での自動化が、外部ツールを使わずに完結するのはセキュリティ的にもコスト的にも魅力的」
-  * 「自然言語でフローを作れるのは、非エンジニアにとって革命的」
+  * プレビュー段階のため、レビューサイトでのポジティブな評価はまだありません。
+  * （公式ブログやテックニュース等での反響）「Google Workspace内での自動化が完結するため、セキュリティとコストの面で魅力的」との期待の声が寄せられています。
+  * 「自然言語で直感的にフローを構築できる点は、非エンジニアの業務効率化に大きく貢献する」と注目を集めています。
 * **ネガティブな評価 / 改善要望**:
-  * 「まだプレビュー版でアクセスできない。早く使いたいのに」という需要過多の声（"overwhelming interest"）。
-  * 「サードパーティアプリとの連携が弱い。Zapierの代わりになるにはまだ時間がかかりそう」
+  * プレビュー段階のため、レビューサイトでのネガティブな評価はまだありません。
+  * （現状の課題）サードパーティ製アプリとの連携が限定的であり、Zapier等の代替となるには時間がかかるのではないかという懸念があります。
+  * 圧倒的な需要によりプレビュープログラムへの参加が難しく、「早く利用したい」という改善要望（ウェイティングリストの早期解消）が多く見られます。
 * **特徴的なユースケース**:
-  * メール内容を読み取って、自動的にスプレッドシートのデータベースを更新し、関連するドキュメントを作成するフロー。
+  * 本格的な利用事例はまだ少ないものの、初期のテスト事例として、メールの内容をAIが読み取ってスプレッドシートのデータベースを自動更新し、関連ドキュメントを生成するフローなどが報告されています。
 
 ## **15. 直近半年のアップデート情報**
 
@@ -202,7 +204,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | ツールA (Microsoft Power Automate) | ツールB (Zapier) | ツールC (Make) |
+| 機能カテゴリ | 機能項目 | 本ツール | Microsoft Power Automate | Zapier | Make |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 連携アプリ数 | △<br><small>Google中心</small> | ◎<br><small>MS + 1000+</small> | ◎<br><small>8000+</small> | ◯<br><small>1600+</small> |
 | **AI機能** | AIによる判断 | ◎<br><small>Geminiネイティブ</small> | ◯<br><small>Copilot / AI Builder</small> | ◯<br><small>AI Agents</small> | △<br><small>AIモジュール連携</small> |
