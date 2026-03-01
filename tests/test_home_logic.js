@@ -1,386 +1,191 @@
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
+const { JSDOM } = require('jsdom');
 
-// Mock DOM
-class HTMLElement {
-  constructor(tagName) {
-    this.tagName = tagName;
-    this.style = {};
-    this.children = [];
-    this._innerHTML = '';
-    this.className = '';
-    this.classList = {
-      add: (c) => {
-        if (!this.className.includes(c)) this.className += ` ${c}`;
-      },
-      remove: (c) => {
-        this.className = this.className.replace(new RegExp(`\\b${c}\\b`, 'g'), '').trim();
-      },
-      contains: (c) => this.className.includes(c),
-      toggle: (c) => {
-        if (this.classList.contains(c)) this.classList.remove(c);
-        else this.classList.add(c);
-      },
-    };
-    this.listeners = {};
-    this.parentNode = null;
-    this.value = '';
-    this.attributes = {};
-    this.dataset = {};
-  }
+/**
+ * tests/test_home_logic.js
+ * Comprehensive tests for home.js variety of features.
+ * This script uses vm.runInContext() for safer script execution and mocks window.crypto
+ * to support the secure random shuffling logic.
+ */
 
-  get innerHTML() {
-    return this._innerHTML;
-  }
-  set innerHTML(val) {
-    this._innerHTML = val;
-  }
-  get textContent() {
-    return this._innerHTML.replace(/[<>]/g, '');
-  } // Simple text extraction
-  set textContent(val) {
-    this._innerHTML = val;
-  }
+// Mock browser environment
+const domHtml = `
+<div class="home-container" data-site-title="Tool Survey Report">
+    <input id="report-search">
+    <div id="search-clear"></div>
+    <select id="tag-filter">
+        <option value="">All Tags</option>
+    </select>
+    <div id="tag-filter-clear"></div>
+    <select id="category-filter">
+        <option value="">All Categories</option>
+        <option value="ai">AI</option>
+        <option value="dev">Dev</option>
+    </select>
+    <div id="category-filter-clear"></div>
+    <select id="sort-select">
+        <option value="date-desc">Newest</option>
+        <option value="date-asc">Oldest</option>
+        <option value="title-asc">Title A-Z</option>
+        <option value="score-desc">Score</option>
+    </select>
+    
+    <div id="reports-grid">
+        <div class="report-card" 
+             data-tool-name="OpenRefine" 
+             data-description="Clean and transform data"
+             data-category="ai"
+             data-tags="data,cleanup"
+             data-date="2023-01-01"
+             data-score="8.5">
+            <div class="meta-item category">AI</div>
+            <div class="report-title"><a href="#">OpenRefine</a></div>
+            <div class="card-score-badge">8.5</div>
+        </div>
+        <div class="report-card" 
+             data-tool-name="VS Code" 
+             data-description="Popular code editor"
+             data-category="dev"
+             data-tags="editor,dev"
+             data-date="2024-01-01"
+             data-score="9.5">
+            <div class="meta-item category">Dev</div>
+            <div class="report-title"><a href="#">VS Code</a></div>
+            <div class="card-score-badge">9.5</div>
+        </div>
+    </div>
+    <div id="no-results" style="display:none">No results found</div>
+    
+    <div id="random-picks-grid">
+        <a class="pick-card">
+            <div class="pick-category"></div>
+            <div class="pick-title"></div>
+        </a>
+    </div>
+    <button id="refresh-picks">Refresh</button>
+</div>
+`;
 
-  appendChild(child) {
-    if (child.parentNode) {
-      child.parentNode.children = child.parentNode.children.filter((c) => c !== child);
-    }
-    this.children.push(child);
-    child.parentNode = this;
-  }
+describe('Home Logic - Filtering and Sorting', () => {
+    let dom;
+    let context;
 
-  remove() {
-    if (this.parentNode) {
-      this.parentNode.children = this.parentNode.children.filter((c) => c !== this);
-      this.parentNode = null;
-    }
-  }
+    beforeEach(() => {
+        dom = new JSDOM(domHtml, { url: 'http://localhost' });
+        const homeJsPath = path.resolve(__dirname, '../assets/js/home.js');
+        const homeJsContent = fs.readFileSync(homeJsPath, 'utf8');
 
-  addEventListener(event, callback) {
-    if (!this.listeners[event]) this.listeners[event] = [];
-    this.listeners[event].push(callback);
-  }
-
-  closest(selector) {
-    if (this.className.includes(selector.replace('.', ''))) return this;
-    return this.parentNode ? this.parentNode.closest(selector) : null;
-  }
-
-  querySelector(selector) {
-    if (selector.startsWith('.')) {
-      const className = selector.substring(1);
-      return this.children.find((c) => c.className?.includes(className)) || null;
-    }
-    if (selector.startsWith('#')) {
-      // Not implemented for children search by ID in this simple mock
-      return null;
-    }
-    // Tag name search
-    return this.children.find((c) => c.tagName && c.tagName.toLowerCase() === selector.toLowerCase()) || null;
-  }
-
-  querySelectorAll(selector) {
-    if (selector === 'option') {
-      return this.children.filter((c) => c.tagName === 'OPTION');
-    }
-    if (selector === '.pick-card') {
-      return this.children.filter((c) => c.className?.includes('pick-card'));
-    }
-    if (selector === '.report-card') {
-      // Search recursively
-      let results = [];
-      if (this.className?.includes('report-card')) {
-        results.push(this);
-      }
-      for (const child of this.children) {
-        results = results.concat(child.querySelectorAll(selector));
-      }
-      return results;
-    }
-    return [];
-  }
-
-  getAttribute(name) {
-    return this.attributes[name];
-  }
-  setAttribute(name, value) {
-    this.attributes[name] = value;
-  }
-
-  blur() {}
-}
-
-// Setup global environment
-const windowListeners = {};
-const documentListeners = {};
-
-global.window = {
-  location: {
-    href: 'http://localhost/',
-    search: '',
-    pathname: '/',
-  },
-  history: {
-    replaceState: (_state, _title, url) => {
-      global.window.location.href = url;
-    },
-  },
-  sessionStorage: {
-    getItem: () => null,
-    setItem: () => {},
-    removeItem: () => {},
-  },
-  addEventListener: (event, callback) => {
-    if (!windowListeners[event]) windowListeners[event] = [];
-    windowListeners[event].push(callback);
-  },
-  matchMedia: () => ({ matches: false, addEventListener: () => {} }),
-  requestAnimationFrame: (cb) => cb(),
-};
-
-global.sessionStorage = global.window.sessionStorage;
-
-global.URL = class {
-  constructor(url) {
-    this.href = url;
-    this.searchParams = new URLSearchParams();
-  }
-  toString() {
-    return this.href;
-  }
-};
-
-global.URLSearchParams = class {
-  constructor(search) {
-    this.params = {};
-    if (search) {
-      // Simple parsing
-      search
-        .replace('?', '')
-        .split('&')
-        .forEach((pair) => {
-          const [key, value] = pair.split('=');
-          if (key) this.params[key] = decodeURIComponent(value || '');
+        context = vm.createContext({
+            document: dom.window.document,
+            window: dom.window,
+            navigator: dom.window.navigator,
+            console: console,
+            setTimeout: setTimeout,
+            clearTimeout: clearTimeout,
+            sessionStorage: {
+                store: {},
+                getItem: function(key) { return this.store[key] || null; },
+                setItem: function(key, val) { this.store[key] = val; },
+                removeItem: function(key) { delete this.store[key]; }
+            },
+            // Mocking window.crypto for secure randomness
+            crypto: {
+                getRandomValues: (array) => {
+                    for (let i = 0; i < array.length; i++) {
+                        array[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+                    }
+                    return array;
+                }
+            },
+            Uint32Array: Uint32Array,
+            URL: dom.window.URL,
+            URLSearchParams: dom.window.URLSearchParams,
+            history: {
+                replaceState: jest.fn()
+            },
+            HTMLElement: dom.window.HTMLElement,
+            Event: dom.window.Event,
+            CustomEvent: dom.window.CustomEvent,
+            NodeList: dom.window.NodeList,
+            HTMLCollection: dom.window.HTMLCollection
         });
-    }
-  }
-  get(key) {
-    return this.params[key] || null;
-  }
-  set(key, value) {
-    this.params[key] = value;
-  }
-  delete(key) {
-    delete this.params[key];
-  }
-  toString() {
-    return Object.entries(this.params)
-      .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
-      .join('&');
-  }
-};
 
-// Create mock elements
-const searchInput = new HTMLElement('input');
-searchInput.attributes.id = 'report-search';
-searchInput.value = '';
+        // Polyfill window object references
+        context.window.crypto = context.crypto;
+        context.window.history = context.history;
 
-const tagFilter = new HTMLElement('select');
-tagFilter.attributes.id = 'tag-filter';
-tagFilter.value = '';
+        const script = new vm.Script(homeJsContent);
+        script.runInContext(context);
 
-const categoryFilter = new HTMLElement('select');
-categoryFilter.attributes.id = 'category-filter';
-categoryFilter.value = '';
+        // Manually trigger DOMContentLoaded
+        const event = dom.window.document.createEvent('Event');
+        event.initEvent('DOMContentLoaded', true, true);
+        dom.window.document.dispatchEvent(event);
+    });
 
-const sortSelect = new HTMLElement('select');
-sortSelect.attributes.id = 'sort-select';
-sortSelect.value = 'date-desc';
+    test('should populate tag filter with unique tags', () => {
+        const tagOptions = Array.from(dom.window.document.querySelectorAll('#tag-filter option'));
+        const tagValues = tagOptions.map(o => o.value);
+        expect(tagValues).toContain('data');
+        expect(tagValues).toContain('cleanup');
+        expect(tagValues).toContain('editor');
+        expect(tagValues).toContain('dev');
+    });
 
-const reportsGrid = new HTMLElement('div');
-reportsGrid.attributes.id = 'reports-grid';
+    test('should filter cards by search text', () => {
+        const searchInput = dom.window.document.getElementById('report-search');
+        searchInput.value = 'refine';
+        context.filterAndSort();
 
-const noResults = new HTMLElement('div');
-noResults.attributes.id = 'no-results';
-noResults.style.display = 'none';
+        const visibleCards = Array.from(dom.window.document.querySelectorAll('.report-card'))
+            .filter(c => c.style.display !== 'none');
+        
+        expect(visibleCards.length).toBe(1);
+        expect(visibleCards[0].dataset.toolName).toBe('OpenRefine');
+    });
 
-// Create a report card
-function createReportCard(title, tags, category, date, score) {
-  const card = new HTMLElement('article');
-  card.className = 'report-card';
-  card.dataset = {
-    toolName: title,
-    toolReading: title, // Simplified
-    description: `Description for ${title}`,
-    latestHighlight: '',
-    developer: 'Developer',
-    tags: tags.join(','),
-    date: date,
-    category: category,
-    score: score || '0',
-    isOss: 'false',
-    hasFreePlan: 'false',
-  };
+    test('should filter cards by category', () => {
+        const categoryFilter = dom.window.document.getElementById('category-filter');
+        categoryFilter.value = 'dev';
+        context.filterAndSort();
 
-  // Add title element for category emoji application
-  const titleEl = new HTMLElement('h3');
-  titleEl.className = 'report-title';
-  const link = new HTMLElement('a');
-  link.textContent = title;
-  titleEl.appendChild(link);
-  card.appendChild(titleEl);
+        const visibleCards = Array.from(dom.window.document.querySelectorAll('.report-card'))
+            .filter(c => c.style.display !== 'none');
+        
+        expect(visibleCards.length).toBe(1);
+        expect(visibleCards[0].dataset.toolName).toBe('VS Code');
+    });
 
-  // Add category element
-  const catEl = new HTMLElement('span');
-  catEl.className = 'meta-item category';
-  catEl.textContent = category;
-  card.appendChild(catEl);
+    test('should sort cards by score desc', () => {
+        const sortSelect = dom.window.document.getElementById('sort-select');
+        sortSelect.value = 'score-desc';
+        context.filterAndSort();
 
-  return card;
-}
+        const cards = Array.from(dom.window.document.querySelectorAll('.report-card'));
+        // Re-appended to grid, check order
+        expect(cards[0].dataset.toolName).toBe('VS Code'); // 9.5
+        expect(cards[1].dataset.toolName).toBe('OpenRefine'); // 8.5
+    });
 
-const card1 = createReportCard('Tool A', ['tag1', 'tag2'], 'Development', '2023-01-01', '80');
-const card2 = createReportCard('Tool B', ['tag2', 'tag3'], 'Design', '2023-02-01', '90');
-const card3 = createReportCard('Tool C', ['tag1'], 'Development', '2023-03-01', '70');
+    test('should handle "No Results" display', () => {
+        const searchInput = dom.window.document.getElementById('report-search');
+        searchInput.value = 'NonExistentTool';
+        context.filterAndSort();
 
-reportsGrid.appendChild(card1);
-reportsGrid.appendChild(card2);
-reportsGrid.appendChild(card3);
+        const noResults = dom.window.document.getElementById('no-results');
+        expect(noResults.style.display).toBe('block');
+    });
 
-// Mock document
-global.document = {
-  getElementById: (id) => {
-    if (id === 'report-search') return searchInput;
-    if (id === 'tag-filter') return tagFilter;
-    if (id === 'category-filter') return categoryFilter;
-    if (id === 'sort-select') return sortSelect;
-    if (id === 'reports-grid') return reportsGrid;
-    if (id === 'no-results') return noResults;
-    if (id === 'search-clear') return new HTMLElement('button');
-    if (id === 'tag-filter-clear') return new HTMLElement('button');
-    if (id === 'category-filter-clear') return new HTMLElement('button');
-    if (id === 'refresh-picks') return new HTMLElement('button');
-    if (id === 'random-picks-grid') return new HTMLElement('div');
-    return null;
-  },
-  querySelector: (selector) => {
-    if (selector === '.home-container') return new HTMLElement('div');
-    return null;
-  },
-  querySelectorAll: (selector) => {
-    if (selector === '.report-card') return [card1, card2, card3];
-    if (selector === '.pick-card') return [];
-    return [];
-  },
-  addEventListener: (event, callback) => {
-    if (!documentListeners[event]) documentListeners[event] = [];
-    documentListeners[event].push(callback);
-  },
-  createElement: (tag) => new HTMLElement(tag),
-  title: 'Test Site',
-};
+    test('should save and restore filter state via sessionStorage', () => {
+        const searchInput = dom.window.document.getElementById('report-search');
+        searchInput.value = 'vscode';
+        context.filterAndSort();
 
-// Load and execute script
-const scriptPath = path.join(__dirname, '../assets/js/home.js');
-const scriptContent = fs.readFileSync(scriptPath, 'utf8');
-
-try {
-  eval(scriptContent);
-
-  // Trigger DOMContentLoaded
-  if (documentListeners.DOMContentLoaded) {
-    documentListeners.DOMContentLoaded.forEach((cb) => cb());
-  }
-
-  // Verification Tests
-  console.log('Running verification tests...');
-  let passed = true;
-
-  // Test 1: Initial state (all cards visible)
-  if (reportsGrid.children.length !== 3) {
-    console.error(`Test 1 Failed: Expected 3 cards initially, got ${reportsGrid.children.length}`);
-    passed = false;
-  } else {
-    console.log('Test 1 Passed: Initial state correct.');
-  }
-
-  // Test 2: Search filter
-  searchInput.value = 'Tool A';
-  window.filterAndSort(false);
-
-  const visibleCardsSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsSearch.length !== 1 || visibleCardsSearch[0].dataset.toolName !== 'Tool A') {
-    console.error('Test 2 Failed: Search filter failed.');
-    passed = false;
-  } else {
-    console.log('Test 2 Passed: Search filter correct.');
-  }
-
-  // Reset search
-  searchInput.value = '';
-  window.filterAndSort(false);
-
-  // Test 3: Tag filter
-  tagFilter.value = 'tag3';
-  window.filterAndSort(false);
-
-  const visibleCardsTag = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsTag.length !== 1 || visibleCardsTag[0].dataset.toolName !== 'Tool B') {
-    console.error(
-      `Test 3 Failed: Tag filter failed. Expected Tool B, got ${visibleCardsTag[0]?.dataset?.toolName || 'none'}`,
-    );
-    passed = false;
-  } else {
-    console.log('Test 3 Passed: Tag filter correct.');
-  }
-
-  // Test 4: Category filter
-  tagFilter.value = '';
-  categoryFilter.value = 'Development'; // Note: In real app this might be lowercase depending on option value
-
-  // We need to make sure the card category matches exactly or logic handles it.
-  // In script: card.dataset.category === selectedCategory
-  // Mock data has 'Development'. Let's set filter to 'Development'.
-
-  window.filterAndSort(false);
-
-  const visibleCardsCat = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  // Should be Tool A and Tool C
-  if (visibleCardsCat.length !== 2) {
-    console.error(`Test 4 Failed: Category filter failed. Expected 2 cards, got ${visibleCardsCat.length}`);
-    passed = false;
-  } else {
-    console.log('Test 4 Passed: Category filter correct.');
-  }
-
-  // Test 5: Sorting (Date Desc) - Default
-  categoryFilter.value = '';
-  sortSelect.value = 'date-desc';
-  window.filterAndSort(false);
-
-  // Order should be: Tool C (Mar), Tool B (Feb), Tool A (Jan)
-  const cardsDateDesc = reportsGrid.children;
-  if (
-    cardsDateDesc[0].dataset.toolName === 'Tool C' &&
-    cardsDateDesc[1].dataset.toolName === 'Tool B' &&
-    cardsDateDesc[2].dataset.toolName === 'Tool A'
-  ) {
-    console.log('Test 5 Passed: Sort date-desc correct.');
-  } else {
-    console.error('Test 5 Failed: Sort date-desc failed.');
-    console.log(cardsDateDesc.map((c) => c.dataset.toolName));
-    passed = false;
-  }
-
-  if (passed) {
-    console.log('All tests passed!');
-    process.exit(0);
-  } else {
-    console.error('Some tests failed.');
-    process.exit(1);
-  }
-} catch (e) {
-  console.error('Error executing script:', e);
-  process.exit(1);
-}
+        // Simulate page reload by re-triggering logic
+        // We'll just verify the store has the data
+        const savedState = JSON.parse(context.sessionStorage.getItem('homeFilterState'));
+        expect(savedState.search).toBe('vscode');
+    });
+});

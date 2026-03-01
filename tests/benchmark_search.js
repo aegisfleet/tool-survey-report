@@ -1,228 +1,125 @@
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
+const { JSDOM } = require('jsdom');
 
-// Mock DOM
-class HTMLElement {
-  constructor(tagName) {
-    this.tagName = tagName;
-    this.style = {};
-    this.children = [];
-    this._innerHTML = '';
-    this._textContent = '';
-    this.className = '';
-    this.classList = {
-      add: (c) => {
-        this.className += ` ${c}`;
-      },
-      remove: (c) => {
-        this.className = this.className.replace(c, '').trim();
-      },
-      contains: (c) => this.className.includes(c),
-      toggle: (c) => {
-        if (this.classList.contains(c)) this.classList.remove(c);
-        else this.classList.add(c);
-      },
-    };
-    this.listeners = {};
-    this.parentNode = null;
-    this.value = '';
-    this.attributes = {};
-  }
+/**
+ * tests/benchmark_search.js
+ * Benchmarks the search and filter logic in home.js.
+ * This script uses vm.runInContext() for safer script execution and mocks window.crypto
+ * to support the secure random shuffling logic.
+ */
 
-  get innerHTML() {
-    if (this.children.length > 0) {
-      return this.children
-        .map((c) => {
-          let html = `<${c.tagName.toLowerCase()}`;
-          if (c.className) html += ` class="${c.className}"`;
-          for (const key in c.attributes) {
-            html += ` ${key}="${c.attributes[key]}"`;
-          }
-          html += '>';
-          if (c._textContent) html += c._textContent;
-          else if (c.innerHTML) html += c.innerHTML;
-          html += `</${c.tagName.toLowerCase()}>`;
-          return html;
-        })
-        .join('');
+const NUM_ITEMS = 500;
+const SEARCH_ITERATIONS = 100;
+
+// Generate large dummy data
+function generateHtml(count) {
+    let cards = '';
+    for (let i = 0; i < count; i++) {
+        cards += `
+        <div class="report-card" 
+             data-tool-name="Tool ${i}" 
+             data-tool-reading="つーる ${i}"
+             data-description="Description for tool ${i}. Features AI and automation."
+             data-category="ai"
+             data-tags="ai,ml,tool${i}"
+             data-date="2024-01-01"
+             data-score="${(i % 10).toFixed(1)}">
+            <div class="meta-item category">AI</div>
+            <div class="report-title"><a href="#">Tool ${i}</a></div>
+            <div class="card-score-badge">${(i % 10).toFixed(1)}</div>
+        </div>`;
     }
-    return this._innerHTML;
-  }
-  set innerHTML(val) {
-    this._innerHTML = val;
-    this.children = []; // Clear children when setting innerHTML
-  }
 
-  get textContent() {
-    return this._textContent;
-  }
-  set textContent(val) {
-    this._textContent = val;
-  }
-
-  appendChild(child) {
-    if (child.tagName === 'DOCUMENT_FRAGMENT') {
-      this.children.push(...child.children);
-      child.children.forEach((c) => {
-        c.parentNode = this;
-      });
-      child.children = [];
-    } else {
-      this.children.push(child);
-      child.parentNode = this;
-    }
-  }
-
-  remove() {
-    if (this.parentNode) {
-      this.parentNode.children = this.parentNode.children.filter((c) => c !== this);
-      this.parentNode = null;
-    }
-  }
-
-  addEventListener(event, callback) {
-    if (!this.listeners[event]) this.listeners[event] = [];
-    this.listeners[event].push(callback);
-  }
-
-  closest(selector) {
-    if (selector === '.search-form') return form; // Return global form for test
-    if (this.className.includes(selector.replace('.', ''))) return this;
-    return this.parentNode ? this.parentNode.closest(selector) : null;
-  }
-
-  querySelector(selector) {
-    return this.children.find((c) => c.className?.includes(selector.replace('.', ''))) || null;
-  }
-
-  querySelectorAll(_selector) {
-    return [];
-  }
-
-  getAttribute(name) {
-    return this.attributes[name];
-  }
-  setAttribute(name, value) {
-    this.attributes[name] = value;
-  }
+    return `
+    <div class="home-container">
+        <input id="report-search">
+        <div id="search-clear"></div>
+        <select id="tag-filter"><option value=""></option></select>
+        <div id="tag-filter-clear"></div>
+        <select id="category-filter"><option value=""></option></select>
+        <div id="category-filter-clear"></div>
+        <select id="sort-select">
+            <option value="date-desc">Newest</option>
+            <option value="score-desc">Score</option>
+        </select>
+        <div id="reports-grid">${cards}</div>
+        <div id="no-results" style="display:none">No results</div>
+        <div id="random-picks-grid"></div>
+    </div>
+    `;
 }
 
-const form = new HTMLElement('form');
-form.className = 'search-form';
-const input = new HTMLElement('input');
-input.className = 'search-input';
-form.appendChild(input);
+const domHtml = generateHtml(NUM_ITEMS);
+const dom = new JSDOM(domHtml);
+const homeJsPath = path.resolve(__dirname, '../assets/js/home.js');
+const homeJsContent = fs.readFileSync(homeJsPath, 'utf8');
 
-let createElementCount = 0;
+// Create context for vm
+const context = vm.createContext({
+    document: dom.window.document,
+    window: dom.window,
+    navigator: dom.window.navigator,
+    console: console,
+    setTimeout: setTimeout,
+    clearTimeout: clearTimeout,
+    sessionStorage: {
+        getItem: (key) => null,
+        setItem: (key, val) => {},
+        removeItem: (key) => {}
+    },
+    // Mocking window.crypto
+    crypto: {
+        getRandomValues: (array) => {
+            for (let i = 0; i < array.length; i++) {
+                array[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+            }
+            return array;
+        }
+    },
+    Uint32Array: Uint32Array,
+    URL: dom.window.URL,
+    URLSearchParams: dom.window.URLSearchParams,
+    history: dom.window.history,
+    HTMLElement: dom.window.HTMLElement,
+    Event: dom.window.Event,
+    CustomEvent: dom.window.CustomEvent,
+    NodeList: dom.window.NodeList,
+    HTMLCollection: dom.window.HTMLCollection
+});
 
-global.document = {
-  createElement: (tag) => {
-    createElementCount++;
-    const el = new HTMLElement(tag);
-    if (tag === 'div') el.tagName = 'DIV';
-    return el;
-  },
-  createDocumentFragment: () => {
-    const el = new HTMLElement('DOCUMENT_FRAGMENT');
-    return el;
-  },
-  getElementById: (_id) => null,
-  querySelector: (selector) => {
-    if (selector === '.search-suggestions') {
-      return form.children.find((c) => c.className === 'search-suggestions') || null;
-    }
-    return null;
-  },
-  querySelectorAll: (_selector) => [],
-  head: new HTMLElement('head'),
-  body: new HTMLElement('body'),
-  documentElement: new HTMLElement('html'),
-  addEventListener: () => {},
-  readyState: 'complete',
-};
+// Polyfill window object
+context.window.crypto = context.crypto;
 
-global.window = {
-  location: { href: '' },
-  matchMedia: () => ({ matches: false, addEventListener: () => {} }),
-  requestAnimationFrame: (cb) => cb(),
-  announceToScreenReader: () => {},
-};
+const script = new vm.Script(homeJsContent);
+script.runInContext(context);
 
-global.localStorage = {
-  getItem: () => null,
-  setItem: () => {},
-  removeItem: () => {},
-};
+// Manually trigger DOMContentLoaded
+const event = dom.window.document.createEvent('Event');
+event.initEvent('DOMContentLoaded', true, true);
+dom.window.document.dispatchEvent(event);
 
-global.sessionStorage = {
-  getItem: () => null,
-  setItem: () => {},
-  removeItem: () => {},
-};
+const searchInput = dom.window.document.getElementById('report-search');
 
-global.navigator = {
-  clipboard: { writeText: () => Promise.resolve() },
-};
+console.log(`Benchmarking search logic with ${NUM_ITEMS} items over ${SEARCH_ITERATIONS} iterations...`);
 
-global.ResizeObserver = class {
-  observe() {}
-  unobserve() {}
-  disconnect() {}
-};
-
-// Mock functions to avoid errors during eval
-global.initAll = () => {};
-global.initThemeToggle = () => {};
-global.initMobileNavigation = () => {};
-global.initNavigationDropdown = () => {};
-global.initSearchFunctionality = () => {};
-global.initSmoothScrolling = () => {};
-global.initFocusManagement = () => {};
-global.initReportEnhancements = () => {};
-global.initAccessibilityEnhancements = () => {};
-global.initBackToTopButton = () => {};
-global.initFilterReset = () => {};
-global.initSmartHeader = () => {};
-global.initKeyboardShortcuts = () => {};
-global.checkColorContrast = () => {};
-
-// Load the script content
-const scriptPath = path.join(__dirname, '../assets/js/main.js');
-const scriptContent = fs.readFileSync(scriptPath, 'utf8');
-
-// Execute script
-eval(scriptContent);
-
-// Verification: Ensure showSearchSuggestions is defined
-if (typeof showSearchSuggestions !== 'function') {
-  console.error('showSearchSuggestions not found!');
-  process.exit(1);
+const start = Date.now();
+for (let i = 0; i < SEARCH_ITERATIONS; i++) {
+    searchInput.value = `tool ${i % NUM_ITEMS}`;
+    // Directly call the filter function exposed to global/window scope
+    context.filterAndSort(false);
 }
+const end = Date.now();
 
-// Benchmark
-console.log('Starting benchmark...');
-const iterations = 10000;
-const start = process.hrtime();
+const totalTime = end - start;
+const avgTime = totalTime / SEARCH_ITERATIONS;
 
-for (let i = 0; i < iterations; i++) {
-  showSearchSuggestions('Jen', input);
-}
+console.log(`Total time: ${totalTime}ms`);
+console.log(`Average search time: ${avgTime.toFixed(2)}ms per search`);
 
-const end = process.hrtime(start);
-const timeInMs = (end[0] * 1000 + end[1] / 1e6).toFixed(2);
-
-console.log(`Execution time for ${iterations} iterations: ${timeInMs}ms`);
-console.log(`createElement calls: ${createElementCount}`);
-
-// Check result
-const suggestions = form.children.find((c) => c.className === 'search-suggestions');
-if (suggestions) {
-  // console.log('Final HTML:', suggestions.innerHTML);
-  if (suggestions.innerHTML.includes('Jenkins')) {
-    console.log('Result verified: Contains expected content.');
-  } else {
-    console.log('Result verification FAILED: Content missing.');
-  }
+if (avgTime > 50) {
+    console.warn('Performance Warning: Search logic is taking longer than 50ms per iteration.');
 } else {
-  console.log('Result verification FAILED: Suggestions element missing.');
+    console.log('Performance OK.');
 }

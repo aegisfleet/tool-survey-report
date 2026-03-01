@@ -1,172 +1,153 @@
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require('fs');
+const path = require('path');
+const vm = require('vm');
 
-// Mock DOM - Simplified version for emoji test
-class HTMLElement {
-  constructor(tagName) {
-    this.tagName = tagName;
-    this.children = [];
-    this._innerHTML = '';
-    this.className = '';
-    this.attributes = {};
-    this.dataset = {};
-    this.style = {};
-  }
+/**
+ * tests/test_emoji_logic.js
+ * Tests the emoji application logic from home.js.
+ * This test uses vm.runInContext() for safer script execution and mocks window.crypto
+ * to support the secure random shuffling logic.
+ */
 
-  get textContent() {
-    return this._innerHTML;
-  }
-  set textContent(val) {
-    this._innerHTML = val;
-  }
+// Mock browser environment
+const domHtml = `
+<div class="home-container">
+    <div id="reports-grid">
+        <div class="report-card" data-tags="ai,test">
+            <div class="meta-item category">AI エージェント</div>
+            <div class="report-title"><a href="#">AI Tool</a></div>
+        </div>
+        <div class="report-card" data-tags="dev">
+            <div class="meta-item category">開発者ツール</div>
+            <div class="report-title"><a href="#">Dev Tool</a></div>
+        </div>
+        <div class="report-card" data-tags="infra">
+            <div class="meta-item category">インフラ</div>
+            <div class="report-title"><a href="#">Infra Tool</a></div>
+        </div>
+    </div>
+    <div id="random-picks-grid">
+        <div class="pick-card">
+            <div class="pick-category">AI</div>
+            <div class="pick-title">AI Pick</div>
+        </div>
+    </div>
+    <select id="category-filter">
+        <option value="">すべてのカテゴリ</option>
+        <option value="ai">AI エージェント</option>
+        <option value="dev">開発者ツール</option>
+    </select>
+    <!-- dummy elements for script initialization -->
+    <input id="report-search">
+    <div id="search-clear"></div>
+    <select id="tag-filter"></select>
+    <div id="tag-filter-clear"></div>
+    <div id="category-filter-clear"></div>
+    <select id="sort-select"><option value="date-desc"></option></select>
+    <div id="no-results"></div>
+</div>
+`;
 
-  appendChild(child) {
-    this.children.push(child);
-    child.parentNode = this;
-  }
+// Set up the environment
+const homeJsPath = path.resolve(__dirname, '../assets/js/home.js');
+const homeJsContent = fs.readFileSync(homeJsPath, 'utf8');
 
-  querySelector(selector) {
-    // Handle the specific selector used in the code
-    if (selector === '.meta-item.category') {
-      return this.children.find((c) => c.className?.includes('category')) || null;
-    }
-
-    // Very simple implementation for specific test cases
-    if (selector === '.report-title a') {
-      const title = this.children.find((c) => c.className?.includes('report-title'));
-      if (title) {
-        return title.children[0]; // Assuming 'a' is the first child
-      }
-      return null;
-    }
-
-    if (selector.startsWith('.')) {
-      const className = selector.substring(1);
-      // Simple include check - might be enough for simple selectors
-      return this.children.find((c) => c.className?.includes(className)) || null;
-    }
-
-    return null;
-  }
-
-  querySelectorAll(_selector) {
-    return [];
-  }
-
-  getAttribute(name) {
-    return this.attributes[name];
-  }
-  setAttribute(name, value) {
-    this.attributes[name] = value;
-  }
-
-  addEventListener() {}
+// Function to run the script in a fresh context
+function runHomeJs(dom) {
+    const script = new vm.Script(homeJsContent);
+    const context = vm.createContext({
+        document: dom.window.document,
+        window: dom.window,
+        navigator: dom.window.navigator,
+        console: console,
+        setTimeout: setTimeout,
+        clearTimeout: clearTimeout,
+        sessionStorage: {
+            getItem: (key) => null,
+            setItem: (key, val) => {},
+            removeItem: (key) => {}
+        },
+        // Mocking window.crypto for secure randomness
+        crypto: {
+            getRandomValues: (array) => {
+                for (let i = 0; i < array.length; i++) {
+                    array[i] = Math.floor(Math.random() * 0xFFFFFFFF);
+                }
+                return array;
+            }
+        },
+        Uint32Array: Uint32Array,
+        URL: dom.window.URL,
+        URLSearchParams: dom.window.URLSearchParams,
+        history: dom.window.history,
+        HTMLElement: dom.window.HTMLElement,
+        Event: dom.window.Event,
+        CustomEvent: dom.window.CustomEvent,
+        NodeList: dom.window.NodeList,
+        HTMLCollection: dom.window.HTMLCollection
+    });
+    
+    // Polyfill window object to have a reference to itself
+    context.window.crypto = context.crypto;
+    
+    script.runInContext(context);
 }
 
-// Setup minimal global environment
-global.window = {
-  location: { search: '' },
-  addEventListener: (event, cb) => {
-    if (event === 'load') setTimeout(cb, 0);
-  },
-  matchMedia: () => ({ matches: false }),
-};
-global.sessionStorage = { getItem: () => null, setItem: () => {} };
-global.URL = class {
-  constructor(u) {
-    this.href = u;
-    this.searchParams = { get: () => null };
-  }
-};
+const { JSDOM } = require('jsdom');
 
-// Create test cards
-const cards = [];
+describe('Emoji Logic Tests', () => {
+    let dom;
 
-const card1 = new HTMLElement('div');
-card1.className = 'report-card';
-card1.dataset = { tags: 'tag1' };
-const title1 = new HTMLElement('h3');
-title1.className = 'report-title';
-const link1 = new HTMLElement('a');
-link1.textContent = 'Simple Title';
-title1.appendChild(link1);
-const cat1 = new HTMLElement('span');
-cat1.className = 'meta-item category';
-cat1.textContent = 'AI';
-card1.appendChild(title1);
-card1.appendChild(cat1);
-cards.push(card1);
+    beforeEach(() => {
+        dom = new JSDOM(domHtml, { url: 'http://localhost' });
+        global.document = dom.window.document;
+        global.window = dom.window;
+        global.navigator = dom.window.navigator;
+        
+        // Mock categoryEmojiRules or just let the script run with its own constants
+        runHomeJs(dom);
+        
+        // Trigger DOMContentLoaded manually if needed
+        const event = dom.window.document.createEvent('Event');
+        event.initEvent('DOMContentLoaded', true, true);
+        dom.window.document.dispatchEvent(event);
+    });
 
-const card2 = new HTMLElement('div');
-card2.className = 'report-card';
-card2.dataset = { tags: 'tag2' };
-const title2 = new HTMLElement('h3');
-title2.className = 'report-title';
-const link2 = new HTMLElement('a');
-link2.textContent = '🤖 Emoji Title';
-title2.appendChild(link2);
-const cat2 = new HTMLElement('span');
-cat2.className = 'meta-item category';
-cat2.textContent = 'AI';
-card2.appendChild(title2);
-card2.appendChild(cat2);
-cards.push(card2);
+    test('should apply robot emoji to AI category', () => {
+        const aiCard = dom.window.document.querySelector('.report-card');
+        const titleLink = aiCard.querySelector('.report-title a');
+        expect(titleLink.textContent).toContain('🤖');
+        expect(titleLink.textContent).toContain('AI Tool');
+    });
 
-// Mock document
-global.document = {
-  getElementById: () => new HTMLElement('div'),
-  querySelector: () => new HTMLElement('div'),
-  querySelectorAll: (selector) => {
-    if (selector === '.report-card') return cards;
-    if (selector === '.pick-card') return [];
-    return [];
-  },
-  addEventListener: (event, cb) => {
-    if (event === 'DOMContentLoaded') setTimeout(cb, 0);
-  },
-  createElement: (tag) => new HTMLElement(tag),
-};
+    test('should apply wrench emoji to Developer Tools category', () => {
+        const devCard = dom.window.document.querySelectorAll('.report-card')[1];
+        const titleLink = devCard.querySelector('.report-title a');
+        expect(titleLink.textContent).toContain('🔧');
+    });
 
-// Load and execute script
-const scriptPath = path.join(__dirname, '../assets/js/home.js');
-const scriptContent = fs.readFileSync(scriptPath, 'utf8');
+    test('should apply cloud emoji to Infrastructure category', () => {
+        const infraCard = dom.window.document.querySelectorAll('.report-card')[2];
+        const titleLink = infraCard.querySelector('.report-title a');
+        expect(titleLink.textContent).toContain('☁️');
+    });
 
-console.log('Running emoji logic tests...');
+    test('should update category filter options with emojis', () => {
+        const aiOption = dom.window.document.querySelector('#category-filter option[value="ai"]');
+        expect(aiOption.textContent).toContain('🤖');
+    });
 
-// We need to wait for DOMContentLoaded
-try {
-  eval(scriptContent);
+    test('should be idempotent (not duplicate emojis)', () => {
+        // Run application logic again
+        const event = dom.window.document.createEvent('Event');
+        event.initEvent('DOMContentLoaded', true, true);
+        dom.window.document.dispatchEvent(event);
 
-  // Wait a bit for the event loop
-  setTimeout(() => {
-    let passed = true;
-
-    // Check Card 1: Should have emoji added
-    // AI category maps to 🤖
-    if (link1.textContent === '🤖 Simple Title') {
-      console.log('Test 1 Passed: Emoji added to simple title');
-    } else {
-      console.error(`Test 1 Failed: Expected "🤖 Simple Title", got "${link1.textContent}"`);
-      passed = false;
-    }
-
-    // Check Card 2: Should have emoji normalized (not duplicated)
-    // "🤖 Emoji Title" should become "🤖 Emoji Title", not "🤖 🤖 Emoji Title"
-    if (link2.textContent === '🤖 Emoji Title') {
-      console.log('Test 2 Passed: Emoji not duplicated');
-    } else {
-      console.error(`Test 2 Failed: Expected "🤖 Emoji Title", got "${link2.textContent}"`);
-      passed = false;
-    }
-
-    if (passed) {
-      console.log('All emoji tests passed!');
-      process.exit(0);
-    } else {
-      process.exit(1);
-    }
-  }, 100);
-} catch (e) {
-  console.error(e);
-  process.exit(1);
-}
+        const aiCard = dom.window.document.querySelector('.report-card');
+        const titleLink = aiCard.querySelector('.report-title a');
+        
+        // Only one emoji should be present
+        const emojiMatches = titleLink.textContent.match(/🤖/g);
+        expect(emojiMatches.length).toBe(1);
+    });
+});
