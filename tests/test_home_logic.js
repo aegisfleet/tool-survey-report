@@ -137,9 +137,16 @@ global.window = {
   },
   matchMedia: () => ({ matches: false, addEventListener: () => {} }),
   requestAnimationFrame: (cb) => cb(),
+  crypto: {
+    getRandomValues: (arr) => {
+      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xffffffff);
+      return arr;
+    },
+  },
 };
 
 global.sessionStorage = global.window.sessionStorage;
+global.crypto = global.window.crypto;
 
 global.URL = class {
   constructor(url) {
@@ -285,8 +292,11 @@ global.document = {
 const scriptPath = path.join(__dirname, '../assets/js/home.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
+const vm = require('node:vm');
+const context = vm.createContext(global);
+
 try {
-  eval(scriptContent);
+  vm.runInContext(scriptContent, context);
 
   // Trigger DOMContentLoaded
   if (documentListeners.DOMContentLoaded) {

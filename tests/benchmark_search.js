@@ -146,6 +146,12 @@ global.window = {
   matchMedia: () => ({ matches: false, addEventListener: () => {} }),
   requestAnimationFrame: (cb) => cb(),
   announceToScreenReader: () => {},
+  crypto: {
+    getRandomValues: (arr) => {
+      for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xffffffff);
+      return arr;
+    },
+  },
 };
 
 global.localStorage = {
@@ -190,8 +196,11 @@ global.checkColorContrast = () => {};
 const scriptPath = path.join(__dirname, '../assets/js/main.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
+const vm = require('node:vm');
+const context = vm.createContext(global);
+
 // Execute script
-eval(scriptContent);
+vm.runInContext(scriptContent, context);
 
 // Verification: Ensure showSearchSuggestions is defined
 if (typeof showSearchSuggestions !== 'function') {

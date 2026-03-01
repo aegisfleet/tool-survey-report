@@ -456,7 +456,11 @@ document.addEventListener('DOMContentLoaded', () => {
         hasFreePlan: !!card.querySelector('.card-free-badge'),
         isOss: card.dataset.isOss === 'true',
       }))
-      .sort(() => Math.random() - 0.5)
+      .sort(() => {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        return array[0] / 0xffffffff - 0.5;
+      })
       .slice(0, 4);
 
     // ピックカードを更新

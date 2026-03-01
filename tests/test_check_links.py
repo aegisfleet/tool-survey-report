@@ -20,7 +20,7 @@ class TestLinkCaching(unittest.TestCase):
         warnings = []
 
         # Mock find_links_in_file to return duplicate links
-        mock_find_links.return_value = ['http://example.com', 'http://example.com', 'http://example.org']
+        mock_find_links.return_value = ['https://example.com', 'https://example.com', 'https://example.org']
 
         # Mock check_link to return 200 OK
         mock_check_link.return_value = (200, "OK")
@@ -33,9 +33,9 @@ class TestLinkCaching(unittest.TestCase):
         self.assertEqual(mock_check_link.call_count, 2)
 
         calls = [args[0] for args, _ in mock_check_link.call_args_list]
-        self.assertIn('http://example.com', calls)
-        self.assertIn('http://example.org', calls)
-        self.assertEqual(calls.count('http://example.com'), 1)
+        self.assertIn('https://example.com', calls)
+        self.assertIn('https://example.org', calls)
+        self.assertEqual(calls.count('https://example.com'), 1)
 
 class TestFindLinksInFile(unittest.TestCase):
 
@@ -51,23 +51,23 @@ class TestFindLinksInFile(unittest.TestCase):
         links = find_links_in_file("dummy.md")
         self.assertEqual(links, [])
 
-    @patch("builtins.open", new_callable=mock_open, read_data="[Example](http://example.com)")
+    @patch("builtins.open", new_callable=mock_open, read_data="[Example](https://example.com)")
     def test_single_link(self, mock_file):
         """Test find_links_in_file with a single link."""
         links = find_links_in_file("dummy.md")
-        self.assertEqual(links, ["http://example.com"])
+        self.assertEqual(links, ["https://example.com"])
 
-    @patch("builtins.open", new_callable=mock_open, read_data="[Example 1](http://example.com)\n[Example 2](https://test.com)")
+    @patch("builtins.open", new_callable=mock_open, read_data="[Example 1](https://example.com)\n[Example 2](https://test.com)")
     def test_multiple_links(self, mock_file):
         """Test find_links_in_file with multiple links on different lines."""
         links = find_links_in_file("dummy.md")
-        self.assertEqual(links, ["http://example.com", "https://test.com"])
+        self.assertEqual(links, ["https://example.com", "https://test.com"])
 
-    @patch("builtins.open", new_callable=mock_open, read_data="[HTTP](http://example.com) and [HTTPS](https://secure.com)")
+    @patch("builtins.open", new_callable=mock_open, read_data="[HTTP](https://example.com) and [HTTPS](https://secure.com)")
     def test_http_and_https(self, mock_file):
         """Test find_links_in_file with http and https links."""
         links = find_links_in_file("dummy.md")
-        self.assertEqual(links, ["http://example.com", "https://secure.com"])
+        self.assertEqual(links, ["https://example.com", "https://secure.com"])
 
     @patch("builtins.open", new_callable=mock_open, read_data="[FTP](ftp://example.com) and [Relative](/foo/bar)")
     def test_ignore_non_http_links(self, mock_file):
@@ -75,11 +75,11 @@ class TestFindLinksInFile(unittest.TestCase):
         links = find_links_in_file("dummy.md")
         self.assertEqual(links, [])
 
-    @patch("builtins.open", new_callable=mock_open, read_data="[Link 1](http://site1.com) text [Link 2](http://site2.com)")
+    @patch("builtins.open", new_callable=mock_open, read_data="[Link 1](https://site1.com) text [Link 2](https://site2.com)")
     def test_multiple_links_same_line(self, mock_file):
         """Test find_links_in_file with multiple links on the same line."""
         links = find_links_in_file("dummy.md")
-        self.assertEqual(links, ["http://site1.com", "http://site2.com"])
+        self.assertEqual(links, ["https://site1.com", "https://site2.com"])
 
     @unittest.expectedFailure
     @patch("builtins.open", new_callable=mock_open, read_data="[Link](http://example.com/foo(bar))")

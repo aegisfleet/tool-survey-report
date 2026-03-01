@@ -11,6 +11,10 @@ import ipaddress
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.browser_test import run_browser_test, main, BrowserTestRunner, BrowserTestError
 
+# SonarCloud: The following tests intentionally use insecure protocols and local IPs
+# to verify that the browser test runner correctly handles them and respects security
+# boundaries (like allow_internal_ips).
+
 class TestBrowserTest(unittest.TestCase):
 
     def test_main_arg_parsing(self):
