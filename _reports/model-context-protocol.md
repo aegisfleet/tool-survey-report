@@ -54,6 +54,7 @@ relationships:
     - "Agent Skills"
     - "UI-TARS Desktop"
     - "Mobile Next"
+    - "Microsoft Work IQ"
 ---
 
 # **Model Context Protocol (MCP) 調査レポート**

@@ -65,6 +65,7 @@ relationships:
     - "Devin"
     - "Claude Code"
     - "Playwright CLI"
+    - "Microsoft Work IQ"
 ---
 
 # **GitHub Copilot 調査レポート**
