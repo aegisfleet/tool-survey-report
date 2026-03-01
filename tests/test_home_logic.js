@@ -69,123 +69,131 @@ const domHtml = `
 `;
 
 describe('Home Logic - Filtering and Sorting', () => {
-    let dom;
-    let context;
+  let dom;
+  let context;
 
-    beforeEach(() => {
-        dom = new JSDOM(domHtml, { url: 'http://localhost' });
-        const homeJsPath = path.resolve(__dirname, '../assets/js/home.js');
-        const homeJsContent = fs.readFileSync(homeJsPath, 'utf8');
+  beforeEach(() => {
+    dom = new JSDOM(domHtml, { url: 'http://localhost' });
+    const homeJsPath = path.resolve(__dirname, '../assets/js/home.js');
+    const homeJsContent = fs.readFileSync(homeJsPath, 'utf8');
 
-        context = vm.createContext({
-            document: dom.window.document,
-            window: dom.window,
-            navigator: dom.window.navigator,
-            console: console,
-            setTimeout: setTimeout,
-            clearTimeout: clearTimeout,
-            sessionStorage: {
-                store: {},
-                getItem: function(key) { return this.store[key] || null; },
-                setItem: function(key, val) { this.store[key] = val; },
-                removeItem: function(key) { delete this.store[key]; }
-            },
-            // Mocking window.crypto for secure randomness
-            crypto: {
-                getRandomValues: (array) => {
-                    for (let i = 0; i < array.length; i++) {
-                        array[i] = Math.floor(Math.random() * 0xFFFFFFFF);
-                    }
-                    return array;
-                }
-            },
-            Uint32Array: Uint32Array,
-            URL: dom.window.URL,
-            URLSearchParams: dom.window.URLSearchParams,
-            history: {
-                replaceState: jest.fn()
-            },
-            HTMLElement: dom.window.HTMLElement,
-            Event: dom.window.Event,
-            CustomEvent: dom.window.CustomEvent,
-            NodeList: dom.window.NodeList,
-            HTMLCollection: dom.window.HTMLCollection
-        });
-
-        // Polyfill window object references
-        context.window.crypto = context.crypto;
-        context.window.history = context.history;
-
-        const script = new vm.Script(homeJsContent);
-        script.runInContext(context);
-
-        // Manually trigger DOMContentLoaded
-        const event = dom.window.document.createEvent('Event');
-        event.initEvent('DOMContentLoaded', true, true);
-        dom.window.document.dispatchEvent(event);
+    context = vm.createContext({
+      document: dom.window.document,
+      window: dom.window,
+      navigator: dom.window.navigator,
+      console: console,
+      setTimeout: setTimeout,
+      clearTimeout: clearTimeout,
+      sessionStorage: {
+        store: {},
+        getItem: function (key) {
+          return this.store[key] || null;
+        },
+        setItem: function (key, val) {
+          this.store[key] = val;
+        },
+        removeItem: function (key) {
+          delete this.store[key];
+        },
+      },
+      // Mocking window.crypto for secure randomness
+      crypto: {
+        getRandomValues: (array) => {
+          for (let i = 0; i < array.length; i++) {
+            array[i] = Math.floor(Math.random() * 0xffffffff);
+          }
+          return array;
+        },
+      },
+      Uint32Array: Uint32Array,
+      URL: dom.window.URL,
+      URLSearchParams: dom.window.URLSearchParams,
+      history: {
+        replaceState: jest.fn(),
+      },
+      HTMLElement: dom.window.HTMLElement,
+      Event: dom.window.Event,
+      CustomEvent: dom.window.CustomEvent,
+      NodeList: dom.window.NodeList,
+      HTMLCollection: dom.window.HTMLCollection,
     });
 
-    test('should populate tag filter with unique tags', () => {
-        const tagOptions = Array.from(dom.window.document.querySelectorAll('#tag-filter option'));
-        const tagValues = tagOptions.map(o => o.value);
-        expect(tagValues).toContain('data');
-        expect(tagValues).toContain('cleanup');
-        expect(tagValues).toContain('editor');
-        expect(tagValues).toContain('dev');
-    });
+    // Polyfill window object references
+    context.window.crypto = context.crypto;
+    context.window.history = context.history;
 
-    test('should filter cards by search text', () => {
-        const searchInput = dom.window.document.getElementById('report-search');
-        searchInput.value = 'refine';
-        context.filterAndSort();
+    const script = new vm.Script(homeJsContent);
+    script.runInContext(context);
 
-        const visibleCards = Array.from(dom.window.document.querySelectorAll('.report-card'))
-            .filter(c => c.style.display !== 'none');
-        
-        expect(visibleCards.length).toBe(1);
-        expect(visibleCards[0].dataset.toolName).toBe('OpenRefine');
-    });
+    // Manually trigger DOMContentLoaded
+    const event = dom.window.document.createEvent('Event');
+    event.initEvent('DOMContentLoaded', true, true);
+    dom.window.document.dispatchEvent(event);
+  });
 
-    test('should filter cards by category', () => {
-        const categoryFilter = dom.window.document.getElementById('category-filter');
-        categoryFilter.value = 'dev';
-        context.filterAndSort();
+  test('should populate tag filter with unique tags', () => {
+    const tagOptions = Array.from(dom.window.document.querySelectorAll('#tag-filter option'));
+    const tagValues = tagOptions.map((o) => o.value);
+    expect(tagValues).toContain('data');
+    expect(tagValues).toContain('cleanup');
+    expect(tagValues).toContain('editor');
+    expect(tagValues).toContain('dev');
+  });
 
-        const visibleCards = Array.from(dom.window.document.querySelectorAll('.report-card'))
-            .filter(c => c.style.display !== 'none');
-        
-        expect(visibleCards.length).toBe(1);
-        expect(visibleCards[0].dataset.toolName).toBe('VS Code');
-    });
+  test('should filter cards by search text', () => {
+    const searchInput = dom.window.document.getElementById('report-search');
+    searchInput.value = 'refine';
+    context.filterAndSort();
 
-    test('should sort cards by score desc', () => {
-        const sortSelect = dom.window.document.getElementById('sort-select');
-        sortSelect.value = 'score-desc';
-        context.filterAndSort();
+    const visibleCards = Array.from(dom.window.document.querySelectorAll('.report-card')).filter(
+      (c) => c.style.display !== 'none',
+    );
 
-        const cards = Array.from(dom.window.document.querySelectorAll('.report-card'));
-        // Re-appended to grid, check order
-        expect(cards[0].dataset.toolName).toBe('VS Code'); // 9.5
-        expect(cards[1].dataset.toolName).toBe('OpenRefine'); // 8.5
-    });
+    expect(visibleCards.length).toBe(1);
+    expect(visibleCards[0].dataset.toolName).toBe('OpenRefine');
+  });
 
-    test('should handle "No Results" display', () => {
-        const searchInput = dom.window.document.getElementById('report-search');
-        searchInput.value = 'NonExistentTool';
-        context.filterAndSort();
+  test('should filter cards by category', () => {
+    const categoryFilter = dom.window.document.getElementById('category-filter');
+    categoryFilter.value = 'dev';
+    context.filterAndSort();
 
-        const noResults = dom.window.document.getElementById('no-results');
-        expect(noResults.style.display).toBe('block');
-    });
+    const visibleCards = Array.from(dom.window.document.querySelectorAll('.report-card')).filter(
+      (c) => c.style.display !== 'none',
+    );
 
-    test('should save and restore filter state via sessionStorage', () => {
-        const searchInput = dom.window.document.getElementById('report-search');
-        searchInput.value = 'vscode';
-        context.filterAndSort();
+    expect(visibleCards.length).toBe(1);
+    expect(visibleCards[0].dataset.toolName).toBe('VS Code');
+  });
 
-        // Simulate page reload by re-triggering logic
-        // We'll just verify the store has the data
-        const savedState = JSON.parse(context.sessionStorage.getItem('homeFilterState'));
-        expect(savedState.search).toBe('vscode');
-    });
+  test('should sort cards by score desc', () => {
+    const sortSelect = dom.window.document.getElementById('sort-select');
+    sortSelect.value = 'score-desc';
+    context.filterAndSort();
+
+    const cards = Array.from(dom.window.document.querySelectorAll('.report-card'));
+    // Re-appended to grid, check order
+    expect(cards[0].dataset.toolName).toBe('VS Code'); // 9.5
+    expect(cards[1].dataset.toolName).toBe('OpenRefine'); // 8.5
+  });
+
+  test('should handle "No Results" display', () => {
+    const searchInput = dom.window.document.getElementById('report-search');
+    searchInput.value = 'NonExistentTool';
+    context.filterAndSort();
+
+    const noResults = dom.window.document.getElementById('no-results');
+    expect(noResults.style.display).toBe('block');
+  });
+
+  test('should save and restore filter state via sessionStorage', () => {
+    const searchInput = dom.window.document.getElementById('report-search');
+    searchInput.value = 'vscode';
+    context.filterAndSort();
+
+    // Simulate page reload by re-triggering logic
+    // We'll just verify the store has the data
+    const savedState = JSON.parse(context.sessionStorage.getItem('homeFilterState'));
+    expect(savedState.search).toBe('vscode');
+  });
 });

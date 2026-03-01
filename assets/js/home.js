@@ -236,8 +236,8 @@ document.addEventListener('DOMContentLoaded', () => {
           return a.dataset.toolName.localeCompare(b.dataset.toolName);
         case 'score-desc': {
           // スコアが高い順でソート（スコアがない場合は0として扱う）
-          const scoreA = parseFloat(a.dataset.score) || 0;
-          const scoreB = parseFloat(b.dataset.score) || 0;
+          const scoreA = Number.parseFloat(a.dataset.score) || 0;
+          const scoreB = Number.parseFloat(b.dataset.score) || 0;
           return scoreB - scoreA;
         }
         case 'oss-free': {
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const priorityDiff = getPriority(b) - getPriority(a);
           // 同じ優先度の場合はスコアでソート
           if (priorityDiff !== 0) return priorityDiff;
-          return (parseFloat(b.dataset.score) || 0) - (parseFloat(a.dataset.score) || 0);
+          return (Number.parseFloat(b.dataset.score) || 0) - (Number.parseFloat(a.dataset.score) || 0);
         }
         default:
           return 0;
@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .sort(() => {
         const array = new Uint32Array(1);
         window.crypto.getRandomValues(array);
-        return array[0] / 0xFFFFFFFF - 0.5;
+        return array[0] / 0xffffffff - 0.5;
       })
       .slice(0, 4);
 

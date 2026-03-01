@@ -15,9 +15,9 @@ const SEARCH_ITERATIONS = 100;
 
 // Generate large dummy data
 function generateHtml(count) {
-    let cards = '';
-    for (let i = 0; i < count; i++) {
-        cards += `
+  let cards = '';
+  for (let i = 0; i < count; i++) {
+    cards += `
         <div class="report-card" 
              data-tool-name="Tool ${i}" 
              data-tool-reading="つーる ${i}"
@@ -30,9 +30,9 @@ function generateHtml(count) {
             <div class="report-title"><a href="#">Tool ${i}</a></div>
             <div class="card-score-badge">${(i % 10).toFixed(1)}</div>
         </div>`;
-    }
+  }
 
-    return `
+  return `
     <div class="home-container">
         <input id="report-search">
         <div id="search-clear"></div>
@@ -58,35 +58,35 @@ const homeJsContent = fs.readFileSync(homeJsPath, 'utf8');
 
 // Create context for vm
 const context = vm.createContext({
-    document: dom.window.document,
-    window: dom.window,
-    navigator: dom.window.navigator,
-    console: console,
-    setTimeout: setTimeout,
-    clearTimeout: clearTimeout,
-    sessionStorage: {
-        getItem: (key) => null,
-        setItem: (key, val) => {},
-        removeItem: (key) => {}
+  document: dom.window.document,
+  window: dom.window,
+  navigator: dom.window.navigator,
+  console: console,
+  setTimeout: setTimeout,
+  clearTimeout: clearTimeout,
+  sessionStorage: {
+    getItem: (key) => null,
+    setItem: (key, val) => {},
+    removeItem: (key) => {},
+  },
+  // Mocking window.crypto
+  crypto: {
+    getRandomValues: (array) => {
+      for (let i = 0; i < array.length; i++) {
+        array[i] = Math.floor(Math.random() * 0xffffffff);
+      }
+      return array;
     },
-    // Mocking window.crypto
-    crypto: {
-        getRandomValues: (array) => {
-            for (let i = 0; i < array.length; i++) {
-                array[i] = Math.floor(Math.random() * 0xFFFFFFFF);
-            }
-            return array;
-        }
-    },
-    Uint32Array: Uint32Array,
-    URL: dom.window.URL,
-    URLSearchParams: dom.window.URLSearchParams,
-    history: dom.window.history,
-    HTMLElement: dom.window.HTMLElement,
-    Event: dom.window.Event,
-    CustomEvent: dom.window.CustomEvent,
-    NodeList: dom.window.NodeList,
-    HTMLCollection: dom.window.HTMLCollection
+  },
+  Uint32Array: Uint32Array,
+  URL: dom.window.URL,
+  URLSearchParams: dom.window.URLSearchParams,
+  history: dom.window.history,
+  HTMLElement: dom.window.HTMLElement,
+  Event: dom.window.Event,
+  CustomEvent: dom.window.CustomEvent,
+  NodeList: dom.window.NodeList,
+  HTMLCollection: dom.window.HTMLCollection,
 });
 
 // Polyfill window object
@@ -106,9 +106,9 @@ console.log(`Benchmarking search logic with ${NUM_ITEMS} items over ${SEARCH_ITE
 
 const start = Date.now();
 for (let i = 0; i < SEARCH_ITERATIONS; i++) {
-    searchInput.value = `tool ${i % NUM_ITEMS}`;
-    // Directly call the filter function exposed to global/window scope
-    context.filterAndSort(false);
+  searchInput.value = `tool ${i % NUM_ITEMS}`;
+  // Directly call the filter function exposed to global/window scope
+  context.filterAndSort(false);
 }
 const end = Date.now();
 
@@ -119,7 +119,7 @@ console.log(`Total time: ${totalTime}ms`);
 console.log(`Average search time: ${avgTime.toFixed(2)}ms per search`);
 
 if (avgTime > 50) {
-    console.warn('Performance Warning: Search logic is taking longer than 50ms per iteration.');
+  console.warn('Performance Warning: Search logic is taking longer than 50ms per iteration.');
 } else {
-    console.log('Performance OK.');
+  console.log('Performance OK.');
 }
