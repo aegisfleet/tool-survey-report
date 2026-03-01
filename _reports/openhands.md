@@ -59,6 +59,7 @@ relationships:
     - "GitHub Copilot"
     - "Cursor"
     - "Manus"
+    - "DeerFlow"
 ---
 
 # **OpenHands 調査レポート**

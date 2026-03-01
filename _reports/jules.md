@@ -57,6 +57,7 @@ relationships:
     - "OpenHands"
     - "Manus"
     - "GitHub Copilot"
+    - "DeerFlow"
 ---
 
 # **Google Jules 調査レポート**

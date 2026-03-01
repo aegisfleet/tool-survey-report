@@ -64,6 +64,7 @@ relationships:
     - "OpenHands"
     - "AutoGPT"
     - "Google Jules"
+    - "DeerFlow"
     - "Cline"
     - "Manus"
     - "OpenCode"
