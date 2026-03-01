@@ -11,10 +11,9 @@ date: "2026-01-27"
 last_updated: "2026-01-27"
 tags:
   - "AI"
-  - "コード生成"
-  - "CLI"
-  - "Open Source"
-  - "Agent"
+  - "エージェント"
+  - "オープンソース"
+  - "コーディング支援"
   - "Rust"
 description: "OpenAIが提供するRust製の軽量ターミナル型コーディングエージェント。ChatGPTプランと連携し、ローカル環境で高速に動作する。"
 
