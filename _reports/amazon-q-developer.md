@@ -53,6 +53,7 @@ relationships:
     - "GitLab Duo"
     - "Cursor"
     - "AWS CloudFormation"
+    - "GitHub Copilot CLI"
 ---
 
 # **Amazon Q Developer 調査レポート**

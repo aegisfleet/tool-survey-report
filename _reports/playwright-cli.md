@@ -55,6 +55,7 @@ relationships:
     - "Selenium"
     - "Claude"
     - "GitHub Copilot"
+    - "GitHub Copilot CLI"
 ---
 
 # **Playwright CLI 調査レポート**
