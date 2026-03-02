@@ -63,6 +63,7 @@ relationships:
   children: []
   related_tools:
     - "LangChain"
+    - "GitHub Copilot SDK"
     - "Amazon Bedrock"
     - "Google Opal"
     - "LITRON CORE"
