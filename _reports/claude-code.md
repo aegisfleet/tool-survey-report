@@ -53,6 +53,7 @@ relationships:
     - "GitHub Copilot"
     - "OpenHands"
     - "Devin"
+    - "GitHub Copilot CLI"
 ---
 
 # **Claude Code 調査レポート**
