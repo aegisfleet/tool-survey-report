@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // フィルタ状態をsessionStorageに保存するキー
   const FILTER_STATE_KEY = 'homeFilterState';
 
+  // Optimization: Regex constants pulled out of loops/repeated functions
+  const STRIP_EMOJI_RE = /^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u;
+  const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
+
   // カテゴリごとの絵文字マッピングルール（上から順にマッチしたものが適用される）
   const categoryEmojiRules = [
     { keywords: ['ai', 'エージェント', '機械学習', 'ml', '生成'], emoji: '🤖' },
@@ -54,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 既存の絵文字や特殊マーク、先頭スペースを除去するヘルパー関数
   function stripEmoji(text) {
-    return text.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
+    return text.replace(STRIP_EMOJI_RE, '').trim();
   }
 
   // カテゴリ要素およびタイトルに絵文字を適用する関数
@@ -192,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Helper function to convert Katakana to Hiragana
   function toHiragana(str) {
     if (!str) return '';
-    return str.replace(/[\u30a1-\u30f6]/g, (match) => {
+    return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
       const chr = match.charCodeAt(0) - 0x60;
       return String.fromCharCode(chr);
     });
