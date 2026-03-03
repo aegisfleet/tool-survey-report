@@ -5,6 +5,8 @@ import sys
 import atexit
 import socket
 import ipaddress
+import urllib.request
+import urllib.error
 from urllib.parse import urlparse
 
 # Check for playwright availability
@@ -14,11 +16,6 @@ try:
 except ImportError:
     HAS_PLAYWRIGHT = False
     sync_playwright = None
-    import urllib.request
-    import urllib.error
-    import socket
-    import ipaddress
-    from urllib.parse import urlparse
     socket.setdefaulttimeout(10)
 
 HEADERS = {
@@ -226,21 +223,14 @@ def check_link_with_urllib(url):
     if not is_safe_url(url):
         return 0, "Blocked: Potential SSRF or unsafe URL"
 
-    import urllib.request
-    import urllib.error
-    
-    if not is_safe_url(url):
-        return 0, "Blocked: Potential SSRF (Private/Loopback IP)"
-
     try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        req.method = 'HEAD'
+        req = urllib.request.Request(url, headers=HEADERS, method='HEAD')
         try:
             with urllib.request.urlopen(req) as response:
                 return response.status, "OK"
         except urllib.error.HTTPError as e:
             if e.code == 405:  # Method Not Allowed, try GET
-                req.method = 'GET'
+                req = urllib.request.Request(url, headers=HEADERS, method='GET')
                 with urllib.request.urlopen(req) as response:
                     return response.status, "OK"
             else:
