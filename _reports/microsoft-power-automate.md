@@ -8,14 +8,13 @@ category: "ワークフロー自動化"
 developer: "Microsoft"
 official_site: "https://powerautomate.microsoft.com/"
 date: "2026-01-26"
-last_updated: "2026-01-26"
+last_updated: "2026-03-04"
 tags:
   - "AI"
   - "RPA"
   - "ローコード"
   - "自動化"
   - "iPaaS"
-  - "Microsoft"
 description: "Microsoft 365との強力な連携を特徴とする、ローコード/AIを活用したMicrosoftの包括的なワークフロー自動化・RPAソリューション。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -55,7 +54,6 @@ relationships:
   parent: null
   children: []
   related_tools:
-    - "Google Workspace Studio"
     - "UiPath"
     - "Zapier"
     - "Make"
@@ -73,7 +71,6 @@ relationships:
 * **公式サイト**: [https://powerautomate.microsoft.com/](https://powerautomate.microsoft.com/)
 * **関連リンク**:
   * ドキュメント: [https://learn.microsoft.com/ja-jp/power-automate/](https://learn.microsoft.com/ja-jp/power-automate/)
-  * レビューサイト: [G2](https://www.g2.com/products/microsoft-power-automate/reviews) | [Capterra](https://www.capterra.com/p/174953/Microsoft-Power-Automate/)
 * **カテゴリ**: ワークフロー自動化, RPA (Robotic Process Automation)
 * **概要**: Microsoft Power Automateは、ローコードのアプローチとAIを組み合わせ、個人のタスクから組織全体の複雑なプロセスまで、幅広いワークフローを自動化・最適化するためのクラウドベースのサービスです。特にMicrosoft 365製品群との強力な連携を特徴とします。
 
@@ -193,8 +190,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra (2025年後半のレビュー)
-* **総合評価**: 4.6/5.0 (G2)
+* **調査対象**: G2, Capterra (2025年後半のレビュー、Google検索結果より引用)
+* **総合評価**: 4.6/5.0 (G2、Google検索結果より引用)
 * **ポジティブな評価**:
   * 「Microsoft 365環境があればすぐ始められ、TeamsやOutlookとの連携が驚くほど簡単」
   * 「承認フローのテンプレートが豊富で、社内のペーパーレス化が迅速に進んだ」

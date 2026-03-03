@@ -57,7 +57,6 @@ relationships:
   parent: null
   children: []
   related_tools:
-    - "Google Workspace Studio"
     - "Make"
     - "Microsoft Power Automate"
     - "n8n"
