@@ -47,7 +47,6 @@ relationships:
   parent: null
   children: []
   related_tools:
-    - "Google Workspace Studio"
     - "Zapier"
     - "n8n"
     - "Workato"
