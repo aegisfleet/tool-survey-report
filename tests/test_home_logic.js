@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 
 // Mock DOM
 class HTMLElement {
@@ -286,7 +287,36 @@ const scriptPath = path.join(__dirname, '../assets/js/home.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
 try {
-  eval(scriptContent);
+  const sandbox = {
+    window: global.window,
+    document: global.document,
+    sessionStorage: global.sessionStorage,
+    URL: global.URL,
+    URLSearchParams: global.URLSearchParams,
+    console: console,
+    setTimeout: setTimeout,
+    clearTimeout: clearTimeout,
+    setInterval: setInterval,
+    clearInterval: clearInterval,
+    requestAnimationFrame: global.window.requestAnimationFrame,
+    history: global.window.history,
+    location: global.window.location,
+    Date: Date,
+    Array: Array,
+    Object: Object,
+    String: String,
+    Number: Number,
+    Boolean: Boolean,
+    RegExp: RegExp,
+    Error: Error,
+    JSON: JSON,
+    Math: Math,
+    Intl: Intl,
+  };
+  sandbox.global = sandbox;
+  sandbox.window.global = sandbox;
+
+  vm.runInNewContext(scriptContent, sandbox);
 
   // Trigger DOMContentLoaded
   if (documentListeners.DOMContentLoaded) {

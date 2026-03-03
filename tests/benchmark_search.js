@@ -1,5 +1,6 @@
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 
 // Mock DOM
 class HTMLElement {
@@ -191,7 +192,55 @@ const scriptPath = path.join(__dirname, '../assets/js/main.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
 // Execute script
-eval(scriptContent);
+const sandbox = {
+  window: global.window,
+  document: global.document,
+  sessionStorage: global.sessionStorage,
+  localStorage: global.localStorage,
+  navigator: global.navigator,
+  console: console,
+  setTimeout: setTimeout,
+  clearTimeout: clearTimeout,
+  setInterval: setInterval,
+  clearInterval: clearInterval,
+  requestAnimationFrame: global.window.requestAnimationFrame,
+  ResizeObserver: global.ResizeObserver,
+  history: global.window.history,
+  location: global.window.location,
+  Date: Date,
+  Array: Array,
+  Object: Object,
+  String: String,
+  Number: Number,
+  Boolean: Boolean,
+  RegExp: RegExp,
+  Error: Error,
+  JSON: JSON,
+  Math: Math,
+  Intl: Intl,
+  // Add other mocks from global
+  initAll: global.initAll,
+  initThemeToggle: global.initThemeToggle,
+  initMobileNavigation: global.initMobileNavigation,
+  initNavigationDropdown: global.initNavigationDropdown,
+  initSearchFunctionality: global.initSearchFunctionality,
+  initSmoothScrolling: global.initSmoothScrolling,
+  initFocusManagement: global.initFocusManagement,
+  initReportEnhancements: global.initReportEnhancements,
+  initAccessibilityEnhancements: global.initAccessibilityEnhancements,
+  initBackToTopButton: global.initBackToTopButton,
+  initFilterReset: global.initFilterReset,
+  initSmartHeader: global.initSmartHeader,
+  initKeyboardShortcuts: global.initKeyboardShortcuts,
+  checkColorContrast: global.checkColorContrast,
+};
+sandbox.global = sandbox;
+sandbox.window.global = sandbox;
+
+vm.runInNewContext(scriptContent, sandbox);
+
+// Extract needed functions from sandbox
+const showSearchSuggestions = sandbox.showSearchSuggestions;
 
 // Verification: Ensure showSearchSuggestions is defined
 if (typeof showSearchSuggestions !== 'function') {
