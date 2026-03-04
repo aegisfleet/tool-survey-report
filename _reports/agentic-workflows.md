@@ -1,4 +1,6 @@
 ---
+# === フロントマター ===
+# 【必須項目】
 title: "Agentic Workflows 調査レポート"
 tool_name: "Agentic Workflows"
 tool_reading: "エージェンティック ワークフローズ"
@@ -6,15 +8,16 @@ category: "CI/CD"
 developer: "GitHub Next"
 official_site: "https://githubnext.com/projects/agentic-workflows/"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-04"
 tags:
   - "GitHub Actions"
   - "AI"
-  - "Automation"
-  - "Natural Language"
-  - "Research Prototype"
-description: "GitHub Actionsのワークフローを自然言語で記述し、AIエージェント（Claude CodeやOpenAI Codex）に実行させるためのGitHub Nextプロジェクト。"
+  - "自動化"
+  - "CI/CD"
+  - "エージェント"
+description: "GitHub Actionsのワークフローを自然言語で記述し、AIエージェント（Claude CodeやOpenAI Codexなど）に実行させるためのGitHub Nextプロジェクト。"
 
+# 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -23,9 +26,10 @@ quick_summary:
     - "開発者"
     - "DevOpsエンジニア"
     - "OSSメンテナ"
-  latest_highlight: "2026年1月27日にv0.37.26をリリース"
+  latest_highlight: "2026年3月4日にv0.53.1をリリース"
   update_frequency: "高"
 
+# 【ツール評価】100点満点、基準点70点からの加減算方式
 evaluation:
   score: 80
   base_score: 70
@@ -41,6 +45,7 @@ evaluation:
       reason: "リサーチプロトタイプであり、本番利用には注意が必要"
   summary: "自然言語プログラミングをGitHub Actionsに持ち込む野心的なプロジェクト。既存のGitHubエコシステムとの親和性が高く、将来性が期待できる。"
 
+# 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/githubnext/gh-aw"
   documentation: "https://githubnext.github.io/gh-aw/"
@@ -65,7 +70,7 @@ relationships:
   * GitHub: [https://github.com/githubnext/gh-aw](https://github.com/githubnext/gh-aw)
   * ドキュメント: [https://githubnext.github.io/gh-aw/](https://githubnext.github.io/gh-aw/)
   * サンプル集: [https://github.com/githubnext/agentics](https://github.com/githubnext/agentics)
-* **カテゴリ**: GitHub Actions拡張 / 自然言語プログラミング
+* **カテゴリ**: CI/CD
 * **概要**: GitHub Nextが開発するリサーチプロトタイプ。GitHub Actionsのワークフローを複雑なYAMLではなく自然言語（Markdown）で記述し、それをAIエージェント（Claude CodeやOpenAI Codexなど）が解釈して実行可能なGitHub Actionsワークフロー（YAML）に変換・実行する仕組み。
 
 ## **2. 目的と主な利用シーン**
@@ -122,7 +127,7 @@ relationships:
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Research Prototype** | **無料** | ツール自体はGitHub CLI拡張として無償で利用可能。 |
+| **Research Prototype** | 無料 | ツール自体はGitHub CLI拡張として無償で利用可能。 |
 | **モデル利用料** | 変動 | バックエンドで使用するAIモデル（Claude Code等）のAPI利用料やサブスクリプションが別途必要になる場合がある。 |
 
 * **課金体系**: Agentic Workflows自体への課金はないが、実行基盤（GitHub Actionsの分数）とAIモデルのコストがかかる。
@@ -184,7 +189,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: GitHub, Discord, Tech Blog (2026年1月時点)
+* **調査対象**: GitHub, Discord, Tech Blog (2026年3月時点)
 * **総合評価**: リサーチ段階だが、そのコンセプトへの期待値は非常に高い。
 * **ポジティブな評価**:
   * 「YAML地獄から解放される未来が見える」
@@ -198,10 +203,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-27 (v0.37.26)**: 最新リリース。安定性向上とバグ修正。
+* **2026-03-04 (v0.53.1)**: 最新リリース。安定性向上とバグ修正が含まれる。
+* **2026-01-27 (v0.37.26)**: 安定性の改善と各種バグ修正。
 * **2026-01-12**: "Peli's Agent Factory" 公開。エージェントワークフローの活用ガイドツアー。
-* **2025-Late**: MCP (Model Context Protocol) への対応強化。外部ツール連携が容易に。
-* **2025-Late**: セキュリティ機能（Safe Outputs, Allow-listing）の拡充。
 
 (出典: [GitHub Releases](https://github.com/githubnext/gh-aw/releases))
 
@@ -211,10 +215,10 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | Agentic Workflows | GitHub Actions (通常) | Claude Code | GitHub Copilot |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **定義方法** | 自然言語記述 | ◎<br><small>Markdownで記述</small> | ×<br><small>YAMLで記述</small> | ◯<br><small>対話的に指示</small> | △<br><small>補完のみ</small> |
+| **基本機能** | 自然言語記述 | ◎<br><small>Markdownで記述</small> | ×<br><small>YAMLで記述</small> | ◯<br><small>対話的に指示</small> | △<br><small>補完のみ</small> |
 | **実行場所** | CI/CD統合 | ◎<br><small>Actions上で動作</small> | ◎<br><small>ネイティブ</small> | △<br><small>ローカル/SSH主体のCLI</small> | ×<br><small>IDE内</small> |
 | **自律性** | タスク遂行能力 | ◎<br><small>調査・判断・実行</small> | ×<br><small>定義された手順のみ</small> | ◎<br><small>自律的に遂行</small> | △<br><small>支援のみ</small> |
-| **安全性** | ガードレール | ◎<br><small>Safe Outputs等</small> | ◯<br><small>権限設定のみ</small> | ◯<br><small>確認プロンプト</small> | - |
+| **安全性** | ガードレール | ◎<br><small>Safe Outputs等</small> | ◯<br><small>権限設定のみ</small> | ◯<br><small>確認プロンプト</small> | -<br><small>該当なし</small> |
 
 ### **16.2 詳細比較**
 

@@ -56,6 +56,7 @@ relationships:
     - "GitHub Copilot SDK"
     - "GitHub Copilot CLI"
   related_tools:
+    - "Agentic Workflows"
     - "CodeRabbit"
     - "Visual Studio Code"
     - "Cursor"

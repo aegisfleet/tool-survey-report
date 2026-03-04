@@ -46,6 +46,7 @@ relationships:
   parent: "Claude"
   children: []
   related_tools:
+    - "Agentic Workflows"
     - "Opcode"
     - "MCP Apps"
     - "SkillsMP"
