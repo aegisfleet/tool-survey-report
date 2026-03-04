@@ -49,11 +49,10 @@ evaluation:
 links:
   documentation: "https://docs.cloud.google.com/looker/docs/studio"
 relationships:
+  parent: "Google Cloud"
   related_tools:
-    - "tableau"
-    - "google-cloud"
-    - "google-analytics"
-    - "google-ads"
+    - "Tableau"
+    - "Google 広告"
 ---
 
 # **Looker Studio 調査レポート**
@@ -66,7 +65,7 @@ relationships:
 * **公式サイト**: [https://cloud.google.com/looker-studio?hl=ja](https://cloud.google.com/looker-studio?hl=ja)
 * **関連リンク**:
   * ドキュメント: [https://docs.cloud.google.com/looker/docs/studio](https://docs.cloud.google.com/looker/docs/studio)
-  * レビューサイト: [G2](https://www.g2.com/products/looker-studio/reviews) | [Capterra](https://www.capterra.com/p/169053/Looker/)
+  * レビューサイト: [Capterra](https://www.capterra.com/p/169053/Looker/)
 * **カテゴリ**: BIツール
 * **概要**: Looker Studioは、多様なデータを視覚化し、インタラクティブなダッシュボードやレポートを簡単に作成・共有できるGoogleの無料BI（ビジネスインテリジェンス）ツールである。2022年にGoogle Data Studioから名称変更された。
 
@@ -179,14 +178,14 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2 (4.4/5.0), Capterra (4.6/5.0)
+* **調査対象**: Capterra, Google検索結果 (G2等)
 * **総合評価**: 4.4〜4.6の高評価。特に使いやすさと無料である点が高く評価されている。
 * **ポジティブな評価**:
-  * 「Google AnalyticsやGoogle広告との連携がシームレスで、すぐに美しいレポートが作成できる。」（G2より引用）
+  * 「Google AnalyticsやGoogle広告との連携がシームレスで、すぐに美しいレポートが作成できる。」（Google検索結果のG2レビュースニペットより引用）
   * 「ドラッグ＆ドロップのインターフェースが直感的で、技術的背景のないユーザーでもダッシュボードを作成しやすい。」（Capterraより引用）
   * 「無料でこれだけの機能が使えるのは驚異的。共有機能もGoogleドライブ同様で便利。」
-* **ネガティブな評価 /改善要望**:
-  * 「データ量が増えたり、複雑なダッシュボードになると読み込み速度が著しく遅くなる。」（G2より引用）
+* **ネガティブな評価 / 改善要望**:
+  * 「データ量が増えたり、複雑なダッシュボードになると読み込み速度が著しく遅くなる。」（Google検索結果のG2レビュースニペットより引用）
   * 「データ結合（ブレンド）機能に制限があり、高度なデータモデリングには不向き。」（Capterraより引用）
   * 「エラーが起きた際の原因特定が難しく、公式サポートがないため解決に時間がかかることがある。」
 * **特徴的なユースケース**:

@@ -58,6 +58,7 @@ relationships:
     - "Gemini"
     - "BigQuery"
     - "Kubernetes"
+    - "Looker Studio"
   related_tools:
     - "Amazon Web Services"
     - "Microsoft Azure"

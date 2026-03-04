@@ -56,6 +56,7 @@ relationships:
     - "Google Cloud"
     - "Salesforce"
     - "Zapier"
+    - "Looker Studio"
 ---
 
 # **Google 広告 調査レポート**
