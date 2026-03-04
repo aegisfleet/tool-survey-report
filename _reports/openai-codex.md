@@ -52,6 +52,7 @@ relationships:
   parent: "ChatGPT"
   children: []
   related_tools:
+    - "Agentic Workflows"
     - "SkillsMP"
     - "GitHub Copilot"
     - "Windsurf"
