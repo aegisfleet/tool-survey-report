@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Amazon QuickSight"
     - "Microsoft Power BI"
+    - "Looker Studio"
 ---
 
 # **Tableau 調査レポート**
