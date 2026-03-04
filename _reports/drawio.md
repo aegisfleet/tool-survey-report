@@ -50,7 +50,7 @@ links:
 
 relationships:
   related_tools:
-    - "miro"
+    - "Miro"
     - "mermaid"
 ---
 
