@@ -66,6 +66,7 @@ relationships:
     - "Devin"
     - "Claude Code"
     - "Playwright CLI"
+    - "Cline"
     - "Microsoft Work IQ"
 ---
 

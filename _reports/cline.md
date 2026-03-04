@@ -8,7 +8,7 @@ category: "AIコーディング支援"
 developer: "Cline Bot Inc."
 official_site: "https://cline.bot/"
 date: "2025-10-23"
-last_updated: "2026-01-27"
+last_updated: "2026-03-05"
 tags:
   - "AI"
   - "エージェント"
@@ -26,7 +26,7 @@ quick_summary:
     - "開発者"
     - "シニアエンジニア"
     - "セキュリティ意識の高い企業"
-  latest_highlight: "2025年12月にコード変更を説明する `Explain Changes` 機能を追加"
+  latest_highlight: "2026年3月にユーザーエージェントヘッダーの追加とSDK機能の拡張を実施"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -54,10 +54,10 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/cline/cline"
+  deepwiki: "https://deepwiki.com/cline/cline"
   documentation: "https://docs.cline.bot/"
 relationships:
   related_tools:
-    - "Roo Code"
     - "Devin"
     - "DeepWiki-Open"
     - "Cursor"
@@ -76,6 +76,7 @@ relationships:
 * **公式サイト**: [https://cline.bot/](https://cline.bot/)
 * **関連リンク**:
   * GitHub: [https://github.com/cline/cline](https://github.com/cline/cline)
+  * DeepWiki: [https://deepwiki.com/cline/cline](https://deepwiki.com/cline/cline)
   * ドキュメント: [https://docs.cline.bot/](https://docs.cline.bot/)
   * レビューサイト: G2、Capterra、ITreview等にまとまったレビューは登録されていない（2026年1月時点）
 * **カテゴリ**: AIコーディング支援
@@ -215,6 +216,11 @@ relationships:
 
 (出典: [Cline GitHub Releases](https://github.com/cline/cline/releases))
 
+* **2026-03-03**: (v3.69.0) Clineバックエンドへのリクエストに `User-Agent` ヘッダーを追加。
+* **2026-02-27**: (v3.68.0) エンドポイントからの動的なClineプロバイダーモデル取得を追加し、CLIでのMarkdownフォーマットを追加。
+* **2026-02-24**: (v3.67.1) Cline SDK APIインターフェースを追加し、カスタムアプリケーションへの統合を可能に。Codex 5.3モデルをサポート。
+* **2026-02-24**: (v3.67.0) サブエージェント設定でのスキルとオプションのmodelIdをサポート。ファイルベースのエージェント設定ローダーを追加。
+* **2026-02-19**: (v3.66.0) Gemini 3.1 Pro Preview をサポート。
 * **2026-01-08**: (v3.41.0) 新しいモデルプロバイダーとしてMistralをサポート。
 * **2025-12-15**: (v3.40.1) `apply_patch`コマンドの不具合を修正、安定性を向上。
 * **2025-12-04**: (v3.40.0)
@@ -238,12 +244,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Cline (本ツール) | Cursor | GitHub Copilot | Roo Code |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | モデル選択 | ◎<br><small>完全自由 (BYOK)</small> | △<br><small>制限あり</small> | ◎<br><small>GPT-5/Claude 4.5等</small> | ◎<br><small>完全自由</small> |
-| **環境** | エディタ統合 | ◯<br><small>VS Code拡張</small> | ◎<br><small>独自IDE (VS Codeフォーク)</small> | ◎<br><small>多数のIDEに対応</small> | ◯<br><small>VS Code拡張</small> |
-| **エージェント** | 自律タスク実行 | ◎<br><small>Plan/Actループ</small> | ◯<br><small>Agent mode</small> | ◎<br><small>Copilot Agents</small> | ◎<br><small>Cloud Agents連携</small> |
-| **非機能要件** | オープンソース | ◎<br><small>MIT License</small> | ×<br><small>プロプライエタリ</small> | ×<br><small>プロプライエタリ</small> | ◎<br><small>MIT License</small> |
+| 機能カテゴリ | 機能項目 | Cline (本ツール) | Cursor | GitHub Copilot |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | モデル選択 | ◎<br><small>完全自由 (BYOK)</small> | △<br><small>制限あり</small> | ◎<br><small>GPT-5/Claude 4.5等</small> |
+| **環境** | エディタ統合 | ◯<br><small>VS Code拡張</small> | ◎<br><small>独自IDE (VS Codeフォーク)</small> | ◎<br><small>多数のIDEに対応</small> |
+| **エージェント** | 自律タスク実行 | ◎<br><small>Plan/Actループ</small> | ◯<br><small>Agent mode</small> | ◎<br><small>Copilot Agents</small> |
+| **非機能要件** | オープンソース | ◎<br><small>MIT License</small> | ×<br><small>プロプライエタリ</small> | ×<br><small>プロプライエタリ</small> |
 
 ### **16.2 詳細比較**
 
@@ -252,7 +258,6 @@ relationships:
 | **Cline** | IDE/CLIで動作する協調型AIエージェント。BYOKモデル。 | オープンソース、高いセキュリティ、モデル選択の自由度。 | 学習コストが高く、API料金が変動する。 | セキュリティ要件が厳しい、または特定のLLMに縛られたくない場合。 |
 | **Cursor** | AI機能を深く統合したフォーク版VS Code。 | コードベース全体を理解し、AIとの対話がスムーズ。 | サブスクリプションモデル。エディタの移行が必要。 | AIとの対話を中心とした開発スタイルを求める場合。 |
 | **GitHub Copilot** | コード補完・生成に特化したAIアシスタント。 | IDEとの統合が強力で手軽に利用開始できる。業界標準。 | BYOKではなくサブスクリプション。透明性はClineに劣る。 | 日常的なコーディングの効率化を求める場合。 |
-| **Roo Code** | Clineのフォーク。クラウドエージェント機能を強化。 | クラウドベースの自律エージェントとの連携、Slack連携。 | 機能が多く複雑。クラウド機能は従量課金。 | チーム全体でAIエージェントを活用したい場合。 |
 
 ## **17. 総評**
 
@@ -265,4 +270,3 @@ relationships:
 * **選択時のポイント**:
   * **コントロールと透明性を重視する場合**: オープンソースで動作がすべて可視化されるClineが最適。
   * **コストの予測可能性を重視する場合**: CursorやCopilotのような定額サブスクリプションモデルが適している。
-  * **チーム連携を重視する場合**: Slack連携などを持つRoo Codeと比較検討すると良い。

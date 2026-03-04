@@ -60,12 +60,12 @@ relationships:
     - "Visual Studio Code"
     - "GitHub Copilot"
     - "Windsurf"
-    - "Roo Code"
     - "IntelliJ IDEA"
     - "Android Studio"
     - "Claude Code"
     - "Mobile Next"
     - "Kiro"
+    - "Cline"
 ---
 
 # **Cursor 調査レポート**
