@@ -123,6 +123,10 @@
     color: $white;
   }
 
+  &.hero-link-docs {
+    background: $gradient-success;
+  }
+
   &.hero-link-github {
     background: linear-gradient(135deg, #24292e 0%, #40464d 100%);
   }

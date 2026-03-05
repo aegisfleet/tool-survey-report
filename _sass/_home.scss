@@ -764,6 +764,10 @@
         color: $white;
     }
 
+    &.card-link-docs {
+        background: $gradient-success;
+    }
+
     &.card-link-github {
         background: linear-gradient(135deg, #24292e 0%, #40464d 100%);
     }
