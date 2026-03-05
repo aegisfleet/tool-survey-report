@@ -69,6 +69,7 @@ relationships:
     - "Playwright CLI"
     - "Cline"
     - "Microsoft Work IQ"
+    - "Bito"
     - "Sourcery"
 ---
 
