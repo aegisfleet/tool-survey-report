@@ -8,7 +8,7 @@ category: "生成AI"
 developer: "DeepSeek"
 official_site: "https://www.deepseek.com/"
 date: "2025-10-23"
-last_updated: "2026-01-27"
+last_updated: "2026-03-05"
 tags:
   - "AI"
   - "大規模言語モデル"
@@ -330,11 +330,11 @@ relationships:
 
 * **2025-12-01**: `DeepSeek-V3.2` および `DeepSeek-V3.2-Speciale` をリリース。エージェント向けに最適化された推論強化モデル。
 * **2025-09-29**: `DeepSeek-V3.2-Exp` をリリース。実験的な新機能を搭載。
-* **2025-09-22**: `DeepSeek V3.1` のマイナーアップデート。安定性の向上。
-* **2025-08-21**: `DeepSeek V3.1` をリリース。V3からの性能向上と軽量化を実現。
-* **2025-07-XX**: APIのレートリミット緩和と、Context Cachingの正式版リリース。
+* **2025-09-22**: `DeepSeek-V3.1-Terminus` にアップグレード。言語の一貫性向上とエージェント機能の最適化を実施。
+* **2025-08-21**: `DeepSeek-V3.1` をリリース。ハイブリッド推論アーキテクチャやエージェント機能の強化が含まれる。
+* **2025-05-28**: `deepseek-reasoner` を `DeepSeek-R1-0528` にアップグレード。推論能力の強化とハルシネーションの低減。
 
-(出典: [DeepSeek API Docs - News](https://api-docs.deepseek.com/news/news251201))
+(出典: [DeepSeek API Docs - Change Log](https://api-docs.deepseek.com/updates))
 
 ## **16. 類似ツールとの比較**
 

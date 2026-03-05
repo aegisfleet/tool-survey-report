@@ -54,6 +54,7 @@ relationships:
     - "Claude Code"
   related_tools:
     - "ChatGPT"
+    - "DeepSeek"
     - "Gemini"
     - "Model Context Protocol"
     - "MCP Apps"
