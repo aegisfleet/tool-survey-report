@@ -54,6 +54,7 @@ relationships:
     - "GitHub Copilot"
     - "GitHub"
     - "SonarQube"
+    - "Sourcery"
     - "Kodus"
     - "Qodo"
 ---
