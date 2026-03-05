@@ -68,6 +68,7 @@ relationships:
     - "Playwright CLI"
     - "Cline"
     - "Microsoft Work IQ"
+    - "Bito"
 ---
 
 # **GitHub Copilot 調査レポート**

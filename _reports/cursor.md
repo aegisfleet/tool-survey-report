@@ -66,6 +66,7 @@ relationships:
     - "Mobile Next"
     - "Kiro"
     - "Cline"
+    - "Bito"
 ---
 
 # **Cursor 調査レポート**

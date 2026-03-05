@@ -54,6 +54,7 @@ relationships:
     - "GitHub Copilot"
     - "GitHub"
     - "SonarQube"
+    - "Bito"
 ---
 
 # **CodeRabbit 調査レポート**
