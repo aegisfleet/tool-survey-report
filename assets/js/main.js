@@ -865,91 +865,8 @@ function initBackToTopButton() {
 
   if (!backToTopButton) return;
 
-  // スクロール位置に応じてボタンの表示/非表示を制御
-  function toggleButtonVisibility(scrollTop) {
-    if (scrollTop === undefined) {
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    }
-
-    // 300px以上スクロールした場合に表示
-    if (scrollTop > 300) {
-      backToTopButton.classList.add('visible');
-    } else {
-      backToTopButton.classList.remove('visible');
-    }
-  }
-
-  // ボタンクリック時の動作
-  function scrollToTop() {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // スマートヘッダーとの干渉を防止:
-    isScrollingToTop = true;
-
-    const header = document.querySelector('.site-header');
-    if (header) {
-      header.classList.remove('header-hidden');
-      // トランジションを一時的に無効化して即時適用
-      header.style.transition = 'none';
-
-      // レイアウト再計算を強制（オプショナルだが念のため）
-      void header.offsetHeight;
-    }
-
-    if (prefersReducedMotion) {
-      window.scrollTo(0, 0);
-      isScrollingToTop = false;
-      if (header) header.style.transition = '';
-    } else {
-      // DOM更新が確実に適用されてからスクロール開始
-      requestAnimationFrame(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      });
-
-      // Safety check & Cleanup
-      const checkIfScrollFinished = setInterval(() => {
-        // トップに到達したかチェック（マージンを少し持たせる）
-        if (window.pageYOffset < 1) {
-          isScrollingToTop = false;
-          if (header) header.style.transition = '';
-          clearInterval(checkIfScrollFinished);
-        }
-      }, 100);
-
-      // Force reset after 2 seconds
-      setTimeout(() => {
-        isScrollingToTop = false;
-        if (header) header.style.transition = '';
-        if (checkIfScrollFinished) clearInterval(checkIfScrollFinished);
-      }, 2000);
-    }
-
-    // フォーカスをページトップの適切な要素に移動
-    const skipLink = document.querySelector('.skip-link');
-    const mainHeading = document.querySelector('h1');
-    const mainContent = document.getElementById('main-content');
-
-    if (skipLink) {
-      skipLink.focus();
-    } else if (mainHeading) {
-      mainHeading.setAttribute('tabindex', '-1');
-      mainHeading.focus();
-    } else if (mainContent) {
-      mainContent.setAttribute('tabindex', '-1');
-      mainContent.focus();
-    }
-
-    // スクリーンリーダーへの通知
-    if (window.announceToScreenReader) {
-      window.announceToScreenReader('ページの先頭に戻りました');
-    }
-  }
-
   // イベントリスナーの設定
-  ScrollManager.register(toggleButtonVisibility);
+  ScrollManager.register((scrollTop) => updateBackToTopButtonVisibility(backToTopButton, scrollTop));
   backToTopButton.addEventListener('click', scrollToTop);
 
   // キーボードサポート
@@ -961,7 +878,116 @@ function initBackToTopButton() {
   });
 
   // 初期状態の設定
-  toggleButtonVisibility();
+  updateBackToTopButtonVisibility(backToTopButton);
+}
+
+/**
+ * トップに戻るボタンの表示/非表示を制御する
+ * @param {HTMLElement} backToTopButton - 対象のボタン要素
+ * @param {number} [scrollTop] - 現在のスクロール位置
+ */
+function updateBackToTopButtonVisibility(backToTopButton, scrollTop) {
+  if (!backToTopButton) return;
+
+  if (scrollTop === undefined) {
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  }
+
+  // 300px以上スクロールした場合に表示
+  if (scrollTop > 300) {
+    backToTopButton.classList.add('visible');
+  } else {
+    backToTopButton.classList.remove('visible');
+  }
+}
+
+/**
+ * ページトップまでスムーズにスクロールする
+ */
+function scrollToTop() {
+  // すでにスクロール中なら何もしない
+  if (isScrollingToTop) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 既存のタイマーをクリア
+  if (activeScrollInterval) clearInterval(activeScrollInterval);
+  if (activeScrollTimeout) clearTimeout(activeScrollTimeout);
+
+  // スマートヘッダーとの干渉を防止
+  isScrollingToTop = true;
+
+  const header = document.querySelector('.site-header');
+  if (header) {
+    header.classList.remove('header-hidden');
+    // トランジションを一時的に無効化して即時適用
+    header.style.transition = 'none';
+
+    // レイアウト再計算を強制
+    void header.offsetHeight;
+  }
+
+  if (prefersReducedMotion) {
+    window.scrollTo(0, 0);
+    isScrollingToTop = false;
+    if (header) header.style.transition = '';
+  } else {
+    // DOM更新が確実に適用されてからスクロール開始
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    });
+
+    // Safety check & Cleanup
+    activeScrollInterval = setInterval(() => {
+      // トップに到達したかチェック
+      if (window.pageYOffset < 1) {
+        isScrollingToTop = false;
+        if (header) header.style.transition = '';
+        if (activeScrollInterval) {
+          clearInterval(activeScrollInterval);
+          activeScrollInterval = null;
+        }
+        if (activeScrollTimeout) {
+          clearTimeout(activeScrollTimeout);
+          activeScrollTimeout = null;
+        }
+      }
+    }, 100);
+
+    // Force reset after 2 seconds
+    activeScrollTimeout = setTimeout(() => {
+      isScrollingToTop = false;
+      if (header) header.style.transition = '';
+      if (activeScrollInterval) {
+        clearInterval(activeScrollInterval);
+        activeScrollInterval = null;
+      }
+      activeScrollTimeout = null;
+    }, 2000);
+  }
+
+  // フォーカスをページトップの適切な要素に移動
+  const skipLink = document.querySelector('.skip-link');
+  const mainHeading = document.querySelector('h1');
+  const mainContent = document.getElementById('main-content');
+
+  if (skipLink) {
+    skipLink.focus();
+  } else if (mainHeading) {
+    mainHeading.setAttribute('tabindex', '-1');
+    mainHeading.focus();
+  } else if (mainContent) {
+    mainContent.setAttribute('tabindex', '-1');
+    mainContent.focus();
+  }
+
+  // スクリーンリーダーへの通知
+  if (window.announceToScreenReader) {
+    window.announceToScreenReader('ページの先頭に戻りました');
+  }
 }
 /**
  * サイトタイトルやホームボタンをクリックした際にフィルタをリセットする
@@ -1113,6 +1139,8 @@ function initAccessibilityEnhancements() {
 
 // Global variable to track scroll state
 let isScrollingToTop = false;
+let activeScrollInterval = null;
+let activeScrollTimeout = null;
 
 // Smart Header functionality
 function initSmartHeader() {
