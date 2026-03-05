@@ -55,6 +55,9 @@ relationships:
     - "GitHub"
     - "SonarQube"
     - "Bito"
+    - "Sourcery"
+    - "Kodus"
+    - "Qodo"
 ---
 
 # **CodeRabbit 調査レポート**

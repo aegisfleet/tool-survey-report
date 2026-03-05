@@ -58,6 +58,7 @@ relationships:
   related_tools:
     - "Agentic Workflows"
     - "CodeRabbit"
+    - "Qodo"
     - "Visual Studio Code"
     - "Cursor"
     - "Windsurf"
@@ -69,6 +70,7 @@ relationships:
     - "Cline"
     - "Microsoft Work IQ"
     - "Bito"
+    - "Sourcery"
 ---
 
 # **GitHub Copilot 調査レポート**
