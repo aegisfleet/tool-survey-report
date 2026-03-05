@@ -726,6 +726,53 @@
     @extend %tag-interactive;
 }
 
+// Card link buttons (Official Site, GitHub, DeepWiki)
+.report-card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: map-get($spacers, 1);
+    margin-bottom: map-get($spacers, 3);
+}
+
+.card-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border-radius: $border-radius;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    text-decoration: none;
+    color: $white;
+    background: $gradient-primary;
+    border: none;
+    transition: $transition-base;
+    line-height: 1.4;
+
+    svg {
+        flex-shrink: 0;
+        width: 14px;
+        height: 14px;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        transform: translateY(-1px);
+        box-shadow: $box-shadow-sm;
+        opacity: 0.9;
+        color: $white;
+    }
+
+    &.card-link-github {
+        background: linear-gradient(135deg, #24292e 0%, #40464d 100%);
+    }
+
+    &.card-link-deepwiki {
+        background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+    }
+}
+
 .report-card-footer {
     margin-top: auto;
     padding-top: map-get($spacers, 3);
@@ -745,6 +792,7 @@
         }
     }
 }
+
 
 // No results and no reports
 .no-reports,

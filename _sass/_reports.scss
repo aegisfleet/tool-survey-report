@@ -63,8 +63,7 @@
 .report-date,
 .report-author,
 .report-developer,
-.report-category,
-.report-official-site {
+.report-category {
   display: flex;
   align-items: center;
   gap: map-get($spacers, 2);
@@ -84,6 +83,52 @@
     &:focus {
       color: $link-color;
     }
+  }
+}
+
+// Hero link buttons (Official Site, GitHub, DeepWiki)
+.report-hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: map-get($spacers, 2);
+  width: 100%;
+}
+
+.hero-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: map-get($spacers, 1);
+  padding: map-get($spacers, 2) map-get($spacers, 3);
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  text-decoration: none;
+  color: $white;
+  background: $gradient-primary;
+  border: none;
+  transition: $transition-base;
+
+  svg {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: $box-shadow-sm;
+    opacity: 0.9;
+    color: $white;
+  }
+
+  &.hero-link-github {
+    background: linear-gradient(135deg, #24292e 0%, #40464d 100%);
+  }
+
+  &.hero-link-deepwiki {
+    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
   }
 }
 
