@@ -8,10 +8,11 @@ official_site: "https://developers.google.com/workspace"
 date: "2026-03-05"
 last_updated: "2026-03-05"
 tags:
-  - "CLIツール"
-  - "Google Workspace"
-  - "AIエージェント"
+  - "エージェント"
   - "開発者ツール"
+  - "API"
+  - "オープンソース"
+  - "CLI"
 description: "Google WorkspaceのAPIをコマンドラインから簡単に操作し、AIエージェント向けの構造化JSON出力を提供する統合CLIツール"
 
 quick_summary:
@@ -44,7 +45,8 @@ links:
   github: "https://github.com/googleworkspace/cli"
   deepwiki: "https://deepwiki.com/googleworkspace/cli"
 relationships:
-  parent: "Google Workspace"
+  related_tools:
+    - "Google Cloud"
 ---
 
 # **Google Workspace CLI (gws) 調査レポート**
@@ -178,6 +180,8 @@ relationships:
   * 動的API解決による柔軟性が高い。（技術者の反応より想定）
 * **ネガティブな評価 / 改善要望**:
   * G2、Capterra、ITreviewにレビューの登録なし。
+* **特徴的なユースケース**:
+  * G2、Capterra、ITreviewにレビューの登録がないため、具体的なユースケースの報告は見つからず。
 
 ## **15. 直近半年のアップデート情報**
 
@@ -191,12 +195,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (gws) | clasp | gcloud CLI |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | Workspace API操作 | ◎<br><small>全APIに動的対応</small> | △<br><small>GAS経由のみ</small> | ×<br><small>GCP向け</small> |
-| **カテゴリ特定** | AI連携(MCP等) | ◎<br><small>標準でプロトコル完備</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
-| **エンタープライズ** | サービスアカウント | ◯<br><small>標準サポート</small> | ×<br><small>非対応</small> | ◯<br><small>標準サポート</small> |
-| **非機能要件** | 学習コスト | ◯<br><small>直感的</small> | △<br><small>GASの理解が必要</small> | ◯<br><small>直感的だがコマンド多</small> |
+| 機能カテゴリ | 機能項目 | 本ツール (gws) | clasp | gcloud CLI | Terraform |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | Workspace API操作 | ◎<br><small>全APIに動的対応</small> | △<br><small>GAS経由のみ</small> | ×<br><small>GCP向け</small> | △<br><small>Google Workspace Providerで一部対応</small> |
+| **カテゴリ特定** | AI連携(MCP等) | ◎<br><small>標準でプロトコル完備</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
+| **エンタープライズ** | サービスアカウント | ◯<br><small>標準サポート</small> | ×<br><small>非対応</small> | ◯<br><small>標準サポート</small> | ◯<br><small>標準サポート</small> |
+| **非機能要件** | 学習コスト | ◯<br><small>直感的</small> | △<br><small>GASの理解が必要</small> | ◯<br><small>直感的だがコマンド多</small> | △<br><small>HCLやIaCの概念理解が必要</small> |
 
 ### **16.2 詳細比較**
 
@@ -205,6 +209,7 @@ relationships:
 | **本ツール** | Workspace全般のAPIを直接叩くCLI | 動的構築、AIネイティブ、MCPサポート | 開発初期段階 | AIエージェントにWorkspace操作をさせたい場合、APIを直接テストしたい場合 |
 | **clasp** | Google Apps Script (GAS) 用のCLI | GASのローカル開発・デプロイに特化 | APIを直接叩く用途には不向き | GASを用いたカスタムソリューションを開発・管理する場合 |
 | **gcloud CLI** | Google Cloud プラットフォーム用CLI | GCPリソースの完全な管理 | Workspace機能は対象外 | インフラ管理やGCPリソースのデプロイ・管理を行う場合 |
+| **Terraform** | IaCによるインフラ・リソースの宣言的管理 | 状態管理(State)と再現性に優れる | 単発のAPI実行や動的操作には不向き | Workspaceのユーザーやグループ設定をコード化し、GitOpsで一元管理する場合 |
 
 ## **17. 総評**
 

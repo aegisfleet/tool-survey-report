@@ -63,6 +63,7 @@ relationships:
     - "Amazon Web Services"
     - "Microsoft Azure"
     - "Terraform"
+    - "Google Workspace CLI (gws)"
     - "Cloudflare"
     - "Google Maps Platform"
 ---
