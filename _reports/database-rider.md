@@ -8,7 +8,7 @@ category: "テスト/QA"
 developer: "Rafael M. Pestano and Community"
 official_site: "https://database-rider.github.io/database-rider/"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-05"
 tags:
   - "Java"
   - "JUnit"
@@ -55,8 +55,8 @@ links:
   github: "https://github.com/database-rider/database-rider"
   documentation: "https://database-rider.github.io/database-rider/"
 relationships:
+  parent: "JUnit"
   related_tools:
-    - "JUnit"
     - "Spring Boot"
 ---
 
@@ -203,7 +203,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: GitHub Issues, Stack Overflow, 技術ブログ記事
+* **調査対象**: GitHub Issues, Stack Overflow, 技術ブログ記事 (G2、Capterra、ITreviewにレビューの登録なし)
 * **総合評価**: 体系的なレビューサイトでのスコアはありませんが、開発者コミュニティでは「JavaでのDBテストの決定版」として高く評価されています。
 * **ポジティブな評価**:
   * 「JUnit 5でDBUnitを使うなら、これ以外の選択肢はないほど便利。」
