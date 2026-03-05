@@ -41,10 +41,11 @@ links:
   github: "https://github.com/junit-team/junit-framework"
   documentation: "https://docs.junit.org/"
 relationships:
+  children:
+    - "Database Rider"
   related_tools:
     - "JaCoCo"
     - "Spring Boot"
-    - "Database Rider"
     - "Allure Report"
     - "PyTest"
 ---
