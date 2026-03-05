@@ -915,7 +915,14 @@ function updateBackToTopButtonVisibility(backToTopButton, scrollTop) {
  * ページトップまでスムーズにスクロールする
  */
 function scrollToTop() {
+  // すでにスクロール中なら何もしない
+  if (isScrollingToTop) return;
+
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // 既存のタイマーをクリア
+  if (activeScrollInterval) clearInterval(activeScrollInterval);
+  if (activeScrollTimeout) clearTimeout(activeScrollTimeout);
 
   // スマートヘッダーとの干渉を防止
   isScrollingToTop = true;
@@ -944,20 +951,31 @@ function scrollToTop() {
     });
 
     // Safety check & Cleanup
-    const checkIfScrollFinished = setInterval(() => {
+    activeScrollInterval = setInterval(() => {
       // トップに到達したかチェック
       if (window.pageYOffset < 1) {
         isScrollingToTop = false;
         if (header) header.style.transition = '';
-        clearInterval(checkIfScrollFinished);
+        if (activeScrollInterval) {
+          clearInterval(activeScrollInterval);
+          activeScrollInterval = null;
+        }
+        if (activeScrollTimeout) {
+          clearTimeout(activeScrollTimeout);
+          activeScrollTimeout = null;
+        }
       }
     }, 100);
 
     // Force reset after 2 seconds
-    setTimeout(() => {
+    activeScrollTimeout = setTimeout(() => {
       isScrollingToTop = false;
       if (header) header.style.transition = '';
-      if (checkIfScrollFinished) clearInterval(checkIfScrollFinished);
+      if (activeScrollInterval) {
+        clearInterval(activeScrollInterval);
+        activeScrollInterval = null;
+      }
+      activeScrollTimeout = null;
     }, 2000);
   }
 
@@ -1131,6 +1149,8 @@ function initAccessibilityEnhancements() {
 
 // Global variable to track scroll state
 let isScrollingToTop = false;
+let activeScrollInterval = null;
+let activeScrollTimeout = null;
 
 // Smart Header functionality
 function initSmartHeader() {
