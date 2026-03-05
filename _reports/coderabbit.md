@@ -54,6 +54,7 @@ relationships:
     - "GitHub Copilot"
     - "GitHub"
     - "SonarQube"
+    - "Kodus"
 ---
 
 # **CodeRabbit 調査レポート**
