@@ -59,6 +59,7 @@ relationships:
   related_tools:
     - "Visual Studio Code"
     - "GitHub Copilot"
+    - "Qodo"
     - "Windsurf"
     - "IntelliJ IDEA"
     - "Android Studio"

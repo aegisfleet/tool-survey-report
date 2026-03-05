@@ -58,6 +58,7 @@ relationships:
   related_tools:
     - "Agentic Workflows"
     - "CodeRabbit"
+    - "Qodo"
     - "Visual Studio Code"
     - "Cursor"
     - "Windsurf"
