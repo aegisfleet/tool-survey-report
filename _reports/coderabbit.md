@@ -54,11 +54,8 @@ relationships:
     - "GitHub Copilot"
     - "GitHub"
     - "SonarQube"
-<<<<<<< feat/add-kodus-report-10981635534685019530
     - "Kodus"
-=======
     - "Qodo"
->>>>>>> main
 ---
 
 # **CodeRabbit 調査レポート**
