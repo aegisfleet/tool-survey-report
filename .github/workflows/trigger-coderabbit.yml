@@ -13,9 +13,36 @@ jobs:
       - uses: actions/github-script@v8
         with:
           script: |
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const prNumber = context.issue.number;
+            
+            // Collect changed files (handle pagination)
+            let files = [];
+            let page = 1;
+            while (true) {
+              const res = await github.rest.pulls.listFiles({ owner, repo, pull_number: prNumber, per_page: 100, page });
+              files = files.concat(res.data.map(f => f.filename));
+              if (res.data.length < 100) break;
+              page += 1;
+            }
+
+            if (files.length === 0) {
+              core.info('No changed files found.');
+              return;
+            }
+
+            core.info(`Changed files:\n${files.join('\n')}`);
+
+            const allUnderReports = files.every(f => f.startsWith('_reports/'));
+            if (allUnderReports) {
+              core.info('Only files under _reports/ were modified — skipping CodeRabbit review trigger.');
+              return;
+            }
+
+            await github.rest.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber,
               body: '@coderabbitai review'
-            })
+            });
