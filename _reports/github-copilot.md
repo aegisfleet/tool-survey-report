@@ -71,6 +71,7 @@ relationships:
     - "Microsoft Work IQ"
     - "Bito"
     - "Sourcery"
+    - "SHIFT DQS for リバースエンジニアリング"
 ---
 
 # **GitHub Copilot 調査レポート**
