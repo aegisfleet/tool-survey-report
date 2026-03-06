@@ -53,9 +53,9 @@ relationships:
   parent: ""
   children: []
   related_tools:
-    - "Devin"
     - "Microsoft 365 Copilot"
     - "Salesforce"
+    - "Devin"
 ---
 
 # **AGENTIC STAR 調査レポート**

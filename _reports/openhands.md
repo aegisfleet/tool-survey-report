@@ -53,13 +53,12 @@ links:
 relationships:
   related_tools:
     - "UI-TARS Desktop"
-    - "Devin"
     - "AutoGPT"
     - "Google Jules"
     - "GitHub Copilot"
     - "Cursor"
     - "Manus"
-    - "DeerFlow"
+    - "Devin"
 ---
 
 # **OpenHands 調査レポート**

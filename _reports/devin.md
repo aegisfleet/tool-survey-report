@@ -8,7 +8,7 @@ category: "自律型AIエージェント"
 developer: "Cognition Labs"
 official_site: "https://devin.ai/"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-06"
 tags:
   - "AI"
   - "エージェント"
@@ -27,7 +27,7 @@ quick_summary:
     - "開発者"
     - "スタートアップ"
     - "プロダクトマネージャー"
-  latest_highlight: "2025年12月にデータ分析特化版「Dana」をリリース"
+  latest_highlight: "2026年2月にDevin 2.2、v3 API、Devin Reviewなどをリリース"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -62,13 +62,8 @@ relationships:
     - "GitHub Copilot"
     - "Cursor"
     - "OpenHands"
-    - "AutoGPT"
     - "Google Jules"
-    - "DeerFlow"
-    - "Cline"
     - "Manus"
-    - "OpenCode"
-    - "AGENTIC STAR"
 ---
 
 # **Devin 調査レポート**
@@ -321,14 +316,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-12-19**: 全てのエンタープライズ顧客向けに最新アーキテクチャを搭載した新バージョンのDevinへのアップグレードが完了。
-* **2025-12-12**: Microsoft Teamsとの連携機能が追加され、Teamsのチャネルから直接Devinを操作可能に。
-* **2025-12-05**: データ分析に最適化されたバージョン「Dana (Data Analyst Devin)」が全ユーザーに公開。
-* **2025-11-21**: 複数のブランチのインデックス管理機能や、Mermaidダイアグラムのインタラクティブな操作機能が追加。
-* **2025-10-24**: DeepWikiにコードを視覚的に探索できる「Codemaps」機能が追加。
-* **2025-09-29**: 従来の2倍の速度を持つClaude Sonnet 4.5を搭載した新しいエージェントのプレビュー版がリリース。
-* **2025-08-08**: CoreおよびTeamsプランのユーザー向けに、GPT-5を搭載したエージェントのプレビューアクセスを提供開始。
-* **2025-07-28**: 1000以上のツールと連携可能な「MCP (Model Context Protocol) Marketplace」が公開。
+* **2026-02-27**: AskDevinがAskとPlanモードに拡張され、コード検索機能が向上。Devin ReviewにGitHubのコミットステータスチェック機能が追加。
+* **2026-02-24**: Devin 2.2がリリースされ、起動時間が3倍高速化。新しいUIとフルデスクトップテスト機能が追加。
+* **2026-02-20**: v3 APIが正式リリース（Role-Based Access Control、セッション属性などの新機能を含む）。またセッションリストの再設計やGitHub Enterprise Serverへの対応が追加。
+* **2026-02-13**: 全体的なデザイン改善、2倍高速な「Fast Mode」の追加、PRレビューのバッチコメント機能などが導入。
+* **2026-02-06**: 入力ボックスから直接セッションをスケジュール可能に。Enterpriseの組織選択ページや自動レビュー設定なども改善。
+* **2026-02-03**: 定期的なスケジュールセッション機能が追加。Devin ReviewでDraft PRのサポートなども導入。
+* **2026-01-22**: 複雑なPRを理解するための「Devin Review」がリリース。またリポジトリ設定時のAIによるサジェスト機能が追加。
+* **2026-01-09**: API経由でのセッション作成時にシークレット情報を渡せる機能や、Linearのネイティブ統合ツールが追加。
 
 (出典: [Official Release Notes](https://docs.devin.ai/release-notes/overview))
 
