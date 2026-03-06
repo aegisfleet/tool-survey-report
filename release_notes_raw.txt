@@ -1,0 +1,651 @@
+"use strict";
+const {Fragment: _Fragment, jsx: _jsx, jsxs: _jsxs} = arguments[0];
+const {useMDXComponents: _provideComponents} = arguments[0];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    hr: "hr",
+    li: "li",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ..._provideComponents(),
+    ...props.components
+  }, {Heading, OptimizedImage, Update} = _components;
+  if (!Heading) _missingMdxReference("Heading", true);
+  if (!OptimizedImage) _missingMdxReference("OptimizedImage", true);
+  if (!Update) _missingMdxReference("Update", true);
+  return _jsxs(_Fragment, {
+    children: [_jsxs(Update, {
+      label: "February 27, 2026",
+      id: "february-27%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "AskDevin Upgrade"
+        })
+      }), _jsx(_components.p, {
+        children: "Expanded to support Ask and Plan modes. Now has more advanced code search capabilities which produce more detailed and accurate answers. The status of Devin sessions created from AskDevin can now be seen in the conversation."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: GitHub Commit Status Checks"
+        })
+      }), _jsx(_components.p, {
+        children: "Status checks now displayed directly on pull request commits, giving visibility into review progress without leaving GitHub. The status links to the full Devin Review analysis."
+      }), _jsx(_components.p, {
+        children: "To enable this, the Devin GitHub App will request the Commit Statuses and Checks permissions. If these permissions are not granted, all existing functionality is unaffected."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Repository Selection for Schedules"
+        })
+      }), _jsx(_components.p, {
+        children: "Schedules can now be configured with specific repositories that the session will be run with each time the schedule executes."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "February 24, 2026",
+      id: "february-24%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin 2.2 Launch"
+        })
+      }), _jsx(_components.p, {
+        children: "Devin 2.2 is the culmination of hundreds of improvements both big and small over the last few weeks including:"
+      }), _jsxs(_components.ul, {
+        children: ["\n", _jsx(_components.li, {
+          children: "3x faster startup time to immediately see Devinâs output and build trust that itâs on the right track"
+        }), "\n", _jsx(_components.li, {
+          children: "A new UI that connects every step of the dev lifecycle: start sessions from anywhere, review agent output directly in Devin, and jump back into sessions from code review."
+        }), "\n", _jsx(_components.li, {
+          children: "Smoother and faster Slack and Linear integrations to start sessions without having to switch context"
+        }), "\n"]
+      }), _jsx(_components.p, {
+        children: "See past release notes for the full list of the improvements."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Full Desktop Testing"
+        })
+      }), _jsx(_components.p, {
+        children: "Devin now supports end-to-end testing using computer use and can test any desktop app that can run on Linux. Devin will request to QA its PR, if you approve it, it will run your app, use its desktop to click around, and send you an edited recording of the testing for your review."
+      }), _jsxs(_components.p, {
+        children: ["Existing users can enable Desktop mode in ", _jsx(_components.a, {
+          href: "https://app.devin.ai/customization",
+          children: "Settings > Customization"
+        }), "."]
+      }), _jsx("video", {
+        autoPlay: true,
+        muted: true,
+        loop: true,
+        className: "mint-w-full mint-aspect-video",
+        src: "https://mintcdn.com/cognitionai/h8qwUI43QqmV5C_j/images/release-notes/desktop_testing_feb25.mp4?fit=max&auto=format&n=h8qwUI43QqmV5C_j&q=85&s=d1b61b1bbc16fe6d9777a5cb5e1d48e8",
+        "data-path": "images/release-notes/desktop_testing_feb25.mp4",
+        playsInline: "true"
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "February 20, 2026",
+      id: "february-20%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin v3 API Officially Released"
+        })
+      }), _jsx(_components.p, {
+        children: "The v3 API is coming out of beta and is now the primary API for all Devin functionality. The new API provides all of the legacy API functionality and additionally provides role-based access control, session attribution, and new capabilities."
+      }), _jsx(_components.p, {
+        children: "The legacy APIs (v1 and v2) will be deprecated in the future. The exact date will be announced in the product and in release notes. We commit to providing at least 30 days notice. During the deprecation period, the legacy APIs will continue to work but all new features will only be available in the v3 API."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Sessions List Redesign"
+        })
+      }), _jsx(_components.p, {
+        children: "The sessions list page has been redesigned with an updated layout featuring inline PR previews, message snippets, and status indicators. Sessions can now also be sorted by creation date."
+      }), _jsx(OptimizedImage, {
+        height: "200",
+        src: "https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=af8e47c95bd885a917a3b14eb88a70b7",
+        "data-og-width": "2981",
+        "data-og-height": "1846",
+        "data-path": "images/release-notes/sessions_list_redesign_feb20.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?w=280&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=9ab748c2fbe98575fb6147a76759b820 280w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?w=560&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=4bcf8f4c81c19c3b9ffbeae461c6307e 560w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?w=840&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=807083927609f12ddd72a439a7ac1b90 840w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?w=1100&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=56dc27878c63fe4dfabca4932b774fbe 1100w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?w=1650&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=6994df256da4ab6be7220476594f3463 1650w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/sessions_list_redesign_feb20.png?w=2500&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=e1b02cc937083050d117e87d9cf1dff2 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Merge Conflict Detection"
+        })
+      }), _jsx(_components.p, {
+        children: "Devin will automatically notify users when a PR created in a Devin session has merge conflicts. Available on GitHub.com only."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "New Devin Scheduling Options"
+        })
+      }), _jsx(_components.p, {
+        children: "Scheduled Devins can now be created as a one-time scheduled event, and existing schedules can be triggered on demand with the âRun nowâ button."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review for GitHub Enterprise Server"
+        })
+      }), _jsx(_components.p, {
+        children: "Devin Review now supports GitHub Enterprise Server (GHES) repositories. You can view PR diffs, run analysis, and use the Devin Review chat agent to propose and apply code changes. Some interactions with GitHub such as posting comments, submitting reviews, and merging are not yet supported on GHES."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Repo Selector Enhancements"
+        })
+      }), _jsx(_components.p, {
+        children: "The repository selector now features an âOnlyâ button to quickly isolate a single repository and displays setup and indexed repo counts."
+      }), _jsx(OptimizedImage, {
+        style: {
+          maxWidth: "300px"
+        },
+        src: "https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=02dbaec4d88fde1c05a23a1249c9bfab",
+        "data-og-width": "672",
+        width: "672",
+        "data-og-height": "758",
+        height: "758",
+        "data-path": "images/release-notes/repo_selector_feb20.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?w=280&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=7b97197fd5598200f62f72ccde9f7cb3 280w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?w=560&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=b58fb8a00b06a81158cf3da9af618219 560w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?w=840&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=9d292cb46d8620e56e61d299b76e6944 840w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?w=1100&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=b117a9beb18af7627e701a3448284470 1100w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?w=1650&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=e5ac9904ba6d6de36d6347747eb47a02 1650w, https://mintcdn.com/cognitionai/giTocETit1KrE1tc/images/release-notes/repo_selector_feb20.png?w=2500&fit=max&auto=format&n=giTocETit1KrE1tc&q=85&s=bb53d8925ff53ee4e62a57adfaa7cd56 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Session Messages API"
+        })
+      }), _jsxs(_components.p, {
+        children: ["A new ", _jsx(_components.code, {
+          children: "GET /messages"
+        }), " endpoint allows programmatic access to session message history."]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "February 13, 2026",
+      id: "february-13%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Visual Refresh and Polish"
+        })
+      }), _jsx(_components.p, {
+        children: "The overall design has been improved and polished across the product. Some button locations have been minorly adjusted, but these changes do not impact the product functionality."
+      }), _jsx(OptimizedImage, {
+        height: "200",
+        src: "https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=2b120f33cf351e2a8ef0519122a13761",
+        "data-og-width": "2984",
+        "data-og-height": "1856",
+        "data-path": "images/release-notes/visual_refresh_feb13.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?w=280&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=bce19f3c45ecf973a5f68a470daccace 280w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?w=560&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=ac2031ac15a81799bee312b39f52ea58 560w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?w=840&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=761c9e5c0583cc0327d34c705b4b28cb 840w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?w=1100&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=c05c4f6ffe966f03584bd81a45bfbfa2 1100w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?w=1650&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=0086538ab4f7e6aebb2b53c3daef639f 1650w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/visual_refresh_feb13.png?w=2500&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=47f5bfedee70dc389d2910d93b483006 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Fast Mode"
+        })
+      }), _jsx(_components.p, {
+        children: "A new âFast Modeâ option is now available in the agent picker, delivering ~2x faster responses with the same intelligence at 4x ACU per session."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: Batch Comments"
+        })
+      }), _jsx(_components.p, {
+        children: "When replying to PR review threads, you can now check âStart a reviewâ to batch multiple review comments before submitting them all at once."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: Code Changes from Chat"
+        })
+      }), _jsx(_components.p, {
+        children: "The Devin Review chat agent can now propose code edits directly in the conversation. You can review the suggested changes, then apply them as a commit to the PR branch without leaving Devin Review."
+      }), _jsx(OptimizedImage, {
+        style: {
+          maxWidth: "300px"
+        },
+        src: "https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=c3fa22770c3519e48e2d30693f52b597",
+        "data-og-width": "1044",
+        width: "1044",
+        "data-og-height": "1368",
+        height: "1368",
+        "data-path": "images/release-notes/devin_review_code_changes_feb13.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?w=280&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=3f6b65272cbce555c306fac2f250aeb2 280w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?w=560&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=152b9d2ccd568d1d6f9adb48464d3c53 560w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?w=840&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=373796f4eecc67637d3a8af030670044 840w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?w=1100&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=498b0dcd45f9451a70ee3d1d9b7907c2 1100w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?w=1650&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=1f75b1131a8e03f04fc7ff7714536efb 1650w, https://mintcdn.com/cognitionai/eb79m3k_19Q1Z7JT/images/release-notes/devin_review_code_changes_feb13.png?w=2500&fit=max&auto=format&n=eb79m3k_19Q1Z7JT&q=85&s=1968a55c660c15e2a501d271e62f0175 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Secure Mode for All Organizations"
+        })
+      }), _jsx(_components.p, {
+        children: "Secure mode is now available for non-enterprise organizations. When enabled, Devin loses native internet deployment capabilities. You can find this setting under âSecurity settingsâ on the Customization page."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Skills Support"
+        })
+      }), _jsx(_components.p, {
+        children: "Devin now recognizes and uses skills defined in your codebase. Skills provide reusable instructions that Devin can activate, search, and invoke during sessions to follow your teamâs preferred workflows."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Settings Search"
+        })
+      }), _jsx(_components.p, {
+        children: "A search bar has been added to the settings sidebar, making it easy to quickly find any settings page by name or keyword."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "February 6, 2026",
+      id: "february-6%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Schedule from the Input Box"
+        })
+      }), _jsx(_components.p, {
+        children: "You can now quickly create a scheduled Devin session directly from the input box. Use the âSchedule Devinâ option in the context menu or switch to the âCreate scheduleâ tab in Advanced mode to set up recurring sessions without leaving the home page."
+      }), _jsx(OptimizedImage, {
+        height: "200",
+        src: "https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=5a1be9af185e7b49aead3841d5cdc71f",
+        "data-og-width": "774",
+        "data-og-height": "450",
+        "data-path": "images/release-notes/schedule_tab_feb6.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?w=280&fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=136ad2154057e409046e5f50f609fc4a 280w, https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?w=560&fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=eded30a3287cab785c71dff2744b5418 560w, https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?w=840&fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=aee6638a2c24856e198cf6b4429c1a8d 840w, https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?w=1100&fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=d30177df9957d0b75bc5a7881f05aa92 1100w, https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?w=1650&fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=319a2ac151269e085839815bda985a75 1650w, https://mintcdn.com/cognitionai/5kC7KOFG99QiDpzy/images/release-notes/schedule_tab_feb6.png?w=2500&fit=max&auto=format&n=5kC7KOFG99QiDpzy&q=85&s=878e1e9b0985826941dae3c252b88702 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Enterprise Organization Selection"
+        })
+      }), _jsx(_components.p, {
+        children: "The enterprise landing page has been redesigned with a cleaner organization list, member counts, and sorting options for easier navigation across your enterprise."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: Auto-Review Settings"
+        })
+      }), _jsx(_components.p, {
+        children: "Auto-review configuration is now accessible as a settings popover directly in the PR header, making it faster to enable or disable auto-reviews per repository."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: Hide Comment Highlights"
+        })
+      }), _jsx(_components.p, {
+        children: "A new setting in the code diff viewer lets you hide comment highlight boxes for a cleaner reading experience when reviewing code."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Git Permissions Update"
+        })
+      }), _jsx(_components.p, {
+        children: "Removed the ability to index repos in the primary organization for enterprises."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "February 3, 2026",
+      id: "february-3%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Scheduled Devins"
+        })
+      }), _jsx(_components.p, {
+        children: "You can now create recurring Devin sessions that run automatically on a schedule. Configure frequency, prompt, and playbook from the new Schedules page in settings, and receive email notifications for schedule events."
+      }), _jsx(OptimizedImage, {
+        height: "200",
+        src: "https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=9eea264876c694242d828772af338ccb",
+        "data-og-width": "1024",
+        "data-og-height": "570",
+        "data-path": "images/release-notes/scheduled_devins_feb3.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?w=280&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=83cdcb0e4a4798dcf254932fa9d3f03d 280w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?w=560&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=f1d81ddfa2f23344ea87448a86eecf40 560w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?w=840&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=1839ac68cf15fb74b17a796dd03816f7 840w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?w=1100&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=2495476ef9edb2224f79bbef2a2cbdf6 1100w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?w=1650&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=0496d053ce50e18ea391449327a20310 1650w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/scheduled_devins_feb3.png?w=2500&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=fcae9dca89f43b12ec224523586794fd 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: Draft PR Support"
+        })
+      }), _jsx(_components.p, {
+        children: "Draft PRs now show a âReady for reviewâ button, allowing you to mark PRs as ready for review directly from Devin Review."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Devin Review: File Comments and @Mentions"
+        })
+      }), _jsx(_components.p, {
+        children: "You can now add file-level comments from the file header menu and use @mentions when editing existing comments in Devin Review."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Settings Sidebar Reorganization"
+        })
+      }), _jsx(_components.p, {
+        children: "The organization settings sidebar has been reorganized with clearer section headers including âDevinâs resources,â âMembership,â âSettings,â and âIntegrationsâ for easier navigation."
+      }), _jsx(OptimizedImage, {
+        height: "200",
+        src: "https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=f65a8a5b3c00f0bb6d9a8a20328a63a3",
+        "data-og-width": "275",
+        "data-og-height": "570",
+        "data-path": "images/release-notes/sidebar_reorganization_feb3.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?w=280&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=7f92f138dee5dfdde6fd2b475c7bbe2e 280w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?w=560&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=82614aa5f5ef1e68d65fa9e02dff8b17 560w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?w=840&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=7bb3063dfd8398538cbc5b4bffdbf48c 840w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?w=1100&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=acdb9f1a1f38ff6ec8071ca940eb7e9c 1100w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?w=1650&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=f437625a5305c9c47196c9d7297a0057 1650w, https://mintcdn.com/cognitionai/bmZeS9ugCdt432TZ/images/release-notes/sidebar_reorganization_feb3.png?w=2500&fit=max&auto=format&n=bmZeS9ugCdt432TZ&q=85&s=312da1e34c241945ec6a80b2b74b3d69 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Per-Product Consumption Analytics API"
+        })
+      }), _jsxs(_components.p, {
+        children: ["The v3 analytics API now includes a per-product breakdown of Agent Compute Unit consumption alongside existing totals. See ", _jsx(_components.a, {
+          href: "/api-reference/release-notes",
+          children: "API Release Notes"
+        }), " for details."]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "January 22, 2026",
+      id: "january-22%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: _jsx(_components.a, {
+            href: "/work-with-devin/devin-review",
+            children: "Devin Review Launch"
+          })
+        })
+      }), _jsx(_components.p, {
+        children: "Devin Review is a reimagined interface for understanding complex PRs. Devin review groups related changes together logically, detects copied code, detects bugs and security issues, and an embedded PR chat interface."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Repo Setup AI Suggestions"
+        })
+      }), _jsx(_components.p, {
+        children: "The repository setup flow now provides inline AI-powered suggestions for setup commands, helping you configure repositories faster with less manual effort."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Sessions API Enhancements"
+        })
+      }), _jsxs(_components.p, {
+        children: ["New API endpoints allow you to retrieve session details by ID, send messages to active sessions, and filter sessions by origin (webapp, Slack, Teams, API, Linear, Jira). See ", _jsx(_components.a, {
+          href: "/api-reference/release-notes",
+          children: "API Release Notes"
+        }), " for details."]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "January 9, 2026",
+      id: "january-9%2C-2026",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Session Secrets via API"
+        })
+      }), _jsx(_components.p, {
+        children: "You can now provide session-scoped secrets when creating sessions via the API, enabling secure credential management for automated workflows without manual intervention."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Native Linear Integration"
+        })
+      }), _jsx(_components.p, {
+        children: "Devin now has a built-in Linear tool for organizations with the Linear integration installed. This means you no longer need to install the Linear MCP separately to interact with Linear issues and projects."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "API Session Filters"
+        })
+      }), _jsx(_components.p, {
+        children: "Added new filtering options to the sessions API endpoint, including the ability to filter sessions by user email for better session management and reporting."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Syntax Highlighting for Kotlin and Protocol Buffers"
+        })
+      }), _jsx(_components.p, {
+        children: "Code blocks now support syntax highlighting for Kotlin and Protocol Buffers (.proto files), improving readability when working with these languages."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Git Settings Reorganization"
+        })
+      }), _jsx(_components.p, {
+        children: "Personal git settings have been moved from the âCustomizationâ section to the âProfileâ tab in user settings for better organization and discoverability."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Playbook Visual Distinction"
+        })
+      }), _jsx(_components.p, {
+        children: "Playbooks now have a visual badge in the dropdown menu, making it easier to distinguish between playbooks and other options when starting a session."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Machine Setup UX Improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Small usability improvements to the machine setup flow for a smoother onboarding experience."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Copy Context Button"
+        })
+      }), _jsx(_components.p, {
+        children: "Each PR now has a âCopy Contextâ button that provides an AI-generated summary of the agentâs work, context it found, and decisions it made, which is particularly useful when handing off work to other agents."
+      }), _jsx(OptimizedImage, {
+        height: "200",
+        src: "https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=204360196ce417fcf11f9a00ee67eeb6",
+        "data-og-width": "1506",
+        "data-og-height": "334",
+        "data-path": "images/release-notes/copy_context_button_jan9.png",
+        "data-optimize": "true",
+        "data-opv": "3",
+        srcset: "https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?w=280&fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=584dc9567f4f506d2997540fb4d868e0 280w, https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?w=560&fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=220b2647aa837aaae6721160e87f212d 560w, https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?w=840&fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=32b67af92e5e8fde092f319f3ded7155 840w, https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?w=1100&fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=a56d0f1dc2a184ab38745af2dbba9a5c 1100w, https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?w=1650&fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=d68ff66d20d71ded05f846a55d2346f3 1650w, https://mintcdn.com/cognitionai/4q3bdIh3Bg1UZT5q/images/release-notes/copy_context_button_jan9.png?w=2500&fit=max&auto=format&n=4q3bdIh3Bg1UZT5q&q=85&s=72f5df90e3c9579436cb0a3f571c17a2 2500w"
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "December 19, 2025",
+      id: "december-19%2C-2025",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "New Agent Upgrade"
+        })
+      }), _jsx(_components.p, {
+        children: "All enterprise customers have now been upgraded to the newest version of Devin, powered by the latest architectural and model improvements. The legacy âAgent (old)â option has been removed from the Agent dropdown menu in the input box, ensuring all users benefit from the most advanced capabilities."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Enterprise API v3 Metrics Endpoints"
+        })
+      }), _jsxs(_components.p, {
+        children: ["New API v3 endpoints for tracking usage metrics and active users across your enterprise. Includes endpoints for sessions, searches, PRs, and daily/weekly/monthly active user metrics with time-series data. See ", _jsx(_components.a, {
+          href: "/api-reference/release-notes",
+          children: "API Release Notes"
+        }), " for details."]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Jira Project Mapping Search"
+        })
+      }), _jsx(_components.p, {
+        children: "Added a search filter to the Jira project mapping modal."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Child Session Indentation"
+        })
+      }), _jsx(_components.p, {
+        children: "Batch sessions now appear visually indented under their parent session in the sidebar, making it easier to understand session hierarchies and navigate complex multi-session workflows at a glance."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Repository Connection Warnings"
+        })
+      }), _jsx(_components.p, {
+        children: "The repository side panel now displays a warning banner when a repository has a connection issue."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Consumption Analytics Improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Enhanced analytics dashboard with extended historical data:"
+      }), _jsxs(_components.ul, {
+        children: ["\n", _jsx(_components.li, {
+          children: "Historical cycles chart now displays 12 months of data (up from 5 months)"
+        }), "\n", _jsx(_components.li, {
+          children: "New export functionality for previous billing cycles, enabling better cost analysis and reporting"
+        }), "\n"]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Computer Use Setting Update"
+        })
+      }), _jsx(_components.p, {
+        children: "Removed the âOnly available on the new agentâ disclaimer from the computer use setting; this feature is now available across all agent versions."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Copy PR Context Button"
+        })
+      }), _jsx(_components.p, {
+        children: "New convenience feature allowing users to quickly copy PR context summaries to clipboard with a single click, streamlining code review workflows and external communication."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the platform."
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "December 12, 2025",
+      id: "december-12%2C-2025",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Custom Slash Commands"
+        })
+      }), _jsx(_components.p, {
+        children: "Organizations can now create and manage custom slash commands that expand into predefined text prompts when used in chat. Features include:"
+      }), _jsxs(_components.ul, {
+        children: ["\n", _jsx(_components.li, {
+          children: "Support for modifying default commands like /plan and /review"
+        }), "\n", _jsx(_components.li, {
+          children: "Ability to create entirely new custom commands tailored to your teamâs workflows"
+        }), "\n", _jsx(_components.li, {
+          children: "Command management interface for enterprise administrators"
+        }), "\n"]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Microsoft Teams Integration"
+        })
+      }), _jsx(_components.p, {
+        children: "Users can now interact with Devin directly in Microsoft Teams channels by mentioning @Devin. The integration provides:"
+      }), _jsxs(_components.ul, {
+        children: ["\n", _jsx(_components.li, {
+          children: "In-thread responses with updates and questions to help with software engineering tasks"
+        }), "\n", _jsx(_components.li, {
+          children: "Support for mapping Teams channels to specific Devin organizations"
+        }), "\n"]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Enterprise API v3 Enhancements"
+        })
+      }), _jsxs(_components.p, {
+        children: ["New v3 API endpoints for advanced sessions, organization searches, and improved audit logs. See ", _jsx(_components.a, {
+          href: "/api-reference/release-notes",
+          children: "API Release Notes"
+        }), " for details."]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Service Users Created Date"
+        })
+      }), _jsx(_components.p, {
+        children: "The service users page now displays the creation date for each service user."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsxs(_components.ul, {
+        children: ["\n", _jsx(_components.li, {
+          children: "The âConnected accountsâ section in organization settings has been renamed to âIntegrationsâ."
+        }), "\n"]
+      })]
+    }), "\n", _jsxs(Update, {
+      label: "December 5, 2025",
+      id: "december-5%2C-2025",
+      children: [_jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Data Analyst Devin (Dana)"
+        })
+      }), _jsx(_components.p, {
+        children: "Dana, which is a version of Devin optimized for data analysis tasks, is now available for all users. To use Dana, simply connect a data source via MCP then start asking questions."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Enterprise API v3 Updates"
+        })
+      }), _jsxs(_components.p, {
+        children: ["New v3 beta endpoints and improvements for service users. See ", _jsx(_components.a, {
+          href: "/api-reference/release-notes",
+          children: "API Release Notes"
+        }), " for details."]
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Service Users Page Improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Unified role filter combining enterprise and organization roles into a single grouped dropdown for easier filtering on the service users page."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Consumption Analytics"
+        })
+      }), _jsx(_components.p, {
+        children: "New backend support for detailed consumption analytics and reporting, providing better visibility into resource usage across organizations."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Enterprise Hypervisors Capacity Utilization"
+        })
+      }), _jsx(_components.p, {
+        children: "The hypervisor monitoring page now shows usage as a percentage instead of max slots and available slots."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Azure DevOps Webhook Support"
+        })
+      }), _jsx(_components.p, {
+        children: "Automated PR comments and status updates for Azure DevOps repositories."
+      }), _jsx(_components.p, {
+        children: _jsx(_components.strong, {
+          children: "Minor bug fixes and improvements"
+        })
+      }), _jsx(_components.p, {
+        children: "Various bug fixes and performance improvements across the webapp UI, Slack integration, and DeepWiki."
+      })]
+    }), "\n", _jsx(_components.hr, {}), "\n", _jsx(Heading, {
+      level: "2",
+      id: "all-release-notes",
+      children: "All Release Notes"
+    }), "\n", _jsxs(_components.ul, {
+      children: ["\n", _jsx(_components.li, {
+        children: _jsx(_components.a, {
+          href: "/release-notes/2025",
+          children: "2025 Release Notes"
+        })
+      }), "\n", _jsx(_components.li, {
+        children: _jsx(_components.a, {
+          href: "/release-notes/2024",
+          children: "2024 Release Notes"
+        })
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ..._provideComponents(),
+    ...props.components
+  };
+  return MDXLayout ? _jsx(MDXLayout, {
+    ...props,
+    children: _jsx(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+return {
+  default: MDXContent
+};
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}

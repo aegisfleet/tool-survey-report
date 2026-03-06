@@ -65,6 +65,7 @@ relationships:
     - "Android Studio"
     - "Claude Code"
     - "Mobile Next"
+    - "Devin"
     - "Kiro"
     - "Cline"
     - "Bito"
