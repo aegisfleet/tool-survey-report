@@ -8,7 +8,7 @@ category: "AI検索エンジン"
 developer: "Google Labs"
 official_site: "https://labs.google/disco"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-07"
 tags:
   - "AI"
   - "生成AI"
@@ -62,7 +62,6 @@ relationships:
 * **開発元**: Google Labs
 * **公式サイト**: [https://labs.google/disco](https://labs.google/disco)
 * **関連リンク**:
-  * ニュース: [Google Disco Explained](https://www.amplifilabs.com/post/google-disco-explained-gentabs-and-the-future-of-ai-driven-browsing)
 * **カテゴリ**: AI検索エンジン
 * **概要**: Google Discoは、Google Labsが開発中の実験的なAIブラウザ環境です。「GenTabs」と呼ばれる機能により、開いている複数のタブとユーザーの意図をAIが解析し、タスクに特化したインタラクティブなアプリのようなインターフェースを動的に生成します。
 
@@ -153,7 +152,7 @@ relationships:
 
 * **認証**: Googleアカウントによるログインが必要。
 * **データ管理**: Googleのプライバシーポリシーに準拠するが、実験的機能特有のデータ収集ポリシー（品質向上のための入力データ利用など）が適用される場合がある。
-* **準拠規格**: 具体的な認証取得状況は不明だが、Googleの標準的なセキュリティ基準で運用されていると考えられる。
+* **準拠規格**: 公式サイトでは公開されていない。個別の問い合わせが必要。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
