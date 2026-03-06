@@ -63,11 +63,7 @@ relationships:
     - "Windsurf"
     - "IntelliJ IDEA"
     - "Android Studio"
-    - "Claude Code"
-    - "Mobile Next"
-    - "Kiro"
-    - "Cline"
-    - "Bito"
+    - "Devin"
 ---
 
 # **Cursor 調査レポート**
