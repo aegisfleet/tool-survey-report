@@ -4,7 +4,7 @@
 title: "Waves Place 調査レポート"
 tool_name: "Waves Place"
 tool_reading: "ウェイブス プレース"
-category: "AI効果音生成"
+category: "動画/メディア"
 developer: "カシオ計算機株式会社 (Casio Computer Co., Ltd.)"
 official_site: "https://wavesplace.casio.com/"
 date: "2026-01-21"
