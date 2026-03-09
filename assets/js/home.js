@@ -3,6 +3,10 @@
  * Handles the logic for the home page, including filtering, sorting, and random picks.
  * Originally extracted from an inline script in _layouts/home.html.
  */
+
+// Katakana to Hiragana conversion regex
+const KATAKANA_REGEX = /[\u30a1-\u30f6]/g;
+
 document.addEventListener('DOMContentLoaded', () => {
   const homeContainer = document.querySelector('.home-container');
   const searchInput = document.getElementById('report-search');
@@ -188,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Helper function to convert Katakana to Hiragana
   function toHiragana(str) {
     if (!str) return '';
-    return str.replace(/[\u30a1-\u30f6]/g, (match) => {
+    return str.replace(KATAKANA_REGEX, (match) => {
       const chr = match.charCodeAt(0) - 0x60;
       return String.fromCharCode(chr);
     });
