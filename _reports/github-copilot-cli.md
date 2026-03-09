@@ -46,6 +46,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/github/copilot-cli"
+  deepwiki: "https://deepwiki.com/github/copilot-cli"
   documentation: "https://docs.github.com/copilot/concepts/agents/about-copilot-cli"
 relationships:
   parent: "GitHub Copilot"

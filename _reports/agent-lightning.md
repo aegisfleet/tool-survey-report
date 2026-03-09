@@ -46,6 +46,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/microsoft/agent-lightning"
+  deepwiki: "https://deepwiki.com/microsoft/agent-lightning"
   documentation: "https://microsoft.github.io/agent-lightning/stable/"
 relationships:
   parent: ""

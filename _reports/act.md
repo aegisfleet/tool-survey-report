@@ -44,6 +44,7 @@ evaluation:
 
 links:
   github: "https://github.com/nektos/act"
+  deepwiki: "https://deepwiki.com/nektos/act"
   documentation: "https://nektosact.com/introduction.html"
 
 relationships:

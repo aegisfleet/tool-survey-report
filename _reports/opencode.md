@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/anomalyco/opencode"
+  deepwiki: "https://deepwiki.com/anomalyco/opencode"
   documentation: "https://opencode.ai/docs"
 relationships:
   parent: ""

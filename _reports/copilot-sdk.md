@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/github/copilot-sdk"
+  deepwiki: "https://deepwiki.com/github/copilot-sdk"
   documentation: "https://github.com/github/copilot-sdk/tree/main/docs"
 relationships:
   parent: "GitHub Copilot"

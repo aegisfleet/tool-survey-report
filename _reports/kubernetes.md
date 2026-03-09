@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/kubernetes/kubernetes"
+  deepwiki: "https://deepwiki.com/kubernetes/kubernetes"
   documentation: "https://kubernetes.io/docs/home/"
 relationships:
   children:

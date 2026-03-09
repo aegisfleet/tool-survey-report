@@ -47,6 +47,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/jenkinsci/plugin-installation-manager-tool"
+  deepwiki: "https://deepwiki.com/jenkinsci/plugin-installation-manager-tool"
 relationships:
   parent: "Jenkins"
   related_tools:

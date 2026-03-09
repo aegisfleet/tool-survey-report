@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/OpenHands/OpenHands"
+  deepwiki: "https://deepwiki.com/OpenHands/OpenHands"
   documentation: "https://docs.openhands.dev/"
 relationships:
   related_tools:

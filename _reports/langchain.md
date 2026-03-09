@@ -51,6 +51,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/langchain-ai/langchain"
+  deepwiki: "https://deepwiki.com/langchain-ai/langchain"
   documentation: "https://docs.langchain.com/"
 relationships:
   parent: ""

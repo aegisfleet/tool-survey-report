@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/eslint/eslint"
+  deepwiki: "https://deepwiki.com/eslint/eslint"
   documentation: "https://eslint.org/docs/latest/"
 relationships:
   related_tools:

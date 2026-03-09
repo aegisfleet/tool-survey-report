@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/evilmartians/lefthook"
+  deepwiki: "https://deepwiki.com/evilmartians/lefthook"
   documentation: "https://lefthook.dev/"
 relationships:
   related_tools:

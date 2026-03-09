@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/microsoft/playwright"
+  deepwiki: "https://deepwiki.com/microsoft/playwright"
   documentation: "https://playwright.dev/docs/test-agents"
 relationships:
   parent: "Playwright"

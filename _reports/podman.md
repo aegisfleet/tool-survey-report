@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/containers/podman"
+  deepwiki: "https://deepwiki.com/containers/podman"
   documentation: "https://docs.podman.io/en/latest/"
 relationships:
   parent: ""

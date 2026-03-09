@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/n8n-io/n8n"
+  deepwiki: "https://deepwiki.com/n8n-io/n8n"
   documentation: "https://docs.n8n.io/"
 relationships:
   parent: null

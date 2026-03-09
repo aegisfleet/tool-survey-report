@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/ollama/ollama"
+  deepwiki: "https://deepwiki.com/ollama/ollama"
   documentation: "https://ollama.com/docs"
 relationships:
   related_tools:

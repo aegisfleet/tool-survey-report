@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/eclipse-platform/eclipse.platform"
+  deepwiki: "https://deepwiki.com/eclipse-platform/eclipse.platform"
   documentation: "https://help.eclipse.org/latest/index.jsp"
 relationships:
   children:

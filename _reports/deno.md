@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】
 links:
   github: "https://github.com/denoland/deno"
+  deepwiki: "https://deepwiki.com/denoland/deno"
   documentation: "https://docs.deno.com/"
 relationships:
   related_tools:

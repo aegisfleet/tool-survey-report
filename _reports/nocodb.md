@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/nocodb/nocodb"
+  deepwiki: "https://deepwiki.com/nocodb/nocodb"
   documentation: "https://docs.nocodb.com/"
 relationships:
   parent: null

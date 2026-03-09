@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/pytest-dev/pytest"
+  deepwiki: "https://deepwiki.com/pytest-dev/pytest"
   documentation: "https://docs.pytest.org/en/stable/"
 relationships:
   related_tools:

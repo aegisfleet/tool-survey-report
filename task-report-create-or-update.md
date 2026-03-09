@@ -46,6 +46,7 @@
   - DeepWikiの有無を確認（オープンソースの場合）
     - GitHubリポジトリが `https://github.com/{owner}/{repo}` の場合、DeepWikiのURLは `https://deepwiki.com/{owner}/{repo}` となる
     - 上記URLにアクセスしてページが存在するか確認する（または `site:deepwiki.com "{owner}/{repo}"` で検索）
+    - **効率化**: `scripts/update_deepwiki_links.py` を実行することで、GitHubリンクが存在しDeepWikiリンクが未記載のレポートを一括でチェック・更新することができる
     - 存在する場合は `links.deepwiki` に記載する
   - 公式ドキュメントサイトのURLを収集（公式サイトと異なる場合）
   - 主要レビューサイト（G2, Capterra, ITreview等）のツールページURLを収集

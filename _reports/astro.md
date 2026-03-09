@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/withastro/astro"
+  deepwiki: "https://deepwiki.com/withastro/astro"
   documentation: "https://docs.astro.build/"
 relationships:
   related_tools:
