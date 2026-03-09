@@ -43,11 +43,12 @@
   - 情報が古いものは更新情報を追加で調査
 - 関連リンクの収集
   - GitHubリポジトリの有無を確認（オープンソースの場合）
-  - DeepWikiの有無を確認（オープンソースの場合）
+  - DeepWikiおよびCodeWikiの有無を確認（オープンソースの場合）
     - GitHubリポジトリが `https://github.com/{owner}/{repo}` の場合、DeepWikiのURLは `https://deepwiki.com/{owner}/{repo}` となる
     - 上記URLにアクセスしてページが存在するか確認する（または `site:deepwiki.com "{owner}/{repo}"` で検索）
-    - **効率化**: `scripts/update_deepwiki_links.py` を実行することで、GitHubリンクが存在しDeepWikiリンクが未記載のレポートを一括でチェック・更新することができる
-    - 存在する場合は `links.deepwiki` に記載する
+    - CodeWikiは `https://codewiki.google/` の形式で利用可能か確認し、存在する場合は記載する
+    - **効率化**: `scripts/update_deepwiki_links.py` を実行することで、GitHubリンクが存在しDeepWiki・CodeWikiリンクが未記載のレポートを一括でチェック・更新することができる
+    - 存在する場合はそれぞれ `links.deepwiki` または `links.codewiki` に記載する
   - 公式ドキュメントサイトのURLを収集（公式サイトと異なる場合）
   - 主要レビューサイト（G2, Capterra, ITreview等）のツールページURLを収集
 
@@ -338,6 +339,7 @@ evaluation:
 links:
   github: "GitHubリポジトリURL"
   deepwiki: "DeepWiki URL"
+  codewiki: "CodeWiki URL"
   documentation: "ドキュメントサイトURL"
 relationships:
   parent: "親ツールのツール名"
@@ -373,6 +375,7 @@ relationships:
 - `links`: 関連リンクを記載（該当するもののみ）
   - `github`: オープンソースツールの場合、GitHubリポジトリURL
   - `deepwiki`: オープンソースツールの場合、DeepWikiのURL（存在すれば）
+  - `codewiki`: オープンソースツールの場合、CodeWikiのURL（存在すれば）
   - `documentation`: 公式ドキュメントサイトURL（公式サイトと異なる場合）
   - 該当しない項目は省略可能
 - `relationships`: 関連するツールがあれば記載する。
@@ -412,7 +415,7 @@ relationships:
 - [ ] 類似ツール比較が「機能比較表（星取表）」と「詳細比較」で構成されている
 - [ ] セキュリティ情報が「不明」のみで済まされていない
 - [ ] リンク切れがない（`python scripts/check_links.py` で確認）
-- [ ] オープンソースの場合、DeepWikiリンクの有無を確認済み（GitHubがあれば `deepwiki.com/{owner}/{repo}` を確認）
+- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの有無を確認済み（GitHubがあれば `deepwiki.com/{owner}/{repo}` および `https://codewiki.google/` を確認）
 
 ### 品質チェック
 
