@@ -50,8 +50,6 @@ links:
   deepwiki: "https://deepwiki.com/allure-framework/allure2"
   documentation: "https://allurereport.org/docs/"
 relationships:
-  parent:
-  children:
   related_tools:
     - "JUnit"
     - "Selenium"
