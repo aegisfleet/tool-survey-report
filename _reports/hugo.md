@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/gohugoio/hugo"
+  deepwiki: "https://deepwiki.com/gohugoio/hugo"
   documentation: "https://gohugo.io/documentation/"
 relationships:
   related_tools:

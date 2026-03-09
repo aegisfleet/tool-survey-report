@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/opentofu/opentofu"
+  deepwiki: "https://deepwiki.com/opentofu/opentofu"
   documentation: "https://opentofu.org/docs/"
 relationships:
   parent: "Terraform"

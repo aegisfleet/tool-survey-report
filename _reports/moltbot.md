@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/moltbot/moltbot"
+  deepwiki: "https://deepwiki.com/moltbot/moltbot"
   documentation: "https://docs.molt.bot/"
 relationships:
   related_tools:
