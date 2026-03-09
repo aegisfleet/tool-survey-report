@@ -53,6 +53,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/pulumi/pulumi"
+  deepwiki: "https://deepwiki.com/pulumi/pulumi"
   documentation: "https://www.pulumi.com/docs/"
 relationships:
   related_tools:

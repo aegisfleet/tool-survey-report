@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/JetBrains/intellij-community"
+  deepwiki: "https://deepwiki.com/JetBrains/intellij-community"
   documentation: "https://www.jetbrains.com/help/idea/"
 relationships:
   parent:

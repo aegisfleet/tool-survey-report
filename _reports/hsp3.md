@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/onitama/OpenHSP"
+  deepwiki: "https://deepwiki.com/onitama/OpenHSP"
   documentation: "https://hsp.tv/make/hsp3.html"
 relationships:
   parent: ""

@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/getgauge/gauge"
+  deepwiki: "https://deepwiki.com/getgauge/gauge"
   documentation: "https://docs.gauge.org/"
 relationships:
   parent: ""

@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/sonatype/nexus-public"
+  deepwiki: "https://deepwiki.com/sonatype/nexus-public"
   documentation: "https://help.sonatype.com/repomanager3"
 relationships:
   parent: ""

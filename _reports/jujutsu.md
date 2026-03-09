@@ -45,6 +45,7 @@ evaluation:
 
 links:
   github: "https://github.com/jj-vcs/jj"
+  deepwiki: "https://deepwiki.com/jj-vcs/jj"
   documentation: "https://docs.jj-vcs.dev/"
 relationships:
   parent: ""
