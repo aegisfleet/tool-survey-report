@@ -8,14 +8,13 @@ category: "テスト/QA"
 developer: "MagicPod Inc."
 official_site: "https://magicpod.com/"
 date: "2025-10-21"
-last_updated: "2026-01-27"
+last_updated: "2026-03-10"
 tags:
   - "テスト自動化"
   - "E2Eテスト"
   - "AI"
   - "ノーコード"
   - "SaaS"
-  - "モバイルテスト"
 description: "AIを活用したノーコードのテスト自動化プラットフォーム。モバイルアプリとウェブアプリの両方に対応し、開発サイクルの高速化と品質向上を実現します。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -75,7 +74,7 @@ relationships:
 * **公式サイト**: [https://magicpod.com/](https://magicpod.com/)
 * **関連リンク**:
   * ドキュメント: [https://support.magic-pod.com/hc/ja](https://support.magic-pod.com/hc/ja)
-  * レビューサイト: [ITreview](https://www.itreview.jp/products/magicpod) | [G2](https://www.g2.com/products/magicpod/reviews)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/magicpod)
 * **カテゴリ**: テスト/QA
 * **概要**: AIの技術を活用し、モバイルアプリとウェブアプリのテスト自動化を支援するクラウドサービス。ノーコードで直感的にテストを作成でき、UI変更に自動追従する自己修復機能により、メンテナンスコストを大幅に削減します。
 
@@ -286,7 +285,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: ITreview, G2, 公式導入事例
+* **調査対象**: ITreview, 公式導入事例
 * **総合評価**: 4.3/5.0 (ITreview)
 * **ポジティブな評価**:
   * 「AIの自己修復機能が優秀で、UI変更でテストが頻繁に失敗するストレスから解放された」
