@@ -46,9 +46,9 @@
   - DeepWikiおよびCodeWikiの有無を確認（オープンソースの場合）
     - GitHubリポジトリが `https://github.com/{owner}/{repo}` の場合、DeepWikiのURLは `https://deepwiki.com/{owner}/{repo}` となる
     - 上記URLにアクセスしてページが存在するか確認する（または `site:deepwiki.com "{owner}/{repo}"` で検索）
-    - CodeWikiは `https://codewiki.google/` の形式で利用可能か確認し、存在する場合は記載する
+    - CodeWikiはオープンソースの場合、URL `https://codewiki.google/` を無条件で記載する
     - **効率化**: `scripts/update_deepwiki_links.py` を実行することで、GitHubリンクが存在しDeepWiki・CodeWikiリンクが未記載のレポートを一括でチェック・更新することができる
-    - 存在する場合はそれぞれ `links.deepwiki` または `links.codewiki` に記載する
+    - 存在する場合は `links.deepwiki` に、CodeWikiは `links.codewiki` に記載する
   - 公式ドキュメントサイトのURLを収集（公式サイトと異なる場合）
   - 主要レビューサイト（G2, Capterra, ITreview等）のツールページURLを収集
 
@@ -415,7 +415,7 @@ relationships:
 - [ ] 類似ツール比較が「機能比較表（星取表）」と「詳細比較」で構成されている
 - [ ] セキュリティ情報が「不明」のみで済まされていない
 - [ ] リンク切れがない（`python scripts/check_links.py` で確認）
-- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの有無を確認済み（GitHubがあれば `deepwiki.com/{owner}/{repo}` および `https://codewiki.google/` を確認）
+- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの記載を確認済み（GitHubがあれば `deepwiki.com/{owner}/{repo}` を確認し、CodeWikiは `https://codewiki.google/` を記載）
 
 ### 品質チェック
 

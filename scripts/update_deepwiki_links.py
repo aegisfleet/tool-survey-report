@@ -38,7 +38,7 @@ def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
     updated = False
     
     deepwiki_line = f'  deepwiki: "https://deepwiki.com/{owner}/{repo}"\n'
-    codewiki_line = f'  codewiki: "https://codewiki.google/"\n'
+    codewiki_line = '  codewiki: "https://codewiki.google/"\n'
     
     for line in lines:
         new_lines.append(line)
