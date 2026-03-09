@@ -29,7 +29,7 @@ def check_deepwiki_exists(page, owner, repo):
     except Exception:
         return False
 
-def update_file(filepath, owner, repo):
+def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
     with open(filepath, 'r', encoding='utf-8') as f:
         lines = f.readlines()
     
@@ -38,6 +38,7 @@ def update_file(filepath, owner, repo):
     updated = False
     
     deepwiki_line = f'  deepwiki: "https://deepwiki.com/{owner}/{repo}"\n'
+    codewiki_line = '  codewiki: "https://codewiki.google/"\n'
     
     for line in lines:
         new_lines.append(line)
@@ -47,12 +48,18 @@ def update_file(filepath, owner, repo):
             # Check if we are still in links section or reached next section
             if line.strip() == "" or not line.startswith('  '):
                 # Insert before ending the section
-                new_lines.insert(-1, deepwiki_line)
+                if not has_codewiki:
+                    new_lines.insert(-1, codewiki_line)
+                if not has_deepwiki and owner and repo:
+                    new_lines.insert(-1, deepwiki_line)
                 updated = True
                 in_links = False
             elif 'github:' in line:
                 # Good place to insert after github
-                new_lines.append(deepwiki_line)
+                if not has_deepwiki and owner and repo:
+                    new_lines.append(deepwiki_line)
+                if not has_codewiki:
+                    new_lines.append(codewiki_line)
                 updated = True
                 in_links = False
 
@@ -77,18 +84,30 @@ def main():
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
             
-            if 'deepwiki:' in content:
+            has_deepwiki = 'deepwiki:' in content
+            has_codewiki = 'codewiki:' in content
+
+            if has_deepwiki and has_codewiki:
                 continue
             
             owner, repo = get_github_repo(content)
             if owner and repo:
-                print(f"Checking DeepWiki for {filename} ({owner}/{repo})...")
-                if check_deepwiki_exists(page, owner, repo):
-                    print(f"  Found! Updating {filename}")
-                    if update_file(filepath, owner, repo):
+                deepwiki_exists = False
+                if not has_deepwiki:
+                    print(f"Checking DeepWiki for {filename} ({owner}/{repo})...")
+                    deepwiki_exists = check_deepwiki_exists(page, owner, repo)
+                    if deepwiki_exists:
+                        print(f"  Found DeepWiki! Updating {filename}")
+                    else:
+                        print(f"  DeepWiki not found.")
+
+                # We always add codewiki if github exists
+                should_update = (deepwiki_exists and not has_deepwiki) or not has_codewiki
+                if should_update:
+                    # if deepwiki_exists is False, we pass has_deepwiki=True to prevent inserting it
+                    if update_file(filepath, owner, repo, has_deepwiki or not deepwiki_exists, has_codewiki):
                         updated_count += 1
-                else:
-                    print(f"  Not found.")
+                        print(f"  Updated links for {filename}")
         
         browser.close()
         print(f"\nTotal updated: {updated_count}")

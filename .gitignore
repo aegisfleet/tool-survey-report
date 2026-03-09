@@ -41,3 +41,5 @@ verify_*.png
 # Python
 __pycache__/
 *.py[cod]
+node_modules/
+*.pyc
