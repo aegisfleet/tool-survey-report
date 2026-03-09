@@ -51,6 +51,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/notifuse/notifuse"
+  deepwiki: "https://deepwiki.com/notifuse/notifuse"
   documentation: "https://docs.notifuse.com/"
 relationships:
   parent:

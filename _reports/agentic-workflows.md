@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/githubnext/gh-aw"
+  deepwiki: "https://deepwiki.com/githubnext/gh-aw"
   documentation: "https://githubnext.github.io/gh-aw/"
 relationships:
   parent: "GitHub Actions"

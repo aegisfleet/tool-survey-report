@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/elastic/kibana"
+  deepwiki: "https://deepwiki.com/elastic/kibana"
   documentation: "https://www.elastic.co/guide/en/kibana/current/index.html"
 relationships:
   related_tools:

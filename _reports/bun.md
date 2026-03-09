@@ -44,6 +44,7 @@ evaluation:
 
 links:
   github: "https://github.com/oven-sh/bun"
+  deepwiki: "https://deepwiki.com/oven-sh/bun"
   documentation: "https://bun.com/docs"
 relationships:
   related_tools:

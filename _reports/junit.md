@@ -39,6 +39,7 @@ evaluation:
 
 links:
   github: "https://github.com/junit-team/junit-framework"
+  deepwiki: "https://deepwiki.com/junit-team/junit-framework"
   documentation: "https://docs.junit.org/"
 relationships:
   children:

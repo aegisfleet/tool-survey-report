@@ -51,6 +51,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/pyinstaller/pyinstaller"
+  deepwiki: "https://deepwiki.com/pyinstaller/pyinstaller"
   documentation: "https://pyinstaller.org/en/stable/"
 relationships:
   parent: null

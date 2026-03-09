@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/microsoft/vscode"
+  deepwiki: "https://deepwiki.com/microsoft/vscode"
   documentation: "https://code.visualstudio.com/docs"
 relationships:
   related_tools:

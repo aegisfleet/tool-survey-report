@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/bytedance/deer-flow"
+  deepwiki: "https://deepwiki.com/bytedance/deer-flow"
 relationships:
   related_tools:
     - "Google Jules"

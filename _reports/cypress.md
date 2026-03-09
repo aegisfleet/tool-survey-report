@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/cypress-io/cypress"
+  deepwiki: "https://deepwiki.com/cypress-io/cypress"
   documentation: "https://docs.cypress.io/"
 relationships:
   related_tools:

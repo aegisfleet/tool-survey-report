@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/strands-agents/sdk-python"
+  deepwiki: "https://deepwiki.com/strands-agents/sdk-python"
   documentation: "https://strandsagents.com/latest/documentation/docs/"
 relationships:
   parent: ""

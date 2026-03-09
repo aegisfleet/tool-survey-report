@@ -47,6 +47,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/jekyll/jekyll"
+  deepwiki: "https://deepwiki.com/jekyll/jekyll"
   documentation: "https://jekyllrb.com/docs/"
 relationships:
   parent: null

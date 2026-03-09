@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/appium/appium"
+  deepwiki: "https://deepwiki.com/appium/appium"
   documentation: "https://appium.io/docs/en/latest/"
 relationships:
   parent: ""
