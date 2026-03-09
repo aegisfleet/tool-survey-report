@@ -66,6 +66,7 @@ relationships:
     - "Amazon Q Developer"
     - "Devin"
     - "Claude Code"
+    - "Google Jules"
     - "Playwright CLI"
     - "Cline"
     - "Microsoft Work IQ"

@@ -8,14 +8,13 @@ category: "自律型AIエージェント"
 developer: "Google"
 official_site: "https://jules.google/"
 date: "2025-10-18"
-last_updated: "2026-01-27"
+last_updated: "2026-03-09"
 tags:
   - "AI"
   - "エージェント"
   - "自律型"
   - "コーディング支援"
   - "開発者ツール"
-  - "CLI"
 description: "Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -331,12 +330,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Google Jules) | Devin | GitHub Copilot |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 自律タスク実行 | ◎<br><small>非同期で完遂</small> | ◎<br><small>完全自律型</small> | △<br><small>支援重視</small> |
-| **環境** | 実行環境 | ◎<br><small>Cloud VM</small> | ◎<br><small>Cloud VM</small> | ◯<br><small>ローカルエディタ</small> |
-| **操作性** | CLI対応 | ◎<br><small>強力なCLIツール</small> | △<br><small>Web/API中心</small> | ◎<br><small>CLIツールあり</small> |
-| **非機能要件** | 日本語対応 | △<br><small>英語中心</small> | △<br><small>英語中心</small> | ◎<br><small>対応済み</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | Devin | GitHub Copilot | OpenHands |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | 自律タスク実行 | ◎<br><small>非同期で完遂</small> | ◎<br><small>完全自律型</small> | △<br><small>支援重視</small> | ◎<br><small>自律型実行可能</small> |
+| **環境** | 実行環境 | ◎<br><small>Cloud VM</small> | ◎<br><small>Cloud VM</small> | ◯<br><small>ローカルエディタ</small> | ◯<br><small>ローカル/クラウド</small> |
+| **操作性** | CLI対応 | ◎<br><small>強力なCLIツール</small> | △<br><small>Web/API中心</small> | ◎<br><small>CLIツールあり</small> | ◎<br><small>CLI対応</small> |
+| **非機能要件** | 日本語対応 | △<br><small>英語中心</small> | △<br><small>英語中心</small> | ◎<br><small>対応済み</small> | △<br><small>英語中心</small> |
 
 ### **16.2 詳細比較**
 
@@ -347,9 +346,10 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Google Jules** | Googleのエコシステムと強力なモデルを背景にした非同期エージェント | CLI連携が強力で、既存のワークフローに組み込みやすい。Gemini 3 Pro搭載。 | リアルタイムな対話型開発には向かない。 | 定型タスクの自動化や並列処理、Googleエコシステム利用者。 |
+| **本ツール** | Googleのエコシステムと強力なモデルを背景にした非同期エージェント | CLI連携が強力で、既存のワークフローに組み込みやすい。Gemini 3 Pro搭載。 | リアルタイムな対話型開発には向かない。 | 定型タスクの自動化や並列処理、Googleエコシステム利用者。 |
 | **Devin** | 自律型AIソフトウェアエンジニアの先駆け | 独自のIDEを持ち、複雑なエンジニアリングタスクへの対応力が高い。 | コストが高めで、クローズドな部分が多い。 | より複雑で長期間にわたる開発タスクを任せたい場合。 |
 | **GitHub Copilot** | リアルタイムAIペアプログラマー | エディタでの即時コード補完に優れ、開発者の思考を止めない。 | 自律的にタスクを完遂する能力は限定的。 | 自分でコーディングしながら、AIの支援をリアルタイムに受けたい場合。 |
+| **OpenHands** | ソフトウェア開発タスクを自律的に実行するオープンソースのAIエージェント | OSSでローカルでも動作可能。 | 環境構築の手間。 | 社内環境やローカルでの実行が必要な場合。 |
 
 ## **17. 総評**
 
