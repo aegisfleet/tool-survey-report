@@ -54,6 +54,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/cline/cline"
+  codewiki: "https://codewiki.google/github.com/cline/cline"
   deepwiki: "https://deepwiki.com/cline/cline"
   documentation: "https://docs.cline.bot/"
 relationships:

@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/sourcery-ai/sourcery"
+  codewiki: "https://codewiki.google/github.com/sourcery-ai/sourcery"
   deepwiki: "https://deepwiki.com/sourcery-ai/sourcery"
   documentation: "https://docs.sourcery.ai/"
 relationships:

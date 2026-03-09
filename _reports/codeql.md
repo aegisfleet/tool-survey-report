@@ -47,6 +47,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/github/codeql"
+  codewiki: "https://codewiki.google/github.com/github/codeql"
   deepwiki: "https://deepwiki.com/github/codeql"
   documentation: "https://codeql.github.com/docs/"
 relationships:

@@ -42,6 +42,7 @@ evaluation:
 
 links:
   github: "https://github.com/nodejs/node"
+  codewiki: "https://codewiki.google/github.com/nodejs/node"
   deepwiki: "https://deepwiki.com/nodejs/node"
   documentation: "https://nodejs.org/en/docs/"
 relationships:

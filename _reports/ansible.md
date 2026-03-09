@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/ansible/ansible"
+  codewiki: "https://codewiki.google/github.com/ansible/ansible"
   documentation: "https://docs.ansible.com/"
 relationships:
   related_tools:

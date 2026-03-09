@@ -31,36 +31,48 @@ def check_deepwiki_exists(page, owner, repo):
 
 def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
     with open(filepath, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+        content = f.read()
+
+    codewiki_url = f'https://codewiki.google/github.com/{owner}/{repo}'
+    deepwiki_url = f'https://deepwiki.com/{owner}/{repo}'
     
-    new_lines = []
-    in_links = False
     updated = False
     
-    deepwiki_line = f'  deepwiki: "https://deepwiki.com/{owner}/{repo}"\n'
-    codewiki_line = '  codewiki: "https://codewiki.google/"\n'
+    # Use regex to replace placeholder with or without indentation
+    new_content = re.sub(r'(codewiki:\s*)"https://codewiki\.google/"', rf'\1"{codewiki_url}"', content)
+    if new_content != content:
+        content = new_content
+        updated = True
+        has_codewiki = True
+    
+    lines = content.splitlines(keepends=True)
+    new_lines = []
+    in_links = False
+    link_section_updated = False
     
     for line in lines:
         new_lines.append(line)
         if 'links:' in line:
             in_links = True
-        elif in_links and not updated:
-            # Check if we are still in links section or reached next section
-            if line.strip() == "" or not line.startswith('  '):
-                # Insert before ending the section
+        elif in_links and not link_section_updated:
+            if line.strip() == "" or (line.strip() and not line.startswith('  ')):
+                # Insert at end of section if missing
                 if not has_codewiki:
-                    new_lines.insert(-1, codewiki_line)
-                if not has_deepwiki and owner and repo:
-                    new_lines.insert(-1, deepwiki_line)
-                updated = True
+                    new_lines.insert(-1, f'  codewiki: "{codewiki_url}"\n')
+                    updated = True
+                if not has_deepwiki:
+                    new_lines.insert(-1, f'  deepwiki: "{deepwiki_url}"\n')
+                    updated = True
+                link_section_updated = True
                 in_links = False
             elif 'github:' in line:
-                # Good place to insert after github
-                if not has_deepwiki and owner and repo:
-                    new_lines.append(deepwiki_line)
+                if not has_deepwiki:
+                    new_lines.append(f'  deepwiki: "{deepwiki_url}"\n')
+                    updated = True
                 if not has_codewiki:
-                    new_lines.append(codewiki_line)
-                updated = True
+                    new_lines.append(f'  codewiki: "{codewiki_url}"\n')
+                    updated = True
+                link_section_updated = True
                 in_links = False
 
     if updated:
@@ -86,8 +98,9 @@ def main():
             
             has_deepwiki = 'deepwiki:' in content
             has_codewiki = 'codewiki:' in content
+            has_placeholder = 'codewiki: "https://codewiki.google/"' in content
 
-            if has_deepwiki and has_codewiki:
+            if has_deepwiki and has_codewiki and not has_placeholder:
                 continue
             
             owner, repo = get_github_repo(content)
@@ -101,8 +114,8 @@ def main():
                     else:
                         print(f"  DeepWiki not found.")
 
-                # We always add codewiki if github exists
-                should_update = (deepwiki_exists and not has_deepwiki) or not has_codewiki
+                # We update if deepwiki found, or codewiki is missing, or we have a placeholder to replace
+                should_update = (deepwiki_exists and not has_deepwiki) or not has_codewiki or has_placeholder
                 if should_update:
                     # if deepwiki_exists is False, we pass has_deepwiki=True to prevent inserting it
                     if update_file(filepath, owner, repo, has_deepwiki or not deepwiki_exists, has_codewiki):

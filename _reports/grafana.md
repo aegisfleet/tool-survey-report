@@ -51,6 +51,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/grafana/grafana"
+  codewiki: "https://codewiki.google/github.com/grafana/grafana"
   deepwiki: "https://deepwiki.com/grafana/grafana"
   documentation: "https://grafana.com/docs/grafana/latest/"
 relationships:

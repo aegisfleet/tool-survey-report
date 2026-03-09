@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/spring-projects/spring-boot"
+  codewiki: "https://codewiki.google/github.com/spring-projects/spring-boot"
   deepwiki: "https://deepwiki.com/spring-projects/spring-boot"
   documentation: "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/"
 relationships:

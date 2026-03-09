@@ -39,6 +39,7 @@ evaluation:
   summary: "現代のWeb開発において最適な選択肢の一つ。特にViteを使用しているプロジェクトでは必須級のツール。"
 links:
   github: "https://github.com/vitest-dev/vitest"
+  codewiki: "https://codewiki.google/github.com/vitest-dev/vitest"
   deepwiki: "https://deepwiki.com/vitest-dev/vitest"
   documentation: "https://vitest.dev/guide/"
 relationships:

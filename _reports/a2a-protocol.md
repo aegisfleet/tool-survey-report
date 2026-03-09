@@ -42,6 +42,7 @@ evaluation:
 
 links:
   github: "https://github.com/a2aproject/A2A"
+  codewiki: "https://codewiki.google/github.com/a2aproject/A2A"
   deepwiki: "https://deepwiki.com/a2aproject/A2A"
   documentation: "https://a2a-protocol.org/"
 relationships:

@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/dependabot/dependabot-core"
+  codewiki: "https://codewiki.google/github.com/dependabot/dependabot-core"
   deepwiki: "https://deepwiki.com/dependabot/dependabot-core"
   documentation: "https://docs.github.com/ja/code-security/dependabot"
 relationships:

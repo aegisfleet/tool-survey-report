@@ -43,6 +43,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/openai/symphony"
+  codewiki: "https://codewiki.google/github.com/openai/symphony"
   deepwiki: "https://deepwiki.com/openai/symphony"
 relationships:
   related_tools:

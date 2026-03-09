@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/gotalab/cc-sdd"
+  codewiki: "https://codewiki.google/github.com/gotalab/cc-sdd"
   deepwiki: "https://deepwiki.com/gotalab/cc-sdd"
 relationships:
   related_tools:

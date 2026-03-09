@@ -51,6 +51,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/gitlabhq/gitlabhq"
+  codewiki: "https://codewiki.google/github.com/gitlabhq/gitlabhq"
   deepwiki: "https://deepwiki.com/gitlabhq/gitlabhq"
   documentation: "https://docs.gitlab.com/"
 relationships:

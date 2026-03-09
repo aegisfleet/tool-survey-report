@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/opensearch-project/OpenSearch"
+  codewiki: "https://codewiki.google/github.com/opensearch-project/OpenSearch"
   deepwiki: "https://deepwiki.com/opensearch-project/OpenSearch"
   documentation: "https://docs.aws.amazon.com/opensearch-service/"
 relationships:

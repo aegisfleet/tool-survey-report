@@ -44,6 +44,7 @@ evaluation:
 
 links:
   github: "https://github.com/microsoft/PowerToys"
+  codewiki: "https://codewiki.google/github.com/microsoft/PowerToys"
   documentation: "https://learn.microsoft.com/en-us/windows/powertoys/"
 relationships:
   related_tools:

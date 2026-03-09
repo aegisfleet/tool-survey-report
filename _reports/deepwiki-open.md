@@ -54,6 +54,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/AsyncFuncAI/deepwiki-open"
+  codewiki: "https://codewiki.google/github.com/AsyncFuncAI/deepwiki-open"
   deepwiki: "https://deepwiki.com/AsyncFuncAI/deepwiki-open"
   documentation: "https://asyncfunc.mintlify.app/"
 relationships:

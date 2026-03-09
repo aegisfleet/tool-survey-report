@@ -43,6 +43,7 @@ evaluation:
 
 links:
   github: "https://github.com/googleworkspace/cli"
+  codewiki: "https://codewiki.google/github.com/googleworkspace/cli"
   deepwiki: "https://deepwiki.com/googleworkspace/cli"
 relationships:
   related_tools:

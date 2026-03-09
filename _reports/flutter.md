@@ -54,6 +54,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/flutter/flutter"
+  codewiki: "https://codewiki.google/github.com/flutter/flutter"
   deepwiki: "https://deepwiki.com/flutter/flutter"
   documentation: "https://docs.flutter.dev/"
 relationships:

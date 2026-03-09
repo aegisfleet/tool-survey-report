@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/QwenLM/Qwen-Image-Layered"
+  codewiki: "https://codewiki.google/github.com/QwenLM/Qwen-Image-Layered"
   deepwiki: "https://deepwiki.com/QwenLM/Qwen-Image-Layered"
   documentation: "https://huggingface.co/Qwen/Qwen-Image-Layered"
 relationships:

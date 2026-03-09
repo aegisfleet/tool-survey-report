@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/biomejs/biome"
+  codewiki: "https://codewiki.google/github.com/biomejs/biome"
   documentation: "https://biomejs.dev/guides/getting-started/"
   # deepwiki: "" # GitHub URL is standard format so likely exists but not verified yet.
 relationships:

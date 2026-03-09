@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/docker/cli"
+  codewiki: "https://codewiki.google/github.com/docker/cli"
   deepwiki: "https://deepwiki.com/docker/cli"
   documentation: "https://docs.docker.com/"
 relationships:

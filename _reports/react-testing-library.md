@@ -45,6 +45,7 @@ evaluation:
 
 links:
   github: "https://github.com/testing-library/react-testing-library"
+  codewiki: "https://codewiki.google/github.com/testing-library/react-testing-library"
   deepwiki: "https://deepwiki.com/testing-library/react-testing-library"
   documentation: "https://testing-library.com/docs/react-testing-library/intro/"
 

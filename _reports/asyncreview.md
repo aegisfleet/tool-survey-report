@@ -45,6 +45,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/AsyncFuncAI/AsyncReview"
+  codewiki: "https://codewiki.google/github.com/AsyncFuncAI/AsyncReview"
   deepwiki: "" # GitHubのWiki機能はなさそうだが、DeepWiki Openの後継
   documentation: "https://github.com/AsyncFuncAI/AsyncReview#readme"
 relationships:

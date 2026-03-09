@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/remotion-dev/remotion"
+  codewiki: "https://codewiki.google/github.com/remotion-dev/remotion"
   deepwiki: "https://deepwiki.com/remotion-dev/remotion"
   documentation: "https://www.remotion.dev/docs/"
 relationships:

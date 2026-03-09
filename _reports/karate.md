@@ -53,6 +53,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/karatelabs/karate"
+  codewiki: "https://codewiki.google/github.com/karatelabs/karate"
   documentation: "https://www.karatelabs.io/get-started"
 relationships:
   related_tools:

@@ -45,6 +45,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/github/spec-kit"
+  codewiki: "https://codewiki.google/github.com/github/spec-kit"
   deepwiki: "https://deepwiki.com/github/spec-kit"
 relationships:
   parent: "GitHub"

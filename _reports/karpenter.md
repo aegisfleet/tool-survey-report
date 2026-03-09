@@ -52,6 +52,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/kubernetes-sigs/karpenter"
+  codewiki: "https://codewiki.google/github.com/kubernetes-sigs/karpenter"
   deepwiki: "https://deepwiki.com/kubernetes-sigs/karpenter"
   documentation: "https://karpenter.sh/docs/"
 relationships:

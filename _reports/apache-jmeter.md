@@ -53,6 +53,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/apache/jmeter"
+  codewiki: "https://codewiki.google/github.com/apache/jmeter"
   deepwiki: "https://deepwiki.com/apache/jmeter"
   documentation: "https://jmeter.apache.org/usermanual/index.html"
 relationships:

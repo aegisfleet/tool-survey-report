@@ -45,6 +45,7 @@ evaluation:
 
 links:
   github: "https://github.com/letta-ai/letta"
+  codewiki: "https://codewiki.google/github.com/letta-ai/letta"
   documentation: "https://docs.letta.com/"
 relationships:
   related_tools:

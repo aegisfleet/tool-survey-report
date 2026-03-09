@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/tensorflow/tensorflow"
+  codewiki: "https://codewiki.google/github.com/tensorflow/tensorflow"
   deepwiki: "https://deepwiki.com/tensorflow/tensorflow"
   documentation: "https://www.tensorflow.org/api_docs"
 relationships:

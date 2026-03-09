@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/SeleniumHQ/selenium"
+  codewiki: "https://codewiki.google/github.com/SeleniumHQ/selenium"
   documentation: "https://www.selenium.dev/documentation/"
 relationships:
   related_tools:

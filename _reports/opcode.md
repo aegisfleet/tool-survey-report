@@ -53,6 +53,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/winfunc/opcode"
+  codewiki: "https://codewiki.google/github.com/winfunc/opcode"
   deepwiki: "https://deepwiki.com/winfunc/opcode"
 relationships:
   parent: ""

@@ -49,6 +49,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/jenkinsci/jenkins"
+  codewiki: "https://codewiki.google/github.com/jenkinsci/jenkins"
   deepwiki: "https://deepwiki.com/jenkinsci/jenkins"
   documentation: "https://www.jenkins.io/doc/"
 relationships:

@@ -53,6 +53,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/robotframework/robotframework"
+  codewiki: "https://codewiki.google/github.com/robotframework/robotframework"
   deepwiki: "https://deepwiki.com/robotframework/robotframework"
   documentation: "https://robotframework.org/robotframework/"
 relationships:

@@ -44,6 +44,7 @@ evaluation:
 
 links:
   github: "https://github.com/openclaw/openclaw"
+  codewiki: "https://codewiki.google/github.com/openclaw/openclaw"
   deepwiki: "https://deepwiki.com/openclaw/openclaw"
   documentation: "https://docs.openclaw.ai/"
 relationships:

@@ -44,6 +44,7 @@ evaluation:
 
 links:
   github: "https://github.com/vitejs/vite"
+  codewiki: "https://codewiki.google/github.com/vitejs/vite"
   deepwiki: "https://deepwiki.com/vitejs/vite"
   documentation: "https://ja.vite.dev/guide/"
 relationships:

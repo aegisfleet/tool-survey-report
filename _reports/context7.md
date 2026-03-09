@@ -47,6 +47,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/upstash/context7"
+  codewiki: "https://codewiki.google/github.com/upstash/context7"
   deepwiki: "https://deepwiki.com/upstash/context7"
   documentation: "https://context7.com/docs"
 relationships:

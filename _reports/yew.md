@@ -46,6 +46,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/yewstack/yew"
+  codewiki: "https://codewiki.google/github.com/yewstack/yew"
   documentation: "https://yew.rs/docs/getting-started/introduction"
 relationships:
   related_tools:

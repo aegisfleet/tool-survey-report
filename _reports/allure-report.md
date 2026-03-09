@@ -47,6 +47,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/allure-framework/allure2"
+  codewiki: "https://codewiki.google/github.com/allure-framework/allure2"
   deepwiki: "https://deepwiki.com/allure-framework/allure2"
   documentation: "https://allurereport.org/docs/"
 relationships:

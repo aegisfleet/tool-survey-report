@@ -48,6 +48,7 @@ evaluation:
 links:
   documentation: "https://github.com/openai/codex/tree/main/docs"
   github: "https://github.com/openai/codex"
+  codewiki: "https://codewiki.google/github.com/openai/codex"
   deepwiki: "https://deepwiki.com/openai/codex"
 relationships:
   parent: "ChatGPT"

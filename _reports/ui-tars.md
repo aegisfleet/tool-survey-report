@@ -50,6 +50,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/bytedance/UI-TARS-desktop"
+  codewiki: "https://codewiki.google/github.com/bytedance/UI-TARS-desktop"
   deepwiki: "https://deepwiki.com/bytedance/UI-TARS-desktop"
   documentation: "https://github.com/bytedance/UI-TARS-desktop/tree/main/docs"
 relationships:

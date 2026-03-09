@@ -44,6 +44,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/agentskills/agentskills"
+  codewiki: "https://codewiki.google/github.com/agentskills/agentskills"
   deepwiki: "https://deepwiki.com/agentskills/agentskills"
   documentation: "https://agentskills.io/what-are-skills"
 relationships:

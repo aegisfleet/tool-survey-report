@@ -54,6 +54,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/actionstatelabs/android-action-kernel"
+  codewiki: "https://codewiki.google/github.com/actionstatelabs/android-action-kernel"
   deepwiki: "https://deepwiki.com/actionstatelabs/android-action-kernel"
 relationships:
   related_tools:

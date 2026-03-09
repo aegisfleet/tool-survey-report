@@ -44,6 +44,7 @@ evaluation:
 
 links:
   github: "https://github.com/facebook/react"
+  codewiki: "https://codewiki.google/github.com/facebook/react"
   deepwiki: "https://deepwiki.com/facebook/react"
   documentation: "https://react.dev/reference/react"
 

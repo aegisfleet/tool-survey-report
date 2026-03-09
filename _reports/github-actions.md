@@ -45,6 +45,7 @@ evaluation:
 
 links:
   github: "https://github.com/actions/runner"
+  codewiki: "https://codewiki.google/github.com/actions/runner"
   documentation: "https://docs.github.com/ja/actions"
 
 relationships:

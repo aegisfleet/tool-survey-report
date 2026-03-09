@@ -48,6 +48,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/ruvnet/wifi-densepose"
+  codewiki: "https://codewiki.google/github.com/ruvnet/wifi-densepose"
   deepwiki: "https://deepwiki.com/ruvnet/wifi-densepose"
 ---
 
