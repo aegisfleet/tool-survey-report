@@ -60,6 +60,7 @@ relationships:
     - "Cypress"
     - "Appium"
     - "Robot Framework"
+    - "MagicPod"
     - "Cucumber"
     - "Allure Report"
 ---
