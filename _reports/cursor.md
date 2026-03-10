@@ -64,6 +64,7 @@ relationships:
     - "IntelliJ IDEA"
     - "Android Studio"
     - "Devin"
+    - "Agent Trace"
 ---
 
 # **Cursor 調査レポート**

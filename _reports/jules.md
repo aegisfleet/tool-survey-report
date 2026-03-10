@@ -57,6 +57,7 @@ relationships:
     - "Manus"
     - "GitHub Copilot"
     - "DeerFlow"
+    - "Agent Trace"
 ---
 
 # **Google Jules 調査レポート**
