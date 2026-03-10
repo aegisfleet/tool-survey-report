@@ -7,16 +7,20 @@ except ImportError:
 try:
     from playwright.sync_api import sync_playwright
 except ImportError:
+    # If playwright is missing, we raise a clear error at import time if not in a testing environment.
+    # This avoids a confusing TypeError when sync_playwright() is called later.
+    if os.environ.get('TESTING') != '1':
+        raise ImportError("playwright is not installed. Please run: pip install playwright && playwright install chromium")
     sync_playwright = None
 
 REPORTS_DIR = '_reports'
 
 def get_github_repo(content):
-    # Search for github link in front matter
+    # Search for github link in front matter (anchored to line start)
     # Support both quoted and unquoted URLs, and handle optional trailing slash
-    match = re.search(r'github:\s*"(https?://github\.com/([^/"]+)/([^/"]+?))/??"', content)
+    match = re.search(r'^\s*github:\s*"(https?://github\.com/([^/"]+)/([^/"]+?))/??"', content, re.MULTILINE)
     if not match:
-        match = re.search(r'github:\s*(https?://github\.com/([^/\s\n]+)/([^/\s\n]+?))/??(?:[\s\n]|$)', content)
+        match = re.search(r'^\s*github:\s*(https?://github\.com/([^/\s\n]+)/([^/\s\n]+?))/??(?:[\s\n]|$)', content, re.MULTILINE)
     
     if match:
         return match.group(2), match.group(3)
