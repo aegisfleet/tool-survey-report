@@ -44,16 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   // カテゴリに対応する絵文字を取得するヘルパー関数（キーワード部分一致）
+  const categoryEmojiCache = new Map();
   function getEmojiForCategory(category) {
     if (!category) return '🔹';
+    if (categoryEmojiCache.has(category)) return categoryEmojiCache.get(category);
+
     const lowerCat = category.toLowerCase();
+    let result = '🔹';
 
     for (const rule of categoryEmojiRules) {
       if (rule.keywords.some((kw) => lowerCat.includes(kw))) {
-        return rule.emoji;
+        result = rule.emoji;
+        break;
       }
     }
-    return '🔹';
+
+    categoryEmojiCache.set(category, result);
+    return result;
   }
 
   // 既存の絵文字や特殊マーク、先頭スペースを除去するヘルパー関数
