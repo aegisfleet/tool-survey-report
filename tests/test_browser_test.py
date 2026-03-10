@@ -339,17 +339,24 @@ class TestBrowserTest(unittest.TestCase):
          args = argparse.Namespace(allow_internal_ips=False)
          runner = BrowserTestRunner(args)
 
-         # Providing a URL without hostname (e.g., just a path or empty)
-         # In the new implementation, non-http/https URLs or relative URLs might be ignored
-         # if parsed_url.hostname is None.
-         # But we explicitly throw error if scheme is http/https and hostname is None
-
-         # 'not_a_valid_url' is parsed as path='not_a_valid_url', scheme='', netloc=''
-         # So it returns None.
-
          # Let's test a case that should fail: http:/// (empty host)
          with self.assertRaises(BrowserTestError):
              runner.validate_url('http://')
+
+    @patch('scripts.browser_test.socket.getaddrinfo')
+    def test_validate_url_invalid_scheme(self, mock_getaddrinfo):
+         args = argparse.Namespace(allow_internal_ips=False)
+         runner = BrowserTestRunner(args)
+
+         # Test file scheme
+         with self.assertRaises(BrowserTestError) as cm:
+             runner.validate_url('file:///etc/passwd')
+         self.assertIn("Invalid URL scheme: file", str(cm.exception))
+
+         # Test data scheme
+         with self.assertRaises(BrowserTestError) as cm:
+             runner.validate_url('data:text/html,<h1>Hello</h1>')
+         self.assertIn("Invalid URL scheme: data", str(cm.exception))
 
 if __name__ == '__main__':
     unittest.main()

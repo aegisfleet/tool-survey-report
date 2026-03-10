@@ -47,20 +47,14 @@ class BrowserTestRunner:
 
         try:
             parsed_url = urllib.parse.urlparse(url)
+
+            if parsed_url.scheme not in ['http', 'https']:
+                raise BrowserTestError(f"Invalid URL scheme: {parsed_url.scheme}. Only http and https are allowed.")
+
             hostname = parsed_url.hostname
             if not hostname:
-                 # If we can't parse a hostname, it might be a malformed URL.
-                 # In the context of page.route, 'url' is the full request URL.
-                 # In the context of initial navigation, it's what the user provided.
-                 # We'll allow it if it's not starting with http/https (e.g. data: or file: - wait, file: is dangerous too)
-                 # Actually, Playwright handles non-http schemes.
-                 # Let's enforce that if it looks like an absolute URL with a hostname, we check it.
-                 # If it doesn't have a hostname, assume it's relative or safe scheme unless we want to block file:// too.
-                 # For SSRF, we care about http/https to internal IPs.
-                 if parsed_url.scheme in ['http', 'https']:
-                     # Malformed http url?
-                     raise BrowserTestError(f"Invalid URL (no hostname): {url}")
-                 return
+                 # Malformed http url?
+                 raise BrowserTestError(f"Invalid URL (no hostname): {url}")
 
             # Resolve hostname to IP
             # We use getaddrinfo to support IPv6 and get all addresses
