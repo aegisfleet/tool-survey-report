@@ -34,8 +34,9 @@ def check_codewiki_exists(page, owner, repo):
     try:
         response = page.goto(url, wait_until='networkidle', timeout=15000)
         if response and response.status == 200:
-            title = page.title()
-            if title == "Not Found | Code Wiki":
+            body_text = page.inner_text('body').lower()
+            title_text = page.title().lower()
+            if '404' in body_text or 'not found' in body_text or "not found | code wiki" in title_text:
                 return False
             return True
         return False
@@ -134,13 +135,15 @@ def main():
                     if codewiki_exists:
                         print(f"  Found CodeWiki! Updating {filename}")
                     else:
-                        print(f"  CodeWiki not found.")
+                        print("  CodeWiki not found.")
 
                 # We update if deepwiki found, or codewiki is found (when it was missing or a placeholder)
                 should_update = (deepwiki_exists and not has_deepwiki) or codewiki_exists
                 if should_update:
                     # If a link does not exist on the web, we pass True for 'has_*' to prevent it from being added
-                    if update_file(filepath, owner, repo, has_deepwiki or not deepwiki_exists, has_codewiki or not codewiki_exists):
+                    pass_deepwiki = has_deepwiki or not deepwiki_exists
+                    pass_codewiki = has_codewiki or not codewiki_exists
+                    if update_file(filepath, owner, repo, pass_deepwiki, pass_codewiki):
                         updated_count += 1
                         print(f"  Updated links for {filename}")
         
