@@ -61,6 +61,7 @@ relationships:
     - "Qodo"
     - "Visual Studio Code"
     - "Cursor"
+    - "Microsoft 365 Copilot"
     - "Windsurf"
     - "GitLab Duo"
     - "Amazon Q Developer"

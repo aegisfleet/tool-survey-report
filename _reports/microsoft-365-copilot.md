@@ -8,14 +8,13 @@ category: "生成AI"
 developer: "Microsoft"
 official_site: "https://www.microsoft.com/ja-jp/microsoft-365/copilot"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-10"
 tags:
   - "AI"
   - "生成AI"
   - "大規模言語モデル"
-  - "業務効率化"
-  - "Office"
   - "エージェント"
+  - "SaaS"
 description: "Microsoft 365アプリに統合された生成AIアシスタント。GPT-4等を活用し、ドキュメント作成、データ分析、会議要約、メール処理などを支援する。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -27,7 +26,7 @@ quick_summary:
     - "ビジネスパーソン"
     - "大企業"
     - "中小企業"
-  latest_highlight: "2026年1月にモバイルアプリでの音声ノート機能を追加"
+  latest_highlight: "2026年3月にMicrosoft TeamsでのAI議事録機能を強化"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -81,7 +80,6 @@ relationships:
 * **公式サイト**: [https://www.microsoft.com/ja-jp/microsoft-365/copilot](https://www.microsoft.com/ja-jp/microsoft-365/copilot)
 * **関連リンク**:
   * ドキュメント: [Microsoft Learn](https://learn.microsoft.com/ja-jp/microsoft-365-copilot/)
-  * レビューサイト: [G2](https://www.g2.com/products/microsoft-365-copilot/reviews) | [Gartner Peer Insights](https://www.gartner.com/reviews/market/generative-ai-knowledge-management-apps-general-productivity/vendor/microsoft/product/microsoft-365-copilot)
 * **カテゴリ**: 生成AI
 * **概要**: Microsoft 365 Copilotは、Word、Excel、PowerPoint、Outlook、TeamsなどのMicrosoft 365アプリケーションに生成AIを統合した業務支援ツールです。大規模言語モデル（LLM）と組織内のデータ（Microsoft Graph）を組み合わせることで、ドキュメント作成、データ分析、メールの要約、会議の議事録作成などを自動化・効率化します。
 
@@ -291,15 +289,15 @@ relationships:
 -->
 
 * **調査対象**: G2, Gartner Peer Insights, TrustRadius
-* **総合評価**: 4.3/5.0 (G2), 4.0/5.0 (Gartner)
+* **総合評価**: 4.3/5.0（G2より引用）, 4.0/5.0（Gartnerより引用）
 * **ポジティブな評価**:
-  * 「メール作成や議事録要約にかかる時間が大幅に短縮され、本来の業務に集中できるようになった」(TrustRadius)
-  * 「WordやPowerPointでのドラフト作成機能が優秀で、白紙の状態から悩み始める時間がなくなった」(Gartner)
-  * 「Teams会議に参加できなくても、後からCopilotに質問するだけで内容をキャッチアップできるのが非常に便利」(G2)
+  * 「メール作成や議事録要約にかかる時間が大幅に短縮され、本来の業務に集中できるようになった」（TrustRadiusより引用）
+  * 「WordやPowerPointでのドラフト作成機能が優秀で、白紙の状態から悩み始める時間がなくなった」（Gartnerより引用）
+  * 「Teams会議に参加できなくても、後からCopilotに質問するだけで内容をキャッチアップできるのが非常に便利」（G2より引用）
 * **ネガティブな評価 / 改善要望**:
-  * 「Excelでの分析機能はまだ発展途上で、複雑なデータ処理やグラフ作成には限界がある」(Gartner)
-  * 「時折、事実と異なる内容をもっともらしく回答するハルシネーションが発生するため、確認作業が必須」(Gartner)
-  * 「中小企業にとってはライセンス費用が高く、導入のROIを証明するのが難しい」(TrustRadius)
+  * 「Excelでの分析機能はまだ発展途上で、複雑なデータ処理やグラフ作成には限界がある」（Gartnerより引用）
+  * 「時折、事実と異なる内容をもっともらしく回答するハルシネーションが発生するため、確認作業が必須」（Gartnerより引用）
+  * 「中小企業にとってはライセンス費用が高く、導入のROIを証明するのが難しい」（TrustRadiusより引用）
 * **特徴的なユースケース**:
   * 営業担当者が商談前に顧客企業の最新ニュースや過去のやり取りをCopilotに要約させ、準備時間を短縮。
 
@@ -317,6 +315,8 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-03-10**: Microsoft TeamsでのAI議事録機能が強化され、多言語対応のリアルタイム翻訳と要約の精度が向上。
+* **2026-02-15**: Copilot Studioでの外部API連携機能が拡充され、主要なSaaSとのコネクタが追加。
 * **2026-01-XX**: モバイルアプリにて音声ノートのキャプチャ機能が追加（ロードマップ）。
 * **2025-12-XX**: 中小企業向けにCopilot Businessの展開を強化し、パートナー経由での提供を拡大。
 * **2025-11-15**: Copilotの記憶・パーソナライズ機能「Work IQ」が強化され、過去の対話履歴を元にした文脈理解が向上。

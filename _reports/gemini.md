@@ -61,6 +61,7 @@ relationships:
   related_tools:
     - "Google Learning"
     - "ChatGPT"
+    - "Microsoft 365 Copilot"
     - "Claude"
     - "Grok"
     - "DeepSeek"
