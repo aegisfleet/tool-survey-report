@@ -943,7 +943,7 @@ function scrollToTop() {
     // Safety check & Cleanup
     activeScrollInterval = setInterval(() => {
       // トップに到達したかチェック
-      if (window.scrollY < 1) {
+      if ((window.scrollY || document.documentElement.scrollTop) < 1) {
         isScrollingToTop = false;
         if (header) header.style.transition = '';
         if (activeScrollInterval) {
