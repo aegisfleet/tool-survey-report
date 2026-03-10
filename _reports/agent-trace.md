@@ -12,9 +12,9 @@ last_updated: "2026-03-10"
 tags:
   - "AI"
   - "オープンソース"
-  - "仕様"
   - "開発者ツール"
-  - "標準化"
+  - "エージェント"
+  - "コーディング支援"
 description: "AIが生成したコードと人間が作成したコードを区別・追跡するためのベンダーニュートラルなオープン仕様。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -51,7 +51,7 @@ relationships:
   related_tools:
     - "Cursor"
     - "Cline"
-    - "Jules"
+    - "Google Jules"
     - "OpenCode"
 ---
 
@@ -192,9 +192,11 @@ relationships:
 * **ポジティブな評価**:
   * 「複数のAIエージェントが連携する未来において、どのAIがどのコードを書いたかを標準フォーマットで追跡できるのは極めて重要。」
   * 「Cursorだけでなく、CognitionやVercelなど多くのプレイヤーが早期に賛同している点が標準化の強力な後押しになっている。」
+  * 「Our team would really like to be part of this spec creation! Happy to help in any way possible」（GitHub Issuesより引用）と、仕様策定へのチーム参加意欲を示す好意的な声がある。
 * **ネガティブな評価 / 改善要望**:
   * 「Git rebaseやMerge commitが発生した際に、どのようにトレース情報を維持・統合するかのベストプラクティスがさらに必要。」
   * 「仕様が定義されたばかりであり、実際のIDE上でのGit BlameのようなシームレスなUI表示が普及するまでは真価を発揮しにくい。」
+  * 「The schema captures who contributed, but not how the contribution occurred.」（GitHub Issuesより引用）として、chat editやinline editなどの操作（Modality）を区別できる機能拡張の要望が挙げられている。
 * **特徴的なユースケース**:
   * スクリプトを通じてAIがコードを生成した場合でも、実行前後のスナップショットとGit Diffを用いてAIの貢献を計算し、Agent Traceフォーマットとして記録するアプローチ。
 
