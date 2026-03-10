@@ -46,6 +46,7 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/modelcontextprotocol/ext-apps"
+  deepwiki: "https://deepwiki.com/modelcontextprotocol/ext-apps"
   documentation: "https://modelcontextprotocol.io/docs/extensions/apps"
 relationships:
   parent: "Model Context Protocol"
