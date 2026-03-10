@@ -189,6 +189,8 @@ def _check_link_logic(page, url):
             title_text = page.title().lower()
             
             has_404_keywords = any(kw in body_text or kw in title_text for kw in NOT_FOUND_KEYWORDS)
+            if "not found | code wiki" in title_text:
+                has_404_keywords = True
             
             # Check for bot detection pages (which should be treated as 403 warnings, not success)
             is_bot_blocked = any(kw in body_text for kw in [
