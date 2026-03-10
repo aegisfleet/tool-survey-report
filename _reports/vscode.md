@@ -62,6 +62,7 @@ relationships:
     - "Roo Code"
     - "Eclipse IDE"
     - "Android Studio"
+    - "MCP Apps"
 ---
 
 # **Visual Studio Code 調査レポート**
