@@ -46,7 +46,6 @@ evaluation:
 links:
   github: "https://github.com/cursor/agent-trace"
   deepwiki: "https://deepwiki.com/cursor/agent-trace"
-  codewiki: "https://codewiki.google/github.com/cursor/agent-trace"
 relationships:
   related_tools:
     - "Cursor"
@@ -66,7 +65,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/cursor/agent-trace](https://github.com/cursor/agent-trace)
   * DeepWiki: [https://deepwiki.com/cursor/agent-trace](https://deepwiki.com/cursor/agent-trace)
-  * CodeWiki: [https://codewiki.google/github.com/cursor/agent-trace](https://codewiki.google/github.com/cursor/agent-trace)
 * **カテゴリ**: 開発者ツール
 * **概要**: AIエージェントやAIコーディングツールが生成したコードと、人間が記述したコードをバージョン管理されたコードベース上で区別し、追跡するためのベンダーニュートラルなオープン仕様。AIの貢献を記録する標準フォーマットを提供している。
 

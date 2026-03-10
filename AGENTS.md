@@ -18,7 +18,7 @@
 
 1. [task-report-create-or-update.md](./task-report-create-or-update.md) を参照する
 2. 新規の場合は `templates/template.md` のテンプレートを基に作成、既存の場合は情報を最新化する
-3. 調査完了後のチェックリストを確認し、全項目をクリアする
+3. 調査完了後のチェックリストを確認し、全項目をクリアする。リンクチェック（`scripts/check_links.py`）を行う際は、CodeWikiなどの動的サイトのリンク切れを正確に検知するため、可能な限り `--browser` フラグを使用すること。
 
 ### ステップ2: 関連レポートの整理
 

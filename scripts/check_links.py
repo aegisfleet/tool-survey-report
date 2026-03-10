@@ -30,7 +30,8 @@ BROWSER_CONFIG = {
 # Keywords indicating 404 pages
 NOT_FOUND_KEYWORDS = [
     '404', 'not found', 'page not found', 'does not exist', 
-    "couldn't find", 'ページが見つかりません', 'could not be found'
+    "couldn't find", 'ページが見つかりません', 'could not be found',
+    'this page doesn’t exist' # Used by CodeWiki
 ]
 
 # Global Playwright instances
@@ -189,8 +190,11 @@ def _check_link_logic(page, url):
             title_text = page.title().lower()
             
             has_404_keywords = any(kw in body_text or kw in title_text for kw in NOT_FOUND_KEYWORDS)
-            if "not found | code wiki" in title_text:
-                has_404_keywords = True
+            if "not found | code wiki" in title_text or title_text == "code wiki":
+                # CodeWiki shows "Code Wiki" (without 404) in title even for soft 404s in some cases, 
+                # but our browser check showed "not found | code wiki"
+                if "this page doesn’t exist" in body_text:
+                    has_404_keywords = True
             
             # Check for bot detection pages (which should be treated as 403 warnings, not success)
             is_bot_blocked = any(kw in body_text for kw in [
@@ -334,7 +338,10 @@ def _process_files(files_to_check, use_browser, browser_context, broken_links, w
                     status, reason = checked_url_cache[url]
                     print(f"  Checking {url}... (cached) {status} {reason}")
                 else:
-                    print(f"  Checking {url}...", end='', flush=True)
+                    if not use_browser and "codewiki.google" in url:
+                        print(f"  Checking {url}... (Warning: CodeWiki requires --browser for accurate checking)", end='', flush=True)
+                    else:
+                        print(f"  Checking {url}...", end='', flush=True)
                     status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context, page=page)
                     checked_url_cache[url] = (status, reason)
                     print(f" {status} {reason}")
