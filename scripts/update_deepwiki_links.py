@@ -142,7 +142,7 @@ def main():
                 if should_update:
                     # If a link does not exist on the web, we pass True for 'has_*' to prevent it from being added
                     pass_deepwiki = has_deepwiki or not deepwiki_exists
-                    pass_codewiki = has_codewiki or not codewiki_exists
+                    pass_codewiki = has_codewiki or (not codewiki_exists and not has_placeholder)
                     if update_file(filepath, owner, repo, pass_deepwiki, pass_codewiki):
                         updated_count += 1
                         print(f"  Updated links for {filename}")
