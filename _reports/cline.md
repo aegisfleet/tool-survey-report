@@ -65,6 +65,7 @@ relationships:
     - "GitHub Copilot"
     - "OpenCode"
     - "AGENTS.md"
+    - "Agent Trace"
 ---
 
 # **Cline 調査レポート**

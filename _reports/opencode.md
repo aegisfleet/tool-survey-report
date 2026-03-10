@@ -60,6 +60,7 @@ relationships:
     - "Devin"
     - "Cline"
     - "GitHub Copilot"
+    - "Agent Trace"
 ---
 
 # **OpenCode 調査レポート**
