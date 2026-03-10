@@ -1,15 +1,22 @@
 import os
 import re
-import yaml
-from playwright.sync_api import sync_playwright
+try:
+    import yaml
+except ImportError:
+    yaml = None
+try:
+    from playwright.sync_api import sync_playwright
+except ImportError:
+    sync_playwright = None
 
 REPORTS_DIR = '_reports'
 
 def get_github_repo(content):
     # Search for github link in front matter
-    match = re.search(r'github:\s*"(https?://github\.com/([^/]+)/([^/"]+))"', content)
+    # Support both quoted and unquoted URLs, and handle optional trailing slash
+    match = re.search(r'github:\s*"(https?://github\.com/([^/"]+)/([^/"]+?))/??"', content)
     if not match:
-        match = re.search(r'github:\s*(https?://github\.com/([^/]+)/([^/\n\s]+))', content)
+        match = re.search(r'github:\s*(https?://github\.com/([^/\s\n]+)/([^/\s\n]+?))/??(?:[\s\n]|$)', content)
     
     if match:
         return match.group(2), match.group(3)
