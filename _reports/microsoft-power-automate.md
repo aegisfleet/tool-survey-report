@@ -59,6 +59,7 @@ relationships:
     - "Make"
     - "n8n"
     - "Workato"
+    - "Microsoft 365 Copilot"
 ---
 
 # **Microsoft Power Automate 調査レポート**
