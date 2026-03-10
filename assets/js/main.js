@@ -9,7 +9,7 @@ const ScrollManager = (() => {
   function handleScroll() {
     if (!ticking) {
       window.requestAnimationFrame(() => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
         handlers.forEach((handler) => handler(scrollTop));
         ticking = false;
       });
@@ -890,7 +890,7 @@ function updateBackToTopButtonVisibility(backToTopButton, scrollTop) {
   if (!backToTopButton) return;
 
   if (scrollTop === undefined) {
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollTop = window.scrollY || document.documentElement.scrollTop;
   }
 
   // 300px以上スクロールした場合に表示
@@ -943,7 +943,7 @@ function scrollToTop() {
     // Safety check & Cleanup
     activeScrollInterval = setInterval(() => {
       // トップに到達したかチェック
-      if (window.pageYOffset < 1) {
+      if (window.scrollY < 1) {
         isScrollingToTop = false;
         if (header) header.style.transition = '';
         if (activeScrollInterval) {
