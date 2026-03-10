@@ -39,6 +39,7 @@ evaluation:
 
 links:
   github: "https://github.com/obsproject/obs-studio"
+  deepwiki: "https://deepwiki.com/obsproject/obs-studio"
   documentation: "https://github.com/obsproject/obs-studio/wiki"
 relationships:
   related_tools: []

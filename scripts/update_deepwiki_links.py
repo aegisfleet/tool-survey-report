@@ -95,8 +95,20 @@ def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
         return True
     return False
 
+import argparse
+
 def main():
-    files = [f for f in os.listdir(REPORTS_DIR) if f.endswith('.md')]
+    parser = argparse.ArgumentParser(description='Update DeepWiki and CodeWiki links in report files.')
+    parser.add_argument('file_path', nargs='?', help='Path to a specific markdown file to update.')
+    args = parser.parse_args()
+
+    if args.file_path:
+        if not os.path.exists(args.file_path):
+            print(f"Error: File not found: {args.file_path}")
+            return
+        files_to_process = [args.file_path]
+    else:
+        files_to_process = [os.path.join(REPORTS_DIR, f) for f in os.listdir(REPORTS_DIR) if f.endswith('.md')]
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -105,8 +117,8 @@ def main():
         
         updated_count = 0
         
-        for filename in files:
-            filepath = os.path.join(REPORTS_DIR, filename)
+        for filepath in files_to_process:
+            filename = os.path.basename(filepath)
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
             
