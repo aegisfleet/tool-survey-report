@@ -47,7 +47,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/TeraTermProject/teraterm"
-  codewiki: "https://codewiki.google/github.com/TeraTermProject/teraterm"
   deepwiki: "https://deepwiki.com/TeraTermProject/teraterm"
 relationships:
   related_tools:
