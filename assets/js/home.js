@@ -3,6 +3,61 @@
  * Handles the logic for the home page, including filtering, sorting, and random picks.
  * Originally extracted from an inline script in _layouts/home.html.
  */
+
+// フィルタ状態をsessionStorageに保存するキー
+const FILTER_STATE_KEY = 'homeFilterState';
+
+// Optimization: Regex constants pulled out of loops/repeated functions
+const STRIP_EMOJI_RE = /^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u;
+const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
+
+// カテゴリごとの絵文字マッピングルール（上から順にマッチしたものが適用される）
+const categoryEmojiRules = [
+  { keywords: ['ai', 'エージェント', '機械学習', 'ml', '生成'], emoji: '🤖' },
+  { keywords: ['テスト', 'qa', '品質'], emoji: '🧪' },
+  { keywords: ['開発者ツール', 'ide', 'エディタ', 'バージョン管理', 'git', 'フック', '開発ツール'], emoji: '🔧' },
+  { keywords: ['インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化'], emoji: '☁️' },
+  { keywords: ['支出', '会計', '経理'], emoji: '💰' },
+  { keywords: ['作図', 'ダイアグラム'], emoji: '📐' },
+  { keywords: ['教育', '学習'], emoji: '🎓' },
+  { keywords: ['web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
+  { keywords: ['モバイル', 'オペレーティングシステム'], emoji: '📱' },
+  { keywords: ['ワークフロー', '自動化'], emoji: '⚡' },
+  { keywords: ['デザイン', '動画', 'メディア'], emoji: '🎨' },
+  { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📋' },
+  { keywords: ['監視', 'セキュリティ', '認証', '脅威', '依存関係'], emoji: '🛡️' },
+  { keywords: ['bi', '広告', '顧客', 'マーケットプレイス', 'saas', '分析', '検索'], emoji: '📊' },
+  { keywords: ['勤怠', '人事', '労務'], emoji: '🏢' },
+  { keywords: ['ふるさと納税', '互換'], emoji: '🔹' },
+];
+
+// カテゴリに対応する絵文字を取得するヘルパー関数（キーワード部分一致）
+function getEmojiForCategory(category) {
+  if (!category) return '🔹';
+  const lowerCat = category.toLowerCase();
+
+  for (const rule of categoryEmojiRules) {
+    if (rule.keywords.some((kw) => lowerCat.includes(kw))) {
+      return rule.emoji;
+    }
+  }
+  return '🔹';
+}
+
+// 既存の絵文字や特殊マーク、先頭スペースを除去するヘルパー関数
+function stripEmoji(text) {
+  return text.replace(STRIP_EMOJI_RE, '').trim();
+}
+
+// Helper function to convert Katakana to Hiragana
+function toHiragana(str) {
+  if (!str) return '';
+  return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
+    const chr = match.charCodeAt(0) - 0x60;
+    return String.fromCharCode(chr);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const homeContainer = document.querySelector('.home-container');
   const searchInput = document.getElementById('report-search');
@@ -15,51 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const reportsGrid = document.getElementById('reports-grid');
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
-
-  // フィルタ状態をsessionStorageに保存するキー
-  const FILTER_STATE_KEY = 'homeFilterState';
-
-  // Optimization: Regex constants pulled out of loops/repeated functions
-  const STRIP_EMOJI_RE = /^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u;
-  const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
-
-  // カテゴリごとの絵文字マッピングルール（上から順にマッチしたものが適用される）
-  const categoryEmojiRules = [
-    { keywords: ['ai', 'エージェント', '機械学習', 'ml', '生成'], emoji: '🤖' },
-    { keywords: ['テスト', 'qa', '品質'], emoji: '🧪' },
-    { keywords: ['開発者ツール', 'ide', 'エディタ', 'バージョン管理', 'git', 'フック', '開発ツール'], emoji: '🔧' },
-    { keywords: ['インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化'], emoji: '☁️' },
-    { keywords: ['支出', '会計', '経理'], emoji: '💰' },
-    { keywords: ['作図', 'ダイアグラム'], emoji: '📐' },
-    { keywords: ['教育', '学習'], emoji: '🎓' },
-    { keywords: ['web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
-    { keywords: ['モバイル', 'オペレーティングシステム'], emoji: '📱' },
-    { keywords: ['ワークフロー', '自動化'], emoji: '⚡' },
-    { keywords: ['デザイン', '動画', 'メディア'], emoji: '🎨' },
-    { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📋' },
-    { keywords: ['監視', 'セキュリティ', '認証', '脅威', '依存関係'], emoji: '🛡️' },
-    { keywords: ['bi', '広告', '顧客', 'マーケットプレイス', 'saas', '分析', '検索'], emoji: '📊' },
-    { keywords: ['勤怠', '人事', '労務'], emoji: '🏢' },
-    { keywords: ['ふるさと納税', '互換'], emoji: '🔹' },
-  ];
-
-  // カテゴリに対応する絵文字を取得するヘルパー関数（キーワード部分一致）
-  function getEmojiForCategory(category) {
-    if (!category) return '🔹';
-    const lowerCat = category.toLowerCase();
-
-    for (const rule of categoryEmojiRules) {
-      if (rule.keywords.some((kw) => lowerCat.includes(kw))) {
-        return rule.emoji;
-      }
-    }
-    return '🔹';
-  }
-
-  // 既存の絵文字や特殊マーク、先頭スペースを除去するヘルパー関数
-  function stripEmoji(text) {
-    return text.replace(STRIP_EMOJI_RE, '').trim();
-  }
 
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
@@ -190,15 +200,6 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         el.classList.remove('active');
       }
-    });
-  }
-
-  // Helper function to convert Katakana to Hiragana
-  function toHiragana(str) {
-    if (!str) return '';
-    return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
-      const chr = match.charCodeAt(0) - 0x60;
-      return String.fromCharCode(chr);
     });
   }
 
