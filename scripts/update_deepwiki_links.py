@@ -29,6 +29,20 @@ def check_deepwiki_exists(page, owner, repo):
     except Exception:
         return False
 
+def check_codewiki_exists(page, owner, repo):
+    url = f"https://codewiki.google/github.com/{owner}/{repo}"
+    try:
+        response = page.goto(url, wait_until='networkidle', timeout=15000)
+        if response and response.status == 200:
+            body_text = page.inner_text('body').lower()
+            title_text = page.title().lower()
+            if '404' in body_text or 'not found' in body_text or "not found | code wiki" in title_text:
+                return False
+            return True
+        return False
+    except Exception:
+        return False
+
 def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -114,11 +128,22 @@ def main():
                     else:
                         print(f"  DeepWiki not found.")
 
-                # We update if deepwiki found, or codewiki is missing, or we have a placeholder to replace
-                should_update = (deepwiki_exists and not has_deepwiki) or not has_codewiki or has_placeholder
+                codewiki_exists = False
+                if not has_codewiki or has_placeholder:
+                    print(f"Checking CodeWiki for {filename} ({owner}/{repo})...")
+                    codewiki_exists = check_codewiki_exists(page, owner, repo)
+                    if codewiki_exists:
+                        print(f"  Found CodeWiki! Updating {filename}")
+                    else:
+                        print("  CodeWiki not found.")
+
+                # We update if deepwiki found, or codewiki is found (when it was missing or a placeholder)
+                should_update = (deepwiki_exists and not has_deepwiki) or codewiki_exists
                 if should_update:
-                    # if deepwiki_exists is False, we pass has_deepwiki=True to prevent inserting it
-                    if update_file(filepath, owner, repo, has_deepwiki or not deepwiki_exists, has_codewiki):
+                    # If a link does not exist on the web, we pass True for 'has_*' to prevent it from being added
+                    pass_deepwiki = has_deepwiki or not deepwiki_exists
+                    pass_codewiki = has_codewiki or (not codewiki_exists and not has_placeholder)
+                    if update_file(filepath, owner, repo, pass_deepwiki, pass_codewiki):
                         updated_count += 1
                         print(f"  Updated links for {filename}")
         
