@@ -74,6 +74,7 @@ relationships:
 * **公式サイト**: [https://www.pulumi.com/](https://www.pulumi.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/pulumi/pulumi](https://github.com/pulumi/pulumi)
+  * CodeWiki: [https://codewiki.google/github.com/pulumi/pulumi](https://codewiki.google/github.com/pulumi/pulumi)
   * ドキュメント: [https://www.pulumi.com/docs/](https://www.pulumi.com/docs/)
 * **カテゴリ**: 構成管理
 * **概要**: Pulumiは、TypeScript, Python, Go, C#, Java, YAMLなどの使い慣れたプログラミング言語を使用して、クラウドインフラをコードとして定義、デプロイ、管理できるオープンソースのInfrastructure as Code (IaC) プラットフォームです。AIアシスタント「Pulumi Copilot」を搭載し、インフラ管理の生産性を向上させます。

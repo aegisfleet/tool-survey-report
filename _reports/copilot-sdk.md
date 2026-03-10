@@ -50,8 +50,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/github/copilot-sdk"
-  codewiki: "https://codewiki.google/github.com/github/copilot-sdk"
   deepwiki: "https://deepwiki.com/github/copilot-sdk"
+  codewiki: "https://codewiki.google/github.com/github/copilot-sdk"
   documentation: "https://github.com/github/copilot-sdk/tree/main/docs"
 relationships:
   parent: "GitHub Copilot"
@@ -70,6 +70,7 @@ relationships:
 * **公式サイト**: [https://github.com/github/copilot-sdk](https://github.com/github/copilot-sdk)
 * **関連リンク**:
   * GitHub: [https://github.com/github/copilot-sdk](https://github.com/github/copilot-sdk)
+  * CodeWiki: [https://codewiki.google/github.com/github/copilot-sdk](https://codewiki.google/github.com/github/copilot-sdk)
   * ドキュメント: [https://github.com/github/copilot-sdk/tree/main/docs](https://github.com/github/copilot-sdk/tree/main/docs)
 * **カテゴリ**: AIエージェント開発
 * **概要**: GitHub Copilot SDKは、GitHub Copilotの強力なエージェント機能を、任意のアプリケーションやサービスに統合するための開発キットです。Copilot CLIのエンジンを利用し、計画立案、ツール実行、ファイル操作などの自律的なワークフローをプログラムから制御できます。

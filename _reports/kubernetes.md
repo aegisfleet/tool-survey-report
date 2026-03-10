@@ -49,8 +49,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/kubernetes/kubernetes"
-  codewiki: "https://codewiki.google/github.com/kubernetes/kubernetes"
   deepwiki: "https://deepwiki.com/kubernetes/kubernetes"
+  codewiki: "https://codewiki.google/github.com/kubernetes/kubernetes"
   documentation: "https://kubernetes.io/docs/home/"
 relationships:
   children:
@@ -75,6 +75,7 @@ relationships:
 * **公式サイト**: [https://kubernetes.io](https://kubernetes.io)
 * **関連リンク**:
   * GitHub: [https://github.com/kubernetes/kubernetes](https://github.com/kubernetes/kubernetes)
+  * CodeWiki: [https://codewiki.google/github.com/kubernetes/kubernetes](https://codewiki.google/github.com/kubernetes/kubernetes)
   * ドキュメント: [https://kubernetes.io/docs/home/](https://kubernetes.io/docs/home/)
 * **カテゴリ**: インフラ/クラウド
 * **概要**: Googleによって設計され、現在はCNCFによって管理されているオープンソースのコンテナオーケストレーションシステム。コンテナ化されたアプリケーションのデプロイ、スケーリング、および管理を自動化するためのプラットフォームとして広く採用されている。

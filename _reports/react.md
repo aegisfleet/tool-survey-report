@@ -44,8 +44,8 @@ evaluation:
 
 links:
   github: "https://github.com/facebook/react"
-  codewiki: "https://codewiki.google/github.com/facebook/react"
   deepwiki: "https://deepwiki.com/facebook/react"
+  codewiki: "https://codewiki.google/github.com/facebook/react"
   documentation: "https://react.dev/reference/react"
 
 relationships:
@@ -69,6 +69,7 @@ relationships:
 * **公式サイト**: [https://react.dev/](https://react.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/facebook/react](https://github.com/facebook/react)
+  * CodeWiki: [https://codewiki.google/github.com/facebook/react](https://codewiki.google/github.com/facebook/react)
   * DeepWiki: [https://deepwiki.com/facebook/react](https://deepwiki.com/facebook/react)
   * ドキュメント: [https://react.dev/reference/react](https://react.dev/reference/react)
   * ブログ: [https://react.dev/blog](https://react.dev/blog)

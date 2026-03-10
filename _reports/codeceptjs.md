@@ -53,7 +53,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/codeceptjs/CodeceptJS"
-  codewiki: "https://codewiki.google/github.com/codeceptjs/CodeceptJS"
   deepwiki: "https://deepwiki.com/codeceptjs/CodeceptJS"
   documentation: "https://codecept.io/basics/"
 relationships:

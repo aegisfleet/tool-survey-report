@@ -47,7 +47,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/GNOME/gimp"
-  codewiki: "https://codewiki.google/github.com/GNOME/gimp"
   deepwiki: "https://deepwiki.com/GNOME/gimp"
   documentation: "https://www.gimp.org/docs/"
 relationships:

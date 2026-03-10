@@ -57,7 +57,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/langgenius/dify"
-  codewiki: "https://codewiki.google/github.com/langgenius/dify"
   deepwiki: "https://deepwiki.com/langgenius/dify"
   documentation: "https://docs.dify.ai/v/ja/getting-started/intro-to-dify"
 relationships:

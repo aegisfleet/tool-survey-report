@@ -88,6 +88,7 @@ relationships:
 * **公式サイト**: [https://playwright.dev/](https://playwright.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/playwright](https://github.com/microsoft/playwright)
+  * CodeWiki: [https://codewiki.google/github.com/microsoft/playwright](https://codewiki.google/github.com/microsoft/playwright)
   * ドキュメント: [https://playwright.dev/docs/intro](https://playwright.dev/docs/intro)
 * **カテゴリ**: テスト/QA
 * **概要**: Playwrightは、最新のWebアプリケーション向けの高速で信頼性の高いエンドツーエンド（E2E）テストを可能にするオープンソースのフレームワークです。単一のAPIでChromium、Firefox、WebKitを操作でき、AIによるテスト生成・修復機能や強力なデバッグツールを備えています。

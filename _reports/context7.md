@@ -47,8 +47,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/upstash/context7"
-  codewiki: "https://codewiki.google/github.com/upstash/context7"
   deepwiki: "https://deepwiki.com/upstash/context7"
+  codewiki: "https://codewiki.google/github.com/upstash/context7"
   documentation: "https://context7.com/docs"
 relationships:
   parent: "Model Context Protocol"
@@ -69,6 +69,7 @@ relationships:
 * **公式サイト**: [https://context7.com/](https://context7.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/upstash/context7](https://github.com/upstash/context7)
+  * CodeWiki: [https://codewiki.google/github.com/upstash/context7](https://codewiki.google/github.com/upstash/context7)
   * ドキュメント: [https://context7.com/docs](https://context7.com/docs)
 * **カテゴリ**: 開発者ツール / MCPサーバー
 * **概要**: Context7は、LLM (Large Language Models) に最新のライブラリドキュメントとコード例を供給するためのMCPサーバーです。LLMのトレーニングデータに含まれない新しいライブラリや、バージョンアップにより変更されたAPI仕様などをリアルタイムに取得し、AIの回答精度を向上させます。

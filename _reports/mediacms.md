@@ -43,7 +43,6 @@ evaluation:
 
 links:
   github: "https://github.com/mediacms-io/mediacms"
-  codewiki: "https://codewiki.google/github.com/mediacms-io/mediacms"
   deepwiki: "https://deepwiki.com/mediacms-io/mediacms"
   documentation: "https://github.com/mediacms-io/mediacms/blob/main/docs/admins_docs.md"
 relationships:

@@ -53,7 +53,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/database-rider/database-rider"
-  codewiki: "https://codewiki.google/github.com/database-rider/database-rider"
   deepwiki: "https://deepwiki.com/database-rider/database-rider"
   documentation: "https://database-rider.github.io/database-rider/"
 relationships:

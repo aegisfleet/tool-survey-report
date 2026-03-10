@@ -63,6 +63,7 @@ relationships:
 * **公式サイト**: [https://docs.letta.com/](https://docs.letta.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/letta-ai/letta](https://github.com/letta-ai/letta)
+  * CodeWiki: [https://codewiki.google/github.com/letta-ai/letta](https://codewiki.google/github.com/letta-ai/letta)
   * ドキュメント: [https://docs.letta.com/](https://docs.letta.com/)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: Lettaは、ステートフル（状態保持可能）なAIエージェントを構築するためのオープンソースフレームワークです。以前は「MemGPT」として知られていたプロジェクトが発展・リブランドされました。LLM（大規模言語モデル）自体はステートレスですが、Lettaは独自のメモリ管理システムにより、ユーザーとの長期的な会話やコンテキストを記憶し、自己編集可能なメモリを持つエージェントを実現します。

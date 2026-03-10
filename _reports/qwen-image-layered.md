@@ -71,6 +71,7 @@ relationships:
 * **公式サイト**: [https://github.com/QwenLM/Qwen-Image-Layered](https://github.com/QwenLM/Qwen-Image-Layered)
 * **関連リンク**:
   * GitHub: [https://github.com/QwenLM/Qwen-Image-Layered](https://github.com/QwenLM/Qwen-Image-Layered)
+  * CodeWiki: [https://codewiki.google/github.com/QwenLM/Qwen-Image-Layered](https://codewiki.google/github.com/QwenLM/Qwen-Image-Layered)
   * ドキュメント: [https://huggingface.co/Qwen/Qwen-Image-Layered](https://huggingface.co/Qwen/Qwen-Image-Layered)
   * デモ: [Hugging Face Spaces](https://huggingface.co/spaces/Qwen/Qwen-Image-Layered)
   * 論文: [arXiv](https://arxiv.org/abs/2512.15603)

@@ -75,6 +75,7 @@ relationships:
 * **公式サイト**: [https://microsoft.github.io/agent-lightning/](https://microsoft.github.io/agent-lightning/)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/agent-lightning](https://github.com/microsoft/agent-lightning)
+  * CodeWiki: [https://codewiki.google/github.com/microsoft/agent-lightning](https://codewiki.google/github.com/microsoft/agent-lightning)
   * ドキュメント: [https://microsoft.github.io/agent-lightning/stable/](https://microsoft.github.io/agent-lightning/stable/)
   * 論文: [https://arxiv.org/abs/2508.03680](https://arxiv.org/abs/2508.03680)
 * **カテゴリ**: AI開発基盤

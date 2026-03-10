@@ -53,7 +53,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/hashicorp/terraform"
-  codewiki: "https://codewiki.google/github.com/hashicorp/terraform"
   deepwiki: "https://deepwiki.com/hashicorp/terraform"
   documentation: "https://developer.hashicorp.com/terraform/docs"
 relationships:

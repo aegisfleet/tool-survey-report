@@ -70,6 +70,7 @@ relationships:
 * **公式サイト**: [https://pytest.org/](https://pytest.org/)
 * **関連リンク**:
   * GitHub: [https://github.com/pytest-dev/pytest](https://github.com/pytest-dev/pytest)
+  * CodeWiki: [https://codewiki.google/github.com/pytest-dev/pytest](https://codewiki.google/github.com/pytest-dev/pytest)
   * ドキュメント: [https://docs.pytest.org/en/stable/](https://docs.pytest.org/en/stable/)
   * レビューサイト: G2, Capterra, ITreviewに開発者向けフレームワークとしての登録はなし
 * **カテゴリ**: テスト/QA

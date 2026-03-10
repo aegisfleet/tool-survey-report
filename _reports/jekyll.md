@@ -47,8 +47,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/jekyll/jekyll"
-  codewiki: "https://codewiki.google/github.com/jekyll/jekyll"
   deepwiki: "https://deepwiki.com/jekyll/jekyll"
+  codewiki: "https://codewiki.google/github.com/jekyll/jekyll"
   documentation: "https://jekyllrb.com/docs/"
 relationships:
   parent: null
@@ -75,6 +75,7 @@ relationships:
 * **公式サイト**: [https://jekyllrb.com/](https://jekyllrb.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+  * CodeWiki: [https://codewiki.google/github.com/jekyll/jekyll](https://codewiki.google/github.com/jekyll/jekyll)
   * ドキュメント: [https://jekyllrb.com/docs/](https://jekyllrb.com/docs/)
 * **カテゴリ**: Webフレームワーク
 * **概要**: Jekyllは、Markdown、Liquidテンプレート、HTML、CSSを組み合わせて、ブログやウェブサイトなどの静的サイトを生成する、Ruby製のオープンソースツールです。データベースを必要としないシンプルさと、GitHub Pagesでのネイティブサポートを特徴としています。

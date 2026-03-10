@@ -43,8 +43,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/openai/symphony"
-  codewiki: "https://codewiki.google/github.com/openai/symphony"
   deepwiki: "https://deepwiki.com/openai/symphony"
+  codewiki: "https://codewiki.google/github.com/openai/symphony"
 relationships:
   related_tools:
     - "OpenAI Codex"
@@ -61,6 +61,7 @@ relationships:
 * **公式サイト**: [https://github.com/openai/symphony](https://github.com/openai/symphony)
 * **関連リンク**:
   * GitHub: [https://github.com/openai/symphony](https://github.com/openai/symphony)
+  * CodeWiki: [https://codewiki.google/github.com/openai/symphony](https://codewiki.google/github.com/openai/symphony)
 * **カテゴリ**: AIエージェント・オーケストレーション
 * **概要**: Symphonyは、コーディングエージェントの作業を分離された自律的な実装プロセスに変換するツールです。エンジニアがエージェントを直接監督する代わりに、プロジェクトのタスク単位で作業を管理できるようになります。
 

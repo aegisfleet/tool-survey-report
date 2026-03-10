@@ -69,6 +69,7 @@ relationships:
 * **公式サイト**: [https://biomejs.dev/](https://biomejs.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/biomejs/biome](https://github.com/biomejs/biome)
+  * CodeWiki: [https://codewiki.google/github.com/biomejs/biome](https://codewiki.google/github.com/biomejs/biome)
   * ドキュメント: [https://biomejs.dev/guides/getting-started/](https://biomejs.dev/guides/getting-started/)
 * **カテゴリ**: 開発者ツール
 * **概要**: Biomeは、Webプロジェクトの健全性を維持するための高速なツールチェーンです。Rustで構築されており、JavaScript, TypeScript, JSX, JSON, CSS, GraphQLのフォーマッターとリンターを単一のツールとして提供します。PrettierやESLintの代替として設計されており、圧倒的なパフォーマンスと設定の簡素さを特徴としています。

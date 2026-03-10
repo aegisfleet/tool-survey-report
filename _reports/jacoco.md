@@ -47,7 +47,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/jacoco/jacoco"
-  codewiki: "https://codewiki.google/github.com/jacoco/jacoco"
   deepwiki: "https://deepwiki.com/jacoco/jacoco"
   documentation: "https://www.jacoco.org/jacoco/trunk/doc/index.html"
 relationships:

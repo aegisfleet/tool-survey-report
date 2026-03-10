@@ -69,6 +69,7 @@ relationships:
 * **公式サイト**: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
 * **関連リンク**:
   * GitHub: [https://github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot)
+  * CodeWiki: [https://codewiki.google/github.com/spring-projects/spring-boot](https://codewiki.google/github.com/spring-projects/spring-boot)
   * ドキュメント: [https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 * **カテゴリ**: Webフレームワーク
 * **概要**: Spring Bootは、本番環境に対応したスタンドアロンなSpringベースのアプリケーションを最小限の設定で迅速に構築できるJavaフレームワークです。「設定より規約」の考え方を採用し、複雑な設定作業を大幅に削減することで、開発者がビジネスロジックに集中できる環境を提供します。

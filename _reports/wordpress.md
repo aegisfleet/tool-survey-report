@@ -50,7 +50,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/WordPress/WordPress"
-  codewiki: "https://codewiki.google/github.com/WordPress/WordPress"
   deepwiki: "https://deepwiki.com/WordPress/WordPress"
   documentation: "https://developer.wordpress.org/documentation/"
 relationships:

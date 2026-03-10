@@ -74,6 +74,7 @@ relationships:
 * **公式サイト**: [https://jmeter.apache.org/](https://jmeter.apache.org/)
 * **関連リンク**:
   * GitHub: [https://github.com/apache/jmeter](https://github.com/apache/jmeter)
+  * CodeWiki: [https://codewiki.google/github.com/apache/jmeter](https://codewiki.google/github.com/apache/jmeter)
   * ドキュメント: [https://jmeter.apache.org/usermanual/index.html](https://jmeter.apache.org/usermanual/index.html)
   * レビューサイト: [G2](https://www.g2.com/products/apache-jmeter/reviews) | [Capterra](https://www.capterra.com/p/142263/JMeter/)
 * **カテゴリ**: テスト/QA

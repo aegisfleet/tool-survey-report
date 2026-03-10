@@ -45,8 +45,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/github/spec-kit"
-  codewiki: "https://codewiki.google/github.com/github/spec-kit"
   deepwiki: "https://deepwiki.com/github/spec-kit"
+  codewiki: "https://codewiki.google/github.com/github/spec-kit"
 relationships:
   parent: "GitHub"
   related_tools:
@@ -64,6 +64,7 @@ relationships:
 * **公式サイト**: [https://github.github.com/spec-kit/](https://github.github.com/spec-kit/)
 * **関連リンク**:
   * GitHub: [https://github.com/github/spec-kit](https://github.com/github/spec-kit)
+  * CodeWiki: [https://codewiki.google/github.com/github/spec-kit](https://codewiki.google/github.com/github/spec-kit)
 * **カテゴリ**: 開発者ツール
 * **概要**: 仕様駆動開発（Spec-Driven Development）を実現するためのオープンソースツールキットです。仕様を単なるガイドではなく実行可能なものとし、多様なAIエージェントと連携して仕様から直接動作するコードを生成・リファクタリングします。
 

@@ -40,7 +40,6 @@ evaluation:
 
 links:
   github: "https://github.com/renovatebot/renovate"
-  codewiki: "https://codewiki.google/github.com/renovatebot/renovate"
   deepwiki: "https://deepwiki.com/renovatebot/renovate"
   documentation: "https://docs.renovatebot.com/"
 relationships:

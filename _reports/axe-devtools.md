@@ -43,7 +43,6 @@ evaluation:
 
 links:
   github: "https://github.com/dequelabs/axe-core"
-  codewiki: "https://codewiki.google/github.com/dequelabs/axe-core"
   deepwiki: "https://deepwiki.com/dequelabs/axe-core"
   documentation: "https://docs.deque.com/devtools-for-web/4/en/"
 relationships:

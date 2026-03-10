@@ -46,7 +46,6 @@ evaluation:
 
 links:
   github: "https://github.com/jgraph/drawio"
-  codewiki: "https://codewiki.google/github.com/jgraph/drawio"
   deepwiki: "https://deepwiki.com/jgraph/drawio"
   documentation: "https://www.drawio.com/doc/"
 

@@ -74,6 +74,7 @@ relationships:
 * **公式サイト**: [https://www.karatelabs.io/](https://www.karatelabs.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/karatelabs/karate](https://github.com/karatelabs/karate)
+  * CodeWiki: [https://codewiki.google/github.com/karatelabs/karate](https://codewiki.google/github.com/karatelabs/karate)
   * ドキュメント: [https://www.karatelabs.io/get-started](https://www.karatelabs.io/get-started)
   * レビューサイト: [Capterra](https://www.capterra.com/p/10008803/Karate-Labs/)
 * **カテゴリ**: テスト/QA

@@ -49,8 +49,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/cypress-io/cypress"
-  codewiki: "https://codewiki.google/github.com/cypress-io/cypress"
   deepwiki: "https://deepwiki.com/cypress-io/cypress"
+  codewiki: "https://codewiki.google/github.com/cypress-io/cypress"
   documentation: "https://docs.cypress.io/"
 relationships:
   related_tools:
@@ -76,6 +76,7 @@ relationships:
 * **公式サイト**: [https://www.cypress.io/](https://www.cypress.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/cypress-io/cypress](https://github.com/cypress-io/cypress)
+  * CodeWiki: [https://codewiki.google/github.com/cypress-io/cypress](https://codewiki.google/github.com/cypress-io/cypress)
   * ドキュメント: [https://docs.cypress.io/](https://docs.cypress.io/)
   * レビューサイト: [G2](https://www.g2.com/products/cypress/reviews) | [Capterra](https://www.capterra.com/p/173950/Cypress/)
 * **カテゴリ**: テスト/QA

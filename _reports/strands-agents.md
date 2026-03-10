@@ -71,6 +71,7 @@ relationships:
 * **公式サイト**: [https://strandsagents.com/](https://strandsagents.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/strands-agents/sdk-python](https://github.com/strands-agents/sdk-python)
+  * CodeWiki: [https://codewiki.google/github.com/strands-agents/sdk-python](https://codewiki.google/github.com/strands-agents/sdk-python)
   * ドキュメント: [https://strandsagents.com/latest/documentation/docs/](https://strandsagents.com/latest/documentation/docs/)
 * **カテゴリ**: AI Agent Framework
 * **概要**: Strands Agentsは、AWSが主導して開発しているオープンソースのAIエージェント構築フレームワークです。「Model-driven approach（モデル駆動型アプローチ）」を掲げ、数行のコードで、単純なチャットボットから複雑なマルチエージェントシステムまでを構築できることを目指しています。Amazon Bedrockをはじめとする主要なLLMプロバイダーとネイティブに統合されています。

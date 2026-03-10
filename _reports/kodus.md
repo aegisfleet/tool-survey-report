@@ -47,7 +47,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/kodustech/kodus-ai"
-  codewiki: "https://codewiki.google/github.com/kodustech/kodus-ai"
   deepwiki: "https://deepwiki.com/kodustech/kodus-ai"
   documentation: "https://docs.kodus.io/"
 relationships:

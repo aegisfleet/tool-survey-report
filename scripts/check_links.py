@@ -188,13 +188,20 @@ def _check_link_logic(page, url):
         try:
             body_text = page.inner_text('body').lower()
             title_text = page.title().lower()
+            has_404_keywords = False
+            is_codewiki = "codewiki.google" in page.url
             
-            has_404_keywords = any(kw in body_text or kw in title_text for kw in NOT_FOUND_KEYWORDS)
-            if "not found | code wiki" in title_text or title_text == "code wiki":
-                # CodeWiki shows "Code Wiki" (without 404) in title even for soft 404s in some cases, 
-                # but our browser check showed "not found | code wiki"
-                if "this page doesn’t exist" in body_text:
-                    has_404_keywords = True
+            if is_codewiki:
+                # CodeWiki specific check
+                if "not found | code wiki" in title_text or title_text == "code wiki":
+                   if "this page doesn’t exist" in body_text:
+                        has_404_keywords = True
+            else:
+                # General check for other sites
+                for kw in NOT_FOUND_KEYWORDS:
+                    if kw in body_text or kw in title_text:
+                        has_404_keywords = True
+                        break
             
             # Check for bot detection pages (which should be treated as 403 warnings, not success)
             is_bot_blocked = any(kw in body_text for kw in [

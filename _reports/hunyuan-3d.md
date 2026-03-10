@@ -46,7 +46,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1"
-  codewiki: "https://codewiki.google/github.com/Tencent-Hunyuan/Hunyuan3D-2.1"
   deepwiki: "https://deepwiki.com/Tencent-Hunyuan/Hunyuan3D-2.1"
   documentation: "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/README.md"
 relationships:

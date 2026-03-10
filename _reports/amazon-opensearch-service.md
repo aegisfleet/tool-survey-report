@@ -74,6 +74,7 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/jp/opensearch-service/](https://aws.amazon.com/jp/opensearch-service/)
 * **関連リンク**:
   * GitHub: [https://github.com/opensearch-project/OpenSearch](https://github.com/opensearch-project/OpenSearch)
+  * CodeWiki: [https://codewiki.google/github.com/opensearch-project/OpenSearch](https://codewiki.google/github.com/opensearch-project/OpenSearch)
   * DeepWiki: [https://deepwiki.com/opensearch-project/OpenSearch](https://deepwiki.com/opensearch-project/OpenSearch)
   * ドキュメント: [https://docs.aws.amazon.com/opensearch-service/](https://docs.aws.amazon.com/opensearch-service/)
   * レビューサイト: [G2](https://www.g2.com/products/amazon-opensearch-service/reviews) | [Capterra](https://www.capterra.com/p/186598/Amazon-OpenSearch-Service/)

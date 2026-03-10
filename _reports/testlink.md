@@ -47,7 +47,6 @@ evaluation:
 
 links:
   github: "https://github.com/TestLinkOpenSourceTRMS/testlink-code"
-  codewiki: "https://codewiki.google/github.com/TestLinkOpenSourceTRMS/testlink-code"
   deepwiki: "https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code"
   documentation: "https://github.com/TestLinkOpenSourceTRMS/testlink-documentation"
 relationships:

@@ -71,6 +71,7 @@ relationships:
 * **公式サイト**: [https://github.com/gotalab/cc-sdd](https://github.com/gotalab/cc-sdd)
 * **関連リンク**:
   * GitHub: [https://github.com/gotalab/cc-sdd](https://github.com/gotalab/cc-sdd)
+  * CodeWiki: [https://codewiki.google/github.com/gotalab/cc-sdd](https://codewiki.google/github.com/gotalab/cc-sdd)
   * npm: [https://www.npmjs.com/package/cc-sdd](https://www.npmjs.com/package/cc-sdd)
 * **カテゴリ**: AI開発補助ツール
 * **概要**: cc-sddは、Claude CodeやCursorをはじめとする様々なAIコーディングエージェントに対して、構造化された「仕様書駆動開発（Spec-Driven Development）」のワークフローを導入するためのコマンドラインツールです。Kiro IDEにインスパイアされたアプローチを採用しています。

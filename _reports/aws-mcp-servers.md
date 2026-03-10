@@ -39,7 +39,6 @@ evaluation:
   summary: "AWSを利用するすべてのAI開発者にとって、環境構築や情報検索を劇的に効率化する必須ツール"
 links:
   github: "https://github.com/awslabs/mcp"
-  codewiki: "https://codewiki.google/github.com/awslabs/mcp"
   deepwiki: "https://deepwiki.com/awslabs/mcp"
   documentation: "https://awslabs.github.io/mcp/"
 relationships:

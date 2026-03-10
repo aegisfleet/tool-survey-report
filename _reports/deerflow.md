@@ -48,8 +48,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/bytedance/deer-flow"
-  codewiki: "https://codewiki.google/github.com/bytedance/deer-flow"
   deepwiki: "https://deepwiki.com/bytedance/deer-flow"
+  codewiki: "https://codewiki.google/github.com/bytedance/deer-flow"
 relationships:
   related_tools:
     - "Google Jules"
@@ -67,6 +67,7 @@ relationships:
 * **公式サイト**: [https://deerflow.tech/](https://deerflow.tech/)
 * **関連リンク**:
   * GitHub: [https://github.com/bytedance/deer-flow](https://github.com/bytedance/deer-flow)
+  * CodeWiki: [https://codewiki.google/github.com/bytedance/deer-flow](https://codewiki.google/github.com/bytedance/deer-flow)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: サンドボックス、メモリ、ツール、スキル、サブエージェントを活用して、リサーチ、コーディング、作成などの複雑なタスクを自動化するオープンソースのSuperAgentフレームワークです。
 

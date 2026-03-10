@@ -52,8 +52,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/ollama/ollama"
-  codewiki: "https://codewiki.google/github.com/ollama/ollama"
   deepwiki: "https://deepwiki.com/ollama/ollama"
+  codewiki: "https://codewiki.google/github.com/ollama/ollama"
   documentation: "https://ollama.com/docs"
 relationships:
   related_tools:
@@ -72,6 +72,7 @@ relationships:
 * **公式サイト**: [https://ollama.com/](https://ollama.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/ollama/ollama](https://github.com/ollama/ollama)
+  * CodeWiki: [https://codewiki.google/github.com/ollama/ollama](https://codewiki.google/github.com/ollama/ollama)
   * ドキュメント: [https://ollama.com/docs](https://ollama.com/docs)
 * **カテゴリ**: AI開発基盤
 * **概要**: オープンソースの大規模言語モデル（LLM）をローカル環境で簡単にセットアップし、実行するためのフレームワーク。シンプルなコマンド体系とOpenAI互換APIを提供し、開発者がAIアプリケーションを迅速に構築・テストすることを可能にする。

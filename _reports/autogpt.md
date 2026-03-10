@@ -54,7 +54,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/Significant-Gravitas/AutoGPT"
-  codewiki: "https://codewiki.google/github.com/Significant-Gravitas/AutoGPT"
   deepwiki: "https://deepwiki.com/Significant-Gravitas/AutoGPT"
   documentation: "https://docs.agpt.co/"
 relationships:

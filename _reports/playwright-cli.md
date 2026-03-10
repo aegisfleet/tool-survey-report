@@ -47,8 +47,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/microsoft/playwright-cli"
-  codewiki: "https://codewiki.google/github.com/microsoft/playwright-cli"
   deepwiki: "https://deepwiki.com/microsoft/playwright-cli"
+  codewiki: "https://codewiki.google/github.com/microsoft/playwright"
   documentation: "https://github.com/microsoft/playwright-cli#readme"
 relationships:
   parent: "Playwright"

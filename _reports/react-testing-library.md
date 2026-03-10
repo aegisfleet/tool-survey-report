@@ -68,6 +68,7 @@ relationships:
 * **公式サイト**: [https://testing-library.com/docs/react-testing-library/intro/](https://testing-library.com/docs/react-testing-library/intro/)
 * **関連リンク**:
   * GitHub: [https://github.com/testing-library/react-testing-library](https://github.com/testing-library/react-testing-library)
+  * CodeWiki: [https://codewiki.google/github.com/testing-library/react-testing-library](https://codewiki.google/github.com/testing-library/react-testing-library)
   * DeepWiki: [https://deepwiki.com/testing-library/react-testing-library](https://deepwiki.com/testing-library/react-testing-library)
 * **カテゴリ**: テスト/QA
 * **概要**: Reactコンポーネントをテストするための非常に軽量なソリューション。`react-dom`や`react-dom/test-utils`の上に構築されており、実装の詳細（StateやPropsの中身など）ではなく、ユーザーが実際にアプリケーションを操作するようにDOMノードをテストすることを促進します。

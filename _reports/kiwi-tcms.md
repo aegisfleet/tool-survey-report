@@ -44,7 +44,6 @@ evaluation:
 
 links:
   github: "https://github.com/kiwitcms/Kiwi"
-  codewiki: "https://codewiki.google/github.com/kiwitcms/Kiwi"
   deepwiki: "https://deepwiki.com/kiwitcms/Kiwi"
   documentation: "https://kiwitcms.readthedocs.io/"
 relationships:

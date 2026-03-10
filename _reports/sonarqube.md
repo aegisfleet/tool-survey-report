@@ -49,7 +49,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/SonarSource/sonarqube"
-  codewiki: "https://codewiki.google/github.com/SonarSource/sonarqube"
   deepwiki: "https://deepwiki.com/SonarSource/sonarqube"
   documentation: "https://docs.sonarsource.com/sonarqube-server/latest/"
 relationships:

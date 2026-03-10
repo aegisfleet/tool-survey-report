@@ -66,7 +66,8 @@ relationships:
 * **開発元**: GitHub
 * **公式サイト**: [https://github.com/features/actions](https://github.com/features/actions)
 * **関連リンク**:
-  * GitHub: [https://github.com/actions/runner](https://github.com/actions/runner) （ランナー）
+  * GitHub: [https://github.com/actions/runner](https://github.com/actions/runner)
+  * CodeWiki: [https://codewiki.google/github.com/actions/runner](https://codewiki.google/github.com/actions/runner) （ランナー）
   * ドキュメント: [https://docs.github.com/ja/actions](https://docs.github.com/ja/actions)
   * レビューサイト: [G2](https://www.g2.com/products/github/reviews) | [ITreview](https://www.itreview.jp/products/github-actions/reviews)
 * **カテゴリ**: CI/CD, 自動化

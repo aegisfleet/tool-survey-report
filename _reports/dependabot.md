@@ -50,8 +50,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/dependabot/dependabot-core"
-  codewiki: "https://codewiki.google/github.com/dependabot/dependabot-core"
   deepwiki: "https://deepwiki.com/dependabot/dependabot-core"
+  codewiki: "https://codewiki.google/github.com/dependabot/dependabot-core"
   documentation: "https://docs.github.com/ja/code-security/dependabot"
 relationships:
   parent: "GitHub"
@@ -71,6 +71,7 @@ relationships:
 * **公式サイト**: [https://github.com/dependabot](https://github.com/dependabot)
 * **関連リンク**:
   * GitHub: [https://github.com/dependabot/dependabot-core](https://github.com/dependabot/dependabot-core)
+  * CodeWiki: [https://codewiki.google/github.com/dependabot/dependabot-core](https://codewiki.google/github.com/dependabot/dependabot-core)
   * ドキュメント: [https://docs.github.com/ja/code-security/dependabot](https://docs.github.com/ja/code-security/dependabot)
 * **カテゴリ**: 開発者ツール
 * **概要**: Dependabotは、GitHubに統合された依存関係管理ツールです。プロジェクトの依存ライブラリを監視し、セキュリティ脆弱性が発見された場合や新しいバージョンがリリースされた場合に、自動的にプルリクエストを作成して更新を提案します。

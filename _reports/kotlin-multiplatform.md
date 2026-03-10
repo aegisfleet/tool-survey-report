@@ -54,7 +54,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/JetBrains/kotlin"
-  codewiki: "https://codewiki.google/github.com/JetBrains/kotlin"
   deepwiki: "https://deepwiki.com/JetBrains/kotlin"
   documentation: "https://kotlinlang.org/docs/multiplatform.html"
 relationships:

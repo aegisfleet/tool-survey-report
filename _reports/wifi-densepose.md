@@ -62,6 +62,7 @@ links:
 * **公式サイト**: [https://github.com/ruvnet/wifi-densepose](https://github.com/ruvnet/wifi-densepose)
 * **関連リンク**:
   * GitHub: [https://github.com/ruvnet/wifi-densepose](https://github.com/ruvnet/wifi-densepose)
+  * CodeWiki: [https://codewiki.google/github.com/ruvnet/wifi-densepose](https://codewiki.google/github.com/ruvnet/wifi-densepose)
   * DeepWiki: [https://deepwiki.com/ruvnet/wifi-densepose](https://deepwiki.com/ruvnet/wifi-densepose)
 * **カテゴリ**: IoT/ハードウェア
 * **概要**:

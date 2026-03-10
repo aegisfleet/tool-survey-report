@@ -50,8 +50,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/appium/appium"
-  codewiki: "https://codewiki.google/github.com/appium/appium"
   deepwiki: "https://deepwiki.com/appium/appium"
+  codewiki: "https://codewiki.google/github.com/appium/appium"
   documentation: "https://appium.io/docs/en/latest/"
 relationships:
   parent: ""
@@ -81,6 +81,7 @@ relationships:
 * **公式サイト**: [https://appium.io/](https://appium.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/appium/appium](https://github.com/appium/appium)
+  * CodeWiki: [https://codewiki.google/github.com/appium/appium](https://codewiki.google/github.com/appium/appium)
   * ドキュメント: [https://appium.io/docs/en/latest/](https://appium.io/docs/en/latest/)
   * レビューサイト: [SoftwareReviews](https://www.softwarereviews.com/products/appium)
 * **カテゴリ**: テスト/QA

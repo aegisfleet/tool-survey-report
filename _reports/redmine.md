@@ -51,7 +51,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/redmine/redmine"
-  codewiki: "https://codewiki.google/github.com/redmine/redmine"
   deepwiki: "https://deepwiki.com/redmine/redmine"
   documentation: "https://www.redmine.org/guide"
 relationships:

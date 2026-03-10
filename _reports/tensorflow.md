@@ -49,8 +49,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/tensorflow/tensorflow"
-  codewiki: "https://codewiki.google/github.com/tensorflow/tensorflow"
   deepwiki: "https://deepwiki.com/tensorflow/tensorflow"
+  codewiki: "https://codewiki.google/github.com/tensorflow/tensorflow"
   documentation: "https://www.tensorflow.org/api_docs"
 relationships:
   related_tools:
@@ -73,6 +73,7 @@ relationships:
 * **公式サイト**: [https://www.tensorflow.org/](https://www.tensorflow.org/)
 * **関連リンク**:
   * GitHub: [https://github.com/tensorflow/tensorflow](https://github.com/tensorflow/tensorflow)
+  * CodeWiki: [https://codewiki.google/github.com/tensorflow/tensorflow](https://codewiki.google/github.com/tensorflow/tensorflow)
   * DeepWiki: [https://deepwiki.com/tensorflow/tensorflow](https://deepwiki.com/tensorflow/tensorflow)
   * ドキュメント: [https://www.tensorflow.org/api_docs](https://www.tensorflow.org/api_docs)
 * **カテゴリ**: AI開発基盤

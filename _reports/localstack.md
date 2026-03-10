@@ -45,7 +45,6 @@ evaluation:
 
 links:
   github: "https://github.com/localstack/localstack"
-  codewiki: "https://codewiki.google/github.com/localstack/localstack"
   deepwiki: "https://deepwiki.com/localstack/localstack"
   documentation: "https://docs.localstack.cloud/"
 relationships:

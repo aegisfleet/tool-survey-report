@@ -75,6 +75,7 @@ relationships:
 * **公式サイト**: [https://playwright.dev/docs/test-agents](https://playwright.dev/docs/test-agents)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/playwright](https://github.com/microsoft/playwright)
+  * CodeWiki: [https://codewiki.google/github.com/microsoft/playwright](https://codewiki.google/github.com/microsoft/playwright)
   * ドキュメント: [https://playwright.dev/docs/test-agents](https://playwright.dev/docs/test-agents)
 * **カテゴリ**: テスト/QA
 * **概要**: Playwright Test Agentsは、Playwrightフレームワークに統合された自律型AIエージェント群です。「Planner（計画）」、「Generator（生成）」、「Healer（修復）」の3つのエージェントが連携し、自然言語による指示からテスト計画を作成し、Playwrightテストコードを自動生成し、失敗したテストを自動的に修復します。

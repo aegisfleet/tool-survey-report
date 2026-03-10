@@ -50,7 +50,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/RooCodeInc/Roo-Code"
-  codewiki: "https://codewiki.google/github.com/RooCodeInc/Roo-Code"
   deepwiki: "https://deepwiki.com/RooCodeInc/Roo-Code"
   documentation: "https://docs.roocode.com/"
 relationships:

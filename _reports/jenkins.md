@@ -49,8 +49,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/jenkinsci/jenkins"
-  codewiki: "https://codewiki.google/github.com/jenkinsci/jenkins"
   deepwiki: "https://deepwiki.com/jenkinsci/jenkins"
+  codewiki: "https://codewiki.google/github.com/jenkinsci/jenkins"
   documentation: "https://www.jenkins.io/doc/"
 relationships:
   children:
@@ -71,6 +71,7 @@ relationships:
 * **公式サイト**: [https://www.jenkins.io/](https://www.jenkins.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/jenkinsci/jenkins](https://github.com/jenkinsci/jenkins)
+  * CodeWiki: [https://codewiki.google/github.com/jenkinsci/jenkins](https://codewiki.google/github.com/jenkinsci/jenkins)
   * ドキュメント: [https://www.jenkins.io/doc/](https://www.jenkins.io/doc/)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/jenkins/reviews)
 * **カテゴリ**: CI/CD

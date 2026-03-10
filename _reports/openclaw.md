@@ -44,8 +44,8 @@ evaluation:
 
 links:
   github: "https://github.com/openclaw/openclaw"
-  codewiki: "https://codewiki.google/github.com/openclaw/openclaw"
   deepwiki: "https://deepwiki.com/openclaw/openclaw"
+  codewiki: "https://codewiki.google/github.com/openclaw/openclaw"
   documentation: "https://docs.openclaw.ai/"
 relationships:
   related_tools:
@@ -63,6 +63,7 @@ relationships:
 * **公式サイト**: [https://openclaw.ai/](https://openclaw.ai/)
 * **関連リンク**:
   * GitHub: [https://github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)
+  * CodeWiki: [https://codewiki.google/github.com/openclaw/openclaw](https://codewiki.google/github.com/openclaw/openclaw)
   * DeepWiki: [https://deepwiki.com/openclaw/openclaw](https://deepwiki.com/openclaw/openclaw)
   * ドキュメント: [https://docs.openclaw.ai/](https://docs.openclaw.ai/)
 * **カテゴリ**: AIエージェント / パーソナルアシスタント

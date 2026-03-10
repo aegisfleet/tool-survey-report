@@ -69,6 +69,7 @@ relationships:
 * **公式サイト**: [https://karpenter.sh/](https://karpenter.sh/)
 * **関連リンク**:
   * GitHub: [https://github.com/kubernetes-sigs/karpenter](https://github.com/kubernetes-sigs/karpenter)
+  * CodeWiki: [https://codewiki.google/github.com/kubernetes-sigs/karpenter](https://codewiki.google/github.com/kubernetes-sigs/karpenter)
   * ドキュメント: [https://karpenter.sh/docs/](https://karpenter.sh/docs/)
 * **カテゴリ**: インフラ/クラウド
 * **概要**: Karpenterは、Kubernetesクラスタ向けのオープンソース・高性能ノードオートスケーラーです。アプリケーションの負荷や要件に応じて、適切な性能とコストのコンピューティングリソース（ノード）をジャストインタイムで起動・削除することで、アプリケーションの可用性向上とインフラコストの最適化を実現します。

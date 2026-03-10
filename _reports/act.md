@@ -44,8 +44,8 @@ evaluation:
 
 links:
   github: "https://github.com/nektos/act"
-  codewiki: "https://codewiki.google/github.com/nektos/act"
   deepwiki: "https://deepwiki.com/nektos/act"
+  codewiki: "https://codewiki.google/github.com/nektos/act"
   documentation: "https://nektosact.com/introduction.html"
 
 relationships:
@@ -67,6 +67,7 @@ relationships:
 * **公式サイト**: [https://nektosact.com/](https://nektosact.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/nektos/act](https://github.com/nektos/act)
+  * CodeWiki: [https://codewiki.google/github.com/nektos/act](https://codewiki.google/github.com/nektos/act)
   * ドキュメント: [https://nektosact.com/introduction.html](https://nektosact.com/introduction.html)
   * レビューサイト: なし (GitHub Stars: 68k+ / 2026年1月時点)
 * **カテゴリ**: DevOps / CI/CD

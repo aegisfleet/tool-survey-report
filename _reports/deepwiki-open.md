@@ -74,6 +74,7 @@ relationships:
 * **公式サイト**: [https://github.com/AsyncFuncAI/deepwiki-open](https://github.com/AsyncFuncAI/deepwiki-open)
 * **関連リンク**:
   * GitHub: [https://github.com/AsyncFuncAI/deepwiki-open](https://github.com/AsyncFuncAI/deepwiki-open)
+  * CodeWiki: [https://codewiki.google/github.com/AsyncFuncAI/deepwiki-open](https://codewiki.google/github.com/AsyncFuncAI/deepwiki-open)
   * DeepWiki: [https://deepwiki.com/AsyncFuncAI/deepwiki-open](https://deepwiki.com/AsyncFuncAI/deepwiki-open)
   * ドキュメント: [https://asyncfunc.mintlify.app/](https://asyncfunc.mintlify.app/)
 * **カテゴリ**: ドキュメント/ナレッジ

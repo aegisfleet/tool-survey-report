@@ -72,6 +72,7 @@ relationships:
 * **公式サイト**: [https://deno.com/](https://deno.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/denoland/deno](https://github.com/denoland/deno)
+  * CodeWiki: [https://codewiki.google/github.com/denoland/deno](https://codewiki.google/github.com/denoland/deno)
   * ドキュメント: [https://docs.deno.com/](https://docs.deno.com/)
 * **カテゴリ**: 開発者ツール
 * **概要**: Node.jsの作者Ryan Dahl氏によって開発された、セキュリティと開発者体験（DX）を重視したモダンなJavaScript/TypeScriptランタイム。RustとV8エンジン上に構築されている。

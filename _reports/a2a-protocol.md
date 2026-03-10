@@ -42,8 +42,8 @@ evaluation:
 
 links:
   github: "https://github.com/a2aproject/A2A"
-  codewiki: "https://codewiki.google/github.com/a2aproject/A2A"
   deepwiki: "https://deepwiki.com/a2aproject/A2A"
+  codewiki: "https://codewiki.google/github.com/a2aproject/A2A"
   documentation: "https://a2a-protocol.org/"
 relationships:
   related_tools:
@@ -61,6 +61,7 @@ relationships:
 * **公式サイト**: [https://a2a-protocol.org/](https://a2a-protocol.org/)
 * **関連リンク**:
   * GitHub: [https://github.com/a2aproject/A2A](https://github.com/a2aproject/A2A)
+  * CodeWiki: [https://codewiki.google/github.com/a2aproject/A2A](https://codewiki.google/github.com/a2aproject/A2A)
   * ドキュメント: [https://a2a-protocol.org/](https://a2a-protocol.org/)
 * **カテゴリ**: AI開発基盤 / プロトコル
 * **概要**: 異なるプラットフォームやフレームワーク（LangGraph, CrewAI, Semantic Kernelなど）で構築されたAIエージェント同士が、相互に通信し、タスクを委任したり連携したりするためのユニバーサルな分散型標準プロトコル。

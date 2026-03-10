@@ -69,6 +69,7 @@ relationships:
 * **公式サイト**: [https://jj-vcs.dev/](https://jj-vcs.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/jj-vcs/jj](https://github.com/jj-vcs/jj)
+  * CodeWiki: [https://codewiki.google/github.com/jj-vcs/jj](https://codewiki.google/github.com/jj-vcs/jj)
   * ドキュメント: [https://docs.jj-vcs.dev/](https://docs.jj-vcs.dev/)
 * **カテゴリ**: バージョン管理
 * **概要**: Jujutsu (jj) は、Gitと互換性を持つ次世代のバージョン管理システム（VCS）です。Gitリポジトリをバックエンドとして使用できるため、既存のGitワークフローやツール（GitHubなど）と共存しながら、Gitの複雑さや使いにくさを解消することを目指しています。Rust言語で開発されており、高速かつ安全な動作が特徴です。

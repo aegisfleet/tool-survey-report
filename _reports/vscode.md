@@ -50,8 +50,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/microsoft/vscode"
-  codewiki: "https://codewiki.google/github.com/microsoft/vscode"
   deepwiki: "https://deepwiki.com/microsoft/vscode"
+  codewiki: "https://codewiki.google/github.com/microsoft/vscode"
   documentation: "https://code.visualstudio.com/docs"
 relationships:
   related_tools:
@@ -75,6 +75,7 @@ relationships:
 * **公式サイト**: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/vscode](https://github.com/microsoft/vscode)
+  * CodeWiki: [https://codewiki.google/github.com/microsoft/vscode](https://codewiki.google/github.com/microsoft/vscode)
   * ドキュメント: [https://code.visualstudio.com/docs](https://code.visualstudio.com/docs)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/visual-studio-code/reviews)
 * **カテゴリ**: IDE/エディタ

@@ -51,7 +51,6 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/honojs/hono"
-  codewiki: "https://codewiki.google/github.com/honojs/hono"
   deepwiki: "https://deepwiki.com/honojs/hono"
   documentation: "https://hono.dev/docs"
 relationships:

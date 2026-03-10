@@ -50,8 +50,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/bytedance/UI-TARS-desktop"
-  codewiki: "https://codewiki.google/github.com/bytedance/UI-TARS-desktop"
   deepwiki: "https://deepwiki.com/bytedance/UI-TARS-desktop"
+  codewiki: "https://codewiki.google/github.com/bytedance/UI-TARS-desktop"
   documentation: "https://github.com/bytedance/UI-TARS-desktop/tree/main/docs"
 relationships:
   parent: null
@@ -80,6 +80,7 @@ relationships:
 * **公式サイト**: [https://github.com/bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop)
 * **関連リンク**:
   * GitHub: [https://github.com/bytedance/UI-TARS-desktop](https://github.com/bytedance/UI-TARS-desktop)
+  * CodeWiki: [https://codewiki.google/github.com/bytedance/UI-TARS-desktop](https://codewiki.google/github.com/bytedance/UI-TARS-desktop)
   * DeepWiki: [https://deepwiki.com/bytedance/UI-TARS-desktop](https://deepwiki.com/bytedance/UI-TARS-desktop)
   * モデルリポジトリ: [https://github.com/bytedance/UI-TARS](https://github.com/bytedance/UI-TARS)
   * 論文 (arXiv): [UI-TARS: Pioneering Automated GUI Interaction with Native Agents](https://arxiv.org/abs/2501.12326)

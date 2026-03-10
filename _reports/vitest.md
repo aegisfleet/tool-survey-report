@@ -61,6 +61,7 @@ relationships:
 * **公式サイト**: [https://vitest.dev/](https://vitest.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/vitest-dev/vitest](https://github.com/vitest-dev/vitest)
+  * CodeWiki: [https://codewiki.google/github.com/vitest-dev/vitest](https://codewiki.google/github.com/vitest-dev/vitest)
   * DeepWiki: [https://deepwiki.com/vitest-dev/vitest](https://deepwiki.com/vitest-dev/vitest)
   * ドキュメント: [https://vitest.dev/guide/](https://vitest.dev/guide/)
 * **カテゴリ**: テスト/QA

@@ -43,8 +43,8 @@ evaluation:
 
 links:
   github: "https://github.com/googleworkspace/cli"
-  codewiki: "https://codewiki.google/github.com/googleworkspace/cli"
   deepwiki: "https://deepwiki.com/googleworkspace/cli"
+  codewiki: "https://codewiki.google/github.com/googleworkspace/cli"
 relationships:
   related_tools:
     - "Google Cloud"
@@ -60,6 +60,7 @@ relationships:
 * **公式サイト**: [https://developers.google.com/workspace](https://developers.google.com/workspace)
 * **関連リンク**:
   * GitHub: [https://github.com/googleworkspace/cli](https://github.com/googleworkspace/cli)
+  * CodeWiki: [https://codewiki.google/github.com/googleworkspace/cli](https://codewiki.google/github.com/googleworkspace/cli)
 * **カテゴリ**: 開発者ツール
 * **概要**: Google WorkspaceのAPIをターミナルやスクリプト、AIエージェントから操作するためのCLIツールです。Discovery Serviceを使用してコマンドを動的に構築し、Drive、Gmail、CalendarなどすべてのWorkspace APIに対する操作をボイラープレートなしで実現します。
 

@@ -83,6 +83,7 @@ relationships:
 * **公式サイト**: [https://www.langchain.com/](https://www.langchain.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/langchain-ai/langchain](https://github.com/langchain-ai/langchain)
+  * CodeWiki: [https://codewiki.google/github.com/langchain-ai/langchain](https://codewiki.google/github.com/langchain-ai/langchain)
   * ドキュメント: [https://docs.langchain.com/](https://docs.langchain.com/)
   * レビューサイト: [G2](https://www.g2.com/products/langchain/reviews)
 * **カテゴリ**: AI開発基盤

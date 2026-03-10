@@ -75,6 +75,7 @@ relationships:
 * **公式サイト**: [https://www.selenium.dev/](https://www.selenium.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium)
+  * CodeWiki: [https://codewiki.google/github.com/SeleniumHQ/selenium](https://codewiki.google/github.com/SeleniumHQ/selenium)
   * ドキュメント: [https://www.selenium.dev/documentation/](https://www.selenium.dev/documentation/)
   * レビューサイト: [G2](https://www.g2.com/products/selenium-hq/reviews)
 * **カテゴリ**: テスト/QA

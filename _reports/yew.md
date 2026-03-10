@@ -65,6 +65,7 @@ relationships:
 * **公式サイト**: [https://yew.rs/](https://yew.rs/)
 * **関連リンク**:
   * GitHub: [https://github.com/yewstack/yew](https://github.com/yewstack/yew)
+  * CodeWiki: [https://codewiki.google/github.com/yewstack/yew](https://codewiki.google/github.com/yewstack/yew)
   * ドキュメント: [https://yew.rs/docs/getting-started/introduction](https://yew.rs/docs/getting-started/introduction)
   * 日本語ドキュメント: [https://yew.rs/ja/](https://yew.rs/ja/)
 * **カテゴリ**: Webフレームワーク
