@@ -63,6 +63,7 @@ relationships:
     - "Cursor"
     - "OpenHands"
     - "Google Jules"
+    - "Agent Zero"
     - "Manus"
 ---
 

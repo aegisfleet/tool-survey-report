@@ -53,6 +53,7 @@ relationships:
   parent: "Gemini"
   related_tools:
     - "Devin"
+    - "Agent Zero"
     - "OpenHands"
     - "Manus"
     - "GitHub Copilot"
