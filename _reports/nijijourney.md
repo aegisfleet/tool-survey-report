@@ -8,12 +8,11 @@ category: "生成AI"
 developer: "Spellbrush & Midjourney"
 official_site: "https://nijijourney.com/"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-11"
 tags:
   - "生成AI"
   - "AI"
-  - "アニメ"
-  - "モバイルアプリ"
+  - "SaaS"
 description: "MidjourneyとSpellbrushが共同開発した、アニメ・マンガ・ゲームスタイルに特化した画像生成AIツール。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -25,7 +24,7 @@ quick_summary:
     - "イラストレーター"
     - "アニメファン"
     - "ゲーム開発者"
-  latest_highlight: "2025年12月に動画生成機能の強化（エンドフレーム指定）を実施"
+  latest_highlight: "2026年2月に「Style Codes（参照画像なしでのスタイル指定）」機能を追加"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -52,8 +51,6 @@ relationships:
   children: []
   related_tools:
     - "Stable Diffusion"
-    - "PixAI"
-    - "NovelAI"
 ---
 
 # **Niji Journey 調査レポート**
@@ -66,8 +63,8 @@ relationships:
 * **公式サイト**: [https://nijijourney.com/](https://nijijourney.com/)
 * **関連リンク**:
   * ドキュメント: [https://nijijourney.com/help-center](https://nijijourney.com/help-center)
-  * レビューサイト: [Google Play](https://play.google.com/store/apps/details?id=com.spellbrush.nijijourney) | [App Store](https://apps.apple.com/us/app/niji-journey-ai-anime-art/id6446376937)
-* **カテゴリ**: 画像生成AI
+  * レビューサイト: [App Store](https://apps.apple.com/us/app/niji-journey-ai-anime-art/id6446376937)
+* **カテゴリ**: 生成AI
 * **概要**: Midjourneyの強力な生成能力をベースに、Spellbrushがアニメ・マンガ・ゲームのスタイルに特化させて調整した画像生成AI。Discordおよび専用のモバイルアプリから利用可能で、高品質なアニメ風イラストを簡単に生成できる。
 
 ## **2. 目的と主な利用シーン**
@@ -144,9 +141,9 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: 公式ドキュメントおよびMidjourneyのドキュメントが利用可能。
-* **コミュニティ**: 公式Discordサーバーが非常に活発で、日本語チャンネルも存在し、ノウハウ共有が盛ん。
-* **公式サポート**: メールおよびDiscord経由でのサポートに対応。
+* **ドキュメント**: [公式ヘルプセンター](https://nijijourney.com/help-center)にてFAQや基本的な使い方がまとめられている。Midjourneyのドキュメントも併用可能。
+* **コミュニティ**: [公式Discordサーバー](https://nijijourney.com/ja/)が非常に活発で、日本語チャンネルも存在し、ノウハウ共有が盛ん。
+* **公式サポート**: メール（support@nijijourney.com）およびDiscord経由でのサポートに対応。日本語での問い合わせも可能。
 
 ## **10. エコシステムと連携**
 
@@ -190,24 +187,24 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: Google Play, App Store
-* **総合評価**: 3.8〜4.2/5.0
+* **調査対象**: App Store
+* **総合評価**: 4.4/5.0 (App Store)
 * **ポジティブな評価**:
-  * 「アニメ絵のクオリティがとにかく高い。他のAIでは出せない味がある。」
-  * 「スマホアプリでここまで手軽に作れるのは革命的。」
+  * 「アニメ絵のクオリティがとにかく高い。他の画像生成AIの中で一番良いと感じる。」
+  * 「スマホアプリで手軽に作れるし、仕事の出先など通信環境が悪い場所でもDiscordより使いやすい。」
   * 「日本語で指示できるのが本当に助かる。」
 * **ネガティブな評価 / 改善要望**:
-  * 「長時間生成しているとスマホが熱くなる。」
-  * 「無料枠がもっと欲しい。」
-  * 「アップデート後に画風が変わってしまった。」
-* **特徴的なユースケース**: TRPGのキャラクター立ち絵作成や、小説投稿サイトの表紙作成での利用が非常に多い。
+  * 「大量の画像（連続しての生成など）を生成しているとスマホが熱くなり動作が重くなる。」
+  * 「キャラクター、画像プロンプト、スタイル参照の使い分けやUIの配置が少し分かりにくい部分がある。」
+  * 「完全な実写などの特定のコンテンツを生成したい場合のモデレーションが厳しすぎる場合がある。」
+* **特徴的なユースケース**: TRPGのキャラクター立ち絵作成、小説投稿サイトの表紙作成、そしてSNSアイコンや個人的な趣味のイラスト作成としての利用が非常に多い。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-02-23**: アプリ v1.32.0 / v1.33.0 - 新機能「Style Codes」のリリース。参照画像なしでも特定のスタイルコード（文字列）を指定することで、様々な画風を探索・共有できるようになった。
 * **2025-12-10**: アプリ v1.31.0 - 動画生成機能（Video Model）の強化。エンドフレーム指定が可能になり、より制御された動画作成が可能に。
 * **2025-08-08**: アプリ v1.30.0 - Video Creation機能の追加。
-* **2025-07-30**: アプリ v1.29.0 - パーソナライズ機能（Personalization）の実装。
-* **2025-06-17**: Midjourney v7 ベースのモデルへの移行準備とテスト運用開始（一部ユーザー向け）。
+* **2025-07-30**: アプリ v1.29.0 - パーソナライズ機能、ムードボード、レーティング機能の実装。
 
 (出典: [App Store Version History](https://apps.apple.com/us/app/niji-journey-ai-anime-art/id6446376937))
 
