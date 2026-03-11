@@ -61,6 +61,7 @@ relationships:
     - "Qodo"
     - "Visual Studio Code"
     - "Cursor"
+    - "OpenAI Codex"
     - "Microsoft 365 Copilot"
     - "Windsurf"
     - "GitLab Duo"

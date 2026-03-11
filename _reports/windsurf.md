@@ -61,6 +61,7 @@ relationships:
     - "Roo Code"
     - "Android Studio"
     - "Kiro"
+    - "OpenAI Codex"
 ---
 
 # **Windsurf 調査レポート**
