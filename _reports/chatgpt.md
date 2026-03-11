@@ -56,6 +56,7 @@ relationships:
   related_tools:
     - "Gemini"
     - "Claude"
+    - "Pomelli"
     - "DeepSeek"
     - "Grok"
     - "Microsoft 365 Copilot"

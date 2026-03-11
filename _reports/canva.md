@@ -59,6 +59,7 @@ relationships:
   related_tools:
     - "Figma"
     - "GIMP"
+    - "Pomelli"
     - "Miro"
     - "Gamma"
     - "Speaker Deck"
