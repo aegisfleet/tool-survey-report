@@ -47,6 +47,7 @@ relationships:
     - "SmartHR"
     - "Backlog"
     - "KING OF TIME"
+    - "ナクサナイ"
 ---
 
 # **ワスレナイ 調査レポート**
