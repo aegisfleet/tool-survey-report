@@ -56,6 +56,7 @@ relationships:
     - "UI-TARS Desktop"
     - "AutoGPT"
     - "Google Jules"
+    - "Agent Zero"
     - "GitHub Copilot"
     - "Cursor"
     - "Manus"
