@@ -65,6 +65,7 @@ relationships:
     - "Android Studio"
     - "Devin"
     - "Agent Trace"
+    - "OpenAI Codex"
 ---
 
 # **Cursor 調査レポート**

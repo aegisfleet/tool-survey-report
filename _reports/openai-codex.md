@@ -7,14 +7,14 @@ tool_reading: "オープンエーアイ コーデックス"
 category: "AIコーディング支援"
 developer: "OpenAI"
 official_site: "https://github.com/openai/codex"
-date: "2026-01-27"
-last_updated: "2026-01-27"
+date: "2026-03-12"
+last_updated: "2026-03-12"
 tags:
   - "AI"
   - "エージェント"
   - "オープンソース"
   - "コーディング支援"
-  - "Rust"
+  - "開発者ツール"
 description: "OpenAIが提供するRust製の軽量ターミナル型コーディングエージェント。ChatGPTプランと連携し、ローカル環境で高速に動作する。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -68,11 +68,11 @@ relationships:
 * **ツール名**: OpenAI Codex
 * **ツールの読み方**: オープンエーアイ コーデックス
 * **開発元**: OpenAI
-* **公式サイト**: [https://github.com/openai/codex](https://github.com/openai/codex) (Web版: [chatgpt.com/codex](https://chatgpt.com/codex))
+* **公式サイト**: [https://github.com/openai/codex](https://github.com/openai/codex)
 * **関連リンク**:
   * GitHub: [openai/codex](https://github.com/openai/codex)
   * ドキュメント: [Codex Documentation](https://github.com/openai/codex/tree/main/docs)
-* **カテゴリ**: AIコーディング支援 / CLIツール
+* **カテゴリ**: AIコーディング支援
 * **概要**:
   * 現在の「OpenAI Codex」は、**ターミナル内で動作する軽量なコーディングエージェント**を指す（旧APIは2023年終了）。
   * Rust言語で開発されたオープンソースツール（Apache-2.0）であり、ローカルファイルシステムを直接操作できる。
@@ -212,12 +212,12 @@ relationships:
 * **調査対象**: GitHub, X (Twitter), 技術ブログ等（2025年〜2026年の投稿を中心に分析）。
 * **総合評価**: CLIツールとして非常に高い評価（GitHub Star 57.7k）。
 * **ポジティブな評価**:
-  * 「Rust製で起動が一瞬。以前のPython製ツールより遥かに快適。」
-  * 「ターミナルから出ずにAIとペアプロできるのが最高。コンテキストスイッチが減った。」
-  * 「WindsurfやCursorと組み合わせて使うと開発効率が倍増する。」
+  * 「Rust製で起動が一瞬。以前のPython製ツールより遥かに快適。」 (Google検索結果より引用)
+  * 「ターミナルから出ずにAIとペアプロできるのが最高。コンテキストスイッチが減った。」 (Google検索結果より引用)
+  * 「WindsurfやCursorと組み合わせて使うと開発効率が倍増する。」 (Google検索結果より引用)
 * **ネガティブな評価 / 改善要望**:
-  * 「古いCodexの記事（API時代）が検索で出てきて紛らわしい。」
-  * 「GUIがないので、複雑な差分確認はエディタで行う必要がある。」
+  * 「古いCodexの記事（API時代）が検索で出てきて紛らわしい。」 (Google検索結果より引用)
+  * 「GUIがないので、複雑な差分確認はエディタで行う必要がある。」 (Google検索結果より引用)
 * **特徴的なユースケース**:
   * SSHで接続したリモートサーバー上でのコーディング作業支援。
 
