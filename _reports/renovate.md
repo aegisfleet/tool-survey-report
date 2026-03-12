@@ -45,6 +45,7 @@ links:
 relationships:
   related_tools:
     - "Dependabot"
+    - "pinact"
 ---
 
 # **Renovate 調査レポート**
