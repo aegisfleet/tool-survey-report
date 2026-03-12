@@ -53,6 +53,7 @@ links:
   documentation: "https://docs.openhands.dev/"
 relationships:
   related_tools:
+    - "Deep Agents"
     - "UI-TARS Desktop"
     - "AutoGPT"
     - "Google Jules"
