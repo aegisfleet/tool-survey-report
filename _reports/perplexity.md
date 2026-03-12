@@ -8,7 +8,7 @@ category: "AI検索エンジン"
 developer: "Perplexity AI, Inc."
 official_site: "https://www.perplexity.ai/"
 date: "2026-01-27"
-last_updated: "2026-01-27"
+last_updated: "2026-03-13"
 tags:
   - "AI"
   - "会話型AI"
@@ -25,7 +25,7 @@ quick_summary:
     - "研究者"
     - "開発者"
     - "情報収集を行う全ての人"
-  latest_highlight: "2025年12月にAPIからsonar-reasoningモデルを廃止"
+  latest_highlight: "2026年2月にAgent APIをリリース。2025年後半にはPro SearchのGAや公式SDKを提供"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -70,7 +70,7 @@ relationships:
 * **公式サイト**: [https://www.perplexity.ai/](https://www.perplexity.ai/)
 * **関連リンク**:
   * ドキュメント: [https://docs.perplexity.ai/](https://docs.perplexity.ai/)
-  * レビューサイト: [G2](https://www.g2.com/products/perplexity/reviews) | [App Store](https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334)
+  * レビューサイト: [App Store](https://apps.apple.com/us/app/perplexity-ask-anything/id1668000334)
 * **カテゴリ**: AI検索エンジン
 * **概要**: ユーザーの質問に対し、Web上の最新情報源を基に、大規模言語モデルが要約と出典付きの回答を生成する対話型のAI検索エンジン。従来のキーワード検索とは異なり、自然言語での複雑な質問にも対応する。
 
@@ -180,8 +180,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, App Store, Google Play
-* **総合評価**: 4.6/5.0 (G2)
+* **調査対象**: G2 (Google検索結果からの引用), App Store, Google Play
+* **総合評価**: 4.6/5.0 (G2より引用)
 * **ポジティブな評価**:
   * 「Google検索に戻れなくなった。情報の到達スピードが段違い。」
   * 「出典が明記されている安心感が大きい。」
@@ -196,11 +196,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-12-15**: APIから`sonar-reasoning`モデルが廃止され、より高性能な`sonar-reasoning-pro`への移行が推奨された。
-* **2025-11-20**: 米国共通役務庁（GSA）との提携を発表し、政府機関向けサービスを強化。
-* **2025-11-15**: エージェント型ショッピング機能「Agentic Shopping」を発表。商品検索から購入までをサポート。
-* **2025-10-28**: AI統合型ブラウザ「Comet」を試験的に公開（Google Discoへの対抗）。
-* **2025-08-10**: 複数の大手メディアから著作権侵害に関する訴訟を提起され、コンテンツ利用ポリシーを改定。
+* **2026-02-XX**: Agent APIの提供を開始。
+* **2025-12-XX**: 古いモデル（`llama-3.1-sonar-small-128k-online`等）の廃止と新しいSonar / Sonar Proモデルへの移行を推進。
+* **2025-11-XX**: Pro Searchが一般提供（GA）され、より高度なリサーチやマルチモーダル機能に対応。
+* **2025-10-XX**: 開発者向けに公式のPerplexity SDKを提供開始。
+* **2025-09-XX**: File Attachments（ファイル添付機能）のサポートを開始。
 
 (出典: [Perplexity Changelog](https://docs.perplexity.ai/changelog), 公式ブログ)
 
