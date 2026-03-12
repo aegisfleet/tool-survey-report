@@ -64,6 +64,7 @@ relationships:
     - "OpenHands"
     - "Google Jules"
     - "Agent Zero"
+    - "OpenCode"
     - "Manus"
 ---
 

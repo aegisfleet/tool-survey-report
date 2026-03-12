@@ -61,6 +61,7 @@ relationships:
     - "Cursor"
     - "Manus"
     - "Devin"
+    - "OpenCode"
 ---
 
 # **OpenHands 調査レポート**
