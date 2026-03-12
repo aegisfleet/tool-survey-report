@@ -56,7 +56,8 @@ links:
   documentation: "https://docs.langchain.com/"
 relationships:
   parent: ""
-  children: []
+  children:
+    - "Deep Agents"
   related_tools:
     - "Dify"
     - "AutoGPT"

@@ -57,6 +57,7 @@ relationships:
   children:
     - "DeepWiki"
   related_tools:
+    - "Deep Agents"
     - "AWS Frontier Agents"
     - "Claude Code"
     - "GitHub Copilot"
