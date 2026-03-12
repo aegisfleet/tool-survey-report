@@ -7,15 +7,15 @@ tool_reading: "オープンコード"
 category: "自律型AIエージェント"
 developer: "Anomaly"
 official_site: "https://opencode.ai/"
-date: "2026-01-27"
-last_updated: "2026-01-27"
+date: "2026-03-12"
+last_updated: "2026-03-12"
 tags:
   - "AI"
   - "オープンソース"
   - "エージェント"
   - "自律型"
   - "コーディング支援"
-  - "TUI"
+  - "開発者ツール"
 description: "ターミナル、IDE、デスクトップで動作するオープンソースのAIコーディングエージェント。プライバシー重視で、多様なLLMに対応。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -43,13 +43,14 @@ evaluation:
       reason: "プライバシー重視でコードデータを保存しない設計"
     - point: 2
       reason: "TUI、GUI、IDE拡張と柔軟な利用形態を提供"
-  minus_points:
+  minus_points: []
   summary: "オープンソースで柔軟性が高く、プライバシーにも配慮された強力なAIコーディングエージェント。コストパフォーマンスと自由度で非常に優れている。"
 
 # 【任意項目】該当するもののみ記載
 links:
   github: "https://github.com/anomalyco/opencode"
   deepwiki: "https://deepwiki.com/anomalyco/opencode"
+  codewiki: "https://codewiki.google/github.com/anomalyco/opencode"
   documentation: "https://opencode.ai/docs"
 relationships:
   parent: ""
@@ -78,8 +79,9 @@ relationships:
 * **公式サイト**: [https://opencode.ai/](https://opencode.ai/)
 * **関連リンク**:
   * GitHub: [https://github.com/anomalyco/opencode](https://github.com/anomalyco/opencode)
+  * DeepWiki: [https://deepwiki.com/anomalyco/opencode](https://deepwiki.com/anomalyco/opencode)
+  * CodeWiki: [https://codewiki.google/github.com/anomalyco/opencode](https://codewiki.google/github.com/anomalyco/opencode)
   * ドキュメント: [https://opencode.ai/docs](https://opencode.ai/docs)
-  * Discord: [https://discord.gg/opencode](https://discord.gg/opencode)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: OpenCodeは、ターミナル、IDE、またはデスクトップアプリとして動作するオープンソースのAIコーディングエージェントです。75以上のLLMプロバイダーに対応し、LSP（Language Server Protocol）の統合やマルチセッション機能を備え、プライバシーを重視した設計が特徴です。
 
@@ -376,10 +378,10 @@ relationships:
 -->
 
 * **総合的な評価**:
-  OpenCodeは、オープンソースのAIコーディングエージェントとして決定版と言える完成度と人気を誇っています。特定のベンダーにロックインされることなく、最新・最強のモデル（Claude 3.5 Sonnetなど）やローカルモデルを自由に組み合わせて利用できる点が最大の魅力です。
+  * OpenCodeは、オープンソースのAIコーディングエージェントとして決定版と言える完成度と人気を誇っています。特定のベンダーにロックインされることなく、最新・最強のモデル（Claude 3.5 Sonnetなど）やローカルモデルを自由に組み合わせて利用できる点が最大の魅力です。
 * **推奨されるチームやプロジェクト**:
   * コストを抑えつつ高性能なAIエージェントを導入したいスタートアップや個人開発者。
   * セキュリティポリシーにより、データが外部に保存されることを懸念する企業。
   * ターミナルでの作業を主とするインフラエンジニアやバックエンドエンジニア。
 * **選択時のポイント**:
-  「GUIかTUIか」「統合型か独立型か」がポイントになります。エディタ体験そのものを変えたい場合はCursorなどが競合になりますが、既存の環境（ターミナルやVS Code）に強力なエージェントを追加したい場合、OpenCodeは最適解の一つです。
+  * 「GUIかTUIか」「統合型か独立型か」がポイントになります。エディタ体験そのものを変えたい場合はCursorなどが競合になりますが、既存の環境（ターミナルやVS Code）に強力なエージェントを追加したい場合、OpenCodeは最適解の一つです。
