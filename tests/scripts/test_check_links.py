@@ -4,7 +4,7 @@ import sys
 import os
 
 # Add the root directory to sys.path to import scripts
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from scripts.check_links import find_links_in_file
 from scripts import check_links
 

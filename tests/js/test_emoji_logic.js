@@ -135,7 +135,7 @@ global.document = {
 };
 
 // Load and execute script
-const scriptPath = path.join(__dirname, '../assets/js/home.js');
+const scriptPath = path.join(__dirname, '../../assets/js/home.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
 const vm = require('node:vm');

@@ -3,7 +3,7 @@ import sys
 import os
 
 # Add the root directory to sys.path to import scripts
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 os.environ['TESTING'] = '1'
 from scripts.update_wiki_links import get_github_repo
 

@@ -8,7 +8,7 @@ import socket
 import ipaddress
 
 # Add the root directory to sys.path to import scripts
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 from scripts.browser_test import run_browser_test, main, BrowserTestRunner, BrowserTestError
 
 # SonarCloud: The following tests intentionally use insecure protocols and local IPs
