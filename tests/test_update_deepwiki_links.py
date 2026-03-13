@@ -5,7 +5,7 @@ import os
 # Add the root directory to sys.path to import scripts
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 os.environ['TESTING'] = '1'
-from scripts.update_deepwiki_links import get_github_repo
+from scripts.update_wiki_links import get_github_repo
 
 class TestGetGithubRepo(unittest.TestCase):
     def test_quoted_url(self):
