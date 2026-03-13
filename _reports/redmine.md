@@ -8,11 +8,11 @@ category: "プロジェクト管理"
 developer: "Jean-Philippe Lang and community"
 official_site: "https://www.redmine.org/"
 date: "2026-01-10"
-last_updated: "2026-01-27"
+last_updated: "2026-03-14"
 tags:
   - "オープンソース"
   - "開発者ツール"
-  - "勤怠管理"
+  - "バグトラッキング"
   - "Ruby"
 description: "オープンソースで提供される柔軟なWebベースのプロジェクト管理・課題管理ツール。オンプレミス環境で構築でき、高いカスタマイズ性が特徴。"
 
