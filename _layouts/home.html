@@ -60,10 +60,11 @@ layout: default
       </div>
       <fieldset class="interest-guide-chips">
         <legend class="sr-only">興味別ガイド</legend>
-        <button type="button" class="interest-chip" data-interest-search="ai">🤖 AI活用・自動化</button>
-        <button type="button" class="interest-chip" data-interest-search="テスト QA">🧪 テスト・品質改善</button>
-        <button type="button" class="interest-chip" data-interest-search="プロジェクト管理 ナレッジ ドキュメント">📋 チーム運用・情報共有</button>
-        <button type="button" class="interest-chip" data-interest-search="自動化 開発 効率">🔧 開発生産性を高める</button>
+        <button type="button" class="interest-chip" data-interest-search="AI">🤖 AI活用・自動化</button>
+        <button type="button" class="interest-chip" data-interest-search="テスト | QA | 品質">🧪 テスト・品質改善</button>
+        <button type="button" class="interest-chip" data-interest-search="プロジェクト | ナレッジ | ドキュメント | 共有">📋
+          チーム運用・情報共有</button>
+        <button type="button" class="interest-chip" data-interest-search="自動化 | 効率 | 支援">🔧 開発生産性を高める</button>
         <button type="button" class="interest-chip" data-interest-sort="oss-free">💚 無料で始められるツール</button>
       </fieldset>
       <button type="button" class="interest-reset" id="interest-reset">絞り込みをリセット</button>
@@ -183,7 +184,8 @@ layout: default
           </div>
           {%- endif -%}
 
-          {%- if report.official_site or report.links.documentation or report.links.github or report.links.deepwiki or report.links.codewiki -%}
+          {%- if report.official_site or report.links.documentation or report.links.github or report.links.deepwiki or
+          report.links.codewiki -%}
           <div class="report-card-links">
             {%- if report.official_site -%}
             <a href="{{ report.official_site }}" target="_blank" rel="noopener" class="card-link-btn" title="公式サイト"
