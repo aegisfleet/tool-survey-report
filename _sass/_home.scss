@@ -386,7 +386,7 @@
     @include card(map-get($spacers, 4));
     margin-bottom: map-get($spacers, 4);
     border: 1px solid rgba($primary-color, 0.15);
-    background: linear-gradient(135deg, rgba($primary-color, 0.06), rgba($white, 0.9));
+    background: linear-gradient(135deg, rgba($primary-color, 0.06), var(--color-bg-content));
 
     .interest-guides-header {
         margin-bottom: map-get($spacers, 3);
@@ -399,7 +399,7 @@
 
         p {
             margin: 0;
-            color: $text-muted;
+            color: var(--color-text-muted);
         }
     }
 
@@ -415,9 +415,9 @@
 
     .interest-chip,
     .interest-reset {
-        border: 1px solid rgba($primary-color, 0.25);
-        background: rgba($white, 0.95);
-        color: $text-color;
+        border: 1px solid var(--color-border);
+        background: var(--color-bg-content);
+        color: var(--color-text);
         border-radius: $border-radius-xl;
         padding: map-get($spacers, 2) map-get($spacers, 3);
         font-size: $font-size-sm;
@@ -426,8 +426,8 @@
 
         &:hover {
             transform: translateY(-1px);
-            border-color: rgba($primary-color, 0.45);
-            box-shadow: $box-shadow-sm;
+            border-color: $primary-color;
+            box-shadow: var(--shadow-sm);
         }
     }
 

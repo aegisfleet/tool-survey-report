@@ -214,14 +214,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortBy = sortSelect.value;
 
     const filteredCards = reportCards.filter((card) => {
-      const matchesSearch =
-        !searchTerm ||
-        (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(searchTerm)) ||
-        (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(searchTerm)) ||
-        (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(searchTerm)) ||
-        (card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(searchTerm)) ||
-        (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(searchTerm)) ||
-        (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(searchTerm));
+      const searchTerms = searchTerm.split(/\s+/).filter(t => t);
+      
+      const matchesSearch = searchTerms.every(term => {
+        return (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(term)) ||
+               (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(term)) ||
+               (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(term)) ||
+               (card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(term)) ||
+               (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(term)) ||
+               (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(term));
+      });
+
       const matchesTag =
         !selectedTag ||
         card.dataset.tags
