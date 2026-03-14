@@ -31,3 +31,16 @@ updates:
       prefix: "build"
       include: "scope"
     open-pull-requests-limit: 10
+
+  # Pythonの依存関係（requirements.txt）を監視
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 10
