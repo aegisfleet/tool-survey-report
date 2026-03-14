@@ -1,9 +1,6 @@
 import os
 import re
-try:
-    import yaml
-except ImportError:
-    yaml = None
+
 try:
     from playwright.sync_api import sync_playwright
 except ImportError:
