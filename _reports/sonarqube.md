@@ -8,14 +8,13 @@ category: "コード品質"
 developer: "SonarSource"
 official_site: "https://www.sonarsource.com/products/sonarqube/"
 date: "2025-10-19"
-last_updated: "2026-01-27"
+last_updated: "2026-03-14"
 tags:
-  - "コード品質"
+  - "オープンソース"
+  - "DevOps"
   - "静的解析"
   - "セキュリティ"
   - "SAST"
-  - "オープンソース"
-  - "DevOps"
 description: "継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォーム。AIを活用したコード修正提案や、30以上の言語に対応したSAST機能を提供します。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -27,7 +26,7 @@ quick_summary:
     - "開発者"
     - "DevOpsエンジニア"
     - "品質保証(QA)チーム"
-  latest_highlight: "2025年12月にSonarQube Server 2025.6をリリース"
+  latest_highlight: "2026年2月にSonarQube Server 26.2をリリース"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -70,7 +69,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/SonarSource/sonarqube](https://github.com/SonarSource/sonarqube)
   * ドキュメント: [https://docs.sonarsource.com/sonarqube-server/latest/](https://docs.sonarsource.com/sonarqube-server/latest/)
-  * レビューサイト: [G2](https://www.g2.com/products/sonarqube/reviews) | [Capterra](https://www.capterra.com/p/134552/SonarQube/) | [ITreview](https://www.itreview.jp/products/sonarqube)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/sonarqube)
 * **カテゴリ**: コード品質
 * **概要**: SonarQubeは、継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォームです。30以上のプログラミング言語に対応し、バグ、コードの臭い(保守性の低いコード)、セキュリティ脆弱性を開発プロセスの早い段階で検出します。
 
@@ -190,7 +189,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, ITreview
+* **調査対象**: G2 (Google検索結果より引用), Capterra (Google検索結果より引用), ITreview
 * **総合評価**: 各サイトで5段階中4.5以上の高評価を獲得。
 * **ポジティブな評価**:
   * 「コード品質が可視化され、チーム全体の意識が向上した」
@@ -205,12 +204,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-12-11 (2025.6)**: Jira CloudおよびSlackとの統合強化。JavaScript/TypeScriptの解析速度が最大40%向上。Swift 6.2およびPython 3.14のサポート追加。
-* **2025-09-24 (2025.5)**: GitHub Actionsの脆弱性検出機能追加。WPFフレームワークのセキュリティ検出対応。Python解析の大幅なパフォーマンス向上。
-* **2025-07-31 (2025.4 LTA)**: 長期サポート版(LTA)リリース。Go言語のSAST対応、VB.NETの汚染解析、YAML/JSON/Kotlinでのシークレット検出強化。
-* **2025-05-29 (2025 Release 3)**: Advanced Security (SCA & 高度なSAST) のGA。KotlinのSASTサポート、MISRA C++:2023準拠。
+* **2026-02-04 (26.2)**: 複数のバグ修正とパフォーマンス改善を含む最新コミュニティビルドのリリース。
+* **2026-01-06 (26.1)**: 最新のSonarQube Serverアップデートのリリース。
+* **2025-12-23 (25.12)**: 2025年最終アップデート。
 
-(出典: [SonarQube Server Release Announcements](https://www.sonarsource.com/products/sonarqube/whats-new/))
+(出典: [GitHub Releases](https://github.com/SonarSource/sonarqube/releases) / [SonarQube Server Release Announcements](https://www.sonarsource.com/products/sonarqube/whats-new/))
 
 ## **16. 類似ツールとの比較**
 
