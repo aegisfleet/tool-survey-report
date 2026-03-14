@@ -214,20 +214,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const sortBy = sortSelect.value;
 
     const filteredCards = reportCards.filter((card) => {
-      const orGroups = searchTerm.split(/\||\sOR\s/i).map(t => t.trim()).filter(t => t);
-      
-      const matchesSearch = orGroups.length === 0 || orGroups.some(group => {
-        const andTerms = group.split(/\s+/).filter(t => t);
-        return andTerms.every(term => {
-          const hTerm = toHiragana(term.toLowerCase());
-          return (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm)) ||
-                 (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm)) ||
-                 (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm)) ||
-                 (card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm)) ||
-                 (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm)) ||
-                 (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(hTerm));
+      const orGroups = searchTerm
+        .split(/\||\sOR\s/i)
+        .map((t) => t.trim())
+        .filter((t) => t);
+
+      const matchesSearch =
+        orGroups.length === 0 ||
+        orGroups.some((group) => {
+          const andTerms = group.split(/\s+/).filter((t) => t);
+          return andTerms.every((term) => {
+            const hTerm = toHiragana(term.toLowerCase());
+            return (
+              (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm)) ||
+              (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm)) ||
+              (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm)) ||
+              (card.dataset.latestHighlight &&
+                toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm)) ||
+              (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm)) ||
+              (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(hTerm))
+            );
+          });
         });
-      });
 
       const matchesTag =
         !selectedTag ||
