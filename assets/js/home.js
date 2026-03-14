@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryFilter = document.getElementById('category-filter');
   const categoryFilterClear = document.getElementById('category-filter-clear');
   const sortSelect = document.getElementById('sort-select');
+  const interestChips = Array.from(document.querySelectorAll('.interest-chip'));
+  const interestReset = document.getElementById('interest-reset');
   const reportsGrid = document.getElementById('reports-grid');
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
@@ -338,6 +340,30 @@ document.addEventListener('DOMContentLoaded', () => {
   sortSelect.addEventListener('change', () => {
     filterAndSort();
   });
+
+  interestChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const suggestedSearch = chip.dataset.interestSearch || '';
+      const suggestedSort = chip.dataset.interestSort || 'score-desc';
+
+      searchInput.value = suggestedSearch;
+      tagFilter.value = '';
+      categoryFilter.value = '';
+      sortSelect.value = suggestedSort;
+
+      filterAndSort();
+    });
+  });
+
+  if (interestReset) {
+    interestReset.addEventListener('click', () => {
+      searchInput.value = '';
+      tagFilter.value = '';
+      categoryFilter.value = '';
+      sortSelect.value = 'date-desc';
+      filterAndSort();
+    });
+  }
 
   searchClear.addEventListener('click', () => {
     searchInput.value = '';
