@@ -1,6 +1,7 @@
 // Common styles and utilities
 // This file contains shared styles to avoid duplication
 
+
 // Form input placeholder styles
 %form-input-base {
     padding: map-get($spacers, 2) map-get($spacers, 3);
@@ -180,6 +181,10 @@
     clip: rect(0, 0, 0, 0) !important;
     white-space: nowrap !important;
     border: 0 !important;
+}
+
+.sr-only {
+    @extend %sr-only;
 }
 
 // Link reset

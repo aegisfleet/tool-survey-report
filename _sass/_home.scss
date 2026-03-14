@@ -1,4 +1,5 @@
 // Home page styles
+
 .home-container {
     @include make-container;
     @include make-container-max-widths;
@@ -406,6 +407,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: map-get($spacers, 2);
+        border: 0;
+        padding: 0;
+        margin: 0;
+        min-width: 0;
     }
 
     .interest-chip,
