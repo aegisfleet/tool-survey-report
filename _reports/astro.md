@@ -61,6 +61,7 @@ relationships:
     - "Hugo"
     - "Jekyll"
     - "Next.js"
+    - "WordPress"
 ---
 
 # **Astro 調査レポート**
