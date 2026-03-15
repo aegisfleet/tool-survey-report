@@ -7,8 +7,8 @@ tool_reading: "ワードプレス"
 category: "CMS"
 developer: "WordPress Foundation"
 official_site: "https://wordpress.org"
-date: "2025-10-20"
-last_updated: "2026-01-27"
+date: "2026-03-15"
+last_updated: "2026-03-15"
 tags:
   - "CMS"
   - "オープンソース"
@@ -26,7 +26,7 @@ quick_summary:
     - "ブロガー"
     - "中小企業"
     - "開発者"
-  latest_highlight: "2025年12月に共同編集機能や多数のブロックを追加したバージョン6.9をリリース"
+  latest_highlight: "2026年3月にWordPress 6.9.4のマイナーリリースと、次期メジャーバージョン7.0のBeta 5を公開"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -70,8 +70,8 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/WordPress/WordPress](https://github.com/WordPress/WordPress)
   * ドキュメント: [https://developer.wordpress.org/documentation/](https://developer.wordpress.org/documentation/)
-  * レビューサイト: [G2](https://www.g2.com/products/wordpress-com/reviews) | [ITreview](https://www.itreview.jp/products/wordpress/reviews)
-* **カテゴリ**: コンテンツ管理システム (CMS)
+  * レビューサイト: [G2](https://www.g2.com/products/wordpress/reviews) | [ITreview](https://www.itreview.jp/products/wordpress/reviews)
+* **カテゴリ**: CMS
 * **概要**: 世界のウェブサイトの40%以上で利用されている、オープンソースのコンテンツ管理システム（CMS）です。豊富なテーマ（デザイン）とプラグイン（拡張機能）により、個人のブログから大企業の公式サイト、Eコマースサイトまで、あらゆる種類のウェブサイトを柔軟に構築・管理できます。
 
 ## **2. 目的と主な利用シーン**
@@ -216,15 +216,17 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-12: WordPress 7.0 Beta 5**
+  * 次期メジャーバージョンである7.0のテスト用ベータ版の公開。
+* **2026-03-11: WordPress 6.9.4 Release**
+  * パフォーマンス向上やバグ修正を含む、安定板向けのマイナーリリース。
 * **2025-12-02: WordPress 6.9 “Gene” リリース**
   * **共同編集機能の強化**: ブロックごとにメモを残せる「ノート機能」を追加し、複数人での非同期コラボレーションを円滑化。
   * **ブロックの拡充**: アコーディオン、用語クエリ、数式、読了時間など、新しい標準ブロックが多数追加。
   * **デザインツールの進化**: 見出しや段落のテキストサイズをコンテナ幅に合わせて自動調整する「テキストフィット機能」を追加。
   * **開発者向けAPI**: AI連携などを目的とした「Abilities API」の導入や、クライアントサイドでのナビゲーションを強化する「Interactivity API」の改善。
-  (出典: [WordPress 6.9 “Gene” リリースノート](https://wordpress.org/news/2025/12/gene/))
 
-* **2025-11-25: WordPress 6.9 Release Candidate 3**
-  * 正式リリースに向けた最終候補版の公開とテストの呼びかけ。
+(出典: [リリースノート](https://wordpress.org/news/category/releases/))
 
 ## **16. 類似ツールとの比較**
 
