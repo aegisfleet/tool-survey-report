@@ -67,6 +67,7 @@ relationships:
     - "Agent Zero"
     - "OpenCode"
     - "Manus"
+    - "Windsurf"
 ---
 
 # **Devin 調査レポート**

@@ -8,11 +8,10 @@ category: "AIコードエディタ"
 developer: "Cognition, Inc."
 official_site: "https://windsurf.com/"
 date: "2025-10-21"
-last_updated: "2026-01-27"
+last_updated: "2026-03-15"
 tags:
   - "AI"
   - "コーディング支援"
-  - "IDE"
   - "エージェント"
   - "開発者ツール"
   - "生成AI"
@@ -27,7 +26,7 @@ quick_summary:
     - "開発者"
     - "スタートアップ"
     - "大企業"
-  latest_highlight: "2026年1月にGPT-5.2-Codexモデルをサポート"
+  latest_highlight: "2026年3月にv1.9577系をリリース、Jupyter NotebookやCascade機能のパフォーマンス向上など"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -60,8 +59,6 @@ relationships:
     - "Google Antigravity"
     - "Roo Code"
     - "Android Studio"
-    - "Kiro"
-    - "OpenAI Codex"
 ---
 
 # **Windsurf 調査レポート**
@@ -74,7 +71,6 @@ relationships:
 * **公式サイト**: [https://windsurf.com/](https://windsurf.com/)
 * **関連リンク**:
   * ドキュメント: [https://docs.windsurf.com/](https://docs.windsurf.com/)
-  * レビューサイト: [G2](https://www.g2.com/products/exafunction-windsurf/reviews)
 * **カテゴリ**: AIコードエディタ
 * **概要**: Windsurfは、開発者とそのチームがフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。独自のAIネイティブIDEのほか、既存のIDE（VS Code, JetBrainsなど40以上）と連携するプラグインも提供しています。Cognition, Inc.（Devinの開発元）によって開発・提供されています。
 
@@ -157,7 +153,7 @@ relationships:
 ## **9. サポート体制**
 
 * **ドキュメント**: [公式サイト](https://docs.windsurf.com/)に充実したドキュメントが整備されている。
-* **コミュニティ**: [Discordサーバー](https://discord.gg/GjCYNGChrw)や[Reddit](https://reddit.com/r/windsurf)でユーザー間の交流や情報交換が活発に行われている。
+* **コミュニティ**: [Discordサーバー](https://discord.gg/GjCYNGChrw)でユーザー間の交流や情報交換が活発に行われている。
 * **公式サポート**: [サポートページ](https://windsurf.com/support)からチャットでの問い合わせが可能。エンタープライズプランでは優先サポートが提供される。
 
 ## **10. エコシステムと連携**
@@ -199,15 +195,15 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2.com, 公式サイト掲載の顧客の声
+* **調査対象**: G2, 公式サイト掲載の顧客の声
 * **総合評価**: 4.1/5.0 (G2)
 * **ポジティブな評価**:
-  * 「Windsurfは非常に高速で、コードの提案はプロジェクトに非常に関連性が高いです。」 - Sujeet A, Senior Software Engineer
-  * 「AIコード補完機能は非常に直感的で、コーディングプロセスを高速化するのに役立つ。」
-  * セットアップの容易さが高く評価されている（95%）。
+  * 「Windsurfは非常に高速で、コードの提案はプロジェクトに非常に関連性が高いです。」 - Sujeet A, Senior Software Engineer (G2より引用)
+  * 「AIコード補完機能は非常に直感的で、コーディングプロセスを高速化するのに役立つ。」 (G2より引用)
+  * セットアップの容易さが高く評価されている。
   * 「効率が60-70%向上した」との声もある。
 * **ネガティブな評価 / 改善要望**:
-  * ドキュメント（73%）、コミュニティ（70%）、精度（74%）の項目で改善の余地がある。（G2の評価時点）
+  * ドキュメントやコミュニティ、精度の項目で改善の余地があるとの指摘がある。（G2より引用）
   * AIの提案が時々的外れになることがある。
 * **特徴的なユースケース**:
   * 既存のIDE（VS Code, JetBrains）に統合して、慣れた環境でAIの支援を受けながら開発を進める。
@@ -216,13 +212,15 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-09**: v1.9577.24リリース。Jupyter Notebookのパフォーマンス向上、Cascade UIレンダリングの改善、モデル価格変更の通知機能などを追加。
+* **2026-02-12**: v1.9552.21リリース。Plan ModeからCode Modeへの自動切り替え機能、Linux ARM64クライアントの正式サポート、Devinサービスキー認証のサポートなどを追加。
+* **2026-02-04**: v1.9544.35リリース。Arena ModeのFast ArenaおよびHybrid Arenaで`GPT-5.3-Codex-Spark`モデルが利用可能に。
 * **2026-01-14**: 最新の`GPT-5.2-Codex`モデルが利用可能に。複数の推論レベルを選択でき、期間限定でクレジット割引も適用される。
 * **2025-12-24**: 「Windsurf Wave 13: Merry Shipmas」アップデートをリリース。ホリデーシーズン向けの機能強化やUI改善を実施。
 * **2025-12-11**: `GPT-5.2`モデルのサポートを開始。
 * **2025-11-24**: `Opus 4.5`モデルが利用可能に。
 * **2025-10-29**: 高速なエージェントモデル`SWE-1.5`を導入。
 * **2025-10-16**: SWE-grepを活用した`Fast Context`サブエージェントを導入し、関連コードの検索速度が最大20倍向上。
-* **2025-08-14**: 大規模アップデート(v1.12.1)。UIの全面的な再設計、`Devin`機能の統合、`Vibe and Replace`（AIによる検索置換）、Tabオートコンプリートの改善などを実施。
 
 (出典: [Windsurf Blog](https://windsurf.com/blog), [Changelog](https://windsurf.com/changelog))
 
