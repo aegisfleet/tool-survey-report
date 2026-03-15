@@ -57,6 +57,7 @@ relationships:
     - "Canva"
     - "Affinity"
     - "GIMP"
+    - "OpenPencil"
 ---
 
 # **Figma 調査レポート**
@@ -353,13 +354,13 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | 本ツール (Figma) | Penpot | Adobe XD | Sketch |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | ベクター編集 | ◎ | ◯ | ◯ | ◎ |
-| **コラボレーション** | リアルタイム編集 | ◎<br><small>業界最高水準</small> | ◯<br><small>良好</small> | △<br><small>同期遅延あり</small> | △<br><small>Macのみ</small> |
-| **開発連携** | コード生成 | ◎<br><small>Dev Mode, Code Connect</small> | ◎<br><small>SVG/CSS標準準拠</small> | △<br><small>基本機能のみ</small> | ◯<br><small>要プラグイン</small> |
-| **Web構築** | サイト公開 | ◯<br><small>Figma Sites (Beta)</small> | × | × | × |
-| **非機能要件** | コスト | △<br><small>値上げ傾向</small> | ◎<br><small>OSS・無料</small> | ◯<br><small>CCに含まれる</small> | ◯<br><small>買い切りあり(過去)</small> |
+| 機能カテゴリ | 機能項目 | 本ツール (Figma) | Penpot | Adobe XD | Sketch | OpenPencil |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **基本機能** | ベクター編集 | ◎ | ◯ | ◯ | ◎ | ◯ |
+| **コラボレーション** | リアルタイム編集 | ◎<br><small>業界最高水準</small> | ◯<br><small>良好</small> | △<br><small>同期遅延あり</small> | △<br><small>Macのみ</small> | △<br><small>ローカル主体</small> |
+| **開発連携** | コード生成 | ◎<br><small>Dev Mode, Code Connect</small> | ◎<br><small>SVG/CSS標準準拠</small> | △<br><small>基本機能のみ</small> | ◯<br><small>要プラグイン</small> | ◎<br><small>読書可能なMCP連携</small> |
+| **Web構築** | サイト公開 | ◯<br><small>Figma Sites (Beta)</small> | × | × | × | × |
+| **非機能要件** | コスト | △<br><small>値上げ傾向</small> | ◎<br><small>OSS・無料</small> | ◯<br><small>CCに含まれる</small> | ◯<br><small>買い切りあり(過去)</small> | ◎<br><small>OSS・無料</small> |
 
 ### **16.2 詳細比較**
 
@@ -371,6 +372,7 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Figma** | クラウドネイティブ、オールインワン | 機能の豊富さ、AI連携、エコシステム、サイト構築まで可能 | コストが高い、オフライン不可 | 予算があり、最新のフローで開発したいチーム |
+| **OpenPencil** | AIネイティブ、ローカルファースト、OSS | Figmaファイル互換、制限のないMCP連携、完全無料 | エコシステムが発展途上、クラウドベースの共有はFigmaに劣る | 開発とデザインをAIでシームレスに繋ぎたいエンジニア、ローカル環境を重視するチーム |
 | **Penpot** | オープンソース、標準規格準拠 | 完全無料（セルフホスト可）、SVG/CSSベースで開発者に優しい | プラグインが少ない、機能面でFigmaに追従中 | コストを抑えたい、OSSを重視する、Linux環境 |
 | **Sketch** | Macネイティブ | Macでの高速な動作、ローカルファイル管理 | Windows/ブラウザ非対応、コラボレーションが弱い | 全員がMacユーザーで、ローカル管理を好む場合 |
 | **Adobe XD** | Adobe CC連携 | 動作が軽量 | **開発終了モード**（新機能追加なし） | 既存資産がある場合のみ（新規採用は非推奨） |
