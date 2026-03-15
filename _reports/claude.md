@@ -1,66 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Claude 調査レポート"
-tool_name: "Claude"
-tool_reading: "クロード"
-category: "生成AI"
-developer: "Anthropic"
-official_site: "https://claude.ai/"
-date: "2025-10-18"
-last_updated: "2026-02-25"
+title: Claude 調査レポート
+tool_name: Claude
+tool_reading: クロード
+category: 生成AI
+developer: Anthropic
+official_site: https://claude.ai/
+date: '2025-10-18'
+last_updated: '2026-02-25'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "エージェント"
-  - "コーディング支援"
-description: "Anthropicが開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。Claude 4.5シリーズを搭載し、高い推論能力と安全性、そして自律的なエージェント機能（Claude Code）を提供します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+- AI
+- 生成AI
+- 大規模言語モデル
+- エージェント
+- コーディング支援
+description: Anthropicが開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。Claude 4.5シリーズを搭載し、高い推論能力と安全性、そして自律的なエージェント機能（Claude
+  Code）を提供します。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "データサイエンティスト"
-    - "一般ユーザー"
-  latest_highlight: "2026年1月にClaude Code v2.1をリリースし、エージェント機能を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  - 開発者
+  - データサイエンティスト
+  - 一般ユーザー
+  latest_highlight: 2026年1月にClaude Code v2.1をリリースし、エージェント機能を強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-    - point: 8
-      reason: "Claude 4.5 Opus/Sonnetによる高い推論能力と長文脈理解"
-    - point: 5
-      reason: "Claude Codeによる自律的なコーディングエージェント機能が強力"
-    - point: 5
-      reason: "Model Context Protocol (MCP) による高い拡張性とエコシステム"
+  - point: 8
+    reason: Claude 4.5 Opus/Sonnetによる高い推論能力と長文脈理解
+  - point: 5
+    reason: Claude Codeによる自律的なコーディングエージェント機能が強力
+  - point: 5
+    reason: Model Context Protocol (MCP) による高い拡張性とエコシステム
   minus_points:
-    - point: -3
-      reason: "Web検索機能がChatGPTやGeminiと比較して限定的"
-  summary: "推論能力とコーディング支援において卓越しており、開発者にとって最強のアシスタントとなるが、汎用的な検索用途では競合に譲る。"
-
-# 【任意項目】該当するもののみ記載
+  - point: -3
+    reason: Web検索機能がChatGPTやGeminiと比較して限定的
+  summary: 推論能力とコーディング支援において卓越しており、開発者にとって最強のアシスタントとなるが、汎用的な検索用途では競合に譲る。
 links:
-  documentation: "https://docs.anthropic.com/"
+  documentation: https://docs.anthropic.com/
 relationships:
-  parent: "Anthropic"
+  parent: Anthropic
   children:
-    - "Claude Code"
+  - Claude Code
   related_tools:
-    - "ChatGPT"
-    - "DeepSeek"
-    - "Gemini"
-    - "Model Context Protocol"
-    - "MCP Apps"
-    - "Cursor"
-    - "GitHub Copilot"
-    - "Playwright CLI"
+  - ChatGPT
+  - DeepSeek
+  - Gemini
+  - Model Context Protocol
+  - MCP Apps
+  - Cursor
+  - GitHub Copilot
+  - Playwright CLI
+  - Z.ai
 ---
 
 # **Claude 調査レポート**
