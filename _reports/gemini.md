@@ -1,73 +1,66 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Gemini 調査レポート"
-tool_name: "Gemini"
-tool_reading: "ジェミニ"
-category: "生成AI"
-developer: "Google"
-official_site: "https://gemini.google.com/"
-date: "2025-10-19"
-last_updated: "2026-02-15"
+title: Gemini 調査レポート
+tool_name: Gemini
+tool_reading: ジェミニ
+category: 生成AI
+developer: Google
+official_site: https://gemini.google.com/
+date: '2025-10-19'
+last_updated: '2026-02-15'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "会話型AI"
-  - "マルチモーダル"
-description: "Googleによって開発された、テキスト、画像、音声、動画などを統合的に扱うマルチモーダルな生成AIモデルファミリー。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+- AI
+- 生成AI
+- 大規模言語モデル
+- 会話型AI
+- マルチモーダル
+description: Googleによって開発された、テキスト、画像、音声、動画などを統合的に扱うマルチモーダルな生成AIモデルファミリー。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般ユーザー"
-    - "開発者"
-    - "研究者"
-  latest_highlight: "2026年1月にGoogle TVとの統合を発表"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  - 一般ユーザー
+  - 開発者
+  - 研究者
+  latest_highlight: 2026年1月にGoogle TVとの統合を発表
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
-    - point: 8
-      reason: "ネイティブなマルチモーダル性能と業界トップクラスの性能を両立している"
-    - point: 7
-      reason: "最大100万トークンという巨大なコンテキストウィンドウを持つ"
-    - point: 5
-      reason: "Googleの強力なエコシステム（Workspace, Android, Google TV等）と深く連携している"
-    - point: 2
-      reason: "用途に応じた多様なモデルファミリー（Pro, Flash, Lite）を提供している"
+  - point: 8
+    reason: ネイティブなマルチモーダル性能と業界トップクラスの性能を両立している
+  - point: 7
+    reason: 最大100万トークンという巨大なコンテキストウィンドウを持つ
+  - point: 5
+    reason: Googleの強力なエコシステム（Workspace, Android, Google TV等）と深く連携している
+  - point: 2
+    reason: 用途に応じた多様なモデルファミリー（Pro, Flash, Lite）を提供している
   minus_points:
-    - point: -0
-      reason: "大きな減点要素は見当たらない"
-  summary: "業界最高水準のマルチモーダル性能と長文処理能力を誇り、Googleエコシステムとの連携で圧倒的な利便性を提供する。"
-
-# 【任意項目】該当するもののみ記載
+  - point: 0
+    reason: 大きな減点要素は見当たらない
+  summary: 業界最高水準のマルチモーダル性能と長文処理能力を誇り、Googleエコシステムとの連携で圧倒的な利便性を提供する。
 links:
-  documentation: "https://ai.google.dev/gemini-api/docs/quickstart"
+  documentation: https://ai.google.dev/gemini-api/docs/quickstart
 relationships:
-  parent: "Google Cloud"
+  parent: Google Cloud
   children:
-    - "Google Antigravity"
-    - "NotebookLM"
-    - "Code Wiki"
-    - "Google Jules"
-    - "Google Stitch"
+  - Google Antigravity
+  - NotebookLM
+  - Code Wiki
+  - Google Jules
+  - Google Stitch
   related_tools:
-    - "Google Learning"
-    - "ChatGPT"
-    - "Microsoft 365 Copilot"
-    - "Claude"
-    - "Grok"
-    - "DeepSeek"
-    - "Microsoft 365 Copilot"
-    - "Vertex AI"
-    - "Vertex AI Studio"
+  - Google Learning
+  - ChatGPT
+  - Microsoft 365 Copilot
+  - Claude
+  - Grok
+  - DeepSeek
+  - Microsoft 365 Copilot
+  - Vertex AI
+  - Vertex AI Studio
+  - Z.ai
 ---
 
 # **Gemini 調査レポート**
