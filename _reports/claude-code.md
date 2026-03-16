@@ -53,6 +53,7 @@ relationships:
     - "Cursor"
     - "GitHub Copilot"
     - "Devin"
+    - "Claude Cowork"
 ---
 
 # **Claude Code 調査レポート**

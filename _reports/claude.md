@@ -45,6 +45,7 @@ relationships:
   parent: Anthropic
   children:
   - Claude Code
+  - Claude Cowork
   related_tools:
   - ChatGPT
   - DeepSeek
