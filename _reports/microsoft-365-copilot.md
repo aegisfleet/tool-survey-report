@@ -53,6 +53,7 @@ links:
 relationships:
   children:
     - "Microsoft Work IQ"
+    - "Copilot Cowork"
   related_tools:
     - "ChatGPT"
     - "Gemini"
