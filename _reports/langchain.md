@@ -63,6 +63,7 @@ relationships:
     - "AutoGPT"
     - "GitHub Copilot SDK"
     - "Amazon Bedrock"
+    - "Amazon Bedrock AgentCore Runtime"
     - "Hugging Face"
     - "OpenAI Frontier"
     - "Agent Lightning"
