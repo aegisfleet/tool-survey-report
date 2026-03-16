@@ -7,13 +7,13 @@ tool_reading: "アマゾン クイックサイト"
 category: "BIツール"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/quicksight/"
-date: "2026-01-28"
-last_updated: "2026-01-28"
+date: "2026-03-17"
+last_updated: "2026-03-17"
 tags:
   - "AWS"
   - "BI"
   - "データ分析"
-  - "可視化"
+  - "データ可視化"
   - "SaaS"
   - "サーバーレス"
 description: "AWSが提供するサーバーレスなBIツール。SPICEによる高速なインメモリ分析と、Amazon Qを活用した生成BI機能が特徴。"
@@ -53,8 +53,8 @@ links:
   documentation: "https://docs.aws.amazon.com/quicksight/"
 relationships:
   related_tools:
-    - "Amazon Bedrock"
     - "Tableau"
+    - "Looker Studio"
 ---
 
 # **Amazon QuickSight 調査レポート**
@@ -67,7 +67,6 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/quicksight/](https://aws.amazon.com/quicksight/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/quicksight/](https://docs.aws.amazon.com/quicksight/)
-  * レビューサイト: [G2](https://www.g2.com/products/amazon-quicksight/reviews)
 * **カテゴリ**: BIツール
 * **概要**: Amazon QuickSightは、AWSが提供するクラウドネイティブなサーバーレスBIサービスです。インメモリエンジンのSPICEによる高速な集計・可視化に加え、生成AIアシスタント「Amazon Q」を統合し、自然言語でのデータ分析やレポート作成が可能です。
 
@@ -182,8 +181,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra
-* **総合評価**: 4.4/5.0 (Capterra), 4.1/5.0 (G2)
+* **調査対象**: G2 (Google検索スニペットより引用), Capterra
+* **総合評価**: 4.4/5.0 (Capterra), 4.1/5.0 (G2より引用)
 * **ポジティブな評価**:
   * 「AWSを使っているなら、セットアップの容易さと統合のスムーズさは他に変えられないメリット」
   * 「SPICEエンジンのおかげで、数億行のデータでもサクサク動く」
@@ -192,24 +191,26 @@ relationships:
   * 「ビジュアルのフォーマット（フォントサイズや色、配置）の自由度がまだ足りない」
   * 「エラーメッセージが不親切で、原因特定に時間がかかることがある」
   * 「テーブル計算や複雑なロジックの実装が少し難しい」
+* **特徴的なユースケース**:
+  * AWS上で構築したデータレイク（S3 + Athena）から直接データを読み込み、外部へのデータエクスポートなしに全社向けKPIダッシュボードをサーバーレスで運用している事例。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-02-18**: Amazon Q in QuickSightで、ダッシュボードのデータに対するカスタムQ&A機能が強化され、より精度の高い回答が得られるように。(出典: AWS News Blog)
+* **2026-01-12**: SPICEエンジンのパフォーマンスが向上し、10億行以上の大規模データセットの取り込みとクエリがさらに高速化。(出典: AWS News Blog)
 * **2025-10-15**: Googleスプレッドシートへの直接接続をサポート。認証設定により安全にシートデータを読み込み可能に。(出典: AWS News Blog)
-* **2025-09-XX**: Amazon Q in QuickSightの機能強化。生成されたダッシュボードの編集機能や、データストーリーの共有機能が改善。
-* **2025-07-XX**: Paginated Reportsの出力形式としてExcelサポートが強化。複数のタブへの出力などが可能に。
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Amazon QuickSight | Tableau | Microsoft Power BI |
+| 機能カテゴリ | 機能項目 | Amazon QuickSight | Tableau | Looker Studio |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 視覚化・表現力 | ◯<br><small>標準的</small> | ◎<br><small>業界最高水準</small> | ◎<br><small>非常に高い</small> |
-| **インフラ** | 管理運用 | ◎<br><small>完全サーバーレス</small> | △<br><small>Server管理が必要な場合あり</small> | ◯<br><small>SaaSだが容量管理等あり</small> |
-| **AI機能** | 自然言語分析 | ◎<br><small>Amazon Q統合</small> | ◯<br><small>Tableau Pulse</small> | ◎<br><small>Copilot統合</small> |
-| **コスト** | 閲覧ライセンス | ◎<br><small>低価格・従量制あり</small> | △<br><small>比較的高価</small> | ◯<br><small>Proライセンス等が必要</small> |
-| **エコシステム** | AWS連携 | ◎<br><small>ネイティブ統合</small> | ◯<br><small>コネクタ対応</small> | ◯<br><small>コネクタ対応</small> |
+| **基本機能** | 視覚化・表現力 | ◯<br><small>標準的</small> | ◎<br><small>業界最高水準</small> | △<br><small>簡易的</small> |
+| **インフラ** | 管理運用 | ◎<br><small>完全サーバーレス</small> | △<br><small>Server管理が必要な場合あり</small> | ◎<br><small>完全SaaS・インフラ不要</small> |
+| **AI機能** | 自然言語分析 | ◎<br><small>Amazon Q統合</small> | ◯<br><small>Tableau Pulse</small> | △<br><small>限定的</small> |
+| **コスト** | 閲覧ライセンス | ◎<br><small>低価格・従量制あり</small> | △<br><small>比較的高価</small> | ◎<br><small>基本無料</small> |
+| **エコシステム** | ネイティブ連携 | ◎<br><small>AWS連携に強み</small> | ◎<br><small>Salesforce連携に強み</small> | ◎<br><small>Google系に強み</small> |
 
 ### **16.2 詳細比較**
 
@@ -217,7 +218,7 @@ relationships:
 |---|---|---|---|---|
 | **Amazon QuickSight** | AWSネイティブ・サーバーレス | サーバー管理不要、AWSデータとの親和性、安価な閲覧コスト | 表現力の自由度、非AWS連携の幅 | AWSを中心にデータ基盤を構築しており、運用負荷を下げたい場合。 |
 | **Tableau** | ビジュアル分析のデファクト | 圧倒的な表現力、強力なコミュニティ、直感的な深掘り分析 | ライセンスコストが高い、学習コストが高い | データの探索的分析を重視し、高度なビジュアライゼーションが必要な場合。 |
-| **Power BI** | Microsoft製品との統合 | Office 365との連携、安価な開始コスト、Windowsユーザーへの親和性 | 大規模データのパフォーマンス管理が複雑になる場合がある | Microsoftエコシステム（Azure, Office）を利用している場合。 |
+| **Looker Studio** | Googleが提供する無料ツール | 完全無料から利用可能、Google広告やGA4等との容易な連携 | 複雑な計算や大規模データの処理性能に限界がある | コストをかけずにマーケティングデータ等を素早く可視化したい場合。 |
 
 ## **17. 総評**
 
