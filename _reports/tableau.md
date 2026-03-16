@@ -12,7 +12,7 @@ last_updated: "2026-01-28"
 tags:
   - "BI"
   - "データ分析"
-  - "可視化"
+  - "データ可視化"
   - "Salesforce"
   - "SaaS"
   - "ノーコード"
@@ -55,7 +55,6 @@ relationships:
   parent: "Salesforce"
   related_tools:
     - "Amazon QuickSight"
-    - "Microsoft Power BI"
     - "Looker Studio"
 ---
 

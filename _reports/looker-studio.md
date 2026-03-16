@@ -9,7 +9,8 @@ official_site: "https://cloud.google.com/looker-studio?hl=ja"
 date: "2026-03-04"
 last_updated: "2026-03-04"
 tags:
-  - "BIツール"
+  - "BI"
+  - "データ分析"
   - "データ可視化"
   - "無料ツール"
   - "Google Cloud"
@@ -51,6 +52,7 @@ links:
 relationships:
   parent: "Google Cloud"
   related_tools:
+    - "Amazon QuickSight"
     - "Tableau"
     - "Google 広告"
 ---
