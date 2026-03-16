@@ -8,7 +8,7 @@ category: "自律型AIエージェント"
 developer: "SoftBank"
 official_site: "https://www.softbank.jp/biz/services/ai/agentic-star/"
 date: "2025-12-13"
-last_updated: "2026-01-28"
+last_updated: "2026-03-16"
 tags:
   - "自律型"
   - "エージェント"

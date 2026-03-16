@@ -64,6 +64,7 @@ relationships:
     - "Cursor"
     - "OpenHands"
     - "Google Jules"
+    - "AGENTIC STAR"
     - "Agent Zero"
     - "OpenCode"
     - "Manus"
