@@ -5,7 +5,8 @@ import os
 # Add the root directory to sys.path to import scripts
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 os.environ['TESTING'] = '1'
-from scripts.update_wiki_links import get_github_repo
+from scripts.update_wiki_links import get_github_repo, update_file
+from unittest.mock import patch, mock_open
 
 class TestGetGithubRepo(unittest.TestCase):
     def test_quoted_url(self):
@@ -73,6 +74,23 @@ class TestGetGithubRepo(unittest.TestCase):
         owner, repo = get_github_repo(content)
         self.assertEqual(owner, "owner")
         self.assertEqual(repo, "repo")
+
+class TestUpdateFile(unittest.TestCase):
+    def test_update_file_write_error(self):
+        content = 'codewiki: "https://codewiki.google/"\n'
+        filepath = "dummy.md"
+        owner = "owner"
+        repo = "repo"
+
+        m = mock_open(read_data=content)
+        def side_effect(file, mode='r', *args, **kwargs):
+            if 'w' in mode:
+                raise OSError("Disk full")
+            return m.return_value
+
+        with patch("builtins.open", side_effect=side_effect):
+            with self.assertRaises(OSError):
+                update_file(filepath, owner, repo, True, False)
 
 if __name__ == "__main__":
     unittest.main()
