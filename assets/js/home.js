@@ -374,10 +374,11 @@ document.addEventListener('DOMContentLoaded', () => {
   interestChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       const suggestedSearch = chip.dataset.interestSearch || '';
-      const suggestedSort = chip.dataset.interestSort || 'score-desc';
+      const suggestedTag = chip.dataset.interestTag || '';
+      const suggestedSort = chip.dataset.interestSort || 'date-desc';
 
       searchInput.value = suggestedSearch;
-      tagFilter.value = '';
+      tagFilter.value = suggestedTag;
       categoryFilter.value = '';
       sortSelect.value = suggestedSort;
 
