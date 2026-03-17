@@ -219,22 +219,36 @@ document.addEventListener('DOMContentLoaded', () => {
         .map((t) => t.trim())
         .filter((t) => t);
 
+      // Helper for field matching (localized to filter function)
+      const matchesFields = (term, allowPartialTags = true) => {
+        const hTerm = toHiragana(term.toLowerCase());
+        const nameMatch = card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm);
+        const readingMatch = card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm);
+        const descMatch = card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm);
+        const highlightMatch = card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm);
+        const devMatch = card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm);
+        
+        // Tag matching: avoid partial matches for short terms in tags to prevent false positives (like "a" matching "tag1")
+        const tagsMatch = card.dataset.tags && card.dataset.tags.split(',').some(tag => {
+          const hTag = toHiragana(tag.trim().toLowerCase());
+          if (hTerm.length <= 1) return hTag === hTerm; // Single char must be exact
+          return allowPartialTags ? hTag.includes(hTerm) : hTag === hTerm;
+        });
+
+        return nameMatch || readingMatch || descMatch || highlightMatch || devMatch || tagsMatch;
+      };
+
       const matchesSearch =
         orGroups.length === 0 ||
         orGroups.some((group) => {
+          // 1. Try whole phrase match first
+          if (matchesFields(group)) return true;
+
+          // 2. Fallback to AND terms if multiple words
           const andTerms = group.split(/\s+/).filter((t) => t);
-          return andTerms.every((term) => {
-            const hTerm = toHiragana(term.toLowerCase());
-            return (
-              (card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm)) ||
-              (card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm)) ||
-              (card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm)) ||
-              (card.dataset.latestHighlight &&
-                toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm)) ||
-              (card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm)) ||
-              (card.dataset.tags && toHiragana(card.dataset.tags.toLowerCase()).includes(hTerm))
-            );
-          });
+          if (andTerms.length <= 1) return false;
+
+          return andTerms.every((term) => matchesFields(term, false)); // Stricter tag match for individual terms
         });
 
       const matchesTag =
@@ -244,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .map((t) => t.trim())
           .includes(selectedTag);
       const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
+      
       return matchesSearch && matchesTag && matchesCategory;
     });
 
