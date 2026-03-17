@@ -56,6 +56,7 @@ relationships:
   - GitHub Copilot
   - Playwright CLI
   - Z.ai
+  - Android Use
 ---
 
 # **Claude 調査レポート**

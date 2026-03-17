@@ -69,6 +69,7 @@ relationships:
     - "OpenCode"
     - "Manus"
     - "Windsurf"
+    - "Android Use"
 ---
 
 # **Devin 調査レポート**
