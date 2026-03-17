@@ -63,6 +63,7 @@ relationships:
     - "MagicPod"
     - "Mobile Next"
     - "Cucumber"
+    - "Android Use"
 ---
 
 # **Appium 調査レポート**

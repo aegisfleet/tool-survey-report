@@ -8,15 +8,13 @@ category: "自律型AIエージェント"
 developer: "Action State Labs"
 official_site: "https://github.com/actionstatelabs/android-action-kernel"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-17"
 tags:
   - "AI"
   - "エージェント"
   - "自律型"
   - "オープンソース"
   - "自動化"
-  - "Android"
-  - "Python"
 description: "Androidネイティブアプリを操作するためのオープンソースのAIエージェントライブラリ。アクセシビリティツリーを利用して低コストかつ高速な操作を実現。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -61,7 +59,7 @@ relationships:
     - "Appium"
     - "UiPath"
     - "Devin"
-    - "Computer Use"
+    - "Claude"
 ---
 
 # **Android Use 調査レポート**
@@ -292,7 +290,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: X (Twitter) および GitHub
+* **調査対象**: X (Twitter) および GitHub (※G2、Capterra等の主要レビューサイトにはまだレビューの登録がありません)
 * **総合評価**: リリース直後のため定量的評価はありませんが、コンセプトへの期待は高いです。
 * **ポジティブな評価**:
   * 「ラップトップが使えない現場での自動化という視点が新しい。」
@@ -333,7 +331,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Android Use) | Appium | Computer Use (Anthropic) | UiPath |
+| 機能カテゴリ | 機能項目 | 本ツール (Android Use) | Appium | Claude | UiPath |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 自律操作 | ◎<br><small>完全自律型</small> | ×<br><small>シナリオ実行型</small> | ◎<br><small>完全自律型</small> | ◯<br><small>一部AI対応</small> |
 | **対象環境** | Androidネイティブ | ◎<br><small>特化している</small> | ◎<br><small>完全対応</small> | ×<br><small>デスクトップのみ</small> | △<br><small>可能だがPC経由</small> |
@@ -351,7 +349,7 @@ relationships:
 |---------|------|------|------|------------------|
 | **Android Use** | Android特化の自律型エージェント | 低コスト、高速、画像認識不要のアプローチ。 | 機能が限定的、開発者向け。 | モバイルネイティブアプリの業務を低コストで自動化したい場合。 |
 | **Appium** | モバイルテスト自動化の標準ツール | 堅牢、クロスプラットフォーム、エコシステムが巨大。 | 自律的な判断能力はない。テストコード記述が必要。 | 品質の担保（テスト）が目的で、厳密なシナリオを実行したい場合。 |
-| **Computer Use** | AnthropicのPC操作エージェント | 汎用性が高く、画面上のあらゆるものを認識可能。 | コストが高い、モバイル非対応。 | デスクトップ作業の自動化を検討している場合。 |
+| **Claude** | AnthropicのPC操作エージェント（Computer Use） | 汎用性が高く、画面上のあらゆるものを認識可能。 | コストが高い、モバイル非対応。 | デスクトップ作業の自動化を検討している場合。 |
 | **UiPath** | エンタープライズRPAプラットフォーム | 統合管理機能、サポート、信頼性が高い。 | コストが高い、モバイル操作はPC経由など構成が複雑。 | 全社的な業務自動化基盤として導入する場合。 |
 
 ## **17. 総評**
