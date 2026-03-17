@@ -53,6 +53,7 @@ relationships:
     - "Cursor"
     - "Amazon Q Developer"
     - "Windsurf"
+    - "AWS Frontier Agents"
 ---
 
 # **Kiro 調査レポート**

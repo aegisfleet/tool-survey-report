@@ -6,14 +6,12 @@ category: "自律型AIエージェント"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/ai/frontier-agents/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-18"
 tags:
   - "AI"
   - "エージェント"
   - "自律型"
-  - "AWS"
   - "DevOps"
-  - "セキュリティ"
   - "開発者ツール"
 description: "自律性、スケーラビリティ、持続性を特徴とするAWSの新しいAIエージェント群。開発、セキュリティ、運用の各領域に特化した自律型エージェントを提供する。"
 quick_summary:
@@ -211,7 +209,7 @@ AWS Frontier Agentsは以下の3つの特化型エージェントで構成され
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | AWS Frontier Agents | Devin | GitHub Copilot |
+| 機能カテゴリ | 機能項目 | 本ツール | Devin | GitHub Copilot |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 自律タスク実行 | ◎<br><small>3領域に特化</small> | ◎<br><small>汎用開発</small> | △<br><small>Workspace機能</small> |
 | **領域** | カバー範囲 | ◎<br><small>開発・Sec・Ops</small> | ◯<br><small>開発中心</small> | ◯<br><small>開発中心</small> |
@@ -222,7 +220,7 @@ AWS Frontier Agentsは以下の3つの特化型エージェントで構成され
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **AWS Frontier Agents** | 開発・セキュリティ・運用の特化型エージェント群 | AWSエコシステムとの統合、専門性の高さ、持続的な自律稼働。 | AWS環境以外での利用制約（特にDevOps Agent）。 | AWSを中心にシステムを構築・運用しており、包括的な自律化を目指す場合。 |
+| **本ツール** | 開発・セキュリティ・運用の特化型エージェント群 | AWSエコシステムとの統合、専門性の高さ、持続的な自律稼働。 | AWS環境以外での利用制約（特にDevOps Agent）。 | - |
 | **Devin** | 自律型AIソフトウェアエンジニア | 汎用的な開発タスクの自律実行能力。独自のIDE環境。 | コスト、複雑なタスクでの成功率。 | スタートアップや、特定の開発タスクを丸ごと委任したい場合。 |
 | **GitHub Copilot** | 開発者支援AIツール | 圧倒的な普及率、IDEへの統合。Workspaceによるタスク実行。 | 完全な自律性や運用・セキュリティ領域への対応は限定的。 | 既存の開発フローを維持しつつ、生産性を向上させたい場合。 |
 
