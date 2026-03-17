@@ -76,6 +76,7 @@ relationships:
     - "Bito"
     - "Sourcery"
     - "SHIFT DQS for リバースエンジニアリング"
+    - "AWS Frontier Agents"
 ---
 
 # **GitHub Copilot 調査レポート**
