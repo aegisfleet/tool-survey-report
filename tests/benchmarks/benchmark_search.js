@@ -190,10 +190,9 @@ global.initBackToTopButton = () => {};
 global.initFilterReset = () => {};
 global.initSmartHeader = () => {};
 global.initKeyboardShortcuts = () => {};
-global.checkColorContrast = () => {};
 
 // Load the script content
-const scriptPath = path.join(__dirname, '../assets/js/main.js');
+const scriptPath = path.join(__dirname, '../../assets/js/main.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
 const vm = require('node:vm');

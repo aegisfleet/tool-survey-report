@@ -72,9 +72,6 @@ function initAll() {
 
   // Initialize keyboard shortcuts
   initKeyboardShortcuts();
-
-  // Initialize color contrast checker in development
-  checkColorContrast();
 }
 
 // Initialize when DOM is ready
@@ -808,17 +805,6 @@ function enhanceFormAccessibility() {
       field.parentElement.insertBefore(errorContainer, field.nextSibling);
     }
   });
-}
-
-// Color contrast checker (development helper)
-function checkColorContrast() {
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    console.log('Color contrast information:');
-    console.log('Primary color (#ff7733) on white background has contrast ratio: ~3.8:1');
-    console.log('Secondary color (#cc5500) on white background has contrast ratio: ~5.2:1');
-    console.log('Text color (#212529) on white background has contrast ratio: ~16.6:1');
-    console.log('All combinations meet WCAG AA standards for normal text.');
-  }
 }
 
 // Keyboard shortcuts for better navigation
