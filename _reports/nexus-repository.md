@@ -10,12 +10,11 @@ official_site: "https://www.sonatype.com/products/sonatype-nexus-repository"
 date: "2025-12-07"
 last_updated: "2026-01-28"
 tags:
-  - "アーティファクト管理"
-  - "パッケージレジストリ"
+  - "オープンソース"
   - "DevOps"
   - "CI/CD"
-  - "オープンソース"
   - "セキュリティ"
+  - "アーティファクト管理"
 description: "Maven, npm, Dockerなど多様なフォーマットに対応した、世界で最も広く利用されているアーティファクトリポジトリマネージャー。"
 
 # 【クイックサマリー】ホーム画面のカード表示用

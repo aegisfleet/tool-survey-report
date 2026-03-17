@@ -8,14 +8,13 @@ category: "開発者ツール"
 developer: "JFrog"
 official_site: "https://jfrog.com/artifactory/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-17"
 tags:
-  - "アーティファクト管理"
-  - "パッケージレジストリ"
   - "DevOps"
   - "CI/CD"
   - "セキュリティ"
   - "AI"
+  - "アーティファクト管理"
 description: "Maven, npm, Docker, PyPIなど、30以上のパッケージフォーマットに対応したユニバーサルアーティファクトリポジトリマネージャー。DevSecOpsの中核として機能する。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -27,7 +26,7 @@ quick_summary:
     - "開発者"
     - "DevOpsエンジニア"
     - "エンタープライズ"
-  latest_highlight: "2026年1月にAIネイティブエンタープライズ向けMLOps基盤構想を発表"
+  latest_highlight: "2026年3月にJFrog CLI v2.96.0リリース（UX監査に基づく違反の修正）"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -200,15 +199,19 @@ relationships:
   * 「設定が複雑で、慣れるまで時間がかかる。ドキュメントは多いが探すのが大変」
   * 「コストが高い。特にクラウド版の転送量課金が予算管理しにくい」
   * 「UIの検索機能がたまに重い」
+* **特徴的なユースケース**:
+  * セキュリティ要件の厳しい金融機関において、脆弱性スキャンを自動化し、DevSecOpsパイプラインの中核として活用。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-12**: **JFrog CLI v2.96.0リリース**。UX監査に基づく違反の修正が行われた。
+* **2026-02-18**: **JFrog CLI v2.92.0リリース**。Hugging Faceのネイティブコマンド機能およびDockerビルドのネストパスサポートなどが追加された。
+* **2026-01-22**: **JFrog CLI v2.89.0リリース**。アップロードされるアーティファクトにCI VCSのプロパティを自動設定する機能が追加された。
 * **2026-01-14**: **AWS Security Competencyの取得**。AWS環境におけるセキュリティ、アイデンティティ、コンプライアンスの基準を満たすソリューションとして認定された。
 * **2026-01-07**: **AIネイティブエンタープライズに向けたビジョン発表**。MLOps機能の強化により、AIモデルの開発からデプロイまでを安全に管理する基盤としての機能を拡充。
 * **2025-12-29**: **Docker Hardened Imagesのサポート拡大**。SLSA Level 3に準拠したセキュアなコンテナイメージの利用を促進し、サプライチェーンセキュリティを向上。
-* **2025-11-XX**: **swampUP Europe 2025開催**。DevOps, DevSecOps, MLOpsを統合する「ユニバーサル・ソフトウェア・サプライチェーン・プラットフォーム」としての方向性を提示。
 
-(出典: [JFrog Blog](https://jfrog.com/blog/))
+(出典: [JFrog Blog](https://jfrog.com/blog/), [JFrog CLI Releases](https://github.com/jfrog/jfrog-cli/releases))
 
 ## **16. 類似ツールとの比較**
 
