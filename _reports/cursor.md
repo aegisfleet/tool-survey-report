@@ -57,6 +57,7 @@ links:
   documentation: "https://cursor.com/docs"
 relationships:
   related_tools:
+    - "Context7"
     - "Visual Studio Code"
     - "GitHub Copilot"
     - "Qodo"
