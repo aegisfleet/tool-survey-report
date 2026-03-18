@@ -50,7 +50,6 @@ relationships:
   children: []
   related_tools:
     - "Playwright"
-    - "Cypress"
     - "Selenium"
 ---
 

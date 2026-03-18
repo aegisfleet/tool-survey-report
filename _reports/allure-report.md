@@ -54,7 +54,6 @@ relationships:
     - "JUnit"
     - "Selenium"
     - "Playwright"
-    - "Cypress"
     - "Cucumber"
 ---
 

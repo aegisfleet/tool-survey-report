@@ -56,7 +56,6 @@ relationships:
   related_tools:
     - "Selenium"
     - "Playwright"
-    - "Cypress"
     - "Robot Framework"
     - "Appium"
     - "Karate"
