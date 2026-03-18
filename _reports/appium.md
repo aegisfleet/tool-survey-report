@@ -60,6 +60,7 @@ relationships:
     - "CodeceptJS"
     - "Selenium"
     - "Playwright"
+    - "Cypress"
     - "MagicPod"
     - "Mobile Next"
     - "Cucumber"

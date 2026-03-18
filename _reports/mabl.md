@@ -60,7 +60,6 @@ relationships:
     - "Autify"
     - "Selenium"
     - "Playwright"
-    - "Cypress"
 ---
 
 # **mabl 調査レポート**

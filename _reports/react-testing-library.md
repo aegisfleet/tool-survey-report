@@ -54,7 +54,6 @@ relationships:
   children: []
   related_tools:
     - "React"
-    - "Cypress"
     - "Playwright"
 ---
 
