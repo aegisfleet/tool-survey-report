@@ -8,13 +8,12 @@ category: "開発者ツール"
 developer: "Upstash"
 official_site: "https://context7.com/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-18"
 tags:
   - "AI"
-  - "MCP"
-  - "ドキュメント"
   - "開発者ツール"
-  - "Upstash"
+  - "オープンソース"
+  - "エージェント"
 description: "LLMに最新のライブラリドキュメントとコード例を直接供給し、ハルシネーションを防ぐMCPサーバー"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -56,7 +55,6 @@ relationships:
   related_tools:
     - "Cursor"
     - "Claude Code"
-    - "Upstash"
 ---
 
 # **Context7 調査レポート**
@@ -193,21 +191,24 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: YouTubeレビュー、GitHub、SNS
-* **総合評価**: 非常に高い。特にCursorユーザーからの支持が厚い。
+* **調査対象**: G2, Capterra, ITreview
+* **総合評価**: 該当なし
 * **ポジティブな評価**:
+  * (G2、Capterra、ITreviewにレビューの登録なし。GitHubやSNS等で評価を確認。)
   * 「Cursorが10倍賢くなった」
   * 「ドキュメントを探してコピペする手間が完全になくなった」
   * 「ハルシネーションがなくなり、コードが一発で動くようになった」
 * **ネガティブな評価 / 改善要望**:
   * 「たまにサーバーが混雑しているのかレスポンスが遅い時がある」
   * 「対応していないマイナーなライブラリがまだある」
+* **特徴的なユースケース**:
+  * 最新のフロントエンドフレームワークやアップデートの激しいライブラリを利用するプロジェクトでのコーディングアシスト。
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-08**: v2.1.0 リリース。機能改善とバグ修正。
-* **2025-12**: 主要なMCPクライアント（Cursor, Claude）への正式対応強化。
-* **2025-11**: プライベートリポジトリ対応（Proプラン）の開始。
+* **2026-03-16**: ctx7@0.3.6 リリース。Token refresh supportなどの追加。
+* **2026-03-11**: ctx7@0.3.5 リリース。Track install count eventsなどの機能改善。
+* **2026-03-11**: ctx7@0.3.4 リリース。Popularity display in searchの追加。
 
 (出典: [GitHub Releases](https://github.com/upstash/context7/releases))
 
