@@ -14,10 +14,7 @@ tags:
   - "E2Eテスト"
   - "ブラウザテスト"
   - "オープンソース"
-  - "JavaScript"
-  - "Python"
-  - "Java"
-  - "Node.js"
+  - "CI/CD"
   - "AI"
   - "エージェント"
 description: "Microsoftが開発する、最新のWebアプリ向けエンドツーエンドテスト自動化フレームワーク。AIエージェント機能や強力なデバッグツールを備え、単一APIで全主要ブラウザに対応する。"
@@ -67,15 +64,13 @@ relationships:
     - "Playwright Test Agents"
     - "Playwright CLI"
   related_tools:
-    - "CodeceptJS"
-    - "axe DevTools"
     - "Cypress"
     - "Selenium"
-    - "Puppeteer"
+    - "Autify"
+    - "MagicPod"
+    - "mabl"
     - "Appium"
-    - "Robot Framework"
     - "Cucumber"
-    - "Allure Report"
 ---
 
 # **Playwright 調査レポート**

@@ -53,16 +53,13 @@ links:
   documentation: "https://www.selenium.dev/documentation/"
 relationships:
   related_tools:
-    - "CodeceptJS"
-    - "axe DevTools"
     - "Playwright"
-    - "PyTest"
     - "Cypress"
     - "Appium"
-    - "Robot Framework"
     - "MagicPod"
-    - "Cucumber"
-    - "Allure Report"
+    - "Autify"
+    - "mabl"
+    - "Robot Framework"
 ---
 
 # **Selenium 調査レポート**

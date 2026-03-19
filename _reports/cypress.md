@@ -15,6 +15,7 @@ tags:
   - "オープンソース"
   - "SaaS"
   - "CI/CD"
+  - "開発者ツール"
 description: "モダンなWebアプリケーション開発に特化した、開発者体験に優れるエンドツーエンド（E2E）テスト自動化ツール。インタラクティブなGUIとAI機能によるテスト作成・デバッグが特徴。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -54,9 +55,11 @@ relationships:
   related_tools:
     - "Playwright"
     - "Selenium"
-    - "CodeceptJS"
+    - "Autify"
+    - "MagicPod"
+    - "mabl"
     - "Appium"
-    - "Robot Framework"
+    - "CodeceptJS"
 ---
 
 # **Cypress 調査レポート**

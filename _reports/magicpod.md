@@ -56,6 +56,8 @@ relationships:
     - "mabl"
     - "Selenium"
     - "Appium"
+    - "Cypress"
+    - "Playwright"
 ---
 
 # **MagicPod 調査レポート**

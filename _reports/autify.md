@@ -53,6 +53,8 @@ relationships:
     - "mabl"
     - "MagicPod"
     - "Selenium"
+    - "Cypress"
+    - "Playwright"
 ---
 
 # **Autify 調査レポート**

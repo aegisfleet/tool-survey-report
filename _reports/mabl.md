@@ -15,8 +15,6 @@ tags:
   - "AI"
   - "ローコード"
   - "SaaS"
-  - "モバイルアプリテスト"
-  - "APIテスト"
 description: "AIを活用したローコードテスト自動化プラットフォーム。Web、モバイル、API、アクセシビリティ、パフォーマンステストを統一環境で管理可能。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -60,6 +58,7 @@ relationships:
     - "Autify"
     - "Selenium"
     - "Playwright"
+    - "Cypress"
 ---
 
 # **mabl 調査レポート**
