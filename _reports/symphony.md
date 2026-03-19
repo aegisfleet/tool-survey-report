@@ -47,7 +47,7 @@ links:
   codewiki: "https://codewiki.google/github.com/openai/symphony"
 relationships:
   related_tools:
-    - "OpenAI Codex"
+    - "OpenAI Codex CLI"
     - "Linear"
 ---
 
@@ -78,7 +78,7 @@ relationships:
 
 * **タスク自動ポーリング**: Linearなどのトラッカーから定期的に候補となるタスクを取得し、エージェントを起動します。
 * **独立したワークスペース**: 各イシュー（課題）ごとに隔離されたワークスペースを作成し、コードの変更や実行環境を他のタスクから分離します。
-* **Codex App Server統合**: ワークスペース内でOpenAI CodexをApp Serverモードで起動し、タスク解決のための自律的なコーディングを実行させます。
+* **Codex App Server統合**: ワークスペース内でOpenAI Codex CLIをApp Serverモードで起動し、タスク解決のための自律的なコーディングを実行させます。
 * **状態管理によるエージェント制御**: イシューが特定の終了状態（Done, Closed, Cancelled, Duplicateなど）に移行すると、該当するエージェントを自動的に停止し、リソースをクリーンアップします。
 * **Webダッシュボード (Phoenix LiveView)**: エージェントの稼働状況やタスクの進行状態をリアルタイムで監視するためのUIを提供します。
 
@@ -142,7 +142,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: プロセスの状態を確認・操作するためのJSON API（`/api/v1/state` など）を提供。
-* **外部サービス連携**: Linear (タスク管理), OpenAI Codex (AIエージェント)
+* **外部サービス連携**: Linear (タスク管理), OpenAI Codex CLI (AIエージェント)
 
 ### **10.2 技術スタックとの相性**
 

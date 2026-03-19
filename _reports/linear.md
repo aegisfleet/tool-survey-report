@@ -208,7 +208,7 @@ relationships:
 * **2026-01-29**: **Jira Epic sync**: JiraのEpicとLinearのProjectを双方向同期可能に。
 * **2026-01-22**: **Linear Agent for Slack**: SlackでのAIエージェント機能を全プランに開放。自然言語でのIssue作成などが可能に。
 * **2025-12-17**: **Team Owners Role**: チーム単位での権限管理を強化する「Team Owner」ロールを追加。
-* **2025-12-04**: **OpenAI Codex Agent**: Linear内でOpenAI Codexエージェントにタスクを委譲できる機能を追加。
+* **2025-12-04**: **OpenAI Codex CLI Agent**: Linear内でOpenAI Codex CLIエージェントにタスクを委譲できる機能を追加。
 * **2025-11-20**: **Form Templates**: Issue作成時の入力フォームをテンプレート化し、必須項目などを設定可能に。
 
 (出典: [Linear Changelog](https://linear.app/changelog))

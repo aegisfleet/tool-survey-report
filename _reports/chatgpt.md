@@ -53,7 +53,7 @@ links:
 relationships:
   children:
     - "Sora"
-    - "OpenAI Codex"
+    - "OpenAI Codex CLI"
   related_tools:
     - "Gemini"
     - "Claude"

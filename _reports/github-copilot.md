@@ -62,7 +62,7 @@ relationships:
     - "Visual Studio Code"
     - "Cursor"
     - "OpenCode"
-    - "OpenAI Codex"
+    - "OpenAI Codex CLI"
     - "Microsoft 365 Copilot"
     - "Windsurf"
     - "GitLab Duo"
