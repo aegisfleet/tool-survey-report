@@ -42,6 +42,10 @@ evaluation:
   summary: "目的に合ったフリーフォントを効率よく探せる、クリエイターにとって非常に有用なサイトです。"
 
 # 【任意項目】該当するもののみ記載
+relationships:
+  related_tools:
+    - "Figma"
+    - "Canva"
 ---
 
 # **いいフォント 調査レポート**

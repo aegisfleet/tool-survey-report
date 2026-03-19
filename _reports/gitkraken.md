@@ -54,6 +54,10 @@ relationships:
   children:
     - "GitLens"
     - "Kiro"
+  related_tools:
+    - "Visual Studio Code"
+    - "GitHub"
+    - "GitLab"
 ---
 
 # **GitKraken 調査レポート**

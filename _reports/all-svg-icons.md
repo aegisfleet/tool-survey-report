@@ -42,6 +42,10 @@ evaluation:
   summary: "開発者やデザイナーにとって非常に有用な、完全無料のSVGアイコンライブラリ"
 
 # 【任意項目】該当するもののみ記載
+relationships:
+  related_tools:
+    - "Figma"
+    - "Canva"
 ---
 
 # **All SVG Icons 調査レポート**

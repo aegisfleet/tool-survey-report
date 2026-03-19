@@ -41,6 +41,12 @@ evaluation:
   summary: "エージェントを使った開発タスクの管理・並行処理に特化しており、効率的なマルチタスク開発を実現する強力なツールです。"
 
 # 【任意項目】該当するもののみ記載
+relationships:
+  related_tools:
+    - "Cursor"
+    - "Windsurf"
+    - "GitHub Copilot"
+    - "Cline"
 ---
 
 # **Codex app 調査レポート**

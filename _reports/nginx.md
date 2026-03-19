@@ -42,6 +42,9 @@ links:
   github: "https://github.com/nginx/nginx"
   deepwiki: "https://deepwiki.com/nginx/nginx"
   documentation: "https://nginx.org/en/docs/"
+relationships:
+  related_tools:
+    - "Cloudflare"
 ---
 
 # **Nginx 調査レポート**

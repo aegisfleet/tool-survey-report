@@ -11,10 +11,10 @@ date: "2026-03-12"
 last_updated: "2026-03-12"
 tags:
   - "MCP"
-  - "Browser Automation"
-  - "Testing"
+  - "ブラウザ自動化"
+  - "テスト"
   - "AI"
-  - "DevTools"
+  - "開発者ツール"
 description: "AIコーディングアシスタント（Gemini、Claude、Cursorなど）にChromeブラウザの操作権限を与え、自動化やデバッグ、パフォーマンス分析を可能にするMCPサーバー"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -49,6 +49,11 @@ evaluation:
 links:
   github: "https://github.com/ChromeDevTools/chrome-devtools-mcp"
   deepwiki: "https://deepwiki.com/ChromeDevTools/chrome-devtools-mcp"
+relationships:
+  related_tools:
+    - "Playwright"
+    - "Selenium"
+    - "Model Context Protocol"
 ---
 
 # **Chrome DevTools MCP 調査レポート**

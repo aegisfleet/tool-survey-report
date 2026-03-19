@@ -10,7 +10,8 @@ official_site: "https://alibaba.github.io/page-agent/"
 date: "2026-03-11"
 last_updated: "2026-03-11"
 tags:
-  - "AI・機械学習"
+  - "AI"
+  - "エージェント"
   - "開発者ツール"
   - "オープンソース"
   - "ブラウザ自動化"
@@ -48,6 +49,12 @@ links:
   github: "https://github.com/alibaba/page-agent"
   deepwiki: "https://deepwiki.com/alibaba/page-agent"
   documentation: "https://alibaba.github.io/page-agent/docs/introduction/overview"
+relationships:
+  related_tools:
+    - "Playwright"
+    - "Selenium"
+    - "Autify"
+    - "MagicPod"
 ---
 # **PageAgent 調査レポート**
 

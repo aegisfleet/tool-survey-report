@@ -10,8 +10,9 @@ official_site: "https://vercel.com/docs/agent-resources/skills"
 date: "2026-03-19"
 last_updated: "2026-03-19"
 tags:
-  - "AI・機械学習"
-  - "開発ツール"
+  - "AI"
+  - "エージェント"
+  - "開発者ツール"
   - "オープンソース"
   - "CLI"
 description: "AIエージェントにReact/Next.jsのベストプラクティスやデプロイなどの具体的な機能を追加・拡張するためのツール群"
@@ -47,6 +48,11 @@ evaluation:
 links:
   github: "https://github.com/vercel-labs/agent-skills"
   deepwiki: "https://deepwiki.com/vercel-labs/agent-skills"
+relationships:
+  related_tools:
+    - "GitHub Actions"
+    - "Vercel"
+    - "React"
 ---
 
 # **Vercel Agent Skills 調査レポート**
