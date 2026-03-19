@@ -223,13 +223,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchesFields = (term, allowPartialTags = true) => {
         const hTerm = toHiragana(term.toLowerCase());
         const nameMatch = card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm);
-        const readingMatch = card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm);
-        const descMatch = card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm);
-        const highlightMatch = card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm);
+        const readingMatch =
+          card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm);
+        const descMatch =
+          card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm);
+        const highlightMatch =
+          card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm);
         const devMatch = card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm);
-        
+
         // Tag matching: avoid partial matches for short terms in tags to prevent false positives (like "a" matching "tag1")
-        const tagsMatch = card.dataset.tags && card.dataset.tags.split(',').some(tag => {
+        const tagsMatch = card.dataset.tags?.split(',').some((tag) => {
           const hTag = toHiragana(tag.trim().toLowerCase());
           if (hTerm.length <= 1) return hTag === hTerm; // Single char must be exact
           return allowPartialTags ? hTag.includes(hTerm) : hTag === hTerm;
@@ -258,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .map((t) => t.trim())
           .includes(selectedTag);
       const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
-      
+
       return matchesSearch && matchesTag && matchesCategory;
     });
 
