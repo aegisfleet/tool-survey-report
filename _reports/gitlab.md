@@ -63,6 +63,7 @@ relationships:
     - "Jenkins"
     - "JFrog Artifactory"
     - "Jira"
+    - "Findy Team+"
 ---
 
 # **GitLab 調査レポート**
