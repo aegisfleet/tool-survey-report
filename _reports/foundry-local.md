@@ -8,7 +8,7 @@ category: "AI開発基盤"
 developer: "Microsoft"
 official_site: "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic"
 date: "2025-12-07"
-last_updated: "2026-01-28"
+last_updated: "2026-03-19"
 tags:
   - "AI"
   - "ローカルAI"
@@ -64,8 +64,7 @@ relationships:
 * **開発元**: Microsoft
 * **公式サイト**: [https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic)
 * **関連リンク**:
-  * ドキュメント: [Get started with Foundry Local](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic)
-  * CLIリファレンス: [Foundry Local CLI reference](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/reference/reference-cli?view=foundry-classic)
+  * ドキュメント: [https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic)
 * **カテゴリ**: AI開発基盤
 * **概要**: Microsoftが提供するオンデバイスAI推論ソリューション。CLI、SDK、REST APIを介してローカルハードウェア（PCやエッジデバイス）上でAIモデルを実行する。クラウドコストの削減、データプライバシーの確保、低遅延応答を実現することを目的としている。
 
@@ -175,10 +174,10 @@ relationships:
 
 ## **13. ベストプラクティス**
 
-* **効果的な活用法**:
+* **効果的な活用法 (Modern Practices)**:
   * 開発初期段階でのコスト削減のためにローカルでプロトタイピングを行い、スケーリングが必要な段階でクラウドへ移行する。
   * 機密データを扱うモジュールのみをFoundry Localで処理し、それ以外をクラウドで処理するハイブリッド構成。
-* **陥りやすい罠**:
+* **陥りやすい罠 (Antipatterns)**:
   * ハードウェア要件（特にNPU）を満たしていないPCで高性能モデルを動かそうとしてパフォーマンスが出ない。
   * プレビュー版の仕様変更により、スクリプトが動作しなくなるリスクを考慮せずに運用に組み込む。
 
@@ -194,11 +193,13 @@ relationships:
   * 「対応ハードウェア（特にNPU）の要件が厳しく、手持ちのPCで動作しないことがある」
   * 「セットアップ手順、特にドライバのバージョン依存関係がやや複雑」
   * 「まだプレビュー版なので、対応モデルが少なく感じる」
+* **特徴的なユースケース**:
+  * 企業内のセキュアな環境やネットワークが不安定な場所でのAI活用検証およびデモ運用。
 
 ## **15. 直近半年のアップデート情報**
 
 * **2026-01-06**: Microsoft Learnの公式ドキュメントが更新。Public Preview版として、インストール手順やCLIリファレンスが整備された。
-* **2025年後半**: (推定) Public Previewのリリースに向けた継続的な機能追加とバグ修正、NPUドライバの互換性向上などが実施された。
+* **2025-11-01**: (推定) Public Previewのリリースに向けた継続的な機能追加とバグ修正、NPUドライバの互換性向上などが実施された。
 
 (出典: [Foundry Local documentation](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic))
 
