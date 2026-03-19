@@ -127,8 +127,16 @@
      - 例：直接競合（GitHub Copilot ↔ Cursor）、補完関係（VS Code ↔ GitHub Copilot）
    - **避けるべき関連付け**: 間接的関係（Docker と Kubernetes）、異なる領域のツール
 
-2. **妥当性確認**:
-   - 参照先ファイルの存在確認
+3. **参照ツールの一律制限**:
+   - `parent`, `children`, `related_tools` に設定するツールは、**本リポジトリ内にレポートが存在するもの（`tool_name` が一致するもの）**に限定する。
+   - レポートが存在しない外部ツールは、たとえ競合であっても記載しない。
+
+4. **冗長性の排除**:
+   - 同一ツールを `children` と `related_tools` の両方に記載しない。
+   - `children`（および `parent`）は垂直/階層的な関係、`related_tools` は水平的な関係を定義するため、垂直関係がある場合はそちらを優先する。
+
+5. **妥当性確認**:
+   - 参照先ファイルの存在確認（`tool_name` の一致確認）
    - 双方向関係の整合性（親子関係の相互設定）
    - 循環参照の回避
 
@@ -222,6 +230,23 @@
 3. **双方向リンクの自動確認**:
    - 1つのファイルを更新したら、そこで `related_tools` に挙げた数ファイルを開き、逆方向のリンクが存在するか確認する。
    - もし逆方向リンクが上限（7件）に達している場合は、無理に追加せず、より関連性の高いものと入れ替える。
+
+4. **チェック用スクリプトの活用**:
+   - 大規模な整理を行う際は、以下のワンライナー等を用いて機械的にチェックすることを推奨する。
+
+   **A. 存在しない tool_name の検出**
+   ```bash
+   # 管理対象の全 tool_name を抽出
+   grep "^tool_name:" _reports/*.md | sed 's/.*tool_name: "\(.*\)"/\1/' | sed "s/.*tool_name: \(.*\)/\1/" | sort | uniq > managed_tools.txt
+
+   # relationships 内のツール名が managed_tools.txt に存在するかチェック (Python)
+   python3 -c "import yaml, glob; m = set(open('managed_tools.txt').read().splitlines()); [([print(f'{f}: {t} not found') for t in (v.get('children',[]) + v.get('related_tools',[]) + ([v['parent']] if 'parent' in v else [])) if t not in m]) for f in glob.glob('_reports/*.md') for v in [yaml.safe_load(open(f).read().split('---')[1]).get('relationships', {})] if v]"
+   ```
+
+   **B. children と related_tools の重複検出**
+   ```bash
+   python3 -c "import yaml, glob; [([print(f'{f}: {overlap}') for overlap in set(v.get('children',[]) or []).intersection(set(v.get('related_tools',[]) or [])) if overlap]) for f in glob.glob('_reports/*.md') for v in [yaml.safe_load(open(f).read().split('---')[1]).get('relationships', {})] if v]"
+   ```
 
 ## 作業例
 
