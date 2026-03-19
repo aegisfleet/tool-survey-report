@@ -60,9 +60,8 @@ relationships:
     - "IntelliJ IDEA"
     - "Windsurf"
     - "Roo Code"
-    - "Eclipse IDE"
+    - "Cline"
     - "Android Studio"
-    - "MCP Apps"
 ---
 
 # **Visual Studio Code 調査レポート**

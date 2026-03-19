@@ -63,7 +63,7 @@ relationships:
     - "Cursor"
     - "GitHub Copilot"
     - "OpenCode"
-    - "AGENTS.md"
+    - "Roo Code"
     - "Agent Trace"
 ---
 

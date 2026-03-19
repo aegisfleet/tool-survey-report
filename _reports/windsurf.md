@@ -58,6 +58,7 @@ relationships:
     - "Devin"
     - "Google Antigravity"
     - "Roo Code"
+    - "Cline"
     - "Android Studio"
 ---
 

@@ -15,6 +15,7 @@ tags:
   - "IDE"
   - "開発者ツール"
   - "エージェント"
+  - "生成AI"
 description: "AIを第一に考えて作られたコードエディタ。VS Codeのフォークをベースに、コードベース全体を理解するAI機能が深く統合されている。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -57,16 +58,13 @@ links:
   documentation: "https://cursor.com/docs"
 relationships:
   related_tools:
-    - "Context7"
-    - "Visual Studio Code"
     - "GitHub Copilot"
-    - "Qodo"
     - "Windsurf"
-    - "IntelliJ IDEA"
-    - "Android Studio"
+    - "Visual Studio Code"
+    - "Cline"
     - "Devin"
+    - "Qodo"
     - "Agent Trace"
-    - "OpenAI Codex CLI"
 ---
 
 # **Cursor 調査レポート**
