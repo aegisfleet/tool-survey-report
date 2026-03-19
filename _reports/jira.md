@@ -55,6 +55,7 @@ relationships:
     - "Notion"
     - "Quality Tracker"
     - "Trac"
+    - "Findy Team+"
 ---
 
 # **Jira 調査レポート**

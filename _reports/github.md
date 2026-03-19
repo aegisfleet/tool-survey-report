@@ -67,6 +67,7 @@ relationships:
     - "CodeRabbit"
     - "JFrog Artifactory"
     - "Quality Tracker"
+    - "Findy Team+"
 ---
 
 # **GitHub 調査レポート**
