@@ -15,7 +15,7 @@ tags:
   - "自動化"
   - "CI/CD"
   - "エージェント"
-description: "GitHub Actionsのワークフローを自然言語で記述し、AIエージェント（Claude CodeやOpenAI Codexなど）に実行させるためのGitHub Nextプロジェクト。"
+description: "GitHub Actionsのワークフローを自然言語で記述し、AIエージェント（Claude CodeやOpenAI Codex CLIなど）に実行させるためのGitHub Nextプロジェクト。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
 quick_summary:
@@ -55,7 +55,7 @@ relationships:
   children: []
   related_tools:
     - "Claude Code"
-    - "OpenAI Codex"
+    - "OpenAI Codex CLI"
     - "GitHub Copilot"
 ---
 
@@ -72,7 +72,7 @@ relationships:
   * ドキュメント: [https://githubnext.github.io/gh-aw/](https://githubnext.github.io/gh-aw/)
   * サンプル集: [https://github.com/githubnext/agentics](https://github.com/githubnext/agentics)
 * **カテゴリ**: CI/CD
-* **概要**: GitHub Nextが開発するリサーチプロトタイプ。GitHub Actionsのワークフローを複雑なYAMLではなく自然言語（Markdown）で記述し、それをAIエージェント（Claude CodeやOpenAI Codexなど）が解釈して実行可能なGitHub Actionsワークフロー（YAML）に変換・実行する仕組み。
+* **概要**: GitHub Nextが開発するリサーチプロトタイプ。GitHub Actionsのワークフローを複雑なYAMLではなく自然言語（Markdown）で記述し、それをAIエージェント（Claude CodeやOpenAI Codex CLIなど）が解釈して実行可能なGitHub Actionsワークフロー（YAML）に変換・実行する仕組み。
 
 ## **2. 目的と主な利用シーン**
 
@@ -88,7 +88,7 @@ relationships:
 
 * **自然言語によるワークフロー定義**: `.github/workflows` にYAMLを書く代わりに、自然言語で指示を書いたMarkdownファイルを記述するだけで動作する。
 * **GitHub Native**: GitHub Actionsの基盤（トリガー、権限、ログ、アーティファクト）をそのまま利用するため、既存のエコシステムと完全に統合されている。
-* **マルチエンジン対応**: 特定のAIモデルに依存せず、Claude CodeやOpenAI Codexなど複数の「コーディングエージェント」をエンジンとして利用可能。
+* **マルチエンジン対応**: 特定のAIモデルに依存せず、Claude CodeやOpenAI Codex CLIなど複数の「コーディングエージェント」をエンジンとして利用可能。
 * **セキュリティとガードレール**: `safe-outputs` による書き込み制限、サンドボックス実行、人間によるレビュー（PR作成）を前提とした安全設計。
 * **gh aw CLI**: 自然言語で書かれたMarkdownファイルを、実行可能なGitHub Actions YAMLにコンパイルするためのCLIツール。
 
@@ -97,7 +97,7 @@ relationships:
 * **前提条件**:
   * GitHubアカウント
   * `gh` (GitHub CLI) のインストール
-  * AIエンジンの利用権限（例: Claude CodeやOpenAI Codexへのアクセス）
+  * AIエンジンの利用権限（例: Claude CodeやOpenAI Codex CLIへのアクセス）
 * **インストール/導入**:
   ```bash
   # gh aw 拡張機能のインストール

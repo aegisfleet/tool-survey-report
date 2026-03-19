@@ -207,7 +207,7 @@ relationships:
 * **2025-04以降 (推測される初期リリース以降)**: CLIアプリケーションとしてローンチ。
 * **継続的アップデート**: GPT-5系列の最新モデルのサポート追加、MCP統合の強化、TUIのUX改善など。
 
-(出典: [OpenAI Codex Docs](https://developers.openai.com/codex))
+(出典: [OpenAI Codex CLI Docs](https://developers.openai.com/codex))
 
 ## **16. 類似ツールとの比較**
 

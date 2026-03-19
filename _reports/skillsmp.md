@@ -13,7 +13,7 @@ tags:
   - "オープンソース"
   - "開発者ツール"
   - "コーディング支援"
-description: "AIエージェント（Claude Code, OpenAI Codex）向けのオープンソーススキル（Agent Skills）を検索・発見できるマーケットプレイス。"
+description: "AIエージェント（Claude Code, OpenAI Codex CLI）向けのオープンソーススキル（Agent Skills）を検索・発見できるマーケットプレイス。"
 
 quick_summary:
   has_free_plan: true
@@ -34,7 +34,7 @@ evaluation:
     - point: 5
       reason: "GitHubベースのオープンソーススキルで透明性が高い"
     - point: 5
-      reason: "Claude CodeとOpenAI Codexの両方に対応"
+      reason: "Claude CodeとOpenAI Codex CLIの両方に対応"
   minus_points:
     - point: -3
       reason: "コミュニティベースのためスキルの品質にばらつきがある"
@@ -47,7 +47,7 @@ relationships:
   children: []
   related_tools:
     - "Claude Code"
-    - "OpenAI Codex"
+    - "OpenAI Codex CLI"
 ---
 
 # **SkillsMP 調査レポート**
@@ -66,7 +66,7 @@ relationships:
 ## **2. 目的と主な利用シーン**
 
 * **解決する課題**: GitHub上に散らばっている膨大な数のエージェントスキルの中から、目的に合った高品質なスキルを探し出すコストを削減する。
-* **想定利用者**: Claude CodeやOpenAI CodexなどのAIエージェントを利用して開発を行うソフトウェアエンジニア、AIエンジニア。
+* **想定利用者**: Claude CodeやOpenAI Codex CLIなどのAIエージェントを利用して開発を行うソフトウェアエンジニア、AIエンジニア。
 * **利用シーン**:
   * Claude Codeに新しい機能（例：特定のAPI操作、テスト自動化）を追加したい時
   * 自作のエージェントスキルをコミュニティに公開・共有したい時
@@ -85,7 +85,7 @@ relationships:
 
 * **前提条件**:
   * Gitのインストール
-  * 対象となるAIエージェント（Claude Code、OpenAI Codexなど）のセットアップ
+  * 対象となるAIエージェント（Claude Code、OpenAI Codex CLIなど）のセットアップ
 * **インストール/導入**:
   ```bash
   # GitHubからスキルをクローン（例）
@@ -142,7 +142,7 @@ relationships:
 * **外部サービス連携**:
   * **GitHub**: スキルのホスティング元として完全に統合されている。
   * **Claude Code**: スキルの主な実行環境の一つ。
-  * **OpenAI Codex**: スキルの主な実行環境の一つ。
+  * **OpenAI Codex CLI**: スキルの主な実行環境の一つ。
 
 ### **10.2 技術スタックとの相性**
 
@@ -217,6 +217,6 @@ relationships:
 * **総合的な評価**:
   SkillsMPは、急速に拡大するAIエージェントエコシステムにおいて、ユーザーとスキルをつなぐ重要なハブとしての役割を果たしています。品質管理の面では課題もありますが、その圧倒的な量とオープン性は、開発者にとって強力な武器となります。
 * **推奨されるチームやプロジェクト**:
-  Claude CodeやOpenAI Codexを積極的に活用し、開発効率を上げたい個人開発者やスタートアップチーム。
+  Claude CodeやOpenAI Codex CLIを積極的に活用し、開発効率を上げたい個人開発者やスタートアップチーム。
 * **選択時のポイント**:
   SaaS連携などの堅牢な統合が必要な場合はComposioなどを検討すべきですが、開発支援やコード生成の補助として手軽にスキルを追加したい場合はSkillsMPが最適です。
