@@ -68,6 +68,7 @@ relationships:
     - "JFrog Artifactory"
     - "Quality Tracker"
     - "Findy Team+"
+    - "Jujutsu"
 ---
 
 # **GitHub 調査レポート**
