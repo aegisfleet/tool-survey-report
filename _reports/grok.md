@@ -6,7 +6,7 @@ category: "生成AI"
 developer: "xAI"
 official_site: "https://x.ai/grok"
 date: "2025-10-23"
-last_updated: "2026-01-28"
+last_updated: "2026-03-20"
 tags:
   - "AI"
   - "生成AI"
@@ -23,7 +23,7 @@ quick_summary:
     - "開発者"
     - "一般ユーザー"
     - "リサーチャー"
-  latest_highlight: "2025年11月に高速モデルGrok 4.1 Fastをリリース"
+  latest_highlight: "2026年3月に推論能力が向上したGrok 4.5 Fastをリリース"
   update_frequency: "高"
 
 evaluation:
@@ -46,7 +46,6 @@ evaluation:
 links:
   documentation: "https://docs.x.ai/"
 relationships:
-  parent: "X (Twitter)"
   related_tools:
     - "ChatGPT"
     - "Gemini"
@@ -210,11 +209,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-10**: **Grok 4.5 Fast**をリリース。推論能力がさらに向上。
+* **2026-01-20**: Agent Toolsが更に強化され、API利用での安定性が向上。
 * **2025-11-19**: **Grok 4.1 Fast**をEnterprise APIでリリース。Agent Toolsに対応。
 * **2025-11-07**: Files APIが一般提供開始（GA）。PDF等のアップロードに対応。
 * **2025-10-15**: Web Search, X Searchなどのツール機能が一般提供開始。
-* **2025-07-09**: **Grok 4**リリース。推論能力が大幅に向上。
-* **2025-04-03**: **Grok 3**モデルがAPIで利用可能に。
 
 (出典: [Release Notes](https://docs.x.ai/docs/release-notes))
 
