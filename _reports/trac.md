@@ -52,7 +52,6 @@ links:
 relationships:
   related_tools:
     - "Redmine"
-    - "Jira"
 ---
 
 # **Trac 調査レポート**
