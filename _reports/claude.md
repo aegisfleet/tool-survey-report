@@ -52,6 +52,7 @@ relationships:
   - Gemini
   - Model Context Protocol
   - MCP Apps
+  - "Grok"
   - Cursor
   - GitHub Copilot
   - Playwright CLI
