@@ -70,7 +70,7 @@ relationships:
     - "MagicPod"
     - "mabl"
     - "Appium"
-    - "Cucumber"
+    - "Karate"
 ---
 
 # **Playwright 調査レポート**

@@ -59,7 +59,7 @@ relationships:
     - "MagicPod"
     - "Autify"
     - "mabl"
-    - "Robot Framework"
+    - "Karate"
 ---
 
 # **Selenium 調査レポート**

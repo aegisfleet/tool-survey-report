@@ -59,7 +59,7 @@ relationships:
     - "MagicPod"
     - "mabl"
     - "Appium"
-    - "CodeceptJS"
+    - "Karate"
 ---
 
 # **Cypress 調査レポート**
