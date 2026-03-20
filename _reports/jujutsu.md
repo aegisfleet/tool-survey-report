@@ -6,7 +6,7 @@ category: "バージョン管理"
 developer: "Open Source Community (Martin von Zweigbergk)"
 official_site: "https://jj-vcs.dev/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-20"
 tags:
   - "バージョン管理"
   - "Rust"
@@ -23,7 +23,7 @@ quick_summary:
     - "ソフトウェア開発者"
     - "Gitユーザー"
     - "大規模プロジェクト開発者"
-  latest_highlight: "2026年1月にv0.37.0をリリース"
+  latest_highlight: "2026年3月にv0.39.0をリリース"
   update_frequency: "高"
 
 evaluation:
@@ -52,9 +52,6 @@ relationships:
   parent: ""
   children: []
   related_tools:
-    - "Git"
-    - "Sapling"
-    - "Mercurial"
     - "GitHub"
     - "GitLab"
 ---
@@ -217,11 +214,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-04 (v0.39.0)**: リビジョンの並べ替え・破棄ができるTUIコマンド `jj arrange` の追加や、`jj bookmark advance` によるブックマークの自動前進機能などをサポート。
+* **2026-02-05 (v0.38.0)**: セキュリティ上の理由から、リポジトリ単位およびワークスペース単位の設定をリポジトリ外部に保存するよう変更（レガシーリポジトリからの自動移行対応）。
 * **2026-01-08 (v0.37.0)**: 隠れた/分岐したChange IDを参照する新構文の導入、ファイル検索コマンド (`jj file search`) の初期バージョン追加。
-* **2025-12-04 (v0.36.0)**: ドキュメントサイトの移転、並行実行時の競合状態の修正。
-* **2025-11-06 (v0.35.0)**: ワークスペースごとの設定ファイル対応、`jj bookmark track` でのリモート紐付け機能。
-* **2025-10-01 (v0.34.0)**: Gerrit連携 (`jj gerrit upload`)、自動二分探索 (`jj bisect run`) のサポート。
-* **2025-09-04 (v0.33.0)**: `jj undo` のシーケンシャル化と `jj redo` の追加。
 
 (出典: [GitHub Releases](https://github.com/jj-vcs/jj/releases))
 

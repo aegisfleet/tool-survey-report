@@ -64,6 +64,7 @@ relationships:
     - "JFrog Artifactory"
     - "Jira"
     - "Findy Team+"
+    - "Jujutsu"
 ---
 
 # **GitLab 調査レポート**
