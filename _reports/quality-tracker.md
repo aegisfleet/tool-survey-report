@@ -55,7 +55,6 @@ relationships:
     - "CAT"
     - "QualityForward"
     - "TestRail"
-    - "Jira"
     - "Redmine"
     - "Backlog"
     - "GitHub"

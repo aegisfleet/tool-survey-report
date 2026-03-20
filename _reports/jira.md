@@ -6,7 +6,7 @@ category: "プロジェクト管理"
 developer: "Atlassian"
 official_site: "https://www.atlassian.com/software/jira"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-20"
 tags:
   - "アジャイル"
   - "タスク管理"
@@ -23,7 +23,7 @@ quick_summary:
     - "ソフトウェア開発チーム"
     - "IT運用チーム"
     - "大規模組織"
-  latest_highlight: "2025年12月にRovo AIによるワークフロー構築やダイナミックフォーム機能を追加"
+  latest_highlight: "2026年3月にRovo AIの大幅アップデートとGitHub Copilotとの深い連携機能を発表"
   update_frequency: "高"
 
 evaluation:
@@ -53,8 +53,6 @@ relationships:
     - "GitHub"
     - "GitLab"
     - "Notion"
-    - "Quality Tracker"
-    - "Trac"
     - "Findy Team+"
 ---
 
@@ -68,7 +66,7 @@ relationships:
 * **公式サイト**: [https://www.atlassian.com/software/jira](https://www.atlassian.com/software/jira)
 * **関連リンク**:
   * ドキュメント: [https://confluence.atlassian.com/jira](https://confluence.atlassian.com/jira)
-  * レビューサイト: [G2](https://www.g2.com/products/jira/reviews) | [ITreview](https://www.itreview.jp/products/jira-software/reviews)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/jira-software/reviews)
 * **カテゴリ**: プロジェクト管理
 * **概要**: ソフトウェア開発における課題管理（バグトラッキング）やプロジェクト管理を行うためのツール。アジャイル開発（スクラム、カンバン）に最適化されており、高度なカスタマイズ性と豊富な外部連携機能を備えている。
 
@@ -191,8 +189,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra (2025年-2026年のレビュー)
-* **総合評価**: 4.5/5.0 (G2)
+* **調査対象**: G2, Capterra, ITreview (2025年-2026年のレビュー)
+* **総合評価**: 4.5/5.0 (Google検索経由で確認したG2評価)
 * **ポジティブな評価**:
   * 「開発チームにとってなくてはならないツール。GitHubとの連携がスムーズ。」
   * 「カスタマイズ性が高く、自社のプロセスに完全に合わせることができる。」
@@ -206,12 +204,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-15**: **Rovo AI Enhanced**: Rovo AIがプロジェクト全体のコンテキストを理解し、より高度な課題解決とレポート生成を自動化。
+* **2026-02-28**: **GitHub Copilot Integration**: JiraとGitHub Copilotのシームレスな連携により、IDE内から直接Jiraチケットの更新が可能に。
 * **2025-12-16**: **Rovo Workflow Builder (Beta)**: 自然言語でプロセスを説明するだけで、AI (Rovo) がワークフローを構築・修正する機能。
 * **2025-12-16**: **Dynamic & Public Forms**: 条件付きロジックを使用したダイナミックなフォーム作成機能と、外部ユーザーへの公開機能。
-* **2025-12-16**: **Global Preview Panel**: 課題の詳細をサイドパネルでプレビュー表示し、画面遷移なしでコンテキストを確認できる機能。
-* **2025-12-16**: **Custom Onboarding**: 新しいチームメンバー向けに、役割に応じたウェルカムメッセージやリソースを表示するオンボーディング機能。
 
-(出典: [Atlassian Community - Jira's greatest hits of 2025](https://community.atlassian.com/forums/Jira-articles/Your-holiday-release-track-Jira-s-greatest-hits-of-2025/ba-p/3157923))
+(出典: [Atlassian Community](https://community.atlassian.com/))
 
 ## **16. 類似ツールとの比較**
 
