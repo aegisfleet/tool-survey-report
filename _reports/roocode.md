@@ -56,7 +56,6 @@ relationships:
   related_tools:
     - "Cline"
     - "Cursor"
-    - "Windsurf"
     - "GitHub Copilot"
 ---
 

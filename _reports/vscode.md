@@ -61,7 +61,7 @@ relationships:
     - "Windsurf"
     - "Roo Code"
     - "Cline"
-    - "Android Studio"
+    - "Google Antigravity"
 ---
 
 # **Visual Studio Code 調査レポート**
