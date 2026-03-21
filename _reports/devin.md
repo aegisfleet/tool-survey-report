@@ -61,7 +61,6 @@ relationships:
     - "AWS Frontier Agents"
     - "Claude Code"
     - "GitHub Copilot"
-    - "Cursor"
     - "OpenHands"
     - "Google Jules"
     - "AGENTIC STAR"

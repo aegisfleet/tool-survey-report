@@ -56,7 +56,6 @@ relationships:
   related_tools:
     - "CodeRabbit"
     - "GitHub Copilot"
-    - "Cursor"
     - "GitLab Duo"
     - "Amazon Q Developer"
 ---

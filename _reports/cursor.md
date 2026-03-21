@@ -15,7 +15,6 @@ tags:
   - "IDE"
   - "開発者ツール"
   - "エージェント"
-  - "生成AI"
 description: "AIを第一に考えて作られたコードエディタ。VS Codeのフォークをベースに、コードベース全体を理解するAI機能が深く統合されている。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -62,8 +61,8 @@ relationships:
     - "Windsurf"
     - "Visual Studio Code"
     - "Cline"
-    - "Devin"
-    - "Qodo"
+    - "Kiro"
+    - "Google Antigravity"
     - "Agent Trace"
 ---
 

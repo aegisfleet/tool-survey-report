@@ -57,9 +57,8 @@ relationships:
     - "GitHub Copilot"
     - "Devin"
     - "Google Antigravity"
-    - "Roo Code"
+    - "Kiro"
     - "Cline"
-    - "Android Studio"
 ---
 
 # **Windsurf 調査レポート**
