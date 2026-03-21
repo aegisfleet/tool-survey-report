@@ -6,13 +6,12 @@ category: "自律型AIエージェント"
 developer: "NTTデータ (NTT DATA)"
 official_site: "https://www.nttdata.com/jp/ja/lineup/litron-core/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-21"
 tags:
   - "AI"
-  - "エージェント"
   - "自律型"
   - "自動化"
-  - "業務効率化"
+  - "エージェント"
   - "生成AI"
 description: "オフィスワーカーの汎用業務の効率化を支援する、NTTデータのエージェント型AI基盤"
 
@@ -44,7 +43,6 @@ evaluation:
 
 links:
   documentation: "https://www.nttdata.com/jp/ja/lineup/litron-core/"
-
 relationships:
   related_tools:
     - "Microsoft 365 Copilot"
@@ -159,9 +157,11 @@ relationships:
 
 ## **13. ベストプラクティス**
 
-* **効果的な活用法**:
+* **効果的な活用法 (Modern Practices)**:
   * 「調査→分析→資料作成」といった一連の定型業務フローをLITRON COREに任せ、人間は最終チェックと意思決定に注力する。
   * 部門固有の業務知識を「業務特化エージェント」として実装し、ノウハウを標準化する。
+* **陥りやすい罠 (Antipatterns)**:
+  * 公式ドキュメント等に記載されたアンチパターンは特筆すべきものがまだありません。
 
 ## **14. ユーザーの声（レビュー分析）**
 
@@ -172,10 +172,10 @@ relationships:
   * 「自然言語でワークフローが作れるので、プログラミング知識が不要」（公式サイトより）
 * **ネガティブな評価 / 改善要望**:
   * 公開された第三者レビューは見当たりません。
+* **特徴的なユースケース**:
+  * 該当するレビュー情報が見当たりません。
 
 ## **15. 直近半年のアップデート情報**
-
-公式サイトの「レポート＆コラム」より関連情報を抜粋。
 
 * **2025-12-05**: 製造業の暗黙知伝承に関する活用事例コラムを公開。
 * **2025-11-28**: 生成AI導入現場でのプロンプトチューニングの工夫に関する知見を公開。
@@ -187,13 +187,13 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | LITRON CORE | Microsoft 365 Copilot | UiPath |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 自然言語対話 | ◎ | ◎ | △<br><small>Autopilot機能等</small> |
-| **自動化** | ワークフロー生成 | ◎<br><small>対話で自動生成</small> | △<br><small>Power Automate連携</small> | ◎<br><small>詳細な定義が可能</small> |
-| **拡張性** | マルチエージェント | ◎ | △<br><small>Copilot Studio等</small> | △ |
-| **セキュリティ** | データ主権 | ◎<br><small>国内重視</small> | ◯ | ◯ |
-| **導入** | 手軽さ | △<br><small>要問い合わせ</small> | ◎<br><small>ライセンス追加のみ</small> | ◯ |
+| 機能カテゴリ | 機能項目 | LITRON CORE | Microsoft 365 Copilot | UiPath | Dify |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | 自然言語対話 | ◎<br><small>対話で自動生成</small> | ◎<br><small>チャット統合</small> | △<br><small>Autopilot機能等</small> | ◯<br><small>チャットボットUI</small> |
+| **自動化** | ワークフロー生成 | ◎<br><small>対話で自動生成</small> | △<br><small>Power Automate連携</small> | ◎<br><small>詳細な定義が可能</small> | ◎<br><small>GUIワークフロー</small> |
+| **拡張性** | マルチエージェント | ◎<br><small>自動連携</small> | △<br><small>Copilot Studio等</small> | △<br><small>連携可能</small> | ◯<br><small>Agent機能</small> |
+| **セキュリティ** | データ主権 | ◎<br><small>国内重視</small> | ◯<br><small>企業データ保護</small> | ◯<br><small>エンタープライズ機能</small> | ◎<br><small>セルフホスト可</small> |
+| **導入** | 手軽さ | △<br><small>要問い合わせ</small> | ◎<br><small>ライセンス追加のみ</small> | ◯<br><small>各種プラン</small> | ◎<br><small>オープンソース/SaaS</small> |
 
 ### **16.2 詳細比較**
 
@@ -202,6 +202,7 @@ relationships:
 | **LITRON CORE** | 日本企業特化型の自律エージェント基盤 | 国内SIerによる手厚い支援、日本語対応、マルチエージェント | コストと導入の手間、情報の不透明さ | 高いセキュリティ要件とカスタム対応が必要な大企業 |
 | **Microsoft 365 Copilot** | Office製品と完全統合されたAI | 普段使いのOfficeアプリで即使える、導入が容易 | 複雑な業務プロセスの自律実行はまだ発展途上 | Office製品中心の業務効率化を即座に図りたい場合 |
 | **UiPath** | 業務自動化のデファクトスタンダード (RPA) | 定型業務の確実な自動化、既存システム連携 | 非定型業務や判断を伴うタスクへの柔軟性 | ルールベースの定型業務を大規模に自動化したい場合 |
+| **Dify** | LLMアプリケーション開発プラットフォーム | ノーコードでのAIワークフロー・Agent構築の容易さ、セルフホスト可能 | 複雑なカスタムロジックの実装には学習コストが必要 | 社内システムと連携したカスタムAIエージェントを自社開発したい場合 |
 
 ## **17. 総評**
 
