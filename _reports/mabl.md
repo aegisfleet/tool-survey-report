@@ -8,7 +8,7 @@ category: "テスト/QA"
 developer: "mabl Inc."
 official_site: "https://www.mabl.com/ja/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-22"
 tags:
   - "テスト自動化"
   - "E2Eテスト"
@@ -77,7 +77,7 @@ relationships:
 * **公式サイト**: [https://www.mabl.com/ja/](https://www.mabl.com/ja/)
 * **関連リンク**:
   * ドキュメント: [https://help.mabl.com/hc/ja](https://help.mabl.com/hc/ja)
-  * レビューサイト: [G2](https://www.g2.com/products/mabl/reviews) | [ITreview](https://www.itreview.jp/products/mabl)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/mabl)
 * **カテゴリ**: テスト/QA
 * **概要**: mablは、AIを活用したローコードのテスト自動化プラットフォームです。Webアプリケーション、モバイルアプリ、APIのテストを単一のクラウド環境で作成・実行・管理でき、DevOpsチームの品質保証プロセスを効率化します。
 
@@ -172,6 +172,7 @@ relationships:
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
+| **無料プラン** | 無料 | なし (14日間の無料トライアルあり) |
 | **Startup** | 要問合せ | 小規模チーム向け。基本的なWebテスト機能。 |
 | **Growth** | 要問合せ | 成長企業向け。モバイルテスト、APIテストなど拡張機能を含めることが可能。 |
 | **Enterprise** | 要問合せ | 大規模組織向け。高度なセキュリティ、無制限の並列実行、プレミアムサポートなど。 |
@@ -290,7 +291,7 @@ relationships:
 -->
 
 * **調査対象**: G2, ITreview
-* **総合評価**: 4.6/5.0 (G2)
+* **総合評価**: 4.6/5.0（G2より引用）
 * **ポジティブな評価**:
   * 「AI自動修復のおかげで、UI変更時のテスト修正作業から解放された」
   * 「サポートチームの対応が素晴らしく、技術的な課題も親身になって解決してくれる」
