@@ -65,9 +65,7 @@ relationships:
     - "Amazon Bedrock"
     - "Amazon Bedrock AgentCore Runtime"
     - "Hugging Face"
-    - "Grok"
-    - "OpenAI Frontier"
-    - "Agent Lightning"
+    - "Letta"
 ---
 
 # **LangChain 調査レポート**
