@@ -53,6 +53,7 @@ relationships:
   related_tools:
     - "Google Cloud"
     - "Gemini"
+    - "NotebookLM"
 ---
 
 # **Google Learning 調査レポート**
