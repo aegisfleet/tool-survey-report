@@ -65,6 +65,7 @@ relationships:
     - "Jira"
     - "Findy Team+"
     - "Jujutsu"
+    - "Nexus Repository"
 ---
 
 # **GitLab 調査レポート**
