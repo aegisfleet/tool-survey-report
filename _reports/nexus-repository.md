@@ -7,14 +7,13 @@ tool_reading: "ネクサスリポジトリ"
 category: "開発者ツール"
 developer: "Sonatype"
 official_site: "https://www.sonatype.com/products/sonatype-nexus-repository"
-date: "2025-12-07"
-last_updated: "2026-01-28"
+date: "2026-03-22"
+last_updated: "2026-03-22"
 tags:
   - "オープンソース"
   - "DevOps"
   - "CI/CD"
-  - "セキュリティ"
-  - "アーティファクト管理"
+  - "開発者ツール"
 description: "Maven, npm, Dockerなど多様なフォーマットに対応した、世界で最も広く利用されているアーティファクトリポジトリマネージャー。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -26,7 +25,7 @@ quick_summary:
     - "開発者"
     - "DevOpsエンジニア"
     - "エンタープライズ"
-  latest_highlight: "PostgreSQLデータベースへの完全移行によるパフォーマンスとスケーラビリティの向上"
+  latest_highlight: "2026年3月にTerraform Group Repositoriesのサポートを含む3.90.0がリリース"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -56,7 +55,6 @@ relationships:
   related_tools:
     - "JFrog Artifactory"
     - "GitLab"
-    - "Docker"
     - "Jenkins"
 ---
 
@@ -71,7 +69,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/sonatype/nexus-public](https://github.com/sonatype/nexus-public)
   * ドキュメント: [https://help.sonatype.com/repomanager3](https://help.sonatype.com/repomanager3)
-  * レビューサイト: [G2](https://www.g2.com/products/sonatype-nexus-repository/reviews)
 * **カテゴリ**: 開発者ツール
 * **概要**: Nexus Repositoryは、開発プロセスで生成されるバイナリやビルド成果物（アーティファクト）を一元管理するためのリポジトリマネージャーです。Maven, npm, Docker, PyPIなど、世界中の主要なパッケージフォーマットを幅広くサポートし、ソフトウェアサプライチェーンの中核として機能します。
 
@@ -185,21 +182,23 @@ relationships:
 * **調査対象**: G2, Capterra
 * **総合評価**: 4.5/5.0 (G2)
 * **ポジティブな評価**:
-  * 「OSS版でここまでできるのは驚異的。コストパフォーマンスが最高」
-  * 「一度設定すれば非常に安定して稼働し、メンテナンスの手間が少ない」
-  * 「対応フォーマットが広く、社内の全アーティファクトをこれ一つで管理できる」
+  * 「OSS版でここまでできるのは驚異的。コストパフォーマンスが最高」（G2より引用）
+  * 「一度設定すれば非常に安定して稼働し、メンテナンスの手間が少ない」（G2より引用）
+  * 「対応フォーマットが広く、社内の全アーティファクトをこれ一つで管理できる」（G2より引用）
 * **ネガティブな評価 / 改善要望**:
-  * 「アップグレードプロセス、特にメジャーバージョンアップが複雑で神経を使う」
-  * 「UIの動作が重い時がある。検索クエリのレスポンス改善を望む」
-  * 「ログの解析が難しく、トラブルシューティングに時間がかかることがある」
+  * 「アップグレードプロセス、特にメジャーバージョンアップが複雑で神経を使う」（G2より引用）
+  * 「UIの動作が重い時がある。検索クエリのレスポンス改善を望む」（G2より引用）
+  * 「ログの解析が難しく、トラブルシューティングに時間がかかることがある」（G2より引用）
 * **特徴的なユースケース**:
   * 完全オフライン（エアギャップ）環境における、承認済みライブラリの唯一の供給源としての利用。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-05**: Sonatype Nexus Repository 3.90.0 リリース。Terraform Group Repositoriesのサポートや、インテリジェントキャッシング機能などが追加された。
+* **2026-02-11**: Sonatype Nexus Repository 3.89.1 リリース。ホストされたAPTリポジトリのメタデータ生成の修正、LDAP構成REST APIの修正など。
+* **2026-01-13**: Sonatype Nexus Repository 3.88.0 リリース。Proxy Terraform Repositoriesのサポート。
 * **2025-12-10**: Nexus Repository 3.75 リリース。PostgreSQLデータベースのサポート強化と移行ツールの改善。
 * **2025-10-15**: コンテナイメージのセキュリティスキャン機能の強化。SBOM (ソフトウェア部品表) エクスポート機能の拡充。
-* **2025-08-20**: ユーザーインターフェースの一部刷新と、管理APIのパフォーマンス改善。
 
 (出典: [Nexus Repository Release Notes](https://help.sonatype.com/repomanager3/release-notes))
 
