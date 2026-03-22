@@ -48,6 +48,8 @@ links:
   codewiki: "https://codewiki.google/github.com/openclaw/openclaw"
   documentation: "https://docs.openclaw.ai/"
 relationships:
+  children:
+    - "NemoClaw"
   related_tools:
     - "AutoGPT"
     - "Claude Computer Use"
