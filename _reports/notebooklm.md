@@ -8,14 +8,13 @@ category: "生成AI"
 developer: "Google"
 official_site: "https://notebooklm.google.com/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-23"
 tags:
   - "AI"
+  - "生成AI"
   - "リサーチ"
   - "ライティング"
-  - "Google"
   - "RAG"
-  - "音声生成"
 description: "アップロードした資料に基づいて、AIが質問への回答、要約、音声による解説などを生成するGoogleのAIリサーチアシスタント。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -282,7 +281,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: X (Twitter), Discord, App Storeレビュー
+* **調査対象**: X (Twitter), Discord, App Storeレビュー (G2、Capterra、ITreviewにレビューの登録なし。)
 * **総合評価**: モバイルアプリのリリース以降、利便性の高さから評価がさらに向上している。
 * **ポジティブな評価**:
   * 「スマホアプリが出たおかげで、通勤中に論文を『聴く』習慣ができた」
