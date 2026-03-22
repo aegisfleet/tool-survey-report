@@ -51,13 +51,9 @@ relationships:
   - DeepSeek
   - Gemini
   - Model Context Protocol
-  - MCP Apps
   - "Grok"
-  - Cursor
   - GitHub Copilot
-  - Playwright CLI
-  - Z.ai
-  - Android Use
+  - NotebookLM
 ---
 
 # **Claude 調査レポート**

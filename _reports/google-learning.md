@@ -48,11 +48,11 @@ links:
   documentation: "https://learning.google.com/"
 relationships:
   parent: ""
-  children:
-    - "NotebookLM"
+  children: []
   related_tools:
     - "Google Cloud"
     - "Gemini"
+    - "NotebookLM"
 ---
 
 # **Google Learning 調査レポート**
