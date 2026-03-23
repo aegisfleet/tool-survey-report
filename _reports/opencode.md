@@ -61,6 +61,7 @@ relationships:
     - "Cline"
     - "GitHub Copilot"
     - "Agent Trace"
+    - "Playwright Test Agents"
 ---
 
 # **OpenCode 調査レポート**

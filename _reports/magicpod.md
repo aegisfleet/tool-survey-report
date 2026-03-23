@@ -58,6 +58,7 @@ relationships:
     - "Appium"
     - "Cypress"
     - "Playwright"
+    - "Playwright Test Agents"
 ---
 
 # **MagicPod 調査レポート**
