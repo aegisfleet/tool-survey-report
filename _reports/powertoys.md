@@ -6,10 +6,10 @@ category: "開発者ツール"
 developer: "Microsoft"
 official_site: "https://learn.microsoft.com/en-us/windows/powertoys/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-24"
 tags:
   - "Windows"
-  - "OSS"
+  - "オープンソース"
   - "生産性"
   - "ユーティリティ"
 description: "Windowsの機能を拡張し、パワーユーザーの生産性を向上させるためのシステムユーティリティスイート。"
@@ -22,7 +22,7 @@ quick_summary:
     - "パワーユーザー"
     - "開発者"
     - "Windowsユーザー"
-  latest_highlight: "2026年1月にv0.97.1をリリース。CursorWrap機能の追加や安定性の向上"
+  latest_highlight: "2026年3月にv0.98.0をリリース。Keyboard Managerの刷新やCommand Palette Dockの追加など"
   update_frequency: "高"
 
 evaluation:
@@ -48,7 +48,7 @@ links:
   documentation: "https://learn.microsoft.com/en-us/windows/powertoys/"
 relationships:
   related_tools:
-    - "vscode"
+    - "Visual Studio Code"
 ---
 
 # **Microsoft PowerToys 調査レポート**
@@ -197,9 +197,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-XX (v0.97.1)**: 安定性の向上とバグ修正。CursorWrapの改善。
-* **2026-01-XX (v0.97.0)**: **CursorWrap**機能の追加（マルチモニター環境でカーソルを画面端から反対側に移動）。Command Paletteの改善。
-* **2025-12-XX (v0.93.0)**: 設定画面（ダッシュボード）のUX刷新。各機能のオンオフやショートカットが一目でわかるようになった。
+* **2026-03-17 (v0.98.0)**: Keyboard Managerの刷新、Command Palette Dockの追加、CursorWrapの改善。
+* **2026-02-10 (v0.97.2)**: Advanced Pasteのクラッシュ修正など、v0.97.0で特定された安定性の問題を修正。
+* **2026-01-28 (v0.97.1)**: 安定性の向上とバグ修正。CursorWrapの改善。
+* **2026-01-14 (v0.97.0)**: **CursorWrap**機能の追加（マルチモニター環境でカーソルを画面端から反対側に移動）。Command Paletteの改善。
 
 (出典: [GitHub Releases](https://github.com/microsoft/PowerToys/releases))
 

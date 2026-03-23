@@ -63,6 +63,7 @@ relationships:
     - "Cline"
     - "Google Antigravity"
     - "Playwright Test Agents"
+    - "Microsoft PowerToys"
 ---
 
 # **Visual Studio Code 調査レポート**
