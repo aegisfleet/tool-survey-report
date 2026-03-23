@@ -8,11 +8,11 @@ category: "テスト/QA"
 developer: "Microsoft"
 official_site: "https://playwright.dev/"
 date: "2025-10-18"
-last_updated: "2026-01-28"
+last_updated: "2026-03-23"
 tags:
   - "テスト自動化"
   - "E2Eテスト"
-  - "ブラウザテスト"
+  - "開発者ツール"
   - "オープンソース"
   - "CI/CD"
   - "AI"
@@ -219,11 +219,11 @@ PlaywrightはApache-2.0ライセンスのオープンソースソフトウェア
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-23 (v1.58)**: AIエージェント向けのCLIモード（token-efficient）とスキルセットを追加。タイムライン表示の改善。
-* **2025-11-25 (v1.57)**: HTMLレポートにテスト実行速度を分析する「Speedboard」を追加。「Chrome for Testing」への移行。
-* **2025-10-06 (v1.56)**: 自律型テストエージェント機能「Playwright Agents (Planner/Generator/Healer)」を導入。
-* **2025-08-20 (v1.55)**: Codegenが `toBeVisible()` アサーションを自動生成可能に。
-* **2025-07-10 (v1.54)**: Cookieのパーティショニング（CHIPS）に対応。
+* **2026-02-06 (v1.58.2)**: バグ修正と安定性の向上。
+* **2026-01-23 (v1.58.0)**: AIエージェント向けのCLIモード（token-efficient）とスキルセットを追加。HTMLレポートのSpeedboardにタイムライン表示を追加。
+* **2025-11-25 (v1.57.0)**: HTMLレポートにテスト実行速度を分析する「Speedboard」を追加。「Chrome for Testing」への移行。
+* **2025-10-06 (v1.56.0)**: 自律型テストエージェント機能「Playwright Test Agents (Planner/Generator/Healer)」を導入。
+* **2025-08-20 (v1.55.0)**: Codegenが `toBeVisible()` アサーションを自動生成可能に。
 
 (出典: [Playwright GitHub Releases](https://github.com/microsoft/playwright/releases))
 
