@@ -55,6 +55,7 @@ relationships:
     - "GitHub Copilot"
     - "Devin"
     - "Claude Cowork"
+    - "Playwright Test Agents"
 ---
 
 # **Claude Code 調査レポート**

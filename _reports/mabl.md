@@ -59,6 +59,7 @@ relationships:
     - "Selenium"
     - "Playwright"
     - "Cypress"
+    - "Playwright Test Agents"
 ---
 
 # **mabl 調査レポート**

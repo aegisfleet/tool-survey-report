@@ -62,6 +62,7 @@ relationships:
     - "Roo Code"
     - "Cline"
     - "Google Antigravity"
+    - "Playwright Test Agents"
 ---
 
 # **Visual Studio Code 調査レポート**

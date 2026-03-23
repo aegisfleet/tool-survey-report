@@ -55,6 +55,7 @@ relationships:
     - "Selenium"
     - "Cypress"
     - "Playwright"
+    - "Playwright Test Agents"
 ---
 
 # **Autify 調査レポート**
