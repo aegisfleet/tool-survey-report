@@ -52,6 +52,7 @@ relationships:
   - Gemini
   - Model Context Protocol
   - MCP Apps
+  - TradingAgents
   - "Grok"
   - Cursor
   - GitHub Copilot
