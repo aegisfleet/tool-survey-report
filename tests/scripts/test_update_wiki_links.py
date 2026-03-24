@@ -8,6 +8,15 @@ os.environ['TESTING'] = '1'
 from scripts.update_wiki_links import get_github_repo, update_file
 from unittest.mock import patch, mock_open
 
+def extract_written_content(handle):
+    """Helper to extract written content from a mocked file handle."""
+    # Try write first
+    written_content = "".join(call.args[0] for call in handle.write.call_args_list)
+    if not written_content:
+        # If write wasn't used, try writelines
+        written_content = "".join("".join(call.args[0]) for call in handle.writelines.call_args_list)
+    return written_content
+
 class TestGetGithubRepo(unittest.TestCase):
     def test_quoted_url(self):
         content = 'github: "https://github.com/owner/repo"'
@@ -93,12 +102,7 @@ class TestUpdateFile(unittest.TestCase):
             result = update_file(filepath, owner, repo, True, False)
             self.assertTrue(result)
 
-            # Check if write was called with updated content
-            handle = m()
-            written_content = "".join(call.args[0] for call in handle.write.call_args_list)
-            if not written_content: # writelines was used
-                 written_content = "".join("".join(call.args[0]) for call in handle.writelines.call_args_list)
-
+            written_content = extract_written_content(m())
             self.assertIn(f'codewiki: "{expected_url}"', written_content)
 
     def test_update_file_after_github_entry(self):
@@ -114,9 +118,7 @@ class TestUpdateFile(unittest.TestCase):
             result = update_file(filepath, owner, repo, False, False)
             self.assertTrue(result)
 
-            handle = m()
-            written_content = "".join("".join(call.args[0]) for call in handle.writelines.call_args_list)
-
+            written_content = extract_written_content(m())
             self.assertIn(expected_codewiki, written_content)
             self.assertIn(expected_deepwiki, written_content)
 
@@ -133,9 +135,7 @@ class TestUpdateFile(unittest.TestCase):
             result = update_file(filepath, owner, repo, False, False)
             self.assertTrue(result)
 
-            handle = m()
-            written_content = "".join("".join(call.args[0]) for call in handle.writelines.call_args_list)
-
+            written_content = extract_written_content(m())
             self.assertIn(expected_codewiki, written_content)
             self.assertIn(expected_deepwiki, written_content)
 
