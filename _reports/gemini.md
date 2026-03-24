@@ -53,6 +53,7 @@ relationships:
   related_tools:
   - Google Learning
   - ChatGPT
+  - TradingAgents
   - Microsoft 365 Copilot
   - Claude
   - Grok

@@ -61,6 +61,7 @@ relationships:
     - "DeepSeek"
     - "Grok"
     - "Microsoft 365 Copilot"
+    - "TradingAgents"
     - "Perplexity"
     - "NotebookLM"
     - "Z.ai"

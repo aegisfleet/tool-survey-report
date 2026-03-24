@@ -51,6 +51,7 @@ relationships:
     - "Gemini"
     - "Claude"
     - "LangChain"
+    - "TradingAgents"
 ---
 
 # **Grok 調査レポート**
