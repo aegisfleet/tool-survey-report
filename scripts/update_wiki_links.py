@@ -13,8 +13,8 @@ except ImportError:
 REPORTS_DIR = '_reports'
 
 # Global regex cache for performance optimization
-GITHUB_REPO_QUOTED_RE = re.compile(r'^\s*github:\s*"(https?://github\.com/([^/"]+)/([^/"]+?))/??"', re.MULTILINE)
-GITHUB_REPO_UNQUOTED_RE = re.compile(r'^\s*github:\s*(https?://github\.com/([^/\s\n]+)/([^/\s\n]+?))/??(?:[\s\n]|$)', re.MULTILINE)
+GITHUB_REPO_QUOTED_RE = re.compile(r'^\s*github:\s*"(https?://github\.com/([^/"]+)/([^/"]+))/?"', re.MULTILINE)
+GITHUB_REPO_UNQUOTED_RE = re.compile(r'^\s*github:\s*(https?://github\.com/([^/\s]+)/([^/\s]+))/?(?:\s|$)', re.MULTILINE)
 CODEWIKI_RE = re.compile(r'(codewiki:\s*)"https://codewiki\.google/"')
 
 def get_github_repo(content):
