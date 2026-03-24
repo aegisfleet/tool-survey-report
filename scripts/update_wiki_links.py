@@ -1,5 +1,6 @@
 import os
 import re
+import argparse
 
 try:
     from playwright.sync_api import sync_playwright
@@ -102,8 +103,6 @@ def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
             f.writelines(new_lines)
         return True
     return False
-
-import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Update DeepWiki and CodeWiki links in report files.')
