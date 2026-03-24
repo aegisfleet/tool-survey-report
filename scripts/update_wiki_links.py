@@ -13,12 +13,17 @@ except ImportError:
 
 REPORTS_DIR = '_reports'
 
+# Global regex cache for performance optimization
+GITHUB_REPO_QUOTED_RE = re.compile(r'^\s*github:\s*"(https?://github\.com/([^/"]+)/([^/"]+))/?"', re.MULTILINE)
+GITHUB_REPO_UNQUOTED_RE = re.compile(r'^\s*github:\s*(https?://github\.com/([^/\s]+)/([^/\s]+))/?(?:\s|$)', re.MULTILINE)
+CODEWIKI_RE = re.compile(r'(codewiki:\s*)"https://codewiki\.google/"')
+
 def get_github_repo(content):
     # Search for github link in front matter (anchored to line start)
     # Support both quoted and unquoted URLs, and handle optional trailing slash
-    match = re.search(r'^\s*github:\s*"(https?://github\.com/([^/"]+)/([^/"]+?))/??"', content, re.MULTILINE)
+    match = GITHUB_REPO_QUOTED_RE.search(content)
     if not match:
-        match = re.search(r'^\s*github:\s*(https?://github\.com/([^/\s\n]+)/([^/\s\n]+?))/??(?:[\s\n]|$)', content, re.MULTILINE)
+        match = GITHUB_REPO_UNQUOTED_RE.search(content)
     
     if match:
         return match.group(2), match.group(3)
@@ -62,7 +67,7 @@ def update_file(filepath, owner, repo, has_deepwiki, has_codewiki):
     updated = False
     
     # Use regex to replace placeholder with or without indentation
-    new_content = re.sub(r'(codewiki:\s*)"https://codewiki\.google/"', rf'\1"{codewiki_url}"', content)
+    new_content = CODEWIKI_RE.sub(rf'\1"{codewiki_url}"', content)
     if new_content != content:
         content = new_content
         updated = True
