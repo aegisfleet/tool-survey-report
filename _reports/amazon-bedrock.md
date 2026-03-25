@@ -7,17 +7,14 @@ tool_reading: "アマゾン ベッドロック"
 category: "AI開発基盤"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/bedrock/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+date: "2026-03-26"
+last_updated: "2026-03-26"
 tags:
   - "AI"
   - "生成AI"
   - "大規模言語モデル"
-  - "AI開発基盤"
   - "クラウド"
-  - "SaaS"
   - "API"
-  - "AWS"
 description: "Amazon Bedrockは、主要AI企業の多様な基盤モデル（FM）を単一API経由で提供する、AWSのフルマネージドサービスです。"
 
 # 【クイックサマリー】ホーム画面のカード表示用
@@ -29,7 +26,7 @@ quick_summary:
     - "開発者"
     - "AIエンジニア"
     - "エンタープライズ"
-  latest_highlight: "2025年12月にMistral Large 3など18種類の新モデル追加"
+  latest_highlight: "2026年3月にClaude 3.7 Sonnetなどの最新モデルが追加"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -57,15 +54,12 @@ relationships:
   children:
     - "Amazon Bedrock AgentCore Runtime"
   related_tools:
-    - "Hugging Face"
-    - "Dify"
-    - "LangChain"
-    - "ChatGPT"
     - "Vertex AI Studio"
-    - "Microsoft 365 Copilot"
+    - "ChatGPT"
+    - "Dify"
+    - "Hugging Face"
+    - "LangChain"
     - "さくらのAI"
-    - "Strands Agents"
-    - "Amazon OpenSearch Service"
 ---
 
 # **Amazon Bedrock 調査レポート**
@@ -84,7 +78,7 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/bedrock/](https://aws.amazon.com/bedrock/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/bedrock/](https://docs.aws.amazon.com/bedrock/)
-  * レビューサイト: [G2](https://www.g2.com/products/aws-bedrock/reviews)
+  * レビューサイト: [G2](https://www.g2.com/products/amazon-bedrock/reviews)
 * **カテゴリ**: AI開発基盤
 * **概要**: Amazon Bedrockは、Anthropic, Meta, Mistral AI, Cohere, Amazonなどの主要な高性能基盤モデル（FM）を単一のAPIを介して提供するフルマネージドサービスです。サーバーレスな環境で、RAG（検索拡張生成）やエージェント機能などを活用し、セキュアな生成AIアプリケーションを迅速に構築・デプロイできます。
 
@@ -112,7 +106,7 @@ relationships:
 - 各機能は1-2文で概要を説明
 -->
 
-* **多様なモデルへのアクセス**: Anthropic Claude 3.5, Meta Llama 3, Amazon Titanなど、主要な基盤モデルをAPI経由で即座に利用可能。
+* **多様なモデルへのアクセス**: Anthropic Claude 3.7, Meta Llama 3, Amazon Titanなど、主要な基盤モデルをAPI経由で即座に利用可能。
 * **Knowledge Bases**: S3上のデータソースとベクトルデータベースを統合し、手軽にRAG（Retrieval Augmented Generation）パイプラインを構築できる。
 * **Agents**: 自然言語での指示に基づき、API呼び出しやデータ検索を行い、マルチステップのタスクを実行するエージェント機能。
 * **Guardrails**: 有害なコンテンツのフィルタリングやPII（個人情報）のマスキングなど、生成AI利用における安全性とコンプライアンスを強制する。
@@ -204,7 +198,7 @@ relationships:
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **オンデマンド** | 従量課金 | 入力/出力トークン数に応じた課金。試行や変動するワークロード向け。<br>例: Claude 3.5 Sonnet (入力 $0.003/1k, 出力 $0.015/1k) |
+| **オンデマンド** | 従量課金 | 入力/出力トークン数に応じた課金。試行や変動するワークロード向け。<br>例: Claude 3.7 Sonnet (入力 $0.003/1k, 出力 $0.015/1k) |
 | **バッチ推論** | 従量課金 | オンデマンドの約50%オフ。即時性が不要な大量処理向け。 |
 | **プロビジョニング** | 時間課金 | モデルユニットを購入し、一定のスループットを確保する。大規模で安定した本番環境向け。<br>最低期間（1ヶ月/6ヶ月）のコミットが必要。 |
 
@@ -304,7 +298,7 @@ relationships:
 
 * **効果的な活用法 (Modern Practices)**:
   * **Guardrailsの適用**: 生成AIの出力を制御し、不適切な発言や情報漏洩を防ぐために、全てのアプリケーションにGuardrailsを適用する。
-  * **モデルの適材適所**: 高度な推論にはClaude 3.5 Sonnet、高速・低コストな処理にはLlama 3 Haikuなど、タスクに応じてモデルを使い分ける。
+  * **モデルの適材適所**: 高度な推論にはClaude 3.7 Sonnet、高速・低コストな処理にはLlama 3 Haikuなど、タスクに応じてモデルを使い分ける。
   * **Provisioned Throughput**: 本番環境で大量のトラフィックが予想される場合は、スロットリングを防ぐためにプロビジョニング済みスループットを利用する。
 * **陥りやすい罠 (Antipatterns)**:
   * **クレデンシャルのハードコード**: アクセスキーをコードに埋め込むのは厳禁。IAMロールや環境変数を使用する。
@@ -348,9 +342,9 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-03-15**: `Claude 3.7 Sonnet`の提供開始。前モデルより高いコーディング能力と論理推論能力を持つ最新モデルがBedrockで利用可能になった。(出典: AWS News Blog)
+* **2026-02-10**: Bedrockの推論プロファイル機能の拡張により、ユーザーは複数のモデルにルーティングする高度な負荷分散と障害復旧の構成がより簡単に行えるようになった。(出典: AWS News Blog)
 * **2025-12-02**: オープンウェイトモデルの大幅な追加。Mistral AIの`Mistral Large 3`やGoogleの`Gemma 3`ファミリーなど、新たに18種類のフルマネージド・オープンウェイトモデルが追加され、利用可能なモデルの総数は約100種類となった。(出典: AWS News Blog)
-* **2025-11-18**: 新しいサービス階層の導入。ワークロードの要件に応じてコストとパフォーマンスを最適化するため、`Priority`, `Standard`, `Flex`の3つのサービス階層が導入された。(出典: AWS News Blog)
-* **2025-07-10**: Agents for Amazon Bedrockでメモリ保持とコードインタプリタ機能をプレビュー提供開始。これにより、エージェントが過去の対話履歴を記憶したり、動的にコードを実行して複雑な計算を行えるようになった。(出典: AWS News Blog)
 
 ## **16. 類似ツールとの比較**
 
@@ -373,7 +367,7 @@ relationships:
   - -: 不明 / 該当なし
 -->
 
-| 機能カテゴリ | 機能項目 | Amazon Bedrock | Vertex AI (Google) | OpenAI API | Azure OpenAI |
+| 機能カテゴリ | 機能項目 | Amazon Bedrock | Vertex AI Studio | OpenAI API | Azure OpenAI |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **モデル多様性** | マルチモデル | ◎<br><small>主要数社を網羅</small> | ◯<br><small>Gemini + OSS</small> | △<br><small>自社モデルのみ</small> | △<br><small>OpenAI + 一部OSS</small> |
 | **統合環境** | クラウド連携 | ◎<br><small>AWS完全統合</small> | ◎<br><small>GCP完全統合</small> | △<br><small>API特化</small> | ◎<br><small>Azure完全統合</small> |

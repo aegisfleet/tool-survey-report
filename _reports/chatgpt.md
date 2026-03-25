@@ -55,6 +55,7 @@ relationships:
     - "Sora"
     - "OpenAI Codex CLI"
   related_tools:
+    - "Amazon Bedrock"
     - "Gemini"
     - "Claude"
     - "Pomelli"
