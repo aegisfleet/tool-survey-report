@@ -8,7 +8,7 @@ category: "BIツール"
 developer: "Salesforce"
 official_site: "https://www.tableau.com/"
 date: "2026-01-28"
-last_updated: "2026-01-28"
+last_updated: "2026-03-25"
 tags:
   - "BI"
   - "データ分析"
@@ -27,7 +27,7 @@ quick_summary:
     - "データアナリスト"
     - "経営層"
     - "マーケター"
-  latest_highlight: "AI機能「Tableau Pulse」と「Tableau Agent」による自然言語分析の強化"
+  latest_highlight: "2026年3月のリリースでTableau Next: Rule-Based Semantic Model AuthoringやPulseの強化を実施"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -195,10 +195,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-03**: Tableau March 2026 Release (2026.1)。「Tableau Next: Rule-Based Semantic Model Authoring」の追加や「Tableau Pulse: Enhanced Q&A Improvements」などの機能強化を実施。
 * **2026-01**: ペース対目標（Pace to Goal）インサイト機能、メトリクスの「お気に入り」登録機能の追加。
 * **2025-12 (2025.3)**: Tableau Agent (AI) のTableau Server対応、ダッシュボードナラティブ（解説文）生成機能、Q&A調整機能の強化。
-* **2025-XX**: Tableau Agentの多言語対応強化（日本語サポート向上）。
-* **2025-XX**: Private Connectにおける接続先（AWS上のDB等）の拡充により、セキュリティを強化。
 
 (出典: [Tableau Release Notes](https://www.tableau.com/support/releases))
 
