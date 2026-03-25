@@ -2,16 +2,16 @@
 title: "act (nektos/act) 調査レポート"
 tool_name: "act"
 tool_reading: "アクト"
-category: "DevOps"
+category: "CI/CD"
 developer: "nektos"
 official_site: "https://nektosact.com/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+date: "2026-03-25"
+last_updated: "2026-03-25"
 tags:
   - "CI/CD"
   - "GitHub Actions"
-  - "OSS"
-  - "Local Development"
+  - "オープンソース"
+  - "開発者ツール"
 description: "GitHub Actionsのワークフローをローカル環境で実行できるコマンドラインツール。Dockerを使用してローカルでCI/CDパイプラインをシミュレートする。"
 
 quick_summary:
@@ -22,7 +22,7 @@ quick_summary:
     - "ソフトウェアエンジニア"
     - "DevOpsエンジニア"
     - "OSSメンテナ"
-  latest_highlight: "2026年1月にv0.2.84をリリース。安定性と互換性が向上。"
+  latest_highlight: "2026年3月にv0.2.86をリリース。Node.js 20非推奨対応などの修正を含む。"
   update_frequency: "高"
 
 evaluation:
@@ -53,8 +53,8 @@ relationships:
   children: []
   related_tools:
     - "Docker"
-    - "CircleCI CLI"
-    - "Dagger"
+    - "GitLab CI/CD"
+    - "Jenkins"
 ---
 
 # **act (nektos/act) 調査レポート**
@@ -219,11 +219,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-25 (v0.2.86)**: Node.js 20非推奨対応や各種依存関係のアップデート。
+* **2026-03-23 (v0.2.85)**: go.opentelemetry.io、go-gitなどの依存関係アップデートによる安定性向上。
 * **2026-01-01 (v0.2.84)**: メンテナンスリリース。依存パッケージのセキュリティアップデートとバグ修正。
 * **2025-12-01 (v0.2.83)**: Mergify設定の更新など、開発フロー周辺の改善。
-* **2025-10-XX (v0.2.82)**: 依存関係のアップデートによる安定性向上。
-* **2025-09-XX (v0.2.81)**: Matrix展開ロジックの修正や、ステップコンテナのワークディレクトリ処理の修正。
-* **2025-08-XX (v0.2.80)**: テスト環境のベースイメージ更新（buster -> bookworm）。
+* **2025-10-01 (v0.2.82)**: 依存関係のアップデートによる安定性向上。
+* **2025-09-01 (v0.2.81)**: Matrix展開ロジックの修正や、ステップコンテナのワークディレクトリ処理の修正。
 
 (出典: [GitHub Releases](https://github.com/nektos/act/releases))
 
@@ -231,12 +232,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | act | GitHub Actions (Cloud) | CircleCI CLI | Dagger |
+| 機能カテゴリ | 機能項目 | act | GitHub Actions (Cloud) | GitLab CI/CD | Jenkins |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **実行環境** | ローカル実行 | ◎<br><small>Dockerで再現</small> | ×<br><small>不可</small> | ◯<br><small>専用コンテナ</small> | ◎<br><small>どこでも動作</small> |
-| **互換性** | Actions構文 | ◎<br><small>ネイティブ対応</small> | ◎<br><small>本家</small> | ×<br><small>CircleCI構文</small> | ×<br><small>独自/CUE/SDK</small> |
-| **セットアップ** | 容易さ | ◯<br><small>Installのみ</small> | ◎<br><small>不要</small> | △<br><small>Token設定等</small> | △<br><small>SDK学習必要</small> |
-| **コスト** | 無料利用 | ◎<br><small>完全無料</small> | ◯<br><small>制限あり</small> | ◯<br><small>制限あり</small> | ◎<br><small>OSS版あり</small> |
+| **実行環境** | ローカル実行 | ◎<br><small>Dockerで再現</small> | ×<br><small>不可</small> | ◯<br><small>gitlab-runner execによるローカル実行</small> | ×<br><small>基本的にサーバー必要</small> |
+| **互換性** | Actions構文 | ◎<br><small>ネイティブ対応</small> | ◎<br><small>本家</small> | ×<br><small>GitLab CI構文</small> | ×<br><small>Jenkinsfile等独自構文</small> |
+| **セットアップ** | 容易さ | ◯<br><small>Installのみ</small> | ◎<br><small>不要</small> | ◯<br><small>Runner設定が必要</small> | △<br><small>サーバーとプラグイン設定が必要</small> |
+| **コスト** | 無料利用 | ◎<br><small>完全無料</small> | ◯<br><small>制限あり</small> | ◯<br><small>SaaSは制限あり</small> | ◎<br><small>完全無料</small> |
 
 ### **16.2 詳細比較**
 
@@ -244,8 +245,8 @@ relationships:
 |---------|------|------|------|------------------|
 | **act** | GitHub Actionsローカルランナー | Actionsの資産をそのまま使える。無料。 | 完全な環境再現は困難。Docker必須。 | GitHub Actionsを利用しており、ローカルで高速にフィードバックを得たい場合。 |
 | **GitHub Actions (Cloud)** | 本家クラウド実行環境 | 完全な互換性。セットアップ不要。並列実行能力。 | フィードバックが遅い。デバッグがしにくい。 | 最終的な動作確認、本番デプロイ、重い処理。 |
-| **CircleCI CLI** | CircleCI用ローカルツール | 強力なデバッグ機能とCircleCIとの整合性。 | GitHub Actionsとは互換性がない。 | CircleCIをメインのCIとして利用している場合。 |
-| **Dagger** | ポータブルCI/CDエンジン | 特定のCIツールに依存せず、Go/Python等で記述可能。 | 独自の学習が必要。Actions資産は直接使えない。 | ベンダーロックインを避け、CIパイプライン自体をコードとして管理・ポータブルにしたい場合。 |
+| **GitLab CI/CD** | GitLabの統合CI/CD | GitHubへの依存なく利用可能。要件を満たせばローカル実行も可能。 | GitHub Actions構文との互換性がない。 | メインのリポジトリがGitLabである場合。 |
+| **Jenkins** | 汎用CI/CDサーバー | 強力なプラグインエコシステム。複雑なパイプライン構築が可能。 | 運用コストが高い。セットアップが煩雑。 | 大規模なパイプラインや特殊な環境構築が必要な場合。 |
 
 ## **17. 総評**
 

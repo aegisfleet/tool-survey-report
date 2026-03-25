@@ -59,6 +59,7 @@ relationships:
     - "GitHub Actions"
     - "GitLab CI/CD"
     - "Nexus Repository"
+    - "act"
 ---
 
 # **Jenkins 調査レポート**
