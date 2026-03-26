@@ -56,6 +56,7 @@ relationships:
     - "LITRON CORE"
     - "Android Use"
     - "Robot Framework"
+    - "AutoHotkey"
 ---
 
 # **UiPath 調査レポート**
