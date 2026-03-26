@@ -66,6 +66,7 @@ relationships:
     - "Amazon Bedrock AgentCore Runtime"
     - "Hugging Face"
     - "Letta"
+    - "Brainbase"
 ---
 
 # **LangChain 調査レポート**
