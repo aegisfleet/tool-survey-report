@@ -58,10 +58,10 @@ relationships:
     - "Cursor"
     - "GitHub Copilot"
     - "IntelliJ IDEA"
+    - "Eclipse IDE"
     - "Windsurf"
     - "Roo Code"
     - "Cline"
-    - "Google Antigravity"
     - "Playwright Test Agents"
     - "Microsoft PowerToys"
 ---

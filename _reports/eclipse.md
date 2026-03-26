@@ -7,8 +7,8 @@ tool_reading: "イクリプス / エクリプス"
 category: "IDE/エディタ"
 developer: "Eclipse Foundation"
 official_site: "https://eclipseide.org/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+date: "2026-03-27"
+last_updated: "2026-03-27"
 tags:
   - "Java"
   - "IDE"
@@ -53,15 +53,11 @@ links:
   deepwiki: "https://deepwiki.com/eclipse-platform/eclipse.platform"
   documentation: "https://help.eclipse.org/latest/index.jsp"
 relationships:
-  children:
-    - "MyEclipse"
   related_tools:
     - "IntelliJ IDEA"
     - "Visual Studio Code"
     - "Android Studio"
     - "JUnit"
-    - "Maven"
-    - "Gradle"
 ---
 
 # **Eclipse IDE 調査レポート**
@@ -75,7 +71,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/eclipse-platform/eclipse.platform](https://github.com/eclipse-platform/eclipse.platform)
   * ドキュメント: [https://help.eclipse.org/latest/index.jsp](https://help.eclipse.org/latest/index.jsp)
-  * レビューサイト: [G2](https://www.g2.com/products/eclipse/reviews) | [ITreview](https://www.itreview.jp/products/eclipse/reviews)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/eclipse/reviews)
 * **カテゴリ**: IDE/エディタ
 * **概要**: Eclipse Foundationが管理する、オープンソースの統合開発環境（IDE）です。Java開発ツールとして最も長い歴史と実績を持ち、強力なプラグインシステム（OSGi）により、C/C++、PHP、Pythonなど多様な言語の開発環境としても利用可能です。四半期ごとに安定版がリリースされ、世界中のエンタープライズ開発現場で広く採用されています。
 
@@ -195,7 +191,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, ITreview
+* **調査対象**: G2 (Google検索スニペットより引用), Capterra, ITreview
 * **総合評価**: 4.0 - 4.2 / 5.0
 * **ポジティブな評価**:
   * 「Java開発に関しては右に出るものがいないほど高機能。」

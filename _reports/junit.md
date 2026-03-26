@@ -45,6 +45,7 @@ relationships:
   children:
     - "Database Rider"
   related_tools:
+    - "Eclipse IDE"
     - "JaCoCo"
     - "Spring Boot"
     - "Allure Report"
