@@ -56,12 +56,11 @@ links:
 relationships:
   parent: "IntelliJ IDEA"
   related_tools:
+    - "Eclipse IDE"
     - "Android"
     - "Flutter"
     - "Kotlin Multiplatform"
     - "Visual Studio Code"
-    - "Mobile Next"
-    - "Delphi"
     - "Cursor"
     - "Windsurf"
     - "Gemini"
