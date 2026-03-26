@@ -68,6 +68,7 @@ relationships:
     - "Amazon Bedrock"
     - "Google Opal"
     - "LITRON CORE"
+    - "Brainbase"
 ---
 
 # **Dify 調査レポート**
