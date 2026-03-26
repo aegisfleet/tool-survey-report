@@ -46,6 +46,7 @@ relationships:
   parent: "Claude"
   children: []
   related_tools:
+    - "Dexter"
     - "Context7"
     - "Agentic Workflows"
     - "Opcode"
