@@ -60,6 +60,7 @@ relationships:
     - "n8n"
     - "Workato"
     - "Microsoft 365 Copilot"
+    - "AutoHotkey"
 ---
 
 # **Microsoft Power Automate 調査レポート**
