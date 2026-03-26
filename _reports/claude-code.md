@@ -56,6 +56,7 @@ relationships:
     - "Devin"
     - "Claude Cowork"
     - "Playwright Test Agents"
+    - "Claude for Financial Services Plugins"
 ---
 
 # **Claude Code 調査レポート**

@@ -52,7 +52,8 @@ links:
   documentation: "https://support.claude.com/en/articles/13345190-getting-started-with-cowork"
 relationships:
   parent: "Claude"
-  children: []
+  children:
+    - "Claude for Financial Services Plugins"
   related_tools:
     - "Claude Code"
 ---
