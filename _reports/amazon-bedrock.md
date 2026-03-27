@@ -26,7 +26,7 @@ quick_summary:
     - "開発者"
     - "AIエンジニア"
     - "エンタープライズ"
-  latest_highlight: "2026年3月にClaude 3.7 Sonnetなどの最新モデルが追加"
+  latest_highlight: "2026年3月にNVIDIA Nemotron 3 SuperやNova Forge SDK、Claude 3.7 Sonnetなどの最新モデル・機能が追加"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -213,9 +213,11 @@ relationships:
 - 導入事例がない場合は「公開事例なし。ただし、〜の分野での利用が報告されている」等
 -->
 
-* **導入企業**: Toyota Connected, Pfizer, Siemens, Ryanair, 竹中工務店
-* **導入事例**: Toyota Connectedは、Bedrockを活用して車両マニュアルの質問応答システムを構築し、顧客体験を向上。
-* **対象業界**: 自動車、ヘルスケア、製造、航空、建設など、セキュリティと信頼性を重視する大手企業での採用が進んでいる。
+* **導入企業**: Toyota Connected, Pfizer, Siemens, Ryanair, 竹中工務店, 住信 SBI ネット銀行
+* **導入事例**:
+  * Toyota Connectedは、Bedrockを活用して車両マニュアルの質問応答システムを構築し、顧客体験を向上。
+  * 住信 SBI ネット銀行は、Amazon Bedrock AgentCoreを中核としたAIエージェント機能を活用し、自然言語による対話を通じた銀行手続きを可能にするAI銀行サービス「NEOBANK ai」を構築。
+* **対象業界**: 自動車、金融、ヘルスケア、製造、航空、建設など、セキュリティと信頼性を重視する大手企業での採用が進んでいる。
 
 ## **9. サポート体制**
 
@@ -342,7 +344,9 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-03-23**: `NVIDIA Nemotron 3 Super`モデルの提供開始および、`Nova Forge SDK`のサポートが追加。(出典: [AWS News Blog](https://aws.amazon.com/jp/blogs/news/aws-weekly-roundup-nvidia-nemotron-3-super-on-amazon-bedrock-nova-forge-sdk-amazon-corretto-26-and-more-march-23-2026/))
 * **2026-03-15**: `Claude 3.7 Sonnet`の提供開始。前モデルより高いコーディング能力と論理推論能力を持つ最新モデルがBedrockで利用可能になった。(出典: AWS News Blog)
+* **2026-02-27**: 住信 SBI ネット銀行における、`Amazon Bedrock AgentCore`を活用したAI銀行サービス「NEOBANK ai」の導入事例が公開。(出典: [AWS News Blog](https://aws.amazon.com/jp/blogs/news/sbi-sumishin-net-bank-aiagent-application-on-aws/))
 * **2026-02-10**: Bedrockの推論プロファイル機能の拡張により、ユーザーは複数のモデルにルーティングする高度な負荷分散と障害復旧の構成がより簡単に行えるようになった。(出典: AWS News Blog)
 * **2025-12-02**: オープンウェイトモデルの大幅な追加。Mistral AIの`Mistral Large 3`やGoogleの`Gemma 3`ファミリーなど、新たに18種類のフルマネージド・オープンウェイトモデルが追加され、利用可能なモデルの総数は約100種類となった。(出典: AWS News Blog)
 
