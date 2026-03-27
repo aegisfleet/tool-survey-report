@@ -56,10 +56,10 @@ relationships:
   children:
     - "Karpenter"
   related_tools:
+    - "Google Cloud"
     - "Docker"
     - "Podman"
     - "Datadog"
-    - "OpenTofu"
     - "Terraform"
     - "Ansible"
     - "Grafana"
