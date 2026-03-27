@@ -50,6 +50,7 @@ relationships:
   - Code Wiki
   - Google Jules
   - Google Stitch
+  - Gemini Skills
   related_tools:
   - Google Learning
   - ChatGPT
