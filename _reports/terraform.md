@@ -59,6 +59,7 @@ relationships:
   children:
     - "OpenTofu"
   related_tools:
+    - "Google Cloud"
     - "Ansible"
     - "Pulumi"
     - "AWS CloudFormation"
