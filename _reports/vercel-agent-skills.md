@@ -53,6 +53,7 @@ relationships:
     - "GitHub Actions"
     - "Vercel"
     - "React"
+    - "Gemini Skills"
 ---
 
 # **Vercel Agent Skills 調査レポート**
