@@ -69,6 +69,7 @@ relationships:
     - "Autify"
     - "MagicPod"
     - "mabl"
+    - "Gauge"
     - "Appium"
     - "Karate"
 ---

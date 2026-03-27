@@ -60,6 +60,7 @@ relationships:
     - "Autify"
     - "mabl"
     - "Karate"
+    - "Gauge"
 ---
 
 # **Selenium 調査レポート**
