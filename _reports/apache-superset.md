@@ -1,57 +1,49 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Apache Superset 調査レポート"
-tool_name: "Apache Superset"
-tool_reading: "アパッチ スーパーセット"
-category: "BIツール"
-developer: "Apache Software Foundation"
-official_site: "https://superset.apache.org/"
-date: "2026-03-29"
-last_updated: "2026-03-29"
+title: Apache Superset 調査レポート
+tool_name: Apache Superset
+tool_reading: アパッチ スーパーセット
+category: BIツール
+developer: Apache Software Foundation
+official_site: https://superset.apache.org/
+date: '2026-03-29'
+last_updated: '2026-03-29'
 tags:
-  - "BIツール"
-  - "データ分析"
-  - "オープンソース"
-  - "ダッシュボード"
-description: "SQLに対応した高速・軽量なオープンソースのデータ可視化・探索プラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - BIツール
+  - データ分析
+  - オープンソース
+  - ダッシュボード
+description: SQLに対応した高速・軽量なオープンソースのデータ可視化・探索プラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "データアナリスト"
-    - "データエンジニア"
-    - "ビジネスユーザー"
-  latest_highlight: "2024年12月にメジャーバージョン 6.0.0 をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - データアナリスト
+    - データエンジニア
+    - ビジネスユーザー
+  latest_highlight: 2025年12月にメジャーバージョン 6.0.0 をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、オンプレミス・クラウド両方で自由に構築可能"
+      reason: オープンソースであり、オンプレミス・クラウド両方で自由に構築可能
     - point: 5
-      reason: "40種類以上の豊富なチャートと、強力なSQL IDEを標準搭載"
+      reason: 40種類以上の豊富なチャートと、強力なSQL IDEを標準搭載
     - point: 5
-      reason: "非常に多くのSQL対応データベースに接続可能"
+      reason: 非常に多くのSQL対応データベースに接続可能
   minus_points:
     - point: -2
-      reason: "自社でホスティング・運用するための専門知識が必要（フルマネージド版はPresetなどが提供）"
-  summary: "強力なSQLエディタと多彩なグラフ表現を備えた、OSS BIツールの決定版"
-
-# 【任意項目】該当するもののみ記載
+      reason: 自社でホスティング・運用するための専門知識が必要（フルマネージド版はPresetなどが提供）
+  summary: 強力なSQLエディタと多彩なグラフ表現を備えた、OSS BIツールの決定版
 links:
-  github: "https://github.com/apache/superset"
-  deepwiki: "https://deepwiki.com/apache/superset"
+  github: https://github.com/apache/superset
+  deepwiki: https://deepwiki.com/apache/superset
 relationships:
   related_tools:
-    - "Metabase"
-    - "Redash"
+    - Metabase
+    - Redash
 ---
 
 # **Apache Superset 調査レポート**
