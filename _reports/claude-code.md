@@ -46,18 +46,13 @@ relationships:
   parent: "Claude"
   children: []
   related_tools:
-    - "Dexter"
-    - "Context7"
-    - "Agentic Workflows"
-    - "Opcode"
-    - "MCP Apps"
-    - "SkillsMP"
-    - "Cursor"
     - "GitHub Copilot"
+    - "Cursor"
+    - "Windsurf"
+    - "Cline"
+    - "Roo Code"
     - "Devin"
     - "Claude Cowork"
-    - "Playwright Test Agents"
-    - "Claude for Financial Services Plugins"
 ---
 
 # **Claude Code 調査レポート**

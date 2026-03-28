@@ -59,12 +59,12 @@ links:
 relationships:
   related_tools:
     - "Devin"
-    - "DeepWiki-Open"
     - "Cursor"
     - "GitHub Copilot"
-    - "OpenCode"
+    - "Windsurf"
     - "Roo Code"
-    - "Agent Trace"
+    - "Claude Code"
+    - "Visual Studio Code"
 ---
 
 # **Cline 調査レポート**

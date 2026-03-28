@@ -57,6 +57,9 @@ relationships:
     - "Cline"
     - "Cursor"
     - "GitHub Copilot"
+    - "Windsurf"
+    - "Claude Code"
+    - "Visual Studio Code"
 ---
 
 # **Roo Code 調査レポート**

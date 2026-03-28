@@ -11,7 +11,7 @@ date: "2026-01-17"
 last_updated: "2026-02-16"
 tags:
   - "AI"
-  - "コーディング支援"
+  - "AIコーディング支援"
   - "開発者ツール"
   - "エージェント"
   - "生成AI"
@@ -59,10 +59,10 @@ relationships:
     - "Cursor"
     - "Windsurf"
     - "Cline"
-    - "GitLab Duo"
-    - "Amazon Q Developer"
+    - "Roo Code"
     - "Claude Code"
     - "Devin"
+    - "GitLab Duo"
 ---
 
 # **GitHub Copilot 調査レポート**

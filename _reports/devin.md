@@ -57,18 +57,13 @@ relationships:
   children:
     - "DeepWiki"
   related_tools:
-    - "Deep Agents"
-    - "AWS Frontier Agents"
-    - "Claude Code"
     - "GitHub Copilot"
-    - "OpenHands"
-    - "Google Jules"
-    - "AGENTIC STAR"
-    - "Agent Zero"
-    - "OpenCode"
-    - "Manus"
+    - "Claude Code"
+    - "Cursor"
     - "Windsurf"
-    - "Android Use"
+    - "Cline"
+    - "Roo Code"
+    - "OpenHands"
 ---
 
 # **Devin 調査レポート**

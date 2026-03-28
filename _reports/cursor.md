@@ -59,11 +59,11 @@ relationships:
   related_tools:
     - "GitHub Copilot"
     - "Windsurf"
-    - "Visual Studio Code"
     - "Cline"
-    - "Kiro"
-    - "Google Antigravity"
-    - "Agent Trace"
+    - "Roo Code"
+    - "Claude Code"
+    - "Visual Studio Code"
+    - "Devin"
 ---
 
 # **Cursor 調査レポート**

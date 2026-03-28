@@ -55,10 +55,10 @@ relationships:
     - "Visual Studio Code"
     - "Cursor"
     - "GitHub Copilot"
-    - "Devin"
-    - "Google Antigravity"
-    - "Kiro"
     - "Cline"
+    - "Roo Code"
+    - "Claude Code"
+    - "Devin"
 ---
 
 # **Windsurf 調査レポート**
