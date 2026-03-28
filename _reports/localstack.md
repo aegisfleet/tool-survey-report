@@ -5,8 +5,8 @@ tool_reading: ローカルスタック
 category: インフラ/クラウド
 developer: LocalStack GmbH
 official_site: https://www.localstack.cloud/
-date: '2026-01-29'
-last_updated: '2026-01-29'
+date: '2026-03-29'
+last_updated: '2026-03-29'
 tags:
   - AWS
   - Python
@@ -22,7 +22,7 @@ quick_summary:
     - クラウドエンジニア
     - バックエンド開発者
     - DevOpsエンジニア
-  latest_highlight: 2025年12月にv4.12.0をリリース。Lambda Managed InstancesやS3 Tables (Iceberg)のサポートを追加。
+  latest_highlight: 2026年2月にv4.14.0をリリース。プロバイダメソッドのタグ付け機能移行やLambda管理インスタンスの非同期スケーリング対応を追加。
   update_frequency: 高
 evaluation:
   score: 88
@@ -204,7 +204,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Product Hunt, GitHub, 技術ブログ等
+* **調査対象**: G2、Capterra、ITreviewにレビューの登録なし。そのためGitHub、Product Hunt、技術ブログ等から収集。
 * **総合評価**: 多くの開発者から「AWS開発の必須ツール」として高い評価を得ている。
 * **ポジティブな評価**:
   * 「AWS請求額を気にせず実験できるのが最高」
@@ -218,11 +218,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-02-26 (v4.14.0)**: Route53・KMS・S3など多数のサービスでタグ付け機能がプロバイダメソッドへ移行。Lambda管理インスタンスの非同期スケーリング・更新に対応。
+* **2026-02-02 (v4.13.1)**: Route53のRecordSetリソースUpdateのサポート。Lambda管理インスタンスのサポートランタイムの検証追加。
+* **2026-01-29 (v4.13.0)**: SNSのv2データ保護とアクセス許可操作のサポート、CloudFormationでの未対応リソースタイプの無視（スキップ）オプション追加、.NET 10 Lambdaランタイムの追加。
 * **2025-12-11 (v4.12.0)**: Lambda Managed Instancesの導入、Step Functionsの単体テスト機能強化、Glue APIの拡充。
 * **2025-11-27 (v4.11.0)**: 最新Lambdaランタイム（Python 3.14, Java 25, Node.js 24）のサポート、KMS Decrypt Recipient対応。
-* **2025-10-30 (v4.10.0)**: S3 Tables (Apache Iceberg) のサポート開始、EKS Pod Identityへの対応。
-* **2025-10-02 (v4.9.0)**: OpenSearchの新バージョン対応、EKS Access EntriesのCRUDサポート、CloudWatchのマルチプロトコル対応。
-* **2025-09-11 (v4.8.0)**: AWS Toolkit for VS Codeとの統合によるLambdaデバッグ機能、ECSベースのBatchプロバイダー導入。
 
 (出典: [LocalStack Releases](https://github.com/localstack/localstack/releases))
 
