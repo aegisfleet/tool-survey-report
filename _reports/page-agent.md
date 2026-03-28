@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "PageAgent 調査レポート"
-tool_name: "PageAgent"
-tool_reading: "ページエージェント"
-category: "自律型AIエージェント"
-developer: "Alibaba"
-official_site: "https://alibaba.github.io/page-agent/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: PageAgent 調査レポート
+tool_name: PageAgent
+tool_reading: ページエージェント
+category: 自律型AIエージェント
+developer: Alibaba
+official_site: https://alibaba.github.io/page-agent/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "オープンソース"
-  - "ブラウザ自動化"
-description: "Webページ内に組み込み、自然言語で操作を可能にするJavaScript製GUIエージェント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - ブラウザ自動化
+  - 開発者ツール
+description: Webページ内に組み込み、自然言語で操作を可能にするJavaScript製GUIエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "SaaS開発者"
-  latest_highlight: "v1.5.5をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Web開発者
+    - SaaS開発者
+  latest_highlight: v1.5.5をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "フロントエンドのみで完結しバックエンドや拡張機能が不要"
+      reason: フロントエンドのみで完結しバックエンドや拡張機能が不要
     - point: 5
-      reason: "視覚認識不要のDOMベース解析による高速かつ正確な操作"
+      reason: 視覚認識不要のDOMベース解析による高速かつ正確な操作
     - point: 3
-      reason: "オープンソースであり無料で利用可能"
+      reason: オープンソースであり無料で利用可能
   minus_points:
     - point: 0
-      reason: ""
-  summary: "既存のWebアプリケーションに容易にAIコパイロットを組み込める画期的なオープンソースツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: 既存のWebアプリケーションに容易にAIコパイロットを組み込める画期的なオープンソースツール
 links:
-  github: "https://github.com/alibaba/page-agent"
-  deepwiki: "https://deepwiki.com/alibaba/page-agent"
-  documentation: "https://alibaba.github.io/page-agent/docs/introduction/overview"
+  github: https://github.com/alibaba/page-agent
+  deepwiki: https://deepwiki.com/alibaba/page-agent
+  documentation: https://alibaba.github.io/page-agent/docs/introduction/overview
 relationships:
   related_tools:
-    - "Playwright"
-    - "Selenium"
-    - "Autify"
-    - "MagicPod"
+    - Playwright
+    - Selenium
+    - Autify
+    - MagicPod
 ---
+
+
+
 # **PageAgent 調査レポート**
 
 ## **1. 基本情報**

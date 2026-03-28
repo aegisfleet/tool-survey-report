@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "cc-sdd 調査レポート"
-tool_name: "cc-sdd"
-tool_reading: "シーシーエスディーディー"
-category: "AI開発基盤"
-developer: "gotalab"
-official_site: "https://github.com/gotalab/cc-sdd"
-date: "2026-03-09"
-last_updated: "2026-03-09"
+title: cc-sdd 調査レポート
+tool_name: cc-sdd
+tool_reading: シーシーエスディーディー
+category: AI開発基盤
+developer: gotalab
+official_site: https://github.com/gotalab/cc-sdd
+date: '2026-03-09'
+last_updated: '2026-03-09'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "仕様書駆動開発"
-  - "CLI"
-  - "Claude Code"
-  - "Cursor"
-  - "オープンソース"
-description: "AIコーディングエージェントに仕様書駆動開発（SDD）のワークフローを導入するCLIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CLI
+  - Claude Code
+  - Cursor
+  - エージェント
+  - オープンソース
+  - 仕様書駆動開発
+  - 開発者ツール
+description: AIコーディングエージェントに仕様書駆動開発（SDD）のワークフローを導入するCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "開発チーム"
-  latest_highlight: "v2.0.0へのメジャーアップデート実施"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 開発チーム
+  latest_highlight: v2.0.0へのメジャーアップデート実施
+  update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "複数の主要なAIエディタ/CLI（Claude Code, Cursorなど計8種）をサポートしている"
+      reason: 複数の主要なAIエディタ/CLI（Claude Code, Cursorなど計8種）をサポートしている
     - point: 5
-      reason: "要件定義から実装タスクまでを構造化し、AIによる手戻りを防ぐ独自のアプローチ"
+      reason: 要件定義から実装タスクまでを構造化し、AIによる手戻りを防ぐ独自のアプローチ
     - point: 3
-      reason: "オープンソースであり無料で利用可能、導入も容易"
+      reason: オープンソースであり無料で利用可能、導入も容易
   minus_points:
-    - point: -0
-      reason: "特になし"
-  summary: "既存のAIコーディングツールに仕様書駆動プロセスを後付けできる、非常に実用的かつ画期的なオープンソースツール。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 特になし
+  summary: 既存のAIコーディングツールに仕様書駆動プロセスを後付けできる、非常に実用的かつ画期的なオープンソースツール。
 links:
-  github: "https://github.com/gotalab/cc-sdd"
-  codewiki: "https://codewiki.google/github.com/gotalab/cc-sdd"
-  deepwiki: "https://deepwiki.com/gotalab/cc-sdd"
+  github: https://github.com/gotalab/cc-sdd
+  codewiki: https://codewiki.google/github.com/gotalab/cc-sdd
+  deepwiki: https://deepwiki.com/gotalab/cc-sdd
 relationships:
   related_tools:
-    - "Kiro"
-    - "Claude Code"
-    - "Cursor"
-    - "Windsurf"
-    - "GitHub Copilot"
+    - Kiro
+    - Claude Code
+    - Cursor
+    - Windsurf
+    - GitHub Copilot
 ---
+
+
+
 
 # **cc-sdd 調査レポート**
 

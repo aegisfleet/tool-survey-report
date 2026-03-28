@@ -1,57 +1,57 @@
 ---
-title: "axe DevTools 調査レポート"
-tool_name: "axe DevTools"
-tool_reading: "アックス デブツールズ"
-category: "テスト/QA"
-developer: "Deque Systems"
-official_site: "https://www.deque.com/axe/devtools/"
-date: "2026-02-19"
-last_updated: "2026-02-19"
+title: axe DevTools 調査レポート
+tool_name: axe DevTools
+tool_reading: アックス デブツールズ
+category: テスト/QA
+developer: Deque Systems
+official_site: https://www.deque.com/axe/devtools/
+date: '2026-02-19'
+last_updated: '2026-02-19'
 tags:
-  - "テスト自動化"
-  - "アクセシビリティ"
-  - "開発者ツール"
-  - "AI"
-  - "SaaS"
-description: "Webおよびモバイルアプリケーションのアクセシビリティ問題をAIと自動化で検出し、修正を支援する開発者向けテストツール"
-
+  - AI
+  - SaaS
+  - アクセシビリティ
+  - テスト自動化
+  - 開発者ツール
+description: Webおよびモバイルアプリケーションのアクセシビリティ問題をAIと自動化で検出し、修正を支援する開発者向けテストツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$40/月"
+  starting_price: $40/月
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-    - "アクセシビリティ専門家"
-  latest_highlight: "2026年1月にVersion 4.120.1をリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - QAエンジニア
+    - アクセシビリティ専門家
+  latest_highlight: 2026年1月にVersion 4.120.1をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "業界標準のaxe-coreエンジンを採用し、高い信頼性と検出精度を誇る"
+      reason: 業界標準のaxe-coreエンジンを採用し、高い信頼性と検出精度を誇る
     - point: 5
-      reason: "Intelligent Guided TestsとAxe Assistantにより、専門知識がなくても修正可能"
+      reason: Intelligent Guided TestsとAxe Assistantにより、専門知識がなくても修正可能
     - point: 5
-      reason: "Playwright, Cypress, VS Codeなど主要な開発ツールとの統合が極めて強力"
+      reason: Playwright, Cypress, VS Codeなど主要な開発ツールとの統合が極めて強力
   minus_points:
     - point: 0
-      reason: ""
-  summary: "AI機能の強化により、アクセシビリティテストの効率と精度がさらに向上した業界標準ツール"
-
+      reason: ''
+  summary: AI機能の強化により、アクセシビリティテストの効率と精度がさらに向上した業界標準ツール
 links:
-  github: "https://github.com/dequelabs/axe-core"
-  deepwiki: "https://deepwiki.com/dequelabs/axe-core"
-  documentation: "https://docs.deque.com/devtools-for-web/4/en/"
+  github: https://github.com/dequelabs/axe-core
+  deepwiki: https://deepwiki.com/dequelabs/axe-core
+  documentation: https://docs.deque.com/devtools-for-web/4/en/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Playwright"
-    - "Selenium"
+    - Playwright
+    - Selenium
 ---
+
+
+
 
 # **axe DevTools 調査レポート**
 

@@ -1,53 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "詐欺バスター Lite 調査レポート"
-tool_name: "詐欺バスター Lite"
-tool_reading: "サギバスター ライト"
-category: "CDN/セキュリティ"
-developer: "トレンドマイクロ株式会社"
-official_site: "https://www.trendmicro.com/ja_jp/forHome/products/sb-lite.html"
-date: "2026-03-12"
-last_updated: "2026-03-12"
+title: 詐欺バスター Lite 調査レポート
+tool_name: 詐欺バスター Lite
+tool_reading: サギバスター ライト
+category: CDN/セキュリティ
+developer: トレンドマイクロ株式会社
+official_site: https://www.trendmicro.com/ja_jp/forHome/products/sb-lite.html
+date: '2026-03-12'
+last_updated: '2026-03-12'
 tags:
-  - "モバイル"
-  - "セキュリティ"
-  - "自動ブロック"
-  - "SaaS"
-description: "特殊詐欺・迷惑電話や国際電話を検知し、発着信時に警告・自動ブロックするスマートフォン専用の無料セキュリティアプリ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - セキュリティ
+  - モバイル
+  - 自動ブロック
+description: 特殊詐欺・迷惑電話や国際電話を検知し、発着信時に警告・自動ブロックするスマートフォン専用の無料セキュリティアプリ
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "スマートフォンユーザー"
-    - "特殊詐欺対策をしたい方"
-  latest_highlight: "全国47都道府県の警察機関と連携し、最新の詐欺電話番号情報を反映"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - スマートフォンユーザー
+    - 特殊詐欺対策をしたい方
+  latest_highlight: 全国47都道府県の警察機関と連携し、最新の詐欺電話番号情報を反映
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "警察庁推奨アプリであり、公的機関との連携による信頼性が高い"
+      reason: 警察庁推奨アプリであり、公的機関との連携による信頼性が高い
     - point: 5
-      reason: "完全無料で基本機能（警告・ブロック）を利用可能"
+      reason: 完全無料で基本機能（警告・ブロック）を利用可能
     - point: 5
-      reason: "国内向けの日本語対応が完璧であり、サポート窓口も充実している"
+      reason: 国内向けの日本語対応が完璧であり、サポート窓口も充実している
   minus_points:
     - point: -3
-      reason: "iOSでは発信時のブロック（自動的な切電）や一部機能に制限がある"
-  summary: "無料で導入できる警察庁推奨の特殊詐欺対策アプリとして、モバイルユーザーに強力な保護を提供する"
-
-# 【任意項目】該当するもののみ記載
-links:
+      reason: iOSでは発信時のブロック（自動的な切電）や一部機能に制限がある
+  summary: 無料で導入できる警察庁推奨の特殊詐欺対策アプリとして、モバイルユーザーに強力な保護を提供する
+links: null
 relationships:
-  related_tools:
+  related_tools: null
 ---
+
+
+
 
 # **詐欺バスター Lite 調査レポート**
 

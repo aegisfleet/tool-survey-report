@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Rakuten AI 調査レポート"
-tool_name: "Rakuten AI"
-tool_reading: "ラクテン エーアイ"
-category: "生成AI"
-developer: "Rakuten Group, Inc."
-official_site: "https://ai.rakuten.co.jp/"
-date: "2025-10-25"
-last_updated: "2026-02-07"
+title: Rakuten AI 調査レポート
+tool_name: Rakuten AI
+tool_reading: ラクテン エーアイ
+category: 生成AI
+developer: Rakuten Group, Inc.
+official_site: https://ai.rakuten.co.jp/
+date: '2025-10-25'
+last_updated: '2026-02-07'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "BtoB"
-  - "オープンソース"
-  - "SaaS"
-description: "楽天エコシステムのデータを活用し、消費者向けエージェントから法人向け業務効率化、開発者向けLLMまで提供する統合AIイニシアチブ。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - BtoB
+  - SaaS
+  - オープンソース
+  - 大規模言語モデル
+  - 生成AI
+description: 楽天エコシステムのデータを活用し、消費者向けエージェントから法人向け業務効率化、開発者向けLLMまで提供する統合AIイニシアチブ。
 quick_summary:
-  has_free_plan: true  # 無料プランの有無
-  is_oss: true  # OSS（オープンソース）かどうか
-  starting_price: "無料 (OSS) / 要問い合わせ (法人向け)"  # 最低価格
-  target_users:  # 想定ユーザー（1-3項目）
-    - "開発者"
-    - "中小企業"
-    - "楽天ユーザー"
-  latest_highlight: "2025年2月にRakuten AI 2.0 (8x7B/2B) モデルを公開"  # 直近1ヶ月の注目アップデート
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  has_free_plan: true
+  is_oss: true
+  starting_price: 無料 (OSS) / 要問い合わせ (法人向け)
+  target_users:
+    - 開発者
+    - 中小企業
+    - 楽天ユーザー
+  latest_highlight: 2025年2月にRakuten AI 2.0 (8x7B/2B) モデルを公開
+  update_frequency: 高
 evaluation:
-  score: 82  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 82
+  base_score: 70
+  plus_points:
     - point: 8
-      reason: "高性能な日本語LLM (Rakuten AI 2.0) をOSS公開し、エコシステムとの連携も強力"
+      reason: 高性能な日本語LLM (Rakuten AI 2.0) をOSS公開し、エコシステムとの連携も強力
     - point: 5
-      reason: "楽天エコシステム内の膨大なデータを学習に活用しており、Eコマース関連タスクに強い"
+      reason: 楽天エコシステム内の膨大なデータを学習に活用しており、Eコマース関連タスクに強い
     - point: 2
-      reason: "楽天市場アプリへのAI搭載など、具体的なサービス統合が進んでいる"
-  minus_points:  # 減点項目（各項目: 点数と理由）
+      reason: 楽天市場アプリへのAI搭載など、具体的なサービス統合が進んでいる
+  minus_points:
     - point: -3
-      reason: "楽天エコシステム外のツールとの連携機能が限定的"
-  summary: "日本語LLMの性能とエコシステム連携が強みだが、汎用性は発展途上。"  # 評価の要約（1文）
-
-# 【任意項目】該当するもののみ記載
+      reason: 楽天エコシステム外のツールとの連携機能が限定的
+  summary: 日本語LLMの性能とエコシステム連携が強みだが、汎用性は発展途上。
 links:
-  huggingface: "https://huggingface.co/Rakuten"
+  huggingface: https://huggingface.co/Rakuten
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "Gemini"
-    - "Claude"
-    - "Grok"
-    - "さくらのAI"
+    - ChatGPT
+    - Gemini
+    - Claude
+    - Grok
+    - さくらのAI
 ---
+
+
+
 
 # **Rakuten AI 調査レポート**
 

@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Delphi 調査レポート"
-tool_name: "Delphi"
-tool_reading: "デルファイ"
-category: "IDE/エディタ"
-developer: "Embarcadero"
-official_site: "https://www.embarcadero.com/jp/products/delphi"
-date: "2025-01-21"
-last_updated: "2026-02-20"
+title: Delphi 調査レポート
+tool_name: Delphi
+tool_reading: デルファイ
+category: IDE/エディタ
+developer: Embarcadero
+official_site: https://www.embarcadero.com/jp/products/delphi
+date: '2025-01-21'
+last_updated: '2026-02-20'
 tags:
-  - "IDE"
-  - "開発者ツール"
-  - "Windows"
-  - "モバイル開発"
-  - "クロスプラットフォーム"
-  - "ローコード"
-  - "AI"
-  - "コーディング支援"
-description: "Object Pascal言語を使用した統合開発環境（IDE）。コンポーネントによるビジュアル開発（RAD）と、単一コードからのWindows/macOS/iOS/Android/Linux向けネイティブアプリ生成が特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - IDE
+  - Windows
+  - クロスプラットフォーム
+  - コーディング支援
+  - モバイル開発
+  - ローコード
+  - 開発者ツール
+description: Object Pascal言語を使用した統合開発環境（IDE）。コンポーネントによるビジュアル開発（RAD）と、単一コードからのWindows/macOS/iOS/Android/Linux向けネイティブアプリ生成が特徴。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (Community Edition)"
+  starting_price: 無料 (Community Edition)
   target_users:
-    - "業務アプリ開発者"
-    - "Windowsアプリ開発者"
-    - "モバイルアプリ開発者"
-  latest_highlight: "2025年12月にRAD Studio 13 Florenceがリリースされ、RAD AI Companion等のAI機能が強化"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 業務アプリ開発者
+    - Windowsアプリ開発者
+    - モバイルアプリ開発者
+  latest_highlight: 2025年12月にRAD Studio 13 Florenceがリリースされ、RAD AI Companion等のAI機能が強化
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ドラッグ＆ドロップによる圧倒的なGUI開発生産性（RAD）"
+      reason: ドラッグ＆ドロップによる圧倒的なGUI開発生産性（RAD）
     - point: 5
-      reason: "単一コードベースから全主要プラットフォームへのネイティブコンパイルが可能"
+      reason: 単一コードベースから全主要プラットフォームへのネイティブコンパイルが可能
     - point: 4
-      reason: "過去の資産（VCLコード）との互換性が高く、長期間の保守に強い"
+      reason: 過去の資産（VCLコード）との互換性が高く、長期間の保守に強い
     - point: 3
-      reason: "AIによるコーディング支援（RAD AI Companion）の強化"
+      reason: AIによるコーディング支援（RAD AI Companion）の強化
   minus_points:
     - point: -3
-      reason: "Professional版以上のライセンス費用が比較的高額"
+      reason: Professional版以上のライセンス費用が比較的高額
     - point: -2
-      reason: "Object Pascal言語の習得者が他のメジャー言語に比べて少ない"
-  summary: "GUIアプリ開発の生産性は依然として最高水準であり、特にWindows業務アプリやマルチデバイス開発において強力な選択肢。AI機能の統合により開発効率がさらに向上。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Object Pascal言語の習得者が他のメジャー言語に比べて少ない
+  summary: GUIアプリ開発の生産性は依然として最高水準であり、特にWindows業務アプリやマルチデバイス開発において強力な選択肢。AI機能の統合により開発効率がさらに向上。
 links:
-  documentation: "http://docwiki.embarcadero.com/"
+  documentation: http://docwiki.embarcadero.com/
 relationships:
   related_tools:
-    - "Visual Studio Code"
-    - "IntelliJ IDEA"
-    - "Android Studio"
+    - Visual Studio Code
+    - IntelliJ IDEA
+    - Android Studio
 ---
+
+
+
 
 # **Delphi 調査レポート**
 

@@ -1,55 +1,56 @@
 ---
-title: "Node.js 調査レポート"
-tool_name: "Node.js"
-tool_reading: "ノードジェイエス"
-category: "開発者ツール"
-developer: "OpenJS Foundation"
-official_site: "https://nodejs.org/"
-date: "2026-01-29"
-last_updated: "2026-02-02"
+title: Node.js 調査レポート
+tool_name: Node.js
+tool_reading: ノードジェイエス
+category: 開発者ツール
+developer: OpenJS Foundation
+official_site: https://nodejs.org/
+date: '2026-01-29'
+last_updated: '2026-02-02'
 tags:
-  - "JavaScript"
-  - "開発者ツール"
-  - "オープンソース"
-description: "非同期イベント駆動型のJavaScriptランタイム環境で、スケーラブルなネットワークアプリケーションの構築に使用されます。"
-
+  - JavaScript
+  - オープンソース
+  - 開発者ツール
+description: 非同期イベント駆動型のJavaScriptランタイム環境で、スケーラブルなネットワークアプリケーションの構築に使用されます。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "サーバーサイドエンジニア"
-  latest_highlight: "2025年12月にHTTPサーバーのパフォーマンスを向上させるオプションを追加"
-  update_frequency: "高"
-
+    - 開発者
+    - サーバーサイドエンジニア
+  latest_highlight: 2025年12月にHTTPサーバーのパフォーマンスを向上させるオプションを追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "npmによる巨大で活発なエコシステムが存在し、機能の拡張性が非常に高い"
+      reason: npmによる巨大で活発なエコシステムが存在し、機能の拡張性が非常に高い
     - point: 5
-      reason: "活発な開発と長期サポート(LTS)版により、安定性と最新機能の両方が提供される"
+      reason: 活発な開発と長期サポート(LTS)版により、安定性と最新機能の両方が提供される
     - point: 5
-      reason: "世界中の企業で採用されており、豊富な実績とコミュニティによるサポートが充実している"
+      reason: 世界中の企業で採用されており、豊富な実績とコミュニティによるサポートが充実している
   minus_points:
     - point: -3
-      reason: "シングルスレッドのため、CPU負荷の高い計算処理には本質的に不向き"
+      reason: シングルスレッドのため、CPU負荷の高い計算処理には本質的に不向き
     - point: -2
-      reason: "非同期処理の概念は初学者にとって学習コストが高くなる場合がある"
-  summary: "巨大なエコシステムと高いパフォーマンスを誇るが、CPU負荷の高い処理には注意が必要なサーバーサイド環境。"
-
+      reason: 非同期処理の概念は初学者にとって学習コストが高くなる場合がある
+  summary: 巨大なエコシステムと高いパフォーマンスを誇るが、CPU負荷の高い処理には注意が必要なサーバーサイド環境。
 links:
-  github: "https://github.com/nodejs/node"
-  deepwiki: "https://deepwiki.com/nodejs/node"
-  documentation: "https://nodejs.org/en/docs/"
+  github: https://github.com/nodejs/node
+  deepwiki: https://deepwiki.com/nodejs/node
+  documentation: https://nodejs.org/en/docs/
 relationships:
-  parent: "OpenJS Foundation"
+  parent: null
   related_tools:
-    - "Deno"
-    - "Bun"
+    - Deno
+    - Bun
+    - Hono
 ---
+
+
+
 
 # **Node.js 調査レポート**
 

@@ -1,71 +1,68 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "IntelliJ IDEA 調査レポート"
-tool_name: "IntelliJ IDEA"
-tool_reading: "インテリジェイ アイデア"
-category: "IDE/エディタ"
-developer: "JetBrains"
-official_site: "https://www.jetbrains.com/idea/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: IntelliJ IDEA 調査レポート
+tool_name: IntelliJ IDEA
+tool_reading: インテリジェイ アイデア
+category: IDE/エディタ
+developer: JetBrains
+official_site: https://www.jetbrains.com/idea/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "AI"
-  - "開発者ツール"
-  - "IDE"
-  - "Java"
-  - "Kotlin"
-description: "JetBrainsが開発する、JavaおよびKotlin開発に特化した強力な統合開発環境（IDE）。高度なリファクタリング機能、インテリジェントなコード補完、AI Assistantを統合。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - IDE
+  - Java
+  - Kotlin
+  - 開発者ツール
+description: JetBrainsが開発する、JavaおよびKotlin開発に特化した強力な統合開発環境（IDE）。高度なリファクタリング機能、インテリジェントなコード補完、AI Assistantを統合。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$16.90/月"
+  starting_price: $16.90/月
   target_users:
-    - "Java/Kotlin開発者"
-    - "エンタープライズ開発チーム"
-    - "Android開発者"
-  latest_highlight: "2025年12月にIntelliJ IDEA 2025.3がリリースされ、AI Assistantが強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Java/Kotlin開発者
+    - エンタープライズ開発チーム
+    - Android開発者
+  latest_highlight: 2025年12月にIntelliJ IDEA 2025.3がリリースされ、AI Assistantが強化
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Java/Kotlin開発における機能の豊富さとコード解析能力は他の追随を許さない"
+      reason: Java/Kotlin開発における機能の豊富さとコード解析能力は他の追随を許さない
     - point: 5
-      reason: "AI Assistantの統合により、コーディング効率がさらに向上"
+      reason: AI Assistantの統合により、コーディング効率がさらに向上
     - point: 5
-      reason: "リファクタリング機能が非常に強力で、大規模なコードベースの保守性に貢献する"
+      reason: リファクタリング機能が非常に強力で、大規模なコードベースの保守性に貢献する
     - point: 2
-      reason: "豊富なプラグインエコシステムにより、高い拡張性を持つ"
+      reason: 豊富なプラグインエコシステムにより、高い拡張性を持つ
   minus_points:
     - point: -3
-      reason: "Ultimate版は高機能だが、個人開発者には高価に感じられる"
+      reason: Ultimate版は高機能だが、個人開発者には高価に感じられる
     - point: -2
-      reason: "高機能な分、リソース消費が多く、低スペックなマシンでは動作が重い"
-  summary: "Java/Kotlin開発におけるデファクトスタンダードであり、生産性を最大化するための強力な機能を備えているが、コストとリソース要件が課題。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高機能な分、リソース消費が多く、低スペックなマシンでは動作が重い
+  summary: Java/Kotlin開発におけるデファクトスタンダードであり、生産性を最大化するための強力な機能を備えているが、コストとリソース要件が課題。
 links:
-  github: "https://github.com/JetBrains/intellij-community"
-  deepwiki: "https://deepwiki.com/JetBrains/intellij-community"
-  documentation: "https://www.jetbrains.com/help/idea/"
+  github: https://github.com/JetBrains/intellij-community
+  deepwiki: https://deepwiki.com/JetBrains/intellij-community
+  documentation: https://www.jetbrains.com/help/idea/
 relationships:
-  parent:
+  parent: null
   children:
-    - "Android Studio"
+    - Android Studio
+    - Kotlin Multiplatform
   related_tools:
-    - "Visual Studio Code"
-    - "Cursor"
-    - "Eclipse IDE"
-    - "Spring Boot"
-    - "Flutter"
-    - "Kotlin Multiplatform"
+    - Visual Studio Code
+    - Cursor
+    - Eclipse IDE
+    - Spring Boot
+    - Flutter
+    - Kotlin Multiplatform
+    - Delphi
 ---
+
+
+
 
 # **IntelliJ IDEA 調査レポート**
 

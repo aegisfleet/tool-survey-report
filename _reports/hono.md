@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Hono 調査レポート"
-tool_name: "Hono"
-tool_reading: "ホノ"
-category: "Webフレームワーク"
-developer: "Yusuke Wada and contributors"
-official_site: "https://hono.dev/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: Hono 調査レポート
+tool_name: Hono
+tool_reading: ホノ
+category: Webフレームワーク
+developer: Yusuke Wada and contributors
+official_site: https://hono.dev/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "Webフレームワーク"
-  - "TypeScript"
-  - "Edge Computing"
-  - "Cloudflare Workers"
-  - "Bun"
-  - "Deno"
-  - "オープンソース"
-  - "開発者ツール"
-description: "Web標準に準拠した、あらゆるJavaScriptランタイムで動作する超高速・軽量なWebフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Bun
+  - Cloudflare Workers
+  - Deno
+  - Edge Computing
+  - TypeScript
+  - Webフレームワーク
+  - オープンソース
+  - 開発者ツール
+description: Web標準に準拠した、あらゆるJavaScriptランタイムで動作する超高速・軽量なWebフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "サーバーサイドエンジニア"
-    - "Edge Computing利用者"
-  latest_highlight: "v4リリースによるStandard Schema対応とエコシステムの拡大"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Web開発者
+    - サーバーサイドエンジニア
+    - Edge Computing利用者
+  latest_highlight: v4リリースによるStandard Schema対応とエコシステムの拡大
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "あらゆるランタイムで動作する高いポータビリティ"
+      reason: あらゆるランタイムで動作する高いポータビリティ
     - point: 5
-      reason: "Expressと比較して圧倒的に高速で軽量"
+      reason: Expressと比較して圧倒的に高速で軽量
     - point: 5
-      reason: "TypeScriptの型サポートが非常に強力（Hono RPCなど）"
+      reason: TypeScriptの型サポートが非常に強力（Hono RPCなど）
     - point: 2
-      reason: "活発な開発とエコシステムの成長"
+      reason: 活発な開発とエコシステムの成長
   minus_points: []
-  summary: "Web標準に準拠し、エッジからNode.jsまで幅広く対応する現代的なWebフレームワークの決定版"
-
-# 【任意項目】該当するもののみ記載
+  summary: Web標準に準拠し、エッジからNode.jsまで幅広く対応する現代的なWebフレームワークの決定版
 links:
-  github: "https://github.com/honojs/hono"
-  deepwiki: "https://deepwiki.com/honojs/hono"
-  documentation: "https://hono.dev/docs"
+  github: https://github.com/honojs/hono
+  deepwiki: https://deepwiki.com/honojs/hono
+  documentation: https://hono.dev/docs
 relationships:
   related_tools:
-    - "Node.js"
-    - "Deno"
-    - "Bun"
-    - "Cloudflare"
-    - "Vercel"
+    - Node.js
+    - Deno
+    - Bun
+    - Cloudflare
+    - Vercel
 ---
+
+
+
 
 # **Hono 調査レポート**
 

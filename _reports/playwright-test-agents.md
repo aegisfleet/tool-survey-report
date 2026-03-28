@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Playwright Test Agents 調査レポート"
-tool_name: "Playwright Test Agents"
-tool_reading: "プレイライト テスト エージェント"
-category: "テスト/QA"
-developer: "Microsoft"
-official_site: "https://playwright.dev/docs/test-agents"
-date: "2026-03-23"
-last_updated: "2026-03-23"
+title: Playwright Test Agents 調査レポート
+tool_name: Playwright Test Agents
+tool_reading: プレイライト テスト エージェント
+category: テスト/QA
+developer: Microsoft
+official_site: https://playwright.dev/docs/test-agents
+date: '2026-03-23'
+last_updated: '2026-03-23'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "テスト自動化"
-  - "E2Eテスト"
-description: "Playwrightに統合された自律型AIテストエージェント。Planner（計画）、Generator（生成）、Healer（修復）の3つのエージェントが連携し、テスト自動化のワークフローを効率化します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - E2Eテスト
+  - エージェント
+  - テスト自動化
+  - 自律型
+description: Playwrightに統合された自律型AIテストエージェント。Planner（計画）、Generator（生成）、Healer（修復）の3つのエージェントが連携し、テスト自動化のワークフローを効率化します。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "Web開発者"
-  latest_highlight: "2025年10月にVS Code v1.105対応で正式なエージェント体験を提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - Web開発者
+  latest_highlight: 2025年10月にVS Code v1.105対応で正式なエージェント体験を提供開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Planner, Generator, Healerによる包括的なテスト自動化ワークフローを提供"
+      reason: Planner, Generator, Healerによる包括的なテスト自動化ワークフローを提供
     - point: 5
-      reason: "Playwrightエコシステムとの完全な統合と、VS Code上でのシームレスな体験"
+      reason: Playwrightエコシステムとの完全な統合と、VS Code上でのシームレスな体験
     - point: 5
-      reason: "オープンソースであり無料で利用可能"
+      reason: オープンソースであり無料で利用可能
   minus_points:
     - point: -3
-      reason: "まだ新しい機能であり、複雑なSPAなどでは意図通りに動作しない場合がある（発展途上）"
+      reason: まだ新しい機能であり、複雑なSPAなどでは意図通りに動作しない場合がある（発展途上）
     - point: -2
-      reason: "日本語情報の不足"
-  summary: "Playwrightの強力な基盤に加え、AIエージェントによる自動化・修復機能を備えた、次世代のテスト自動化ツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語情報の不足
+  summary: Playwrightの強力な基盤に加え、AIエージェントによる自動化・修復機能を備えた、次世代のテスト自動化ツール。
 links:
-  github: "https://github.com/microsoft/playwright"
-  codewiki: "https://codewiki.google/github.com/microsoft/playwright"
-  deepwiki: "https://deepwiki.com/microsoft/playwright"
-  documentation: "https://playwright.dev/docs/test-agents"
+  github: https://github.com/microsoft/playwright
+  codewiki: https://codewiki.google/github.com/microsoft/playwright
+  deepwiki: https://deepwiki.com/microsoft/playwright
+  documentation: https://playwright.dev/docs/test-agents
 relationships:
-  parent: "Playwright"
+  parent: Playwright
   children: []
   related_tools:
-    - "Visual Studio Code"
-    - "Claude Code"
-    - "OpenCode"
-    - "Autify"
-    - "MagicPod"
-    - "mabl"
+    - Visual Studio Code
+    - Claude Code
+    - OpenCode
+    - Autify
+    - MagicPod
+    - mabl
 ---
+
+
+
 
 # **Playwright Test Agents 調査レポート**
 

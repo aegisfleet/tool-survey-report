@@ -1,52 +1,58 @@
 ---
-title: "AWS Frontier Agents 調査レポート"
-tool_name: "AWS Frontier Agents"
-tool_reading: "エーダブリューエス フロンティア エージェンツ"
-category: "自律型AIエージェント"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/ai/frontier-agents/"
-date: "2026-01-28"
-last_updated: "2026-03-18"
+title: AWS Frontier Agents 調査レポート
+tool_name: AWS Frontier Agents
+tool_reading: エーダブリューエス フロンティア エージェンツ
+category: 自律型AIエージェント
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/ai/frontier-agents/
+date: '2026-01-28'
+last_updated: '2026-03-18'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "DevOps"
-  - "開発者ツール"
-description: "自律性、スケーラビリティ、持続性を特徴とするAWSの新しいAIエージェント群。開発、セキュリティ、運用の各領域に特化した自律型エージェントを提供する。"
+  - AI
+  - DevOps
+  - エージェント
+  - 自律型
+  - 開発者ツール
+description: 自律性、スケーラビリティ、持続性を特徴とするAWSの新しいAIエージェント群。開発、セキュリティ、運用の各領域に特化した自律型エージェントを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "プレビュー中は無料"
+  starting_price: プレビュー中は無料
   target_users:
-    - "開発者"
-    - "セキュリティエンジニア"
-    - "DevOpsエンジニア"
-  latest_highlight: "Kiro, Security, DevOpsの3つの特化型自律エージェントをプレビュー公開"
-  update_frequency: "高"
+    - 開発者
+    - セキュリティエンジニア
+    - DevOpsエンジニア
+  latest_highlight: Kiro, Security, DevOpsの3つの特化型自律エージェントをプレビュー公開
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "開発・セキュリティ・運用という主要領域に特化したエージェントを統合的に提供している"
+      reason: 開発・セキュリティ・運用という主要領域に特化したエージェントを統合的に提供している
     - point: 5
-      reason: "AWSエコシステムとの深い統合により、インフラレベルでの自律的な問題解決が可能"
+      reason: AWSエコシステムとの深い統合により、インフラレベルでの自律的な問題解決が可能
     - point: 5
-      reason: "人間による常時監視を必要とせず、長時間自律的に稼働する「持続性」を実現"
+      reason: 人間による常時監視を必要とせず、長時間自律的に稼働する「持続性」を実現
   minus_points:
     - point: -3
-      reason: "現在はプレビュー段階であり、利用には申請が必要"
-  summary: "AWS上の開発・運用プロセスを根本から変革する可能性を秘めた、次世代の自律型エージェント群。"
+      reason: 現在はプレビュー段階であり、利用には申請が必要
+  summary: AWS上の開発・運用プロセスを根本から変革する可能性を秘めた、次世代の自律型エージェント群。
 links:
-  documentation: "https://aws.amazon.com/ai/frontier-agents/"
+  documentation: https://aws.amazon.com/ai/frontier-agents/
 relationships:
   related_tools:
-    - "Kiro"
-    - "Amazon Q Developer"
-    - "Devin"
-    - "GitHub Copilot"
+    - Kiro
+    - Amazon Q Developer
+    - Devin
+    - GitHub Copilot
+    - OpenAI Frontier
+  children:
+    - AWS DevOps Agent
 ---
+
+
+
 
 # **AWS Frontier Agents 調査レポート**
 

@@ -1,57 +1,58 @@
 ---
-title: "Bun 調査レポート"
-tool_name: "Bun"
-tool_reading: "バン"
-category: "開発者ツール"
-developer: "Anthropic (旧 Oven)"
-official_site: "https://bun.com/"
-date: "2026-02-02"
-last_updated: "2026-02-02"
+title: Bun 調査レポート
+tool_name: Bun
+tool_reading: バン
+category: 開発者ツール
+developer: Anthropic (旧 Oven)
+official_site: https://bun.com/
+date: '2026-02-02'
+last_updated: '2026-02-02'
 tags:
-  - "JavaScript"
-  - "TypeScript"
-  - "ランタイム"
-  - "オープンソース"
-description: "高速な起動と実行速度を誇る、オールインワンのJavaScript/TypeScriptランタイム。2025年にAnthropicにより買収。"
-
+  - JavaScript
+  - TypeScript
+  - オープンソース
+  - ランタイム
+description: 高速な起動と実行速度を誇る、オールインワンのJavaScript/TypeScriptランタイム。2025年にAnthropicにより買収。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "バックエンドエンジニア"
-    - "AIエージェント開発者"
-  latest_highlight: "2025年12月にAnthropicによる買収を発表。v1.3.8をリリース。"
-  update_frequency: "高"
-
+    - Web開発者
+    - バックエンドエンジニア
+    - AIエージェント開発者
+  latest_highlight: 2025年12月にAnthropicによる買収を発表。v1.3.8をリリース。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "起動速度と実行速度が競合と比較して圧倒的に速い"
+      reason: 起動速度と実行速度が競合と比較して圧倒的に速い
     - point: 5
-      reason: "Anthropicの支援により、長的な安定性とAIツールとの統合が期待できる"
+      reason: Anthropicの支援により、長的な安定性とAIツールとの統合が期待できる
     - point: 5
-      reason: "TypeScriptとJSXをネイティブサポートし、設定なしで動く"
+      reason: TypeScriptとJSXをネイティブサポートし、設定なしで動く
   minus_points:
     - point: -3
-      reason: "Node.jsとの完全な互換性はまだ達成されておらず、一部動かないパッケージがある"
+      reason: Node.jsとの完全な互換性はまだ達成されておらず、一部動かないパッケージがある
     - point: -2
-      reason: "Windows対応は進んでいるが、一部機能で制限がある可能性がある"
-  summary: "圧倒的なパフォーマンスに加え、Anthropicによる買収で将来の安定性も確保された次世代ランタイム"
-
+      reason: Windows対応は進んでいるが、一部機能で制限がある可能性がある
+  summary: 圧倒的なパフォーマンスに加え、Anthropicによる買収で将来の安定性も確保された次世代ランタイム
 links:
-  github: "https://github.com/oven-sh/bun"
-  deepwiki: "https://deepwiki.com/oven-sh/bun"
-  documentation: "https://bun.com/docs"
+  github: https://github.com/oven-sh/bun
+  deepwiki: https://deepwiki.com/oven-sh/bun
+  documentation: https://bun.com/docs
 relationships:
   related_tools:
-    - "Node.js"
-    - "Deno"
-    - "Hono"
+    - Node.js
+    - Deno
+    - Hono
+    - Vite
 ---
+
+
+
 
 # **Bun 調査レポート**
 

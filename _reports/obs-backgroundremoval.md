@@ -1,49 +1,49 @@
 ---
-title: "OBS Background Removal 調査レポート"
-tool_name: "OBS Background Removal"
-tool_reading: "オービーエス バックグラウンド リムーバル"
-category: "動画/メディア"
-developer: "Roy Shilkrot"
-official_site: "https://royshil.github.io/obs-backgroundremoval/"
-date: "2026-03-13"
-last_updated: "2026-03-13"
+title: OBS Background Removal 調査レポート
+tool_name: OBS Background Removal
+tool_reading: オービーエス バックグラウンド リムーバル
+category: 動画/メディア
+developer: Roy Shilkrot
+official_site: https://royshil.github.io/obs-backgroundremoval/
+date: '2026-03-13'
+last_updated: '2026-03-13'
 tags:
-  - "オープンソース"
-  - "ライブ配信"
-  - "プラグイン"
-  - "AI"
-description: "OBS Studio向け背景透過・低照度エンハンスメントプラグイン"
-
+  - AI
+  - オープンソース
+  - プラグイン
+  - ライブ配信
+description: OBS Studio向け背景透過・低照度エンハンスメントプラグイン
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ストリーマー"
-    - "動画制作者"
-  latest_highlight: "OBS Background Removal 1.3.7 リリース (2026-02-25)"
-  update_frequency: "高"
-
+    - ストリーマー
+    - 動画制作者
+  latest_highlight: OBS Background Removal 1.3.7 リリース (2026-02-25)
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "グリーンスクリーン不要で背景を透過できる手軽さ"
+      reason: グリーンスクリーン不要で背景を透過できる手軽さ
     - point: 5
-      reason: "クロスプラットフォーム対応"
+      reason: クロスプラットフォーム対応
   minus_points: []
-  summary: "グリーンスクリーンなしで背景を透過できる、OBS Studioの強力なプラグイン"
-
+  summary: グリーンスクリーンなしで背景を透過できる、OBS Studioの強力なプラグイン
 links:
-  github: "https://github.com/royshil/obs-backgroundremoval"
-  deepwiki: "https://deepwiki.com/royshil/obs-backgroundremoval"
-  documentation: "https://royshil.github.io/obs-backgroundremoval/usage/"
+  github: https://github.com/royshil/obs-backgroundremoval
+  deepwiki: https://deepwiki.com/royshil/obs-backgroundremoval
+  documentation: https://royshil.github.io/obs-backgroundremoval/usage/
 relationships:
-  parent: "OBS Studio"
+  parent: OBS Studio
   children: []
   related_tools: []
 ---
+
+
+
 
 # **OBS Background Removal 調査レポート**
 

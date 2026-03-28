@@ -1,52 +1,46 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "詐欺対策 by NTTタウンページ 調査レポート"
-tool_name: "詐欺対策 by NTTタウンページ"
-tool_reading: "サギタイサク バイ エヌティティタウンページ"
-category: "CDN/セキュリティ"
-developer: "NTTタウンページ株式会社 / トビラシステムズ株式会社"
-official_site: "https://itp.ne.jp/sagitaisaku"
-date: "2026-03-13"
-last_updated: "2026-03-13"
+title: 詐欺対策 by NTTタウンページ 調査レポート
+tool_name: 詐欺対策 by NTTタウンページ
+tool_reading: サギタイサク バイ エヌティティタウンページ
+category: CDN/セキュリティ
+developer: NTTタウンページ株式会社 / トビラシステムズ株式会社
+official_site: https://itp.ne.jp/sagitaisaku
+date: '2026-03-13'
+last_updated: '2026-03-13'
 tags:
-  - "モバイル開発"
-  - "SaaS"
-  - "セキュリティ"
-description: "警察庁推奨の特殊詐欺対策アプリ。危険な電話番号の遮断・警告と、iタウンページデータを活用した発信元表示機能を提供。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - セキュリティ
+  - モバイル開発
+description: 警察庁推奨の特殊詐欺対策アプリ。危険な電話番号の遮断・警告と、iタウンページデータを活用した発信元表示機能を提供。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般消費者"
-    - "高齢者やそのご家族"
-  latest_highlight: "2026年3月に「警察庁推奨アプリ」として提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 一般消費者
+    - 高齢者やそのご家族
+  latest_highlight: 2026年3月に「警察庁推奨アプリ」として提供開始
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "警察庁の推奨認定を受けた高い信頼性"
+      reason: 警察庁の推奨認定を受けた高い信頼性
     - point: 5
-      reason: "全ての機能が無料で利用可能"
+      reason: 全ての機能が無料で利用可能
     - point: 5
-      reason: "iタウンページのデータベースによる発信元表示が独自かつ強力"
+      reason: iタウンページのデータベースによる発信元表示が独自かつ強力
   minus_points:
     - point: -2
-      reason: "iOS 17以下では自動ブロック機能が警告表示に留まる（OS制限）"
-  summary: "無料で提供される警察庁推奨の強力な詐欺対策アプリ。信頼性の高いデータベースが安心感をもたらす。"
-
-# 【任意項目】該当するもののみ記載
+      reason: iOS 17以下では自動ブロック機能が警告表示に留まる（OS制限）
+  summary: 無料で提供される警察庁推奨の強力な詐欺対策アプリ。信頼性の高いデータベースが安心感をもたらす。
 relationships:
-  related_tools:
-    - "トレンドマイクロ 詐欺バスター Lite"
+  related_tools: []
 ---
+
+
+
 
 # **詐欺対策 by NTTタウンページ 調査レポート**
 

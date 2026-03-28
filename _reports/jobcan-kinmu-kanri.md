@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ジョブカン勤怠管理 調査レポート"
-tool_name: "ジョブカン勤怠管理"
-tool_reading: "ジョブカンキンムカンリ"
-category: "勤怠管理"
-developer: "株式会社DONUTS"
-official_site: "https://jobcan.ne.jp/"
-date: "2026-01-29"
-last_updated: "2026-03-28"
+title: ジョブカン勤怠管理 調査レポート
+tool_name: ジョブカン勤怠管理
+tool_reading: ジョブカンキンムカンリ
+category: 勤怠管理
+developer: 株式会社DONUTS
+official_site: https://jobcan.ne.jp/
+date: '2026-01-29'
+last_updated: '2026-03-28'
 tags:
-  - "勤怠管理"
-  - "SaaS"
-  - "人事労務"
-  - "クラウド"
-description: "必要な機能を自由に組み合わせて利用できる、導入実績30万社超のクラウド勤怠管理システム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - クラウド
+  - 人事労務
+  - 勤怠管理
+description: 必要な機能を自由に組み合わせて利用できる、導入実績30万社超のクラウド勤怠管理システム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "¥200/月"
+  starting_price: ¥200/月
   target_users:
-    - "中小企業"
-    - "スタートアップ"
-    - "多様な働き方の企業"
-  latest_highlight: "2025年に工数管理プランをリニューアルし、分析機能を強化"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 中小企業
+    - スタートアップ
+    - 多様な働き方の企業
+  latest_highlight: 2025年に工数管理プランをリニューアルし、分析機能を強化
+  update_frequency: 中
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "必要な機能だけを選べる柔軟な料金体系（¥200/月〜）"
+      reason: 必要な機能だけを選べる柔軟な料金体系（¥200/月〜）
     - point: 5
-      reason: "シリーズ累計30万社以上の圧倒的な導入実績と信頼性"
+      reason: シリーズ累計30万社以上の圧倒的な導入実績と信頼性
     - point: 3
-      reason: "無料プランがあり、電話・チャットサポートも充実"
+      reason: 無料プランがあり、電話・チャットサポートも充実
   minus_points:
     - point: -3
-      reason: "管理者画面の機能が多く、設定が複雑になりがち"
+      reason: 管理者画面の機能が多く、設定が複雑になりがち
     - point: -2
-      reason: "工数管理プランのリニューアルに伴い、一部機能で移行の手間が発生"
-  summary: "コストパフォーマンスと機能のバランスが良く、初めてのシステム導入から大規模運用まで幅広く対応可能"
-
-# 【任意項目】該当するもののみ記載
+      reason: 工数管理プランのリニューアルに伴い、一部機能で移行の手間が発生
+  summary: コストパフォーマンスと機能のバランスが良く、初めてのシステム導入から大規模運用まで幅広く対応可能
 links:
-  documentation: "https://jobcan.zendesk.com/hc/ja"
+  documentation: https://jobcan.zendesk.com/hc/ja
 relationships:
   related_tools:
-    - "COMPANY"
-    - "KING OF TIME"
-    - "マネーフォワード クラウド勤怠"
-    - "SmartHR"
+    - COMPANY
+    - KING OF TIME
+    - マネーフォワード クラウド勤怠
+    - SmartHR
 ---
+
+
+
 
 # **ジョブカン勤怠管理 調査レポート**
 

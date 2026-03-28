@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Deno 調査レポート"
-tool_name: "Deno"
-tool_reading: "デノ"
-category: "開発者ツール"
-developer: "Deno Land Inc."
-official_site: "https://deno.com/"
-date: "2025-12-20"
-last_updated: "2026-02-02"
+title: Deno 調査レポート
+tool_name: Deno
+tool_reading: デノ
+category: 開発者ツール
+developer: Deno Land Inc.
+official_site: https://deno.com/
+date: '2025-12-20'
+last_updated: '2026-02-02'
 tags:
-  - "JavaScript"
-  - "TypeScript"
-  - "オープンソース"
-  - "開発者ツール"
-  - "サーバーレス"
-description: "セキュリティと開発者体験を重視した、モダンなJavaScript/TypeScriptランタイム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - JavaScript
+  - TypeScript
+  - オープンソース
+  - サーバーレス
+  - 開発者ツール
+description: セキュリティと開発者体験を重視した、モダンなJavaScript/TypeScriptランタイム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "バックエンドエンジニア"
-    - "サーバーレス開発者"
-  latest_highlight: "2025年12月にv2.6をリリースし、npx相当のdxコマンドを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Web開発者
+    - バックエンドエンジニア
+    - サーバーレス開発者
+  latest_highlight: 2025年12月にv2.6をリリースし、npx相当のdxコマンドを追加
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 8
-      reason: "TypeScriptのネイティブサポートとオールインワンのツールチェーンがDXを大幅に向上させる"
+      reason: TypeScriptのネイティブサポートとオールインワンのツールチェーンがDXを大幅に向上させる
     - point: 7
-      reason: "デフォルトでセキュアなサンドボックスモデルを採用しており、安全性が高い"
+      reason: デフォルトでセキュアなサンドボックスモデルを採用しており、安全性が高い
     - point: 5
-      reason: "Node.jsとの互換性が向上し、npmエコシステムを活用しやすくなった"
+      reason: Node.jsとの互換性が向上し、npmエコシステムを活用しやすくなった
     - point: 2
-      reason: "公式のサーバーレス環境Deno Deployとの連携がスムーズ"
+      reason: 公式のサーバーレス環境Deno Deployとの連携がスムーズ
   minus_points:
     - point: -3
-      reason: "Bunなどの新しい競合と比較すると、パフォーマンス面で劣る場合がある"
+      reason: Bunなどの新しい競合と比較すると、パフォーマンス面で劣る場合がある
     - point: -2
-      reason: "エコシステムはNode.jsに及ばず、Denoネイティブのライブラリはまだ少ない"
-  summary: "高いセキュリティと優れた開発者体験を両立した、新規プロジェクトで採用すべき有力なランタイム"
-
-# 【任意項目】
+      reason: エコシステムはNode.jsに及ばず、Denoネイティブのライブラリはまだ少ない
+  summary: 高いセキュリティと優れた開発者体験を両立した、新規プロジェクトで採用すべき有力なランタイム
 links:
-  github: "https://github.com/denoland/deno"
-  codewiki: "https://codewiki.google/github.com/denoland/deno"
-  deepwiki: "https://deepwiki.com/denoland/deno"
-  documentation: "https://docs.deno.com/"
+  github: https://github.com/denoland/deno
+  codewiki: https://codewiki.google/github.com/denoland/deno
+  deepwiki: https://deepwiki.com/denoland/deno
+  documentation: https://docs.deno.com/
 relationships:
   related_tools:
-    - "Node.js"
-    - "Bun"
-    - "Hono"
+    - Node.js
+    - Bun
+    - Hono
 ---
+
+
+
 
 # **Deno 調査レポート**
 

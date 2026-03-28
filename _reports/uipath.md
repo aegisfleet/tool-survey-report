@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "UiPath 調査レポート"
-tool_name: "UiPath"
-tool_reading: "ユーアイパス"
-category: "ワークフロー自動化"
-developer: "UiPath Inc."
-official_site: "https://www.uipath.com/ja/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: UiPath 調査レポート
+tool_name: UiPath
+tool_reading: ユーアイパス
+category: ワークフロー自動化
+developer: UiPath Inc.
+official_site: https://www.uipath.com/ja/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "RPA"
-  - "AI"
-  - "自動化"
-  - "ローコード"
-  - "エージェント"
-description: "AIを搭載したエンタープライズ向けRPA（Robotic Process Automation）プラットフォーム。AIエージェントによる自律的なタスク実行や高度な業務自動化を実現。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - RPA
+  - エージェント
+  - ローコード
+  - 自動化
+description: AIを搭載したエンタープライズ向けRPA（Robotic Process Automation）プラットフォーム。AIエージェントによる自律的なタスク実行や高度な業務自動化を実現。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料〜"
+  starting_price: 無料〜
   target_users:
-    - "大企業"
-    - "IT部門"
-    - "業務改善担当者"
-  latest_highlight: "2025年12月、次世代AI機能「Autopilot」を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - IT部門
+    - 業務改善担当者
+  latest_highlight: 2025年12月、次世代AI機能「Autopilot」を強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "RPA市場のリーダーであり、機能の網羅性と安定性が非常に高い"
+      reason: RPA市場のリーダーであり、機能の網羅性と安定性が非常に高い
     - point: 5
-      reason: "AI機能の統合（特にドキュメント理解やAIエージェント）が進んでいる"
+      reason: AI機能の統合（特にドキュメント理解やAIエージェント）が進んでいる
     - point: 3
-      reason: "日本語のドキュメント、学習教材、コミュニティが非常に充実している"
+      reason: 日本語のドキュメント、学習教材、コミュニティが非常に充実している
   minus_points:
     - point: -3
-      reason: "多機能な反面、ライセンス体系が複雑で、エンタープライズ版は高額になりやすい"
-  summary: "機能・サポート面で市場をリードするRPAの決定版だが、コストと学習難易度の検討は必要"
-
-# 【任意項目】
+      reason: 多機能な反面、ライセンス体系が複雑で、エンタープライズ版は高額になりやすい
+  summary: 機能・サポート面で市場をリードするRPAの決定版だが、コストと学習難易度の検討は必要
 links:
-  documentation: "https://docs.uipath.com/ja/"
+  documentation: https://docs.uipath.com/ja/
 relationships:
   related_tools:
-    - "Microsoft Power Automate"
-    - "Workato"
-    - "Zapier"
-    - "LITRON CORE"
-    - "Android Use"
-    - "Robot Framework"
-    - "AutoHotkey"
+    - Microsoft Power Automate
+    - Workato
+    - Zapier
+    - LITRON CORE
+    - Android Use
+    - Robot Framework
+    - AutoHotkey
 ---
+
+
+
 
 # **UiPath 調査レポート**
 

@@ -1,71 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Docker 調査レポート"
-tool_name: "Docker"
-tool_reading: "ドッカー"
-category: "開発者ツール"
-developer: "Docker, Inc."
-official_site: "https://www.docker.com/"
-date: "2026-02-14"
-last_updated: "2026-02-14"
+title: Docker 調査レポート
+tool_name: Docker
+tool_reading: ドッカー
+category: 開発者ツール
+developer: Docker, Inc.
+official_site: https://www.docker.com/
+date: '2026-02-14'
+last_updated: '2026-02-14'
 tags:
-  - "DevOps"
-  - "オープンソース"
-  - "コンテナ"
-  - "開発環境"
-  - "AI"
-description: "アプリケーションをコンテナとして構築、共有、実行するためのオープンソースプラットフォーム。AI開発やDevOpsの中核として機能する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - DevOps
+  - オープンソース
+  - コンテナ
+  - 開発環境
+description: アプリケーションをコンテナとして構築、共有、実行するためのオープンソースプラットフォーム。AI開発やDevOpsの中核として機能する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "データサイエンティスト"
-  latest_highlight: "2026年1月にDocker Desktop 4.50をリリースし、AI開発向けのローカルモデル実行基盤を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - データサイエンティスト
+  latest_highlight: 2026年1月にDocker Desktop 4.50をリリースし、AI開発向けのローカルモデル実行基盤を強化
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "コンテナ技術のデファクトスタンダードであり、エコシステムが非常に豊富。"
+      reason: コンテナ技術のデファクトスタンダードであり、エコシステムが非常に豊富。
     - point: 8
-      reason: "ポータビリティと環境再現性が高く、開発効率を劇的に向上させる。"
+      reason: ポータビリティと環境再現性が高く、開発効率を劇的に向上させる。
     - point: 5
-      reason: "Docker Desktopにより、Windows/Macでも容易に利用できる。"
+      reason: Docker Desktopにより、Windows/Macでも容易に利用できる。
     - point: 2
-      reason: "Docker AIやDocker Scoutなど、最新の開発トレンド（AI/セキュリティ）への対応が早い。"
+      reason: Docker AIやDocker Scoutなど、最新の開発トレンド（AI/セキュリティ）への対応が早い。
   minus_points:
     - point: -3
-      reason: "Docker Desktopのパフォーマンス問題や有料化に伴うユーザーの不満が見られる。"
-  summary: "コンテナ技術の標準として開発効率を飛躍的に高める。AI機能の統合により、モダンな開発環境としての地位を盤石にしている。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Docker Desktopのパフォーマンス問題や有料化に伴うユーザーの不満が見られる。
+  summary: コンテナ技術の標準として開発効率を飛躍的に高める。AI機能の統合により、モダンな開発環境としての地位を盤石にしている。
 links:
-  github: "https://github.com/docker/cli"
-  codewiki: "https://codewiki.google/github.com/docker/cli"
-  deepwiki: "https://deepwiki.com/docker/cli"
-  documentation: "https://docs.docker.com/"
+  github: https://github.com/docker/cli
+  codewiki: https://codewiki.google/github.com/docker/cli
+  deepwiki: https://deepwiki.com/docker/cli
+  documentation: https://docs.docker.com/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Podman"
-    - "Kubernetes"
-    - "act"
-    - "LocalStack"
-    - "dockur/windows"
-    - "JFrog Artifactory"
-    - "Ubuntu"
-    - "Amazon Bedrock AgentCore Runtime"
+    - Podman
+    - Kubernetes
+    - act
+    - LocalStack
+    - dockur/windows
+    - JFrog Artifactory
+    - Ubuntu
 ---
+
+
+
 
 # **Docker 調査レポート**
 

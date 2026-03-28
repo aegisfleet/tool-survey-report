@@ -1,54 +1,49 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Microsoft Agent Framework 調査レポート"
-tool_name: "Microsoft Agent Framework"
-tool_reading: "マイクロソフト エージェント フレームワーク"
-category: "AI開発基盤"
-developer: "Microsoft"
-official_site: "https://learn.microsoft.com/en-us/agent-framework/"
-date: "2026-03-28"
-last_updated: "2026-03-28"
+title: Microsoft Agent Framework 調査レポート
+tool_name: Microsoft Agent Framework
+tool_reading: マイクロソフト エージェント フレームワーク
+category: AI開発基盤
+developer: Microsoft
+official_site: https://learn.microsoft.com/en-us/agent-framework/
+date: '2026-03-28'
+last_updated: '2026-03-28'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "ワークフロー"
-  - "AI開発基盤"
-description: "AutoGenとSemantic Kernelの次世代となる、エージェントとワークフローを構築するためのオープンソースAIフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - AI開発基盤
+  - エージェント
+  - オープンソース
+  - ワークフロー
+description: AutoGenとSemantic Kernelの次世代となる、エージェントとワークフローを構築するためのオープンソースAIフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "エンタープライズ"
-  latest_highlight: "パブリックプレビューの公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンタープライズ
+  latest_highlight: パブリックプレビューの公開
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Semantic KernelとAutoGenの利点を統合した強力なアーキテクチャ"
+      reason: Semantic KernelとAutoGenの利点を統合した強力なアーキテクチャ
     - point: 5
-      reason: "オープンソースであり、エコシステムやエンタープライズ対応が充実している"
+      reason: オープンソースであり、エコシステムやエンタープライズ対応が充実している
   minus_points: []
-  summary: "次世代のマルチエージェントオーケストレーションとエンタープライズ向け機能を兼ね備えた強力なフレームワーク"
-
-# 【任意項目】該当するもののみ記載
+  summary: 次世代のマルチエージェントオーケストレーションとエンタープライズ向け機能を兼ね備えた強力なフレームワーク
 links:
-  github: "https://github.com/microsoft/agent-framework"
-  deepwiki: "https://deepwiki.com/microsoft/agent-framework"
-  codewiki: "https://codewiki.google/github.com/microsoft/agent-framework"
+  github: https://github.com/microsoft/agent-framework
+  deepwiki: https://deepwiki.com/microsoft/agent-framework
+  codewiki: https://codewiki.google/github.com/microsoft/agent-framework
 relationships:
   related_tools:
-    - "A2A Protocol"
+    - A2A Protocol
 ---
+
+
+
 
 # **Microsoft Agent Framework 調査レポート**
 

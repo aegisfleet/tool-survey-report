@@ -1,70 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Visual Studio Code 調査レポート"
-tool_name: "Visual Studio Code"
-tool_reading: "ビジュアル スタジオ コード"
-category: "IDE/エディタ"
-developer: "Microsoft"
-official_site: "https://code.visualstudio.com/"
-date: "2026-02-08"
-last_updated: "2026-02-08"
+title: Visual Studio Code 調査レポート
+tool_name: Visual Studio Code
+tool_reading: ビジュアル スタジオ コード
+category: IDE/エディタ
+developer: Microsoft
+official_site: https://code.visualstudio.com/
+date: '2026-02-08'
+last_updated: '2026-02-08'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "開発者ツール"
-  - "エディタ"
-  - "IDE"
-description: "Microsoftが開発した、無料で高機能なオープンソースのコードエディタ。豊富な拡張機能により、あらゆる言語での開発に対応し、AIによるコーディング支援も強力です。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - IDE
+  - エディタ
+  - オープンソース
+  - 開発者ツール
+description: Microsoftが開発した、無料で高機能なオープンソースのコードエディタ。豊富な拡張機能により、あらゆる言語での開発に対応し、AIによるコーディング支援も強力です。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Webデザイナー"
-    - "学生"
-  latest_highlight: "2026年1月にAIエージェントのスキル機能（実験的）を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - Webデザイナー
+    - 学生
+  latest_highlight: 2026年1月にAIエージェントのスキル機能（実験的）を追加
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "圧倒的な機能性、拡張性、パフォーマンスを無料で提供しており、開発者ツールのデファクトスタンダードとなっている"
+      reason: 圧倒的な機能性、拡張性、パフォーマンスを無料で提供しており、開発者ツールのデファクトスタンダードとなっている
     - point: 8
-      reason: "GitHub CopilotをはじめとするAI機能の統合が強力で、開発体験を大幅に向上させる"
+      reason: GitHub CopilotをはじめとするAI機能の統合が強力で、開発体験を大幅に向上させる
     - point: 5
-      reason: "クロスプラットフォーム対応で、ドキュメントも充実しており、導入のハードルが非常に低い"
+      reason: クロスプラットフォーム対応で、ドキュメントも充実しており、導入のハードルが非常に低い
     - point: 5
-      reason: "活発なコミュニティと毎月のアップデートにより、常に進化を続けている"
+      reason: 活発なコミュニティと毎月のアップデートにより、常に進化を続けている
   minus_points:
     - point: -3
-      reason: "高機能な反面、多すぎる拡張機能や設定項目が初学者を混乱させる可能性がある"
-  summary: "現代の開発に必須のツールであり、機能、拡張性、AI連携の全てにおいて最高水準のエディタ。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高機能な反面、多すぎる拡張機能や設定項目が初学者を混乱させる可能性がある
+  summary: 現代の開発に必須のツールであり、機能、拡張性、AI連携の全てにおいて最高水準のエディタ。
 links:
-  github: "https://github.com/microsoft/vscode"
-  deepwiki: "https://deepwiki.com/microsoft/vscode"
-  codewiki: "https://codewiki.google/github.com/microsoft/vscode"
-  documentation: "https://code.visualstudio.com/docs"
+  github: https://github.com/microsoft/vscode
+  deepwiki: https://deepwiki.com/microsoft/vscode
+  codewiki: https://codewiki.google/github.com/microsoft/vscode
+  documentation: https://code.visualstudio.com/docs
 relationships:
   related_tools:
-    - "Cursor"
-    - "GitHub Copilot"
-    - "IntelliJ IDEA"
-    - "Eclipse IDE"
-    - "Windsurf"
-    - "Roo Code"
-    - "Cline"
-    - "Playwright Test Agents"
-    - "Microsoft PowerToys"
+    - Cursor
+    - GitHub Copilot
+    - IntelliJ IDEA
+    - Eclipse IDE
+    - Windsurf
+    - Roo Code
+    - Cline
 ---
+
+
+
 
 # **Visual Studio Code 調査レポート**
 

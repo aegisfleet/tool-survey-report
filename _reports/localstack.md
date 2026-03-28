@@ -1,60 +1,60 @@
 ---
-title: "LocalStack 調査レポート"
-tool_name: "LocalStack"
-tool_reading: "ローカルスタック"
-category: "インフラ/クラウド"
-developer: "LocalStack GmbH"
-official_site: "https://www.localstack.cloud/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: LocalStack 調査レポート
+tool_name: LocalStack
+tool_reading: ローカルスタック
+category: インフラ/クラウド
+developer: LocalStack GmbH
+official_site: https://www.localstack.cloud/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "AWS"
-  - "クラウド"
-  - "開発者ツール"
-  - "テスト自動化"
-  - "Python"
-description: "ローカル環境でAWSクラウドサービスをエミュレートし、クラウドコストを削減しながら開発・テストを高速化するツール"
-
+  - AWS
+  - Python
+  - クラウド
+  - テスト自動化
+  - 開発者ツール
+description: ローカル環境でAWSクラウドサービスをエミュレートし、クラウドコストを削減しながら開発・テストを高速化するツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "クラウドエンジニア"
-    - "バックエンド開発者"
-    - "DevOpsエンジニア"
-  latest_highlight: "2025年12月にv4.12.0をリリース。Lambda Managed InstancesやS3 Tables (Iceberg)のサポートを追加。"
-  update_frequency: "高"
-
+    - クラウドエンジニア
+    - バックエンド開発者
+    - DevOpsエンジニア
+  latest_highlight: 2025年12月にv4.12.0をリリース。Lambda Managed InstancesやS3 Tables (Iceberg)のサポートを追加。
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ローカルで完結するためクラウドコストを大幅に削減可能"
+      reason: ローカルで完結するためクラウドコストを大幅に削減可能
     - point: 5
-      reason: "主要なAWSサービスを網羅しており、オフライン開発が可能"
+      reason: 主要なAWSサービスを網羅しており、オフライン開発が可能
     - point: 5
-      reason: "更新頻度が高く、AWSの新機能（S3 Tables等）への追随が早い"
+      reason: 更新頻度が高く、AWSの新機能（S3 Tables等）への追随が早い
     - point: 3
-      reason: "開発サイクルの高速化（デプロイ待ち時間の短縮）"
+      reason: 開発サイクルの高速化（デプロイ待ち時間の短縮）
   minus_points:
     - point: 0
-      reason: ""
-  summary: "AWS開発において、コスト削減と開発効率向上を両立させる強力なツール。新機能への対応も早く、開発・テスト用途では必須級の存在。"
-
+      reason: ''
+  summary: AWS開発において、コスト削減と開発効率向上を両立させる強力なツール。新機能への対応も早く、開発・テスト用途では必須級の存在。
 links:
-  github: "https://github.com/localstack/localstack"
-  deepwiki: "https://deepwiki.com/localstack/localstack"
-  documentation: "https://docs.localstack.cloud/"
+  github: https://github.com/localstack/localstack
+  deepwiki: https://deepwiki.com/localstack/localstack
+  documentation: https://docs.localstack.cloud/
 relationships:
   children: []
   related_tools:
-    - "Docker"
-    - "Terraform"
-    - "AWS CloudFormation"
-    - "OpenTofu"
+    - Docker
+    - Terraform
+    - AWS CloudFormation
+    - OpenTofu
 ---
+
+
+
 
 # **LocalStack 調査レポート**
 

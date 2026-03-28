@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Jenkins 調査レポート"
-tool_name: "Jenkins"
-tool_reading: "ジェンキンス"
-category: "CI/CD"
-developer: "CloudBees, Inc. and the Jenkins community"
-official_site: "https://www.jenkins.io/"
-date: "2026-01-27"
-last_updated: "2026-03-08"
+title: Jenkins 調査レポート
+tool_name: Jenkins
+tool_reading: ジェンキンス
+category: CI/CD
+developer: CloudBees, Inc. and the Jenkins community
+official_site: https://www.jenkins.io/
+date: '2026-01-27'
+last_updated: '2026-03-08'
 tags:
-  - "CI/CD"
-  - "DevOps"
-  - "オープンソース"
-  - "自動化"
-description: "ビルド、テスト、デプロイを自動化する、拡張性の高いオープンソースのCI/CDサーバー。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - DevOps
+  - オープンソース
+  - 自動化
+description: ビルド、テスト、デプロイを自動化する、拡張性の高いオープンソースのCI/CDサーバー。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "品質保証(QA)チーム"
-  latest_highlight: "Java 21必須化、UIの近代化、バグ報奨金プログラムの開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - 品質保証(QA)チーム
+  latest_highlight: Java 21必須化、UIの近代化、バグ報奨金プログラムの開始
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 10
-      reason: "2000以上のプラグインによる圧倒的な拡張性と柔軟性"
+      reason: 2000以上のプラグインによる圧倒的な拡張性と柔軟性
     - point: 5
-      reason: "無料で利用できるオープンソースであり、オンプレミス運用に最適"
+      reason: 無料で利用できるオープンソースであり、オンプレミス運用に最適
     - point: 3
-      reason: "UIの近代化が進行中で、ユーザビリティが改善されつつある"
+      reason: UIの近代化が進行中で、ユーザビリティが改善されつつある
   minus_points:
     - point: -5
-      reason: "サーバー設定やプラグイン管理など、運用コストが高い"
+      reason: サーバー設定やプラグイン管理など、運用コストが高い
     - point: -3
-      reason: "SaaS型ツールと比較して学習コストが高い"
-  summary: "運用コストは高いが、圧倒的な拡張性とオンプレミスでの制御性を求めるなら依然として最強のツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: SaaS型ツールと比較して学習コストが高い
+  summary: 運用コストは高いが、圧倒的な拡張性とオンプレミスでの制御性を求めるなら依然として最強のツール
 links:
-  github: "https://github.com/jenkinsci/jenkins"
-  deepwiki: "https://deepwiki.com/jenkinsci/jenkins"
-  codewiki: "https://codewiki.google/github.com/jenkinsci/jenkins"
-  documentation: "https://www.jenkins.io/doc/"
+  github: https://github.com/jenkinsci/jenkins
+  deepwiki: https://deepwiki.com/jenkinsci/jenkins
+  codewiki: https://codewiki.google/github.com/jenkinsci/jenkins
+  documentation: https://www.jenkins.io/doc/
 relationships:
   children:
-    - "Plugin Installation Manager Tool"
+    - Plugin Installation Manager Tool
   related_tools:
-    - "GitHub Actions"
-    - "GitLab CI/CD"
-    - "Nexus Repository"
-    - "act"
+    - GitHub Actions
+    - GitLab CI/CD
+    - Nexus Repository
+    - act
+    - GitLab
 ---
+
+
+
 
 # **Jenkins 調査レポート**
 

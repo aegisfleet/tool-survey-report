@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Hunyuan 3D 調査レポート"
-tool_name: "Hunyuan 3D"
-tool_reading: "フュンユエン スリーディー"
-category: "生成AI"
-developer: "Tencent"
-official_site: "https://hunyuan.tencent.com/hunyuan-3d"
-date: "2026-02-05"
-last_updated: "2026-02-05"
+title: Hunyuan 3D 調査レポート
+tool_name: Hunyuan 3D
+tool_reading: フュンユエン スリーディー
+category: 生成AI
+developer: Tencent
+official_site: https://hunyuan.tencent.com/hunyuan-3d
+date: '2026-02-05'
+last_updated: '2026-02-05'
 tags:
-  - "AI"
-  - "生成AI"
-  - "3D"
-  - "オープンソース"
-  - "画像生成"
-description: "テキストや画像から高品質な3Dモデルを生成するTencent社のオープンソースAIモデル。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - 3D
+  - AI
+  - オープンソース
+  - 生成AI
+  - 画像生成
+description: テキストや画像から高品質な3Dモデルを生成するTencent社のオープンソースAIモデル。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "3Dアーティスト"
-    - "ゲーム開発者"
-    - "Eコマース事業者"
-  latest_highlight: "2025年12月にHunyuanWorld-1.5 (WorldPlay) をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 3Dアーティスト
+    - ゲーム開発者
+    - Eコマース事業者
+  latest_highlight: 2025年12月にHunyuanWorld-1.5 (WorldPlay) をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "オープンソースで商用レベルの高品質な3Dモデルを生成可能"
+      reason: オープンソースで商用レベルの高品質な3Dモデルを生成可能
     - point: 5
-      reason: "3D-DiTアーキテクチャによる精密な生成とPBR対応"
+      reason: 3D-DiTアーキテクチャによる精密な生成とPBR対応
   minus_points:
-    - point: -0
-      reason: "なし"
-  summary: "オープンソース3D生成AIの最高峰であり、商用利用にも耐える品質とカスタマイズ性を持つ。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: なし
+  summary: オープンソース3D生成AIの最高峰であり、商用利用にも耐える品質とカスタマイズ性を持つ。
 links:
-  github: "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1"
-  deepwiki: "https://deepwiki.com/Tencent-Hunyuan/Hunyuan3D-2.1"
-  documentation: "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/README.md"
+  github: https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1
+  deepwiki: https://deepwiki.com/Tencent-Hunyuan/Hunyuan3D-2.1
+  documentation: https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/README.md
 relationships:
   related_tools:
-    - "Stable Diffusion"
-    - "Hugging Face"
-    - "Luma AI"
+    - Stable Diffusion
+    - Hugging Face
+    - Luma AI
 ---
+
+
+
 
 # **Hunyuan 3D 調査レポート**
 

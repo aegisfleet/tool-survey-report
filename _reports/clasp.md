@@ -1,56 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "clasp 調査レポート"
-tool_name: "clasp"
-tool_reading: "クラスプ"
-category: "開発者ツール"
-developer: "Google"
-official_site: "https://developers.google.com/apps-script/guides/clasp"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: clasp 調査レポート
+tool_name: clasp
+tool_reading: クラスプ
+category: 開発者ツール
+developer: Google
+official_site: https://developers.google.com/apps-script/guides/clasp
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "Apps Script"
-  - "CLI"
-  - "Google Workspace"
-  - "オープンソース"
-description: "Google Apps Scriptプロジェクトをローカルで開発・管理するためのコマンドラインツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Apps Script
+  - CLI
+  - Google Workspace
+  - オープンソース
+description: Google Apps Scriptプロジェクトをローカルで開発・管理するためのコマンドラインツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Google Workspace管理者"
-  latest_highlight: "実験的機能としてMCP（Model Context Protocol）をサポート"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - Google Workspace管理者
+  latest_highlight: 実験的機能としてMCP（Model Context Protocol）をサポート
+  update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Apps Scriptのローカル開発・Git管理を可能にする必須ツール"
+      reason: Apps Scriptのローカル開発・Git管理を可能にする必須ツール
     - point: 4
-      reason: "Google公式がサポート・提供していることによる信頼性"
+      reason: Google公式がサポート・提供していることによる信頼性
     - point: 4
-      reason: "AIエージェント向けのMCPサポートなど先進的な機能の追加"
+      reason: AIエージェント向けのMCPサポートなど先進的な機能の追加
   minus_points:
     - point: -2
-      reason: "TypeScriptの直接コンパイルサポートがバージョン3.xで廃止され、外部バンドラーが必要となった"
-  summary: "GAS開発をモダンにする強力なCLIツール。3.x以降はTypeScript対応に工夫が必要だが、エコシステム統合により価値が高い。"
-
-# 【任意項目】該当するもののみ記載
+      reason: TypeScriptの直接コンパイルサポートがバージョン3.xで廃止され、外部バンドラーが必要となった
+  summary: GAS開発をモダンにする強力なCLIツール。3.x以降はTypeScript対応に工夫が必要だが、エコシステム統合により価値が高い。
 links:
-  github: "https://github.com/google/clasp"
-  deepwiki: "https://deepwiki.com/google/clasp"
-  documentation: "https://github.com/google/clasp/tree/master/docs"
+  github: https://github.com/google/clasp
+  deepwiki: https://deepwiki.com/google/clasp
+  documentation: https://github.com/google/clasp/tree/master/docs
 relationships:
-  parent: "Google Apps Script"
+  parent: null
 ---
+
+
+
 
 # **clasp 調査レポート**
 

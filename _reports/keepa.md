@@ -1,57 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Keepa 調査レポート"
-tool_name: "Keepa"
-tool_reading: "キーパ"
-category: "業務系ツール"
-developer: "Keepa.com"
-official_site: "https://keepa.com/"
-date: "2026-02-25"
-last_updated: "2026-02-25"
+title: Keepa 調査レポート
+tool_name: Keepa
+tool_reading: キーパ
+category: BIツール
+developer: Keepa.com
+official_site: https://keepa.com/
+date: '2026-02-25'
+last_updated: '2026-02-25'
 tags:
-  - "EC"
-  - "Amazon"
-  - "SaaS"
-  - "市場調査"
-  - "価格追跡"
-description: "Amazonの価格推移やランキング履歴を詳細に追跡・分析できる、せどりやEC物販に必須の市場調査ツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Amazon
+  - EC
+  - SaaS
+  - 価格追跡
+  - 市場調査
+description: Amazonの価格推移やランキング履歴を詳細に追跡・分析できる、せどりやEC物販に必須の市場調査ツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "€19/月 (約$21)"
+  starting_price: €19/月 (約$21)
   target_users:
-    - "Amazon出品者"
-    - "せどり実践者"
-    - "一般購入者"
-  latest_highlight: "継続的な対応国とデータポイントの拡大"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Amazon出品者
+    - せどり実践者
+    - 一般購入者
+  latest_highlight: 継続的な対応国とデータポイントの拡大
+  update_frequency: 高
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 5
-      reason: "50億以上の商品データを追跡する圧倒的なデータベースと履歴の網羅性"
+      reason: 50億以上の商品データを追跡する圧倒的なデータベースと履歴の網羅性
     - point: 3
-      reason: "ブラウザ拡張機能により、Amazonの商品ページ上でシームレスにデータを確認可能"
+      reason: ブラウザ拡張機能により、Amazonの商品ページ上でシームレスにデータを確認可能
     - point: 3
-      reason: "APIによるデータ取得が可能で、独自の分析ツールとの連携が容易"
+      reason: APIによるデータ取得が可能で、独自の分析ツールとの連携が容易
   minus_points:
     - point: -3
-      reason: "売れ筋ランキングなどの重要データを見るには有料プランへの加入が必須"
+      reason: 売れ筋ランキングなどの重要データを見るには有料プランへの加入が必須
     - point: -2
-      reason: "グラフやデータが多岐にわたるため、初心者が読み解くには学習が必要"
-  summary: "Amazon物販には不可欠なツールであり、データの質と量は他を圧倒するが、本格的な利用にはコストがかかる"
-
-# 【任意項目】
+      reason: グラフやデータが多岐にわたるため、初心者が読み解くには学習が必要
+  summary: Amazon物販には不可欠なツールであり、データの質と量は他を圧倒するが、本格的な利用にはコストがかかる
 links:
-  documentation: "https://keepa.com/#!discuss"
-relationships:
+  documentation: https://keepa.com/#!discuss
+relationships: {}
 ---
+
+
+
 
 # **Keepa 調査レポート**
 

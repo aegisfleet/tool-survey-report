@@ -1,69 +1,64 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitHub Copilot 調査レポート"
-tool_name: "GitHub Copilot"
-tool_reading: "ギットハブ コパイロット"
-category: "AIコーディング支援"
-developer: "GitHub (Microsoft)"
-official_site: "https://github.com/features/copilot"
-date: "2026-01-17"
-last_updated: "2026-02-16"
+title: GitHub Copilot 調査レポート
+tool_name: GitHub Copilot
+tool_reading: ギットハブ コパイロット
+category: AIコーディング支援
+developer: GitHub (Microsoft)
+official_site: https://github.com/features/copilot
+date: '2026-01-17'
+last_updated: '2026-02-16'
 tags:
-  - "AI"
-  - "コーディング支援"
-  - "開発者ツール"
-  - "エージェント"
-  - "生成AI"
-description: "GitHub Copilotは、GPT-5やClaude 4.5などの最新モデルを搭載し、IDEやCLIでコーディング全般を支援するAIペアプログラマーです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - コーディング支援
+  - 生成AI
+  - 開発者ツール
+description: GitHub Copilotは、GPT-5やClaude 4.5などの最新モデルを搭載し、IDEやCLIでコーディング全般を支援するAIペアプログラマーです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "大企業"
-  latest_highlight: "2026年1月にGPT-5.2-CodexやAgentic Memory、OpenCode対応などの新機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - 大企業
+  latest_highlight: 2026年1月にGPT-5.2-CodexやAgentic Memory、OpenCode対応などの新機能を追加
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 5
-      reason: "無料プランがあり、個人開発者も手軽に利用開始できる"
+      reason: 無料プランがあり、個人開発者も手軽に利用開始できる
     - point: 8
-      reason: "GPT-5、Claude 4.5、Gemini 3など、利用可能なAIモデルの選択肢が非常に豊富"
+      reason: GPT-5、Claude 4.5、Gemini 3など、利用可能なAIモデルの選択肢が非常に豊富
     - point: 6
-      reason: "Copilot EditsやCLIエージェントなど、機能の進化が非常に速い"
+      reason: Copilot EditsやCLIエージェントなど、機能の進化が非常に速い
   minus_points:
     - point: -3
-      reason: "上位機能（Spark等）を含むPro+プランは月額$39と個人向けとしては高額"
+      reason: 上位機能（Spark等）を含むPro+プランは月額$39と個人向けとしては高額
     - point: -2
-      reason: "機能が多岐にわたるため、使いこなすまでの学習コストがやや高い"
-  summary: "無料プランからハイエンドなPro+まで幅広いニーズに対応し、常に最新モデルと機能を提供する業界標準ツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が多岐にわたるため、使いこなすまでの学習コストがやや高い
+  summary: 無料プランからハイエンドなPro+まで幅広いニーズに対応し、常に最新モデルと機能を提供する業界標準ツール。
 links:
-  documentation: "https://docs.github.com/en/copilot"
+  documentation: https://docs.github.com/en/copilot
 relationships:
-  parent: "GitHub"
+  parent: GitHub
   children:
-    - "GitHub Copilot SDK"
-    - "GitHub Copilot CLI"
+    - GitHub Copilot SDK
+    - GitHub Copilot CLI
   related_tools:
-    - "Cursor"
-    - "Windsurf"
-    - "Cline"
-    - "Roo Code"
-    - "Claude Code"
-    - "Devin"
-    - "GitLab Duo"
+    - Cursor
+    - Windsurf
+    - Cline
+    - Roo Code
+    - Claude Code
+    - Devin
+    - GitLab Duo
 ---
+
+
+
 
 # **GitHub Copilot 調査レポート**
 

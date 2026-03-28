@@ -1,57 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitLens 調査レポート"
-tool_name: "GitLens"
-tool_reading: "ギットレンズ"
-category: "開発者ツール"
-developer: "GitKraken"
-official_site: "https://www.gitkraken.com/gitlens"
-date: "2026-03-17"
-last_updated: "2026-03-17"
+title: GitLens 調査レポート
+tool_name: GitLens
+tool_reading: ギットレンズ
+category: 開発者ツール
+developer: GitKraken
+official_site: https://www.gitkraken.com/gitlens
+date: '2026-03-17'
+last_updated: '2026-03-17'
 tags:
-  - "Git"
-  - "VS Code拡張機能"
-  - "IDE拡張機能"
-description: "VS CodeなどのIDEに高度なGit機能を追加し、コードの履歴や作成者を視覚化する強力な拡張機能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Git
+  - IDE拡張機能
+  - VS Code拡張機能
+description: VS CodeなどのIDEに高度なGit機能を追加し、コードの履歴や作成者を視覚化する強力な拡張機能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "開発チーム"
-  latest_highlight: "AIエージェント機能「GitKraken AI」や「Commit Composer」のプレビュー公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 開発チーム
+  latest_highlight: AIエージェント機能「GitKraken AI」や「Commit Composer」のプレビュー公開
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "VS Codeで最もダウンロードされているGit拡張機能としての高い実績"
+      reason: VS Codeで最もダウンロードされているGit拡張機能としての高い実績
     - point: 5
-      reason: "インラインBlameや強力なCommit Graphなど、可視化機能が非常に優れている"
+      reason: インラインBlameや強力なCommit Graphなど、可視化機能が非常に優れている
     - point: 5
-      reason: "GitKraken AIなど、AIを活用した機能が積極的に導入されている"
+      reason: GitKraken AIなど、AIを活用した機能が積極的に導入されている
   minus_points:
     - point: -2
-      reason: "機能が豊富すぎるため、初心者には設定や操作がやや複雑に感じる場合がある"
-  summary: "Git履歴の可視化とチームコラボレーションを劇的に向上させる、モダンIDEに必須クラスの拡張機能。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が豊富すぎるため、初心者には設定や操作がやや複雑に感じる場合がある
+  summary: Git履歴の可視化とチームコラボレーションを劇的に向上させる、モダンIDEに必須クラスの拡張機能。
 links:
-  github: "https://github.com/gitkraken/vscode-gitlens"
-  deepwiki: "https://deepwiki.com/gitkraken/vscode-gitlens"
+  github: https://github.com/gitkraken/vscode-gitlens
+  deepwiki: https://deepwiki.com/gitkraken/vscode-gitlens
 relationships:
-  parent: "GitKraken"
+  parent: GitKraken
   related_tools:
-    - "GitKraken Desktop"
-    - "GitHub Copilot"
+    - GitHub Copilot
 ---
+
+
+
 
 # **GitLens 調査レポート**
 

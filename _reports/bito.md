@@ -1,56 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Bito 調査レポート"
-tool_name: "Bito"
-tool_reading: "ビト"
-category: "AIコーディング支援"
-developer: "Bito Inc."
-official_site: "https://bito.ai/"
-date: "2026-03-05"
-last_updated: "2026-03-05"
+title: Bito 調査レポート
+tool_name: Bito
+tool_reading: ビト
+category: AIコーディング支援
+developer: Bito Inc.
+official_site: https://bito.ai/
+date: '2026-03-05'
+last_updated: '2026-03-05'
 tags:
-  - "AI"
-  - "開発者ツール"
-  - "コーディング支援"
-  - "コードレビュー"
-  - "SaaS"
-description: "AI Architectによるコードベース全体の文脈理解を活用した、IDEやGit連携で高度なAIコードレビューを提供する開発支援ツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - コーディング支援
+  - コードレビュー
+  - 開発者ツール
+description: AI Architectによるコードベース全体の文脈理解を活用した、IDEやGit連携で高度なAIコードレビューを提供する開発支援ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$15/月"
+  starting_price: $15/月
   target_users:
-    - "開発チーム"
-    - "ソフトウェアエンジニア"
-  latest_highlight: "2026年2月にAI Code ReviewでのConfluence連携を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発チーム
+    - ソフトウェアエンジニア
+  latest_highlight: 2026年2月にAI Code ReviewでのConfluence連携を追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AI Architectによるリポジトリ全体・依存関係の深い文脈理解が可能"
+      reason: AI Architectによるリポジトリ全体・依存関係の深い文脈理解が可能
     - point: 5
-      reason: "IDE、CLI、Git（GitHub, GitLab, Bitbucket）と幅広く連携可能"
+      reason: IDE、CLI、Git（GitHub, GitLab, Bitbucket）と幅広く連携可能
     - point: 3
-      reason: "無料プランでもAIコーディング支援機能が利用可能"
+      reason: 無料プランでもAIコーディング支援機能が利用可能
   minus_points: []
-  summary: "単なるファイル単位の補完にとどまらず、システム全体を理解した高度なコードレビューとコーディング支援を提供する強力なツール"
-
-# 【任意項目】該当するもののみ記載
+  summary: 単なるファイル単位の補完にとどまらず、システム全体を理解した高度なコードレビューとコーディング支援を提供する強力なツール
 links:
-  documentation: "https://docs.bito.ai/"
+  documentation: https://docs.bito.ai/
 relationships:
   related_tools:
-    - "CodeRabbit"
-    - "Cursor"
-    - "GitHub Copilot"
+    - CodeRabbit
+    - Cursor
+    - GitHub Copilot
 ---
+
+
+
 
 # **Bito 調査レポート**
 

@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "PyInstaller 調査レポート"
-tool_name: "PyInstaller"
-tool_reading: "パイインストーラー"
-category: "開発者ツール"
-developer: "PyInstaller Development Team"
-official_site: "https://pyinstaller.org/"
-date: "2025-12-06"
-last_updated: "2026-03-25"
+title: PyInstaller 調査レポート
+tool_name: PyInstaller
+tool_reading: パイインストーラー
+category: 開発者ツール
+developer: PyInstaller Development Team
+official_site: https://pyinstaller.org/
+date: '2025-12-06'
+last_updated: '2026-03-25'
 tags:
-  - "Python"
-  - "オープンソース"
-  - "開発者ツール"
-  - "パッケージング"
-  - "exe化"
-description: "Pythonアプリケーションとその依存関係をまとめ、Python環境のないコンピュータでも実行可能な単一の実行ファイル等に変換するバンドルツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Python
+  - exe化
+  - オープンソース
+  - パッケージング
+  - 開発者ツール
+description: Pythonアプリケーションとその依存関係をまとめ、Python環境のないコンピュータでも実行可能な単一の実行ファイル等に変換するバンドルツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Python開発者"
-    - "ツール作成者"
-  latest_highlight: "2026年2月のv6.19.0でuvやConda等の環境におけるnumpy/pandasのDLL収集の不具合を修正"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Python開発者
+    - ツール作成者
+  latest_highlight: 2026年2月のv6.19.0でuvやConda等の環境におけるnumpy/pandasのDLL収集の不具合を修正
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Pythonのパッケージングツールとしてデファクトスタンダードであり、多くの主要ライブラリを標準でサポートしている。"
+      reason: Pythonのパッケージングツールとしてデファクトスタンダードであり、多くの主要ライブラリを標準でサポートしている。
     - point: 5
-      reason: "オープンソースで無料利用可能。ドキュメントやコミュニティの情報が豊富。"
+      reason: オープンソースで無料利用可能。ドキュメントやコミュニティの情報が豊富。
     - point: 3
-      reason: "基本的な利用方法がコマンド一つで完結し、学習コストが低い。"
+      reason: 基本的な利用方法がコマンド一つで完結し、学習コストが低い。
   minus_points:
     - point: -3
-      reason: "クロスコンパイルに非対応なため、各OS環境でビルド作業が必要。"
+      reason: クロスコンパイルに非対応なため、各OS環境でビルド作業が必要。
     - point: -3
-      reason: "生成されるファイルサイズが大きく、起動が遅延することがある。"
+      reason: 生成されるファイルサイズが大きく、起動が遅延することがある。
     - point: -2
-      reason: "生成された実行ファイルがウイルス対策ソフトによって誤検知されるケースが多い。"
-  summary: "手軽さと高い互換性でPythonアプリ配布の第一選択肢となるが、ファイルサイズや誤検知には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 生成された実行ファイルがウイルス対策ソフトによって誤検知されるケースが多い。
+  summary: 手軽さと高い互換性でPythonアプリ配布の第一選択肢となるが、ファイルサイズや誤検知には注意が必要。
 links:
-  github: "https://github.com/pyinstaller/pyinstaller"
-  deepwiki: "https://deepwiki.com/pyinstaller/pyinstaller"
-  documentation: "https://pyinstaller.org/en/stable/"
+  github: https://github.com/pyinstaller/pyinstaller
+  deepwiki: https://deepwiki.com/pyinstaller/pyinstaller
+  documentation: https://pyinstaller.org/en/stable/
 relationships:
   parent: null
   children: []
   related_tools: []
 ---
+
+
+
 
 # **PyInstaller 調査レポート**
 

@@ -1,59 +1,58 @@
 ---
-title: "Deep Agents 調査レポート"
-tool_name: "Deep Agents"
-tool_reading: "ディープエージェント"
-category: "自律型AIエージェント"
-developer: "LangChain"
-official_site: "https://docs.langchain.com/oss/python/deepagents/overview"
-date: "2026-03-12"
-last_updated: "2026-03-12"
+title: Deep Agents 調査レポート
+tool_name: Deep Agents
+tool_reading: ディープエージェント
+category: 自律型AIエージェント
+developer: LangChain
+official_site: https://docs.langchain.com/oss/python/deepagents/overview
+date: '2026-03-12'
+last_updated: '2026-03-12'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-  - "Python"
-  - "LangChain"
-description: "LangChainとLangGraph上に構築された、計画・ファイルシステム・サブエージェント等の機能を備えたAIエージェントフレームワーク"
-
+  - AI
+  - LangChain
+  - Python
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+description: LangChainとLangGraph上に構築された、計画・ファイルシステム・サブエージェント等の機能を備えたAIエージェントフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "LangChainエコシステムとの強力な統合による包括的なエージェント構築フレームワークの提供"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+  latest_highlight: LangChainエコシステムとの強力な統合による包括的なエージェント構築フレームワークの提供
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、MITライセンスで提供されている"
+      reason: オープンソースであり、MITライセンスで提供されている
     - point: 5
-      reason: "計画、ファイルシステム、サブエージェントなどの高度な機能が組み込まれている"
+      reason: 計画、ファイルシステム、サブエージェントなどの高度な機能が組み込まれている
     - point: 3
-      reason: "LangChain・LangGraphのエコシステムと強力に統合されている"
+      reason: LangChain・LangGraphのエコシステムと強力に統合されている
     - point: 2
-      reason: "CLIツールが提供されており、コマンドラインからの利用が容易"
+      reason: CLIツールが提供されており、コマンドラインからの利用が容易
   minus_points: []
-  summary: "AIエージェントを迅速に構築するための強力な基盤を提供する、開発者向けの優れたオープンソースフレームワーク"
-
+  summary: AIエージェントを迅速に構築するための強力な基盤を提供する、開発者向けの優れたオープンソースフレームワーク
 links:
-  github: "https://github.com/langchain-ai/deepagents"
-  documentation: "https://docs.langchain.com/oss/python/deepagents/overview"
-  deepwiki: "https://deepwiki.com/langchain-ai/deepagents"
-  codewiki: "https://codewiki.google/github.com/langchain-ai/deepagents"
-
+  github: https://github.com/langchain-ai/deepagents
+  documentation: https://docs.langchain.com/oss/python/deepagents/overview
+  deepwiki: https://deepwiki.com/langchain-ai/deepagents
+  codewiki: https://codewiki.google/github.com/langchain-ai/deepagents
 relationships:
-  parent: "LangChain"
+  parent: LangChain
   children: []
   related_tools:
-    - "OpenHands"
-    - "Devin"
+    - OpenHands
+    - Devin
 ---
+
+
+
 
 # **Deep Agents 調査レポート**
 

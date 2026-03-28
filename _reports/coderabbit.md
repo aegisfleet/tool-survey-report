@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "CodeRabbit 調査レポート"
-tool_name: "CodeRabbit"
-tool_reading: "コードラビット"
-category: "AIコーディング支援"
-developer: "CodeRabbit Inc."
-official_site: "https://coderabbit.ai/"
-date: "2025-10-19"
-last_updated: "2026-02-10"
+title: CodeRabbit 調査レポート
+tool_name: CodeRabbit
+tool_reading: コードラビット
+category: AIコーディング支援
+developer: CodeRabbit Inc.
+official_site: https://coderabbit.ai/
+date: '2025-10-19'
+last_updated: '2026-02-10'
 tags:
-  - "AI"
-  - "コードレビュー"
-  - "開発者ツール"
-  - "自動化"
-  - "CI/CD"
-  - "IDE"
-  - "CLI"
-description: "AIを活用したコードレビュー自動化ツール。GitHub等のGitプラットフォーム、IDE、CLIと連携し、開発フロー全体でコード品質向上とレビュー工数削減を支援する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - CLI
+  - IDE
+  - コードレビュー
+  - 自動化
+  - 開発者ツール
+description: AIを活用したコードレビュー自動化ツール。GitHub等のGitプラットフォーム、IDE、CLIと連携し、開発フロー全体でコード品質向上とレビュー工数削減を支援する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$24/月"
+  starting_price: $24/月
   target_users:
-    - "開発者"
-    - "エンジニアリングチーム"
-  latest_highlight: "2026年2月にTrivyやTFLintなどの新ツールサポートを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアリングチーム
+  latest_highlight: 2026年2月にTrivyやTFLintなどの新ツールサポートを追加
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 8
-      reason: "レビュー、IDE、CLIを横断する一貫した開発体験と、40以上の静的解析ツールとの連携が強力。"
+      reason: レビュー、IDE、CLIを横断する一貫した開発体験と、40以上の静的解析ツールとの連携が強力。
     - point: 5
-      reason: "設定の継承・中央管理機能により、大規模な組織でも統一されたレビュー基準を適用しやすい。"
+      reason: 設定の継承・中央管理機能により、大規模な組織でも統一されたレビュー基準を適用しやすい。
     - point: 2
-      reason: "オープンソースプロジェクトに対してProプランを永続的に無料提供しており、OSSへの貢献度が高い。"
+      reason: オープンソースプロジェクトに対してProプランを永続的に無料提供しており、OSSへの貢献度が高い。
   minus_points:
     - point: -3
-      reason: "Reddit等のレビューで、AIによる誤検出や冗長な指摘が報告されており、ノイズを精査する必要がある。"
-  summary: "開発フロー全体をカバーする強力なレビュー自動化ツールだが、AIの提案を適切に取捨選択する運用が求められる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Reddit等のレビューで、AIによる誤検出や冗長な指摘が報告されており、ノイズを精査する必要がある。
+  summary: 開発フロー全体をカバーする強力なレビュー自動化ツールだが、AIの提案を適切に取捨選択する運用が求められる。
 links:
-  documentation: "https://docs.coderabbit.ai/"
+  documentation: https://docs.coderabbit.ai/
 relationships:
   related_tools:
-    - "GitHub Copilot"
-    - "GitHub"
-    - "SonarQube"
-    - "Bito"
-    - "Sourcery"
-    - "Kodus"
-    - "Qodo"
+    - GitHub Copilot
+    - GitHub
+    - SonarQube
+    - Bito
+    - Sourcery
+    - Kodus
+    - Qodo
 ---
+
+
+
 
 # **CodeRabbit 調査レポート**
 

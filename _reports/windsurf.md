@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Windsurf 調査レポート"
-tool_name: "Windsurf"
-tool_reading: "ウィンドサーフ"
-category: "AIコードエディタ"
-developer: "Cognition, Inc."
-official_site: "https://windsurf.com/"
-date: "2025-10-21"
-last_updated: "2026-03-15"
+title: Windsurf 調査レポート
+tool_name: Windsurf
+tool_reading: ウィンドサーフ
+category: AIコードエディタ
+developer: Cognition, Inc.
+official_site: https://windsurf.com/
+date: '2025-10-21'
+last_updated: '2026-03-15'
 tags:
-  - "AI"
-  - "コーディング支援"
-  - "エージェント"
-  - "開発者ツール"
-  - "生成AI"
-description: "Windsurfは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - コーディング支援
+  - 生成AI
+  - 開発者ツール
+description: Windsurfは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$15/月"
+  starting_price: $15/月
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "大企業"
-  latest_highlight: "2026年3月にv1.9577系をリリース、Jupyter NotebookやCascade機能のパフォーマンス向上など"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - 大企業
+  latest_highlight: 2026年3月にv1.9577系をリリース、Jupyter NotebookやCascade機能のパフォーマンス向上など
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Cascadeエージェントやライブプレビューなど、競合より優れた独自機能が豊富"
+      reason: Cascadeエージェントやライブプレビューなど、競合より優れた独自機能が豊富
     - point: 5
-      reason: "40以上のIDEに対応しており、既存の開発環境に導入しやすい"
+      reason: 40以上のIDEに対応しており、既存の開発環境に導入しやすい
     - point: 5
-      reason: "SOC 2やFedRAMP Highなど高いセキュリティ基準を満たしている"
+      reason: SOC 2やFedRAMP Highなど高いセキュリティ基準を満たしている
     - point: 5
-      reason: "新LLMの迅速な統合や独自機能開発など、アップデートが非常に活発"
+      reason: 新LLMの迅速な統合や独自機能開発など、アップデートが非常に活発
   minus_points:
     - point: -3
-      reason: "G2レビューでドキュメントやコミュニティがまだ発展途上との指摘がある"
-  summary: "豊富な独自機能と高いセキュリティを両立し、活発な開発が続く先進的なAIコードエディタ。"
-
-# 【任意項目】該当するもののみ記載
+      reason: G2レビューでドキュメントやコミュニティがまだ発展途上との指摘がある
+  summary: 豊富な独自機能と高いセキュリティを両立し、活発な開発が続く先進的なAIコードエディタ。
 links:
-  documentation: "https://docs.windsurf.com/"
+  documentation: https://docs.windsurf.com/
 relationships:
   related_tools:
-    - "Visual Studio Code"
-    - "Cursor"
-    - "GitHub Copilot"
-    - "Cline"
-    - "Roo Code"
-    - "Claude Code"
-    - "Devin"
+    - Visual Studio Code
+    - Cursor
+    - GitHub Copilot
+    - Cline
+    - Roo Code
+    - Claude Code
+    - Devin
 ---
+
+
+
 
 # **Windsurf 調査レポート**
 

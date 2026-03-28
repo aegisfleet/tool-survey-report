@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "JaCoCo 調査レポート"
-tool_name: "JaCoCo"
-tool_reading: "ジャココ"
-category: "コード品質"
-developer: "Mountainminds GmbH & Co. KG and Contributors"
-official_site: "https://www.jacoco.org/jacoco/"
-date: "2025-10-22"
-last_updated: "2026-03-08"
+title: JaCoCo 調査レポート
+tool_name: JaCoCo
+tool_reading: ジャココ
+category: コード品質
+developer: Mountainminds GmbH & Co. KG and Contributors
+official_site: https://www.jacoco.org/jacoco/
+date: '2025-10-22'
+last_updated: '2026-03-08'
 tags:
-  - "Java"
-  - "テスト自動化"
-  - "オープンソース"
-  - "CI/CD"
-  - "開発者ツール"
-description: "Java VMベースの環境でコードカバレッジ分析を行うためのオープンソースライブラリ。ビルドツールやCI/CDパイプラインとの連携が容易。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - Java
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: Java VMベースの環境でコードカバレッジ分析を行うためのオープンソースライブラリ。ビルドツールやCI/CDパイプラインとの連携が容易。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Java開発者"
-    - "QAエンジニア"
-  latest_highlight: "2025年10月にJava 25やKotlinコンパイラの最適化に対応したv0.8.14をリリース"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Java開発者
+    - QAエンジニア
+  latest_highlight: 2025年10月にJava 25やKotlinコンパイラの最適化に対応したv0.8.14をリリース
+  update_frequency: 中
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Javaにおけるコードカバレッジツールのデファクトスタンダードであり、エコシステムが成熟している"
+      reason: Javaにおけるコードカバレッジツールのデファクトスタンダードであり、エコシステムが成熟している
     - point: 5
-      reason: "軽量でパフォーマンスへの影響が少なく、主要なビルドツールとの統合が容易"
+      reason: 軽量でパフォーマンスへの影響が少なく、主要なビルドツールとの統合が容易
     - point: 5
-      reason: "活発な開発が継続されており、最新のJavaバージョンへの追従が速い"
+      reason: 活発な開発が継続されており、最新のJavaバージョンへの追従が速い
   minus_points:
     - point: -3
-      reason: "公式ドキュメントが英語中心で、日本語の情報が限定的"
-  summary: "Javaにおけるコードカバレッジ測定の標準ツールであり、CI/CD連携に不可欠だが、日本語情報の少なさが課題。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 公式ドキュメントが英語中心で、日本語の情報が限定的
+  summary: Javaにおけるコードカバレッジ測定の標準ツールであり、CI/CD連携に不可欠だが、日本語情報の少なさが課題。
 links:
-  github: "https://github.com/jacoco/jacoco"
-  deepwiki: "https://deepwiki.com/jacoco/jacoco"
-  documentation: "https://www.jacoco.org/jacoco/trunk/doc/index.html"
+  github: https://github.com/jacoco/jacoco
+  deepwiki: https://deepwiki.com/jacoco/jacoco
+  documentation: https://www.jacoco.org/jacoco/trunk/doc/index.html
 relationships:
   related_tools:
-    - "SonarQube"
-    - "JUnit"
+    - SonarQube
+    - JUnit
 ---
+
+
+
 
 # **JaCoCo 調査レポート**
 

@@ -1,67 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Microsoft Power Automate 調査レポート"
-tool_name: "Microsoft Power Automate"
-tool_reading: "マイクロソフト パワー オートメート"
-category: "ワークフロー自動化"
-developer: "Microsoft"
-official_site: "https://powerautomate.microsoft.com/"
-date: "2026-01-26"
-last_updated: "2026-03-04"
+title: Microsoft Power Automate 調査レポート
+tool_name: Microsoft Power Automate
+tool_reading: マイクロソフト パワー オートメート
+category: ワークフロー自動化
+developer: Microsoft
+official_site: https://powerautomate.microsoft.com/
+date: '2026-01-26'
+last_updated: '2026-03-04'
 tags:
-  - "AI"
-  - "RPA"
-  - "ローコード"
-  - "自動化"
-  - "iPaaS"
-description: "Microsoft 365との強力な連携を特徴とする、ローコード/AIを活用したMicrosoftの包括的なワークフロー自動化・RPAソリューション。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - RPA
+  - iPaaS
+  - ローコード
+  - 自動化
+description: Microsoft 365との強力な連携を特徴とする、ローコード/AIを活用したMicrosoftの包括的なワークフロー自動化・RPAソリューション。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$15/月"
+  starting_price: $15/月
   target_users:
-    - "ビジネスユーザー"
-    - "IT部門"
-    - "開発者"
-  latest_highlight: "2025年12月にデスクトップフローのSAP GUIテーブル操作がGA"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ビジネスユーザー
+    - IT部門
+    - 開発者
+  latest_highlight: 2025年12月にデスクトップフローのSAP GUIテーブル操作がGA
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Microsoft 365, Azure等のMicrosoftエコシステムとのシームレスな連携は競合製品に対する最大の強み。"
+      reason: Microsoft 365, Azure等のMicrosoftエコシステムとのシームレスな連携は競合製品に対する最大の強み。
     - point: 5
-      reason: "1,000を超える豊富な標準コネクタが提供されており、多くのサードパーティサービスと容易に連携できる。"
+      reason: 1,000を超える豊富な標準コネクタが提供されており、多くのサードパーティサービスと容易に連携できる。
     - point: 3
-      reason: "類似のエンタープライズ向けRPAツールと比較して、ライセンスコストが比較的安価で導入しやすい。"
+      reason: 類似のエンタープライズ向けRPAツールと比較して、ライセンスコストが比較的安価で導入しやすい。
   minus_points:
     - point: -3
-      reason: "複雑なフローを構築する際の学習コストが高く、特にエラーハンドリングやデバッグが難しいとの指摘が多い。"
+      reason: 複雑なフローを構築する際の学習コストが高く、特にエラーハンドリングやデバッグが難しいとの指摘が多い。
     - point: -2
-      reason: "ライセンス体系が機能ごとに細分化されており、特に大規模導入時には最適なプランの選択が複雑になりがち。"
-  summary: "Microsoftエコシステムとの親和性が非常に高く、コストパフォーマンスに優れた自動化ツールだが、高度な利用には学習が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ライセンス体系が機能ごとに細分化されており、特に大規模導入時には最適なプランの選択が複雑になりがち。
+  summary: Microsoftエコシステムとの親和性が非常に高く、コストパフォーマンスに優れた自動化ツールだが、高度な利用には学習が必要。
 links:
-  documentation: "https://learn.microsoft.com/ja-jp/power-automate/"
+  documentation: https://learn.microsoft.com/ja-jp/power-automate/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "UiPath"
-    - "Zapier"
-    - "Make"
-    - "n8n"
-    - "Workato"
-    - "Microsoft 365 Copilot"
-    - "AutoHotkey"
+    - UiPath
+    - Zapier
+    - Make
+    - n8n
+    - Workato
+    - Microsoft 365 Copilot
+    - AutoHotkey
 ---
+
+
+
 
 # **Microsoft Power Automate 調査レポート**
 

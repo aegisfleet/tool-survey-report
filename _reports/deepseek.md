@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "DeepSeek 調査レポート"
-tool_name: "DeepSeek"
-tool_reading: "ディープシーク"
-category: "生成AI"
-developer: "DeepSeek"
-official_site: "https://www.deepseek.com/"
-date: "2025-10-23"
-last_updated: "2026-03-05"
+title: DeepSeek 調査レポート
+tool_name: DeepSeek
+tool_reading: ディープシーク
+category: 生成AI
+developer: DeepSeek
+official_site: https://www.deepseek.com/
+date: '2025-10-23'
+last_updated: '2026-03-05'
 tags:
-  - "AI"
-  - "大規模言語モデル"
-  - "開発者ツール"
-  - "オープンソース"
-  - "生成AI"
-description: "AGIの実現を目指す中国のAI企業DeepSeekが開発する、高性能な大規模言語モデル群。最新モデルはコーディングと推論能力に優れ、高いコストパフォーマンスを提供。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - 大規模言語モデル
+  - 生成AI
+  - 開発者ツール
+description: AGIの実現を目指す中国のAI企業DeepSeekが開発する、高性能な大規模言語モデル群。最新モデルはコーディングと推論能力に優れ、高いコストパフォーマンスを提供。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "研究者"
-    - "スタートアップ"
-  latest_highlight: "2025年12月にエージェント向け推論モデルDeepSeek-V3.2をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 研究者
+    - スタートアップ
+  latest_highlight: 2025年12月にエージェント向け推論モデルDeepSeek-V3.2をリリース
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 8
-      reason: "競合のGPT-4o等に匹敵する性能を持ちながら、API料金が非常に低価格。"
+      reason: 競合のGPT-4o等に匹敵する性能を持ちながら、API料金が非常に低価格。
     - point: 5
-      reason: "DeepSeek-R1（推論モデル）など、高度な推論とコーディング能力を持つモデルをOSSで公開。"
+      reason: DeepSeek-R1（推論モデル）など、高度な推論とコーディング能力を持つモデルをOSSで公開。
     - point: 3
-      reason: "OpenAI互換APIにより、既存のエコシステムへの統合が容易。"
+      reason: OpenAI互換APIにより、既存のエコシステムへの統合が容易。
   minus_points:
     - point: -4
-      reason: "データが中国国内のサーバーで処理されるため、プライバシーとセキュリティに関する懸念がある。"
-  summary: "コストパフォーマンスと開発者向け機能に優れるが、データプライバシーの懸念から用途が限定される。"
-
-# 【任意項目】該当するもののみ記載
+      reason: データが中国国内のサーバーで処理されるため、プライバシーとセキュリティに関する懸念がある。
+  summary: コストパフォーマンスと開発者向け機能に優れるが、データプライバシーの懸念から用途が限定される。
 links:
-  documentation: "https://api-docs.deepseek.com/"
-  github: "https://github.com/deepseek-ai"
+  documentation: https://api-docs.deepseek.com/
+  github: https://github.com/deepseek-ai
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "Claude"
-    - "Gemini"
-    - "Z.ai"
+    - ChatGPT
+    - Claude
+    - Gemini
+    - Z.ai
 ---
+
+
+
 
 # **DeepSeek 調査レポート**
 

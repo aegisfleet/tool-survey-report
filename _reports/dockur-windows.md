@@ -1,57 +1,57 @@
 ---
-title: "dockur/windows 調査レポート"
-tool_name: "dockur/windows"
-tool_reading: "ドッカー・ウィンドウズ"
-category: "開発者ツール"
-developer: "dockur"
-official_site: "https://github.com/dockur/windows"
-date: "2026-02-05"
-last_updated: "2026-02-05"
+title: dockur/windows 調査レポート
+tool_name: dockur/windows
+tool_reading: ドッカー・ウィンドウズ
+category: 開発者ツール
+developer: dockur
+official_site: https://github.com/dockur/windows
+date: '2026-02-05'
+last_updated: '2026-02-05'
 tags:
-  - "Docker"
-  - "Windows"
-  - "KVM"
-  - "コンテナ"
-  - "オープンソース"
-description: "Dockerコンテナ内でWindowsを動作させるためのツール。KVMアクセラレーションを利用し、ISOのダウンロードからインストールまでを全自動で行う。"
-
+  - Docker
+  - KVM
+  - Windows
+  - オープンソース
+  - コンテナ
+description: Dockerコンテナ内でWindowsを動作させるためのツール。KVMアクセラレーションを利用し、ISOのダウンロードからインストールまでを全自動で行う。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "インフラエンジニア"
-    - "QAエンジニア"
-  latest_highlight: "Windows 11の自動インストールとKVMによる高速化に対応"
-  update_frequency: "高"
-
+    - 開発者
+    - インフラエンジニア
+    - QAエンジニア
+  latest_highlight: Windows 11の自動インストールとKVMによる高速化に対応
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "面倒なWindowsのインストール作業を完全に自動化している"
+      reason: 面倒なWindowsのインストール作業を完全に自動化している
     - point: 5
-      reason: "Dockerコマンド一つでWindows環境が立ち上がる手軽さ"
+      reason: Dockerコマンド一つでWindows環境が立ち上がる手軽さ
     - point: 3
-      reason: "Webブラウザで操作できるビューワを標準搭載"
+      reason: Webブラウザで操作できるビューワを標準搭載
     - point: 2
-      reason: "日本語を含む多言語に標準対応"
+      reason: 日本語を含む多言語に標準対応
   minus_points:
     - point: -3
-      reason: "パフォーマンスはホストのKVM環境に強く依存する"
+      reason: パフォーマンスはホストのKVM環境に強く依存する
     - point: -2
-      reason: "Webビューワの画質や操作性はRDPに劣る"
-  summary: "使い捨てのWindows環境が必要な場面で、これ以上ないほど便利なツール。CI/CDやテスト用途に最適。"
-
+      reason: Webビューワの画質や操作性はRDPに劣る
+  summary: 使い捨てのWindows環境が必要な場面で、これ以上ないほど便利なツール。CI/CDやテスト用途に最適。
 links:
-  github: "https://github.com/dockur/windows"
-  codewiki: "https://codewiki.google/github.com/dockur/windows"
+  github: https://github.com/dockur/windows
+  codewiki: https://codewiki.google/github.com/dockur/windows
 relationships:
   related_tools:
-    - "Docker"
+    - Docker
 ---
+
+
+
 
 # **dockur/windows 調査レポート**
 

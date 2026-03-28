@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Hugging Face 調査レポート"
-tool_name: "Hugging Face"
-tool_reading: "ハギングフェイス"
-category: "AI開発基盤"
-developer: "Hugging Face"
-official_site: "https://huggingface.co/"
-date: "2026-02-05"
-last_updated: "2026-02-05"
+title: Hugging Face 調査レポート
+tool_name: Hugging Face
+tool_reading: ハギングフェイス
+category: AI開発基盤
+developer: Hugging Face
+official_site: https://huggingface.co/
+date: '2026-02-05'
+last_updated: '2026-02-05'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "オープンソース"
-  - "開発者ツール"
-description: "AIモデル・データセット・アプリケーションを共有・協力するためのオープンソースプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - 大規模言語モデル
+  - 生成AI
+  - 開発者ツール
+description: AIモデル・データセット・アプリケーションを共有・協力するためのオープンソースプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AI研究者"
-    - "機械学習エンジニア"
-    - "開発者"
-  latest_highlight: "2026年1月に論文読解を支援するHuggingChat for Papersをリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AI研究者
+    - 機械学習エンジニア
+    - 開発者
+  latest_highlight: 2026年1月に論文読解を支援するHuggingChat for Papersをリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "120万以上のモデルと25万以上のデータセットを誇る巨大なエコシステム"
+      reason: 120万以上のモデルと25万以上のデータセットを誇る巨大なエコシステム
     - point: 8
-      reason: "Transformersなど業界標準のOSSライブラリを多数開発・提供"
+      reason: Transformersなど業界標準のOSSライブラリを多数開発・提供
     - point: 5
-      reason: "無料プランの範囲が広く、個人開発者や研究者が利用しやすい"
+      reason: 無料プランの範囲が広く、個人開発者や研究者が利用しやすい
   minus_points:
     - point: -3
-      reason: "情報量が膨大で、最適なモデルやドキュメントを見つけにくい"
+      reason: 情報量が膨大で、最適なモデルやドキュメントを見つけにくい
     - point: -3
-      reason: "ドキュメントやコミュニティは英語中心で、日本語情報は限定的"
+      reason: ドキュメントやコミュニティは英語中心で、日本語情報は限定的
     - point: -2
-      reason: "大規模モデルの利用には高いコンピューティングリソースが必要"
-  summary: "AI開発における巨大なエコシステムと活発なOSSコミュニティが強みだが、情報の多さと日本語情報の不足が課題。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 大規模モデルの利用には高いコンピューティングリソースが必要
+  summary: AI開発における巨大なエコシステムと活発なOSSコミュニティが強みだが、情報の多さと日本語情報の不足が課題。
 links:
-  github: "https://github.com/huggingface"
-  documentation: "https://huggingface.co/docs"
+  github: https://github.com/huggingface
+  documentation: https://huggingface.co/docs
 relationships:
   related_tools:
-    - "LangChain"
-    - "Stable Diffusion"
-    - "Amazon Bedrock"
-    - "TensorFlow"
-    - "Hunyuan 3D"
+    - LangChain
+    - Stable Diffusion
+    - Amazon Bedrock
+    - TensorFlow
+    - Hunyuan 3D
+    - UI-TARS Desktop
 ---
+
+
+
 
 # **Hugging Face 調査レポート**
 

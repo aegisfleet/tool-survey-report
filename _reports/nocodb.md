@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "NocoDB 調査レポート"
-tool_name: "NocoDB"
-tool_reading: "ノコディービー"
-category: "開発者ツール"
-developer: "NocoDB Inc."
-official_site: "https://nocodb.com/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: NocoDB 調査レポート
+tool_name: NocoDB
+tool_reading: ノコディービー
+category: 開発者ツール
+developer: NocoDB Inc.
+official_site: https://nocodb.com/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "ノーコード"
-  - "ローコード"
-  - "オープンソース"
-  - "データベース"
-  - "Airtable代替"
-  - "開発者ツール"
-description: "既存のSQLデータベースをスマートなスプレッドシートインターフェースに変換するオープンソースのノーコードプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Airtable代替
+  - オープンソース
+  - データベース
+  - ノーコード
+  - ローコード
+  - 開発者ツール
+description: 既存のSQLデータベースをスマートなスプレッドシートインターフェースに変換するオープンソースのノーコードプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "SMB"
-  latest_highlight: "2025年11月にチーム管理機能とデータ同期機能(NocoSync)をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - SMB
+  latest_highlight: 2025年11月にチーム管理機能とデータ同期機能(NocoSync)をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "オープンソースであり、既存のDBに接続してUI化できる柔軟性が高い"
+      reason: オープンソースであり、既存のDBに接続してUI化できる柔軟性が高い
     - point: 5
-      reason: "セルフホスト版は機能制限が少なく、コストパフォーマンスが非常に高い"
+      reason: セルフホスト版は機能制限が少なく、コストパフォーマンスが非常に高い
     - point: 4
-      reason: "REST APIとGraphQL APIを自動生成し、バックエンド開発を大幅に短縮できる"
+      reason: REST APIとGraphQL APIを自動生成し、バックエンド開発を大幅に短縮できる
   minus_points:
     - point: -2
-      reason: "クラウド版やエンタープライズ機能（SSO、監査ログ）は有料プランが必要"
-  summary: "既存のデータベース資産を活用しながら、ノーコードで業務アプリを構築できる強力なツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: クラウド版やエンタープライズ機能（SSO、監査ログ）は有料プランが必要
+  summary: 既存のデータベース資産を活用しながら、ノーコードで業務アプリを構築できる強力なツール。
 links:
-  github: "https://github.com/nocodb/nocodb"
-  deepwiki: "https://deepwiki.com/nocodb/nocodb"
-  documentation: "https://docs.nocodb.com/"
+  github: https://github.com/nocodb/nocodb
+  deepwiki: https://deepwiki.com/nocodb/nocodb
+  documentation: https://docs.nocodb.com/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Make"
-    - "n8n"
-    - "Zapier"
-    - "Notion"
+    - Make
+    - n8n
+    - Zapier
+    - Notion
 ---
+
+
+
 
 # **NocoDB 調査レポート**
 

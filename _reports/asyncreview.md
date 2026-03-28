@@ -1,61 +1,57 @@
 ---
-title: "AsyncReview 調査レポート"
-tool_name: "AsyncReview"
-tool_reading: "アシンクレビュー"
-category: "開発者ツール"
-developer: "AsyncFuncAI"
-official_site: "https://github.com/AsyncFuncAI/AsyncReview"
-date: "2026-02-11"
-last_updated: "2026-02-11"
+title: AsyncReview 調査レポート
+tool_name: AsyncReview
+tool_reading: アシンクレビュー
+category: 開発者ツール
+developer: AsyncFuncAI
+official_site: https://github.com/AsyncFuncAI/AsyncReview
+date: '2026-02-11'
+last_updated: '2026-02-11'
 tags:
-  - "AI"
-  - "開発ツール"
-  - "テスト自動化"
-  - "コードレビュー"
-description: "再帰的言語モデル(RLM)を用いた、GitHub PR/Issue向けの自律型コードレビューエージェント"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - コードレビュー
+  - テスト自動化
+  - 開発ツール
+description: 再帰的言語モデル(RLM)を用いた、GitHub PR/Issue向けの自律型コードレビューエージェント
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (APIキーが必要)"
+  starting_price: 無料 (APIキーが必要)
   target_users:
-    - "開発者"
-    - "メンテナー"
-    - "QAエンジニア"
-  latest_highlight: "Recursive Language Models (RLM)による深い推論と幻覚の低減"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - メンテナー
+    - QAエンジニア
+  latest_highlight: Recursive Language Models (RLM)による深い推論と幻覚の低減
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "従来の差分解析を超えたリポジトリ全体のコンテキスト理解"
+      reason: 従来の差分解析を超えたリポジトリ全体のコンテキスト理解
     - point: 5
-      reason: "自律的な探索と検証による高い信頼性（幻覚の低減）"
+      reason: 自律的な探索と検証による高い信頼性（幻覚の低減）
     - point: 5
-      reason: "エージェントスキルとして組み込み可能"
+      reason: エージェントスキルとして組み込み可能
   minus_points:
     - point: 0
-      reason: "特になし（APIキーが必要だが開発者向けツールとしては標準的）"
-  summary: "単なるコード生成ではなく、検証と考え抜かれた推論を行う次世代のコードレビューツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（APIキーが必要だが開発者向けツールとしては標準的）
+  summary: 単なるコード生成ではなく、検証と考え抜かれた推論を行う次世代のコードレビューツール
 links:
-  github: "https://github.com/AsyncFuncAI/AsyncReview"
-  codewiki: "https://codewiki.google/github.com/AsyncFuncAI/AsyncReview"
-  deepwiki: "" # GitHubのWiki機能はなさそうだが、DeepWiki Openの後継
-  documentation: "https://github.com/AsyncFuncAI/AsyncReview#readme"
+  github: https://github.com/AsyncFuncAI/AsyncReview
+  codewiki: https://codewiki.google/github.com/AsyncFuncAI/AsyncReview
+  deepwiki: ''
+  documentation: https://github.com/AsyncFuncAI/AsyncReview#readme
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "DeepWiki Open"
-    - "GitHub Copilot"
-    - "Claude Code"
+    - GitHub Copilot
+    - Claude Code
 ---
+
+
+
 
 # **AsyncReview 調査レポート**
 

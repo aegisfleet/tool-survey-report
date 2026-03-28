@@ -1,65 +1,65 @@
 ---
-title: "Quality Tracker 調査レポート"
-tool_name: "Quality Tracker"
-tool_reading: "クオリティトラッカー"
-category: "テスト管理"
-developer: "バルテス株式会社 (VALTES CO.,LTD.)"
-official_site: "https://service.valtes.co.jp/qualitytracker/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: Quality Tracker 調査レポート
+tool_name: Quality Tracker
+tool_reading: クオリティトラッカー
+category: テスト管理
+developer: バルテス株式会社 (VALTES CO.,LTD.)
+official_site: https://service.valtes.co.jp/qualitytracker/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト管理"
-  - "品質管理"
-  - "EVM"
-  - "SaaS"
-  - "Jira連携"
-  - "Redmine連携"
-description: "テストの進捗と資産を一元管理し、EVMを用いて正確な進捗状況を見える化するクラウド型テスト管理ツール"
-
+  - EVM
+  - Jira連携
+  - Redmine連携
+  - SaaS
+  - テスト管理
+  - 品質管理
+description: テストの進捗と資産を一元管理し、EVMを用いて正確な進捗状況を見える化するクラウド型テスト管理ツール
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "¥2,860/月/人"
+  starting_price: ¥2,860/月/人
   target_users:
-    - "QAエンジニア"
-    - "プロジェクトマネージャー"
-    - "テスト管理者"
-  latest_highlight: "2025年12月にシステムメンテナンスを実施"
-  update_frequency: "中"
-
+    - QAエンジニア
+    - プロジェクトマネージャー
+    - テスト管理者
+  latest_highlight: 2025年12月にシステムメンテナンスを実施
+  update_frequency: 中
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 5
-      reason: "EVM（アーンドバリューマネジメント）による科学的な進捗管理が可能"
+      reason: EVM（アーンドバリューマネジメント）による科学的な進捗管理が可能
     - point: 3
-      reason: "テストケースの資産化と再利用が容易"
+      reason: テストケースの資産化と再利用が容易
     - point: 3
-      reason: "Jira, Redmine, GitHubなど主要なBTSとの連携が充実"
+      reason: Jira, Redmine, GitHubなど主要なBTSとの連携が充実
     - point: 3
-      reason: "ISO 27001 (ISMS) 認証取得企業による運営で安心感がある"
+      reason: ISO 27001 (ISMS) 認証取得企業による運営で安心感がある
   minus_points:
     - point: -3
-      reason: "無料プランがなく（トライアルのみ）、少人数での長期利用にはコストがかかる"
+      reason: 無料プランがなく（トライアルのみ）、少人数での長期利用にはコストがかかる
     - point: -3
-      reason: "口コミやレビュー情報が少なく、ユーザーの生の評価が見えにくい"
+      reason: 口コミやレビュー情報が少なく、ユーザーの生の評価が見えにくい
     - point: -2
-      reason: "IP制限などのセキュリティオプションが有料"
-  summary: "EVMを用いた正確な進捗管理が強み。日本の品質専門会社が開発しており、国内のテスト現場にマッチした機能を持つ。"
-
+      reason: IP制限などのセキュリティオプションが有料
+  summary: EVMを用いた正確な進捗管理が強み。日本の品質専門会社が開発しており、国内のテスト現場にマッチした機能を持つ。
 links:
-  documentation: "https://service.valtes.co.jp/qualitytracker/#faq"
+  documentation: https://service.valtes.co.jp/qualitytracker/#faq
 relationships:
   related_tools:
-    - "CAT"
-    - "QualityForward"
-    - "TestRail"
-    - "Redmine"
-    - "Backlog"
-    - "GitHub"
-    - "GitLab"
+    - CAT
+    - QualityForward
+    - TestRail
+    - Redmine
+    - Backlog
+    - GitHub
+    - GitLab
 ---
+
+
+
 
 # **Quality Tracker 調査レポート**
 

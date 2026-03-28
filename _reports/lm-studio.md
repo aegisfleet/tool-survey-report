@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "LM Studio 調査レポート"
-tool_name: "LM Studio"
-tool_reading: "エルエムスタジオ"
-category: "AI開発基盤"
-developer: "Element Labs, Inc."
-official_site: "https://lmstudio.ai/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: LM Studio 調査レポート
+tool_name: LM Studio
+tool_reading: エルエムスタジオ
+category: AI開発基盤
+developer: Element Labs, Inc.
+official_site: https://lmstudio.ai/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "AI"
-  - "ローカルAI"
-  - "大規模言語モデル"
-  - "開発者ツール"
-description: "オープンソースの大規模言語モデル（LLM）をローカルPCやサーバー上で、オフラインで実行するためのデスクトップアプリケーションおよびCLIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - ローカルAI
+  - 大規模言語モデル
+  - 開発者ツール
+description: オープンソースの大規模言語モデル（LLM）をローカルPCやサーバー上で、オフラインで実行するためのデスクトップアプリケーションおよびCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "研究者"
-    - "AI学習者"
-  latest_highlight: "2026年1月にv0.4.0をリリース。ヘッドレスモードや並列リクエストに対応"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 研究者
+    - AI学習者
+  latest_highlight: 2026年1月にv0.4.0をリリース。ヘッドレスモードや並列リクエストに対応
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 8
-      reason: "GUIが非常に直感的で、専門知識がなくても容易に利用開始できる"
+      reason: GUIが非常に直感的で、専門知識がなくても容易に利用開始できる
     - point: 8
-      reason: "個人利用・商用利用ともに基本機能は無料で、コスト面の懸念がない"
+      reason: 個人利用・商用利用ともに基本機能は無料で、コスト面の懸念がない
     - point: 5
-      reason: "完全オフラインで動作し、データのプライバシーが最大限に確保される"
+      reason: 完全オフラインで動作し、データのプライバシーが最大限に確保される
     - point: 5
-      reason: "v0.4.0でヘッドレスモードに対応し、サーバー用途での利用が可能になった"
+      reason: v0.4.0でヘッドレスモードに対応し、サーバー用途での利用が可能になった
   minus_points:
     - point: -2
-      reason: "モデルを快適に動作させるには、高性能なPC（特にRAM/VRAM）が要求される"
+      reason: モデルを快適に動作させるには、高性能なPC（特にRAM/VRAM）が要求される
     - point: -2
-      reason: "GUIアプリケーション自体はオープンソースではなく、ソースコードの透明性に欠ける"
-  summary: "GUIの手軽さとヘッドレス運用の柔軟性を兼ね備えた、ローカルLLM実行環境の決定版。"
-
-# 【任意項目】該当するもののみ記載
+      reason: GUIアプリケーション自体はオープンソースではなく、ソースコードの透明性に欠ける
+  summary: GUIの手軽さとヘッドレス運用の柔軟性を兼ね備えた、ローカルLLM実行環境の決定版。
 links:
-  documentation: "https://lmstudio.ai/docs/welcome"
+  documentation: https://lmstudio.ai/docs/welcome
 relationships:
   related_tools:
-    - "Ollama"
-    - "Foundry Local"
+    - Ollama
+    - Foundry Local
 ---
+
+
+
 
 # **LM Studio 調査レポート**
 

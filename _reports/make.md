@@ -1,57 +1,60 @@
 ---
-title: "Make 調査レポート"
-tool_name: "Make"
-tool_reading: "メイク"
-category: "ワークフロー自動化"
-developer: "Celonis / Make"
-official_site: "https://www.make.com/"
-date: "2026-02-22"
-last_updated: "2026-02-22"
+title: Make 調査レポート
+tool_name: Make
+tool_reading: メイク
+category: ワークフロー自動化
+developer: Celonis / Make
+official_site: https://www.make.com/
+date: '2026-02-22'
+last_updated: '2026-02-22'
 tags:
-  - "iPaaS"
-  - "ノーコード"
-  - "自動化"
-  - "ワークフロー自動化"
-  - "AI"
-description: "直感的なビジュアル操作で複雑なワークフローを構築できるiPaaSプラットフォーム。旧Integromatとして知られ、高い柔軟性とコストパフォーマンスが特徴。"
-
+  - AI
+  - iPaaS
+  - ノーコード
+  - ワークフロー自動化
+  - 自動化
+description: 直感的なビジュアル操作で複雑なワークフローを構築できるiPaaSプラットフォーム。旧Integromatとして知られ、高い柔軟性とコストパフォーマンスが特徴。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "SMB"
-  latest_highlight: "2025年12月にエンタープライズ向けの管理機能（監査ログ詳細化等）を強化"
-  update_frequency: "高"
-
+    - 開発者
+    - スタートアップ
+    - SMB
+  latest_highlight: 2025年12月にエンタープライズ向けの管理機能（監査ログ詳細化等）を強化
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "視覚的なシナリオビルダーが非常に直感的で、複雑なロジックも可視化しやすい"
+      reason: 視覚的なシナリオビルダーが非常に直感的で、複雑なロジックも可視化しやすい
     - point: 3
-      reason: "無料プランの実用性が高く、有料プランも競合（Zapier等）と比較して安価"
+      reason: 無料プランの実用性が高く、有料プランも競合（Zapier等）と比較して安価
     - point: 2
-      reason: "HTTP/Webhookモジュールやデータ変換機能が強力で、APIを持つほぼ全てのサービスと連携可能"
+      reason: HTTP/Webhookモジュールやデータ変換機能が強力で、APIを持つほぼ全てのサービスと連携可能
   minus_points:
     - point: -2
-      reason: "複雑なシナリオを作成するには、配列やJSONなどのデータ構造の理解が必要（学習コスト高）"
-  summary: "視覚的な操作性と高いカスタマイズ性を両立しており、単純な連携から高度なアプリ開発まで幅広く推奨できる。"
-
+      reason: 複雑なシナリオを作成するには、配列やJSONなどのデータ構造の理解が必要（学習コスト高）
+  summary: 視覚的な操作性と高いカスタマイズ性を両立しており、単純な連携から高度なアプリ開発まで幅広く推奨できる。
 links:
-  documentation: "https://help.make.com/"
+  documentation: https://help.make.com/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Zapier"
-    - "n8n"
-    - "Workato"
-    - "Microsoft Power Automate"
+    - Zapier
+    - n8n
+    - Workato
+    - Microsoft Power Automate
+    - NocoDB
+    - MoneyPrinterV2
+    - Google Workspace Studio
 ---
+
+
+
 
 # **Make 調査レポート**
 

@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Pulumi 調査レポート"
-tool_name: "Pulumi"
-tool_reading: "プルミ"
-category: "構成管理"
-developer: "Pulumi Corp."
-official_site: "https://www.pulumi.com/"
-date: "2025-10-27"
-last_updated: "2026-02-12"
+title: Pulumi 調査レポート
+tool_name: Pulumi
+tool_reading: プルミ
+category: 構成管理
+developer: Pulumi Corp.
+official_site: https://www.pulumi.com/
+date: '2025-10-27'
+last_updated: '2026-02-12'
 tags:
-  - "IaC"
-  - "構成管理"
-  - "クラウド"
-  - "DevOps"
-  - "オープンソース"
-  - "AI"
-description: "使い慣れたプログラミング言語でクラウドインフラを定義・管理できる、AI搭載のオープンソースIaCプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - DevOps
+  - IaC
+  - オープンソース
+  - クラウド
+  - 構成管理
+description: 使い慣れたプログラミング言語でクラウドインフラを定義・管理できる、AI搭載のオープンソースIaCプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "開発者"
-    - "プラットフォームエンジニア"
-  latest_highlight: "2026年1月 Pulumi Copilotによる自然言語でのインフラ管理機能強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - 開発者
+    - プラットフォームエンジニア
+  latest_highlight: 2026年1月 Pulumi Copilotによる自然言語でのインフラ管理機能強化
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "汎用プログラミング言語が利用でき、DSLの学習コストが不要な点"
+      reason: 汎用プログラミング言語が利用でき、DSLの学習コストが不要な点
     - point: 7
-      reason: "Pulumi Neo/Copilotといった強力なAI支援機能"
+      reason: Pulumi Neo/Copilotといった強力なAI支援機能
     - point: 5
-      reason: "使い慣れたフレームワークでインフラコードをテストできる点"
+      reason: 使い慣れたフレームワークでインフラコードをテストできる点
   minus_points:
     - point: -3
-      reason: "最大手であるTerraformと比較してコミュニティ規模やモジュール数が少ない"
+      reason: 最大手であるTerraformと比較してコミュニティ規模やモジュール数が少ない
     - point: -2
-      reason: "一部のドキュメントの不足やUIの複雑さがレビューで指摘されている"
+      reason: 一部のドキュメントの不足やUIの複雑さがレビューで指摘されている
     - point: -2
-      reason: "料金体系が分かりにくいというユーザーの声がある"
-  summary: "汎用言語による高い表現力とAI機能が強みだが、コミュニティ規模ではTerraformに及ばない"
-
-# 【任意項目】該当するもののみ記載
+      reason: 料金体系が分かりにくいというユーザーの声がある
+  summary: 汎用言語による高い表現力とAI機能が強みだが、コミュニティ規模ではTerraformに及ばない
 links:
-  github: "https://github.com/pulumi/pulumi"
-  codewiki: "https://codewiki.google/github.com/pulumi/pulumi"
-  deepwiki: "https://deepwiki.com/pulumi/pulumi"
-  documentation: "https://www.pulumi.com/docs/"
+  github: https://github.com/pulumi/pulumi
+  codewiki: https://codewiki.google/github.com/pulumi/pulumi
+  deepwiki: https://deepwiki.com/pulumi/pulumi
+  documentation: https://www.pulumi.com/docs/
 relationships:
   related_tools:
-    - "Terraform"
-    - "AWS CloudFormation"
-    - "Ansible"
-    - "OpenTofu"
+    - Terraform
+    - AWS CloudFormation
+    - Ansible
+    - OpenTofu
 ---
+
+
+
 
 # **Pulumi 調査レポート**
 

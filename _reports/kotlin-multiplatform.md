@@ -1,71 +1,64 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Kotlin Multiplatform 調査レポート"
-tool_name: "Kotlin Multiplatform"
-tool_reading: "コトリン マルチプラットフォーム"
-category: "モバイル開発"
-developer: "JetBrains"
-official_site: "https://kotlinlang.org/multiplatform/"
-date: "2026-02-15"
-last_updated: "2026-02-15"
+title: Kotlin Multiplatform 調査レポート
+tool_name: Kotlin Multiplatform
+tool_reading: コトリン マルチプラットフォーム
+category: モバイル開発
+developer: JetBrains
+official_site: https://kotlinlang.org/multiplatform/
+date: '2026-02-15'
+last_updated: '2026-02-15'
 tags:
-  - "モバイル開発"
-  - "クロスプラットフォーム"
-  - "Kotlin"
-  - "オープンソース"
-  - "Compose Multiplatform"
-description: "ビジネスロジックを共有し、UIはネイティブまたはCompose Multiplatformで構築することで、コードの再利用とネイティブパフォーマンスを両立させる開発技術。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Compose Multiplatform
+  - Kotlin
+  - オープンソース
+  - クロスプラットフォーム
+  - モバイル開発
+description: ビジネスロジックを共有し、UIはネイティブまたはCompose Multiplatformで構築することで、コードの再利用とネイティブパフォーマンスを両立させる開発技術。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "モバイルアプリ開発者"
-    - "Android/iOSエンジニア"
-    - "大規模開発チーム"
-  latest_highlight: "2025年にCompose Multiplatform for iOSが安定版(Stable)に到達し、UI共有の実用性が飛躍的に向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - モバイルアプリ開発者
+    - Android/iOSエンジニア
+    - 大規模開発チーム
+  latest_highlight: 2025年にCompose Multiplatform for iOSが安定版(Stable)に到達し、UI共有の実用性が飛躍的に向上
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ビジネスロジックの共有とネイティブパフォーマンスの両立という独自の強み"
+      reason: ビジネスロジックの共有とネイティブパフォーマンスの両立という独自の強み
     - point: 5
-      reason: "既存のアプリに部分的に導入できる柔軟性（インクリメンタル採用）"
+      reason: 既存のアプリに部分的に導入できる柔軟性（インクリメンタル採用）
     - point: 5
-      reason: "JetBrainsによる強力なIDEサポートとGoogleによる公式サポート"
+      reason: JetBrainsによる強力なIDEサポートとGoogleによる公式サポート
     - point: 5
-      reason: "Compose Multiplatform for iOSの安定化によりUI共有も現実的な選択肢に"
+      reason: Compose Multiplatform for iOSの安定化によりUI共有も現実的な選択肢に
   minus_points:
     - point: -3
-      reason: "Gradle設定や環境構築の複雑さが依然として残る"
+      reason: Gradle設定や環境構築の複雑さが依然として残る
     - point: -3
-      reason: "iOS開発において、Swift/Objective-CやiOSエコシステムの知識が必須"
+      reason: iOS開発において、Swift/Objective-CやiOSエコシステムの知識が必須
     - point: -2
-      reason: "純粋なSwiftUIやUIKitに比べると、iOS固有の最新UI機能への即応にラグがある"
-  summary: "ロジック共有とネイティブ品質を両立させる最有力候補。Composeの成熟によりUI共有の選択肢も加わり、死角がなくなった。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 純粋なSwiftUIやUIKitに比べると、iOS固有の最新UI機能への即応にラグがある
+  summary: ロジック共有とネイティブ品質を両立させる最有力候補。Composeの成熟によりUI共有の選択肢も加わり、死角がなくなった。
 links:
-  github: "https://github.com/JetBrains/kotlin"
-  deepwiki: "https://deepwiki.com/JetBrains/kotlin"
-  documentation: "https://kotlinlang.org/docs/multiplatform.html"
+  github: https://github.com/JetBrains/kotlin
+  deepwiki: https://deepwiki.com/JetBrains/kotlin
+  documentation: https://kotlinlang.org/docs/multiplatform.html
 relationships:
-  parent: "IntelliJ IDEA"
-  children:
-    - "Compose Multiplatform"
+  parent: IntelliJ IDEA
+  children: []
   related_tools:
-    - "Flutter"
-    - "React Native"
-    - "Android Studio"
-    - "SwiftUI"
+    - Flutter
+    - Android Studio
+    - IntelliJ IDEA
 ---
+
+
+
 
 # **Kotlin Multiplatform 調査レポート**
 

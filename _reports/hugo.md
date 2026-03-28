@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Hugo 調査レポート"
-tool_name: "Hugo"
-tool_reading: "ヒューゴ"
-category: "Webフレームワーク"
-developer: "The Hugo Authors"
-official_site: "https://gohugo.io/"
-date: "2026-03-07"
-last_updated: "2026-03-07"
+title: Hugo 調査レポート
+tool_name: Hugo
+tool_reading: ヒューゴ
+category: Webフレームワーク
+developer: The Hugo Authors
+official_site: https://gohugo.io/
+date: '2026-03-07'
+last_updated: '2026-03-07'
 tags:
-  - "静的サイトジェネレーター"
-  - "オープンソース"
-  - "Go"
-description: "Go言語で開発されたオープンソースの静的サイトジェネレーター。「世界最速」を謳い、圧倒的なビルド速度と柔軟性を特徴とする。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Go
+  - オープンソース
+  - 静的サイトジェネレーター
+description: Go言語で開発されたオープンソースの静的サイトジェネレーター。「世界最速」を謳い、圧倒的なビルド速度と柔軟性を特徴とする。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "コンテンツ制作者"
-    - "技術ライター"
-  latest_highlight: "2026年2月にv0.157.0をリリースし、Hugo ModulesのGitInfoサポートを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - コンテンツ制作者
+    - 技術ライター
+  latest_highlight: 2026年2月にv0.157.0をリリースし、Hugo ModulesのGitInfoサポートを追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 10
-      reason: "ビルド速度が圧倒的に速く、大規模サイトでもストレスなく開発できる"
+      reason: ビルド速度が圧倒的に速く、大規模サイトでもストレスなく開発できる
     - point: 5
-      reason: "単一バイナリで依存関係がなく、導入と運用が非常に容易"
+      reason: 単一バイナリで依存関係がなく、導入と運用が非常に容易
     - point: 3
-      reason: "活発なコミュニティと頻繁なアップデートによる継続的な改善"
+      reason: 活発なコミュニティと頻繁なアップデートによる継続的な改善
   minus_points:
     - point: -3
-      reason: "Goテンプレートの学習コストがやや高く、初心者には習熟が必要"
+      reason: Goテンプレートの学習コストがやや高く、初心者には習熟が必要
     - point: -2
-      reason: "プラグインエコシステムがないため、特定の機能追加は自力での実装が必要になる場合がある"
-  summary: "圧倒的なビルド速度と運用の手軽さが強みだが、独自のテンプレート言語の習熟には時間が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: プラグインエコシステムがないため、特定の機能追加は自力での実装が必要になる場合がある
+  summary: 圧倒的なビルド速度と運用の手軽さが強みだが、独自のテンプレート言語の習熟には時間が必要。
 links:
-  github: "https://github.com/gohugoio/hugo"
-  deepwiki: "https://deepwiki.com/gohugoio/hugo"
-  codewiki: "https://codewiki.google/github.com/gohugoio/hugo"
-  documentation: "https://gohugo.io/documentation/"
+  github: https://github.com/gohugoio/hugo
+  deepwiki: https://deepwiki.com/gohugoio/hugo
+  codewiki: https://codewiki.google/github.com/gohugoio/hugo
+  documentation: https://gohugo.io/documentation/
 relationships:
   related_tools:
-    - "Astro"
-    - "Jekyll"
-    - "WordPress"
+    - Astro
+    - Jekyll
+    - WordPress
 ---
+
+
+
 
 # **Hugo 調査レポート**
 

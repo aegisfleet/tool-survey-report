@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "OpenTofu 調査レポート"
-tool_name: "OpenTofu"
-tool_reading: "オープントフ"
-category: "構成管理"
-developer: "Linux Foundation"
-official_site: "https://opentofu.org/"
-date: "2025-10-27"
-last_updated: "2026-02-12"
+title: OpenTofu 調査レポート
+tool_name: OpenTofu
+tool_reading: オープントフ
+category: 構成管理
+developer: Linux Foundation
+official_site: https://opentofu.org/
+date: '2025-10-27'
+last_updated: '2026-02-12'
 tags:
-  - "IaC"
-  - "構成管理"
-  - "自動化"
-  - "クラウド"
-  - "オープンソース"
-  - "DevOps"
-description: "Terraformのオープンソースフォーク。コミュニティ主導で開発されているInfrastructure as Code (IaC) ツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - IaC
+  - オープンソース
+  - クラウド
+  - 構成管理
+  - 自動化
+description: Terraformのオープンソースフォーク。コミュニティ主導で開発されているInfrastructure as Code (IaC) ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "インフラエンジニア"
-    - "DevOpsエンジニア"
-  latest_highlight: "2026年1月にv1.11.4をリリース。セキュリティと安定性が向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - インフラエンジニア
+    - DevOpsエンジニア
+  latest_highlight: 2026年1月にv1.11.4をリリース。セキュリティと安定性が向上
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Terraformとの完全な互換性を持ちつつ、ライセンスリスクがない"
+      reason: Terraformとの完全な互換性を持ちつつ、ライセンスリスクがない
     - point: 5
-      reason: "クライアントサイド暗号化やEphemeral Valuesなど、コミュニティ主導の機能追加が迅速"
+      reason: クライアントサイド暗号化やEphemeral Valuesなど、コミュニティ主導の機能追加が迅速
     - point: 5
-      reason: "Linux Foundation傘下であり、プロジェクトの安定性と中立性が高い"
+      reason: Linux Foundation傘下であり、プロジェクトの安定性と中立性が高い
   minus_points:
     - point: -3
-      reason: "Terraformと比較すると、エコシステムやサードパーティツールの対応がまだ発展途上"
-  summary: "ライセンス懸念なくTerraformの全機能を使え、コミュニティ主導の改善も魅力的なIaCツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: Terraformと比較すると、エコシステムやサードパーティツールの対応がまだ発展途上
+  summary: ライセンス懸念なくTerraformの全機能を使え、コミュニティ主導の改善も魅力的なIaCツール
 links:
-  github: "https://github.com/opentofu/opentofu"
-  deepwiki: "https://deepwiki.com/opentofu/opentofu"
-  documentation: "https://opentofu.org/docs/"
+  github: https://github.com/opentofu/opentofu
+  deepwiki: https://deepwiki.com/opentofu/opentofu
+  documentation: https://opentofu.org/docs/
 relationships:
-  parent: "Terraform"
+  parent: Terraform
   related_tools:
-    - "Pulumi"
-    - "AWS CloudFormation"
-    - "Ansible"
-    - "LocalStack"
-    - "Kubernetes"
+    - Pulumi
+    - AWS CloudFormation
+    - Ansible
+    - LocalStack
+    - Kubernetes
 ---
+
+
+
 
 # **OpenTofu 調査レポート**
 

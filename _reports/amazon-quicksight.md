@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Amazon QuickSight 調査レポート"
-tool_name: "Amazon QuickSight"
-tool_reading: "アマゾン クイックサイト"
-category: "BIツール"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/quicksight/"
-date: "2026-03-17"
-last_updated: "2026-03-17"
+title: Amazon QuickSight 調査レポート
+tool_name: Amazon QuickSight
+tool_reading: アマゾン クイックサイト
+category: BIツール
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/quicksight/
+date: '2026-03-17'
+last_updated: '2026-03-17'
 tags:
-  - "AWS"
-  - "BI"
-  - "データ分析"
-  - "データ可視化"
-  - "SaaS"
-  - "サーバーレス"
-description: "AWSが提供するサーバーレスなBIツール。SPICEによる高速なインメモリ分析と、Amazon Qを活用した生成BI機能が特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AWS
+  - BI
+  - SaaS
+  - サーバーレス
+  - データ分析
+  - データ可視化
+description: AWSが提供するサーバーレスなBIツール。SPICEによる高速なインメモリ分析と、Amazon Qを活用した生成BI機能が特徴。
 quick_summary:
-  has_free_plan: false  # 30日間の無料トライアルあり
+  has_free_plan: false
   is_oss: false
-  starting_price: "$3/月"  # Readerプラン（Standard Editionの場合は$9/月〜）
+  starting_price: $3/月
   target_users:
-    - "データアナリスト"
-    - "経営層"
-    - "開発者"
-  latest_highlight: "生成BI機能「Amazon Q in QuickSight」による自然言語分析の強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - データアナリスト
+    - 経営層
+    - 開発者
+  latest_highlight: 生成BI機能「Amazon Q in QuickSight」による自然言語分析の強化
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "サーバーレスでインフラ管理が不要、オートスケールする"
+      reason: サーバーレスでインフラ管理が不要、オートスケールする
     - point: 5
-      reason: "AWSサービス（S3, Athena, Redshift等）との親和性が非常に高い"
+      reason: AWSサービス（S3, Athena, Redshift等）との親和性が非常に高い
     - point: 3
-      reason: "Reader（閲覧者）の料金が安価で、全社展開しやすい"
+      reason: Reader（閲覧者）の料金が安価で、全社展開しやすい
   minus_points:
     - point: -3
-      reason: "グラフやチャートのカスタマイズ性がTableau等に比べるとやや限定的"
+      reason: グラフやチャートのカスタマイズ性がTableau等に比べるとやや限定的
     - point: -2
-      reason: "高度な機能（SPICE管理や行レベルセキュリティ）には独自の学習コストが必要"
-  summary: "AWS環境でのデータ分析において最強の選択肢。サーバーレスの手軽さとAI機能が魅力だが、表現力の柔軟性には一部制限がある。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な機能（SPICE管理や行レベルセキュリティ）には独自の学習コストが必要
+  summary: AWS環境でのデータ分析において最強の選択肢。サーバーレスの手軽さとAI機能が魅力だが、表現力の柔軟性には一部制限がある。
 links:
-  documentation: "https://docs.aws.amazon.com/quicksight/"
+  documentation: https://docs.aws.amazon.com/quicksight/
 relationships:
   related_tools:
-    - "Tableau"
-    - "Looker Studio"
+    - Tableau
+    - Looker Studio
 ---
+
+
+
 
 # **Amazon QuickSight 調査レポート**
 

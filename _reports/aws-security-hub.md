@@ -1,66 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AWS Security Hub 調査レポート"
-tool_name: "AWS Security Hub"
-tool_reading: "AWS セキュリティハブ"
-category: "セキュリティ"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/security-hub/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: AWS Security Hub 調査レポート
+tool_name: AWS Security Hub
+tool_reading: AWS セキュリティハブ
+category: CDN/セキュリティ
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/security-hub/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "AWS"
-  - "CSPM"
-  - "CNAPP"
-  - "セキュリティ"
-  - "脆弱性管理"
-description: "AWS環境全体のセキュリティ状況を可視化し、リスクベースの優先順位付けと自動修復を提供する統合クラウドセキュリティソリューション"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AWS
+  - CNAPP
+  - CSPM
+  - セキュリティ
+  - 脆弱性管理
+description: AWS環境全体のセキュリティ状況を可視化し、リスクベースの優先順位付けと自動修復を提供する統合クラウドセキュリティソリューション
 quick_summary:
-  has_free_plan: true  # 30日間の無料トライアルあり
+  has_free_plan: true
   is_oss: false
-  starting_price: "$3.75/EC2インスタンス/月"  # EssentialsプランのEC2単価
+  starting_price: $3.75/EC2インスタンス/月
   target_users:
-    - "クラウドセキュリティ管理者"
-    - "DevSecOpsエンジニア"
-    - "コンプライアンス担当者"
-  latest_highlight: "2025年後半に「統合セキュリティソリューション」として大幅刷新し、料金体系を一本化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クラウドセキュリティ管理者
+    - DevSecOpsエンジニア
+    - コンプライアンス担当者
+  latest_highlight: 2025年後半に「統合セキュリティソリューション」として大幅刷新し、料金体系を一本化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "AWSサービス（GuardDuty, Inspector, Macie等）とのシームレスな統合と自動相関分析"
+      reason: AWSサービス（GuardDuty, Inspector, Macie等）とのシームレスな統合と自動相関分析
     - point: 5
-      reason: "OCSF形式の採用によるサードパーティツールとの連携容易性"
+      reason: OCSF形式の採用によるサードパーティツールとの連携容易性
     - point: 3
-      reason: "AWS Organizations連携によるマルチアカウント管理の容易さ"
+      reason: AWS Organizations連携によるマルチアカウント管理の容易さ
   minus_points:
     - point: -3
-      reason: "マルチクラウド対応はAWSネイティブ機能としては限定的（パートナー連携が必要）"
-  summary: "AWS環境におけるセキュリティ運用の核心。統合された可視性と自動化により、運用負荷を大幅に軽減する必須ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: マルチクラウド対応はAWSネイティブ機能としては限定的（パートナー連携が必要）
+  summary: AWS環境におけるセキュリティ運用の核心。統合された可視性と自動化により、運用負荷を大幅に軽減する必須ツール
 links:
-  documentation: "https://docs.aws.amazon.com/securityhub/"
+  documentation: https://docs.aws.amazon.com/securityhub/
 relationships:
-  parent: "AWS"
-  children:
-    - "AWS Security Hub CSPM"
+  parent: null
+  children: []
   related_tools:
-    - "Amazon GuardDuty"
-    - "Amazon Inspector"
-    - "Amazon Macie"
-    - "AWS Config"
-    - "Wiz"
-    - "Datadog Security"
-    - "Prowler"
+    - Amazon GuardDuty
 ---
+
+
+
 
 # **AWS Security Hub 調査レポート**
 

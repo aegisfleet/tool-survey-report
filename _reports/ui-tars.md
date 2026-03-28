@@ -1,68 +1,65 @@
 ---
-# 【必須項目】
-title: "UI-TARS Desktop 調査レポート"
-tool_name: "UI-TARS Desktop"
-tool_reading: "ユーアイターズ デスクトップ"
-category: "自律型AIエージェント"
-developer: "ByteDance"
-official_site: "https://github.com/bytedance/UI-TARS-desktop"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: UI-TARS Desktop 調査レポート
+tool_name: UI-TARS Desktop
+tool_reading: ユーアイターズ デスクトップ
+category: 自律型AIエージェント
+developer: ByteDance
+official_site: https://github.com/bytedance/UI-TARS-desktop
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "オープンソース"
-  - "GUI"
-  - "デスクトップ操作"
-  - "ByteDance"
-  - "MCP"
-description: "VLMを活用し、人間のようにPC画面を見て操作する自律型GUIエージェント。アクセシビリティツリーと視覚情報の両方を利用して高精度な操作を実現。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - ByteDance
+  - GUI
+  - MCP
+  - エージェント
+  - オープンソース
+  - デスクトップ操作
+  - 自律型
+description: VLMを活用し、人間のようにPC画面を見て操作する自律型GUIエージェント。アクセシビリティツリーと視覚情報の両方を利用して高精度な操作を実現。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AI研究者"
-    - "自動化エンジニア"
-  latest_highlight: "2025年11月にAgent TARS CLI v0.3.0リリース、MCPに完全対応"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AI研究者
+    - 自動化エンジニア
+  latest_highlight: 2025年11月にAgent TARS CLI v0.3.0リリース、MCPに完全対応
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全にローカル環境（Ollama/vLLM）で動作可能"
+      reason: 完全にローカル環境（Ollama/vLLM）で動作可能
     - point: 5
-      reason: "視覚情報とアクセシビリティツリーを組み合わせた高精度な操作"
+      reason: 視覚情報とアクセシビリティツリーを組み合わせた高精度な操作
     - point: 5
-      reason: "オープンソース（Apache 2.0）でカスタマイズ性が高い"
+      reason: オープンソース（Apache 2.0）でカスタマイズ性が高い
   minus_points:
     - point: -3
-      reason: "セットアップにはある程度の技術的知識（環境構築）が必要"
-  summary: "ローカルで動作する高性能なGUIエージェントとして、プライバシーやコストを重視するユーザーに最適。"
-
-# 【任意項目】該当するもののみ記載
+      reason: セットアップにはある程度の技術的知識（環境構築）が必要
+  summary: ローカルで動作する高性能なGUIエージェントとして、プライバシーやコストを重視するユーザーに最適。
 links:
-  github: "https://github.com/bytedance/UI-TARS-desktop"
-  deepwiki: "https://deepwiki.com/bytedance/UI-TARS-desktop"
-  codewiki: "https://codewiki.google/github.com/bytedance/UI-TARS-desktop"
-  documentation: "https://github.com/bytedance/UI-TARS-desktop/tree/main/docs"
+  github: https://github.com/bytedance/UI-TARS-desktop
+  deepwiki: https://deepwiki.com/bytedance/UI-TARS-desktop
+  codewiki: https://codewiki.google/github.com/bytedance/UI-TARS-desktop
+  documentation: https://github.com/bytedance/UI-TARS-desktop/tree/main/docs
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Claude"
-    - "OpenHands"
-    - "Ollama"
-    - "Hugging Face"
-    - "Model Context Protocol (MCP)"
+    - Claude
+    - OpenHands
+    - Ollama
+    - Hugging Face
+    - Model Context Protocol
+    - Ferret-UI
 ---
+
+
+
 
 # **UI-TARS Desktop 調査レポート**
 

@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "TradingAgents 調査レポート"
-tool_name: "TradingAgents"
-tool_reading: "トレーディングエージェンツ"
-category: "自律型AIエージェント"
-developer: "TauricResearch"
-official_site: "https://github.com/TauricResearch/TradingAgents"
-date: "2026-03-25"
-last_updated: "2026-03-25"
+title: TradingAgents 調査レポート
+tool_name: TradingAgents
+tool_reading: トレーディングエージェンツ
+category: 自律型AIエージェント
+developer: TauricResearch
+official_site: https://github.com/TauricResearch/TradingAgents
+date: '2026-03-25'
+last_updated: '2026-03-25'
 tags:
-  - "AI"
-  - "エージェント"
-  - "金融"
-  - "オープンソース"
-  - "大規模言語モデル"
-  - "Python"
-description: "投資ファームの動態を模倣した、金融取引のためのマルチエージェントLLMフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Python
+  - エージェント
+  - オープンソース
+  - 大規模言語モデル
+  - 金融
+description: 投資ファームの動態を模倣した、金融取引のためのマルチエージェントLLMフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIリサーチャー"
-    - "クオンツ開発者"
-    - "個人投資家"
-  latest_highlight: "2026年3月にv0.2.2をリリース、GPT-5.4やClaude 4.6など複数モデルに対応"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIリサーチャー
+    - クオンツ開発者
+    - 個人投資家
+  latest_highlight: 2026年3月にv0.2.2をリリース、GPT-5.4やClaude 4.6など複数モデルに対応
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "複数の役割（アナリスト、リサーチャー、トレーダー等）を組み合わせた高度なマルチエージェントシステム"
+      reason: 複数の役割（アナリスト、リサーチャー、トレーダー等）を組み合わせた高度なマルチエージェントシステム
     - point: 3
-      reason: "GPT、Gemini、Claude、Ollamaなど多様なLLMプロバイダーに対応"
+      reason: GPT、Gemini、Claude、Ollamaなど多様なLLMプロバイダーに対応
   minus_points:
     - point: -3
-      reason: "APIの利用コストやモデル性能にパフォーマンスが依存する"
-  summary: "研究用途として非常に先進的かつ拡張性が高いが、本番の金融取引にはリスク管理が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: APIの利用コストやモデル性能にパフォーマンスが依存する
+  summary: 研究用途として非常に先進的かつ拡張性が高いが、本番の金融取引にはリスク管理が必要
 links:
-  github: "https://github.com/TauricResearch/TradingAgents"
-  deepwiki: "https://deepwiki.com/TauricResearch/TradingAgents"
-  codewiki: "https://codewiki.google/github.com/TauricResearch/TradingAgents"
+  github: https://github.com/TauricResearch/TradingAgents
+  deepwiki: https://deepwiki.com/TauricResearch/TradingAgents
+  codewiki: https://codewiki.google/github.com/TauricResearch/TradingAgents
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "Gemini"
-    - "Claude"
-    - "Grok"
+    - ChatGPT
+    - Gemini
+    - Claude
+    - Grok
 ---
+
+
+
 
 # **TradingAgents 調査レポート**
 

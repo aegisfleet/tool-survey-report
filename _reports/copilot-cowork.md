@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Copilot Cowork 調査レポート"
-tool_name: "Copilot Cowork"
-tool_reading: "コパイロット コワーク"
-category: "自律型AIエージェント"
-developer: "Microsoft"
-official_site: "https://adoption.microsoft.com/en-us/copilot/frontier-program/"
-date: "2026-03-16"
-last_updated: "2026-03-16"
+title: Copilot Cowork 調査レポート
+tool_name: Copilot Cowork
+tool_reading: コパイロット コワーク
+category: 自律型AIエージェント
+developer: Microsoft
+official_site: https://adoption.microsoft.com/en-us/copilot/frontier-program/
+date: '2026-03-16'
+last_updated: '2026-03-16'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "自律型"
-  - "自動化"
-description: "Microsoft 365上でユーザーの意図を具体的なアクションに変換し、バックグラウンドで自律的にタスクを実行・調整するAIエージェント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - 生成AI
+  - 自動化
+  - 自律型
+description: Microsoft 365上でユーザーの意図を具体的なアクションに変換し、バックグラウンドで自律的にタスクを実行・調整するAIエージェント。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "未定 (Frontier programにてプレビュー)"
+  starting_price: 未定 (Frontier programにてプレビュー)
   target_users:
-    - "ナレッジワーカー"
-    - "マネージャー"
-    - "エンタープライズ"
-  latest_highlight: "2026年3月下旬よりFrontier programでResearch Previewとして提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ナレッジワーカー
+    - マネージャー
+    - エンタープライズ
+  latest_highlight: 2026年3月下旬よりFrontier programでResearch Previewとして提供開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Microsoft 365のエコシステム（Outlook, Teams, Excel等）と深く統合されており、日々の業務に直結したタスクの自動化が可能"
+      reason: Microsoft 365のエコシステム（Outlook, Teams, Excel等）と深く統合されており、日々の業務に直結したタスクの自動化が可能
     - point: 5
-      reason: "実行前にアクションを確認・承認できる安全なコントロールメカニズムを備えている"
+      reason: 実行前にアクションを確認・承認できる安全なコントロールメカニズムを備えている
     - point: 5
-      reason: "Work IQと連携し、組織のデータや文脈を正確に把握した上で自律的に動作する"
+      reason: Work IQと連携し、組織のデータや文脈を正確に把握した上で自律的に動作する
   minus_points:
     - point: -2
-      reason: "現在は限定的なResearch Preview段階であり、利用できるユーザーが限られている"
+      reason: 現在は限定的なResearch Preview段階であり、利用できるユーザーが限られている
     - point: -3
-      reason: "高度な自動化機能のため、エンタープライズでの導入には一定のコストと管理要件が伴う可能性がある"
-  summary: "Microsoft 365の文脈を深く理解し、日常的なタスクを安全かつ自律的に遂行する強力なAIエージェント。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な自動化機能のため、エンタープライズでの導入には一定のコストと管理要件が伴う可能性がある
+  summary: Microsoft 365の文脈を深く理解し、日常的なタスクを安全かつ自律的に遂行する強力なAIエージェント。
 links:
-  documentation: "https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/"
+  documentation: https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/09/copilot-cowork-a-new-way-of-getting-work-done/
 relationships:
-  parent: "Microsoft 365 Copilot"
+  parent: Microsoft 365 Copilot
   children: []
   related_tools: []
 ---
+
+
+
 
 # **Copilot Cowork 調査レポート**
 

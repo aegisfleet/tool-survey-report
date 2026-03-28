@@ -1,68 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Astro 調査レポート"
-tool_name: "Astro"
-tool_reading: "アストロ"
-category: "Webフレームワーク"
-developer: "Astro Technology Company (Joined Cloudflare)"
-official_site: "https://astro.build/"
-date: "2026-02-21"
-last_updated: "2026-02-21"
+title: Astro 調査レポート
+tool_name: Astro
+tool_reading: アストロ
+category: Webフレームワーク
+developer: Astro Technology Company (Joined Cloudflare)
+official_site: https://astro.build/
+date: '2026-02-21'
+last_updated: '2026-02-21'
 tags:
-  - "Webフレームワーク"
-  - "静的サイトジェネレーター"
-  - "オープンソース"
-  - "JavaScript"
-  - "アイランドアーキテクチャ"
-description: "高速なコンテンツ駆動型ウェブサイトを構築するために最適化されたJavaScriptウェブフレームワーク。2026年にCloudflareに参加し、開発が加速しています。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - JavaScript
+  - Webフレームワーク
+  - アイランドアーキテクチャ
+  - オープンソース
+  - 静的サイトジェネレーター
+description: 高速なコンテンツ駆動型ウェブサイトを構築するために最適化されたJavaScriptウェブフレームワーク。2026年にCloudflareに参加し、開発が加速しています。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "コンテンツ制作者"
-    - "マーケティング担当者"
-  latest_highlight: "2026年1月にAstro Technology CompanyがCloudflareに参加。Astro v6 Betaがリリース。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Web開発者
+    - コンテンツ制作者
+    - マーケティング担当者
+  latest_highlight: 2026年1月にAstro Technology CompanyがCloudflareに参加。Astro v6 Betaがリリース。
+  update_frequency: 高
 evaluation:
   score: 93
   base_score: 70
   plus_points:
     - point: 10
-      reason: "アイランドアーキテクチャによる圧倒的なパフォーマンス"
+      reason: アイランドアーキテクチャによる圧倒的なパフォーマンス
     - point: 8
-      reason: "React, Vue, Svelteなど複数フレームワークを混在できる高い柔軟性"
+      reason: React, Vue, Svelteなど複数フレームワークを混在できる高い柔軟性
     - point: 5
-      reason: "Cloudflareの支援を受け、開発リソースとエコシステムの長期的な安定性が向上"
+      reason: Cloudflareの支援を受け、開発リソースとエコシステムの長期的な安定性が向上
     - point: 3
-      reason: "Server Islandsなどの新機能により、動的コンテンツの扱いが飛躍的に容易になった"
+      reason: Server Islandsなどの新機能により、動的コンテンツの扱いが飛躍的に容易になった
   minus_points:
     - point: -2
-      reason: "管理画面のような高度に動的なWebアプリケーションには、依然としてNext.js等が優位"
+      reason: 管理画面のような高度に動的なWebアプリケーションには、依然としてNext.js等が優位
     - point: -1
-      reason: "日本語の技術情報は増えているが、まだ英語圏に比べると限定的"
-  summary: "パフォーマンス最優先のサイト構築において最高の選択肢。Cloudflare参加により将来性も盤石に。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語の技術情報は増えているが、まだ英語圏に比べると限定的
+  summary: パフォーマンス最優先のサイト構築において最高の選択肢。Cloudflare参加により将来性も盤石に。
 links:
-  github: "https://github.com/withastro/astro"
-  deepwiki: "https://deepwiki.com/withastro/astro"
-  documentation: "https://docs.astro.build/"
+  github: https://github.com/withastro/astro
+  deepwiki: https://deepwiki.com/withastro/astro
+  documentation: https://docs.astro.build/
 relationships:
   related_tools:
-    - "Cloudflare"
-    - "React"
-    - "Hugo"
-    - "Jekyll"
-    - "Next.js"
-    - "WordPress"
+    - Cloudflare
+    - React
+    - Hugo
+    - Jekyll
+    - WordPress
 ---
+
+
+
 
 # **Astro 調査レポート**
 

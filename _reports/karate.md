@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Karate 調査レポート"
-tool_name: "Karate"
-tool_reading: "カラテ"
-category: "テスト/QA"
-developer: "Karate Labs Inc."
-official_site: "https://www.karatelabs.io/"
-date: "2026-03-21"
-last_updated: "2026-03-21"
+title: Karate 調査レポート
+tool_name: Karate
+tool_reading: カラテ
+category: テスト/QA
+developer: Karate Labs Inc.
+official_site: https://www.karatelabs.io/
+date: '2026-03-21'
+last_updated: '2026-03-21'
 tags:
-  - "テスト自動化"
-  - "API"
-  - "E2Eテスト"
-  - "BDD"
-  - "オープンソース"
-  - "Java"
-  - "負荷テスト"
-description: "APIテスト、UIテスト、負荷テストを統合したオープンソースのテスト自動化フレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - API
+  - BDD
+  - E2Eテスト
+  - Java
+  - オープンソース
+  - テスト自動化
+  - 負荷テスト
+description: APIテスト、UIテスト、負荷テストを統合したオープンソースのテスト自動化フレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-  latest_highlight: "v1.5.2にてJava 21+対応を強化 (2025年01月)"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - QAエンジニア
+  latest_highlight: v1.5.2にてJava 21+対応を強化 (2025年01月)
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 8
-      reason: "API、UI、負荷テストを単一フレームワークで扱える統合性の高さ"
+      reason: API、UI、負荷テストを単一フレームワークで扱える統合性の高さ
     - point: 5
-      reason: "活発に開発が続くオープンソースであり、透明性と柔軟性が高い"
+      reason: 活発に開発が続くオープンソースであり、透明性と柔軟性が高い
     - point: 3
-      reason: "Gherkinベースの可読性の高い構文で、非開発者にも理解しやすい"
+      reason: Gherkinベースの可読性の高い構文で、非開発者にも理解しやすい
     - point: 3
-      reason: "Javaエコシステムとの強力な連携と相互運用性"
+      reason: Javaエコシステムとの強力な連携と相互運用性
   minus_points:
     - point: -3
-      reason: "デバッガなど高度なIDE機能が有償プラグインとなっている"
+      reason: デバッガなど高度なIDE機能が有償プラグインとなっている
     - point: -2
-      reason: "独自のDSLのため、複雑なロジックはJava/JSの知識が必要となる"
-  summary: "API、UI、負荷テストを統合した多機能さとOSSとしての手軽さは魅力的だが、高度なIDE支援機能が有償である点に注意。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 独自のDSLのため、複雑なロジックはJava/JSの知識が必要となる
+  summary: API、UI、負荷テストを統合した多機能さとOSSとしての手軽さは魅力的だが、高度なIDE支援機能が有償である点に注意。
 links:
-  github: "https://github.com/karatelabs/karate"
-  codewiki: "https://codewiki.google/github.com/karatelabs/karate"
-  documentation: "https://www.karatelabs.io/get-started"
+  github: https://github.com/karatelabs/karate
+  codewiki: https://codewiki.google/github.com/karatelabs/karate
+  documentation: https://www.karatelabs.io/get-started
 relationships:
   related_tools:
-    - "Selenium"
-    - "Playwright"
-    - "Apache JMeter"
-    - "Cucumber"
-    - "Cypress"
+    - Selenium
+    - Playwright
+    - Apache JMeter
+    - Cucumber
+    - Cypress
 ---
+
+
+
 
 # **Karate 調査レポート**
 

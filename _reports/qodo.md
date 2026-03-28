@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Qodo 調査レポート"
-tool_name: "Qodo"
-tool_reading: "コド"
-category: "AIコーディング支援"
-developer: "Qodo (旧 CodiumAI)"
-official_site: "https://www.qodo.ai/"
-date: "2026-03-05"
-last_updated: "2026-03-05"
+title: Qodo 調査レポート
+tool_name: Qodo
+tool_reading: コド
+category: AIコーディング支援
+developer: Qodo (旧 CodiumAI)
+official_site: https://www.qodo.ai/
+date: '2026-03-05'
+last_updated: '2026-03-05'
 tags:
-  - "AI"
-  - "コードレビュー"
-  - "テスト自動化"
-  - "IDE"
-  - "CLI"
-  - "CI/CD"
-  - "エージェント"
-description: "単なるコード生成を超え、AIを用いたテスト作成と高度なコードレビューに特化したエンタープライズ対応の品質第一コーディングプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - CLI
+  - IDE
+  - エージェント
+  - コードレビュー
+  - テスト自動化
+description: 単なるコード生成を超え、AIを用いたテスト作成と高度なコードレビューに特化したエンタープライズ対応の品質第一コーディングプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "エンジニアリングチーム"
-    - "オープンソースメンテナ"
-  latest_highlight: "Qodo 2.1にて、組織のコーディング規約を自動適用・学習するRules System (beta)をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアリングチーム
+    - オープンソースメンテナ
+  latest_highlight: Qodo 2.1にて、組織のコーディング規約を自動適用・学習するRules System (beta)をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "コードを生成するだけでなく、自動テスト生成やエッジケースの発見によるコード品質の担保に強みがある。"
+      reason: コードを生成するだけでなく、自動テスト生成やエッジケースの発見によるコード品質の担保に強みがある。
     - point: 6
-      reason: "IDE(Gen)、Pull Request(Merge)、CLI(Cover/Command)という開発フロー全体をカバーする一貫した製品群。"
+      reason: IDE(Gen)、Pull Request(Merge)、CLI(Cover/Command)という開発フロー全体をカバーする一貫した製品群。
     - point: 3
-      reason: "オープンソースプロジェクトへの無料提供と、企業向けの強固なセキュリティ（オンプレミス、VPC対応）の両立。"
+      reason: オープンソースプロジェクトへの無料提供と、企業向けの強固なセキュリティ（オンプレミス、VPC対応）の両立。
   minus_points:
     - point: -2
-      reason: "レビューのノイズや自動生成テストの微調整など、AIの出力を精査する人間側の対応が一定数必要。"
+      reason: レビューのノイズや自動生成テストの微調整など、AIの出力を精査する人間側の対応が一定数必要。
     - point: -2
-      reason: "機能が多岐にわたるため、チーム全体で効果的なルールやフローを構築するための初期設定と学習コストがかかる。"
-  summary: "AIコーディングの「生成」から「レビュー・テスト」に焦点を移し、安全で高品質なソフトウェア開発を実現する堅牢なツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が多岐にわたるため、チーム全体で効果的なルールやフローを構築するための初期設定と学習コストがかかる。
+  summary: AIコーディングの「生成」から「レビュー・テスト」に焦点を移し、安全で高品質なソフトウェア開発を実現する堅牢なツール。
 links:
-  documentation: "https://docs.qodo.ai/qodo-documentation"
+  documentation: https://docs.qodo.ai/qodo-documentation
 relationships:
   related_tools:
-    - "CodeRabbit"
-    - "GitHub Copilot"
-    - "GitLab Duo"
-    - "Amazon Q Developer"
+    - CodeRabbit
+    - GitHub Copilot
+    - GitLab Duo
+    - Amazon Q Developer
 ---
+
+
+
 
 # **Qodo 調査レポート**
 

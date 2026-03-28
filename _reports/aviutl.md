@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AviUtl 調査レポート"
-tool_name: "AviUtl"
-tool_reading: "エーブイアイユーティル / アビユートル"
-category: "動画/メディア"
-developer: "ＫＥＮくん"
-official_site: "https://spring-fragrance.mints.ne.jp/aviutl/"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: AviUtl 調査レポート
+tool_name: AviUtl
+tool_reading: エーブイアイユーティル / アビユートル
+category: 動画/メディア
+developer: ＫＥＮくん
+official_site: https://spring-fragrance.mints.ne.jp/aviutl/
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "動画編集"
-  - "無料"
-  - "プラグイン"
-description: "拡張編集とプラグインによる高い自由度を誇る、Windows向けの無料動画編集ソフトウェア。次世代版「AviUtl ExEdit2」により性能が刷新された。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - プラグイン
+  - 動画編集
+  - 無料
+description: 拡張編集とプラグインによる高い自由度を誇る、Windows向けの無料動画編集ソフトウェア。次世代版「AviUtl ExEdit2」により性能が刷新された。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "個人クリエイター"
-    - "MAD制作者"
-    - "YouTuber"
-  latest_highlight: "2026年2月14日にAviUtl ExEdit2 beta33が公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 個人クリエイター
+    - MAD制作者
+    - YouTuber
+  latest_highlight: 2026年2月14日にAviUtl ExEdit2 beta33が公開
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 10
-      reason: "完全無料で商用利用も可能であり、コストパフォーマンスが極めて高い"
+      reason: 完全無料で商用利用も可能であり、コストパフォーマンスが極めて高い
     - point: 5
-      reason: "プラグインによる無限の拡張性を持ち、コミュニティも活発"
+      reason: プラグインによる無限の拡張性を持ち、コミュニティも活発
     - point: 5
-      reason: "ExEdit2により現代的なPCスペック（多コアCPU/GPU）を活用できるようになり、動作が大幅に高速化"
+      reason: ExEdit2により現代的なPCスペック（多コアCPU/GPU）を活用できるようになり、動作が大幅に高速化
   minus_points:
     - point: -5
-      reason: "導入や設定が依然として煩雑で、初心者には学習コストが高い"
+      reason: 導入や設定が依然として煩雑で、初心者には学習コストが高い
     - point: -5
-      reason: "次世代版（ExEdit2）は開発途上のベータ版であり、安定性に課題が残る場合がある"
-  summary: "完全無料かつ高機能な編集ソフトとしての地位を維持しつつ、ExEdit2により性能面でも現代化を果たした"
-
-# 【任意項目】該当するもののみ記載
+      reason: 次世代版（ExEdit2）は開発途上のベータ版であり、安定性に課題が残る場合がある
+  summary: 完全無料かつ高機能な編集ソフトとしての地位を維持しつつ、ExEdit2により性能面でも現代化を果たした
 links: {}
 relationships:
   parent: null
   children: []
   related_tools:
-    - "DaVinci Resolve"
-    - "Apple Creator Studio"
-    - "Remotion"
+    - DaVinci Resolve
+    - Apple Creator Studio
+    - Remotion
 ---
+
+
+
 
 # **AviUtl 調査レポート**
 

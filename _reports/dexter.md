@@ -1,48 +1,48 @@
 ---
-title: "Dexter 調査レポート"
-tool_name: "Dexter"
-tool_reading: "デクスター"
-category: "自律型AIエージェント"
-developer: "virattt"
-official_site: "https://github.com/virattt/dexter"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Dexter 調査レポート
+tool_name: Dexter
+tool_reading: デクスター
+category: 自律型AIエージェント
+developer: virattt
+official_site: https://github.com/virattt/dexter
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "オープンソース"
-  - "開発者ツール"
-description: "金融リサーチに特化した自律型AIエージェント。複雑な金融の質問をステップバイステップのリサーチ計画に変換し実行する。"
-
+  - AI
+  - エージェント
+  - オープンソース
+  - 自律型
+  - 開発者ツール
+description: 金融リサーチに特化した自律型AIエージェント。複雑な金融の質問をステップバイステップのリサーチ計画に変換し実行する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "リサーチャー"
-  latest_highlight: "2026年3月にv2026.3.25をリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - リサーチャー
+  latest_highlight: 2026年3月にv2026.3.25をリリース
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "金融データに特化した自律的なリサーチ能力"
+      reason: 金融データに特化した自律的なリサーチ能力
   minus_points: []
-  summary: "金融データ分析に特化した自律型エージェントとして有用。"
-
+  summary: 金融データ分析に特化した自律型エージェントとして有用。
 links:
-  github: "https://github.com/virattt/dexter"
-  deepwiki: "https://deepwiki.com/virattt/dexter"
+  github: https://github.com/virattt/dexter
+  deepwiki: https://deepwiki.com/virattt/dexter
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Claude Code"
+    - Claude Code
 ---
+
+
+
 
 # **Dexter 調査レポート**
 

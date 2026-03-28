@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "OpenID 調査レポート"
-tool_name: "OpenID"
-tool_reading: "オープンアイディー"
-category: "認証・ID管理"
-developer: "OpenID Foundation"
-official_site: "https://openid.net/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: OpenID 調査レポート
+tool_name: OpenID
+tool_reading: オープンアイディー
+category: CDN/セキュリティ
+developer: OpenID Foundation
+official_site: https://openid.net/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "認証"
-  - "ID管理"
-  - "セキュリティ"
-  - "SSO"
-  - "標準規格"
-  - "OIDC"
-description: "OAuth 2.0をベースに構築された、シンプルで相互運用性の高いIDレイヤー。Webやモバイルアプリにおけるユーザー認証のデファクトスタンダード。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - ID管理
+  - OIDC
+  - SSO
+  - セキュリティ
+  - 標準規格
+  - 認証
+description: OAuth 2.0をベースに構築された、シンプルで相互運用性の高いIDレイヤー。Webやモバイルアプリにおけるユーザー認証のデファクトスタンダード。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (規格)"
+  starting_price: 無料 (規格)
   target_users:
-    - "開発者"
-    - "IDプロバイダー"
-    - "企業"
-  latest_highlight: "2026年1月にOpenID Federation 1.0の最終投票、AuthZEN APIの承認など"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - IDプロバイダー
+    - 企業
+  latest_highlight: 2026年1月にOpenID Federation 1.0の最終投票、AuthZEN APIの承認など
+  update_frequency: 中
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "現代のWeb/モバイルアプリケーションにおける認証のデファクトスタンダードであり、圧倒的な普及率を誇る"
+      reason: 現代のWeb/モバイルアプリケーションにおける認証のデファクトスタンダードであり、圧倒的な普及率を誇る
     - point: 8
-      reason: "Google, Microsoft, Appleなど主要なIDプロバイダーがサポートしており、ソーシャルログインの実装が容易"
+      reason: Google, Microsoft, Appleなど主要なIDプロバイダーがサポートしており、ソーシャルログインの実装が容易
     - point: 5
-      reason: "FAPI（Financial-grade API）など、高セキュリティが求められる金融・医療分野への対応も進んでいる"
+      reason: FAPI（Financial-grade API）など、高セキュリティが求められる金融・医療分野への対応も進んでいる
     - point: 5
-      reason: "IDトークン（JWT）を用いたステートレスでスケーラブルな認証が可能"
+      reason: IDトークン（JWT）を用いたステートレスでスケーラブルな認証が可能
   minus_points:
     - point: -3
-      reason: "OAuth 2.0の知識が前提となり、セキュリティ要件を満たすための学習コストはやや高い"
-  summary: "Web認証の「共通言語」として確固たる地位を築いている。セキュリティと利便性を両立させるための必須知識。"
-
-# 【任意項目】該当するもののみ記載
+      reason: OAuth 2.0の知識が前提となり、セキュリティ要件を満たすための学習コストはやや高い
+  summary: Web認証の「共通言語」として確固たる地位を築いている。セキュリティと利便性を両立させるための必須知識。
 links:
-  documentation: "https://openid.net/developers/specs/"
+  documentation: https://openid.net/developers/specs/
 relationships:
-  parent: "OAuth"
+  parent: OAuth
 ---
+
+
+
 
 # **OpenID 調査レポート**
 

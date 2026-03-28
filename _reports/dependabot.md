@@ -1,65 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Dependabot 調査レポート"
-tool_name: "Dependabot"
-tool_reading: "ディペンダボット / デペンダボット"
-category: "開発者ツール"
-developer: "GitHub (Microsoft)"
-official_site: "https://github.com/dependabot"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: Dependabot 調査レポート
+tool_name: Dependabot
+tool_reading: ディペンダボット / デペンダボット
+category: 開発者ツール
+developer: GitHub (Microsoft)
+official_site: https://github.com/dependabot
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "開発者ツール"
-  - "自動化"
-  - "セキュリティ"
-  - "CI/CD"
-  - "DevOps"
-  - "GitHub"
-  - "オープンソース"
-description: "GitHubに統合された依存関係自動更新ツール。脆弱性修正とバージョンアップを自動化し、セキュアな開発を支援する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - DevOps
+  - GitHub
+  - オープンソース
+  - セキュリティ
+  - 自動化
+  - 開発者ツール
+description: GitHubに統合された依存関係自動更新ツール。脆弱性修正とバージョンアップを自動化し、セキュアな開発を支援する。
 quick_summary:
   has_free_plan: true
-  is_oss: true  # Core logic is OSS
-  starting_price: "無料"
+  is_oss: true
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "セキュリティエンジニア"
-    - "OSSメンテナ"
-  latest_highlight: "2025年12月にDrupalリリースノート自動取得機能が改善"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - セキュリティエンジニア
+    - OSSメンテナ
+  latest_highlight: 2025年12月にDrupalリリースノート自動取得機能が改善
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "GitHub完全統合による導入ハードルの低さとシームレスな体験"
+      reason: GitHub完全統合による導入ハードルの低さとシームレスな体験
     - point: 5
-      reason: "セキュリティアップデート（脆弱性修正）が無料で利用可能"
+      reason: セキュリティアップデート（脆弱性修正）が無料で利用可能
     - point: 3
-      reason: "広範なエコシステム（言語・パッケージマネージャ）への対応"
+      reason: 広範なエコシステム（言語・パッケージマネージャ）への対応
   minus_points:
     - point: 0
-      reason: "特になし（GitHub利用者にとってはほぼ必須ツール）"
-  summary: "GitHub利用者であれば導入しない理由がない、強力かつ手軽な依存関係管理ツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（GitHub利用者にとってはほぼ必須ツール）
+  summary: GitHub利用者であれば導入しない理由がない、強力かつ手軽な依存関係管理ツール。
 links:
-  github: "https://github.com/dependabot/dependabot-core"
-  deepwiki: "https://deepwiki.com/dependabot/dependabot-core"
-  codewiki: "https://codewiki.google/github.com/dependabot/dependabot-core"
-  documentation: "https://docs.github.com/ja/code-security/dependabot"
+  github: https://github.com/dependabot/dependabot-core
+  deepwiki: https://deepwiki.com/dependabot/dependabot-core
+  codewiki: https://codewiki.google/github.com/dependabot/dependabot-core
+  documentation: https://docs.github.com/ja/code-security/dependabot
 relationships:
-  parent: "GitHub"
+  parent: GitHub
   related_tools:
-    - "CodeQL"
-    - "CodeRabbit"
-    - "SonarQube"
+    - CodeQL
+    - CodeRabbit
+    - SonarQube
+    - Renovate
 ---
+
+
+
 
 # **Dependabot 調査レポート**
 

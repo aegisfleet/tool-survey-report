@@ -1,50 +1,49 @@
 ---
-title: "Fluorite Game Engine 調査レポート"
-tool_name: "Fluorite Game Engine"
-tool_reading: "フローライト"
-category: "モバイル開発"
-developer: "Toyota Connected North America"
-official_site: "https://fluorite.game/"
-date: "2026-02-10"
-last_updated: "2026-02-10"
+title: Fluorite Game Engine 調査レポート
+tool_name: Fluorite Game Engine
+tool_reading: フローライト
+category: モバイル開発
+developer: Toyota Connected North America
+official_site: https://fluorite.game/
+date: '2026-02-10'
+last_updated: '2026-02-10'
 tags:
-  - "モバイル開発"
-  - "ゲームエンジン"
-  - "Flutter"
-  - "ECS"
-  - "3D"
-description: "Flutterと完全に統合された初のコンソールグレードゲームエンジン。C++製ECSコアとGoogle Filamentレンダラーを採用。"
-
+  - 3D
+  - ECS
+  - Flutter
+  - ゲームエンジン
+  - モバイル開発
+description: Flutterと完全に統合された初のコンソールグレードゲームエンジン。C++製ECSコアとGoogle Filamentレンダラーを採用。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (推定)"
+  starting_price: 無料 (推定)
   target_users:
-    - "Flutter開発者"
-    - "ゲーム開発者"
-  latest_highlight: "公式サイトにてプレビュー情報公開 (Coming Soon)"
-  update_frequency: "不明"
-
+    - Flutter開発者
+    - ゲーム開発者
+  latest_highlight: 公式サイトにてプレビュー情報公開 (Coming Soon)
+  update_frequency: 不明
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Flutterとの完全統合という独自の強み"
+      reason: Flutterとの完全統合という独自の強み
     - point: 3
-      reason: "Toyota Connectedによる開発という信頼性"
+      reason: Toyota Connectedによる開発という信頼性
   minus_points:
     - point: -3
-      reason: "現時点で詳細ドキュメントやリポジトリが未公開"
-  summary: "Flutterで本格的な3Dゲームを開発できる可能性を秘めた期待のエンジン。現在はプレビュー段階。"
-
+      reason: 現時点で詳細ドキュメントやリポジトリが未公開
+  summary: Flutterで本格的な3Dゲームを開発できる可能性を秘めた期待のエンジン。現在はプレビュー段階。
 links:
-  documentation: "https://fluorite.game/"
-
+  documentation: https://fluorite.game/
 relationships:
   related_tools:
-    - "Flutter"
+    - Flutter
 ---
+
+
+
 
 # **Fluorite Game Engine 調査レポート**
 

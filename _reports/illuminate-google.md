@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Illuminate 調査レポート"
-tool_name: "Google Illuminate"
-tool_reading: "グーグル イルミネート"
-category: "AI開発基盤"
-developer: "Google"
-official_site: "https://illuminate.google.com/"
-date: "2026-02-23"
-last_updated: "2026-02-23"
+title: Google Illuminate 調査レポート
+tool_name: Google Illuminate
+tool_reading: グーグル イルミネート
+category: AI開発基盤
+developer: Google
+official_site: https://illuminate.google.com/
+date: '2026-02-23'
+last_updated: '2026-02-23'
 tags:
-  - "AI"
-  - "Google"
-  - "Research"
-  - "Education"
-  - "Podcast"
-  - "Audio"
-description: "学術論文や技術文書をAIが分析し、ポッドキャストスタイルの音声会話に変換して学習を支援する実験的ツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Audio
+  - Education
+  - Google
+  - Podcast
+  - Research
+description: 学術論文や技術文書をAIが分析し、ポッドキャストスタイルの音声会話に変換して学習を支援する実験的ツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "研究者"
-    - "学生"
-    - "エンジニア"
-  latest_highlight: "学術論文を音声会話に変換し、トランスクリプトと同期再生が可能"
-  update_frequency: "中"  # 実験的プロジェクトのため
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 研究者
+    - 学生
+    - エンジニア
+  latest_highlight: 学術論文を音声会話に変換し、トランスクリプトと同期再生が可能
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "無料で手軽に論文を音声化できる"
+      reason: 無料で手軽に論文を音声化できる
     - point: 5
-      reason: "トランスクリプトと音声の同期機能が学習に便利"
+      reason: トランスクリプトと音声の同期機能が学習に便利
     - point: 3
-      reason: "Google Labsによる先進的なAI音声生成技術"
+      reason: Google Labsによる先進的なAI音声生成技術
   minus_points:
     - point: -3
-      reason: "対応ソースが現在は論文やURLに限られる"
-  summary: "論文を読むハードルを劇的に下げる画期的なツールだが、実験段階であり機能や対応言語に制限がある。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 対応ソースが現在は論文やURLに限られる
+  summary: 論文を読むハードルを劇的に下げる画期的なツールだが、実験段階であり機能や対応言語に制限がある。
 links:
-  documentation: "https://illuminate.google.com/home"
+  documentation: https://illuminate.google.com/home
 relationships:
-  parent: "Google Labs"
+  parent: null
   children: []
   related_tools:
-    - "NotebookLM"
+    - NotebookLM
 ---
+
+
+
 
 # **Google Illuminate 調査レポート**
 

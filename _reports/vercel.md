@@ -1,58 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Vercel 調査レポート"
-tool_name: "Vercel"
-tool_reading: "ヴァーセル"
-category: "インフラ/クラウド"
-developer: "Vercel Inc."
-official_site: "https://vercel.com"
-date: "2025-10-22"
-last_updated: "2026-01-31"
+title: Vercel 調査レポート
+tool_name: Vercel
+tool_reading: ヴァーセル
+category: インフラ/クラウド
+developer: Vercel Inc.
+official_site: https://vercel.com
+date: '2025-10-22'
+last_updated: '2026-01-31'
 tags:
-  - "Next.js"
-  - "AI"
-  - "CI/CD"
-  - "クラウド"
-  - "開発者ツール"
-description: "AIアプリケーションやNext.jsプロジェクトに最適化された、「Frontend Cloud」を標榜する開発・デプロイプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - Next.js
+  - クラウド
+  - 開発者ツール
+description: AIアプリケーションやNext.jsプロジェクトに最適化された、「Frontend Cloud」を標榜する開発・デプロイプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンド開発者"
-    - "スタートアップ"
-    - "AIエンジニア"
-  latest_highlight: "2026年1月にAIエージェント向けのSkills v1.1.1を公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - フロントエンド開発者
+    - スタートアップ
+    - AIエンジニア
+  latest_highlight: 2026年1月にAIエージェント向けのSkills v1.1.1を公開
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Next.js開発において右に出るものがない圧倒的な開発者体験（DX）"
+      reason: Next.js開発において右に出るものがない圧倒的な開発者体験（DX）
     - point: 5
-      reason: "v0, AI SDK, AI Gatewayなど、生成AI開発のためのエコシステムが非常に充実している"
+      reason: v0, AI SDK, AI Gatewayなど、生成AI開発のためのエコシステムが非常に充実している
     - point: 5
-      reason: "グローバルなEdge NetworkとFluid Computeによる高いパフォーマンス"
+      reason: グローバルなEdge NetworkとFluid Computeによる高いパフォーマンス
   minus_points:
     - point: -2
-      reason: "従量課金部分が多岐にわたり、大規模利用時のコスト予測がやや複雑"
-  summary: "フロントエンドとAI開発のための最高のプラットフォーム。DXは極めて高いが、スケール時のコスト管理は必須。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 従量課金部分が多岐にわたり、大規模利用時のコスト予測がやや複雑
+  summary: フロントエンドとAI開発のための最高のプラットフォーム。DXは極めて高いが、スケール時のコスト管理は必須。
 links:
-  documentation: "https://vercel.com/docs"
+  documentation: https://vercel.com/docs
 relationships:
   related_tools:
-    - "Cloudflare"
-    - "Render"
+    - Cloudflare
+    - Render
+    - Vercel Agent Skills
+    - Hono
 ---
+
+
+
 
 # **Vercel 調査レポート**
 

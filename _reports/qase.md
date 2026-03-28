@@ -1,57 +1,57 @@
 ---
-title: "Qase 調査レポート"
-tool_name: "Qase"
-tool_reading: "ケース"
-category: "テスト管理"
-developer: "Qase Inc."
-official_site: "https://qase.io/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: Qase 調査レポート
+tool_name: Qase
+tool_reading: ケース
+category: テスト管理
+developer: Qase Inc.
+official_site: https://qase.io/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト自動化"
-  - "開発ツール"
-  - "AI"
-description: "AIを活用したモダンなテスト管理プラットフォーム。手動・自動テストの一元管理が可能。"
-
+  - AI
+  - テスト自動化
+  - 開発ツール
+description: AIを活用したモダンなテスト管理プラットフォーム。手動・自動テストの一元管理が可能。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$24/月"
+  starting_price: $24/月
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-    - "QAマネージャー"
-  latest_highlight: "AI機能（AIDEN）の強化と新アーキテクチャの導入"
-  update_frequency: "高"
-
+    - QAエンジニア
+    - 開発者
+    - QAマネージャー
+  latest_highlight: AI機能（AIDEN）の強化と新アーキテクチャの導入
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AI機能（AIDEN）によるテスト生成・自動化支援が強力"
+      reason: AI機能（AIDEN）によるテスト生成・自動化支援が強力
     - point: 5
-      reason: "モダンで高速なUI/UX"
+      reason: モダンで高速なUI/UX
     - point: 3
-      reason: "35以上の豊富な外部連携"
+      reason: 35以上の豊富な外部連携
     - point: 2
-      reason: "無料プランがあり導入しやすい"
+      reason: 無料プランがあり導入しやすい
   minus_points:
     - point: 0
-      reason: "日本語UI未対応（英語のみ）"
-  summary: "モダンなUIとAI機能が特徴的な次世代テスト管理ツール。英語UIに抵抗がなければ非常に有力な選択肢。"
-
+      reason: 日本語UI未対応（英語のみ）
+  summary: モダンなUIとAI機能が特徴的な次世代テスト管理ツール。英語UIに抵抗がなければ非常に有力な選択肢。
 links:
-  documentation: "https://docs.qase.io/"
+  documentation: https://docs.qase.io/
 relationships:
   related_tools:
-    - "CAT"
-    - "QualityForward"
-    - "TestRail"
-    - "TestLink"
-    - "Xray"
-    - "Jira"
+    - CAT
+    - QualityForward
+    - TestRail
+    - TestLink
+    - Jira
+    - Kiwi TCMS
 ---
+
+
+
 
 # **Qase 調査レポート**
 

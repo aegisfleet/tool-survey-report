@@ -1,59 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Yew 調査レポート"
-tool_name: "Yew"
-tool_reading: "ユー"
-category: "Webフレームワーク"
-developer: "Yewstack (Open Source Community)"
-official_site: "https://yew.rs/"
-date: "2026-01-30"
-last_updated: "2026-01-30"
+title: Yew 調査レポート
+tool_name: Yew
+tool_reading: ユー
+category: Webフレームワーク
+developer: Yewstack (Open Source Community)
+official_site: https://yew.rs/
+date: '2026-01-30'
+last_updated: '2026-01-30'
 tags:
-  - "Rust"
-  - "WebAssembly"
-  - "フロントエンド"
-  - "Webフレームワーク"
-  - "SPA"
-description: "RustとWebAssemblyを使用してマルチスレッドのフロントエンドWebアプリを作成するための最新のフレームワーク。Reactライクなコンポーネントシステムを採用しています。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Rust
+  - SPA
+  - WebAssembly
+  - Webフレームワーク
+  - フロントエンド
+description: RustとWebAssemblyを使用してマルチスレッドのフロントエンドWebアプリを作成するための最新のフレームワーク。Reactライクなコンポーネントシステムを採用しています。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Rust開発者"
-    - "フロントエンドエンジニア"
-    - "Wasmに興味がある開発者"
-  latest_highlight: "v0.22.0にて機能改善とバグ修正が含まれる安定版がリリース"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Rust開発者
+    - フロントエンドエンジニア
+    - Wasmに興味がある開発者
+  latest_highlight: v0.22.0にて機能改善とバグ修正が含まれる安定版がリリース
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Reactライクな構文で、React経験者が移行しやすい"
+      reason: Reactライクな構文で、React経験者が移行しやすい
     - point: 5
-      reason: "Rustのエコシステムを活用でき、型安全性とパフォーマンスが高い"
+      reason: Rustのエコシステムを活用でき、型安全性とパフォーマンスが高い
     - point: 5
-      reason: "ドキュメントが充実しており、コミュニティも成熟している"
+      reason: ドキュメントが充実しており、コミュニティも成熟している
   minus_points: []
-  summary: "RustでWebフロントエンドを開発する際の最も標準的で安定した選択肢。"
-
-# 【任意項目】該当するもののみ記載
+  summary: RustでWebフロントエンドを開発する際の最も標準的で安定した選択肢。
 links:
-  github: "https://github.com/yewstack/yew"
-  codewiki: "https://codewiki.google/github.com/yewstack/yew"
-  documentation: "https://yew.rs/docs/getting-started/introduction"
+  github: https://github.com/yewstack/yew
+  codewiki: https://codewiki.google/github.com/yewstack/yew
+  documentation: https://yew.rs/docs/getting-started/introduction
 relationships:
   related_tools:
-    - "React"
-    - "VS Code"
-    - "IntelliJ IDEA"
+    - React
+    - IntelliJ IDEA
 ---
+
+
+
 
 # **Yew 調査レポート**
 

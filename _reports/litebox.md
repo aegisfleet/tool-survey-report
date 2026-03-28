@@ -1,56 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "LiteBox 調査レポート"
-tool_name: "LiteBox"
-tool_reading: "ライトボックス"
-category: "開発者ツール"
-developer: "Microsoft"
-official_site: "https://github.com/microsoft/litebox"
-date: "2026-03-20"
-last_updated: "2026-03-20"
+title: LiteBox 調査レポート
+tool_name: LiteBox
+tool_reading: ライトボックス
+category: 開発者ツール
+developer: Microsoft
+official_site: https://github.com/microsoft/litebox
+date: '2026-03-20'
+last_updated: '2026-03-20'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "Rust"
-  - "セキュリティ"
-description: "ホストへのインターフェースを削減しアタックサーフェスを減らす、セキュリティ重視のライブラリOS。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Rust
+  - オープンソース
+  - セキュリティ
+  - 開発者ツール
+description: ホストへのインターフェースを削減しアタックサーフェスを減らす、セキュリティ重視のライブラリOS。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "セキュリティエンジニア"
-  latest_highlight: "Microsoftがオープンソースとして公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - セキュリティエンジニア
+  latest_highlight: Microsoftがオープンソースとして公開
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり透明性が高い"
+      reason: オープンソースであり透明性が高い
     - point: 5
-      reason: "セキュリティに特化し、アタックサーフェスを削減する設計"
+      reason: セキュリティに特化し、アタックサーフェスを削減する設計
     - point: 2
-      reason: "Microsoftによる支援・開発"
+      reason: Microsoftによる支援・開発
   minus_points:
     - point: -2
-      reason: "開発中であり安定版リリースに向けてAPIやインターフェースが変更される可能性がある"
-  summary: "セキュリティを重視した革新的なライブラリOSだが、安定板リリースまでは仕様変更に注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 開発中であり安定版リリースに向けてAPIやインターフェースが変更される可能性がある
+  summary: セキュリティを重視した革新的なライブラリOSだが、安定板リリースまでは仕様変更に注意が必要。
 links:
-  github: "https://github.com/microsoft/litebox"
-  deepwiki: "https://deepwiki.com/microsoft/litebox"
+  github: https://github.com/microsoft/litebox
+  deepwiki: https://deepwiki.com/microsoft/litebox
 relationships:
   related_tools:
-    - "Docker"
+    - Docker
 ---
+
+
+
 
 # **LiteBox 調査レポート**
 

@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Gauge 調査レポート"
-tool_name: "Gauge"
-tool_reading: "ゲージ"
-category: "テスト/QA"
-developer: "ThoughtWorks (コミュニティ主導)"
-official_site: "https://gauge.org/"
-date: "2025-12-06"
-last_updated: "2026-03-27"
+title: Gauge 調査レポート
+tool_name: Gauge
+tool_reading: ゲージ
+category: テスト/QA
+developer: ThoughtWorks (コミュニティ主導)
+official_site: https://gauge.org/
+date: '2025-12-06'
+last_updated: '2026-03-27'
 tags:
-  - "テスト自動化"
-  - "E2Eテスト"
-  - "オープンソース"
-  - "BDD"
-  - "Markdown"
-description: "Markdownベースの仕様書でテストを作成できる、軽量でクロスプラットフォームなテスト自動化ツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - BDD
+  - E2Eテスト
+  - Markdown
+  - オープンソース
+  - テスト自動化
+description: Markdownベースの仕様書でテストを作成できる、軽量でクロスプラットフォームなテスト自動化ツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-  latest_highlight: "2026年3月に最新バージョン(v1.6.28)をリリース"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - 開発者
+  latest_highlight: 2026年3月に最新バージョン(v1.6.28)をリリース
+  update_frequency: 低
 evaluation:
   score: 65
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Markdownで仕様書を記述できるため、非技術者にも分かりやすい"
+      reason: Markdownで仕様書を記述できるため、非技術者にも分かりやすい
     - point: 3
-      reason: "VS Codeなど主要IDEとの連携が強力"
+      reason: VS Codeなど主要IDEとの連携が強力
     - point: 5
-      reason: "オープンソースで完全に無料"
+      reason: オープンソースで完全に無料
   minus_points:
     - point: -15
-      reason: "2021年に公式スポンサーが終了し、開発が停滞。将来性に懸念"
+      reason: 2021年に公式スポンサーが終了し、開発が停滞。将来性に懸念
     - point: -3
-      reason: "競合ツールに比べコミュニティが小規模で、日本語情報が少ない"
-  summary: "Markdownで仕様が書ける点はユニークだが、公式サポート終了により、採用は自己責任が前提となる"
-
-# 【任意項目】該当するもののみ記載
+      reason: 競合ツールに比べコミュニティが小規模で、日本語情報が少ない
+  summary: Markdownで仕様が書ける点はユニークだが、公式サポート終了により、採用は自己責任が前提となる
 links:
-  github: "https://github.com/getgauge/gauge"
-  deepwiki: "https://deepwiki.com/getgauge/gauge"
-  documentation: "https://docs.gauge.org/"
+  github: https://github.com/getgauge/gauge
+  deepwiki: https://deepwiki.com/getgauge/gauge
+  documentation: https://docs.gauge.org/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Cucumber"
-    - "Robot Framework"
-    - "Playwright"
-    - "Selenium"
+    - Cucumber
+    - Robot Framework
+    - Playwright
+    - Selenium
 ---
+
+
+
 
 # **Gauge 調査レポート**
 

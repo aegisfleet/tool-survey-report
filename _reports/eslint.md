@@ -1,64 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ESLint 調査レポート"
-tool_name: "ESLint"
-tool_reading: "イーエスリント"
-category: "開発者ツール"
-developer: "ESLint Team (OpenJS Foundation)"
-official_site: "https://eslint.org/"
-date: "2026-02-20"
-last_updated: "2026-02-20"
+title: ESLint 調査レポート
+tool_name: ESLint
+tool_reading: イーエスリント
+category: 開発者ツール
+developer: ESLint Team (OpenJS Foundation)
+official_site: https://eslint.org/
+date: '2026-02-20'
+last_updated: '2026-02-20'
 tags:
-  - "開発者ツール"
-  - "コード品質"
-  - "静的解析"
-  - "Linter"
-  - "JavaScript"
-  - "TypeScript"
-  - "オープンソース"
-description: "JavaScript/TypeScriptおよびJSXのための、プラグイン可能な静的解析・リンティングツール。コードの問題を検出し自動修正します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - JavaScript
+  - Linter
+  - TypeScript
+  - オープンソース
+  - コード品質
+  - 開発者ツール
+  - 静的解析
+description: JavaScript/TypeScriptおよびJSXのための、プラグイン可能な静的解析・リンティングツール。コードの問題を検出し自動修正します。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "JavaScript開発者"
-    - "TypeScript開発者"
-    - "Webプロジェクト"
-  latest_highlight: "2026年2月にv10.0.0をリリース。メジャーアップデート。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - JavaScript開発者
+    - TypeScript開発者
+    - Webプロジェクト
+  latest_highlight: 2026年2月にv10.0.0をリリース。メジャーアップデート。
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "JavaScriptエコシステムにおける事実上の標準リンターであり、圧倒的なプラグイン数。"
+      reason: JavaScriptエコシステムにおける事実上の標準リンターであり、圧倒的なプラグイン数。
     - point: 5
-      reason: "高度なカスタマイズ性と構成可能性。"
+      reason: 高度なカスタマイズ性と構成可能性。
     - point: 5
-      reason: "自動修正機能が強力で、開発効率を向上させる。"
+      reason: 自動修正機能が強力で、開発効率を向上させる。
     - point: 5
-      reason: "TypeScriptのサポートも充実（typescript-eslint）。"
+      reason: TypeScriptのサポートも充実（typescript-eslint）。
   minus_points: []
-  summary: "JavaScript/TypeScript開発において必須とも言える標準ツール。機能、エコシステム共に最高水準。"
-
-# 【任意項目】該当するもののみ記載
+  summary: JavaScript/TypeScript開発において必須とも言える標準ツール。機能、エコシステム共に最高水準。
 links:
-  github: "https://github.com/eslint/eslint"
-  deepwiki: "https://deepwiki.com/eslint/eslint"
-  codewiki: "https://codewiki.google/github.com/eslint/eslint"
-  documentation: "https://eslint.org/docs/latest/"
+  github: https://github.com/eslint/eslint
+  deepwiki: https://deepwiki.com/eslint/eslint
+  codewiki: https://codewiki.google/github.com/eslint/eslint
+  documentation: https://eslint.org/docs/latest/
 relationships:
   related_tools:
-    - "Biome"
-    - "SonarQube"
-    - "Prettier"
+    - Biome
+    - SonarQube
 ---
+
+
+
 
 # **ESLint 調査レポート**
 

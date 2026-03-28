@@ -1,54 +1,54 @@
 ---
-title: "NemoClaw 調査レポート"
-tool_name: "NemoClaw"
-tool_reading: "ニモクロー"
-category: "自律型AIエージェント"
-developer: "NVIDIA"
-official_site: "https://www.nvidia.com/ja-jp/ai/nemoclaw/"
-date: "2026-03-22"
-last_updated: "2026-03-22"
+title: NemoClaw 調査レポート
+tool_name: NemoClaw
+tool_reading: ニモクロー
+category: 自律型AIエージェント
+developer: NVIDIA
+official_site: https://www.nvidia.com/ja-jp/ai/nemoclaw/
+date: '2026-03-22'
+last_updated: '2026-03-22'
 tags:
-  - "エージェント"
-  - "自律型"
-  - "オープンソース"
-  - "ローカルAI"
-  - "開発者ツール"
-description: "OpenClawにプライバシーおよびセキュリティ制御を追加し、より安全で常時稼働するAIアシスタントをデプロイするオープンソースのスタック。"
+  - エージェント
+  - オープンソース
+  - ローカルAI
+  - 自律型
+  - 開発者ツール
+description: OpenClawにプライバシーおよびセキュリティ制御を追加し、より安全で常時稼働するAIアシスタントをデプロイするオープンソースのスタック。
 layout: report
-
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "2026年3月16日に早期プレビュー版（Alphaソフトウェア）をリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+  latest_highlight: 2026年3月16日に早期プレビュー版（Alphaソフトウェア）をリリース
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 10
-      reason: "NVIDIA OpenShellにより、ファイルシステムやネットワークに対するポリシーベースの強力なサンドボックス機能を提供"
+      reason: NVIDIA OpenShellにより、ファイルシステムやネットワークに対するポリシーベースの強力なサンドボックス機能を提供
     - point: 5
-      reason: "1つのコマンドでローカル推論モデル(Nemotron等)とともに常時稼働エージェントをデプロイ可能"
+      reason: 1つのコマンドでローカル推論モデル(Nemotron等)とともに常時稼働エージェントをデプロイ可能
     - point: 5
-      reason: "既存のオープンソースエージェント(OpenClaw)にセキュリティ制御を統合する実用的なアプローチ"
+      reason: 既存のオープンソースエージェント(OpenClaw)にセキュリティ制御を統合する実用的なアプローチ
   minus_points:
     - point: -3
-      reason: "現在は早期プレビュー（Alpha）段階であり、機能やAPIの変更が予想される"
-  summary: "OpenClawをより安全に運用するためのNVIDIA製のオープンソーススタック。エンタープライズレベルのセキュリティ制御とローカルAIモデルを簡単に統合できる強力な基盤。"
-
+      reason: 現在は早期プレビュー（Alpha）段階であり、機能やAPIの変更が予想される
+  summary: OpenClawをより安全に運用するためのNVIDIA製のオープンソーススタック。エンタープライズレベルのセキュリティ制御とローカルAIモデルを簡単に統合できる強力な基盤。
 links:
-  github: "https://github.com/NVIDIA/NemoClaw"
-  deepwiki: "https://deepwiki.com/NVIDIA/NemoClaw"
-  codewiki: "https://codewiki.google/github.com/NVIDIA/NemoClaw"
-  documentation: "https://docs.nvidia.com/nemoclaw/latest/"
+  github: https://github.com/NVIDIA/NemoClaw
+  deepwiki: https://deepwiki.com/NVIDIA/NemoClaw
+  codewiki: https://codewiki.google/github.com/NVIDIA/NemoClaw
+  documentation: https://docs.nvidia.com/nemoclaw/latest/
 relationships:
-  parent: "OpenClaw"
+  parent: OpenClaw
 ---
+
+
+
 
 # **NemoClaw 調査レポート**
 

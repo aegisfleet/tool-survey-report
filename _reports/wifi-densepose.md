@@ -1,56 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "WiFi DensePose 調査レポート"
-tool_name: "WiFi DensePose"
-tool_reading: "ワイファイ デンスポーズ"
-category: "開発者ツール"
-developer: "ruvnet"
-official_site: "https://github.com/ruvnet/wifi-densepose"
-date: "2026-03-01"
-last_updated: "2026-03-01"
+title: WiFi DensePose 調査レポート
+tool_name: WiFi DensePose
+tool_reading: ワイファイ デンスポーズ
+category: 開発者ツール
+developer: ruvnet
+official_site: https://github.com/ruvnet/wifi-densepose
+date: '2026-03-01'
+last_updated: '2026-03-01'
 tags:
-  - "オープンソース"
-  - "IoT"
-  - "センシング"
-  - "AI"
-  - "Rust"
-description: "市販のWiFi信号を用いて、カメラやウェアラブルなしで人間の姿勢推定やバイタルサイン監視を行うオープンソースシステム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - IoT
+  - Rust
+  - オープンソース
+  - センシング
+description: 市販のWiFi信号を用いて、カメラやウェアラブルなしで人間の姿勢推定やバイタルサイン監視を行うオープンソースシステム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "研究者"
-    - "開発者"
-    - "インフラ/設備管理者"
-  latest_highlight: "2026年3月にエンドツーエンドのトレーニングパイプラインとDockerイメージを公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 研究者
+    - 開発者
+    - インフラ/設備管理者
+  latest_highlight: 2026年3月にエンドツーエンドのトレーニングパイプラインとDockerイメージを公開
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "カメラを使用しないプライバシー保護に優れた設計"
+      reason: カメラを使用しないプライバシー保護に優れた設計
     - point: 5
-      reason: "ESP32など安価なハードウェアで高精度なセンシングを実現"
+      reason: ESP32など安価なハードウェアで高精度なセンシングを実現
     - point: 5
-      reason: "Rustによる高速なパイプラインとDocker等での容易なセットアップ"
+      reason: Rustによる高速なパイプラインとDocker等での容易なセットアップ
   minus_points:
     - point: -2
-      reason: "日本語のドキュメントやサポートが不足"
-  summary: "プライバシーを保護しつつ高度な人間のセンシングを可能にする画期的な技術であり、導入のしやすさとコストパフォーマンスに優れている"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語のドキュメントやサポートが不足
+  summary: プライバシーを保護しつつ高度な人間のセンシングを可能にする画期的な技術であり、導入のしやすさとコストパフォーマンスに優れている
 links:
-  github: "https://github.com/ruvnet/wifi-densepose"
-  codewiki: "https://codewiki.google/github.com/ruvnet/wifi-densepose"
-  deepwiki: "https://deepwiki.com/ruvnet/wifi-densepose"
+  github: https://github.com/ruvnet/wifi-densepose
+  codewiki: https://codewiki.google/github.com/ruvnet/wifi-densepose
+  deepwiki: https://deepwiki.com/ruvnet/wifi-densepose
+relationships: {}
 ---
+
+
+
 
 # **WiFi DensePose 調査レポート**
 

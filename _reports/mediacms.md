@@ -1,54 +1,53 @@
 ---
-title: "MediaCMS 調査レポート"
-tool_name: "MediaCMS"
-tool_reading: "メディアシーエムエス"
-category: "動画/メディア"
-developer: "Markos Gogoulos / MediaCMS.io"
-official_site: "https://mediacms.io/"
-date: "2026-02-02"
-last_updated: "2026-02-02"
+title: MediaCMS 調査レポート
+tool_name: MediaCMS
+tool_reading: メディアシーエムエス
+category: 動画/メディア
+developer: Markos Gogoulos / MediaCMS.io
+official_site: https://mediacms.io/
+date: '2026-02-02'
+last_updated: '2026-02-02'
 tags:
-  - "オープンソース"
-  - "CMS"
-  - "動画配信"
-  - "Django"
-  - "React"
-description: "YouTubeライクな動画共有サイトを構築できる、モダンなオープンソースCMS。DjangoとReactを採用し、セルフホストでメディア資産を管理可能。"
-
+  - CMS
+  - Django
+  - React
+  - オープンソース
+  - 動画配信
+description: YouTubeライクな動画共有サイトを構築できる、モダンなオープンソースCMS。DjangoとReactを採用し、セルフホストでメディア資産を管理可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "教育機関"
-    - "企業内ポータル"
-    - "メディア組織"
-  latest_highlight: "2025年11月にv7.2.0をリリース。機能改善とバグ修正。"
-  update_frequency: "中"
-
+    - 教育機関
+    - 企業内ポータル
+    - メディア組織
+  latest_highlight: 2025年11月にv7.2.0をリリース。機能改善とバグ修正。
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "YouTubeライクな使いやすいUIと豊富な機能"
+      reason: YouTubeライクな使いやすいUIと豊富な機能
     - point: 5
-      reason: "完全なオープンソースでデータ所有権を確保できる"
+      reason: 完全なオープンソースでデータ所有権を確保できる
     - point: 5
-      reason: "モダンな技術スタック（Django + React）で拡張性が高い"
+      reason: モダンな技術スタック（Django + React）で拡張性が高い
   minus_points:
     - point: -3
-      reason: "構築・運用にはサーバー管理の知識が必要"
-  summary: "自前でYouTubeのような動画サイトを作りたい場合、現時点で最も有力なオープンソースソリューションの一つ。"
-
+      reason: 構築・運用にはサーバー管理の知識が必要
+  summary: 自前でYouTubeのような動画サイトを作りたい場合、現時点で最も有力なオープンソースソリューションの一つ。
 links:
-  github: "https://github.com/mediacms-io/mediacms"
-  deepwiki: "https://deepwiki.com/mediacms-io/mediacms"
-  documentation: "https://github.com/mediacms-io/mediacms/blob/main/docs/admins_docs.md"
+  github: https://github.com/mediacms-io/mediacms
+  deepwiki: https://deepwiki.com/mediacms-io/mediacms
+  documentation: https://github.com/mediacms-io/mediacms/blob/main/docs/admins_docs.md
 relationships:
-  related_tools:
-    - "wordpress"
+  related_tools: []
 ---
+
+
+
 
 # **MediaCMS 調査レポート**
 

@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Jules 調査レポート"
-tool_name: "Google Jules"
-tool_reading: "グーグル ジュールズ"
-category: "自律型AIエージェント"
-developer: "Google"
-official_site: "https://jules.google/"
-date: "2025-10-18"
-last_updated: "2026-03-09"
+title: Google Jules 調査レポート
+tool_name: Google Jules
+tool_reading: グーグル ジュールズ
+category: 自律型AIエージェント
+developer: Google
+official_site: https://jules.google/
+date: '2025-10-18'
+last_updated: '2026-03-09'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "コーディング支援"
-  - "開発者ツール"
-description: "Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - コーディング支援
+  - 自律型
+  - 開発者ツール
+description: Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "エンジニアリングチーム"
-  latest_highlight: "2025年11月にRepolessモード導入、Gemini 3 Proを搭載"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアリングチーム
+  latest_highlight: 2025年11月にRepolessモード導入、Gemini 3 Proを搭載
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Gemini 3 Proを搭載し、自律的なタスク実行能力が高い"
+      reason: Gemini 3 Proを搭載し、自律的なタスク実行能力が高い
     - point: 5
-      reason: "CLI/API連携や非同期実行など開発ワークフローへの統合が強力"
+      reason: CLI/API連携や非同期実行など開発ワークフローへの統合が強力
     - point: 3
-      reason: "無料プランが提供されており導入しやすい"
+      reason: 無料プランが提供されており導入しやすい
   minus_points:
     - point: -3
-      reason: "エンタープライズ向けのガバナンスやセキュリティに関する情報が不足"
+      reason: エンタープライズ向けのガバナンスやセキュリティに関する情報が不足
     - point: -2
-      reason: "リアルタイムの対話的なコーディングには不向き"
-  summary: "開発ワークフローの自動化に強力な選択肢だが、エンタープライズ利用には情報開示が待たれる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: リアルタイムの対話的なコーディングには不向き
+  summary: 開発ワークフローの自動化に強力な選択肢だが、エンタープライズ利用には情報開示が待たれる。
 links:
-  documentation: "https://jules.google/docs/"
+  documentation: https://jules.google/docs/
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "Devin"
-    - "Agent Zero"
-    - "OpenHands"
-    - "Manus"
-    - "GitHub Copilot"
-    - "DeerFlow"
-    - "Agent Trace"
+    - Devin
+    - Agent Zero
+    - OpenHands
+    - Manus
+    - GitHub Copilot
+    - DeerFlow
+    - Agent Trace
 ---
+
+
+
 
 # **Google Jules 調査レポート**
 

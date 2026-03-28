@@ -1,61 +1,61 @@
 ---
-title: "Qangaroo 調査レポート"
-tool_name: "Qangaroo"
-tool_reading: "カンガルー"
-category: "テスト管理"
-developer: "株式会社テクノデジタル"
-official_site: "https://qangaroo.jp/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: Qangaroo 調査レポート
+tool_name: Qangaroo
+tool_reading: カンガルー
+category: テスト管理
+developer: 株式会社テクノデジタル
+official_site: https://qangaroo.jp/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト管理"
-  - "クラウド"
-  - "Excelライク"
-  - "BTS連携"
-  - "SaaS"
-description: "Excelライクな操作性で直感的にテストケースを作成・実行できるクラウド型テスト管理ツール"
-
+  - BTS連携
+  - Excelライク
+  - SaaS
+  - クラウド
+  - テスト管理
+description: Excelライクな操作性で直感的にテストケースを作成・実行できるクラウド型テスト管理ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発チーム"
-    - "Web制作会社"
-  latest_highlight: "2026年1月21日にメンテナンス実施"
-  update_frequency: "中"
-
+    - QAエンジニア
+    - 開発チーム
+    - Web制作会社
+  latest_highlight: 2026年1月21日にメンテナンス実施
+  update_frequency: 中
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Excelライクな操作性で学習コストが非常に低い"
+      reason: Excelライクな操作性で学習コストが非常に低い
     - point: 3
-      reason: "無料プラン（フリープラン）が永続的に利用可能"
+      reason: 無料プラン（フリープラン）が永続的に利用可能
     - point: 3
-      reason: "主要なBTS（Backlog, Redmine, Jira）との連携がスムーズ"
+      reason: 主要なBTS（Backlog, Redmine, Jira）との連携がスムーズ
     - point: 2
-      reason: "Chrome拡張機能によるエビデンス取得が便利"
+      reason: Chrome拡張機能によるエビデンス取得が便利
   minus_points:
     - point: -3
-      reason: "大規模プロジェクト向けの機能（複雑な権限管理やAPI連携）が一部限定的"
+      reason: 大規模プロジェクト向けの機能（複雑な権限管理やAPI連携）が一部限定的
     - point: -2
-      reason: "モバイルアプリが提供されていない（ブラウザ利用のみ）"
-  summary: "脱Excelを目指すチームに最適。シンプルさとコストパフォーマンスに優れた国産テスト管理ツール。"
-
+      reason: モバイルアプリが提供されていない（ブラウザ利用のみ）
+  summary: 脱Excelを目指すチームに最適。シンプルさとコストパフォーマンスに優れた国産テスト管理ツール。
 links:
-  documentation: "https://qangaroo.jp/support/"
+  documentation: https://qangaroo.jp/support/
 relationships:
   related_tools:
-    - "CAT"
-    - "QualityForward"
-    - "TestRail"
-    - "Backlog"
-    - "Jira"
-    - "Redmine"
+    - CAT
+    - QualityForward
+    - TestRail
+    - Backlog
+    - Jira
+    - Redmine
 ---
+
+
+
 
 # **Qangaroo 調査レポート**
 

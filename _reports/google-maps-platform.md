@@ -1,58 +1,54 @@
 ---
-# 【必須項目】
-title: "Google Maps Platform 調査レポート"
-tool_name: "Google Maps Platform"
-tool_reading: "グーグル マップ プラットフォーム"
-category: "開発者ツール"
-developer: "Google"
-official_site: "https://developers.google.com/maps"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: Google Maps Platform 調査レポート
+tool_name: Google Maps Platform
+tool_reading: グーグル マップ プラットフォーム
+category: 開発者ツール
+developer: Google
+official_site: https://developers.google.com/maps
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "API"
-  - "クラウド"
-  - "開発者ツール"
-  - "地図"
-  - "位置情報"
-description: "Googleが提供する地図・位置情報サービスの開発者向けプラットフォーム。Webやモバイルアプリに地図を表示したり、ルート検索や場所の検索機能などを組み込むためのAPIとSDKを提供する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - API
+  - クラウド
+  - 位置情報
+  - 地図
+  - 開発者ツール
+description: Googleが提供する地図・位置情報サービスの開発者向けプラットフォーム。Webやモバイルアプリに地図を表示したり、ルート検索や場所の検索機能などを組み込むためのAPIとSDKを提供する。
 quick_summary:
   has_free_plan: true
-  starting_price: "無料 ($200分の月額クレジット)"
+  starting_price: 無料 ($200分の月額クレジット)
   target_users:
-    - "開発者"
-    - "企業"
-    - "物流・交通事業者"
-  latest_highlight: "Photorealistic 3D TilesやPollen APIなどの環境・没入型機能の拡充"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 企業
+    - 物流・交通事業者
+  latest_highlight: Photorealistic 3D TilesやPollen APIなどの環境・没入型機能の拡充
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "圧倒的なデータ量と精度（ストリートビュー、POI）"
+      reason: 圧倒的なデータ量と精度（ストリートビュー、POI）
     - point: 5
-      reason: "毎月$200分の無料クレジットにより小規模利用は実質無料"
+      reason: 毎月$200分の無料クレジットにより小規模利用は実質無料
     - point: 3
-      reason: "グローバルなカバレッジと高い信頼性"
+      reason: グローバルなカバレッジと高い信頼性
     - point: 2
-      reason: "豊富なドキュメントと大規模なコミュニティ"
+      reason: 豊富なドキュメントと大規模なコミュニティ
   minus_points:
-    - point: -0
-      reason: "大規模利用時のコスト増加に注意が必要だが、機能に見合っている"
-  summary: "地図APIのデファクトスタンダードであり、精度、機能、信頼性の面で他をリードしている。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 大規模利用時のコスト増加に注意が必要だが、機能に見合っている
+  summary: 地図APIのデファクトスタンダードであり、精度、機能、信頼性の面で他をリードしている。
 links:
-  documentation: "https://developers.google.com/maps/documentation"
-  github: "https://github.com/googlemaps"
+  documentation: https://developers.google.com/maps/documentation
+  github: https://github.com/googlemaps
 relationships:
   related_tools:
-    - "Google Cloud"
+    - Google Cloud
 ---
+
+
+
 
 # **Google Maps Platform 調査レポート**
 

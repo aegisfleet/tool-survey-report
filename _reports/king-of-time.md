@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "KING OF TIME 調査レポート"
-tool_name: "KING OF TIME"
-tool_reading: "キングオブタイム"
-category: "勤怠管理"
-developer: "株式会社ヒューマンテクノロジーズ"
-official_site: "https://www.kingoftime.jp/"
-date: "2026-01-29"
-last_updated: "2026-03-28"
+title: KING OF TIME 調査レポート
+tool_name: KING OF TIME
+tool_reading: キングオブタイム
+category: 勤怠管理
+developer: 株式会社ヒューマンテクノロジーズ
+official_site: https://www.kingoftime.jp/
+date: '2026-01-29'
+last_updated: '2026-03-28'
 tags:
-  - "勤怠管理"
-  - "人事労務"
-  - "SaaS"
-  - "自動化"
-description: "市場シェアNo.1を誇るクラウド型勤怠管理システム。多彩な打刻方法と柔軟な設定で、あらゆる業種・規模の企業に対応。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - 人事労務
+  - 勤怠管理
+  - 自動化
+description: 市場シェアNo.1を誇るクラウド型勤怠管理システム。多彩な打刻方法と柔軟な設定で、あらゆる業種・規模の企業に対応。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "¥300/月"
+  starting_price: ¥300/月
   target_users:
-    - "中小企業"
-    - "大企業"
-    - "多拠点・多店舗"
-  latest_highlight: "2026年3月に人事労務、給与、電子契約等の新機能を順次リリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 中小企業
+    - 大企業
+    - 多拠点・多店舗
+  latest_highlight: 2026年3月に人事労務、給与、電子契約等の新機能を順次リリース
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 8
-      reason: "機能が非常に豊富で、あらゆる業種・就業規則に対応できるカスタマイズ性を持つ"
+      reason: 機能が非常に豊富で、あらゆる業種・就業規則に対応できるカスタマイズ性を持つ
     - point: 5
-      reason: "市場シェアNo.1という圧倒的な導入実績と信頼性"
+      reason: 市場シェアNo.1という圧倒的な導入実績と信頼性
     - point: 5
-      reason: "初期費用0円・月額300円で全機能が使える高いコストパフォーマンス"
+      reason: 初期費用0円・月額300円で全機能が使える高いコストパフォーマンス
     - point: 3
-      reason: "無料のサポート体制（チャット、メール、電話）が充実している"
+      reason: 無料のサポート体制（チャット、メール、電話）が充実している
   minus_points:
     - point: -3
-      reason: "多機能な反面、初期設定が複雑で学習コストがかかる"
+      reason: 多機能な反面、初期設定が複雑で学習コストがかかる
     - point: -2
-      reason: "管理画面のUI/UXがやや古く、直感的でないという意見がある"
-  summary: "圧倒的な実績と機能網羅性を誇る、コストパフォーマンスに優れた勤怠管理の王道ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 管理画面のUI/UXがやや古く、直感的でないという意見がある
+  summary: 圧倒的な実績と機能網羅性を誇る、コストパフォーマンスに優れた勤怠管理の王道ツール
 links:
-  documentation: "https://support.ta.kingoftime.jp/hc/ja"
+  documentation: https://support.ta.kingoftime.jp/hc/ja
 relationships:
   related_tools:
-    - "ワスレナイ"
-    - "COMPANY"
-    - "SmartHR"
-    - "ジョブカン勤怠管理"
-    - "マネーフォワード クラウド勤怠"
+    - ワスレナイ
+    - COMPANY
+    - SmartHR
+    - ジョブカン勤怠管理
+    - マネーフォワード クラウド勤怠
 ---
+
+
+
 
 # **KING OF TIME 調査レポート**
 

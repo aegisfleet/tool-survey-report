@@ -1,71 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Appium 調査レポート"
-tool_name: "Appium"
-tool_reading: "アピウム"
-category: "テスト/QA"
-developer: "OpenJS Foundation"
-official_site: "https://appium.io/"
-date: "2025-10-26"
-last_updated: "2026-02-02"
+title: Appium 調査レポート
+tool_name: Appium
+tool_reading: アピウム
+category: テスト/QA
+developer: OpenJS Foundation
+official_site: https://appium.io/
+date: '2025-10-26'
+last_updated: '2026-02-02'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "モバイル"
-  - "E2Eテスト"
-  - "開発者ツール"
-description: "ネイティブ、ハイブリッド、モバイルWebアプリ向けのオープンソース・テスト自動化フレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - E2Eテスト
+  - オープンソース
+  - テスト自動化
+  - モバイル
+  - 開発者ツール
+description: ネイティブ、ハイブリッド、モバイルWebアプリ向けのオープンソース・テスト自動化フレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-    - "テスト自動化チーム"
-  latest_highlight: "2025年8月にAppium 3.0をリリースし、WebDriver BiDi対応を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - 開発者
+    - テスト自動化チーム
+  latest_highlight: 2025年8月にAppium 3.0をリリースし、WebDriver BiDi対応を強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "オープンソースで完全に無料であり、導入コストが低い"
+      reason: オープンソースで完全に無料であり、導入コストが低い
     - point: 8
-      reason: "iOS, Android, Web, Desktopなど幅広いプラットフォームを単一APIで操作可能"
+      reason: iOS, Android, Web, Desktopなど幅広いプラットフォームを単一APIで操作可能
     - point: 5
-      reason: "WebDriverプロトコルに準拠し、巨大なエコシステムと活発なコミュニティを持つ"
+      reason: WebDriverプロトコルに準拠し、巨大なエコシステムと活発なコミュニティを持つ
   minus_points:
     - point: -5
-      reason: "環境構築やドライバの管理が複雑で、学習コストが高い"
+      reason: 環境構築やドライバの管理が複雑で、学習コストが高い
     - point: -3
-      reason: "テスト実行が不安定になることがあり、特にiOSでの実行速度が課題"
-  summary: "圧倒的な柔軟性とエコシステムを持つモバイルテスト自動化のデファクトスタンダードだが、セットアップには専門知識が求められる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: テスト実行が不安定になることがあり、特にiOSでの実行速度が課題
+  summary: 圧倒的な柔軟性とエコシステムを持つモバイルテスト自動化のデファクトスタンダードだが、セットアップには専門知識が求められる。
 links:
-  github: "https://github.com/appium/appium"
-  deepwiki: "https://deepwiki.com/appium/appium"
-  codewiki: "https://codewiki.google/github.com/appium/appium"
-  documentation: "https://appium.io/docs/en/latest/"
+  github: https://github.com/appium/appium
+  deepwiki: https://deepwiki.com/appium/appium
+  codewiki: https://codewiki.google/github.com/appium/appium
+  documentation: https://appium.io/docs/en/latest/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "CodeceptJS"
-    - "Selenium"
-    - "Playwright"
-    - "Cypress"
-    - "MagicPod"
-    - "Mobile Next"
-    - "Cucumber"
-    - "Android Use"
+    - CodeceptJS
+    - Selenium
+    - Playwright
+    - Cypress
+    - MagicPod
+    - Mobile Next
+    - Cucumber
 ---
+
+
+
 
 # **Appium 調査レポート**
 

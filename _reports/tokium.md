@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "TOKIUM 調査レポート"
-tool_name: "TOKIUM"
-tool_reading: "トキウム"
-category: "業務系ツール"
-developer: "株式会社TOKIUM"
-official_site: "https://www.keihi.com/"
-date: "2026-02-21"
-last_updated: "2026-02-21"
+title: TOKIUM 調査レポート
+tool_name: TOKIUM
+tool_reading: トキウム
+category: BIツール
+developer: 株式会社TOKIUM
+official_site: https://www.keihi.com/
+date: '2026-02-21'
+last_updated: '2026-02-21'
 tags:
-  - "経費精算"
-  - "請求書受領"
-  - "電子帳簿保存法"
-  - "インボイス制度"
-  - "ペーパーレス"
-description: "経費精算、請求書受領、契約書管理などを統合した支出管理プラットフォーム。紙の領収書・請求書の完全ペーパーレス化を実現。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - インボイス制度
+  - ペーパーレス
+  - 経費精算
+  - 請求書受領
+  - 電子帳簿保存法
+description: 経費精算、請求書受領、契約書管理などを統合した支出管理プラットフォーム。紙の領収書・請求書の完全ペーパーレス化を実現。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "月額10,000円〜"
+  starting_price: 月額10,000円〜
   target_users:
-    - "中小企業"
-    - "中堅企業"
-    - "大企業"
-  latest_highlight: "2026年2月にAIエージェント機能を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 中小企業
+    - 中堅企業
+    - 大企業
+  latest_highlight: 2026年2月にAIエージェント機能を強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "領収書・請求書の原本回収・スキャン代行まで行うBPOサービスが強力で、完全ペーパーレスを実現できる"
+      reason: 領収書・請求書の原本回収・スキャン代行まで行うBPOサービスが強力で、完全ペーパーレスを実現できる
     - point: 5
-      reason: "利用人数無制限の従量課金制により、全社員への展開が容易"
+      reason: 利用人数無制限の従量課金制により、全社員への展開が容易
     - point: 5
-      reason: "電子帳簿保存法およびインボイス制度への対応が手厚い（JIIMA認証取得済み）"
+      reason: 電子帳簿保存法およびインボイス制度への対応が手厚い（JIIMA認証取得済み）
   minus_points:
     - point: 0
-      reason: "特に大きな欠点は見当たらないが、月額費用は従量課金のため規模によってはコスト増になる可能性も"
-  summary: "「入力レス」と「完全ペーパーレス」を徹底的に追求したサービスであり、アナログ業務からの脱却に最適。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特に大きな欠点は見当たらないが、月額費用は従量課金のため規模によってはコスト増になる可能性も
+  summary: 「入力レス」と「完全ペーパーレス」を徹底的に追求したサービスであり、アナログ業務からの脱却に最適。
 links:
-  documentation: "https://support.keihi.com/"
+  documentation: https://support.keihi.com/
 relationships:
   parent: null
   children: []
   related_tools: []
 ---
+
+
+
 
 # **TOKIUM 調査レポート**
 

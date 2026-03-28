@@ -1,52 +1,52 @@
 ---
-title: "Renovate 調査レポート"
-tool_name: "Renovate"
-tool_reading: "リノベート"
-category: "DevSecOps / 依存関係自動更新"
-developer: "Mend.io (旧 WhiteSource)"
-official_site: "https://github.com/renovatebot/renovate"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: Renovate 調査レポート
+tool_name: Renovate
+tool_reading: リノベート
+category: 開発者ツール
+developer: Mend.io (旧 WhiteSource)
+official_site: https://github.com/renovatebot/renovate
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "依存関係管理"
-  - "DevSecOps"
-  - "自動化"
-  - "オープンソース"
-description: "多数のプラットフォームと言語に対応した、高機能な依存関係自動更新ツール"
-
+  - DevSecOps
+  - オープンソース
+  - 依存関係管理
+  - 自動化
+description: 多数のプラットフォームと言語に対応した、高機能な依存関係自動更新ツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "オープンソースメンテナ"
-  latest_highlight: "2026年1月にv43をリリースし、セキュリティ機能を大幅強化"
-  update_frequency: "高"
-
+    - 開発者
+    - DevOpsエンジニア
+    - オープンソースメンテナ
+  latest_highlight: 2026年1月にv43をリリースし、セキュリティ機能を大幅強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "対応プラットフォームと言語が非常に豊富"
+      reason: 対応プラットフォームと言語が非常に豊富
     - point: 5
-      reason: "依存関係ダッシュボード機能が便利"
+      reason: 依存関係ダッシュボード機能が便利
     - point: 5
-      reason: "マージコンフィデンス（信頼度）機能による安全性"
+      reason: マージコンフィデンス（信頼度）機能による安全性
   minus_points: []
-  summary: "多機能かつ柔軟な設定が可能で、大規模プロジェクトにも対応できる強力な依存関係管理ツール"
-
+  summary: 多機能かつ柔軟な設定が可能で、大規模プロジェクトにも対応できる強力な依存関係管理ツール
 links:
-  github: "https://github.com/renovatebot/renovate"
-  deepwiki: "https://deepwiki.com/renovatebot/renovate"
-  documentation: "https://docs.renovatebot.com/"
+  github: https://github.com/renovatebot/renovate
+  deepwiki: https://deepwiki.com/renovatebot/renovate
+  documentation: https://docs.renovatebot.com/
 relationships:
   related_tools:
-    - "Dependabot"
-    - "pinact"
+    - Dependabot
+    - pinact
 ---
+
+
+
 
 # **Renovate 調査レポート**
 

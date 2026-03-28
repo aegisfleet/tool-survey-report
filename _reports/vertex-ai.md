@@ -1,63 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Vertex AI 調査レポート"
-tool_name: "Vertex AI"
-tool_reading: "バーテックス エーアイ"
-category: "AI開発基盤"
-developer: "Google"
-official_site: "https://cloud.google.com/vertex-ai"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: Vertex AI 調査レポート
+tool_name: Vertex AI
+tool_reading: バーテックス エーアイ
+category: AI開発基盤
+developer: Google
+official_site: https://cloud.google.com/vertex-ai
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "AI"
-  - "機械学習"
-  - "生成AI"
-  - "MLOps"
-  - "Google Cloud"
-  - "Gemini"
-description: "Google Cloudが提供する統合AIプラットフォーム。生成AIモデルの利用から、機械学習モデルの構築、デプロイ、管理までをエンドツーエンドでサポートする。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Gemini
+  - Google Cloud
+  - MLOps
+  - 機械学習
+  - 生成AI
+description: Google Cloudが提供する統合AIプラットフォーム。生成AIモデルの利用から、機械学習モデルの構築、デプロイ、管理までをエンドツーエンドでサポートする。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$300無料クレジット (新規)"
+  starting_price: $300無料クレジット (新規)
   target_users:
-    - "MLエンジニア"
-    - "データサイエンティスト"
-    - "アプリケーション開発者"
-  latest_highlight: "2026年1月にGemini 3 Pro/Flashが一般提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - MLエンジニア
+    - データサイエンティスト
+    - アプリケーション開発者
+  latest_highlight: 2026年1月にGemini 3 Pro/Flashが一般提供開始
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Gemini 3やVeo 3など、Googleの最先端AIモデルを即座に利用可能"
+      reason: Gemini 3やVeo 3など、Googleの最先端AIモデルを即座に利用可能
     - point: 8
-      reason: "データ準備から学習、デプロイ、監視まで、MLOpsの全工程をカバーする包括的な機能"
+      reason: データ準備から学習、デプロイ、監視まで、MLOpsの全工程をカバーする包括的な機能
     - point: 5
-      reason: "BigQueryとのネイティブな連携により、データ分析とMLのシームレスな統合が可能"
+      reason: BigQueryとのネイティブな連携により、データ分析とMLのシームレスな統合が可能
   minus_points:
     - point: -3
-      reason: "機能が非常に多岐にわたるため、全体像を把握し使いこなすまでの学習コストが高い"
-  summary: "GoogleのAI技術の粋を集めたプラットフォームであり、生成AI活用から本格的なML開発まで、あらゆるAIニーズに応える強力な基盤。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が非常に多岐にわたるため、全体像を把握し使いこなすまでの学習コストが高い
+  summary: GoogleのAI技術の粋を集めたプラットフォームであり、生成AI活用から本格的なML開発まで、あらゆるAIニーズに応える強力な基盤。
 links:
-  documentation: "https://cloud.google.com/vertex-ai/docs"
+  documentation: https://cloud.google.com/vertex-ai/docs
 relationships:
-  parent: "Google Cloud"
+  parent: Google Cloud
   children:
-    - "Vertex AI Studio"
+    - Vertex AI Studio
   related_tools:
-    - "Amazon SageMaker"
-    - "Azure AI Studio"
-    - "Databricks"
+    - Gemini
 ---
+
+
+
 
 # **Vertex AI 調査レポート**
 

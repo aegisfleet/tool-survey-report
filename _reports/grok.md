@@ -1,58 +1,59 @@
 ---
-title: "Grok 調査レポート"
-tool_name: "Grok"
-tool_reading: "グロック"
-category: "生成AI"
-developer: "xAI"
-official_site: "https://x.ai/grok"
-date: "2025-10-23"
-last_updated: "2026-03-20"
+title: Grok 調査レポート
+tool_name: Grok
+tool_reading: グロック
+category: 生成AI
+developer: xAI
+official_site: https://x.ai/grok
+date: '2025-10-23'
+last_updated: '2026-03-20'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "会話型AI"
-  - "エージェント"
-description: "xAIが開発した、X(旧Twitter)のリアルタイム情報にアクセスできるAIモデル。高い推論能力とユーモア、検閲の少ない回答を特徴とする。"
-
+  - AI
+  - エージェント
+  - 会話型AI
+  - 大規模言語モデル
+  - 生成AI
+description: xAIが開発した、X(旧Twitter)のリアルタイム情報にアクセスできるAIモデル。高い推論能力とユーモア、検閲の少ない回答を特徴とする。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "一般ユーザー"
-    - "リサーチャー"
-  latest_highlight: "2026年3月に推論能力が向上したGrok 4.5 Fastをリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - 一般ユーザー
+    - リサーチャー
+  latest_highlight: 2026年3月に推論能力が向上したGrok 4.5 Fastをリリース
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Xのリアルタイムデータへのアクセス権による独自性"
+      reason: Xのリアルタイムデータへのアクセス権による独自性
     - point: 4
-      reason: "Grok 4による高い推論能力とReasoningモデルの提供"
+      reason: Grok 4による高い推論能力とReasoningモデルの提供
     - point: 3
-      reason: "APIツールの充実（Web検索、コード実行など）"
+      reason: APIツールの充実（Web検索、コード実行など）
     - point: 3
-      reason: "Python SDKやLangChainなどエコシステムの拡大"
+      reason: Python SDKやLangChainなどエコシステムの拡大
   minus_points:
     - point: -3
-      reason: "情報源がXに偏る可能性"
-  summary: "リアルタイム情報へのアクセスと強力な推論能力を兼ね備え、エコシステムも急速に成熟している。"
-
+      reason: 情報源がXに偏る可能性
+  summary: リアルタイム情報へのアクセスと強力な推論能力を兼ね備え、エコシステムも急速に成熟している。
 links:
-  documentation: "https://docs.x.ai/"
+  documentation: https://docs.x.ai/
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "Gemini"
-    - "Claude"
-    - "LangChain"
-    - "TradingAgents"
+    - ChatGPT
+    - Gemini
+    - Claude
+    - LangChain
+    - TradingAgents
+    - Rakuten AI
 ---
+
+
+
 
 # **Grok 調査レポート**
 

@@ -1,67 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Ansible 調査レポート"
-tool_name: "Ansible"
-tool_reading: "アンシブル"
-category: "構成管理"
-developer: "Red Hat"
-official_site: "https://www.ansible.com/"
-date: "2025-10-27"
-last_updated: "2026-02-01"
+title: Ansible 調査レポート
+tool_name: Ansible
+tool_reading: アンシブル
+category: 構成管理
+developer: Red Hat
+official_site: https://www.ansible.com/
+date: '2025-10-27'
+last_updated: '2026-02-01'
 tags:
-  - "構成管理"
-  - "自動化"
-  - "オープンソース"
-  - "DevOps"
-  - "IaC"
-  - "CI/CD"
-  - "Python"
-description: "エージェントレスで導入が容易な、構成管理、アプリケーションデプロイ、プロビジョニングを自動化するオープンソースIT自動化エンジン。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - DevOps
+  - IaC
+  - Python
+  - オープンソース
+  - 構成管理
+  - 自動化
+description: エージェントレスで導入が容易な、構成管理、アプリケーションデプロイ、プロビジョニングを自動化するオープンソースIT自動化エンジン。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "インフラエンジニア"
-    - "DevOpsエンジニア"
-    - "SRE"
-  latest_highlight: "2025年11月にansible-core 2.20がリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - インフラエンジニア
+    - DevOpsエンジニア
+    - SRE
+  latest_highlight: 2025年11月にansible-core 2.20がリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "エージェントレスで導入が容易かつ、人間が読みやすいYAML形式のため学習コストが低い"
+      reason: エージェントレスで導入が容易かつ、人間が読みやすいYAML形式のため学習コストが低い
     - point: 7
-      reason: "豊富なモジュールと活発なコミュニティにより、幅広い用途に対応できる高い拡張性を持つ"
+      reason: 豊富なモジュールと活発なコミュニティにより、幅広い用途に対応できる高い拡張性を持つ
     - point: 5
-      reason: "Red Hatによる強力なエンタープライズサポートとエコシステム"
+      reason: Red Hatによる強力なエンタープライズサポートとエコシステム
   minus_points:
     - point: -3
-      reason: "大規模環境（数千台規模）ではSSH接続のオーバーヘッドにより実行速度が低下する場合がある"
+      reason: 大規模環境（数千台規模）ではSSH接続のオーバーヘッドにより実行速度が低下する場合がある
     - point: -2
-      reason: "GUIでの管理（Automation Controller）を利用するには有償版の契約が必要"
-  summary: "導入の容易さと拡張性に優れる構成管理の定番ツール。小規模から大規模まで対応可能だが、エンタープライズ機能は有償。"
-
-# 【任意項目】該当するもののみ記載
+      reason: GUIでの管理（Automation Controller）を利用するには有償版の契約が必要
+  summary: 導入の容易さと拡張性に優れる構成管理の定番ツール。小規模から大規模まで対応可能だが、エンタープライズ機能は有償。
 links:
-  github: "https://github.com/ansible/ansible"
-  documentation: "https://docs.ansible.com/"
+  github: https://github.com/ansible/ansible
+  documentation: https://docs.ansible.com/
 relationships:
   related_tools:
-    - "Terraform"
-    - "OpenTofu"
-    - "Pulumi"
-    - "AWS CloudFormation"
-    - "Kubernetes"
-    - "Podman"
+    - Terraform
+    - OpenTofu
+    - Pulumi
+    - AWS CloudFormation
+    - Kubernetes
+    - Podman
 ---
+
+
+
 
 # **Ansible 調査レポート**
 

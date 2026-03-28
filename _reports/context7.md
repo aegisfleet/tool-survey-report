@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Context7 調査レポート"
-tool_name: "Context7"
-tool_reading: "コンテキストセブン"
-category: "開発者ツール"
-developer: "Upstash"
-official_site: "https://context7.com/"
-date: "2026-01-28"
-last_updated: "2026-03-18"
+title: Context7 調査レポート
+tool_name: Context7
+tool_reading: コンテキストセブン
+category: 開発者ツール
+developer: Upstash
+official_site: https://context7.com/
+date: '2026-01-28'
+last_updated: '2026-03-18'
 tags:
-  - "AI"
-  - "開発者ツール"
-  - "オープンソース"
-  - "エージェント"
-description: "LLMに最新のライブラリドキュメントとコード例を直接供給し、ハルシネーションを防ぐMCPサーバー"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+description: LLMに最新のライブラリドキュメントとコード例を直接供給し、ハルシネーションを防ぐMCPサーバー
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "CursorやClaude Codeなどの主要なMCPクライアントに対応"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエンジニア
+  latest_highlight: CursorやClaude Codeなどの主要なMCPクライアントに対応
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "最新かつバージョン指定可能なドキュメントをLLMに提供し、ハルシネーションを大幅に削減"
+      reason: 最新かつバージョン指定可能なドキュメントをLLMに提供し、ハルシネーションを大幅に削減
     - point: 5
-      reason: "MCP (Model Context Protocol) に準拠しており、CursorやClaude Codeなど様々なツールで利用可能"
+      reason: MCP (Model Context Protocol) に準拠しており、CursorやClaude Codeなど様々なツールで利用可能
     - point: 3
-      reason: "無料プランでも月1,000回まで利用可能で、個人利用には十分"
+      reason: 無料プランでも月1,000回まで利用可能で、個人利用には十分
     - point: 2
-      reason: "Upstashによる開発・運用で、インフラ面での信頼性が高い"
+      reason: Upstashによる開発・運用で、インフラ面での信頼性が高い
   minus_points: []
-  summary: "AIコーディングにおける「情報の鮮度」という最大の課題を解決する、必須級のMCPツール"
-
-# 【任意項目】該当するもののみ記載
+  summary: AIコーディングにおける「情報の鮮度」という最大の課題を解決する、必須級のMCPツール
 links:
-  github: "https://github.com/upstash/context7"
-  deepwiki: "https://deepwiki.com/upstash/context7"
-  codewiki: "https://codewiki.google/github.com/upstash/context7"
-  documentation: "https://context7.com/docs"
+  github: https://github.com/upstash/context7
+  deepwiki: https://deepwiki.com/upstash/context7
+  codewiki: https://codewiki.google/github.com/upstash/context7
+  documentation: https://context7.com/docs
 relationships:
-  parent: "Model Context Protocol"
+  parent: Model Context Protocol
   children: []
   related_tools:
-    - "Cursor"
-    - "Claude Code"
+    - Cursor
+    - Claude Code
 ---
+
+
+
 
 # **Context7 調査レポート**
 

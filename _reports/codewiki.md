@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Code Wiki 調査レポート"
-tool_name: "Code Wiki"
-tool_reading: "コードウィキ"
-category: "ドキュメント/ナレッジ"
-developer: "Google"
-official_site: "https://codewiki.google/"
-date: "2026-02-14"
-last_updated: "2026-02-14"
+title: Code Wiki 調査レポート
+tool_name: Code Wiki
+tool_reading: コードウィキ
+category: ドキュメント/ナレッジ
+developer: Google
+official_site: https://codewiki.google/
+date: '2026-02-14'
+last_updated: '2026-02-14'
 tags:
-  - "AI"
-  - "ドキュメント生成"
-  - "開発者ツール"
-  - "Gemini"
-  - "Google"
-  - "ナレッジベース"
-  - "コード解析"
-description: "GitHubリポジトリのコードを解析し、常に最新の状態に保たれたドキュメント（Wiki）を自動生成するGoogleのAIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Gemini
+  - Google
+  - コード解析
+  - ドキュメント生成
+  - ナレッジベース
+  - 開発者ツール
+description: GitHubリポジトリのコードを解析し、常に最新の状態に保たれたドキュメント（Wiki）を自動生成するGoogleのAIツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (Public Preview)"
+  starting_price: 無料 (Public Preview)
   target_users:
-    - "開発者"
-    - "OSSコントリビューター"
-    - "チームリーダー"
-  latest_highlight: "2026年2月にGemini CLI拡張機能のユーザビリティ向上を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - OSSコントリビューター
+    - チームリーダー
+  latest_highlight: 2026年2月にGemini CLI拡張機能のユーザビリティ向上を実施
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "コード変更に追従してドキュメントを自動更新する機能が画期的"
+      reason: コード変更に追従してドキュメントを自動更新する機能が画期的
     - point: 5
-      reason: "Geminiを活用した対話型インターフェースが強力で、コード理解を深めることができる"
+      reason: Geminiを活用した対話型インターフェースが強力で、コード理解を深めることができる
     - point: 5
-      reason: "アーキテクチャ図やクラス図などのダイアグラム自動生成による可視化機能"
+      reason: アーキテクチャ図やクラス図などのダイアグラム自動生成による可視化機能
   minus_points:
     - point: -3
-      reason: "プライベートリポジトリ対応（CLI拡張）が現在はウェイトリスト制"
-  summary: "「ドキュメントの陳腐化」という長年の課題を解決する強力なツール。Googleのエコシステムとの統合も期待できる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: プライベートリポジトリ対応（CLI拡張）が現在はウェイトリスト制
+  summary: 「ドキュメントの陳腐化」という長年の課題を解決する強力なツール。Googleのエコシステムとの統合も期待できる。
 links:
-  documentation: "https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/"
+  documentation: https://developers.googleblog.com/introducing-code-wiki-accelerating-your-code-understanding/
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "DeepWiki"
-    - "DeepWiki-Open"
-    - "Notion"
-    - "GitHub Copilot"
+    - DeepWiki
+    - DeepWiki-Open
+    - Notion
+    - GitHub Copilot
 ---
+
+
+
 
 # **Code Wiki 調査レポート**
 

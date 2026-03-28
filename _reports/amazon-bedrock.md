@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Amazon Bedrock 調査レポート"
-tool_name: "Amazon Bedrock"
-tool_reading: "アマゾン ベッドロック"
-category: "AI開発基盤"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/bedrock/"
-date: "2026-03-26"
-last_updated: "2026-03-26"
+title: Amazon Bedrock 調査レポート
+tool_name: Amazon Bedrock
+tool_reading: アマゾン ベッドロック
+category: AI開発基盤
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/bedrock/
+date: '2026-03-26'
+last_updated: '2026-03-26'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "クラウド"
-  - "API"
-description: "Amazon Bedrockは、主要AI企業の多様な基盤モデル（FM）を単一API経由で提供する、AWSのフルマネージドサービスです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - API
+  - クラウド
+  - 大規模言語モデル
+  - 生成AI
+description: Amazon Bedrockは、主要AI企業の多様な基盤モデル（FM）を単一API経由で提供する、AWSのフルマネージドサービスです。
 quick_summary:
-  has_free_plan: false  # 永続的な無料プランなし（一部トライアルあり）
+  has_free_plan: false
   is_oss: false
-  starting_price: "従量課金"
+  starting_price: 従量課金
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-    - "エンタープライズ"
-  latest_highlight: "2026年3月にNVIDIA Nemotron 3 SuperやNova Forge SDK、Claude 3.7 Sonnetなどの最新モデル・機能が追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエンジニア
+    - エンタープライズ
+  latest_highlight: 2026年3月にNVIDIA Nemotron 3 SuperやNova Forge SDK、Claude 3.7 Sonnetなどの最新モデル・機能が追加
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "多様な主要モデルを選択でき、特定ベンダーへの依存を回避できる"
+      reason: 多様な主要モデルを選択でき、特定ベンダーへの依存を回避できる
     - point: 8
-      reason: "AWSの堅牢なセキュリティとエコシステム連携はエンタープライズ用途に最適"
+      reason: AWSの堅牢なセキュリティとエコシステム連携はエンタープライズ用途に最適
     - point: 5
-      reason: "Agents機能により、自律的なタスク実行アプリケーションを容易に構築できる"
+      reason: Agents機能により、自律的なタスク実行アプリケーションを容易に構築できる
   minus_points:
     - point: -3
-      reason: "料金体系がモデルやリージョン毎に異なり複雑"
+      reason: 料金体系がモデルやリージョン毎に異なり複雑
     - point: -2
-      reason: "各社の最新モデルが利用可能になるまでにタイムラグが生じることがある"
-  summary: "豊富なモデル選択肢とAWS連携が強みのエンタープライズ向けAI開発基盤だが、料金体系の複雑さに注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 各社の最新モデルが利用可能になるまでにタイムラグが生じることがある
+  summary: 豊富なモデル選択肢とAWS連携が強みのエンタープライズ向けAI開発基盤だが、料金体系の複雑さに注意が必要。
 links:
-  documentation: "https://docs.aws.amazon.com/bedrock/"
+  documentation: https://docs.aws.amazon.com/bedrock/
 relationships:
   children:
-    - "Amazon Bedrock AgentCore Runtime"
+    - Amazon Bedrock AgentCore Runtime
   related_tools:
-    - "Vertex AI Studio"
-    - "ChatGPT"
-    - "Dify"
-    - "Hugging Face"
-    - "LangChain"
-    - "さくらのAI"
+    - Vertex AI Studio
+    - ChatGPT
+    - Dify
+    - Hugging Face
+    - LangChain
+    - さくらのAI
+    - Strands Agents
 ---
+
+
+
 
 # **Amazon Bedrock 調査レポート**
 

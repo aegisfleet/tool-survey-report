@@ -1,70 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Datadog 調査レポート"
-tool_name: "Datadog"
-tool_reading: "データドッグ"
-category: "監視/可観測性"
-developer: "Datadog, Inc."
-official_site: "https://www.datadoghq.com/"
-date: "2025-10-25"
-last_updated: "2026-02-04"
+title: Datadog 調査レポート
+tool_name: Datadog
+tool_reading: データドッグ
+category: 監視/可観測性
+developer: Datadog, Inc.
+official_site: https://www.datadoghq.com/
+date: '2025-10-25'
+last_updated: '2026-02-04'
 tags:
-  - "SaaS"
-  - "監視"
-  - "オブザーバビリティ"
-  - "APM"
-  - "ログ管理"
-  - "セキュリティ"
-  - "DevOps"
-  - "AI"
-description: "Datadogは、クラウド時代のアプリケーション向けに、サーバー、データベース、ツール、サービスを監視するSaaSベースの統合監視・オブザーバビリティプラットフォームです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - APM
+  - DevOps
+  - SaaS
+  - オブザーバビリティ
+  - セキュリティ
+  - ログ管理
+  - 監視
+description: Datadogは、クラウド時代のアプリケーション向けに、サーバー、データベース、ツール、サービスを監視するSaaSベースの統合監視・オブザーバビリティプラットフォームです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "SRE"
-    - "開発者"
-  latest_highlight: "LLMアプリケーションの包括的監視とセキュリティ保護（AI Guard）機能を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - SRE
+    - 開発者
+  latest_highlight: LLMアプリケーションの包括的監視とセキュリティ保護（AI Guard）機能を強化
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "インフラ、APM、ログ、セキュリティ、そしてAI監視までを単一で提供する統合プラットフォームとしての完成度が非常に高い"
+      reason: インフラ、APM、ログ、セキュリティ、そしてAI監視までを単一で提供する統合プラットフォームとしての完成度が非常に高い
     - point: 5
-      reason: "1,000以上の豊富なインテグレーションに対応し、既存環境への導入が容易"
+      reason: 1,000以上の豊富なインテグレーションに対応し、既存環境への導入が容易
     - point: 5
-      reason: "AI(Bits AI)や機械学習(Watchdog)を活用した高度な分析・自動化機能が充実している"
+      reason: AI(Bits AI)や機械学習(Watchdog)を活用した高度な分析・自動化機能が充実している
     - point: 3
-      reason: "AI GuardやLLM Observabilityなど、生成AI時代のニーズに迅速に対応している"
+      reason: AI GuardやLLM Observabilityなど、生成AI時代のニーズに迅速に対応している
   minus_points:
     - point: -3
-      reason: "多機能な反面、料金体系が製品ごとに細分化されており、コスト見積もりが複雑になりがち"
+      reason: 多機能な反面、料金体系が製品ごとに細分化されており、コスト見積もりが複雑になりがち
     - point: -2
-      reason: "全ての機能を使いこなすにはクエリ言語などの学習が必要な場合がある"
-  summary: "クラウドネイティブ環境における監視・オブザーバビリティのデファクトスタンダードであり、AI時代への適応も最も進んでいるが、コスト管理には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 全ての機能を使いこなすにはクエリ言語などの学習が必要な場合がある
+  summary: クラウドネイティブ環境における監視・オブザーバビリティのデファクトスタンダードであり、AI時代への適応も最も進んでいるが、コスト管理には注意が必要。
 links:
-  documentation: "https://docs.datadoghq.com/"
+  documentation: https://docs.datadoghq.com/
 relationships:
   related_tools:
-    - "Kibana"
-    - "Splunk"
-    - "Splunk AppDynamics"
-    - "New Relic"
-    - "Grafana"
-    - "Amazon OpenSearch Service"
-    - "Kubernetes"
+    - Kibana
+    - Splunk
+    - Splunk AppDynamics
+    - New Relic
+    - Grafana
+    - Amazon OpenSearch Service
+    - Kubernetes
 ---
+
+
+
 
 # **Datadog 調査レポート**
 

@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "TensorFlow 調査レポート"
-tool_name: "TensorFlow"
-tool_reading: "テンソルフロー"
-category: "AI開発基盤"
-developer: "Google"
-official_site: "https://www.tensorflow.org/"
-date: "2026-02-08"
-last_updated: "2026-02-08"
+title: TensorFlow 調査レポート
+tool_name: TensorFlow
+tool_reading: テンソルフロー
+category: AI開発基盤
+developer: Google
+official_site: https://www.tensorflow.org/
+date: '2026-02-08'
+last_updated: '2026-02-08'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "機械学習"
-  - "ディープラーニング"
-  - "MLOps"
-  - "Python"
-description: "Googleが開発した、機械学習モデルの構築・トレーニング・デプロイのための包括的なエンドツーエンドのオープンソースプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - MLOps
+  - Python
+  - オープンソース
+  - ディープラーニング
+  - 機械学習
+description: Googleが開発した、機械学習モデルの構築・トレーニング・デプロイのための包括的なエンドツーエンドのオープンソースプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "機械学習エンジニア"
-    - "データサイエンティスト"
-    - "AI研究者"
-  latest_highlight: "2025年8月にTensorFlow 2.20をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 機械学習エンジニア
+    - データサイエンティスト
+    - AI研究者
+  latest_highlight: 2025年8月にTensorFlow 2.20をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "本番環境へのデプロイ機能やMLOpsエコシステムが非常に充実している"
+      reason: 本番環境へのデプロイ機能やMLOpsエコシステムが非常に充実している
     - point: 5
-      reason: "モバイルからサーバーまで対応するクロスプラットフォーム性が高い"
+      reason: モバイルからサーバーまで対応するクロスプラットフォーム性が高い
     - point: 3
-      reason: "巨大なコミュニティと豊富なドキュメントが存在する"
+      reason: 巨大なコミュニティと豊富なドキュメントが存在する
   minus_points:
     - point: -3
-      reason: "PyTorchと比較して学習コストが高く、APIが複雑な場合がある"
-  summary: "本番運用やスケーラビリティを重視するプロジェクトに最適な、最も成熟したMLプラットフォームの一つ"
-
-# 【任意項目】該当するもののみ記載
+      reason: PyTorchと比較して学習コストが高く、APIが複雑な場合がある
+  summary: 本番運用やスケーラビリティを重視するプロジェクトに最適な、最も成熟したMLプラットフォームの一つ
 links:
-  github: "https://github.com/tensorflow/tensorflow"
-  deepwiki: "https://deepwiki.com/tensorflow/tensorflow"
-  codewiki: "https://codewiki.google/github.com/tensorflow/tensorflow"
-  documentation: "https://www.tensorflow.org/api_docs"
+  github: https://github.com/tensorflow/tensorflow
+  deepwiki: https://deepwiki.com/tensorflow/tensorflow
+  codewiki: https://codewiki.google/github.com/tensorflow/tensorflow
+  documentation: https://www.tensorflow.org/api_docs
 relationships:
   related_tools:
-    - "Hugging Face"
+    - Hugging Face
 ---
+
+
+
 
 # **TensorFlow 調査レポート**
 

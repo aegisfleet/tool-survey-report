@@ -1,60 +1,60 @@
 ---
-title: "Jujutsu (jj) 調査レポート"
-tool_name: "Jujutsu"
-tool_reading: "ジュジュツ"
-category: "バージョン管理"
-developer: "Open Source Community (Martin von Zweigbergk)"
-official_site: "https://jj-vcs.dev/"
-date: "2026-01-28"
-last_updated: "2026-03-20"
+title: Jujutsu (jj) 調査レポート
+tool_name: Jujutsu
+tool_reading: ジュジュツ
+category: バージョン管理
+developer: Open Source Community (Martin von Zweigbergk)
+official_site: https://jj-vcs.dev/
+date: '2026-01-28'
+last_updated: '2026-03-20'
 tags:
-  - "バージョン管理"
-  - "Rust"
-  - "CLI"
-  - "Git互換"
-  - "開発者ツール"
-description: "Gitと互換性がありながら、よりシンプルで強力な操作性を実現した次世代のバージョン管理システム"
-
+  - CLI
+  - Git互換
+  - Rust
+  - バージョン管理
+  - 開発者ツール
+description: Gitと互換性がありながら、よりシンプルで強力な操作性を実現した次世代のバージョン管理システム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェア開発者"
-    - "Gitユーザー"
-    - "大規模プロジェクト開発者"
-  latest_highlight: "2026年3月にv0.39.0をリリース"
-  update_frequency: "高"
-
+    - ソフトウェア開発者
+    - Gitユーザー
+    - 大規模プロジェクト開発者
+  latest_highlight: 2026年3月にv0.39.0をリリース
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Git互換でありながら、コンフリクト解決やUndo機能などGitの弱点を克服している"
+      reason: Git互換でありながら、コンフリクト解決やUndo機能などGitの弱点を克服している
     - point: 5
-      reason: "完全無料のオープンソースソフトウェアで、開発が非常に活発"
+      reason: 完全無料のオープンソースソフトウェアで、開発が非常に活発
     - point: 5
-      reason: "ワーキングコピーの自動コミットや強力な履歴操作により、安全かつ効率的な開発が可能"
+      reason: ワーキングコピーの自動コミットや強力な履歴操作により、安全かつ効率的な開発が可能
   minus_points:
     - point: -2
-      reason: "Gitとは異なる概念（ブランチレスなど）があり、学習コストが多少かかる"
+      reason: Gitとは異なる概念（ブランチレスなど）があり、学習コストが多少かかる
     - point: -1
-      reason: "GUIツールの選択肢がまだ少ない"
-  summary: "Gitの強力な代替手段として、特にコンフリクト解決や履歴操作において優れた体験を提供する次世代VCS。"
-
+      reason: GUIツールの選択肢がまだ少ない
+  summary: Gitの強力な代替手段として、特にコンフリクト解決や履歴操作において優れた体験を提供する次世代VCS。
 links:
-  github: "https://github.com/jj-vcs/jj"
-  codewiki: "https://codewiki.google/github.com/jj-vcs/jj"
-  deepwiki: "https://deepwiki.com/jj-vcs/jj"
-  documentation: "https://docs.jj-vcs.dev/"
+  github: https://github.com/jj-vcs/jj
+  codewiki: https://codewiki.google/github.com/jj-vcs/jj
+  deepwiki: https://deepwiki.com/jj-vcs/jj
+  documentation: https://docs.jj-vcs.dev/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "GitHub"
-    - "GitLab"
+    - GitHub
+    - GitLab
 ---
+
+
+
 
 # **Jujutsu (jj) 調査レポート**
 

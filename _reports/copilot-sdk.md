@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitHub Copilot SDK 調査レポート"
-tool_name: "GitHub Copilot SDK"
-tool_reading: "ギットハブ コパイロット エスディーケー"
-category: "AI開発基盤"
-developer: "GitHub (Microsoft)"
-official_site: "https://github.com/github/copilot-sdk"
-date: "2026-03-02"
-last_updated: "2026-03-02"
+title: GitHub Copilot SDK 調査レポート
+tool_name: GitHub Copilot SDK
+tool_reading: ギットハブ コパイロット エスディーケー
+category: AI開発基盤
+developer: GitHub (Microsoft)
+official_site: https://github.com/github/copilot-sdk
+date: '2026-03-02'
+last_updated: '2026-03-02'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "自律型"
-  - "オープンソース"
-description: "GitHub Copilotのエージェント機能を任意のアプリケーションに組み込むためのSDK。Python, TypeScript, Go, .NETに対応。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 自律型
+  - 開発者ツール
+description: GitHub Copilotのエージェント機能を任意のアプリケーションに組み込むためのSDK。Python, TypeScript, Go, .NETに対応。
 quick_summary:
   has_free_plan: false
   is_oss: true
-  starting_price: "$10/月"
+  starting_price: $10/月
   target_users:
-    - "開発者"
-    - "ツール製作者"
-    - "企業内開発チーム"
-  latest_highlight: "2026年1月にv0.1.18リリース。Python, TS, Go, .NETをサポート"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - ツール製作者
+    - 企業内開発チーム
+  latest_highlight: 2026年1月にv0.1.18リリース。Python, TS, Go, .NETをサポート
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Copilotの強力なモデル(GPT-5等)とセキュリティ基盤をそのまま利用可能"
+      reason: Copilotの強力なモデル(GPT-5等)とセキュリティ基盤をそのまま利用可能
     - point: 4
-      reason: "MCP (Model Context Protocol) に標準対応し拡張性が高い"
+      reason: MCP (Model Context Protocol) に標準対応し拡張性が高い
     - point: 3
-      reason: "主要4言語 (TS, Python, Go, .NET) をサポート"
+      reason: 主要4言語 (TS, Python, Go, .NET) をサポート
   minus_points:
     - point: -3
-      reason: "利用にはCopilotの有料サブスクリプションが必須"
+      reason: 利用にはCopilotの有料サブスクリプションが必須
     - point: -2
-      reason: "現在はテクニカルプレビュー段階で仕様変更の可能性がある"
-  summary: "Copilotの頭脳を自作アプリに組み込める画期的なSDK。エンタープライズグレードのセキュリティと最新モデルが魅力。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現在はテクニカルプレビュー段階で仕様変更の可能性がある
+  summary: Copilotの頭脳を自作アプリに組み込める画期的なSDK。エンタープライズグレードのセキュリティと最新モデルが魅力。
 links:
-  github: "https://github.com/github/copilot-sdk"
-  deepwiki: "https://deepwiki.com/github/copilot-sdk"
-  codewiki: "https://codewiki.google/github.com/github/copilot-sdk"
-  documentation: "https://github.com/github/copilot-sdk/tree/main/docs"
+  github: https://github.com/github/copilot-sdk
+  deepwiki: https://deepwiki.com/github/copilot-sdk
+  codewiki: https://codewiki.google/github.com/github/copilot-sdk
+  documentation: https://github.com/github/copilot-sdk/tree/main/docs
 relationships:
-  parent: "GitHub Copilot"
+  parent: GitHub Copilot
   related_tools:
-    - "LangChain"
-    - "Dify"
+    - LangChain
+    - Dify
 ---
+
+
+
 
 # **GitHub Copilot SDK 調査レポート**
 

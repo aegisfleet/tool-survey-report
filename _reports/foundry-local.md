@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Foundry Local 調査レポート"
-tool_name: "Foundry Local"
-tool_reading: "ファウンドリ ローカル"
-category: "AI開発基盤"
-developer: "Microsoft"
-official_site: "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic"
-date: "2025-12-07"
-last_updated: "2026-03-19"
+title: Foundry Local 調査レポート
+tool_name: Foundry Local
+tool_reading: ファウンドリ ローカル
+category: AI開発基盤
+developer: Microsoft
+official_site: https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic
+date: '2025-12-07'
+last_updated: '2026-03-19'
 tags:
-  - "AI"
-  - "ローカルAI"
-  - "開発者ツール"
-  - "推論"
-  - "Microsoft"
-description: "Microsoftが提供するオンデバイスAI推論ソリューション。ローカルハードウェア上でAIモデルを実行し、クラウドコスト削減とデータプライバシー保護を実現する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Microsoft
+  - ローカルAI
+  - 推論
+  - 開発者ツール
+description: Microsoftが提供するオンデバイスAI推論ソリューション。ローカルハードウェア上でAIモデルを実行し、クラウドコスト削減とデータプライバシー保護を実現する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AI開発者"
-    - "組み込みエンジニア"
-  latest_highlight: "2026年1月にCLI/SDKリファレンスが更新されPublic Previewが進行中"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AI開発者
+    - 組み込みエンジニア
+  latest_highlight: 2026年1月にCLI/SDKリファレンスが更新されPublic Previewが進行中
+  update_frequency: 高
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ローカル実行による高いコスト効率とプライバシー保護"
+      reason: ローカル実行による高いコスト効率とプライバシー保護
     - point: 5
-      reason: "Microsoftの強力なエコシステム（Azure AI Foundry）との連携"
+      reason: Microsoftの強力なエコシステム（Azure AI Foundry）との連携
     - point: 3
-      reason: "NPUアクセラレーションによるハードウェア最適化"
+      reason: NPUアクセラレーションによるハードウェア最適化
   minus_points:
     - point: -2
-      reason: "パフォーマンスがローカルハードウェアのスペックに大きく依存する"
+      reason: パフォーマンスがローカルハードウェアのスペックに大きく依存する
     - point: -2
-      reason: "Public Preview段階であり、機能や仕様が変更される可能性がある"
-  summary: "コストとプライバシーに強みを持つ開発者向けローカル推論ツールだが、ハードウェア依存とプレビュー段階である点に注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Public Preview段階であり、機能や仕様が変更される可能性がある
+  summary: コストとプライバシーに強みを持つ開発者向けローカル推論ツールだが、ハードウェア依存とプレビュー段階である点に注意が必要。
 links:
-  documentation: "https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic"
+  documentation: https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic
 relationships:
   related_tools:
-    - "Ollama"
-    - "LM Studio"
+    - Ollama
+    - LM Studio
 ---
+
+
+
 
 # **Foundry Local 調査レポート**
 

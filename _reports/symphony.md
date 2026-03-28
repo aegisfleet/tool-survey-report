@@ -1,55 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Symphony 調査レポート"
-tool_name: "Symphony"
-tool_reading: "シンフォニー"
-category: "自律型AIエージェント"
-developer: "OpenAI"
-official_site: "https://github.com/openai/symphony"
-date: "2026-03-06"
-last_updated: "2026-03-06"
+title: Symphony 調査レポート
+tool_name: Symphony
+tool_reading: シンフォニー
+category: 自律型AIエージェント
+developer: OpenAI
+official_site: https://github.com/openai/symphony
+date: '2026-03-06'
+last_updated: '2026-03-06'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "プロジェクト管理連携"
-description: "コーディングエージェントの作業を自律的な実行に変換し、エンジニアがタスク単位で管理できるようにするオーケストレーションツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - プロジェクト管理連携
+description: コーディングエージェントの作業を自律的な実行に変換し、エンジニアがタスク単位で管理できるようにするオーケストレーションツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発チーム"
-    - "ソフトウェアエンジニア"
-  latest_highlight: "Elixir/OTPに基づくリファレンス実装を試験的に公開"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発チーム
+    - ソフトウェアエンジニア
+  latest_highlight: Elixir/OTPに基づくリファレンス実装を試験的に公開
+  update_frequency: 不定期
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Linear等のトラッカーと連動し、タスク駆動でエージェントを自律動作させる先進的なアプローチ"
+      reason: Linear等のトラッカーと連動し、タスク駆動でエージェントを自律動作させる先進的なアプローチ
     - point: 5
-      reason: "Elixir/OTPによる堅牢なプロセス管理とワークスペースの分離"
+      reason: Elixir/OTPによる堅牢なプロセス管理とワークスペースの分離
   minus_points:
-    - point: -0
-      reason: "なし"
-  summary: "AIコーディングエージェントの管理を自動化し、タスクの進捗ベースでの管理を実現する強力なプロトタイプ"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: なし
+  summary: AIコーディングエージェントの管理を自動化し、タスクの進捗ベースでの管理を実現する強力なプロトタイプ
 links:
-  github: "https://github.com/openai/symphony"
-  deepwiki: "https://deepwiki.com/openai/symphony"
-  codewiki: "https://codewiki.google/github.com/openai/symphony"
+  github: https://github.com/openai/symphony
+  deepwiki: https://deepwiki.com/openai/symphony
+  codewiki: https://codewiki.google/github.com/openai/symphony
 relationships:
   related_tools:
-    - "OpenAI Codex CLI"
-    - "Linear"
+    - OpenAI Codex CLI
+    - Linear
 ---
+
+
+
 
 # **Symphony 調査レポート**
 

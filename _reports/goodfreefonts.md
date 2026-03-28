@@ -1,52 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "いいフォント 調査レポート"
-tool_name: "いいフォント"
-tool_reading: "イイフォント"
-category: "デザインツール"
-developer: "いいフォント運営"
-official_site: "https://goodfreefonts.com/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: いいフォント 調査レポート
+tool_name: いいフォント
+tool_reading: イイフォント
+category: デザインツール
+developer: いいフォント運営
+official_site: https://goodfreefonts.com/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "フォント"
-  - "無料ツール"
-  - "デザインツール"
-description: "「いいフォント」は、商用利用可能なフリーフォントをカテゴリー別に検索・比較できるリンク集サイトです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - デザインツール
+  - フォント
+  - 無料ツール
+description: 「いいフォント」は、商用利用可能なフリーフォントをカテゴリー別に検索・比較できるリンク集サイトです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "デザイナー"
-    - "クリエイター"
-    - "動画編集者"
-  latest_highlight: "「えれがんと平成明朝」「わんぱくルイカ」などの新しいフォント情報が追加されました"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - デザイナー
+    - クリエイター
+    - 動画編集者
+  latest_highlight: 「えれがんと平成明朝」「わんぱくルイカ」などの新しいフォント情報が追加されました
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "カテゴリーやイメージワードからの検索が非常に使いやすい"
+      reason: カテゴリーやイメージワードからの検索が非常に使いやすい
     - point: 5
-      reason: "商用利用可能なフォントに特化したタグがあり実用的"
+      reason: 商用利用可能なフォントに特化したタグがあり実用的
     - point: 5
-      reason: "掲載されているフォント数が豊富で、最新のフォントも随時追加されている"
+      reason: 掲載されているフォント数が豊富で、最新のフォントも随時追加されている
   minus_points: []
-  summary: "目的に合ったフリーフォントを効率よく探せる、クリエイターにとって非常に有用なサイトです。"
-
-# 【任意項目】該当するもののみ記載
+  summary: 目的に合ったフリーフォントを効率よく探せる、クリエイターにとって非常に有用なサイトです。
 relationships:
   related_tools:
-    - "Figma"
-    - "Canva"
+    - Figma
+    - Canva
 ---
+
+
+
 
 # **いいフォント 調査レポート**
 

@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Remotion 調査レポート"
-tool_name: "Remotion"
-tool_reading: "リモーション"
-category: "動画/メディア"
-developer: "Remotion AG"
-official_site: "https://www.remotion.dev/"
-date: "2026-02-23"
-last_updated: "2026-02-23"
+title: Remotion 調査レポート
+tool_name: Remotion
+tool_reading: リモーション
+category: 動画/メディア
+developer: Remotion AG
+official_site: https://www.remotion.dev/
+date: '2026-02-23'
+last_updated: '2026-02-23'
 tags:
-  - "開発者ツール"
-  - "React"
-  - "TypeScript"
-  - "動画生成"
-  - "プログラマブルビデオ"
-description: "Reactを使用して動画をプログラムで作成できるフレームワーク。Web技術を活用し、動的でデータ駆動型の動画コンテンツを生成・自動化可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - React
+  - TypeScript
+  - プログラマブルビデオ
+  - 動画生成
+  - 開発者ツール
+description: Reactを使用して動画をプログラムで作成できるフレームワーク。Web技術を活用し、動的でデータ駆動型の動画コンテンツを生成・自動化可能。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 / $25/月"
+  starting_price: 無料 / $25/月
   target_users:
-    - "Web開発者"
-    - "スタートアップ"
-    - "SaaS企業"
-  latest_highlight: "2026年2月にWeb Renderer向けVercelパッケージとAmazon Linux 2023対応を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Web開発者
+    - スタートアップ
+    - SaaS企業
+  latest_highlight: 2026年2月にWeb Renderer向けVercelパッケージとAmazon Linux 2023対応を追加
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "React/TypeScriptの知識をそのまま活かして高品質な動画を作成できる"
+      reason: React/TypeScriptの知識をそのまま活かして高品質な動画を作成できる
     - point: 5
-      reason: "Gitによるバージョン管理やCI/CDとの統合が可能で、動画制作の自動化に最適"
+      reason: Gitによるバージョン管理やCI/CDとの統合が可能で、動画制作の自動化に最適
     - point: 5
-      reason: "Web RendererやLambdaを活用した、サーバーサイドおよびクライアントサイドでの動的生成が可能"
+      reason: Web RendererやLambdaを活用した、サーバーサイドおよびクライアントサイドでの動的生成が可能
     - point: 3
-      reason: "個人や小規模チーム（3人以下）は商用利用を含めて無料で利用可能"
+      reason: 個人や小規模チーム（3人以下）は商用利用を含めて無料で利用可能
   minus_points:
-    - point: -0
-      reason: ""
-  summary: "React開発者にとって最強の動画生成ツール。動的な動画生成や自動化において圧倒的な強みを持つ。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: ''
+  summary: React開発者にとって最強の動画生成ツール。動的な動画生成や自動化において圧倒的な強みを持つ。
 links:
-  github: "https://github.com/remotion-dev/remotion"
-  deepwiki: "https://deepwiki.com/remotion-dev/remotion"
-  documentation: "https://www.remotion.dev/docs/"
+  github: https://github.com/remotion-dev/remotion
+  deepwiki: https://deepwiki.com/remotion-dev/remotion
+  documentation: https://www.remotion.dev/docs/
 relationships:
-  parent: "React"
+  parent: React
   children: []
   related_tools:
-    - "DaVinci Resolve"
-    - "AviUtl"
+    - DaVinci Resolve
+    - AviUtl
 ---
+
+
+
 
 # **Remotion 調査レポート**
 

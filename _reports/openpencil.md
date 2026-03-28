@@ -1,52 +1,55 @@
 ---
-title: "OpenPencil 調査レポート"
-tool_name: "OpenPencil"
-tool_reading: "オープンペンシル"
-category: "デザインツール"
-developer: "OpenPencil"
-official_site: "https://openpencil.dev/"
-date: "2026-03-15"
-last_updated: "2026-03-15"
+title: OpenPencil 調査レポート
+tool_name: OpenPencil
+tool_reading: オープンペンシル
+category: デザインツール
+developer: OpenPencil
+official_site: https://openpencil.dev/
+date: '2026-03-15'
+last_updated: '2026-03-15'
 tags:
-  - "デザインツール"
-  - "オープンソース"
-  - "AI"
-description: "クローズドなFigmaの代替となる、オープンソースのAIネイティブデザインエディター。"
+  - AI
+  - オープンソース
+  - デザインツール
+description: クローズドなFigmaの代替となる、オープンソースのAIネイティブデザインエディター。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "UI/UXデザイナー"
-    - "開発者"
-  latest_highlight: "AIネイティブでFigma互換性を持つオープンソースツールとして登場"
-  update_frequency: "高"
+    - UI/UXデザイナー
+    - 開発者
+  latest_highlight: AIネイティブでFigma互換性を持つオープンソースツールとして登場
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、ベンダーロックインがない"
+      reason: オープンソースであり、ベンダーロックインがない
     - point: 5
-      reason: "ネイティブでFigmaファイル(.fig)の読み書きに対応"
+      reason: ネイティブでFigmaファイル(.fig)の読み書きに対応
     - point: 3
-      reason: "75のツールを持つ組み込みチャットやMCPサーバーによる拡張性が高い"
+      reason: 75のツールを持つ組み込みチャットやMCPサーバーによる拡張性が高い
   minus_points:
     - point: -5
-      reason: "Figmaほどの巨大なエコシステムや事例はまだ少ない"
+      reason: Figmaほどの巨大なエコシステムや事例はまだ少ない
     - point: -3
-      reason: "開発中であり安定性やサポートに懸念がある可能性"
-  summary: "Figmaのベンダーロックインに課題を感じる開発者・デザイナーにとって強力な選択肢となるオープンソースのデザインエディタ。"
+      reason: 開発中であり安定性やサポートに懸念がある可能性
+  summary: Figmaのベンダーロックインに課題を感じる開発者・デザイナーにとって強力な選択肢となるオープンソースのデザインエディタ。
 links:
-  github: "https://github.com/open-pencil/open-pencil"
-  deepwiki: "https://deepwiki.com/open-pencil/open-pencil"
-  codewiki: "https://codewiki.google/github.com/open-pencil/open-pencil"
+  github: https://github.com/open-pencil/open-pencil
+  deepwiki: https://deepwiki.com/open-pencil/open-pencil
+  codewiki: https://codewiki.google/github.com/open-pencil/open-pencil
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Figma"
+    - Figma
 ---
+
+
+
 
 # **OpenPencil 調査レポート**
 

@@ -1,61 +1,63 @@
 ---
-title: "GitHub Actions 調査レポート"
-tool_name: "GitHub Actions"
-tool_reading: "ギットハブ アクションズ"
-category: "CI/CD"
-developer: "GitHub"
-official_site: "https://github.com/features/actions"
-date: "2026-01-17"
-last_updated: "2026-02-16"
+title: GitHub Actions 調査レポート
+tool_name: GitHub Actions
+tool_reading: ギットハブ アクションズ
+category: CI/CD
+developer: GitHub
+official_site: https://github.com/features/actions
+date: '2026-01-17'
+last_updated: '2026-02-16'
 tags:
-  - "CI/CD"
-  - "自動化"
-  - "DevOps"
-  - "クラウド"
-  - "SaaS"
-description: "GitHubリポジトリに統合されたCI/CDプラットフォーム。ビルド、テスト、デプロイなどの開発ワークフローをコード（YAML）で定義し自動化する。"
-
+  - CI/CD
+  - DevOps
+  - SaaS
+  - クラウド
+  - 自動化
+description: GitHubリポジトリに統合されたCI/CDプラットフォーム。ビルド、テスト、デプロイなどの開発ワークフローをコード（YAML）で定義し自動化する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "スタートアップ"
-  latest_highlight: "2026年1月よりホステッドランナーの料金を最大39%引き下げ"
-  update_frequency: "高"
-
+    - 開発者
+    - DevOpsエンジニア
+    - スタートアップ
+  latest_highlight: 2026年1月よりホステッドランナーの料金を最大39%引き下げ
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "GitHubとの完全な統合と豊富なMarketplaceエコシステム"
+      reason: GitHubとの完全な統合と豊富なMarketplaceエコシステム
     - point: 3
-      reason: "2025年のアーキテクチャ刷新によるパフォーマンス向上と料金引き下げ"
+      reason: 2025年のアーキテクチャ刷新によるパフォーマンス向上と料金引き下げ
     - point: 3
-      reason: "OIDCやArtifact Attestationsなどモダンなセキュリティ機能"
+      reason: OIDCやArtifact Attestationsなどモダンなセキュリティ機能
   minus_points:
     - point: -3
-      reason: "複雑なパイプラインにおけるYAML記述の肥大化（YAML地獄）"
+      reason: 複雑なパイプラインにおけるYAML記述の肥大化（YAML地獄）
     - point: -3
-      reason: "Advanced Securityなど高度な機能のコスト負担"
-  summary: "GitHubユーザーにとって最適なCI/CDツールであり、機能・コスト・性能のバランスが大きく改善された"
-
+      reason: Advanced Securityなど高度な機能のコスト負担
+  summary: GitHubユーザーにとって最適なCI/CDツールであり、機能・コスト・性能のバランスが大きく改善された
 links:
-  github: "https://github.com/actions/runner"
-  codewiki: "https://codewiki.google/github.com/actions/runner"
-  documentation: "https://docs.github.com/ja/actions"
-
+  github: https://github.com/actions/runner
+  codewiki: https://codewiki.google/github.com/actions/runner
+  documentation: https://docs.github.com/ja/actions
 relationships:
-  parent: "GitHub"
-  children: []
+  parent: GitHub
+  children:
+    - act
+    - Agentic Workflows
   related_tools:
-    - "Jenkins"
-    - "GitLab CI/CD"
-    - "act"
+    - Jenkins
+    - GitLab CI/CD
+    - act
+    - Vercel Agent Skills
 ---
+
+
+
 
 # **GitHub Actions 調査レポート**
 

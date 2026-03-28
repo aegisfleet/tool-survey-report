@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Seedance 2.0 (SeaDance AI) 調査レポート"
-tool_name: "Seedance 2.0"
-tool_reading: "シーダンス ニーテンゼロ (シーダンス エーアイ)"
-category: "動画/メディア"
-developer: "Seedance AI"
-official_site: "https://seadanceai.com/"
-date: "2026-02-11"
-last_updated: "2026-02-11"
+title: Seedance 2.0 (SeaDance AI) 調査レポート
+tool_name: Seedance 2.0
+tool_reading: シーダンス ニーテンゼロ (シーダンス エーアイ)
+category: 動画/メディア
+developer: Seedance AI
+official_site: https://seadanceai.com/
+date: '2026-02-11'
+last_updated: '2026-02-11'
 tags:
-  - "生成AI"
-  - "AI"
-  - "画像生成"
-  - "動画生成"
-  - "FLUX.2"
-  - "Sora"
-description: "FLUX.2、Veo3.1、Sora 2 proなど複数の最先端AIモデルを統合した、画像および動画生成のためのオールインワンプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - FLUX.2
+  - Sora
+  - 動画生成
+  - 生成AI
+  - 画像生成
+description: FLUX.2、Veo3.1、Sora 2 proなど複数の最先端AIモデルを統合した、画像および動画生成のためのオールインワンプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "クリエイター"
-    - "マーケター"
-    - "コンテンツ制作者"
-  latest_highlight: "FLUX.2、Sora 2 pro、Kling 3.0など最新モデルを統合"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クリエイター
+    - マーケター
+    - コンテンツ制作者
+  latest_highlight: FLUX.2、Sora 2 pro、Kling 3.0など最新モデルを統合
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "FLUX.2やSora 2 proなど、複数の強力なモデルを一つのプラットフォームで利用可能"
+      reason: FLUX.2やSora 2 proなど、複数の強力なモデルを一つのプラットフォームで利用可能
     - point: 5
-      reason: "無料プランでも商用利用権が付与されており、ビジネス利用に親和性が高い"
+      reason: 無料プランでも商用利用権が付与されており、ビジネス利用に親和性が高い
     - point: 5
-      reason: "最大4メガピクセルの高解像度出力に対応し、アップスケーリングなしで印刷等に利用可能"
+      reason: 最大4メガピクセルの高解像度出力に対応し、アップスケーリングなしで印刷等に利用可能
   minus_points:
     - point: 0
-      reason: ""
-  summary: "複数の最新AIモデルを統合し、画像から動画まで幅広く対応する強力なプラットフォーム。商用利用も可能で、クリエイターにとって非常に魅力的な選択肢。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: 複数の最新AIモデルを統合し、画像から動画まで幅広く対応する強力なプラットフォーム。商用利用も可能で、クリエイターにとって非常に魅力的な選択肢。
 links:
-  documentation: "https://seadanceai.com/"
+  documentation: https://seadanceai.com/
 relationships:
   related_tools:
-    - "Sora"
-    - "Stable Diffusion"
+    - Sora
+    - Stable Diffusion
 ---
+
+
+
 
 # **Seedance 2.0 (SeaDance AI) 調査レポート**
 

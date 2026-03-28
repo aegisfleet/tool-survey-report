@@ -1,51 +1,51 @@
 ---
-title: "POPOPO 調査レポート"
-tool_name: "POPOPO"
-tool_reading: "ポポポ"
-category: "コミュニケーション"
-developer: "POPOPO株式会社"
-official_site: "https://www.popopo.com/ja/"
-date: "2026-03-19"
-last_updated: "2026-03-19"
+title: POPOPO 調査レポート
+tool_name: POPOPO
+tool_reading: ポポポ
+category: コミュニケーション
+developer: POPOPO株式会社
+official_site: https://www.popopo.com/ja/
+date: '2026-03-19'
+last_updated: '2026-03-19'
 tags:
-  - "SaaS"
-  - "モバイル開発"
-  - "メタバース"
-  - "ライブ配信"
-description: "カメラを使わずにリアルタイムにカメラカットを自動生成するテレビ通話・ライブ配信アプリ"
-
+  - SaaS
+  - メタバース
+  - モバイル開発
+  - ライブ配信
+description: カメラを使わずにリアルタイムにカメラカットを自動生成するテレビ通話・ライブ配信アプリ
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般ユーザー"
-    - "配信者"
-  latest_highlight: "不明"
-  update_frequency: "中"
-
+    - 一般ユーザー
+    - 配信者
+  latest_highlight: 不明
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "カメラ不要で映画のような演出を自動生成する独自機能"
+      reason: カメラ不要で映画のような演出を自動生成する独自機能
     - point: 3
-      reason: "そのまま配信できる手軽さ"
+      reason: そのまま配信できる手軽さ
     - point: 2
-      reason: "完全日本語対応（日本発のサービス）"
+      reason: 完全日本語対応（日本発のサービス）
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "独自の「ホロスーツ」や「カメラカット自動生成」により、顔出し不要で手軽に高品質な通話・配信が楽しめるアプリ"
-
+      reason: 特になし
+  summary: 独自の「ホロスーツ」や「カメラカット自動生成」により、顔出し不要で手軽に高品質な通話・配信が楽しめるアプリ
 links:
-  documentation: "https://help.popopo.com/hc/ja-jp"
+  documentation: https://help.popopo.com/hc/ja-jp
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools: []
 ---
+
+
+
 
 # **POPOPO 調査レポート**
 

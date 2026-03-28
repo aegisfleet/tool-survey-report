@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Playwright CLI 調査レポート"
-tool_name: "Playwright CLI"
-tool_reading: "プレイライト シーエルアイ"
-category: "テスト/QA"
-developer: "Microsoft"
-official_site: "https://github.com/microsoft/playwright-cli"
-date: "2026-02-26"
-last_updated: "2026-02-26"
+title: Playwright CLI 調査レポート
+tool_name: Playwright CLI
+tool_reading: プレイライト シーエルアイ
+category: テスト/QA
+developer: Microsoft
+official_site: https://github.com/microsoft/playwright-cli
+date: '2026-02-26'
+last_updated: '2026-02-26'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "テスト自動化"
-  - "CLI"
-  - "エージェント"
-description: "AIコーディングエージェント（Claude Code, GitHub Copilotなど）がブラウザ操作を行うための軽量で効率的なCLIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CLI
+  - エージェント
+  - オープンソース
+  - テスト自動化
+description: AIコーディングエージェント（Claude Code, GitHub Copilotなど）がブラウザ操作を行うための軽量で効率的なCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年2月にリリースされたv0.1.1でAIスキルとしての安定性が向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエージェント開発者
+    - QAエンジニア
+  latest_highlight: 2026年2月にリリースされたv0.1.1でAIスキルとしての安定性が向上
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "トークン効率を重視した設計により、AIエージェントとの連携が非常にスムーズ"
+      reason: トークン効率を重視した設計により、AIエージェントとの連携が非常にスムーズ
     - point: 5
-      reason: "Microsoft公式による提供で信頼性が高く、Playwright本体との互換性が完璧"
+      reason: Microsoft公式による提供で信頼性が高く、Playwright本体との互換性が完璧
     - point: 5
-      reason: "セッション永続化機能により、ログイン状態を維持した操作が容易"
+      reason: セッション永続化機能により、ログイン状態を維持した操作が容易
   minus_points:
     - point: 0
-      reason: "特になし（CLIツールとしての完成度が高い）"
-  summary: "AIエージェントにブラウザ操作能力を付与するための最適解であり、MCPサーバーよりも軽量で実用的。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（CLIツールとしての完成度が高い）
+  summary: AIエージェントにブラウザ操作能力を付与するための最適解であり、MCPサーバーよりも軽量で実用的。
 links:
-  github: "https://github.com/microsoft/playwright-cli"
-  deepwiki: "https://deepwiki.com/microsoft/playwright-cli"
-  codewiki: "https://codewiki.google/github.com/microsoft/playwright"
-  documentation: "https://github.com/microsoft/playwright-cli#readme"
+  github: https://github.com/microsoft/playwright-cli
+  deepwiki: https://deepwiki.com/microsoft/playwright-cli
+  codewiki: https://codewiki.google/github.com/microsoft/playwright
+  documentation: https://github.com/microsoft/playwright-cli#readme
 relationships:
-  parent: "Playwright"
+  parent: Playwright
   children: []
   related_tools:
-    - "Selenium"
-    - "Claude"
-    - "GitHub Copilot"
-    - "GitHub Copilot CLI"
+    - Selenium
+    - Claude
+    - GitHub Copilot
+    - GitHub Copilot CLI
 ---
+
+
+
 
 # **Playwright CLI 調査レポート**
 

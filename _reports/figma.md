@@ -1,64 +1,65 @@
 ---
-title: "Figma 調査レポート"
-tool_name: "Figma"
-tool_reading: "フィグマ"
-category: "デザインツール"
-developer: "Figma, Inc."
-official_site: "https://www.figma.com/"
-date: "2026-02-19"
-last_updated: "2026-02-19"
+title: Figma 調査レポート
+tool_name: Figma
+tool_reading: フィグマ
+category: デザインツール
+developer: Figma, Inc.
+official_site: https://www.figma.com/
+date: '2026-02-19'
+last_updated: '2026-02-19'
 tags:
-  - "デザインツール"
-  - "UI/UXデザイン"
-  - "プロトタイピング"
-  - "コラボレーション"
-  - "ノーコード"
-  - "SaaS"
-description: "ブラウザベースでリアルタイムコラボレーションが可能なUI/UXデザインツールのデファクトスタンダード。"
-
+  - SaaS
+  - UI/UXデザイン
+  - コラボレーション
+  - デザインツール
+  - ノーコード
+  - プロトタイピング
+description: ブラウザベースでリアルタイムコラボレーションが可能なUI/UXデザインツールのデファクトスタンダード。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$15/月"
+  starting_price: $15/月
   target_users:
-    - "UI/UXデザイナー"
-    - "プロダクトマネージャー"
-    - "エンジニア"
-  latest_highlight: "2025年末にAIサイト作成機能（Figma Sites）やMCPサーバー対応を発表"
-  update_frequency: "高"
-
+    - UI/UXデザイナー
+    - プロダクトマネージャー
+    - エンジニア
+  latest_highlight: 2025年末にAIサイト作成機能（Figma Sites）やMCPサーバー対応を発表
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "業界標準ツールとして圧倒的なシェアとエコシステムを持つ"
+      reason: 業界標準ツールとして圧倒的なシェアとエコシステムを持つ
     - point: 5
-      reason: "リアルタイムコラボレーションとDev Modeによる開発連携が強力"
+      reason: リアルタイムコラボレーションとDev Modeによる開発連携が強力
     - point: 5
-      reason: "Figma AIによる自動化とFigma Sitesによる公開機能の拡充"
+      reason: Figma AIによる自動化とFigma Sitesによる公開機能の拡充
     - point: 3
-      reason: "日本語UIおよびサポートが充実しており、学習コストが比較的低い"
+      reason: 日本語UIおよびサポートが充実しており、学習コストが比較的低い
   minus_points:
     - point: -3
-      reason: "Dev Modeの有償化やプラン改定によりコストが増加傾向"
+      reason: Dev Modeの有償化やプラン改定によりコストが増加傾向
     - point: -2
-      reason: "高機能化に伴い、初学者にはインターフェースが複雑化している"
-  summary: "価格改定によるコスト増はあるが、AI機能や開発連携の強化により「プロダクト開発プラットフォーム」としての地位は不動。"
-
+      reason: 高機能化に伴い、初学者にはインターフェースが複雑化している
+  summary: 価格改定によるコスト増はあるが、AI機能や開発連携の強化により「プロダクト開発プラットフォーム」としての地位は不動。
 links:
-  documentation: "https://help.figma.com/hc/ja"
+  documentation: https://help.figma.com/hc/ja
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Google Stitch"
-    - "Miro"
-    - "Canva"
-    - "Affinity"
-    - "GIMP"
-    - "OpenPencil"
+    - Google Stitch
+    - Miro
+    - Canva
+    - Affinity
+    - GIMP
+    - OpenPencil
+    - いいフォント
 ---
+
+
+
 
 # **Figma 調査レポート**
 

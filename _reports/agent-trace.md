@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Agent Trace 調査レポート"
-tool_name: "Agent Trace"
-tool_reading: "エージェントトレース"
-category: "開発者ツール"
-developer: "オープンコミュニティ (Cursor主導)"
-official_site: "https://agent-trace.dev/"
-date: "2026-03-10"
-last_updated: "2026-03-10"
+title: Agent Trace 調査レポート
+tool_name: Agent Trace
+tool_reading: エージェントトレース
+category: 開発者ツール
+developer: オープンコミュニティ (Cursor主導)
+official_site: https://agent-trace.dev/
+date: '2026-03-10'
+last_updated: '2026-03-10'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "開発者ツール"
-  - "エージェント"
-  - "コーディング支援"
-description: "AIが生成したコードと人間が作成したコードを区別・追跡するためのベンダーニュートラルなオープン仕様。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - コーディング支援
+  - 開発者ツール
+description: AIが生成したコードと人間が作成したコードを区別・追跡するためのベンダーニュートラルなオープン仕様。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIツール開発者"
-  latest_highlight: "2026年1月にRFCとしてVersion 0.1.0が公開"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIツール開発者
+  latest_highlight: 2026年1月にRFCとしてVersion 0.1.0が公開
+  update_frequency: 不定期
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "多数のAIコーディングツールやプラットフォームの賛同と連携"
+      reason: 多数のAIコーディングツールやプラットフォームの賛同と連携
     - point: 5
-      reason: "ベンダーニュートラルで拡張可能なオープンな仕様"
+      reason: ベンダーニュートラルで拡張可能なオープンな仕様
     - point: 5
-      reason: "既存のVCSと連動する実用的なリファレンス実装の提供"
+      reason: 既存のVCSと連動する実用的なリファレンス実装の提供
   minus_points: []
-  summary: "AIコーディング時代のコードの来歴管理を解決する強力なオープン標準。"
-
-# 【任意項目】該当するもののみ記載
+  summary: AIコーディング時代のコードの来歴管理を解決する強力なオープン標準。
 links:
-  github: "https://github.com/cursor/agent-trace"
-  deepwiki: "https://deepwiki.com/cursor/agent-trace"
+  github: https://github.com/cursor/agent-trace
+  deepwiki: https://deepwiki.com/cursor/agent-trace
 relationships:
   related_tools:
-    - "Cursor"
-    - "Cline"
-    - "Google Jules"
-    - "OpenCode"
+    - Cursor
+    - Cline
+    - Google Jules
+    - OpenCode
 ---
+
+
+
 
 # **Agent Trace 調査レポート**
 

@@ -1,58 +1,58 @@
 ---
-title: "Ubuntu 調査レポート"
-tool_name: "Ubuntu"
-tool_reading: "ウブントゥ"
-category: "インフラ/クラウド"
-developer: "Canonical Ltd."
-official_site: "https://ubuntu.com/"
-date: "2026-03-02"
-last_updated: "2026-03-02"
+title: Ubuntu 調査レポート
+tool_name: Ubuntu
+tool_reading: ウブントゥ
+category: インフラ/クラウド
+developer: Canonical Ltd.
+official_site: https://ubuntu.com/
+date: '2026-03-02'
+last_updated: '2026-03-02'
 tags:
-  - "オープンソース"
-  - "Linux"
-  - "OS"
-  - "クラウド"
-  - "DevOps"
-description: "世界で最も広く利用されているLinuxディストリビューション。デスクトップからクラウド、IoTまであらゆる環境に対応する。"
-
+  - DevOps
+  - Linux
+  - OS
+  - オープンソース
+  - クラウド
+description: 世界で最も広く利用されているLinuxディストリビューション。デスクトップからクラウド、IoTまであらゆる環境に対応する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "システム管理者"
-    - "企業"
-  latest_highlight: "LTSサポート期間がUbuntu Pro Legacy Supportにより最大15年に延長"
-  update_frequency: "高"
-
+    - 開発者
+    - システム管理者
+    - 企業
+  latest_highlight: LTSサポート期間がUbuntu Pro Legacy Supportにより最大15年に延長
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "クラウド、コンテナ、AI開発におけるデファクトスタンダード"
+      reason: クラウド、コンテナ、AI開発におけるデファクトスタンダード
     - point: 5
-      reason: "5年のLTSと最大15年の延長サポートによる長期安定性"
+      reason: 5年のLTSと最大15年の延長サポートによる長期安定性
     - point: 5
-      reason: "圧倒的なコミュニティとドキュメントの充実度"
+      reason: 圧倒的なコミュニティとドキュメントの充実度
     - point: 5
-      reason: "ハードウェア互換性が高く、導入が容易"
+      reason: ハードウェア互換性が高く、導入が容易
   minus_points:
     - point: -3
-      reason: "Snapパッケージの強制や起動速度の問題"
+      reason: Snapパッケージの強制や起動速度の問題
     - point: -2
-      reason: "商用サービスへの誘導が一部で強まっている"
-  summary: "Linuxの標準として、初心者からエンタープライズまであらゆるニーズに応える最強のOS"
-
+      reason: 商用サービスへの誘導が一部で強まっている
+  summary: Linuxの標準として、初心者からエンタープライズまであらゆるニーズに応える最強のOS
 links:
-  github: "https://github.com/canonical"
-  documentation: "https://ubuntu.com/server/docs/"
+  github: https://github.com/canonical
+  documentation: https://ubuntu.com/server/docs/
 relationships:
   related_tools:
-    - "Docker"
-    - "Wine"
+    - Docker
+    - Wine
 ---
+
+
+
 # **Ubuntu 調査レポート**
 
 ## **1. 基本情報**

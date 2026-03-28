@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Miro 調査レポート"
-tool_name: "Miro"
-tool_reading: "ミロ"
-category: "デザインツール"
-developer: "Miro"
-official_site: "https://miro.com/"
-date: "2026-01-26"
-last_updated: "2026-03-04"
+title: Miro 調査レポート
+tool_name: Miro
+tool_reading: ミロ
+category: デザインツール
+developer: Miro
+official_site: https://miro.com/
+date: '2026-01-26'
+last_updated: '2026-03-04'
 tags:
-  - "コラボレーション"
-  - "SaaS"
-  - "プロジェクト管理"
-  - "アジャイル開発"
-  - "開発者ツール"
-description: "チームでのブレインストーミングから複雑なシステム設計、プロジェクト管理まで、あらゆるコラボレーションを視覚的に実現するイノベーションワークスペース。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - アジャイル開発
+  - コラボレーション
+  - プロジェクト管理
+  - 開発者ツール
+description: チームでのブレインストーミングから複雑なシステム設計、プロジェクト管理まで、あらゆるコラボレーションを視覚的に実現するイノベーションワークスペース。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$8/月"
+  starting_price: $8/月
   target_users:
-    - "プロダクトマネージャー"
-    - "エンジニア"
-    - "UX/UIデザイナー"
-  latest_highlight: "2026年1月にプロトタイプ機能のコネクタ表示切替や詳細なピクセル指定機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - プロダクトマネージャー
+    - エンジニア
+    - UX/UIデザイナー
+  latest_highlight: 2026年1月にプロトタイプ機能のコネクタ表示切替や詳細なピクセル指定機能を追加
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 8
-      reason: "オンラインホワイトボードの枠を超え、高度な作図やプロトタイプ作成まで可能な多機能性"
+      reason: オンラインホワイトボードの枠を超え、高度な作図やプロトタイプ作成まで可能な多機能性
     - point: 5
-      reason: "Miroverseコミュニティによる5,000以上の豊富なテンプレート"
+      reason: Miroverseコミュニティによる5,000以上の豊富なテンプレート
     - point: 5
-      reason: "Jira, Slack, Microsoft 365など250以上のツールとの強力な連携"
+      reason: Jira, Slack, Microsoft 365など250以上のツールとの強力な連携
     - point: 4
-      reason: "Miro AIによる図の自動生成やマインドマップ作成などの支援機能"
+      reason: Miro AIによる図の自動生成やマインドマップ作成などの支援機能
   minus_points:
     - point: -2
-      reason: "大規模なボードでは動作が重くなる場合がある"
+      reason: 大規模なボードでは動作が重くなる場合がある
     - point: -2
-      reason: "多機能ゆえに、単純なホワイトボードとして使うには学習コストがやや高い"
+      reason: 多機能ゆえに、単純なホワイトボードとして使うには学習コストがやや高い
     - point: -1
-      reason: "オフライン環境では利用できない"
-  summary: "圧倒的な機能性とエコシステムを持つ、チームコラボレーションツールの決定版。単なるホワイトボード以上の価値を提供する。"
-
-# 【任意項目】該当するもののみ記載
+      reason: オフライン環境では利用できない
+  summary: 圧倒的な機能性とエコシステムを持つ、チームコラボレーションツールの決定版。単なるホワイトボード以上の価値を提供する。
 links:
-  documentation: "https://help.miro.com/hc/en-us"
+  documentation: https://help.miro.com/hc/en-us
 relationships:
   parent: null
   children: []
   related_tools:
-    - "ワスレナイ"
-    - "Figma"
-    - "Canva"
-    - "draw.io"
+    - ワスレナイ
+    - Figma
+    - Canva
+    - draw.io (diagrams.net)
 ---
+
+
+
 
 # **Miro 調査レポート**
 

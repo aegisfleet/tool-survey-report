@@ -1,57 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Niji Journey 調査レポート"
-tool_name: "Niji Journey"
-tool_reading: "ニジジャーニー"
-category: "生成AI"
-developer: "Spellbrush & Midjourney"
-official_site: "https://nijijourney.com/"
-date: "2026-01-27"
-last_updated: "2026-03-11"
+title: Niji Journey 調査レポート
+tool_name: Niji Journey
+tool_reading: ニジジャーニー
+category: 生成AI
+developer: Spellbrush & Midjourney
+official_site: https://nijijourney.com/
+date: '2026-01-27'
+last_updated: '2026-03-11'
 tags:
-  - "生成AI"
-  - "AI"
-  - "SaaS"
-description: "MidjourneyとSpellbrushが共同開発した、アニメ・マンガ・ゲームスタイルに特化した画像生成AIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - 生成AI
+description: MidjourneyとSpellbrushが共同開発した、アニメ・マンガ・ゲームスタイルに特化した画像生成AIツール。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$4.99/月 (アプリのみ)"
+  starting_price: $4.99/月 (アプリのみ)
   target_users:
-    - "イラストレーター"
-    - "アニメファン"
-    - "ゲーム開発者"
-  latest_highlight: "2026年2月に「Style Codes（参照画像なしでのスタイル指定）」機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - イラストレーター
+    - アニメファン
+    - ゲーム開発者
+  latest_highlight: 2026年2月に「Style Codes（参照画像なしでのスタイル指定）」機能を追加
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 8
-      reason: "アニメ・マンガスタイルにおける圧倒的な生成品質"
+      reason: アニメ・マンガスタイルにおける圧倒的な生成品質
     - point: 5
-      reason: "モバイルアプリ版限定の安価なMiniプランの存在"
+      reason: モバイルアプリ版限定の安価なMiniプランの存在
     - point: 4
-      reason: "日本語プロンプトに標準対応（アプリ版など）"
+      reason: 日本語プロンプトに標準対応（アプリ版など）
   minus_points:
     - point: -5
-      reason: "PC版（Discord）には無料トライアルがほぼない"
-  summary: "アニメ調の画像生成においてはトップクラスの品質を誇る。アプリ版の機能拡充により、より手軽に利用可能になった。"
-
-# 【任意項目】該当するもののみ記載
+      reason: PC版（Discord）には無料トライアルがほぼない
+  summary: アニメ調の画像生成においてはトップクラスの品質を誇る。アプリ版の機能拡充により、より手軽に利用可能になった。
 links:
-  documentation: "https://nijijourney.com/help-center"
+  documentation: https://nijijourney.com/help-center
 relationships:
-  parent: "Midjourney"
+  parent: null
   children: []
   related_tools:
-    - "Stable Diffusion"
+    - Stable Diffusion
 ---
+
+
+
 
 # **Niji Journey 調査レポート**
 

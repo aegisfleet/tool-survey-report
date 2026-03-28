@@ -1,49 +1,51 @@
 ---
-title: "OBS Studio 調査レポート"
-tool_name: "OBS Studio"
-tool_reading: "オービーエス スタジオ"
-category: "動画/メディア"
-developer: "Lain / OBS Studio Contributors"
-official_site: "https://obsproject.com/"
-date: "2026-03-10"
-last_updated: "2026-03-10"
+title: OBS Studio 調査レポート
+tool_name: OBS Studio
+tool_reading: オービーエス スタジオ
+category: 動画/メディア
+developer: Lain / OBS Studio Contributors
+official_site: https://obsproject.com/
+date: '2026-03-10'
+last_updated: '2026-03-10'
 tags:
-  - "オープンソース"
-  - "録画"
-  - "ライブ配信"
-description: "ビデオ録画とライブストリーミングのための無料のオープンソースソフトウェア"
-
+  - オープンソース
+  - ライブ配信
+  - 録画
+description: ビデオ録画とライブストリーミングのための無料のオープンソースソフトウェア
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ストリーマー"
-    - "動画制作者"
-    - "教育者"
-  latest_highlight: "OBS Studio 32.0.4 リリース"
-  update_frequency: "高"
-
+    - ストリーマー
+    - 動画制作者
+    - 教育者
+  latest_highlight: OBS Studio 32.0.4 リリース
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "完全無料で機能制限がない"
+      reason: 完全無料で機能制限がない
     - point: 10
-      reason: "オープンソースで拡張性が高い"
+      reason: オープンソースで拡張性が高い
     - point: 5
-      reason: "クロスプラットフォーム対応（Windows, macOS, Linux）"
+      reason: クロスプラットフォーム対応（Windows, macOS, Linux）
   minus_points: []
-  summary: "無料でありながら商用ソフトに匹敵する機能を持つ、ストリーミング・録画ツールのデファクトスタンダード"
-
+  summary: 無料でありながら商用ソフトに匹敵する機能を持つ、ストリーミング・録画ツールのデファクトスタンダード
 links:
-  github: "https://github.com/obsproject/obs-studio"
-  deepwiki: "https://deepwiki.com/obsproject/obs-studio"
-  documentation: "https://github.com/obsproject/obs-studio/wiki"
+  github: https://github.com/obsproject/obs-studio
+  deepwiki: https://deepwiki.com/obsproject/obs-studio
+  documentation: https://github.com/obsproject/obs-studio/wiki
 relationships:
   related_tools: []
+  children:
+    - OBS Background Removal
 ---
+
+
+
 
 # **OBS Studio 調査レポート**
 

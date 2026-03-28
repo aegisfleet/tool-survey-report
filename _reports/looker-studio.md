@@ -1,61 +1,57 @@
 ---
-# 【必須項目】
-title: "Looker Studio 調査レポート"
-tool_name: "Looker Studio"
-tool_reading: "ルッカースタジオ"
-category: "BIツール"
-developer: "Google"
-official_site: "https://cloud.google.com/looker-studio?hl=ja"
-date: "2026-03-04"
-last_updated: "2026-03-04"
+title: Looker Studio 調査レポート
+tool_name: Looker Studio
+tool_reading: ルッカースタジオ
+category: BIツール
+developer: Google
+official_site: https://cloud.google.com/looker-studio?hl=ja
+date: '2026-03-04'
+last_updated: '2026-03-04'
 tags:
-  - "BI"
-  - "データ分析"
-  - "データ可視化"
-  - "無料ツール"
-  - "Google Cloud"
-description: "様々なデータソースを接続し、直感的な操作でインタラクティブなダッシュボードやレポートを作成できる無料のビジネスインテリジェンスツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - BI
+  - Google Cloud
+  - データ分析
+  - データ可視化
+  - 無料ツール
+description: 様々なデータソースを接続し、直感的な操作でインタラクティブなダッシュボードやレポートを作成できる無料のビジネスインテリジェンスツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "マーケター"
-    - "データアナリスト"
-    - "ビジネスリーダー"
-  latest_highlight: "2026年1月: 強化されたConversational Analyticsの提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - マーケター
+    - データアナリスト
+    - ビジネスリーダー
+  latest_highlight: '2026年1月: 強化されたConversational Analyticsの提供開始'
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料で強力なBI機能が利用できる圧倒的なコストパフォーマンス"
+      reason: 完全無料で強力なBI機能が利用できる圧倒的なコストパフォーマンス
     - point: 4
-      reason: "Google AnalyticsやGoogle広告などGoogleエコシステムとのシームレスな連携"
+      reason: Google AnalyticsやGoogle広告などGoogleエコシステムとのシームレスな連携
     - point: 3
-      reason: "直感的で使いやすいドラッグ＆ドロップインターフェース"
+      reason: 直感的で使いやすいドラッグ＆ドロップインターフェース
     - point: 3
-      reason: "豊富なサードパーティ製コネクタによる拡張性"
+      reason: 豊富なサードパーティ製コネクタによる拡張性
   minus_points:
     - point: -2
-      reason: "大規模データや複雑なクエリ処理時にパフォーマンスが低下する場合がある"
-  summary: "Googleエコシステムを利用している組織にとって最強の無料BIツールだが、高度なデータ処理にはエンタープライズ向けツールやLooker Studio Proの検討が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: 大規模データや複雑なクエリ処理時にパフォーマンスが低下する場合がある
+  summary: Googleエコシステムを利用している組織にとって最強の無料BIツールだが、高度なデータ処理にはエンタープライズ向けツールやLooker Studio Proの検討が必要
 links:
-  documentation: "https://docs.cloud.google.com/looker/docs/studio"
+  documentation: https://docs.cloud.google.com/looker/docs/studio
 relationships:
-  parent: "Google Cloud"
+  parent: Google Cloud
   related_tools:
-    - "Amazon QuickSight"
-    - "Tableau"
-    - "Google 広告"
+    - Amazon QuickSight
+    - Tableau
+    - Google 広告
 ---
+
+
+
 
 # **Looker Studio 調査レポート**
 

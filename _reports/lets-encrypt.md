@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Let's Encrypt 調査レポート"
-tool_name: "Let's Encrypt"
-tool_reading: "レッツ・エンクリプト"
-category: "CDN/セキュリティ"
-developer: "Internet Security Research Group (ISRG)"
-official_site: "https://letsencrypt.org/"
-date: "2026-02-22"
-last_updated: "2026-02-22"
+title: Let's Encrypt 調査レポート
+tool_name: Let's Encrypt
+tool_reading: レッツ・エンクリプト
+category: CDN/セキュリティ
+developer: Internet Security Research Group (ISRG)
+official_site: https://letsencrypt.org/
+date: '2026-02-22'
+last_updated: '2026-02-22'
 tags:
-  - "オープンソース"
-  - "自動化"
-  - "SSL"
-  - "TLS"
-  - "セキュリティ"
-description: "誰でも無料で利用できる、自動化されたオープンな認証局（CA）"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SSL
+  - TLS
+  - オープンソース
+  - セキュリティ
+  - 自動化
+description: 誰でも無料で利用できる、自動化されたオープンな認証局（CA）
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Webサイト管理者"
-    - "開発者"
-    - "インフラエンジニア"
-  latest_highlight: "2026年1月に短期間証明書とIPアドレス証明書の一般提供を開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Webサイト管理者
+    - 開発者
+    - インフラエンジニア
+  latest_highlight: 2026年1月に短期間証明書とIPアドレス証明書の一般提供を開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "完全無料で信頼性の高いSSL/TLS証明書を発行できる"
+      reason: 完全無料で信頼性の高いSSL/TLS証明書を発行できる
     - point: 5
-      reason: "ACMEプロトコルによる発行・更新の完全自動化が可能"
+      reason: ACMEプロトコルによる発行・更新の完全自動化が可能
     - point: 3
-      reason: "7億以上のWebサイトで利用されており、広範な信頼を得ている"
-  minus_points:  # 減点項目（各項目: 点数と理由）
+      reason: 7億以上のWebサイトで利用されており、広範な信頼を得ている
+  minus_points:
     - point: -3
-      reason: "証明書の有効期限が90日と短く、自動更新の設定が必須"
-  summary: "コストをかけずにWebサイトをHTTPS化するためのデファクトスタンダード"
-
-# 【任意項目】該当するもののみ記載
+      reason: 証明書の有効期限が90日と短く、自動更新の設定が必須
+  summary: コストをかけずにWebサイトをHTTPS化するためのデファクトスタンダード
 links:
-  github: "https://github.com/letsencrypt"
-  documentation: "https://letsencrypt.org/docs/"
+  github: https://github.com/letsencrypt
+  documentation: https://letsencrypt.org/docs/
 relationships:
   related_tools:
-    - "Cloudflare"
+    - Cloudflare
 ---
+
+
+
 
 # **Let's Encrypt 調査レポート**
 

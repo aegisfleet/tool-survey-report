@@ -1,54 +1,56 @@
 ---
-title: "Brainbase 調査レポート"
-tool_name: "Brainbase"
-tool_reading: "ブレインベース"
-category: "自律型AIエージェント"
-developer: "Brainbase Labs Inc."
-official_site: "https://usebrainbase.com"
-date: "2026-01-29"
-last_updated: "2026-03-26"
+title: Brainbase 調査レポート
+tool_name: Brainbase
+tool_reading: ブレインベース
+category: 自律型AIエージェント
+developer: Brainbase Labs Inc.
+official_site: https://usebrainbase.com
+date: '2026-01-29'
+last_updated: '2026-03-26'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "自動化"
-  - "開発者ツール"
-description: "企業のワークフローを自動化するAIエージェント（AI Workforce）を構築・展開・管理するためのエンタープライズ向けプラットフォーム。"
+  - AI
+  - エージェント
+  - 自動化
+  - 自律型
+  - 開発者ツール
+description: 企業のワークフローを自動化するAIエージェント（AI Workforce）を構築・展開・管理するためのエンタープライズ向けプラットフォーム。
 layout: report
-
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ (従量課金)"
+  starting_price: 要問い合わせ (従量課金)
   target_users:
-    - "エンタープライズ"
-    - "開発者"
-    - "IT部門"
-  latest_highlight: "AIエージェント構築言語「Based」による信頼性の高いワークフロー構築"
-  update_frequency: "高"
+    - エンタープライズ
+    - 開発者
+    - IT部門
+  latest_highlight: AIエージェント構築言語「Based」による信頼性の高いワークフロー構築
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "決定論的な動作を保証する専用言語「Based」を採用"
+      reason: 決定論的な動作を保証する専用言語「Based」を採用
     - point: 4
-      reason: "電話、SMS、メール、チャットなどオムニチャネルに展開可能"
+      reason: 電話、SMS、メール、チャットなどオムニチャネルに展開可能
     - point: 3
-      reason: "VSCode拡張機能など開発者向けツールが充実"
+      reason: VSCode拡張機能など開発者向けツールが充実
   minus_points:
     - point: -3
-      reason: "日本語ドキュメントやサポートが現状未確認"
+      reason: 日本語ドキュメントやサポートが現状未確認
     - point: -2
-      reason: "料金体系が公開されておらず、問い合わせが必要"
-  summary: "企業の基幹業務にも適用可能な信頼性の高いAIエージェント構築基盤。専用言語の習得は必要だが、複雑なフローを制御できる点が魅力。"
+      reason: 料金体系が公開されておらず、問い合わせが必要
+  summary: 企業の基幹業務にも適用可能な信頼性の高いAIエージェント構築基盤。専用言語の習得は必要だが、複雑なフローを制御できる点が魅力。
 links:
-  documentation: "https://docs.usebrainbase.com/introduction"
+  documentation: https://docs.usebrainbase.com/introduction
 relationships:
   related_tools:
-    - "LangChain"
-    - "Dify"
+    - LangChain
+    - Dify
 ---
+
+
+
 
 # **Brainbase 調査レポート**
 

@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Database Rider 調査レポート"
-tool_name: "Database Rider"
-tool_reading: "データベースライダー"
-category: "テスト/QA"
-developer: "Rafael M. Pestano and Community"
-official_site: "https://database-rider.github.io/database-rider/"
-date: "2026-01-27"
-last_updated: "2026-03-05"
+title: Database Rider 調査レポート
+tool_name: Database Rider
+tool_reading: データベースライダー
+category: テスト/QA
+developer: Rafael M. Pestano and Community
+official_site: https://database-rider.github.io/database-rider/
+date: '2026-01-27'
+last_updated: '2026-03-05'
 tags:
-  - "Java"
-  - "JUnit"
-  - "テスト自動化"
-  - "オープンソース"
-  - "開発者ツール"
-description: "DBUnitとJUnitを統合し、アノテーションベースでデータベーステストのデータセット管理を簡素化するJava向けオープンソースライブラリ。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - JUnit
+  - Java
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: DBUnitとJUnitを統合し、アノテーションベースでデータベーステストのデータセット管理を簡素化するJava向けオープンソースライブラリ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Java開発者"
-    - "QAエンジニア"
-  latest_highlight: "2024年7月のv1.44.0リリース以降、安定版として稼働"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Java開発者
+    - QAエンジニア
+  latest_highlight: 2024年7月のv1.44.0リリース以降、安定版として稼働
+  update_frequency: 低
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 8
-      reason: "DBUnitの複雑さを解消し、アノテーションで直感的に操作できるため生産性が非常に高い。"
+      reason: DBUnitの複雑さを解消し、アノテーションで直感的に操作できるため生産性が非常に高い。
     - point: 5
-      reason: "JUnit 5, Spring Boot, QuarkusなどモダンなJavaエコシステムとの連携が充実している。"
+      reason: JUnit 5, Spring Boot, QuarkusなどモダンなJavaエコシステムとの連携が充実している。
     - point: 3
-      reason: "オープンソースで活発にメンテナンスされており、導入障壁が低い。"
+      reason: オープンソースで活発にメンテナンスされており、導入障壁が低い。
     - point: 2
-      reason: "多様なデータセット形式（YAML, JSON, XML等）に対応し、テストデータ管理が柔軟。"
+      reason: 多様なデータセット形式（YAML, JSON, XML等）に対応し、テストデータ管理が柔軟。
   minus_points:
     - point: -3
-      reason: "Javaエコシステムに特化しており、他言語プロジェクトでは利用できない。"
+      reason: Javaエコシステムに特化しており、他言語プロジェクトでは利用できない。
     - point: -2
-      reason: "日本語の情報源が少なく、学習は公式ドキュメント（英語）が中心となる。"
+      reason: 日本語の情報源が少なく、学習は公式ドキュメント（英語）が中心となる。
     - point: -5
-      reason: "最終更新から1年以上経過しており、将来的なメンテナンス継続性に懸念がある。"
-  summary: "Javaにおけるデータベーステストの生産性を劇的に向上させる強力なライブラリだが、直近の更新頻度が低い点に留意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 最終更新から1年以上経過しており、将来的なメンテナンス継続性に懸念がある。
+  summary: Javaにおけるデータベーステストの生産性を劇的に向上させる強力なライブラリだが、直近の更新頻度が低い点に留意が必要。
 links:
-  github: "https://github.com/database-rider/database-rider"
-  deepwiki: "https://deepwiki.com/database-rider/database-rider"
-  documentation: "https://database-rider.github.io/database-rider/"
+  github: https://github.com/database-rider/database-rider
+  deepwiki: https://deepwiki.com/database-rider/database-rider
+  documentation: https://database-rider.github.io/database-rider/
 relationships:
-  parent: "JUnit"
+  parent: JUnit
   related_tools:
-    - "Spring Boot"
+    - Spring Boot
 ---
+
+
+
 
 # **Database Rider 調査レポート**
 

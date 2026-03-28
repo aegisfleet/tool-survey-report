@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitKraken 調査レポート"
-tool_name: "GitKraken"
-tool_reading: "ギットクラーケン"
-category: "開発者ツール"
-developer: "GitKraken"
-official_site: "https://www.gitkraken.com/"
-date: "2026-03-17"
-last_updated: "2026-03-17"
+title: GitKraken 調査レポート
+tool_name: GitKraken
+tool_reading: ギットクラーケン
+category: 開発者ツール
+developer: GitKraken
+official_site: https://www.gitkraken.com/
+date: '2026-03-17'
+last_updated: '2026-03-17'
 tags:
-  - "Git"
-  - "開発者ツール"
-  - "SaaS"
-  - "AI"
-  - "開発環境"
-description: "直感的なUIと強力な可視化機能で開発者のGit操作を支援し、チームコラボレーションを加速させる強力なDevExプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Git
+  - SaaS
+  - 開発環境
+  - 開発者ツール
+description: 直感的なUIと強力な可視化機能で開発者のGit操作を支援し、チームコラボレーションを加速させる強力なDevExプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "開発チーム"
-    - "エンジニアリングリーダー"
-  latest_highlight: "AIエージェント機能「GitKraken AI」やAIを活用した機能(Commit Composer等)の統合"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 開発チーム
+    - エンジニアリングリーダー
+  latest_highlight: AIエージェント機能「GitKraken AI」やAIを活用した機能(Commit Composer等)の統合
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "高度なCommit Graphなど、可視化機能が非常に優れており、Git履歴の直感的な理解を促進する"
+      reason: 高度なCommit Graphなど、可視化機能が非常に優れており、Git履歴の直感的な理解を促進する
     - point: 5
-      reason: "GitLens、CLI、GUIなど幅広いインターフェースを提供し、開発体験(DevEx)を包括的に向上させる"
+      reason: GitLens、CLI、GUIなど幅広いインターフェースを提供し、開発体験(DevEx)を包括的に向上させる
     - point: 5
-      reason: "LaunchpadやCloud Workspacesにより、分散チームのコラボレーションとPR管理を効率化"
+      reason: LaunchpadやCloud Workspacesにより、分散チームのコラボレーションとPR管理を効率化
     - point: 3
-      reason: "GitKraken AIによるコミット生成やPR連携が生産性を向上"
+      reason: GitKraken AIによるコミット生成やPR連携が生産性を向上
   minus_points:
     - point: -3
-      reason: "高度なコラボレーション機能やプライベートリポジトリの利用には有償プランが必要"
-  summary: "直感的なGUIと高度なAI機能で、初心者から熟練者までチーム全体のGit体験を劇的に向上させる強力なプラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度なコラボレーション機能やプライベートリポジトリの利用には有償プランが必要
+  summary: 直感的なGUIと高度なAI機能で、初心者から熟練者までチーム全体のGit体験を劇的に向上させる強力なプラットフォーム。
 links:
-  documentation: "https://help.gitkraken.com/"
+  documentation: https://help.gitkraken.com/
 relationships:
   children:
-    - "GitLens"
-    - "Kiro"
+    - GitLens
+    - Kiro
   related_tools:
-    - "Visual Studio Code"
-    - "GitHub"
-    - "GitLab"
+    - Visual Studio Code
+    - GitHub
+    - GitLab
 ---
+
+
+
 
 # **GitKraken 調査レポート**
 

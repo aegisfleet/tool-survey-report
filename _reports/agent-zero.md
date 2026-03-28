@@ -1,57 +1,57 @@
 ---
-title: "Agent Zero 調査レポート"
-tool_name: "Agent Zero"
-tool_reading: "エージェント・ゼロ"
-category: "自律型AIエージェント"
-developer: "Agent Zero, s.r.o."
-official_site: "https://www.agent-zero.ai/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: Agent Zero 調査レポート
+tool_name: Agent Zero
+tool_reading: エージェント・ゼロ
+category: 自律型AIエージェント
+developer: Agent Zero, s.r.o.
+official_site: https://www.agent-zero.ai/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "開発者ツール"
-description: "ユーザーの指示に従ってツールを自ら作成し、PC上の操作を自律的に実行するオープンソースの汎用AIエージェントフレームワーク"
-
+  - エージェント
+  - オープンソース
+  - 自律型
+  - 開発者ツール
+description: ユーザーの指示に従ってツールを自ら作成し、PC上の操作を自律的に実行するオープンソースの汎用AIエージェントフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "研究者"
-    - "データアナリスト"
-  latest_highlight: "2026年2月にSkills機能やGitプロジェクトのサポートを追加（v0.9.8.2）"
-  update_frequency: "高"
-
+    - 開発者
+    - 研究者
+    - データアナリスト
+  latest_highlight: 2026年2月にSkills機能やGitプロジェクトのサポートを追加（v0.9.8.2）
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 6
-      reason: "特定の枠組みに縛られない非常に高い汎用性と、ツール自作能力"
+      reason: 特定の枠組みに縛られない非常に高い汎用性と、ツール自作能力
     - point: 4
-      reason: "オープンソースであり、ローカルLLMや多様なプロバイダと柔軟に連携可能"
+      reason: オープンソースであり、ローカルLLMや多様なプロバイダと柔軟に連携可能
     - point: 3
-      reason: "Web UIと連携したリアルタイムストリーミングや透明性の高さ"
+      reason: Web UIと連携したリアルタイムストリーミングや透明性の高さ
     - point: 3
-      reason: "プロジェクトごとに分離されたコンテキストやメモリダッシュボードなどの実用機能"
+      reason: プロジェクトごとに分離されたコンテキストやメモリダッシュボードなどの実用機能
   minus_points:
     - point: -3
-      reason: "高い自由度と引き換えに、プロンプトエンジニアリングのスキルが要求される"
-  summary: "制約がなく、ユーザーの意図に合わせて自らツールを作成・実行できる強力なOSSエージェントフレームワーク"
-
+      reason: 高い自由度と引き換えに、プロンプトエンジニアリングのスキルが要求される
+  summary: 制約がなく、ユーザーの意図に合わせて自らツールを作成・実行できる強力なOSSエージェントフレームワーク
 links:
-  github: "https://github.com/agent0ai/agent-zero"
-  deepwiki: "https://deepwiki.com/agent0ai/agent-zero"
-  documentation: "https://www.agent-zero.ai/p/docs/"
+  github: https://github.com/agent0ai/agent-zero
+  deepwiki: https://deepwiki.com/agent0ai/agent-zero
+  documentation: https://www.agent-zero.ai/p/docs/
 relationships:
   related_tools:
-    - "Devin"
-    - "OpenHands"
-    - "Jules"
+    - Devin
+    - OpenHands
+    - Google Jules
 ---
+
+
+
 
 # **Agent Zero 調査レポート**
 

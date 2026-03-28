@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "SmartHR 調査レポート"
-tool_name: "SmartHR"
-tool_reading: "スマートエイチアール"
-category: "人事労務"
-developer: "株式会社SmartHR"
-official_site: "https://smarthr.jp/"
-date: "2025-10-24"
-last_updated: "2026-01-31"
+title: SmartHR 調査レポート
+tool_name: SmartHR
+tool_reading: スマートエイチアール
+category: 人事労務
+developer: 株式会社SmartHR
+official_site: https://smarthr.jp/
+date: '2025-10-24'
+last_updated: '2026-01-31'
 tags:
-  - "人事労務"
-  - "タレントマネジメント"
-  - "SaaS"
-  - "人的資本経営"
-description: "労務管理からタレントマネジメントまでを一つのプラットフォームで実現し、組織の生産性向上を支援するクラウド型人事労務ソフト。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - タレントマネジメント
+  - 人事労務
+  - 人的資本経営
+description: 労務管理からタレントマネジメントまでを一つのプラットフォームで実現し、組織の生産性向上を支援するクラウド型人事労務ソフト。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "人事・労務担当者"
-    - "経営者"
-    - "中小企業"
-  latest_highlight: "2026年1月に招待管理機能を追加、2025年11月に人的資本統計機能をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 人事・労務担当者
+    - 経営者
+    - 中小企業
+  latest_highlight: 2026年1月に招待管理機能を追加、2025年11月に人的資本統計機能をリリース
+  update_frequency: 高
 evaluation:
   score: 91
   base_score: 70
   plus_points:
     - point: 8
-      reason: "労務管理からタレントマネジメントまで網羅する非常に豊富な機能"
+      reason: 労務管理からタレントマネジメントまで網羅する非常に豊富な機能
     - point: 7
-      reason: "レビューで圧倒的に評価の高い、直感的で使いやすいUI/UX"
+      reason: レビューで圧倒的に評価の高い、直感的で使いやすいUI/UX
     - point: 5
-      reason: "日本国内企業による開発で、日本語のドキュメント・サポートが完璧"
+      reason: 日本国内企業による開発で、日本語のドキュメント・サポートが完璧
     - point: 5
-      reason: "豊富な外部サービス連携（SmartHR Plus）と開発者向けAPI"
+      reason: 豊富な外部サービス連携（SmartHR Plus）と開発者向けAPI
     - point: 3
-      reason: "30名まで無料で利用できるプランがあり、スタートアップに優しい"
+      reason: 30名まで無料で利用できるプランがあり、スタートアップに優しい
   minus_points:
     - point: -3
-      reason: "本体機能に有給管理が含まれておらず、別途連携が必要"
+      reason: 本体機能に有給管理が含まれておらず、別途連携が必要
     - point: -2
-      reason: "電話によるリアルタイムサポートが提供されていない"
+      reason: 電話によるリアルタイムサポートが提供されていない
     - point: -2
-      reason: "有料プランの料金が個別見積もりのため、導入前のコスト比較が難しい"
-  summary: "優れたUI/UXと包括的な機能で人事労務DXを強力に推進するが、一部機能の不足やサポート体制には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 有料プランの料金が個別見積もりのため、導入前のコスト比較が難しい
+  summary: 優れたUI/UXと包括的な機能で人事労務DXを強力に推進するが、一部機能の不足やサポート体制には注意が必要。
 links:
-  documentation: "https://support.smarthr.jp/ja/"
+  documentation: https://support.smarthr.jp/ja/
 relationships:
   related_tools:
-    - "ワスレナイ"
-    - "COMPANY"
-    - "KING OF TIME"
-    - "ジョブカン勤怠管理"
-    - "マネーフォワード クラウド勤怠"
+    - ワスレナイ
+    - COMPANY
+    - KING OF TIME
+    - ジョブカン勤怠管理
+    - マネーフォワード クラウド勤怠
 ---
+
+
+
 
 # **SmartHR 調査レポート**
 

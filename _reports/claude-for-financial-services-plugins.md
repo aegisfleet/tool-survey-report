@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Claude for Financial Services Plugins 調査レポート"
-tool_name: "Claude for Financial Services Plugins"
-tool_reading: "クロード フォー ファイナンシャル サービス プラグイン"
-category: "AI開発基盤"
-developer: "Anthropic"
-official_site: "https://github.com/anthropics/financial-services-plugins"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Claude for Financial Services Plugins 調査レポート
+tool_name: Claude for Financial Services Plugins
+tool_reading: クロード フォー ファイナンシャル サービス プラグイン
+category: AI開発基盤
+developer: Anthropic
+official_site: https://github.com/anthropics/financial-services-plugins
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "金融"
-  - "プラグイン"
-description: "Claudeを投資銀行、株式調査、未公開株、ウェルスマネジメント等の金融サービス専門のAIに強化するプラグイン群"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - プラグイン
+  - 金融
+description: Claudeを投資銀行、株式調査、未公開株、ウェルスマネジメント等の金融サービス専門のAIに強化するプラグイン群
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "金融専門職"
-    - "アナリスト"
-    - "投資銀行家"
-  latest_highlight: "金融サービス向けプラグインをオープンソースとして公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 金融専門職
+    - アナリスト
+    - 投資銀行家
+  latest_highlight: 金融サービス向けプラグインをオープンソースとして公開
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Daloopa、S&P Global、FactSetなど多様な金融データソースとMCP経由で強力に連携"
+      reason: Daloopa、S&P Global、FactSetなど多様な金融データソースとMCP経由で強力に連携
     - point: 5
-      reason: "投資銀行、株式調査など特化型の高度な金融分析ワークフローを完備"
+      reason: 投資銀行、株式調査など特化型の高度な金融分析ワークフローを完備
     - point: 5
-      reason: "オープンソースであり自社特有のプロセスに合わせて容易にカスタマイズ可能"
+      reason: オープンソースであり自社特有のプロセスに合わせて容易にカスタマイズ可能
   minus_points:
     - point: -3
-      reason: "利用には各データプロバイダー（MCPサーバー）の契約・APIキーが別途必要"
-  summary: "金融業務に特化した強力なAI拡張ツールだが、真価を発揮するには外部データソースの契約が前提となる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 利用には各データプロバイダー（MCPサーバー）の契約・APIキーが別途必要
+  summary: 金融業務に特化した強力なAI拡張ツールだが、真価を発揮するには外部データソースの契約が前提となる。
 links:
-  github: "https://github.com/anthropics/financial-services-plugins"
-  deepwiki: "https://deepwiki.com/anthropics/financial-services-plugins"
-  codewiki: "https://codewiki.google/github.com/anthropics/financial-services-plugins"
+  github: https://github.com/anthropics/financial-services-plugins
+  deepwiki: https://deepwiki.com/anthropics/financial-services-plugins
+  codewiki: https://codewiki.google/github.com/anthropics/financial-services-plugins
 relationships:
-  parent: "Claude Cowork"
+  parent: Claude Cowork
   related_tools:
-    - "Claude Code"
+    - Claude Code
 ---
+
+
+
 
 # **Claude for Financial Services Plugins 調査レポート**
 

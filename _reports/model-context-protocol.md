@@ -1,61 +1,63 @@
 ---
-title: "Model Context Protocol (MCP) 調査レポート"
-tool_name: "Model Context Protocol"
-tool_reading: "モデルコンテキストプロトコル"
-category: "開発者ツール"
-developer: "Anthropic"
-official_site: "https://modelcontextprotocol.io/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: Model Context Protocol (MCP) 調査レポート
+tool_name: Model Context Protocol
+tool_reading: モデルコンテキストプロトコル
+category: 開発者ツール
+developer: Anthropic
+official_site: https://modelcontextprotocol.io/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "標準化"
-  - "プロトコル"
-  - "開発者ツール"
-description: "AIモデルと外部のデータ・ツールを接続するためのオープン標準プロトコル"
+  - AI
+  - オープンソース
+  - プロトコル
+  - 標準化
+  - 開発者ツール
+description: AIモデルと外部のデータ・ツールを接続するためのオープン標準プロトコル
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "主要なAIエディタ（Cursor, Windsurf）やClaude Desktopでの採用が加速"
-  update_frequency: "高"
+    - 開発者
+    - AIエンジニア
+  latest_highlight: 主要なAIエディタ（Cursor, Windsurf）やClaude Desktopでの採用が加速
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "AIとツール間の接続を標準化し、個別実装の乱立を防ぐ画期的なプロトコル"
+      reason: AIとツール間の接続を標準化し、個別実装の乱立を防ぐ画期的なプロトコル
     - point: 5
-      reason: "Anthropic主導で、Microsoft, Google等の主要プレイヤーも参画・対応が進んでいる"
+      reason: Anthropic主導で、Microsoft, Google等の主要プレイヤーも参画・対応が進んでいる
     - point: 5
-      reason: "オープンソースであり、誰でもサーバーやクライアントを開発可能"
+      reason: オープンソースであり、誰でもサーバーやクライアントを開発可能
     - point: 5
-      reason: "セキュリティ（サンドボックス化）とユーザビリティを両立"
+      reason: セキュリティ（サンドボックス化）とユーザビリティを両立
   minus_points: []
-  summary: "AIアプリケーションのエコシステムを根底から変える、事実上の標準（デファクトスタンダード）となるプロトコル"
+  summary: AIアプリケーションのエコシステムを根底から変える、事実上の標準（デファクトスタンダード）となるプロトコル
 links:
-  github: "https://github.com/modelcontextprotocol"
-  documentation: "https://modelcontextprotocol.io/introduction"
+  github: https://github.com/modelcontextprotocol
+  documentation: https://modelcontextprotocol.io/introduction
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "AWS MCP Servers"
-    - "Context7"
-    - "MCP Apps"
+    - AWS MCP Servers
+    - Context7
+    - MCP Apps
   related_tools:
-    - "Claude"
-    - "Cursor"
-    - "Windsurf"
-    - "Cline"
-    - "Agent Skills"
-    - "UI-TARS Desktop"
-    - "Mobile Next"
-    - "Microsoft Work IQ"
+    - Claude
+    - Cursor
+    - Windsurf
+    - Cline
+    - Agent Skills
+    - UI-TARS Desktop
+    - Mobile Next
 ---
+
+
+
 
 # **Model Context Protocol (MCP) 調査レポート**
 

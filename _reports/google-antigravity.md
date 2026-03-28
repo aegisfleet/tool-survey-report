@@ -1,61 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Antigravity 調査レポート"
-tool_name: "Google Antigravity"
-tool_reading: "グーグル アンチグラビティ"
-category: "AIコードエディタ"
-developer: "Google"
-official_site: "https://antigravity.google/"
-date: "2026-02-28"
-last_updated: "2026-02-28"
+title: Google Antigravity 調査レポート
+tool_name: Google Antigravity
+tool_reading: グーグル アンチグラビティ
+category: AIコードエディタ
+developer: Google
+official_site: https://antigravity.google/
+date: '2026-02-28'
+last_updated: '2026-02-28'
 tags:
-  - "AI"
-  - "コーディング支援"
-  - "IDE"
-  - "エージェント"
-  - "開発者ツール"
-description: "AIを単なるツールではなく自律的なアクターとして活用する、エージェントファーストな新しい開発プラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - IDE
+  - エージェント
+  - コーディング支援
+  - 開発者ツール
+description: AIを単なるツールではなく自律的なアクターとして活用する、エージェントファーストな新しい開発プラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-  latest_highlight: "2026年2月にAccount Remediation Pathwayを追加（v1.19.6）"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+  latest_highlight: 2026年2月にAccount Remediation Pathwayを追加（v1.19.6）
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "複数のエージェントを非同期に並行して動作させ、それぞれがタスクを計画・実行・検証できる強力なAgent Manager機能"
+      reason: 複数のエージェントを非同期に並行して動作させ、それぞれがタスクを計画・実行・検証できる強力なAgent Manager機能
     - point: 5
-      reason: "VS Codeをフォークしており、既存の開発者に馴染みのあるEditor Viewを保持している"
+      reason: VS Codeをフォークしており、既存の開発者に馴染みのあるEditor Viewを保持している
     - point: 4
-      reason: "Artifactsを用いたフィードバックループにより、レビューと軌道修正がGoogle Docsのように直感的に行える"
+      reason: Artifactsを用いたフィードバックループにより、レビューと軌道修正がGoogle Docsのように直感的に行える
     - point: 3
-      reason: "ブラウザと深く統合され、UIの変更やエンドツーエンドのテストを自律的に確認可能"
+      reason: ブラウザと深く統合され、UIの変更やエンドツーエンドのテストを自律的に確認可能
   minus_points:
     - point: -3
-      reason: "AIエージェントに自律的にターミナルやブラウザを操作させることによるセキュリティ上の懸念事項やリスクへの対策（Allow List, Deny List等）の適切な運用が必要"
+      reason: AIエージェントに自律的にターミナルやブラウザを操作させることによるセキュリティ上の懸念事項やリスクへの対策（Allow List, Deny List等）の適切な運用が必要
     - point: -2
-      reason: "新しいプレビュー版ツールであり、まだ成熟途上にある"
-  summary: "強力な自律型マルチエージェントオーケストレーションと、親しみやすいVS CodeベースのUIを融合させた、革新的な次世代AI開発プラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 新しいプレビュー版ツールであり、まだ成熟途上にある
+  summary: 強力な自律型マルチエージェントオーケストレーションと、親しみやすいVS CodeベースのUIを融合させた、革新的な次世代AI開発プラットフォーム。
 links:
-  documentation: "https://antigravity.google/docs"
+  documentation: https://antigravity.google/docs
 relationships:
   related_tools:
-    - "Visual Studio Code"
-    - "Cursor"
-    - "Windsurf"
+    - Visual Studio Code
+    - Cursor
+    - Windsurf
+  parent: Gemini
 ---
+
+
+
 
 # **Google Antigravity 調査レポート**
 

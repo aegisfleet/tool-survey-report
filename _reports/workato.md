@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Workato 調査レポート"
-tool_name: "Workato"
-tool_reading: "ワーカート"
-category: "ワークフロー自動化"
-developer: "Workato, Inc."
-official_site: "https://www.workato.com/"
-date: "2026-02-21"
-last_updated: "2026-02-21"
+title: Workato 調査レポート
+tool_name: Workato
+tool_reading: ワーカート
+category: ワークフロー自動化
+developer: Workato, Inc.
+official_site: https://www.workato.com/
+date: '2026-02-21'
+last_updated: '2026-02-21'
 tags:
-  - "iPaaS"
-  - "ワークフロー自動化"
-  - "ローコード"
-  - "AI"
-  - "自動化"
-description: "企業内のアプリ連携と業務自動化を実現するエンタープライズ向けiPaaSプラットフォーム。セキュリティとガバナンスに強みを持つ。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - iPaaS
+  - ローコード
+  - ワークフロー自動化
+  - 自動化
+description: 企業内のアプリ連携と業務自動化を実現するエンタープライズ向けiPaaSプラットフォーム。セキュリティとガバナンスに強みを持つ。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "大企業"
-    - "情報システム部門"
-    - "業務部門"
-  latest_highlight: "2026年1月にAnthropic Connectorを強化しAIエージェント連携を促進"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - 情報システム部門
+    - 業務部門
+  latest_highlight: 2026年1月にAnthropic Connectorを強化しAIエージェント連携を促進
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "エンタープライズレベルの強力なセキュリティとガバナンス"
+      reason: エンタープライズレベルの強力なセキュリティとガバナンス
     - point: 5
-      reason: "1000以上のコネクタと柔軟な自動化機能"
+      reason: 1000以上のコネクタと柔軟な自動化機能
     - point: 3
-      reason: "日本語UI対応と国内サポート体制の強化"
+      reason: 日本語UI対応と国内サポート体制の強化
   minus_points:
     - point: -3
-      reason: "料金が公開されておらず、導入のハードルが高い"
+      reason: 料金が公開されておらず、導入のハードルが高い
     - point: -2
-      reason: "高機能ゆえに使いこなすための学習コストがかかる"
-  summary: "セキュリティと拡張性を重視する企業に最適なiPaaS。コストはかかるが、全社的なDX推進の基盤として強力。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高機能ゆえに使いこなすための学習コストがかかる
+  summary: セキュリティと拡張性を重視する企業に最適なiPaaS。コストはかかるが、全社的なDX推進の基盤として強力。
 links:
-  documentation: "https://docs.workato.com/"
+  documentation: https://docs.workato.com/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Make"
-    - "Zapier"
-    - "n8n"
-    - "Microsoft Power Automate"
-    - "UiPath"
+    - Make
+    - Zapier
+    - n8n
+    - Microsoft Power Automate
+    - UiPath
 ---
+
+
+
 
 # **Workato 調査レポート**
 

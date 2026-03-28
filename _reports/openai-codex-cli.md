@@ -1,64 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "OpenAI Codex CLI 調査レポート"
-tool_name: "OpenAI Codex CLI"
-tool_reading: "オープンエーアイ コーデックス シーエルアイ"
-category: "自律型AIエージェント"
-developer: "OpenAI"
-official_site: "https://developers.openai.com/codex/cli"
-date: "2026-03-19"
-last_updated: "2026-03-19"
+title: OpenAI Codex CLI 調査レポート
+tool_name: OpenAI Codex CLI
+tool_reading: オープンエーアイ コーデックス シーエルアイ
+category: 自律型AIエージェント
+developer: OpenAI
+official_site: https://developers.openai.com/codex/cli
+date: '2026-03-19'
+last_updated: '2026-03-19'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "開発者ツール"
-  - "CLI"
-description: "OpenAIのモデルを搭載し、ローカル環境でコードの読み取りや変更、コマンドの実行を自律的に行うオープンソースのコマンドラインAIエージェント"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CLI
+  - エージェント
+  - 自律型
+  - 開発者ツール
+description: OpenAIのモデルを搭載し、ローカル環境でコードの読み取りや変更、コマンドの実行を自律的に行うオープンソースのコマンドラインAIエージェント
 quick_summary:
   has_free_plan: false
   is_oss: true
-  starting_price: "$20/月 (ChatGPT Plus等に内包)"
+  starting_price: $20/月 (ChatGPT Plus等に内包)
   target_users:
-    - "開発者"
-    - "ソフトウェアエンジニア"
-  latest_highlight: "GPT-5.4やGPT-5.3-Codexなどの最新推論モデルをターミナルで利用可能"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - ソフトウェアエンジニア
+  latest_highlight: GPT-5.4やGPT-5.3-Codexなどの最新推論モデルをターミナルで利用可能
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソース(Rust実装)であり、高速かつ効率的に動作"
+      reason: オープンソース(Rust実装)であり、高速かつ効率的に動作
     - point: 4
-      reason: "最新のOpenAI推論モデル(o4, GPT-5.4等)をローカルCLIで直接利用可能"
+      reason: 最新のOpenAI推論モデル(o4, GPT-5.4等)をローカルCLIで直接利用可能
     - point: 4
-      reason: "MCP(Model Context Protocol)をサポートし、外部ツールとの連携が強力"
+      reason: MCP(Model Context Protocol)をサポートし、外部ツールとの連携が強力
     - point: 3
-      reason: "ローカルのコードレビューやWeb検索などの多様な機能を内蔵"
+      reason: ローカルのコードレビューやWeb検索などの多様な機能を内蔵
   minus_points:
     - point: -3
-      reason: "利用にはChatGPT Plusなどの有料プランまたはAPIキーが必要（単体無料ではない）"
-  summary: "ターミナルから直接最新のOpenAIモデルにアクセスし、ローカル環境で強力な自律的開発支援を受けられる優秀なCLIツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 利用にはChatGPT Plusなどの有料プランまたはAPIキーが必要（単体無料ではない）
+  summary: ターミナルから直接最新のOpenAIモデルにアクセスし、ローカル環境で強力な自律的開発支援を受けられる優秀なCLIツール
 links:
-  github: "https://github.com/openai/codex"
-  deepwiki: "https://deepwiki.com/openai/codex"
-  codewiki: "https://codewiki.google/github.com/openai/codex"
-  documentation: "https://developers.openai.com/codex"
+  github: https://github.com/openai/codex
+  deepwiki: https://deepwiki.com/openai/codex
+  codewiki: https://codewiki.google/github.com/openai/codex
+  documentation: https://developers.openai.com/codex
 relationships:
-  parent: "ChatGPT"
+  parent: ChatGPT
   related_tools:
-    - "Cline"
-    - "Cursor"
-    - "Windsurf"
+    - Cline
+    - Cursor
+    - Windsurf
+    - Symphony
+    - SkillsMP
+    - Agentic Workflows
 ---
+
+
+
 
 # **OpenAI Codex CLI 調査レポート**
 

@@ -1,60 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Microsoft 広告 調査レポート"
-tool_name: "Microsoft 広告"
-tool_reading: "マイクロソフト コウコク / マイクロソフト アドバタイジング"
-category: "広告配信"
-developer: "Microsoft"
-official_site: "https://about.ads.microsoft.com/"
-date: "2026-01-31"
-last_updated: "2026-01-31"
+title: Microsoft 広告 調査レポート
+tool_name: Microsoft 広告
+tool_reading: マイクロソフト コウコク / マイクロソフト アドバタイジング
+category: 広告配信
+developer: Microsoft
+official_site: https://about.ads.microsoft.com/
+date: '2026-01-31'
+last_updated: '2026-01-31'
 tags:
-  - "Web広告"
-  - "マーケティング"
-  - "SEM"
-  - "B2Bマーケティング"
-  - "生成AI"
-description: "Bing、Yahoo!、DuckDuckGoなどの検索エンジンや、MSN、OutlookなどのMicrosoftエコシステムへ広告を配信できるプラットフォーム。LinkedInプロフィールを活用した精密なターゲティングが特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - B2Bマーケティング
+  - SEM
+  - Web広告
+  - マーケティング
+  - 生成AI
+description: Bing、Yahoo!、DuckDuckGoなどの検索エンジンや、MSN、OutlookなどのMicrosoftエコシステムへ広告を配信できるプラットフォーム。LinkedInプロフィールを活用した精密なターゲティングが特徴。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "予算は自由に設定可能"
+  starting_price: 予算は自由に設定可能
   target_users:
-    - "B2B企業"
-    - "EC事業者"
-    - "Google広告利用者"
-  latest_highlight: "2026年、Copilot機能をプラットフォーム全体に完全統合し、キャンペーン作成を自動化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - B2B企業
+    - EC事業者
+    - Google広告利用者
+  latest_highlight: 2026年、Copilot機能をプラットフォーム全体に完全統合し、キャンペーン作成を自動化
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "LinkedInのプロフィール情報（会社、役職、スキル）を活用したターゲティングが可能"
+      reason: LinkedInのプロフィール情報（会社、役職、スキル）を活用したターゲティングが可能
     - point: 3
-      reason: "Google 広告の設定を直接インポートでき、移行や並行運用が非常に容易"
+      reason: Google 広告の設定を直接インポートでき、移行や並行運用が非常に容易
     - point: 2
-      reason: "Google 広告と比較してクリック単価（CPC）が低くなる傾向がある"
+      reason: Google 広告と比較してクリック単価（CPC）が低くなる傾向がある
   minus_points:
     - point: -5
-      reason: "検索ボリュームやインプレッション数がGoogleと比較して少ない"
-  summary: "検索ボリュームはGoogleに劣るものの、LinkedIn連携によるB2Bターゲティングと低いCPCは大きな魅力。Google広告の補完として最適。"
-
-# 【任意項目】
+      reason: 検索ボリュームやインプレッション数がGoogleと比較して少ない
+  summary: 検索ボリュームはGoogleに劣るものの、LinkedIn連携によるB2Bターゲティングと低いCPCは大きな魅力。Google広告の補完として最適。
 links:
-  documentation: "https://help.ads.microsoft.com/"
+  documentation: https://help.ads.microsoft.com/
 relationships:
   related_tools:
-    - "Google 広告"
-    - "LinkedIn"
-    - "Copilot"
-    - "Shopify"
+    - Google 広告
 ---
+
+
+
 
 # **Microsoft 広告 調査レポート**
 

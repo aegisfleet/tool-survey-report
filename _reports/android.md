@@ -1,60 +1,61 @@
 ---
-title: "Android 調査レポート"
-tool_name: "Android"
-tool_reading: "アンドロイド"
-category: "オペレーティングシステム"
-developer: "Google (AOSP)"
-official_site: "https://source.android.com/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: Android 調査レポート
+tool_name: Android
+tool_reading: アンドロイド
+category: オペレーティングシステム
+developer: Google (AOSP)
+official_site: https://source.android.com/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "OS"
-  - "モバイル"
-  - "オープンソース"
-  - "Google"
-description: "Googleが主導する世界で最も普及しているモバイルオペレーティングシステム。オープンソースプロジェクト（AOSP）として開発され、スマートフォン、タブレット、車載機器など幅広いデバイスで利用されている。"
-
+  - Google
+  - OS
+  - オープンソース
+  - モバイル
+description: Googleが主導する世界で最も普及しているモバイルオペレーティングシステム。オープンソースプロジェクト（AOSP）として開発され、スマートフォン、タブレット、車載機器など幅広いデバイスで利用されている。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "デバイスメーカー"
-    - "アプリ開発者"
-    - "組み込みシステムエンジニア"
-  latest_highlight: "2026年第2四半期および第4四半期にAOSPへソースコードを公開予定（Trunk Stableモデル）"
-  update_frequency: "高"
-
+    - デバイスメーカー
+    - アプリ開発者
+    - 組み込みシステムエンジニア
+  latest_highlight: 2026年第2四半期および第4四半期にAOSPへソースコードを公開予定（Trunk Stableモデル）
+  update_frequency: 高
 evaluation:
   score: 98
   base_score: 70
   plus_points:
     - point: 10
-      reason: "世界最大のモバイルOSシェアを持ち、エコシステムが巨大"
+      reason: 世界最大のモバイルOSシェアを持ち、エコシステムが巨大
     - point: 10
-      reason: "オープンソースであり、誰でもカスタマイズやフォークが可能"
+      reason: オープンソースであり、誰でもカスタマイズやフォークが可能
     - point: 5
-      reason: "ハードウェアの選択肢が非常に広く、安価な端末からハイエンドまでカバー"
+      reason: ハードウェアの選択肢が非常に広く、安価な端末からハイエンドまでカバー
     - point: 3
-      reason: "KotlinやJetpack Composeなど、モダンな開発環境が整っている"
+      reason: KotlinやJetpack Composeなど、モダンな開発環境が整っている
   minus_points:
     - point: -5
-      reason: "OSのバージョン分断（フラグメンテーション）が依然として課題"
+      reason: OSのバージョン分断（フラグメンテーション）が依然として課題
     - point: -5
-      reason: "デバイスメーカーごとの独自実装により、動作検証コストが高い"
-  summary: "モバイルOSの事実上の標準であり、そのオープン性と柔軟性により、今後も中心的な地位を維持し続けるプラットフォーム"
-
+      reason: デバイスメーカーごとの独自実装により、動作検証コストが高い
+  summary: モバイルOSの事実上の標準であり、そのオープン性と柔軟性により、今後も中心的な地位を維持し続けるプラットフォーム
 links:
-  documentation: "https://source.android.com/docs"
-  github: "https://android.googlesource.com/"
-
+  documentation: https://source.android.com/docs
+  github: https://android.googlesource.com/
 relationships:
   related_tools:
-    - "Android Studio"
+    - Android Studio
+    - Android Use
+    - AluminiumOS
   children:
-    - "AluminiumOS"
-    - "Android Use"
+    - AluminiumOS
+    - Android Use
 ---
+
+
+
 
 # **Android (AOSP) 調査レポート**
 

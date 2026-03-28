@@ -1,67 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Gamma 調査レポート"
-tool_name: "Gamma"
-tool_reading: "ガンマ"
-category: "デザインツール"
-developer: "Gamma Tech, Inc."
-official_site: "https://gamma.app/"
-date: "2026-01-23"
-last_updated: "2026-02-24"
+title: Gamma 調査レポート
+tool_name: Gamma
+tool_reading: ガンマ
+category: デザインツール
+developer: Gamma Tech, Inc.
+official_site: https://gamma.app/
+date: '2026-01-23'
+last_updated: '2026-02-24'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "プレゼンテーション"
-  - "資料作成"
-  - "自動化"
-  - "デザインツール"
-description: "「AIデザインパートナー」として、対話形式でプレゼンテーション、ドキュメント、Webページを高速に生成・編集できるツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - デザインツール
+  - プレゼンテーション
+  - 生成AI
+  - 自動化
+  - 資料作成
+description: 「AIデザインパートナー」として、対話形式でプレゼンテーション、ドキュメント、Webページを高速に生成・編集できるツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$8/月"
+  starting_price: $8/月
   target_users:
-    - "ビジネスパーソン"
-    - "スタートアップ"
-    - "マーケター"
-  latest_highlight: "2025年9月に「Gamma 3.0」とAIエージェント機能をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ビジネスパーソン
+    - スタートアップ
+    - マーケター
+  latest_highlight: 2025年9月に「Gamma 3.0」とAIエージェント機能をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Gamma Agentによる対話的な修正機能が強力で、作成時間を劇的に短縮できる"
+      reason: Gamma Agentによる対話的な修正機能が強力で、作成時間を劇的に短縮できる
     - point: 5
-      reason: "スマートダイアグラム機能により、複雑な概念図もテキストから自動生成可能"
+      reason: スマートダイアグラム機能により、複雑な概念図もテキストから自動生成可能
     - point: 5
-      reason: "APIによる大量生成（Mass Automation）が可能になり、ビジネス活用が進んだ"
+      reason: APIによる大量生成（Mass Automation）が可能になり、ビジネス活用が進んだ
     - point: 3
-      reason: "SOC2 Type IIおよびISO27001認証を取得済みでセキュリティが高い"
+      reason: SOC2 Type IIおよびISO27001認証を取得済みでセキュリティが高い
   minus_points:
     - point: -3
-      reason: "PowerPointへのエクスポート時にレイアウト崩れが発生する場合がある"
+      reason: PowerPointへのエクスポート時にレイアウト崩れが発生する場合がある
     - point: -3
-      reason: "デザインの微調整（ピクセル単位の移動など）が自由に行えない"
-  summary: "Gamma 3.0への進化で「AIデザインパートナー」としての地位を確立。資料作成の初速を最大化する最強のツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: デザインの微調整（ピクセル単位の移動など）が自由に行えない
+  summary: Gamma 3.0への進化で「AIデザインパートナー」としての地位を確立。資料作成の初速を最大化する最強のツール。
 links:
-  documentation: "https://help.gamma.app/"
+  documentation: https://help.gamma.app/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Canva"
-    - "Microsoft 365 Copilot"
-    - "Speaker Deck"
+    - Canva
+    - Microsoft 365 Copilot
+    - Speaker Deck
 ---
+
+
+
 
 # **Gamma 調査レポート**
 

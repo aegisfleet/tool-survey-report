@@ -1,75 +1,71 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitHub 調査レポート"
-tool_name: "GitHub"
-tool_reading: "ギットハブ"
-category: "バージョン管理"
-developer: "Microsoft"
-official_site: "https://github.com"
-date: "2026-02-26"
-last_updated: "2026-02-26"
+title: GitHub 調査レポート
+tool_name: GitHub
+tool_reading: ギットハブ
+category: バージョン管理
+developer: Microsoft
+official_site: https://github.com
+date: '2026-02-26'
+last_updated: '2026-02-26'
 tags:
-  - "バージョン管理"
-  - "CI/CD"
-  - "DevOps"
-  - "AI"
-  - "オープンソース"
-  - "開発者ツール"
-description: "AIを搭載したコードホスティングプラットフォーム。バージョン管理、CI/CD、プロジェクト管理など、開発のライフサイクル全体をサポートします。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - DevOps
+  - オープンソース
+  - バージョン管理
+  - 開発者ツール
+description: AIを搭載したコードホスティングプラットフォーム。バージョン管理、CI/CD、プロジェクト管理など、開発のライフサイクル全体をサポートします。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$4/月"
+  starting_price: $4/月
   target_users:
-    - "開発者"
-    - "オープンソースコミュニティ"
-    - "企業"
-  latest_highlight: "2026年2月にGitHub Copilot Workspaceが一般提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - オープンソースコミュニティ
+    - 企業
+  latest_highlight: 2026年2月にGitHub Copilot Workspaceが一般提供開始
+  update_frequency: 高
 evaluation:
   score: 96
   base_score: 70
   plus_points:
     - point: 10
-      reason: "AI中心の開発体験（Copilot, Agent HQ）は業界をリードし、生産性を劇的に向上させる。"
+      reason: AI中心の開発体験（Copilot, Agent HQ）は業界をリードし、生産性を劇的に向上させる。
     - point: 8
-      reason: "世界最大の開発者コミュニティとオープンソースのエコシステムを持つ。"
+      reason: 世界最大の開発者コミュニティとオープンソースのエコシステムを持つ。
     - point: 5
-      reason: "GitHub Actionsによる柔軟で強力なCI/CD機能が統合されている。"
+      reason: GitHub Actionsによる柔軟で強力なCI/CD機能が統合されている。
     - point: 5
-      reason: "Pull Requestベースのコードレビュー文化は、コラボレーションとコード品質を向上させる上で非常に効果的。"
+      reason: Pull Requestベースのコードレビュー文化は、コラボレーションとコード品質を向上させる上で非常に効果的。
     - point: 2
-      reason: "Advanced Securityなど、高度なセキュリティ機能が組み込まれている。"
+      reason: Advanced Securityなど、高度なセキュリティ機能が組み込まれている。
   minus_points:
     - point: -2
-      reason: "機能が非常に多いため、初心者にはUIが複雑に感じられることがある。"
+      reason: 機能が非常に多いため、初心者にはUIが複雑に感じられることがある。
     - point: -2
-      reason: "高度なAI機能やセキュリティ機能は有料プランに限定されており、コストがかかる。"
-  summary: "AIを核とした統合開発プラットフォームとして進化を遂げ、開発者体験をリードしているが、多機能ゆえの複雑さには注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度なAI機能やセキュリティ機能は有料プランに限定されており、コストがかかる。
+  summary: AIを核とした統合開発プラットフォームとして進化を遂げ、開発者体験をリードしているが、多機能ゆえの複雑さには注意が必要。
 links:
-  documentation: "https://docs.github.com/"
+  documentation: https://docs.github.com/
 relationships:
   children:
-    - "GitHub Actions"
-    - "GitHub Copilot"
-    - "Dependabot"
-    - "CodeQL"
+    - GitHub Actions
+    - GitHub Copilot
+    - Dependabot
+    - CodeQL
+    - Spec Kit
   related_tools:
-    - "GitLab"
-    - "Jira"
-    - "CodeRabbit"
-    - "JFrog Artifactory"
-    - "Quality Tracker"
-    - "Findy Team+"
-    - "Jujutsu"
+    - GitLab
+    - Jira
+    - CodeRabbit
+    - JFrog Artifactory
+    - Quality Tracker
+    - Findy Team+
+    - Jujutsu
 ---
+
+
+
 
 # **GitHub 調査レポート**
 

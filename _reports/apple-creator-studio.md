@@ -1,64 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Apple Creator Studio 調査レポート"
-tool_name: "Apple Creator Studio"
-tool_reading: "アップル クリエイター スタジオ"
-category: "動画/メディア"
-developer: "Apple"
-official_site: "https://www.apple.com/jp/final-cut-pro/"
-date: "2026-02-14"
-last_updated: "2026-02-14"
+title: Apple Creator Studio 調査レポート
+tool_name: Apple Creator Studio
+tool_reading: アップル クリエイター スタジオ
+category: 動画/メディア
+developer: Apple
+official_site: https://www.apple.com/jp/final-cut-pro/
+date: '2026-02-14'
+last_updated: '2026-02-14'
 tags:
-  - "動画編集"
-  - "画像編集"
-  - "音楽制作"
-  - "デザイン"
-  - "サブスクリプション"
-  - "Apple"
-  - "iPad"
-  - "Mac"
-  - "AI"
-description: "Appleのプロ向けクリエイティブアプリ（Final Cut Pro, Logic Pro, Pixelmator Proなど）を統合したサブスクリプションサービス。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Apple
+  - Mac
+  - iPad
+  - サブスクリプション
+  - デザイン
+  - 動画編集
+  - 画像編集
+  - 音楽制作
+description: Appleのプロ向けクリエイティブアプリ（Final Cut Pro, Logic Pro, Pixelmator Proなど）を統合したサブスクリプションサービス。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "¥1,780/月"
+  starting_price: ¥1,780/月
   target_users:
-    - "クリエイター"
-    - "YouTuber"
-    - "学生"
-  latest_highlight: "2026年1月29日にサービス正式開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クリエイター
+    - YouTuber
+    - 学生
+  latest_highlight: 2026年1月29日にサービス正式開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Final Cut Pro, Logic Pro, Pixelmator Proなどプロ向けアプリが使い放題"
+      reason: Final Cut Pro, Logic Pro, Pixelmator Proなどプロ向けアプリが使い放題
     - point: 4
-      reason: "個別購入や個別サブスクリプションより安価（複数利用時）"
+      reason: 個別購入や個別サブスクリプションより安価（複数利用時）
     - point: 3
-      reason: "iPadとMacの両方でアプリを利用可能（クロスプラットフォーム）"
+      reason: iPadとMacの両方でアプリを利用可能（クロスプラットフォーム）
     - point: 3
-      reason: "Apple製品との高い親和性とエコシステム連携"
+      reason: Apple製品との高い親和性とエコシステム連携
   minus_points:
     - point: -3
-      reason: "利用にはサブスクリプション契約が必須（永続ライセンスではない）"
-  summary: "MacとiPadで複数のクリエイティブツールを使用するユーザーにとって、圧倒的なコストパフォーマンスを提供するバンドルサービス。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 利用にはサブスクリプション契約が必須（永続ライセンスではない）
+  summary: MacとiPadで複数のクリエイティブツールを使用するユーザーにとって、圧倒的なコストパフォーマンスを提供するバンドルサービス。
 relationships:
   related_tools:
-    - "DaVinci Resolve"
-    - "Canva"
-    - "GIMP"
-    - "Affinity"
+    - DaVinci Resolve
+    - Canva
+    - GIMP
+    - Affinity
+    - AviUtl
 ---
+
+
+
 
 # **Apple Creator Studio 調査レポート**
 

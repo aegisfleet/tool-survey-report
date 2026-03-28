@@ -1,47 +1,50 @@
 ---
-title: "天才くん 調査レポート"
-tool_name: "天才くん"
-tool_reading: "テンサイクン"
-category: "自律型AIエージェント"
-developer: "株式会社SHIFT"
-official_site: "https://tensaikun.jp/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: 天才くん 調査レポート
+tool_name: 天才くん
+tool_reading: テンサイクン
+category: 自律型AIエージェント
+developer: 株式会社SHIFT
+official_site: https://tensaikun.jp/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "エージェント"
-  - "業務効率化"
-  - "生成AI"
-description: "業務に特化した専用のAIエージェントを作成・利用できる、企業向け生成AI活用プラットフォーム。"
+  - エージェント
+  - 業務効率化
+  - 生成AI
+description: 業務に特化した専用のAIエージェントを作成・利用できる、企業向け生成AI活用プラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料トライアルあり / 要問い合わせ"
+  starting_price: 無料トライアルあり / 要問い合わせ
   target_users:
-    - "企業"
-    - "業務改善担当者"
-    - "DX推進部門"
-  latest_highlight: "30種類以上のテンプレートで即座に活用可能"
-  update_frequency: "中"
+    - 企業
+    - 業務改善担当者
+    - DX推進部門
+  latest_highlight: 30種類以上のテンプレートで即座に活用可能
+  update_frequency: 中
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ISMS認証取得や学習防止システムなど、企業向けのセキュリティ対策が充実"
+      reason: ISMS認証取得や学習防止システムなど、企業向けのセキュリティ対策が充実
     - point: 3
-      reason: "豊富なテンプレートにより、導入後すぐに業務活用が可能"
+      reason: 豊富なテンプレートにより、導入後すぐに業務活用が可能
   minus_points:
     - point: -3
-      reason: "詳細な料金プランが公開されておらず、問い合わせが必要"
-  summary: "セキュリティを重視する企業にとって、安全かつ手軽に導入できる業務特化型AIエージェントプラットフォーム。"
+      reason: 詳細な料金プランが公開されておらず、問い合わせが必要
+  summary: セキュリティを重視する企業にとって、安全かつ手軽に導入できる業務特化型AIエージェントプラットフォーム。
 links:
-  documentation: "https://tensaikun.jp/#faq"
+  documentation: https://tensaikun.jp/#faq
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "Microsoft 365 Copilot"
-    - "Gemini"
+    - ChatGPT
+    - Microsoft 365 Copilot
+    - Gemini
 ---
+
+
+
 
 # **天才くん 調査レポート**
 

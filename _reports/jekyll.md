@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Jekyll 調査レポート"
-tool_name: "Jekyll"
-tool_reading: "ジキル"
-category: "Webフレームワーク"
-developer: "Tom Preston-Werner and volunteers"
-official_site: "https://jekyllrb.com/"
-date: "2026-01-27"
-last_updated: "2026-03-08"
+title: Jekyll 調査レポート
+tool_name: Jekyll
+tool_reading: ジキル
+category: Webフレームワーク
+developer: Tom Preston-Werner and volunteers
+official_site: https://jekyllrb.com/
+date: '2026-01-27'
+last_updated: '2026-03-08'
 tags:
-  - "静的サイトジェネレーター"
-  - "オープンソース"
-  - "ブログ"
-  - "Ruby"
-description: "Ruby製のシンプルな静的サイトジェネレーター。GitHub Pagesでネイティブサポートされており、ブログやドキュメントサイトの構築に利用されます。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Ruby
+  - オープンソース
+  - ブログ
+  - 静的サイトジェネレーター
+description: Ruby製のシンプルな静的サイトジェネレーター。GitHub Pagesでネイティブサポートされており、ブログやドキュメントサイトの構築に利用されます。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "ブロガー"
-    - "技術ライター"
-  latest_highlight: "2025年1月にv4.4.1がリリースされ、フロントマターのバグ修正が行われた"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - ブロガー
+    - 技術ライター
+  latest_highlight: 2025年1月にv4.4.1がリリースされ、フロントマターのバグ修正が行われた
+  update_frequency: 中
 evaluation:
   score: 74
   base_score: 70
   plus_points:
     - point: 5
-      reason: "GitHub Pagesとの親和性が非常に高く、無料で手軽にサイトを公開できる"
+      reason: GitHub Pagesとの親和性が非常に高く、無料で手軽にサイトを公開できる
     - point: 3
-      reason: "長年の実績があり、コミュニティが成熟していてテーマや情報が豊富"
+      reason: 長年の実績があり、コミュニティが成熟していてテーマや情報が豊富
   minus_points:
     - point: -3
-      reason: "競合ツール（Hugo, Astro）と比較してビルド速度が遅い"
+      reason: 競合ツール（Hugo, Astro）と比較してビルド速度が遅い
     - point: -1
-      reason: "Ruby環境への依存があり、セットアップに手間がかかる場合がある"
-  summary: "手軽さとGitHub Pages連携は依然として強力だが、ビルド速度やモダンな機能では競合に譲る。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Ruby環境への依存があり、セットアップに手間がかかる場合がある
+  summary: 手軽さとGitHub Pages連携は依然として強力だが、ビルド速度やモダンな機能では競合に譲る。
 links:
-  github: "https://github.com/jekyll/jekyll"
-  deepwiki: "https://deepwiki.com/jekyll/jekyll"
-  codewiki: "https://codewiki.google/github.com/jekyll/jekyll"
-  documentation: "https://jekyllrb.com/docs/"
+  github: https://github.com/jekyll/jekyll
+  deepwiki: https://deepwiki.com/jekyll/jekyll
+  codewiki: https://codewiki.google/github.com/jekyll/jekyll
+  documentation: https://jekyllrb.com/docs/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Hugo"
-    - "Astro"
-    - "WordPress"
+    - Hugo
+    - Astro
+    - WordPress
 ---
+
+
+
 
 # **Jekyll 調査レポート**
 

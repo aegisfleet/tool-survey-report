@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Stable Diffusion 調査レポート"
-tool_name: "Stable Diffusion"
-tool_reading: "ステーブル・ディフュージョン"
-category: "生成AI"
-developer: "Stability AI"
-official_site: "https://stability.ai/"
-date: "2026-01-31"
-last_updated: "2026-01-31"
+title: Stable Diffusion 調査レポート
+tool_name: Stable Diffusion
+tool_reading: ステーブル・ディフュージョン
+category: 生成AI
+developer: Stability AI
+official_site: https://stability.ai/
+date: '2026-01-31'
+last_updated: '2026-01-31'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "生成AI"
-  - "画像生成"
-  - "ローカルAI"
-description: "テキストプロンプトから高品質な画像を生成できる、オープンウェイトの画像生成AIモデル。ローカル環境での実行や柔軟なカスタマイズが可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - ローカルAI
+  - 生成AI
+  - 画像生成
+description: テキストプロンプトから高品質な画像を生成できる、オープンウェイトの画像生成AIモデル。ローカル環境での実行や柔軟なカスタマイズが可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "デザイナー"
-    - "開発者"
-    - "AI研究者"
-  latest_highlight: "Stable Diffusion 3.5シリーズ（Large/Medium）をリリースし、プロンプト追従性と画質が大幅に向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - デザイナー
+    - 開発者
+    - AI研究者
+  latest_highlight: Stable Diffusion 3.5シリーズ（Large/Medium）をリリースし、プロンプト追従性と画質が大幅に向上
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 8
-      reason: "オープンウェイトで提供され、ローカル環境でプライバシーを保ちながら実行可能"
+      reason: オープンウェイトで提供され、ローカル環境でプライバシーを保ちながら実行可能
     - point: 5
-      reason: "ControlNetやLoRAなど、コミュニティによる拡張機能のエコシステムが圧倒的"
+      reason: ControlNetやLoRAなど、コミュニティによる拡張機能のエコシステムが圧倒的
     - point: 2
-      reason: "最新のv3.5でプロンプト理解力が向上し、テキスト描画能力も改善された"
+      reason: 最新のv3.5でプロンプト理解力が向上し、テキスト描画能力も改善された
   minus_points:
     - point: -2
-      reason: "高性能なGPU（VRAM容量）が必須であり、環境構築の敷居がやや高い"
+      reason: 高性能なGPU（VRAM容量）が必須であり、環境構築の敷居がやや高い
     - point: -1
-      reason: "ライセンス体系が変更され、商用利用の条件が以前より複雑化（Community License等）"
-  summary: "カスタマイズ性とプライバシー保護に優れた最強のローカル画像生成AIだが、導入にはハードウェアと知識が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: ライセンス体系が変更され、商用利用の条件が以前より複雑化（Community License等）
+  summary: カスタマイズ性とプライバシー保護に優れた最強のローカル画像生成AIだが、導入にはハードウェアと知識が必要
 links:
-  github: "https://github.com/Stability-AI"
-  documentation: "https://platform.stability.ai/docs"
+  github: https://github.com/Stability-AI
+  documentation: https://platform.stability.ai/docs
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Seedance 2.0"
-    - "Niji Journey"
-    - "Hugging Face"
-    - "ChatGPT"
-    - "Gemini"
-    - "Qwen-Image-Layered"
-    - "Hunyuan 3D"
+    - Seedance 2.0
+    - Niji Journey
+    - Hugging Face
+    - ChatGPT
+    - Gemini
+    - Qwen-Image-Layered
+    - Hunyuan 3D
 ---
+
+
+
 
 # **Stable Diffusion 調査レポート**
 

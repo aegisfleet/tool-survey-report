@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitLab CI/CD 調査レポート"
-tool_name: "GitLab CI/CD"
-tool_reading: "ギットラボ シーアイシーディ"
-category: "CI/CD"
-developer: "GitLab Inc."
-official_site: "https://about.gitlab.com/solutions/continuous-integration/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: GitLab CI/CD 調査レポート
+tool_name: GitLab CI/CD
+tool_reading: ギットラボ シーアイシーディ
+category: CI/CD
+developer: GitLab Inc.
+official_site: https://about.gitlab.com/solutions/continuous-integration/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "CI/CD"
-  - "DevOps"
-  - "SaaS"
-  - "開発者ツール"
-  - "自動化"
-description: "GitLabに完全統合されたCI/CDプラットフォーム。単一のアプリケーションでDevSecOps全体をカバーし、AIエージェントによる自動化も実現。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - DevOps
+  - SaaS
+  - 自動化
+  - 開発者ツール
+description: GitLabに完全統合されたCI/CDプラットフォーム。単一のアプリケーションでDevSecOps全体をカバーし、AIエージェントによる自動化も実現。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "エンタープライズ"
-  latest_highlight: "2026年1月にGitLab Duo Agent Platformが一般公開(GA)"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - エンタープライズ
+  latest_highlight: 2026年1月にGitLab Duo Agent Platformが一般公開(GA)
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ソースコード管理からセキュリティ、監視まで単一ツールで完結するオールインワン体験"
+      reason: ソースコード管理からセキュリティ、監視まで単一ツールで完結するオールインワン体験
     - point: 5
-      reason: "GitLab Duo Agentsによる高度なAI支援（計画、セキュリティ分析など）"
+      reason: GitLab Duo Agentsによる高度なAI支援（計画、セキュリティ分析など）
     - point: 5
-      reason: "Freeプランが強力で、セルフホストランナーなら実行時間無制限"
+      reason: Freeプランが強力で、セルフホストランナーなら実行時間無制限
   minus_points:
     - point: -3
-      reason: "機能が豊富なためUIが複雑で、初心者には学習コストがかかる"
-  summary: "GitLabユーザーにとって最強の選択肢であり、AIエージェントの統合によりDevSecOpsの自動化レベルが一段階向上した"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が豊富なためUIが複雑で、初心者には学習コストがかかる
+  summary: GitLabユーザーにとって最強の選択肢であり、AIエージェントの統合によりDevSecOpsの自動化レベルが一段階向上した
 links:
-  documentation: "https://docs.gitlab.com/ee/ci/"
+  documentation: https://docs.gitlab.com/ee/ci/
 relationships:
-  parent: "GitLab"
+  parent: GitLab
   children: []
   related_tools:
-    - "GitHub Actions"
-    - "Jenkins"
-    - "act"
+    - GitHub Actions
+    - Jenkins
+    - act
 ---
+
+
+
 
 # **GitLab CI/CD 調査レポート**
 

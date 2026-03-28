@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "マネーフォワード クラウド勤怠 調査レポート"
-tool_name: "マネーフォワード クラウド勤怠"
-tool_reading: "マネーフォワード クラウドキンタイ"
-category: "勤怠管理"
-developer: "株式会社マネーフォワード"
-official_site: "https://biz.moneyforward.com/attendance/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: マネーフォワード クラウド勤怠 調査レポート
+tool_name: マネーフォワード クラウド勤怠
+tool_reading: マネーフォワード クラウドキンタイ
+category: 勤怠管理
+developer: 株式会社マネーフォワード
+official_site: https://biz.moneyforward.com/attendance/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "勤怠管理"
-  - "人事労務"
-  - "SaaS"
-  - "自動化"
-description: "多様な働き方に対応し、勤怠管理から給与計算までをシームレスに連携するクラウド型勤怠管理システム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - 人事労務
+  - 勤怠管理
+  - 自動化
+description: 多様な働き方に対応し、勤怠管理から給与計算までをシームレスに連携するクラウド型勤怠管理システム。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "月額2,480円〜"
+  starting_price: 月額2,480円〜
   target_users:
-    - "中小企業"
-    - "成長企業"
-    - "MFシリーズ利用者"
-  latest_highlight: "2026年1月時点で目立った機能追加情報はなし"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 中小企業
+    - 成長企業
+    - MFシリーズ利用者
+  latest_highlight: 2026年1月時点で目立った機能追加情報はなし
+  update_frequency: 不定期
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 8
-      reason: "マネーフォワードの他サービスとの連携が強力で、バックオフィス業務全体を効率化できる"
+      reason: マネーフォワードの他サービスとの連携が強力で、バックオフィス業務全体を効率化できる
     - point: 5
-      reason: "UIが直感的で使いやすく、ITに不慣れな従業員でも導入しやすい"
+      reason: UIが直感的で使いやすく、ITに不慣れな従業員でも導入しやすい
     - point: 3
-      reason: "多様な働き方（フレックス、裁量労働制など）に標準で対応できる"
+      reason: 多様な働き方（フレックス、裁量労働制など）に標準で対応できる
   minus_points:
     - point: -2
-      reason: "競合と比較して、生体認証など打刻方法の種類が少ない"
+      reason: 競合と比較して、生体認証など打刻方法の種類が少ない
     - point: -2
-      reason: "多機能なため初期設定がやや煩雑に感じられる場合がある"
-  summary: "MFクラウドシリーズ利用企業に最適で、UIも良いが、打刻方法のバリエーションは競合に譲る。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 多機能なため初期設定がやや煩雑に感じられる場合がある
+  summary: MFクラウドシリーズ利用企業に最適で、UIも良いが、打刻方法のバリエーションは競合に譲る。
 links:
-  documentation: "https://biz.moneyforward.com/support/attendance/"
+  documentation: https://biz.moneyforward.com/support/attendance/
 relationships:
   related_tools:
-    - "COMPANY"
-    - "SmartHR"
-    - "KING OF TIME"
-    - "ジョブカン勤怠管理"
+    - COMPANY
+    - SmartHR
+    - KING OF TIME
+    - ジョブカン勤怠管理
 ---
+
+
+
 
 # **マネーフォワード クラウド勤怠 調査レポート**
 

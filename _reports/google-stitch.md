@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Stitch 調査レポート"
-tool_name: "Google Stitch"
-tool_reading: "グーグルステッチ"
-category: "デザインツール"
-developer: "Google"
-official_site: "https://stitch.withgoogle.com/"
-date: "2026-02-22"
-last_updated: "2026-02-22"
+title: Google Stitch 調査レポート
+tool_name: Google Stitch
+tool_reading: グーグルステッチ
+category: デザインツール
+developer: Google
+official_site: https://stitch.withgoogle.com/
+date: '2026-02-22'
+last_updated: '2026-02-22'
 tags:
-  - "AI"
-  - "デザインツール"
-  - "プロトタイピング"
-  - "UI/UXデザイン"
-  - "ノーコード"
-  - "Gemini"
-description: "テキストプロンプトや画像からUIデザインとフロントエンドコードを生成する、GoogleのAI搭載プロトタイピングツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Gemini
+  - UI/UXデザイン
+  - デザインツール
+  - ノーコード
+  - プロトタイピング
+description: テキストプロンプトや画像からUIデザインとフロントエンドコードを生成する、GoogleのAI搭載プロトタイピングツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "デザイナー"
-    - "プロダクトマネージャー"
-  latest_highlight: "Gemini 2.5 Pro/Flashモデルを搭載し、画像からのUI生成に対応"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - デザイナー
+    - プロダクトマネージャー
+  latest_highlight: Gemini 2.5 Pro/Flashモデルを搭載し、画像からのUI生成に対応
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "テキストプロンプトから数秒でUIのプロトタイプを作成できる"
+      reason: テキストプロンプトから数秒でUIのプロトタイプを作成できる
     - point: 3
-      reason: "Gemini 2.5 Proによる画像（スケッチやワイヤーフレーム）からのUI生成に対応"
+      reason: Gemini 2.5 Proによる画像（スケッチやワイヤーフレーム）からのUI生成に対応
     - point: 3
-      reason: "生成されたUIをFigma形式やHTML/CSSコードとしてエクスポート可能"
+      reason: 生成されたUIをFigma形式やHTML/CSSコードとしてエクスポート可能
     - point: 3
-      reason: "Google Labsを通じて無料で利用可能（記事執筆時点）"
+      reason: Google Labsを通じて無料で利用可能（記事執筆時点）
   minus_points:
     - point: -3
-      reason: "生成されるデザインが一般的で、細部の品質やアクセシビリティに課題がある"
+      reason: 生成されるデザインが一般的で、細部の品質やアクセシビリティに課題がある
     - point: -3
-      reason: "Experimentalモード（画像入力対応）ではFigmaへのエクスポートが非対応"
-  summary: "初期のアイデア出しやプロトタイピングには強力だが、実務レベルのデザイン品質には調整が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Experimentalモード（画像入力対応）ではFigmaへのエクスポートが非対応
+  summary: 初期のアイデア出しやプロトタイピングには強力だが、実務レベルのデザイン品質には調整が必要。
 links:
-  documentation: "https://stitch.withgoogle.com/"
+  documentation: https://stitch.withgoogle.com/
 relationships:
-  parent: null
+  parent: Gemini
   children: []
   related_tools:
-    - "Figma"
-    - "Gemini"
+    - Figma
+    - Gemini
 ---
+
+
+
 
 # **Google Stitch 調査レポート**
 

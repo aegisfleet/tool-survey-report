@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Tableau 調査レポート"
-tool_name: "Tableau"
-tool_reading: "タブロー"
-category: "BIツール"
-developer: "Salesforce"
-official_site: "https://www.tableau.com/"
-date: "2026-01-28"
-last_updated: "2026-03-25"
+title: Tableau 調査レポート
+tool_name: Tableau
+tool_reading: タブロー
+category: BIツール
+developer: Salesforce
+official_site: https://www.tableau.com/
+date: '2026-01-28'
+last_updated: '2026-03-25'
 tags:
-  - "BI"
-  - "データ分析"
-  - "データ可視化"
-  - "Salesforce"
-  - "SaaS"
-  - "ノーコード"
-description: "直感的なドラッグ＆ドロップ操作でデータを視覚化できる、業界標準のBIプラットフォーム。Salesforceエコシステムとの強力な連携とAI機能が特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - BI
+  - SaaS
+  - Salesforce
+  - データ分析
+  - データ可視化
+  - ノーコード
+description: 直感的なドラッグ＆ドロップ操作でデータを視覚化できる、業界標準のBIプラットフォーム。Salesforceエコシステムとの強力な連携とAI機能が特徴。
 quick_summary:
-  has_free_plan: true  # Tableau Public (無料版) あり
+  has_free_plan: true
   is_oss: false
-  starting_price: "$15/月"  # Viewerプラン
+  starting_price: $15/月
   target_users:
-    - "データアナリスト"
-    - "経営層"
-    - "マーケター"
-  latest_highlight: "2026年3月のリリースでTableau Next: Rule-Based Semantic Model AuthoringやPulseの強化を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - データアナリスト
+    - 経営層
+    - マーケター
+  latest_highlight: '2026年3月のリリースでTableau Next: Rule-Based Semantic Model AuthoringやPulseの強化を実施'
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "業界最高水準のデータ可視化能力と表現力"
+      reason: 業界最高水準のデータ可視化能力と表現力
     - point: 3
-      reason: "Salesforce製品とのシームレスな統合"
+      reason: Salesforce製品とのシームレスな統合
     - point: 3
-      reason: "世界的に活発なユーザーコミュニティと豊富な学習リソース"
+      reason: 世界的に活発なユーザーコミュニティと豊富な学習リソース
     - point: 2
-      reason: "AI機能（Tableau Pulse等）によるインサイト自動化"
+      reason: AI機能（Tableau Pulse等）によるインサイト自動化
   minus_points:
     - point: -3
-      reason: "Creatorライセンスの料金が比較的高額"
-  summary: "データ可視化におけるデファクトスタンダード。機能、コミュニティ、AI活用のバランスが非常に良く、Salesforceユーザーには必須級のツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Creatorライセンスの料金が比較的高額
+  summary: データ可視化におけるデファクトスタンダード。機能、コミュニティ、AI活用のバランスが非常に良く、Salesforceユーザーには必須級のツール。
 links:
-  documentation: "https://help.tableau.com/current/pro/desktop/ja-jp/default.htm"
+  documentation: https://help.tableau.com/current/pro/desktop/ja-jp/default.htm
 relationships:
-  parent: "Salesforce"
+  parent: Salesforce
   related_tools:
-    - "Amazon QuickSight"
-    - "Looker Studio"
+    - Amazon QuickSight
+    - Looker Studio
 ---
+
+
+
 
 # **Tableau 調査レポート**
 

@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Splunk AppDynamics 調査レポート"
-tool_name: "Splunk AppDynamics"
-tool_reading: "スプランク アップダイナミクス"
-category: "監視/可観測性"
-developer: "Splunk (a Cisco company)"
-official_site: "https://www.splunk.com/en_us/products/appdynamics.html"
-date: "2026-02-09"
-last_updated: "2026-02-09"
+title: Splunk AppDynamics 調査レポート
+tool_name: Splunk AppDynamics
+tool_reading: スプランク アップダイナミクス
+category: 監視/可観測性
+developer: Splunk (a Cisco company)
+official_site: https://www.splunk.com/en_us/products/appdynamics.html
+date: '2026-02-09'
+last_updated: '2026-02-09'
 tags:
-  - "APM"
-  - "オブザーバビリティ"
-  - "監視"
-  - "SaaS"
-  - "オンプレミス"
-  - "エンタープライズ"
-description: "ビジネスパフォーマンスとアプリケーションの健全性を紐づけて可視化することに強みを持つ、エンタープライズ向けのAPM/オブザーバビリティプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - APM
+  - SaaS
+  - エンタープライズ
+  - オブザーバビリティ
+  - オンプレミス
+  - 監視
+description: ビジネスパフォーマンスとアプリケーションの健全性を紐づけて可視化することに強みを持つ、エンタープライズ向けのAPM/オブザーバビリティプラットフォーム
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "大企業"
-    - "IT運用チーム"
-    - "SRE"
-  latest_highlight: "2026年1月にJavaScript Agent 26.1.0をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - IT運用チーム
+    - SRE
+  latest_highlight: 2026年1月にJavaScript Agent 26.1.0をリリース
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ビジネスインパクトの可視化機能が非常に強力で、競合に対する明確な優位性となっている"
+      reason: ビジネスインパクトの可視化機能が非常に強力で、競合に対する明確な優位性となっている
     - point: 5
-      reason: "オンプレミスやハイブリッド環境への対応が手厚く、エンタープライズの複雑な要求に応えられる"
+      reason: オンプレミスやハイブリッド環境への対応が手厚く、エンタープライズの複雑な要求に応えられる
     - point: 5
-      reason: "SplunkやCisco製品との連携により、ログ、ネットワーク、セキュリティを横断した高度な可観測性を実現できる"
+      reason: SplunkやCisco製品との連携により、ログ、ネットワーク、セキュリティを横断した高度な可観測性を実現できる
   minus_points:
     - point: -3
-      reason: "エンタープライズ向けであるため価格が高く、導入のハードルが高い"
+      reason: エンタープライズ向けであるため価格が高く、導入のハードルが高い
     - point: -3
-      reason: "多機能ゆえに設定が複雑で、学習コストが高い"
-  summary: "ビジネス成果とITパフォーマンスを直結させたい大企業向けの、高機能だが高コストなオブザーバビリティソリューション"
-
-# 【任意項目】該当するもののみ記載
+      reason: 多機能ゆえに設定が複雑で、学習コストが高い
+  summary: ビジネス成果とITパフォーマンスを直結させたい大企業向けの、高機能だが高コストなオブザーバビリティソリューション
 links:
-  documentation: "https://docs.appdynamics.com/"
+  documentation: https://docs.appdynamics.com/
 relationships:
-  parent: "Splunk"
+  parent: Splunk
   related_tools:
-    - "Datadog"
-    - "New Relic"
-    - "Grafana"
+    - Datadog
+    - New Relic
+    - Grafana
 ---
+
+
+
 
 # **Splunk AppDynamics 調査レポート**
 

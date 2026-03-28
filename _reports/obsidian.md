@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Obsidian 調査レポート"
-tool_name: "Obsidian"
-tool_reading: "オブシディアン"
-category: "ドキュメント/ナレッジ"
-developer: "Obsidian"
-official_site: "https://obsidian.md/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: Obsidian 調査レポート
+tool_name: Obsidian
+tool_reading: オブシディアン
+category: ドキュメント/ナレッジ
+developer: Obsidian
+official_site: https://obsidian.md/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "ドキュメント管理"
-  - "ナレッジベース"
-  - "Markdown"
-  - "ローカル"
-  - "開発者ツール"
-description: "ローカル環境で動作するMarkdownベースのナレッジベースツール。強力なリンク機能、グラフビュー、データベース機能「Bases」が特徴で、ユーザーがデータを完全に所有できます。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Markdown
+  - ドキュメント管理
+  - ナレッジベース
+  - ローカル
+  - 開発者ツール
+description: ローカル環境で動作するMarkdownベースのナレッジベースツール。強力なリンク機能、グラフビュー、データベース機能「Bases」が特徴で、ユーザーがデータを完全に所有できます。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "研究者"
-    - "ライター"
-    - "エンジニア"
-  latest_highlight: "2026年1月にSiri/ショートカット連携を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 研究者
+    - ライター
+    - エンジニア
+  latest_highlight: 2026年1月にSiri/ショートカット連携を追加
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "ローカルファーストで動作が高速かつプライバシー性が高い"
+      reason: ローカルファーストで動作が高速かつプライバシー性が高い
     - point: 8
-      reason: "豊富なプラグインによる圧倒的なカスタマイズ性"
+      reason: 豊富なプラグインによる圧倒的なカスタマイズ性
     - point: 5
-      reason: "Bases機能により構造化データも扱えるようになり、汎用性が向上した"
+      reason: Bases機能により構造化データも扱えるようになり、汎用性が向上した
   minus_points:
     - point: -3
-      reason: "公式の同期機能が有料"
+      reason: 公式の同期機能が有料
     - point: -2
-      reason: "多機能ゆえに学習コストが高い"
-  summary: "カスタマイズ性とプライバシー性を両立した最高峰の個人用ナレッジベースだが、ポテンシャルを最大限に引き出すには学習が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 多機能ゆえに学習コストが高い
+  summary: カスタマイズ性とプライバシー性を両立した最高峰の個人用ナレッジベースだが、ポテンシャルを最大限に引き出すには学習が必要。
 links:
-  github: "https://github.com/obsidianmd"
-  documentation: "https://help.obsidian.md/"
+  github: https://github.com/obsidianmd
+  documentation: https://help.obsidian.md/
 relationships:
   related_tools:
-    - "Notion"
-    - "Visual Studio Code"
+    - Notion
+    - Visual Studio Code
 ---
+
+
+
 
 # **Obsidian 調査レポート**
 

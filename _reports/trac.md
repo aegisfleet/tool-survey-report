@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Trac 調査レポート"
-tool_name: "Trac"
-tool_reading: "トラック"
-category: "プロジェクト管理"
-developer: "Edgewall Software"
-official_site: "https://trac.edgewall.org/"
-date: "2026-02-02"
-last_updated: "2026-02-02"
+title: Trac 調査レポート
+tool_name: Trac
+tool_reading: トラック
+category: プロジェクト管理
+developer: Edgewall Software
+official_site: https://trac.edgewall.org/
+date: '2026-02-02'
+last_updated: '2026-02-02'
 tags:
-  - "オープンソース"
-  - "バグトラッキング"
-  - "Wiki"
-  - "Python"
-description: "統合されたWikiと課題管理システムを持つ、ミニマルで拡張性の高いプロジェクト管理ツール。Python製。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Python
+  - Wiki
+  - オープンソース
+  - バグトラッキング
+description: 統合されたWikiと課題管理システムを持つ、ミニマルで拡張性の高いプロジェクト管理ツール。Python製。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "小〜中規模チーム"
-    - "Pythonユーザー"
-  latest_highlight: "Python 3に完全対応したバージョン1.6がリリースされ、モダンな環境での動作が安定。"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 小〜中規模チーム
+    - Pythonユーザー
+  latest_highlight: Python 3に完全対応したバージョン1.6がリリースされ、モダンな環境での動作が安定。
+  update_frequency: 中
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Wikiとチケット管理がシームレスに統合されており、情報の一元化が容易。"
+      reason: Wikiとチケット管理がシームレスに統合されており、情報の一元化が容易。
     - point: 3
-      reason: "Python製であり、Pythonプログラマーにとってカスタマイズが容易。"
+      reason: Python製であり、Pythonプログラマーにとってカスタマイズが容易。
     - point: 5
-      reason: "オープンソースで完全に無料。"
+      reason: オープンソースで完全に無料。
   minus_points:
     - point: -5
-      reason: "デフォルトのUIが古く、モダンなツールに比べると操作性が劣る。"
+      reason: デフォルトのUIが古く、モダンなツールに比べると操作性が劣る。
     - point: -3
-      reason: "セットアップやメンテナンスが手動であり、技術的な知識が必要。"
-  summary: "シンプルで軽量だが、UIの古さと構築の手間がネック。Python環境との親和性は高い。"
-
-# 【任意項目】該当するもののみ記載
+      reason: セットアップやメンテナンスが手動であり、技術的な知識が必要。
+  summary: シンプルで軽量だが、UIの古さと構築の手間がネック。Python環境との親和性は高い。
 links:
-  documentation: "https://trac.edgewall.org/wiki/TracGuide"
+  documentation: https://trac.edgewall.org/wiki/TracGuide
 relationships:
   related_tools:
-    - "Redmine"
+    - Redmine
 ---
+
+
+
 
 # **Trac 調査レポート**
 

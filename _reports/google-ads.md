@@ -1,63 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google 広告 調査レポート"
-tool_name: "Google 広告"
-tool_reading: "グーグルコウコク / グーグルアズ"
-category: "広告配信"
-developer: "Google"
-official_site: "https://business.google.com/jp/google-ads/"
-date: "2026-01-31"
-last_updated: "2026-01-31"
+title: Google 広告 調査レポート
+tool_name: Google 広告
+tool_reading: グーグルコウコク / グーグルアズ
+category: 広告配信
+developer: Google
+official_site: https://business.google.com/jp/google-ads/
+date: '2026-01-31'
+last_updated: '2026-01-31'
 tags:
-  - "Web広告"
-  - "マーケティング"
-  - "SEM"
-  - "動画広告"
-  - "PPC"
-description: "Google検索、YouTube、その他数百万のサイトやアプリに広告を掲載できる、世界最大級のオンライン広告プラットフォーム。AIを活用した自動最適化機能（P-MAX）などを提供。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - PPC
+  - SEM
+  - Web広告
+  - マーケティング
+  - 動画広告
+description: Google検索、YouTube、その他数百万のサイトやアプリに広告を掲載できる、世界最大級のオンライン広告プラットフォーム。AIを活用した自動最適化機能（P-MAX）などを提供。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "予算は自由に設定可能"
+  starting_price: 予算は自由に設定可能
   target_users:
-    - "全規模の企業"
-    - "マーケター"
-    - "EC事業者"
-  latest_highlight: "2026年1月、エージェンティック・ショッピング時代に向けた新ツールと戦略を発表"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 全規模の企業
+    - マーケター
+    - EC事業者
+  latest_highlight: 2026年1月、エージェンティック・ショッピング時代に向けた新ツールと戦略を発表
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "検索、YouTube、ディスプレイなど、圧倒的なリーチと在庫量"
+      reason: 検索、YouTube、ディスプレイなど、圧倒的なリーチと在庫量
     - point: 5
-      reason: "P-MAXなどのAI機能による高度な自動化と最適化"
+      reason: P-MAXなどのAI機能による高度な自動化と最適化
     - point: 5
-      reason: "Google アナリティクスなどのエコシステムとの強力な連携"
+      reason: Google アナリティクスなどのエコシステムとの強力な連携
   minus_points:
     - point: -3
-      reason: "競合性が高く、クリック単価（CPC）が上昇傾向にある"
+      reason: 競合性が高く、クリック単価（CPC）が上昇傾向にある
     - point: -2
-      reason: "機能が多岐にわたり、初心者が使いこなすには学習コストが高い"
-  summary: "Webマーケティングにおいて必須級のツールであり、機能・リーチ共に最高水準だが、運用スキルまたはAIへの適切な指示が求められる"
-
-# 【任意項目】
+      reason: 機能が多岐にわたり、初心者が使いこなすには学習コストが高い
+  summary: Webマーケティングにおいて必須級のツールであり、機能・リーチ共に最高水準だが、運用スキルまたはAIへの適切な指示が求められる
 links:
-  documentation: "https://support.google.com/google-ads/"
+  documentation: https://support.google.com/google-ads/
 relationships:
   related_tools:
-    - "Gemini"
-    - "Google Cloud"
-    - "Salesforce"
-    - "Zapier"
-    - "Looker Studio"
+    - Gemini
+    - Google Cloud
+    - Salesforce
+    - Zapier
+    - Looker Studio
+    - Microsoft 広告
 ---
+
+
+
 
 # **Google 広告 調査レポート**
 

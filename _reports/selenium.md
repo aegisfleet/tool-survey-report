@@ -1,67 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Selenium 調査レポート"
-tool_name: "Selenium"
-tool_reading: "セレニウム"
-category: "テスト/QA"
-developer: "Software Freedom Conservancy"
-official_site: "https://www.selenium.dev/"
-date: "2025-10-24"
-last_updated: "2026-01-30"
+title: Selenium 調査レポート
+tool_name: Selenium
+tool_reading: セレニウム
+category: テスト/QA
+developer: Software Freedom Conservancy
+official_site: https://www.selenium.dev/
+date: '2025-10-24'
+last_updated: '2026-01-30'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "Webブラウザ"
-  - "E2Eテスト"
-  - "開発者ツール"
-description: "Webブラウザの操作を自動化するためのオープンソースフレームワーク群。主にWebアプリケーションのテストに利用されるが、Webスクレイピングなど定型作業の自動化にも活用される。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - E2Eテスト
+  - Webブラウザ
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: Webブラウザの操作を自動化するためのオープンソースフレームワーク群。主にWebアプリケーションのテストに利用されるが、Webスクレイピングなど定型作業の自動化にも活用される。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年1月にSelenium 4.40.0をリリースし、.NETやJavaの環境設定を近代化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - QAエンジニア
+  latest_highlight: 2026年1月にSelenium 4.40.0をリリースし、.NETやJavaの環境設定を近代化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "完全にオープンソースであり、ライセンス費用が一切かからない"
+      reason: 完全にオープンソースであり、ライセンス費用が一切かからない
     - point: 7
-      reason: "Java, Python, C#, JavaScriptなど多くの言語に対応し、ほぼ全てのモダンブラウザをサポートしているため、非常に柔軟性が高い"
+      reason: Java, Python, C#, JavaScriptなど多くの言語に対応し、ほぼ全てのモダンブラウザをサポートしているため、非常に柔軟性が高い
     - point: 5
-      reason: "20年以上の歴史を持ち、世界中に巨大なコミュニティと豊富なドキュメントが存在するため、問題解決が容易である"
+      reason: 20年以上の歴史を持ち、世界中に巨大なコミュニティと豊富なドキュメントが存在するため、問題解決が容易である
   minus_points:
     - point: -3
-      reason: "WebDriverを使いこなすにはプログラミングスキルが必須であり、学習コストが高い"
+      reason: WebDriverを使いこなすにはプログラミングスキルが必須であり、学習コストが高い
     - point: -2
-      reason: "テスト結果のレポート機能が標準で提供されておらず、別途ライブラリの導入が必要"
-  summary: "圧倒的な柔軟性と実績を誇るWeb自動化の標準ツールだが、習得には一定の技術力が求められる"
-
-# 【任意項目】該当するもののみ記載
+      reason: テスト結果のレポート機能が標準で提供されておらず、別途ライブラリの導入が必要
+  summary: 圧倒的な柔軟性と実績を誇るWeb自動化の標準ツールだが、習得には一定の技術力が求められる
 links:
-  github: "https://github.com/SeleniumHQ/selenium"
-  codewiki: "https://codewiki.google/github.com/SeleniumHQ/selenium"
-  documentation: "https://www.selenium.dev/documentation/"
+  github: https://github.com/SeleniumHQ/selenium
+  codewiki: https://codewiki.google/github.com/SeleniumHQ/selenium
+  documentation: https://www.selenium.dev/documentation/
 relationships:
   related_tools:
-    - "Playwright"
-    - "Cypress"
-    - "Appium"
-    - "MagicPod"
-    - "Autify"
-    - "mabl"
-    - "Karate"
-    - "Gauge"
+    - Playwright
+    - Cypress
+    - Appium
+    - MagicPod
+    - Autify
+    - mabl
+    - Karate
 ---
+
+
+
 
 # **Selenium 調査レポート**
 

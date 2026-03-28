@@ -1,72 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Canva 調査レポート"
-tool_name: "Canva"
-tool_reading: "キャンバ"
-category: "デザインツール"
-developer: "Canva Pty Ltd."
-official_site: "https://www.canva.com/"
-date: "2026-02-23"
-last_updated: "2026-02-23"
+title: Canva 調査レポート
+tool_name: Canva
+tool_reading: キャンバ
+category: デザインツール
+developer: Canva Pty Ltd.
+official_site: https://www.canva.com/
+date: '2026-02-23'
+last_updated: '2026-02-23'
 tags:
-  - "デザインツール"
-  - "AI"
-  - "SaaS"
-  - "マーケティング"
-  - "生成AI"
-description: "AI機能を統合し、デザインからマーケティング、分析までをワンストップで実現する総合ビジュアルコミュニケーションプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - デザインツール
+  - マーケティング
+  - 生成AI
+description: AI機能を統合し、デザインからマーケティング、分析までをワンストップで実現する総合ビジュアルコミュニケーションプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "マーケター"
-    - "中小企業"
-    - "個人クリエイター"
-  latest_highlight: "2025年後半にAI機能を大幅強化する「Imagination Era」を発表"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - マーケター
+    - 中小企業
+    - 個人クリエイター
+  latest_highlight: 2025年後半にAI機能を大幅強化する「Imagination Era」を発表
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "初心者からプロまで対応する圧倒的な機能性と使いやすさ"
+      reason: 初心者からプロまで対応する圧倒的な機能性と使いやすさ
     - point: 8
-      reason: "プロ向けスイート「Affinity」の無料提供は市場のゲームチェンジャー"
+      reason: プロ向けスイート「Affinity」の無料提供は市場のゲームチェンジャー
     - point: 7
-      reason: "デザイン・AI・マーケティング分析を統合したワンストッププラットフォーム"
+      reason: デザイン・AI・マーケティング分析を統合したワンストッププラットフォーム
     - point: 2
-      reason: "豊富なテンプレートと素材、活発な機能アップデート"
+      reason: 豊富なテンプレートと素材、活発な機能アップデート
   minus_points:
     - point: -3
-      reason: "多機能化したことで、全ての機能を使いこなすための学習コストが上昇"
+      reason: 多機能化したことで、全ての機能を使いこなすための学習コストが上昇
     - point: -2
-      reason: "テンプレートへの依存によるデザインの画一化リスク"
-  summary: "AIとマーケティング機能を統合し、プロ向けツールも無料化したことで、あらゆるクリエイティブ活動のハブとなったプラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: テンプレートへの依存によるデザインの画一化リスク
+  summary: AIとマーケティング機能を統合し、プロ向けツールも無料化したことで、あらゆるクリエイティブ活動のハブとなったプラットフォーム。
 links:
-  documentation: "https://www.canva.com/design-school/"
+  documentation: https://www.canva.com/design-school/
 relationships:
   parent: null
   children:
-    - "Affinity"
+    - Affinity
   related_tools:
-    - "Figma"
-    - "GIMP"
-    - "Pomelli"
-    - "Miro"
-    - "Gamma"
-    - "Speaker Deck"
-    - "Apple Creator Studio"
-    - "Qwen-Image-Layered"
-    - "Felo"
+    - Figma
+    - GIMP
+    - Pomelli
+    - Miro
+    - Gamma
+    - Speaker Deck
+    - Apple Creator Studio
 ---
+
+
+
 
 # **Canva 調査レポート**
 

@@ -1,57 +1,59 @@
 ---
-title: "Kiro 調査レポート"
-tool_name: "Kiro"
-tool_reading: "キロ"
-category: "AIコードエディタ"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://kiro.dev/"
-date: "2026-02-20"
-last_updated: "2026-02-20"
+title: Kiro 調査レポート
+tool_name: Kiro
+tool_reading: キロ
+category: AIコードエディタ
+developer: Amazon Web Services (AWS)
+official_site: https://kiro.dev/
+date: '2026-02-20'
+last_updated: '2026-02-20'
 tags:
-  - "AI"
-  - "エージェント"
-  - "IDE"
-  - "開発者ツール"
-  - "クラウド"
-description: "自然言語から仕様書を生成し、自律エージェントが実装を行うスペック駆動開発型のAIネイティブIDE。"
-
+  - AI
+  - IDE
+  - エージェント
+  - クラウド
+  - 開発者ツール
+description: 自然言語から仕様書を生成し、自律エージェントが実装を行うスペック駆動開発型のAIネイティブIDE。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "SaaS開発チーム"
-  latest_highlight: "2026年2月にデザインファーストな仕様策定フローやバグ修正専用フローを追加"
-  update_frequency: "高"
-
+    - 開発者
+    - スタートアップ
+    - SaaS開発チーム
+  latest_highlight: 2026年2月にデザインファーストな仕様策定フローやバグ修正専用フローを追加
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "スペック駆動開発による要件定義からの構造的な実装が可能"
+      reason: スペック駆動開発による要件定義からの構造的な実装が可能
     - point: 4
-      reason: "AWSの信頼性とセキュリティ基準（SOC2等）に準拠"
+      reason: AWSの信頼性とセキュリティ基準（SOC2等）に準拠
     - point: 3
-      reason: "VS Code互換で移行が容易"
+      reason: VS Code互換で移行が容易
     - point: 2
-      reason: "自律エージェント機能が強力でカスタマイズも可能"
+      reason: 自律エージェント機能が強力でカスタマイズも可能
   minus_points:
     - point: -1
-      reason: "日本語ドキュメントやUIがまだ英語中心"
+      reason: 日本語ドキュメントやUIがまだ英語中心
     - point: -1
-      reason: "クレジット制の従量課金がやや複雑"
-  summary: "AWS発の強力なAIネイティブIDE。スペック駆動開発という独自のアプローチで、実装だけでなく設計フェーズからAIが支援する点が革新的。"
-
+      reason: クレジット制の従量課金がやや複雑
+  summary: AWS発の強力なAIネイティブIDE。スペック駆動開発という独自のアプローチで、実装だけでなく設計フェーズからAIが支援する点が革新的。
 relationships:
   related_tools:
-    - "Cursor"
-    - "Amazon Q Developer"
-    - "Windsurf"
-    - "AWS Frontier Agents"
+    - Cursor
+    - Amazon Q Developer
+    - Windsurf
+    - AWS Frontier Agents
+    - cc-sdd
+  parent: GitKraken
 ---
+
+
+
 
 # **Kiro 調査レポート**
 

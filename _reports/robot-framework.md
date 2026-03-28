@@ -1,73 +1,66 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Robot Framework 調査レポート"
-tool_name: "Robot Framework"
-tool_reading: "ロボット フレームワーク"
-category: "テスト/QA"
-developer: "Robot Framework Foundation"
-official_site: "https://robotframework.org/"
-date: "2025-12-07"
-last_updated: "2026-01-29"
+title: Robot Framework 調査レポート
+tool_name: Robot Framework
+tool_reading: ロボット フレームワーク
+category: テスト/QA
+developer: Robot Framework Foundation
+official_site: https://robotframework.org/
+date: '2025-12-07'
+last_updated: '2026-01-29'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "Python"
-  - "E2Eテスト"
-  - "RPA"
-  - "キーワード駆動テスト"
-description: "キーワード駆動型で読みやすい構文を持つ、オープンソースの汎用テスト自動化・RPAフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - E2Eテスト
+  - Python
+  - RPA
+  - オープンソース
+  - キーワード駆動テスト
+  - テスト自動化
+description: キーワード駆動型で読みやすい構文を持つ、オープンソースの汎用テスト自動化・RPAフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "テスト担当者"
-    - "RPA開発者"
-  latest_highlight: "2025年12月に機密情報管理を強化したv7.4.1をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - テスト担当者
+    - RPA開発者
+  latest_highlight: 2025年12月に機密情報管理を強化したv7.4.1をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "オープンソースでありながら非常に多機能で、Web・API・デスクトップなど多様な環境のテストを単一フレームワークで実現できる。"
+      reason: オープンソースでありながら非常に多機能で、Web・API・デスクトップなど多様な環境のテストを単一フレームワークで実現できる。
     - point: 5
-      reason: "キーワード駆動により可読性が高く、非プログラマでもテストケースの作成やレビューに参加しやすい。"
+      reason: キーワード駆動により可読性が高く、非プログラマでもテストケースの作成やレビューに参加しやすい。
     - point: 3
-      reason: "Pythonベースで拡張性が高く、豊富なライブラリ資産を活用できるエコシステムが強力。"
+      reason: Pythonベースで拡張性が高く、豊富なライブラリ資産を活用できるエコシステムが強力。
     - point: 2
-      reason: "活発なコミュニティと頻繁なアップデートがあり、将来性も高い。"
+      reason: 活発なコミュニティと頻繁なアップデートがあり、将来性も高い。
   minus_points:
     - point: -3
-      reason: "独自の構文やライブラリ仕様の学習が必要で、単純なテストではコードが冗長になる場合がある。"
+      reason: 独自の構文やライブラリ仕様の学習が必要で、単純なテストではコードが冗長になる場合がある。
     - point: -2
-      reason: "フレームワークのオーバーヘッドにより、純粋なコードと比較して実行速度が若干劣ることがある。"
-  summary: "高い汎用性・拡張性・可読性を誇るオープンソースのテスト自動化フレームワークの決定版。"
-
-# 【任意項目】該当するもののみ記載
+      reason: フレームワークのオーバーヘッドにより、純粋なコードと比較して実行速度が若干劣ることがある。
+  summary: 高い汎用性・拡張性・可読性を誇るオープンソースのテスト自動化フレームワークの決定版。
 links:
-  github: "https://github.com/robotframework/robotframework"
-  codewiki: "https://codewiki.google/github.com/robotframework/robotframework"
-  deepwiki: "https://deepwiki.com/robotframework/robotframework"
-  documentation: "https://robotframework.org/robotframework/"
+  github: https://github.com/robotframework/robotframework
+  codewiki: https://codewiki.google/github.com/robotframework/robotframework
+  deepwiki: https://deepwiki.com/robotframework/robotframework
+  documentation: https://robotframework.org/robotframework/
 relationships:
   related_tools:
-    - "UiPath"
-    - "Microsoft Power Automate"
-    - "Selenium"
-    - "Cucumber"
-    - "PyTest"
-    - "Gauge"
-    - "Playwright"
-    - "Cypress"
-    - "Appium"
+    - UiPath
+    - Microsoft Power Automate
+    - Selenium
+    - Cucumber
+    - PyTest
+    - Gauge
+    - Playwright
 ---
+
+
+
 
 # **Robot Framework 調査レポート**
 

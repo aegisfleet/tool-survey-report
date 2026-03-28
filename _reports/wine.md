@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Wine (WineHQ) 調査レポート"
-tool_name: "Wine"
-tool_reading: "ワイン"
-category: "開発者ツール"
-developer: "WineHQ"
-official_site: "https://www.winehq.org/"
-date: "2026-02-13"
-last_updated: "2026-02-13"
+title: Wine (WineHQ) 調査レポート
+tool_name: Wine
+tool_reading: ワイン
+category: 開発者ツール
+developer: WineHQ
+official_site: https://www.winehq.org/
+date: '2026-02-13'
+last_updated: '2026-02-13'
 tags:
-  - "オープンソース"
-  - "Linux"
-  - "Windows互換"
-  - "開発者ツール"
-  - "仮想化"
-description: "LinuxやmacOSなどのPOSIX準拠OS上でWindowsアプリケーションをネイティブに実行するための互換レイヤー"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Linux
+  - Windows互換
+  - オープンソース
+  - 仮想化
+  - 開発者ツール
+description: LinuxやmacOSなどのPOSIX準拠OS上でWindowsアプリケーションをネイティブに実行するための互換レイヤー
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Linuxユーザー"
-    - "macOSユーザー"
-    - "システム管理者"
-  latest_highlight: "2026年1月にWine 11.0安定版リリース。Waylandドライバーがデフォルトに"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Linuxユーザー
+    - macOSユーザー
+    - システム管理者
+  latest_highlight: 2026年1月にWine 11.0安定版リリース。Waylandドライバーがデフォルトに
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料でオープンソースであり、Windowsライセンスが不要"
+      reason: 完全無料でオープンソースであり、Windowsライセンスが不要
     - point: 5
-      reason: "エミュレーションではないため、非常に軽量でパフォーマンスが高い"
+      reason: エミュレーションではないため、非常に軽量でパフォーマンスが高い
     - point: 5
-      reason: "30年以上の歴史があり、膨大な数のWindowsアプリが動作する"
+      reason: 30年以上の歴史があり、膨大な数のWindowsアプリが動作する
   minus_points:
     - point: -3
-      reason: "設定や調整（Winetricksなど）に専門知識が必要な場合がある"
-  summary: "WindowsアプリをLinux/macOSで動かすための最強の無料ツールだが、使いこなすには知識が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: 設定や調整（Winetricksなど）に専門知識が必要な場合がある
+  summary: WindowsアプリをLinux/macOSで動かすための最強の無料ツールだが、使いこなすには知識が必要
 links:
-  github: "https://gitlab.winehq.org/wine/wine"
-  documentation: "https://wiki.winehq.org/"
+  github: https://gitlab.winehq.org/wine/wine
+  documentation: https://wiki.winehq.org/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Docker"
-    - "Podman"
-    - "Ubuntu"
+    - Docker
+    - Podman
+    - Ubuntu
 ---
+
+
+
 
 # **Wine (WineHQ) 調査レポート**
 

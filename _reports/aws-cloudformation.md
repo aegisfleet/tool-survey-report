@@ -1,68 +1,64 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AWS CloudFormation 調査レポート"
-tool_name: "AWS CloudFormation"
-tool_reading: "エーダブリューエス クラウドフォーメーション"
-category: "構成管理"
-developer: "Amazon Web Services"
-official_site: "https://aws.amazon.com/cloudformation/"
-date: "2025-10-27"
-last_updated: "2026-02-03"
+title: AWS CloudFormation 調査レポート
+tool_name: AWS CloudFormation
+tool_reading: エーダブリューエス クラウドフォーメーション
+category: 構成管理
+developer: Amazon Web Services
+official_site: https://aws.amazon.com/cloudformation/
+date: '2025-10-27'
+last_updated: '2026-02-03'
 tags:
-  - "構成管理"
-  - "IaC"
-  - "DevOps"
-  - "自動化"
-  - "クラウド"
-description: "AWSリソースのプロビジョニングと管理を自動化するInfrastructure as Code (IaC) サービス"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - IaC
+  - クラウド
+  - 構成管理
+  - 自動化
+description: AWSリソースのプロビジョニングと管理を自動化するInfrastructure as Code (IaC) サービス
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "インフラ管理者"
-    - "開発者"
-  latest_highlight: "2025年11月にStackSetsのデプロイ順序制御機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - インフラ管理者
+    - 開発者
+  latest_highlight: 2025年11月にStackSetsのデプロイ順序制御機能を追加
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "AWSサービスとのネイティブな統合と機能の豊富さ"
+      reason: AWSサービスとのネイティブな統合と機能の豊富さ
     - point: 5
-      reason: "Change Setsや自動ロールバックによる高い安全性と信頼性"
+      reason: Change Setsや自動ロールバックによる高い安全性と信頼性
     - point: 5
-      reason: "AWSによる活発な開発・機能改善が行われている"
+      reason: AWSによる活発な開発・機能改善が行われている
     - point: 3
-      reason: "ドキュメントやサポートが日本語に完全対応している"
+      reason: ドキュメントやサポートが日本語に完全対応している
   minus_points:
     - point: -5
-      reason: "AWSへのベンダーロックインが強く、マルチクラウド戦略には不向き"
+      reason: AWSへのベンダーロックインが強く、マルチクラウド戦略には不向き
     - point: -3
-      reason: "YAML/JSONの記述とAWSサービスへの深い理解が求められ学習コストが高い"
+      reason: YAML/JSONの記述とAWSサービスへの深い理解が求められ学習コストが高い
     - point: -2
-      reason: "状態（ステート）がAWS管理下で不透明なため、トラブルシュートが困難な場合がある"
-  summary: "AWSネイティブの信頼性は非常に高いが、学習コストとベンダーロックインが主な課題"
-
-# 【任意項目】該当するもののみ記載
+      reason: 状態（ステート）がAWS管理下で不透明なため、トラブルシュートが困難な場合がある
+  summary: AWSネイティブの信頼性は非常に高いが、学習コストとベンダーロックインが主な課題
 links:
-  documentation: "https://docs.aws.amazon.com/cloudformation/"
+  documentation: https://docs.aws.amazon.com/cloudformation/
 relationships:
   related_tools:
-    - "Terraform"
-    - "Pulumi"
-    - "Ansible"
-    - "OpenTofu"
-    - "Amazon Q Developer"
-    - "LocalStack"
+    - Terraform
+    - Pulumi
+    - Ansible
+    - OpenTofu
+    - Amazon Q Developer
+    - LocalStack
+    - AWS MCP Servers
 ---
+
+
+
 
 # **AWS CloudFormation 調査レポート**
 

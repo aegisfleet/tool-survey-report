@@ -1,55 +1,55 @@
 ---
-title: "Letta 調査レポート"
-tool_name: "Letta"
-tool_reading: "レッタ"
-category: "自律型AIエージェント"
-developer: "Letta AI"
-official_site: "https://docs.letta.com/"
-date: "2026-03-21"
-last_updated: "2026-03-21"
+title: Letta 調査レポート
+tool_name: Letta
+tool_reading: レッタ
+category: 自律型AIエージェント
+developer: Letta AI
+official_site: https://docs.letta.com/
+date: '2026-03-21'
+last_updated: '2026-03-21'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "オープンソース"
-  - "開発者ツール"
-description: "ステートフルなAIエージェントを構築・管理・デプロイするためのオープンソースフレームワーク。MemGPTの後継として、永続的なメモリ管理とマルチエージェントシステムを提供する。"
-
+  - AI
+  - エージェント
+  - オープンソース
+  - 自律型
+  - 開発者ツール
+description: ステートフルなAIエージェントを構築・管理・デプロイするためのオープンソースフレームワーク。MemGPTの後継として、永続的なメモリ管理とマルチエージェントシステムを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-    - "研究者"
-  latest_highlight: "2026年3月にv0.16.6をリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+    - 研究者
+  latest_highlight: 2026年3月にv0.16.6をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "永続的なメモリ管理という独自の強み"
+      reason: 永続的なメモリ管理という独自の強み
     - point: 5
-      reason: "モデルに依存しない柔軟性（OpenAI, Anthropic, Gemini等）"
+      reason: モデルに依存しない柔軟性（OpenAI, Anthropic, Gemini等）
     - point: 5
-      reason: "活発なオープンソース開発と商用版の提供"
+      reason: 活発なオープンソース開発と商用版の提供
   minus_points:
     - point: -2
-      reason: "概念が高度で学習コストがやや高い"
-  summary: "永続メモリを持つエージェント開発において、最も先進的かつ実用的なフレームワークの一つ。"
-
+      reason: 概念が高度で学習コストがやや高い
+  summary: 永続メモリを持つエージェント開発において、最も先進的かつ実用的なフレームワークの一つ。
 links:
-  github: "https://github.com/letta-ai/letta"
-  codewiki: "https://codewiki.google/github.com/letta-ai/letta"
-  documentation: "https://docs.letta.com/"
+  github: https://github.com/letta-ai/letta
+  codewiki: https://codewiki.google/github.com/letta-ai/letta
+  documentation: https://docs.letta.com/
 relationships:
   related_tools:
-    - "AutoGPT"
-    - "LangChain"
+    - AutoGPT
+    - LangChain
 ---
+
+
+
 
 # **Letta 調査レポート**
 

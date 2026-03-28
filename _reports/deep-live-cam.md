@@ -1,56 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Deep-Live-Cam 調査レポート"
-tool_name: "Deep-Live-Cam"
-tool_reading: "ディープライブカム"
-category: "生成AI"
-developer: "hacksider"
-official_site: "https://deeplivecam.net/"
-date: "2026-03-28"
-last_updated: "2026-03-28"
+title: Deep-Live-Cam 調査レポート
+tool_name: Deep-Live-Cam
+tool_reading: ディープライブカム
+category: 生成AI
+developer: hacksider
+official_site: https://deeplivecam.net/
+date: '2026-03-28'
+last_updated: '2026-03-28'
 tags:
-  - "オープンソース"
-  - "ディープフェイク"
-  - "リアルタイム"
-  - "画像処理"
-description: "たった1枚の画像からリアルタイムで顔を入れ替えることができるワンクリックビデオディープフェイクツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - ディープフェイク
+  - リアルタイム
+  - 画像処理
+description: たった1枚の画像からリアルタイムで顔を入れ替えることができるワンクリックビデオディープフェイクツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "クリエイター"
-    - "Vtuber"
-    - "ストリーマー"
-  latest_highlight: "Mac Silicon EditionやNvidia/AMD GPU向けPre-builtバージョンの提供"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クリエイター
+    - Vtuber
+    - ストリーマー
+  latest_highlight: Mac Silicon EditionやNvidia/AMD GPU向けPre-builtバージョンの提供
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、誰でも無料で利用可能"
+      reason: オープンソースであり、誰でも無料で利用可能
     - point: 5
-      reason: "1枚の画像だけでリアルタイムの顔入れ替えが可能という強力な機能"
+      reason: 1枚の画像だけでリアルタイムの顔入れ替えが可能という強力な機能
     - point: 5
-      reason: "80,000以上のGitHubスターを獲得し、コミュニティが非常に活発"
+      reason: 80,000以上のGitHubスターを獲得し、コミュニティが非常に活発
   minus_points:
     - point: -3
-      reason: "高度な機能を利用するためにはGPU等の高スペックな環境が必要になる場合がある"
-  summary: "手軽に高品質なリアルタイムディープフェイクを作成できる強力なオープンソースツールだが、倫理的な利用には注意が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な機能を利用するためにはGPU等の高スペックな環境が必要になる場合がある
+  summary: 手軽に高品質なリアルタイムディープフェイクを作成できる強力なオープンソースツールだが、倫理的な利用には注意が必要
 links:
-  github: "https://github.com/hacksider/Deep-Live-Cam"
-  deepwiki: "https://deepwiki.com/hacksider/Deep-Live-Cam"
+  github: https://github.com/hacksider/Deep-Live-Cam
+  deepwiki: https://deepwiki.com/hacksider/Deep-Live-Cam
 relationships:
   related_tools: []
 ---
+
+
+
 
 # **Deep-Live-Cam 調査レポート**
 

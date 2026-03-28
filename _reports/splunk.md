@@ -1,69 +1,64 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Splunk 調査レポート"
-tool_name: "Splunk"
-tool_reading: "スプランク"
-category: "監視/可観測性"
-developer: "Splunk Inc. (Cisco)"
-official_site: "https://www.splunk.com/"
-date: "2026-02-13"
-last_updated: "2026-02-13"
+title: Splunk 調査レポート
+tool_name: Splunk
+tool_reading: スプランク
+category: 監視/可観測性
+developer: Splunk Inc. (Cisco)
+official_site: https://www.splunk.com/
+date: '2026-02-13'
+last_updated: '2026-02-13'
 tags:
-  - "ログ管理"
-  - "SIEM"
-  - "オブザーバビリティ"
-  - "セキュリティ"
-  - "ビッグデータ"
-  - "SaaS"
-  - "DevOps"
-  - "AI"
-description: "マシンデータを収集・分析・可視化し、セキュリティとオブザーバビリティを統合するデータプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - DevOps
+  - SIEM
+  - SaaS
+  - オブザーバビリティ
+  - セキュリティ
+  - ビッグデータ
+  - ログ管理
+description: マシンデータを収集・分析・可視化し、セキュリティとオブザーバビリティを統合するデータプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (500MB/日)"
+  starting_price: 無料 (500MB/日)
   target_users:
-    - "セキュリティアナリスト"
-    - "SRE / DevOps"
-    - "IT運用管理者"
-  latest_highlight: "2025年11月、Gartner SIEMレポートで11回連続のリーダーに選出"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - セキュリティアナリスト
+    - SRE / DevOps
+    - IT運用管理者
+  latest_highlight: 2025年11月、Gartner SIEMレポートで11回連続のリーダーに選出
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 10
-      reason: "SPLによる圧倒的な検索・分析能力とスキーマオンリードの柔軟性は業界最高水準"
+      reason: SPLによる圧倒的な検索・分析能力とスキーマオンリードの柔軟性は業界最高水準
     - point: 5
-      reason: "Ciscoとの統合により、ネットワークインテリジェンスとセキュリティ機能が大幅に強化"
+      reason: Ciscoとの統合により、ネットワークインテリジェンスとセキュリティ機能が大幅に強化
     - point: 3
-      reason: "Splunkbaseによる豊富なエコシステムと2,500以上の連携アプリ"
+      reason: Splunkbaseによる豊富なエコシステムと2,500以上の連携アプリ
   minus_points:
     - point: -3
-      reason: "データ量やワークロードに応じたライセンス費用が高額になりやすい"
+      reason: データ量やワークロードに応じたライセンス費用が高額になりやすい
     - point: -2
-      reason: "独自の検索言語SPLの習得に時間がかかり、専門スキルが必要"
-  summary: "ログ分析・SIEMのデファクトスタンダードであり、Cisco統合でさらに盤石となったが、コストと学習曲線には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 独自の検索言語SPLの習得に時間がかかり、専門スキルが必要
+  summary: ログ分析・SIEMのデファクトスタンダードであり、Cisco統合でさらに盤石となったが、コストと学習曲線には注意が必要。
 links:
-  documentation: "https://docs.splunk.com/Documentation/Splunk"
+  documentation: https://docs.splunk.com/Documentation/Splunk
 relationships:
-  parent: "Cisco"
+  parent: null
   children:
-    - "Splunk AppDynamics"
+    - Splunk AppDynamics
   related_tools:
-    - "Datadog"
-    - "New Relic"
-    - "Kibana"
-    - "Amazon OpenSearch Service"
-    - "Grafana"
+    - Datadog
+    - New Relic
+    - Kibana
+    - Amazon OpenSearch Service
+    - Grafana
 ---
+
+
+
 
 # **Splunk 調査レポート**
 

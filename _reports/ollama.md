@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Ollama 調査レポート"
-tool_name: "Ollama"
-tool_reading: "オラマ"
-category: "AI開発基盤"
-developer: "Ollama Inc."
-official_site: "https://ollama.com/"
-date: "2025-10-24"
-last_updated: "2026-01-29"
+title: Ollama 調査レポート
+tool_name: Ollama
+tool_reading: オラマ
+category: AI開発基盤
+developer: Ollama Inc.
+official_site: https://ollama.com/
+date: '2025-10-24'
+last_updated: '2026-01-29'
 tags:
-  - "AI"
-  - "ローカルAI"
-  - "大規模言語モデル"
-  - "オープンソース"
-  - "開発者ツール"
-description: "オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - ローカルAI
+  - 大規模言語モデル
+  - 開発者ツール
+description: オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AI/MLエンジニア"
-    - "研究者"
-  latest_highlight: "2026年1月にollama launchコマンドや画像生成機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AI/MLエンジニア
+    - 研究者
+  latest_highlight: 2026年1月にollama launchコマンドや画像生成機能を追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "CLIベースの簡単なセットアップと操作性"
+      reason: CLIベースの簡単なセットアップと操作性
     - point: 5
-      reason: "オープンソースで開発が非常に活発"
+      reason: オープンソースで開発が非常に活発
     - point: 5
-      reason: "OpenAI互換APIによる高い拡張性とエコシステム連携"
+      reason: OpenAI互換APIによる高い拡張性とエコシステム連携
     - point: 3
-      reason: "macOS, Windows, Linuxへのクロスプラットフォーム対応"
+      reason: macOS, Windows, Linuxへのクロスプラットフォーム対応
   minus_points:
     - point: -3
-      reason: "高性能モデルの利用には高いハードウェア（特にGPU）が要求される"
+      reason: 高性能モデルの利用には高いハードウェア（特にGPU）が要求される
     - point: -2
-      reason: "CLIが中心で、公式のGUIが提供されていないため初心者には敷居が高い"
-  summary: "開発者にとってローカルLLM環境の決定版と言えるツール。拡張性と将来性が高いが、利用には一定のハードウェア知識が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: CLIが中心で、公式のGUIが提供されていないため初心者には敷居が高い
+  summary: 開発者にとってローカルLLM環境の決定版と言えるツール。拡張性と将来性が高いが、利用には一定のハードウェア知識が必要。
 links:
-  github: "https://github.com/ollama/ollama"
-  deepwiki: "https://deepwiki.com/ollama/ollama"
-  codewiki: "https://codewiki.google/github.com/ollama/ollama"
-  documentation: "https://ollama.com/docs"
+  github: https://github.com/ollama/ollama
+  deepwiki: https://deepwiki.com/ollama/ollama
+  codewiki: https://codewiki.google/github.com/ollama/ollama
+  documentation: https://ollama.com/docs
 relationships:
   related_tools:
-    - "UI-TARS Desktop"
-    - "LM Studio"
-    - "Foundry Local"
+    - UI-TARS Desktop
+    - LM Studio
+    - Foundry Local
 ---
+
+
+
 
 # **Ollama 調査レポート**
 

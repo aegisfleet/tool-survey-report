@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Luma AI 調査レポート"
-tool_name: "Luma AI"
-tool_reading: "ルマエーアイ"
-category: "動画/メディア"
-developer: "Luma Labs, Inc."
-official_site: "https://lumalabs.ai/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: Luma AI 調査レポート
+tool_name: Luma AI
+tool_reading: ルマエーアイ
+category: 動画/メディア
+developer: Luma Labs, Inc.
+official_site: https://lumalabs.ai/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "AI"
-  - "生成AI"
-  - "動画生成"
-  - "3D"
-  - "API"
-description: "テキストや画像から高品質な動画や3Dモデルを生成するAIプラットフォーム。動画生成モデル「Dream Machine」が主力。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - 3D
+  - AI
+  - API
+  - 動画生成
+  - 生成AI
+description: テキストや画像から高品質な動画や3Dモデルを生成するAIプラットフォーム。動画生成モデル「Dream Machine」が主力。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$7.99/月"
+  starting_price: $7.99/月
   target_users:
-    - "クリエイター"
-    - "デザイナー"
-    - "開発者"
-  latest_highlight: "2026年1月にPython/Node.js SDK v1.19.1をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クリエイター
+    - デザイナー
+    - 開発者
+  latest_highlight: 2026年1月にPython/Node.js SDK v1.19.1をリリース
+  update_frequency: 高
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 8
-      reason: "テキストや画像からの動画生成品質が非常に高い"
+      reason: テキストや画像からの動画生成品質が非常に高い
     - point: 5
-      reason: "自然言語での動画編集など、革新的な機能を提供"
+      reason: 自然言語での動画編集など、革新的な機能を提供
     - point: 3
-      reason: "APIが提供されており、開発者による拡張性が高い"
+      reason: APIが提供されており、開発者による拡張性が高い
   minus_points:
     - point: -3
-      reason: "クレジットベースの料金体系が複雑で、コスト管理が難しい"
+      reason: クレジットベースの料金体系が複雑で、コスト管理が難しい
     - point: -2
-      reason: "G2などの主要レビューサイトに情報がなく、第三者評価が少ない"
+      reason: G2などの主要レビューサイトに情報がなく、第三者評価が少ない
     - point: -2
-      reason: "日本語のドキュメントやサポートが限定的"
-  summary: "生成品質と機能性はトップクラスだが、複雑な料金体系と日本語情報の不足が課題。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語のドキュメントやサポートが限定的
+  summary: 生成品質と機能性はトップクラスだが、複雑な料金体系と日本語情報の不足が課題。
 links:
-  documentation: "https://lumalabs.ai/learning-hub"
+  documentation: https://lumalabs.ai/learning-hub
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Sora"
-    - "Hunyuan 3D"
+    - Sora
+    - Hunyuan 3D
 ---
+
+
+
 
 # **Luma AI 調査レポート**
 

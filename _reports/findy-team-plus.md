@@ -1,52 +1,52 @@
 ---
-title: "Findy Team+ 調査レポート"
-tool_name: "Findy Team+"
-tool_reading: "ファインディ チームプラス"
-category: "開発者ツール"
-developer: "ファインディ株式会社"
-official_site: "https://findy-team.io/"
-date: "2026-01-28"
-last_updated: "2026-03-19"
+title: Findy Team+ 調査レポート
+tool_name: Findy Team+
+tool_reading: ファインディ チームプラス
+category: 開発者ツール
+developer: ファインディ株式会社
+official_site: https://findy-team.io/
+date: '2026-01-28'
+last_updated: '2026-03-19'
 tags:
-  - "開発者ツール"
-  - "SaaS"
-  - "DevOps"
-description: "GitHubやJiraなどのエンジニアリングツールと連携し、開発組織のパフォーマンスを可視化・分析するプラットフォーム"
-
+  - DevOps
+  - SaaS
+  - 開発者ツール
+description: GitHubやJiraなどのエンジニアリングツールと連携し、開発組織のパフォーマンスを可視化・分析するプラットフォーム
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "CTO / VPoE"
-    - "エンジニアリングマネージャー"
-    - "開発チームリーダー"
-  latest_highlight: "2025年版「Findy Team+ Award」で優れたエンジニア組織34社を表彰"
-  update_frequency: "高"
-
+    - CTO / VPoE
+    - エンジニアリングマネージャー
+    - 開発チームリーダー
+  latest_highlight: 2025年版「Findy Team+ Award」で優れたエンジニア組織34社を表彰
+  update_frequency: 高
 evaluation:
   score: 77
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Four KeysやSPACEなど、最新の開発生産性指標を網羅的に可視化可能"
+      reason: Four KeysやSPACEなど、最新の開発生産性指標を網羅的に可視化可能
     - point: 5
-      reason: "国内発のサービスであり、日本語のUI・サポートが完全にネイティブ"
+      reason: 国内発のサービスであり、日本語のUI・サポートが完全にネイティブ
   minus_points:
     - point: -3
-      reason: "料金プランが公開されておらず、問い合わせが必要"
-  summary: "日本のエンジニア組織に特化した強力な分析ツール。開発生産性の可視化から改善までをワンストップで支援する。"
-
+      reason: 料金プランが公開されておらず、問い合わせが必要
+  summary: 日本のエンジニア組織に特化した強力な分析ツール。開発生産性の可視化から改善までをワンストップで支援する。
 links:
-  documentation: "https://help.findy-team.io/"
+  documentation: https://help.findy-team.io/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "GitHub"
-    - "Jira"
-    - "GitLab"
+    - GitHub
+    - Jira
+    - GitLab
 ---
+
+
+
 
 # **Findy Team+ 調査レポート**
 

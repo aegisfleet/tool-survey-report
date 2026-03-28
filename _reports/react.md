@@ -1,63 +1,63 @@
 ---
-title: "React 調査レポート"
-tool_name: "React"
-tool_reading: "リアクト"
-category: "Webフレームワーク"
-developer: "Meta / React Foundation"
-official_site: "https://react.dev/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: React 調査レポート
+tool_name: React
+tool_reading: リアクト
+category: Webフレームワーク
+developer: Meta / React Foundation
+official_site: https://react.dev/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "UIライブラリ"
-  - "JavaScript"
-  - "オープンソース"
-  - "Webフレームワーク"
-  - "コンポーネント指向"
-description: "Webおよびネイティブユーザーインターフェースを構築するためのライブラリ。React Compilerによる自動最適化やServer Componentsによるフルスタック機能を提供。"
-
+  - JavaScript
+  - UIライブラリ
+  - Webフレームワーク
+  - オープンソース
+  - コンポーネント指向
+description: Webおよびネイティブユーザーインターフェースを構築するためのライブラリ。React Compilerによる自動最適化やServer Componentsによるフルスタック機能を提供。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンドエンジニア"
-    - "フルスタックエンジニア"
-  latest_highlight: "2025年10月にReact Compiler v1.0が正式リリースされ、手動メモ化が不要に"
-  update_frequency: "高"
-
+    - フロントエンドエンジニア
+    - フルスタックエンジニア
+  latest_highlight: 2025年10月にReact Compiler v1.0が正式リリースされ、手動メモ化が不要に
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "React Compilerによりパフォーマンス最適化が自動化され、DXが劇的に向上"
+      reason: React Compilerによりパフォーマンス最適化が自動化され、DXが劇的に向上
     - point: 5
-      reason: "Server Components (RSC) の普及によりサーバーサイドとの統合がシームレスに"
+      reason: Server Components (RSC) の普及によりサーバーサイドとの統合がシームレスに
     - point: 5
-      reason: "圧倒的なエコシステムと採用実績"
+      reason: 圧倒的なエコシステムと採用実績
     - point: 2
-      reason: "React Foundation設立によるガバナンスの透明化"
+      reason: React Foundation設立によるガバナンスの透明化
   minus_points:
-    - point: -0
-      reason: ""
-  summary: "Compilerの導入で最大の弱点だった「再レンダリング制御の複雑さ」を克服。現代のWeb開発における揺るぎないデファクトスタンダード。"
-
+    - point: 0
+      reason: ''
+  summary: Compilerの導入で最大の弱点だった「再レンダリング制御の複雑さ」を克服。現代のWeb開発における揺るぎないデファクトスタンダード。
 links:
-  github: "https://github.com/facebook/react"
-  deepwiki: "https://deepwiki.com/facebook/react"
-  codewiki: "https://codewiki.google/github.com/facebook/react"
-  documentation: "https://react.dev/reference/react"
-
+  github: https://github.com/facebook/react
+  deepwiki: https://deepwiki.com/facebook/react
+  codewiki: https://codewiki.google/github.com/facebook/react
+  documentation: https://react.dev/reference/react
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "Remotion"
+    - Remotion
   related_tools:
-    - "Flutter"
-    - "Astro"
-    - "Yew"
-    - "React Testing Library"
+    - Flutter
+    - Astro
+    - Yew
+    - React Testing Library
+    - Vercel Agent Skills
 ---
+
+
+
 
 # **React 調査レポート**
 

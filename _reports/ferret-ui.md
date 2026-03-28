@@ -1,51 +1,46 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Ferret-UI 調査レポート"
-tool_name: "Ferret-UI"
-tool_reading: "フェレット ユーアイ"
-category: "自律型AIエージェント"
-developer: "Apple"
-official_site: "https://machinelearning.apple.com/research/ferret-ui"
-date: "2026-03-01"
-last_updated: "2026-03-01"
+title: Ferret-UI 調査レポート
+tool_name: Ferret-UI
+tool_reading: フェレット ユーアイ
+category: 自律型AIエージェント
+developer: Apple
+official_site: https://machinelearning.apple.com/research/ferret-ui
+date: '2026-03-01'
+last_updated: '2026-03-01'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "自律型"
-  - "大規模言語モデル"
-description: "Appleが開発した、モバイル・Web・デスクトップのグラフィカルユーザーインターフェース（GUI）を理解し操作できるマルチモーダル大規模言語モデル（MLLM）。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - 大規模言語モデル
+  - 生成AI
+  - 自律型
+description: Appleが開発した、モバイル・Web・デスクトップのグラフィカルユーザーインターフェース（GUI）を理解し操作できるマルチモーダル大規模言語モデル（MLLM）。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "無料 (研究発表段階)"
+  starting_price: 無料 (研究発表段階)
   target_users:
-    - "AI研究者"
-    - "自動化エンジニア"
-  latest_highlight: "2026年2月に小型でオンデバイス動作が可能な「Ferret-UI Lite」を発表。"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AI研究者
+    - 自動化エンジニア
+  latest_highlight: 2026年2月に小型でオンデバイス動作が可能な「Ferret-UI Lite」を発表。
+  update_frequency: 不定期
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "GUIの理解と操作において高い性能を示し、オンデバイス（3B）モデルでも競合と同等以上のスコアを達成"
+      reason: GUIの理解と操作において高い性能を示し、オンデバイス（3B）モデルでも競合と同等以上のスコアを達成
   minus_points:
     - point: 0
-      reason: "現在は研究プロジェクトであり、一般向けの製品として提供されていない"
-  summary: "GUIエージェントの分野で先進的な研究成果を示しており、今後の商用化やツールへの統合が期待される"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現在は研究プロジェクトであり、一般向けの製品として提供されていない
+  summary: GUIエージェントの分野で先進的な研究成果を示しており、今後の商用化やツールへの統合が期待される
 relationships:
   related_tools:
-    - "UI-TARS Desktop"
-    - "Claude"
+    - UI-TARS Desktop
+    - Claude
 ---
+
+
+
 
 # **Ferret-UI 調査レポート**
 

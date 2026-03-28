@@ -1,54 +1,57 @@
 ---
-title: "AWS MCP Servers 調査レポート"
-tool_name: "AWS MCP Servers"
-tool_reading: "エーダブリューエス エムシーピー サーバーズ"
-category: "開発者ツール"
-developer: "AWS Labs"
-official_site: "https://awslabs.github.io/mcp/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: AWS MCP Servers 調査レポート
+tool_name: AWS MCP Servers
+tool_reading: エーダブリューエス エムシーピー サーバーズ
+category: 開発者ツール
+developer: AWS Labs
+official_site: https://awslabs.github.io/mcp/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "AWS"
-  - "MCP"
-  - "クラウド"
-  - "AI"
-  - "オープンソース"
-  - "開発者ツール"
-description: "AWSリソースやドキュメントをModel Context Protocol (MCP) を通じてAIアシスタントに接続するための公式サーバー群"
+  - AI
+  - AWS
+  - MCP
+  - オープンソース
+  - クラウド
+  - 開発者ツール
+description: AWSリソースやドキュメントをModel Context Protocol (MCP) を通じてAIアシスタントに接続するための公式サーバー群
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AWS利用者"
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "CloudFormation, Bedrock, ドキュメント検索など9種のサーバーが公開"
-  update_frequency: "高"
+    - AWS利用者
+    - 開発者
+    - AIエンジニア
+  latest_highlight: CloudFormation, Bedrock, ドキュメント検索など9種のサーバーが公開
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AWS公式のMCPサーバーであり、信頼性が高い"
+      reason: AWS公式のMCPサーバーであり、信頼性が高い
     - point: 5
-      reason: "ドキュメント検索からIaC、AIサービス連携まで幅広いユースケースをカバー"
+      reason: ドキュメント検索からIaC、AIサービス連携まで幅広いユースケースをカバー
     - point: 3
-      reason: "オープンソースとして公開されており、カスタマイズが可能"
+      reason: オープンソースとして公開されており、カスタマイズが可能
   minus_points: []
-  summary: "AWSを利用するすべてのAI開発者にとって、環境構築や情報検索を劇的に効率化する必須ツール"
+  summary: AWSを利用するすべてのAI開発者にとって、環境構築や情報検索を劇的に効率化する必須ツール
 links:
-  github: "https://github.com/awslabs/mcp"
-  codewiki: "https://codewiki.google/github.com/awslabs/mcp"
-  deepwiki: "https://deepwiki.com/awslabs/mcp"
-  documentation: "https://awslabs.github.io/mcp/"
+  github: https://github.com/awslabs/mcp
+  codewiki: https://codewiki.google/github.com/awslabs/mcp
+  deepwiki: https://deepwiki.com/awslabs/mcp
+  documentation: https://awslabs.github.io/mcp/
 relationships:
-  parent: "Model Context Protocol"
+  parent: Model Context Protocol
   children: []
   related_tools:
-    - "Amazon Bedrock"
-    - "AWS CloudFormation"
+    - Amazon Bedrock
+    - AWS CloudFormation
 ---
+
+
+
 
 # **AWS MCP Servers 調査レポート**
 

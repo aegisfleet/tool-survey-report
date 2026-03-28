@@ -1,52 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "All SVG Icons 調査レポート"
-tool_name: "All SVG Icons"
-tool_reading: "オールエスブイジーアイコンズ"
-category: "デザインツール"
-developer: "All SVG Icons"
-official_site: "https://allsvgicons.com/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: All SVG Icons 調査レポート
+tool_name: All SVG Icons
+tool_reading: オールエスブイジーアイコンズ
+category: デザインツール
+developer: All SVG Icons
+official_site: https://allsvgicons.com/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "アイコン"
-  - "オープンソース"
-  - "SVG"
-  - "開発者ツール"
-description: "250,000以上の無料SVGアイコンを検索、カスタマイズ、ダウンロードできるプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SVG
+  - アイコン
+  - オープンソース
+  - 開発者ツール
+description: 250,000以上の無料SVGアイコンを検索、カスタマイズ、ダウンロードできるプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "デザイナー"
-  latest_highlight: "25万以上のアイコンを提供"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - デザイナー
+  latest_highlight: 25万以上のアイコンを提供
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "無料で25万以上の高品質なアイコンが利用可能"
+      reason: 無料で25万以上の高品質なアイコンが利用可能
     - point: 5
-      reason: "SVG、PNG、JSXなど多様な形式でダウンロード可能"
+      reason: SVG、PNG、JSXなど多様な形式でダウンロード可能
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "開発者やデザイナーにとって非常に有用な、完全無料のSVGアイコンライブラリ"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: 開発者やデザイナーにとって非常に有用な、完全無料のSVGアイコンライブラリ
 relationships:
   related_tools:
-    - "Figma"
-    - "Canva"
+    - Figma
+    - Canva
 ---
+
+
+
 
 # **All SVG Icons 調査レポート**
 

@@ -1,56 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ネムラナイ 調査レポート"
-tool_name: "ネムラナイ"
-tool_reading: "ネムラナイ"
-category: "テスト/QA"
-developer: "株式会社SHIFT"
-official_site: "https://contents.shiftinc.jp/nemuranai/"
-date: "2026-02-09"
-last_updated: "2026-02-09"
+title: ネムラナイ 調査レポート
+tool_name: ネムラナイ
+tool_reading: ネムラナイ
+category: テスト/QA
+developer: 株式会社SHIFT
+official_site: https://contents.shiftinc.jp/nemuranai/
+date: '2026-02-09'
+last_updated: '2026-02-09'
 tags:
-  - "AIテスト"
-  - "QA"
-  - "自動化"
-  - "SHIFT"
-description: "SHIFTの品質保証ノウハウをAIに学習させ、24時間365日のテスト実行・監視を実現するAIテストセンターサービス。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - QA
+  - SHIFT
+  - テスト自動化
+  - 自動化
+description: SHIFTの品質保証ノウハウをAIに学習させ、24時間365日のテスト実行・監視を実現するAIテストセンターサービス。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "エンタープライズ"
-    - "大規模開発プロジェクト"
-    - "品質重視の企業"
-  latest_highlight: "24時間365日のAI監視体制によるテスト工期短縮"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - エンタープライズ
+    - 大規模開発プロジェクト
+    - 品質重視の企業
+  latest_highlight: 24時間365日のAI監視体制によるテスト工期短縮
+  update_frequency: 不定期
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "SHIFTの膨大な品質保証ノウハウがAIに組み込まれている"
+      reason: SHIFTの膨大な品質保証ノウハウがAIに組み込まれている
     - point: 4
-      reason: "24時間365日の稼働体制による圧倒的なテストスピード"
+      reason: 24時間365日の稼働体制による圧倒的なテストスピード
     - point: 3
-      reason: "最大10環境での並列実行が可能"
+      reason: 最大10環境での並列実行が可能
   minus_points:
     - point: 0
-      reason: "特に大きな欠点はないが、導入にはコンサルティングが必要な可能性"
-  summary: "品質保証のプロフェッショナルであるSHIFTの知見とAIのスピードを融合させた、次世代のテストソリューション。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特に大きな欠点はないが、導入にはコンサルティングが必要な可能性
+  summary: 品質保証のプロフェッショナルであるSHIFTの知見とAIのスピードを融合させた、次世代のテストソリューション。
 relationships:
   related_tools:
-    - "Autify"
-    - "MagicPod"
-    - "mabl"
+    - Autify
+    - MagicPod
+    - mabl
 ---
+
+
+
 
 # **ネムラナイ 調査レポート**
 

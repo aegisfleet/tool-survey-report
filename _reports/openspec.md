@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "OpenSpec 調査レポート"
-tool_name: "OpenSpec"
-tool_reading: "オープンスペック"
-category: "開発者ツール"
-developer: "Fission-AI"
-official_site: "https://openspec.dev/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: OpenSpec 調査レポート
+tool_name: OpenSpec
+tool_reading: オープンスペック
+category: 開発者ツール
+developer: Fission-AI
+official_site: https://openspec.dev/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "AIコーディングアシスタント"
-  - "オープンソース"
-  - "ドキュメンテーション"
-description: "AIコーディングアシスタントのための軽量な仕様駆動型フレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AIコーディングアシスタント
+  - オープンソース
+  - ドキュメンテーション
+description: AIコーディングアシスタントのための軽量な仕様駆動型フレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント利用者"
-  latest_highlight: "アーティファクト主導の新しいワークフローが利用可能に"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエージェント利用者
+  latest_highlight: アーティファクト主導の新しいワークフローが利用可能に
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "20以上の主要なAIコーディングアシスタントと統合できる高い汎用性"
+      reason: 20以上の主要なAIコーディングアシスタントと統合できる高い汎用性
     - point: 3
-      reason: "完全無料のオープンソースツール"
+      reason: 完全無料のオープンソースツール
     - point: 4
-      reason: "コードベースと仕様書のズレを防ぐSpec-Drivenなアプローチ"
+      reason: コードベースと仕様書のズレを防ぐSpec-Drivenなアプローチ
   minus_points:
     - point: -2
-      reason: "テキスト（Markdown）ベースのため、視覚的なプランニングツールを好むユーザーには不向きな場合がある"
-  summary: "AIコーディングアシスタントの文脈を保持し、仕様ドリブンな開発を強力に支援する軽量ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: テキスト（Markdown）ベースのため、視覚的なプランニングツールを好むユーザーには不向きな場合がある
+  summary: AIコーディングアシスタントの文脈を保持し、仕様ドリブンな開発を強力に支援する軽量ツール
 links:
-  github: "https://github.com/Fission-AI/OpenSpec"
-  deepwiki: "https://deepwiki.com/Fission-AI/OpenSpec"
-  codewiki: "https://codewiki.google/github.com/Fission-AI/OpenSpec"
-  documentation: "https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md"
+  github: https://github.com/Fission-AI/OpenSpec
+  deepwiki: https://deepwiki.com/Fission-AI/OpenSpec
+  codewiki: https://codewiki.google/github.com/Fission-AI/OpenSpec
+  documentation: https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md
 relationships:
   related_tools:
-    - "GitHub Copilot"
-    - "Claude Code"
-    - "Cursor"
-    - "Windsurf"
+    - GitHub Copilot
+    - Claude Code
+    - Cursor
+    - Windsurf
 ---
+
+
+
 
 # **OpenSpec 調査レポート**
 

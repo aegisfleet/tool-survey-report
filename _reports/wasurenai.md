@@ -1,54 +1,54 @@
 ---
-title: "ワスレナイ 調査レポート"
-tool_name: "ワスレナイ"
-tool_reading: "ワスレナイ"
-category: "業務系ツール"
-developer: "株式会社SHIFT"
-official_site: "https://lp.wasurenai.jp/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: ワスレナイ 調査レポート
+tool_name: ワスレナイ
+tool_reading: ワスレナイ
+category: 開発者ツール
+developer: 株式会社SHIFT
+official_site: https://lp.wasurenai.jp/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "SaaS"
-  - "資産管理"
-  - "コスト削減"
-  - "セキュリティ"
-description: "企業のSaaS利用状況を可視化し、コスト削減とセキュリティ強化を支援するSaaS管理プラットフォーム。"
-
+  - SaaS
+  - コスト削減
+  - セキュリティ
+  - 資産管理
+description: 企業のSaaS利用状況を可視化し、コスト削減とセキュリティ強化を支援するSaaS管理プラットフォーム。
 quick_summary:
   has_free_plan: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "情シス"
-    - "経営企画"
-    - "スタートアップ"
-  latest_highlight: "対応SaaSの継続的な拡大"
-  update_frequency: "中"
-
+    - 情シス
+    - 経営企画
+    - スタートアップ
+  latest_highlight: 対応SaaSの継続的な拡大
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "基本機能が永年無料で利用できる"
+      reason: 基本機能が永年無料で利用できる
     - point: 5
-      reason: "株式会社SHIFTによる運営で信頼性が高い"
+      reason: 株式会社SHIFTによる運営で信頼性が高い
   minus_points: []
-  summary: "コストをかけずにSaaS管理を始めたい企業に最適。運用代行オプションも充実している。"
-
+  summary: コストをかけずにSaaS管理を始めたい企業に最適。運用代行オプションも充実している。
 links:
-  documentation: "https://manual.wasurenai.jp/"
+  documentation: https://manual.wasurenai.jp/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Notion"
-    - "Salesforce"
-    - "Miro"
-    - "SmartHR"
-    - "Backlog"
-    - "KING OF TIME"
-    - "ナクサナイ"
+    - Notion
+    - Salesforce
+    - Miro
+    - SmartHR
+    - Backlog
+    - KING OF TIME
+    - ナクサナイ
 ---
+
+
+
 
 # **ワスレナイ 調査レポート**
 

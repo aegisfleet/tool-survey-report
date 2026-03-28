@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "mabl 調査レポート"
-tool_name: "mabl"
-tool_reading: "メイブル"
-category: "テスト/QA"
-developer: "mabl Inc."
-official_site: "https://www.mabl.com/ja/"
-date: "2026-01-28"
-last_updated: "2026-03-22"
+title: mabl 調査レポート
+tool_name: mabl
+tool_reading: メイブル
+category: テスト/QA
+developer: mabl Inc.
+official_site: https://www.mabl.com/ja/
+date: '2026-01-28'
+last_updated: '2026-03-22'
 tags:
-  - "テスト自動化"
-  - "E2Eテスト"
-  - "AI"
-  - "ローコード"
-  - "SaaS"
-description: "AIを活用したローコードテスト自動化プラットフォーム。Web、モバイル、API、アクセシビリティ、パフォーマンステストを統一環境で管理可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - E2Eテスト
+  - SaaS
+  - テスト自動化
+  - ローコード
+description: AIを活用したローコードテスト自動化プラットフォーム。Web、モバイル、API、アクセシビリティ、パフォーマンステストを統一環境で管理可能。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問合せ"
+  starting_price: 要問合せ
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-    - "大企業"
-  latest_highlight: "2026年1月にテスト作成を支援する「アプリケーションサマリー」機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - 開発者
+    - 大企業
+  latest_highlight: 2026年1月にテスト作成を支援する「アプリケーションサマリー」機能を追加
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Web、モバイル、API、パフォーマンスなど全テストを単一プラットフォームで統合管理できる"
+      reason: Web、モバイル、API、パフォーマンスなど全テストを単一プラットフォームで統合管理できる
     - point: 5
-      reason: "AIによる自動修復（Auto-heal）機能が強力で、テスト保守コストを大幅に削減できる"
+      reason: AIによる自動修復（Auto-heal）機能が強力で、テスト保守コストを大幅に削減できる
     - point: 3
-      reason: "生成AIを活用したテスト作成支援やアサーション機能が急速に進化している"
+      reason: 生成AIを活用したテスト作成支援やアサーション機能が急速に進化している
     - point: 3
-      reason: "日本法人による手厚い日本語サポートとドキュメントが提供されている"
+      reason: 日本法人による手厚い日本語サポートとドキュメントが提供されている
   minus_points:
     - point: -3
-      reason: "エンタープライズ向けの価格設定であり、小規模チームにはコストが高い"
+      reason: エンタープライズ向けの価格設定であり、小規模チームにはコストが高い
     - point: -2
-      reason: "モバイルテストの機能はWebテストに比べるとまだ発展途上の部分がある"
-  summary: "多機能かつAI活用が進んだ統合プラットフォーム。コストはかかるが、長期的な運用効率と品質向上を重視する組織に最適。"
-
-# 【任意項目】該当するもののみ記載
+      reason: モバイルテストの機能はWebテストに比べるとまだ発展途上の部分がある
+  summary: 多機能かつAI活用が進んだ統合プラットフォーム。コストはかかるが、長期的な運用効率と品質向上を重視する組織に最適。
 links:
-  documentation: "https://help.mabl.com/hc/ja"
+  documentation: https://help.mabl.com/hc/ja
 relationships:
   related_tools:
-    - "MagicPod"
-    - "Autify"
-    - "Selenium"
-    - "Playwright"
-    - "Cypress"
-    - "Playwright Test Agents"
+    - MagicPod
+    - Autify
+    - Selenium
+    - Playwright
+    - Cypress
+    - Playwright Test Agents
+    - ネムラナイ
 ---
+
+
+
 
 # **mabl 調査レポート**
 

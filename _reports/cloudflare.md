@@ -1,64 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Cloudflare 調査レポート"
-tool_name: "Cloudflare"
-tool_reading: "クラウドフレア"
-category: "CDN/セキュリティ"
-developer: "Cloudflare, Inc."
-official_site: "https://www.cloudflare.com/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: Cloudflare 調査レポート
+tool_name: Cloudflare
+tool_reading: クラウドフレア
+category: CDN/セキュリティ
+developer: Cloudflare, Inc.
+official_site: https://www.cloudflare.com/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "CDN"
-  - "WAF"
-  - "DDoS対策"
-  - "Zero Trust"
-  - "DNS"
-  - "AI"
-description: "Webサイトのパフォーマンス向上とセキュリティ対策を統合したグローバルクラウドネットワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CDN
+  - DDoS対策
+  - DNS
+  - WAF
+  - Zero Trust
+description: Webサイトのパフォーマンス向上とセキュリティ対策を統合したグローバルクラウドネットワーク
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Webサイト運営者"
-    - "開発者"
-    - "企業のIT担当者"
-  latest_highlight: "2026年1月にWebフレームワーク「Astro」の開発元を買収し、エコシステムを拡大"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Webサイト運営者
+    - 開発者
+    - 企業のIT担当者
+  latest_highlight: 2026年1月にWebフレームワーク「Astro」の開発元を買収し、エコシステムを拡大
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 10
-      reason: "CDN、WAF、Zero Trust、Workersなど非常に多機能で、単一プラットフォームで多くの課題を解決できる"
+      reason: CDN、WAF、Zero Trust、Workersなど非常に多機能で、単一プラットフォームで多くの課題を解決できる
     - point: 5
-      reason: "基本的なCDNやDDoS対策が可能な無料プランが非常に強力"
+      reason: 基本的なCDNやDDoS対策が可能な無料プランが非常に強力
     - point: 5
-      reason: "Workers AIやR2など、エッジコンピューティングとAI分野でのイノベーションが活発"
+      reason: Workers AIやR2など、エッジコンピューティングとAI分野でのイノベーションが活発
   minus_points:
     - point: -5
-      reason: "2025年後半に複数の大規模障害が発生し、サービス安定性に懸念が見られた"
+      reason: 2025年後半に複数の大規模障害が発生し、サービス安定性に懸念が見られた
     - point: -3
-      reason: "機能が豊富な反面、設定項目が多く、初心者にはUIが複雑に感じられる場合がある"
-  summary: "非常に多機能で強力な統合プラットフォームだが、近年のサービス安定性と設定の複雑さには注意が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が豊富な反面、設定項目が多く、初心者にはUIが複雑に感じられる場合がある
+  summary: 非常に多機能で強力な統合プラットフォームだが、近年のサービス安定性と設定の複雑さには注意が必要
 links:
-  documentation: "https://developers.cloudflare.com/"
+  documentation: https://developers.cloudflare.com/
 relationships:
   related_tools:
-    - "Vercel"
-    - "Google Cloud"
-    - "Hono"
-    - "Astro"
-    - "Let's Encrypt"
+    - Vercel
+    - Google Cloud
+    - Hono
+    - Astro
+    - Let's Encrypt
+    - Nginx
 ---
+
+
+
 
 # **Cloudflare 調査レポート**
 

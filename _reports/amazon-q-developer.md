@@ -1,60 +1,63 @@
 ---
-title: "Amazon Q Developer 調査レポート"
-tool_name: "Amazon Q Developer"
-tool_reading: "アマゾン キュー デベロッパー"
-category: "AIコーディング支援"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/q/developer/"
-date: "2026-01-19"
-last_updated: "2026-02-18"
+title: Amazon Q Developer 調査レポート
+tool_name: Amazon Q Developer
+tool_reading: アマゾン キュー デベロッパー
+category: AIコーディング支援
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/q/developer/
+date: '2026-01-19'
+last_updated: '2026-02-18'
 tags:
-  - "AI"
-  - "AWS"
-  - "コーディング支援"
-  - "エージェント"
-  - "開発者ツール"
-  - "インフラ/クラウド"
-description: "AWSアプリケーションの開発、デバッグ、運用を支援する生成AIアシスタント。IDEやAWSコンソールに統合され、コード生成からインフラ管理まで幅広くサポートする。"
+  - AI
+  - AWS
+  - インフラ/クラウド
+  - エージェント
+  - コーディング支援
+  - 開発者ツール
+description: AWSアプリケーションの開発、デバッグ、運用を支援する生成AIアシスタント。IDEやAWSコンソールに統合され、コード生成からインフラ管理まで幅広くサポートする。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$19/月"
+  starting_price: $19/月
   target_users:
-    - "AWS開発者"
-    - "クラウドエンジニア"
-    - "エンタープライズ"
-  latest_highlight: "2025年12月にGitHub統合機能を刷新、11月にはCLI機能をKiroへ移行"
-  update_frequency: "高"
+    - AWS開発者
+    - クラウドエンジニア
+    - エンタープライズ
+  latest_highlight: 2025年12月にGitHub統合機能を刷新、11月にはCLI機能をKiroへ移行
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AWSサービスとの深い統合とインフラ管理能力"
+      reason: AWSサービスとの深い統合とインフラ管理能力
     - point: 4
-      reason: "Java/NETのバージョンアップグレードなどのコード変換機能が強力"
+      reason: Java/NETのバージョンアップグレードなどのコード変換機能が強力
     - point: 3
-      reason: "個人利用向けの無料プランが充実している"
+      reason: 個人利用向けの無料プランが充実している
   minus_points:
     - point: -2
-      reason: "AWS以外の汎用的な開発タスクでは競合に劣る場合がある"
+      reason: AWS以外の汎用的な開発タスクでは競合に劣る場合がある
     - point: -2
-      reason: "CLI機能のKiroへの移行に伴う学習コストと環境再構築の手間"
-  summary: "AWS環境での開発において最強のアシスタントだが、CLI機能はKiroへ移行するなど進化の過渡期にある。"
+      reason: CLI機能のKiroへの移行に伴う学習コストと環境再構築の手間
+  summary: AWS環境での開発において最強のアシスタントだが、CLI機能はKiroへ移行するなど進化の過渡期にある。
 links:
-  documentation: "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html"
+  documentation: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Kiro"
-    - "AWS Frontier Agents"
-    - "GitHub Copilot"
-    - "GitLab Duo"
-    - "Cursor"
-    - "AWS CloudFormation"
-    - "GitHub Copilot CLI"
+    - Kiro
+    - AWS Frontier Agents
+    - GitHub Copilot
+    - GitLab Duo
+    - Cursor
+    - AWS CloudFormation
+    - GitHub Copilot CLI
 ---
+
+
+
 
 # **Amazon Q Developer 調査レポート**
 

@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Chrome DevTools MCP 調査レポート"
-tool_name: "Chrome DevTools MCP"
-tool_reading: "クローム デブツールズ エムシーピー"
-category: "開発者ツール"
-developer: "Google LLC"
-official_site: "https://github.com/ChromeDevTools/chrome-devtools-mcp"
-date: "2026-03-12"
-last_updated: "2026-03-12"
+title: Chrome DevTools MCP 調査レポート
+tool_name: Chrome DevTools MCP
+tool_reading: クローム デブツールズ エムシーピー
+category: 開発者ツール
+developer: Google LLC
+official_site: https://github.com/ChromeDevTools/chrome-devtools-mcp
+date: '2026-03-12'
+last_updated: '2026-03-12'
 tags:
-  - "MCP"
-  - "ブラウザ自動化"
-  - "テスト"
-  - "AI"
-  - "開発者ツール"
-description: "AIコーディングアシスタント（Gemini、Claude、Cursorなど）にChromeブラウザの操作権限を与え、自動化やデバッグ、パフォーマンス分析を可能にするMCPサーバー"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - MCP
+  - テスト自動化
+  - ブラウザ自動化
+  - 開発者ツール
+description: AIコーディングアシスタント（Gemini、Claude、Cursorなど）にChromeブラウザの操作権限を与え、自動化やデバッグ、パフォーマンス分析を可能にするMCPサーバー
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント利用者"
-    - "フロントエンドエンジニア"
-    - "QAエンジニア"
-  latest_highlight: "自動接続（autoConnect）オプションのサポート追加（Chrome 144以降）"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエージェント利用者
+    - フロントエンドエンジニア
+    - QAエンジニア
+  latest_highlight: 自動接続（autoConnect）オプションのサポート追加（Chrome 144以降）
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "DevToolsプロトコルを通じた高度なブラウザ操作・分析が可能"
+      reason: DevToolsプロトコルを通じた高度なブラウザ操作・分析が可能
     - point: 5
-      reason: "公式（Google / Chrome DevTools チーム）による提供で信頼性が高い"
+      reason: 公式（Google / Chrome DevTools チーム）による提供で信頼性が高い
     - point: 5
-      reason: "無料でフル機能がオープンソースで利用可能"
+      reason: 無料でフル機能がオープンソースで利用可能
   minus_points:
     - point: -2
-      reason: "セットアップ時のオプション指定やポート設定がやや複雑"
-  summary: "AIコーディングアシスタントにブラウザ検証能力を付与する強力かつ信頼性の高い公式ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: セットアップ時のオプション指定やポート設定がやや複雑
+  summary: AIコーディングアシスタントにブラウザ検証能力を付与する強力かつ信頼性の高い公式ツール
 links:
-  github: "https://github.com/ChromeDevTools/chrome-devtools-mcp"
-  deepwiki: "https://deepwiki.com/ChromeDevTools/chrome-devtools-mcp"
+  github: https://github.com/ChromeDevTools/chrome-devtools-mcp
+  deepwiki: https://deepwiki.com/ChromeDevTools/chrome-devtools-mcp
 relationships:
   related_tools:
-    - "Playwright"
-    - "Selenium"
-    - "Model Context Protocol"
+    - Playwright
+    - Selenium
+    - Model Context Protocol
 ---
+
+
+
 
 # **Chrome DevTools MCP 調査レポート**
 

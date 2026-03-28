@@ -1,73 +1,67 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "LangChain 調査レポート"
-tool_name: "LangChain"
-tool_reading: "ラングチェーン"
-category: "AI開発基盤"
-developer: "LangChain, Inc."
-official_site: "https://www.langchain.com/"
-date: "2026-02-17"
-last_updated: "2026-02-17"
+title: LangChain 調査レポート
+tool_name: LangChain
+tool_reading: ラングチェーン
+category: AI開発基盤
+developer: LangChain, Inc.
+official_site: https://www.langchain.com/
+date: '2026-02-17'
+last_updated: '2026-02-17'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "大規模言語モデル"
-  - "開発者ツール"
-  - "Python"
-  - "自律型"
-description: "大規模言語モデル（LLM）を活用したアプリケーション開発を、データ連携・エージェント構築・実行監視などの機能で支援するオープンソースフレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Python
+  - エージェント
+  - オープンソース
+  - 大規模言語モデル
+  - 自律型
+  - 開発者ツール
+description: 大規模言語モデル（LLM）を活用したアプリケーション開発を、データ連携・エージェント構築・実行監視などの機能で支援するオープンソースフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエンジニア"
-    - "ソフトウェア開発者"
-  latest_highlight: "2026年1月にLangSmith Self-Hosted v0.13がリリース、セキュリティと運用性が向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエンジニア
+    - ソフトウェア開発者
+  latest_highlight: 2026年1月にLangSmith Self-Hosted v0.13がリリース、セキュリティと運用性が向上
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 8
-      reason: "60以上のLLM、数百のツール・DBと連携可能な圧倒的なエコシステム"
+      reason: 60以上のLLM、数百のツール・DBと連携可能な圧倒的なエコシステム
     - point: 4
-      reason: "v1.0リリースによりAPIの安定性が保証され、本番導入のリスクが低減"
+      reason: v1.0リリースによりAPIの安定性が保証され、本番導入のリスクが低減
     - point: 3
-      reason: "LangGraphによる高度なエージェント制御とLangSmithによる可観測性が強力"
+      reason: LangGraphによる高度なエージェント制御とLangSmithによる可観測性が強力
   minus_points:
     - point: -3
-      reason: "独自の抽象化概念（Chain, LCEL等）が多く、学習コストが高い"
+      reason: 独自の抽象化概念（Chain, LCEL等）が多く、学習コストが高い
     - point: -2
-      reason: "機能追加が速すぎてドキュメントの構成が複雑化しており、情報の取捨選択が難しい"
-  summary: "エコシステムの広さとv1.0による安定性で業界標準の地位を確立。学習コストはあるが、本格的な開発には必須級。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能追加が速すぎてドキュメントの構成が複雑化しており、情報の取捨選択が難しい
+  summary: エコシステムの広さとv1.0による安定性で業界標準の地位を確立。学習コストはあるが、本格的な開発には必須級。
 links:
-  github: "https://github.com/langchain-ai/langchain"
-  codewiki: "https://codewiki.google/github.com/langchain-ai/langchain"
-  deepwiki: "https://deepwiki.com/langchain-ai/langchain"
-  documentation: "https://docs.langchain.com/"
+  github: https://github.com/langchain-ai/langchain
+  codewiki: https://codewiki.google/github.com/langchain-ai/langchain
+  deepwiki: https://deepwiki.com/langchain-ai/langchain
+  documentation: https://docs.langchain.com/
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "Deep Agents"
+    - Deep Agents
   related_tools:
-    - "Dify"
-    - "AutoGPT"
-    - "GitHub Copilot SDK"
-    - "Amazon Bedrock"
-    - "Amazon Bedrock AgentCore Runtime"
-    - "Hugging Face"
-    - "Letta"
-    - "Brainbase"
+    - Dify
+    - AutoGPT
+    - GitHub Copilot SDK
+    - Amazon Bedrock
+    - Amazon Bedrock AgentCore Runtime
+    - Hugging Face
+    - Letta
 ---
+
+
+
 
 # **LangChain 調査レポート**
 

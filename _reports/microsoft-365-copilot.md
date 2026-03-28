@@ -1,69 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Microsoft 365 Copilot 調査レポート"
-tool_name: "Microsoft 365 Copilot"
-tool_reading: "マイクロソフト 365 コパイロット"
-category: "生成AI"
-developer: "Microsoft"
-official_site: "https://www.microsoft.com/ja-jp/microsoft-365/copilot"
-date: "2026-01-27"
-last_updated: "2026-03-10"
+title: Microsoft 365 Copilot 調査レポート
+tool_name: Microsoft 365 Copilot
+tool_reading: マイクロソフト 365 コパイロット
+category: 生成AI
+developer: Microsoft
+official_site: https://www.microsoft.com/ja-jp/microsoft-365/copilot
+date: '2026-01-27'
+last_updated: '2026-03-10'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "エージェント"
-  - "SaaS"
-description: "Microsoft 365アプリに統合された生成AIアシスタント。GPT-4等を活用し、ドキュメント作成、データ分析、会議要約、メール処理などを支援する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - エージェント
+  - 大規模言語モデル
+  - 生成AI
+description: Microsoft 365アプリに統合された生成AIアシスタント。GPT-4等を活用し、ドキュメント作成、データ分析、会議要約、メール処理などを支援する。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "ビジネスパーソン"
-    - "大企業"
-    - "中小企業"
-  latest_highlight: "2026年3月にMicrosoft TeamsでのAI議事録機能を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ビジネスパーソン
+    - 大企業
+    - 中小企業
+  latest_highlight: 2026年3月にMicrosoft TeamsでのAI議事録機能を強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Microsoft 365アプリとの深い統合により、既存の業務フローを大幅に効率化できる"
+      reason: Microsoft 365アプリとの深い統合により、既存の業務フローを大幅に効率化できる
     - point: 8
-      reason: "組織内のデータを安全に活用できるため、文脈に沿った高精度な応答が期待できる"
+      reason: 組織内のデータを安全に活用できるため、文脈に沿った高精度な応答が期待できる
     - point: 5
-      reason: "Copilot Studioによる拡張性が高く、特定の業務に特化したカスタマイズが可能"
+      reason: Copilot Studioによる拡張性が高く、特定の業務に特化したカスタマイズが可能
   minus_points:
     - point: -5
-      reason: "ユーザーライセンスが高額で、全社展開には相応のコストがかかる"
+      reason: ユーザーライセンスが高額で、全社展開には相応のコストがかかる
     - point: -3
-      reason: "最大限に活用するにはデータ整備やプロンプトスキルが求められ、学習コストが発生する"
-  summary: "Microsoft 365との深い統合と組織データ活用が強力だが、導入コストと学習コストが課題"
-
-# 【任意項目】該当するもののみ記載
+      reason: 最大限に活用するにはデータ整備やプロンプトスキルが求められ、学習コストが発生する
+  summary: Microsoft 365との深い統合と組織データ活用が強力だが、導入コストと学習コストが課題
 links:
-  documentation: "https://learn.microsoft.com/ja-jp/microsoft-365-copilot/"
+  documentation: https://learn.microsoft.com/ja-jp/microsoft-365-copilot/
 relationships:
   children:
-    - "Microsoft Work IQ"
-    - "Copilot Cowork"
+    - Microsoft Work IQ
+    - Copilot Cowork
   related_tools:
-    - "ChatGPT"
-    - "Gemini"
-    - "GitHub Copilot"
-    - "Microsoft Power Automate"
-    - "AGENTIC STAR"
-    - "Circleback"
-    - "Gamma"
-    - "LITRON CORE"
+    - ChatGPT
+    - Gemini
+    - GitHub Copilot
+    - Microsoft Power Automate
+    - AGENTIC STAR
+    - Circleback
+    - Gamma
 ---
+
+
+
 
 # **Microsoft 365 Copilot 調査レポート**
 

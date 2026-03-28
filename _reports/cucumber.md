@@ -1,67 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Cucumber 調査レポート"
-tool_name: "Cucumber"
-tool_reading: "キューカンバー"
-category: "テスト/QA"
-developer: "The Cucumber Open Source Project"
-official_site: "https://cucumber.io/"
-date: "2025-10-19"
-last_updated: "2026-02-10"
+title: Cucumber 調査レポート
+tool_name: Cucumber
+tool_reading: キューカンバー
+category: テスト/QA
+developer: The Cucumber Open Source Project
+official_site: https://cucumber.io/
+date: '2025-10-19'
+last_updated: '2026-02-10'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "BDD"
-  - "E2Eテスト"
-  - "Java"
-  - "JavaScript"
-description: "自然言語で記述された仕様書を基に、自動化された受け入れテストを実行するためのオープンソースツール。BDD（振る舞い駆動開発）をサポートし、チーム内のコラボレーションを促進する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - BDD
+  - E2Eテスト
+  - Java
+  - JavaScript
+  - オープンソース
+  - テスト自動化
+description: 自然言語で記述された仕様書を基に、自動化された受け入れテストを実行するためのオープンソースツール。BDD（振る舞い駆動開発）をサポートし、チーム内のコラボレーションを促進する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-    - "プロダクトマネージャー"
-  latest_highlight: "2026年1月に外部プラグイン対応などを強化したv12.6.0をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - QAエンジニア
+    - プロダクトマネージャー
+  latest_highlight: 2026年1月に外部プラグイン対応などを強化したv12.6.0をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "BDDの思想を強力にサポートし、チームのコラボレーションを促進する独自の価値を持つ"
+      reason: BDDの思想を強力にサポートし、チームのコラボレーションを促進する独自の価値を持つ
     - point: 5
-      reason: "主要なプログラミング言語を幅広くサポートし、多くの開発環境に導入可能"
+      reason: 主要なプログラミング言語を幅広くサポートし、多くの開発環境に導入可能
     - point: 5
-      reason: "活発なコミュニティによって開発が継続されているオープンソースプロジェクトである"
+      reason: 活発なコミュニティによって開発が継続されているオープンソースプロジェクトである
   minus_points:
     - point: -3
-      reason: "BDDの概念とGherkinの習熟に一定の学習コストが必要"
+      reason: BDDの概念とGherkinの習熟に一定の学習コストが必要
     - point: -2
-      reason: "UIテストと組み合わせた際の実行速度や、大規模プロジェクトでのメンテナンス性が課題となる場合がある"
-  summary: "チームのコラボレーションを促進するBDDツールとして非常に強力だが、導入には学習コストと文化の醸成が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: UIテストと組み合わせた際の実行速度や、大規模プロジェクトでのメンテナンス性が課題となる場合がある
+  summary: チームのコラボレーションを促進するBDDツールとして非常に強力だが、導入には学習コストと文化の醸成が必要。
 links:
-  github: "https://github.com/cucumber"
-  documentation: "https://cucumber.io/docs"
+  github: https://github.com/cucumber
+  documentation: https://cucumber.io/docs
 relationships:
   related_tools:
-    - "Selenium"
-    - "Playwright"
-    - "Robot Framework"
-    - "Appium"
-    - "Karate"
-    - "Gauge"
-    - "Allure Report"
+    - Selenium
+    - Playwright
+    - Robot Framework
+    - Appium
+    - Karate
+    - Gauge
+    - Allure Report
 ---
+
+
+
 
 # **Cucumber 調査レポート**
 

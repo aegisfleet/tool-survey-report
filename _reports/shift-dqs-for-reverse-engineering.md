@@ -1,51 +1,46 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "SHIFT DQS for リバースエンジニアリング 調査レポート"
-tool_name: "SHIFT DQS for リバースエンジニアリング"
-tool_reading: "シフト ディーキューエス フォー リバースエンジニアリング"
-category: "開発者ツール"
-developer: "株式会社SHIFT"
-official_site: "https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/"
-date: "2026-03-06"
-last_updated: "2026-03-06"
+title: SHIFT DQS for リバースエンジニアリング 調査レポート
+tool_name: SHIFT DQS for リバースエンジニアリング
+tool_reading: シフト ディーキューエス フォー リバースエンジニアリング
+category: 開発者ツール
+developer: 株式会社SHIFT
+official_site: https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/
+date: '2026-03-06'
+last_updated: '2026-03-06'
 tags:
-  - "AI"
-  - "システム可視化"
-  - "モダナイゼーション"
-  - "リバースエンジニアリング"
-  - "生成AI"
-description: "システムのソースコードをAIで解析し、内部仕様・外部仕様を統合的に可視化して46種類のドキュメントを生成するサービス"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - システム可視化
+  - モダナイゼーション
+  - リバースエンジニアリング
+  - 生成AI
+description: システムのソースコードをAIで解析し、内部仕様・外部仕様を統合的に可視化して46種類のドキュメントを生成するサービス
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "情報システム部門"
-    - "開発エンジニア"
-    - "プロジェクトマネージャー"
-  latest_highlight: "2026年2月に提供開始。46種類のドキュメント生成に対応"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 情報システム部門
+    - 開発エンジニア
+    - プロジェクトマネージャー
+  latest_highlight: 2026年2月に提供開始。46種類のドキュメント生成に対応
+  update_frequency: 不定期
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "内部・外部仕様の統合的な可視化と46種類の豊富なドキュメント生成に対応しているため"
+      reason: 内部・外部仕様の統合的な可視化と46種類の豊富なドキュメント生成に対応しているため
   minus_points:
     - point: 0
-      reason: "新規サービスのため現時点で実績やレビューが少なく評価が限定されるため"
-  summary: "AIを活用してレガシーシステムのブラックボックス化を解消し、モダナイゼーションを強力に支援する有望なサービス"
-
-# 【任意項目】該当するもののみ記載
+      reason: 新規サービスのため現時点で実績やレビューが少なく評価が限定されるため
+  summary: AIを活用してレガシーシステムのブラックボックス化を解消し、モダナイゼーションを強力に支援する有望なサービス
 relationships:
   related_tools:
-    - "GitHub Copilot"
+    - GitHub Copilot
 ---
+
+
+
 
 # **SHIFT DQS for リバースエンジニアリング 調査レポート**
 

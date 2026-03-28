@@ -1,57 +1,61 @@
 ---
-title: "Salesforce 調査レポート"
-tool_name: "Salesforce"
-tool_reading: "セールスフォース"
-category: "顧客管理"
-developer: "Salesforce, Inc."
-official_site: "https://www.salesforce.com/jp/"
-date: "2026-01-13"
-last_updated: "2026-01-29"
+title: Salesforce 調査レポート
+tool_name: Salesforce
+tool_reading: セールスフォース
+category: 顧客管理
+developer: Salesforce, Inc.
+official_site: https://www.salesforce.com/jp/
+date: '2026-01-13'
+last_updated: '2026-01-29'
 tags:
-  - "CRM"
-  - "SFA"
-  - "SaaS"
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "クラウド"
-description: "世界シェアNo.1のCRMプラットフォーム。自律型AI「Agentforce」を核とし、営業、サービス、マーケティングなど全方位の業務変革を支援する。"
+  - AI
+  - CRM
+  - SFA
+  - SaaS
+  - エージェント
+  - クラウド
+  - 自律型
+description: 世界シェアNo.1のCRMプラットフォーム。自律型AI「Agentforce」を核とし、営業、サービス、マーケティングなど全方位の業務変革を支援する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "¥3,000/月"
+  starting_price: ¥3,000/月
   target_users:
-    - "中規模企業"
-    - "大企業"
-    - "営業チーム"
-  latest_highlight: "2026年6月・11月に「Agentforce World Tour Tokyo 2026」開催決定"
-  update_frequency: "高"
+    - 中規模企業
+    - 大企業
+    - 営業チーム
+  latest_highlight: 2026年6月・11月に「Agentforce World Tour Tokyo 2026」開催決定
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "機能が圧倒的に豊富で、あらゆる業務要件に対応可能"
+      reason: 機能が圧倒的に豊富で、あらゆる業務要件に対応可能
     - point: 5
-      reason: "自律型AI「Agentforce」の実装が競合より先行している"
+      reason: 自律型AI「Agentforce」の実装が競合より先行している
     - point: 3
-      reason: "AppExchangeによる拡張エコシステムが巨大"
+      reason: AppExchangeによる拡張エコシステムが巨大
     - point: 5
-      reason: "日本語対応や国内サポートが非常に充実している"
+      reason: 日本語対応や国内サポートが非常に充実している
   minus_points:
     - point: -3
-      reason: "導入・運用コストが競合と比較して高い"
-  summary: "機能、拡張性、AI機能はいずれも最高水準。コストは高いが、スケーラビリティと将来性を重視するなら最適な選択肢。"
+      reason: 導入・運用コストが競合と比較して高い
+  summary: 機能、拡張性、AI機能はいずれも最高水準。コストは高いが、スケーラビリティと将来性を重視するなら最適な選択肢。
 links:
-  documentation: "https://help.salesforce.com/s/"
+  documentation: https://help.salesforce.com/s/
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "Tableau"
+    - Tableau
   related_tools:
-    - "ワスレナイ"
-    - "AGENTIC STAR"
+    - ワスレナイ
+    - AGENTIC STAR
+    - Google 広告
 ---
+
+
+
 
 # **Salesforce 調査レポート**
 

@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Notifuse 調査レポート"
-tool_name: "Notifuse"
-tool_reading: "ノティフューズ"
-category: "開発者ツール"
-developer: "Notifuse"
-official_site: "https://www.notifuse.com/"
-date: "2025-12-21"
-last_updated: "2026-01-29"
+title: Notifuse 調査レポート
+tool_name: Notifuse
+tool_reading: ノティフューズ
+category: 開発者ツール
+developer: Notifuse
+official_site: https://www.notifuse.com/
+date: '2025-12-21'
+last_updated: '2026-01-29'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "API"
-  - "Go"
-  - "自動化"
-  - "生成AI"
-description: "セルフホスト可能なオープンソースのメールマーケティングプラットフォーム。MJMLビジュアルエディタ、マーケティングオートメーション、AIアシスタントを備える。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - API
+  - Go
+  - オープンソース
+  - 生成AI
+  - 自動化
+  - 開発者ツール
+description: セルフホスト可能なオープンソースのメールマーケティングプラットフォーム。MJMLビジュアルエディタ、マーケティングオートメーション、AIアシスタントを備える。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "マーケティング担当者"
-  latest_highlight: "2026年1月に多言語対応(日本語含む)とAI機能を強化 (v26.13)"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - マーケティング担当者
+  latest_highlight: 2026年1月に多言語対応(日本語含む)とAI機能を強化 (v26.13)
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "MJMLビジュアルエディタやマルチテナント機能など、競合OSSより機能が豊富"
+      reason: MJMLビジュアルエディタやマルチテナント機能など、競合OSSより機能が豊富
     - point: 5
-      reason: "セルフホストにより、登録者数に依存しない高いコストパフォーマンスを実現"
+      reason: セルフホストにより、登録者数に依存しない高いコストパフォーマンスを実現
     - point: 3
-      reason: "v26.12で日本語を含む多言語対応が追加された"
+      reason: v26.12で日本語を含む多言語対応が追加された
     - point: 2
-      reason: "Claude統合によるAIアシスタント機能"
+      reason: Claude統合によるAIアシスタント機能
   minus_points:
     - point: -3
-      reason: "セルフホストのため、サーバー設定や保守などの運用コストが発生する"
-  summary: "日本語対応とAI機能が追加され、機能性とコスト効率を兼ね備えた強力なOSSツールに進化した。"
-
-# 【任意項目】該当するもののみ記載
+      reason: セルフホストのため、サーバー設定や保守などの運用コストが発生する
+  summary: 日本語対応とAI機能が追加され、機能性とコスト効率を兼ね備えた強力なOSSツールに進化した。
 links:
-  github: "https://github.com/notifuse/notifuse"
-  deepwiki: "https://deepwiki.com/notifuse/notifuse"
-  documentation: "https://docs.notifuse.com/"
+  github: https://github.com/notifuse/notifuse
+  deepwiki: https://deepwiki.com/notifuse/notifuse
+  documentation: https://docs.notifuse.com/
 relationships:
-  parent:
-  children:
-  related_tools:
+  parent: null
+  children: null
+  related_tools: null
 ---
+
+
+
 
 # **Notifuse 調査レポート**
 

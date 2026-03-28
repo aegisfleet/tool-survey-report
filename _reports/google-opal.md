@@ -1,64 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Opal 調査レポート"
-tool_name: "Google Opal"
-tool_reading: "グーグル オパール"
-category: "ワークフロー自動化"
-developer: "Google"
-official_site: "https://developers.google.com/opal"
-date: "2026-02-20"
-last_updated: "2026-02-20"
+title: Google Opal 調査レポート
+tool_name: Google Opal
+tool_reading: グーグル オパール
+category: ワークフロー自動化
+developer: Google
+official_site: https://developers.google.com/opal
+date: '2026-02-20'
+last_updated: '2026-02-20'
 tags:
-  - "AI"
-  - "ノーコード"
-  - "Google"
-  - "ワークフロー自動化"
-  - "生成AI"
-  - "エージェント"
-description: "自然言語の指示だけで、テキスト・画像・動画生成を組み合わせたAIミニアプリを構築・共有できるGoogle製のノーコードプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Google
+  - エージェント
+  - ノーコード
+  - ワークフロー自動化
+  - 生成AI
+description: 自然言語の指示だけで、テキスト・画像・動画生成を組み合わせたAIミニアプリを構築・共有できるGoogle製のノーコードプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ビジネスユーザー"
-    - "マーケター"
-    - "クリエイター"
-  latest_highlight: "日本を含む世界各国で利用可能になり、デスクトップ環境での開発体験が最適化された"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ビジネスユーザー
+    - マーケター
+    - クリエイター
+  latest_highlight: 日本を含む世界各国で利用可能になり、デスクトップ環境での開発体験が最適化された
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 7
-      reason: "自然言語のみでアプリ構築が可能（Natural Language App Building）な高い操作性"
+      reason: 自然言語のみでアプリ構築が可能（Natural Language App Building）な高い操作性
     - point: 5
-      reason: "Gemini、Imagen、VeoなどGoogleの最新マルチモーダルモデルを統合"
+      reason: Gemini、Imagen、VeoなどGoogleの最新マルチモーダルモデルを統合
     - point: 3
-      reason: "完全無料で利用可能（実験的フェーズ）"
+      reason: 完全無料で利用可能（実験的フェーズ）
   minus_points:
     - point: -5
-      reason: "Google Labsの実験的ツールであり、将来のサービス継続性に不確実性がある"
-  summary: "自然言語だけでマルチモーダルAIを活用したアプリが作れる革新的なツールだが、実験的サービスである点に留意。"
-
-# 【任意項目】該当するもののみ記載
+      reason: Google Labsの実験的ツールであり、将来のサービス継続性に不確実性がある
+  summary: 自然言語だけでマルチモーダルAIを活用したアプリが作れる革新的なツールだが、実験的サービスである点に留意。
 links:
-  documentation: "https://developers.google.com/opal"
+  documentation: https://developers.google.com/opal
 relationships:
-  parent: "Google"
+  parent: null
   children: []
   related_tools:
-    - "Zapier"
-    - "n8n"
-    - "Microsoft Power Automate"
-    - "Google Gemini Flows"
-    - "Dify"
+    - Zapier
+    - n8n
+    - Microsoft Power Automate
+    - Dify
 ---
+
+
+
 
 # **Google Opal 調査レポート**
 

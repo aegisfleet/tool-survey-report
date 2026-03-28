@@ -1,56 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Microsoft Work IQ 調査レポート"
-tool_name: "Microsoft Work IQ"
-tool_reading: "マイクロソフト ワーク アイキュー"
-category: "開発者ツール"
-developer: "Microsoft"
-official_site: "https://github.com/microsoft/work-iq-mcp"
-date: "2026-01-25"
-last_updated: "2026-03-01"
+title: Microsoft Work IQ 調査レポート
+tool_name: Microsoft Work IQ
+tool_reading: マイクロソフト ワーク アイキュー
+category: 開発者ツール
+developer: Microsoft
+official_site: https://github.com/microsoft/work-iq-mcp
+date: '2026-01-25'
+last_updated: '2026-03-01'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "Microsoft 365"
-  - "CLI"
-description: "Microsoft 365のデータ（メール、会議、ドキュメントなど）に自然言語でアクセスするためのMCPサーバーおよびCLIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CLI
+  - Microsoft 365
+  - エージェント
+  - 開発者ツール
+description: Microsoft 365のデータ（メール、会議、ドキュメントなど）に自然言語でアクセスするためのMCPサーバーおよびCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Microsoft 365 ユーザー"
-  latest_highlight: "2025年11月のIgnite 2025でPublic Previewとして発表"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - Microsoft 365 ユーザー
+  latest_highlight: 2025年11月のIgnite 2025でPublic Previewとして発表
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "MCP（Model Context Protocol）に公式対応しており、AIエージェントとの連携が容易"
+      reason: MCP（Model Context Protocol）に公式対応しており、AIエージェントとの連携が容易
     - point: 3
-      reason: "CLIツールが付属しており、手軽に動作確認や対話が可能"
+      reason: CLIツールが付属しており、手軽に動作確認や対話が可能
   minus_points:
     - point: -3
-      reason: "Public Preview段階であり、機能やAPIが変更される可能性がある"
-  summary: "Microsoft 365データをAIエージェントから利用するための公式かつ標準的な手段として有望"
-
-# 【任意項目】該当するもののみ記載
+      reason: Public Preview段階であり、機能やAPIが変更される可能性がある
+  summary: Microsoft 365データをAIエージェントから利用するための公式かつ標準的な手段として有望
 links:
-  documentation: "https://github.com/microsoft/work-iq-mcp/blob/main/README.md"
+  documentation: https://github.com/microsoft/work-iq-mcp/blob/main/README.md
 relationships:
-  parent: "Microsoft 365 Copilot"
+  parent: Microsoft 365 Copilot
   related_tools:
-    - "GitHub Copilot"
-    - "Model Context Protocol"
+    - GitHub Copilot
+    - Model Context Protocol
 ---
+
+
+
 
 # **Microsoft Work IQ 調査レポート**
 

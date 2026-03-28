@@ -1,70 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Devin 調査レポート"
-tool_name: "Devin"
-tool_reading: "デビン"
-category: "自律型AIエージェント"
-developer: "Cognition Labs"
-official_site: "https://devin.ai/"
-date: "2026-01-27"
-last_updated: "2026-03-06"
+title: Devin 調査レポート
+tool_name: Devin
+tool_reading: デビン
+category: 自律型AIエージェント
+developer: Cognition Labs
+official_site: https://devin.ai/
+date: '2026-01-27'
+last_updated: '2026-03-06'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "開発者ツール"
-  - "コーディング支援"
-  - "自動化"
-description: "世界初の完全自律型AIソフトウェアエンジニア。自然言語の指示に基づき、ソフトウェア開発の計画、コーディング、デバッグ、テスト、デプロイまでを一貫して自律的に実行します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - コーディング支援
+  - 自動化
+  - 自律型
+  - 開発者ツール
+description: 世界初の完全自律型AIソフトウェアエンジニア。自然言語の指示に基づき、ソフトウェア開発の計画、コーディング、デバッグ、テスト、デプロイまでを一貫して自律的に実行します。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$20から"
+  starting_price: $20から
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "プロダクトマネージャー"
-  latest_highlight: "2026年2月にDevin 2.2、v3 API、Devin Reviewなどをリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - プロダクトマネージャー
+  latest_highlight: 2026年2月にDevin 2.2、v3 API、Devin Reviewなどをリリース
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 8
-      reason: "タスクの計画からデプロイまで一貫して実行できる自律性を持ち、独自のIDEや多数の連携機能を備えている。"
+      reason: タスクの計画からデプロイまで一貫して実行できる自律性を持ち、独自のIDEや多数の連携機能を備えている。
     - point: 5
-      reason: "リリースノートから確認できるように、機能改善や新機能の追加が毎週のように行われており、開発が非常に活発である。"
+      reason: リリースノートから確認できるように、機能改善や新機能の追加が毎週のように行われており、開発が非常に活発である。
     - point: 2
-      reason: "プロトタイピングやWebスクレイピング等の特定タスクにおいて、高い評価を得ている。"
+      reason: プロトタイピングやWebスクレイピング等の特定タスクにおいて、高い評価を得ている。
   minus_points:
     - point: -5
-      reason: "レビューサイト等で、複雑なタスクにおける成功率が約15%と報告されており、信頼性に課題がある。"
+      reason: レビューサイト等で、複雑なタスクにおける成功率が約15%と報告されており、信頼性に課題がある。
     - point: -3
-      reason: "Teamプランが月額$500と高価なことに加え、ACUベースの従量課金のためコストが想定以上になる可能性がある。"
+      reason: Teamプランが月額$500と高価なことに加え、ACUベースの従量課金のためコストが想定以上になる可能性がある。
     - point: -2
-      reason: "UIやドキュメントは英語が基本であり、日本語での指示に対する精度は英語に劣る可能性がある。"
-  summary: "タスクの自律性は高いが成功率に課題があり、コストと信頼性のバランスを考慮した特定用途での導入が現実的。"
-
-# 【任意項目】該当するもののみ記載
+      reason: UIやドキュメントは英語が基本であり、日本語での指示に対する精度は英語に劣る可能性がある。
+  summary: タスクの自律性は高いが成功率に課題があり、コストと信頼性のバランスを考慮した特定用途での導入が現実的。
 links:
-  documentation: "https://docs.devin.ai/"
+  documentation: https://docs.devin.ai/
 relationships:
   children:
-    - "DeepWiki"
+    - DeepWiki
   related_tools:
-    - "GitHub Copilot"
-    - "Claude Code"
-    - "Cursor"
-    - "Windsurf"
-    - "Cline"
-    - "Roo Code"
-    - "OpenHands"
+    - GitHub Copilot
+    - Claude Code
+    - Cursor
+    - Windsurf
+    - Cline
+    - Roo Code
+    - OpenHands
 ---
+
+
+
 
 # **Devin 調査レポート**
 

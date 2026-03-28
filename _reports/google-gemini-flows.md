@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Workspace Studio 調査レポート"
-tool_name: "Google Workspace Studio"
-tool_reading: "グーグル ワークスペース スタジオ"
-category: "ワークフロー自動化"
-developer: "Google"
-official_site: "https://developers.google.com/workspace/add-ons/studio"
-date: "2026-01-25"
-last_updated: "2026-03-01"
+title: Google Workspace Studio 調査レポート
+tool_name: Google Workspace Studio
+tool_reading: グーグル ワークスペース スタジオ
+category: ワークフロー自動化
+developer: Google
+official_site: https://developers.google.com/workspace/add-ons/studio
+date: '2026-01-25'
+last_updated: '2026-03-01'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "ノーコード"
-  - "自動化"
-description: "Gemini AIを活用し、自然言語でGoogle Workspace内の反復作業を自動化するノーコードプラットフォーム。旧称または関連機能として「Gemini Flows」とも呼ばれる。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - ノーコード
+  - 生成AI
+  - 自動化
+description: Gemini AIを活用し、自然言語でGoogle Workspace内の反復作業を自動化するノーコードプラットフォーム。旧称または関連機能として「Gemini Flows」とも呼ばれる。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "Geminiアドオンに依存"
+  starting_price: Geminiアドオンに依存
   target_users:
-    - "Google Workspaceユーザー"
-    - "ビジネスユーザー"
-  latest_highlight: "2025年後半よりLimited Previewとして展開中。圧倒的な需要によりロールアウト調整中。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Google Workspaceユーザー
+    - ビジネスユーザー
+  latest_highlight: 2025年後半よりLimited Previewとして展開中。圧倒的な需要によりロールアウト調整中。
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Google Workspaceとのネイティブな統合性が非常に高く、セキュリティ面でも安心できる"
+      reason: Google Workspaceとのネイティブな統合性が非常に高く、セキュリティ面でも安心できる
     - point: 7
-      reason: "Gemini AIを中核に据え、自然言語でのフロー構築や高度な判断（Agentic AI）が可能"
+      reason: Gemini AIを中核に据え、自然言語でのフロー構築や高度な判断（Agentic AI）が可能
     - point: 5
-      reason: "ノーコードかつチャットベースのUIで、非開発者でも直感的に操作できる"
+      reason: ノーコードかつチャットベースのUIで、非開発者でも直感的に操作できる
   minus_points:
     - point: -5
-      reason: "現在はLimited Preview段階であり、一般利用にはまだ制限がある"
+      reason: 現在はLimited Preview段階であり、一般利用にはまだ制限がある
     - point: -5
-      reason: "サードパーティ製アプリとの連携はApps Script等が必要で、Zapier等に比べると手軽さに欠ける"
-  summary: "Google Workspace内でのAIを活用した自動化において、最強のツールとなるポテンシャルを持つが、現在は提供が限定的。"
-
-# 【任意項目】該当するもののみ記載
+      reason: サードパーティ製アプリとの連携はApps Script等が必要で、Zapier等に比べると手軽さに欠ける
+  summary: Google Workspace内でのAIを活用した自動化において、最強のツールとなるポテンシャルを持つが、現在は提供が限定的。
 links:
-  documentation: "https://developers.google.com/workspace/add-ons/studio"
+  documentation: https://developers.google.com/workspace/add-ons/studio
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Microsoft Power Automate"
-    - "Zapier"
-    - "Make"
+    - Microsoft Power Automate
+    - Zapier
+    - Make
 ---
+
+
+
 
 # **Google Workspace Studio 調査レポート**
 

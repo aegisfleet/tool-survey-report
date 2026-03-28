@@ -1,55 +1,57 @@
 ---
-title: "Vitest 調査レポート"
-tool_name: "Vitest"
-tool_reading: "ヴィーテスト / ヴァイテスト"
-category: "テスト/QA"
-developer: "VoidZero Inc. / Vitest Contributors"
-official_site: "https://vitest.dev/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: Vitest 調査レポート
+tool_name: Vitest
+tool_reading: ヴィーテスト / ヴァイテスト
+category: テスト/QA
+developer: VoidZero Inc. / Vitest Contributors
+official_site: https://vitest.dev/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "テスト自動化"
-  - "JavaScript"
-  - "TypeScript"
-  - "オープンソース"
-  - "Vite"
-description: "Viteネイティブの高速なユニットテストフレームワーク。Jest互換のAPIを持ち、高速なHMRと優れたDXを提供する。"
+  - JavaScript
+  - TypeScript
+  - Vite
+  - オープンソース
+  - テスト自動化
+description: Viteネイティブの高速なユニットテストフレームワーク。Jest互換のAPIを持ち、高速なHMRと優れたDXを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "フロントエンドエンジニア"
-  latest_highlight: "v4.0系リリースによるBrowser Modeの安定化とパフォーマンス向上 (2026年2月時点)"
-  update_frequency: "高"
+    - Web開発者
+    - フロントエンドエンジニア
+  latest_highlight: v4.0系リリースによるBrowser Modeの安定化とパフォーマンス向上 (2026年2月時点)
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Viteベースによる圧倒的な実行速度と設定の共有"
+      reason: Viteベースによる圧倒的な実行速度と設定の共有
     - point: 5
-      reason: "Jest互換APIによる移行の容易さ"
+      reason: Jest互換APIによる移行の容易さ
     - point: 5
-      reason: "WatchモードとHMRの快適な開発体験"
+      reason: WatchモードとHMRの快適な開発体験
     - point: 2
-      reason: "活発な開発コミュニティと頻繁なアップデート"
+      reason: 活発な開発コミュニティと頻繁なアップデート
   minus_points: []
-  summary: "現代のWeb開発において最適な選択肢の一つ。特にViteを使用しているプロジェクトでは必須級のツール。"
+  summary: 現代のWeb開発において最適な選択肢の一つ。特にViteを使用しているプロジェクトでは必須級のツール。
 links:
-  github: "https://github.com/vitest-dev/vitest"
-  codewiki: "https://codewiki.google/github.com/vitest-dev/vitest"
-  deepwiki: "https://deepwiki.com/vitest-dev/vitest"
-  documentation: "https://vitest.dev/guide/"
+  github: https://github.com/vitest-dev/vitest
+  codewiki: https://codewiki.google/github.com/vitest-dev/vitest
+  deepwiki: https://deepwiki.com/vitest-dev/vitest
+  documentation: https://vitest.dev/guide/
 relationships:
-  parent: "Vite"
+  parent: Vite
   children: []
   related_tools:
-    - "Jest"
-    - "Playwright"
-    - "Cypress"
+    - Playwright
+    - Cypress
 ---
+
+
+
 
 # **Vitest 調査レポート**
 

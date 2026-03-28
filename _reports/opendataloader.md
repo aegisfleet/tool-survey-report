@@ -1,53 +1,53 @@
 ---
-title: "OpenDataLoader 調査レポート"
-tool_name: "OpenDataLoader"
-tool_reading: "オープンデータローダー"
-category: "開発者ツール"
-developer: "Hancom / OpenDataLoader Project"
-official_site: "https://opendataloader.org/"
-date: "2026-03-20"
-last_updated: "2026-03-20"
+title: OpenDataLoader 調査レポート
+tool_name: OpenDataLoader
+tool_reading: オープンデータローダー
+category: 開発者ツール
+developer: Hancom / OpenDataLoader Project
+official_site: https://opendataloader.org/
+date: '2026-03-20'
+last_updated: '2026-03-20'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "データ連携"
-description: "RAGパイプライン向けに最適化された、AI対応のオープンソースPDFパーサーおよびPDFアクセシビリティ自動化ツール。"
-
+  - AI
+  - オープンソース
+  - データ連携
+description: RAGパイプライン向けに最適化された、AI対応のオープンソースPDFパーサーおよびPDFアクセシビリティ自動化ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AI・機械学習エンジニア"
-  latest_highlight: "v2.0.2をリリースし、ライセンスをApache 2.0に変更"
-  update_frequency: "高"
-
+    - 開発者
+    - AI・機械学習エンジニア
+  latest_highlight: v2.0.2をリリースし、ライセンスをApache 2.0に変更
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ベンチマークで高いスコア（全体0.90）を記録し、競合より高精度"
+      reason: ベンチマークで高いスコア（全体0.90）を記録し、競合より高精度
     - point: 5
-      reason: "すべての要素に対してバウンディングボックスを出力可能"
+      reason: すべての要素に対してバウンディングボックスを出力可能
     - point: 3
-      reason: "ハイブリッドモードにより複雑な表やスキャンされたPDFにも対応"
+      reason: ハイブリッドモードにより複雑な表やスキャンされたPDFにも対応
     - point: 3
-      reason: "オープンソース（Apache 2.0）でローカル環境で動作可能"
+      reason: オープンソース（Apache 2.0）でローカル環境で動作可能
   minus_points:
     - point: -3
-      reason: "PDF/UA出力やビジュアルエディタなど一部機能はエンタープライズ版のみ"
-  summary: "RAG構築において非常に高精度かつ有用なPDFパーサーであり、ローカルで安全に利用できる点が強み。"
-
+      reason: PDF/UA出力やビジュアルエディタなど一部機能はエンタープライズ版のみ
+  summary: RAG構築において非常に高精度かつ有用なPDFパーサーであり、ローカルで安全に利用できる点が強み。
 links:
-  github: "https://github.com/opendataloader-project/opendataloader-pdf"
-  deepwiki: "https://deepwiki.com/opendataloader-project/opendataloader-pdf"
-  documentation: "https://opendataloader.org/docs"
+  github: https://github.com/opendataloader-project/opendataloader-pdf
+  deepwiki: https://deepwiki.com/opendataloader-project/opendataloader-pdf
+  documentation: https://opendataloader.org/docs
 relationships:
   related_tools:
-    - "LangChain"
+    - LangChain
 ---
+
+
+
 
 # **OpenDataLoader 調査レポート**
 

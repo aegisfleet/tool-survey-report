@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Manus 調査レポート"
-tool_name: "Manus"
-tool_reading: "マヌス"
-category: "自律型AIエージェント"
-developer: "Meta Platforms"
-official_site: "https://manus.im/"
-date: "2026-03-03"
-last_updated: "2026-03-03"
+title: Manus 調査レポート
+tool_name: Manus
+tool_reading: マヌス
+category: 自律型AIエージェント
+developer: Meta Platforms
+official_site: https://manus.im/
+date: '2026-03-03'
+last_updated: '2026-03-03'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "開発者ツール"
-  - "ノーコード"
-description: "Meta傘下の完全自律型AIエージェント。自然言語のプロンプトからフルスタックのWebアプリやモバイルアプリを自動構築する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - ノーコード
+  - 自律型
+  - 開発者ツール
+description: Meta傘下の完全自律型AIエージェント。自然言語のプロンプトからフルスタックのWebアプリやモバイルアプリを自動構築する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "起業家"
-    - "クリエイター"
-  latest_highlight: "2025年12月にMeta Platformsへ参加、機能を大幅強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 起業家
+    - クリエイター
+  latest_highlight: 2025年12月にMeta Platformsへ参加、機能を大幅強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "一度指示すればタスクを完遂する完全自律性と、アプリ開発からデザインまでカバーする多機能性"
+      reason: 一度指示すればタスクを完遂する完全自律性と、アプリ開発からデザインまでカバーする多機能性
     - point: 5
-      reason: "Metaの技術力と資金力がバックにあり、長期的な発展と統合が期待できる"
+      reason: Metaの技術力と資金力がバックにあり、長期的な発展と統合が期待できる
     - point: 4
-      reason: "日本語を含む多言語に対応しており、グローバルで利用しやすい"
+      reason: 日本語を含む多言語に対応しており、グローバルで利用しやすい
   minus_points:
     - point: -2
-      reason: "高度な機能を利用するには有料プランが必要で、本格的な利用にはコストがかかる"
-  summary: "Meta傘下となり信頼性と機能が強化された、汎用性の高い強力な自律型AIエージェント。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な機能を利用するには有料プランが必要で、本格的な利用にはコストがかかる
+  summary: Meta傘下となり信頼性と機能が強化された、汎用性の高い強力な自律型AIエージェント。
 links:
-  documentation: "https://manus.im/docs"
+  documentation: https://manus.im/docs
 relationships:
   related_tools:
-    - "Devin"
-    - "OpenHands"
-    - "Google Jules"
+    - Devin
+    - OpenHands
+    - Google Jules
 ---
+
+
+
 
 # **Manus 調査レポート**
 

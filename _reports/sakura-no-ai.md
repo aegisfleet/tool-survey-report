@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "さくらのAI 調査レポート"
-tool_name: "さくらのAI"
-tool_reading: "さくらのエーアイ"
-category: "AI開発基盤"
-developer: "さくらインターネット株式会社"
-official_site: "https://www.sakura.ad.jp/aipf/"
-date: "2025-12-16"
-last_updated: "2026-01-30"
+title: さくらのAI 調査レポート
+tool_name: さくらのAI
+tool_reading: さくらのエーアイ
+category: AI開発基盤
+developer: さくらインターネット株式会社
+official_site: https://www.sakura.ad.jp/aipf/
+date: '2025-12-16'
+last_updated: '2026-01-30'
 tags:
-  - "AI"
-  - "生成AI"
-  - "クラウド"
-  - "API"
-  - "大規模言語モデル"
-  - "AI開発基盤"
-  - "RAG"
-  - "国産"
-  - "GPUクラウド"
-description: "「国内完結」の安全性と「低コスト」を両立した、さくらインターネットが提供するAIプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - AI開発基盤
+  - API
+  - GPUクラウド
+  - RAG
+  - クラウド
+  - 国産
+  - 大規模言語モデル
+  - 生成AI
+description: 「国内完結」の安全性と「低コスト」を両立した、さくらインターネットが提供するAIプラットフォーム。
 quick_summary:
-  has_free_plan: true  # 無料プランの有無
-  is_oss: false  # OSS（オープンソース）かどうか
-  starting_price: "無料"  # 最低価格（無料の場合は「無料」）
-  target_users:  # 想定ユーザー（1-3項目）
-    - "開発者"
-    - "企業"
-    - "官公庁"
-  latest_highlight: "2025年12月にQwen3-Embedding-4Bモデルが追加"  # 直近1ヶ月の注目アップデート
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  has_free_plan: true
+  is_oss: false
+  starting_price: 無料
+  target_users:
+    - 開発者
+    - 企業
+    - 官公庁
+  latest_highlight: 2025年12月にQwen3-Embedding-4Bモデルが追加
+  update_frequency: 高
 evaluation:
-  score: 82  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 82
+  base_score: 70
+  plus_points:
     - point: 8
-      reason: "データが日本国内で完結するため、データ主権やセキュリティ要件に強い"
+      reason: データが日本国内で完結するため、データ主権やセキュリティ要件に強い
     - point: 5
-      reason: "OpenAI互換APIを提供しており、既存システムからの移行が容易"
+      reason: OpenAI互換APIを提供しており、既存システムからの移行が容易
     - point: 5
-      reason: "円建ての料金体系で為替リスクがなく、コストパフォーマンスが高い"
-  minus_points:  # 減点項目（各項目: 点数と理由）
+      reason: 円建ての料金体系で為替リスクがなく、コストパフォーマンスが高い
+  minus_points:
     - point: -3
-      reason: "海外の巨大プラットフォームと比較して、利用可能なモデルの種類が限定的"
+      reason: 海外の巨大プラットフォームと比較して、利用可能なモデルの種類が限定的
     - point: -3
-      reason: "AWSやAzureのような周辺サービスとのエコシステムは発展途上"
-  summary: "データの安全性とコストを重視する国内プロジェクトに最適だが、モデルの多様性は限定的。"  # 評価の要約（1文）
-
-# 【任意項目】該当するもののみ記載
+      reason: AWSやAzureのような周辺サービスとのエコシステムは発展途上
+  summary: データの安全性とコストを重視する国内プロジェクトに最適だが、モデルの多様性は限定的。
 links:
-  documentation: "https://manual.sakura.ad.jp/cloud/ai-engine/03-operation-guide.html"
+  documentation: https://manual.sakura.ad.jp/cloud/ai-engine/03-operation-guide.html
 relationships:
   related_tools:
-    - "Amazon Bedrock"
-    - "Rakuten AI"
-    - "ChatGPT"
-    - "Vertex AI Studio"
+    - Amazon Bedrock
+    - Rakuten AI
+    - ChatGPT
+    - Vertex AI Studio
 ---
+
+
+
 
 # **さくらのAI 調査レポート**
 

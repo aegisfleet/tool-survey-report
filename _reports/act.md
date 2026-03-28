@@ -1,61 +1,61 @@
 ---
-title: "act (nektos/act) 調査レポート"
-tool_name: "act"
-tool_reading: "アクト"
-category: "CI/CD"
-developer: "nektos"
-official_site: "https://nektosact.com/"
-date: "2026-03-25"
-last_updated: "2026-03-25"
+title: act (nektos/act) 調査レポート
+tool_name: act
+tool_reading: アクト
+category: CI/CD
+developer: nektos
+official_site: https://nektosact.com/
+date: '2026-03-25'
+last_updated: '2026-03-25'
 tags:
-  - "CI/CD"
-  - "GitHub Actions"
-  - "オープンソース"
-  - "開発者ツール"
-description: "GitHub Actionsのワークフローをローカル環境で実行できるコマンドラインツール。Dockerを使用してローカルでCI/CDパイプラインをシミュレートする。"
-
+  - CI/CD
+  - GitHub Actions
+  - オープンソース
+  - 開発者ツール
+description: GitHub Actionsのワークフローをローカル環境で実行できるコマンドラインツール。Dockerを使用してローカルでCI/CDパイプラインをシミュレートする。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェアエンジニア"
-    - "DevOpsエンジニア"
-    - "OSSメンテナ"
-  latest_highlight: "2026年3月にv0.2.86をリリース。Node.js 20非推奨対応などの修正を含む。"
-  update_frequency: "高"
-
+    - ソフトウェアエンジニア
+    - DevOpsエンジニア
+    - OSSメンテナ
+  latest_highlight: 2026年3月にv0.2.86をリリース。Node.js 20非推奨対応などの修正を含む。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料でGitHub Actionsのローカル実行環境を提供"
+      reason: 完全無料でGitHub Actionsのローカル実行環境を提供
     - point: 5
-      reason: "開発サイクルの大幅な短縮（プッシュ不要でテスト可能）"
+      reason: 開発サイクルの大幅な短縮（プッシュ不要でテスト可能）
     - point: 5
-      reason: "活発なオープンソースコミュニティと頻繁なアップデート"
+      reason: 活発なオープンソースコミュニティと頻繁なアップデート
   minus_points:
     - point: -3
-      reason: "GitHubホステッドランナーとの完全な互換性はない（一部機能制限あり）"
+      reason: GitHubホステッドランナーとの完全な互換性はない（一部機能制限あり）
     - point: -2
-      reason: "Docker環境のセットアップとリソースが必要"
-  summary: "GitHub Actionsを利用する開発者にとって必須級のツール。完全な互換性はないものの、開発効率を劇的に向上させる。"
-
+      reason: Docker環境のセットアップとリソースが必要
+  summary: GitHub Actionsを利用する開発者にとって必須級のツール。完全な互換性はないものの、開発効率を劇的に向上させる。
 links:
-  github: "https://github.com/nektos/act"
-  deepwiki: "https://deepwiki.com/nektos/act"
-  codewiki: "https://codewiki.google/github.com/nektos/act"
-  documentation: "https://nektosact.com/introduction.html"
-
+  github: https://github.com/nektos/act
+  deepwiki: https://deepwiki.com/nektos/act
+  codewiki: https://codewiki.google/github.com/nektos/act
+  documentation: https://nektosact.com/introduction.html
 relationships:
-  parent: "GitHub Actions"
+  parent: GitHub Actions
   children: []
   related_tools:
-    - "Docker"
-    - "GitLab CI/CD"
-    - "Jenkins"
+    - Docker
+    - GitLab CI/CD
+    - Jenkins
+    - GitHub Actions
 ---
+
+
+
 
 # **act (nektos/act) 調査レポート**
 

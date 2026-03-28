@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Plugin Installation Manager Tool 調査レポート"
-tool_name: "Plugin Installation Manager Tool"
-tool_reading: "プラグイン・インストレーション・マネージャー・ツール"
-category: "CI/CD"
-developer: "Jenkins"
-official_site: "https://github.com/jenkinsci/plugin-installation-manager-tool"
-date: "2026-02-12"
-last_updated: "2026-02-12"
+title: Plugin Installation Manager Tool 調査レポート
+tool_name: Plugin Installation Manager Tool
+tool_reading: プラグイン・インストレーション・マネージャー・ツール
+category: CI/CD
+developer: Jenkins
+official_site: https://github.com/jenkinsci/plugin-installation-manager-tool
+date: '2026-02-12'
+last_updated: '2026-02-12'
 tags:
-  - "Jenkins"
-  - "CI/CD"
-  - "DevOps"
-  - "CLI"
-  - "Java"
-description: "Jenkinsプラグインとその依存関係を効率的にダウンロード・管理するためのCLIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - CLI
+  - DevOps
+  - Java
+  - Jenkins
+description: Jenkinsプラグインとその依存関係を効率的にダウンロード・管理するためのCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Jenkins管理者"
-    - "DevOpsエンジニア"
-  latest_highlight: "2026年2月にv2.14.0リリース（クレデンシャル上書き機能など）"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Jenkins管理者
+    - DevOpsエンジニア
+  latest_highlight: 2026年2月にv2.14.0リリース（クレデンシャル上書き機能など）
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Jenkins公式ツールであり、Dockerイメージにも同梱されている信頼性"
+      reason: Jenkins公式ツールであり、Dockerイメージにも同梱されている信頼性
     - point: 5
-      reason: "依存関係の自動解決機能が強力"
+      reason: 依存関係の自動解決機能が強力
     - point: 3
-      reason: "セキュリティ警告のチェック機能搭載"
+      reason: セキュリティ警告のチェック機能搭載
   minus_points:
     - point: -3
-      reason: "CLI専用であり、GUIでの操作はできない"
-  summary: "Jenkins運用、特にDocker環境においてプラグイン管理を自動化するためのデファクトスタンダード"
-
-# 【任意項目】該当するもののみ記載
+      reason: CLI専用であり、GUIでの操作はできない
+  summary: Jenkins運用、特にDocker環境においてプラグイン管理を自動化するためのデファクトスタンダード
 links:
-  github: "https://github.com/jenkinsci/plugin-installation-manager-tool"
-  deepwiki: "https://deepwiki.com/jenkinsci/plugin-installation-manager-tool"
+  github: https://github.com/jenkinsci/plugin-installation-manager-tool
+  deepwiki: https://deepwiki.com/jenkinsci/plugin-installation-manager-tool
 relationships:
-  parent: "Jenkins"
+  parent: Jenkins
   related_tools:
-    - "Docker"
+    - Docker
 ---
+
+
+
 
 # **Plugin Installation Manager Tool 調査レポート**
 

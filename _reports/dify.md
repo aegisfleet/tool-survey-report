@@ -1,75 +1,70 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Dify 調査レポート"
-tool_name: "Dify"
-tool_reading: "ディファイ"
-category: "AI開発基盤"
-developer: "LangGenius, Inc."
-official_site: "https://dify.ai/"
-date: "2026-02-11"
-last_updated: "2026-02-11"
+title: Dify 調査レポート
+tool_name: Dify
+tool_reading: ディファイ
+category: AI開発基盤
+developer: LangGenius, Inc.
+official_site: https://dify.ai/
+date: '2026-02-11'
+last_updated: '2026-02-11'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "生成AI"
-  - "エージェント"
-  - "RAG"
-  - "LLMOps"
-  - "ノーコード"
-  - "ローコード"
-  - "ワークフロー"
-  - "Python"
-description: "エージェントワークフロー開発のための本番環境対応プラットフォーム。AIワークフロー、RAGパイプライン、エージェント機能、モデル管理、オブザーバビリティ機能などを組み合わせ、プロトタイプから本番環境へ迅速に移行可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - LLMOps
+  - Python
+  - RAG
+  - エージェント
+  - オープンソース
+  - ノーコード
+  - ローコード
+  - ワークフロー
+  - 生成AI
+description: エージェントワークフロー開発のための本番環境対応プラットフォーム。AIワークフロー、RAGパイプライン、エージェント機能、モデル管理、オブザーバビリティ機能などを組み合わせ、プロトタイプから本番環境へ迅速に移行可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "プロダクトマネージャー"
-  latest_highlight: "2026年1月にInfraNodus GraphRAGとの連携機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - プロダクトマネージャー
+  latest_highlight: 2026年1月にInfraNodus GraphRAGとの連携機能を追加
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "オープンソースでありながら、AIワークフロー、RAG、エージェント開発、BaaSなど本番運用を見据えた機能が統合されており、競合ツールより優れている"
+      reason: オープンソースでありながら、AIワークフロー、RAG、エージェント開発、BaaSなど本番運用を見据えた機能が統合されており、競合ツールより優れている
     - point: 5
-      reason: "ノーコード/ローコード対応のUI/UXが洗練されており、非エンジニアでもプロトタイピングが可能"
+      reason: ノーコード/ローコード対応のUI/UXが洗練されており、非エンジニアでもプロトタイピングが可能
     - point: 5
-      reason: "無料プランと手頃な有料プランがあり、コストパフォーマンスが高い"
+      reason: 無料プランと手頃な有料プランがあり、コストパフォーマンスが高い
     - point: 3
-      reason: "活発な開発と頻繁な機能アップデートが行われている"
+      reason: 活発な開発と頻繁な機能アップデートが行われている
   minus_points:
     - point: -3
-      reason: "多機能であるため、すべての機能を使いこなすには学習コストがかかる"
+      reason: 多機能であるため、すべての機能を使いこなすには学習コストがかかる
     - point: -2
-      reason: "公式ドキュメントは日本語対応しているが、コミュニティや技術情報は英語が中心"
-  summary: "豊富な機能と高い拡張性に加え、優れたコストパフォーマンスも兼ね備えた、完成度の高いAIアプリケーション開発プラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 公式ドキュメントは日本語対応しているが、コミュニティや技術情報は英語が中心
+  summary: 豊富な機能と高い拡張性に加え、優れたコストパフォーマンスも兼ね備えた、完成度の高いAIアプリケーション開発プラットフォーム
 links:
-  github: "https://github.com/langgenius/dify"
-  deepwiki: "https://deepwiki.com/langgenius/dify"
-  documentation: "https://docs.dify.ai/v/ja/getting-started/intro-to-dify"
+  github: https://github.com/langgenius/dify
+  deepwiki: https://deepwiki.com/langgenius/dify
+  documentation: https://docs.dify.ai/v/ja/getting-started/intro-to-dify
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "LangChain"
-    - "GitHub Copilot SDK"
-    - "Amazon Bedrock"
-    - "Google Opal"
-    - "LITRON CORE"
-    - "Brainbase"
+    - LangChain
+    - GitHub Copilot SDK
+    - Amazon Bedrock
+    - Google Opal
+    - LITRON CORE
+    - Brainbase
 ---
+
+
+
 
 # **Dify 調査レポート**
 

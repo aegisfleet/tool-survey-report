@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "HSP3 調査レポート"
-tool_name: "HSP3"
-tool_reading: "エイチエスピースリー / ホットスーププロセッサ"
-category: "開発者ツール"
-developer: "ONION software (おにたま)"
-official_site: "https://hsp.tv/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: HSP3 調査レポート
+tool_name: HSP3
+tool_reading: エイチエスピースリー / ホットスーププロセッサ
+category: 開発者ツール
+developer: ONION software (おにたま)
+official_site: https://hsp.tv/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "プログラミング言語"
-  - "ゲーム開発"
-  - "初心者向け"
-  - "Windows"
-  - "OpenHSP"
-description: "日本発の初心者向けプログラミング言語。BASICライクな文法で手軽にWindowsアプリやゲームを作成可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - OpenHSP
+  - Windows
+  - ゲーム開発
+  - プログラミング言語
+  - 初心者向け
+description: 日本発の初心者向けプログラミング言語。BASICライクな文法で手軽にWindowsアプリやゲームを作成可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "プログラミング初心者"
-    - "ホビープログラマー"
-    - "教育機関"
-  latest_highlight: "2025年9月にHSP3.7正式版がリリースされ、マルチプラットフォーム機能が強化"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - プログラミング初心者
+    - ホビープログラマー
+    - 教育機関
+  latest_highlight: 2025年9月にHSP3.7正式版がリリースされ、マルチプラットフォーム機能が強化
+  update_frequency: 中
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料で商用利用も可能であり、OpenHSPとしてコア部分はOSS化されている"
+      reason: 完全無料で商用利用も可能であり、OpenHSPとしてコア部分はOSS化されている
     - point: 5
-      reason: "「Hello World」からGUI表示までの手順が極めて少なく、初心者の挫折率が低い"
+      reason: 「Hello World」からGUI表示までの手順が極めて少なく、初心者の挫折率が低い
     - point: 5
-      reason: "日本語ドキュメント、書籍、ユーザーコミュニティが非常に充実している"
+      reason: 日本語ドキュメント、書籍、ユーザーコミュニティが非常に充実している
   minus_points:
     - point: -3
-      reason: "グローバルなエコシステムが弱く、英語圏の情報やライブラリは限定的"
+      reason: グローバルなエコシステムが弱く、英語圏の情報やライブラリは限定的
     - point: -3
-      reason: "大規模開発やチーム開発に必要な機能（高度なデバッグ、リファクタリング等）が弱い"
-  summary: "プログラミング入門や小規模ツール開発において、圧倒的な手軽さと安心感を提供する国産ツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 大規模開発やチーム開発に必要な機能（高度なデバッグ、リファクタリング等）が弱い
+  summary: プログラミング入門や小規模ツール開発において、圧倒的な手軽さと安心感を提供する国産ツール。
 links:
-  github: "https://github.com/onitama/OpenHSP"
-  deepwiki: "https://deepwiki.com/onitama/OpenHSP"
-  documentation: "https://hsp.tv/make/hsp3.html"
+  github: https://github.com/onitama/OpenHSP
+  deepwiki: https://deepwiki.com/onitama/OpenHSP
+  documentation: https://hsp.tv/make/hsp3.html
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Visual Studio Code"
+    - Visual Studio Code
 ---
+
+
+
 
 # **HSP3 調査レポート**
 

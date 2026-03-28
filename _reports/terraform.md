@@ -1,71 +1,66 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Terraform 調査レポート"
-tool_name: "Terraform"
-tool_reading: "テラフォーム"
-category: "構成管理"
-developer: "HashiCorp (IBM Company)"
-official_site: "https://www.hashicorp.com/products/terraform"
-date: "2026-02-13"
-last_updated: "2026-02-13"
+title: Terraform 調査レポート
+tool_name: Terraform
+tool_reading: テラフォーム
+category: 構成管理
+developer: HashiCorp (IBM Company)
+official_site: https://www.hashicorp.com/products/terraform
+date: '2026-02-13'
+last_updated: '2026-02-13'
 tags:
-  - "IaC"
-  - "構成管理"
-  - "自動化"
-  - "クラウド"
-  - "DevOps"
-  - "HCL"
-description: "クラウドインフラの構築・変更・バージョン管理を行うためのInfrastructure as Code (IaC) ツール。マルチクラウド対応のデファクトスタンダード。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - HCL
+  - IaC
+  - クラウド
+  - 構成管理
+  - 自動化
+description: クラウドインフラの構築・変更・バージョン管理を行うためのInfrastructure as Code (IaC) ツール。マルチクラウド対応のデファクトスタンダード。
 quick_summary:
-  has_free_plan: true  # CLIは無料、HCP Terraformに無料プランあり
-  is_oss: false  # BUSLライセンス (Source Available)
-  starting_price: "無料"
+  has_free_plan: true
+  is_oss: false
+  starting_price: 無料
   target_users:
-    - "インフラエンジニア"
-    - "DevOpsエンジニア"
-    - "SRE"
-  latest_highlight: "2026年1月にv1.11系がリリースされ、IBM Cloudとの統合が強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - インフラエンジニア
+    - DevOpsエンジニア
+    - SRE
+  latest_highlight: 2026年1月にv1.11系がリリースされ、IBM Cloudとの統合が強化
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 10
-      reason: "圧倒的なエコシステムとプロバイダー数により、ほぼ全てのクラウドサービスを操作可能"
+      reason: 圧倒的なエコシステムとプロバイダー数により、ほぼ全てのクラウドサービスを操作可能
     - point: 5
-      reason: "宣言的なHCL言語により、インフラの最終状態を定義するだけで構築・変更が可能"
+      reason: 宣言的なHCL言語により、インフラの最終状態を定義するだけで構築・変更が可能
     - point: 3
-      reason: "IBMによる買収完了後も、エンタープライズ向けの機能強化が継続している"
+      reason: IBMによる買収完了後も、エンタープライズ向けの機能強化が継続している
   minus_points:
     - point: -5
-      reason: "BUSLライセンスへの変更により、オープンソースとしての自由度が制限された（OpenTofuへの分裂要因）"
+      reason: BUSLライセンスへの変更により、オープンソースとしての自由度が制限された（OpenTofuへの分裂要因）
     - point: -3
-      reason: "HCP Terraformのリソース単位の課金（RUM）が、大規模環境ではコスト高になる場合がある"
+      reason: HCP Terraformのリソース単位の課金（RUM）が、大規模環境ではコスト高になる場合がある
     - point: -2
-      reason: "Stateファイルの管理が複雑で、チーム開発時の競合や不整合のリスクがある"
-  summary: "IaCの絶対王者だが、ライセンス変更と新料金体系によりOpenTofu等の代替案との比較検討が必須となった"
-
-# 【任意項目】該当するもののみ記載
+      reason: Stateファイルの管理が複雑で、チーム開発時の競合や不整合のリスクがある
+  summary: IaCの絶対王者だが、ライセンス変更と新料金体系によりOpenTofu等の代替案との比較検討が必須となった
 links:
-  github: "https://github.com/hashicorp/terraform"
-  deepwiki: "https://deepwiki.com/hashicorp/terraform"
-  documentation: "https://developer.hashicorp.com/terraform/docs"
+  github: https://github.com/hashicorp/terraform
+  deepwiki: https://deepwiki.com/hashicorp/terraform
+  documentation: https://developer.hashicorp.com/terraform/docs
 relationships:
   children:
-    - "OpenTofu"
+    - OpenTofu
   related_tools:
-    - "Google Cloud"
-    - "Ansible"
-    - "Pulumi"
-    - "AWS CloudFormation"
-    - "LocalStack"
-    - "Kubernetes"
+    - Google Cloud
+    - Ansible
+    - Pulumi
+    - AWS CloudFormation
+    - LocalStack
+    - Kubernetes
 ---
+
+
+
 
 # **Terraform 調査レポート**
 

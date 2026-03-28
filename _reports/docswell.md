@@ -1,62 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Docswell 調査レポート"
-tool_name: "Docswell"
-tool_reading: "ドクセル"
-category: "ドキュメント/ナレッジ"
-developer: "株式会社アプルーシッド (Uplucid, Inc.)"
-official_site: "https://www.docswell.com/"
-date: "2026-02-24"
-last_updated: "2026-02-24"
+title: Docswell 調査レポート
+tool_name: Docswell
+tool_reading: ドクセル
+category: ドキュメント/ナレッジ
+developer: 株式会社アプルーシッド (Uplucid, Inc.)
+official_site: https://www.docswell.com/
+date: '2026-02-24'
+last_updated: '2026-02-24'
 tags:
-  - "SaaS"
-  - "ドキュメント共有"
-  - "日本発"
-  - "PDF"
-  - "PowerPoint"
-  - "動画共有"
-description: "PDFやPowerPointに加え、動画もアップロードして共有できる日本発のプラットフォーム。日本語検索やサポートに強みを持ち、国内のエンジニアや広報担当者に広く利用されている。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - PDF
+  - PowerPoint
+  - SaaS
+  - ドキュメント共有
+  - 動画共有
+  - 日本発
+description: PDFやPowerPointに加え、動画もアップロードして共有できる日本発のプラットフォーム。日本語検索やサポートに強みを持ち、国内のエンジニアや広報担当者に広く利用されている。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "企業広報"
-    - "マーケター"
-  latest_highlight: "2026年2月にセミナーBizをリニューアル、動画アップロード機能も実装済み"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 企業広報
+    - マーケター
+  latest_highlight: 2026年2月にセミナーBizをリニューアル、動画アップロード機能も実装済み
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "日本発のサービスであり、日本語の検索精度やサポートが非常に充実している"
+      reason: 日本発のサービスであり、日本語の検索精度やサポートが非常に充実している
     - point: 3
-      reason: "スライド内のリンクがクリック可能で、外部サイトへの誘導が容易"
+      reason: スライド内のリンクがクリック可能で、外部サイトへの誘導が容易
     - point: 2
-      reason: "スライドだけでなく動画もアップロード・共有可能になり、表現の幅が広がった"
+      reason: スライドだけでなく動画もアップロード・共有可能になり、表現の幅が広がった
   minus_points:
-    - point: -0
-      reason: "グローバルなリーチは弱いが、国内特化のため減点なし"
-  summary: "スライドと動画の両方に対応し、国内向けの情報発信プラットフォームとして機能が大幅に強化された"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: グローバルなリーチは弱いが、国内特化のため減点なし
+  summary: スライドと動画の両方に対応し、国内向けの情報発信プラットフォームとして機能が大幅に強化された
 links:
-  documentation: "https://support.uplucid.com/docs/docswell/"
+  documentation: https://support.uplucid.com/docs/docswell/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Speaker Deck"
-    - "SlideShare"
-    - "Google Slides"
+    - Speaker Deck
 ---
+
+
+
 
 # **Docswell 調査レポート**
 

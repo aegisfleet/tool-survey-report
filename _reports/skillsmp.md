@@ -1,54 +1,54 @@
 ---
-title: "SkillsMP 調査レポート"
-tool_name: "SkillsMP"
-tool_reading: "スキルズエムピー / スキルズマーケットプレイス"
-category: "AI開発基盤"
-developer: "Godi13 (Community Project)"
-official_site: "https://github.com/Godi13"
-date: "2026-01-25"
-last_updated: "2026-03-02"
+title: SkillsMP 調査レポート
+tool_name: SkillsMP
+tool_reading: スキルズエムピー / スキルズマーケットプレイス
+category: AI開発基盤
+developer: Godi13 (Community Project)
+official_site: https://github.com/Godi13
+date: '2026-01-25'
+last_updated: '2026-03-02'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "開発者ツール"
-  - "コーディング支援"
-description: "AIエージェント（Claude Code, OpenAI Codex CLI）向けのオープンソーススキル（Agent Skills）を検索・発見できるマーケットプレイス。"
-
+  - AI
+  - エージェント
+  - オープンソース
+  - コーディング支援
+  - 開発者ツール
+description: AIエージェント（Claude Code, OpenAI Codex CLI）向けのオープンソーススキル（Agent Skills）を検索・発見できるマーケットプレイス。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "登録スキル数が90,000件を突破"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+  latest_highlight: 登録スキル数が90,000件を突破
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "90,000件以上という圧倒的なスキル登録数"
+      reason: 90,000件以上という圧倒的なスキル登録数
     - point: 5
-      reason: "GitHubベースのオープンソーススキルで透明性が高い"
+      reason: GitHubベースのオープンソーススキルで透明性が高い
     - point: 5
-      reason: "Claude CodeとOpenAI Codex CLIの両方に対応"
+      reason: Claude CodeとOpenAI Codex CLIの両方に対応
   minus_points:
     - point: -3
-      reason: "コミュニティベースのためスキルの品質にばらつきがある"
-  summary: "AIエージェントの機能を拡張するための必須ハブ。圧倒的な数のスキルとオープンなエコシステムが魅力。"
-
+      reason: コミュニティベースのためスキルの品質にばらつきがある
+  summary: AIエージェントの機能を拡張するための必須ハブ。圧倒的な数のスキルとオープンなエコシステムが魅力。
 links:
-  github: "https://github.com/Godi13"
+  github: https://github.com/Godi13
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Claude Code"
-    - "OpenAI Codex CLI"
+    - Claude Code
+    - OpenAI Codex CLI
 ---
+
+
+
 
 # **SkillsMP 調査レポート**
 

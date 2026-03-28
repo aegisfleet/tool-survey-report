@@ -1,61 +1,59 @@
 ---
-title: "React Testing Library 調査レポート"
-tool_name: "React Testing Library"
-tool_reading: "リアクトテスティングライブラリ"
-category: "テスト/QA"
-developer: "Testing Library"
-official_site: "https://testing-library.com/docs/react-testing-library/intro/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: React Testing Library 調査レポート
+tool_name: React Testing Library
+tool_reading: リアクトテスティングライブラリ
+category: テスト/QA
+developer: Testing Library
+official_site: https://testing-library.com/docs/react-testing-library/intro/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "テスト自動化"
-  - "React"
-  - "フロントエンド"
-  - "オープンソース"
-  - "JavaScript"
-  - "ユニットテスト"
-description: "Reactコンポーネントをユーザーの使用方法に近い形でテストするための軽量なライブラリ。実装詳細ではなくDOMノードに対する検証を重視する。"
-
+  - JavaScript
+  - React
+  - オープンソース
+  - テスト自動化
+  - フロントエンド
+description: Reactコンポーネントをユーザーの使用方法に近い形でテストするための軽量なライブラリ。実装詳細ではなくDOMノードに対する検証を重視する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンドエンジニア"
-    - "React開発者"
-  latest_highlight: "React 19および最新のReact Server Components (RSC) テストパターンの確立"
-  update_frequency: "高"
-
+    - フロントエンドエンジニア
+    - React開発者
+  latest_highlight: React 19および最新のReact Server Components (RSC) テストパターンの確立
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Reactの公式推奨テストツールであり、事実上のデファクトスタンダード。"
+      reason: Reactの公式推奨テストツールであり、事実上のデファクトスタンダード。
     - point: 5
-      reason: "「実装詳細ではなくユーザーの振る舞いをテストする」という哲学により、リファクタリングに強いテストが書ける。"
+      reason: 「実装詳細ではなくユーザーの振る舞いをテストする」という哲学により、リファクタリングに強いテストが書ける。
     - point: 5
-      reason: "アクセシビリティ（a11y）を意識したクエリ（getByRoleなど）が標準であり、品質向上に寄与する。"
+      reason: アクセシビリティ（a11y）を意識したクエリ（getByRoleなど）が標準であり、品質向上に寄与する。
     - point: 5
-      reason: "エコシステム（Jest, Vitest, MSWなど）との連携が極めてスムーズ。"
+      reason: エコシステム（Jest, Vitest, MSWなど）との連携が極めてスムーズ。
   minus_points:
     - point: 0
-      reason: ""
-  summary: "React開発における必須ツール。導入しない理由が見当たらないほどの標準的な地位を確立している。"
-
+      reason: ''
+  summary: React開発における必須ツール。導入しない理由が見当たらないほどの標準的な地位を確立している。
 links:
-  github: "https://github.com/testing-library/react-testing-library"
-  codewiki: "https://codewiki.google/github.com/testing-library/react-testing-library"
-  deepwiki: "https://deepwiki.com/testing-library/react-testing-library"
-  documentation: "https://testing-library.com/docs/react-testing-library/intro/"
-
+  github: https://github.com/testing-library/react-testing-library
+  codewiki: https://codewiki.google/github.com/testing-library/react-testing-library
+  deepwiki: https://deepwiki.com/testing-library/react-testing-library
+  documentation: https://testing-library.com/docs/react-testing-library/intro/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "React"
-    - "Playwright"
+    - React
+    - Playwright
 ---
+
+
+
 
 # **React Testing Library 調査レポート**
 

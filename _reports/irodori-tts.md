@@ -1,58 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Irodori-TTS 調査レポート"
-tool_name: "Irodori-TTS"
-tool_reading: "イロドリ ティーティーエス"
-category: "動画/メディア"
-developer: "Aratako"
-official_site: "https://github.com/Aratako/Irodori-TTS"
-date: "2026-03-20"
-last_updated: "2026-03-20"
+title: Irodori-TTS 調査レポート
+tool_name: Irodori-TTS
+tool_reading: イロドリ ティーティーエス
+category: 動画/メディア
+developer: Aratako
+official_site: https://github.com/Aratako/Irodori-TTS
+date: '2026-03-20'
+last_updated: '2026-03-20'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "音声合成"
-  - "TTS"
-  - "Voice Cloning"
-description: "絵文字によるスタイル制御が可能な、Flow Matchingベースの日本語テキスト音声合成（TTS）モデル"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - TTS
+  - Voice Cloning
+  - オープンソース
+  - 音声合成
+description: 絵文字によるスタイル制御が可能な、Flow Matchingベースの日本語テキスト音声合成（TTS）モデル
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "研究者"
-    - "クリエイター"
-  latest_highlight: "Irodori-TTS-500MモデルがHugging Faceで公開"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 研究者
+    - クリエイター
+  latest_highlight: Irodori-TTS-500MモデルがHugging Faceで公開
+  update_frequency: 低
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "独自の絵文字によるスタイル・効果音制御機能"
+      reason: 独自の絵文字によるスタイル・効果音制御機能
     - point: 5
-      reason: "オープンソースとして無料で利用可能"
+      reason: オープンソースとして無料で利用可能
     - point: 5
-      reason: "ローカル環境での実行・学習が可能"
+      reason: ローカル環境での実行・学習が可能
   minus_points:
     - point: -3
-      reason: "現状は日本語入力のみの対応"
-  summary: "絵文字を用いた直感的なスタイル制御と高品質な日本語音声合成が強みのオープンソースTTS"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現状は日本語入力のみの対応
+  summary: 絵文字を用いた直感的なスタイル制御と高品質な日本語音声合成が強みのオープンソースTTS
 links:
-  github: "https://github.com/Aratako/Irodori-TTS"
-  documentation: "https://huggingface.co/Aratako/Irodori-TTS-500M"
+  github: https://github.com/Aratako/Irodori-TTS
+  documentation: https://huggingface.co/Aratako/Irodori-TTS-500M
 relationships:
-  related_tools:
-    - "elevenlabs"
+  related_tools: []
 ---
+
+
+
 
 # **Irodori-TTS 調査レポート**
 

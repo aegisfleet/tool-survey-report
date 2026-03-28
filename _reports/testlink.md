@@ -1,63 +1,62 @@
 ---
-title: "TestLink 調査レポート"
-tool_name: "TestLink"
-tool_reading: "テストリンク"
-category: "テスト管理"
-developer: "TestLink Development Team"
-official_site: "https://testlink.org/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: TestLink 調査レポート
+tool_name: TestLink
+tool_reading: テストリンク
+category: テスト管理
+developer: TestLink Development Team
+official_site: https://testlink.org/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト管理"
-  - "オープンソース"
-  - "テスト自動化"
-  - "オンプレミス"
-  - "PHP"
-description: "オープンソースのWebベーステスト管理システム。テストケースの管理、実行、レポート作成をサポート。"
-
+  - PHP
+  - オンプレミス
+  - オープンソース
+  - テスト管理
+  - テスト自動化
+description: オープンソースのWebベーステスト管理システム。テストケースの管理、実行、レポート作成をサポート。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-    - "コスト重視の組織"
-  latest_highlight: "バージョン1.9.20リリース（セキュリティ修正と改善）。次期バージョン2.xでUI刷新予定。"
-  update_frequency: "低"
-
+    - QAエンジニア
+    - 開発者
+    - コスト重視の組織
+  latest_highlight: バージョン1.9.20リリース（セキュリティ修正と改善）。次期バージョン2.xでUI刷新予定。
+  update_frequency: 低
 evaluation:
   score: 72
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料のオープンソースであり、コストがかからない"
+      reason: 完全無料のオープンソースであり、コストがかからない
     - point: 3
-      reason: "長年の実績があり機能が豊富"
+      reason: 長年の実績があり機能が豊富
     - point: 3
-      reason: "オンプレミスでデータ管理が可能"
+      reason: オンプレミスでデータ管理が可能
   minus_points:
     - point: -5
-      reason: "UIが古く、操作性が現代のツールに劣る"
+      reason: UIが古く、操作性が現代のツールに劣る
     - point: -2
-      reason: "セットアップとメンテナンス（PHP/DB）の手間がかかる"
+      reason: セットアップとメンテナンス（PHP/DB）の手間がかかる
     - point: -2
-      reason: "公式ドキュメントやサポートが分散している"
-  summary: "コストを抑えたい場合やオンプレミス必須の環境では有力な選択肢だが、モダンなUXを求めるなら他ツールを検討すべき。"
-
+      reason: 公式ドキュメントやサポートが分散している
+  summary: コストを抑えたい場合やオンプレミス必須の環境では有力な選択肢だが、モダンなUXを求めるなら他ツールを検討すべき。
 links:
-  github: "https://github.com/TestLinkOpenSourceTRMS/testlink-code"
-  deepwiki: "https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code"
-  documentation: "https://github.com/TestLinkOpenSourceTRMS/testlink-documentation"
+  github: https://github.com/TestLinkOpenSourceTRMS/testlink-code
+  deepwiki: https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code
+  documentation: https://github.com/TestLinkOpenSourceTRMS/testlink-documentation
 relationships:
   related_tools:
-    - "TestRail"
-    - "Qase"
-    - "Kiwi TCMS"
-    - "Mantis"
-    - "Jira"
+    - TestRail
+    - Qase
+    - Kiwi TCMS
+    - Jira
 layout: report
 ---
+
+
+
 
 # **TestLink 調査レポート**
 

@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "DeepWiki-Open 調査レポート"
-tool_name: "DeepWiki-Open"
-tool_reading: "ディープウィキ オープン"
-category: "ドキュメント/ナレッジ"
-developer: "AsyncFuncAI"
-official_site: "https://github.com/AsyncFuncAI/deepwiki-open"
-date: "2026-02-11"
-last_updated: "2026-02-11"
+title: DeepWiki-Open 調査レポート
+tool_name: DeepWiki-Open
+tool_reading: ディープウィキ オープン
+category: ドキュメント/ナレッジ
+developer: AsyncFuncAI
+official_site: https://github.com/AsyncFuncAI/deepwiki-open
+date: '2026-02-11'
+last_updated: '2026-02-11'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "ドキュメント生成"
-  - "開発者ツール"
-  - "セルフホスト"
-description: "GitHub/GitLab/Bitbucketリポジトリ向けのOSSドキュメント自動生成ツール。現在はメンテナンスモード。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - セルフホスト
+  - ドキュメント生成
+  - 開発者ツール
+description: GitHub/GitLab/Bitbucketリポジトリ向けのOSSドキュメント自動生成ツール。現在はメンテナンスモード。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "テックリード"
-    - "OSSコントリビューター"
-  latest_highlight: "開発リソースをAsyncReviewへ移行し、本プロジェクトはメンテナンスモードへ"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - テックリード
+    - OSSコントリビューター
+  latest_highlight: 開発リソースをAsyncReviewへ移行し、本プロジェクトはメンテナンスモードへ
+  update_frequency: 低
 evaluation:
   score: 74
   base_score: 70
   plus_points:
     - point: 8
-      reason: "完全なオープンソースでセルフホスト可能、データのプライバシーが確保できる"
+      reason: 完全なオープンソースでセルフホスト可能、データのプライバシーが確保できる
     - point: 5
-      reason: "Google, OpenAI, Azure, Ollamaなど多様なLLMプロバイダーに対応"
+      reason: Google, OpenAI, Azure, Ollamaなど多様なLLMプロバイダーに対応
     - point: 3
-      reason: "RAGやDeepResearchなどの高度なコード分析機能を搭載"
+      reason: RAGやDeepResearchなどの高度なコード分析機能を搭載
   minus_points:
     - point: -5
-      reason: "主要な開発が終了し、メンテナンスモードに移行している（将来性の懸念）"
+      reason: 主要な開発が終了し、メンテナンスモードに移行している（将来性の懸念）
     - point: -3
-      reason: "DockerやAPIキーの管理など、導入・運用の技術的ハードルが高い"
+      reason: DockerやAPIキーの管理など、導入・運用の技術的ハードルが高い
     - point: -2
-      reason: "公式リリースがなく、安定版の特定が難しい"
+      reason: 公式リリースがなく、安定版の特定が難しい
     - point: -2
-      reason: "ドキュメントの質が元のコードに依存する"
-  summary: "強力なOSSツールだが、開発が縮小傾向にあるため、長期利用には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ドキュメントの質が元のコードに依存する
+  summary: 強力なOSSツールだが、開発が縮小傾向にあるため、長期利用には注意が必要。
 links:
-  github: "https://github.com/AsyncFuncAI/deepwiki-open"
-  codewiki: "https://codewiki.google/github.com/AsyncFuncAI/deepwiki-open"
-  deepwiki: "https://deepwiki.com/AsyncFuncAI/deepwiki-open"
-  documentation: "https://asyncfunc.mintlify.app/"
+  github: https://github.com/AsyncFuncAI/deepwiki-open
+  codewiki: https://codewiki.google/github.com/AsyncFuncAI/deepwiki-open
+  deepwiki: https://deepwiki.com/AsyncFuncAI/deepwiki-open
+  documentation: https://asyncfunc.mintlify.app/
 relationships:
   related_tools:
-    - "DeepWiki"
-    - "Code Wiki"
-    - "Cline"
+    - DeepWiki
+    - Code Wiki
+    - Cline
 ---
+
+
+
 
 # **DeepWiki-Open 調査レポート**
 

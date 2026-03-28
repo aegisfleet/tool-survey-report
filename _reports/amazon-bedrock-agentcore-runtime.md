@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Amazon Bedrock AgentCore Runtime 調査レポート"
-tool_name: "Amazon Bedrock AgentCore Runtime"
-tool_reading: "アマゾン ベッドロック エージェントコア ランタイム"
-category: "AI開発基盤"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/bedrock/agentcore/"
-date: "2026-01-28"
-last_updated: "2026-03-26"
+title: Amazon Bedrock AgentCore Runtime 調査レポート
+tool_name: Amazon Bedrock AgentCore Runtime
+tool_reading: アマゾン ベッドロック エージェントコア ランタイム
+category: AI開発基盤
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/bedrock/agentcore/
+date: '2026-01-28'
+last_updated: '2026-03-26'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "クラウド"
-  - "大規模言語モデル"
-description: "AIエージェントやツールのための安全でサーバーレスなホスティング環境。フレームワークやモデルに依存せず、スケーラブルなエージェント実行基盤を提供。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - クラウド
+  - 大規模言語モデル
+  - 生成AI
+description: AIエージェントやツールのための安全でサーバーレスなホスティング環境。フレームワークやモデルに依存せず、スケーラブルなエージェント実行基盤を提供。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "従量課金"
+  starting_price: 従量課金
   target_users:
-    - "AIエンジニア"
-    - "開発者"
-    - "エンタープライズ"
-  latest_highlight: "2025年10月に一般提供開始(GA)。MCPサーバーへの接続やIAM認証サポートが追加。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエンジニア
+    - 開発者
+    - エンタープライズ
+  latest_highlight: 2025年10月に一般提供開始(GA)。MCPサーバーへの接続やIAM認証サポートが追加。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "サーバーレスでインフラ管理不要かつ数秒で数千セッションまでスケール可能"
+      reason: サーバーレスでインフラ管理不要かつ数秒で数千セッションまでスケール可能
     - point: 5
-      reason: "I/O待ち時間が無料というエージェント特有のワークロードに最適化された料金モデル"
+      reason: I/O待ち時間が無料というエージェント特有のワークロードに最適化された料金モデル
     - point: 3
-      reason: "LangGraphやCrewAIなど任意のフレームワークを利用可能"
+      reason: LangGraphやCrewAIなど任意のフレームワークを利用可能
     - point: 2
-      reason: "MicroVMによる完全なセッション分離で高いセキュリティを実現"
+      reason: MicroVMによる完全なセッション分離で高いセキュリティを実現
   minus_points:
     - point: -2
-      reason: "AWSエコシステムへの依存度が高く、他のクラウドへの移行が難しい"
+      reason: AWSエコシステムへの依存度が高く、他のクラウドへの移行が難しい
     - point: -2
-      reason: "料金計算がCPU/メモリの秒単位であり、コスト見積もりが複雑になる場合がある"
-  summary: "エージェント開発における「インフラ管理」と「コスト効率」の課題を解決する強力な基盤。AWS利用者なら第一選択肢。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 料金計算がCPU/メモリの秒単位であり、コスト見積もりが複雑になる場合がある
+  summary: エージェント開発における「インフラ管理」と「コスト効率」の課題を解決する強力な基盤。AWS利用者なら第一選択肢。
 links:
-  documentation: "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html"
+  documentation: https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html
 relationships:
-  parent: "Amazon Bedrock"
+  parent: Amazon Bedrock
   children: []
   related_tools:
-    - "LangChain"
-    - "Docker"
+    - LangChain
+    - Docker
 ---
+
+
+
 
 # **Amazon Bedrock AgentCore Runtime 調査レポート**
 

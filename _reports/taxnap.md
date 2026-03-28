@@ -1,41 +1,42 @@
 ---
-title: "タックスナップ 調査レポート"
-tool_name: "タックスナップ"
-tool_reading: "タックスナップ"
-category: "業務系ツール"
-developer: "株式会社タックスナップ"
-official_site: "https://taxnap.com/"
-date: "2026-03-01"
-last_updated: "2026-03-01"
+title: タックスナップ 調査レポート
+tool_name: タックスナップ
+tool_reading: タックスナップ
+category: BIツール
+developer: 株式会社タックスナップ
+official_site: https://taxnap.com/
+date: '2026-03-01'
+last_updated: '2026-03-01'
 tags:
-  - "SaaS"
-description: "個人事業主・フリーランス向けの、スマホひとつで確定申告が完結するアプリ"
-
+  - SaaS
+description: 個人事業主・フリーランス向けの、スマホひとつで確定申告が完結するアプリ
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料トライアルあり"
+  starting_price: 無料トライアルあり
   target_users:
-    - "個人事業主"
-    - "フリーランス"
-    - "副業"
-  latest_highlight: "不動産所得の確定申告（青色申告・白色申告）に対応"
-  update_frequency: "不定期"
-
+    - 個人事業主
+    - フリーランス
+    - 副業
+  latest_highlight: 不動産所得の確定申告（青色申告・白色申告）に対応
+  update_frequency: 不定期
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "スマホだけで完結する手軽さと「丸投げ仕分け」による手間削減"
+      reason: スマホだけで完結する手軽さと「丸投げ仕分け」による手間削減
     - point: 5
-      reason: "AIによる自動判定や税務調査リスクチェックなど初心者向け機能が充実"
+      reason: AIによる自動判定や税務調査リスクチェックなど初心者向け機能が充実
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "確定申告の知識がない個人事業主やフリーランスにとって、非常に使いやすいスマホ特化の会計アプリ"
-
+      reason: 特になし
+  summary: 確定申告の知識がない個人事業主やフリーランスにとって、非常に使いやすいスマホ特化の会計アプリ
+relationships: {}
 ---
+
+
+
 
 # **タックスナップ 調査レポート**
 

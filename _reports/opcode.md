@@ -1,67 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Opcode 調査レポート"
-tool_name: "Opcode"
-tool_reading: "オペコード"
-category: "AIコーディング支援"
-developer: "winfunc (Asterisk)"
-official_site: "https://opcode.sh/"
-date: "2026-02-07"
-last_updated: "2026-02-07"
+title: Opcode 調査レポート
+tool_name: Opcode
+tool_reading: オペコード
+category: AIコーディング支援
+developer: winfunc (Asterisk)
+official_site: https://opcode.sh/
+date: '2026-02-07'
+last_updated: '2026-02-07'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "コーディング支援"
-  - "GUI"
-  - "Claude"
-  - "Rust"
-  - "TypeScript"
-description: "Claude Code CLIをGUIで操作・管理するための強力なデスクトップツールキット。セッション管理やエージェント作成機能を提供する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Claude
+  - GUI
+  - Rust
+  - TypeScript
+  - エージェント
+  - オープンソース
+  - コーディング支援
+  - 自律型
+description: Claude Code CLIをGUIで操作・管理するための強力なデスクトップツールキット。セッション管理やエージェント作成機能を提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Claude Codeユーザー"
-  latest_highlight: "2025年8月にv0.2.0リリース、MCPサーバー管理機能を追加"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - Claude Codeユーザー
+  latest_highlight: 2025年8月にv0.2.0リリース、MCPサーバー管理機能を追加
+  update_frequency: 中
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Claude Code CLIの操作性をGUIで大幅に向上"
+      reason: Claude Code CLIの操作性をGUIで大幅に向上
     - point: 3
-      reason: "MCPサーバーの管理機能が統合されている"
+      reason: MCPサーバーの管理機能が統合されている
     - point: 3
-      reason: "無料で利用可能なオープンソースソフトウェア"
+      reason: 無料で利用可能なオープンソースソフトウェア
   minus_points:
     - point: -3
-      reason: "利用には別途Claude Code CLIのインストールが必要"
+      reason: 利用には別途Claude Code CLIのインストールが必要
     - point: -2
-      reason: "リリースバイナリが未提供でビルドが必要（2026年2月時点）"
-  summary: "Claude Codeの使い勝手を向上させる必須級のGUIツールだが、導入のハードルがやや高い。"
-
-# 【任意項目】該当するもののみ記載
+      reason: リリースバイナリが未提供でビルドが必要（2026年2月時点）
+  summary: Claude Codeの使い勝手を向上させる必須級のGUIツールだが、導入のハードルがやや高い。
 links:
-  github: "https://github.com/winfunc/opcode"
-  deepwiki: "https://deepwiki.com/winfunc/opcode"
+  github: https://github.com/winfunc/opcode
+  deepwiki: https://deepwiki.com/winfunc/opcode
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Claude Code"
-    - "OpenHands"
-    - "Devin"
+    - Claude Code
+    - OpenHands
+    - Devin
 ---
+
+
+
 
 # **Opcode 調査レポート**
 

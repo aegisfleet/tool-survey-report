@@ -1,71 +1,66 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Cline 調査レポート"
-tool_name: "Cline"
-tool_reading: "クライン"
-category: "AIコーディング支援"
-developer: "Cline Bot Inc."
-official_site: "https://cline.bot/"
-date: "2025-10-23"
-last_updated: "2026-03-05"
+title: Cline 調査レポート
+tool_name: Cline
+tool_reading: クライン
+category: AIコーディング支援
+developer: Cline Bot Inc.
+official_site: https://cline.bot/
+date: '2025-10-23'
+last_updated: '2026-03-05'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "IDE"
-  - "コーディング支援"
-description: "VS CodeなどのIDE内で動作する協調型AIコーディングエージェント。ローカルのコードベース全体を直接理解し、人間と協力して計画を立て、変更を実行する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - IDE
+  - エージェント
+  - オープンソース
+  - コーディング支援
+description: VS CodeなどのIDE内で動作する協調型AIコーディングエージェント。ローカルのコードベース全体を直接理解し、人間と協力して計画を立て、変更を実行する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "シニアエンジニア"
-    - "セキュリティ意識の高い企業"
-  latest_highlight: "2026年3月にユーザーエージェントヘッダーの追加とSDK機能の拡張を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - シニアエンジニア
+    - セキュリティ意識の高い企業
+  latest_highlight: 2026年3月にユーザーエージェントヘッダーの追加とSDK機能の拡張を実施
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "コードベース全体を理解する高いコンテキスト能力と、最新LLMへの迅速な対応"
+      reason: コードベース全体を理解する高いコンテキスト能力と、最新LLMへの迅速な対応
     - point: 5
-      reason: "コードがローカル環境で完結する高いセキュリティ"
+      reason: コードがローカル環境で完結する高いセキュリティ
     - point: 5
-      reason: "オープンソースによる透明性とカスタマイズ性"
+      reason: オープンソースによる透明性とカスタマイズ性
     - point: 3
-      reason: "Hooks機能による高い拡張性"
+      reason: Hooks機能による高い拡張性
   minus_points:
     - point: -5
-      reason: "BYOKモデルのため、タスクによってはAPI料金が高額になる可能性がある"
+      reason: BYOKモデルのため、タスクによってはAPI料金が高額になる可能性がある
     - point: -3
-      reason: "エージェントの能力を最大限に引き出すには習熟が必要で、学習コストが高い"
+      reason: エージェントの能力を最大限に引き出すには習熟が必要で、学習コストが高い
     - point: -2
-      reason: "公式ドキュメントやコミュニティが英語中心で、日本語の情報が少ない"
-  summary: "高いカスタマイズ性とセキュリティを誇るが、コスト管理と学習曲線が課題となる上級者向けAIエージェント。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 公式ドキュメントやコミュニティが英語中心で、日本語の情報が少ない
+  summary: 高いカスタマイズ性とセキュリティを誇るが、コスト管理と学習曲線が課題となる上級者向けAIエージェント。
 links:
-  github: "https://github.com/cline/cline"
-  deepwiki: "https://deepwiki.com/cline/cline"
-  documentation: "https://docs.cline.bot/"
+  github: https://github.com/cline/cline
+  deepwiki: https://deepwiki.com/cline/cline
+  documentation: https://docs.cline.bot/
 relationships:
   related_tools:
-    - "Devin"
-    - "Cursor"
-    - "GitHub Copilot"
-    - "Windsurf"
-    - "Roo Code"
-    - "Claude Code"
-    - "Visual Studio Code"
+    - Devin
+    - Cursor
+    - GitHub Copilot
+    - Windsurf
+    - Roo Code
+    - Claude Code
+    - Visual Studio Code
 ---
+
+
+
 
 # **Cline 調査レポート**
 

@@ -1,62 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GIMP 調査レポート"
-tool_name: "GIMP"
-tool_reading: "ギンプ"
-category: "デザインツール"
-developer: "The GIMP Team"
-official_site: "https://www.gimp.org/"
-date: "2026-02-16"
-last_updated: "2026-02-16"
+title: GIMP 調査レポート
+tool_name: GIMP
+tool_reading: ギンプ
+category: デザインツール
+developer: The GIMP Team
+official_site: https://www.gimp.org/
+date: '2026-02-16'
+last_updated: '2026-02-16'
 tags:
-  - "デザインツール"
-  - "オープンソース"
-  - "写真編集"
-  - "グラフィックデザイン"
-description: "写真レタッチ、画像合成、画像オーサリングに対応する、高機能な無料のオープンソース画像編集ソフトウェア。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - グラフィックデザイン
+  - デザインツール
+  - 写真編集
+description: 写真レタッチ、画像合成、画像オーサリングに対応する、高機能な無料のオープンソース画像編集ソフトウェア。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "デザイナー"
-    - "写真家"
-    - "学生"
-  latest_highlight: "2026年1月に安定版3.0.8をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - デザイナー
+    - 写真家
+    - 学生
+  latest_highlight: 2026年1月に安定版3.0.8をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "有償のプロ向けツールに匹敵する高度な機能をすべて無料で利用できる"
+      reason: 有償のプロ向けツールに匹敵する高度な機能をすべて無料で利用できる
     - point: 5
-      reason: "バージョン3.0での非破壊編集（レイヤー効果）の導入により柔軟性が飛躍的に向上"
+      reason: バージョン3.0での非破壊編集（レイヤー効果）の導入により柔軟性が飛躍的に向上
     - point: 3
-      reason: "GTK3への移行によりHiDPIやWaylandへの対応が強化された"
+      reason: GTK3への移行によりHiDPIやWaylandへの対応が強化された
   minus_points:
     - point: -3
-      reason: "非破壊編集などの新機能において、処理速度（パフォーマンス）に課題が残る"
-  summary: "待望のバージョン3.0により非破壊編集を実現。無料ツールとしての地位を盤石にしたが、パフォーマンスに改善の余地あり。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 非破壊編集などの新機能において、処理速度（パフォーマンス）に課題が残る
+  summary: 待望のバージョン3.0により非破壊編集を実現。無料ツールとしての地位を盤石にしたが、パフォーマンスに改善の余地あり。
 links:
-  github: "https://github.com/GNOME/gimp"
-  deepwiki: "https://deepwiki.com/GNOME/gimp"
-  documentation: "https://www.gimp.org/docs/"
+  github: https://github.com/GNOME/gimp
+  deepwiki: https://deepwiki.com/GNOME/gimp
+  documentation: https://www.gimp.org/docs/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Affinity"
-    - "Canva"
-    - "Figma"
+    - Affinity
+    - Canva
+    - Figma
+    - Apple Creator Studio
 ---
+
+
+
 
 # **GIMP 調査レポート**
 

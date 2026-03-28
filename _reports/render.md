@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Render 調査レポート"
-tool_name: "Render"
-tool_reading: "レンダー"
-category: "インフラ/クラウド"
-developer: "Render, Inc."
-official_site: "https://render.com"
-date: "2026-01-31"
-last_updated: "2026-01-31"
+title: Render 調査レポート
+tool_name: Render
+tool_reading: レンダー
+category: インフラ/クラウド
+developer: Render, Inc.
+official_site: https://render.com
+date: '2026-01-31'
+last_updated: '2026-01-31'
 tags:
-  - "PaaS"
-  - "クラウド"
-  - "ホスティング"
-  - "PostgreSQL"
-  - "Docker"
-description: "開発者がインフラ管理から解放され、コードを書くことに集中できる、HerokuライクなモダンPaaS"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Docker
+  - PaaS
+  - PostgreSQL
+  - クラウド
+  - ホスティング
+description: 開発者がインフラ管理から解放され、コードを書くことに集中できる、HerokuライクなモダンPaaS
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (Hobbyプラン)"
+  starting_price: 無料 (Hobbyプラン)
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "個人開発者"
-  latest_highlight: "2026年1月にBlueprintファイルの検証機能をCLI/APIに追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - 個人開発者
+  latest_highlight: 2026年1月にBlueprintファイルの検証機能をCLI/APIに追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Herokuのような使いやすさと、より現代的で低コストな料金体系"
+      reason: Herokuのような使いやすさと、より現代的で低コストな料金体系
     - point: 5
-      reason: "オートスケーリング、プライベートネットワーク、DDoS防御が標準で利用可能"
+      reason: オートスケーリング、プライベートネットワーク、DDoS防御が標準で利用可能
     - point: 5
-      reason: "Infrastructure as Code (Blueprints) による構成管理が容易"
+      reason: Infrastructure as Code (Blueprints) による構成管理が容易
   minus_points:
     - point: -3
-      reason: "日本リージョン（東京/大阪）が存在しない（最寄りはシンガポール）"
-  summary: "Herokuからの移行先として最適。DXが高く、コストパフォーマンスに優れたモダンなPaaS。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本リージョン（東京/大阪）が存在しない（最寄りはシンガポール）
+  summary: Herokuからの移行先として最適。DXが高く、コストパフォーマンスに優れたモダンなPaaS。
 links:
-  documentation: "https://render.com/docs"
-  github: "https://github.com/render-oss"
+  documentation: https://render.com/docs
+  github: https://github.com/render-oss
 relationships:
   related_tools:
-    - "Vercel"
-    - "Google Cloud"
+    - Vercel
+    - Google Cloud
 ---
+
+
+
 
 # **Render 調査レポート**
 

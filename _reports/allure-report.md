@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Allure Report 調査レポート"
-tool_name: "Allure Report"
-tool_reading: "アリュール レポート"
-category: "テスト/QA"
-developer: "Qameta Software"
-official_site: "https://allurereport.org/"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: Allure Report 調査レポート
+tool_name: Allure Report
+tool_reading: アリュール レポート
+category: テスト/QA
+developer: Qameta Software
+official_site: https://allurereport.org/
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "CI/CD"
-  - "E2Eテスト"
-description: "テスト結果を視覚的に分かりやすく表示するためのオープンソースのテストレポーティングツール。多言語対応やCI/CD連携が容易で、詳細なステップやスクリーンショットを含めたレポートを作成できる。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - E2Eテスト
+  - オープンソース
+  - テスト自動化
+description: テスト結果を視覚的に分かりやすく表示するためのオープンソースのテストレポーティングツール。多言語対応やCI/CD連携が容易で、詳細なステップやスクリーンショットを含めたレポートを作成できる。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "テスト自動化エンジニア"
-    - "開発者"
-  latest_highlight: "2025年12月にv2.36.0リリース。Playwrightトレース添付やWebP対応などが追加。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - テスト自動化エンジニア
+    - 開発者
+  latest_highlight: 2025年12月にv2.36.0リリース。Playwrightトレース添付やWebP対応などが追加。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースでありながらUIが非常に洗練されている"
+      reason: オープンソースでありながらUIが非常に洗練されている
     - point: 5
-      reason: "対応する言語・フレームワークが極めて豊富"
+      reason: 対応する言語・フレームワークが極めて豊富
     - point: 5
-      reason: "PlaywrightやCypressなどモダンなフレームワークとの連携も強化されている"
+      reason: PlaywrightやCypressなどモダンなフレームワークとの連携も強化されている
   minus_points:
     - point: 0
-      reason: "特になし（OSSとして十分な機能を持つ）"
-  summary: "テストレポートツールのデファクトスタンダードとして、機能・使いやすさ共に非常に高水準。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（OSSとして十分な機能を持つ）
+  summary: テストレポートツールのデファクトスタンダードとして、機能・使いやすさ共に非常に高水準。
 links:
-  github: "https://github.com/allure-framework/allure2"
-  deepwiki: "https://deepwiki.com/allure-framework/allure2"
-  documentation: "https://allurereport.org/docs/"
+  github: https://github.com/allure-framework/allure2
+  deepwiki: https://deepwiki.com/allure-framework/allure2
+  documentation: https://allurereport.org/docs/
 relationships:
   related_tools:
-    - "JUnit"
-    - "Selenium"
-    - "Playwright"
-    - "Cucumber"
+    - JUnit
+    - Selenium
+    - Playwright
+    - Cucumber
 ---
+
+
+
 
 # **Allure Report 調査レポート**
 

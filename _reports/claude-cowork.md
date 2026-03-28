@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Claude Cowork 調査レポート"
-tool_name: "Claude Cowork"
-tool_reading: "クロード コワーク"
-category: "自律型AIエージェント"
-developer: "Anthropic"
-official_site: "https://claude.com/product/cowork"
-date: "2026-03-16"
-last_updated: "2026-03-16"
+title: Claude Cowork 調査レポート
+tool_name: Claude Cowork
+tool_reading: クロード コワーク
+category: 自律型AIエージェント
+developer: Anthropic
+official_site: https://claude.com/product/cowork
+date: '2026-03-16'
+last_updated: '2026-03-16'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "自律型"
-  - "自動化"
-description: "Claude Codeのエージェント機能をデスクトップにもたらし、ローカルファイルやツールにアクセスして非コーディングタスクを自律的に完了させるツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - 生成AI
+  - 自動化
+  - 自律型
+description: Claude Codeのエージェント機能をデスクトップにもたらし、ローカルファイルやツールにアクセスして非コーディングタスクを自律的に完了させるツール。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "Proプランに含む ($20/月)"
+  starting_price: Proプランに含む ($20/月)
   target_users:
-    - "ナレッジワーカー"
-    - "マネージャー"
-    - "営業・事務"
-  latest_highlight: "Windows/macOS向けデスクトップアプリでResearch Previewとして公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ナレッジワーカー
+    - マネージャー
+    - 営業・事務
+  latest_highlight: Windows/macOS向けデスクトップアプリでResearch Previewとして公開
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ローカル環境のファイルやフォルダに直接アクセスし、自律的にタスクを処理できる"
+      reason: ローカル環境のファイルやフォルダに直接アクセスし、自律的にタスクを処理できる
     - point: 5
-      reason: "プラグインとConnectorsにより、既存のSaaSツール（Slack等）とシームレスに連携可能"
+      reason: プラグインとConnectorsにより、既存のSaaSツール（Slack等）とシームレスに連携可能
     - point: 5
-      reason: "実行前にユーザーの承認を求めるセーフティファーストの設計"
+      reason: 実行前にユーザーの承認を求めるセーフティファーストの設計
   minus_points:
     - point: -3
-      reason: "まだResearch Preview段階であり、一部の機能（Projects等）が未対応"
+      reason: まだResearch Preview段階であり、一部の機能（Projects等）が未対応
     - point: -2
-      reason: "チャットと比較して使用制限（Rate Limit）の消費が早い"
-  summary: "デスクトップ環境で自律的に非コーディングタスクをこなす強力なAIエージェント。今後の発展に大きな期待が持てる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: チャットと比較して使用制限（Rate Limit）の消費が早い
+  summary: デスクトップ環境で自律的に非コーディングタスクをこなす強力なAIエージェント。今後の発展に大きな期待が持てる。
 links:
-  documentation: "https://support.claude.com/en/articles/13345190-getting-started-with-cowork"
+  documentation: https://support.claude.com/en/articles/13345190-getting-started-with-cowork
 relationships:
-  parent: "Claude"
+  parent: Claude
   children:
-    - "Claude for Financial Services Plugins"
+    - Claude for Financial Services Plugins
   related_tools:
-    - "Claude Code"
+    - Claude Code
 ---
+
+
+
 
 # **Claude Cowork 調査レポート**
 

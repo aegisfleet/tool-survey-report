@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitHub Copilot CLI 調査レポート"
-tool_name: "GitHub Copilot CLI"
-tool_reading: "ギットハブ コパイロット シーエルアイ"
-category: "AIコーディング支援"
-developer: "GitHub (Microsoft)"
-official_site: "https://github.com/github/copilot-cli"
-date: "2026-01-26"
-last_updated: "2026-03-03"
+title: GitHub Copilot CLI 調査レポート
+tool_name: GitHub Copilot CLI
+tool_reading: ギットハブ コパイロット シーエルアイ
+category: AIコーディング支援
+developer: GitHub (Microsoft)
+official_site: https://github.com/github/copilot-cli
+date: '2026-01-26'
+last_updated: '2026-03-03'
 tags:
-  - "CLI"
-  - "エージェント"
-  - "GitHub"
-  - "開発者ツール"
-description: "GitHub Copilotの機能をターミナルに拡張し、コマンドラインでの開発作業、デバッグ、コマンド生成を自然言語で支援するAIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CLI
+  - GitHub
+  - エージェント
+  - 開発者ツール
+description: GitHub Copilotの機能をターミナルに拡張し、コマンドラインでの開発作業、デバッグ、コマンド生成を自然言語で支援するAIツール。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$10/月 (Copilot Pro)"
+  starting_price: $10/月 (Copilot Pro)
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-  latest_highlight: "「Plan」「Task」などのカスタムエージェント機能による自律的なタスク実行が可能に"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+  latest_highlight: 「Plan」「Task」などのカスタムエージェント機能による自律的なタスク実行が可能に
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ターミナルから離れずにGitHub Copilotの強力なAI機能を利用できる"
+      reason: ターミナルから離れずにGitHub Copilotの強力なAI機能を利用できる
     - point: 4
-      reason: "MCP (Model Context Protocol) に対応し拡張性が高い"
+      reason: MCP (Model Context Protocol) に対応し拡張性が高い
     - point: 3
-      reason: "GitHubのIssueやPRと直接連携できる"
+      reason: GitHubのIssueやPRと直接連携できる
   minus_points:
     - point: 0
-      reason: ""
-  summary: "ターミナル作業が多い開発者にとって、Copilotの能力を最大限に引き出すための強力なパートナー。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: ターミナル作業が多い開発者にとって、Copilotの能力を最大限に引き出すための強力なパートナー。
 links:
-  github: "https://github.com/github/copilot-cli"
-  deepwiki: "https://deepwiki.com/github/copilot-cli"
-  documentation: "https://docs.github.com/copilot/concepts/agents/about-copilot-cli"
+  github: https://github.com/github/copilot-cli
+  deepwiki: https://deepwiki.com/github/copilot-cli
+  documentation: https://docs.github.com/copilot/concepts/agents/about-copilot-cli
 relationships:
-  parent: "GitHub Copilot"
+  parent: GitHub Copilot
   children: []
   related_tools:
-    - "Playwright CLI"
-    - "Claude Code"
-    - "Amazon Q Developer"
+    - Playwright CLI
+    - Claude Code
+    - Amazon Q Developer
 ---
+
+
+
 
 # **GitHub Copilot CLI 調査レポート**
 

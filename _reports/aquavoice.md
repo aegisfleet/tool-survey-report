@@ -1,55 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Aqua Voice 調査レポート"
-tool_name: "Aqua Voice"
-tool_reading: "アクアボイス"
-category: "開発者ツール"
-developer: "Aqua Voice"
-official_site: "https://aquavoice.com/"
-date: "2026-03-01"
-last_updated: "2026-03-01"
+title: Aqua Voice 調査レポート
+tool_name: Aqua Voice
+tool_reading: アクアボイス
+category: 開発者ツール
+developer: Aqua Voice
+official_site: https://aquavoice.com/
+date: '2026-03-01'
+last_updated: '2026-03-01'
 tags:
-  - "コーディング支援"
-  - "音声入力"
-  - "生産性向上"
-  - "エージェント"
-description: "開発者やAIツールに特化し、画面のコンテキストを理解して高精度なテキスト変換を行う音声入力ツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - エージェント
+  - コーディング支援
+  - 生産性向上
+  - 音声入力
+description: 開発者やAIツールに特化し、画面のコンテキストを理解して高精度なテキスト変換を行う音声入力ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$8/月"
+  starting_price: $8/月
   target_users:
-    - "開発者"
-    - "プロダクトマネージャー"
-  latest_highlight: "Replacements（置換）機能やCursor連携によるファイルタグ機能の追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - プロダクトマネージャー
+  latest_highlight: Replacements（置換）機能やCursor連携によるファイルタグ機能の追加
+  update_frequency: 高
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 5
-      reason: "開発用語やAI関連用語の認識精度が非常に高い（独自モデルAvalon）"
+      reason: 開発用語やAI関連用語の認識精度が非常に高い（独自モデルAvalon）
     - point: 3
-      reason: "画面上のコンテキスト（コードなど）を読み取り、出力内容を最適化可能"
+      reason: 画面上のコンテキスト（コードなど）を読み取り、出力内容を最適化可能
     - point: 3
-      reason: "あらゆるテキストボックスで直接利用できる汎用性の高さ"
+      reason: あらゆるテキストボックスで直接利用できる汎用性の高さ
   minus_points:
     - point: -2
-      reason: "独自の高性能モデルAvalonの利用には有料プラン（Pro）が必要"
-  summary: "AIコーディング支援ツール（Cursor, Claude Codeなど）でのプロンプト入力や、日常の開発コミュニケーションにおいて圧倒的な生産性向上をもたらす音声入力ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 独自の高性能モデルAvalonの利用には有料プラン（Pro）が必要
+  summary: AIコーディング支援ツール（Cursor, Claude Codeなど）でのプロンプト入力や、日常の開発コミュニケーションにおいて圧倒的な生産性向上をもたらす音声入力ツール
 relationships:
   related_tools:
-    - "Cursor"
-    - "Claude Code"
-    - "Windsurf"
+    - Cursor
+    - Claude Code
+    - Windsurf
 ---
+
+
+
 
 # **Aqua Voice 調査レポート**
 

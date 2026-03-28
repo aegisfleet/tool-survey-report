@@ -1,70 +1,68 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AutoGPT 調査レポート"
-tool_name: "AutoGPT"
-tool_reading: "オートジーピーティー"
-category: "自律型AIエージェント"
-developer: "Significant Gravitas"
-official_site: "https://agpt.co/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: AutoGPT 調査レポート
+tool_name: AutoGPT
+tool_reading: オートジーピーティー
+category: 自律型AIエージェント
+developer: Significant Gravitas
+official_site: https://agpt.co/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "オープンソース"
-  - "自動化"
-  - "Python"
-  - "大規模言語モデル"
-description: "目標を設定するだけでタスクを自律的に実行するAIエージェント構築プラットフォーム。GUIベースのビルダーで、ノーコードでのエージェント開発も可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Python
+  - エージェント
+  - オープンソース
+  - 大規模言語モデル
+  - 自動化
+  - 自律型
+description: 目標を設定するだけでタスクを自律的に実行するAIエージェント構築プラットフォーム。GUIベースのビルダーで、ノーコードでのエージェント開発も可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（セルフホスト）"
+  starting_price: 無料（セルフホスト）
   target_users:
-    - "開発者"
-    - "AI研究者"
-    - "ビジネスユーザー"
-  latest_highlight: "2026年1月にv0.6.45をリリース。ClaudeCodeBlockの追加や検索機能の強化が行われた"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AI研究者
+    - ビジネスユーザー
+  latest_highlight: 2026年1月にv0.6.45をリリース。ClaudeCodeBlockの追加や検索機能の強化が行われた
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 8
-      reason: "自律型AIエージェントのコンセプトを広く普及させた先駆者であり、高い自律性を誇る"
+      reason: 自律型AIエージェントのコンセプトを広く普及させた先駆者であり、高い自律性を誇る
     - point: 7
-      reason: "GitHubでのスター数が18万を超え、非常に活発なオープンソースコミュニティと継続的な開発体制がある"
+      reason: GitHubでのスター数が18万を超え、非常に活発なオープンソースコミュニティと継続的な開発体制がある
     - point: 5
-      reason: "GUIベースのAgent Builderにより、ノーコード/ローコードでのエージェント構築が可能になり、利用のハードルが下がった"
+      reason: GUIベースのAgent Builderにより、ノーコード/ローコードでのエージェント構築が可能になり、利用のハードルが下がった
   minus_points:
     - point: -5
-      reason: "タスクの複雑さやループによっては、意図せずLLMのAPIコストが高額になるリスクがある"
+      reason: タスクの複雑さやループによっては、意図せずLLMのAPIコストが高額になるリスクがある
     - point: -4
-      reason: "自律性が高い反面、挙動の制御が難しく、期待通りの成果を得るには試行錯誤が必要"
+      reason: 自律性が高い反面、挙動の制御が難しく、期待通りの成果を得るには試行錯誤が必要
     - point: -3
-      reason: "主力であるAutoGPT Platform部分が商用利用に制限のあるライセンス（Polyform Shield）を採用している"
-  summary: "自律型AIエージェントの先駆者だが、コストと制御の難しさが実用上の課題であり、ライセンスにも注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 主力であるAutoGPT Platform部分が商用利用に制限のあるライセンス（Polyform Shield）を採用している
+  summary: 自律型AIエージェントの先駆者だが、コストと制御の難しさが実用上の課題であり、ライセンスにも注意が必要。
 links:
-  github: "https://github.com/Significant-Gravitas/AutoGPT"
-  deepwiki: "https://deepwiki.com/Significant-Gravitas/AutoGPT"
-  documentation: "https://docs.agpt.co/"
+  github: https://github.com/Significant-Gravitas/AutoGPT
+  deepwiki: https://deepwiki.com/Significant-Gravitas/AutoGPT
+  documentation: https://docs.agpt.co/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "LangChain"
-    - "Devin"
-    - "OpenHands"
-    - "Letta"
+    - LangChain
+    - Devin
+    - OpenHands
+    - Letta
+    - AgentScope
+    - MoneyPrinterV2
+    - OpenClaw
 ---
+
+
+
 
 # **AutoGPT 調査レポート**
 

@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Vercel Agent Skills 調査レポート"
-tool_name: "Vercel Agent Skills"
-tool_reading: "ヴァーセル エージェント スキルズ / エージェント スキルズ"
-category: "開発者ツール"
-developer: "Vercel"
-official_site: "https://vercel.com/docs/agent-resources/skills"
-date: "2026-03-19"
-last_updated: "2026-03-19"
+title: Vercel Agent Skills 調査レポート
+tool_name: Vercel Agent Skills
+tool_reading: ヴァーセル エージェント スキルズ / エージェント スキルズ
+category: 開発者ツール
+developer: Vercel
+official_site: https://vercel.com/docs/agent-resources/skills
+date: '2026-03-19'
+last_updated: '2026-03-19'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "オープンソース"
-  - "CLI"
-description: "AIエージェントにReact/Next.jsのベストプラクティスやデプロイなどの具体的な機能を追加・拡張するためのツール群"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CLI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+description: AIエージェントにReact/Next.jsのベストプラクティスやデプロイなどの具体的な機能を追加・拡張するためのツール群
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント利用者"
-  latest_highlight: "React/Next.jsのベストプラクティスやVercelデプロイなどのスキルが公開されている"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエージェント利用者
+  latest_highlight: React/Next.jsのベストプラクティスやVercelデプロイなどのスキルが公開されている
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "主要なAIエージェント（Claude Code, Cursor, Clineなど）18種以上に対応"
+      reason: 主要なAIエージェント（Claude Code, Cursor, Clineなど）18種以上に対応
     - point: 5
-      reason: "ReactやNext.jsのベストプラクティスをAIエージェントに直接適用可能"
+      reason: ReactやNext.jsのベストプラクティスをAIエージェントに直接適用可能
     - point: 5
-      reason: "オープンソースでありコミュニティによる拡張が容易"
+      reason: オープンソースでありコミュニティによる拡張が容易
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "AIコーディングエージェントの能力を大幅に引き上げる、実用的で拡張性の高いツールキット"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: AIコーディングエージェントの能力を大幅に引き上げる、実用的で拡張性の高いツールキット
 links:
-  github: "https://github.com/vercel-labs/agent-skills"
-  deepwiki: "https://deepwiki.com/vercel-labs/agent-skills"
+  github: https://github.com/vercel-labs/agent-skills
+  deepwiki: https://deepwiki.com/vercel-labs/agent-skills
 relationships:
   related_tools:
-    - "GitHub Actions"
-    - "Vercel"
-    - "React"
-    - "Gemini Skills"
+    - GitHub Actions
+    - Vercel
+    - React
+    - Gemini Skills
 ---
+
+
+
 
 # **Vercel Agent Skills 調査レポート**
 

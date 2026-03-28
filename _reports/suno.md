@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Suno 調査レポート"
-tool_name: "Suno"
-tool_reading: "スノ"
-category: "動画/メディア"
-developer: "Suno, Inc."
-official_site: "https://suno.com/"
-date: "2026-02-07"
-last_updated: "2026-02-07"
+title: Suno 調査レポート
+tool_name: Suno
+tool_reading: スノ
+category: 動画/メディア
+developer: Suno, Inc.
+official_site: https://suno.com/
+date: '2026-02-07'
+last_updated: '2026-02-07'
 tags:
-  - "AI"
-  - "生成AI"
-  - "音楽生成"
-  - "作曲"
-description: "テキストプロンプトからボーカルや楽器を含む独創的な音楽を生成するAIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - 作曲
+  - 生成AI
+  - 音楽生成
+description: テキストプロンプトからボーカルや楽器を含む独創的な音楽を生成するAIツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$10/月"
+  starting_price: $10/月
   target_users:
-    - "動画クリエイター"
-    - "ミュージシャン"
-    - "インディーゲーム開発者"
-  latest_highlight: "2025年12月にv5モデルが正式リリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 動画クリエイター
+    - ミュージシャン
+    - インディーゲーム開発者
+  latest_highlight: 2025年12月にv5モデルが正式リリース
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ボーカル生成品質が非常に高く、競合より優れている"
+      reason: ボーカル生成品質が非常に高く、競合より優れている
     - point: 5
-      reason: "専門知識がなくても直感的に操作できるUI/UX"
+      reason: 専門知識がなくても直感的に操作できるUI/UX
     - point: 3
-      reason: "無料プランでも十分に試せるクレジットが提供される"
+      reason: 無料プランでも十分に試せるクレジットが提供される
   minus_points:
     - point: -3
-      reason: "生成AIの著作権に関する法的な懸念点が残る"
+      reason: 生成AIの著作権に関する法的な懸念点が残る
     - point: -2
-      reason: "クレジット消費が激しく、ヘビーユーザーにはコストがかさむ"
-  summary: "ボーカル生成品質は業界最高水準だが、著作権の懸念とクレジット消費には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: クレジット消費が激しく、ヘビーユーザーにはコストがかさむ
+  summary: ボーカル生成品質は業界最高水準だが、著作権の懸念とクレジット消費には注意が必要。
 links:
-  review: "https://www.g2.com/products/suno-ai/reviews"
+  review: https://www.g2.com/products/suno-ai/reviews
 relationships:
   parent: null
   children: []
   related_tools:
-    - "ElevenLabs"
-    - "Sora"
+    - ElevenLabs
+    - Sora
 ---
+
+
+
 
 # **Suno 調査レポート**
 

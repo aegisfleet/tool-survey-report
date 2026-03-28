@@ -1,56 +1,59 @@
 ---
-title: "Mobile Next 調査レポート"
-tool_name: "Mobile Next"
-tool_reading: "モバイルネクスト"
-category: "モバイル開発"
-developer: "Mobile Next"
-official_site: "https://mobilenexthq.com/"
-date: "2026-02-11"
-last_updated: "2026-02-11"
+title: Mobile Next 調査レポート
+tool_name: Mobile Next
+tool_reading: モバイルネクスト
+category: モバイル開発
+developer: Mobile Next
+official_site: https://mobilenexthq.com/
+date: '2026-02-11'
+last_updated: '2026-02-11'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "テスト自動化"
-  - "モバイル"
-  - "MCP"
-description: "AIエージェントによるモバイルアプリ操作やテスト自動化を実現する、MCPサーバーやCLI、VS Code拡張機能を含むモバイル開発プラットフォーム"
+  - AI
+  - MCP
+  - エージェント
+  - オープンソース
+  - テスト自動化
+  - モバイル
+description: AIエージェントによるモバイルアプリ操作やテスト自動化を実現する、MCPサーバーやCLI、VS Code拡張機能を含むモバイル開発プラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "モバイル開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年1月にCLIツールがアップデート"
-  update_frequency: "中"
+    - モバイル開発者
+    - QAエンジニア
+  latest_highlight: 2026年1月にCLIツールがアップデート
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 8
-      reason: "AIエージェント連携を前提とした先進的な設計とオープンソースである点"
+      reason: AIエージェント連携を前提とした先進的な設計とオープンソースである点
     - point: 5
-      reason: "VS Code統合やCLIにより開発者のコンテキストスイッチを削減できる点"
+      reason: VS Code統合やCLIにより開発者のコンテキストスイッチを削減できる点
   minus_points:
     - point: -3
-      reason: "発展途上のプロジェクトであり、iOS実機設定など学習コストを要する点"
-  summary: "AIエージェント連携という先進的な機能を持つが、プロジェクトの現状や学習コストには注意が必要"
+      reason: 発展途上のプロジェクトであり、iOS実機設定など学習コストを要する点
+  summary: AIエージェント連携という先進的な機能を持つが、プロジェクトの現状や学習コストには注意が必要
 links:
-  github: "https://github.com/mobile-next"
-  documentation: "https://github.com/mobile-next/mobile-mcp/wiki"
+  github: https://github.com/mobile-next
+  documentation: https://github.com/mobile-next/mobile-mcp/wiki
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Claude"
-    - "Cursor"
-    - "GitHub Copilot"
-    - "Appium"
-    - "Android Studio"
-    - "Flutter"
-    - "Model Context Protocol"
+    - Claude
+    - Cursor
+    - GitHub Copilot
+    - Appium
+    - Android Studio
+    - Flutter
+    - Model Context Protocol
 ---
+
+
+
 
 # **Mobile Next 調査レポート**
 

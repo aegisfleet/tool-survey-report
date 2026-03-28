@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Kodus 調査レポート"
-tool_name: "Kodus"
-tool_reading: "コダス"
-category: "AIコーディング支援"
-developer: "Kodus"
-official_site: "https://kodus.io/"
-date: "2026-03-05"
-last_updated: "2026-03-05"
+title: Kodus 調査レポート
+tool_name: Kodus
+tool_reading: コダス
+category: AIコーディング支援
+developer: Kodus
+official_site: https://kodus.io/
+date: '2026-03-05'
+last_updated: '2026-03-05'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "コードレビュー"
-  - "開発者ツール"
-  - "自動化"
-description: "LLMを自由に選択でき、チームの規約を学習して自動でコードレビューを行うオープンソースのAIコードレビューエージェント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - コードレビュー
+  - 自動化
+  - 開発者ツール
+description: LLMを自由に選択でき、チームの規約を学習して自動でコードレビューを行うオープンソースのAIコードレビューエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$10/月"
+  starting_price: $10/月
   target_users:
-    - "開発者"
-    - "エンジニアリングチーム"
-  latest_highlight: "1.0.88でMCPをカスタムルールとプロンプトで直接使用可能に"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアリングチーム
+  latest_highlight: 1.0.88でMCPをカスタムルールとプロンプトで直接使用可能に
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 4
-      reason: "オープンソースであり、セルフホストが可能。"
+      reason: オープンソースであり、セルフホストが可能。
     - point: 4
-      reason: "任意のLLM（Claude, GPT-4, Geminiなど）を自由に選択できる「Model Agnostic」設計で、APIトークンに対するマージン（Zero Markup）がない。"
+      reason: 任意のLLM（Claude, GPT-4, Geminiなど）を自由に選択できる「Model Agnostic」設計で、APIトークンに対するマージン（Zero Markup）がない。
     - point: 4
-      reason: "自然言語でチームのレビュー基準（Kody Rules）を定義でき、アーキテクチャや標準を学習（Context Engine）する。"
+      reason: 自然言語でチームのレビュー基準（Kody Rules）を定義でき、アーキテクチャや標準を学習（Context Engine）する。
   minus_points:
     - point: -2
-      reason: "比較的新しいツールであり、G2などの主要レビュープラットフォームでの評価蓄積がまだ少ない。"
-  summary: "モデル選択の自由度とカスタマイズ性を重視し、AIのAPIコストを最適化したい開発チームに最適なオープンソースのコードレビューツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 比較的新しいツールであり、G2などの主要レビュープラットフォームでの評価蓄積がまだ少ない。
+  summary: モデル選択の自由度とカスタマイズ性を重視し、AIのAPIコストを最適化したい開発チームに最適なオープンソースのコードレビューツール。
 links:
-  github: "https://github.com/kodustech/kodus-ai"
-  deepwiki: "https://deepwiki.com/kodustech/kodus-ai"
-  documentation: "https://docs.kodus.io/"
+  github: https://github.com/kodustech/kodus-ai
+  deepwiki: https://deepwiki.com/kodustech/kodus-ai
+  documentation: https://docs.kodus.io/
 relationships:
   related_tools:
-    - "CodeRabbit"
+    - CodeRabbit
 ---
+
+
+
 
 # **Kodus 調査レポート**
 

@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Spec Kit 調査レポート"
-tool_name: "Spec Kit"
-tool_reading: "スペックキット"
-category: "開発者ツール"
-developer: "GitHub"
-official_site: "https://github.github.com/spec-kit/"
-date: "2026-03-09"
-last_updated: "2026-03-09"
+title: Spec Kit 調査レポート
+tool_name: Spec Kit
+tool_reading: スペックキット
+category: 開発者ツール
+developer: GitHub
+official_site: https://github.github.com/spec-kit/
+date: '2026-03-09'
+last_updated: '2026-03-09'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-  - "自動化"
-description: "仕様駆動開発（Spec-Driven Development）を実現し、仕様から直接コードを生成するオープンソースツールキット"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 自動化
+  - 開発者ツール
+description: 仕様駆動開発（Spec-Driven Development）を実現し、仕様から直接コードを生成するオープンソースツールキット
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "チーム"
-  latest_highlight: "AIエージェントを用いた仕様からのコード生成を実現"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - チーム
+  latest_highlight: AIエージェントを用いた仕様からのコード生成を実現
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "様々なAIエージェント（Claude Code, GitHub Copilot, Cursor等）をサポートしている"
+      reason: 様々なAIエージェント（Claude Code, GitHub Copilot, Cursor等）をサポートしている
     - point: 5
-      reason: "仕様から実装までを一貫して管理・自動化できる画期的なアプローチ"
+      reason: 仕様から実装までを一貫して管理・自動化できる画期的なアプローチ
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "AI時代の新しい開発手法である仕様駆動開発を強力に後押しする有望なツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: AI時代の新しい開発手法である仕様駆動開発を強力に後押しする有望なツール
 links:
-  github: "https://github.com/github/spec-kit"
-  deepwiki: "https://deepwiki.com/github/spec-kit"
-  codewiki: "https://codewiki.google/github.com/github/spec-kit"
+  github: https://github.com/github/spec-kit
+  deepwiki: https://deepwiki.com/github/spec-kit
+  codewiki: https://codewiki.google/github.com/github/spec-kit
 relationships:
-  parent: "GitHub"
+  parent: GitHub
   related_tools:
-    - "GitHub Copilot"
-    - "Claude"
+    - GitHub Copilot
+    - Claude
 ---
+
+
+
 
 # **Spec Kit 調査レポート**
 

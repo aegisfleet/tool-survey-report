@@ -1,59 +1,59 @@
 ---
-title: "Claude Code 調査レポート"
-tool_name: "Claude Code"
-tool_reading: "クロード コード"
-category: "自律型AIエージェント"
-developer: "Anthropic"
-official_site: "https://claude.ai/code"
-date: "2026-01-24"
-last_updated: "2026-02-09"
+title: Claude Code 調査レポート
+tool_name: Claude Code
+tool_reading: クロード コード
+category: 自律型AIエージェント
+developer: Anthropic
+official_site: https://claude.ai/code
+date: '2026-01-24'
+last_updated: '2026-02-09'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "コーディング支援"
-  - "開発者ツール"
-description: "Anthropicが提供する、ターミナルやIDEで動作する自律型コーディングエージェント。最新のClaude 4.5モデルを使用。"
-
+  - AI
+  - エージェント
+  - コーディング支援
+  - 自律型
+  - 開発者ツール
+description: Anthropicが提供する、ターミナルやIDEで動作する自律型コーディングエージェント。最新のClaude 4.5モデルを使用。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "プランに含む"
+  starting_price: プランに含む
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-  latest_highlight: "2025年12月にAIエージェント機能を追加"
-  update_frequency: "高"
-
+    - 開発者
+    - DevOpsエンジニア
+  latest_highlight: 2025年12月にAIエージェント機能を追加
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Claude 4.5 Opus/Sonnetの強力な推論能力を活用"
+      reason: Claude 4.5 Opus/Sonnetの強力な推論能力を活用
     - point: 5
-      reason: "Agentic searchによる深いコードベース理解"
+      reason: Agentic searchによる深いコードベース理解
     - point: 5
-      reason: "ターミナル、IDE、Slack、Webと柔軟な環境対応"
+      reason: ターミナル、IDE、Slack、Webと柔軟な環境対応
     - point: 3
-      reason: "MCPによる高い拡張性"
+      reason: MCPによる高い拡張性
   minus_points: []
-  summary: "ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5の搭載により信頼性と解決力がさらに向上した。"
-
+  summary: ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5の搭載により信頼性と解決力がさらに向上した。
 links:
-  documentation: "https://docs.claude.com/en/docs/claude-code"
+  documentation: https://docs.claude.com/en/docs/claude-code
 relationships:
-  parent: "Claude"
+  parent: Claude
   children: []
   related_tools:
-    - "GitHub Copilot"
-    - "Cursor"
-    - "Windsurf"
-    - "Cline"
-    - "Roo Code"
-    - "Devin"
-    - "Claude Cowork"
+    - GitHub Copilot
+    - Cursor
+    - Windsurf
+    - Cline
+    - Roo Code
+    - Devin
+    - Claude Cowork
 ---
+
+
+
 
 # **Claude Code 調査レポート**
 

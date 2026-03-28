@@ -1,59 +1,58 @@
 ---
-title: "OpenClaw 調査レポート"
-tool_name: "OpenClaw"
-tool_reading: "オープンクロー"
-category: "自律型AIエージェント"
-developer: "Peter Steinberger & community"
-official_site: "https://openclaw.ai/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: OpenClaw 調査レポート
+tool_name: OpenClaw
+tool_reading: オープンクロー
+category: 自律型AIエージェント
+developer: Peter Steinberger & community
+official_site: https://openclaw.ai/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "エージェント"
-  - "オープンソース"
-  - "自動化"
-  - "ローカルLLM"
-  - "開発者ツール"
-description: "自分のデバイス上で動作するパーソナルAIアシスタント。WhatsAppやTelegramなどのチャットアプリを通じて操作し、Webブラウジングやシステム操作を実行可能。"
+  - エージェント
+  - オープンソース
+  - ローカルLLM
+  - 自動化
+  - 開発者ツール
+description: 自分のデバイス上で動作するパーソナルAIアシスタント。WhatsAppやTelegramなどのチャットアプリを通じて操作し、Webブラウジングやシステム操作を実行可能。
 layout: report
-
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (API利用料は別途)"
+  starting_price: 無料 (API利用料は別途)
   target_users:
-    - "開発者"
-    - "パワーユーザー"
-    - "AIエンジニア"
-  latest_highlight: "2026年1月にv2026.1.30をリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - パワーユーザー
+    - AIエンジニア
+  latest_highlight: 2026年1月にv2026.1.30をリリース
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "完全にローカルで動作し、プライバシーが確保される"
+      reason: 完全にローカルで動作し、プライバシーが確保される
     - point: 5
-      reason: "多様なチャットプラットフォーム（WhatsApp, Telegram, Discord等）に対応"
+      reason: 多様なチャットプラットフォーム（WhatsApp, Telegram, Discord等）に対応
     - point: 5
-      reason: "ブラウザ操作やシステム操作など、強力な実行能力を持つ"
+      reason: ブラウザ操作やシステム操作など、強力な実行能力を持つ
     - point: 2
-      reason: "活発なオープンソースコミュニティ"
+      reason: 活発なオープンソースコミュニティ
   minus_points: []
-  summary: "プライバシー重視かつ高機能なオープンソースのパーソナルAIアシスタント。技術的なセットアップが必要だが、その柔軟性と機能性は圧倒的。"
-
+  summary: プライバシー重視かつ高機能なオープンソースのパーソナルAIアシスタント。技術的なセットアップが必要だが、その柔軟性と機能性は圧倒的。
 links:
-  github: "https://github.com/openclaw/openclaw"
-  deepwiki: "https://deepwiki.com/openclaw/openclaw"
-  codewiki: "https://codewiki.google/github.com/openclaw/openclaw"
-  documentation: "https://docs.openclaw.ai/"
+  github: https://github.com/openclaw/openclaw
+  deepwiki: https://deepwiki.com/openclaw/openclaw
+  codewiki: https://codewiki.google/github.com/openclaw/openclaw
+  documentation: https://docs.openclaw.ai/
 relationships:
   children:
-    - "NemoClaw"
+    - NemoClaw
   related_tools:
-    - "AutoGPT"
-    - "Claude Computer Use"
+    - AutoGPT
 ---
+
+
+
 
 # **OpenClaw 調査レポート**
 

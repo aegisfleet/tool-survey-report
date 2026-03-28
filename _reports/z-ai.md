@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Z.ai (Zhipu AI) 調査レポート"
-tool_name: "Z.ai"
-tool_reading: "ジーエーアイ / ジープーエーアイ"
-category: "生成AI"
-developer: "Zhipu AI (智譜AI)"
-official_site: "https://z.ai"
-date: "2026-01-27"
-last_updated: "2026-03-16"
+title: Z.ai (Zhipu AI) 調査レポート
+tool_name: Z.ai
+tool_reading: ジーエーアイ / ジープーエーアイ
+category: 生成AI
+developer: Zhipu AI (智譜AI)
+official_site: https://z.ai
+date: '2026-01-27'
+last_updated: '2026-03-16'
 tags:
-  - "生成AI"
-  - "大規模言語モデル"
-  - "エージェント"
-  - "オープンソース"
-description: "中国のZhipu AIが開発した、高性能なGLMシリーズモデルを提供するAIプラットフォーム。テキスト、画像、動画、エージェントなど多岐にわたる機能を持つ。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - エージェント
+  - オープンソース
+  - 大規模言語モデル
+  - 生成AI
+description: 中国のZhipu AIが開発した、高性能なGLMシリーズモデルを提供するAIプラットフォーム。テキスト、画像、動画、エージェントなど多岐にわたる機能を持つ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$3/月"
+  starting_price: $3/月
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "エンタープライズ"
-  latest_highlight: "2026年1月にGLM-4.7-FlashとGLM-Imageをリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - エンタープライズ
+  latest_highlight: 2026年1月にGLM-4.7-FlashとGLM-Imageをリリース
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "GLM-4.7やCogView-4など、テキスト・画像・動画をカバーするマルチモーダル機能が充実"
+      reason: GLM-4.7やCogView-4など、テキスト・画像・動画をカバーするマルチモーダル機能が充実
     - point: 5
-      reason: "Coding Planが月額$3からと非常に安価で、コストパフォーマンスが高い"
+      reason: Coding Planが月額$3からと非常に安価で、コストパフォーマンスが高い
     - point: 5
-      reason: "AutoGLMによるデバイス操作など、エージェント機能が先進的"
+      reason: AutoGLMによるデバイス操作など、エージェント機能が先進的
   minus_points:
     - point: -3
-      reason: "ドキュメントの一部が中国語のみなど、日本語サポートは完全ではない"
-  summary: "圧倒的なコストパフォーマンスと多機能性を誇るが、日本語環境での利用には多少の工夫が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: ドキュメントの一部が中国語のみなど、日本語サポートは完全ではない
+  summary: 圧倒的なコストパフォーマンスと多機能性を誇るが、日本語環境での利用には多少の工夫が必要
 links:
-  github: "https://github.com/zai-org"
-  documentation: "https://docs.z.ai/"
+  github: https://github.com/zai-org
+  documentation: https://docs.z.ai/
 relationships:
   related_tools:
-    - "DeepSeek"
-    - "ChatGPT"
-    - "Claude"
-    - "Gemini"
+    - DeepSeek
+    - ChatGPT
+    - Claude
+    - Gemini
 ---
+
+
+
 
 # **Z.ai (Zhipu AI) 調査レポート**
 

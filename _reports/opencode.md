@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "OpenCode 調査レポート"
-tool_name: "OpenCode"
-tool_reading: "オープンコード"
-category: "自律型AIエージェント"
-developer: "Anomaly"
-official_site: "https://opencode.ai/"
-date: "2026-03-12"
-last_updated: "2026-03-12"
+title: OpenCode 調査レポート
+tool_name: OpenCode
+tool_reading: オープンコード
+category: 自律型AIエージェント
+developer: Anomaly
+official_site: https://opencode.ai/
+date: '2026-03-12'
+last_updated: '2026-03-12'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "コーディング支援"
-  - "開発者ツール"
-description: "ターミナル、IDE、デスクトップで動作するオープンソースのAIコーディングエージェント。プライバシー重視で、多様なLLMに対応。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - コーディング支援
+  - 自律型
+  - 開発者ツール
+description: ターミナル、IDE、デスクトップで動作するオープンソースのAIコーディングエージェント。プライバシー重視で、多様なLLMに対応。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "エンジニアリングチーム"
-    - "OSSコントリビューター"
-  latest_highlight: "2026年1月にv1.1.13をリリース。デスクトップアプリのベータ版も提供中。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアリングチーム
+    - OSSコントリビューター
+  latest_highlight: 2026年1月にv1.1.13をリリース。デスクトップアプリのベータ版も提供中。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり無料で全機能が利用可能"
+      reason: オープンソースであり無料で全機能が利用可能
     - point: 5
-      reason: "75以上のLLMプロバイダーに対応し、ローカルLLMも利用可能"
+      reason: 75以上のLLMプロバイダーに対応し、ローカルLLMも利用可能
     - point: 3
-      reason: "プライバシー重視でコードデータを保存しない設計"
+      reason: プライバシー重視でコードデータを保存しない設計
     - point: 2
-      reason: "TUI、GUI、IDE拡張と柔軟な利用形態を提供"
+      reason: TUI、GUI、IDE拡張と柔軟な利用形態を提供
   minus_points: []
-  summary: "オープンソースで柔軟性が高く、プライバシーにも配慮された強力なAIコーディングエージェント。コストパフォーマンスと自由度で非常に優れている。"
-
-# 【任意項目】該当するもののみ記載
+  summary: オープンソースで柔軟性が高く、プライバシーにも配慮された強力なAIコーディングエージェント。コストパフォーマンスと自由度で非常に優れている。
 links:
-  github: "https://github.com/anomalyco/opencode"
-  deepwiki: "https://deepwiki.com/anomalyco/opencode"
-  codewiki: "https://codewiki.google/github.com/anomalyco/opencode"
-  documentation: "https://opencode.ai/docs"
+  github: https://github.com/anomalyco/opencode
+  deepwiki: https://deepwiki.com/anomalyco/opencode
+  codewiki: https://codewiki.google/github.com/anomalyco/opencode
+  documentation: https://opencode.ai/docs
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "OpenHands"
-    - "Devin"
-    - "Cline"
-    - "GitHub Copilot"
-    - "Agent Trace"
-    - "Playwright Test Agents"
+    - OpenHands
+    - Devin
+    - Cline
+    - GitHub Copilot
+    - Agent Trace
+    - Playwright Test Agents
 ---
+
+
+
 
 # **OpenCode 調査レポート**
 

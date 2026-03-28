@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "RevenueCat 調査レポート"
-tool_name: "RevenueCat"
-tool_reading: "レベニューキャット"
-category: "モバイル開発"
-developer: "RevenueCat"
-official_site: "https://www.revenuecat.com/"
-date: "2026-03-14"
-last_updated: "2026-03-14"
+title: RevenueCat 調査レポート
+tool_name: RevenueCat
+tool_reading: レベニューキャット
+category: モバイル開発
+developer: RevenueCat
+official_site: https://www.revenuecat.com/
+date: '2026-03-14'
+last_updated: '2026-03-14'
 tags:
-  - "モバイル開発"
-  - "SaaS"
-  - "開発者ツール"
-  - "API"
-  - "クロスプラットフォーム"
-description: "iOS、Android、Web向けのアプリ内課金とサブスクリプション管理を簡素化し、クロスプラットフォームでの実装、レシート検証、分析機能を提供するバックエンドプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - API
+  - SaaS
+  - クロスプラットフォーム
+  - モバイル開発
+  - 開発者ツール
+description: iOS、Android、Web向けのアプリ内課金とサブスクリプション管理を簡素化し、クロスプラットフォームでの実装、レシート検証、分析機能を提供するバックエンドプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (MTR $2.5kまで)"
+  starting_price: 無料 (MTR $2.5kまで)
   target_users:
-    - "モバイルアプリ開発者"
-    - "スタートアップ"
-    - "グロースチーム"
-  latest_highlight: "2026年3月にサブスクリプション分析ダッシュボードのパフォーマンスを大幅改善"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - モバイルアプリ開発者
+    - スタートアップ
+    - グロースチーム
+  latest_highlight: 2026年3月にサブスクリプション分析ダッシュボードのパフォーマンスを大幅改善
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "サブスクリプション管理のデファクトスタンダードであり、機能が豊富で非常に信頼性が高い"
+      reason: サブスクリプション管理のデファクトスタンダードであり、機能が豊富で非常に信頼性が高い
     - point: 8
-      reason: "導入が容易で、クロスプラットフォーム開発の工数を劇的に削減できる"
+      reason: 導入が容易で、クロスプラットフォーム開発の工数を劇的に削減できる
     - point: 2
-      reason: "PaywallsやCustomer Centerなど、マーケティングやサポートを支援する機能が強化されている"
+      reason: PaywallsやCustomer Centerなど、マーケティングやサポートを支援する機能が強化されている
   minus_points:
     - point: -5
-      reason: "MTR（月間追跡収益）が大きくなると、手数料が競合サービスより高価になる可能性がある"
-  summary: "モバイルアプリのサブスクリプション管理における必須ツール。開発効率と安定性を劇的に向上させるが、大規模な収益を持つアプリではコスト検討が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: MTR（月間追跡収益）が大きくなると、手数料が競合サービスより高価になる可能性がある
+  summary: モバイルアプリのサブスクリプション管理における必須ツール。開発効率と安定性を劇的に向上させるが、大規模な収益を持つアプリではコスト検討が必要。
 links:
-  documentation: "https://www.revenuecat.com/docs/"
+  documentation: https://www.revenuecat.com/docs/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Flutter"
+    - Flutter
 ---
+
+
+
 
 # **RevenueCat 調査レポート**
 

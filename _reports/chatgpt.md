@@ -1,72 +1,64 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ChatGPT 調査レポート"
-tool_name: "ChatGPT"
-tool_reading: "チャットジーピーティー"
-category: "生成AI"
-developer: "OpenAI"
-official_site: "https://openai.com/chatgpt"
-date: "2026-02-09"
-last_updated: "2026-02-09"
+title: ChatGPT 調査レポート
+tool_name: ChatGPT
+tool_reading: チャットジーピーティー
+category: 生成AI
+developer: OpenAI
+official_site: https://openai.com/chatgpt
+date: '2026-02-09'
+last_updated: '2026-02-09'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "会話型AI"
-  - "開発者ツール"
-description: "OpenAIによって開発された、自然言語処理と生成に優れた能力を持つ最先端の会話型AIモデル。最新のo1およびGPT-4oモデルを搭載し、対話、コンテンツ生成、データ分析から、検索や高度な推論まで、幅広い機能を提供する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - 会話型AI
+  - 大規模言語モデル
+  - 生成AI
+  - 開発者ツール
+description: OpenAIによって開発された、自然言語処理と生成に優れた能力を持つ最先端の会話型AIモデル。最新のo1およびGPT-4oモデルを搭載し、対話、コンテンツ生成、データ分析から、検索や高度な推論まで、幅広い機能を提供する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "開発者"
-    - "コンテンツ制作者"
-    - "一般ユーザー"
-  latest_highlight: "推論能力を強化したo1モデルおよびリアルタイム検索機能Searchを正式リリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - コンテンツ制作者
+    - 一般ユーザー
+  latest_highlight: 推論能力を強化したo1モデルおよびリアルタイム検索機能Searchを正式リリース
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "推論モデルo1やマルチモーダルモデルGPT-4oにより、業界最高水準の性能と汎用性を実現"
+      reason: 推論モデルo1やマルチモーダルモデルGPT-4oにより、業界最高水準の性能と汎用性を実現
     - point: 5
-      reason: "Canvas機能やSearch機能など、単なるチャットを超えた新しいUI/UXの提供"
+      reason: Canvas機能やSearch機能など、単なるチャットを超えた新しいUI/UXの提供
     - point: 5
-      reason: "GPTsエコシステムやAPI連携の豊富さにより、カスタマイズ性と拡張性が極めて高い"
+      reason: GPTsエコシステムやAPI連携の豊富さにより、カスタマイズ性と拡張性が極めて高い
   minus_points:
     - point: -3
-      reason: "依然としてハルシネーションのリスクがあり、特に専門的な内容ではファクトチェックが不可欠"
+      reason: 依然としてハルシネーションのリスクがあり、特に専門的な内容ではファクトチェックが不可欠
     - point: -2
-      reason: "高度な機能（o1 Proモード等）は高額なプランに限定される場合がある"
-  summary: "モデル性能、機能性、エコシステムの全てで市場をリードし、推論能力の強化により複雑なタスクへの対応力が向上した。"
-
-# 【任意項目】
+      reason: 高度な機能（o1 Proモード等）は高額なプランに限定される場合がある
+  summary: モデル性能、機能性、エコシステムの全てで市場をリードし、推論能力の強化により複雑なタスクへの対応力が向上した。
 links:
-  documentation: "https://help.openai.com/en/"
+  documentation: https://help.openai.com/en/
 relationships:
   children:
-    - "Sora"
-    - "OpenAI Codex CLI"
+    - Sora
+    - OpenAI Codex CLI
+    - Codex cloud
   related_tools:
-    - "Amazon Bedrock"
-    - "Gemini"
-    - "Claude"
-    - "Pomelli"
-    - "DeepSeek"
-    - "Grok"
-    - "Microsoft 365 Copilot"
-    - "TradingAgents"
-    - "Perplexity"
-    - "NotebookLM"
-    - "Z.ai"
+    - Amazon Bedrock
+    - Gemini
+    - Claude
+    - Pomelli
+    - DeepSeek
+    - Grok
+    - Microsoft 365 Copilot
 ---
+
+
+
 
 # **ChatGPT 調査レポート**
 

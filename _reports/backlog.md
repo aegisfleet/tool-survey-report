@@ -1,62 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Backlog 調査レポート"
-tool_name: "Backlog"
-tool_reading: "バックログ"
-category: "プロジェクト管理"
-developer: "株式会社ヌーラボ (Nulab)"
-official_site: "https://backlog.com/ja/"
-date: "2026-01-28"
-last_updated: "2026-03-18"
+title: Backlog 調査レポート
+tool_name: Backlog
+tool_reading: バックログ
+category: プロジェクト管理
+developer: 株式会社ヌーラボ (Nulab)
+official_site: https://backlog.com/ja/
+date: '2026-01-28'
+last_updated: '2026-03-18'
 tags:
-  - "プロジェクト管理"
-  - "タスク管理"
-  - "開発者ツール"
-  - "SaaS"
-  - "バグトラッキング"
-description: "開発者、デザイナー、マーケターなど、あらゆるチームメンバーが使いやすいように設計されたオールインワン型プロジェクト管理ツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - タスク管理
+  - バグトラッキング
+  - プロジェクト管理
+  - 開発者ツール
+description: 開発者、デザイナー、マーケターなど、あらゆるチームメンバーが使いやすいように設計されたオールインワン型プロジェクト管理ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "¥2,970/月"
+  starting_price: ¥2,970/月
   target_users:
-    - "開発チーム"
-    - "デザインチーム"
-    - "マーケティングチーム"
-  latest_highlight: "2026年3月にAIアシスタント機能を正式リリース。Androidアプリもリニューアル"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発チーム
+    - デザインチーム
+    - マーケティングチーム
+  latest_highlight: 2026年3月にAIアシスタント機能を正式リリース。Androidアプリもリニューアル
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "開発者向け機能（Git/SVN）と一般向け機能（タスク管理）のバランスが良い"
+      reason: 開発者向け機能（Git/SVN）と一般向け機能（タスク管理）のバランスが良い
     - point: 5
-      reason: "直感的で使いやすいUI/UX、日本語対応が完璧"
+      reason: 直感的で使いやすいUI/UX、日本語対応が完璧
     - point: 3
-      reason: "ユーザー数無制限プラン（スタンダード以上）があり、コスト予測が容易"
+      reason: ユーザー数無制限プラン（スタンダード以上）があり、コスト予測が容易
   minus_points:
     - point: -3
-      reason: "大規模プロジェクトでのパフォーマンスに課題があるとの声あり"
+      reason: 大規模プロジェクトでのパフォーマンスに課題があるとの声あり
     - point: -2
-      reason: "カスタマイズ性がJira等と比較して限定的"
-  summary: "開発と非開発者が共存するチームに最適。使いやすさと機能のバランスが高評価だが、大規模利用には検証が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: カスタマイズ性がJira等と比較して限定的
+  summary: 開発と非開発者が共存するチームに最適。使いやすさと機能のバランスが高評価だが、大規模利用には検証が必要。
 links:
-  documentation: "https://support-ja.backlog.com/hc/ja"
+  documentation: https://support-ja.backlog.com/hc/ja
 relationships:
   related_tools:
-    - "ワスレナイ"
-    - "Jira"
-    - "Redmine"
-    - "Quality Tracker"
+    - ワスレナイ
+    - Jira
+    - Redmine
+    - Quality Tracker
+    - Qangaroo
+    - CAT
 ---
+
+
+
 
 # **Backlog 調査レポート**
 

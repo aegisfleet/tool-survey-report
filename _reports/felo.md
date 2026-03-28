@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Felo 調査レポート"
-tool_name: "Felo"
-tool_reading: "フェロー"
-category: "AI検索エンジン"
-developer: "Sparticle Inc."
-official_site: "https://felo.ai"
-date: "2026-02-24"
-last_updated: "2026-02-24"
+title: Felo 調査レポート
+tool_name: Felo
+tool_reading: フェロー
+category: AI検索エンジン
+developer: Sparticle Inc.
+official_site: https://felo.ai
+date: '2026-02-24'
+last_updated: '2026-02-24'
 tags:
-  - "AI"
-  - "リサーチ"
-  - "コンテンツ生成"
-  - "エージェント"
-  - "Canvas"
-description: "Feloは、AI検索を中核に、無限キャンバス（LiveDoc）での情報整理、スライド作成、エージェント構築までを統合したAIワークスペースです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Canvas
+  - エージェント
+  - コンテンツ生成
+  - リサーチ
+description: Feloは、AI検索を中核に、無限キャンバス（LiveDoc）での情報整理、スライド作成、エージェント構築までを統合したAIワークスペースです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "リサーチャー"
-    - "コンテンツ制作者"
-    - "グローバルチーム"
-  latest_highlight: "2026年2月にAI Slidesのテンプレートアップロード機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - リサーチャー
+    - コンテンツ制作者
+    - グローバルチーム
+  latest_highlight: 2026年2月にAI Slidesのテンプレートアップロード機能を追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 6
-      reason: "「検索→整理(Canvas)→生成(スライド)」のワークフローが単一ツールで完結し、生産性が非常に高い"
+      reason: 「検索→整理(Canvas)→生成(スライド)」のワークフローが単一ツールで完結し、生産性が非常に高い
     - point: 5
-      reason: "多言語検索・翻訳能力が極めて高く、海外情報の収集に強みを持つ"
+      reason: 多言語検索・翻訳能力が極めて高く、海外情報の収集に強みを持つ
     - point: 4
-      reason: "X ResearchやAI Mind Mapなど、特定のタスクに特化した強力な機能が頻繁に追加される"
+      reason: X ResearchやAI Mind Mapなど、特定のタスクに特化した強力な機能が頻繁に追加される
   minus_points:
     - point: -2
-      reason: "機能が急速に拡大しているため、初心者が全機能を使いこなすまでの学習コストが高い"
-  summary: "単なる検索エンジンを超え、リサーチからアウトプットまでを一気通貫で支援する強力な統合プラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が急速に拡大しているため、初心者が全機能を使いこなすまでの学習コストが高い
+  summary: 単なる検索エンジンを超え、リサーチからアウトプットまでを一気通貫で支援する強力な統合プラットフォーム。
 links:
-  documentation: "https://felo.ai/blog"
+  documentation: https://felo.ai/blog
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Perplexity"
-    - "Genspark"
-    - "Google Disco"
-    - "Notion"
-    - "Canva"
+    - Perplexity
+    - Genspark
+    - Google Disco
+    - Notion
+    - Canva
 ---
+
+
+
 
 # **Felo 調査レポート**
 

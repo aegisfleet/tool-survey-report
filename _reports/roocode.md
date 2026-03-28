@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Roo Code 調査レポート"
-tool_name: "Roo Code"
-tool_reading: "ルーコード"
-category: "AIコーディング支援"
-developer: "Roo Code Inc."
-official_site: "https://roocode.com/"
-date: "2026-02-25"
-last_updated: "2026-02-25"
+title: Roo Code 調査レポート
+tool_name: Roo Code
+tool_reading: ルーコード
+category: AIコーディング支援
+developer: Roo Code Inc.
+official_site: https://roocode.com/
+date: '2026-02-25'
+last_updated: '2026-02-25'
 tags:
-  - "AI"
-  - "エージェント"
-  - "VS Code"
-  - "オープンソース"
-  - "クラウド"
-description: "VS Code拡張機能とクラウドエージェントを組み合わせた、オープンソースのAIソフトウェアエンジニアリングプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - VS Code
+  - エージェント
+  - オープンソース
+  - クラウド
+description: VS Code拡張機能とクラウドエージェントを組み合わせた、オープンソースのAIソフトウェアエンジニアリングプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 / 従量課金"
+  starting_price: 無料 / 従量課金
   target_users:
-    - "開発者"
-    - "エンジニアリングチーム"
-    - "スタートアップ"
-  latest_highlight: "2026年1月にv3.42.0をリリース。クラウドエージェント機能が拡充"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアリングチーム
+    - スタートアップ
+  latest_highlight: 2026年1月にv3.42.0をリリース。クラウドエージェント機能が拡充
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全なモデル非依存（BYOK）で、最新モデル（OpenAI, Anthropic, Gemini等）を即座に利用可能"
+      reason: 完全なモデル非依存（BYOK）で、最新モデル（OpenAI, Anthropic, Gemini等）を即座に利用可能
     - point: 5
-      reason: "クラウドエージェント（Planner, Coder, Reviewer等）による高度な自律タスク実行とチーム連携"
+      reason: クラウドエージェント（Planner, Coder, Reviewer等）による高度な自律タスク実行とチーム連携
     - point: 5
-      reason: "VS Code拡張機能はオープンソースであり、透明性とカスタマイズ性が高い"
+      reason: VS Code拡張機能はオープンソースであり、透明性とカスタマイズ性が高い
     - point: 3
-      reason: "SlackやGitHubとのネイティブ連携により、非エンジニアも含めたチーム開発を促進"
+      reason: SlackやGitHubとのネイティブ連携により、非エンジニアも含めたチーム開発を促進
   minus_points:
     - point: -2
-      reason: "クラウドエージェントの利用は従量課金制であり、コスト管理が必要"
-  summary: "個人のコーディング支援からチームでの自律エージェント活用まで対応する、柔軟かつ強力なプラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: クラウドエージェントの利用は従量課金制であり、コスト管理が必要
+  summary: 個人のコーディング支援からチームでの自律エージェント活用まで対応する、柔軟かつ強力なプラットフォーム。
 links:
-  github: "https://github.com/RooCodeInc/Roo-Code"
-  deepwiki: "https://deepwiki.com/RooCodeInc/Roo-Code"
-  documentation: "https://docs.roocode.com/"
+  github: https://github.com/RooCodeInc/Roo-Code
+  deepwiki: https://deepwiki.com/RooCodeInc/Roo-Code
+  documentation: https://docs.roocode.com/
 relationships:
   related_tools:
-    - "Cline"
-    - "Cursor"
-    - "GitHub Copilot"
-    - "Windsurf"
-    - "Claude Code"
-    - "Visual Studio Code"
+    - Cline
+    - Cursor
+    - GitHub Copilot
+    - Windsurf
+    - Claude Code
+    - Visual Studio Code
+    - Devin
 ---
+
+
+
 
 # **Roo Code 調査レポート**
 

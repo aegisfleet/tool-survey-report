@@ -1,68 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Apache JMeter 調査レポート"
-tool_name: "Apache JMeter"
-tool_reading: "アパッチ ジェイメーター"
-category: "テスト/QA"
-developer: "Apache Software Foundation"
-official_site: "https://jmeter.apache.org/"
-date: "2025-10-18"
-last_updated: "2026-02-02"
+title: Apache JMeter 調査レポート
+tool_name: Apache JMeter
+tool_reading: アパッチ ジェイメーター
+category: テスト/QA
+developer: Apache Software Foundation
+official_site: https://jmeter.apache.org/
+date: '2025-10-18'
+last_updated: '2026-02-02'
 tags:
-  - "オープンソース"
-  - "テスト自動化"
-  - "負荷テスト"
-  - "Java"
-  - "開発者ツール"
-  - "API"
-description: "Webアプリケーションのパフォーマンス測定と負荷テストのために設計された、100% Pure Javaで開発されているオープンソースソフトウェアです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - API
+  - Java
+  - オープンソース
+  - テスト自動化
+  - 負荷テスト
+  - 開発者ツール
+description: Webアプリケーションのパフォーマンス測定と負荷テストのために設計された、100% Pure Javaで開発されているオープンソースソフトウェアです。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-    - "パフォーマンスエンジニア"
-  latest_highlight: "直近のアップデートは依存関係の更新とバグ修正が中心"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - QAエンジニア
+    - パフォーマンスエンジニア
+  latest_highlight: 直近のアップデートは依存関係の更新とバグ修正が中心
+  update_frequency: 低
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 10
-      reason: "オープンソースで完全に無料で利用できるため、コスト面の制約がない"
+      reason: オープンソースで完全に無料で利用できるため、コスト面の制約がない
     - point: 8
-      reason: "非常に多機能かつ拡張性が高く、多様なプロトコルに対応している"
+      reason: 非常に多機能かつ拡張性が高く、多様なプロトコルに対応している
     - point: 5
-      reason: "歴史が長く巨大なコミュニティと豊富なドキュメントが存在する"
+      reason: 歴史が長く巨大なコミュニティと豊富なドキュメントが存在する
   minus_points:
     - point: -5
-      reason: "UIが古く直感的ではなく、独自の概念が多いため学習コストが高い"
+      reason: UIが古く直感的ではなく、独自の概念が多いため学習コストが高い
     - point: -2
-      reason: "GUIモードはリソース消費が大きく、大規模テストではCLIでの実行が推奨される"
+      reason: GUIモードはリソース消費が大きく、大規模テストではCLIでの実行が推奨される
     - point: -2
-      reason: "クライアントサイドのパフォーマンス測定には不向き"
-  summary: "豊富な機能と高い拡張性を持つ定番のOSS負荷テストツールだが、学習コストとUIの古さが課題"
-
-# 【任意項目】該当するもののみ記載
+      reason: クライアントサイドのパフォーマンス測定には不向き
+  summary: 豊富な機能と高い拡張性を持つ定番のOSS負荷テストツールだが、学習コストとUIの古さが課題
 links:
-  github: "https://github.com/apache/jmeter"
-  codewiki: "https://codewiki.google/github.com/apache/jmeter"
-  deepwiki: "https://deepwiki.com/apache/jmeter"
-  documentation: "https://jmeter.apache.org/usermanual/index.html"
+  github: https://github.com/apache/jmeter
+  codewiki: https://codewiki.google/github.com/apache/jmeter
+  deepwiki: https://deepwiki.com/apache/jmeter
+  documentation: https://jmeter.apache.org/usermanual/index.html
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Karate"
-    - "Playwright"
+    - Karate
+    - Playwright
 ---
+
+
+
 
 # **Apache JMeter 調査レポート**
 

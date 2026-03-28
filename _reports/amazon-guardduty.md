@@ -1,63 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Amazon GuardDuty 調査レポート"
-tool_name: "Amazon GuardDuty"
-tool_reading: "アマゾン ガードデューティ"
-category: "セキュリティ"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/jp/guardduty/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: Amazon GuardDuty 調査レポート
+tool_name: Amazon GuardDuty
+tool_reading: アマゾン ガードデューティ
+category: CDN/セキュリティ
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/jp/guardduty/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "AWS"
-  - "セキュリティ"
-  - "脅威検知"
-  - "IDS"
-  - "マルウェア対策"
-description: "AWSアカウント、ワークロード、データを継続的に監視し、機械学習と統合された脅威インテリジェンスを使用して悪意のあるアクティビティを検出するフルマネージド型脅威検出サービス"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AWS
+  - IDS
+  - セキュリティ
+  - マルウェア対策
+  - 脅威検知
+description: AWSアカウント、ワークロード、データを継続的に監視し、機械学習と統合された脅威インテリジェンスを使用して悪意のあるアクティビティを検出するフルマネージド型脅威検出サービス
 quick_summary:
-  has_free_plan: false  # 30日間の無料トライアルのみ
+  has_free_plan: false
   is_oss: false
-  starting_price: "$4.00/100万イベント (CloudTrail)"
+  starting_price: $4.00/100万イベント (CloudTrail)
   target_users:
-    - "セキュリティ担当者"
-    - "DevOpsエンジニア"
-    - "AWS管理者"
-  latest_highlight: "Aurora Limitless Databaseへの対応とRDS保護の強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - セキュリティ担当者
+    - DevOpsエンジニア
+    - AWS管理者
+  latest_highlight: Aurora Limitless Databaseへの対応とRDS保護の強化
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ワンクリックで全アカウントに導入可能な容易さ"
+      reason: ワンクリックで全アカウントに導入可能な容易さ
     - point: 5
-      reason: "AWSネイティブ統合によるシームレスな運用"
+      reason: AWSネイティブ統合によるシームレスな運用
     - point: 5
-      reason: "AI/MLを活用した高精度な異常検知"
+      reason: AI/MLを活用した高精度な異常検知
     - point: 4
-      reason: "エージェントレスでパフォーマンス影響がない"
+      reason: エージェントレスでパフォーマンス影響がない
     - point: 3
-      reason: "日本語ドキュメントとサポートが充実"
+      reason: 日本語ドキュメントとサポートが充実
   minus_points: []
-  summary: "AWS環境におけるセキュリティ対策の「一丁目一番地」。導入の手軽さと強力な検知能力を兼ね備え、必須レベルのサービス。"
-
-# 【任意項目】該当するもののみ記載
+  summary: AWS環境におけるセキュリティ対策の「一丁目一番地」。導入の手軽さと強力な検知能力を兼ね備え、必須レベルのサービス。
 links:
-  documentation: "https://docs.aws.amazon.com/guardduty/"
+  documentation: https://docs.aws.amazon.com/guardduty/
 relationships:
-  parent: "AWS"
+  parent: null
   related_tools:
-    - "AWS Security Hub"
-    - "Amazon Detective"
-    - "Amazon Inspector"
-    - "Amazon Macie"
+    - AWS Security Hub
 ---
+
+
+
 
 # **Amazon GuardDuty 調査レポート**
 

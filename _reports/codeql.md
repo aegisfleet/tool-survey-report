@@ -1,60 +1,58 @@
 ---
-title: "CodeQL 調査レポート"
-tool_name: "CodeQL"
-tool_reading: "コードキューエル"
-category: "セキュリティ"
-developer: "GitHub"
-official_site: "https://codeql.github.com/"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: CodeQL 調査レポート
+tool_name: CodeQL
+tool_reading: コードキューエル
+category: CDN/セキュリティ
+developer: GitHub
+official_site: https://codeql.github.com/
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "セキュリティ"
-  - "静的解析"
-  - "GitHub"
-  - "DevSecOps"
-description: "コードをデータとして扱い、脆弱性を検出するGitHubの高度な静的解析エンジン"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevSecOps
+  - GitHub
+  - セキュリティ
+  - 静的解析
+description: コードをデータとして扱い、脆弱性を検出するGitHubの高度な静的解析エンジン
 quick_summary:
-  has_free_plan: true  # 無料プランの有無 (OSS/Public Repos)
-  is_oss: false  # OSS（オープンソース）かどうか (CLI/EngineはProprietary)
-  starting_price: "無料 (OSS) / $30/user/月 (Enterprise)"  # 最低価格
-  target_users:  # 想定ユーザー（1-3項目）
-    - "セキュリティエンジニア"
-    - "開発者"
-    - "OSSメンテナ"
-  latest_highlight: "2026年2月にKotlin 2.3.0対応やLLMプロンプトインジェクション検知を追加"
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  has_free_plan: true
+  is_oss: false
+  starting_price: 無料 (OSS) / $30/user/月 (Enterprise)
+  target_users:
+    - セキュリティエンジニア
+    - 開発者
+    - OSSメンテナ
+  latest_highlight: 2026年2月にKotlin 2.3.0対応やLLMプロンプトインジェクション検知を追加
+  update_frequency: 高
 evaluation:
-  score: 85  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 85
+  base_score: 70
+  plus_points:
     - point: 10
-      reason: "GitHubネイティブで統合がスムーズ"
+      reason: GitHubネイティブで統合がスムーズ
     - point: 5
-      reason: "クエリ言語(QL)による柔軟で強力なカスタム解析が可能"
+      reason: クエリ言語(QL)による柔軟で強力なカスタム解析が可能
     - point: 5
-      reason: "OSSに対しては完全に無料で利用可能"
-  minus_points:  # 減点項目（各項目: 点数と理由）
+      reason: OSSに対しては完全に無料で利用可能
+  minus_points:
     - point: -3
-      reason: "独自のクエリ言語(QL)の学習コストが高い"
+      reason: 独自のクエリ言語(QL)の学習コストが高い
     - point: -2
-      reason: "対応言語数がSonarQubeなどに比べると少なめ"
-  summary: "GitHub利用者にとって最強のセキュリティツールだが、使いこなすには学習が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: 対応言語数がSonarQubeなどに比べると少なめ
+  summary: GitHub利用者にとって最強のセキュリティツールだが、使いこなすには学習が必要
 links:
-  github: "https://github.com/github/codeql"
-  codewiki: "https://codewiki.google/github.com/github/codeql"
-  deepwiki: "https://deepwiki.com/github/codeql"
-  documentation: "https://codeql.github.com/docs/"
+  github: https://github.com/github/codeql
+  codewiki: https://codewiki.google/github.com/github/codeql
+  deepwiki: https://deepwiki.com/github/codeql
+  documentation: https://codeql.github.com/docs/
 relationships:
-  parent: "GitHub"
+  parent: GitHub
   related_tools:
-    - "SonarQube"
+    - SonarQube
+    - Dependabot
 ---
+
+
+
 
 # **CodeQL 調査レポート**
 

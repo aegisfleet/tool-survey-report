@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "COMPANY 調査レポート"
-tool_name: "COMPANY"
-tool_reading: "カンパニー"
-category: "人事労務"
-developer: "株式会社Works Human Intelligence"
-official_site: "https://www.works-hi.co.jp/products"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: COMPANY 調査レポート
+tool_name: COMPANY
+tool_reading: カンパニー
+category: 人事労務
+developer: 株式会社Works Human Intelligence
+official_site: https://www.works-hi.co.jp/products
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "人事労務"
-  - "SaaS"
-  - "給与計算"
-  - "勤怠管理"
-  - "タレントマネジメント"
-description: "大手法人向け統合型人事システム。人事管理、給与計算、勤怠管理、タレントマネジメント等の人的資本マネジメントにまつわる業務領域を広くカバーします。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - タレントマネジメント
+  - 人事労務
+  - 勤怠管理
+  - 給与計算
+description: 大手法人向け統合型人事システム。人事管理、給与計算、勤怠管理、タレントマネジメント等の人的資本マネジメントにまつわる業務領域を広くカバーします。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "非公開"
+  starting_price: 非公開
   target_users:
-    - "大企業"
-    - "人事部"
-  latest_highlight: "2025年12月に人件費計画機能を追加"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - 人事部
+  latest_highlight: 2025年12月に人件費計画機能を追加
+  update_frequency: 中
 evaluation:
   score: 77
   base_score: 70
   plus_points:
     - point: 8
-      reason: "大企業の複雑な要件に対応できる業務網羅性と、1200法人グループ以上の導入実績"
+      reason: 大企業の複雑な要件に対応できる業務網羅性と、1200法人グループ以上の導入実績
     - point: 5
-      reason: "ISMAPやSOC2など多数のセキュリティ認証を取得しており、信頼性が高い"
+      reason: ISMAPやSOC2など多数のセキュリティ認証を取得しており、信頼性が高い
   minus_points:
     - point: -2
-      reason: "体系的なリリースノートが公開されておらず、開発の活発度が不明瞭"
+      reason: 体系的なリリースノートが公開されておらず、開発の活発度が不明瞭
     - point: -3
-      reason: "ユーザーレビューでUIの操作性やモバイル非対応が指摘されている"
+      reason: ユーザーレビューでUIの操作性やモバイル非対応が指摘されている
     - point: -1
-      reason: "ITreviewでの評価スコア（3.4）が競合と比較してやや低め"
-  summary: "大企業向け統合人事システムとして圧倒的な実績と機能網羅性を誇るが、UI/UXには改善の余地あり。"
-
-# 【任意項目】該当するもののみ記載
-links:
+      reason: ITreviewでの評価スコア（3.4）が競合と比較してやや低め
+  summary: 大企業向け統合人事システムとして圧倒的な実績と機能網羅性を誇るが、UI/UXには改善の余地あり。
+links: null
 relationships:
   related_tools:
-    - "SmartHR"
-    - "KING OF TIME"
-    - "ジョブカン勤怠管理"
-    - "マネーフォワード クラウド勤怠"
+    - SmartHR
+    - KING OF TIME
+    - ジョブカン勤怠管理
+    - マネーフォワード クラウド勤怠
 ---
+
+
+
 
 # **COMPANY 調査レポート**
 

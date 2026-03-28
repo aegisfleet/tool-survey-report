@@ -1,62 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitLab Duo 調査レポート"
-tool_name: "GitLab Duo"
-tool_reading: "ギットラボ デュオ"
-category: "AIコーディング支援"
-developer: "GitLab Inc."
-official_site: "https://about.gitlab.com/gitlab-duo/"
-date: "2026-02-05"
-last_updated: "2026-02-05"
+title: GitLab Duo 調査レポート
+tool_name: GitLab Duo
+tool_reading: ギットラボ デュオ
+category: AIコーディング支援
+developer: GitLab Inc.
+official_site: https://about.gitlab.com/gitlab-duo/
+date: '2026-02-05'
+last_updated: '2026-02-05'
 tags:
-  - "AI"
-  - "DevSecOps"
-  - "コーディング支援"
-  - "エージェント"
-  - "CI/CD"
-  - "DevOps"
-description: "GitLabのDevSecOpsプラットフォームに統合されたAI機能群。コード生成からセキュリティスキャン、自律型エージェントによるタスク実行まで、開発ライフサイクル全体を支援する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - DevOps
+  - DevSecOps
+  - エージェント
+  - コーディング支援
+description: GitLabのDevSecOpsプラットフォームに統合されたAI機能群。コード生成からセキュリティスキャン、自律型エージェントによるタスク実行まで、開発ライフサイクル全体を支援する。
 quick_summary:
-  has_free_plan: false  # GitLabの無料プランでも一部機能（トライアル等）はあるが、Duo自体は有料アドオンが主
-  is_oss: false  # プロプライエタリ
-  starting_price: "$19/月"  # Duo Pro
+  has_free_plan: false
+  is_oss: false
+  starting_price: $19/月
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "セキュリティ担当者"
-  latest_highlight: "2026年1月にGitLab Duo Agent Platformと自律型エージェント機能が正式リリース"
-  update_frequency: "高"  # 毎月リリース
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - セキュリティ担当者
+  latest_highlight: 2026年1月にGitLab Duo Agent Platformと自律型エージェント機能が正式リリース
+  update_frequency: 高
 evaluation:
-  score: 82  # Agent Platformの追加で加点
+  score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "DevSecOpsライフサイクル全体（計画、開発、セキュリティ、運用）を単一プラットフォームでカバーしている点"
+      reason: DevSecOpsライフサイクル全体（計画、開発、セキュリティ、運用）を単一プラットフォームでカバーしている点
     - point: 5
-      reason: "自律型エージェント（Agent Platform）により、複雑なタスクの自動化が可能になった点"
+      reason: 自律型エージェント（Agent Platform）により、複雑なタスクの自動化が可能になった点
     - point: 5
-      reason: "セキュリティ機能（脆弱性解説・修正案提示）が非常に強力で、シフトレフトを推進できる点"
+      reason: セキュリティ機能（脆弱性解説・修正案提示）が非常に強力で、シフトレフトを推進できる点
   minus_points:
     - point: -3
-      reason: "GitLabプラットフォームへの依存度が高く、他のツールチェーンとの組み合わせが難しい場合がある"
-  summary: "DevSecOps全体をAIで強化する強力なプラットフォーム。特にAgent機能の追加により、単なるコーディング支援を超えた価値を提供する。"
-
-# 【任意項目】該当するもののみ記載
+      reason: GitLabプラットフォームへの依存度が高く、他のツールチェーンとの組み合わせが難しい場合がある
+  summary: DevSecOps全体をAIで強化する強力なプラットフォーム。特にAgent機能の追加により、単なるコーディング支援を超えた価値を提供する。
 links:
-  documentation: "https://docs.gitlab.com/ee/user/gitlab_duo/"
+  documentation: https://docs.gitlab.com/ee/user/gitlab_duo/
 relationships:
-  parent: "GitLab"
+  parent: GitLab
   children: []
   related_tools:
-    - "GitHub Copilot"
-    - "Amazon Q Developer"
-    - "Cursor"
+    - GitHub Copilot
+    - Amazon Q Developer
+    - Cursor
+    - Qodo
 ---
+
+
+
 
 # **GitLab Duo 調査レポート**
 

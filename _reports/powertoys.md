@@ -1,55 +1,55 @@
 ---
-title: "Microsoft PowerToys 調査レポート"
-tool_name: "Microsoft PowerToys"
-tool_reading: "マイクロソフト パワートイズ"
-category: "開発者ツール"
-developer: "Microsoft"
-official_site: "https://learn.microsoft.com/en-us/windows/powertoys/"
-date: "2026-01-28"
-last_updated: "2026-03-24"
+title: Microsoft PowerToys 調査レポート
+tool_name: Microsoft PowerToys
+tool_reading: マイクロソフト パワートイズ
+category: 開発者ツール
+developer: Microsoft
+official_site: https://learn.microsoft.com/en-us/windows/powertoys/
+date: '2026-01-28'
+last_updated: '2026-03-24'
 tags:
-  - "Windows"
-  - "オープンソース"
-  - "生産性"
-  - "ユーティリティ"
-description: "Windowsの機能を拡張し、パワーユーザーの生産性を向上させるためのシステムユーティリティスイート。"
-
+  - Windows
+  - オープンソース
+  - ユーティリティ
+  - 生産性
+description: Windowsの機能を拡張し、パワーユーザーの生産性を向上させるためのシステムユーティリティスイート。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "パワーユーザー"
-    - "開発者"
-    - "Windowsユーザー"
-  latest_highlight: "2026年3月にv0.98.0をリリース。Keyboard Managerの刷新やCommand Palette Dockの追加など"
-  update_frequency: "高"
-
+    - パワーユーザー
+    - 開発者
+    - Windowsユーザー
+  latest_highlight: 2026年3月にv0.98.0をリリース。Keyboard Managerの刷新やCommand Palette Dockの追加など
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 5
-      reason: "純正に近い統合感と信頼性"
+      reason: 純正に近い統合感と信頼性
     - point: 5
-      reason: "20以上の豊富なユーティリティ機能"
+      reason: 20以上の豊富なユーティリティ機能
     - point: 5
-      reason: "完全無料かつオープンソース"
+      reason: 完全無料かつオープンソース
     - point: 3
-      reason: "頻繁なアップデートと新機能の追加"
+      reason: 頻繁なアップデートと新機能の追加
     - point: 4
-      reason: "日本語対応が充実"
+      reason: 日本語対応が充実
   minus_points: []
-  summary: "Windowsユーザーであれば必須級の、非常に強力かつ無料のユーティリティ群。"
-
+  summary: Windowsユーザーであれば必須級の、非常に強力かつ無料のユーティリティ群。
 links:
-  github: "https://github.com/microsoft/PowerToys"
-  codewiki: "https://codewiki.google/github.com/microsoft/PowerToys"
-  documentation: "https://learn.microsoft.com/en-us/windows/powertoys/"
+  github: https://github.com/microsoft/PowerToys
+  codewiki: https://codewiki.google/github.com/microsoft/PowerToys
+  documentation: https://learn.microsoft.com/en-us/windows/powertoys/
 relationships:
   related_tools:
-    - "Visual Studio Code"
+    - Visual Studio Code
 ---
+
+
+
 
 # **Microsoft PowerToys 調査レポート**
 

@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Gemini Skills 調査レポート"
-tool_name: "Gemini Skills"
-tool_reading: "ジェミニ スキルズ"
-category: "AI開発基盤"
-developer: "Google"
-official_site: "https://github.com/google-gemini/gemini-skills"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Gemini Skills 調査レポート
+tool_name: Gemini Skills
+tool_reading: ジェミニ スキルズ
+category: AI開発基盤
+developer: Google
+official_site: https://github.com/google-gemini/gemini-skills
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "AI"
-  - "開発者ツール"
-  - "エージェント"
-  - "API"
-  - "生成AI"
-description: "Gemini API、SDK、およびモデル/エージェントインタラクションのためのスキル（知識拡張）ライブラリ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - API
+  - エージェント
+  - 生成AI
+  - 開発者ツール
+description: Gemini API、SDK、およびモデル/エージェントインタラクションのためのスキル（知識拡張）ライブラリ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント利用者"
-  latest_highlight: "Gemini APIを使用したアプリ開発のベストプラクティスをAIエージェントに提供"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエージェント利用者
+  latest_highlight: Gemini APIを使用したアプリ開発のベストプラクティスをAIエージェントに提供
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Gemini APIのベストプラクティスをAIエージェントに直接適用し、正確なコード生成を支援する"
+      reason: Gemini APIのベストプラクティスをAIエージェントに直接適用し、正確なコード生成を支援する
     - point: 4
-      reason: "VercelやContext7のskills CLIから簡単にインストール可能"
+      reason: VercelやContext7のskills CLIから簡単にインストール可能
     - point: 3
-      reason: "オープンソース(Apache-2.0)であり、コミュニティによる検証・利用が容易"
+      reason: オープンソース(Apache-2.0)であり、コミュニティによる検証・利用が容易
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "AIエージェントのGemini APIに対する知識ギャップを埋め、ベストプラクティスに沿ったコード生成を大幅に改善するツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: AIエージェントのGemini APIに対する知識ギャップを埋め、ベストプラクティスに沿ったコード生成を大幅に改善するツール
 links:
-  github: "https://github.com/google-gemini/gemini-skills"
-  deepwiki: "https://deepwiki.com/google-gemini/gemini-skills"
-  codewiki: "https://codewiki.google/github.com/google-gemini/gemini-skills"
-  documentation: "https://ai.google.dev/gemini-api/docs"
+  github: https://github.com/google-gemini/gemini-skills
+  deepwiki: https://deepwiki.com/google-gemini/gemini-skills
+  codewiki: https://codewiki.google/github.com/google-gemini/gemini-skills
+  documentation: https://ai.google.dev/gemini-api/docs
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "Vercel Agent Skills"
+    - Vercel Agent Skills
 ---
+
+
+
 
 # **Gemini Skills 調査レポート**
 

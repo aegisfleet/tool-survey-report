@@ -1,65 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Moltbot 調査レポート"
-tool_name: "Moltbot"
-tool_reading: "モルトボット"
-category: "自律型AIエージェント"
-developer: "Peter Steinberger & Community"
-official_site: "https://www.molt.bot/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: Moltbot 調査レポート
+tool_name: Moltbot
+tool_reading: モルトボット
+category: 自律型AIエージェント
+developer: Peter Steinberger & Community
+official_site: https://www.molt.bot/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "ローカルAI"
-  - "自動化"
-  - "パーソナルアシスタント"
-description: "WhatsAppやTelegramなどのチャットアプリを通じて操作可能な、ローカルファーストの自律型パーソナルAIアシスタント"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - パーソナルアシスタント
+  - ローカルAI
+  - 自動化
+  - 自律型
+description: WhatsAppやTelegramなどのチャットアプリを通じて操作可能な、ローカルファーストの自律型パーソナルAIアシスタント
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "パワーユーザー"
-    - "個人"
-  latest_highlight: "2026年1月にLINEプラグインやTTS機能強化を含むv2026.1.24をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - パワーユーザー
+    - 個人
+  latest_highlight: 2026年1月にLINEプラグインやTTS機能強化を含むv2026.1.24をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ローカル環境で動作し、プライバシーとコントロール性が高い"
+      reason: ローカル環境で動作し、プライバシーとコントロール性が高い
     - point: 5
-      reason: "WhatsApp, Telegram, Discordなど多数のチャットプラットフォームに対応"
+      reason: WhatsApp, Telegram, Discordなど多数のチャットプラットフォームに対応
     - point: 3
-      reason: "オープンソースであり、コミュニティによる活発な開発が行われている"
+      reason: オープンソースであり、コミュニティによる活発な開発が行われている
     - point: 2
-      reason: "ブラウザ操作やシステムコマンド実行など、強力な自動化機能を備える"
+      reason: ブラウザ操作やシステムコマンド実行など、強力な自動化機能を備える
   minus_points:
     - point: 0
-      reason: ""
-  summary: "チャットアプリを介してPCを操作できる革新的なパーソナルエージェント。ローカルファーストでプライバシー重視の設計が魅力。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: チャットアプリを介してPCを操作できる革新的なパーソナルエージェント。ローカルファーストでプライバシー重視の設計が魅力。
 links:
-  github: "https://github.com/moltbot/moltbot"
-  deepwiki: "https://deepwiki.com/moltbot/moltbot"
-  documentation: "https://docs.molt.bot/"
+  github: https://github.com/moltbot/moltbot
+  deepwiki: https://deepwiki.com/moltbot/moltbot
+  documentation: https://docs.molt.bot/
 relationships:
   related_tools:
-    - "OpenHands"
-    - "Claude"
-    - "OpenAI"
+    - OpenHands
+    - Claude
 ---
+
+
+
 
 # **Moltbot 調査レポート**
 

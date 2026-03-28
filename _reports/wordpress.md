@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "WordPress 調査レポート"
-tool_name: "WordPress"
-tool_reading: "ワードプレス"
-category: "Webフレームワーク"
-developer: "WordPress Foundation"
-official_site: "https://wordpress.org"
-date: "2026-03-15"
-last_updated: "2026-03-15"
+title: WordPress 調査レポート
+tool_name: WordPress
+tool_reading: ワードプレス
+category: Webフレームワーク
+developer: WordPress Foundation
+official_site: https://wordpress.org
+date: '2026-03-15'
+last_updated: '2026-03-15'
 tags:
-  - "CMS"
-  - "オープンソース"
-  - "ノーコード"
-  - "PHP"
-  - "ブログ"
-description: "世界で最も人気のあるオープンソースのコンテンツ管理システム（CMS）で、ブログから企業サイト、Eコマースまであらゆるウェブサイトを構築可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CMS
+  - PHP
+  - オープンソース
+  - ノーコード
+  - ブログ
+description: 世界で最も人気のあるオープンソースのコンテンツ管理システム（CMS）で、ブログから企業サイト、Eコマースまであらゆるウェブサイトを構築可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ブロガー"
-    - "中小企業"
-    - "開発者"
-  latest_highlight: "2026年3月にWordPress 6.9.4のマイナーリリースと、次期メジャーバージョン7.0のBeta 5を公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ブロガー
+    - 中小企業
+    - 開発者
+  latest_highlight: 2026年3月にWordPress 6.9.4のマイナーリリースと、次期メジャーバージョン7.0のBeta 5を公開
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 10
-      reason: "圧倒的なシェアと、10万種類以上のテーマ・プラグインによるエコシステムが非常に強力"
+      reason: 圧倒的なシェアと、10万種類以上のテーマ・プラグインによるエコシステムが非常に強力
     - point: 5
-      reason: "オープンソースで無料で利用でき、カスタマイズの自由度が非常に高い"
+      reason: オープンソースで無料で利用でき、カスタマイズの自由度が非常に高い
     - point: 5
-      reason: "ブロックエディタの導入により、初心者でも直感的にコンテンツ作成が可能"
+      reason: ブロックエディタの導入により、初心者でも直感的にコンテンツ作成が可能
   minus_points:
     - point: -3
-      reason: "人気の高さから攻撃対象になりやすく、継続的なセキュリティ対策が必須"
+      reason: 人気の高さから攻撃対象になりやすく、継続的なセキュリティ対策が必須
     - point: -3
-      reason: "プラグインの多用や設定ミスがサイトのパフォーマンス低下に直結しやすい"
-  summary: "圧倒的なエコシステムと拡張性が強みだが、セキュリティとパフォーマンス管理には注意が必要なCMS。"
-
-# 【任意項目】該当するもののみ記載
+      reason: プラグインの多用や設定ミスがサイトのパフォーマンス低下に直結しやすい
+  summary: 圧倒的なエコシステムと拡張性が強みだが、セキュリティとパフォーマンス管理には注意が必要なCMS。
 links:
-  github: "https://github.com/WordPress/WordPress"
-  deepwiki: "https://deepwiki.com/WordPress/WordPress"
-  documentation: "https://developer.wordpress.org/documentation/"
+  github: https://github.com/WordPress/WordPress
+  deepwiki: https://deepwiki.com/WordPress/WordPress
+  documentation: https://developer.wordpress.org/documentation/
 relationships:
   related_tools:
-    - "Hugo"
-    - "Jekyll"
-    - "Astro"
+    - Hugo
+    - Jekyll
+    - Astro
 ---
+
+
+
 
 # **WordPress 調査レポート**
 

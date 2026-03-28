@@ -1,69 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Kubernetes 調査レポート"
-tool_name: "Kubernetes"
-tool_reading: "クバネティス / クーべネティス"
-category: "インフラ/クラウド"
-developer: "Cloud Native Computing Foundation (CNCF)"
-official_site: "https://kubernetes.io"
-date: "2026-02-17"
-last_updated: "2026-02-17"
+title: Kubernetes 調査レポート
+tool_name: Kubernetes
+tool_reading: クバネティス / クーべネティス
+category: インフラ/クラウド
+developer: Cloud Native Computing Foundation (CNCF)
+official_site: https://kubernetes.io
+date: '2026-02-17'
+last_updated: '2026-02-17'
 tags:
-  - "コンテナ"
-  - "オーケストレーション"
-  - "オープンソース"
-  - "クラウドネイティブ"
-  - "DevOps"
-  - "クラウド"
-description: "コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションシステム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - オーケストレーション
+  - オープンソース
+  - クラウド
+  - クラウドネイティブ
+  - コンテナ
+description: コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションシステム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "インフラエンジニア"
-    - "SRE"
-  latest_highlight: "2025年12月リリースのv1.35でPodの垂直スケーリング機能がGA(正式版)に"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - インフラエンジニア
+    - SRE
+  latest_highlight: 2025年12月リリースのv1.35でPodの垂直スケーリング機能がGA(正式版)に
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "コンテナオーケストレーションのデファクトスタンダード"
+      reason: コンテナオーケストレーションのデファクトスタンダード
     - point: 3
-      reason: "巨大なエコシステムとコミュニティ"
+      reason: 巨大なエコシステムとコミュニティ
     - point: 3
-      reason: "クラウドベンダー各社によるマネージドサービスが充実"
+      reason: クラウドベンダー各社によるマネージドサービスが充実
   minus_points:
     - point: -3
-      reason: "学習コストが非常に高い"
-  summary: "学習コストは高いが、拡張性、移植性、エコシステムの充実度は他を圧倒しており、モダンなインフラ基盤として最適。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 学習コストが非常に高い
+  summary: 学習コストは高いが、拡張性、移植性、エコシステムの充実度は他を圧倒しており、モダンなインフラ基盤として最適。
 links:
-  github: "https://github.com/kubernetes/kubernetes"
-  deepwiki: "https://deepwiki.com/kubernetes/kubernetes"
-  codewiki: "https://codewiki.google/github.com/kubernetes/kubernetes"
-  documentation: "https://kubernetes.io/docs/home/"
+  github: https://github.com/kubernetes/kubernetes
+  deepwiki: https://deepwiki.com/kubernetes/kubernetes
+  codewiki: https://codewiki.google/github.com/kubernetes/kubernetes
+  documentation: https://kubernetes.io/docs/home/
 relationships:
   children:
-    - "Karpenter"
+    - Karpenter
   related_tools:
-    - "Google Cloud"
-    - "Docker"
-    - "Podman"
-    - "Datadog"
-    - "Terraform"
-    - "Ansible"
-    - "Grafana"
+    - Google Cloud
+    - Docker
+    - Podman
+    - Datadog
+    - Terraform
+    - Ansible
+    - Grafana
+  parent: Google Cloud
 ---
+
+
+
 
 # **Kubernetes 調査レポート**
 

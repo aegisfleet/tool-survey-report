@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "JFrog Artifactory 調査レポート"
-tool_name: "JFrog Artifactory"
-tool_reading: "ジェイフロッグ アーティファクトリー"
-category: "開発者ツール"
-developer: "JFrog"
-official_site: "https://jfrog.com/artifactory/"
-date: "2026-01-28"
-last_updated: "2026-03-17"
+title: JFrog Artifactory 調査レポート
+tool_name: JFrog Artifactory
+tool_reading: ジェイフロッグ アーティファクトリー
+category: 開発者ツール
+developer: JFrog
+official_site: https://jfrog.com/artifactory/
+date: '2026-01-28'
+last_updated: '2026-03-17'
 tags:
-  - "DevOps"
-  - "CI/CD"
-  - "セキュリティ"
-  - "AI"
-  - "アーティファクト管理"
-description: "Maven, npm, Docker, PyPIなど、30以上のパッケージフォーマットに対応したユニバーサルアーティファクトリポジトリマネージャー。DevSecOpsの中核として機能する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - DevOps
+  - アーティファクト管理
+  - セキュリティ
+description: Maven, npm, Docker, PyPIなど、30以上のパッケージフォーマットに対応したユニバーサルアーティファクトリポジトリマネージャー。DevSecOpsの中核として機能する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$150/月"
+  starting_price: $150/月
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "エンタープライズ"
-  latest_highlight: "2026年3月にJFrog CLI v2.96.0リリース（UX監査に基づく違反の修正）"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - エンタープライズ
+  latest_highlight: 2026年3月にJFrog CLI v2.96.0リリース（UX監査に基づく違反の修正）
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ほぼ全ての主要なパッケージフォーマットに対応するユニバーサル性が極めて高い。"
+      reason: ほぼ全ての主要なパッケージフォーマットに対応するユニバーサル性が極めて高い。
     - point: 6
-      reason: "JFrog Xrayとの統合による強力なセキュリティスキャンとコンプライアンス対応。"
+      reason: JFrog Xrayとの統合による強力なセキュリティスキャンとコンプライアンス対応。
     - point: 4
-      reason: "AI/MLモデルの管理機能（MLOps）が強化され、時代のニーズに対応している。"
+      reason: AI/MLモデルの管理機能（MLOps）が強化され、時代のニーズに対応している。
   minus_points:
     - point: -3
-      reason: "Cloud版の料金が月額$150からと、個人や小規模チームにはハードルが高め。"
+      reason: Cloud版の料金が月額$150からと、個人や小規模チームにはハードルが高め。
     - point: -2
-      reason: "機能が多岐にわたるため、初期設定や学習コストがやや高い。"
-  summary: "DevOps/DevSecOpsを実現するための事実上の標準ツールの一つ。AI/MLへの対応も進み、包括的な供給網管理が可能。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 機能が多岐にわたるため、初期設定や学習コストがやや高い。
+  summary: DevOps/DevSecOpsを実現するための事実上の標準ツールの一つ。AI/MLへの対応も進み、包括的な供給網管理が可能。
 links:
-  github: "https://github.com/jfrog"
-  documentation: "https://jfrog.com/help/r/artifactory"
+  github: https://github.com/jfrog
+  documentation: https://jfrog.com/help/r/artifactory
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Nexus Repository"
-    - "GitLab"
-    - "GitHub"
-    - "Docker"
+    - Nexus Repository
+    - GitLab
+    - GitHub
+    - Docker
 ---
+
+
+
 
 # **JFrog Artifactory 調査レポート**
 

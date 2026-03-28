@@ -1,62 +1,62 @@
 ---
-title: "Kiwi TCMS 調査レポート"
-tool_name: "Kiwi TCMS"
-tool_reading: "キウイ ティーシーエムエス"
-category: "テスト管理"
-developer: "Kiwi TCMS Team"
-official_site: "https://kiwitcms.org/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: Kiwi TCMS 調査レポート
+tool_name: Kiwi TCMS
+tool_reading: キウイ ティーシーエムエス
+category: テスト管理
+developer: Kiwi TCMS Team
+official_site: https://kiwitcms.org/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "開発ツール"
-  - "Python"
-  - "Django"
-  - "Docker"
-description: "主要なオープンソースのテスト管理システム（TCMS）。手動および自動テストを一元管理し、JiraやGitHubなどのバグトラッカーと強力に連携。"
-
+  - Django
+  - Docker
+  - Python
+  - オープンソース
+  - テスト自動化
+  - 開発ツール
+description: 主要なオープンソースのテスト管理システム（TCMS）。手動および自動テストを一元管理し、JiraやGitHubなどのバグトラッカーと強力に連携。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-    - "QAマネージャー"
-  latest_highlight: "2026年1月にバージョン15.3をリリース"
-  update_frequency: "高"
-
+    - QAエンジニア
+    - 開発者
+    - QAマネージャー
+  latest_highlight: 2026年1月にバージョン15.3をリリース
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全なオープンソースであり、オンプレミスで無料で利用可能"
+      reason: 完全なオープンソースであり、オンプレミスで無料で利用可能
     - point: 3
-      reason: "Jira, GitHub, GitLabなど多数のバグトラッカーと連携可能"
+      reason: Jira, GitHub, GitLabなど多数のバグトラッカーと連携可能
     - point: 3
-      reason: "豊富な自動化プラグインとAPIを提供"
+      reason: 豊富な自動化プラグインとAPIを提供
   minus_points:
     - point: -3
-      reason: "公式の日本語UIが提供されていない"
-  summary: "コストパフォーマンス最強のテスト管理ツール。オープンソースでカスタマイズ性が高く、技術力のあるチームに最適。"
-
+      reason: 公式の日本語UIが提供されていない
+  summary: コストパフォーマンス最強のテスト管理ツール。オープンソースでカスタマイズ性が高く、技術力のあるチームに最適。
 links:
-  github: "https://github.com/kiwitcms/Kiwi"
-  deepwiki: "https://deepwiki.com/kiwitcms/Kiwi"
-  documentation: "https://kiwitcms.readthedocs.io/"
+  github: https://github.com/kiwitcms/Kiwi
+  deepwiki: https://deepwiki.com/kiwitcms/Kiwi
+  documentation: https://kiwitcms.readthedocs.io/
 relationships:
   related_tools:
-    - "TestRail"
-    - "Qase"
-    - "Jira"
-    - "Redmine"
-    - "GitHub"
-    - "GitLab"
-    - "Selenium"
+    - TestRail
+    - Qase
+    - Jira
+    - Redmine
+    - GitHub
+    - GitLab
+    - Selenium
 layout: report
 ---
+
+
+
 
 # **Kiwi TCMS 調査レポート**
 

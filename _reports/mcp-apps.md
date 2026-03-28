@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "MCP Apps 調査レポート"
-tool_name: "MCP Apps"
-tool_reading: "エムシーピー アップス"
-category: "開発者ツール"
-developer: "Anthropic (Model Context Protocol Project)"
-official_site: "https://modelcontextprotocol.io/docs/extensions/apps"
-date: "2026-03-10"
-last_updated: "2026-03-10"
+title: MCP Apps 調査レポート
+tool_name: MCP Apps
+tool_reading: エムシーピー アップス
+category: 開発者ツール
+developer: Anthropic (Model Context Protocol Project)
+official_site: https://modelcontextprotocol.io/docs/extensions/apps
+date: '2026-03-10'
+last_updated: '2026-03-10'
 tags:
-  - "エージェント"
-  - "UI/UX"
-  - "オープンソース"
-  - "開発者ツール"
-description: "AIチャットインターフェース内でインタラクティブなUIを表示するためのModel Context Protocol (MCP) の拡張機能"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - UI/UX
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+description: AIチャットインターフェース内でインタラクティブなUIを表示するためのModel Context Protocol (MCP) の拡張機能
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "Claude DesktopやVS Codeでのサポートが拡充中"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエンジニア
+  latest_highlight: Claude DesktopやVS Codeでのサポートが拡充中
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "チャット内でのリッチなUI表現を標準化"
+      reason: チャット内でのリッチなUI表現を標準化
     - point: 5
-      reason: "オープンソースで誰でも拡張可能"
+      reason: オープンソースで誰でも拡張可能
     - point: 3
-      reason: "セキュアなサンドボックス実行環境"
+      reason: セキュアなサンドボックス実行環境
     - point: 2
-      reason: "活発なエコシステムと開発速度"
+      reason: 活発なエコシステムと開発速度
   minus_points: []
-  summary: "AIとの対話をテキストからインタラクティブな体験へと進化させる革新的なプロトコル拡張"
-
-# 【任意項目】該当するもののみ記載
+  summary: AIとの対話をテキストからインタラクティブな体験へと進化させる革新的なプロトコル拡張
 links:
-  github: "https://github.com/modelcontextprotocol/ext-apps"
-  deepwiki: "https://deepwiki.com/modelcontextprotocol/ext-apps"
-  documentation: "https://modelcontextprotocol.io/docs/extensions/apps"
+  github: https://github.com/modelcontextprotocol/ext-apps
+  deepwiki: https://deepwiki.com/modelcontextprotocol/ext-apps
+  documentation: https://modelcontextprotocol.io/docs/extensions/apps
 relationships:
-  parent: "Model Context Protocol"
+  parent: Model Context Protocol
   children: []
   related_tools:
-    - "Claude"
-    - "Visual Studio Code"
-    - "Claude Code"
-    - "Agent Skills"
+    - Claude
+    - Visual Studio Code
+    - Claude Code
+    - Agent Skills
 ---
+
+
+
 
 # **MCP Apps 調査レポート**
 

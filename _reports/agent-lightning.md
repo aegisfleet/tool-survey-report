@@ -1,63 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Agent Lightning 調査レポート"
-tool_name: "Agent Lightning"
-tool_reading: "エージェント ライトニング"
-category: "AI開発基盤"
-developer: "Microsoft (Research)"
-official_site: "https://microsoft.github.io/agent-lightning/"
-date: "2026-02-23"
-last_updated: "2026-02-23"
+title: Agent Lightning 調査レポート
+tool_name: Agent Lightning
+tool_reading: エージェント ライトニング
+category: AI開発基盤
+developer: Microsoft (Research)
+official_site: https://microsoft.github.io/agent-lightning/
+date: '2026-02-23'
+last_updated: '2026-02-23'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "強化学習"
-  - "最適化"
-  - "MLOps"
-description: "強化学習やAPOを用いて、あらゆるAIエージェントフレームワークのエージェントを「コード変更なし」で最適化・学習させるためのトレーニングフレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - MLOps
+  - エージェント
+  - オープンソース
+  - 強化学習
+  - 最適化
+description: 強化学習やAPOを用いて、あらゆるAIエージェントフレームワークのエージェントを「コード変更なし」で最適化・学習させるためのトレーニングフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIリサーチャー"
-    - "AIエンジニア"
-  latest_highlight: "2025年12月にv0.3.0をリリース。Tinkerとの連携やvLLMによる学習高速化を実現"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIリサーチャー
+    - AIエンジニア
+  latest_highlight: 2025年12月にv0.3.0をリリース。Tinkerとの連携やvLLMによる学習高速化を実現
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "既存のエージェントコードを修正せずに強化学習ループに組み込める「Zero Code Change」設計が革新的"
+      reason: 既存のエージェントコードを修正せずに強化学習ループに組み込める「Zero Code Change」設計が革新的
     - point: 5
-      reason: "LangChain, AutoGen, CrewAIなど主要なフレームワークを問わず利用できる高い汎用性"
+      reason: LangChain, AutoGen, CrewAIなど主要なフレームワークを問わず利用できる高い汎用性
   minus_points:
     - point: -2
-      reason: "高度な機能ゆえに学習コストが高く、RL（強化学習）の知識も求められる"
-  summary: "エージェント開発の「作成」から「育成（最適化）」へのシフトを促す先駆的なツール。研究・高度開発向け。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な機能ゆえに学習コストが高く、RL（強化学習）の知識も求められる
+  summary: エージェント開発の「作成」から「育成（最適化）」へのシフトを促す先駆的なツール。研究・高度開発向け。
 links:
-  github: "https://github.com/microsoft/agent-lightning"
-  codewiki: "https://codewiki.google/github.com/microsoft/agent-lightning"
-  deepwiki: "https://deepwiki.com/microsoft/agent-lightning"
-  documentation: "https://microsoft.github.io/agent-lightning/stable/"
+  github: https://github.com/microsoft/agent-lightning
+  codewiki: https://codewiki.google/github.com/microsoft/agent-lightning
+  deepwiki: https://deepwiki.com/microsoft/agent-lightning
+  documentation: https://microsoft.github.io/agent-lightning/stable/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "LangChain"
-    - "AutoGen"
-    - "DSPy"
-    - "LangSmith"
+    - LangChain
 ---
+
+
+
 
 # **Agent Lightning 調査レポート**
 

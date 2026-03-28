@@ -1,53 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Jinba 調査レポート"
-tool_name: "Jinba"
-tool_reading: "ジンバ"
-category: "ワークフロー自動化"
-developer: "Carnot Inc."
-official_site: "https://jinba.io/"
-date: "2026-03-21"
-last_updated: "2026-03-21"
+title: Jinba 調査レポート
+tool_name: Jinba
+tool_reading: ジンバ
+category: ワークフロー自動化
+developer: Carnot Inc.
+official_site: https://jinba.io/
+date: '2026-03-21'
+last_updated: '2026-03-21'
 tags:
-  - "AI"
-  - "自動化"
-  - "エンタープライズ"
-description: "自然言語でAIエージェント機能を含むワークフローを構築・実行・デプロイできるエンタープライズ向けプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エンタープライズ
+  - 自動化
+description: 自然言語でAIエージェント機能を含むワークフローを構築・実行・デプロイできるエンタープライズ向けプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "大企業"
-    - "スタートアップ"
-  latest_highlight: "Jinba Toolbox Betaの提供によるAIエージェントツールの集中管理"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 大企業
+    - スタートアップ
+  latest_highlight: Jinba Toolbox Betaの提供によるAIエージェントツールの集中管理
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "自然言語のみでMCP/API化までシームレスに開発可能"
+      reason: 自然言語のみでMCP/API化までシームレスに開発可能
     - point: 5
-      reason: "SOC II対応予定・SSO・RBACなどエンタープライズ向けの堅牢なセキュリティ体制"
+      reason: SOC II対応予定・SSO・RBACなどエンタープライズ向けの堅牢なセキュリティ体制
     - point: 5
-      reason: "豊富な事前連携機能とカスタムコネクタへの柔軟な対応"
+      reason: 豊富な事前連携機能とカスタムコネクタへの柔軟な対応
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "社内業務の自動化から高度なAIエージェントの構築まで、大規模な組織での利用に適した強力なプラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: 社内業務の自動化から高度なAIエージェントの構築まで、大規模な組織での利用に適した強力なプラットフォーム
 links:
-  documentation: "https://carnot.mintlify.app/en/introduction"
+  documentation: https://carnot.mintlify.app/en/introduction
 relationships: {}
 ---
+
+
+
 
 # **Jinba 調査レポート**
 

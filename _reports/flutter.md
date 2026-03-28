@@ -1,74 +1,69 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Flutter 調査レポート"
-tool_name: "Flutter"
-tool_reading: "フラッター"
-category: "モバイル開発"
-developer: "Google"
-official_site: "https://flutter.dev/"
-date: "2026-02-15"
-last_updated: "2026-02-15"
+title: Flutter 調査レポート
+tool_name: Flutter
+tool_reading: フラッター
+category: モバイル開発
+developer: Google
+official_site: https://flutter.dev/
+date: '2026-02-15'
+last_updated: '2026-02-15'
 tags:
-  - "モバイル開発"
-  - "クロスプラットフォーム"
-  - "オープンソース"
-  - "開発者ツール"
-  - "Dart"
-description: "単一のコードベースからモバイル、Web、デスクトップ向けの高性能で美しいUIを持つネイティブアプリを構築するためのGoogle製オープンソースUIツールキット。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Dart
+  - オープンソース
+  - クロスプラットフォーム
+  - モバイル開発
+  - 開発者ツール
+description: 単一のコードベースからモバイル、Web、デスクトップ向けの高性能で美しいUIを持つネイティブアプリを構築するためのGoogle製オープンソースUIツールキット。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "デザイナー"
-  latest_highlight: "2026年2月のFlutter 3.38.10リリースで安定性がさらに向上し、Impellerレンダリングエンジンが完全定着"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - デザイナー
+  latest_highlight: 2026年2月のFlutter 3.38.10リリースで安定性がさらに向上し、Impellerレンダリングエンジンが完全定着
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "単一コードベースでのマルチプラットフォーム対応による圧倒的な開発効率の高さ"
+      reason: 単一コードベースでのマルチプラットフォーム対応による圧倒的な開発効率の高さ
     - point: 8
-      reason: "Impellerエンジンの安定化により、iOS/Android共にシェーダーコンパイルの遅延（ジャンク）が解消"
+      reason: Impellerエンジンの安定化により、iOS/Android共にシェーダーコンパイルの遅延（ジャンク）が解消
     - point: 5
-      reason: "ネイティブコードにコンパイルされることによる高いパフォーマンス"
+      reason: ネイティブコードにコンパイルされることによる高いパフォーマンス
     - point: 3
-      reason: "Googleの強力なサポートと、AI支援機能（Gemini CLI）の統合による生産性向上"
+      reason: Googleの強力なサポートと、AI支援機能（Gemini CLI）の統合による生産性向上
   minus_points:
     - point: -3
-      reason: "ネイティブアプリと比較してアプリケーションのファイルサイズが大きくなる傾向がある"
+      reason: ネイティブアプリと比較してアプリケーションのファイルサイズが大きくなる傾向がある
     - point: -3
-      reason: "OS固有の機能やハードウェア連携において、ブリッジコードの実装が依然として必要"
+      reason: OS固有の機能やハードウェア連携において、ブリッジコードの実装が依然として必要
     - point: -2
-      reason: "プログラミング言語Dartの習得に追加の学習コストが必要"
-  summary: "Impellerの完成により最大の弱点だった描画パフォーマンスが解決。クロスプラットフォーム開発の決定版。"
-
-# 【任意項目】該当するもののみ記載
+      reason: プログラミング言語Dartの習得に追加の学習コストが必要
+  summary: Impellerの完成により最大の弱点だった描画パフォーマンスが解決。クロスプラットフォーム開発の決定版。
 links:
-  github: "https://github.com/flutter/flutter"
-  codewiki: "https://codewiki.google/github.com/flutter/flutter"
-  deepwiki: "https://deepwiki.com/flutter/flutter"
-  documentation: "https://docs.flutter.dev/"
+  github: https://github.com/flutter/flutter
+  codewiki: https://codewiki.google/github.com/flutter/flutter
+  deepwiki: https://deepwiki.com/flutter/flutter
+  documentation: https://docs.flutter.dev/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "React"
-    - "Kotlin Multiplatform"
-    - "Android Studio"
-    - "Visual Studio Code"
-    - "RevenueCat"
-    - "Mobile Next"
-    - "Fluorite Game Engine"
+    - React
+    - Kotlin Multiplatform
+    - Android Studio
+    - Visual Studio Code
+    - RevenueCat
+    - Mobile Next
+    - Fluorite Game Engine
 ---
+
+
+
 
 # **Flutter 調査レポート**
 

@@ -1,53 +1,53 @@
 ---
-title: "AdGuard 調査レポート"
-tool_name: "AdGuard"
-tool_reading: "アドガード"
-category: "セキュリティ"
-developer: "Adguard Software Ltd."
-official_site: "https://adguard.com/"
-date: "2026-03-12"
-last_updated: "2026-03-12"
+title: AdGuard 調査レポート
+tool_name: AdGuard
+tool_reading: アドガード
+category: CDN/セキュリティ
+developer: Adguard Software Ltd.
+official_site: https://adguard.com/
+date: '2026-03-12'
+last_updated: '2026-03-12'
 tags:
-  - "広告ブロック"
-  - "プライバシー保護"
-  - "VPN"
-description: "広告やトラッカーをブロックし、オンラインプライバシーを保護する包括的なセキュリティツール群。"
-
+  - VPN
+  - プライバシー保護
+  - 広告ブロック
+description: 広告やトラッカーをブロックし、オンラインプライバシーを保護する包括的なセキュリティツール群。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般ユーザー"
-    - "開発者"
-  latest_highlight: "2026年3月にMeta Quest向けVR対応アドブロッカーをリリース"
-  update_frequency: "高"
-
+    - 一般ユーザー
+    - 開発者
+  latest_highlight: 2026年3月にMeta Quest向けVR対応アドブロッカーをリリース
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 8
-      reason: "あらゆるプラットフォーム向けのアプリ・拡張機能を網羅し、システム全体での広告ブロックが可能"
+      reason: あらゆるプラットフォーム向けのアプリ・拡張機能を網羅し、システム全体での広告ブロックが可能
     - point: 5
-      reason: "優れたトラッカーブロックとプライバシー保護機能"
+      reason: 優れたトラッカーブロックとプライバシー保護機能
     - point: 4
-      reason: "オープンソースプロジェクトとしての透明性と活発な開発"
+      reason: オープンソースプロジェクトとしての透明性と活発な開発
     - point: 5
-      reason: "VPNやDNSといった派生製品による総合的なセキュリティ対策"
+      reason: VPNやDNSといった派生製品による総合的なセキュリティ対策
   minus_points:
-    - point: -0
-      reason: "特になし"
-  summary: "単なるブラウザ拡張機能を超え、システムレベルで広告とトラッキングを排除する強力なツール群"
-
+    - point: 0
+      reason: 特になし
+  summary: 単なるブラウザ拡張機能を超え、システムレベルで広告とトラッキングを排除する強力なツール群
 links:
-  github: "https://github.com/AdguardTeam"
-  documentation: "https://adguard.com/kb/"
+  github: https://github.com/AdguardTeam
+  documentation: https://adguard.com/kb/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools: []
 ---
+
+
+
 
 # **AdGuard 調査レポート**
 

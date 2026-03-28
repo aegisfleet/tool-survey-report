@@ -1,58 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AluminiumOS 調査レポート"
-tool_name: "AluminiumOS"
-tool_reading: "アルミニウムオーエス"
-category: "オペレーティングシステム"
-developer: "Google"
-official_site: "https://aluminium-os.com/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: AluminiumOS 調査レポート
+tool_name: AluminiumOS
+tool_reading: アルミニウムオーエス
+category: オペレーティングシステム
+developer: Google
+official_site: https://aluminium-os.com/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "OS"
-  - "Android"
-  - "ChromeOS"
-  - "AI"
-  - "Desktop"
-description: "Googleが開発中の次世代オペレーティングシステム。ChromeOSとAndroidを統合し、AIを中心としたシームレスなデスクトップ体験を提供することを目指している。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Android
+  - ChromeOS
+  - Desktop
+  - OS
+description: Googleが開発中の次世代オペレーティングシステム。ChromeOSとAndroidを統合し、AIを中心としたシームレスなデスクトップ体験を提供することを目指している。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (想定)"
+  starting_price: 無料 (想定)
   target_users:
-    - "一般ユーザー"
-    - "開発者"
-    - "Androidユーザー"
-  latest_highlight: "2026年1月にAndroid 16ベースのデスクトップインターフェースがリーク"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 一般ユーザー
+    - 開発者
+    - Androidユーザー
+  latest_highlight: 2026年1月にAndroid 16ベースのデスクトップインターフェースがリーク
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AndroidアプリとChromeOSの完全な統合によるエコシステムの拡大"
+      reason: AndroidアプリとChromeOSの完全な統合によるエコシステムの拡大
     - point: 5
-      reason: "OSレベルでの深いAI統合による生産性向上"
+      reason: OSレベルでの深いAI統合による生産性向上
     - point: 5
-      reason: "スマートフォンとデスクトップの境界をなくすシームレスな連携"
+      reason: スマートフォンとデスクトップの境界をなくすシームレスな連携
   minus_points: []
-  summary: "デスクトップOSの概念を再定義する、Googleの野心的な次世代プラットフォーム"
-
-# 【任意項目】該当するもののみ記載
-links:
-  # github: "" # Not available yet
-  # documentation: ""
+  summary: デスクトップOSの概念を再定義する、Googleの野心的な次世代プラットフォーム
+links: null
 relationships:
   related_tools:
-    - "Android"
-    - "gemini"
-    - "android-studio"
+    - Android
+  parent: Android
 ---
+
+
+
 
 # **AluminiumOS 調査レポート**
 

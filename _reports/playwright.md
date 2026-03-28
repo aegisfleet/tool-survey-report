@@ -1,78 +1,72 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Playwright 調査レポート"
-tool_name: "Playwright"
-tool_reading: "プレイライト"
-category: "テスト/QA"
-developer: "Microsoft"
-official_site: "https://playwright.dev/"
-date: "2025-10-18"
-last_updated: "2026-03-23"
+title: Playwright 調査レポート
+tool_name: Playwright
+tool_reading: プレイライト
+category: テスト/QA
+developer: Microsoft
+official_site: https://playwright.dev/
+date: '2025-10-18'
+last_updated: '2026-03-23'
 tags:
-  - "テスト自動化"
-  - "E2Eテスト"
-  - "開発者ツール"
-  - "オープンソース"
-  - "CI/CD"
-  - "AI"
-  - "エージェント"
-description: "Microsoftが開発する、最新のWebアプリ向けエンドツーエンドテスト自動化フレームワーク。AIエージェント機能や強力なデバッグツールを備え、単一APIで全主要ブラウザに対応する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - E2Eテスト
+  - エージェント
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: Microsoftが開発する、最新のWebアプリ向けエンドツーエンドテスト自動化フレームワーク。AIエージェント機能や強力なデバッグツールを備え、単一APIで全主要ブラウザに対応する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年1月にAIエージェント向けCLIモード(v1.58)を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Web開発者
+    - QAエンジニア
+  latest_highlight: 2026年1月にAIエージェント向けCLIモード(v1.58)を追加
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "自動待機機能、強力なデバッグツール（Trace Viewer）、クロスブラウザ対応など、機能が非常に豊富でテストの安定性が高い。"
+      reason: 自動待機機能、強力なデバッグツール（Trace Viewer）、クロスブラウザ対応など、機能が非常に豊富でテストの安定性が高い。
     - point: 7
-      reason: "Playwright Test AgentsやCLIスキルなど、AI時代に対応した先進的な機能をいち早く取り入れている。"
+      reason: Playwright Test AgentsやCLIスキルなど、AI時代に対応した先進的な機能をいち早く取り入れている。
     - point: 5
-      reason: "公式ドキュメントが非常に充実しており、Codegen機能など初学者でも学習を始めやすい。"
+      reason: 公式ドキュメントが非常に充実しており、Codegen機能など初学者でも学習を始めやすい。
     - point: 5
-      reason: "Microsoftによる活発な開発が続いており、月次でのアップデートで常に最新技術に対応している。"
+      reason: Microsoftによる活発な開発が続いており、月次でのアップデートで常に最新技術に対応している。
     - point: 5
-      reason: "完全無料のオープンソースでありながら、有料ツールに匹敵、あるいは凌駕する機能を持つ。"
+      reason: 完全無料のオープンソースでありながら、有料ツールに匹敵、あるいは凌駕する機能を持つ。
   minus_points:
     - point: -3
-      reason: "公式ドキュメントやツールUIは英語のみで、日本語ネイティブのサポートは提供されていない。"
+      reason: 公式ドキュメントやツールUIは英語のみで、日本語ネイティブのサポートは提供されていない。
     - point: -2
-      reason: "高機能ゆえにAPIが膨大で、全機能を使いこなすには一定の学習コストが必要。"
-  summary: "AI時代のテスト自動化におけるデファクトスタンダード。機能、安定性、将来性の全てにおいてトップクラスの評価。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高機能ゆえにAPIが膨大で、全機能を使いこなすには一定の学習コストが必要。
+  summary: AI時代のテスト自動化におけるデファクトスタンダード。機能、安定性、将来性の全てにおいてトップクラスの評価。
 links:
-  github: "https://github.com/microsoft/playwright"
-  codewiki: "https://codewiki.google/github.com/microsoft/playwright"
-  deepwiki: "https://deepwiki.com/microsoft/playwright"
-  documentation: "https://playwright.dev/docs/intro"
+  github: https://github.com/microsoft/playwright
+  codewiki: https://codewiki.google/github.com/microsoft/playwright
+  deepwiki: https://deepwiki.com/microsoft/playwright
+  documentation: https://playwright.dev/docs/intro
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "Playwright Test Agents"
-    - "Playwright CLI"
+    - Playwright Test Agents
+    - Playwright CLI
   related_tools:
-    - "Cypress"
-    - "Selenium"
-    - "Autify"
-    - "MagicPod"
-    - "mabl"
-    - "Gauge"
-    - "Appium"
-    - "Karate"
+    - Cypress
+    - Selenium
+    - Autify
+    - MagicPod
+    - mabl
+    - Gauge
+    - Appium
 ---
+
+
+
 
 # **Playwright 調査レポート**
 

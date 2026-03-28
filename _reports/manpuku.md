@@ -1,52 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "まん福 調査レポート"
-tool_name: "まん福"
-tool_reading: "マンプク"
-category: "ふるさと納税"
-developer: "株式会社SHIFT"
-official_site: "https://www.manpuku.app/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: まん福 調査レポート
+tool_name: まん福
+tool_reading: マンプク
+category: ふるさと納税
+developer: 株式会社SHIFT
+official_site: https://www.manpuku.app/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "福利厚生"
-  - "ふるさと納税"
-  - "ESG"
-  - "SaaS"
-description: "従業員向けの福利厚生型ふるさと納税サービス。企業が導入することで、従業員は簡単にふるさと納税ができ、企業は福利厚生の充実やESG経営のアピールが可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - ESG
+  - SaaS
+  - ふるさと納税
+  - 福利厚生
+description: 従業員向けの福利厚生型ふるさと納税サービス。企業が導入することで、従業員は簡単にふるさと納税ができ、企業は福利厚生の充実やESG経営のアピールが可能。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "0円"
+  starting_price: 0円
   target_users:
-    - "企業の人事・総務担当者"
-    - "従業員"
-  latest_highlight: "従業員と地域を繋ぐ新しい福利厚生の形を提供"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 企業の人事・総務担当者
+    - 従業員
+  latest_highlight: 従業員と地域を繋ぐ新しい福利厚生の形を提供
+  update_frequency: 中
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "初期費用・月額費用0円から導入可能"
+      reason: 初期費用・月額費用0円から導入可能
     - point: 3
-      reason: "ESG経営や地方創生に貢献できる"
+      reason: ESG経営や地方創生に貢献できる
   minus_points:
     - point: 0
-      reason: "特になし（B2Bサービスのため詳細な比較が難しいが、コストメリットは大きい）"
-  summary: "コスト負担なく導入できる福利厚生として、従業員満足度向上と企業の社会貢献を両立できる優れたサービス。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（B2Bサービスのため詳細な比較が難しいが、コストメリットは大きい）
+  summary: コスト負担なく導入できる福利厚生として、従業員満足度向上と企業の社会貢献を両立できる優れたサービス。
 links:
-  documentation: "https://www.manpuku.app/"
+  documentation: https://www.manpuku.app/
 relationships:
   related_tools: []
 ---
+
+
+
 
 # **まん福 調査レポート**
 

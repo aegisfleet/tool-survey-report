@@ -1,52 +1,52 @@
 ---
-title: "Circleback 調査レポート"
-tool_name: "Circleback"
-tool_reading: "サークルバック"
-category: "業務系ツール"
-developer: "Circleback AI, Inc."
-official_site: "https://circleback.ai/"
-date: "2026-03-26"
-last_updated: "2026-03-26"
+title: Circleback 調査レポート
+tool_name: Circleback
+tool_reading: サークルバック
+category: プロジェクト管理
+developer: Circleback AI, Inc.
+official_site: https://circleback.ai/
+date: '2026-03-26'
+last_updated: '2026-03-26'
 tags:
-  - "AI"
-  - "自動化"
-  - "SaaS"
-  - "開発者ツール"
-  - "議事録"
-description: "会議の録音、文字起こし、要約、アクションアイテムの抽出を自動化し、MCP対応によりAIエージェントとも連携可能なミーティングアシスタント。"
-
+  - AI
+  - SaaS
+  - 自動化
+  - 議事録
+  - 開発者ツール
+description: 会議の録音、文字起こし、要約、アクションアイテムの抽出を自動化し、MCP対応によりAIエージェントとも連携可能なミーティングアシスタント。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$20.83/月"
+  starting_price: $20.83/月
   target_users:
-    - "営業チーム"
-    - "プロダクトマネージャー"
-    - "経営者"
-  latest_highlight: "2026年3月にターミナルからアクセス可能なCircleback CLIを追加"
-  update_frequency: "高"
-
+    - 営業チーム
+    - プロダクトマネージャー
+    - 経営者
+  latest_highlight: 2026年3月にターミナルからアクセス可能なCircleback CLIを追加
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "MCP (Model Context Protocol) 対応により、CursorやClaudeなどの外部AIツールから会議データを利用可能"
+      reason: MCP (Model Context Protocol) 対応により、CursorやClaudeなどの外部AIツールから会議データを利用可能
     - point: 4
-      reason: "ボットレス録画や対面会議対応など、柔軟な録音スタイル"
+      reason: ボットレス録画や対面会議対応など、柔軟な録音スタイル
     - point: 5
-      reason: "Notion, Linear, HubSpotなどへの強力な連携と自動化機能"
+      reason: Notion, Linear, HubSpotなどへの強力な連携と自動化機能
   minus_points:
     - point: -2
-      reason: "無料プランがなく、トライアル終了後は有料化必須"
-  summary: "単なる議事録ツールを超え、MCP対応によりAI開発フローにも組み込める強力なアシスタントだが、コストは要検討。"
-
+      reason: 無料プランがなく、トライアル終了後は有料化必須
+  summary: 単なる議事録ツールを超え、MCP対応によりAI開発フローにも組み込める強力なアシスタントだが、コストは要検討。
 links:
-  documentation: "https://support.circleback.ai/"
+  documentation: https://support.circleback.ai/
 relationships:
   related_tools:
-    - "Microsoft 365 Copilot"
+    - Microsoft 365 Copilot
 ---
+
+
+
 
 # **Circleback 調査レポート**
 

@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Android Use 調査レポート"
-tool_name: "Android Use"
-tool_reading: "アンドロイド ユース"
-category: "自律型AIエージェント"
-developer: "Action State Labs"
-official_site: "https://github.com/actionstatelabs/android-action-kernel"
-date: "2026-01-28"
-last_updated: "2026-03-17"
+title: Android Use 調査レポート
+tool_name: Android Use
+tool_reading: アンドロイド ユース
+category: 自律型AIエージェント
+developer: Action State Labs
+official_site: https://github.com/actionstatelabs/android-action-kernel
+date: '2026-01-28'
+last_updated: '2026-03-17'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "オープンソース"
-  - "自動化"
-description: "Androidネイティブアプリを操作するためのオープンソースのAIエージェントライブラリ。アクセシビリティツリーを利用して低コストかつ高速な操作を実現。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 自動化
+  - 自律型
+description: Androidネイティブアプリを操作するためのオープンソースのAIエージェントライブラリ。アクセシビリティツリーを利用して低コストかつ高速な操作を実現。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-    - "業務自動化担当者"
-  latest_highlight: "2025年12月に初期バージョンが公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - QAエンジニア
+    - 業務自動化担当者
+  latest_highlight: 2025年12月に初期バージョンが公開
+  update_frequency: 高
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Visionモデルに依存しないアプローチにより、低コスト・高速動作を実現している点"
+      reason: Visionモデルに依存しないアプローチにより、低コスト・高速動作を実現している点
     - point: 5
-      reason: "モバイルネイティブ環境の自動化というユニークな着眼点"
+      reason: モバイルネイティブ環境の自動化というユニークな着眼点
     - point: 5
-      reason: "オープンソースで誰でも無料で利用・改変できる点"
+      reason: オープンソースで誰でも無料で利用・改変できる点
   minus_points:
     - point: -5
-      reason: "初期段階のプロジェクトであり、機能の安定性やドキュメントが発展途上"
+      reason: 初期段階のプロジェクトであり、機能の安定性やドキュメントが発展途上
     - point: -3
-      reason: "利用にADBのセットアップなど、一定の技術的知識が必要"
+      reason: 利用にADBのセットアップなど、一定の技術的知識が必要
     - point: -3
-      reason: "日本語に非対応であり、日本語アプリの操作精度は未知数"
-  summary: "モバイル環境の自動化に革命を起こす可能性を秘めた、低コスト・高速なAIエージェント"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語に非対応であり、日本語アプリの操作精度は未知数
+  summary: モバイル環境の自動化に革命を起こす可能性を秘めた、低コスト・高速なAIエージェント
 links:
-  github: "https://github.com/actionstatelabs/android-action-kernel"
-  deepwiki: "https://deepwiki.com/actionstatelabs/android-action-kernel"
+  github: https://github.com/actionstatelabs/android-action-kernel
+  deepwiki: https://deepwiki.com/actionstatelabs/android-action-kernel
 relationships:
   related_tools:
-    - "Android"
-    - "Appium"
-    - "UiPath"
-    - "Devin"
-    - "Claude"
+    - Android
+    - Appium
+    - UiPath
+    - Devin
+    - Claude
+  parent: Android
 ---
+
+
+
 
 # **Android Use 調査レポート**
 

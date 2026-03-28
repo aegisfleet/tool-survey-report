@@ -1,57 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Tera Term 調査レポート"
-tool_name: "Tera Term"
-tool_reading: "テラターム"
-category: "開発者ツール"
-developer: "TeraTerm Project"
-official_site: "https://teratermproject.github.io/"
-date: "2026-02-28"
-last_updated: "2026-02-28"
+title: Tera Term 調査レポート
+tool_name: Tera Term
+tool_reading: テラターム
+category: 開発者ツール
+developer: TeraTerm Project
+official_site: https://teratermproject.github.io/
+date: '2026-02-28'
+last_updated: '2026-02-28'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "SSH"
-  - "Windows"
-description: "Windowsで動作するオープンソースのターミナルエミュレータ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SSH
+  - Windows
+  - オープンソース
+  - 開発者ツール
+description: Windowsで動作するオープンソースのターミナルエミュレータ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "インフラエンジニア"
-    - "ネットワークエンジニア"
-  latest_highlight: "SSH対応の拡充やWindows上での安定したエミュレーション"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - インフラエンジニア
+    - ネットワークエンジニア
+  latest_highlight: SSH対応の拡充やWindows上での安定したエミュレーション
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "長年にわたる実績と安定性"
+      reason: 長年にわたる実績と安定性
     - point: 3
-      reason: "日本語UIのサポートと充実したドキュメント"
+      reason: 日本語UIのサポートと充実したドキュメント
     - point: 2
-      reason: "マクロ機能（TTL）による自動化機能"
+      reason: マクロ機能（TTL）による自動化機能
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "Windows向けの定番ターミナルエミュレータとして、SSH接続やシリアル通信で高い信頼性を持つ"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: Windows向けの定番ターミナルエミュレータとして、SSH接続やシリアル通信で高い信頼性を持つ
 links:
-  github: "https://github.com/TeraTermProject/teraterm"
-  deepwiki: "https://deepwiki.com/TeraTermProject/teraterm"
+  github: https://github.com/TeraTermProject/teraterm
+  deepwiki: https://deepwiki.com/TeraTermProject/teraterm
 relationships:
-  related_tools:
-    - "PuTTY"
+  related_tools: []
 ---
+
+
+
 
 # **Tera Term 調査レポート**
 

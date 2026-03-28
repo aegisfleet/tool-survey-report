@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "New Relic 調査レポート"
-tool_name: "New Relic"
-tool_reading: "ニューレリック"
-category: "監視/可観測性"
-developer: "New Relic, Inc."
-official_site: "https://newrelic.com/"
-date: "2026-01-31"
-last_updated: "2026-01-31"
+title: New Relic 調査レポート
+tool_name: New Relic
+tool_reading: ニューレリック
+category: 監視/可観測性
+developer: New Relic, Inc.
+official_site: https://newrelic.com/
+date: '2026-01-31'
+last_updated: '2026-01-31'
 tags:
-  - "SaaS"
-  - "監視"
-  - "オブザーバビリティ"
-  - "APM"
-  - "ログ管理"
-  - "AI監視"
-description: "New Relicは、インフラ、アプリケーション、ログ、ユーザー体験を統合的に監視・分析できるフルスタックオブザーバビリティプラットフォームです。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI監視
+  - APM
+  - SaaS
+  - オブザーバビリティ
+  - ログ管理
+  - 監視
+description: New Relicは、インフラ、アプリケーション、ログ、ユーザー体験を統合的に監視・分析できるフルスタックオブザーバビリティプラットフォームです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (100GB/月まで)"
+  starting_price: 無料 (100GB/月まで)
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "SRE"
-  latest_highlight: "2026年1月、アカウントセキュリティ強化のためのMFA必須化を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - SRE
+  latest_highlight: 2026年1月、アカウントセキュリティ強化のためのMFA必須化を実施
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "無料プランが非常に充実しており（100GB/月、1フルユーザー）、個人や小規模チームが導入しやすい"
+      reason: 無料プランが非常に充実しており（100GB/月、1フルユーザー）、個人や小規模チームが導入しやすい
     - point: 5
-      reason: "30以上の機能がオールインワンで提供され、データのサイロ化を防げる"
+      reason: 30以上の機能がオールインワンで提供され、データのサイロ化を防げる
     - point: 2
-      reason: "OpenTelemetryへのネイティブ対応など、オープンスタンダードへの準拠が進んでいる"
+      reason: OpenTelemetryへのネイティブ対応など、オープンスタンダードへの準拠が進んでいる
   minus_points:
     - point: -3
-      reason: "クエリ言語（NRQL）の習得が必要で、高度な分析には学習コストがかかる"
+      reason: クエリ言語（NRQL）の習得が必要で、高度な分析には学習コストがかかる
     - point: -2
-      reason: "従量課金制のため、大規模環境ではコスト予測が難しい場合がある"
-  summary: "無料プランの手厚さと全方位的な機能セットにより、導入のハードルが低く、かつスケーラブルな優秀なプラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 従量課金制のため、大規模環境ではコスト予測が難しい場合がある
+  summary: 無料プランの手厚さと全方位的な機能セットにより、導入のハードルが低く、かつスケーラブルな優秀なプラットフォーム
 links:
-  documentation: "https://docs.newrelic.com/"
+  documentation: https://docs.newrelic.com/
 relationships:
   related_tools:
-    - "Datadog"
-    - "Splunk AppDynamics"
-    - "Grafana"
-    - "Splunk"
+    - Datadog
+    - Splunk AppDynamics
+    - Grafana
+    - Splunk
 ---
+
+
+
 
 # **New Relic 調査レポート**
 

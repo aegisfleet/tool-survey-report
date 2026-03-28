@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Nexus Repository 調査レポート"
-tool_name: "Nexus Repository"
-tool_reading: "ネクサスリポジトリ"
-category: "開発者ツール"
-developer: "Sonatype"
-official_site: "https://www.sonatype.com/products/sonatype-nexus-repository"
-date: "2026-03-22"
-last_updated: "2026-03-22"
+title: Nexus Repository 調査レポート
+tool_name: Nexus Repository
+tool_reading: ネクサスリポジトリ
+category: 開発者ツール
+developer: Sonatype
+official_site: https://www.sonatype.com/products/sonatype-nexus-repository
+date: '2026-03-22'
+last_updated: '2026-03-22'
 tags:
-  - "オープンソース"
-  - "DevOps"
-  - "CI/CD"
-  - "開発者ツール"
-description: "Maven, npm, Dockerなど多様なフォーマットに対応した、世界で最も広く利用されているアーティファクトリポジトリマネージャー。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - DevOps
+  - オープンソース
+  - 開発者ツール
+description: Maven, npm, Dockerなど多様なフォーマットに対応した、世界で最も広く利用されているアーティファクトリポジトリマネージャー。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "エンタープライズ"
-  latest_highlight: "2026年3月にTerraform Group Repositoriesのサポートを含む3.90.0がリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - エンタープライズ
+  latest_highlight: 2026年3月にTerraform Group Repositoriesのサポートを含む3.90.0がリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "無料のOSS版でも機能制限が少なく、全主要フォーマットをサポートしている。"
+      reason: 無料のOSS版でも機能制限が少なく、全主要フォーマットをサポートしている。
     - point: 5
-      reason: "Javaエコシステムにおけるデファクトスタンダードであり、長期的な安定性と信頼性が高い。"
+      reason: Javaエコシステムにおけるデファクトスタンダードであり、長期的な安定性と信頼性が高い。
     - point: 4
-      reason: "PostgreSQL対応により、大規模環境でのパフォーマンスと運用性が大幅に向上した。"
+      reason: PostgreSQL対応により、大規模環境でのパフォーマンスと運用性が大幅に向上した。
   minus_points:
     - point: -2
-      reason: "高可用性（HA）構成や高度な機能はPro版（有償）に限定される。"
-  summary: "OSS版の完成度が非常に高く、コストパフォーマンス最強のアーティファクト管理ツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高可用性（HA）構成や高度な機能はPro版（有償）に限定される。
+  summary: OSS版の完成度が非常に高く、コストパフォーマンス最強のアーティファクト管理ツール。
 links:
-  github: "https://github.com/sonatype/nexus-public"
-  deepwiki: "https://deepwiki.com/sonatype/nexus-public"
-  documentation: "https://help.sonatype.com/repomanager3"
+  github: https://github.com/sonatype/nexus-public
+  deepwiki: https://deepwiki.com/sonatype/nexus-public
+  documentation: https://help.sonatype.com/repomanager3
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "JFrog Artifactory"
-    - "GitLab"
-    - "Jenkins"
+    - JFrog Artifactory
+    - GitLab
+    - Jenkins
 ---
+
+
+
 
 # **Nexus Repository 調査レポート**
 

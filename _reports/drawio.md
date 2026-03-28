@@ -1,59 +1,57 @@
 ---
-title: "draw.io (diagrams.net) 調査レポート"
-tool_name: "draw.io (diagrams.net)"
-tool_reading: "ドロー・アイオー / ダイアグラムス・ドット・ネット"
-category: "デザインツール"
-developer: "JGraph Ltd"
-official_site: "https://app.diagrams.net/"
-date: "2026-02-25"
-last_updated: "2026-02-25"
+title: draw.io (diagrams.net) 調査レポート
+tool_name: draw.io (diagrams.net)
+tool_reading: ドロー・アイオー / ダイアグラムス・ドット・ネット
+category: デザインツール
+developer: JGraph Ltd
+official_site: https://app.diagrams.net/
+date: '2026-02-25'
+last_updated: '2026-02-25'
 tags:
-  - "作図ツール"
-  - "オープンソース"
-  - "ホワイトボード"
-  - "ダイアグラム"
-description: "Webブラウザ上で動作する無料の作図ツール。フローチャート、UML、ネットワーク図など多様な図を作成でき、登録不要で利用可能。"
-
+  - オープンソース
+  - ダイアグラム
+  - ホワイトボード
+  - 作図ツール
+description: Webブラウザ上で動作する無料の作図ツール。フローチャート、UML、ネットワーク図など多様な図を作成でき、登録不要で利用可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "エンジニア"
-    - "デザイナー"
-    - "ビジネスパーソン"
-  latest_highlight: "2026年2月にv29.5系がリリースされ、機能改善が継続中"
-  update_frequency: "高"
-
+    - エンジニア
+    - デザイナー
+    - ビジネスパーソン
+  latest_highlight: 2026年2月にv29.5系がリリースされ、機能改善が継続中
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料で機能制限なく利用可能"
+      reason: 完全無料で機能制限なく利用可能
     - point: 3
-      reason: "豊富なテンプレートとアイコンライブラリ"
+      reason: 豊富なテンプレートとアイコンライブラリ
     - point: 3
-      reason: "VS Code拡張機能との連携が強力"
+      reason: VS Code拡張機能との連携が強力
     - point: 2
-      reason: "アカウント登録不要ですぐに利用開始できる"
+      reason: アカウント登録不要ですぐに利用開始できる
     - point: 2
-      reason: "データがサーバーに送信されないためセキュリティが高い"
+      reason: データがサーバーに送信されないためセキュリティが高い
   minus_points:
     - point: 0
-      reason: "目立った欠点なし"
-  summary: "無料で高機能かつセキュアな作図ツールの決定版。個人利用から業務利用まで幅広く推奨できる。"
-
+      reason: 目立った欠点なし
+  summary: 無料で高機能かつセキュアな作図ツールの決定版。個人利用から業務利用まで幅広く推奨できる。
 links:
-  github: "https://github.com/jgraph/drawio"
-  deepwiki: "https://deepwiki.com/jgraph/drawio"
-  documentation: "https://www.drawio.com/doc/"
-
+  github: https://github.com/jgraph/drawio
+  deepwiki: https://deepwiki.com/jgraph/drawio
+  documentation: https://www.drawio.com/doc/
 relationships:
   related_tools:
-    - "Miro"
-    - "mermaid"
+    - Miro
 ---
+
+
+
 
 # **draw.io (diagrams.net) 調査レポート**
 

@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "TextFX 調査レポート"
-tool_name: "TextFX"
-tool_reading: "テキストエフエックス"
-category: "生成AI"
-developer: "Google"
-official_site: "https://textfx.withgoogle.com/"
-date: "2026-02-23"
-last_updated: "2026-02-23"
+title: TextFX 調査レポート
+tool_name: TextFX
+tool_reading: テキストエフエックス
+category: 生成AI
+developer: Google
+official_site: https://textfx.withgoogle.com/
+date: '2026-02-23'
+last_updated: '2026-02-23'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "文章作成"
-  - "クリエイティブ"
-  - "Google"
-description: "GoogleとラッパーLupe Fiascoが共同開発した、ラッパーやライター向けの創造的執筆支援AIツール群。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Google
+  - クリエイティブ
+  - 大規模言語モデル
+  - 文章作成
+  - 生成AI
+description: GoogleとラッパーLupe Fiascoが共同開発した、ラッパーやライター向けの創造的執筆支援AIツール群。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ラッパー"
-    - "作詞家"
-    - "ライター"
-  latest_highlight: "Google PaLM 2モデルを活用した10種類の創造的ツールを提供"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ラッパー
+    - 作詞家
+    - ライター
+  latest_highlight: Google PaLM 2モデルを活用した10種類の創造的ツールを提供
+  update_frequency: 低
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "独自の創造的なアプローチ（韻踏み、言葉遊びなど）が可能"
+      reason: 独自の創造的なアプローチ（韻踏み、言葉遊びなど）が可能
     - point: 5
-      reason: "完全無料で利用可能"
+      reason: 完全無料で利用可能
     - point: 3
-      reason: "Google PaLM 2の強力な言語処理能力を活用"
+      reason: Google PaLM 2の強力な言語処理能力を活用
   minus_points:
     - point: -3
-      reason: "日本語に対応していない（英語のみ）"
+      reason: 日本語に対応していない（英語のみ）
     - point: -2
-      reason: "実験的なツールであり、長文生成には向かない"
-  summary: "創造的な言葉遊びや韻踏みに特化したユニークな無料ツールだが、日本語未対応が惜しまれる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 実験的なツールであり、長文生成には向かない
+  summary: 創造的な言葉遊びや韻踏みに特化したユニークな無料ツールだが、日本語未対応が惜しまれる。
 links:
-  documentation: "https://developers.googleblog.com/how-its-made-textfx-is-a-suite-of-ai-tools-made-in-collaboration-with-lupe-fiasco/"
+  documentation: https://developers.googleblog.com/how-its-made-textfx-is-a-suite-of-ai-tools-made-in-collaboration-with-lupe-fiasco/
 relationships:
   related_tools:
-    - "Gemini"
-    - "ChatGPT"
-    - "Claude"
+    - Gemini
+    - ChatGPT
+    - Claude
 ---
+
+
+
 
 # **TextFX 調査レポート**
 

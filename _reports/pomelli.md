@@ -1,55 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Pomelli 調査レポート"
-tool_name: "Pomelli"
-tool_reading: "ポメリ"
-category: "デザインツール"
-developer: "Google Labs & DeepMind"
-official_site: "https://labs.google.com/pomelli/"
-date: "2026-03-12"
-last_updated: "2026-03-12"
+title: Pomelli 調査レポート
+tool_name: Pomelli
+tool_reading: ポメリ
+category: デザインツール
+developer: Google Labs & DeepMind
+official_site: https://labs.google.com/pomelli/
+date: '2026-03-12'
+last_updated: '2026-03-12'
 tags:
-  - "デザインツール"
-  - "生成AI"
-  - "マーケティング"
-  - "AI"
-description: "中小企業向けに、Webサイトからブランド情報を分析し、一貫性のあるマーケティングアセットを自動生成するAIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - デザインツール
+  - マーケティング
+  - 生成AI
+description: 中小企業向けに、Webサイトからブランド情報を分析し、一貫性のあるマーケティングアセットを自動生成するAIツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "マーケター"
-    - "中小企業"
-    - "コンテンツクリエイター"
-  latest_highlight: "2025年10月にパブリックベータ版として公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - マーケター
+    - 中小企業
+    - コンテンツクリエイター
+  latest_highlight: 2025年10月にパブリックベータ版として公開
+  update_frequency: 高
 evaluation:
   score: 73
   base_score: 70
   plus_points:
     - point: 5
-      reason: "既存のWebサイトから自動でブランドプロファイルを作成できる画期的なアプローチ"
+      reason: 既存のWebサイトから自動でブランドプロファイルを作成できる画期的なアプローチ
   minus_points:
     - point: -2
-      reason: "まだパブリックベータ版であり、出力がテンプレート化されている場合がある"
-  summary: "中小企業のマーケティング活動を強力に支援する有望なツールだが、発展途上のベータ版である点には留意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: まだパブリックベータ版であり、出力がテンプレート化されている場合がある
+  summary: 中小企業のマーケティング活動を強力に支援する有望なツールだが、発展途上のベータ版である点には留意が必要。
 links:
-  documentation: "https://labs.google.com/pomelli/about"
+  documentation: https://labs.google.com/pomelli/about
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Canva"
-    - "ChatGPT"
+    - Canva
+    - ChatGPT
 ---
+
+
+
 
 # **Pomelli 調査レポート**
 

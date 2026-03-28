@@ -1,57 +1,54 @@
 ---
-title: "OAuth 調査レポート"
-tool_name: "OAuth"
-tool_reading: "オーオース"
-category: "認証・ID管理"
-developer: "IETF (Internet Engineering Task Force)"
-official_site: "https://oauth.net/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: OAuth 調査レポート
+tool_name: OAuth
+tool_reading: オーオース
+category: CDN/セキュリティ
+developer: IETF (Internet Engineering Task Force)
+official_site: https://oauth.net/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "プロトコル"
-  - "セキュリティ"
-  - "API"
-  - "認可"
-  - "標準規格"
-description: "ユーザーがパスワードを共有せずに、アプリケーションにデータへのアクセス権を付与するためのオープン標準プロトコル。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - API
+  - セキュリティ
+  - プロトコル
+  - 標準規格
+  - 認可
+description: ユーザーがパスワードを共有せずに、アプリケーションにデータへのアクセス権を付与するためのオープン標準プロトコル。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (オープン標準)"
+  starting_price: 無料 (オープン標準)
   target_users:
-    - "API開発者"
-    - "セキュリティエンジニア"
-    - "Webアプリケーション開発者"
-  latest_highlight: "OAuth 2.1によるセキュリティ強化（PKCE必須化など）が進行中"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - API開発者
+    - セキュリティエンジニア
+    - Webアプリケーション開発者
+  latest_highlight: OAuth 2.1によるセキュリティ強化（PKCE必須化など）が進行中
+  update_frequency: 中
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 5
-      reason: "事実上の業界標準であり、Google, Facebook, Microsoftなどほぼ全ての主要プラットフォームで採用されている"
+      reason: 事実上の業界標準であり、Google, Facebook, Microsoftなどほぼ全ての主要プラットフォームで採用されている
     - point: 5
-      reason: "パスワードを共有せずにアクセス権限を委譲できるため、セキュリティリスクを大幅に低減できる"
+      reason: パスワードを共有せずにアクセス権限を委譲できるため、セキュリティリスクを大幅に低減できる
     - point: 5
-      reason: "OpenID Connect (OIDC) の基盤となっており、認証レイヤーとしても拡張性が高い"
+      reason: OpenID Connect (OIDC) の基盤となっており、認証レイヤーとしても拡張性が高い
     - point: 5
-      reason: "言語やフレームワークを問わず、膨大な数のライブラリと知見が存在する"
+      reason: 言語やフレームワークを問わず、膨大な数のライブラリと知見が存在する
   minus_points:
     - point: 0
-      reason: "プロトコル自体が複雑であり、実装者が仕様を誤解して脆弱性を作り込むリスクがある"
-  summary: "Web APIセキュリティの基盤であり、現代の開発において必須の知識。実装はライブラリやIDaaSの利用が推奨される。"
-
-# 【任意項目】該当するもののみ記載
+      reason: プロトコル自体が複雑であり、実装者が仕様を誤解して脆弱性を作り込むリスクがある
+  summary: Web APIセキュリティの基盤であり、現代の開発において必須の知識。実装はライブラリやIDaaSの利用が推奨される。
 links:
-  documentation: "https://oauth.net/2/"
+  documentation: https://oauth.net/2/
 relationships:
   children:
-    - "OpenID"
+    - OpenID
 ---
+
+
+
 
 # **OAuth 調査レポート**
 

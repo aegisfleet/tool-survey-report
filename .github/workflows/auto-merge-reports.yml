@@ -151,6 +151,26 @@ jobs:
               try {
                 parsedFrontmatter = yaml.load(frontmatterContent);
                 core.info(`  ✅ YAML syntax is valid.`);
+
+                // Check for normalization
+                const normalizedYaml = yaml.dump(parsedFrontmatter, {
+                  allowUnicode: true,
+                  sortKeys: false,
+                  lineWidth: -1
+                });
+                
+                if (frontmatterContent.trim() !== normalizedYaml.trim()) {
+                  const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nYAMLのフォーマットが標準（js-yamlの出力形式）と一致しません。\n\n**期待されるフォーマット:**\n\`\`\`yaml\n${normalizedYaml}\n\`\`\``;
+                  core.error(errorMsg);
+                  await github.rest.issues.createComment({ 
+                    owner, 
+                    repo, 
+                    issue_number: prNumber, 
+                    body: errorMsg + '\n\n自動マージを中止しました。手元で \`npm run lint:yaml\` を実行してフォーマットを修正してください。'
+                  });
+                  throw new Error(`Frontmatter validation failed for ${file}: formatting mismatch`);
+                }
+                core.info(`  ✅ YAML format is normalized.`);
               } catch (yamlErr) {
                 const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nYAML構文エラー: ${yamlErr.message}`;
                 core.error(errorMsg);

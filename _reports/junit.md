@@ -1,56 +1,56 @@
 ---
-title: "JUnit 調査レポート"
-tool_name: "JUnit"
-tool_reading: "ジェイユニット"
-category: "テスト/QA"
-developer: "JUnit Team"
-official_site: "https://junit.org/"
-date: "2025-10-22"
-last_updated: "2026-03-09"
+title: JUnit 調査レポート
+tool_name: JUnit
+tool_reading: ジェイユニット
+category: テスト/QA
+developer: JUnit Team
+official_site: https://junit.org/
+date: '2025-10-22'
+last_updated: '2026-03-09'
 tags:
-  - "Java"
-  - "テスト自動化"
-  - "オープンソース"
-  - "開発者ツール"
-description: "Javaエコシステムにおけるユニットテストのデファクトスタンダード。最新のJUnit 6ではJava 17以降をベースとし、より堅牢で柔軟なテスト自動化基盤を提供。"
-
+  - Java
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: Javaエコシステムにおけるユニットテストのデファクトスタンダード。最新のJUnit 6ではJava 17以降をベースとし、より堅牢で柔軟なテスト自動化基盤を提供。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Java開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年2月にメンテナンスリリースであるJUnit 6.0.3を公開"
-  update_frequency: "高"
-
+    - Java開発者
+    - QAエンジニア
+  latest_highlight: 2026年2月にメンテナンスリリースであるJUnit 6.0.3を公開
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Java開発における圧倒的なシェアとデファクトスタンダードとしての信頼性"
+      reason: Java開発における圧倒的なシェアとデファクトスタンダードとしての信頼性
     - point: 5
-      reason: "主要なIDE、ビルドツール、CI/CD環境と完全に統合されている"
+      reason: 主要なIDE、ビルドツール、CI/CD環境と完全に統合されている
     - point: 5
-      reason: "活発な開発が続いており、最新のJavaバージョンへの対応が早い"
+      reason: 活発な開発が続いており、最新のJavaバージョンへの対応が早い
   minus_points: []
-  summary: "Javaプロジェクトにおいてテストを行う場合、まず最初に選択すべき必須のフレームワーク。"
-
+  summary: Javaプロジェクトにおいてテストを行う場合、まず最初に選択すべき必須のフレームワーク。
 links:
-  github: "https://github.com/junit-team/junit-framework"
-  deepwiki: "https://deepwiki.com/junit-team/junit-framework"
-  documentation: "https://docs.junit.org/"
+  github: https://github.com/junit-team/junit-framework
+  deepwiki: https://deepwiki.com/junit-team/junit-framework
+  documentation: https://docs.junit.org/
 relationships:
   children:
-    - "Database Rider"
+    - Database Rider
   related_tools:
-    - "Eclipse IDE"
-    - "JaCoCo"
-    - "Spring Boot"
-    - "Allure Report"
-    - "PyTest"
+    - Eclipse IDE
+    - JaCoCo
+    - Spring Boot
+    - Allure Report
+    - PyTest
 ---
+
+
+
 
 # **JUnit 調査レポート**
 

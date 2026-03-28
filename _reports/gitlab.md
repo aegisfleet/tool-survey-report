@@ -1,72 +1,67 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GitLab 調査レポート"
-tool_name: "GitLab"
-tool_reading: "ギットラボ"
-category: "バージョン管理"
-developer: "GitLab Inc."
-official_site: "https://about.gitlab.com/"
-date: "2026-02-27"
-last_updated: "2026-02-27"
+title: GitLab 調査レポート
+tool_name: GitLab
+tool_reading: ギットラボ
+category: バージョン管理
+developer: GitLab Inc.
+official_site: https://about.gitlab.com/
+date: '2026-02-27'
+last_updated: '2026-02-27'
 tags:
-  - "バージョン管理"
-  - "CI/CD"
-  - "DevOps"
-  - "AI"
-  - "オープンソース"
-  - "開発者ツール"
-description: "ソースコード管理からCI/CD、セキュリティ、監視までを単一アプリケーションで統合した、AI搭載のDevSecOpsプラットフォーム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - DevOps
+  - オープンソース
+  - バージョン管理
+  - 開発者ツール
+description: ソースコード管理からCI/CD、セキュリティ、監視までを単一アプリケーションで統合した、AI搭載のDevSecOpsプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "エンタープライズ"
-  latest_highlight: "2026年2月にGitLab Duo Agent Platformと自律型エージェント機能が正式リリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - エンタープライズ
+  latest_highlight: 2026年2月にGitLab Duo Agent Platformと自律型エージェント機能が正式リリース
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 10
-      reason: "開発ライフサイクル全体を単一プラットフォームに集約できる点が非常に強力"
+      reason: 開発ライフサイクル全体を単一プラットフォームに集約できる点が非常に強力
     - point: 5
-      reason: "CI/CD機能が柔軟かつ高機能で、業界標準レベル"
+      reason: CI/CD機能が柔軟かつ高機能で、業界標準レベル
     - point: 5
-      reason: "セキュリティ機能がパイプラインに深く統合されている (DevSecOps)"
+      reason: セキュリティ機能がパイプラインに深く統合されている (DevSecOps)
     - point: 3
-      reason: "AI機能(GitLab Duo)の統合が進んでおり、開発の各段階で支援を受けられる"
+      reason: AI機能(GitLab Duo)の統合が進んでおり、開発の各段階で支援を受けられる
   minus_points:
     - point: -3
-      reason: "多機能であるためUIが複雑で、学習コストが高い"
-  summary: "開発ライフサイクル全体を単一プラットフォームに集約できる点が最大の強みであり、DevSecOps推進に最適。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 多機能であるためUIが複雑で、学習コストが高い
+  summary: 開発ライフサイクル全体を単一プラットフォームに集約できる点が最大の強みであり、DevSecOps推進に最適。
 links:
-  github: "https://github.com/gitlabhq/gitlabhq"
-  deepwiki: "https://deepwiki.com/gitlabhq/gitlabhq"
-  documentation: "https://docs.gitlab.com/"
+  github: https://github.com/gitlabhq/gitlabhq
+  deepwiki: https://deepwiki.com/gitlabhq/gitlabhq
+  documentation: https://docs.gitlab.com/
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "GitLab Duo"
-    - "GitLab CI/CD"
+    - GitLab Duo
+    - GitLab CI/CD
   related_tools:
-    - "GitHub"
-    - "Jenkins"
-    - "JFrog Artifactory"
-    - "Jira"
-    - "Findy Team+"
-    - "Jujutsu"
-    - "Nexus Repository"
+    - GitHub
+    - Jenkins
+    - JFrog Artifactory
+    - Jira
+    - Findy Team+
+    - Jujutsu
+    - Nexus Repository
 ---
+
+
+
 
 # **GitLab 調査レポート**
 

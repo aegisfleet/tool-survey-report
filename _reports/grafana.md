@@ -1,65 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Grafana 調査レポート"
-tool_name: "Grafana"
-tool_reading: "グラファナ"
-category: "監視/可観測性"
-developer: "Grafana Labs"
-official_site: "https://grafana.com/"
-date: "2026-03-01"
-last_updated: "2026-03-01"
+title: Grafana 調査レポート
+tool_name: Grafana
+tool_reading: グラファナ
+category: 監視/可観測性
+developer: Grafana Labs
+official_site: https://grafana.com/
+date: '2026-03-01'
+last_updated: '2026-03-01'
 tags:
-  - "監視"
-  - "オブザーバビリティ"
-  - "可視化"
-  - "ダッシュボード"
-  - "オープンソース"
-  - "SaaS"
-description: "メトリクス、ログ、トレースをどこからでもクエリ、可視化、アラート通知できる、オープンな可観測性プラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SaaS
+  - オブザーバビリティ
+  - オープンソース
+  - ダッシュボード
+  - 可視化
+  - 監視
+description: メトリクス、ログ、トレースをどこからでもクエリ、可視化、アラート通知できる、オープンな可観測性プラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "SRE"
-    - "データアナリスト"
-  latest_highlight: "2026年1月、Visualization Suggestionsがデフォルト機能として強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - SRE
+    - データアナリスト
+  latest_highlight: 2026年1月、Visualization Suggestionsがデフォルト機能として強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、無料でも非常に高度な可視化が可能"
+      reason: オープンソースであり、無料でも非常に高度な可視化が可能
     - point: 5
-      reason: "あらゆるデータソース（Prometheus, CloudWatch, SQL等）と接続できる柔軟性"
+      reason: あらゆるデータソース（Prometheus, CloudWatch, SQL等）と接続できる柔軟性
     - point: 3
-      reason: "活発なコミュニティと豊富なプラグインエコシステム"
+      reason: 活発なコミュニティと豊富なプラグインエコシステム
     - point: 2
-      reason: "Visualization SuggestionsなどのAI/支援機能によるダッシュボード作成の効率化"
+      reason: Visualization SuggestionsなどのAI/支援機能によるダッシュボード作成の効率化
   minus_points:
     - point: 0
-      reason: "" # 大きな減点なし
-  summary: "可視化ツールのデファクトスタンダードであり、データソースを選ばない柔軟性と強力な表現力を持つ。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: 可視化ツールのデファクトスタンダードであり、データソースを選ばない柔軟性と強力な表現力を持つ。
 links:
-  github: "https://github.com/grafana/grafana"
-  deepwiki: "https://deepwiki.com/grafana/grafana"
-  documentation: "https://grafana.com/docs/grafana/latest/"
+  github: https://github.com/grafana/grafana
+  deepwiki: https://deepwiki.com/grafana/grafana
+  documentation: https://grafana.com/docs/grafana/latest/
 relationships:
   related_tools:
-    - "Kibana"
-    - "Datadog"
-    - "Splunk"
-    - "Kubernetes"
+    - Kibana
+    - Datadog
+    - Splunk
+    - Kubernetes
+    - Splunk AppDynamics
+    - New Relic
 ---
+
+
+
 
 # **Grafana 調査レポート**
 

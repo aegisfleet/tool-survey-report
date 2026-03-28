@@ -1,51 +1,54 @@
 ---
-title: "Nginx 調査レポート"
-tool_name: "Nginx"
-tool_reading: "エンジンエックス"
-category: "Webサーバー"
-developer: "F5, Inc."
-official_site: "https://nginx.org/"
-date: "2026-03-17"
-last_updated: "2026-03-17"
+title: Nginx 調査レポート
+tool_name: Nginx
+tool_reading: エンジンエックス
+category: インフラ/クラウド
+developer: F5, Inc.
+official_site: https://nginx.org/
+date: '2026-03-17'
+last_updated: '2026-03-17'
 tags:
-  - "サーバー"
-  - "オープンソース"
-  - "インフラ"
-description: "高性能なWebサーバー、リバースプロキシ、ロードバランサーとして機能するオープンソースソフトウェア"
+  - インフラ
+  - オープンソース
+  - サーバー
+description: 高性能なWebサーバー、リバースプロキシ、ロードバランサーとして機能するオープンソースソフトウェア
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "インフラエンジニア"
-    - "システム管理者"
-  latest_highlight: "Nginx 1.29.6メインライン版のリリース（2026年3月）"
-  update_frequency: "高"
+    - 開発者
+    - インフラエンジニア
+    - システム管理者
+  latest_highlight: Nginx 1.29.6メインライン版のリリース（2026年3月）
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "世界トップシェアを誇る圧倒的な実績と信頼性"
+      reason: 世界トップシェアを誇る圧倒的な実績と信頼性
     - point: 8
-      reason: "軽量で高速、高い同時接続処理能力（C10k問題の解決）"
+      reason: 軽量で高速、高い同時接続処理能力（C10k問題の解決）
     - point: 5
-      reason: "オープンソースとして無料で利用でき、情報が豊富"
+      reason: オープンソースとして無料で利用でき、情報が豊富
     - point: 5
-      reason: "豊富なモジュールとエコシステムによる高い拡張性"
+      reason: 豊富なモジュールとエコシステムによる高い拡張性
   minus_points:
     - point: -3
-      reason: ".htaccessのようなディレクトリ単位の動的設定ができない"
-  summary: "圧倒的なパフォーマンスと安定性を備えた、現代のWebインフラに不可欠なデファクトスタンダード"
+      reason: .htaccessのようなディレクトリ単位の動的設定ができない
+  summary: 圧倒的なパフォーマンスと安定性を備えた、現代のWebインフラに不可欠なデファクトスタンダード
 links:
-  github: "https://github.com/nginx/nginx"
-  deepwiki: "https://deepwiki.com/nginx/nginx"
-  documentation: "https://nginx.org/en/docs/"
+  github: https://github.com/nginx/nginx
+  deepwiki: https://deepwiki.com/nginx/nginx
+  documentation: https://nginx.org/en/docs/
 relationships:
   related_tools:
-    - "Cloudflare"
+    - Cloudflare
 ---
+
+
+
 
 # **Nginx 調査レポート**
 

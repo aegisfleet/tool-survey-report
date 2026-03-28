@@ -1,64 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Notion 調査レポート"
-tool_name: "Notion"
-tool_reading: "ノーション"
-category: "ドキュメント/ナレッジ"
-developer: "Notion Labs, Inc."
-official_site: "https://www.notion.com/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: Notion 調査レポート
+tool_name: Notion
+tool_reading: ノーション
+category: ドキュメント/ナレッジ
+developer: Notion Labs, Inc.
+official_site: https://www.notion.com/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "ドキュメント管理"
-  - "SaaS"
-description: "ドキュメント、ナレッジベース、タスク管理を一つのワークスペースに統合したAI搭載のコラボレーションツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - エージェント
+  - ドキュメント管理
+  - 自律型
+description: ドキュメント、ナレッジベース、タスク管理を一つのワークスペースに統合したAI搭載のコラボレーションツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$10/月"
+  starting_price: $10/月
   target_users:
-    - "個人ユーザー"
-    - "スタートアップ"
-    - "エンタープライズ"
-  latest_highlight: "2025年11月にNotion 3.1をリリース。会議機能とエージェント機能を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 個人ユーザー
+    - スタートアップ
+    - エンタープライズ
+  latest_highlight: 2025年11月にNotion 3.1をリリース。会議機能とエージェント機能を強化
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 10
-      reason: "ドキュメント、DB、タスク管理を統合した圧倒的な柔軟性と機能性"
+      reason: ドキュメント、DB、タスク管理を統合した圧倒的な柔軟性と機能性
     - point: 8
-      reason: "自律型AIエージェント機能が革新的で、将来性が非常に高い"
+      reason: 自律型AIエージェント機能が革新的で、将来性が非常に高い
     - point: 5
-      reason: "洗練されたUI/UXと豊富なテンプレート"
+      reason: 洗練されたUI/UXと豊富なテンプレート
     - point: 3
-      reason: "日本語のドキュメントやサポート、コミュニティが充実している"
+      reason: 日本語のドキュメントやサポート、コミュニティが充実している
   minus_points:
     - point: -3
-      reason: "多機能・高自由度ゆえに学習コストが高い"
+      reason: 多機能・高自由度ゆえに学習コストが高い
     - point: -3
-      reason: "大量のデータを扱うとパフォーマンスが低下することがある"
-  summary: "圧倒的な柔軟性と革新的なAI機能を備えるが、多機能ゆえの学習コストが課題。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 大量のデータを扱うとパフォーマンスが低下することがある
+  summary: 圧倒的な柔軟性と革新的なAI機能を備えるが、多機能ゆえの学習コストが課題。
 links:
-  documentation: "https://www.notion.so/help"
+  documentation: https://www.notion.so/help
 relationships:
   related_tools:
-    - "ワスレナイ"
-    - "Obsidian"
-    - "Felo"
-    - "Jira"
+    - ワスレナイ
+    - Obsidian
+    - Felo
+    - Jira
+    - Code Wiki
+    - NocoDB
 ---
+
+
+
 
 # **Notion 調査レポート**
 

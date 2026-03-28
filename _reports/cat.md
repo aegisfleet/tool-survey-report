@@ -1,62 +1,61 @@
 ---
-title: "CAT (Computer Aided Test) 調査レポート"
-tool_name: "CAT"
-tool_reading: "キャット"
-category: "テスト管理"
-developer: "株式会社SHIFT"
-official_site: "https://www.catcloud.net/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: CAT (Computer Aided Test) 調査レポート
+tool_name: CAT
+tool_reading: キャット
+category: テスト管理
+developer: 株式会社SHIFT
+official_site: https://www.catcloud.net/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト/QA"
-  - "テスト管理"
-  - "SaaS"
-  - "品質管理"
-  - "プロジェクト管理"
-description: "株式会社SHIFTが開発・提供する統合型ソフトウェアテスト管理ツール。Excelライクな操作性と強力な品質分析機能を備える。"
+  - SaaS
+  - テスト/QA
+  - テスト管理
+  - プロジェクト管理
+  - 品質管理
+description: 株式会社SHIFTが開発・提供する統合型ソフトウェアテスト管理ツール。Excelライクな操作性と強力な品質分析機能を備える。
 layout: report
-
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "2,650円/月"
+  starting_price: 2,650円/月
   target_users:
-    - "QAエンジニア"
-    - "プロジェクトマネージャー"
-    - "開発チーム"
-  latest_highlight: "2026年1月に操作性と管理機能を強化するアップデートを実施"
-  update_frequency: "高"
-
+    - QAエンジニア
+    - プロジェクトマネージャー
+    - 開発チーム
+  latest_highlight: 2026年1月に操作性と管理機能を強化するアップデートを実施
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Excelからの移行が容易なUIとインポート機能"
+      reason: Excelからの移行が容易なUIとインポート機能
     - point: 5
-      reason: "小規模チーム向けの永年無料プラン（機能充実）"
+      reason: 小規模チーム向けの永年無料プラン（機能充実）
     - point: 3
-      reason: "テストと不具合の統合管理によるトレーサビリティ"
+      reason: テストと不具合の統合管理によるトレーサビリティ
     - point: 2
-      reason: "純国産で日本語サポートとマニュアルが充実"
+      reason: 純国産で日本語サポートとマニュアルが充実
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "Excelでのテスト管理からの脱却に最適。操作性が馴染みやすく、無料プランも充実しているため導入ハードルが低い。"
-
+      reason: 特になし
+  summary: Excelでのテスト管理からの脱却に最適。操作性が馴染みやすく、無料プランも充実しているため導入ハードルが低い。
 links:
-  documentation: "https://catcloud.zendesk.com/hc/ja"
+  documentation: https://catcloud.zendesk.com/hc/ja
 relationships:
   related_tools:
-    - "TestRail"
-    - "QualityForward"
-    - "Qase"
-    - "Qangaroo"
-    - "Quality Tracker"
-    - "Jira"
-    - "Redmine"
-    - "Backlog"
+    - TestRail
+    - QualityForward
+    - Qase
+    - Qangaroo
+    - Quality Tracker
+    - Jira
+    - Redmine
 ---
+
+
+
 
 # **CAT (Computer Aided Test) 調査レポート**
 

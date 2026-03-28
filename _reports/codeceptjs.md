@@ -1,70 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "CodeceptJS 調査レポート"
-tool_name: "CodeceptJS"
-tool_reading: "コードセプトジェイエス"
-category: "テスト/QA"
-developer: "CodeceptJS Team"
-official_site: "https://codecept.io/"
-date: "2026-02-09"
-last_updated: "2026-02-09"
+title: CodeceptJS 調査レポート
+tool_name: CodeceptJS
+tool_reading: コードセプトジェイエス
+category: テスト/QA
+developer: CodeceptJS Team
+official_site: https://codecept.io/
+date: '2026-02-09'
+last_updated: '2026-02-09'
 tags:
-  - "E2Eテスト"
-  - "テスト自動化"
-  - "オープンソース"
-  - "JavaScript"
-  - "Node.js"
-  - "BDD"
-  - "AI"
-description: "Playwright, WebDriver, Puppeteerなどを利用してE2Eテストをシンプルに記述できる、シナリオ駆動のNode.js製テスト自動化フレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - BDD
+  - E2Eテスト
+  - JavaScript
+  - Node.js
+  - オープンソース
+  - テスト自動化
+description: Playwright, WebDriver, Puppeteerなどを利用してE2Eテストをシンプルに記述できる、シナリオ駆動のNode.js製テスト自動化フレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-  latest_highlight: "2026年1月にv3.7.6がリリース。v4.0系の開発も活発に進行中。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - 開発者
+  latest_highlight: 2026年1月にv3.7.6がリリース。v4.0系の開発も活発に進行中。
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 8
-      reason: "多様なバックエンドを統一APIで扱え、AIによるテスト修復など先進的な機能も持つ"
+      reason: 多様なバックエンドを統一APIで扱え、AIによるテスト修復など先進的な機能も持つ
     - point: 5
-      reason: "可読性の高いテスト記述が可能で、学習コストが低い"
+      reason: 可読性の高いテスト記述が可能で、学習コストが低い
     - point: 5
-      reason: "無料で利用できる高機能なオープンソースソフトウェアである"
+      reason: 無料で利用できる高機能なオープンソースソフトウェアである
     - point: 3
-      reason: "コミュニティが活発で、継続的な開発が行われている"
+      reason: コミュニティが活発で、継続的な開発が行われている
   minus_points:
     - point: -3
-      reason: "公式ドキュメントは充実しているが、日本語の情報はまだ限定的"
+      reason: 公式ドキュメントは充実しているが、日本語の情報はまだ限定的
     - point: -2
-      reason: "抽象化レイヤーを介するため、バックエンド固有の高度な操作がしづらい場合がある"
-  summary: "可読性とメンテナンス性を重視するチームに最適な、多機能で学習コストの低いテスト自動化フレームワーク"
-
-# 【任意項目】該当するもののみ記載
+      reason: 抽象化レイヤーを介するため、バックエンド固有の高度な操作がしづらい場合がある
+  summary: 可読性とメンテナンス性を重視するチームに最適な、多機能で学習コストの低いテスト自動化フレームワーク
 links:
-  github: "https://github.com/codeceptjs/CodeceptJS"
-  deepwiki: "https://deepwiki.com/codeceptjs/CodeceptJS"
-  documentation: "https://codecept.io/basics/"
+  github: https://github.com/codeceptjs/CodeceptJS
+  deepwiki: https://deepwiki.com/codeceptjs/CodeceptJS
+  documentation: https://codecept.io/basics/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Playwright"
-    - "Cypress"
-    - "Selenium"
-    - "Cucumber"
-    - "Appium"
+    - Playwright
+    - Cypress
+    - Selenium
+    - Cucumber
+    - Appium
 ---
+
+
+
 
 # **CodeceptJS 調査レポート**
 

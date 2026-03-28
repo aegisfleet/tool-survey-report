@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Arnis 調査レポート"
-tool_name: "Arnis"
-tool_reading: "アーニス"
-category: "開発者ツール"
-developer: "Louis Erbkamm"
-official_site: "https://arnismc.com/"
-date: "2026-03-20"
-last_updated: "2026-03-20"
+title: Arnis 調査レポート
+tool_name: Arnis
+tool_reading: アーニス
+category: 開発者ツール
+developer: Louis Erbkamm
+official_site: https://arnismc.com/
+date: '2026-03-20'
+last_updated: '2026-03-20'
 tags:
-  - "Minecraft"
-  - "オープンソース"
-  - "地図データ"
-  - "コンバーター"
-  - "Rust"
-description: "現実世界の地理データ（OpenStreetMap等）を使用して、プレイ可能なMinecraftのワールド（Java版/Bedrock版）を自動生成するオープンソースのデスクトップアプリケーション。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Minecraft
+  - Rust
+  - オープンソース
+  - コンバーター
+  - 地図データ
+description: 現実世界の地理データ（OpenStreetMap等）を使用して、プレイ可能なMinecraftのワールド（Java版/Bedrock版）を自動生成するオープンソースのデスクトップアプリケーション。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Minecraftプレイヤー"
-    - "マップ製作者"
-    - "教育関係者"
-  latest_highlight: "オンライン生成サービス「MapSmith」の提供開始（モバイル対応）"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Minecraftプレイヤー
+    - マップ製作者
+    - 教育関係者
+  latest_highlight: オンライン生成サービス「MapSmith」の提供開始（モバイル対応）
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "OSMデータを用いた高精度な現実世界の再現が可能"
+      reason: OSMデータを用いた高精度な現実世界の再現が可能
     - point: 4
-      reason: "完全無料でオープンソース（ローカル生成）"
+      reason: 完全無料でオープンソース（ローカル生成）
     - point: 3
-      reason: "Java版とBedrock版の両方に対応"
+      reason: Java版とBedrock版の両方に対応
   minus_points:
     - point: -2
-      reason: "OSMのデータ充実度に依存するため、地域によって再現度に差が出る"
-  summary: "現実の街並みをMinecraftで手軽に再現できる強力なツール。OSMデータに依存するが、無料かつオープンソースで提供されており価値が高い。"
-
-# 【任意項目】該当するもののみ記載
+      reason: OSMのデータ充実度に依存するため、地域によって再現度に差が出る
+  summary: 現実の街並みをMinecraftで手軽に再現できる強力なツール。OSMデータに依存するが、無料かつオープンソースで提供されており価値が高い。
 links:
-  github: "https://github.com/louis-e/arnis"
-  deepwiki: "https://deepwiki.com/louis-e/arnis"
-  codewiki: "https://codewiki.google/github.com/louis-e/arnis"
-  documentation: "https://github.com/louis-e/arnis#readme"
+  github: https://github.com/louis-e/arnis
+  deepwiki: https://deepwiki.com/louis-e/arnis
+  codewiki: https://codewiki.google/github.com/louis-e/arnis
+  documentation: https://github.com/louis-e/arnis#readme
 relationships:
   related_tools: []
 ---
+
+
+
 
 # **Arnis 調査レポート**
 

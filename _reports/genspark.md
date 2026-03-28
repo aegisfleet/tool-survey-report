@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Genspark 調査レポート"
-tool_name: "Genspark"
-tool_reading: "ジェンスパーク"
-category: "自律型AIエージェント"
-developer: "GENSPARK INC"
-official_site: "https://www.genspark.ai/"
-date: "2026-02-26"
-last_updated: "2026-02-26"
+title: Genspark 調査レポート
+tool_name: Genspark
+tool_reading: ジェンスパーク
+category: 自律型AIエージェント
+developer: GENSPARK INC
+official_site: https://www.genspark.ai/
+date: '2026-02-26'
+last_updated: '2026-02-26'
 tags:
-  - "AI"
-  - "エージェント"
-  - "生成AI"
-  - "自動化"
-  - "自律型"
-description: "AI Sheets, AI Docs, Speaklyなどの機能を備え、リサーチからアウトプット作成までを自動化するAll-in-One AIワークスペース。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - 生成AI
+  - 自動化
+  - 自律型
+description: AI Sheets, AI Docs, Speaklyなどの機能を備え、リサーチからアウトプット作成までを自動化するAll-in-One AIワークスペース。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$24.99/月"
+  starting_price: $24.99/月
   target_users:
-    - "コンテンツ制作者"
-    - "マーケター"
-    - "リサーチャー"
-  latest_highlight: "2026年初頭にWorkspace 2.0へ進化し、音声入力機能Speaklyなどを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - コンテンツ制作者
+    - マーケター
+    - リサーチャー
+  latest_highlight: 2026年初頭にWorkspace 2.0へ進化し、音声入力機能Speaklyなどを追加
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "リサーチ、執筆、スライド生成に加え、スプレッドシートや会議録音も統合されたAll-in-One性"
+      reason: リサーチ、執筆、スライド生成に加え、スプレッドシートや会議録音も統合されたAll-in-One性
     - point: 3
-      reason: "毎日クレジットがリフレッシュされる実用的な無料プラン"
+      reason: 毎日クレジットがリフレッシュされる実用的な無料プラン
     - point: 3
-      reason: "Speaklyによる高品質な音声入力・テキスト化機能"
+      reason: Speaklyによる高品質な音声入力・テキスト化機能
   minus_points:
     - point: -3
-      reason: "WordやPDFへのエクスポート時にフォーマットが崩れるという報告がある"
+      reason: WordやPDFへのエクスポート時にフォーマットが崩れるという報告がある
     - point: -2
-      reason: "多機能ゆえにUIが複雑で、使いこなすまでの学習コストがやや高い"
-  summary: "機能の網羅性は圧倒的で「仕事の自動化」を体現しているが、出力品質の安定性に課題を残す。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 多機能ゆえにUIが複雑で、使いこなすまでの学習コストがやや高い
+  summary: 機能の網羅性は圧倒的で「仕事の自動化」を体現しているが、出力品質の安定性に課題を残す。
 links:
-  documentation: "https://www.genspark.ai/"
+  documentation: https://www.genspark.ai/
 relationships:
-  parent:
-  children:
+  parent: null
+  children: null
   related_tools:
-    - "Perplexity"
-    - "Felo"
-    - "Devin"
-    - "Google Disco"
+    - Perplexity
+    - Felo
+    - Devin
+    - Google Disco
 ---
+
+
+
 
 # **Genspark 調査レポート**
 

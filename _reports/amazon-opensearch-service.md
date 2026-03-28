@@ -1,68 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Amazon OpenSearch Service 調査レポート"
-tool_name: "Amazon OpenSearch Service"
-tool_reading: "アマゾン オープンサーチ サービス"
-category: "インフラ/クラウド"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/jp/opensearch-service/"
-date: "2026-02-12"
-last_updated: "2026-02-12"
+title: Amazon OpenSearch Service 調査レポート
+tool_name: Amazon OpenSearch Service
+tool_reading: アマゾン オープンサーチ サービス
+category: インフラ/クラウド
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/jp/opensearch-service/
+date: '2026-02-12'
+last_updated: '2026-02-12'
 tags:
-  - "検索エンジン"
-  - "ログ分析"
-  - "ベクトルデータベース"
-  - "AWS"
-  - "生成AI"
-description: "AWSマネージドなOpenSearchサービス。ログ分析、リアルタイムアプリケーションモニタリング、ウェブサイト検索、生成AI向けのベクトルデータベースとして利用される。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AWS
+  - ベクトルデータベース
+  - ログ分析
+  - 検索エンジン
+  - 生成AI
+description: AWSマネージドなOpenSearchサービス。ログ分析、リアルタイムアプリケーションモニタリング、ウェブサイト検索、生成AI向けのベクトルデータベースとして利用される。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$0.036/時"
+  starting_price: $0.036/時
   target_users:
-    - "開発者"
-    - "データエンジニア"
-    - "SRE"
-  latest_highlight: "2025年12月にベクトル検索のGPUアクセラレーションとOpenSearch 3.3のサポートを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - データエンジニア
+    - SRE
+  latest_highlight: 2025年12月にベクトル検索のGPUアクセラレーションとOpenSearch 3.3のサポートを追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AWSエコシステム（S3, Kinesis, DynamoDB, Bedrock等）との強力な統合"
+      reason: AWSエコシステム（S3, Kinesis, DynamoDB, Bedrock等）との強力な統合
     - point: 5
-      reason: "マネージドサービスによるクラスター運用負荷の大幅な軽減"
+      reason: マネージドサービスによるクラスター運用負荷の大幅な軽減
     - point: 3
-      reason: "サーバーレスオプション（OpenSearch Serverless）によるスケーラビリティ"
+      reason: サーバーレスオプション（OpenSearch Serverless）によるスケーラビリティ
     - point: 3
-      reason: "ベクトルデータベース機能による生成AI（RAG）への対応"
+      reason: ベクトルデータベース機能による生成AI（RAG）への対応
     - point: 2
-      reason: "高度なセキュリティ機能（IAM, VPC, 暗号化）"
+      reason: 高度なセキュリティ機能（IAM, VPC, 暗号化）
   minus_points:
     - point: -3
-      reason: "大規模構成時のコストが高くなりやすく、複雑な設計が必要"
-  summary: "AWS環境での検索・分析基盤として最適であり、生成AI活用におけるベクトルDBとしても強力な選択肢。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 大規模構成時のコストが高くなりやすく、複雑な設計が必要
+  summary: AWS環境での検索・分析基盤として最適であり、生成AI活用におけるベクトルDBとしても強力な選択肢。
 links:
-  github: "https://github.com/opensearch-project/OpenSearch"
-  codewiki: "https://codewiki.google/github.com/opensearch-project/OpenSearch"
-  deepwiki: "https://deepwiki.com/opensearch-project/OpenSearch"
-  documentation: "https://docs.aws.amazon.com/opensearch-service/"
+  github: https://github.com/opensearch-project/OpenSearch
+  codewiki: https://codewiki.google/github.com/opensearch-project/OpenSearch
+  deepwiki: https://deepwiki.com/opensearch-project/OpenSearch
+  documentation: https://docs.aws.amazon.com/opensearch-service/
 relationships:
   related_tools:
-    - "Elasticsearch"
-    - "Kibana"
-    - "Splunk"
-    - "Datadog"
-    - "Amazon Bedrock"
+    - Kibana
+    - Splunk
+    - Datadog
+    - Amazon Bedrock
 ---
+
+
+
 
 # **Amazon OpenSearch Service 調査レポート**
 

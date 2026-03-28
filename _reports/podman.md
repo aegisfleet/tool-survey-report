@@ -1,66 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Podman 調査レポート"
-tool_name: "Podman"
-tool_reading: "ポッドマン"
-category: "開発者ツール"
-developer: "Red Hat"
-official_site: "https://podman.io/"
-date: "2026-02-17"
-last_updated: "2026-02-17"
+title: Podman 調査レポート
+tool_name: Podman
+tool_reading: ポッドマン
+category: 開発者ツール
+developer: Red Hat
+official_site: https://podman.io/
+date: '2026-02-17'
+last_updated: '2026-02-17'
 tags:
-  - "DevOps"
-  - "オープンソース"
-  - "コンテナ"
-  - "開発環境"
-  - "開発者ツール"
-description: "デーモンレスでセキュアなコンテナエンジン。Docker互換のCLIを持ち、Kubernetesとの親和性が高い。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - オープンソース
+  - コンテナ
+  - 開発環境
+  - 開発者ツール
+description: デーモンレスでセキュアなコンテナエンジン。Docker互換のCLIを持ち、Kubernetesとの親和性が高い。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "インフラエンジニア"
-    - "SRE"
-  latest_highlight: "2025年12月にv5.7.1をリリース。セキュリティ強化とQuadletの機能拡充を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - インフラエンジニア
+    - SRE
+  latest_highlight: 2025年12月にv5.7.1をリリース。セキュリティ強化とQuadletの機能拡充を実施
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "デーモンレス・ルートレスによる本質的なセキュリティ"
+      reason: デーモンレス・ルートレスによる本質的なセキュリティ
     - point: 5
-      reason: "Kubernetesマニフェスト(Pod)のネイティブサポート"
+      reason: Kubernetesマニフェスト(Pod)のネイティブサポート
     - point: 5
-      reason: "Docker互換CLIによる移行の容易さ"
+      reason: Docker互換CLIによる移行の容易さ
     - point: 3
-      reason: "RHELにおける標準採用と長期サポート"
+      reason: RHELにおける標準採用と長期サポート
   minus_points:
     - point: 0
-      reason: "特になし（Docker Desktopほどのエコシステムではないが、Podman Desktopで解消されつつある）"
-  summary: "セキュリティとKubernetes連携を重視するならDocker以上の価値がある。RHEL環境では必須のツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（Docker Desktopほどのエコシステムではないが、Podman Desktopで解消されつつある）
+  summary: セキュリティとKubernetes連携を重視するならDocker以上の価値がある。RHEL環境では必須のツール。
 links:
-  github: "https://github.com/containers/podman"
-  deepwiki: "https://deepwiki.com/containers/podman"
-  codewiki: "https://codewiki.google/github.com/containers/podman"
-  documentation: "https://docs.podman.io/en/latest/"
+  github: https://github.com/containers/podman
+  deepwiki: https://deepwiki.com/containers/podman
+  codewiki: https://codewiki.google/github.com/containers/podman
+  documentation: https://docs.podman.io/en/latest/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Docker"
-    - "Kubernetes"
-    - "Ansible"
+    - Docker
+    - Kubernetes
+    - Ansible
+    - Wine
 ---
+
+
+
 
 # **Podman 調査レポート**
 

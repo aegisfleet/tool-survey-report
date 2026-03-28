@@ -1,64 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "LilysAI 調査レポート"
-tool_name: "LilysAI"
-tool_reading: "リリスAI"
-category: "生成AI"
-developer: "TeamLilys"
-official_site: "https://lilys.ai/"
-date: "2026-02-21"
-last_updated: "2026-02-21"
+title: LilysAI 調査レポート
+tool_name: LilysAI
+tool_reading: リリスAI
+category: 生成AI
+developer: TeamLilys
+official_site: https://lilys.ai/
+date: '2026-02-21'
+last_updated: '2026-02-21'
 tags:
-  - "AI"
-  - "要約"
-  - "動画要約"
-  - "マインドマップ"
-  - "SaaS"
-  - "生成AI"
-  - "翻訳"
-description: "YouTube動画やPDF、Web記事から構造化された要約ノートやマインドマップを自動生成するAIツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - マインドマップ
+  - 動画要約
+  - 生成AI
+  - 翻訳
+  - 要約
+description: YouTube動画やPDF、Web記事から構造化された要約ノートやマインドマップを自動生成するAIツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "学生"
-    - "研究者"
-    - "動画学習者"
-  latest_highlight: "2026年1月にPDF画像解析機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 学生
+    - 研究者
+    - 動画学習者
+  latest_highlight: 2026年1月にPDF画像解析機能を追加
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "動画・音声からの構造化ノート生成精度が非常に高く、マインドマップなどの視覚的出力も充実"
+      reason: 動画・音声からの構造化ノート生成精度が非常に高く、マインドマップなどの視覚的出力も充実
     - point: 5
-      reason: "多言語対応が優秀で、外国語の動画も日本語で即座に要約可能"
+      reason: 多言語対応が優秀で、外国語の動画も日本語で即座に要約可能
     - point: 3
-      reason: "無料プランでも基本的な要約機能が十分に利用可能"
+      reason: 無料プランでも基本的な要約機能が十分に利用可能
     - point: 2
-      reason: "頻繁なアップデートにより新機能（アニメーション、クイズ生成など）が次々と追加されている"
+      reason: 頻繁なアップデートにより新機能（アニメーション、クイズ生成など）が次々と追加されている
   minus_points: []
-  summary: "動画学習の効率を劇的に向上させるツールとして卓越しており、機能の進化も早い。"
-
-# 【任意項目】該当するもののみ記載
+  summary: 動画学習の効率を劇的に向上させるツールとして卓越しており、機能の進化も早い。
 links:
-  documentation: "https://help.lilys.ai/en/"
+  documentation: https://help.lilys.ai/en/
 relationships:
-  parent:
+  parent: null
   children: []
   related_tools:
-    - "NotebookLM"
-    - "NoteGPT"
-    - "Tana"
-    - "Wudpecker"
+    - NotebookLM
 ---
+
+
+
 
 # **LilysAI 調査レポート**
 

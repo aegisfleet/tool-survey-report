@@ -1,60 +1,58 @@
 ---
-title: "Vite 調査レポート"
-tool_name: "Vite"
-tool_reading: "ヴィート"
-category: "開発者ツール"
-developer: "VoidZero Inc. & Vite Contributors"
-official_site: "https://ja.vite.dev/"
-date: "2026-02-06"
-last_updated: "2026-02-06"
+title: Vite 調査レポート
+tool_name: Vite
+tool_reading: ヴィート
+category: 開発者ツール
+developer: VoidZero Inc. & Vite Contributors
+official_site: https://ja.vite.dev/
+date: '2026-02-06'
+last_updated: '2026-02-06'
 tags:
-  - "開発者ツール"
-  - "オープンソース"
-  - "Web開発"
-  - "JavaScript"
-  - "TypeScript"
-  - "高速化"
-  - "ビルドツール"
-description: "次世代のフロントエンドビルドツール。ネイティブESMを利用した高速な開発サーバーと、Rolldownによる最適化されたビルドを提供。"
-
+  - JavaScript
+  - TypeScript
+  - Web開発
+  - オープンソース
+  - ビルドツール
+  - 開発者ツール
+  - 高速化
+description: 次世代のフロントエンドビルドツール。ネイティブESMを利用した高速な開発サーバーと、Rolldownによる最適化されたビルドを提供。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "フロントエンドエンジニア"
-  latest_highlight: "2026年2月現在、Rust製の高速バンドラRolldownを採用したVite 8のベータ版が公開中"
-  update_frequency: "高"
-
+    - Web開発者
+    - フロントエンドエンジニア
+  latest_highlight: 2026年2月現在、Rust製の高速バンドラRolldownを採用したVite 8のベータ版が公開中
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "HMR（ホットモジュールリプレースメント）が非常に高速で、開発体験が劇的に向上する"
+      reason: HMR（ホットモジュールリプレースメント）が非常に高速で、開発体験が劇的に向上する
     - point: 8
-      reason: "設定なし（Zero Config）でTypeScriptやJSXなどがすぐに使える"
+      reason: 設定なし（Zero Config）でTypeScriptやJSXなどがすぐに使える
     - point: 5
-      reason: "Rolldownの導入により、ビルドパフォーマンスがさらに向上している（v8以降）"
+      reason: Rolldownの導入により、ビルドパフォーマンスがさらに向上している（v8以降）
     - point: 2
-      reason: "豊富なプラグインエコシステムと、Rollup互換のプラグインAPI"
+      reason: 豊富なプラグインエコシステムと、Rollup互換のプラグインAPI
   minus_points: []
-  summary: "現代のWeb開発におけるデファクトスタンダード。圧倒的な開発スピードと豊富なエコシステムで、新規プロジェクトの第一選択肢。"
-
+  summary: 現代のWeb開発におけるデファクトスタンダード。圧倒的な開発スピードと豊富なエコシステムで、新規プロジェクトの第一選択肢。
 links:
-  github: "https://github.com/vitejs/vite"
-  codewiki: "https://codewiki.google/github.com/vitejs/vite"
-  deepwiki: "https://deepwiki.com/vitejs/vite"
-  documentation: "https://ja.vite.dev/guide/"
+  github: https://github.com/vitejs/vite
+  codewiki: https://codewiki.google/github.com/vitejs/vite
+  deepwiki: https://deepwiki.com/vitejs/vite
+  documentation: https://ja.vite.dev/guide/
 relationships:
   children:
-    - "Vitest"
+    - Vitest
   related_tools:
-    - "Bun"
-    - "Webpack"
-    - "Turbopack"
+    - Bun
 ---
+
+
+
 
 # **Vite 調査レポート**
 

@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Zscaler 調査レポート"
-tool_name: "Zscaler"
-tool_reading: "ジースケラー"
-category: "セキュリティ"
-developer: "Zscaler, Inc."
-official_site: "https://www.zscaler.com/"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Zscaler 調査レポート
+tool_name: Zscaler
+tool_reading: ジースケラー
+category: CDN/セキュリティ
+developer: Zscaler, Inc.
+official_site: https://www.zscaler.com/
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "サイバーセキュリティ"
-  - "ゼロトラスト"
-  - "SSE"
-  - "SASE"
-  - "クラウドセキュリティ"
-description: "ゼロトラストアーキテクチャに基づき、ユーザー、デバイス、アプリケーションを安全に接続するクラウドネイティブなAIセキュリティプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SASE
+  - SSE
+  - クラウドセキュリティ
+  - サイバーセキュリティ
+  - ゼロトラスト
+description: ゼロトラストアーキテクチャに基づき、ユーザー、デバイス、アプリケーションを安全に接続するクラウドネイティブなAIセキュリティプラットフォーム
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$72/ユーザー/年 (ZIAのエントリーレベル目安)"
+  starting_price: $72/ユーザー/年 (ZIAのエントリーレベル目安)
   target_users:
-    - "大企業・エンタープライズ"
-    - "中規模企業"
-    - "IT・セキュリティ管理者"
-  latest_highlight: "Zscaler ThreatLabz 2026 AI Security Reportの公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業・エンタープライズ
+    - 中規模企業
+    - IT・セキュリティ管理者
+  latest_highlight: Zscaler ThreatLabz 2026 AI Security Reportの公開
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Gartner Magic Quadrant SSE部門のリーダーとして、世界最大規模のインラインセキュリティクラウドによる圧倒的な保護機能を提供"
+      reason: Gartner Magic Quadrant SSE部門のリーダーとして、世界最大規模のインラインセキュリティクラウドによる圧倒的な保護機能を提供
     - point: 5
-      reason: "Zero Trust Network Access (ZTNA)の分野で市場をリードし、VPN代替としての確固たる実績"
+      reason: Zero Trust Network Access (ZTNA)の分野で市場をリードし、VPN代替としての確固たる実績
     - point: 5
-      reason: "エコシステムが強力（Microsoft, AWS, CrowdStrike等の主要技術スタックとシームレスに連携）"
+      reason: エコシステムが強力（Microsoft, AWS, CrowdStrike等の主要技術スタックとシームレスに連携）
     - point: 3
-      reason: "ユーザーや各種レビューサイト（G2, Gartner Peer Insights等）で高い評価を獲得"
+      reason: ユーザーや各種レビューサイト（G2, Gartner Peer Insights等）で高い評価を獲得
   minus_points:
     - point: -3
-      reason: "多機能かつ複雑な構成のため、初期導入の設計と展開に高い学習コストと専門知識が必要"
-  summary: "エンタープライズ向けのゼロトラストセキュリティ基盤として、業界標準とも言える強力なプラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 多機能かつ複雑な構成のため、初期導入の設計と展開に高い学習コストと専門知識が必要
+  summary: エンタープライズ向けのゼロトラストセキュリティ基盤として、業界標準とも言える強力なプラットフォーム。
 links:
-  documentation: "https://help.zscaler.com/"
+  documentation: https://help.zscaler.com/
 relationships:
-  related_tools:
-    - "Cisco"
-    - "Palo Alto Networks"
-    - "Netskope"
+  related_tools: []
 ---
+
+
+
 
 # **Zscaler 調査レポート**
 

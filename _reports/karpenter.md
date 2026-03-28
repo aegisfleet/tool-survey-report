@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Karpenter 調査レポート"
-tool_name: "Karpenter"
-tool_reading: "カーペンター"
-category: "インフラ/クラウド"
-developer: "AWS (Cloud Native Computing Foundation)"
-official_site: "https://karpenter.sh/"
-date: "2025-11-18"
-last_updated: "2026-03-03"
+title: Karpenter 調査レポート
+tool_name: Karpenter
+tool_reading: カーペンター
+category: インフラ/クラウド
+developer: AWS (Cloud Native Computing Foundation)
+official_site: https://karpenter.sh/
+date: '2025-11-18'
+last_updated: '2026-03-03'
 tags:
-  - "Kubernetes"
-  - "オープンソース"
-  - "クラウド"
-  - "DevOps"
-  - "構成管理"
-description: "Kubernetes向けのオープンソース・高性能ノードオートスケーラー。アプリケーション需要に基づき、最適なコンピューティングリソースをジャストインタイムで提供する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - Kubernetes
+  - オープンソース
+  - クラウド
+  - 構成管理
+description: Kubernetes向けのオープンソース・高性能ノードオートスケーラー。アプリケーション需要に基づき、最適なコンピューティングリソースをジャストインタイムで提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "SRE"
-    - "プラットフォームエンジニア"
-  latest_highlight: "2026年2月にv1.9.0をリリース。ノードプールコストメトリクスを追加。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - SRE
+    - プラットフォームエンジニア
+  latest_highlight: 2026年2月にv1.9.0をリリース。ノードプールコストメトリクスを追加。
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Podの要求に基づくジャストインタイムなノード起動による、高速スケーリングと高いコスト効率"
+      reason: Podの要求に基づくジャストインタイムなノード起動による、高速スケーリングと高いコスト効率
     - point: 5
-      reason: "ノードグループ管理を不要とし、クラスタ運用のオーバーヘッドを大幅に削減"
+      reason: ノードグループ管理を不要とし、クラスタ運用のオーバーヘッドを大幅に削減
     - point: 5
-      reason: "CNCFプロジェクトとして活発な開発が継続されており、コミュニティも強力"
+      reason: CNCFプロジェクトとして活発な開発が継続されており、コミュニティも強力
     - point: 2
-      reason: "Azure AKSでもNode Autoprovisioning (NAP) として正式サポート"
+      reason: Azure AKSでもNode Autoprovisioning (NAP) として正式サポート
   minus_points:
     - point: -3
-      reason: "AWS以外のクラウドプロバイダーへの対応はまだ発展途上（Azure以外）"
+      reason: AWS以外のクラウドプロバイダーへの対応はまだ発展途上（Azure以外）
     - point: -2
-      reason: "高度な最適化にはKubernetesとクラウドの深い知識が求められ、学習コストがかかる"
-  summary: "AWS環境におけるKubernetesのコスト効率と運用性を劇的に改善する、高速なノードオートスケーラー。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な最適化にはKubernetesとクラウドの深い知識が求められ、学習コストがかかる
+  summary: AWS環境におけるKubernetesのコスト効率と運用性を劇的に改善する、高速なノードオートスケーラー。
 links:
-  github: "https://github.com/kubernetes-sigs/karpenter"
-  codewiki: "https://codewiki.google/github.com/kubernetes-sigs/karpenter"
-  deepwiki: "https://deepwiki.com/kubernetes-sigs/karpenter"
-  documentation: "https://karpenter.sh/docs/"
+  github: https://github.com/kubernetes-sigs/karpenter
+  codewiki: https://codewiki.google/github.com/kubernetes-sigs/karpenter
+  deepwiki: https://deepwiki.com/kubernetes-sigs/karpenter
+  documentation: https://karpenter.sh/docs/
 relationships:
-  parent: "Kubernetes"
+  parent: Kubernetes
 ---
+
+
+
 
 # **Karpenter 調査レポート**
 

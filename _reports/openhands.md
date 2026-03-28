@@ -1,69 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "OpenHands 調査レポート"
-tool_name: "OpenHands"
-tool_reading: "オープンハンズ"
-category: "自律型AIエージェント"
-developer: "All Hands AI"
-official_site: "https://openhands.dev/"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: OpenHands 調査レポート
+tool_name: OpenHands
+tool_reading: オープンハンズ
+category: 自律型AIエージェント
+developer: All Hands AI
+official_site: https://openhands.dev/
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "コーディング支援"
-  - "開発者ツール"
-description: "ソフトウェア開発タスクを自律的に実行するオープンソースのAIエージェント。自然言語の指示でコード作成からデプロイまでを自動化します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - コーディング支援
+  - 自律型
+  - 開発者ツール
+description: ソフトウェア開発タスクを自律的に実行するオープンソースのAIエージェント。自然言語の指示でコード作成からデプロイまでを自動化します。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "エンジニアリングチーム"
-  latest_highlight: "2026年1月にv1.2.1をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - エンジニアリングチーム
+  latest_highlight: 2026年1月にv1.2.1をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "オープンソースであり、ローカル環境で無料で自律型エージェントを実行できる柔軟性が高い"
+      reason: オープンソースであり、ローカル環境で無料で自律型エージェントを実行できる柔軟性が高い
     - point: 5
-      reason: "Dockerベースの安全なサンドボックス環境を提供し、任意のLLM（BYOK）を利用可能"
+      reason: Dockerベースの安全なサンドボックス環境を提供し、任意のLLM（BYOK）を利用可能
     - point: 3
-      reason: "開発が非常に活発で、Cloud版やEnterprise版などデプロイの選択肢が豊富"
+      reason: 開発が非常に活発で、Cloud版やEnterprise版などデプロイの選択肢が豊富
   minus_points:
     - point: -3
-      reason: "ローカル実行にはDockerやPython環境のセットアップが必要で、初学者にはややハードルがある"
-  summary: "オープンソースの自律型エージェントとしてトップクラスの機能を持ち、コストと柔軟性のバランスが非常に良い。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ローカル実行にはDockerやPython環境のセットアップが必要で、初学者にはややハードルがある
+  summary: オープンソースの自律型エージェントとしてトップクラスの機能を持ち、コストと柔軟性のバランスが非常に良い。
 links:
-  github: "https://github.com/OpenHands/OpenHands"
-  deepwiki: "https://deepwiki.com/OpenHands/OpenHands"
-  documentation: "https://docs.openhands.dev/"
+  github: https://github.com/OpenHands/OpenHands
+  deepwiki: https://deepwiki.com/OpenHands/OpenHands
+  documentation: https://docs.openhands.dev/
 relationships:
   related_tools:
-    - "Deep Agents"
-    - "UI-TARS Desktop"
-    - "AutoGPT"
-    - "Google Jules"
-    - "Agent Zero"
-    - "GitHub Copilot"
-    - "Cursor"
-    - "Manus"
-    - "Devin"
-    - "OpenCode"
+    - Deep Agents
+    - UI-TARS Desktop
+    - AutoGPT
+    - Google Jules
+    - Agent Zero
+    - GitHub Copilot
+    - Cursor
 ---
+
+
+
 
 # **OpenHands 調査レポート**
 

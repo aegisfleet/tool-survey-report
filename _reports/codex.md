@@ -1,58 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Codex cloud 調査レポート"
-tool_name: "Codex cloud"
-tool_reading: "コーデックス・クラウド"
-category: "自律型AIエージェント"
-developer: "OpenAI"
-official_site: "https://developers.openai.com/codex/cloud"
-date: "2026-03-19"
-last_updated: "2026-03-19"
+title: Codex cloud 調査レポート
+tool_name: Codex cloud
+tool_reading: コーデックス・クラウド
+category: 自律型AIエージェント
+developer: OpenAI
+official_site: https://developers.openai.com/codex/cloud
+date: '2026-03-19'
+last_updated: '2026-03-19'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "自動化"
-  - "クラウド"
-description: "Codexが独自のクラウド環境を使用してバックグラウンドで（並行して）タスクを実行できる、クラウドベースのコーディングエージェント機能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - クラウド
+  - 自動化
+  - 開発者ツール
+description: Codexが独自のクラウド環境を使用してバックグラウンドで（並行して）タスクを実行できる、クラウドベースのコーディングエージェント機能。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "開発者"
-    - "エンジニアチーム"
-  latest_highlight: "Codexのクラウド実行環境が利用可能に"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニアチーム
+  latest_highlight: Codexのクラウド実行環境が利用可能に
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "クラウド上で並行して複数タスクを実行でき、ローカルリソースを消費しない"
+      reason: クラウド上で並行して複数タスクを実行でき、ローカルリソースを消費しない
     - point: 5
-      reason: "GitHubと連携した自動コードレビューやプルリクエスト作成が可能"
+      reason: GitHubと連携した自動コードレビューやプルリクエスト作成が可能
     - point: 3
-      reason: "IDEやCLI、GitHub上から直接クラウドタスクをキックできる柔軟なワークフロー"
+      reason: IDEやCLI、GitHub上から直接クラウドタスクをキックできる柔軟なワークフロー
   minus_points:
     - point: -3
-      reason: "利用にChatGPTの有料プランが必要であり、クラウドタスクはクレジットの消費が大きい"
-  summary: "ローカルマシンのリソースを消費せず、バックグラウンドで並行して開発タスクを任せられる強力なクラウド型AIエージェントです。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 利用にChatGPTの有料プランが必要であり、クラウドタスクはクレジットの消費が大きい
+  summary: ローカルマシンのリソースを消費せず、バックグラウンドで並行して開発タスクを任せられる強力なクラウド型AIエージェントです。
 relationships:
-  parent: "ChatGPT"
+  parent: ChatGPT
   related_tools:
-    - "Codex app"
-    - "GitHub Copilot"
-    - "Jules"
-    - "Devin"
+    - Codex app
+    - GitHub Copilot
+    - Devin
 ---
+
+
+
 
 # **Codex cloud 調査レポート**
 

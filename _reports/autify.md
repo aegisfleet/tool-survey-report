@@ -1,62 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Autify 調査レポート"
-tool_name: "Autify"
-tool_reading: "オーティファイ"
-category: "テスト/QA"
-developer: "オーティファイ株式会社"
-official_site: "https://autify.jp/"
-date: "2026-02-22"
-last_updated: "2026-02-22"
+title: Autify 調査レポート
+tool_name: Autify
+tool_reading: オーティファイ
+category: テスト/QA
+developer: オーティファイ株式会社
+official_site: https://autify.jp/
+date: '2026-02-22'
+last_updated: '2026-02-22'
 tags:
-  - "テスト自動化"
-  - "E2Eテスト"
-  - "AI"
-  - "ノーコード"
-  - "SaaS"
-description: "AIを活用したノーコードのテスト自動化プラットフォーム。AIによる自動修復機能で、テストのメンテナンスコストを大幅に削減します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - E2Eテスト
+  - SaaS
+  - テスト自動化
+  - ノーコード
+description: AIを活用したノーコードのテスト自動化プラットフォーム。AIによる自動修復機能で、テストのメンテナンスコストを大幅に削減します。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "個別見積もり"
+  starting_price: 個別見積もり
   target_users:
-    - "QA担当者"
-    - "開発者"
-    - "プロダクトマネージャー"
-  latest_highlight: "2025年12月にAutify CLIのログ出力機能を強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QA担当者
+    - 開発者
+    - プロダクトマネージャー
+  latest_highlight: 2025年12月にAutify CLIのログ出力機能を強化
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AIによるテストの自動修復機能が強力で、メンテナンスコストを削減できる"
+      reason: AIによるテストの自動修復機能が強力で、メンテナンスコストを削減できる
     - point: 5
-      reason: "ノーコードのUIが直感的で、非エンジニアでもテスト作成が容易"
+      reason: ノーコードのUIが直感的で、非エンジニアでもテスト作成が容易
     - point: 5
-      reason: "日本語のドキュメントやサポートが非常に手厚い"
+      reason: 日本語のドキュメントやサポートが非常に手厚い
   minus_points:
     - point: -3
-      reason: "料金が完全な個別見積もりで、導入前の費用感がつかみにくい"
-  summary: "AIによる高いメンテナンス性とノーコードの操作性が強みだが、料金は個別見積もりとなる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 料金が完全な個別見積もりで、導入前の費用感がつかみにくい
+  summary: AIによる高いメンテナンス性とノーコードの操作性が強みだが、料金は個別見積もりとなる。
 links:
-  documentation: "https://help.autify.com/"
+  documentation: https://help.autify.com/
 relationships:
   related_tools:
-    - "mabl"
-    - "MagicPod"
-    - "Selenium"
-    - "Cypress"
-    - "Playwright"
-    - "Playwright Test Agents"
+    - mabl
+    - MagicPod
+    - Selenium
+    - Cypress
+    - Playwright
+    - Playwright Test Agents
+    - ネムラナイ
 ---
+
+
+
 
 # **Autify 調査レポート**
 

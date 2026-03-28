@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Waves Place 調査レポート"
-tool_name: "Waves Place"
-tool_reading: "ウェイブス プレース"
-category: "動画/メディア"
-developer: "カシオ計算機株式会社 (Casio Computer Co., Ltd.)"
-official_site: "https://wavesplace.casio.com/"
-date: "2026-03-15"
-last_updated: "2026-03-15"
+title: Waves Place 調査レポート
+tool_name: Waves Place
+tool_reading: ウェイブス プレース
+category: 動画/メディア
+developer: カシオ計算機株式会社 (Casio Computer Co., Ltd.)
+official_site: https://wavesplace.casio.com/
+date: '2026-03-15'
+last_updated: '2026-03-15'
 tags:
-  - "AI"
-  - "生成AI"
-  - "効果音"
-  - "クリエイターツール"
-  - "音声生成"
-description: "日本語テキストからAIが効果音を生成するWebサービス。カシオ計算機とAIdeaLabが共同開発。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - クリエイターツール
+  - 効果音
+  - 生成AI
+  - 音声生成
+description: 日本語テキストからAIが効果音を生成するWebサービス。カシオ計算機とAIdeaLabが共同開発。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "動画クリエイター"
-    - "楽曲制作者"
-    - "配信者"
-  latest_highlight: "2025年12月に音質とプロンプト追従性を向上"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 動画クリエイター
+    - 楽曲制作者
+    - 配信者
+  latest_highlight: 2025年12月に音質とプロンプト追従性を向上
+  update_frequency: 中
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 5
-      reason: "日本語プロンプトに特化しており、直感的に使える"
+      reason: 日本語プロンプトに特化しており、直感的に使える
     - point: 3
-      reason: "大手メーカー（カシオ）による運営の安心感"
+      reason: 大手メーカー（カシオ）による運営の安心感
     - point: 2
-      reason: "AIdeaLabとの共同開発による高い技術力"
+      reason: AIdeaLabとの共同開発による高い技術力
   minus_points:
     - point: -2
-      reason: "商用利用は有料プランのみ"
+      reason: 商用利用は有料プランのみ
     - point: -2
-      reason: "詳細な料金プラン情報が公式サイト外からは確認しづらい"
-  summary: "日本語で手軽に高品質な効果音を作成できる強力なツール。商用利用には課金が必要だが、クリエイターにとって強力な味方となる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 詳細な料金プラン情報が公式サイト外からは確認しづらい
+  summary: 日本語で手軽に高品質な効果音を作成できる強力なツール。商用利用には課金が必要だが、クリエイターにとって強力な味方となる。
 links:
-  documentation: "https://wavesplace.casio.com/" # 公式サイト内にガイドがあると想定
+  documentation: https://wavesplace.casio.com/
 relationships:
   related_tools:
-    - "ElevenLabs"
+    - ElevenLabs
 ---
+
+
+
 
 # **Waves Place 調査レポート**
 

@@ -1,58 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "MoneyPrinterV2 調査レポート"
-tool_name: "MoneyPrinterV2"
-tool_reading: "マネープリンターブイツー"
-category: "ワークフロー自動化"
-developer: "FujiwaraChoki"
-official_site: "https://github.com/FujiwaraChoki/MoneyPrinterV2"
-date: "2026-03-21"
-last_updated: "2026-03-21"
+title: MoneyPrinterV2 調査レポート
+tool_name: MoneyPrinterV2
+tool_reading: マネープリンターブイツー
+category: ワークフロー自動化
+developer: FujiwaraChoki
+official_site: https://github.com/FujiwaraChoki/MoneyPrinterV2
+date: '2026-03-21'
+last_updated: '2026-03-21'
 tags:
-  - "自動化"
-  - "オープンソース"
-  - "Python"
-  - "SNS連携"
-  - "動画生成"
-description: "YouTube ShortsやTwitterでの発信など、オンラインでの収益化プロセスを自動化するPythonベースのオープンソースツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Python
+  - SNS連携
+  - オープンソース
+  - 動画生成
+  - 自動化
+description: YouTube ShortsやTwitterでの発信など、オンラインでの収益化プロセスを自動化するPythonベースのオープンソースツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "マーケター"
-  latest_highlight: "2026年3月にKittenTTSとOllamaへの切り替えを含む大規模アップデートを実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - マーケター
+  latest_highlight: 2026年3月にKittenTTSとOllamaへの切り替えを含む大規模アップデートを実施
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "無料で複数のプラットフォームの自動化が可能"
+      reason: 無料で複数のプラットフォームの自動化が可能
     - point: 3
-      reason: "オープンソースでカスタマイズ性が高い"
+      reason: オープンソースでカスタマイズ性が高い
   minus_points:
     - point: -3
-      reason: "PythonやGo環境の構築など非エンジニアにはハードルが高い"
-  summary: "強力な自動化機能を持つが、導入には一定の技術的知識が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: PythonやGo環境の構築など非エンジニアにはハードルが高い
+  summary: 強力な自動化機能を持つが、導入には一定の技術的知識が必要
 links:
-  github: "https://github.com/FujiwaraChoki/MoneyPrinterV2"
-  deepwiki: "https://deepwiki.com/FujiwaraChoki/MoneyPrinterV2"
+  github: https://github.com/FujiwaraChoki/MoneyPrinterV2
+  deepwiki: https://deepwiki.com/FujiwaraChoki/MoneyPrinterV2
 relationships:
   related_tools:
-    - "AutoGPT"
-    - "n8n"
-    - "Make"
-    - "Zapier"
+    - AutoGPT
+    - n8n
+    - Make
+    - Zapier
 ---
+
+
+
 
 # **MoneyPrinterV2 調査レポート**
 

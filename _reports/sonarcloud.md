@@ -1,60 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "SonarQube Cloud 調査レポート"
-tool_name: "SonarQube Cloud"
-tool_reading: "ソナーキューブ クラウド / ソナークラウド"
-category: "コード品質"
-developer: "SonarSource"
-official_site: "https://sonarcloud.io/"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: SonarQube Cloud 調査レポート
+tool_name: SonarQube Cloud
+tool_reading: ソナーキューブ クラウド / ソナークラウド
+category: コード品質
+developer: SonarSource
+official_site: https://sonarcloud.io/
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "コード品質"
-  - "静的解析"
-  - "SAST"
-  - "DevSecOps"
-  - "SaaS"
-  - "CI/CD"
-description: "40以上の言語に対応したクラウドベースの静的コード解析プラットフォーム。GitHubなどのクラウドALMと連携し、プルリクエストごとにコード品質とセキュリティを自動チェックします。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CI/CD
+  - DevSecOps
+  - SAST
+  - SaaS
+  - コード品質
+  - 静的解析
+description: 40以上の言語に対応したクラウドベースの静的コード解析プラットフォーム。GitHubなどのクラウドALMと連携し、プルリクエストごとにコード品質とセキュリティを自動チェックします。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "€10/月 (100k LOC)"
+  starting_price: €10/月 (100k LOC)
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "DevOpsチーム"
-  latest_highlight: "SonarCloud から SonarQube Cloud へリブランディング"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - DevOpsチーム
+  latest_highlight: SonarCloud から SonarQube Cloud へリブランディング
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "インフラ管理不要で即座に利用開始できる手軽さ（SaaS）"
+      reason: インフラ管理不要で即座に利用開始できる手軽さ（SaaS）
     - point: 5
-      reason: "オープンソースプロジェクトであれば全機能を無料で利用可能"
+      reason: オープンソースプロジェクトであれば全機能を無料で利用可能
     - point: 5
-      reason: "GitHub, Bitbucket, Azure DevOps, GitLab との連携が極めてスムーズ"
+      reason: GitHub, Bitbucket, Azure DevOps, GitLab との連携が極めてスムーズ
   minus_points:
-    - point: -0
-      reason: ""
-  summary: "インフラ管理の手間なく、業界標準のコード品質管理を導入できる強力なSaaSツール。OSS開発やスタートアップに最適。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: ''
+  summary: インフラ管理の手間なく、業界標準のコード品質管理を導入できる強力なSaaSツール。OSS開発やスタートアップに最適。
 links:
-  documentation: "https://docs.sonarcloud.io/"
+  documentation: https://docs.sonarcloud.io/
 relationships:
   related_tools:
-    - "SonarQube"
-    - "Snyk"
-    - "Codacy"
+    - SonarQube
 ---
+
+
+
 
 # **SonarQube Cloud 調査レポート**
 

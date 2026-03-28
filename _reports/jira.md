@@ -1,60 +1,60 @@
 ---
-title: "Jira 調査レポート"
-tool_name: "Jira"
-tool_reading: "ジラ"
-category: "プロジェクト管理"
-developer: "Atlassian"
-official_site: "https://www.atlassian.com/software/jira"
-date: "2026-01-28"
-last_updated: "2026-03-20"
+title: Jira 調査レポート
+tool_name: Jira
+tool_reading: ジラ
+category: プロジェクト管理
+developer: Atlassian
+official_site: https://www.atlassian.com/software/jira
+date: '2026-01-28'
+last_updated: '2026-03-20'
 tags:
-  - "アジャイル"
-  - "タスク管理"
-  - "SaaS"
-  - "AI"
-  - "開発者ツール"
-description: "アジャイル開発チームを中心に世界中で広く利用されている、高度なカスタマイズ性を持つプロジェクト管理・課題追跡ツール"
-
+  - AI
+  - SaaS
+  - アジャイル
+  - タスク管理
+  - 開発者ツール
+description: アジャイル開発チームを中心に世界中で広く利用されている、高度なカスタマイズ性を持つプロジェクト管理・課題追跡ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$8.15/月"
+  starting_price: $8.15/月
   target_users:
-    - "ソフトウェア開発チーム"
-    - "IT運用チーム"
-    - "大規模組織"
-  latest_highlight: "2026年3月にRovo AIの大幅アップデートとGitHub Copilotとの深い連携機能を発表"
-  update_frequency: "高"
-
+    - ソフトウェア開発チーム
+    - IT運用チーム
+    - 大規模組織
+  latest_highlight: 2026年3月にRovo AIの大幅アップデートとGitHub Copilotとの深い連携機能を発表
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "圧倒的な機能の豊富さと柔軟なワークフロー"
+      reason: 圧倒的な機能の豊富さと柔軟なワークフロー
     - point: 4
-      reason: "巨大なエコシステムと連携機能"
+      reason: 巨大なエコシステムと連携機能
     - point: 3
-      reason: "無料プランの実用性が高い（10ユーザーまで）"
+      reason: 無料プランの実用性が高い（10ユーザーまで）
     - point: 3
-      reason: "Atlassian Intelligence (Rovo) によるAI機能の統合"
+      reason: Atlassian Intelligence (Rovo) によるAI機能の統合
   minus_points:
     - point: -3
-      reason: "設定が複雑で学習コストが高い"
-  summary: "多機能かつ柔軟で開発現場のデファクトスタンダードだが、使いこなすには習熟が必要"
-
+      reason: 設定が複雑で学習コストが高い
+  summary: 多機能かつ柔軟で開発現場のデファクトスタンダードだが、使いこなすには習熟が必要
 links:
-  documentation: "https://confluence.atlassian.com/jira"
+  documentation: https://confluence.atlassian.com/jira
 relationships:
   related_tools:
-    - "Redmine"
-    - "Backlog"
-    - "Linear"
-    - "GitHub"
-    - "GitLab"
-    - "Notion"
-    - "Findy Team+"
+    - Redmine
+    - Backlog
+    - Linear
+    - GitHub
+    - GitLab
+    - Notion
+    - Findy Team+
 ---
+
+
+
 
 # **Jira 調査レポート**
 

@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "NotebookLM 調査レポート"
-tool_name: "NotebookLM"
-tool_reading: "ノートブックエルエム"
-category: "生成AI"
-developer: "Google"
-official_site: "https://notebooklm.google.com/"
-date: "2026-01-28"
-last_updated: "2026-03-23"
+title: NotebookLM 調査レポート
+tool_name: NotebookLM
+tool_reading: ノートブックエルエム
+category: 生成AI
+developer: Google
+official_site: https://notebooklm.google.com/
+date: '2026-01-28'
+last_updated: '2026-03-23'
 tags:
-  - "AI"
-  - "生成AI"
-  - "リサーチ"
-  - "ライティング"
-  - "RAG"
-description: "アップロードした資料に基づいて、AIが質問への回答、要約、音声による解説などを生成するGoogleのAIリサーチアシスタント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - RAG
+  - ライティング
+  - リサーチ
+  - 生成AI
+description: アップロードした資料に基づいて、AIが質問への回答、要約、音声による解説などを生成するGoogleのAIリサーチアシスタント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "研究者"
-    - "学生"
-    - "ビジネスパーソン"
-  latest_highlight: "2025年11月にWeb情報を自動収集・分析するDeep Research機能を追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 研究者
+    - 学生
+    - ビジネスパーソン
+  latest_highlight: 2025年11月にWeb情報を自動収集・分析するDeep Research機能を追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "指定した資料のみに基づく回答（グラウンディング）により、ハルシネーションを極小化"
+      reason: 指定した資料のみに基づく回答（グラウンディング）により、ハルシネーションを極小化
     - point: 5
-      reason: "「音声概説」機能が革新的で、資料をポッドキャスト風に聴くことができる"
+      reason: 「音声概説」機能が革新的で、資料をポッドキャスト風に聴くことができる
     - point: 2
-      reason: "モバイルアプリの提供により、場所を選ばず学習・リサーチが可能になった"
+      reason: モバイルアプリの提供により、場所を選ばず学習・リサーチが可能になった
   minus_points:
     - point: -3
-      reason: "日本語の読解・生成精度が英語に比べて改善の余地がある"
+      reason: 日本語の読解・生成精度が英語に比べて改善の余地がある
     - point: -2
-      reason: "アップロード可能なソース容量や数に依然として制限がある"
-  summary: "信頼性の高い情報整理ツールとして卓越しており、Deep Researchやモバイル対応により実用性がさらに向上した。"
-
-# 【任意項目】該当するもののみ記載
+      reason: アップロード可能なソース容量や数に依然として制限がある
+  summary: 信頼性の高い情報整理ツールとして卓越しており、Deep Researchやモバイル対応により実用性がさらに向上した。
 links:
-  documentation: "https://notebooklm.google.com/"
+  documentation: https://notebooklm.google.com/
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   children: []
   related_tools:
-    - "Google Learning"
-    - "Google Illuminate"
-    - "ChatGPT"
-    - "Perplexity"
-    - "Claude"
-    - "LilysAI"
+    - Google Learning
+    - Google Illuminate
+    - ChatGPT
+    - Perplexity
+    - Claude
+    - LilysAI
 ---
+
+
+
 
 # **NotebookLM 調査レポート**
 

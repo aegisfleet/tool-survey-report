@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Sourcery 調査レポート"
-tool_name: "Sourcery"
-tool_reading: "ソーサリー"
-category: "AIコーディング支援"
-developer: "Sourcery AI"
-official_site: "https://sourcery.ai/"
-date: "2026-03-05"
-last_updated: "2026-03-05"
+title: Sourcery 調査レポート
+tool_name: Sourcery
+tool_reading: ソーサリー
+category: AIコーディング支援
+developer: Sourcery AI
+official_site: https://sourcery.ai/
+date: '2026-03-05'
+last_updated: '2026-03-05'
 tags:
-  - "AI"
-  - "コードレビュー"
-  - "セキュリティ"
-  - "開発者ツール"
-  - "オープンソース"
-description: "セキュリティスキャンとコードレビューを自動化・高速化し、セキュアなAI主導開発を支援するツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - コードレビュー
+  - セキュリティ
+  - 開発者ツール
+description: セキュリティスキャンとコードレビューを自動化・高速化し、セキュアなAI主導開発を支援するツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$12/月"
+  starting_price: $12/月
   target_users:
-    - "開発者"
-    - "開発チーム"
-    - "OSSメンテナー"
-  latest_highlight: "包括的なセキュリティスキャン（SAST、SCA、シークレット検出）の追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 開発チーム
+    - OSSメンテナー
+  latest_highlight: 包括的なセキュリティスキャン（SAST、SCA、シークレット検出）の追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "高度な自動コードレビューと自動リファクタリング機能"
+      reason: 高度な自動コードレビューと自動リファクタリング機能
     - point: 5
-      reason: "オープンソースプロジェクトでの完全無料利用が可能"
+      reason: オープンソースプロジェクトでの完全無料利用が可能
     - point: 5
-      reason: "IDE統合（VS Code, JetBrains等）によるリアルタイムフィードバック"
+      reason: IDE統合（VS Code, JetBrains等）によるリアルタイムフィードバック
   minus_points:
     - point: -2
-      reason: "カスタムルールの作成には専用の構文を学習する必要がある"
-  summary: "コード品質の向上とセキュリティ確保を自動化する強力なレビューツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: カスタムルールの作成には専用の構文を学習する必要がある
+  summary: コード品質の向上とセキュリティ確保を自動化する強力なレビューツール
 links:
-  github: "https://github.com/sourcery-ai/sourcery"
-  deepwiki: "https://deepwiki.com/sourcery-ai/sourcery"
-  documentation: "https://docs.sourcery.ai/"
+  github: https://github.com/sourcery-ai/sourcery
+  deepwiki: https://deepwiki.com/sourcery-ai/sourcery
+  documentation: https://docs.sourcery.ai/
 relationships:
   related_tools:
-    - "CodeRabbit"
-    - "GitHub Copilot"
-    - "SonarQube"
+    - CodeRabbit
+    - GitHub Copilot
+    - SonarQube
 ---
+
+
+
 
 # **Sourcery 調査レポート**
 

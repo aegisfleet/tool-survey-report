@@ -1,56 +1,58 @@
 ---
-title: "OpenAI Frontier 調査レポート"
-tool_name: "OpenAI Frontier"
-tool_reading: "オープンエーアイ フロンティア"
-category: "自律型AIエージェント"
-developer: "OpenAI"
-official_site: "https://openai.com/frontier"
-date: "2026-02-07"
-last_updated: "2026-02-07"
+title: OpenAI Frontier 調査レポート
+tool_name: OpenAI Frontier
+tool_reading: オープンエーアイ フロンティア
+category: 自律型AIエージェント
+developer: OpenAI
+official_site: https://openai.com/frontier
+date: '2026-02-07'
+last_updated: '2026-02-07'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "大規模言語モデル"
-  - "研究開発"
-  - "OpenAI"
-description: "GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。"
+  - AI
+  - OpenAI
+  - エージェント
+  - 大規模言語モデル
+  - 研究開発
+  - 自律型
+description: GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "従量課金 (Enterprise/Team)"
+  starting_price: 従量課金 (Enterprise/Team)
   target_users:
-    - "研究者"
-    - "ソフトウェアエンジニア"
-    - "データサイエンティスト"
-  latest_highlight: "2026年2月にパブリックベータ公開。3つの特化型エージェントを提供。"
-  update_frequency: "高"
+    - 研究者
+    - ソフトウェアエンジニア
+    - データサイエンティスト
+  latest_highlight: 2026年2月にパブリックベータ公開。3つの特化型エージェントを提供。
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 10
-      reason: "GPT-5.2ベースの圧倒的な推論能力により、未解決の科学的問題や複雑なコードベースの理解が可能"
+      reason: GPT-5.2ベースの圧倒的な推論能力により、未解決の科学的問題や複雑なコードベースの理解が可能
     - point: 7
-      reason: "マルチエージェント協調により、調査・計画・実行・検証のサイクルを自律的に回せる"
+      reason: マルチエージェント協調により、調査・計画・実行・検証のサイクルを自律的に回せる
     - point: 5
-      reason: "外部ツール（ブラウザ、Python環境、社内DB）とのシームレスな統合"
+      reason: 外部ツール（ブラウザ、Python環境、社内DB）とのシームレスな統合
   minus_points:
     - point: -5
-      reason: "利用コストが非常に高く、個人開発者や小規模チームには敷居が高い"
+      reason: 利用コストが非常に高く、個人開発者や小規模チームには敷居が高い
     - point: -3
-      reason: "推論に時間がかかるため、リアルタイム性が求められるタスクには不向き"
-  summary: "人類の知的生産活動を「アシスト」から「自律実行」へと引き上げる、次世代のAGIへ向けたマイルストーン的プラットフォーム。"
+      reason: 推論に時間がかかるため、リアルタイム性が求められるタスクには不向き
+  summary: 人類の知的生産活動を「アシスト」から「自律実行」へと引き上げる、次世代のAGIへ向けたマイルストーン的プラットフォーム。
 links:
-  documentation: "https://platform.openai.com/docs/frontier"
+  documentation: https://platform.openai.com/docs/frontier
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "AWS Frontier Agents"
-    - "Devin"
-    - "Google Gemini"
-    - "LangChain"
+    - ChatGPT
+    - AWS Frontier Agents
+    - Devin
+    - LangChain
 ---
+
+
+
 
 # **OpenAI Frontier 調査レポート**
 

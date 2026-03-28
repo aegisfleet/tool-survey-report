@@ -1,57 +1,55 @@
 ---
-title: "Amazon Athena 調査レポート"
-tool_name: "Amazon Athena"
-tool_reading: "アマゾン アテナ"
-category: "インフラ/クラウド"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/jp/athena/"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Amazon Athena 調査レポート
+tool_name: Amazon Athena
+tool_reading: アマゾン アテナ
+category: インフラ/クラウド
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/jp/athena/
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "AWS"
-  - "データ分析"
-  - "サーバーレス"
-  - "SQL"
-  - "データレイク"
-description: "Amazon S3内のデータを標準SQLで直接分析できるサーバーレスのインタラクティブクエリサービス"
-
+  - AWS
+  - SQL
+  - サーバーレス
+  - データレイク
+  - データ分析
+description: Amazon S3内のデータを標準SQLで直接分析できるサーバーレスのインタラクティブクエリサービス
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$5.00/TB"
+  starting_price: $5.00/TB
   target_users:
-    - "データエンジニア"
-    - "データアナリスト"
-    - "開発者"
-  latest_highlight: "次世代のAmazon SageMakerとの統合による分析ワークフローの強化"
-  update_frequency: "中"
-
+    - データエンジニア
+    - データアナリスト
+    - 開発者
+  latest_highlight: 次世代のAmazon SageMakerとの統合による分析ワークフローの強化
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "サーバーレスでインフラ管理が不要なため、すぐに利用開始できる"
+      reason: サーバーレスでインフラ管理が不要なため、すぐに利用開始できる
     - point: 5
-      reason: "スキャンしたデータ量に基づく従量課金で、小規模からでもコスト効率が高い"
+      reason: スキャンしたデータ量に基づく従量課金で、小規模からでもコスト効率が高い
     - point: 3
-      reason: "標準SQL（Presto/Trinoベース）が使用でき、学習コストが低い"
+      reason: 標準SQL（Presto/Trinoベース）が使用でき、学習コストが低い
     - point: 3
-      reason: "豊富なAWSエコシステム（S3, Glue, QuickSightなど）との強力な連携"
+      reason: 豊富なAWSエコシステム（S3, Glue, QuickSightなど）との強力な連携
     - point: 2
-      reason: "フェデレーテッドクエリによりS3以外のデータソースも柔軟にクエリ可能"
+      reason: フェデレーテッドクエリによりS3以外のデータソースも柔軟にクエリ可能
   minus_points:
     - point: -3
-      reason: "複雑なテーブル結合や超大規模な分析ワークロードでは、専用DWH（Redshift等）に比べてパフォーマンスやコスト面で不利になる場合がある"
-  summary: "S3上のデータを手軽に探索・分析する用途に最適で、AWS環境でのデータレイク活用の第一歩として非常に強力なツール"
-
+      reason: 複雑なテーブル結合や超大規模な分析ワークロードでは、専用DWH（Redshift等）に比べてパフォーマンスやコスト面で不利になる場合がある
+  summary: S3上のデータを手軽に探索・分析する用途に最適で、AWS環境でのデータレイク活用の第一歩として非常に強力なツール
 links:
-  documentation: "https://docs.aws.amazon.com/athena/latest/ug/what-is.html"
+  documentation: https://docs.aws.amazon.com/athena/latest/ug/what-is.html
 relationships:
-  related_tools:
-    - "amazon-opensearch-service"
-    - "amazon-quicksight"
+  related_tools: []
 ---
+
+
+
 
 # **Amazon Athena 調査レポート**
 

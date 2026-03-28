@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Qwen-Image-Layered 調査レポート"
-tool_name: "Qwen-Image-Layered"
-tool_reading: "クウェン・イメージ・レイヤード"
-category: "生成AI"
-developer: "Alibaba Cloud / QwenLM Team"
-official_site: "https://github.com/QwenLM/Qwen-Image-Layered"
-date: "2026-01-30"
-last_updated: "2026-01-30"
+title: Qwen-Image-Layered 調査レポート
+tool_name: Qwen-Image-Layered
+tool_reading: クウェン・イメージ・レイヤード
+category: 生成AI
+developer: Alibaba Cloud / QwenLM Team
+official_site: https://github.com/QwenLM/Qwen-Image-Layered
+date: '2026-01-30'
+last_updated: '2026-01-30'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "生成AI"
-  - "画像編集"
-  - "Python"
-description: "画像を複数の編集可能なRGBAレイヤーに分解することで、高忠実度な編集を実現するオープンソースのAIモデル。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Python
+  - オープンソース
+  - 生成AI
+  - 画像編集
+description: 画像を複数の編集可能なRGBAレイヤーに分解することで、高忠実度な編集を実現するオープンソースのAIモデル。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AI研究者"
-    - "デザイナー"
-  latest_highlight: "2025年12月に公開された、画像を編集可能なレイヤーに分解する初のオープンソースモデル"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AI研究者
+    - デザイナー
+  latest_highlight: 2025年12月に公開された、画像を編集可能なレイヤーに分解する初のオープンソースモデル
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 10
-      reason: "画像を編集可能なレイヤーに分解するという、これまでにない画期的な機能を提供している点"
+      reason: 画像を編集可能なレイヤーに分解するという、これまでにない画期的な機能を提供している点
     - point: 5
-      reason: "Apache 2.0ライセンスのオープンソースであり、商用利用も可能なため、幅広い応用が期待できる点"
+      reason: Apache 2.0ライセンスのオープンソースであり、商用利用も可能なため、幅広い応用が期待できる点
     - point: 3
-      reason: "リリース直後からGitHubで高い注目を集め、活発なコミュニティが形成されつつある点"
+      reason: リリース直後からGitHubで高い注目を集め、活発なコミュニティが形成されつつある点
   minus_points:
     - point: -3
-      reason: "Pythonや関連ライブラリの知識が前提となり、非開発者にとっては学習コストが高い点"
+      reason: Pythonや関連ライブラリの知識が前提となり、非開発者にとっては学習コストが高い点
     - point: -3
-      reason: "高性能なGPUが推奨されており、ローカル環境での利用には一定のハードルがある点"
-  summary: "画期的なレイヤー分解機能を持つが、利用には専門知識と相応の計算リソースが必要となる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高性能なGPUが推奨されており、ローカル環境での利用には一定のハードルがある点
+  summary: 画期的なレイヤー分解機能を持つが、利用には専門知識と相応の計算リソースが必要となる。
 links:
-  github: "https://github.com/QwenLM/Qwen-Image-Layered"
-  codewiki: "https://codewiki.google/github.com/QwenLM/Qwen-Image-Layered"
-  deepwiki: "https://deepwiki.com/QwenLM/Qwen-Image-Layered"
-  documentation: "https://huggingface.co/Qwen/Qwen-Image-Layered"
+  github: https://github.com/QwenLM/Qwen-Image-Layered
+  codewiki: https://codewiki.google/github.com/QwenLM/Qwen-Image-Layered
+  deepwiki: https://deepwiki.com/QwenLM/Qwen-Image-Layered
+  documentation: https://huggingface.co/Qwen/Qwen-Image-Layered
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Stable Diffusion"
-    - "Canva"
+    - Stable Diffusion
+    - Canva
 ---
+
+
+
 
 # **Qwen-Image-Layered 調査レポート**
 

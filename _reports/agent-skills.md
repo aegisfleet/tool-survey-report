@@ -1,59 +1,54 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Agent Skills 調査レポート"
-tool_name: "Agent Skills"
-tool_reading: "エージェント スキルズ"
-category: "AI開発基盤"
-developer: "Anthropic / Agent Skills Project"
-official_site: "https://agentskills.io/home"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: Agent Skills 調査レポート
+tool_name: Agent Skills
+tool_reading: エージェント スキルズ
+category: AI開発基盤
+developer: Anthropic / Agent Skills Project
+official_site: https://agentskills.io/home
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "開発者ツール"
-  - "標準化"
-description: "AIエージェントに専門知識やワークフローを付与するためのオープンな標準フォーマット"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 標準化
+  - 開発者ツール
+description: AIエージェントに専門知識やワークフローを付与するためのオープンな標準フォーマット
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエンジニア"
-    - "エージェント開発者"
-    - "企業のDX推進担当者"
-  latest_highlight: "主要なAI開発ツールでの採用拡大と仕様の安定化"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエンジニア
+    - エージェント開発者
+    - 企業のDX推進担当者
+  latest_highlight: 主要なAI開発ツールでの採用拡大と仕様の安定化
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンな標準仕様で特定ベンダーに依存しない"
+      reason: オープンな標準仕様で特定ベンダーに依存しない
     - point: 5
-      reason: "シンプルなファイル構成で管理・共有が容易"
+      reason: シンプルなファイル構成で管理・共有が容易
   minus_points: []
-  summary: "AIエージェントの能力拡張を標準化する有望な規格"
-
-# 【任意項目】該当するもののみ記載
+  summary: AIエージェントの能力拡張を標準化する有望な規格
 links:
-  github: "https://github.com/agentskills/agentskills"
-  deepwiki: "https://deepwiki.com/agentskills/agentskills"
-  documentation: "https://agentskills.io/what-are-skills"
+  github: https://github.com/agentskills/agentskills
+  deepwiki: https://deepwiki.com/agentskills/agentskills
+  documentation: https://agentskills.io/what-are-skills
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Model Context Protocol"
-    - "MCP Apps"
-    - "Claude"
+    - Model Context Protocol
+    - MCP Apps
+    - Claude
 ---
+
+
+
 
 # **Agent Skills 調査レポート**
 

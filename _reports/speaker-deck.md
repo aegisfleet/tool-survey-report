@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Speaker Deck 調査レポート"
-tool_name: "Speaker Deck"
-tool_reading: "スピーカーデック"
-category: "ドキュメント/ナレッジ"
-developer: "Speaker Deck, LLC"
-official_site: "https://speakerdeck.com/"
-date: "2026-01-23"
-last_updated: "2026-02-27"
+title: Speaker Deck 調査レポート
+tool_name: Speaker Deck
+tool_reading: スピーカーデック
+category: ドキュメント/ナレッジ
+developer: Speaker Deck, LLC
+official_site: https://speakerdeck.com/
+date: '2026-01-23'
+last_updated: '2026-02-27'
 tags:
-  - "SaaS"
-  - "ドキュメント共有"
-  - "開発者ツール"
-  - "プレゼンテーション"
-  - "PDF"
-description: "PDF形式のスライドを高品質で共有・埋め込みできるプラットフォーム。広告なしのクリーンなビューアと開発者コミュニティでの高い人気が特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - PDF
+  - SaaS
+  - ドキュメント共有
+  - プレゼンテーション
+  - 開発者ツール
+description: PDF形式のスライドを高品質で共有・埋め込みできるプラットフォーム。広告なしのクリーンなビューアと開発者コミュニティでの高い人気が特徴。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$8/月"
+  starting_price: $8/月
   target_users:
-    - "開発者"
-    - "スピーカー"
-    - "技術カンファレンス"
-  latest_highlight: "2025年12月にスライド内リンクのクリックに対応"
-  update_frequency: "低"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スピーカー
+    - 技術カンファレンス
+  latest_highlight: 2025年12月にスライド内リンクのクリックに対応
+  update_frequency: 低
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 5
-      reason: "PDFベースでフォント崩れがなく、ビューアが非常に軽量・シンプル"
+      reason: PDFベースでフォント崩れがなく、ビューアが非常に軽量・シンプル
     - point: 3
-      reason: "広告が少なく（Proは完全なし）、コンテンツに集中できるデザイン"
+      reason: 広告が少なく（Proは完全なし）、コンテンツに集中できるデザイン
     - point: 3
-      reason: "スライド内のリンクがクリック可能になり、利便性が向上した"
+      reason: スライド内のリンクがクリック可能になり、利便性が向上した
   minus_points:
     - point: -3
-      reason: "アニメーションや画面切り替え効果に対応していない（PDFのみ）"
+      reason: アニメーションや画面切り替え効果に対応していない（PDFのみ）
     - point: -2
-      reason: "日本語検索の精度や機能が競合（Docswell）に比べて弱い"
-  summary: "機能はシンプルだが、PDFスライドの共有において最も信頼性と表示品質が高いツールの一つ"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語検索の精度や機能が競合（Docswell）に比べて弱い
+  summary: 機能はシンプルだが、PDFスライドの共有において最も信頼性と表示品質が高いツールの一つ
 links:
-  documentation: "https://help.speakerdeck.com/"
+  documentation: https://help.speakerdeck.com/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Docswell"
-    - "Gamma"
-    - "Canva"
+    - Docswell
+    - Gamma
+    - Canva
 ---
+
+
+
 
 # **Speaker Deck 調査レポート**
 

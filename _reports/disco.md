@@ -1,57 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Disco 調査レポート"
-tool_name: "Google Disco"
-tool_reading: "グーグル ディスコ"
-category: "AI検索エンジン"
-developer: "Google Labs"
-official_site: "https://labs.google/disco"
-date: "2026-01-27"
-last_updated: "2026-03-07"
+title: Google Disco 調査レポート
+tool_name: Google Disco
+tool_reading: グーグル ディスコ
+category: AI検索エンジン
+developer: Google Labs
+official_site: https://labs.google/disco
+date: '2026-01-27'
+last_updated: '2026-03-07'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "会話型AI"
-description: "Google Labsが提供する実験的なAIブラウザ。ユーザーの意図に合わせてタブを動的な「GenTabs」アプリに変換します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - 会話型AI
+  - 生成AI
+description: Google Labsが提供する実験的なAIブラウザ。ユーザーの意図に合わせてタブを動的な「GenTabs」アプリに変換します。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (ウェイトリスト)"
+  starting_price: 無料 (ウェイトリスト)
   target_users:
-    - "アーリーアダプター"
-    - "リサーチャー"
-    - "情報収集を行うユーザー"
-  latest_highlight: "2026年1月現在もウェイトリスト制で、GenTabs機能がコアとして展開中"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - アーリーアダプター
+    - リサーチャー
+    - 情報収集を行うユーザー
+  latest_highlight: 2026年1月現在もウェイトリスト制で、GenTabs機能がコアとして展開中
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "「GenTabs」という新しいブラウジング体験を提供し、タブの整理とタスク実行を革新"
+      reason: 「GenTabs」という新しいブラウジング体験を提供し、タブの整理とタスク実行を革新
     - point: 3
-      reason: "Googleの最新Geminiモデルを活用した高いコンテキスト理解能力"
+      reason: Googleの最新Geminiモデルを活用した高いコンテキスト理解能力
   minus_points:
     - point: -3
-      reason: "現在はウェイトリスト制の実験的プロダクトであり、一般利用が制限されている"
-  summary: "ブラウザとAIエージェントを融合させた野心的な実験作。GenTabsの概念は革新的だが、現在はアクセス制限がある。"
-
-# 【任意項目】該当するもののみ記載
-links:
+      reason: 現在はウェイトリスト制の実験的プロダクトであり、一般利用が制限されている
+  summary: ブラウザとAIエージェントを融合させた野心的な実験作。GenTabsの概念は革新的だが、現在はアクセス制限がある。
+links: null
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Perplexity"
-    - "Felo"
-    - "Genspark"
+    - Perplexity
+    - Felo
+    - Genspark
 ---
+
+
+
 
 # **Google Disco 調査レポート**
 

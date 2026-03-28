@@ -1,62 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "SonarQube 調査レポート"
-tool_name: "SonarQube"
-tool_reading: "ソナーキューブ"
-category: "コード品質"
-developer: "SonarSource"
-official_site: "https://www.sonarsource.com/products/sonarqube/"
-date: "2025-10-19"
-last_updated: "2026-03-14"
+title: SonarQube 調査レポート
+tool_name: SonarQube
+tool_reading: ソナーキューブ
+category: コード品質
+developer: SonarSource
+official_site: https://www.sonarsource.com/products/sonarqube/
+date: '2025-10-19'
+last_updated: '2026-03-14'
 tags:
-  - "オープンソース"
-  - "DevOps"
-  - "静的解析"
-  - "セキュリティ"
-  - "SAST"
-description: "継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォーム。AIを活用したコード修正提案や、30以上の言語に対応したSAST機能を提供します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - DevOps
+  - SAST
+  - オープンソース
+  - セキュリティ
+  - 静的解析
+description: 継続的なコード品質とセキュリティの自動レビューを行うためのオープンソースプラットフォーム。AIを活用したコード修正提案や、30以上の言語に対応したSAST機能を提供します。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$32/月 (Cloud Team)"
+  starting_price: $32/月 (Cloud Team)
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "品質保証(QA)チーム"
-  latest_highlight: "2026年2月にSonarQube Server 26.2をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - 品質保証(QA)チーム
+  latest_highlight: 2026年2月にSonarQube Server 26.2をリリース
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 10
-      reason: "30以上の言語をサポートする圧倒的な網羅性と、静的解析ツールとしての業界標準の地位を確立している点。"
+      reason: 30以上の言語をサポートする圧倒的な網羅性と、静的解析ツールとしての業界標準の地位を確立している点。
     - point: 5
-      reason: "オープンソース版でも基本的な機能が無料で利用でき、導入のハードルが低い点。"
+      reason: オープンソース版でも基本的な機能が無料で利用でき、導入のハードルが低い点。
     - point: 5
-      reason: "CI/CDツールとの連携が容易で、DevOpsワークフローにシームレスに統合できる点。"
+      reason: CI/CDツールとの連携が容易で、DevOpsワークフローにシームレスに統合できる点。
   minus_points:
-    - point: -0
-      reason: ""
-  summary: "コード品質とセキュリティ管理の分野で業界標準としての地位を確立しており、総合的に非常に優れたツール。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: ''
+  summary: コード品質とセキュリティ管理の分野で業界標準としての地位を確立しており、総合的に非常に優れたツール。
 links:
-  github: "https://github.com/SonarSource/sonarqube"
-  deepwiki: "https://deepwiki.com/SonarSource/sonarqube"
-  documentation: "https://docs.sonarsource.com/sonarqube-server/latest/"
+  github: https://github.com/SonarSource/sonarqube
+  deepwiki: https://deepwiki.com/SonarSource/sonarqube
+  documentation: https://docs.sonarsource.com/sonarqube-server/latest/
 relationships:
   related_tools:
-    - "JaCoCo"
-    - "CodeRabbit"
-    - "SonarQube Cloud"
-    - "ESLint"
+    - JaCoCo
+    - CodeRabbit
+    - SonarQube Cloud
+    - ESLint
+    - Sourcery
+    - CodeQL
+    - Dependabot
 ---
+
+
+
 
 # **SonarQube 調査レポート**
 

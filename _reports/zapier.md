@@ -1,69 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Zapier 調査レポート"
-tool_name: "Zapier"
-tool_reading: "ザピアー"
-category: "ワークフロー自動化"
-developer: "Zapier Inc."
-official_site: "https://zapier.com/"
-date: "2026-02-14"
-last_updated: "2026-02-14"
+title: Zapier 調査レポート
+tool_name: Zapier
+tool_reading: ザピアー
+category: ワークフロー自動化
+developer: Zapier Inc.
+official_site: https://zapier.com/
+date: '2026-02-14'
+last_updated: '2026-02-14'
 tags:
-  - "自動化"
-  - "iPaaS"
-  - "ノーコード"
-  - "AI"
-  - "エージェント"
-  - "SaaS"
-description: "8,000以上のアプリと連携し、AIワークフローやエージェントの構築を可能にする業界トップクラスの自動化プラットフォーム。ノーコードで直感的に操作できる点が特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - SaaS
+  - iPaaS
+  - エージェント
+  - ノーコード
+  - 自動化
+description: 8,000以上のアプリと連携し、AIワークフローやエージェントの構築を可能にする業界トップクラスの自動化プラットフォーム。ノーコードで直感的に操作できる点が特徴。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$19.99/月"
+  starting_price: $19.99/月
   target_users:
-    - "マーケター"
-    - "営業担当者"
-    - "バックオフィス"
-  latest_highlight: "2025年12月にAIエージェントのバージョン管理機能や管理機能の強化を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - マーケター
+    - 営業担当者
+    - バックオフィス
+  latest_highlight: 2025年12月にAIエージェントのバージョン管理機能や管理機能の強化を実施
+  update_frequency: 高
 evaluation:
   score: 89
   base_score: 70
   plus_points:
     - point: 10
-      reason: "8,000以上の圧倒的な連携アプリ数は競合を大きく引き離している"
+      reason: 8,000以上の圧倒的な連携アプリ数は競合を大きく引き離している
     - point: 8
-      reason: "AI AgentsやCanvasなど、単なる連携に留まらない先進的なAI機能が充実している"
+      reason: AI AgentsやCanvasなど、単なる連携に留まらない先進的なAI機能が充実している
     - point: 4
-      reason: "ノーコードで直感的に利用できるUI/UXが高く評価されている"
+      reason: ノーコードで直感的に利用できるUI/UXが高く評価されている
     - point: 2
-      reason: "SOC 2/3に準拠しており、エンタープライズレベルのセキュリティ要件に対応できる"
+      reason: SOC 2/3に準拠しており、エンタープライズレベルのセキュリティ要件に対応できる
   minus_points:
     - point: -3
-      reason: "UIやサポートが英語中心であり、日本語での利用には依然としてハードルがある"
+      reason: UIやサポートが英語中心であり、日本語での利用には依然としてハードルがある
     - point: -2
-      reason: "タスク数に応じた従量課金制のため、大規模な利用や複雑なワークフローではコストが高騰する可能性がある"
-  summary: "圧倒的な連携数を基盤に、AIによる高度な自動化を実現する強力なツールだが、日本語対応と料金体系には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: タスク数に応じた従量課金制のため、大規模な利用や複雑なワークフローではコストが高騰する可能性がある
+  summary: 圧倒的な連携数を基盤に、AIによる高度な自動化を実現する強力なツールだが、日本語対応と料金体系には注意が必要。
 links:
-  documentation: "https://help.zapier.com/hc/en-us"
+  documentation: https://help.zapier.com/hc/en-us
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Make"
-    - "Microsoft Power Automate"
-    - "n8n"
-    - "Workato"
-    - "Google Opal"
-    - "UiPath"
+    - Make
+    - Microsoft Power Automate
+    - n8n
+    - Workato
+    - Google Opal
+    - UiPath
+    - NocoDB
 ---
+
+
+
 
 # **Zapier 調査レポート**
 

@@ -1,63 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Biome 調査レポート"
-tool_name: "Biome"
-tool_reading: "バイオーム"
-category: "開発者ツール"
-developer: "Biome Developers"
-official_site: "https://biomejs.dev/"
-date: "2026-02-17"
-last_updated: "2026-02-17"
+title: Biome 調査レポート
+tool_name: Biome
+tool_reading: バイオーム
+category: 開発者ツール
+developer: Biome Developers
+official_site: https://biomejs.dev/
+date: '2026-02-17'
+last_updated: '2026-02-17'
 tags:
-  - "開発者ツール"
-  - "コード品質"
-  - "Formatter"
-  - "Linter"
-  - "Rust"
-  - "Web開発"
-  - "高速化"
-description: "Prettier互換のフォーマッターと高機能なリンターを統合した、Rust製の高速なWeb開発向けツールチェーン。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Formatter
+  - Linter
+  - Rust
+  - Web開発
+  - コード品質
+  - 開発者ツール
+  - 高速化
+description: Prettier互換のフォーマッターと高機能なリンターを統合した、Rust製の高速なWeb開発向けツールチェーン。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Webプロジェクト"
-  latest_highlight: "2026年2月にv2.4をリリース。Playwright対応ルールの強化など。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - Webプロジェクト
+  latest_highlight: 2026年2月にv2.4をリリース。Playwright対応ルールの強化など。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Rust製による圧倒的なパフォーマンス（Prettierの約25倍〜35倍）。"
+      reason: Rust製による圧倒的なパフォーマンス（Prettierの約25倍〜35倍）。
     - point: 5
-      reason: "フォーマッターとリンターが統合されており、セットアップが容易。"
+      reason: フォーマッターとリンターが統合されており、セットアップが容易。
     - point: 3
-      reason: "Prettierと97%の互換性があり、移行がスムーズ。"
+      reason: Prettierと97%の互換性があり、移行がスムーズ。
   minus_points:
     - point: -3
-      reason: "ESLintに比べるとプラグインエコシステムがまだ発展途上。"
-  summary: "パフォーマンスとDX（開発者体験）を最優先するプロジェクトに最適。ESLint/Prettierからの置き換え候補として有力。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ESLintに比べるとプラグインエコシステムがまだ発展途上。
+  summary: パフォーマンスとDX（開発者体験）を最優先するプロジェクトに最適。ESLint/Prettierからの置き換え候補として有力。
 links:
-  github: "https://github.com/biomejs/biome"
-  codewiki: "https://codewiki.google/github.com/biomejs/biome"
-  documentation: "https://biomejs.dev/guides/getting-started/"
-  # deepwiki: "" # GitHub URL is standard format so likely exists but not verified yet.
+  github: https://github.com/biomejs/biome
+  codewiki: https://codewiki.google/github.com/biomejs/biome
+  documentation: https://biomejs.dev/guides/getting-started/
 relationships:
-  # parent: ""
-  # children: []
   related_tools:
-    - "ESLint"
+    - ESLint
 ---
+
+
+
 
 # **Biome 調査レポート**
 

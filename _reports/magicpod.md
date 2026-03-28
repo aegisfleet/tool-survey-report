@@ -1,65 +1,60 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "MagicPod 調査レポート"
-tool_name: "MagicPod"
-tool_reading: "マジックポッド"
-category: "テスト/QA"
-developer: "MagicPod Inc."
-official_site: "https://magicpod.com/"
-date: "2025-10-21"
-last_updated: "2026-03-10"
+title: MagicPod 調査レポート
+tool_name: MagicPod
+tool_reading: マジックポッド
+category: テスト/QA
+developer: MagicPod Inc.
+official_site: https://magicpod.com/
+date: '2025-10-21'
+last_updated: '2026-03-10'
 tags:
-  - "テスト自動化"
-  - "E2Eテスト"
-  - "AI"
-  - "ノーコード"
-  - "SaaS"
-description: "AIを活用したノーコードのテスト自動化プラットフォーム。モバイルアプリとウェブアプリの両方に対応し、開発サイクルの高速化と品質向上を実現します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - E2Eテスト
+  - SaaS
+  - テスト自動化
+  - ノーコード
+description: AIを活用したノーコードのテスト自動化プラットフォーム。モバイルアプリとウェブアプリの両方に対応し、開発サイクルの高速化と品質向上を実現します。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "¥39,800/月"
+  starting_price: ¥39,800/月
   target_users:
-    - "QAエンジニア"
-    - "開発者"
-    - "PM"
-  latest_highlight: "2026年1月にSAML認証の多要素認証対応やiOSシミュレーター最新版への対応を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - 開発者
+    - PM
+  latest_highlight: 2026年1月にSAML認証の多要素認証対応やiOSシミュレーター最新版への対応を実施
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 8
-      reason: "AIによる自己修復機能など、メンテナンス性が非常に高い"
+      reason: AIによる自己修復機能など、メンテナンス性が非常に高い
     - point: 5
-      reason: "非エンジニアでも直感的に操作できるUI/UX"
+      reason: 非エンジニアでも直感的に操作できるUI/UX
     - point: 5
-      reason: "日本語ドキュメントとSlackコミュニティによる手厚いサポート"
+      reason: 日本語ドキュメントとSlackコミュニティによる手厚いサポート
     - point: 2
-      reason: "実行回数無制限のプランがあり、コストを気にせずテストできる"
+      reason: 実行回数無制限のプランがあり、コストを気にせずテストできる
   minus_points:
     - point: -3
-      reason: "無料プランがなく、トライアル期間が2週間と比較的短い"
-  summary: "AIによる高いメンテナンス性と使いやすさを両立した、バランスの取れたテスト自動化ツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 無料プランがなく、トライアル期間が2週間と比較的短い
+  summary: AIによる高いメンテナンス性と使いやすさを両立した、バランスの取れたテスト自動化ツール。
 links:
-  documentation: "https://support.magic-pod.com/hc/ja"
+  documentation: https://support.magic-pod.com/hc/ja
 relationships:
   related_tools:
-    - "Autify"
-    - "mabl"
-    - "Selenium"
-    - "Appium"
-    - "Cypress"
-    - "Playwright"
-    - "Playwright Test Agents"
+    - Autify
+    - mabl
+    - Selenium
+    - Appium
+    - Cypress
+    - Playwright
+    - Playwright Test Agents
 ---
+
+
+
 
 # **MagicPod 調査レポート**
 

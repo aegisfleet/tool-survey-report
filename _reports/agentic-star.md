@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AGENTIC STAR 調査レポート"
-tool_name: "AGENTIC STAR"
-tool_reading: "エージェンティック・スター"
-category: "自律型AIエージェント"
-developer: "SoftBank"
-official_site: "https://www.softbank.jp/biz/services/ai/agentic-star/"
-date: "2025-12-13"
-last_updated: "2026-03-16"
+title: AGENTIC STAR 調査レポート
+tool_name: AGENTIC STAR
+tool_reading: エージェンティック・スター
+category: 自律型AIエージェント
+developer: SoftBank
+official_site: https://www.softbank.jp/biz/services/ai/agentic-star/
+date: '2025-12-13'
+last_updated: '2026-03-16'
 tags:
-  - "自律型"
-  - "エージェント"
-  - "MCP"
-  - "法人向け"
-  - "SaaS"
-description: "ソフトバンクが提供する法人向け自律型AIエージェントプラットフォーム。業務ゴールの達成に向けて自律的に思考・実行し、企業のデジタル変革を加速します。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - MCP
+  - SaaS
+  - エージェント
+  - 法人向け
+  - 自律型
+description: ソフトバンクが提供する法人向け自律型AIエージェントプラットフォーム。業務ゴールの達成に向けて自律的に思考・実行し、企業のデジタル変革を加速します。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "個別見積もり"
+  starting_price: 個別見積もり
   target_users:
-    - "大企業"
-    - "DX推進担当者"
-    - "企画・マーケティング部門"
-  latest_highlight: "2025年12月に法人向けSaaSモデルの提供を開始"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - DX推進担当者
+    - 企画・マーケティング部門
+  latest_highlight: 2025年12月に法人向けSaaSモデルの提供を開始
+  update_frequency: 中
 evaluation:
   score: 77
   base_score: 70
   plus_points:
     - point: 5
-      reason: "法人利用に特化した堅牢なセキュリティとガバナンス機能"
+      reason: 法人利用に特化した堅牢なセキュリティとガバナンス機能
     - point: 5
-      reason: "ソフトバンクによる日本語での手厚いサポート体制"
+      reason: ソフトバンクによる日本語での手厚いサポート体制
     - point: 3
-      reason: "オープン標準「MCP」への早期対応による高い将来性"
+      reason: オープン標準「MCP」への早期対応による高い将来性
   minus_points:
     - point: -3
-      reason: "料金が非公開で、導入前のコスト試算が困難"
+      reason: 料金が非公開で、導入前のコスト試算が困難
     - point: -3
-      reason: "リリース直後で導入実績やユーザーレビューが少ない"
-  summary: "セキュリティとサポートを重視する国内大企業に適しているが、料金の透明性と実績には課題が残る。"
-
-# 【任意項目】該当するもののみ記載
+      reason: リリース直後で導入実績やユーザーレビューが少ない
+  summary: セキュリティとサポートを重視する国内大企業に適しているが、料金の透明性と実績には課題が残る。
 links: {}
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Microsoft 365 Copilot"
-    - "Salesforce"
-    - "Devin"
+    - Microsoft 365 Copilot
+    - Salesforce
+    - Devin
 ---
+
+
+
 
 # **AGENTIC STAR 調査レポート**
 

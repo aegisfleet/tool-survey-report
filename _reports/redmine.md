@@ -1,67 +1,65 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Redmine 調査レポート"
-tool_name: "Redmine"
-tool_reading: "レッドマイン"
-category: "プロジェクト管理"
-developer: "Jean-Philippe Lang and community"
-official_site: "https://www.redmine.org/"
-date: "2026-01-10"
-last_updated: "2026-03-14"
+title: Redmine 調査レポート
+tool_name: Redmine
+tool_reading: レッドマイン
+category: プロジェクト管理
+developer: Jean-Philippe Lang and community
+official_site: https://www.redmine.org/
+date: '2026-01-10'
+last_updated: '2026-03-14'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "バグトラッキング"
-  - "Ruby"
-description: "オープンソースで提供される柔軟なWebベースのプロジェクト管理・課題管理ツール。オンプレミス環境で構築でき、高いカスタマイズ性が特徴。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Ruby
+  - オープンソース
+  - バグトラッキング
+  - 開発者ツール
+description: オープンソースで提供される柔軟なWebベースのプロジェクト管理・課題管理ツール。オンプレミス環境で構築でき、高いカスタマイズ性が特徴。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発チーム"
-    - "プロジェクトマネージャー"
-    - "オンプレミス環境が必要な組織"
-  latest_highlight: "2026年1月にセキュリティ修正を含むv6.1.1をリリース。2025年9月にリアクション機能やOAuth2対応を追加(v6.1.0)"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発チーム
+    - プロジェクトマネージャー
+    - オンプレミス環境が必要な組織
+  latest_highlight: 2026年1月にセキュリティ修正を含むv6.1.1をリリース。2025年9月にリアクション機能やOAuth2対応を追加(v6.1.0)
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 10
-      reason: "オープンソースであり、ライセンス費用が完全に無料である点。"
+      reason: オープンソースであり、ライセンス費用が完全に無料である点。
     - point: 8
-      reason: "豊富なプラグインやテーマによる高いカスタマイズ性と拡張性。"
+      reason: 豊富なプラグインやテーマによる高いカスタマイズ性と拡張性。
     - point: 5
-      reason: "オンプレミスで運用でき、セキュリティポリシーに柔軟に対応可能。"
+      reason: オンプレミスで運用でき、セキュリティポリシーに柔軟に対応可能。
   minus_points:
     - point: -5
-      reason: "サーバー構築やメンテナンスに専門知識が必要で、運用コストがかかる。"
+      reason: サーバー構築やメンテナンスに専門知識が必要で、運用コストがかかる。
     - point: -3
-      reason: "近年のSaaSツールと比較してUI/UXが古く、直感性に欠ける点。"
+      reason: 近年のSaaSツールと比較してUI/UXが古く、直感性に欠ける点。
     - point: -2
-      reason: "ベンダーによる公式の商用サポートが存在しない点。"
-  summary: "無料で高機能かつカスタマイズ性も高いが、導入と運用の技術的ハードルを考慮する必要がある。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ベンダーによる公式の商用サポートが存在しない点。
+  summary: 無料で高機能かつカスタマイズ性も高いが、導入と運用の技術的ハードルを考慮する必要がある。
 links:
-  github: "https://github.com/redmine/redmine"
-  deepwiki: "https://deepwiki.com/redmine/redmine"
-  documentation: "https://www.redmine.org/guide"
+  github: https://github.com/redmine/redmine
+  deepwiki: https://deepwiki.com/redmine/redmine
+  documentation: https://www.redmine.org/guide
 relationships:
   children:
-    - "Testcase Management"
+    - Testcase Management
   related_tools:
-    - "Jira"
-    - "Backlog"
-    - "Quality Tracker"
-    - "Trac"
+    - Jira
+    - Backlog
+    - Quality Tracker
+    - Trac
+    - Qangaroo
+    - Kiwi TCMS
+    - CAT
 ---
+
+
+
 
 # **Redmine 調査レポート**
 

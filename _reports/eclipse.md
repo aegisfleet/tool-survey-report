@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Eclipse IDE 調査レポート"
-tool_name: "Eclipse IDE"
-tool_reading: "イクリプス / エクリプス"
-category: "IDE/エディタ"
-developer: "Eclipse Foundation"
-official_site: "https://eclipseide.org/"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Eclipse IDE 調査レポート
+tool_name: Eclipse IDE
+tool_reading: イクリプス / エクリプス
+category: IDE/エディタ
+developer: Eclipse Foundation
+official_site: https://eclipseide.org/
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "Java"
-  - "IDE"
-  - "オープンソース"
-  - "開発者ツール"
-  - "C/C++"
-description: "歴史あるオープンソースの統合開発環境（IDE）。Java開発におけるデファクトスタンダードの一つであり、強力なプラグインエコシステムと拡張性を持つ。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - C/C++
+  - IDE
+  - Java
+  - オープンソース
+  - 開発者ツール
+description: 歴史あるオープンソースの統合開発環境（IDE）。Java開発におけるデファクトスタンダードの一つであり、強力なプラグインエコシステムと拡張性を持つ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Java開発者"
-    - "エンタープライズ開発チーム"
-    - "OSSコントリビューター"
-  latest_highlight: "2025年12月リリースでJava 25をサポート"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Java開発者
+    - エンタープライズ開発チーム
+    - OSSコントリビューター
+  latest_highlight: 2025年12月リリースでJava 25をサポート
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料かつオープンソースであり、商用利用の制限がない"
+      reason: 完全無料かつオープンソースであり、商用利用の制限がない
     - point: 5
-      reason: "Java開発ツール（JDT）としての機能は依然として強力で安定している"
+      reason: Java開発ツール（JDT）としての機能は依然として強力で安定している
     - point: 5
-      reason: "膨大な数のプラグインが存在し、ほぼあらゆる言語やツールと連携可能"
+      reason: 膨大な数のプラグインが存在し、ほぼあらゆる言語やツールと連携可能
   minus_points:
     - point: -3
-      reason: "UI/UXが現代のIDEと比較して古く、直感性に欠ける場合がある"
+      reason: UI/UXが現代のIDEと比較して古く、直感性に欠ける場合がある
     - point: -2
-      reason: "起動が遅く、メモリ消費も多いため、動作が重く感じられることがある"
-  summary: "UIやパフォーマンスに課題はあるものの、Java開発における機能性と信頼性は非常に高く、コストパフォーマンスは最強。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 起動が遅く、メモリ消費も多いため、動作が重く感じられることがある
+  summary: UIやパフォーマンスに課題はあるものの、Java開発における機能性と信頼性は非常に高く、コストパフォーマンスは最強。
 links:
-  github: "https://github.com/eclipse-platform/eclipse.platform"
-  deepwiki: "https://deepwiki.com/eclipse-platform/eclipse.platform"
-  documentation: "https://help.eclipse.org/latest/index.jsp"
+  github: https://github.com/eclipse-platform/eclipse.platform
+  deepwiki: https://deepwiki.com/eclipse-platform/eclipse.platform
+  documentation: https://help.eclipse.org/latest/index.jsp
 relationships:
   related_tools:
-    - "IntelliJ IDEA"
-    - "Visual Studio Code"
-    - "Android Studio"
-    - "JUnit"
+    - IntelliJ IDEA
+    - Visual Studio Code
+    - Android Studio
+    - JUnit
 ---
+
+
+
 
 # **Eclipse IDE 調査レポート**
 

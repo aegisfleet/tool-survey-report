@@ -1,62 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Ranorex Studio 調査レポート"
-tool_name: "Ranorex Studio"
-tool_reading: "ラノレックス スタジオ"
-category: "テスト/QA"
-developer: "Ranorex GmbH (Idera, Inc.)"
-official_site: "https://www.ranorex.com/"
-official_site_ja: "https://ranorex.techmatrix.jp/"
-date: "2026-01-27"
-last_updated: "2026-02-10"
+title: Ranorex Studio 調査レポート
+tool_name: Ranorex Studio
+tool_reading: ラノレックス スタジオ
+category: テスト/QA
+developer: Ranorex GmbH (Idera, Inc.)
+official_site: https://www.ranorex.com/
+official_site_ja: https://ranorex.techmatrix.jp/
+date: '2026-01-27'
+last_updated: '2026-02-10'
 tags:
-  - "テスト自動化"
-  - "GUIテスト"
-  - "デスクトップ"
-  - "Web"
-  - "モバイル"
-  - "E2Eテスト"
-  - "RPA"
-description: "デスクトップ、Web、モバイルアプリケーション向けの堅牢なGUIテスト自動化ツール。ローコードとフルコードの両アプローチに対応し、高精度なオブジェクト認識を特徴とする。日本国内ではテクマトリックス株式会社が販売・サポートを提供。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - E2Eテスト
+  - GUIテスト
+  - RPA
+  - Web
+  - テスト自動化
+  - デスクトップ
+  - モバイル
+description: デスクトップ、Web、モバイルアプリケーション向けの堅牢なGUIテスト自動化ツール。ローコードとフルコードの両アプローチに対応し、高精度なオブジェクト認識を特徴とする。日本国内ではテクマトリックス株式会社が販売・サポートを提供。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "QAエンジニア"
-    - "大企業"
-  latest_highlight: "2026年1月にTestRail連携を強化したv12.7.0をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - QAエンジニア
+    - 大企業
+  latest_highlight: 2026年1月にTestRail連携を強化したv12.7.0をリリース
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 8
-      reason: "デスクトップ・Web・モバイルと幅広い技術を単一ツールでサポートしている点"
+      reason: デスクトップ・Web・モバイルと幅広い技術を単一ツールでサポートしている点
     - point: 5
-      reason: "RanoreXPathによる高精度なオブジェクト認識機能が、UIの変更に強い"
+      reason: RanoreXPathによる高精度なオブジェクト認識機能が、UIの変更に強い
   minus_points:
     - point: -5
-      reason: "ライセンス費用が競合のオープンソースツールと比較して高額である点"
+      reason: ライセンス費用が競合のオープンソースツールと比較して高額である点
     - point: -3
-      reason: "高機能なため、全ての機能を使いこなすには一定の学習コストが必要"
-  summary: "オブジェクト認識精度と対応範囲は強力だが、高コストで学習も必要なエンタープライズ向けツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高機能なため、全ての機能を使いこなすには一定の学習コストが必要
+  summary: オブジェクト認識精度と対応範囲は強力だが、高コストで学習も必要なエンタープライズ向けツール。
 links:
-  documentation: "https://support.ranorex.com/hc/en-us"
+  documentation: https://support.ranorex.com/hc/en-us
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Playwright"
-    - "Selenium"
+    - Playwright
+    - Selenium
 ---
+
+
+
 
 # **Ranorex Studio 調査レポート**
 

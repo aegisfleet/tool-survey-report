@@ -1,67 +1,62 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AgentScope 調査レポート"
-tool_name: "AgentScope"
-tool_reading: "エージェントスコープ"
-category: "AI開発基盤"
-developer: "Alibaba"
-official_site: "https://doc.agentscope.io/"
-date: "2026-03-26"
-last_updated: "2026-03-26"
+title: AgentScope 調査レポート
+tool_name: AgentScope
+tool_reading: エージェントスコープ
+category: AI開発基盤
+developer: Alibaba
+official_site: https://doc.agentscope.io/
+date: '2026-03-26'
+last_updated: '2026-03-26'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "大規模言語モデル"
-  - "開発者ツール"
-  - "マルチエージェント"
-  - "Python"
-description: "モデルの推論能力とツール活用能力を最大限に引き出す、高拡張・本番環境向けマルチエージェントAIアプリケーション開発フレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Python
+  - エージェント
+  - オープンソース
+  - マルチエージェント
+  - 大規模言語モデル
+  - 開発者ツール
+description: モデルの推論能力とツール活用能力を最大限に引き出す、高拡張・本番環境向けマルチエージェントAIアプリケーション開発フレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエンジニア"
-    - "AI研究者"
-    - "ソフトウェア開発者"
-  latest_highlight: "2026年2月にRealtime Voice Agentのサポートを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエンジニア
+    - AI研究者
+    - ソフトウェア開発者
+  latest_highlight: 2026年2月にRealtime Voice Agentのサポートを追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "メッセージハブとパイプラインによる、マルチエージェントワークフローの柔軟で強力なオーケストレーション機能"
+      reason: メッセージハブとパイプラインによる、マルチエージェントワークフローの柔軟で強力なオーケストレーション機能
     - point: 4
-      reason: "Realtime VoiceやTTS、Agentic RL（強化学習）など、最新のAIトレンドをいち早くフレームワークレベルで統合している"
+      reason: Realtime VoiceやTTS、Agentic RL（強化学習）など、最新のAIトレンドをいち早くフレームワークレベルで統合している
     - point: 4
-      reason: "Docker/Kubernetesデプロイメントのサポート（AgentScope Runtime）やAgentScope Studioなど、本番運用・監視ツールが充実"
+      reason: Docker/Kubernetesデプロイメントのサポート（AgentScope Runtime）やAgentScope Studioなど、本番運用・監視ツールが充実
   minus_points:
     - point: -2
-      reason: "日本語のドキュメントやコミュニティ情報がまだ少なく、公式情報（英語・中国語）やコードを読み解く必要がある"
+      reason: 日本語のドキュメントやコミュニティ情報がまだ少なく、公式情報（英語・中国語）やコードを読み解く必要がある
     - point: -3
-      reason: "独自のメッセージパッシング概念やHub/Pipelineアーキテクチャの学習コストが必要"
-  summary: "複雑なマルチエージェントシステムの構築において、高度な制御と本番デプロイの両立を実現する強力なOSSフレームワーク。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 独自のメッセージパッシング概念やHub/Pipelineアーキテクチャの学習コストが必要
+  summary: 複雑なマルチエージェントシステムの構築において、高度な制御と本番デプロイの両立を実現する強力なOSSフレームワーク。
 links:
-  github: "https://github.com/agentscope-ai/agentscope"
-  deepwiki: "https://deepwiki.com/agentscope-ai/agentscope"
-  codewiki: "https://codewiki.google/github.com/agentscope-ai/agentscope"
-  documentation: "https://doc.agentscope.io/tutorial/index.html"
+  github: https://github.com/agentscope-ai/agentscope
+  deepwiki: https://deepwiki.com/agentscope-ai/agentscope
+  codewiki: https://codewiki.google/github.com/agentscope-ai/agentscope
+  documentation: https://doc.agentscope.io/tutorial/index.html
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "LangChain"
-    - "AutoGPT"
+    - LangChain
+    - AutoGPT
 ---
+
+
+
 
 # **AgentScope 調査レポート**
 

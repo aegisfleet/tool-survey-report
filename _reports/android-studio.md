@@ -1,70 +1,64 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Android Studio 調査レポート"
-tool_name: "Android Studio"
-tool_reading: "アンドロイド スタジオ"
-category: "モバイル開発"
-developer: "Google"
-official_site: "https://developer.android.com/studio"
-date: "2025-11-28"
-last_updated: "2026-02-01"
+title: Android Studio 調査レポート
+tool_name: Android Studio
+tool_reading: アンドロイド スタジオ
+category: モバイル開発
+developer: Google
+official_site: https://developer.android.com/studio
+date: '2025-11-28'
+last_updated: '2026-02-01'
 tags:
-  - "IDE"
-  - "Android"
-  - "モバイル開発"
-  - "開発者ツール"
-  - "Google"
-  - "Kotlin"
-  - "Gemini"
-  - "AI"
-  - "エージェント"
-description: "Googleが提供するAndroidアプリ開発のための公式統合開発環境（IDE）。Gemini AIによるエージェント機能やMCPサポートが統合され、AIファーストな開発環境へと進化している。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Android
+  - Gemini
+  - Google
+  - IDE
+  - Kotlin
+  - エージェント
+  - モバイル開発
+  - 開発者ツール
+description: Googleが提供するAndroidアプリ開発のための公式統合開発環境（IDE）。Gemini AIによるエージェント機能やMCPサポートが統合され、AIファーストな開発環境へと進化している。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Android開発者"
-    - "モバイルアプリ開発者"
-  latest_highlight: "2026年1月に安定版「Otter 3 Feature Drop」と、次期版「Panda」のCanary/RCがリリース。AIエージェント機能（UI生成、デバイス操作）が大幅強化。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Android開発者
+    - モバイルアプリ開発者
+  latest_highlight: 2026年1月に安定版「Otter 3 Feature Drop」と、次期版「Panda」のCanary/RCがリリース。AIエージェント機能（UI生成、デバイス操作）が大幅強化。
+  update_frequency: 高
 evaluation:
   score: 96
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Androidアプリ開発の公式IDEであり、最新OS機能への対応が最速"
+      reason: Androidアプリ開発の公式IDEであり、最新OS機能への対応が最速
     - point: 8
-      reason: "Gemini Agent Modeにより、UI生成やリファクタリングが自然言語で可能"
+      reason: Gemini Agent Modeにより、UI生成やリファクタリングが自然言語で可能
     - point: 5
-      reason: "ローカルLLM対応やMCPサポートなど、オープンなエコシステムとの連携強化"
+      reason: ローカルLLM対応やMCPサポートなど、オープンなエコシステムとの連携強化
     - point: 3
-      reason: "エミュレータ操作やスクリーンショットテストなど、実機検証のAI自動化が進んでいる"
+      reason: エミュレータ操作やスクリーンショットテストなど、実機検証のAI自動化が進んでいる
   minus_points:
     - point: -5
-      reason: "動作に高いシステム要件（特にメモリ）を必要とし、依然として重い"
-  summary: "AIエージェント機能の本格統合により、単なるIDEから「AIペアプログラマー」へと進化した必須ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 動作に高いシステム要件（特にメモリ）を必要とし、依然として重い
+  summary: AIエージェント機能の本格統合により、単なるIDEから「AIペアプログラマー」へと進化した必須ツール
 links:
-  documentation: "https://developer.android.com/studio/docs"
+  documentation: https://developer.android.com/studio/docs
 relationships:
-  parent: "IntelliJ IDEA"
+  parent: IntelliJ IDEA
   related_tools:
-    - "Eclipse IDE"
-    - "Android"
-    - "Flutter"
-    - "Kotlin Multiplatform"
-    - "Visual Studio Code"
-    - "Cursor"
-    - "Windsurf"
-    - "Gemini"
+    - Eclipse IDE
+    - Android
+    - Flutter
+    - Kotlin Multiplatform
+    - Visual Studio Code
+    - Cursor
+    - Windsurf
 ---
+
+
+
 
 # **Android Studio 調査レポート**
 

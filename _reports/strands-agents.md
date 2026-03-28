@@ -1,65 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Strands Agents 調査レポート"
-tool_name: "Strands Agents"
-tool_reading: "ストランズ エージェンツ"
-category: "自律型AIエージェント"
-developer: "Amazon Web Services"
-official_site: "https://strandsagents.com/"
-date: "2026-02-04"
-last_updated: "2026-02-04"
+title: Strands Agents 調査レポート
+tool_name: Strands Agents
+tool_reading: ストランズ エージェンツ
+category: 自律型AIエージェント
+developer: Amazon Web Services
+official_site: https://strandsagents.com/
+date: '2026-02-04'
+last_updated: '2026-02-04'
 tags:
-  - "AI Agent"
-  - "AWS"
-  - "Python"
-  - "TypeScript"
-  - "オープンソース"
-  - "MCP"
-description: "数行のコードで本番運用可能なAIエージェントを構築できる、AWS発のモデル駆動型オープンソースフレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AWS
+  - MCP
+  - Python
+  - TypeScript
+  - エージェント
+  - オープンソース
+description: 数行のコードで本番運用可能なAIエージェントを構築できる、AWS発のモデル駆動型オープンソースフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエンジニア"
-    - "AWSユーザー"
-    - "ソフトウェア開発者"
-  latest_highlight: "2026年1月にv1.24.0がリリースされ、実験的な双方向ストリーミング機能などが強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIエンジニア
+    - AWSユーザー
+    - ソフトウェア開発者
+  latest_highlight: 2026年1月にv1.24.0がリリースされ、実験的な双方向ストリーミング機能などが強化
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 4
-      reason: "AWSサービス（Bedrock, Lambda等）との親和性が極めて高く、AWSユーザーにとって導入が容易"
+      reason: AWSサービス（Bedrock, Lambda等）との親和性が極めて高く、AWSユーザーにとって導入が容易
     - point: 3
-      reason: "Pydanticを活用した型安全な開発と、数行で書けるシンプルなAPI設計"
+      reason: Pydanticを活用した型安全な開発と、数行で書けるシンプルなAPI設計
     - point: 3
-      reason: "MCP（Model Context Protocol）に標準対応しており、ツールの拡張性が高い"
+      reason: MCP（Model Context Protocol）に標準対応しており、ツールの拡張性が高い
   minus_points:
     - point: -2
-      reason: "LangChain等と比較するとコミュニティ規模やサードパーティ連携数はまだ成長途上"
-  summary: "AWS環境での利用に最適化された軽量かつ強力なフレームワーク。型安全性とシンプルさを重視する開発者に最適。"
-
-# 【任意項目】該当するもののみ記載
+      reason: LangChain等と比較するとコミュニティ規模やサードパーティ連携数はまだ成長途上
+  summary: AWS環境での利用に最適化された軽量かつ強力なフレームワーク。型安全性とシンプルさを重視する開発者に最適。
 links:
-  github: "https://github.com/strands-agents/sdk-python"
-  codewiki: "https://codewiki.google/github.com/strands-agents/sdk-python"
-  deepwiki: "https://deepwiki.com/strands-agents/sdk-python"
-  documentation: "https://strandsagents.com/latest/documentation/docs/"
+  github: https://github.com/strands-agents/sdk-python
+  codewiki: https://codewiki.google/github.com/strands-agents/sdk-python
+  deepwiki: https://deepwiki.com/strands-agents/sdk-python
+  documentation: https://strandsagents.com/latest/documentation/docs/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "LangChain"
-    - "Amazon Bedrock"
-    - "AutoGen"
+    - LangChain
+    - Amazon Bedrock
 ---
+
+
+
 
 # **Strands Agents 調査レポート**
 

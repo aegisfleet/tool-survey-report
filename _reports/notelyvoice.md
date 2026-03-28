@@ -1,46 +1,42 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Notely Voice 調査レポート"
-tool_name: "Notely Voice"
-tool_reading: "ノートリーボイス"
-category: "ドキュメント/ナレッジ"
-developer: "Notely Voice, Inc."
-official_site: "https://notelyvoice.com/"
-date: "2026-03-16"
-last_updated: "2026-03-16"
+title: Notely Voice 調査レポート
+tool_name: Notely Voice
+tool_reading: ノートリーボイス
+category: ドキュメント/ナレッジ
+developer: Notely Voice, Inc.
+official_site: https://notelyvoice.com/
+date: '2026-03-16'
+last_updated: '2026-03-16'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "モバイル開発"
-description: "Compose Multiplatformで構築された、完全プライベートなAI音声文字起こし・メモ作成アプリ。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - モバイル開発
+description: Compose Multiplatformで構築された、完全プライベートなAI音声文字起こし・メモ作成アプリ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "学生"
-    - "プロフェッショナル"
-  latest_highlight: "不明"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 学生
+    - プロフェッショナル
+  latest_highlight: 不明
+  update_frequency: 中
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全なオンデバイス処理による高いプライバシーとオフライン機能を提供しているため"
+      reason: 完全なオンデバイス処理による高いプライバシーとオフライン機能を提供しているため
   minus_points: []
-  summary: "プライバシーを重視したAI音声文字起こしツールとして、完全なオフライン処理が可能な優れたソリューション"
-
-# 【任意項目】該当するもののみ記載
+  summary: プライバシーを重視したAI音声文字起こしツールとして、完全なオフライン処理が可能な優れたソリューション
 links:
-  github: "https://github.com/Notely-Voice/NotelyVoice"
-  deepwiki: "https://deepwiki.com/Notely-Voice/NotelyVoice"
+  github: https://github.com/Notely-Voice/NotelyVoice
+  deepwiki: https://deepwiki.com/Notely-Voice/NotelyVoice
+relationships: {}
 ---
+
+
+
 
 # **Notely Voice 調査レポート**
 

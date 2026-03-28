@@ -1,64 +1,59 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Perplexity 調査レポート"
-tool_name: "Perplexity"
-tool_reading: "パープレキシティ"
-category: "AI検索エンジン"
-developer: "Perplexity AI, Inc."
-official_site: "https://www.perplexity.ai/"
-date: "2026-01-27"
-last_updated: "2026-03-13"
+title: Perplexity 調査レポート
+tool_name: Perplexity
+tool_reading: パープレキシティ
+category: AI検索エンジン
+developer: Perplexity AI, Inc.
+official_site: https://www.perplexity.ai/
+date: '2026-01-27'
+last_updated: '2026-03-13'
 tags:
-  - "AI"
-  - "会話型AI"
-  - "生成AI"
-  - "大規模言語モデル"
-description: "大規模言語モデルとリアルタイムのWeb検索を組み合わせ、出典付きで正確かつ信頼性の高い回答を提供するAIパワード検索エンジン。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - 会話型AI
+  - 大規模言語モデル
+  - 生成AI
+description: 大規模言語モデルとリアルタイムのWeb検索を組み合わせ、出典付きで正確かつ信頼性の高い回答を提供するAIパワード検索エンジン。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "研究者"
-    - "開発者"
-    - "情報収集を行う全ての人"
-  latest_highlight: "2026年2月にAgent APIをリリース。2025年後半にはPro SearchのGAや公式SDKを提供"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 研究者
+    - 開発者
+    - 情報収集を行う全ての人
+  latest_highlight: 2026年2月にAgent APIをリリース。2025年後半にはPro SearchのGAや公式SDKを提供
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "回答に情報源のリンクが明記されており、信頼性が高くファクトチェックが容易"
+      reason: 回答に情報源のリンクが明記されており、信頼性が高くファクトチェックが容易
     - point: 5
-      reason: "G2でのレビュー評価が4.6/5.0と非常に高く、ユーザーからの支持を得ている"
+      reason: G2でのレビュー評価が4.6/5.0と非常に高く、ユーザーからの支持を得ている
     - point: 3
-      reason: "ProプランでGPT-5やClaude 4.0など、最新の高性能なAIモデルを選択できる"
+      reason: ProプランでGPT-5やClaude 4.0など、最新の高性能なAIモデルを選択できる
   minus_points:
     - point: -3
-      reason: "大手メディアから著作権侵害で提訴されるなど、倫理的・法的な課題を抱えている"
+      reason: 大手メディアから著作権侵害で提訴されるなど、倫理的・法的な課題を抱えている
     - point: -2
-      reason: "日本語での検索や回答生成の精度が、英語に比べて若干劣る場合がある"
-  summary: "出典明記による信頼性と情報鮮度が強みだが、著作権問題と日本語精度には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語での検索や回答生成の精度が、英語に比べて若干劣る場合がある
+  summary: 出典明記による信頼性と情報鮮度が強みだが、著作権問題と日本語精度には注意が必要。
 links:
-  documentation: "https://docs.perplexity.ai/"
+  documentation: https://docs.perplexity.ai/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "ChatGPT"
-    - "Genspark"
-    - "Felo"
-    - "NotebookLM"
-    - "Google Disco"
+    - ChatGPT
+    - Genspark
+    - Felo
+    - NotebookLM
+    - Google Disco
 ---
+
+
+
 
 # **Perplexity 調査レポート**
 

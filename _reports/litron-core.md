@@ -1,54 +1,54 @@
 ---
-title: "LITRON CORE 調査レポート"
-tool_name: "LITRON CORE"
-tool_reading: "リトロン コア"
-category: "自律型AIエージェント"
-developer: "NTTデータ (NTT DATA)"
-official_site: "https://www.nttdata.com/jp/ja/lineup/litron-core/"
-date: "2026-01-28"
-last_updated: "2026-03-21"
+title: LITRON CORE 調査レポート
+tool_name: LITRON CORE
+tool_reading: リトロン コア
+category: 自律型AIエージェント
+developer: NTTデータ (NTT DATA)
+official_site: https://www.nttdata.com/jp/ja/lineup/litron-core/
+date: '2026-01-28'
+last_updated: '2026-03-21'
 tags:
-  - "AI"
-  - "自律型"
-  - "自動化"
-  - "エージェント"
-  - "生成AI"
-description: "オフィスワーカーの汎用業務の効率化を支援する、NTTデータのエージェント型AI基盤"
-
+  - AI
+  - エージェント
+  - 生成AI
+  - 自動化
+  - 自律型
+description: オフィスワーカーの汎用業務の効率化を支援する、NTTデータのエージェント型AI基盤
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "大企業"
-    - "オフィスワーカー"
-    - "業務改革推進者"
-  latest_highlight: "2025年12月 製造業の暗黙知伝承に関するコラム公開"
-  update_frequency: "中"
-
+    - 大企業
+    - オフィスワーカー
+    - 業務改革推進者
+  latest_highlight: 2025年12月 製造業の暗黙知伝承に関するコラム公開
+  update_frequency: 中
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 5
-      reason: "NTTデータによる信頼性の高い開発・運用基盤とセキュリティ"
+      reason: NTTデータによる信頼性の高い開発・運用基盤とセキュリティ
     - point: 3
-      reason: "日本語環境・日本企業文化への深い理解と適合性"
+      reason: 日本語環境・日本企業文化への深い理解と適合性
     - point: 3
-      reason: "マルチエージェント構造による複雑なタスクの自律処理"
+      reason: マルチエージェント構造による複雑なタスクの自律処理
   minus_points:
     - point: -5
-      reason: "料金や詳細な技術仕様が公開されておらず、問い合わせが必須"
-  summary: "日本企業の業務に特化した信頼性の高いAIエージェント基盤だが、導入には個別見積もりが必須でありハードルはやや高い"
-
+      reason: 料金や詳細な技術仕様が公開されておらず、問い合わせが必須
+  summary: 日本企業の業務に特化した信頼性の高いAIエージェント基盤だが、導入には個別見積もりが必須でありハードルはやや高い
 links:
-  documentation: "https://www.nttdata.com/jp/ja/lineup/litron-core/"
+  documentation: https://www.nttdata.com/jp/ja/lineup/litron-core/
 relationships:
   related_tools:
-    - "Microsoft 365 Copilot"
-    - "UiPath"
-    - "Dify"
+    - Microsoft 365 Copilot
+    - UiPath
+    - Dify
 ---
+
+
+
 
 # **LITRON CORE 調査レポート**
 

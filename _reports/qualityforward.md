@@ -1,59 +1,61 @@
 ---
-title: "QualityForward 調査レポート"
-tool_name: "QualityForward"
-tool_reading: "クオリティフォワード"
-category: "テスト管理"
-developer: "株式会社ベリサーブ"
-official_site: "https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: QualityForward 調査レポート
+tool_name: QualityForward
+tool_reading: クオリティフォワード
+category: テスト管理
+developer: 株式会社ベリサーブ
+official_site: https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト管理"
-  - "品質管理"
-  - "プロジェクト管理"
-  - "SaaS"
-description: "開発スピードと品質の向上を支援するテスト管理ツール。ExcelライクなUIで直感的に操作でき、リアルタイムな進捗可視化を実現する。"
-
+  - SaaS
+  - テスト管理
+  - プロジェクト管理
+  - 品質管理
+description: 開発スピードと品質の向上を支援するテスト管理ツール。ExcelライクなUIで直感的に操作でき、リアルタイムな進捗可視化を実現する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 / 10,000円/月"
+  starting_price: 無料 / 10,000円/月
   target_users:
-    - "QAエンジニア"
-    - "テスト管理者"
-    - "プロジェクトマネージャー"
-  latest_highlight: "テスト要求ツリー機能の追加"
-  update_frequency: "中"
-
+    - QAエンジニア
+    - テスト管理者
+    - プロジェクトマネージャー
+  latest_highlight: テスト要求ツリー機能の追加
+  update_frequency: 中
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ExcelライクなUIで移行が容易"
+      reason: ExcelライクなUIで移行が容易
     - point: 5
-      reason: "充実した日本語サポートとドキュメント"
+      reason: 充実した日本語サポートとドキュメント
     - point: 5
-      reason: "無料プランがあり導入のハードルが低い"
+      reason: 無料プランがあり導入のハードルが低い
     - point: 3
-      reason: "リアルタイムな進捗可視化機能が優秀"
+      reason: リアルタイムな進捗可視化機能が優秀
   minus_points:
     - point: -2
-      reason: "階層構造に一部制約がある"
+      reason: 階層構造に一部制約がある
     - point: -2
-      reason: "Excelに比べると装飾などの柔軟性が劣る"
-  summary: "Excel管理からの脱却を目指す日本企業に最適。低コストで導入でき、スムーズにテスト管理の効率化を実現できる。"
-
+      reason: Excelに比べると装飾などの柔軟性が劣る
+  summary: Excel管理からの脱却を目指す日本企業に最適。低コストで導入でき、スムーズにテスト管理の効率化を実現できる。
 links:
-  documentation: "https://qualityforward.zendesk.com/hc/ja"
+  documentation: https://qualityforward.zendesk.com/hc/ja
 relationships:
   related_tools:
-    - "CAT"
-    - "TestRail"
-    - "Qangaroo"
-    - "Redmine"
-    - "Jira"
+    - CAT
+    - TestRail
+    - Qangaroo
+    - Redmine
+    - Jira
+    - Quality Tracker
+    - Qase
 ---
+
+
+
 
 # **QualityForward 調査レポート**
 

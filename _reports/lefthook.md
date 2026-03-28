@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Lefthook 調査レポート"
-tool_name: "Lefthook"
-tool_reading: "レフトフック"
-category: "開発者ツール"
-developer: "Evil Martians"
-official_site: "https://lefthook.dev/"
-date: "2026-02-18"
-last_updated: "2026-02-18"
+title: Lefthook 調査レポート
+tool_name: Lefthook
+tool_reading: レフトフック
+category: 開発者ツール
+developer: Evil Martians
+official_site: https://lefthook.dev/
+date: '2026-02-18'
+last_updated: '2026-02-18'
 tags:
-  - "Git"
-  - "自動化"
-  - "開発ツール"
-  - "Go"
-  - "オープンソース"
-description: "Go言語製の高速なGitフック管理ツール。並列実行や柔軟なファイル指定が可能で、大規模プロジェクトや多言語プロジェクトに最適。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Git
+  - Go
+  - オープンソース
+  - 自動化
+  - 開発ツール
+description: Go言語製の高速なGitフック管理ツール。並列実行や柔軟なファイル指定が可能で、大規模プロジェクトや多言語プロジェクトに最適。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "SRE"
-    - "大規模チーム"
-  latest_highlight: "v2.1.1リリース (2026-02-12)"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - SRE
+    - 大規模チーム
+  latest_highlight: v2.1.1リリース (2026-02-12)
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Go言語製で実行速度が非常に速い"
+      reason: Go言語製で実行速度が非常に速い
     - point: 5
-      reason: "並列実行を標準サポートし、CI時間を短縮できる"
+      reason: 並列実行を標準サポートし、CI時間を短縮できる
     - point: 3
-      reason: "モノレポや多言語プロジェクトに対応しやすい柔軟性"
+      reason: モノレポや多言語プロジェクトに対応しやすい柔軟性
     - point: 2
-      reason: "ローカル設定 (lefthook-local.yml) が可能"
+      reason: ローカル設定 (lefthook-local.yml) が可能
   minus_points: []
-  summary: "高速かつ柔軟で、特に大規模プロジェクトやモノレポにおいてHuskyやpre-commitより優れた選択肢となる。"
-
-# 【任意項目】該当するもののみ記載
+  summary: 高速かつ柔軟で、特に大規模プロジェクトやモノレポにおいてHuskyやpre-commitより優れた選択肢となる。
 links:
-  github: "https://github.com/evilmartians/lefthook"
-  deepwiki: "https://deepwiki.com/evilmartians/lefthook"
-  documentation: "https://lefthook.dev/"
+  github: https://github.com/evilmartians/lefthook
+  deepwiki: https://deepwiki.com/evilmartians/lefthook
+  documentation: https://lefthook.dev/
 relationships:
-  related_tools:
-    - "github-actions"
-    - "gitlab-ci"
-    - "pre-commit"
+  related_tools: []
 ---
+
+
+
 
 # **Lefthook 調査レポート**
 

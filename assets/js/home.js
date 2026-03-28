@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
     filterAndSort();
   });
 
-    interestChips.forEach((chip) => {
+  interestChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       const suggestedSearch = chip.dataset.interestSearch || '';
       const suggestedTag = chip.dataset.interestTag || '';

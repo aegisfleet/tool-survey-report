@@ -1,56 +1,54 @@
 ---
-title: "A2A Protocol 調査レポート"
-tool_name: "A2A Protocol"
-tool_reading: "エーツーエー プロトコル"
-category: "AI開発基盤"
-developer: "The Linux Foundation"
-official_site: "https://a2a-protocol.org/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: A2A Protocol 調査レポート
+tool_name: A2A Protocol
+tool_reading: エーツーエー プロトコル
+category: AI開発基盤
+developer: The Linux Foundation
+official_site: https://a2a-protocol.org/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "エージェント"
-  - "プロトコル"
-  - "相互運用性"
-  - "MCP"
-  - "The Linux Foundation"
-description: "異なるプラットフォーム上のAIエージェント同士が相互に通信し、タスクを委任・連携するためのユニバーサルな標準プロトコル"
-
+  - MCP
+  - The Linux Foundation
+  - エージェント
+  - プロトコル
+  - 相互運用性
+description: 異なるプラットフォーム上のAIエージェント同士が相互に通信し、タスクを委任・連携するためのユニバーサルな標準プロトコル
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "プラットフォームエンジニア"
-  latest_highlight: "The Linux Foundationによる標準化と複数言語SDKの提供"
-  update_frequency: "高"
-
+    - AIエージェント開発者
+    - プラットフォームエンジニア
+  latest_highlight: The Linux Foundationによる標準化と複数言語SDKの提供
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "異なるエージェントフレームワーク間の壁を取り払う相互運用性"
+      reason: 異なるエージェントフレームワーク間の壁を取り払う相互運用性
     - point: 5
-      reason: "MCPと補完関係にあり、ツール利用とエージェント連携を両立可能"
+      reason: MCPと補完関係にあり、ツール利用とエージェント連携を両立可能
     - point: 5
-      reason: "The Linux Foundationによる中立的な運営とオープン標準"
+      reason: The Linux Foundationによる中立的な運営とオープン標準
   minus_points:
     - point: 0
-      reason: "プロトコル自体が新しいため、普及とエコシステムの拡大はこれから"
-  summary: "エージェント間連携のデファクトスタンダードとなる可能性を秘めた、極めて重要なプロトコル"
-
+      reason: プロトコル自体が新しいため、普及とエコシステムの拡大はこれから
+  summary: エージェント間連携のデファクトスタンダードとなる可能性を秘めた、極めて重要なプロトコル
 links:
-  github: "https://github.com/a2aproject/A2A"
-  deepwiki: "https://deepwiki.com/a2aproject/A2A"
-  codewiki: "https://codewiki.google/github.com/a2aproject/A2A"
-  documentation: "https://a2a-protocol.org/"
+  github: https://github.com/a2aproject/A2A
+  deepwiki: https://deepwiki.com/a2aproject/A2A
+  codewiki: https://codewiki.google/github.com/a2aproject/A2A
+  documentation: https://a2a-protocol.org/
 relationships:
   related_tools:
-    - "context7"
-    - "agents-md"
-    - "Microsoft Agent Framework"
+    - Microsoft Agent Framework
 ---
+
+
+
 
 # **A2A Protocol 調査レポート**
 

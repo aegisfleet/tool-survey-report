@@ -1,57 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "DeerFlow 調査レポート"
-tool_name: "DeerFlow"
-tool_reading: "ディアフロー"
-category: "開発者ツール"
-developer: "Bytedance"
-official_site: "https://deerflow.tech/"
-date: "2026-03-01"
-last_updated: "2026-03-24"
+title: DeerFlow 調査レポート
+tool_name: DeerFlow
+tool_reading: ディアフロー
+category: 開発者ツール
+developer: Bytedance
+official_site: https://deerflow.tech/
+date: '2026-03-01'
+last_updated: '2026-03-24'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "開発ツール"
-  - "エージェント"
-description: "データ分析からコーディングまで自動化するオープンソースのSuperAgentフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 開発ツール
+description: データ分析からコーディングまで自動化するオープンソースのSuperAgentフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "データサイエンティスト"
-    - "リサーチャー"
-  latest_highlight: "2026年2月末にバージョン2.0をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - データサイエンティスト
+    - リサーチャー
+  latest_highlight: 2026年2月末にバージョン2.0をリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "サブエージェント、サンドボックスなどによる強力なタスク実行機能を持つ"
+      reason: サブエージェント、サンドボックスなどによる強力なタスク実行機能を持つ
     - point: 5
-      reason: "オープンソースとしてGitHub Stars 39k超を獲得するなどユーザー評価が極めて高い"
+      reason: オープンソースとしてGitHub Stars 39k超を獲得するなどユーザー評価が極めて高い
     - point: 3
-      reason: "MITライセンスで自由にカスタマイズ・組み込みが可能"
+      reason: MITライセンスで自由にカスタマイズ・組み込みが可能
   minus_points: []
-  summary: "複雑なタスクを柔軟にこなす、極めて高く評価されている強力なオープンソースSuperAgentフレームワーク"
-
-# 【任意項目】該当するもののみ記載
+  summary: 複雑なタスクを柔軟にこなす、極めて高く評価されている強力なオープンソースSuperAgentフレームワーク
 links:
-  github: "https://github.com/bytedance/deer-flow"
-  deepwiki: "https://deepwiki.com/bytedance/deer-flow"
+  github: https://github.com/bytedance/deer-flow
+  deepwiki: https://deepwiki.com/bytedance/deer-flow
 relationships:
   related_tools:
-    - "Google Jules"
-    - "Devin"
-    - "OpenHands"
+    - Google Jules
+    - Devin
+    - OpenHands
 ---
+
+
+
 
 # **DeerFlow 調査レポート**
 

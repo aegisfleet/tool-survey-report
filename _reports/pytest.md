@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "PyTest 調査レポート"
-tool_name: "PyTest"
-tool_reading: "パイテスト"
-category: "テスト/QA"
-developer: "pytest-dev team"
-official_site: "https://pytest.org/"
-date: "2025-10-22"
-last_updated: "2026-03-13"
+title: PyTest 調査レポート
+tool_name: PyTest
+tool_reading: パイテスト
+category: テスト/QA
+developer: pytest-dev team
+official_site: https://pytest.org/
+date: '2025-10-22'
+last_updated: '2026-03-13'
 tags:
-  - "テスト自動化"
-  - "オープンソース"
-  - "開発者ツール"
-  - "Python"
-description: "Pythonで広く利用されている、シンプルかつ強力なテスト自動化フレームワーク。ユニットテストから複雑な機能テストまで幅広く対応。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Python
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: Pythonで広く利用されている、シンプルかつ強力なテスト自動化フレームワーク。ユニットテストから複雑な機能テストまで幅広く対応。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Python開発者"
-    - "QAエンジニア"
-  latest_highlight: "2025年11月にサブテスト機能、ネイティブTOML設定などの新機能を追加したv9.0をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Python開発者
+    - QAエンジニア
+  latest_highlight: 2025年11月にサブテスト機能、ネイティブTOML設定などの新機能を追加したv9.0をリリース
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "豊富なプラグインエコシステムによる高い拡張性"
+      reason: 豊富なプラグインエコシステムによる高い拡張性
     - point: 8
-      reason: "シンプルで可読性の高いテストコードを記述可能"
+      reason: シンプルで可読性の高いテストコードを記述可能
     - point: 5
-      reason: "フィクスチャ機能が強力で、テストのセットアップや後処理を効率化できる"
+      reason: フィクスチャ機能が強力で、テストのセットアップや後処理を効率化できる
     - point: 2
-      reason: "開発が活発で、継続的に新機能が追加されている"
+      reason: 開発が活発で、継続的に新機能が追加されている
   minus_points:
     - point: -3
-      reason: "高機能なため、unittestに比べて学習コストがやや高い"
-  summary: "Pythonのテスト自動化におけるデファクトスタンダードであり、あらゆるプロジェクトで第一選択肢となるフレームワーク。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高機能なため、unittestに比べて学習コストがやや高い
+  summary: Pythonのテスト自動化におけるデファクトスタンダードであり、あらゆるプロジェクトで第一選択肢となるフレームワーク。
 links:
-  github: "https://github.com/pytest-dev/pytest"
-  deepwiki: "https://deepwiki.com/pytest-dev/pytest"
-  codewiki: "https://codewiki.google/github.com/pytest-dev/pytest"
-  documentation: "https://docs.pytest.org/en/stable/"
+  github: https://github.com/pytest-dev/pytest
+  deepwiki: https://deepwiki.com/pytest-dev/pytest
+  codewiki: https://codewiki.google/github.com/pytest-dev/pytest
+  documentation: https://docs.pytest.org/en/stable/
 relationships:
   related_tools:
-    - "JUnit"
-    - "Selenium"
-    - "Playwright"
-    - "Robot Framework"
+    - JUnit
+    - Selenium
+    - Playwright
+    - Robot Framework
 ---
+
+
+
 
 # **PyTest 調査レポート**
 

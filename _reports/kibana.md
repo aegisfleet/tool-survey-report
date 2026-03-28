@@ -1,66 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Kibana 調査レポート"
-tool_name: "Kibana"
-tool_reading: "キバナ"
-category: "監視/可観測性"
-developer: "Elastic"
-official_site: "https://www.elastic.co/jp/kibana"
-date: "2026-02-12"
-last_updated: "2026-02-12"
+title: Kibana 調査レポート
+tool_name: Kibana
+tool_reading: キバナ
+category: 監視/可観測性
+developer: Elastic
+official_site: https://www.elastic.co/jp/kibana
+date: '2026-02-12'
+last_updated: '2026-02-12'
 tags:
-  - "ログ管理"
-  - "可視化"
-  - "ダッシュボード"
-  - "SIEM"
-  - "オブザーバビリティ"
-  - "ELK Stack"
-  - "AI"
-description: "Elasticsearchデータの可視化・探索・管理を行うための主要なインターフェース。AIアシスタントやES|QLを搭載し、ログ分析からセキュリティ監視まで幅広く対応。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - ELK Stack
+  - SIEM
+  - オブザーバビリティ
+  - ダッシュボード
+  - ログ管理
+  - 可視化
+description: Elasticsearchデータの可視化・探索・管理を行うための主要なインターフェース。AIアシスタントやES|QLを搭載し、ログ分析からセキュリティ監視まで幅広く対応。
 quick_summary:
   has_free_plan: true
-  is_oss: false # Elastic License v2 / SSPL
-  starting_price: "無料"
+  is_oss: false
+  starting_price: 無料
   target_users:
-    - "DevOpsエンジニア"
-    - "セキュリティアナリスト"
-    - "データサイエンティスト"
-  latest_highlight: "2026年2月、バージョン9.3リリース。AIアシスタント機能とES|QLエディタの更なる強化。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - DevOpsエンジニア
+    - セキュリティアナリスト
+    - データサイエンティスト
+  latest_highlight: 2026年2月、バージョン9.3リリース。AIアシスタント機能とES|QLエディタの更なる強化。
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Elasticsearchとの完全な統合により、ペタバイト規模のログデータの高速な検索・分析が可能"
+      reason: Elasticsearchとの完全な統合により、ペタバイト規模のログデータの高速な検索・分析が可能
     - point: 5
-      reason: "AI AssistantやES|QLなど、最新の技術トレンドを迅速に取り入れている"
+      reason: AI AssistantやES|QLなど、最新の技術トレンドを迅速に取り入れている
     - point: 2
-      reason: "CanvasやMapsなど、表現力豊かな可視化機能が充実している"
+      reason: CanvasやMapsなど、表現力豊かな可視化機能が充実している
   minus_points:
     - point: -3
-      reason: "Elasticsearchとセットでの運用が前提であり、単体での利用はできない"
+      reason: Elasticsearchとセットでの運用が前提であり、単体での利用はできない
     - point: -2
-      reason: "ライセンスが純粋なOSSではなくなり（ELv2/SSPL）、一部の利用シーンで制約がある"
-  summary: "ログ分析と検索の分野で圧倒的な強みを持ち、AI機能の統合により分析効率が飛躍的に向上しているが、ライセンス形態には注意が必要。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ライセンスが純粋なOSSではなくなり（ELv2/SSPL）、一部の利用シーンで制約がある
+  summary: ログ分析と検索の分野で圧倒的な強みを持ち、AI機能の統合により分析効率が飛躍的に向上しているが、ライセンス形態には注意が必要。
 links:
-  github: "https://github.com/elastic/kibana"
-  deepwiki: "https://deepwiki.com/elastic/kibana"
-  documentation: "https://www.elastic.co/guide/en/kibana/current/index.html"
+  github: https://github.com/elastic/kibana
+  deepwiki: https://deepwiki.com/elastic/kibana
+  documentation: https://www.elastic.co/guide/en/kibana/current/index.html
 relationships:
   related_tools:
-    - "Grafana"
-    - "Splunk"
-    - "Datadog"
-    - "Amazon OpenSearch Service"
+    - Grafana
+    - Splunk
+    - Datadog
+    - Amazon OpenSearch Service
 ---
+
+
+
 
 # **Kibana 調査レポート**
 

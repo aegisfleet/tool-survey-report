@@ -1,67 +1,61 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Vertex AI Studio 調査レポート"
-tool_name: "Vertex AI Studio"
-tool_reading: "バーテックス エーアイ スタジオ"
-category: "AI開発基盤"
-developer: "Google"
-official_site: "https://cloud.google.com/generative-ai-studio"
-date: "2026-01-29"
-last_updated: "2026-01-29"
+title: Vertex AI Studio 調査レポート
+tool_name: Vertex AI Studio
+tool_reading: バーテックス エーアイ スタジオ
+category: AI開発基盤
+developer: Google
+official_site: https://cloud.google.com/generative-ai-studio
+date: '2026-01-29'
+last_updated: '2026-01-29'
 tags:
-  - "AI"
-  - "生成AI"
-  - "AI開発基盤"
-  - "大規模言語モデル"
-  - "Google Cloud"
-  - "MLOps"
-  - "Gemini"
-description: "Google Cloud上で生成AIモデルのプロトタイピング、カスタマイズ、本番環境への統合を迅速に行うための統合開発環境。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - AI開発基盤
+  - Gemini
+  - Google Cloud
+  - MLOps
+  - 大規模言語モデル
+  - 生成AI
+description: Google Cloud上で生成AIモデルのプロトタイピング、カスタマイズ、本番環境への統合を迅速に行うための統合開発環境。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料枠あり（従量課金）"
+  starting_price: 無料枠あり（従量課金）
   target_users:
-    - "AI/MLエンジニア"
-    - "アプリケーション開発者"
-    - "データサイエンティスト"
-  latest_highlight: "2026年1月にGemini 3 Pro/Flashが一般提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AI/MLエンジニア
+    - アプリケーション開発者
+    - データサイエンティスト
+  latest_highlight: 2026年1月にGemini 3 Pro/Flashが一般提供開始
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Gemini 3 Pro/Flashなど、Googleの最先端・高性能な基盤モデルを迅速に利用できる。"
+      reason: Gemini 3 Pro/Flashなど、Googleの最先端・高性能な基盤モデルを迅速に利用できる。
     - point: 5
-      reason: "プロンプト設計からチューニング、デプロイ、管理まで、エンドツーエンドのMLOps機能が単一プラットフォームに統合されている。"
+      reason: プロンプト設計からチューニング、デプロイ、管理まで、エンドツーエンドのMLOps機能が単一プラットフォームに統合されている。
     - point: 5
-      reason: "Model Gardenを通じて、Google製モデルだけでなく、多数のオープンソースやパートナー製モデルにアクセスできる。"
+      reason: Model Gardenを通じて、Google製モデルだけでなく、多数のオープンソースやパートナー製モデルにアクセスできる。
     - point: 2
-      reason: "新規顧客向けの$300無料クレジットや、一部機能の無料利用枠が提供されている。"
+      reason: 新規顧客向けの$300無料クレジットや、一部機能の無料利用枠が提供されている。
   minus_points:
     - point: -3
-      reason: "多機能である反面、特に初心者にとっては学習コストが高く、プラットフォーム全体が複雑に感じられる場合がある。"
+      reason: 多機能である反面、特に初心者にとっては学習コストが高く、プラットフォーム全体が複雑に感じられる場合がある。
     - point: -2
-      reason: "利用するモデルやリソースごとに料金が細分化されており、コストの見積もりが複雑になりやすい。"
-  summary: "Googleの最新AIモデルを活用した開発から運用までをカバーする、極めて強力で包括的なAI開発プラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 利用するモデルやリソースごとに料金が細分化されており、コストの見積もりが複雑になりやすい。
+  summary: Googleの最新AIモデルを活用した開発から運用までをカバーする、極めて強力で包括的なAI開発プラットフォーム。
 links:
-  documentation: "https://cloud.google.com/vertex-ai/docs"
+  documentation: https://cloud.google.com/vertex-ai/docs
 relationships:
-  parent: "Vertex AI"
+  parent: Vertex AI
   related_tools:
-    - "Amazon Bedrock"
-    - "Azure AI Studio"
-    - "OpenAI Playground"
-    - "さくらのAI"
+    - Amazon Bedrock
+    - さくらのAI
+    - Gemini
 ---
+
+
+
 
 # **Vertex AI Studio 調査レポート**
 

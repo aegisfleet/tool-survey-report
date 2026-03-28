@@ -1,70 +1,63 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Cloud 調査レポート"
-tool_name: "Google Cloud"
-tool_reading: "グーグル クラウド"
-category: "インフラ/クラウド"
-developer: "Google"
-official_site: "https://cloud.google.com/"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: Google Cloud 調査レポート
+tool_name: Google Cloud
+tool_reading: グーグル クラウド
+category: インフラ/クラウド
+developer: Google
+official_site: https://cloud.google.com/
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "クラウド"
-  - "AI"
-  - "インフラ"
-  - "開発者ツール"
-  - "コンテナ"
-description: "Googleが提供するクラウドコンピューティングプラットフォーム。AI/ML、データ分析、コンテナ管理に強みを持ち、スケーラブルなインフラと最先端のイノベーションを提供する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - インフラ
+  - クラウド
+  - コンテナ
+  - 開発者ツール
+description: Googleが提供するクラウドコンピューティングプラットフォーム。AI/ML、データ分析、コンテナ管理に強みを持ち、スケーラブルなインフラと最先端のイノベーションを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料枠あり（従量課金）"
+  starting_price: 無料枠あり（従量課金）
   target_users:
-    - "開発者"
-    - "データサイエンティスト"
-    - "エンタープライズ"
-  latest_highlight: "2026年初頭にGemini 3およびTPU v7 (Ironwood) を発表しAI機能を大幅強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - データサイエンティスト
+    - エンタープライズ
+  latest_highlight: 2026年初頭にGemini 3およびTPU v7 (Ironwood) を発表しAI機能を大幅強化
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Vertex AIとGemini 3による圧倒的なAI/ML開発環境の提供"
+      reason: Vertex AIとGemini 3による圧倒的なAI/ML開発環境の提供
     - point: 5
-      reason: "BigQueryによる高速かつコスト効率の高いデータ分析基盤"
+      reason: BigQueryによる高速かつコスト効率の高いデータ分析基盤
     - point: 5
-      reason: "Kubernetes (GKE) の本家としての強力なコンテナ管理機能"
+      reason: Kubernetes (GKE) の本家としての強力なコンテナ管理機能
     - point: 4
-      reason: "グローバルなファイバーネットワークによる低遅延・高スループット"
+      reason: グローバルなファイバーネットワークによる低遅延・高スループット
   minus_points:
-    - point: -0
-      reason: "特になし（市場シェアではAWS/Azureに次ぐが機能面での不足はない）"
-  summary: "AIとデータ分析の分野で他社をリードし、モダンなアプリケーション開発に最適なクラウドプラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 特になし（市場シェアではAWS/Azureに次ぐが機能面での不足はない）
+  summary: AIとデータ分析の分野で他社をリードし、モダンなアプリケーション開発に最適なクラウドプラットフォーム。
 links:
-  documentation: "https://cloud.google.com/docs"
+  documentation: https://cloud.google.com/docs
 relationships:
   children:
-    - "Vertex AI"
-    - "Gemini"
-    - "BigQuery"
-    - "Kubernetes"
-    - "Looker Studio"
+    - Vertex AI
+    - Gemini
+    - Kubernetes
+    - Looker Studio
   related_tools:
-    - "Amazon Web Services"
-    - "Microsoft Azure"
-    - "Terraform"
-    - "Google Workspace CLI (gws)"
-    - "Cloudflare"
-    - "Google Maps Platform"
+    - Terraform
+    - Google Workspace CLI (gws)
+    - Cloudflare
+    - Google Maps Platform
+    - Google 広告
 ---
+
+
+
 
 # **Google Cloud 調査レポート**
 

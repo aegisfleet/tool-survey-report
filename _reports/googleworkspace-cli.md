@@ -1,54 +1,54 @@
 ---
-title: "Google Workspace CLI 調査レポート"
-tool_name: "Google Workspace CLI (gws)"
-tool_reading: "グーグル ワークスペース シーエルアイ / ジーダブリューエス"
-category: "開発者ツール"
-developer: "Google"
-official_site: "https://developers.google.com/workspace"
-date: "2026-03-05"
-last_updated: "2026-03-05"
+title: Google Workspace CLI 調査レポート
+tool_name: Google Workspace CLI (gws)
+tool_reading: グーグル ワークスペース シーエルアイ / ジーダブリューエス
+category: 開発者ツール
+developer: Google
+official_site: https://developers.google.com/workspace
+date: '2026-03-05'
+last_updated: '2026-03-05'
 tags:
-  - "エージェント"
-  - "開発者ツール"
-  - "API"
-  - "オープンソース"
-  - "CLI"
-description: "Google WorkspaceのAPIをコマンドラインから簡単に操作し、AIエージェント向けの構造化JSON出力を提供する統合CLIツール"
-
+  - API
+  - CLI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+description: Google WorkspaceのAPIをコマンドラインから簡単に操作し、AIエージェント向けの構造化JSON出力を提供する統合CLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント"
-    - "システム管理者"
-  latest_highlight: "2026年3月にv0.3.1をリリースし、AIスキル自動生成の更新とセキュリティ強化を実施"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエージェント
+    - システム管理者
+  latest_highlight: 2026年3月にv0.3.1をリリースし、AIスキル自動生成の更新とセキュリティ強化を実施
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Discovery Serviceを活用し、Google Workspaceの全APIを動的にサポートする柔軟性"
+      reason: Discovery Serviceを活用し、Google Workspaceの全APIを動的にサポートする柔軟性
     - point: 5
-      reason: "AIエージェント（LLMやMCP）向けの構造化されたJSON出力とAgent Skillsの提供"
+      reason: AIエージェント（LLMやMCP）向けの構造化されたJSON出力とAgent Skillsの提供
     - point: 3
-      reason: "CLIからの直感的な認証フロー（ブラウザ、CI、サービスアカウント対応）の完備"
+      reason: CLIからの直感的な認証フロー（ブラウザ、CI、サービスアカウント対応）の完備
   minus_points:
-    - point: -0
-      reason: "特筆すべき大きな減点項目はないが、開発途上のツールであるため破壊的変更の可能性がある"
-  summary: "人間とAIエージェントの双方にとって、Google Workspaceの自動化を飛躍的に効率化する非常に強力なツール"
-
+    - point: 0
+      reason: 特筆すべき大きな減点項目はないが、開発途上のツールであるため破壊的変更の可能性がある
+  summary: 人間とAIエージェントの双方にとって、Google Workspaceの自動化を飛躍的に効率化する非常に強力なツール
 links:
-  github: "https://github.com/googleworkspace/cli"
-  deepwiki: "https://deepwiki.com/googleworkspace/cli"
-  codewiki: "https://codewiki.google/github.com/googleworkspace/cli"
+  github: https://github.com/googleworkspace/cli
+  deepwiki: https://deepwiki.com/googleworkspace/cli
+  codewiki: https://codewiki.google/github.com/googleworkspace/cli
 relationships:
   related_tools:
-    - "Google Cloud"
+    - Google Cloud
 ---
+
+
+
 
 # **Google Workspace CLI (gws) 調査レポート**
 

@@ -1,47 +1,47 @@
 ---
-title: "ナクサナイ 調査レポート"
-tool_name: "ナクサナイ"
-tool_reading: "ナクサナイ"
-category: "業務系ツール"
-developer: "株式会社SHIFT"
-official_site: "https://nakusanai.jp/"
-date: "2026-03-11"
-last_updated: "2026-03-11"
+title: ナクサナイ 調査レポート
+tool_name: ナクサナイ
+tool_reading: ナクサナイ
+category: 開発者ツール
+developer: 株式会社SHIFT
+official_site: https://nakusanai.jp/
+date: '2026-03-11'
+last_updated: '2026-03-11'
 tags:
-  - "資産管理"
-  - "自動化"
-  - "SaaS"
-description: "資産と契約を紐づけて一元管理できる、完全無料のクラウド型資産管理ツール。"
-
+  - SaaS
+  - 自動化
+  - 資産管理
+description: 資産と契約を紐づけて一元管理できる、完全無料のクラウド型資産管理ツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "総務"
-    - "バックオフィス"
-  latest_highlight: "アプリでのQRコード棚卸し機能提供"
-  update_frequency: "中"
-
+    - 総務
+    - バックオフィス
+  latest_highlight: アプリでのQRコード棚卸し機能提供
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "機能制限なく完全無料で利用できる"
+      reason: 機能制限なく完全無料で利用できる
     - point: 5
-      reason: "株式会社SHIFTによる運営でISMS等のセキュリティ認証を取得済み"
+      reason: 株式会社SHIFTによる運営でISMS等のセキュリティ認証を取得済み
   minus_points: []
-  summary: "コストをかけずに物理資産・契約管理を始めたい中小企業やバックオフィスに最適。"
-
+  summary: コストをかけずに物理資産・契約管理を始めたい中小企業やバックオフィスに最適。
 links:
-  documentation: "https://nakusanai.jp/"
+  documentation: https://nakusanai.jp/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "ワスレナイ"
+    - ワスレナイ
 ---
+
+
+
 
 # **ナクサナイ 調査レポート**
 

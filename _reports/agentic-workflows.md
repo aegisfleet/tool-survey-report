@@ -1,63 +1,58 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Agentic Workflows 調査レポート"
-tool_name: "Agentic Workflows"
-tool_reading: "エージェンティック ワークフローズ"
-category: "CI/CD"
-developer: "GitHub Next"
-official_site: "https://githubnext.com/projects/agentic-workflows/"
-date: "2026-01-27"
-last_updated: "2026-03-04"
+title: Agentic Workflows 調査レポート
+tool_name: Agentic Workflows
+tool_reading: エージェンティック ワークフローズ
+category: CI/CD
+developer: GitHub Next
+official_site: https://githubnext.com/projects/agentic-workflows/
+date: '2026-01-27'
+last_updated: '2026-03-04'
 tags:
-  - "GitHub Actions"
-  - "AI"
-  - "自動化"
-  - "CI/CD"
-  - "エージェント"
-description: "GitHub Actionsのワークフローを自然言語で記述し、AIエージェント（Claude CodeやOpenAI Codex CLIなど）に実行させるためのGitHub Nextプロジェクト。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - CI/CD
+  - GitHub Actions
+  - エージェント
+  - 自動化
+description: GitHub Actionsのワークフローを自然言語で記述し、AIエージェント（Claude CodeやOpenAI Codex CLIなど）に実行させるためのGitHub Nextプロジェクト。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (Research Prototype)"
+  starting_price: 無料 (Research Prototype)
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "OSSメンテナ"
-  latest_highlight: "2026年3月4日にv0.53.1をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - OSSメンテナ
+  latest_highlight: 2026年3月4日にv0.53.1をリリース
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "自然言語でワークフローを定義できる革新性"
+      reason: 自然言語でワークフローを定義できる革新性
     - point: 5
-      reason: "GitHub Actionsのセキュリティモデルを継承した安全性"
+      reason: GitHub Actionsのセキュリティモデルを継承した安全性
     - point: 3
-      reason: "特定のモデルに依存しないエンジン非依存設計"
+      reason: 特定のモデルに依存しないエンジン非依存設計
   minus_points:
     - point: -3
-      reason: "リサーチプロトタイプであり、本番利用には注意が必要"
-  summary: "自然言語プログラミングをGitHub Actionsに持ち込む野心的なプロジェクト。既存のGitHubエコシステムとの親和性が高く、将来性が期待できる。"
-
-# 【任意項目】該当するもののみ記載
+      reason: リサーチプロトタイプであり、本番利用には注意が必要
+  summary: 自然言語プログラミングをGitHub Actionsに持ち込む野心的なプロジェクト。既存のGitHubエコシステムとの親和性が高く、将来性が期待できる。
 links:
-  github: "https://github.com/githubnext/gh-aw"
-  deepwiki: "https://deepwiki.com/githubnext/gh-aw"
-  documentation: "https://githubnext.github.io/gh-aw/"
+  github: https://github.com/githubnext/gh-aw
+  deepwiki: https://deepwiki.com/githubnext/gh-aw
+  documentation: https://githubnext.github.io/gh-aw/
 relationships:
-  parent: "GitHub Actions"
+  parent: GitHub Actions
   children: []
   related_tools:
-    - "Claude Code"
-    - "OpenAI Codex CLI"
-    - "GitHub Copilot"
+    - Claude Code
+    - OpenAI Codex CLI
+    - GitHub Copilot
 ---
+
+
+
 
 # **Agentic Workflows 調査レポート**
 

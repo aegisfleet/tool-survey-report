@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google Learning 調査レポート"
-tool_name: "Google Learning"
-tool_reading: "グーグル ラーニング"
-category: "AI開発基盤"
-developer: "Google"
-official_site: "https://learning.google.com/"
-date: "2026-02-23"
-last_updated: "2026-02-23"
+title: Google Learning 調査レポート
+tool_name: Google Learning
+tool_reading: グーグル ラーニング
+category: AI開発基盤
+developer: Google
+official_site: https://learning.google.com/
+date: '2026-02-23'
+last_updated: '2026-02-23'
 tags:
-  - "教育"
-  - "学習"
-  - "AI"
-  - "スキル開発"
-  - "Google"
-description: "Googleが提供する学習者向けの総合ポータルサイト。教育機関、仕事、生活の3つのカテゴリで、Googleの学習ツールやリソースを集約している。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - Google
+  - スキル開発
+  - 学習
+  - 教育
+description: Googleが提供する学習者向けの総合ポータルサイト。教育機関、仕事、生活の3つのカテゴリで、Googleの学習ツールやリソースを集約している。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "学生・教育者"
-    - "ビジネスパーソン"
-    - "生涯学習者"
-  latest_highlight: "AIを活用した新しい学習実験ツール（Learn Aboutなど）を公開"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 学生・教育者
+    - ビジネスパーソン
+    - 生涯学習者
+  latest_highlight: AIを活用した新しい学習実験ツール（Learn Aboutなど）を公開
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Googleの膨大な学習リソースが一箇所に集約されておりアクセスしやすい"
+      reason: Googleの膨大な学習リソースが一箇所に集約されておりアクセスしやすい
     - point: 5
-      reason: "GeminiやNotebookLMなど最新のAI技術を活用した学習ツールを体験できる"
+      reason: GeminiやNotebookLMなど最新のAI技術を活用した学習ツールを体験できる
   minus_points:
-    - point: -0
-      reason: "特になし"
-  summary: "Googleの多様な学習ツールへの入り口として機能し、AI時代の新しい学習体験を提供するポータル。"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 特になし
+  summary: Googleの多様な学習ツールへの入り口として機能し、AI時代の新しい学習体験を提供するポータル。
 links:
-  documentation: "https://learning.google.com/"
+  documentation: https://learning.google.com/
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - "NotebookLM"
+    - NotebookLM
   related_tools:
-    - "Google Cloud"
-    - "Gemini"
-    - "NotebookLM"
+    - Google Cloud
+    - Gemini
+    - NotebookLM
 ---
+
+
+
 
 # **Google Learning 調査レポート**
 

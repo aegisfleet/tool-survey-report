@@ -1,69 +1,66 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "n8n 調査レポート"
-tool_name: "n8n"
-tool_reading: "エヌエイトエヌ"
-category: "ワークフロー自動化"
-developer: "n8n GmbH"
-official_site: "https://n8n.io/"
-date: "2026-01-27"
-last_updated: "2026-03-11"
+title: n8n 調査レポート
+tool_name: n8n
+tool_reading: エヌエイトエヌ
+category: ワークフロー自動化
+developer: n8n GmbH
+official_site: https://n8n.io/
+date: '2026-01-27'
+last_updated: '2026-03-11'
 tags:
-  - "自動化"
-  - "オープンソース"
-  - "AI"
-  - "ローコード"
-  - "セルフホスト"
-description: "オープンソースを基盤とした柔軟性の高いAIネイティブのワークフロー自動化ツール。ビジュアルエディタとコード記述を組み合わせ、複雑なプロセスに対応可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - セルフホスト
+  - ローコード
+  - 自動化
+description: オープンソースを基盤とした柔軟性の高いAIネイティブのワークフロー自動化ツール。ビジュアルエディタとコード記述を組み合わせ、複雑なプロセスに対応可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "€20/月"
+  starting_price: €20/月
   target_users:
-    - "開発者"
-    - "IT部門"
-    - "技術系スタートアップ"
-  latest_highlight: "2026年2月に外部シークレットプロバイダーへの複数接続サポートや大規模環境のパフォーマンス改善を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - IT部門
+    - 技術系スタートアップ
+  latest_highlight: 2026年2月に外部シークレットプロバイダーへの複数接続サポートや大規模環境のパフォーマンス改善を実施
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 8
-      reason: "オープンソースかつセルフホスト可能で、データガバナンスとカスタマイズ性に優れる"
+      reason: オープンソースかつセルフホスト可能で、データガバナンスとカスタマイズ性に優れる
     - point: 7
-      reason: "AIネイティブ機能（AIエージェント構築、プロンプトからのWF生成）が豊富で先進的"
+      reason: AIネイティブ機能（AIエージェント構築、プロンプトからのWF生成）が豊富で先進的
     - point: 4
-      reason: "ノーコードとローコード（JS/Python）のハイブリッドで、単純な連携から複雑なロジックまで対応できる"
+      reason: ノーコードとローコード（JS/Python）のハイブリッドで、単純な連携から複雑なロジックまで対応できる
     - point: 2
-      reason: "活発なコミュニティと頻繁なアップデートがあり、将来性が期待できる"
+      reason: 活発なコミュニティと頻繁なアップデートがあり、将来性が期待できる
   minus_points:
     - point: -4
-      reason: "多機能な反面、非エンジニアには学習コストが高く、Zapierのようなシンプルさはない"
+      reason: 多機能な反面、非エンジニアには学習コストが高く、Zapierのようなシンプルさはない
     - point: -3
-      reason: "公式ドキュメントやUIが英語中心で、日本語の情報が限定的"
-  summary: "開発者向けの高度な自動化・AI連携に強みを持つが、非技術者には学習コストが課題となる"
-
-# 【任意項目】該当するもののみ記載
+      reason: 公式ドキュメントやUIが英語中心で、日本語の情報が限定的
+  summary: 開発者向けの高度な自動化・AI連携に強みを持つが、非技術者には学習コストが課題となる
 links:
-  github: "https://github.com/n8n-io/n8n"
-  deepwiki: "https://deepwiki.com/n8n-io/n8n"
-  documentation: "https://docs.n8n.io/"
+  github: https://github.com/n8n-io/n8n
+  deepwiki: https://deepwiki.com/n8n-io/n8n
+  documentation: https://docs.n8n.io/
 relationships:
   parent: null
   children: []
   related_tools:
-    - "Make"
-    - "Zapier"
-    - "Microsoft Power Automate"
-    - "Workato"
-    - "Google Opal"
+    - Make
+    - Zapier
+    - Microsoft Power Automate
+    - Workato
+    - Google Opal
+    - NocoDB
+    - MoneyPrinterV2
 ---
+
+
+
 
 # **n8n 調査レポート**
 

@@ -1,60 +1,55 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AutoHotkey 調査レポート"
-tool_name: "AutoHotkey"
-tool_reading: "オートホットキー"
-category: "開発者ツール"
-developer: "AutoHotkey Community (Chris Mallett, Steve Gray 等)"
-official_site: "https://www.autohotkey.com/"
-date: "2026-03-27"
-last_updated: "2026-03-27"
+title: AutoHotkey 調査レポート
+tool_name: AutoHotkey
+tool_reading: オートホットキー
+category: 開発者ツール
+developer: AutoHotkey Community (Chris Mallett, Steve Gray 等)
+official_site: https://www.autohotkey.com/
+date: '2026-03-27'
+last_updated: '2026-03-27'
 tags:
-  - "オープンソース"
-  - "自動化"
-  - "スクリプト言語"
-  - "Windows"
-  - "RPA"
-description: "Windows向けの強力で学習が容易な自動化スクリプト言語。キーボード/マウスのマクロ作成やGUI構築などを通じて、定型作業を効率化する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - RPA
+  - Windows
+  - オープンソース
+  - スクリプト言語
+  - 自動化
+description: Windows向けの強力で学習が容易な自動化スクリプト言語。キーボード/マウスのマクロ作成やGUI構築などを通じて、定型作業を効率化する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Windowsユーザー"
-    - "開発者"
-    - "業務効率化担当者"
-  latest_highlight: "AutoHotkey v2系が正式な主力バージョンとして提供されている"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Windowsユーザー
+    - 開発者
+    - 業務効率化担当者
+  latest_highlight: AutoHotkey v2系が正式な主力バージョンとして提供されている
+  update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Windows上のあらゆるキーボード・マウス操作を柔軟かつ強力に自動化可能"
+      reason: Windows上のあらゆるキーボード・マウス操作を柔軟かつ強力に自動化可能
     - point: 5
-      reason: "オープンソースであり完全無料で利用でき、軽量かつポータブル"
+      reason: オープンソースであり完全無料で利用でき、軽量かつポータブル
     - point: 3
-      reason: "巨大で活発なコミュニティが存在し、多数のサンプルコードやライブラリが入手可能"
+      reason: 巨大で活発なコミュニティが存在し、多数のサンプルコードやライブラリが入手可能
   minus_points:
     - point: -3
-      reason: "独自のスクリプト構文（特にv1）は学習コストが高く、他の一般的な言語と異なる"
-  summary: "Windowsの自動化・カスタマイズにおいては他の追随を許さないほど強力なオープンソースツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 独自のスクリプト構文（特にv1）は学習コストが高く、他の一般的な言語と異なる
+  summary: Windowsの自動化・カスタマイズにおいては他の追随を許さないほど強力なオープンソースツール
 links:
-  github: "https://github.com/AutoHotkey/AutoHotkey"
-  documentation: "https://www.autohotkey.com/docs/v2/"
+  github: https://github.com/AutoHotkey/AutoHotkey
+  documentation: https://www.autohotkey.com/docs/v2/
 relationships:
   related_tools:
-    - "Microsoft Power Automate"
-    - "UiPath"
-    - "Zapier"
+    - Microsoft Power Automate
+    - UiPath
+    - Zapier
 ---
+
+
+
 
 # **AutoHotkey 調査レポート**
 

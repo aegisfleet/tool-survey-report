@@ -1,54 +1,49 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AGENTS.md 調査レポート"
-tool_name: "AGENTS.md"
-tool_reading: "エージェンツ ドット エムディー"
-category: "開発者ツール"
-developer: "LF Projects, LLC"
-official_site: "https://agents.md/"
-date: "2026-02-03"
-last_updated: "2026-02-03"
+title: AGENTS.md 調査レポート
+tool_name: AGENTS.md
+tool_reading: エージェンツ ドット エムディー
+category: 開発者ツール
+developer: LF Projects, LLC
+official_site: https://agents.md/
+date: '2026-02-03'
+last_updated: '2026-02-03'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "自動化"
-  - "ドキュメント"
-description: "AIコーディングエージェントのための専用READMEフォーマット。プロジェクトのコンテキストや指示を記述し、エージェントの自律的な作業を支援する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - ドキュメント
+  - 自動化
+description: AIコーディングエージェントのための専用READMEフォーマット。プロジェクトのコンテキストや指示を記述し、エージェントの自律的な作業を支援する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "Linux Foundationのプロジェクトとして策定が進んでいる"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエンジニア
+  latest_highlight: Linux Foundationのプロジェクトとして策定が進んでいる
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "シンプルで標準的なMarkdown形式のため、導入コストが非常に低い"
+      reason: シンプルで標準的なMarkdown形式のため、導入コストが非常に低い
     - point: 3
-      reason: "オープンソースであり、特定のベンダーにロックインされない"
+      reason: オープンソースであり、特定のベンダーにロックインされない
     - point: 2
-      reason: "Clineなどの主要なAIエージェントツールでサポートが進んでいる"
+      reason: Clineなどの主要なAIエージェントツールでサポートが進んでいる
   minus_points: []
-  summary: "AIエージェントとの協調作業における事実上の標準となる可能性を持つ、シンプルかつ強力なコンテキスト共有フォーマット。"
-
-# 【任意項目】該当するもののみ記載
+  summary: AIエージェントとの協調作業における事実上の標準となる可能性を持つ、シンプルかつ強力なコンテキスト共有フォーマット。
 links:
-  documentation: "https://agents.md/index"
+  documentation: https://agents.md/index
 relationships:
   related_tools:
-    - "Cline"
+    - Cline
 ---
+
+
+
 
 # **AGENTS.md 調査レポート**
 

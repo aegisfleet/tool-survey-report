@@ -1,61 +1,56 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Affinity 調査レポート"
-tool_name: "Affinity"
-tool_reading: "アフィニティ"
-category: "デザインツール"
-developer: "Serif (Canva)"
-official_site: "https://affinity.serif.com/"
-date: "2026-02-08"
-last_updated: "2026-02-08"
+title: Affinity 調査レポート
+tool_name: Affinity
+tool_reading: アフィニティ
+category: デザインツール
+developer: Serif (Canva)
+official_site: https://affinity.serif.com/
+date: '2026-02-08'
+last_updated: '2026-02-08'
 tags:
-  - "デザインツール"
-  - "画像編集"
-  - "DTP"
-  - "SaaS"
-  - "AI"
-description: "写真編集、ベクターデザイン、DTP機能をシームレスに統合したプロフェッショナル向けクリエイティブソフトウェア。2025年よりCanvaの「Imagination Era」構想の下、完全無料で提供されている。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - DTP
+  - SaaS
+  - デザインツール
+  - 画像編集
+description: 写真編集、ベクターデザイン、DTP機能をシームレスに統合したプロフェッショナル向けクリエイティブソフトウェア。2025年よりCanvaの「Imagination Era」構想の下、完全無料で提供されている。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "デザイナー"
-    - "クリエイター"
-    - "マーケター"
-  latest_highlight: "2025年10月にV3をリリースし、全機能を完全無料化"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - デザイナー
+    - クリエイター
+    - マーケター
+  latest_highlight: 2025年10月にV3をリリースし、全機能を完全無料化
+  update_frequency: 中
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "プロ向けの高機能ツールが完全無料で利用可能となり、コストパフォーマンスが極めて高い"
+      reason: プロ向けの高機能ツールが完全無料で利用可能となり、コストパフォーマンスが極めて高い
     - point: 5
-      reason: "StudioLink機能により、写真・ベクター・DTPの作業をアプリ切り替えなしで完結できる"
+      reason: StudioLink機能により、写真・ベクター・DTPの作業をアプリ切り替えなしで完結できる
     - point: 5
-      reason: "Canvaとの連携強化により、AI機能やアセット共有がスムーズになった"
+      reason: Canvaとの連携強化により、AI機能やアセット共有がスムーズになった
   minus_points:
     - point: -2
-      reason: "高度な生成AI機能の利用にはCanva Pro契約が必要"
-  summary: "完全無料化によりデザイン制作の民主化を加速させる強力なツール。プロ品質の機能とCanvaのAIエコシステムが融合している。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 高度な生成AI機能の利用にはCanva Pro契約が必要
+  summary: 完全無料化によりデザイン制作の民主化を加速させる強力なツール。プロ品質の機能とCanvaのAIエコシステムが融合している。
 links:
-  documentation: "https://affinity.serif.com/learn/"
+  documentation: https://affinity.serif.com/learn/
 relationships:
-  parent: "Canva"
+  parent: Canva
   children: []
   related_tools:
-    - "Apple Creator Studio"
-    - "Figma"
-    - "GIMP"
+    - Apple Creator Studio
+    - Figma
+    - GIMP
 ---
+
+
+
 
 # **Affinity 調査レポート**
 

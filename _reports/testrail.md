@@ -1,54 +1,56 @@
 ---
-title: "TestRail 調査レポート"
-tool_name: "TestRail"
-tool_reading: "テストレール"
-category: "テスト管理"
-developer: "Gurock (Sembi)"
-official_site: "https://www.testrail.com/"
-date: "2026-02-01"
-last_updated: "2026-02-01"
+title: TestRail 調査レポート
+tool_name: TestRail
+tool_reading: テストレール
+category: テスト管理
+developer: Gurock (Sembi)
+official_site: https://www.testrail.com/
+date: '2026-02-01'
+last_updated: '2026-02-01'
 tags:
-  - "テスト自動化"
-  - "開発ツール"
-  - "プロジェクト管理"
-description: "テストケースの管理、計画、実行、レポート作成を一元化し、QAチームの生産性を向上させるWebベースのテスト管理ツール。"
+  - テスト自動化
+  - プロジェクト管理
+  - 開発ツール
+description: テストケースの管理、計画、実行、レポート作成を一元化し、QAチームの生産性を向上させるWebベースのテスト管理ツール。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "$37/月"
+  starting_price: $37/月
   target_users:
-    - "QAエンジニア"
-    - "テストマネージャー"
-    - "開発者"
-  latest_highlight: "2026年1月にTestRail 10をリリース（Jiraデータ連携強化）"
-  update_frequency: "高"
+    - QAエンジニア
+    - テストマネージャー
+    - 開発者
+  latest_highlight: 2026年1月にTestRail 10をリリース（Jiraデータ連携強化）
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "直感的で使いやすいUI/UXと充実したレポート機能"
+      reason: 直感的で使いやすいUI/UXと充実したレポート機能
     - point: 5
-      reason: "Jiraをはじめとする課題管理ツールとの強力な連携"
+      reason: Jiraをはじめとする課題管理ツールとの強力な連携
     - point: 5
-      reason: "AIによるテストケース生成などの先進的な機能追加"
+      reason: AIによるテストケース生成などの先進的な機能追加
   minus_points:
     - point: -3
-      reason: "公式の日本語インターフェースが提供されていない（2026年2月時点）"
-  summary: "テスト管理ツールの世界的なスタンダード。機能のバランスが良く、特にJiraを使用しているチームには最適な選択肢の一つ。"
+      reason: 公式の日本語インターフェースが提供されていない（2026年2月時点）
+  summary: テスト管理ツールの世界的なスタンダード。機能のバランスが良く、特にJiraを使用しているチームには最適な選択肢の一つ。
 links:
-  documentation: "https://support.testrail.com/hc/en-us/"
+  documentation: https://support.testrail.com/hc/en-us/
 relationships:
   related_tools:
-    - "CAT"
-    - "QualityForward"
-    - "Qase"
-    - "TestLink"
-    - "Jira"
-    - "Ranorex"
-    - "Selenium"
+    - CAT
+    - QualityForward
+    - Qase
+    - TestLink
+    - Jira
+    - Selenium
 layout: report
 ---
+
+
+
 
 ## **1. 基本情報**
 
