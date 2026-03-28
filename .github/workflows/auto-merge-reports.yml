@@ -241,17 +241,23 @@ jobs:
                 execSync('git config user.name "github-actions[bot]"');
                 execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
                 execSync('git add _reports/');
-                execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"');
-                execSync('git push');
 
-                core.info('Changes have been pushed.');
-                await github.rest.issues.createComment({
-                  owner,
-                  repo,
-                  issue_number: prNumber,
-                  body: 'YAMLフォーマットの自動修正を適用しました。Auto-fixed YAML formatting.'
-                });
-                return; // Exit here
+                const status = execSync('git status --porcelain _reports/').toString();
+                if (status.trim().length > 0) {
+                  execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"');
+                  execSync('git push');
+
+                  core.info('Changes have been pushed.');
+                  await github.rest.issues.createComment({
+                    owner,
+                    repo,
+                    issue_number: prNumber,
+                    body: 'YAMLフォーマットの自動修正を適用しました。Auto-fixed YAML formatting.'
+                  });
+                  return; // Exit here
+                } else {
+                  core.info('No changes were made by the auto-fix.');
+                }
               } catch (fixErr) {
                 core.error(`Failed to auto-fix or push changes: ${fixErr.message}`);
                 throw new Error(`Auto-fix failed: ${fixErr.message}`);
