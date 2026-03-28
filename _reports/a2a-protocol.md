@@ -49,6 +49,7 @@ relationships:
   related_tools:
     - "context7"
     - "agents-md"
+    - "Microsoft Agent Framework"
 ---
 
 # **A2A Protocol 調査レポート**
