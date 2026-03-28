@@ -4,7 +4,7 @@
 title: "Google Illuminate 調査レポート"
 tool_name: "Google Illuminate"
 tool_reading: "グーグル イルミネート"
-category: "AI学習・リサーチ"
+category: "AI開発基盤"
 developer: "Google"
 official_site: "https://illuminate.google.com/"
 date: "2026-02-23"

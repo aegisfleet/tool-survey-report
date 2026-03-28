@@ -10,7 +10,7 @@ official_site: "https://aquavoice.com/"
 date: "2026-03-01"
 last_updated: "2026-03-01"
 tags:
-  - "AIコーディング支援"
+  - "コーディング支援"
   - "音声入力"
   - "生産性向上"
   - "エージェント"

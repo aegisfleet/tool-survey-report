@@ -4,7 +4,7 @@
 title: "PageAgent 調査レポート"
 tool_name: "PageAgent"
 tool_reading: "ページエージェント"
-category: "AIエージェント / 自動化ツール"
+category: "自律型AIエージェント"
 developer: "Alibaba"
 official_site: "https://alibaba.github.io/page-agent/"
 date: "2026-03-11"

@@ -8,9 +8,9 @@ official_site: "https://qase.io/"
 date: "2026-02-01"
 last_updated: "2026-02-01"
 tags:
-  - "テスト・自動化"
+  - "テスト自動化"
   - "開発ツール"
-  - "AI・機械学習"
+  - "AI"
 description: "AIを活用したモダンなテスト管理プラットフォーム。手動・自動テストの一元管理が可能。"
 
 quick_summary:

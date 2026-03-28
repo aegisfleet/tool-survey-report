@@ -4,7 +4,7 @@
 title: "Keepa 調査レポート"
 tool_name: "Keepa"
 tool_reading: "キーパ"
-category: "EC・マーケットプレイス分析"
+category: "業務系ツール"
 developer: "Keepa.com"
 official_site: "https://keepa.com/"
 date: "2026-02-25"

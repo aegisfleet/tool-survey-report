@@ -4,7 +4,7 @@
 title: "WiFi DensePose 調査レポート"
 tool_name: "WiFi DensePose"
 tool_reading: "ワイファイ デンスポーズ"
-category: "IoT/ハードウェア"
+category: "開発者ツール"
 developer: "ruvnet"
 official_site: "https://github.com/ruvnet/wifi-densepose"
 date: "2026-03-01"

@@ -2,7 +2,7 @@
 title: "CodeQL 調査レポート"
 tool_name: "CodeQL"
 tool_reading: "コードキューエル"
-category: "セキュリティ・静的解析"
+category: "セキュリティ"
 developer: "GitHub"
 official_site: "https://codeql.github.com/"
 date: "2026-02-18"

@@ -4,7 +4,7 @@
 title: "Deep-Live-Cam 調査レポート"
 tool_name: "Deep-Live-Cam"
 tool_reading: "ディープライブカム"
-category: "AI生成 / ディープフェイク"
+category: "生成AI"
 developer: "hacksider"
 official_site: "https://deeplivecam.net/"
 date: "2026-03-28"

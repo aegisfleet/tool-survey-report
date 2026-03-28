@@ -4,7 +4,7 @@
 title: "Amazon GuardDuty 調査レポート"
 tool_name: "Amazon GuardDuty"
 tool_reading: "アマゾン ガードデューティ"
-category: "セキュリティ / IDS / 脅威検知"
+category: "セキュリティ"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/jp/guardduty/"
 date: "2026-02-04"
@@ -77,7 +77,7 @@ relationships:
   * ドキュメント: [https://docs.aws.amazon.com/guardduty/](https://docs.aws.amazon.com/guardduty/)
   * 料金ページ: [https://aws.amazon.com/guardduty/pricing/](https://aws.amazon.com/guardduty/pricing/)
   * FAQ: [https://aws.amazon.com/guardduty/faqs/](https://aws.amazon.com/guardduty/faqs/)
-* **カテゴリ**: セキュリティ / IDS / 脅威検知
+* **カテゴリ**: セキュリティ
 * **概要**: Amazon GuardDutyは、AWSアカウント、ワークロード、およびデータを保護するためのインテリジェントな脅威検出サービスです。AWS環境内のログを継続的に監視・分析し、機械学習と脅威インテリジェンスを活用して、不正アクセスやマルウェア感染などのセキュリティ脅威を自動的に検出します。
 
 ## **2. 目的と主な利用シーン**

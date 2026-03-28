@@ -10,7 +10,7 @@ official_site: "https://itp.ne.jp/sagitaisaku"
 date: "2026-03-13"
 last_updated: "2026-03-13"
 tags:
-  - "モバイルアプリ"
+  - "モバイル開発"
   - "SaaS"
   - "セキュリティ"
 description: "警察庁推奨の特殊詐欺対策アプリ。危険な電話番号の遮断・警告と、iタウンページデータを活用した発信元表示機能を提供。"

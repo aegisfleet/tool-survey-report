@@ -8,7 +8,7 @@ official_site: "https://www.testrail.com/"
 date: "2026-02-01"
 last_updated: "2026-02-01"
 tags:
-  - "テスト・自動化"
+  - "テスト自動化"
   - "開発ツール"
   - "プロジェクト管理"
 description: "テストケースの管理、計画、実行、レポート作成を一元化し、QAチームの生産性を向上させるWebベースのテスト管理ツール。"

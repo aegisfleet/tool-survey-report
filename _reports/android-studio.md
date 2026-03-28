@@ -12,7 +12,7 @@ last_updated: "2026-02-01"
 tags:
   - "IDE"
   - "Android"
-  - "モバイルアプリ開発"
+  - "モバイル開発"
   - "開発者ツール"
   - "Google"
   - "Kotlin"

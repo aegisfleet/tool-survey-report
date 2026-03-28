@@ -2,7 +2,7 @@
 title: "draw.io (diagrams.net) 調査レポート"
 tool_name: "draw.io (diagrams.net)"
 tool_reading: "ドロー・アイオー / ダイアグラムス・ドット・ネット"
-category: "作図ツール"
+category: "デザインツール"
 developer: "JGraph Ltd"
 official_site: "https://app.diagrams.net/"
 date: "2026-02-25"

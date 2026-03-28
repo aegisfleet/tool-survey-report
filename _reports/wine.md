@@ -4,7 +4,7 @@
 title: "Wine (WineHQ) 調査レポート"
 tool_name: "Wine"
 tool_reading: "ワイン"
-category: "互換レイヤー"
+category: "開発者ツール"
 developer: "WineHQ"
 official_site: "https://www.winehq.org/"
 date: "2026-02-13"

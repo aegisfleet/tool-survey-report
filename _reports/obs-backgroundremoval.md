@@ -11,7 +11,7 @@ tags:
   - "オープンソース"
   - "ライブ配信"
   - "プラグイン"
-  - "AI・機械学習"
+  - "AI"
 description: "OBS Studio向け背景透過・低照度エンハンスメントプラグイン"
 
 quick_summary:

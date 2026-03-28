@@ -4,7 +4,7 @@
 title: "cc-sdd 調査レポート"
 tool_name: "cc-sdd"
 tool_reading: "シーシーエスディーディー"
-category: "AI開発補助ツール"
+category: "AI開発基盤"
 developer: "gotalab"
 official_site: "https://github.com/gotalab/cc-sdd"
 date: "2026-03-09"

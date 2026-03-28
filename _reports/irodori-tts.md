@@ -4,7 +4,7 @@
 title: "Irodori-TTS 調査レポート"
 tool_name: "Irodori-TTS"
 tool_reading: "イロドリ ティーティーエス"
-category: "AI/音声合成"
+category: "動画/メディア"
 developer: "Aratako"
 official_site: "https://github.com/Aratako/Irodori-TTS"
 date: "2026-03-20"

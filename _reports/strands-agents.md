@@ -4,7 +4,7 @@
 title: "Strands Agents 調査レポート"
 tool_name: "Strands Agents"
 tool_reading: "ストランズ エージェンツ"
-category: "AI Agent Framework"
+category: "自律型AIエージェント"
 developer: "Amazon Web Services"
 official_site: "https://strandsagents.com/"
 date: "2026-02-04"
@@ -14,7 +14,7 @@ tags:
   - "AWS"
   - "Python"
   - "TypeScript"
-  - "Open Source"
+  - "オープンソース"
   - "MCP"
 description: "数行のコードで本番運用可能なAIエージェントを構築できる、AWS発のモデル駆動型オープンソースフレームワーク。"
 

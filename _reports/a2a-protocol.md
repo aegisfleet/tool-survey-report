@@ -8,7 +8,7 @@ official_site: "https://a2a-protocol.org/"
 date: "2026-02-03"
 last_updated: "2026-02-03"
 tags:
-  - "AIエージェント"
+  - "エージェント"
   - "プロトコル"
   - "相互運用性"
   - "MCP"

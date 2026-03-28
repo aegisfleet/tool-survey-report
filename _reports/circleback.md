@@ -2,7 +2,7 @@
 title: "Circleback 調査レポート"
 tool_name: "Circleback"
 tool_reading: "サークルバック"
-category: "AI議事録・会議アシスタント"
+category: "業務系ツール"
 developer: "Circleback AI, Inc."
 official_site: "https://circleback.ai/"
 date: "2026-03-26"

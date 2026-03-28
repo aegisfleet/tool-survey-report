@@ -2,7 +2,7 @@
 title: "Amazon Athena 調査レポート"
 tool_name: "Amazon Athena"
 tool_reading: "アマゾン アテナ"
-category: "データ分析 / クラウド"
+category: "インフラ/クラウド"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/jp/athena/"
 date: "2026-03-27"

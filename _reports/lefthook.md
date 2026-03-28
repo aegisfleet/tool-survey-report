@@ -4,7 +4,7 @@
 title: "Lefthook 調査レポート"
 tool_name: "Lefthook"
 tool_reading: "レフトフック"
-category: "Gitフックマネージャー"
+category: "開発者ツール"
 developer: "Evil Martians"
 official_site: "https://lefthook.dev/"
 date: "2026-02-18"

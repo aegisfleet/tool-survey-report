@@ -4,7 +4,7 @@
 title: "Amazon OpenSearch Service 調査レポート"
 tool_name: "Amazon OpenSearch Service"
 tool_reading: "アマゾン オープンサーチ サービス"
-category: "検索・分析エンジン"
+category: "インフラ/クラウド"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/jp/opensearch-service/"
 date: "2026-02-12"

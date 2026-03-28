@@ -16,7 +16,7 @@ tags:
   - "Linter"
   - "JavaScript"
   - "TypeScript"
-  - "OSS"
+  - "オープンソース"
 description: "JavaScript/TypeScriptおよびJSXのための、プラグイン可能な静的解析・リンティングツール。コードの問題を検出し自動修正します。"
 
 # 【クイックサマリー】ホーム画面のカード表示用

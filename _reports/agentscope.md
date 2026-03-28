@@ -4,7 +4,7 @@
 title: "AgentScope 調査レポート"
 tool_name: "AgentScope"
 tool_reading: "エージェントスコープ"
-category: "マルチエージェント基盤"
+category: "AI開発基盤"
 developer: "Alibaba"
 official_site: "https://doc.agentscope.io/"
 date: "2026-03-26"

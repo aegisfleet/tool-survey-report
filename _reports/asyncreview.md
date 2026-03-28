@@ -2,15 +2,15 @@
 title: "AsyncReview 調査レポート"
 tool_name: "AsyncReview"
 tool_reading: "アシンクレビュー"
-category: "開発ツール"
+category: "開発者ツール"
 developer: "AsyncFuncAI"
 official_site: "https://github.com/AsyncFuncAI/AsyncReview"
 date: "2026-02-11"
 last_updated: "2026-02-11"
 tags:
-  - "AI・機械学習"
+  - "AI"
   - "開発ツール"
-  - "テスト・自動化"
+  - "テスト自動化"
   - "コードレビュー"
 description: "再帰的言語モデル(RLM)を用いた、GitHub PR/Issue向けの自律型コードレビューエージェント"
 

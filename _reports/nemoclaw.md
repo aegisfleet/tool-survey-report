@@ -8,7 +8,7 @@ official_site: "https://www.nvidia.com/ja-jp/ai/nemoclaw/"
 date: "2026-03-22"
 last_updated: "2026-03-22"
 tags:
-  - "AIエージェント"
+  - "エージェント"
   - "自律型"
   - "オープンソース"
   - "ローカルAI"

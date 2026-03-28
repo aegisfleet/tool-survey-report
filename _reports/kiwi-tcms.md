@@ -8,7 +8,7 @@ official_site: "https://kiwitcms.org/"
 date: "2026-02-01"
 last_updated: "2026-02-01"
 tags:
-  - "テスト・自動化"
+  - "テスト自動化"
   - "オープンソース"
   - "開発ツール"
   - "Python"

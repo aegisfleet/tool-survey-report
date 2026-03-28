@@ -4,7 +4,7 @@
 title: "Vertex AI 調査レポート"
 tool_name: "Vertex AI"
 tool_reading: "バーテックス エーアイ"
-category: "AI/MLプラットフォーム"
+category: "AI開発基盤"
 developer: "Google"
 official_site: "https://cloud.google.com/vertex-ai"
 date: "2026-01-29"

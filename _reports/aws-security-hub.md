@@ -4,7 +4,7 @@
 title: "AWS Security Hub 調査レポート"
 tool_name: "AWS Security Hub"
 tool_reading: "AWS セキュリティハブ"
-category: "セキュリティ / CSPM / CNAPP"
+category: "セキュリティ"
 developer: "Amazon Web Services (AWS)"
 official_site: "https://aws.amazon.com/security-hub/"
 date: "2026-02-04"

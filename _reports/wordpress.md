@@ -4,7 +4,7 @@
 title: "WordPress 調査レポート"
 tool_name: "WordPress"
 tool_reading: "ワードプレス"
-category: "CMS"
+category: "Webフレームワーク"
 developer: "WordPress Foundation"
 official_site: "https://wordpress.org"
 date: "2026-03-15"

@@ -4,7 +4,7 @@
 title: "TOKIUM 調査レポート"
 tool_name: "TOKIUM"
 tool_reading: "トキウム"
-category: "支出管理クラウド"
+category: "業務系ツール"
 developer: "株式会社TOKIUM"
 official_site: "https://www.keihi.com/"
 date: "2026-02-21"

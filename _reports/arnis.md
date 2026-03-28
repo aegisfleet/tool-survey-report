@@ -4,7 +4,7 @@
 title: "Arnis 調査レポート"
 tool_name: "Arnis"
 tool_reading: "アーニス"
-category: "ゲーム開発ツール"
+category: "開発者ツール"
 developer: "Louis Erbkamm"
 official_site: "https://arnismc.com/"
 date: "2026-03-20"

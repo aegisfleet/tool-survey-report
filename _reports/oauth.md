@@ -2,7 +2,7 @@
 title: "OAuth 調査レポート"
 tool_name: "OAuth"
 tool_reading: "オーオース"
-category: "認証・認可"
+category: "認証・ID管理"
 developer: "IETF (Internet Engineering Task Force)"
 official_site: "https://oauth.net/"
 date: "2026-02-04"
