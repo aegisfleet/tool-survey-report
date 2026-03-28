@@ -15,22 +15,40 @@ const yaml = require('js-yaml');
 const reportsDir = path.resolve(__dirname, '../_reports');
 const files = fs.readdirSync(reportsDir).filter(f => f.endsWith('.md'));
 
+const isFixMode = process.argv.includes('--fix');
+
 let errorCount = 0;
 let filesChecked = 0;
+let filesFixed = 0;
 
 files.forEach(file => {
   const filePath = path.join(reportsDir, file);
   const content = fs.readFileSync(filePath, 'utf8');
   
   // フロントマターの開始マーカーをチェック
-  if (!content.startsWith('---\n')) {
+  if (!content.startsWith('---\n') && !content.startsWith('---\r\n')) {
     console.error(`[ERROR] ${file}: フロントマターが '---' で始まっていません。`);
     errorCount++;
     return;
   }
 
   // 終了マーカーを探す
-  const endMarkerIndex = content.indexOf('\n---\n', 4);
+  // '\n---\n' 以外に Windows の '\r\n---\r\n' や '\n---\r\n' の可能性も考慮
+  let endMarkerIndex = content.indexOf('\n---\n', 4);
+  let lineEndingLength = 5; // \n---\n は5文字
+
+  if (endMarkerIndex === -1) {
+    endMarkerIndex = content.indexOf('\r\n---\r\n', 4);
+    if (endMarkerIndex !== -1) {
+      lineEndingLength = 7; // \r\n---\r\n は7文字
+    } else {
+      endMarkerIndex = content.indexOf('\n---\r\n', 4);
+      if (endMarkerIndex !== -1) {
+        lineEndingLength = 6; // \n---\r\n は6文字
+      }
+    }
+  }
+
   if (endMarkerIndex === -1) {
     console.error(`[ERROR] ${file}: フロントマターの終了マーカーが見つかりません。`);
     errorCount++;
@@ -56,9 +74,16 @@ files.forEach(file => {
     });
 
     if (rawYaml.trim() !== normalizedYaml.trim()) {
-      console.error(`[LINT] ${file}: フォーマットが標準と異なります。修正が必要です。`);
-      // console.log("Expected:\n", normalizedYaml);
-      errorCount++;
+      if (isFixMode) {
+        const newContent = `---\n${normalizedYaml}---\n${content.substring(endMarkerIndex + lineEndingLength)}`;
+        fs.writeFileSync(filePath, newContent, 'utf8');
+        console.log(`[FIXED] ${file}: フォーマットを自動修正しました。`);
+        filesFixed++;
+      } else {
+        console.error(`[LINT] ${file}: フォーマットが標準と異なります。修正が必要です。`);
+        // console.log("Expected:\n", normalizedYaml);
+        errorCount++;
+      }
     }
   } catch (e) {
     console.error(`[SYNT] ${file}: YAML構文エラー - ${e.message}`);
@@ -67,6 +92,9 @@ files.forEach(file => {
 });
 
 console.log(`\nChecked ${filesChecked} files.`);
+if (isFixMode && filesFixed > 0) {
+  console.log(`Fixed ${filesFixed} files.`);
+}
 
 if (errorCount > 0) {
   console.error(`\n❌ ${errorCount} 件のフォーマットエラーが見つかりました。`);

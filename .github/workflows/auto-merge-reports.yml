@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Install js-yaml
         run: npm install js-yaml
@@ -80,8 +82,11 @@ jobs:
             // Validate frontmatter of changed Markdown files
             const fs = require('fs');
             const yaml = require('js-yaml');
+            const execSync = require('child_process').execSync;
             const mdFiles = files.filter(f => f.endsWith('.md'));
             
+            let needsFix = false;
+
             for (const file of mdFiles) {
               core.info(`Validating frontmatter: ${file}`);
               
@@ -160,17 +165,11 @@ jobs:
                 });
                 
                 if (frontmatterContent.trim() !== normalizedYaml.trim()) {
-                  const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nYAMLのフォーマットが標準（js-yamlの出力形式）と一致しません。\n\n**期待されるフォーマット:**\n\`\`\`yaml\n${normalizedYaml}\n\`\`\``;
-                  core.error(errorMsg);
-                  await github.rest.issues.createComment({ 
-                    owner, 
-                    repo, 
-                    issue_number: prNumber, 
-                    body: errorMsg + '\n\n自動マージを中止しました。手元で \`npm run lint:yaml\` を実行してフォーマットを修正してください。'
-                  });
-                  throw new Error(`Frontmatter validation failed for ${file}: formatting mismatch`);
+                  core.info(`  ⚠️ YAML format is not normalized. Will run auto-fix.`);
+                  needsFix = true;
+                } else {
+                  core.info(`  ✅ YAML format is normalized.`);
                 }
-                core.info(`  ✅ YAML format is normalized.`);
               } catch (yamlErr) {
                 const errorMsg = `❌ フロントマター検証エラー: ${file}\n\nYAML構文エラー: ${yamlErr.message}`;
                 core.error(errorMsg);
@@ -216,6 +215,32 @@ jobs:
             }
             
             core.info('All frontmatter validations passed.');
+
+            if (needsFix) {
+              core.info('Auto-fixing YAML formatting...');
+              try {
+                execSync('npm run lint:yaml -- --fix', { stdio: 'inherit' });
+
+                // Commit and push the changes
+                execSync('git config user.name "github-actions[bot]"');
+                execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
+                execSync('git add _reports/');
+                execSync('git commit -m "Auto-fix YAML formatting in frontmatter"');
+                execSync('git push');
+
+                core.info('Changes have been pushed. The workflow will re-run on the new commit.');
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: prNumber,
+                  body: 'YAMLフォーマットの自動修正を適用しました。Auto-fixed YAML formatting.'
+                });
+                return; // Exit here; the push will trigger a new workflow run
+              } catch (fixErr) {
+                core.error(`Failed to auto-fix or push changes: ${fixErr.message}`);
+                throw new Error(`Auto-fix failed: ${fixErr.message}`);
+              }
+            }
 
             // If PR is draft, convert to ready_for_review first so the merge can proceed
             if (pr.draft) {
