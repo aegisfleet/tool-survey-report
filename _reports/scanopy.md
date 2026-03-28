@@ -1,51 +1,51 @@
 ---
-title: "Scanopy 調査レポート"
-tool_name: "Scanopy"
-tool_reading: "スキャノピー"
-category: "ネットワーク調査・ドキュメント作成"
-developer: "Scanopy"
-official_site: "https://scanopy.net/"
-date: "2026-03-29"
-last_updated: "2026-03-29"
+title: Scanopy 調査レポート
+tool_name: Scanopy
+tool_reading: スキャノピー
+category: ネットワーク調査・ドキュメント作成
+developer: Scanopy
+official_site: https://scanopy.net/
+date: '2026-03-29'
+last_updated: '2026-03-29'
 tags:
-  - "ネットワーク構成図"
-  - "IT資産管理"
-  - "自動化"
-  - "オープンソース"
-description: "自動でネットワーク構成図を生成・更新するディスカバリー＆ドキュメンテーションツール"
+  - ネットワーク構成図
+  - IT資産管理
+  - 自動化
+  - オープンソース
+description: 自動でネットワーク構成図を生成・更新するディスカバリー＆ドキュメンテーションツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$11.99/月"
+  starting_price: $11.99/月
   target_users:
-    - "ITチーム"
-    - "MSP（マネージドサービスプロバイダー）"
-    - "ホームラボ愛好家"
-  latest_highlight: "2026年3月にv0.15.3リリース"
-  update_frequency: "高"
+    - ITチーム
+    - MSP（マネージドサービスプロバイダー）
+    - ホームラボ愛好家
+  latest_highlight: 2026年3月にv0.15.3リリース
+  update_frequency: 高
 evaluation:
-  score: 82
+  score: 79
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ネットワークスキャンから構成図作成までを完全自動化できる"
+      reason: ネットワークスキャンから構成図作成までを完全自動化できる
     - point: 3
-      reason: "セルフホスト（Community版）なら無料でホスト無制限で利用可能"
+      reason: セルフホスト（Community版）なら無料でホスト無制限で利用可能
     - point: 2
-      reason: "DockerやPostgreSQLなど200種類以上のサービスを自動検出可能"
+      reason: DockerやPostgreSQLなど200種類以上のサービスを自動検出可能
     - point: 2
-      reason: "デバイス単位ではなく定額制のわかりやすい料金体系"
+      reason: デバイス単位ではなく定額制のわかりやすい料金体系
   minus_points:
     - point: -3
-      reason: "公式サイトやドキュメントが日本語に非対応"
-  summary: "手作業でのネットワーク構成図作成を過去のものにする、革新的で実用的な自動化ツール"
+      reason: 公式サイトやドキュメントが日本語に非対応
+  summary: 手作業でのネットワーク構成図作成を過去のものにする、革新的で実用的な自動化ツール
 links:
-  github: "https://github.com/scanopy/scanopy"
-  deepwiki: "https://deepwiki.com/scanopy/scanopy"
-  documentation: "https://scanopy.net/docs"
+  github: https://github.com/scanopy/scanopy
+  deepwiki: https://deepwiki.com/scanopy/scanopy
+  documentation: https://scanopy.net/docs
 relationships:
   related_tools:
-    - "draw.io (diagrams.net)"
+    - draw.io (diagrams.net)
 ---
 
 # **Scanopy 調査レポート**
