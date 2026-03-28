@@ -6,7 +6,7 @@ category: AI開発基盤
 developer: Element Labs, Inc.
 official_site: https://lmstudio.ai/
 date: '2026-01-29'
-last_updated: '2026-01-29'
+last_updated: '2026-03-28'
 tags:
   - AI
   - ローカルAI
@@ -21,7 +21,7 @@ quick_summary:
     - 開発者
     - 研究者
     - AI学習者
-  latest_highlight: 2026年1月にv0.4.0をリリース。ヘッドレスモードや並列リクエストに対応
+  latest_highlight: 2026年2月に「LM Link」をリリースし、Tailscaleと提携してリモートインスタンスへの接続に対応
   update_frequency: 高
 evaluation:
   score: 92
@@ -200,7 +200,7 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: X (Twitter), Discord, Reddit, GitHub Issues
-* **総合評価**: ローカルLLMユーザーから非常に高い評価を得ている。特にv0.4.0でのヘッドレス対応は待望の機能として歓迎されている。
+* **総合評価**: G2、Capterra、ITreviewにレビューの登録なし。ローカルLLMユーザーからは非常に高い評価を得ている。特にv0.4.0でのヘッドレス対応は待望の機能として歓迎されている。
 * **ポジティブな評価**:
   * 「ヘッドレスモードがついに来た！これでサーバー運用が捗る」
   * 「UIがさらに使いやすくなった。Split Viewが便利」
@@ -208,17 +208,18 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
   * 「アップデート直後はバグが残っていることがある（ベータ版など）」
   * 「一部の特殊なモデルアーキテクチャへの対応が遅れる場合がある」
+  * 「高性能なPC（特にRAM/VRAM）が要求されるため、古いPCでは快適に動作しない」
 * **特徴的なユースケース**:
   * 社内LAN内でのプライベートなAIチャットボットサーバーとしての運用。
   * 飛行機や新幹線など、オフライン環境でのプログラミング補助。
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-28 (v0.4.0)**: 次世代メジャーアップデート。GUIなしで動作する`llmster`デーモン、並列リクエスト処理、ステートフルREST API、UI刷新（Split View, Export機能）などを実装。
-* **2025-12-12 (v0.3.35)**: Devstral-2およびGLM-4.6Vのサポート追加。バグ修正多数。
-* **2025-11-19 (v0.3.32)**: GLM 4.5およびolmOCR-2のサポート。APIでのBase64画像入力対応。
-* **2025-10-14**: Linux on ARMアーキテクチャへの対応。
-* **2025-09-24 (v0.3.27)**: チャット内検索機能の実装。
+* **2026-03-26 (v0.4.8)**: OpenAI互換の /v1/chat/completions API において `reasoning_effort` および `reasoning_tokens` のサポートを追加。
+* **2026-02-27 (v0.4.6)**: 「LM Link」をリリース。Tailscaleと提携し、リモートのLM Studioインスタンスへエンドツーエンド暗号化で接続してローカル同様に利用できる機能を実装。
+* **2026-02-06 (v0.4.2)**: MLXエンジン1.0.0を用いたParallel Requests（連続バッチング）に対応。
+* **2026-01-30 (v0.4.1)**: Anthropic互換のAPIエンドポイント `/v1/messages` を追加し、Claude Codeとの連携が可能に。
+* **2026-01-28 (v0.4.0)**: 次世代メジャーアップデート。GUIなしで動作する`llmster`デーモン、並列リクエスト処理、ステートフルREST API、UI刷新などを実装。
 
 (出典: [LM Studio Blog](https://lmstudio.ai/blog) / [Changelog](https://lmstudio.ai/changelog))
 
