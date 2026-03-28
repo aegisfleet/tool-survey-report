@@ -8,7 +8,7 @@ category: "勤怠管理"
 developer: "株式会社ヒューマンテクノロジーズ"
 official_site: "https://www.kingoftime.jp/"
 date: "2026-01-29"
-last_updated: "2026-01-29"
+last_updated: "2026-03-28"
 tags:
   - "勤怠管理"
   - "人事労務"
@@ -25,7 +25,7 @@ quick_summary:
     - "中小企業"
     - "大企業"
     - "多拠点・多店舗"
-  latest_highlight: "2026年1月に人事労務機能の改修を予定"
+  latest_highlight: "2026年3月に人事労務、給与、電子契約等の新機能を順次リリース"
   update_frequency: "高"
 
 # 【ツール評価】100点満点、基準点70点からの加減算方式
@@ -58,7 +58,6 @@ relationships:
     - "SmartHR"
     - "ジョブカン勤怠管理"
     - "マネーフォワード クラウド勤怠"
-    - "freee人事労務"
 ---
 
 # **KING OF TIME 調査レポート**
@@ -204,11 +203,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-20**: 「KING OF TIME 人事労務」にて、健康保険証廃止に伴う仕様変更などの機能改修をリリース予定。 (出典: [公式ニュース](https://www.kingoftime.jp/news/update_20260120/))
+* **2026-03-25**: 「KING OF TIME 人事労務」「KING OF TIME 給与」にて新機能をリリース。 (出典: [公式ニュース](https://www.kingoftime.jp/news/update_20260325/))
+* **2026-03-24**: 「KING OF TIME 電子契約」にて新機能をリリース。 (出典: [公式ニュース](https://www.kingoftime.jp/news/update_20260324/))
+* **2026-03-17**: 「KING OF TIME システムログ」にて新機能をリリース。 (出典: [公式ニュース](https://www.kingoftime.jp/news/update_20260317/))
+* **2026-02-17**: 「KING OF TIME 勤怠管理」にて新機能をリリース。 (出典: [公式ニュース](https://www.kingoftime.jp/news/update_20260217-2/))
+* **2026-01-20**: 「KING OF TIME 人事労務」にて、健康保険証廃止に伴う仕様変更などの機能改修をリリース。 (出典: [公式ニュース](https://www.kingoftime.jp/news/update_20260120/))
 * **2025-12-05**: クラウド人事労務ソフト「SmartHR」のID管理機能とのAPI連携を開始。 (出典: [公式ニュース](https://www.kingoftime.jp/news/kot_smarthr_id/))
-* **2025-11-25**: 中途採用支援サービス「ミイダス」へ「KING OF TIME 勤怠管理」のOEM提供を開始。 (出典: [公式ニュース](https://www.kingoftime.jp/news/kot_miidas/))
-* **2025-11-14**: 高精度顔認証ソリューション「Face勤怠」とのAPI連携を開始。 (出典: [公式ニュース](https://www.kingoftime.jp/news/face_kintai_kot/))
-* **2025-08-01**: 「KING OF TIME 給与」において、定額減税に対応した機能改修を実施。
 
 ## **16. 類似ツールとの比較**
 
