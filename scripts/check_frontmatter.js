@@ -15,29 +15,52 @@ const yaml = require('js-yaml');
 const reportsDir = path.resolve(__dirname, '../_reports');
 const files = fs.readdirSync(reportsDir).filter(f => f.endsWith('.md'));
 
+const isFixMode = process.argv.includes('--fix');
+
 let errorCount = 0;
 let filesChecked = 0;
+let filesFixed = 0;
+
+function findEndMarker(content, startOffset) {
+  const patterns = [
+    { pattern: '\n---\n', length: 5 },
+    { pattern: '\r\n---\r\n', length: 7 },
+    { pattern: '\n---\r\n', length: 6 },
+    { pattern: '\r\n---\n', length: 6 }
+  ];
+  for (const { pattern, length } of patterns) {
+    const index = content.indexOf(pattern, startOffset);
+    if (index !== -1) {
+      return { index, length };
+    }
+  }
+  return { index: -1, length: 0 };
+}
 
 files.forEach(file => {
   const filePath = path.join(reportsDir, file);
   const content = fs.readFileSync(filePath, 'utf8');
   
   // フロントマターの開始マーカーをチェック
-  if (!content.startsWith('---\n')) {
+  let startMarkerLength = 4;
+  if (content.startsWith('---\r\n')) {
+    startMarkerLength = 5;
+  } else if (!content.startsWith('---\n')) {
     console.error(`[ERROR] ${file}: フロントマターが '---' で始まっていません。`);
     errorCount++;
     return;
   }
 
   // 終了マーカーを探す
-  const endMarkerIndex = content.indexOf('\n---\n', 4);
+  const { index: endMarkerIndex, length: lineEndingLength } = findEndMarker(content, startMarkerLength);
+
   if (endMarkerIndex === -1) {
     console.error(`[ERROR] ${file}: フロントマターの終了マーカーが見つかりません。`);
     errorCount++;
     return;
   }
 
-  const rawYaml = content.substring(4, endMarkerIndex + 1);
+  const rawYaml = content.substring(startMarkerLength, endMarkerIndex + 1);
   filesChecked++;
 
   try {
@@ -56,9 +79,16 @@ files.forEach(file => {
     });
 
     if (rawYaml.trim() !== normalizedYaml.trim()) {
-      console.error(`[LINT] ${file}: フォーマットが標準と異なります。修正が必要です。`);
-      // console.log("Expected:\n", normalizedYaml);
-      errorCount++;
+      if (isFixMode) {
+        const newContent = `---\n${normalizedYaml}---\n${content.substring(endMarkerIndex + lineEndingLength)}`;
+        fs.writeFileSync(filePath, newContent, 'utf8');
+        console.log(`[FIXED] ${file}: フォーマットを自動修正しました。`);
+        filesFixed++;
+      } else {
+        console.error(`[LINT] ${file}: フォーマットが標準と異なります。修正が必要です。`);
+        // console.log("Expected:\n", normalizedYaml);
+        errorCount++;
+      }
     }
   } catch (e) {
     console.error(`[SYNT] ${file}: YAML構文エラー - ${e.message}`);
@@ -67,6 +97,9 @@ files.forEach(file => {
 });
 
 console.log(`\nChecked ${filesChecked} files.`);
+if (isFixMode && filesFixed > 0) {
+  console.log(`Fixed ${filesFixed} files.`);
+}
 
 if (errorCount > 0) {
   console.error(`\n❌ ${errorCount} 件のフォーマットエラーが見つかりました。`);
