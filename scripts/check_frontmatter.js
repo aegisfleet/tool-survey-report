@@ -21,33 +21,38 @@ let errorCount = 0;
 let filesChecked = 0;
 let filesFixed = 0;
 
+function findEndMarker(content, startOffset) {
+  const patterns = [
+    { pattern: '\n---\n', length: 5 },
+    { pattern: '\r\n---\r\n', length: 7 },
+    { pattern: '\n---\r\n', length: 6 },
+    { pattern: '\r\n---\n', length: 6 }
+  ];
+  for (const { pattern, length } of patterns) {
+    const index = content.indexOf(pattern, startOffset);
+    if (index !== -1) {
+      return { index, length };
+    }
+  }
+  return { index: -1, length: 0 };
+}
+
 files.forEach(file => {
   const filePath = path.join(reportsDir, file);
   const content = fs.readFileSync(filePath, 'utf8');
   
   // フロントマターの開始マーカーをチェック
-  if (!content.startsWith('---\n') && !content.startsWith('---\r\n')) {
+  let startMarkerLength = 4;
+  if (content.startsWith('---\r\n')) {
+    startMarkerLength = 5;
+  } else if (!content.startsWith('---\n')) {
     console.error(`[ERROR] ${file}: フロントマターが '---' で始まっていません。`);
     errorCount++;
     return;
   }
 
   // 終了マーカーを探す
-  // '\n---\n' 以外に Windows の '\r\n---\r\n' や '\n---\r\n' の可能性も考慮
-  let endMarkerIndex = content.indexOf('\n---\n', 4);
-  let lineEndingLength = 5; // \n---\n は5文字
-
-  if (endMarkerIndex === -1) {
-    endMarkerIndex = content.indexOf('\r\n---\r\n', 4);
-    if (endMarkerIndex !== -1) {
-      lineEndingLength = 7; // \r\n---\r\n は7文字
-    } else {
-      endMarkerIndex = content.indexOf('\n---\r\n', 4);
-      if (endMarkerIndex !== -1) {
-        lineEndingLength = 6; // \n---\r\n は6文字
-      }
-    }
-  }
+  const { index: endMarkerIndex, length: lineEndingLength } = findEndMarker(content, startMarkerLength);
 
   if (endMarkerIndex === -1) {
     console.error(`[ERROR] ${file}: フロントマターの終了マーカーが見つかりません。`);
@@ -55,7 +60,7 @@ files.forEach(file => {
     return;
   }
 
-  const rawYaml = content.substring(4, endMarkerIndex + 1);
+  const rawYaml = content.substring(startMarkerLength, endMarkerIndex + 1);
   filesChecked++;
 
   try {

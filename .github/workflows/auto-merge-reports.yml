@@ -219,23 +219,39 @@ jobs:
             if (needsFix) {
               core.info('Auto-fixing YAML formatting...');
               try {
+                // Determine if we've already tried to fix this PR by checking previous comments
+                // or looking at the last commit message.
+                // We'll use the [skip ci] tag in the commit message to prevent an infinite loop.
+                const commitLog = execSync('git log -1 --pretty=format:"%B"').toString();
+                if (commitLog.includes('[skip ci]') && commitLog.includes('Auto-fix YAML formatting in frontmatter')) {
+                  core.warning('Detected a previous auto-fix commit. Bailing out to prevent infinite loop.');
+                  const errorMsg = '⚠️ YAMLフォーマットの自動修正を試みましたが、繰り返し失敗している可能性があります。[skip ci] タグを持つコミットがすでに存在するため、無限ループを防ぐために処理を中止しました。手動でフォーマットを確認してください。';
+                  await github.rest.issues.createComment({
+                    owner,
+                    repo,
+                    issue_number: prNumber,
+                    body: errorMsg
+                  });
+                  throw new Error('Auto-fix aborted to prevent infinite loop.');
+                }
+
                 execSync('npm run lint:yaml -- --fix', { stdio: 'inherit' });
 
                 // Commit and push the changes
                 execSync('git config user.name "github-actions[bot]"');
                 execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
                 execSync('git add _reports/');
-                execSync('git commit -m "Auto-fix YAML formatting in frontmatter"');
+                execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"');
                 execSync('git push');
 
-                core.info('Changes have been pushed. The workflow will re-run on the new commit.');
+                core.info('Changes have been pushed.');
                 await github.rest.issues.createComment({
                   owner,
                   repo,
                   issue_number: prNumber,
                   body: 'YAMLフォーマットの自動修正を適用しました。Auto-fixed YAML formatting.'
                 });
-                return; // Exit here; the push will trigger a new workflow run
+                return; // Exit here
               } catch (fixErr) {
                 core.error(`Failed to auto-fix or push changes: ${fixErr.message}`);
                 throw new Error(`Auto-fix failed: ${fixErr.message}`);
