@@ -70,7 +70,7 @@ layout: default
         <button type="button" class="interest-chip" data-interest-tag="大規模言語モデル">🧠 大規模言語モデル</button>
         <button type="button" class="interest-chip" data-interest-category="デザインツール">🎨 デザインツール</button>
         <button type="button" class="interest-chip" data-interest-category="動画/メディア">🎥 動画/メディア</button>
-        <button type="button" class="interest-chip" data-interest-sort="oss-free">💚 無料で始められる</button>
+        <button type="button" class="interest-chip" data-interest-sort="free">💚 無料で始められる</button>
       </fieldset>
       <button type="button" class="interest-reset" id="interest-reset">絞り込みをリセット</button>
     </section>
@@ -108,7 +108,8 @@ layout: default
               <option value="date-asc">古い順</option>
               <option value="title-asc">ツール名順</option>
               <option value="score-desc">総合評価順</option>
-              <option value="oss-free">OSS・無料順</option>
+              <option value="oss">OSS順</option>
+              <option value="free">無料順</option>
             </select>
           </div>
         </div>
@@ -125,7 +126,7 @@ layout: default
           data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
           data-developer="{{ report.developer | downcase }}"
           data-is-oss="{{ report.quick_summary.is_oss | default: false }}"
-          data-has-free_plan="{{ report.quick_summary.has_free_plan | default: false }}"
+          data-has-free-plan="{{ report.quick_summary.has_free_plan | default: false }}"
           data-score="{{ report.evaluation.score | default: 0 }}">
 
           <div class="report-card-header">

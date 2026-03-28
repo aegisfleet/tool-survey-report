@@ -266,7 +266,15 @@ document.addEventListener('DOMContentLoaded', () => {
           .includes(selectedTag);
       const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
 
-      return matchesSearch && matchesTag && matchesCategory;
+      // ソート条件に基づくフィルタリング（分離の徹底）
+      let matchesSortFilter = true;
+      if (sortBy === 'oss') {
+        matchesSortFilter = card.dataset.isOss === 'true';
+      } else if (sortBy === 'free') {
+        matchesSortFilter = card.dataset.isOss !== 'true' && card.dataset.hasFreePlan === 'true';
+      }
+
+      return matchesSearch && matchesTag && matchesCategory && matchesSortFilter;
     });
 
     // Sort cards
@@ -284,15 +292,17 @@ document.addEventListener('DOMContentLoaded', () => {
           const scoreB = Number.parseFloat(b.dataset.score) || 0;
           return scoreB - scoreA;
         }
-        case 'oss-free': {
-          // OSS > 無料プラン > その他の順でソート
-          const getPriority = (card) => {
-            if (card.dataset.isOss === 'true') return 2;
-            if (card.dataset.hasFreePlan === 'true') return 1;
-            return 0;
-          };
+        case 'oss': {
+          // OSSを優先し、同じ場合はスコア順でソート
+          const getPriority = (card) => (card.dataset.isOss === 'true' ? 1 : 0);
           const priorityDiff = getPriority(b) - getPriority(a);
-          // 同じ優先度の場合はスコアでソート
+          if (priorityDiff !== 0) return priorityDiff;
+          return (Number.parseFloat(b.dataset.score) || 0) - (Number.parseFloat(a.dataset.score) || 0);
+        }
+        case 'free': {
+          // 無料プランあり（非OSS）を優先し、同じ場合はスコア順でソート
+          const getPriority = (card) => (card.dataset.hasFreePlan === 'true' && card.dataset.isOss !== 'true' ? 1 : 0);
+          const priorityDiff = getPriority(b) - getPriority(a);
           if (priorityDiff !== 0) return priorityDiff;
           return (Number.parseFloat(b.dataset.score) || 0) - (Number.parseFloat(a.dataset.score) || 0);
         }
