@@ -79,6 +79,31 @@ python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/
 pkill -f "jekyll"
 ```
 
+## Jekyll環境での検証（詳細手順）
+
+WSL環境や特定の制限下で `jekyll serve` による直接アクセスが困難な場合や、より確実な動作確認を要する場合は、以下のビルド＆サーブ方式を推奨する。
+
+### 1. Jekyllビルド
+このプロジェクトは `/tool-survey-report/` 下で動作するため、ビルド時にベースURLを指定する必要がある。
+```bash
+bundle exec jekyll build --baseurl /tool-survey-report
+```
+
+### 2. 開発サーバー起動（Python HTTP Server）
+ビルド済みの `_site` ディレクトリの階層を維持したままサーブする。
+```bash
+# _site 以下のパス構造を維持するため一時的なディレクトリを作成
+mkdir -p /tmp/serve_root/tool-survey-report
+cp -r _site/* /tmp/serve_root/tool-survey-report/
+python3 -m http.server 4000 --directory /tmp/serve_root
+```
+
+### 3. ブラウザでの確認ポイント
+- **興味別チップのクリック**: 各ボタンをクリックした際、セレクトボックスが連動し、レポートカードが正しく絞り込まれること。
+- **カテゴリフィルタ**: 整理されたカテゴリ名が表示され、正しい絵文字が付与されていること。
+- **タグの表示**: カード内のタグをクリックして、そのタグでのフィルタリングが機能すること。
+- **共有用URL**: `?category=...` を含むURLでアクセスし、フィルタ状態が復元されること。
+
 ## オプション一覧
 
 - `--url`: ターゲットURL (必須)

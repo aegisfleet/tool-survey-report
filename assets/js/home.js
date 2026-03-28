@@ -13,20 +13,24 @@ const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
 
 // カテゴリごとの絵文字マッピングルール（上から順にマッチしたものが適用される）
 const categoryEmojiRules = [
-  { keywords: ['ai', 'エージェント', '機械学習', 'ml', '生成'], emoji: '🤖' },
+  { keywords: ['自律型aiエージェント', 'エージェント'], emoji: '🤖' },
+  { keywords: ['aiコーディング支援'], emoji: '⌨️' },
+  { keywords: ['aiコードエディタ', 'cursor', 'windsurf', 'エディタ'], emoji: '💻' },
+  { keywords: ['ai開発基盤', '基盤', 'プラットフォーム'], emoji: '🛠️' },
+  { keywords: ['生成ai'], emoji: '✨' },
   { keywords: ['テスト', 'qa', '品質'], emoji: '🧪' },
-  { keywords: ['開発者ツール', 'ide', 'エディタ', 'バージョン管理', 'git', 'フック', '開発ツール'], emoji: '🔧' },
+  { keywords: ['開発者ツール', 'ide', 'バージョン管理', 'git', 'フック', '開発ツール'], emoji: '🔧' },
   { keywords: ['インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化'], emoji: '☁️' },
+  { keywords: ['デザイン', '動画', 'メディア'], emoji: '🎨' },
+  { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📋' },
+  { keywords: ['ワークフロー', '自動化'], emoji: '⚡' },
+  { keywords: ['web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
+  { keywords: ['監視', 'セキュリティ', '認証', '脅威', '依存関係'], emoji: '🛡️' },
+  { keywords: ['bi', '広告', '顧客', 'マーケットプレイス', 'saas', '分析', '検索'], emoji: '📊' },
+  { keywords: ['モバイル'], emoji: '📱' },
   { keywords: ['支出', '会計', '経理'], emoji: '💰' },
   { keywords: ['作図', 'ダイアグラム'], emoji: '📐' },
   { keywords: ['教育', '学習'], emoji: '🎓' },
-  { keywords: ['web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
-  { keywords: ['モバイル', 'オペレーティングシステム'], emoji: '📱' },
-  { keywords: ['ワークフロー', '自動化'], emoji: '⚡' },
-  { keywords: ['デザイン', '動画', 'メディア'], emoji: '🎨' },
-  { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📋' },
-  { keywords: ['監視', 'セキュリティ', '認証', '脅威', '依存関係'], emoji: '🛡️' },
-  { keywords: ['bi', '広告', '顧客', 'マーケットプレイス', 'saas', '分析', '検索'], emoji: '📊' },
   { keywords: ['勤怠', '人事', '労務'], emoji: '🏢' },
   { keywords: ['ふるさと納税', '互換'], emoji: '🔹' },
 ];
@@ -374,15 +378,16 @@ document.addEventListener('DOMContentLoaded', () => {
     filterAndSort();
   });
 
-  interestChips.forEach((chip) => {
+    interestChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       const suggestedSearch = chip.dataset.interestSearch || '';
       const suggestedTag = chip.dataset.interestTag || '';
+      const suggestedCategory = chip.dataset.interestCategory || '';
       const suggestedSort = chip.dataset.interestSort || 'date-desc';
 
       searchInput.value = suggestedSearch;
       tagFilter.value = suggestedTag;
-      categoryFilter.value = '';
+      categoryFilter.value = suggestedCategory.toLowerCase(); // カテゴリフィルタは小文字でマッチさせる
       sortSelect.value = suggestedSort;
 
       filterAndSort();
