@@ -6,7 +6,7 @@ category: 勤怠管理
 developer: 株式会社マネーフォワード
 official_site: https://biz.moneyforward.com/attendance/
 date: '2026-01-29'
-last_updated: '2026-01-29'
+last_updated: '2026-03-30'
 tags:
   - SaaS
   - 人事労務
@@ -203,12 +203,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | KING OF TIME | ジョブカン勤怠管理 | freee人事労務 |
+| 機能カテゴリ | 機能項目 | 本ツール | KING OF TIME | ジョブカン勤怠管理 | SmartHR |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 打刻方法 | ◯<br><small>PC/スマホ/IC</small> | ◎<br><small>生体認証など多数</small> | ◎<br><small>LINE/Slack等も</small> | ◯<br><small>標準的</small> |
-| **連携** | 給与連携 | ◎<br><small>MF給与と最強</small> | ◯<br><small>API連携多数</small> | ◯<br><small>主要ソフト対応</small> | ◎<br><small>freeeと一体</small> |
+| **連携** | 給与連携 | ◎<br><small>MF給与と最強</small> | ◯<br><small>API連携多数</small> | ◯<br><small>主要ソフト対応</small> | ◎<br><small>SmartHR基本機能と連携</small> |
 | **拡張性** | API公開 | △<br><small>要問い合わせ</small> | ◯<br><small>非公開だが連携多</small> | ◯<br><small>公開APIあり</small> | ◯<br><small>公開APIあり</small> |
-| **非機能要件** | コスト | △<br><small>シリーズ契約前提</small> | ◎<br><small>単価安い</small> | ◎<br><small>機能選択式</small> | △<br><small>セットプラン</small> |
+| **非機能要件** | コスト | △<br><small>シリーズ契約前提</small> | ◎<br><small>単価安い</small> | ◎<br><small>機能選択式</small> | △<br><small>包括プラン</small> |
 | **UI/UX** | 操作性 | ◎<br><small>モダンで直感的</small> | △<br><small>やや古め</small> | ◯<br><small>シンプル</small> | ◎<br><small>モダン</small> |
 
 ### **16.2 詳細比較**
@@ -218,7 +218,7 @@ relationships:
 | **本ツール** | MFクラウド製品群との強力な連携 | バックオフィス業務全体を効率化できる、優れたUI | 打刻方法が限定的、単体利用では割高感あり | マネーフォワードの他サービスを導入済み、または導入予定の企業 |
 | **KING OF TIME** | 業界トップシェア、機能の網羅性 | 生体認証など多彩な打刻方法、詳細なカスタマイズ性 | 多機能ゆえに設定が複雑、UIがやや古い | 独自の就業規則が多く、複雑な勤怠管理が必要な企業 |
 | **ジョブカン勤怠管理** | 機能を選択して導入できる柔軟性 | 必要な機能だけを低コストで利用開始できる | 全機能を利用すると割高になる可能性がある | スモールスタートで、将来的に機能拡張を検討している企業 |
-| **freee人事労務** | freee会計とのシームレスな連携 | freee製品で統一された操作性、シンプルなUI | 勤怠管理単体の機能は競合より少ない | freee会計を既に利用しており、シンプルな勤怠管理を求めている企業 |
+| **SmartHR** | 人事労務・タレントマネジメントの一元化 | 従業員情報の集約、使いやすいUI | 勤怠単体の詳細なカスタマイズ性は専用ツールに劣る | 労務管理やタレントマネジメントも統合して管理したい企業 |
 
 ## **17. 総評**
 
