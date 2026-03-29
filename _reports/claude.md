@@ -46,6 +46,7 @@ relationships:
     - Claude Code
     - Claude Cowork
   related_tools:
+    - Moltbot
     - ChatGPT
     - DeepSeek
     - Gemini
