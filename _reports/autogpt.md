@@ -59,6 +59,7 @@ relationships:
     - AgentScope
     - MoneyPrinterV2
     - OpenClaw
+    - Moltbot
 ---
 
 

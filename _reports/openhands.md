@@ -45,6 +45,7 @@ links:
   documentation: https://docs.openhands.dev/
 relationships:
   related_tools:
+    - Moltbot
     - Deep Agents
     - UI-TARS Desktop
     - AutoGPT
