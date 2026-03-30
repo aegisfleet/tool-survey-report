@@ -6,14 +6,13 @@ category: 開発者ツール
 developer: NocoDB Inc.
 official_site: https://nocodb.com/
 date: '2026-01-29'
-last_updated: '2026-01-29'
+last_updated: '2026-03-30'
 tags:
   - Airtable代替
   - オープンソース
   - データベース
   - ノーコード
   - ローコード
-  - 開発者ツール
 description: 既存のSQLデータベースをスマートなスプレッドシートインターフェースに変換するオープンソースのノーコードプラットフォーム。
 quick_summary:
   has_free_plan: true
@@ -23,7 +22,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - SMB
-  latest_highlight: 2025年11月にチーム管理機能とデータ同期機能(NocoSync)をリリース
+  latest_highlight: 2026年1月にv0.301.0でダークモード追加、3月にv0.301.5（バグ修正）をリリース
   update_frequency: 高
 evaluation:
   score: 85
@@ -217,10 +216,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-18**: **v0.301.5リリース**: バグ修正リリース。
+* **2026-01-13**: **v0.301.0リリース**: ダークモードの追加、カスタムWebhookペイロード対応、およびGroupbyアグリゲーション機能を追加。
 * **2025-11-20**: **Teams機能リリース**: ユーザーをチームにグループ化し、一括でロールを割り当てる機能を追加。
 * **2025-11-20**: **NocoSync (Beta)**: GitHub, Zendeskなどの外部ツールとNocoDBのテーブルを自動同期する機能を追加。
-* **2025-10-08**: **v0.255.2リリース**: パフォーマンス改善とバグ修正。
-* **2025-08-15**: **監査ログ機能の強化**: エンタープライズ向けの監査ログの詳細度が向上。
+* **2025-10-01**: **v0.265.0リリース**: MCP (Model Context Protocol) サーバー機能の導入により、AIエージェントとの連携が強化された。
 
 (出典: [NocoDB Changelog](https://nocodb.com/docs/changelog/), [GitHub Releases](https://github.com/nocodb/nocodb/releases))
 
