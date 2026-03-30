@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Squid 調査レポート"
-tool_name: "Squid"
-tool_reading: "スクイッド"
-category: "プロキシサーバー"
-developer: "Squid Project"
-official_site: "https://www.squid-cache.org/"
-date: "2026-03-30"
-last_updated: "2026-03-30"
+title: Squid 調査レポート
+tool_name: Squid
+tool_reading: スクイッド
+category: プロキシサーバー
+developer: Squid Project
+official_site: https://www.squid-cache.org/
+date: '2026-03-30'
+last_updated: '2026-03-30'
 tags:
-  - "インフラ"
-  - "オープンソース"
-  - "プロキシ"
-description: "高機能なキャッシングプロキシサーバーおよびWebアクセラレーター"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - インフラ
+  - オープンソース
+  - プロキシ
+description: 高機能なキャッシングプロキシサーバーおよびWebアクセラレーター
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "インフラエンジニア"
-    - "システム管理者"
-    - "ネットワーク管理者"
-  latest_highlight: "v7.5のリリース（2026年3月）"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - インフラエンジニア
+    - システム管理者
+    - ネットワーク管理者
+  latest_highlight: v7.5のリリース（2026年3月）
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "豊富なアクセス制御と高いキャッシュ効率"
+      reason: 豊富なアクセス制御と高いキャッシュ効率
     - point: 5
-      reason: "実績のあるオープンソースソフトウェアで完全無料"
+      reason: 実績のあるオープンソースソフトウェアで完全無料
     - point: 4
-      reason: "様々なOS環境で動作する高い移植性"
+      reason: 様々なOS環境で動作する高い移植性
   minus_points:
     - point: -2
-      reason: "HTTPS時代において透過的プロキシ（SSL Bumping）の設定難易度が高い"
-  summary: "強力なアクセス制御とキャッシュ機能を持つが、HTTPS通信の傍受には高度な設定スキルが求められる"
-
-# 【任意項目】該当するもののみ記載
+      reason: HTTPS時代において透過的プロキシ（SSL Bumping）の設定難易度が高い
+  summary: 強力なアクセス制御とキャッシュ機能を持つが、HTTPS通信の傍受には高度な設定スキルが求められる
 links:
-  github: "https://github.com/squid-cache/squid"
-  deepwiki: "https://deepwiki.com/squid-cache/squid"
-  documentation: "https://wiki.squid-cache.org/"
+  github: https://github.com/squid-cache/squid
+  deepwiki: https://deepwiki.com/squid-cache/squid
+  documentation: https://wiki.squid-cache.org/
 relationships:
   related_tools:
-    - "Nginx"
+    - Nginx
 ---
 
 # **Squid 調査レポート**
