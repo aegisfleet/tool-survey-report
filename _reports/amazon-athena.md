@@ -45,7 +45,8 @@ evaluation:
 links:
   documentation: https://docs.aws.amazon.com/athena/latest/ug/what-is.html
 relationships:
-  related_tools: []
+  related_tools:
+    - Snowflake
 ---
 
 
