@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - Amazon QuickSight
     - Looker Studio
+    - Snowflake
 ---
 
 

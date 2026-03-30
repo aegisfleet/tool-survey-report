@@ -44,6 +44,7 @@ relationships:
   related_tools:
     - Metabase
     - Redash
+    - Snowflake
 ---
 
 # **Apache Superset 調査レポート**
