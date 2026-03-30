@@ -6,7 +6,7 @@ category: 開発者ツール
 developer: Notifuse
 official_site: https://www.notifuse.com/
 date: '2025-12-21'
-last_updated: '2026-01-29'
+last_updated: '2026-03-30'
 tags:
   - API
   - Go
@@ -23,7 +23,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - マーケティング担当者
-  latest_highlight: 2026年1月に多言語対応(日本語含む)とAI機能を強化 (v26.13)
+  latest_highlight: 2026年3月にMJMLコードエディタとテンプレート翻訳機能を追加 (v28.0)
   update_frequency: 高
 evaluation:
   score: 85
@@ -81,11 +81,12 @@ relationships:
 
 ## **3. 主要機能**
 
-* **MJMLビジュアルエディタ**: ドラッグ＆ドロップでモバイルレスポンシブなメールを作成可能。
+* **MJML対応エディタと多言語翻訳**: ドラッグ＆ドロップのビジュアルエディタとMJMLコードエディタを選択可能。テンプレートの多言語翻訳にも対応（v28.0追加）。
 * **マーケティングオートメーション**: ビジュアルフロービルダーを使用して、トリガー、分岐、遅延などを含む複雑な自動化ワークフローを作成可能（v20.0追加）。
 * **AIアシスタント**: Claudeモデルを統合し、メールテンプレートやブログ記事の作成を支援（v22.0追加）。
 * **メールキューシステム**: 一元化されたキューシステムにより、ブロードキャストとオートメーションの配信を効率的に処理（v21.0追加）。
 * **トランザクションAPI**: REST APIを通じて自動メール送信が可能。Liquidテンプレートエンジン対応。
+* **Broadcast Data Feeds**: 外部API連携により、ブロードキャスト配信時に動的なコンテンツを挿入可能（v27.0追加）。
 * **マルチプロバイダー対応**: Amazon SES, Mailgun, Postmark, Mailjet, SparkPost, SMTP, Twilio SendGridなど主要なサービスと連携。
 * **マルチテナント**: 複数のワークスペースを作成し、クライアントごとに環境を分離可能。
 * **アナリティクス**: 開封率、クリック率、バウンスなどのリアルタイム追跡。
@@ -200,13 +201,13 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-17 (v28.2)**: PostmarkのMessage Streamをサポート、Contacts APIでメールアドレスの部分一致検索が可能に。
+* **2026-03-08 (v28.0)**: ビジュアルエディタとMJMLコードエディタの選択機能、テンプレートの多言語翻訳機能を追加。
+* **2026-02-14 (v27.1)**: オートメーションでメールプロバイダーをノードごとに上書き可能に。
+* **2026-02-08 (v27.0)**: ブロードキャスト向けの外部データフィード連携（Broadcast Data Feeds）を追加。
 * **2026-01-25 (v26.13)**: セグメント作成時のリアルタイム検証機能の追加、Email Builderの修正。
 * **2026-01-24 (v26.12)**: コンソールUIの多言語対応（日本語含む）、ファイルマネージャーの改善。
 * **2026-01-06 (v22.6)**: SMTPの不具合修正。
-* **2025-12-29 (v22.1)**: Email AI Assistant機能の追加。Claudeモデルを利用したメール作成支援。
-* **2025-12-28 (v22.0)**: Blog AI Assistant機能の追加。
-* **2025-12-23 (v21.0)**: Email Queue Systemの導入。配信処理の一元化と効率化。
-* **2025-12-21 (v20.0)**: Marketing Automations機能の追加。ビジュアルワークフロービルダーの実装。
 
 (出典: [GitHub Releases](https://github.com/notifuse/notifuse/releases), [CHANGELOG](https://github.com/Notifuse/notifuse/blob/main/CHANGELOG.md))
 
