@@ -51,6 +51,7 @@ relationships:
     - Agent Zero
     - Cursor
     - GitHub Copilot
+    - Claw Code
 ---
 
 # **OpenHands 調査レポート**

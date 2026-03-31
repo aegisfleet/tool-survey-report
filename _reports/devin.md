@@ -56,6 +56,7 @@ relationships:
     - Cline
     - Roo Code
     - OpenHands
+    - Claw Code
 ---
 
 
