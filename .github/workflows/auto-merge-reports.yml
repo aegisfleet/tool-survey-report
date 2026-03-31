@@ -247,14 +247,15 @@ jobs:
                   execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"');
                   execSync('git push');
 
-                  core.info('Changes have been pushed.');
+                  core.info('Changes have been pushed. Waiting 3 seconds for GitHub to update PR state...');
+                  await new Promise(resolve => setTimeout(resolve, 3000));
+
                   await github.rest.issues.createComment({
                     owner,
                     repo,
                     issue_number: prNumber,
                     body: 'YAMLフォーマットの自動修正を適用しました。Auto-fixed YAML formatting.'
                   });
-                  return; // Exit here
                 } else {
                   core.info('No changes were made by the auto-fix.');
                 }
