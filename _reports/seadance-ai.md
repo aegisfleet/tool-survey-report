@@ -10,7 +10,6 @@ last_updated: '2026-02-11'
 tags:
   - AI
   - FLUX.2
-  - Sora
   - 動画生成
   - 生成AI
   - 画像生成
@@ -43,7 +42,6 @@ links:
   documentation: https://seadanceai.com/
 relationships:
   related_tools:
-    - Sora
     - Stable Diffusion
 ---
 

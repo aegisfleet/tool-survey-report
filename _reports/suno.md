@@ -46,7 +46,6 @@ relationships:
   children: []
   related_tools:
     - ElevenLabs
-    - Sora
 ---
 
 

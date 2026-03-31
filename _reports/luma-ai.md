@@ -48,7 +48,6 @@ relationships:
   parent: ''
   children: []
   related_tools:
-    - Sora
     - Hunyuan 3D
 ---
 

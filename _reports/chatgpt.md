@@ -44,7 +44,6 @@ links:
   documentation: https://help.openai.com/en/
 relationships:
   children:
-    - Sora
     - OpenAI Codex CLI
     - Codex cloud
   related_tools:

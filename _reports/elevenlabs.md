@@ -49,7 +49,6 @@ relationships:
   related_tools:
     - Suno
     - Waves Place
-    - Sora
 ---
 
 
