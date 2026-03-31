@@ -56,6 +56,7 @@ relationships:
     - Claude Code
     - Visual Studio Code
     - Devin
+    - "OpenHands"
 ---
 
 

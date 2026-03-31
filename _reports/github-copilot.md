@@ -55,6 +55,7 @@ relationships:
     - Claude Code
     - Devin
     - GitLab Duo
+    - "OpenHands"
 ---
 
 
