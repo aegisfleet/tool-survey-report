@@ -40,6 +40,7 @@ evaluation:
   summary: Windowsの自動化・カスタマイズにおいては他の追随を許さないほど強力なオープンソースツール
 links:
   github: https://github.com/AutoHotkey/AutoHotkey
+  deepwiki: https://deepwiki.com/AutoHotkey/AutoHotkey
   documentation: https://www.autohotkey.com/docs/v2/
 relationships:
   related_tools:

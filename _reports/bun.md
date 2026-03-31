@@ -49,6 +49,7 @@ relationships:
     - Deno
     - Hono
     - Vite
+    - npm
 ---
 
 

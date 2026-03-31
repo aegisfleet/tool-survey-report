@@ -43,6 +43,8 @@ links:
   documentation: https://nodejs.org/en/docs/
 relationships:
   parent: null
+  children:
+    - npm
   related_tools:
     - Deno
     - Bun
