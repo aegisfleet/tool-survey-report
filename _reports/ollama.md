@@ -6,7 +6,7 @@ category: AI開発基盤
 developer: Ollama Inc.
 official_site: https://ollama.com/
 date: '2025-10-24'
-last_updated: '2026-01-29'
+last_updated: '2026-03-31'
 tags:
   - AI
   - オープンソース
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - AI/MLエンジニア
     - 研究者
-  latest_highlight: 2026年1月にollama launchコマンドや画像生成機能を追加
+  latest_highlight: 2026年3月にv0.19.0をリリースし、Apple Silicon向けMLXサポートを強化
   update_frequency: 高
 evaluation:
   score: 83
@@ -209,6 +209,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-27**: v0.19.0をリリース。Apple Silicon上のMLXを利用した高速化をプレビュー版として提供。
+* **2026-03-18**: v0.18.2をリリース。OpenClaw連携やClaude Codeのローカル実行速度を改善。
+* **2026-03-17**: v0.18.1をリリース。Web検索・取得機能を含むOpenClawプラグインを追加。
 * **2026-01-23**: `ollama launch`コマンドを追加。Claude CodeやOpenCodeなどのツールをセットアップ不要で実行可能に。
 * **2026-01-20**: 実験的な画像生成機能をmacOS向けにリリース。
 * **2026-01-16**: Anthropic API互換性をサポートし、Claude Codeなどが利用可能に。
