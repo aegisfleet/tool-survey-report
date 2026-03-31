@@ -40,6 +40,7 @@ evaluation:
   summary: 絵文字を用いた直感的なスタイル制御と高品質な日本語音声合成が強みのオープンソースTTS
 links:
   github: https://github.com/Aratako/Irodori-TTS
+  deepwiki: "https://deepwiki.com/Aratako/Irodori-TTS"
   documentation: https://huggingface.co/Aratako/Irodori-TTS-500M
 relationships:
   related_tools: []
