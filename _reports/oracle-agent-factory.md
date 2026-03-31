@@ -1,54 +1,51 @@
 ---
-title: "Oracle AI Database Private Agent Factory 調査レポート"
-tool_name: "Oracle AI Database Private Agent Factory"
-tool_reading: "オラクル エーアイ データベース プライベート エージェント ファクトリー"
-category: "AI開発基盤"
-developer: "Oracle"
-official_site: "https://docs.oracle.com/en/database/oracle/agent-factory/"
-date: "2026-03-31"
-last_updated: "2026-03-31"
+title: Oracle AI Database Private Agent Factory 調査レポート
+tool_name: Oracle AI Database Private Agent Factory
+tool_reading: オラクル エーアイ データベース プライベート エージェント ファクトリー
+category: AI開発基盤
+developer: Oracle
+official_site: https://docs.oracle.com/en/database/oracle/agent-factory/
+date: '2026-03-31'
+last_updated: '2026-03-31'
 tags:
-  - "AI"
-  - "エージェント"
-  - "ノーコード"
-  - "開発者ツール"
-  - "エンタープライズ"
-description: "ビジネスユーザーとエンジニアがインテリジェントなエージェントを迅速に構築・デプロイできるノーコードプラットフォーム。"
-
+  - AI
+  - エージェント
+  - ノーコード
+  - 開発者ツール
+  - エンタープライズ
+description: ビジネスユーザーとエンジニアがインテリジェントなエージェントを迅速に構築・デプロイできるノーコードプラットフォーム。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "ビジネスユーザー"
-    - "開発者"
-    - "データアナリスト"
-  latest_highlight: "Release 25.3でGoogle Drive連携やGeminiモデルサポート、各種新ノード（計算機、Wikipedia検索等）を追加"
-  update_frequency: "中"
-
+    - ビジネスユーザー
+    - 開発者
+    - データアナリスト
+  latest_highlight: Release 25.3でGoogle Drive連携やGeminiモデルサポート、各種新ノード（計算機、Wikipedia検索等）を追加
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ノーコードでの直感的なエージェント構築とマルチエージェントオーケストレーション機能を備えている"
+      reason: ノーコードでの直感的なエージェント構築とマルチエージェントオーケストレーション機能を備えている
     - point: 5
-      reason: "Oracle Databaseとの強力な統合により、セキュアなデータ分析エージェントがすぐに構築できる"
+      reason: Oracle Databaseとの強力な統合により、セキュアなデータ分析エージェントがすぐに構築できる
     - point: 3
-      reason: "SSOやプロンプトガードレールなど、エンタープライズ水準のセキュリティ機能が標準装備"
+      reason: SSOやプロンプトガードレールなど、エンタープライズ水準のセキュリティ機能が標準装備
   minus_points:
     - point: -3
-      reason: "Oracleエコシステムへの依存度が比較的高く、単独での料金体系が不明瞭"
-  summary: "Oracle製品群を利用中のエンタープライズ企業にとって、安全かつ迅速にAIエージェントを導入できる強力なプラットフォーム。"
-
+      reason: Oracleエコシステムへの依存度が比較的高く、単独での料金体系が不明瞭
+  summary: Oracle製品群を利用中のエンタープライズ企業にとって、安全かつ迅速にAIエージェントを導入できる強力なプラットフォーム。
 links:
-  documentation: "https://docs.oracle.com/en/database/oracle/agent-factory/25.3/paias/index.html"
+  documentation: https://docs.oracle.com/en/database/oracle/agent-factory/25.3/paias/index.html
 relationships:
-  parent: "Oracle Database"
+  parent: Oracle Database
   children: []
   related_tools:
-    - "Dify"
-    - "Flowise"
+    - Dify
+    - Flowise
 ---
 
 # **Oracle AI Database Private Agent Factory 調査レポート**
