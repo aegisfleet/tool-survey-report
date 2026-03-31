@@ -1,55 +1,52 @@
 ---
-title: "npm 調査レポート"
-tool_name: "npm"
-tool_reading: "エヌピーエム"
-category: "開発者ツール"
-developer: "GitHub (Microsoft)"
-official_site: "https://www.npmjs.com/"
-date: "2026-03-31"
-last_updated: "2026-03-31"
+title: npm 調査レポート
+tool_name: npm
+tool_reading: エヌピーエム
+category: 開発者ツール
+developer: GitHub (Microsoft)
+official_site: https://www.npmjs.com/
+date: '2026-03-31'
+last_updated: '2026-03-31'
 tags:
-  - "JavaScript"
-  - "Node.js"
-  - "オープンソース"
-  - "パッケージマネージャー"
-description: "JavaScriptおよびNode.js向けの公式パッケージマネージャー。世界最大規模のソフトウェアレジストリを提供する。"
-
+  - JavaScript
+  - Node.js
+  - オープンソース
+  - パッケージマネージャー
+description: JavaScriptおよびNode.js向けの公式パッケージマネージャー。世界最大規模のソフトウェアレジストリを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "サーバーサイドエンジニア"
-    - "フロントエンドエンジニア"
-  latest_highlight: "Node.jsに標準バンドルされ、継続的な機能追加とセキュリティアップデートが行われている"
-  update_frequency: "高"
-
+    - 開発者
+    - サーバーサイドエンジニア
+    - フロントエンドエンジニア
+  latest_highlight: Node.jsに標準バンドルされ、継続的な機能追加とセキュリティアップデートが行われている
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "世界最大級のパッケージエコシステムであり、JavaScript開発において必須のインフラである"
+      reason: 世界最大級のパッケージエコシステムであり、JavaScript開発において必須のインフラである
     - point: 5
-      reason: "Node.jsに標準でバンドルされており、導入コストが実質ゼロ"
+      reason: Node.jsに標準でバンドルされており、導入コストが実質ゼロ
     - point: 5
-      reason: "豊富なCLIコマンドによる高度なスクリプト実行や依存関係管理が可能"
+      reason: 豊富なCLIコマンドによる高度なスクリプト実行や依存関係管理が可能
   minus_points:
     - point: -3
-      reason: "巨大な依存関係ツリー（node_modules）によるディスク容量やインストール時間の増加"
+      reason: 巨大な依存関係ツリー（node_modules）によるディスク容量やインストール時間の増加
     - point: -2
-      reason: "依存関係の多さに起因するサプライチェーン攻撃のリスクが存在する"
-  summary: "JavaScript開発における業界標準ツールだが、巨大化する依存関係の管理には注意が必要"
-
+      reason: 依存関係の多さに起因するサプライチェーン攻撃のリスクが存在する
+  summary: JavaScript開発における業界標準ツールだが、巨大化する依存関係の管理には注意が必要
 links:
-  github: "https://github.com/npm/cli"
-  deepwiki: "https://deepwiki.com/npm/cli"
-  documentation: "https://docs.npmjs.com/"
+  github: https://github.com/npm/cli
+  deepwiki: https://deepwiki.com/npm/cli
+  documentation: https://docs.npmjs.com/
 relationships:
-  parent: "Node.js"
+  parent: Node.js
   related_tools:
-    - "Bun"
+    - Bun
 ---
 
 # **npm 調査レポート**
