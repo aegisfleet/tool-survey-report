@@ -61,7 +61,7 @@ relationships:
     - Autify
     - MagicPod
     - mabl
-    - Gauge
+    - Robot Framework
     - Appium
 ---
 
