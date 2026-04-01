@@ -6,11 +6,9 @@ category: 顧客管理
 developer: Salesforce, Inc.
 official_site: https://www.salesforce.com/jp/
 date: '2026-01-13'
-last_updated: '2026-01-29'
+last_updated: '2026-04-01'
 tags:
   - AI
-  - CRM
-  - SFA
   - SaaS
   - エージェント
   - クラウド
@@ -49,9 +47,7 @@ relationships:
   children:
     - Tableau
   related_tools:
-    - ワスレナイ
     - AGENTIC STAR
-    - Google 広告
 ---
 
 
@@ -67,8 +63,8 @@ relationships:
 * **公式サイト**: [https://www.salesforce.com/jp/](https://www.salesforce.com/jp/)
 * **関連リンク**:
   * ドキュメント: [https://help.salesforce.com/s/](https://help.salesforce.com/s/)
-  * レビューサイト: [G2](https://www.g2.com/products/salesforce-salesforce-sales-cloud/reviews) | [ITreview](https://www.itreview.jp/products/salesforce-sales-cloud/reviews)
-* **カテゴリ**: CRM (顧客関係管理) / SFA (営業支援)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/salesforce-sales-cloud/reviews)
+* **カテゴリ**: 顧客管理
 * **概要**: 世界No.1のシェアを誇る統合CRMプラットフォーム。営業、サービス、マーケティングなどの顧客接点を一元管理し、自律型AI「Agentforce」により、データ分析からタスク実行までを自動化・効率化する。
 
 ## **2. 目的と主な利用シーン**
@@ -101,7 +97,7 @@ relationships:
 * **前提条件**:
   * Webブラウザ環境
   * アカウント作成（クレジットカード不要の無料トライアルあり）
-* **導入/利用開始**:
+* **インストール/導入**:
   1. 公式サイトの「無料トライアル」からサインアップ。
   2. Starter Suiteなどの初期設定ウィザードに従い、ユーザー追加やデータインポートを実施。
 * **初期設定**:
@@ -133,7 +129,7 @@ relationships:
 
 ※Sales Cloudの主なプラン（年額契約時の月額料金）。
 
-| プラン名 | 料金 (1ユーザー/月) | 主な特徴 |
+| プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
 | **Free Suite** | 無料 | 最大2ユーザーまで。基本CRM機能、ガイド付きオンボーディング。 |
 | **Starter Suite** | ¥3,000 | 営業・サービス・マーケティング・コマース機能を含むオールインワンCRM。 |
@@ -202,8 +198,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, ITreview
-* **総合評価**: 4.3/5.0 (G2)
+* **調査対象**: Google検索によるG2等のレビュー引用、ITreview
+* **総合評価**: 4.3/5.0 (G2のGoogle検索結果等から引用)
 * **ポジティブな評価**:
   * 「カスタマイズ性が高く、自社の複雑な商流に合わせられる唯一のツール」
   * 「レポート・ダッシュボード機能が強力で、経営の見える化が進んだ」
