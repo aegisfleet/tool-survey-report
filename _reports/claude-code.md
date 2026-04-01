@@ -6,7 +6,7 @@ category: 自律型AIエージェント
 developer: Anthropic
 official_site: https://claude.ai/code
 date: '2026-01-24'
-last_updated: '2026-02-09'
+last_updated: '2026-04-01'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - DevOpsエンジニア
-  latest_highlight: 2025年12月にAIエージェント機能を追加
+  latest_highlight: 2026年4月に各種不具合修正やheadless session向けのフック強化を含むv2.1.89をリリース
   update_frequency: 高
 evaluation:
   score: 88
@@ -38,6 +38,8 @@ evaluation:
   minus_points: []
   summary: ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5の搭載により信頼性と解決力がさらに向上した。
 links:
+  github: "https://github.com/anthropics/claude-code"
+  deepwiki: "https://deepwiki.com/anthropics/claude-code"
   documentation: https://docs.claude.com/en/docs/claude-code
 relationships:
   parent: Claude
@@ -325,13 +327,16 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-04 (v2.1.89)**: headless session向けのフック強化、`CLAUDE_CODE_NO_FLICKER=1`環境変数の追加など。
+* **2026-03 (v2.1.87)**: ターミナルでのレンダリングバグや自動補完の修正を含むマイナーアップデート。
+* **2026-03 (v2.1.86)**: 自動モードに関する各種修正とパフォーマンス向上。
 * **2026-01 (v2.1.x)**: **タスク管理とカスタマイズ性の向上**。新しいタスク管理システムの導入、キーボードショートカットのカスタマイズ機能 (`/keybindings`)、Bashモードでの履歴ベースのオートコンプリート機能などが追加された。
 * **2025-Late (v2.0.7x)**: **機能拡張と統合の強化**。コードインテリジェンス機能を提供するLSP (Language Server Protocol) ツール、ブラウザを直接制御するClaude in Chrome (Beta) が追加された。
 * **2025-Late (v2.0.5x - v2.0.6x)**: **バックグラウンドエージェントとOpus 4.5**。エージェントをバックグラウンドで実行する機能や、Proユーザー向けのClaude 4.5 Opusモデルの利用が可能になった。
 * **2025-Late (v2.0.12)**: **プラグインシステム公開**。カスタムコマンドやエージェントをプラグインとして導入・管理できる仕組み (`/plugin`) がリリースされた。
 * **2025-09 (v2.0.0)**: **Claude Code GA & VS Code拡張**。Claude Codeが一般公開 (GA) され、ネイティブVS Code拡張機能がリリースされた。
 
-(出典: [Claude Code Changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md))
+(出典: [Claude Code Releases](https://github.com/anthropics/claude-code/releases))
 
 ## **16. 類似ツールとの比較**
 
