@@ -6,13 +6,12 @@ category: テスト/QA
 developer: Robot Framework Foundation
 official_site: https://robotframework.org/
 date: '2025-12-07'
-last_updated: '2026-01-29'
+last_updated: '2026-04-01'
 tags:
   - E2Eテスト
   - Python
   - RPA
   - オープンソース
-  - キーワード駆動テスト
   - テスト自動化
 description: キーワード駆動型で読みやすい構文を持つ、オープンソースの汎用テスト自動化・RPAフレームワーク
 quick_summary:
@@ -23,7 +22,7 @@ quick_summary:
     - QAエンジニア
     - テスト担当者
     - RPA開発者
-  latest_highlight: 2025年12月に機密情報管理を強化したv7.4.1をリリース
+  latest_highlight: 2026年3月にバグフィックス版のv7.4.2をリリース
   update_frequency: 高
 evaluation:
   score: 83
@@ -206,16 +205,14 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-03**: **Robot Framework 7.4.2 リリース**
+  * 7.4.xシリーズの最後のバグフィックスリリース。ドキュメントの強化と、組み込みのTestdocツールの非推奨化（外部ツールへの移行）が行われた。
 * **2025-12-23**: **Robot Framework 7.4.1 リリース**
   * 7.4で報告されたリグレッション（後退バグ）を修正したバグフィックスリリース。
 * **2025-12-12**: **Robot Framework 7.4 リリース**
   * **Secret Variables**: `%{SECRET}` のように変数を定義することで、ログやレポートに値が表示されなくなる機能が追加され、機密情報の取り扱いがより安全になった。
   * **Typed Keywords**: 標準ライブラリのキーワードで型ヒントが強化され、静的解析ツールとの連携が向上。
   * **Bytes処理の改善**: バイナリデータの扱いに関するパフォーマンスと機能性が向上。
-* **2025-11-20**: Robot Framework 7.4 Release Candidate 1 (RC1) リリース。
-* **2025-05-30**: Robot Framework 7.3 リリース。
-  * 変数の型変換機能（例: `${var:int}`）が強化され、より柔軟なデータ操作が可能になった。
-  * Python 3.14への互換性が確保された。
 
 (出典: [GitHub Releases](https://github.com/robotframework/robotframework/releases))
 

@@ -50,7 +50,7 @@ relationships:
     - Appium
     - MagicPod
     - Autify
-    - mabl
+    - Robot Framework
     - Karate
 ---
 
