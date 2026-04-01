@@ -38,8 +38,8 @@ evaluation:
   minus_points: []
   summary: ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5の搭載により信頼性と解決力がさらに向上した。
 links:
-  github: "https://github.com/anthropics/claude-code"
-  deepwiki: "https://deepwiki.com/anthropics/claude-code"
+  github: https://github.com/anthropics/claude-code
+  deepwiki: https://deepwiki.com/anthropics/claude-code
   documentation: https://docs.claude.com/en/docs/claude-code
 relationships:
   parent: Claude
