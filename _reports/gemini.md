@@ -53,6 +53,7 @@ relationships:
   related_tools:
     - Google Learning
     - ChatGPT
+    - Vertex AI
     - Vertex AI Studio
     - TradingAgents
     - Microsoft 365 Copilot
