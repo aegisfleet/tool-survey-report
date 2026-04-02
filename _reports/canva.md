@@ -56,6 +56,7 @@ relationships:
     - Gamma
     - Speaker Deck
     - Apple Creator Studio
+    - Qwen-Image-Layered
 ---
 
 

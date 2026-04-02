@@ -6,13 +6,11 @@ category: 生成AI
 developer: Alibaba Cloud / QwenLM Team
 official_site: https://github.com/QwenLM/Qwen-Image-Layered
 date: '2026-01-30'
-last_updated: '2026-01-30'
+last_updated: '2026-04-03'
 tags:
   - AI
-  - Python
   - オープンソース
   - 生成AI
-  - 画像編集
 description: 画像を複数の編集可能なRGBAレイヤーに分解することで、高忠実度な編集を実現するオープンソースのAIモデル。
 quick_summary:
   has_free_plan: true
@@ -22,7 +20,7 @@ quick_summary:
     - 開発者
     - AI研究者
     - デザイナー
-  latest_highlight: 2025年12月に公開された、画像を編集可能なレイヤーに分解する初のオープンソースモデル
+  latest_highlight: vLLM-Omniのサポート追加やPSDエクスポート機能の改善を実施
   update_frequency: 中
 evaluation:
   score: 82
@@ -152,7 +150,7 @@ relationships:
 
 ### **10.1 API・外部サービス連携**
 
-* **API**: Pythonライブラリ (`diffusers`) を通じて利用可能。Web APIとしての提供はサードパーティまたは自前での構築が必要。
+* **API**: Pythonライブラリ (`diffusers`) を通じて利用可能。Web APIとしての提供はサードパーティまたは自前での構築が必要。vLLM-Omniを用いた推論にも対応している。
 * **外部サービス連携**: Hugging Face Hubとシームレスに連携。
 
 ### **10.2 技術スタックとの相性**
@@ -199,6 +197,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2025-12-31**: vLLM-Omniによるサポートを追加（推論の効率化）。
+* **2025-12-25**: PSDエクスポート機能を改善・追加。
 * **2025-12-22**: Hugging Face SpacesおよびModelScope Studio上で、誰でも試せるオンラインデモを公開。
 * **2025-12-19**: モデルの重みデータをHugging FaceとModelScopeで公開。公式ブログ記事もリリース。
 * **2025-12-18**: arXivにて研究論文を公開。
