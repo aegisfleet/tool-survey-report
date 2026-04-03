@@ -6,15 +6,12 @@ category: AI開発基盤
 developer: さくらインターネット株式会社
 official_site: https://www.sakura.ad.jp/aipf/
 date: '2025-12-16'
-last_updated: '2026-01-30'
+last_updated: '2026-04-03'
 tags:
   - AI
   - AI開発基盤
   - API
-  - GPUクラウド
-  - RAG
   - クラウド
-  - 国産
   - 大規模言語モデル
   - 生成AI
 description: 「国内完結」の安全性と「低コスト」を両立した、さくらインターネットが提供するAIプラットフォーム。
@@ -50,7 +47,6 @@ relationships:
   related_tools:
     - Amazon Bedrock
     - Rakuten AI
-    - ChatGPT
     - Vertex AI Studio
 ---
 
@@ -355,6 +351,7 @@ relationships:
   - △: 一部対応 / 制限あり / アドオンが必要
   - ×: 非対応
   - -: 不明 / 該当なし
+- 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
 | 機能カテゴリ | 機能項目 | 本ツール (さくらのAI) | Amazon Bedrock | Rakuten AI | Vertex AI Studio |
