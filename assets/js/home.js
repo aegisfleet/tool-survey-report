@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
     // レポートカード
-    document.querySelectorAll('.report-card').forEach((card) => {
+    reportCards.forEach((card) => {
       const categoryEl = card.querySelector('.meta-item.category');
       if (!categoryEl) return;
 
@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!picksGrid) return;
 
     const pickCards = Array.from(picksGrid.querySelectorAll('.pick-card'));
-    const allReportCards = Array.from(document.querySelectorAll('.report-card'));
+    const allReportCards = reportCards;
 
     if (allReportCards.length <= 4) return;
 
