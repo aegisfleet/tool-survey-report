@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - Karate
     - Playwright
+    - Selenium
 ---
 
 

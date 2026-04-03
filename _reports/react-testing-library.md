@@ -50,6 +50,7 @@ relationships:
   related_tools:
     - React
     - Playwright
+    - Selenium
 ---
 
 

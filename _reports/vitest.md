@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - Playwright
     - Cypress
+    - Selenium
 ---
 
 

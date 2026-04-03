@@ -51,6 +51,7 @@ relationships:
   parent: JUnit
   related_tools:
     - Spring Boot
+    - Selenium
 ---
 
 
