@@ -6,10 +6,9 @@ category: テスト/QA
 developer: Software Freedom Conservancy
 official_site: https://www.selenium.dev/
 date: '2025-10-24'
-last_updated: '2026-01-30'
+last_updated: '2026-04-03'
 tags:
   - E2Eテスト
-  - Webブラウザ
   - オープンソース
   - テスト自動化
   - 開発者ツール
@@ -21,7 +20,7 @@ quick_summary:
   target_users:
     - 開発者
     - QAエンジニア
-  latest_highlight: 2026年1月にSelenium 4.40.0をリリースし、.NETやJavaの環境設定を近代化
+  latest_highlight: 2026年2月にSelenium 4.41.0をリリースし、様々な環境設定と内部構造を更新
   update_frequency: 高
 evaluation:
   score: 85
@@ -69,7 +68,6 @@ relationships:
   * GitHub: [https://github.com/SeleniumHQ/selenium](https://github.com/SeleniumHQ/selenium)
   * CodeWiki: [https://codewiki.google/github.com/SeleniumHQ/selenium](https://codewiki.google/github.com/SeleniumHQ/selenium)
   * ドキュメント: [https://www.selenium.dev/documentation/](https://www.selenium.dev/documentation/)
-  * レビューサイト: [G2](https://www.g2.com/products/selenium-hq/reviews)
 * **カテゴリ**: テスト/QA
 * **概要**: Webブラウザの操作を自動化するためのオープンソースのフレームワーク群。主にWebアプリケーションの機能テストや回帰テストの自動化に利用されるが、WebスクレイピングなどWebベースの定型作業の自動化にも広く活用される。
 
@@ -210,8 +208,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: TrustRadius, G2, Capterra (既存レポート情報および一般的評価に基づく)
-* **総合評価**: 8.3/10 (TrustRadius) - 業界標準としての地位は揺るぎない。
+* **調査対象**: TrustRadius, G2, Capterra（既存レポート情報および一般的評価に基づく）
+* **総合評価**: 8.3/10 (TrustRadiusより引用) - 業界標準としての地位は揺るぎない。
 * **ポジティブな評価**:
   * 「多様なプログラミング言語をサポートしている点が素晴らしい。開発チームは好みの言語でテストを記述できる」
   * 「定型的なタスクやデータ入力作業を自動化することで、大幅な時間短縮と工数削減を実現できた」
@@ -225,6 +223,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-02-20**: **Selenium 4.41.0 リリース**
+  * .NETやJavaの内部テスト・ビルドツールの改善やBiDi APIの機能強化・バグ修正などが含まれる。
 * **2026-01-18**: **Selenium 4.40.0 リリース**
   * .NETのEnvironmentManagerの近代化、JavaのアサーションライブラリのAssertJへの移行など、内部構造の近代化が行われた。
 * **2025-12-06**: **Selenium 4.39.0 リリース**
@@ -235,8 +235,6 @@ relationships:
   * Python 3.14のサポート開始と3.9のサポート終了。.NET版BiDiでのエミュレーションモジュール追加。
 * **2025-10-02**: **Selenium 4.36.0 リリース**
   * .NETでのWebExtensionモジュールサポート。Python BiDiでのdownloadEndイベント追加。
-* **2025-08-12**: **Selenium 4.35.0 リリース**
-  * Python BiDi Scriptモジュールに高レベルAPIを追加。
 
 (出典: [GitHub Releases](https://github.com/SeleniumHQ/selenium/releases))
 

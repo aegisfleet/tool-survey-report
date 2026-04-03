@@ -47,6 +47,7 @@ relationships:
     - Spring Boot
     - Allure Report
     - PyTest
+    - Selenium
 ---
 
 

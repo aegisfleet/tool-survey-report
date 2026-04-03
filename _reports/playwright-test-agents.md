@@ -54,6 +54,7 @@ relationships:
     - Autify
     - MagicPod
     - mabl
+    - Selenium
 ---
 
 
