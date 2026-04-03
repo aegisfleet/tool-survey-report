@@ -32,7 +32,11 @@ const testCases = [
   { input: '🤖✨ Title', expected: 'Title', desc: 'Multiple leading emojis' },
   { input: '  🤖  Title', expected: 'Title', desc: 'Leading spaces and emoji' },
   { input: 'Title', expected: 'Title', desc: 'No emoji' },
-  { input: 'Title 🤖', expected: 'Title 🤖', desc: 'Emoji at the end (should NOT be stripped by regex, but trim() might affect trailing spaces)' },
+  {
+    input: 'Title 🤖',
+    expected: 'Title 🤖',
+    desc: 'Emoji at the end (should NOT be stripped by regex, but trim() might affect trailing spaces)',
+  },
   { input: '🤖', expected: '', desc: 'Only emoji' },
   { input: '   ', expected: '', desc: 'Only spaces' },
   { input: 'A 🤖 B', expected: 'A 🤖 B', desc: 'Emoji in the middle' },
