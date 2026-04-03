@@ -5,14 +5,14 @@ tool_reading: ユー
 category: Webフレームワーク
 developer: Yewstack (Open Source Community)
 official_site: https://yew.rs/
-date: '2026-01-30'
-last_updated: '2026-01-30'
+date: '2026-04-04'
+last_updated: '2026-04-04'
 tags:
   - Rust
   - SPA
   - WebAssembly
   - Webフレームワーク
-  - フロントエンド
+  - オープンソース
 description: RustとWebAssemblyを使用してマルチスレッドのフロントエンドWebアプリを作成するための最新のフレームワーク。Reactライクなコンポーネントシステムを採用しています。
 quick_summary:
   has_free_plan: true
@@ -22,7 +22,7 @@ quick_summary:
     - Rust開発者
     - フロントエンドエンジニア
     - Wasmに興味がある開発者
-  latest_highlight: v0.22.0にて機能改善とバグ修正が含まれる安定版がリリース
+  latest_highlight: 2026年3月にv0.23.0がリリースされ、安定性がさらに向上
   update_frequency: 中
 evaluation:
   score: 85
@@ -43,7 +43,6 @@ links:
 relationships:
   related_tools:
     - React
-    - IntelliJ IDEA
 ---
 
 
@@ -196,11 +195,14 @@ Yewはオープンソースプロジェクト（Apache-2.0 / MIT ライセンス
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-10**: **v0.23.0 リリース**
+  * 安定性の向上と機能改善を含む最新マイナーバージョンがリリースされました。
+* **2026-02-28**: **v0.22.1 リリース**
+  * v0.22系列のパッチアップデート。内部的な依存関係の更新やバグ修正が行われました。
 * **2025-12-08**: **v0.22.0 リリース**
   * 安定性の向上と、いくつかのAPIの改善が含まれています。内部的な依存関係の更新やバグ修正が主に行われました。
-  (出典: [GitHub Releases](https://github.com/yewstack/yew/releases))
-* **2024-xx-xx**: (以前のバージョン)
-  * コンポーネントのレンダリング最適化などが行われました。
+
+(出典: [GitHub Releases](https://github.com/yewstack/yew/releases))
 
 ## **16. 類似ツールとの比較**
 
