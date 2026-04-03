@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   auto-merge:
-    name: Auto merge reports only PRs by google-labs-jules or aegisfleet
+    name: Auto merge reports only PRs by authorized authors
     runs-on: ubuntu-latest
 
     steps:
@@ -49,10 +49,11 @@ jobs:
               return;
             }
 
-            const isAllowed = author.startsWith('google-labs-jules') || author === 'aegisfleet';
+            const allowedAuthors = ['google-labs-jules', 'google-labs-jules[bot]', 'aegisfleet'];
+            const isAllowed = allowedAuthors.includes(author);
 
             if (!isAllowed) {
-              core.info('PR author is not in allowed list (google-labs-jules, aegisfleet) — skipping.');
+              core.info(`PR author (${author}) is not in allowed list (${allowedAuthors.join(', ')}) — skipping.`);
               return;
             }
 
