@@ -3,26 +3,26 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 // Mock minimal environment for home.js to load
-global.window = {
+globalThis.window = {
   location: { search: '' },
   addEventListener: () => {},
   crypto: {
     getRandomValues: (arr) => arr,
   },
 };
-global.document = {
+globalThis.document = {
   addEventListener: () => {},
   querySelector: () => null,
   querySelectorAll: () => [],
   getElementById: () => null,
 };
-global.sessionStorage = { getItem: () => null, setItem: () => {} };
-global.history = { replaceState: () => {} };
+globalThis.sessionStorage = { getItem: () => null, setItem: () => {} };
+globalThis.history = { replaceState: () => {} };
 
 // Load and execute script
 const scriptPath = path.join(__dirname, '../../assets/js/home.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
-const context = vm.createContext(global);
+const context = vm.createContext(globalThis);
 vm.runInContext(scriptContent, context);
 
 const stripEmoji = context.stripEmoji;
@@ -32,17 +32,13 @@ const testCases = [
   { input: '🤖✨ Title', expected: 'Title', desc: 'Multiple leading emojis' },
   { input: '  🤖  Title', expected: 'Title', desc: 'Leading spaces and emoji' },
   { input: 'Title', expected: 'Title', desc: 'No emoji' },
-  {
-    input: 'Title 🤖',
-    expected: 'Title 🤖',
-    desc: 'Emoji at the end (should NOT be stripped by regex, but trim() might affect trailing spaces)',
-  },
+  { input: 'Title 🤖', expected: 'Title 🤖', desc: 'Emoji at the end (should NOT be stripped by regex, but trim() might affect trailing spaces)' },
   { input: '🤖', expected: '', desc: 'Only emoji' },
   { input: '   ', expected: '', desc: 'Only spaces' },
   { input: 'A 🤖 B', expected: 'A 🤖 B', desc: 'Emoji in the middle' },
   { input: '⌨️ AI coding', expected: 'AI coding', desc: 'Emoji with variation selector' },
   { input: '👨‍👩‍👧‍👦 Family', expected: 'Family', desc: 'Complex ZWJ emoji at start' },
-  { input: '  Title  ', expected: 'Title', desc: 'Just spaces (trim test)' },
+  { input: '  Title  ', expected: 'Title', desc: 'Leading and trailing spaces (trim test)' },
   { input: '🔹 Blue diamond', expected: 'Blue diamond', desc: 'Special mark at start' },
 ];
 
