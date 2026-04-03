@@ -169,7 +169,7 @@ class BrowserTestRunner:
         # Wait for at least one element to be attached
         try:
             self.page.wait_for_selector(self.args.selector, state='attached', timeout=5000)
-        except:
+        except Exception:
             pass # Continue to check count
 
         # Check for visible elements
