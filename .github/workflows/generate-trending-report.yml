@@ -1,0 +1,118 @@
+name: Generate Daily Trending Topics Report
+
+on:
+  schedule:
+    # 毎日 日本時間 8:00 (UTC 23:00)
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      focus_topic:
+        description: '特に注力して調査したいトピックがあれば指定'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  generate-trending:
+    name: Generate Daily Trending Topics using Jules API
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        
+      - name: Call Jules API to generate report
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          FOCUS_TOPIC: ${{ github.event.inputs.focus_topic }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            // 新しいテンプレートファイルを読み込み
+            const templatePath = 'templates/trending_template.md';
+            let templateContent = '';
+            try {
+              templateContent = fs.readFileSync(templatePath, 'utf8');
+              core.info(`Trending template loaded: ${templatePath}`);
+            } catch (error) {
+              core.error(`Failed to load trending template: ${error.message}`);
+              process.exit(1);
+            }
+
+            const todayJST = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
+            const focusTopic = process.env.FOCUS_TOPIC;
+
+            const promptLines = [
+              '本日のAI・開発ツール業界について、多角的な視点から重要なトピックスをまとめ、`templates/trending_template.md`の形式でレポートを作成してください。',
+              '',
+              '## 重点調査項目',
+              '以下の3つの観点から、必ず複数のツールやサービスをピックアップしてください：',
+              '1. **セキュリティ・リスク情報**: 脆弱性、設定不備による情報漏洩、悪用リスク、利用規約の変更など「今日チェックしないとまずい」もの。',
+              '2. **メジャーリリース・新機能**: 注目ツールのメジャーバージョンアップやワークフローを革新する新機能。',
+              '3. **最新トレンド**: GitHub、SNS、技術コミュニティで急速に話題になっている新しいツールやアプローチ。',
+              '',
+              focusTopic ? `## 特別注力トピック\n- ${focusTopic}\n` : '',
+              '## 指示事項',
+              `1. 本日の日付は ${todayJST} です。`,
+              '2. 以下のテンプレートの構成・形式に厳密に準拠してください。',
+              `3. 作成したレポートは \`_trending/${todayJST}.md\` というファイル名で保存してください。`,
+              '4. 1つのレポート内に、上記3つの観点から合計で少なくとも3〜5件程度のトピックスを含めてください。',
+              '5. 客観的な事実に基づき、具体的なURL（公式サイト、リリースノート等）を記載してください。',
+              '',
+              '## レポートテンプレート（厳守）',
+              '',
+              '```markdown',
+              templateContent,
+              '```'
+            ];
+
+            const prompt = promptLines.join('\n');
+
+            const requestBody = {
+              prompt: prompt,
+              sourceContext: {
+                source: `sources/github/${context.repo.owner}/${context.repo.repo}`,
+                githubRepoContext: {
+                  startingBranch: "main"
+                }
+              },
+              requirePlanApproval: false,
+              automationMode: `AUTO_CREATE_PR`,
+              title: `[Daily Topics] ${todayJST}`
+            };
+
+            const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
+            const apiKey = process.env.JULES_API_KEY;
+
+            if (!apiKey) {
+              core.error('JULES_API_KEY secret is not set');
+              process.exit(1);
+            }
+
+            try {
+              core.info('Calling Jules API...');
+              const response = await fetch(julesApiUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'X-Goog-Api-Key': apiKey
+                },
+                body: JSON.stringify(requestBody)
+              });
+
+              if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Jules API call failed: ${response.status} ${response.statusText}\n${errorText}`);
+              }
+
+              const result = await response.json();
+              core.info(`Jules API session created: ${result.sessionId}`);
+            } catch (error) {
+              core.error(`Error: ${error.message}`);
+              process.exit(1);
+            }

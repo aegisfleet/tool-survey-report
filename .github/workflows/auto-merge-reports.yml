@@ -74,9 +74,9 @@ jobs:
 
             core.info(`Changed files:\n${files.join('\n')}`);
 
-            const allUnderReports = files.every(f => f.startsWith('_reports/'));
+            const allUnderReports = files.every(f => f.startsWith('_reports/') || f.startsWith('_trending/'));
             if (!allUnderReports) {
-              core.info('At least one changed file is outside _reports/ — skipping auto-merge.');
+              core.info('At least one changed file is outside _reports/ or _trending/ — skipping auto-merge.');
               return;
             }
 
@@ -241,9 +241,9 @@ jobs:
                 // Commit and push the changes
                 execSync('git config user.name "github-actions[bot]"');
                 execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
-                execSync('git add _reports/');
-
-                const status = execSync('git status --porcelain _reports/').toString();
+                execSync('git add _reports/ _trending/');
+                
+                const status = execSync('git status --porcelain _reports/ _trending/').toString();
                 if (status.trim().length > 0) {
                   execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"');
                   execSync('git push');
@@ -268,7 +268,7 @@ jobs:
 
             // If PR is draft, convert to ready_for_review first so the merge can proceed
             if (pr.draft) {
-              core.info('PR is draft and only touches _reports/ — converting to ready and adding comment.');
+              core.info('PR is draft and only touches _reports/ or _trending/ — converting to ready and adding comment.');
 
               // GitHub CLIを使用してPRの状態を変更（gh認証は自動的に設定される）
               const exec = require('node:util').promisify(require('node:child_process').exec);
@@ -285,7 +285,7 @@ jobs:
                 owner, 
                 repo, 
                 issue_number: prNumber, 
-                body: 'このドラフトPRは `_reports/` のみを変更しているため、自動的にレビュー準備完了状態に変更され、マージされます。\n\nThis draft PR only modifies `_reports/` and was automatically converted to ready-to-review; it will be merged automatically.' 
+                body: 'このドラフトPRは `_reports/` または `_trending/` のみを変更しているため、自動的にレビュー準備完了状態に変更され、マージされます。\n\nThis draft PR only modifies `_reports/` or `_trending/` and was automatically converted to ready-to-review; it will be merged automatically.' 
               });
 
               // 明示的に状態が更新されるまで待機
@@ -328,7 +328,7 @@ jobs:
             core.info('Merging PR...');
             try {
               await github.rest.pulls.merge({ owner, repo, pull_number: prNumber, merge_method: 'squash' });
-              await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body: 'Auto-merged: changes limited to `_reports/`.' });
+              await github.rest.issues.createComment({ owner, repo, issue_number: prNumber, body: 'Auto-merged: changes limited to `_reports/` or `_trending/`.' });
               core.info('PR merged successfully.');
               // Wait 10 seconds before triggering the jekyll workflow to give GitHub a moment to settle
               core.info('Waiting 10 seconds before dispatching jekyll.yml...');
