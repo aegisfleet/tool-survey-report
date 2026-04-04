@@ -1,52 +1,52 @@
 ---
-title: "Linear 調査レポート"
-tool_name: "Linear"
-tool_reading: "リニア"
-category: "プロジェクト管理"
-developer: "Linear Orbit, Inc."
-official_site: "https://linear.app/"
-date: "2026-01-31"
-last_updated: "2026-04-05"
+title: Linear 調査レポート
+tool_name: Linear
+tool_reading: リニア
+category: プロジェクト管理
+developer: Linear Orbit, Inc.
+official_site: https://linear.app/
+date: '2026-01-31'
+last_updated: '2026-04-05'
 tags:
-  - "SaaS"
-  - "開発者ツール"
-  - "プロジェクト管理"
-  - "アジャイル"
-  - "バグトラッキング"
-description: "ソフトウェア開発チームのために設計された、高速でモダンなプロジェクト管理・課題追跡ツール"
+  - SaaS
+  - 開発者ツール
+  - プロジェクト管理
+  - アジャイル
+  - バグトラッキング
+description: ソフトウェア開発チームのために設計された、高速でモダンなプロジェクト管理・課題追跡ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$10/月"
+  starting_price: $10/月
   target_users:
-    - "ソフトウェア開発チーム"
-    - "スタートアップ"
-    - "プロダクトマネージャー"
-  latest_highlight: "UIの刷新やAIコーディングツールとの連携を強化"
-  update_frequency: "高"
+    - ソフトウェア開発チーム
+    - スタートアップ
+    - プロダクトマネージャー
+  latest_highlight: UIの刷新やAIコーディングツールとの連携を強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "圧倒的な動作速度とキーボード中心の操作性により、入力・管理のストレスが極小"
+      reason: 圧倒的な動作速度とキーボード中心の操作性により、入力・管理のストレスが極小
     - point: 5
-      reason: "開発者のワークフロー（GitHub/GitLab連携）に深く統合されている"
+      reason: 開発者のワークフロー（GitHub/GitLab連携）に深く統合されている
     - point: 5
-      reason: "美しく直感的なUI/UXで、学習コストが低い"
+      reason: 美しく直感的なUI/UXで、学習コストが低い
   minus_points:
     - point: -3
-      reason: "UIおよび公式ドキュメントが日本語未対応"
+      reason: UIおよび公式ドキュメントが日本語未対応
     - point: -2
-      reason: "Jira等と比較すると、ワークフローやフィールドのカスタマイズ性に制限がある"
-  summary: "「開発者が使いたくなる」ことを追求したツール。スピードとUXは最高峰だが、日本語対応と高度な柔軟性は課題"
+      reason: Jira等と比較すると、ワークフローやフィールドのカスタマイズ性に制限がある
+  summary: 「開発者が使いたくなる」ことを追求したツール。スピードとUXは最高峰だが、日本語対応と高度な柔軟性は課題
 links:
-  documentation: "https://linear.app/docs"
+  documentation: https://linear.app/docs
 relationships:
   related_tools:
-    - "Jira"
-    - "GitHub"
-    - "Symphony"
+    - Jira
+    - GitHub
+    - Symphony
 ---
 
 
