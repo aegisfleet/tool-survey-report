@@ -53,6 +53,7 @@ relationships:
   related_tools:
     - Google Learning
     - ChatGPT
+    - Google 広告
     - Vertex AI
     - Vertex AI Studio
     - TradingAgents
