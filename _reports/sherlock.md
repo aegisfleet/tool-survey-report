@@ -1,52 +1,44 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Sherlock 調査レポート"
-tool_name: "Sherlock"
-tool_reading: "シャーロック"
-category: "開発者ツール"
-developer: "Sherlock Project"
-official_site: "https://sherlockproject.xyz/"
-date: "2026-04-05"
-last_updated: "2026-04-05"
+title: Sherlock 調査レポート
+tool_name: Sherlock
+tool_reading: シャーロック
+category: 開発者ツール
+developer: Sherlock Project
+official_site: https://sherlockproject.xyz/
+date: '2026-04-05'
+last_updated: '2026-04-05'
 tags:
-  - "オープンソース"
-  - "セキュリティ"
-  - "Python"
-  - "CLI"
-  - "OSINT"
-description: "400以上のソーシャルネットワークを対象に、特定のユーザー名を持つアカウントを検索できるOSINTツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - セキュリティ
+  - Python
+  - CLI
+  - OSINT
+description: 400以上のソーシャルネットワークを対象に、特定のユーザー名を持つアカウントを検索できるOSINTツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "セキュリティエンジニア"
-    - "OSINTリサーチャー"
-    - "ペネトレーションテスター"
-  latest_highlight: "v0.16.0で誤検知（False Positives）の大幅な削減とコミュニティパッケージ提供"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - セキュリティエンジニア
+    - OSINTリサーチャー
+    - ペネトレーションテスター
+  latest_highlight: v0.16.0で誤検知（False Positives）の大幅な削減とコミュニティパッケージ提供
+  update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "400以上のサイトを一度に検索できる強力な機能"
+      reason: 400以上のサイトを一度に検索できる強力な機能
     - point: 5
-      reason: "オープンソースで完全に無料で利用可能"
+      reason: オープンソースで完全に無料で利用可能
   minus_points:
-    - point: -0
-      reason: ""
-  summary: "無料で強力なOSINT調査が可能なデファクトスタンダードツール"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: ''
+  summary: 無料で強力なOSINT調査が可能なデファクトスタンダードツール
 links:
-  github: "https://github.com/sherlock-project/sherlock"
-  deepwiki: "https://deepwiki.com/sherlock-project/sherlock"
+  github: https://github.com/sherlock-project/sherlock
+  deepwiki: https://deepwiki.com/sherlock-project/sherlock
 relationships:
   related_tools: []
 ---
