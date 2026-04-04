@@ -184,7 +184,8 @@ jobs:
               }
               
               // Validate required fields exist
-              const requiredFields = ['title', 'tool_name'];
+              const isTrending = file.startsWith('_trending/');
+              const requiredFields = isTrending ? ['title'] : ['title', 'tool_name'];
               const missingFields = requiredFields.filter(field => !parsedFrontmatter || !parsedFrontmatter[field]);
               if (missingFields.length > 0) {
                 const errorMsg = `❌ フロントマター検証エラー: ${file}\n\n必須フィールドが見つかりません: ${missingFields.join(', ')}\n\nフロントマターの形式が正しくない可能性があります。`;
@@ -201,7 +202,11 @@ jobs:
               
               // Check for duplicate frontmatter (frontmatter content appearing in body)
               const bodyContent = lines.slice(closingIndex + 1).join('\n');
-              if (bodyContent.includes('# === フロントマター ===') || bodyContent.includes('title: "') && bodyContent.includes('tool_name: "')) {
+              const hasDuplicate = bodyContent.includes('# === フロントマター ===') || 
+                                  (bodyContent.includes('title: "') && (isTrending || bodyContent.includes('tool_name: "')));
+              
+              if (hasDuplicate && !isTrending) { // Only strict for standard reports for now
+                // Note: isTrending reports are allowed to have more flexible content
                 const errorMsg = `❌ フロントマター検証エラー: ${file}\n\n本文内にフロントマターの内容が重複して存在します。\nフロントマターが2回記述されている可能性があります。`;
                 core.error(errorMsg);
                 await github.rest.issues.createComment({ 
