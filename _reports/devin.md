@@ -49,6 +49,7 @@ relationships:
   children:
     - DeepWiki
   related_tools:
+    - Accomplish
     - GitHub Copilot
     - Claude Code
     - Cursor
