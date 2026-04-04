@@ -1,54 +1,51 @@
 ---
-title: "Google 広告 調査レポート"
-tool_name: "Google 広告"
-tool_reading: "グーグルコウコク / グーグルアズ"
-category: "その他"
-developer: "Google"
-official_site: "https://business.google.com/jp/google-ads/"
-date: "2026-04-04"
-last_updated: "2026-04-04"
+title: Google 広告 調査レポート
+tool_name: Google 広告
+tool_reading: グーグルコウコク / グーグルアズ
+category: その他
+developer: Google
+official_site: https://business.google.com/jp/google-ads/
+date: '2026-04-04'
+last_updated: '2026-04-04'
 tags:
-  - "SaaS"
-  - "クラウド"
-  - "マーケティング"
-description: "Google検索、YouTube、その他数百万のサイトやアプリに広告を掲載できる、世界最大級のオンライン広告プラットフォーム。"
-
+  - SaaS
+  - クラウド
+  - マーケティング
+description: Google検索、YouTube、その他数百万のサイトやアプリに広告を掲載できる、世界最大級のオンライン広告プラットフォーム。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "予算は自由に設定可能"
+  starting_price: 予算は自由に設定可能
   target_users:
-    - "全規模の企業"
-    - "マーケター"
-    - "EC事業者"
-  latest_highlight: "2026年1月にエージェンティック・ショッピング時代に向けた新ツールと戦略を発表"
-  update_frequency: "高"
-
+    - 全規模の企業
+    - マーケター
+    - EC事業者
+  latest_highlight: 2026年1月にエージェンティック・ショッピング時代に向けた新ツールと戦略を発表
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "検索、YouTube、ディスプレイなど、圧倒的なリーチと在庫量"
+      reason: 検索、YouTube、ディスプレイなど、圧倒的なリーチと在庫量
     - point: 5
-      reason: "P-MAXなどのAI機能による高度な自動化と最適化"
+      reason: P-MAXなどのAI機能による高度な自動化と最適化
     - point: 5
-      reason: "Google アナリティクスなどのエコシステムとの強力な連携"
+      reason: Google アナリティクスなどのエコシステムとの強力な連携
   minus_points:
     - point: -3
-      reason: "競合性が高く、クリック単価（CPC）が上昇傾向にある"
+      reason: 競合性が高く、クリック単価（CPC）が上昇傾向にある
     - point: -2
-      reason: "機能が多岐にわたり、初心者が使いこなすには学習コストが高い"
-  summary: "Webマーケティングにおいて必須級のツールであり、機能・リーチ共に最高水準だが、運用スキルまたはAIへの適切な指示が求められる"
-
+      reason: 機能が多岐にわたり、初心者が使いこなすには学習コストが高い
+  summary: Webマーケティングにおいて必須級のツールであり、機能・リーチ共に最高水準だが、運用スキルまたはAIへの適切な指示が求められる
 relationships:
   related_tools:
-    - "Gemini"
-    - "Google Cloud"
-    - "Salesforce"
-    - "Zapier"
-    - "Looker Studio"
-    - "Microsoft 広告"
+    - Gemini
+    - Google Cloud
+    - Salesforce
+    - Zapier
+    - Looker Studio
+    - Microsoft 広告
 ---
 
 # **Google 広告 調査レポート**
