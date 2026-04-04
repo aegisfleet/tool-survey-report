@@ -62,6 +62,7 @@ relationships:
     - Quality Tracker
     - Findy Team+
     - Jujutsu
+    - Linear
 ---
 
 

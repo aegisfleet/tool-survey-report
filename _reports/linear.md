@@ -6,23 +6,23 @@ category: プロジェクト管理
 developer: Linear Orbit, Inc.
 official_site: https://linear.app/
 date: '2026-01-31'
-last_updated: '2026-01-31'
+last_updated: '2026-04-05'
 tags:
   - SaaS
+  - 開発者ツール
+  - プロジェクト管理
   - アジャイル
   - バグトラッキング
-  - プロジェクト管理
-  - 開発者ツール
 description: ソフトウェア開発チームのために設計された、高速でモダンなプロジェクト管理・課題追跡ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: $10/user/月
+  starting_price: $10/月
   target_users:
     - ソフトウェア開発チーム
     - スタートアップ
     - プロダクトマネージャー
-  latest_highlight: 2026年1月にJira Epic同期機能やSlack Agentの全プラン開放を実施
+  latest_highlight: UIの刷新やAIコーディングツールとの連携を強化
   update_frequency: 高
 evaluation:
   score: 85
@@ -39,7 +39,7 @@ evaluation:
       reason: UIおよび公式ドキュメントが日本語未対応
     - point: -2
       reason: Jira等と比較すると、ワークフローやフィールドのカスタマイズ性に制限がある
-  summary: 「開発者が使いたくなる」ことを追求したツール。スピードとUXは最高峰だが、日本語対応と高度な柔軟性は課題。
+  summary: 「開発者が使いたくなる」ことを追求したツール。スピードとUXは最高峰だが、日本語対応と高度な柔軟性は課題
 links:
   documentation: https://linear.app/docs
 relationships:
@@ -62,8 +62,6 @@ relationships:
 * **公式サイト**: [https://linear.app/](https://linear.app/)
 * **関連リンク**:
   * ドキュメント: [https://linear.app/docs](https://linear.app/docs)
-  * Changelog: [https://linear.app/changelog](https://linear.app/changelog)
-  * レビューサイト: [G2](https://www.g2.com/products/linear/reviews)
 * **カテゴリ**: プロジェクト管理
 * **概要**: ソフトウェア開発プロジェクトを効率的に計画・実行するために設計された課題追跡ツール。「Magic back to software」を掲げ、圧倒的な動作速度、モダンなデザイン、そしてエンジニアのワークフローに最適化された機能群を提供する。
 
@@ -124,8 +122,8 @@ relationships:
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
 | **Free** | 無料 | 無制限メンバー、2チームまで、250 Issuesまで。 |
-| **Basic** | $10/ユーザー/月 | 5チームまで、Issue数無制限、ファイルアップロード無制限、Adminロール。 |
-| **Business** | $16/ユーザー/月 | チーム数無制限、Private Teams、Linear Insights、Linear Asks、SLA、SSO(Google)。 |
+| **Basic** | $10/月 | 5チームまで、Issue数無制限、ファイルアップロード無制限、Adminロール。 |
+| **Business** | $16/月 | チーム数無制限、Private Teams、Linear Insights、Linear Asks、SLA、SSO(Google)。 |
 | **Enterprise** | 要問い合わせ | SAML/SCIM、高度なセキュリティ、専任サポート、データレジデンシー。 |
 
 * **課金体系**: ユーザー数単位のサブスクリプション。
@@ -187,7 +185,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, X (Twitter)
+* **調査対象**: G2 (Google検索スニペットより), X (Twitter)
 * **総合評価**: 4.5/5.0 (G2)
 * **ポジティブな評価**:
   * 「Jiraから移行したら、チームの生産性が上がったし、何よりツールを開くのが苦痛じゃなくなった。」
@@ -197,14 +195,17 @@ relationships:
   * 「複雑な権限設定や承認フローが必要な大企業的な運用には向かない。」
   * 「ガントチャート機能がもっと高機能だと嬉しい。」
   * 「日本語UIがないので、非エンジニアのメンバーへの導入障壁がある。」
+* **特徴的なユースケース**:
+  * スピードとキーボード操作を重視するエンジニアリングチームでのアジャイル開発の中核としての利用。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-01**: **UI Refresh**: プロダクト全体のUIを刷新し、より直感的で高速な操作を実現。
+* **2026-03-25**: **AI Coding Tools Deeplink**: AIコーディングツール向けの追加ランチャー（Deeplink）を提供開始。
+* **2026-03-15**: **Send comment on Enter preference**: Enterキーでのコメント送信設定を追加。
 * **2026-01-29**: **Jira Epic sync**: JiraのEpicとLinearのProjectを双方向同期可能に。
 * **2026-01-22**: **Linear Agent for Slack**: SlackでのAIエージェント機能を全プランに開放。自然言語でのIssue作成などが可能に。
 * **2025-12-17**: **Team Owners Role**: チーム単位での権限管理を強化する「Team Owner」ロールを追加。
-* **2025-12-04**: **OpenAI Codex CLI Agent**: Linear内でOpenAI Codex CLIエージェントにタスクを委譲できる機能を追加。
-* **2025-11-20**: **Form Templates**: Issue作成時の入力フォームをテンプレート化し、必須項目などを設定可能に。
 
 (出典: [Linear Changelog](https://linear.app/changelog))
 
