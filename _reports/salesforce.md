@@ -48,6 +48,7 @@ relationships:
     - Tableau
   related_tools:
     - AGENTIC STAR
+    - Google 広告
 ---
 
 
