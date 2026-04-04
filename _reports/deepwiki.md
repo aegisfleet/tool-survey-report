@@ -1,45 +1,45 @@
 ---
-title: "DeepWiki 調査レポート"
-tool_name: "DeepWiki"
-tool_reading: "ディープウィキ"
-category: "ドキュメント/ナレッジ"
-developer: "Cognition"
-official_site: "https://deepwiki.com/"
-date: "2026-04-04"
-last_updated: "2026-04-04"
+title: DeepWiki 調査レポート
+tool_name: DeepWiki
+tool_reading: ディープウィキ
+category: ドキュメント/ナレッジ
+developer: Cognition
+official_site: https://deepwiki.com/
+date: '2026-04-04'
+last_updated: '2026-04-04'
 tags:
-  - "AI"
-  - "開発者ツール"
-  - "ドキュメント生成"
-description: "GitHubリポジトリのコードを解析し、AIと対話可能なドキュメント（Wiki）を自動生成するツール"
+  - AI
+  - 開発者ツール
+  - ドキュメント生成
+description: GitHubリポジトリのコードを解析し、AIと対話可能なドキュメント（Wiki）を自動生成するツール
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "OSSコントリビューター"
-  latest_highlight: "2025年10月にコードを視覚的に探索できる「Codemaps」機能を追加"
-  update_frequency: "中"
+    - 開発者
+    - OSSコントリビューター
+  latest_highlight: 2025年10月にコードを視覚的に探索できる「Codemaps」機能を追加
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "コードの各行へのディープリンクを含む詳細なドキュメントを自動生成できる"
+      reason: コードの各行へのディープリンクを含む詳細なドキュメントを自動生成できる
     - point: 3
-      reason: "生成されたドキュメントに対してチャット形式で質問が可能"
+      reason: 生成されたドキュメントに対してチャット形式で質問が可能
     - point: 5
-      reason: "AIエンジニアDevinとの連携により、シームレスなコード理解と開発が可能"
+      reason: AIエンジニアDevinとの連携により、シームレスなコード理解と開発が可能
   minus_points:
     - point: -3
-      reason: "詳細な料金プランや企業向けの管理機能に関する情報が少ない"
-  summary: "リポジトリの理解を劇的に効率化するツールであり、特にDevinユーザーにとって強力な資産となる"
+      reason: 詳細な料金プランや企業向けの管理機能に関する情報が少ない
+  summary: リポジトリの理解を劇的に効率化するツールであり、特にDevinユーザーにとって強力な資産となる
 relationships:
-  parent: "Devin"
+  parent: Devin
   related_tools:
-    - "Code Wiki"
-    - "DeepWiki-Open"
+    - Code Wiki
+    - DeepWiki-Open
 ---
 
 # **DeepWiki 調査レポート**
