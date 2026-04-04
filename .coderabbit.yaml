@@ -4,6 +4,7 @@ early_access: true
 reviews:
   path_filters:
     - "!_reports/**"
+    - "!_trending/**"
   profile: "chill"
   request_changes_workflow: true
   high_level_summary: true
