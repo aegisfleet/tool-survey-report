@@ -45,6 +45,7 @@ links:
   documentation: https://docs.openhands.dev/
 relationships:
   related_tools:
+    - Accomplish
     - Devin
     - AutoGPT
     - Google Jules
