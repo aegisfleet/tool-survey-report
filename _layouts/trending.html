@@ -2,30 +2,57 @@
 layout: default
 ---
 
-<article class="trending-article" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
-  <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-    <div style="margin-bottom: 1rem;">
-      <a href="{{ '/trending/' | relative_url }}" style="color: var(--link-color); text-decoration: none; font-size: 0.9rem;">← トレンド一覧に戻る</a>
+<article class="report-article">
+  <header class="report-header">
+    <div class="report-breadcrumb">
+      <nav aria-label="パンくずリスト">
+        <ol class="breadcrumb">
+          <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
+          <li><a href="{{ '/trending/' | relative_url }}">トレンド一覧</a></li>
+          <li aria-current="page">{{ page.title }}</li>
+        </ol>
+      </nav>
     </div>
 
-    <h1 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--text-color); line-height: 1.2;">{{ page.title }}</h1>
+    <h1 class="report-title">{{ page.title }}</h1>
     
-    <div style="display: flex; gap: 1rem; align-items: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        📅 {{ page.date | date: "%Y年%m月%d日" }}
-      </time>
+    <div class="report-meta">
+      <div class="report-date">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+        </svg>
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%Y年%m月%d日" }}
+        </time>
+      </div>
     </div>
 
     {% if page.tags and page.tags.size > 0 %}
-    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-      {% for tag in page.tags %}
-      <span style="font-size: 0.8rem; padding: 0.2rem 0.6rem; background: var(--bg-tag); color: var(--text-muted); border-radius: 12px;">#{{ tag }}</span>
-      {% endfor %}
+    <div class="report-tags">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+      </svg>
+      <ul class="tag-list">
+        {% for tag in page.tags %}
+        <li><span class="tag-link">{{ tag }}</span></li>
+        {% endfor %}
+      </ul>
     </div>
     {% endif %}
   </header>
 
-  <div class="report-content" style="line-height: 1.6; font-size: 1.05rem;">
+  <div class="report-content">
     {{ content }}
   </div>
+
+  <footer class="report-footer">
+    <div class="back-to-index">
+      <a href="{{ '/trending/' | relative_url }}" class="back-link">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        トレンド一覧に戻る
+      </a>
+    </div>
+  </footer>
 </article>
