@@ -1,8 +1,8 @@
 ---
-title: "本日の AI/開発ツール トピックス"
+title: "AI/開発トレンド: [その日の主要なトピックを15文字程度で記述]"
 date: "YYYY-MM-DD"
 last_updated: "YYYY-MM-DD"
-description: "AI・開発ツール業界の最新トレンド、セキュリティ、新機能のまとめ"
+description: "[本日の主なトピック3点程度を100文字以内で要約して記述]"
 categories: ["Daily Topics"]
 tags: ["Trending", "Security", "Releases"]
 ---
