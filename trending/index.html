@@ -1,0 +1,47 @@
+---
+layout: default
+title: "AI/開発ツール トレンド一覧"
+description: "日々の業界動向、セキュリティ情報、注目のトレンドツールをまとめたレポート一覧"
+---
+
+<div class="trending-list-container" style="max-width: 1200px; margin: 0 auto; padding: 2rem 1rem;">
+  <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+    <h1 style="font-size: 2rem; margin-bottom: 0.5rem; color: var(--text-color);">📈 {{ page.title }}</h1>
+    <p style="color: var(--text-muted);">{{ page.description }}</p>
+  </header>
+
+  <div class="trending-grid" style="display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+    {% assign sorted_trending = site.trending | sort: 'date' | reverse %}
+    {% for report in sorted_trending %}
+    <article class="trending-card report-card" style="display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; transition: transform 0.2s, box-shadow 0.2s;">
+      <h2 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 0.5rem;">
+        <a href="{{ report.url | relative_url }}" style="color: var(--link-color); text-decoration: none;">{{ report.title }}</a>
+      </h2>
+      
+      <div style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+        <time datetime="{{ report.date | date: '%Y-%m-%d' }}">
+          📅 {{ report.date | date: "%Y年%m月%d日" }}
+        </time>
+      </div>
+
+      <p style="color: var(--text-color); font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; flex-grow: 1;">
+        {{ report.description | truncate: 120 }}
+      </p>
+
+      {% if report.tags and report.tags.size > 0 %}
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px dashed var(--border-color);">
+        {% for tag in report.tags limit:3 %}
+        <span style="font-size: 0.75rem; padding: 0.2rem 0.5rem; background: var(--bg-tag); border-radius: 12px; color: var(--text-muted);">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+
+  {% if site.trending.size == 0 %}
+  <div style="text-align: center; padding: 3rem; background: var(--bg-card); border-radius: 8px; color: var(--text-muted);">
+    まだトレンドレポートがありません。
+  </div>
+  {% endif %}
+</div>

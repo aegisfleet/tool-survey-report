@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="trending-article" style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+  <header style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+    <div style="margin-bottom: 1rem;">
+      <a href="{{ '/trending/' | relative_url }}" style="color: var(--link-color); text-decoration: none; font-size: 0.9rem;">← トレンド一覧に戻る</a>
+    </div>
+
+    <h1 style="font-size: 2.25rem; margin-bottom: 1rem; color: var(--text-color); line-height: 1.2;">{{ page.title }}</h1>
+    
+    <div style="display: flex; gap: 1rem; align-items: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        📅 {{ page.date | date: "%Y年%m月%d日" }}
+      </time>
+    </div>
+
+    {% if page.tags and page.tags.size > 0 %}
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      {% for tag in page.tags %}
+      <span style="font-size: 0.8rem; padding: 0.2rem 0.6rem; background: var(--bg-tag); color: var(--text-muted); border-radius: 12px;">#{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="report-content" style="line-height: 1.6; font-size: 1.05rem;">
+    {{ content }}
+  </div>
+</article>

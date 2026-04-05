@@ -16,6 +16,30 @@ layout: default
 
   <main class="home-content">
 
+    <!-- トレンドレポート -->
+    <section class="daily-trends" style="margin-bottom: 2.5rem;">
+      <div class="trends-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 style="margin-bottom: 0.25rem;">📈 最新トレンド情報</h2>
+          <p class="trends-desc" style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">AI・開発ツール業界の日々の動向とセキュリティ情報</p>
+        </div>
+        <a href="{{ '/trending/' | relative_url }}" class="trends-link" style="color: var(--link-color); font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.5rem 1rem; border: 1px solid var(--link-color); border-radius: 20px; transition: all 0.2s; font-size: 0.9rem;">
+          すべてのトレンドを見る
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="trends-grid" style="display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));">
+        {% assign recent_trends = site.trending | sort: 'date' | reverse | slice: 0, 3 %}
+        {% for trend in recent_trends %}
+        <a href="{{ trend.url | relative_url }}" class="trend-card" style="display: flex; flex-direction: column; padding: 1.25rem; background: var(--bg-secondary, rgba(0,0,0,0.02)); border: 1px solid var(--border-color); border-radius: 8px; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; height: 100%;">
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">📅 {{ trend.date | date: "%Y年%m月%d日" }}</div>
+          <h3 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: var(--text-color); line-height: 1.4;">{{ trend.title }}</h3>
+          <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.5; flex-grow: 1;">{{ trend.description }}</p>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+
     <!-- ランダムピックアップ -->
     <section class="random-picks">
       <div class="picks-header">

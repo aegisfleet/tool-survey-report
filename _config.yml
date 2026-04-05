@@ -19,6 +19,9 @@ collections:
   reports:
     output: true
     permalink: "/reports/:name/"
+  trending:
+    output: true
+    permalink: "/trending/:name/"
 
 # Default front matter
 defaults:
@@ -27,6 +30,11 @@ defaults:
       type: "reports"
     values:
       layout: "report"
+  - scope:
+      path: ""
+      type: "trending"
+    values:
+      layout: "trending"
   - scope:
       path: ""
       type: "posts"
