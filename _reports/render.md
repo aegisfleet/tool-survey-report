@@ -6,13 +6,12 @@ category: インフラ/クラウド
 developer: Render, Inc.
 official_site: https://render.com
 date: '2026-01-31'
-last_updated: '2026-01-31'
+last_updated: '2026-04-06'
 tags:
-  - Docker
-  - PaaS
-  - PostgreSQL
   - クラウド
-  - ホスティング
+  - 開発者ツール
+  - コンテナ
+  - PaaS
 description: 開発者がインフラ管理から解放され、コードを書くことに集中できる、HerokuライクなモダンPaaS
 quick_summary:
   has_free_plan: true
@@ -22,7 +21,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - 個人開発者
-  latest_highlight: 2026年1月にBlueprintファイルの検証機能をCLI/APIに追加
+  latest_highlight: 2026年3月に監査ログ機能が強化（送信元IP・ユーザーエージェントの記録等）され、Render CLI v2.8.0もリリース
   update_frequency: 高
 evaluation:
   score: 85
@@ -201,12 +200,13 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-25**: 監査ログの更新。EndShellEventタイプが追加され、送信元IPとユーザーエージェントのメタデータ記録に対応。
+* **2026-02-24**: 無料Webサービスが、既存の接続からの受信WebSocketメッセージによってもスピンダウンを遅延させるように改善。
+* **2026-02-10**: Render CLI v2.8.0 がリリース。
 * **2026-01-28**: **Blueprint Validation**: CLIとAPIで `render.yaml` ファイルの検証が可能に。
 * **2025-12-17**: **Logs UX Improved**: ダッシュボードとCLIでのログ閲覧体験が向上（無限スクロール、詳細表示）。
 * **2025-12-10**: **Jules Integration**: Google LabsのAI「Jules」によるビルドエラーの自律デバッグ機能を追加。
 * **2025-11-21**: **Postgres Credentials Rotation**: マネージドユーザー作成によるクレデンシャルローテーション機能。
-* **2025-11-06**: **Storage Autoscaling**: Postgresデータベースのストレージ自動拡張機能。
-* **2025-10-27**: **Blueprints Projects**: IaCでプロジェクトと環境（Project/Environment）の定義をサポート。
 
 (出典: [Render Changelog](https://render.com/changelog))
 
