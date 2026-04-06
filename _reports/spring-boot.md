@@ -5,8 +5,8 @@ tool_reading: スプリングブート
 category: Webフレームワーク
 developer: Broadcom (VMware)
 official_site: https://spring.io/projects/spring-boot
-date: '2026-01-31'
-last_updated: '2026-01-31'
+date: '2026-04-06'
+last_updated: '2026-04-06'
 tags:
   - Java
   - オープンソース
@@ -41,8 +41,8 @@ evaluation:
   summary: 成熟したエコシステムと高い生産性を誇るJavaの標準フレームワークだが、クラウドネイティブ性能では競合に譲る面もある。
 links:
   github: https://github.com/spring-projects/spring-boot
-  codewiki: https://codewiki.google/github.com/spring-projects/spring-boot
   deepwiki: https://deepwiki.com/spring-projects/spring-boot
+  codewiki: https://codewiki.google/github.com/spring-projects/spring-boot
   documentation: https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 relationships:
   related_tools:
@@ -64,7 +64,6 @@ relationships:
 * **公式サイト**: [https://spring.io/projects/spring-boot](https://spring.io/projects/spring-boot)
 * **関連リンク**:
   * GitHub: [https://github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot)
-  * CodeWiki: [https://codewiki.google/github.com/spring-projects/spring-boot](https://codewiki.google/github.com/spring-projects/spring-boot)
   * ドキュメント: [https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
 * **カテゴリ**: Webフレームワーク
 * **概要**: Spring Bootは、本番環境に対応したスタンドアロンなSpringベースのアプリケーションを最小限の設定で迅速に構築できるJavaフレームワークです。「設定より規約」の考え方を採用し、複雑な設定作業を大幅に削減することで、開発者がビジネスロジックに集中できる環境を提供します。
