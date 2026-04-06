@@ -35,8 +35,6 @@ evaluation:
 links:
   documentation: https://manual.wasurenai.jp/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Notion
     - Salesforce
