@@ -2,7 +2,7 @@
 title: "AI/開発トレンド: [その日の主要なトピックを15文字程度で記述]"
 date: "YYYY-MM-DD"
 last_updated: "YYYY-MM-DD"
-description: "[本日の主なトピック3点程度を100文字以内で要約して記述]"
+description: "[本日の主なトピック3点程度を100文字程度で要約して記述]"
 categories: ["Daily Topics"]
 tags: ["Trending", "Security", "Releases"]
 ---
