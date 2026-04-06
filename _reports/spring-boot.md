@@ -1,54 +1,54 @@
 ---
-title: "Spring Boot 調査レポート"
-tool_name: "Spring Boot"
-tool_reading: "スプリングブート"
-category: "Webフレームワーク"
-developer: "Broadcom (VMware)"
-official_site: "https://spring.io/projects/spring-boot"
-date: "2026-04-06"
-last_updated: "2026-04-06"
+title: Spring Boot 調査レポート
+tool_name: Spring Boot
+tool_reading: スプリングブート
+category: Webフレームワーク
+developer: Broadcom (VMware)
+official_site: https://spring.io/projects/spring-boot
+date: '2026-04-06'
+last_updated: '2026-04-06'
 tags:
-  - "Java"
-  - "オープンソース"
-  - "マイクロサービス"
-  - "開発者ツール"
-description: "本番環境に対応したスタンドアロンなSpringベースのアプリケーションを最小限の設定で迅速に構築できるJavaベースのWebフレームワーク。"
+  - Java
+  - オープンソース
+  - マイクロサービス
+  - 開発者ツール
+description: 本番環境に対応したスタンドアロンなSpringベースのアプリケーションを最小限の設定で迅速に構築できるJavaベースのWebフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Java開発者"
-    - "バックエンドエンジニア"
-    - "企業"
-  latest_highlight: "2025年11月に次世代の基盤となるSpring Boot 4.0がリリース"
-  update_frequency: "高"
+    - Java開発者
+    - バックエンドエンジニア
+    - 企業
+  latest_highlight: 2025年11月に次世代の基盤となるSpring Boot 4.0がリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Springエコシステムとの強力な連携と、非常に豊富な機能を持つため"
+      reason: Springエコシステムとの強力な連携と、非常に豊富な機能を持つため
     - point: 5
-      reason: "圧倒的なコミュニティの規模と、充実した公式ドキュメントが存在するため"
+      reason: 圧倒的なコミュニティの規模と、充実した公式ドキュメントが存在するため
     - point: 5
-      reason: "高い生産性と優れた開発者体験を提供し、業界のデファクトスタンダードであるため"
+      reason: 高い生産性と優れた開発者体験を提供し、業界のデファクトスタンダードであるため
   minus_points:
     - point: -3
-      reason: "Spring Frameworkの知識が前提となり、初学者の学習コストが比較的高いため"
+      reason: Spring Frameworkの知識が前提となり、初学者の学習コストが比較的高いため
     - point: -2
-      reason: "Quarkusなどの競合と比較して、起動時間やメモリ消費量で劣るため"
-  summary: "成熟したエコシステムと高い生産性を誇るJavaの標準フレームワークだが、クラウドネイティブ性能では競合に譲る面もある。"
+      reason: Quarkusなどの競合と比較して、起動時間やメモリ消費量で劣るため
+  summary: 成熟したエコシステムと高い生産性を誇るJavaの標準フレームワークだが、クラウドネイティブ性能では競合に譲る面もある。
 links:
-  github: "https://github.com/spring-projects/spring-boot"
-  deepwiki: "https://deepwiki.com/spring-projects/spring-boot"
-  codewiki: "https://codewiki.google/github.com/spring-projects/spring-boot"
-  documentation: "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/"
+  github: https://github.com/spring-projects/spring-boot
+  deepwiki: https://deepwiki.com/spring-projects/spring-boot
+  codewiki: https://codewiki.google/github.com/spring-projects/spring-boot
+  documentation: https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/
 relationships:
   related_tools:
-    - "JUnit"
-    - "Database Rider"
-    - "IntelliJ IDEA"
+    - JUnit
+    - Database Rider
+    - IntelliJ IDEA
 ---
 
 
