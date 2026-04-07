@@ -35,6 +35,9 @@ evaluation:
   summary: クリエイターへの還元率が高く、気軽な投げ銭から月額メンバーシップまで多様なニーズに応える優れたプラットフォーム
 links:
   documentation: https://support.ofuse.me/hc
+relationships:
+  related_tools:
+    - codoc
 ---
 
 # **OFUSE 調査レポート**
