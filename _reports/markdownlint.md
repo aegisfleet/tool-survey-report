@@ -2,7 +2,7 @@
 title: markdownlint 調査レポート
 tool_name: markdownlint
 tool_reading: マークダウンリント
-category: 開発者ツール
+category: コード品質
 developer: David Anson
 official_site: https://github.com/DavidAnson/markdownlint
 date: '2026-04-07'

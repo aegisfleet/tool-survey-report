@@ -2,7 +2,7 @@
 title: まん福 調査レポート
 tool_name: まん福
 tool_reading: マンプク
-category: ふるさと納税
+category: その他
 developer: 株式会社SHIFT
 official_site: https://www.manpuku.app/
 date: '2026-02-06'

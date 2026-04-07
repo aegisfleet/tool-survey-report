@@ -2,7 +2,7 @@
 title: Vercel 調査レポート
 tool_name: Vercel
 tool_reading: ヴァーセル
-category: インフラ/クラウド
+category: OS/プラットフォーム
 developer: Vercel Inc.
 official_site: https://vercel.com
 date: '2025-10-22'

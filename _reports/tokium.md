@@ -2,7 +2,7 @@
 title: TOKIUM 調査レポート
 tool_name: TOKIUM
 tool_reading: トキウム
-category: BIツール
+category: データ分析
 developer: 株式会社TOKIUM
 official_site: https://www.keihi.com/
 date: '2026-02-21'

@@ -2,7 +2,7 @@
 title: Squid 調査レポート
 tool_name: Squid
 tool_reading: スクイッド
-category: プロキシサーバー
+category: インフラ/クラウド
 developer: Squid Project
 official_site: https://www.squid-cache.org/
 date: '2026-03-30'

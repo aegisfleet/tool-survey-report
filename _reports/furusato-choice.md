@@ -2,7 +2,7 @@
 title: ふるさとチョイス 調査レポート
 tool_name: ふるさとチョイス
 tool_reading: ふるさとチョイス
-category: ふるさと納税
+category: その他
 developer: 株式会社トラストバンク
 official_site: https://www.furusato-tax.jp/
 date: '2026-02-06'

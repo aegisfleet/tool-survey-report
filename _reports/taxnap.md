@@ -2,7 +2,7 @@
 title: タックスナップ 調査レポート
 tool_name: タックスナップ
 tool_reading: タックスナップ
-category: BIツール
+category: データ分析
 developer: 株式会社タックスナップ
 official_site: https://taxnap.com/
 date: '2026-03-01'

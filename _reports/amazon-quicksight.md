@@ -2,7 +2,7 @@
 title: Amazon QuickSight 調査レポート
 tool_name: Amazon QuickSight
 tool_reading: アマゾン クイックサイト
-category: BIツール
+category: データ分析
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/quicksight/
 date: '2026-03-17'

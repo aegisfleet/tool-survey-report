@@ -2,7 +2,7 @@
 title: AluminiumOS 調査レポート
 tool_name: AluminiumOS
 tool_reading: アルミニウムオーエス
-category: オペレーティングシステム
+category: OS/プラットフォーム
 developer: Google
 official_site: https://aluminium-os.com/
 date: '2026-02-03'

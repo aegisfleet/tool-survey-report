@@ -2,7 +2,7 @@
 title: ワスレナイ 調査レポート
 tool_name: ワスレナイ
 tool_reading: ワスレナイ
-category: 開発者ツール
+category: ユーティリティ
 developer: 株式会社SHIFT
 official_site: https://lp.wasurenai.jp/
 date: '2026-02-06'

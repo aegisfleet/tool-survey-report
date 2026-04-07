@@ -2,7 +2,7 @@
 title: OFUSE 調査レポート
 tool_name: OFUSE
 tool_reading: オフセ
-category: SaaS
+category: EC/決済
 developer: 株式会社Sozi
 official_site: https://ofuse.me/
 date: '2026-04-07'

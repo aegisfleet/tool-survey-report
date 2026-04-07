@@ -2,7 +2,7 @@
 title: Node.js 調査レポート
 tool_name: Node.js
 tool_reading: ノードジェイエス
-category: 開発者ツール
+category: OS/プラットフォーム
 developer: OpenJS Foundation
 official_site: https://nodejs.org/
 date: '2026-01-29'

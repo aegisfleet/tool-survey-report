@@ -2,7 +2,7 @@
 title: dockur/windows 調査レポート
 tool_name: dockur/windows
 tool_reading: ドッカー・ウィンドウズ
-category: 開発者ツール
+category: OS/プラットフォーム
 developer: dockur
 official_site: https://github.com/dockur/windows
 date: '2026-02-05'

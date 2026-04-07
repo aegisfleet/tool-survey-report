@@ -2,7 +2,7 @@
 title: POPOPO 調査レポート
 tool_name: POPOPO
 tool_reading: ポポポ
-category: コミュニケーション
+category: ドキュメント/ナレッジ
 developer: POPOPO株式会社
 official_site: https://www.popopo.com/ja/
 date: '2026-03-19'

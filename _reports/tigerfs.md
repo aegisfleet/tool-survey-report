@@ -2,7 +2,7 @@
 title: TigerFS 調査レポート
 tool_name: TigerFS
 tool_reading: タイガーエフエス
-category: ファイルシステム
+category: 開発者ツール
 developer: Timescale
 official_site: https://tigerfs.io/
 date: '2026-04-05'

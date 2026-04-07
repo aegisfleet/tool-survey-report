@@ -2,7 +2,7 @@
 title: Keepa 調査レポート
 tool_name: Keepa
 tool_reading: キーパ
-category: BIツール
+category: データ分析
 developer: Keepa.com
 official_site: https://keepa.com/
 date: '2026-02-25'

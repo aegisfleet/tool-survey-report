@@ -2,7 +2,7 @@
 title: Tableau 調査レポート
 tool_name: Tableau
 tool_reading: タブロー
-category: BIツール
+category: データ分析
 developer: Salesforce
 official_site: https://www.tableau.com/
 date: '2026-01-28'

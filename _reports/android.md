@@ -2,7 +2,7 @@
 title: Android 調査レポート
 tool_name: Android
 tool_reading: アンドロイド
-category: オペレーティングシステム
+category: OS/プラットフォーム
 developer: Google (AOSP)
 official_site: https://source.android.com/
 date: '2026-02-03'

@@ -2,7 +2,7 @@
 title: Snowflake 調査レポート
 tool_name: Snowflake
 tool_reading: スノーフレイク
-category: BIツール
+category: データ分析
 developer: Snowflake Inc.
 official_site: https://www.snowflake.com/
 date: '2026-03-30'
