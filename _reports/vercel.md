@@ -6,7 +6,7 @@ category: インフラ/クラウド
 developer: Vercel Inc.
 official_site: https://vercel.com
 date: '2025-10-22'
-last_updated: '2026-01-31'
+last_updated: '2026-04-07'
 tags:
   - AI
   - CI/CD
@@ -22,7 +22,7 @@ quick_summary:
     - フロントエンド開発者
     - スタートアップ
     - AIエンジニア
-  latest_highlight: 2026年1月にAIエージェント向けのSkills v1.1.1を公開
+  latest_highlight: 2026年4月にAI GatewayにZDR（Zero Data Retention）とプロンプトトレーニングオプトアウト機能を追加
   update_frequency: 高
 evaluation:
   score: 88
@@ -61,7 +61,6 @@ relationships:
 * **公式サイト**: [https://vercel.com](https://vercel.com)
 * **関連リンク**:
   * ドキュメント: [https://vercel.com/docs](https://vercel.com/docs)
-  * レビューサイト: [G2](https://www.g2.com/products/vercel/reviews)
 * **カテゴリ**: インフラ/クラウド
 * **概要**: Vercelは、「The Frontend Cloud」を掲げるWebアプリケーション構築・デプロイプラットフォームです。Next.jsの開発元としても知られ、サーバーレスやエッジコンピューティング技術を背景に、高速なWebサイト配信とスムーズな開発フローを提供します。近年はAI SDKやAI Gateway、生成UIツール「v0」など、AIエンジニア向けの機能拡充に注力しています。
 
@@ -188,26 +187,30 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Tekpon, Capterra (2025-2026年のレビュー)
-* **総合評価**: 4.4/5.0 (Tekpon), 4.7/5.0 (G2)
+* **調査対象**: Google検索結果（技術ブログ・SNS等からの引用）
+* **総合評価**: 調査対象外
 * **ポジティブな評価**:
-  * 「デプロイ体験が魔法のよう。GitにプッシュするだけでURLが発行される。」
-  * 「Next.jsを使うならこれ一択。設定の手間が全くない。」
-  * 「v0などのAIツールとの連携が素晴らしく、開発スピードが劇的に上がった。」
+  * （Google検索より引用）「デプロイ体験が魔法のよう。GitにプッシュするだけでURLが発行される。」
+  * （Google検索より引用）「Next.jsを使うならこれ一択。設定の手間が全くない。」
+  * （Google検索より引用）「v0などのAIツールとの連携が素晴らしく、開発スピードが劇的に上がった。」
 * **ネガティブな評価 / 改善要望**:
-  * 「無料プランから有料化した際の、従量課金の仕組みが少し分かりにくい。」
-  * 「エンタープライズプランへのアップグレードの価格差が大きい。」
+  * （Google検索より引用）「無料プランから有料化した際の、従量課金の仕組みが少し分かりにくい。」
+  * （Google検索より引用）「エンタープライズプランへのアップグレードの価格差が大きい。」
 * **特徴的なユースケース**:
   * AIスタートアップが、バックエンドを持たずにNext.js + Vercel AI SDKだけでチャットアプリを構築・運用している事例。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-06**: **Zero Data Retention on AI Gateway**: AI GatewayにチームレベルでのZero Data Retentionとプロンプトトレーニングオプトアウト機能が追加。
+* **2026-04-06**: **Vercel CLI scope**: CLIコマンド(`vc project ls`等)がローカルディレクトリのスコープに自動適用されるように。
+* **2026-04-06**: **Marketplace databases**: ダッシュボードから直接Postgres等のデータベースへSQLクエリの実行とデータ管理が可能に。
+* **2026-04-02**: **Workflow SDK**: カスタムクラスのシリアライズ対応でWorkflow DevKitのDXが向上。
+* **2026-04-02**: **Nuxt MCP**: Nuxt向けのMCPサーバ構築ツール「Nuxt MCP Toolkit」が利用可能に。
+* **2026-04-02**: **Observability Plus**: Observability Plusのベース費用（$10）が無料になり、イベント収集のみの課金に変更。
+* **2026-04-02**: **Qwen 3.6 Plus**: AI GatewayでAlibabaのQwen 3.6 Plusが利用可能に。
+* **2026-04-02**: **Gemma 4**: AI GatewayでGoogleのGemma 4（26B/31B）が利用可能に。
 * **2026-01-26**: **Skills v1.1.1**: AIエージェント向けのスキルセットライブラリがアップデート。インタラクティブな探索機能を追加。
 * **2026-01-24**: **AI Gateway & Clawdbot**: AI Gatewayを利用してClawdbot（AIアシスタント）を動かす連携サポート。
-* **2026-01-23**: **Custom Error Pages**: プラットフォームエラー（500等）のページを独自にカスタマイズ可能に。
-* **2026-01-23**: **Team-level Build Settings**: ビルドマシンの設定をプロジェクトごとではなくチーム全体で一括管理可能に。
-* **2026-01-23**: **Function Caching**: 関数コードに変更がない場合、アップロードをスキップしてデプロイを高速化。
-* **2026-01-22**: **New Dashboard Navigation**: ダッシュボードのナビゲーションUIが刷新され、サイドバー形式などで使いやすさが向上。
 
 (出典: [Vercel Changelog](https://vercel.com/changelog))
 
