@@ -35,7 +35,7 @@ evaluation:
       reason: 料金プランが公開されておらず、問い合わせが必要
   summary: 日本のエンジニア組織に特化した強力な分析ツール。開発生産性の可視化から改善までをワンストップで支援する。
 links:
-  documentation: https://help.findy-team.io/
+  documentation: https://findy-team.io/
 relationships:
   parent: null
   children: []
@@ -57,7 +57,7 @@ relationships:
 * **開発元**: ファインディ株式会社 (Findy Inc.)
 * **公式サイト**: [https://findy-team.io/](https://findy-team.io/)
 * **関連リンク**:
-  * ドキュメント: [https://help.findy-team.io/](https://help.findy-team.io/)
+  * ドキュメント: [https://findy-team.io/](https://findy-team.io/)
 * **カテゴリ**: 開発者ツール
 * **概要**: GitHub、GitLab、Jiraなどの開発ツールと連携し、エンジニアリング組織の生産性やパフォーマンスを自動で可視化・分析するサービス。「Four Keys」や「SPACE」フレームワークなどの指標を用い、チームの振り返りやプロセス改善を支援する。
 

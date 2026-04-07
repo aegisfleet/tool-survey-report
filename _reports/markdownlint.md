@@ -55,7 +55,6 @@ relationships:
 * **公式サイト**: [https://github.com/DavidAnson/markdownlint](https://github.com/DavidAnson/markdownlint)
 * **関連リンク**:
   * GitHub: [https://github.com/DavidAnson/markdownlint](https://github.com/DavidAnson/markdownlint)
-  * CodeWiki: [https://codewiki.google/github.com/DavidAnson/markdownlint](https://codewiki.google/github.com/DavidAnson/markdownlint)
   * ドキュメント: [https://github.com/DavidAnson/markdownlint/tree/main/doc](https://github.com/DavidAnson/markdownlint/tree/main/doc)
 * **カテゴリ**: 開発者ツール
 * **概要**: markdownlintは、Markdown（およびCommonMark）ファイルのスタイルチェックや構文エラーの検出を自動で行うためのNode.jsライブラリおよびLinterツール。ドキュメントの品質向上と、チーム内での書き方の一貫性を保つために広く利用されている。
