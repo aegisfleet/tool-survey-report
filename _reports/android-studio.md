@@ -6,17 +6,13 @@ category: モバイル開発
 developer: Google
 official_site: https://developer.android.com/studio
 date: '2025-11-28'
-last_updated: '2026-02-01'
+last_updated: '2026-04-07'
 tags:
   - AI
-  - Android
-  - Gemini
-  - Google
-  - IDE
-  - Kotlin
   - エージェント
-  - モバイル開発
   - 開発者ツール
+  - IDE
+  - Android
 description: Googleが提供するAndroidアプリ開発のための公式統合開発環境（IDE）。Gemini AIによるエージェント機能やMCPサポートが統合され、AIファーストな開発環境へと進化している。
 quick_summary:
   has_free_plan: true
@@ -25,7 +21,7 @@ quick_summary:
   target_users:
     - Android開発者
     - モバイルアプリ開発者
-  latest_highlight: 2026年1月に安定版「Otter 3 Feature Drop」と、次期版「Panda」のCanary/RCがリリース。AIエージェント機能（UI生成、デバイス操作）が大幅強化。
+  latest_highlight: 2026年4月に次期版「Panda」の安定版リリースに向けたアップデートが進行中。AIエージェント機能（UI生成、デバイス操作）がさらに強化。
   update_frequency: 高
 evaluation:
   score: 96
@@ -47,14 +43,12 @@ links:
   documentation: https://developer.android.com/studio/docs
 relationships:
   parent: IntelliJ IDEA
+  children: []
   related_tools:
-    - Eclipse IDE
-    - Android
+    - Eclipse
     - Flutter
     - Kotlin Multiplatform
     - Visual Studio Code
-    - Cursor
-    - Windsurf
 ---
 
 
@@ -188,7 +182,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Reddit, 開発者ブログ (2026年1月時点)
+* **調査対象**: G2, Reddit, 開発者ブログ (2026年4月時点)
 * **総合評価**: 4.6/5.0 (推定)
 * **ポジティブな評価**:
   * 「Agent ModeでのUI作成が魔法のようだ。手書きスケッチから動くコードが一瞬でできる」
@@ -203,14 +197,14 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-01**: **Panda Feature Update**
+  * AIエージェントの精度向上およびComposeプレビューの最適化。
 * **2026-01-30**: **Otter 3 Feature Drop (2025.2.3)**
   * 安定版リリース。App Links AI Assistant、Agent ModeでのUI開発強化、ローカルLLM対応、MCPサポート、自動Logcatリトレースなどが追加。
 * **2026-01-XX**: **Panda | 2025.3.1 Canary / RC**
   * 次期メジャーバージョンのプレビュー。さらなるAI機能の強化とパフォーマンス改善が含まれる。
 * **2025-10-01**: **Gemini Nanoの実験的アクセス**
   * デバイスオンデバイスAI開発のサポート強化。
-* **2025-09-06**: **Compose Preview Screenshot Testing**
-  * UIリグレッションテスト機能の追加。
 
 (出典: [Android Studio release notes](https://developer.android.com/studio/releases))
 
