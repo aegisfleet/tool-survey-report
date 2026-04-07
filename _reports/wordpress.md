@@ -49,6 +49,7 @@ relationships:
     - Hugo
     - Jekyll
     - Astro
+    - codoc
 ---
 
 
