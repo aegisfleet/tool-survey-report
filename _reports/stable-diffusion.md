@@ -5,14 +5,14 @@ tool_reading: ステーブル・ディフュージョン
 category: 生成AI
 developer: Stability AI
 official_site: https://stability.ai/
-date: '2026-01-31'
-last_updated: '2026-01-31'
+date: '2026-04-07'
+last_updated: '2026-04-07'
 tags:
-  - AI
-  - オープンソース
-  - ローカルAI
   - 生成AI
   - 画像生成
+  - オープンソース
+  - ローカルAI
+  - AI
 description: テキストプロンプトから高品質な画像を生成できる、オープンウェイトの画像生成AIモデル。ローカル環境での実行や柔軟なカスタマイズが可能。
 quick_summary:
   has_free_plan: true
@@ -22,7 +22,7 @@ quick_summary:
     - デザイナー
     - 開発者
     - AI研究者
-  latest_highlight: Stable Diffusion 3.5シリーズ（Large/Medium）をリリースし、プロンプト追従性と画質が大幅に向上
+  latest_highlight: Stable Diffusion 3.5 Mediumモデルの推論速度を約20%向上させた最適化版を公開（2026年1月）
   update_frequency: 高
 evaluation:
   score: 82
@@ -41,7 +41,8 @@ evaluation:
       reason: ライセンス体系が変更され、商用利用の条件が以前より複雑化（Community License等）
   summary: カスタマイズ性とプライバシー保護に優れた最強のローカル画像生成AIだが、導入にはハードウェアと知識が必要
 links:
-  github: https://github.com/Stability-AI
+  github: https://github.com/Stability-AI/generative-models
+  codewiki: https://codewiki.google/github.com/Stability-AI/generative-models
   documentation: https://platform.stability.ai/docs
 relationships:
   parent: null
@@ -50,8 +51,6 @@ relationships:
     - Seedance 2.0
     - Niji Journey
     - Hugging Face
-    - ChatGPT
-    - Gemini
     - Qwen-Image-Layered
     - Hunyuan 3D
 ---
@@ -68,7 +67,8 @@ relationships:
 * **開発元**: Stability AI
 * **公式サイト**: [https://stability.ai/](https://stability.ai/)
 * **関連リンク**:
-  * GitHub: [https://github.com/Stability-AI](https://github.com/Stability-AI)
+  * GitHub: [https://github.com/Stability-AI/generative-models](https://github.com/Stability-AI/generative-models)
+  * CodeWiki: [https://codewiki.google/github.com/Stability-AI/generative-models](https://codewiki.google/github.com/Stability-AI/generative-models)
   * ドキュメント: [https://platform.stability.ai/docs](https://platform.stability.ai/docs)
 * **カテゴリ**: 生成AI
 * **概要**: テキストプロンプトから高品質な画像を生成する、世界で最も普及しているオープンウェイトの深層学習モデル。自身のハードウェア（ローカル環境）で動作させることができ、プライバシー保護や徹底したカスタマイズが可能。
@@ -226,7 +226,6 @@ relationships:
 * **2026-01-10**: Stable Diffusion 3.5 Mediumモデルの最適化版を公開。推論速度が約20%向上。
 * **2025-12-05**: Diffusersライブラリのメジャーアップデートにより、SD3.5のメモリ使用量が削減。
 * **2025-10-22**: **Stable Diffusion 3.5 (Large, Large Turbo, Medium)** をリリース。カスタマイズ性と画質を両立し、Community License下で公開。
-* **2025-09-15**: Stable Audio Open 2.0を発表。画像生成技術を応用した音声生成モデルの進化版。
 
 (出典: [Stability AI News](https://stability.ai/news))
 
