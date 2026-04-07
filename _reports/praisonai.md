@@ -1,62 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "PraisonAI 調査レポート"
-tool_name: "PraisonAI"
-tool_reading: "プレイソンエーアイ"
-category: "AI開発基盤"
-developer: "Mervin Praison"
-official_site: "https://docs.praison.ai/"
-date: "2026-04-07"
-last_updated: "2026-04-07"
+title: PraisonAI 調査レポート
+tool_name: PraisonAI
+tool_reading: プレイソンエーアイ
+category: AI開発基盤
+developer: Mervin Praison
+official_site: https://docs.praison.ai/
+date: '2026-04-07'
+last_updated: '2026-04-07'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "ローコード"
-  - "SaaS"
-description: "単一エージェントからマルチエージェントシステムまで手軽に構築・運用できるローコードAIエージェントフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - エージェント
+  - 自律型
+  - ローコード
+  - SaaS
+description: 単一エージェントからマルチエージェントシステムまで手軽に構築・運用できるローコードAIエージェントフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "自動化エンジニア"
-  latest_highlight: "高速なエージェントインスタンス化と豊富なLLMプロバイダ対応"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 自動化エンジニア
+  latest_highlight: 高速なエージェントインスタンス化と豊富なLLMプロバイダ対応
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "100以上のLLMプロバイダに対応し、柔軟性が高い"
+      reason: 100以上のLLMプロバイダに対応し、柔軟性が高い
     - point: 4
-      reason: "ノーコード（YAML）およびローコードで容易にマルチエージェントを構築可能"
+      reason: ノーコード（YAML）およびローコードで容易にマルチエージェントを構築可能
     - point: 3
-      reason: "メモリ、RAG、MCPなどモダンなAI技術を標準サポート"
+      reason: メモリ、RAG、MCPなどモダンなAI技術を標準サポート
     - point: 3
-      reason: "UIダッシュボードやLangflow連携など利用環境が豊富"
+      reason: UIダッシュボードやLangflow連携など利用環境が豊富
   minus_points:
     - point: -2
-      reason: "日本語ドキュメントや国内での事例が少ない"
-  summary: "多様なLLMと連携し、手軽かつ高速に実用的なAIエージェントチームを構築できる優れたOSSフレームワーク"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語ドキュメントや国内での事例が少ない
+  summary: 多様なLLMと連携し、手軽かつ高速に実用的なAIエージェントチームを構築できる優れたOSSフレームワーク
 links:
-  github: "https://github.com/MervinPraison/PraisonAI"
-  deepwiki: "https://deepwiki.com/MervinPraison/PraisonAI"
-  codewiki: "https://codewiki.google/github.com/MervinPraison/PraisonAI"
-  documentation: "https://docs.praison.ai/"
-
+  github: https://github.com/MervinPraison/PraisonAI
+  deepwiki: https://deepwiki.com/MervinPraison/PraisonAI
+  codewiki: https://codewiki.google/github.com/MervinPraison/PraisonAI
+  documentation: https://docs.praison.ai/
 relationships:
   related_tools:
-    - "LangChain"
+    - LangChain
 ---
 
 # **PraisonAI 調査レポート**
