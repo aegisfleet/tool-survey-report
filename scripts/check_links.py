@@ -29,9 +29,9 @@ BROWSER_CONFIG = {
 
 # Keywords indicating 404 pages
 NOT_FOUND_KEYWORDS = [
-    '404', 'not found', 'page not found', 'does not exist', 
+    '404 not found', 'page not found', 'does not exist', 
     "couldn't find", 'ページが見つかりません', 'could not be found',
-    'this page doesn’t exist' # Used by CodeWiki
+    'this page doesn’t exist', '404 - not found'
 ]
 
 # Global Playwright instances
@@ -190,11 +190,19 @@ def _check_link_logic(page, url):
             title_text = page.title().lower()
             has_404_keywords = False
             is_codewiki = "codewiki.google" in page.url
+            is_github = "github.com" in page.url
             
             if is_codewiki:
                 # CodeWiki specific check
                 if "not found | code wiki" in title_text or title_text == "code wiki":
                    if "this page doesn’t exist" in body_text:
+                        has_404_keywords = True
+            elif is_github:
+                # GitHub specific check
+                if "page not found" in title_text and "github" in title_text:
+                    has_404_keywords = True
+                elif title_text == "github": # Sometimes happens on empty/broken repos
+                    if "this is not the web page you are looking for" in body_text:
                         has_404_keywords = True
             else:
                 # General check for other sites
