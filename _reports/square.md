@@ -1,58 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Square 調査レポート"
-tool_name: "Square"
-tool_reading: "スクエア"
-category: "POS・決済システム"
-developer: "Block, Inc."
-official_site: "https://squareup.com/"
-date: "2026-04-07"
-last_updated: "2026-04-07"
+title: Square 調査レポート
+tool_name: Square
+tool_reading: スクエア
+category: POS・決済システム
+developer: Block, Inc.
+official_site: https://squareup.com/
+date: '2026-04-07'
+last_updated: '2026-04-07'
 tags:
-  - "POSシステム"
-  - "決済プラットフォーム"
-  - "店舗管理"
-  - "eコマース"
-description: "店舗運営、決済処理、オンライン販売までを統合的にサポートする包括的なPOSプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - POSシステム
+  - 決済プラットフォーム
+  - 店舗管理
+  - eコマース
+description: 店舗運営、決済処理、オンライン販売までを統合的にサポートする包括的なPOSプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料（決済手数料のみ）"
+  starting_price: 無料（決済手数料のみ）
   target_users:
-    - "小売店・飲食店"
-    - "美容・サービス業"
-    - "中小規模事業者"
-  latest_highlight: "Square AIや次世代レジなどを追加したSpring 2025アップデートを実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 小売店・飲食店
+    - 美容・サービス業
+    - 中小規模事業者
+  latest_highlight: Square AIや次世代レジなどを追加したSpring 2025アップデートを実施
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 5
-      reason: "初期費用・月額固定費無料から始められる高い導入しやすさ"
+      reason: 初期費用・月額固定費無料から始められる高い導入しやすさ
     - point: 5
-      reason: "小売・飲食・サロン向けに特化した多彩なPOSソリューションを提供"
+      reason: 小売・飲食・サロン向けに特化した多彩なPOSソリューションを提供
     - point: 4
-      reason: "直感的で使いやすい洗練されたUIとハードウェアの統合"
+      reason: 直感的で使いやすい洗練されたUIとハードウェアの統合
     - point: 3
-      reason: "開発者向けのAPIが充実しカスタマイズ性が高い"
+      reason: 開発者向けのAPIが充実しカスタマイズ性が高い
   minus_points:
     - point: -2
-      reason: "大規模・高取引量のビジネスでは決済手数料が割高になる場合がある"
-  summary: "中小規模のビジネスに最適な、直感的で拡張性の高い統合型POS・決済プラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 大規模・高取引量のビジネスでは決済手数料が割高になる場合がある
+  summary: 中小規模のビジネスに最適な、直感的で拡張性の高い統合型POS・決済プラットフォーム
 links:
-  documentation: "https://developer.squareup.com/us/en"
+  documentation: https://developer.squareup.com/us/en
 relationships:
   related_tools:
-    - "Shopify"
-    - "Stripe"
+    - Shopify
+    - Stripe
 ---
 
 # **Square 調査レポート**
