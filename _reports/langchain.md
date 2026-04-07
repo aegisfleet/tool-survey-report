@@ -51,13 +51,13 @@ relationships:
   children:
     - Deep Agents
   related_tools:
+    - PraisonAI
     - Dify
     - AutoGPT
     - GitHub Copilot SDK
     - Amazon Bedrock
     - Amazon Bedrock AgentCore Runtime
     - Hugging Face
-    - Letta
 ---
 
 
