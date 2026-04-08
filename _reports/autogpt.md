@@ -49,17 +49,17 @@ links:
   deepwiki: https://deepwiki.com/Significant-Gravitas/AutoGPT
   documentation: https://docs.agpt.co/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "LangChain"
-    - "Devin"
-    - "OpenHands"
-    - "Letta"
-    - "AgentScope"
-    - "MoneyPrinterV2"
-    - "OpenClaw"
-    - "Moltbot"
+    - LangChain
+    - Devin
+    - OpenHands
+    - Letta
+    - AgentScope
+    - MoneyPrinterV2
+    - OpenClaw
+    - Moltbot
 ---
 
 
