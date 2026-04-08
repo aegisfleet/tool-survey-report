@@ -83,6 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
 
+  // Pre-calculate sort values to improve performance
+  reportCards.forEach((card) => {
+    card._timestamp = card.dataset.date ? new Date(card.dataset.date).getTime() : 0;
+    card._score = Number.parseFloat(card.dataset.score) || 0;
+  });
+
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
     // レポートカード
@@ -287,30 +293,28 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredCards.sort((a, b) => {
       switch (sortBy) {
         case 'date-desc':
-          return new Date(b.dataset.date) - new Date(a.dataset.date);
+          return b._timestamp - a._timestamp;
         case 'date-asc':
-          return new Date(a.dataset.date) - new Date(b.dataset.date);
+          return a._timestamp - b._timestamp;
         case 'title-asc':
           return a.dataset.toolName.localeCompare(b.dataset.toolName);
         case 'score-desc': {
-          // スコアが高い順でソート（スコアがない場合は0として扱う）
-          const scoreA = Number.parseFloat(a.dataset.score) || 0;
-          const scoreB = Number.parseFloat(b.dataset.score) || 0;
-          return scoreB - scoreA;
+          // スコアが高い順でソート
+          return b._score - a._score;
         }
         case 'oss': {
           // OSSを優先し、同じ場合はスコア順でソート
           const getPriority = (card) => (card.dataset.isOss === 'true' ? 1 : 0);
           const priorityDiff = getPriority(b) - getPriority(a);
           if (priorityDiff !== 0) return priorityDiff;
-          return (Number.parseFloat(b.dataset.score) || 0) - (Number.parseFloat(a.dataset.score) || 0);
+          return b._score - a._score;
         }
         case 'free': {
           // 無料プランあり（非OSS）を優先し、同じ場合はスコア順でソート
           const getPriority = (card) => (card.dataset.hasFreePlan === 'true' && card.dataset.isOss !== 'true' ? 1 : 0);
           const priorityDiff = getPriority(b) - getPriority(a);
           if (priorityDiff !== 0) return priorityDiff;
-          return (Number.parseFloat(b.dataset.score) || 0) - (Number.parseFloat(a.dataset.score) || 0);
+          return b._score - a._score;
         }
         default:
           return 0;
