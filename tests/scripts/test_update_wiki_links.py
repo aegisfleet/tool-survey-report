@@ -5,8 +5,8 @@ import os
 # Add the root directory to sys.path to import scripts
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 os.environ['TESTING'] = '1'
-from scripts.update_wiki_links import get_github_repo, update_file
-from unittest.mock import patch, mock_open
+from scripts.update_wiki_links import get_github_repo, update_file, check_codewiki_exists, check_deepwiki_exists
+from unittest.mock import patch, mock_open, MagicMock
 
 def extract_written_content(handle):
     """Helper to extract written content from a mocked file handle."""
@@ -169,6 +169,107 @@ class TestUpdateFile(unittest.TestCase):
         with patch("builtins.open", side_effect=side_effect):
             with self.assertRaises(OSError):
                 update_file(filepath, owner, repo, True, False)
+
+class TestWikiChecks(unittest.TestCase):
+    def setUp(self):
+        self.mock_page = MagicMock()
+        self.mock_response = MagicMock()
+        self.owner = "owner"
+        self.repo = "repo"
+
+    def test_check_codewiki_exists_success(self):
+        self.mock_response.status = 200
+        self.mock_page.goto.return_value = self.mock_response
+        self.mock_page.inner_text.return_value = "Some content"
+        self.mock_page.title.return_value = "Code Wiki"
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertTrue(result)
+        self.mock_page.goto.assert_called_with(
+            f"https://codewiki.google/github.com/{self.owner}/{self.repo}",
+            wait_until='networkidle',
+            timeout=15000
+        )
+
+    def test_check_codewiki_exists_404_in_body(self):
+        self.mock_response.status = 200
+        self.mock_page.goto.return_value = self.mock_response
+        self.mock_page.inner_text.return_value = "Error 404: Not Found"
+        self.mock_page.title.return_value = "Code Wiki"
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_codewiki_exists_not_found_in_body(self):
+        self.mock_response.status = 200
+        self.mock_page.goto.return_value = self.mock_response
+        self.mock_page.inner_text.return_value = "The page was not found"
+        self.mock_page.title.return_value = "Code Wiki"
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_codewiki_exists_not_found_in_title(self):
+        self.mock_response.status = 200
+        self.mock_page.goto.return_value = self.mock_response
+        self.mock_page.inner_text.return_value = "Some content"
+        self.mock_page.title.return_value = "Not Found | Code Wiki"
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_codewiki_exists_non_200(self):
+        self.mock_response.status = 404
+        self.mock_page.goto.return_value = self.mock_response
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_codewiki_exists_goto_none(self):
+        self.mock_page.goto.return_value = None
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_codewiki_exists_exception(self):
+        self.mock_page.goto.side_effect = Exception("Network error")
+
+        result = check_codewiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_deepwiki_exists_success(self):
+        self.mock_response.status = 200
+        self.mock_page.goto.return_value = self.mock_response
+        self.mock_page.inner_text.return_value = "Some content"
+
+        result = check_deepwiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertTrue(result)
+        self.mock_page.goto.assert_called_with(
+            f"https://deepwiki.com/{self.owner}/{self.repo}",
+            wait_until='networkidle',
+            timeout=15000
+        )
+
+    def test_check_deepwiki_exists_404_in_body(self):
+        self.mock_response.status = 200
+        self.mock_page.goto.return_value = self.mock_response
+        self.mock_page.inner_text.return_value = "404 Not Found"
+
+        result = check_deepwiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_deepwiki_exists_non_200(self):
+        self.mock_response.status = 500
+        self.mock_page.goto.return_value = self.mock_response
+
+        result = check_deepwiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
+
+    def test_check_deepwiki_exists_exception(self):
+        self.mock_page.goto.side_effect = Exception("Timeout")
+
+        result = check_deepwiki_exists(self.mock_page, self.owner, self.repo)
+        self.assertFalse(result)
 
 if __name__ == "__main__":
     unittest.main()
