@@ -45,7 +45,7 @@ class BrowserTestRunner:
         try:
             validate_url_ssr_safe(url)
         except SSRFError as e:
-            raise BrowserTestError(str(e))
+            raise BrowserTestError(str(e)) from e
 
     def _handle_route(self, route):
         request = route.request

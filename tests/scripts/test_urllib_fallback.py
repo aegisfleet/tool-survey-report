@@ -15,7 +15,7 @@ class TestUrllibFallback(unittest.TestCase):
     def test_ssrf_protection(self, mock_is_safe):
         """Test that unsafe URLs are blocked."""
         mock_is_safe.return_value = False
-        url = "http://127.0.0.1"
+        url = "http://127.0.0.1" # NOSONAR
         status, reason = check_link_with_urllib(url)
         self.assertEqual(status, 0)
         self.assertIn("Blocked", reason)

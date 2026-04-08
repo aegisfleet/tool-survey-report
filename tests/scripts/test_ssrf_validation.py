@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 import socket
 import ipaddress
 from urllib.parse import urlparse
@@ -43,21 +44,16 @@ class TestSSRFValidation(unittest.TestCase):
 
     def test_safe_public_domain(self):
         # We need to mock socket.getaddrinfo to avoid network calls and flaky tests
-        original_getaddrinfo = socket.getaddrinfo
-
         def mock_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
             if host == "example.com":
                 return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
             elif host == "internal.local":
                 return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('192.168.1.100', 80))] # NOSONAR
-            return original_getaddrinfo(host, port, family, type, proto, flags)
+            return socket.getaddrinfo(host, port, family, type, proto, flags)
 
-        socket.getaddrinfo = mock_getaddrinfo
-        try:
+        with patch('socket.getaddrinfo', side_effect=mock_getaddrinfo):
             self.assertTrue(is_url_ssr_safe("http://example.com"), "Should allow example.com")
             self.assertFalse(is_url_ssr_safe("http://internal.local"), "Should block internal.local")
-        finally:
-            socket.getaddrinfo = original_getaddrinfo
 
 if __name__ == '__main__':
     unittest.main()

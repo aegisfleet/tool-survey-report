@@ -13,6 +13,7 @@ try:
     from playwright.sync_api import sync_playwright
     HAS_PLAYWRIGHT = True
 except ImportError:
+    import socket
     HAS_PLAYWRIGHT = False
     sync_playwright = None
     socket.setdefaulttimeout(10)

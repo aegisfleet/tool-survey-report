@@ -75,7 +75,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_screenshot(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # example.com IP
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         # Mock playwright objects
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
@@ -103,7 +103,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_check_success(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
@@ -131,7 +131,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_check_failure(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
@@ -157,7 +157,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_text(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
@@ -183,7 +183,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_click(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
@@ -207,7 +207,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_input(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
@@ -231,7 +231,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_wait(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
@@ -256,7 +256,7 @@ class TestBrowserTest(unittest.TestCase):
     @patch('scripts.browser_test.sync_playwright')
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
     def test_run_browser_test_mobile(self, mock_getaddrinfo, mock_playwright):
-        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
+        mock_getaddrinfo.return_value = [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))] # NOSONAR
         mock_p = mock_playwright.return_value.__enter__.return_value
         mock_browser = mock_p.chromium.launch.return_value
         mock_page = mock_browser.new_page.return_value
