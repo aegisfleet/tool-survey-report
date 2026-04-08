@@ -12,12 +12,8 @@ class HTMLElement {
     this.dataset = {};
     this.attributes = {};
   }
-  get textContent() {
-    return this._innerHTML;
-  }
-  set textContent(val) {
-    this._innerHTML = val;
-  }
+  get textContent() { return this._innerHTML; }
+  set textContent(val) { this._innerHTML = val; }
   appendChild(child) {
     if (child.parentNode) {
       child.parentNode.children = child.parentNode.children.filter((c) => c !== child);
@@ -26,24 +22,19 @@ class HTMLElement {
     child.parentNode = this;
   }
   querySelectorAll(selector) {
-    if (selector === 'option') return this.children.filter((c) => c.tagName === 'OPTION');
-    if (selector === '.report-card') return this.children.filter((c) => c.className.includes('report-card'));
+    if (selector === 'option') return this.children.filter(c => c.tagName === 'OPTION');
+    if (selector === '.report-card') return this.children.filter(c => c.className.includes('report-card'));
     return [];
   }
   querySelector(selector) {
-    if (selector === '.meta-item.category') return this.children.find((c) => c.className === 'meta-item category');
-    if (selector === '.report-title a')
-      return this.children.find((c) => c.tagName === 'H3')?.children.find((c) => c.tagName === 'A');
-    if (selector === '.pick-category') return this.children.find((c) => c.className === 'pick-category');
-    if (selector === '.pick-title') return this.children.find((c) => c.className === 'pick-title');
+    if (selector === '.meta-item.category') return this.children.find(c => c.className === 'meta-item category');
+    if (selector === '.report-title a') return this.children.find(c => c.tagName === 'H3')?.children.find(c => c.tagName === 'A');
+    if (selector === '.pick-category') return this.children.find(c => c.className === 'pick-category');
+    if (selector === '.pick-title') return this.children.find(c => c.className === 'pick-title');
     return null;
   }
-  setAttribute(k, v) {
-    this.attributes[k] = v;
-  }
-  getAttribute(k) {
-    return this.attributes[k];
-  }
+  setAttribute(k, v) { this.attributes[k] = v; }
+  getAttribute(k) { return this.attributes[k]; }
   blur() {}
   addEventListener() {}
 }
@@ -52,13 +43,9 @@ const reportCards = [];
 for (let i = 0; i < 500; i++) {
   const card = new HTMLElement('article');
   card.className = 'report-card';
-  const date = new Date(
-    2020 + Math.floor(Math.random() * 6),
-    Math.floor(Math.random() * 12),
-    Math.floor(Math.random() * 28),
-  )
-    .toISOString()
-    .split('T')[0];
+  // Use day 1-28 to avoid Date overflow issues
+  const date = new Date(2020 + Math.floor(Math.random() * 6), Math.floor(Math.random() * 12), Math.floor(Math.random() * 28) + 1)
+    .toISOString().split('T')[0];
   card.dataset = {
     date: date,
     toolName: `Tool ${i}`,
@@ -66,7 +53,7 @@ for (let i = 0; i < 500; i++) {
     isOss: Math.random() > 0.5 ? 'true' : 'false',
     hasFreePlan: Math.random() > 0.5 ? 'true' : 'false',
     tags: 'tag1,tag2',
-    category: 'Category',
+    category: 'Category'
   };
 
   const titleH3 = new HTMLElement('h3');
@@ -99,7 +86,7 @@ categoryFilter.value = '';
 const reportsGrid = new HTMLElement('div');
 const noResults = new HTMLElement('div');
 
-global.document = {
+globalThis.document = {
   addEventListener: (ev, cb) => {
     if (ev === 'DOMContentLoaded') setTimeout(cb, 0);
   },
@@ -133,7 +120,7 @@ global.document = {
   title: 'Test',
 };
 
-global.window = {
+globalThis.window = {
   addEventListener: () => {},
   sessionStorage: { getItem: () => null, setItem: () => {} },
   location: { search: '', href: '' },
@@ -146,29 +133,21 @@ global.window = {
   },
 };
 
-global.sessionStorage = global.window.sessionStorage;
-global.URL = class {
-  constructor(u) {
-    this.searchParams = { set: () => {}, delete: () => {} };
-    this.href = u;
-  }
-  toString() {
-    return this.href;
-  }
-};
+globalThis.sessionStorage = globalThis.window.sessionStorage;
+globalThis.URL = class { constructor(u) { this.searchParams = { set: () => {}, delete: () => {} }; this.href = u; } toString() { return this.href; } };
 
 const scriptPath = path.join(__dirname, '../../assets/js/home.js');
 const scriptContent = fs.readFileSync(scriptPath, 'utf8');
 
 const vm = require('node:vm');
-const context = vm.createContext(global);
+const context = vm.createContext(globalThis);
 vm.runInContext(scriptContent, context);
 
 // We need to wait for DOMContentLoaded to finish or call it manually
 setTimeout(() => {
-  if (typeof global.window.filterAndSort !== 'function') {
-    console.error('filterAndSort not found on window');
-    process.exit(1);
+  if (typeof globalThis.window.filterAndSort !== 'function') {
+      console.error('filterAndSort not found on window');
+      process.exit(1);
   }
 
   console.log('Starting benchmark for filterAndSort with 500 cards...');
@@ -176,7 +155,7 @@ setTimeout(() => {
   const start = process.hrtime();
 
   for (let i = 0; i < iterations; i++) {
-    global.window.filterAndSort(false);
+    globalThis.window.filterAndSort(false);
   }
 
   const end = process.hrtime(start);
