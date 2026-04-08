@@ -7,7 +7,7 @@ import os
 
 # Add the root directory to sys.path to import scripts
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from scripts.check_links import is_safe_url
+from scripts.ssrf_utils import is_url_ssr_safe, validate_url_ssr_safe, SSRFError
 
 # SonarCloud: The following tests intentionally use insecure protocols and local IPs
 # to verify that the SSRF protection logic correctly blocks them.
@@ -28,16 +28,18 @@ class TestSSRFValidation(unittest.TestCase):
         ]
 
         for url in unsafe_urls:
-            self.assertFalse(is_safe_url(url), f"Should block {url}")
+            self.assertFalse(is_url_ssr_safe(url), f"Should block {url}")
+            with self.assertRaises(SSRFError):
+                validate_url_ssr_safe(url)
 
     def test_schemes(self):
-        self.assertFalse(is_safe_url("ftp://example.com"))
-        self.assertFalse(is_safe_url("file:///etc/passwd"))
-        self.assertFalse(is_safe_url("javascript:alert(1)"))
+        self.assertFalse(is_url_ssr_safe("ftp://example.com"))
+        self.assertFalse(is_url_ssr_safe("file:///etc/passwd"))
+        self.assertFalse(is_url_ssr_safe("javascript:alert(1)"))
 
     def test_safe_public_ip(self):
         # 8.8.8.8 is Google DNS, definitely public
-        self.assertTrue(is_safe_url("http://8.8.8.8"), "Should allow public IP 8.8.8.8")
+        self.assertTrue(is_url_ssr_safe("http://8.8.8.8"), "Should allow public IP 8.8.8.8")
 
     def test_safe_public_domain(self):
         # We need to mock socket.getaddrinfo to avoid network calls and flaky tests
@@ -52,8 +54,8 @@ class TestSSRFValidation(unittest.TestCase):
 
         socket.getaddrinfo = mock_getaddrinfo
         try:
-            self.assertTrue(is_safe_url("http://example.com"), "Should allow example.com")
-            self.assertFalse(is_safe_url("http://internal.local"), "Should block internal.local")
+            self.assertTrue(is_url_ssr_safe("http://example.com"), "Should allow example.com")
+            self.assertFalse(is_url_ssr_safe("http://internal.local"), "Should block internal.local")
         finally:
             socket.getaddrinfo = original_getaddrinfo
 
