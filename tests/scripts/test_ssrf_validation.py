@@ -17,14 +17,14 @@ class TestSSRFValidation(unittest.TestCase):
 
     def test_unsafe_local_ips(self):
         unsafe_urls = [
-            "http://127.0.0.1",
-            "http://0.0.0.0",
-            "http://localhost",
-            "http://[::1]",
-            "http://192.168.1.1",
-            "http://10.0.0.1",
-            "http://172.16.0.1",
-            "http://169.254.169.254" # Cloud metadata
+            "http://127.0.0.1", # NOSONAR
+            "http://0.0.0.0", # NOSONAR
+            "http://localhost", # NOSONAR
+            "http://[::1]", # NOSONAR
+            "http://192.168.1.1", # NOSONAR
+            "http://10.0.0.1", # NOSONAR
+            "http://172.16.0.1", # NOSONAR
+            "http://169.254.169.254" # NOSONAR - Cloud metadata
         ]
 
         for url in unsafe_urls:
@@ -33,13 +33,13 @@ class TestSSRFValidation(unittest.TestCase):
                 validate_url_ssr_safe(url)
 
     def test_schemes(self):
-        self.assertFalse(is_url_ssr_safe("ftp://example.com"))
-        self.assertFalse(is_url_ssr_safe("file:///etc/passwd"))
-        self.assertFalse(is_url_ssr_safe("javascript:alert(1)"))
+        self.assertFalse(is_url_ssr_safe("ftp://example.com")) # NOSONAR
+        self.assertFalse(is_url_ssr_safe("file:///etc/passwd")) # NOSONAR
+        self.assertFalse(is_url_ssr_safe("javascript:alert(1)")) # NOSONAR
 
     def test_safe_public_ip(self):
         # 8.8.8.8 is Google DNS, definitely public
-        self.assertTrue(is_url_ssr_safe("http://8.8.8.8"), "Should allow public IP 8.8.8.8")
+        self.assertTrue(is_url_ssr_safe("http://8.8.8.8"), "Should allow public IP 8.8.8.8") # NOSONAR
 
     def test_safe_public_domain(self):
         # We need to mock socket.getaddrinfo to avoid network calls and flaky tests
@@ -49,7 +49,7 @@ class TestSSRFValidation(unittest.TestCase):
             if host == "example.com":
                 return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('93.184.216.34', 80))]
             elif host == "internal.local":
-                return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('192.168.1.100', 80))]
+                return [(socket.AF_INET, socket.SOCK_STREAM, 6, '', ('192.168.1.100', 80))] # NOSONAR
             return original_getaddrinfo(host, port, family, type, proto, flags)
 
         socket.getaddrinfo = mock_getaddrinfo
