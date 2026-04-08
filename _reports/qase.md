@@ -9,8 +9,9 @@ date: '2026-02-01'
 last_updated: '2026-02-01'
 tags:
   - AI
+  - テスト管理
   - テスト自動化
-  - 開発ツール
+  - 開発者ツール
 description: AIを活用したモダンなテスト管理プラットフォーム。手動・自動テストの一元管理が可能。
 quick_summary:
   has_free_plan: true

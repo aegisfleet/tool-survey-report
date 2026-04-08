@@ -8,11 +8,9 @@ official_site: https://service.valtes.co.jp/qualitytracker/
 date: '2026-02-01'
 last_updated: '2026-02-01'
 tags:
-  - EVM
-  - Jira連携
-  - Redmine連携
   - SaaS
   - テスト管理
+  - プロジェクト管理
   - 品質管理
 description: テストの進捗と資産を一元管理し、EVMを用いて正確な進捗状況を見える化するクラウド型テスト管理ツール
 quick_summary:
