@@ -8,11 +8,9 @@ official_site: https://qangaroo.jp/
 date: '2026-02-01'
 last_updated: '2026-02-01'
 tags:
-  - BTS連携
-  - Excelライク
   - SaaS
-  - クラウド
   - テスト管理
+  - クラウド
 description: Excelライクな操作性で直感的にテストケースを作成・実行できるクラウド型テスト管理ツール
 quick_summary:
   has_free_plan: true
