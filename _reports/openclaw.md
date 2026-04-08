@@ -5,16 +5,15 @@ tool_reading: オープンクロー
 category: 自律型AIエージェント
 developer: Peter Steinberger & community
 official_site: https://openclaw.ai/
-date: '2026-02-01'
-last_updated: '2026-02-01'
+date: '2026-04-09'
+last_updated: '2026-04-09'
 tags:
   - エージェント
   - オープンソース
-  - ローカルLLM
+  - ローカルAI
   - 自動化
   - 開発者ツール
 description: 自分のデバイス上で動作するパーソナルAIアシスタント。WhatsAppやTelegramなどのチャットアプリを通じて操作し、Webブラウジングやシステム操作を実行可能。
-layout: report
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -41,12 +40,11 @@ evaluation:
   summary: プライバシー重視かつ高機能なオープンソースのパーソナルAIアシスタント。技術的なセットアップが必要だが、その柔軟性と機能性は圧倒的。
 links:
   github: https://github.com/openclaw/openclaw
-  deepwiki: https://deepwiki.com/openclaw/openclaw
-  codewiki: https://codewiki.google/github.com/openclaw/openclaw
   documentation: https://docs.openclaw.ai/
 relationships:
   children:
     - NemoClaw
+    - Moltbot
   related_tools:
     - AutoGPT
 ---
@@ -64,8 +62,6 @@ relationships:
 * **公式サイト**: [https://openclaw.ai/](https://openclaw.ai/)
 * **関連リンク**:
   * GitHub: [https://github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)
-  * CodeWiki: [https://codewiki.google/github.com/openclaw/openclaw](https://codewiki.google/github.com/openclaw/openclaw)
-  * DeepWiki: [https://deepwiki.com/openclaw/openclaw](https://deepwiki.com/openclaw/openclaw)
   * ドキュメント: [https://docs.openclaw.ai/](https://docs.openclaw.ai/)
 * **カテゴリ**: AIエージェント / パーソナルアシスタント
 * **概要**: ユーザー自身のマシン上で動作するオープンソースのパーソナルAIアシスタント。WhatsAppやTelegramなどの使い慣れたチャットアプリを通じて指示を出し、Webブラウジング、ファイル操作、カレンダー管理など多岐にわたるタスクを自動化できる。プライバシーを重視した設計が特徴。
@@ -226,7 +222,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | OpenClaw | AutoGPT | Claude Computer Use |
+| 機能カテゴリ | 機能項目 | 本ツール | AutoGPT | Claude Computer Use |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 自律タスク実行 | ◎<br><small>高度な判断と実行</small> | ◎<br><small>タスクループに特化</small> | ◯<br><small>モデル機能として提供</small> |
 | **インターフェース** | チャットアプリ連携 | ◎<br><small>主要アプリ網羅</small> | △<br><small>独自UIやCLI主体</small> | △<br><small>APIまたは専用UI</small> |
@@ -237,7 +233,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **OpenClaw** | チャットアプリ統合型パーソナルアシスタント | マルチチャネル対応、プライバシー、PC操作能力 | セットアップの技術的ハードル | エンジニアが自分専用の最強アシスタントを作りたい場合 |
+| **本ツール** | チャットアプリ統合型パーソナルアシスタント | マルチチャネル対応、プライバシー、PC操作能力 | セットアップの技術的ハードル | エンジニアが自分専用の最強アシスタントを作りたい場合 |
 | **AutoGPT** | 自律型AIエージェントの先駆け | 目標達成のためのタスク分解と実行ループ | 安定性や実用面での課題（過去のバージョンにおいて） | 実験的なタスク自動化や研究目的 |
 | **Claude Computer Use** | Anthropicが提供するモデル機能 | モデルレベルでの高いPC操作能力 | 単体では「アシスタント」としての機能（記憶、連携等）が不足 | アプリケーションの一部としてPC操作機能を組み込みたい場合 |
 
