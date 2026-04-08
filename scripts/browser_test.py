@@ -3,9 +3,7 @@ import argparse
 import sys
 from playwright.sync_api import sync_playwright
 import time
-import socket
-import ipaddress
-import urllib.parse
+from scripts.ssrf_utils import validate_url_ssr_safe, SSRFError
 
 class BrowserTestError(Exception):
     pass
@@ -40,55 +38,14 @@ class BrowserTestRunner:
     def validate_url(self, url):
         """
         Validates the URL to prevent SSRF attacks.
-        Checks if the resolved IP address is a private, loopback, or link-local address.
         """
         if self.args.allow_internal_ips:
             return
 
         try:
-            parsed_url = urllib.parse.urlparse(url)
-
-            if parsed_url.scheme not in ['http', 'https']:
-                raise BrowserTestError(f"Invalid URL scheme: {parsed_url.scheme}. Only http and https are allowed.")
-
-            hostname = parsed_url.hostname
-            if not hostname:
-                 # Malformed http url?
-                 raise BrowserTestError(f"Invalid URL (no hostname): {url}")
-
-            # Resolve hostname to IP
-            # We use getaddrinfo to support IPv6 and get all addresses
-            # We filter for AF_INET and AF_INET6 to avoid other socket types
-            addr_info = socket.getaddrinfo(hostname, None)
-
-            for family, type, proto, canonname, sockaddr in addr_info:
-                ip_str = sockaddr[0]
-                # socket.getaddrinfo might return IPv6 with scope id (e.g. fe80::1%lo0)
-                # ipaddress module handles standard formats.
-                # Strip scope id if present for IPv6
-                if '%' in ip_str:
-                    ip_str = ip_str.split('%')[0]
-
-                try:
-                    ip = ipaddress.ip_address(ip_str)
-                except ValueError:
-                    continue # Skip if not a valid IP (shouldn't happen with getaddrinfo)
-
-                if ip.is_private or ip.is_loopback or ip.is_link_local:
-                     raise BrowserTestError(f"Access to internal IP address {ip_str} is restricted.")
-
-        except (socket.gaierror, ValueError) as e:
-            # If we can't resolve it, it might be an internal name that only resolves internally,
-            # or just a bad domain.
-            # To be safe, if we can't resolve it, we could block it, or let Playwright fail.
-            # However, if it resolves internally but not on the machine running this check (unlikely in this context),
-            # it implies split DNS.
-            # Best practice for SSRF is to block if resolution fails or if it resolves to internal.
-            # But valid external domains might transiently fail.
-            # Let's log and allow if it's a resolution error? No, fail secure.
-            # But gaierror is common.
-            # The review said "fail securely (closed) if resolution fails".
-            raise BrowserTestError(f"Error resolving URL {url}: {e}")
+            validate_url_ssr_safe(url)
+        except SSRFError as e:
+            raise BrowserTestError(str(e)) from e
 
     def _handle_route(self, route):
         request = route.request

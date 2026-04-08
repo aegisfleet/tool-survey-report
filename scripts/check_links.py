@@ -3,17 +3,17 @@ import re
 import argparse
 import sys
 import atexit
-import socket
-import ipaddress
 import urllib.request
 import urllib.error
 from urllib.parse import urlparse
+from scripts.ssrf_utils import is_url_ssr_safe
 
 # Check for playwright availability
 try:
     from playwright.sync_api import sync_playwright
     HAS_PLAYWRIGHT = True
 except ImportError:
+    import socket
     HAS_PLAYWRIGHT = False
     sync_playwright = None
     socket.setdefaulttimeout(10)
@@ -42,61 +42,8 @@ _CONTEXT = None
 def is_safe_url(url):
     """
     Validates that the URL is safe to visit.
-    Checks:
-    1. Scheme is http or https.
-    2. Hostname resolves to a public IP address (not private, loopback, etc).
     """
-    try:
-        parsed = urlparse(url)
-        hostname = parsed.hostname
-        if not hostname:
-            return False
-
-        # Allow only http and https
-        if parsed.scheme not in ('http', 'https'):
-            return False
-
-        # If hostname is an IP literal, validate it directly
-        try:
-            ip = ipaddress.ip_address(hostname.strip("[]"))
-            if (ip.is_private or ip.is_loopback or ip.is_link_local or
-                ip.is_multicast or ip.is_reserved or ip.is_unspecified):
-                return False
-            return True
-        except ValueError:
-            pass
-
-        # Resolve hostname to IP
-        try:
-            # Get address info - this might block if DNS is slow
-            addr_info = socket.getaddrinfo(hostname, None)
-            ips = [info[4][0] for info in addr_info]
-        except socket.gaierror:
-            # If we cannot resolve it, we cannot verify it's safe.
-            # However, if it doesn't resolve, check_link will fail anyway.
-            # But to be safe against DNS rebinding or other tricks,
-            # we might want to fail open or closed.
-            # Failing closed (returning False) is safer for SSRF.
-            return False
-
-        for ip_str in ips:
-            # Handle IPv6 scope id if present
-            ip_str = ip_str.split('%')[0]
-            try:
-                ip = ipaddress.ip_address(ip_str)
-                if (ip.is_private or
-                    ip.is_loopback or
-                    ip.is_link_local or
-                    ip.is_multicast or
-                    ip.is_reserved or
-                    ip.is_unspecified):
-                    return False
-            except ValueError:
-                continue
-
-        return True
-    except Exception:
-        return False
+    return is_url_ssr_safe(url)
 
 def _get_global_context():
     """Lazily initialize and return the global Playwright context.
