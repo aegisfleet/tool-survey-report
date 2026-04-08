@@ -47,7 +47,7 @@ relationships:
     - TestLink
     - Jira
     - Selenium
-layout: report
+    - Kiwi TCMS
 ---
 
 

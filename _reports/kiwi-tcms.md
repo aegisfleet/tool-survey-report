@@ -5,15 +5,14 @@ tool_reading: キウイ ティーシーエムエス
 category: テスト管理
 developer: Kiwi TCMS Team
 official_site: https://kiwitcms.org/
-date: '2026-02-01'
-last_updated: '2026-02-01'
+date: '2026-04-08'
+last_updated: '2026-04-08'
 tags:
-  - Django
-  - Docker
-  - Python
+  - テスト管理
   - オープンソース
   - テスト自動化
-  - 開発ツール
+  - Python
+  - 開発者ツール
 description: 主要なオープンソースのテスト管理システム（TCMS）。手動および自動テストを一元管理し、JiraやGitHubなどのバグトラッカーと強力に連携。
 quick_summary:
   has_free_plan: true
@@ -23,7 +22,7 @@ quick_summary:
     - QAエンジニア
     - 開発者
     - QAマネージャー
-  latest_highlight: 2026年1月にバージョン15.3をリリース
+  latest_highlight: 2026年3月にバージョン15.4をリリース
   update_frequency: 高
 evaluation:
   score: 78
@@ -52,7 +51,6 @@ relationships:
     - GitHub
     - GitLab
     - Selenium
-layout: report
 ---
 
 
@@ -202,8 +200,9 @@ layout: report
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-17**: **Kiwi TCMS 15.4** - 依存ライブラリの更新、バグ修正、パフォーマンス改善。
 * **2026-01-28**: **Kiwi TCMS 15.3** - 依存ライブラリの更新、バグ修正、パフォーマンス改善。
-* **2025年後半**: 定期的なリリースが行われており、セキュリティパッチの適用やUIの微調整、プラグインの互換性向上が進められている。
+* **2025-12-06**: **Kiwi TCMS 15.2** - セキュリティパッチの適用やプラグインの互換性向上。
 
 (出典: [GitHub Releases](https://github.com/kiwitcms/Kiwi/releases))
 
@@ -213,10 +212,10 @@ layout: report
 
 | 機能カテゴリ | 機能項目 | Kiwi TCMS | TestRail | Qase |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | テスト管理 | ◎ | ◎ | ◎ |
-| **コスト** | 無料プラン | ◎<br><small>全機能無料(OSS)</small> | × | ◯<br><small>制限あり</small> |
-| **拡張性** | API/プラグイン | ◎ | ◯ | ◎ |
-| **非機能** | 日本語対応 | × | × | × |
+| **基本機能** | テスト管理 | ◎<br><small>標準的なテスト管理機能</small> | ◎<br><small>標準的なテスト管理機能</small> | ◎<br><small>モダンなUIでのテスト管理</small> |
+| **コスト** | 無料プラン | ◎<br><small>全機能無料(OSS)</small> | ×<br><small>無料トライアルのみ</small> | ◯<br><small>制限あり</small> |
+| **拡張性** | API/プラグイン | ◎<br><small>豊富</small> | ◯<br><small>標準的なAPI提供</small> | ◎<br><small>APIとWebhook対応</small> |
+| **非機能要件** | 日本語対応 | ×<br><small>公式サポートなし</small> | △<br><small>一部サポート</small> | ×<br><small>公式サポートなし</small> |
 
 ### **16.2 詳細比較**
 
