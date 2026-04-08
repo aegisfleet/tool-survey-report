@@ -44,7 +44,7 @@ links:
   codewiki: https://codewiki.google/github.com/NVIDIA/NemoClaw
   documentation: https://docs.nvidia.com/nemoclaw/latest/
 relationships:
-  parent: OpenClaw
+  parent: "OpenClaw"
 ---
 
 

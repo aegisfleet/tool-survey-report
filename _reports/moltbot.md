@@ -44,12 +44,12 @@ links:
   codewiki: https://codewiki.google/github.com/openclaw/openclaw
   documentation: https://docs.openclaw.ai/
 relationships:
-  parent: OpenClaw
+  parent: "OpenClaw"
   children: []
   related_tools:
-    - OpenHands
-    - Claude
-    - AutoGPT
+    - "OpenHands"
+    - "Claude"
+    - "AutoGPT"
 ---
 
 # **Moltbot 調査レポート**
