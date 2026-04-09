@@ -50,6 +50,7 @@ relationships:
     - Backlog
     - Jira
     - Redmine
+    - Quality Tracker
 ---
 
 
