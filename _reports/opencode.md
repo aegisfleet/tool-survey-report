@@ -55,6 +55,7 @@ relationships:
     - GitHub Copilot
     - Agent Trace
     - Playwright Test Agents
+    - TAKT
 ---
 
 

@@ -53,6 +53,7 @@ relationships:
     - Devin
     - Claude Cowork
     - Claw Code
+    - TAKT
 ---
 
 

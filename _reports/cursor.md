@@ -57,6 +57,7 @@ relationships:
     - Visual Studio Code
     - Devin
     - OpenHands
+    - TAKT
 ---
 
 
