@@ -70,6 +70,6 @@
   },
   "files": {
     "include": ["assets/js/**/*.js", "tests/**/*.js"],
-    "ignore": ["node_modules", "_site", "vendor", ".sass-cache", ".jekyll-cache"]
+    "ignore": ["node_modules", "_site", "vendor", ".sass-cache", ".jekyll-cache", "assets/css/main.scss"]
   }
 }

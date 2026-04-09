@@ -13,6 +13,11 @@
     --color-bg-footer: #{$footer-bg};
     --color-bg-main: #{$main-bg};
 
+    // Primary & Brand colors
+    --color-primary: #{$primary-color};
+    --color-secondary: #{$secondary-color};
+    --color-accent: #{$accent-color};
+
     // Text colors
     --color-text: #{$text-color};
     --color-text-muted: #{$text-muted};
@@ -65,6 +70,11 @@
         --color-bg-footer: #{$dark-footer-bg};
         --color-bg-main: #{$dark-main-bg};
 
+        // Primary & Brand colors (keeping Sass variables as base or adjusting for dark)
+        --color-primary: #{$primary-color}; // Or use a dark-specific primary if exists
+        --color-secondary: #{$dark-link-color};
+        --color-accent: #{$accent-color};
+
         --color-text: #{$dark-text-color};
         --color-text-muted: #{$dark-text-muted};
         --color-text-light: #{$dark-text-light};
@@ -107,6 +117,11 @@
     --color-bg-header: #{$dark-header-bg};
     --color-bg-footer: #{$dark-footer-bg};
     --color-bg-main: #{$dark-main-bg};
+
+    // Primary & Brand colors
+    --color-primary: #{$primary-color};
+    --color-secondary: #{$dark-link-color};
+    --color-accent: #{$accent-color};
 
     --color-text: #{$dark-text-color};
     --color-text-muted: #{$dark-text-muted};
