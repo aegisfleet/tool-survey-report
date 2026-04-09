@@ -47,6 +47,7 @@ relationships:
     - Playwright CLI
     - Claude Code
     - Amazon Q Developer
+    - TAKT
 ---
 
 
