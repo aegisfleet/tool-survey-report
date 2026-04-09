@@ -53,6 +53,7 @@ relationships:
     - Notion
     - Findy Team+
     - Kiwi TCMS
+    - Qangaroo
 ---
 
 
