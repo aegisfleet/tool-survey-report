@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "PyTorch 調査レポート"
-tool_name: "PyTorch"
-tool_reading: "パイトーチ"
-category: "機械学習 / ディープラーニング"
-developer: "PyTorch Foundation (The Linux Foundation)"
-official_site: "https://pytorch.org/"
-date: "2026-04-09"
-last_updated: "2026-04-09"
+title: PyTorch 調査レポート
+tool_name: PyTorch
+tool_reading: パイトーチ
+category: 機械学習 / ディープラーニング
+developer: PyTorch Foundation (The Linux Foundation)
+official_site: https://pytorch.org/
+date: '2026-04-09'
+last_updated: '2026-04-09'
 tags:
-  - "オープンソース"
-  - "機械学習"
-  - "ディープラーニング"
-  - "Python"
-  - "C++"
-description: "強力なGPUアクセラレーションをサポートし、動的計算グラフを備えたオープンソースの機械学習・ディープラーニングフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - 機械学習
+  - ディープラーニング
+  - Python
+  - C++
+description: 強力なGPUアクセラレーションをサポートし、動的計算グラフを備えたオープンソースの機械学習・ディープラーニングフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AI研究者"
-    - "機械学習エンジニア"
-    - "データサイエンティスト"
-  latest_highlight: "PyTorch 2.x の普及と最新のハードウェア（GPU等）サポート強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AI研究者
+    - 機械学習エンジニア
+    - データサイエンティスト
+  latest_highlight: PyTorch 2.x の普及と最新のハードウェア（GPU等）サポート強化
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "動的計算グラフによる研究開発のしやすさと柔軟性"
+      reason: 動的計算グラフによる研究開発のしやすさと柔軟性
     - point: 5
-      reason: "Pythonに特化した直感的なAPI"
+      reason: Pythonに特化した直感的なAPI
     - point: 5
-      reason: "巨大で活発なエコシステムとコミュニティ"
+      reason: 巨大で活発なエコシステムとコミュニティ
     - point: 5
-      reason: "Hugging Faceなど主要なAIライブラリとの強力な連携"
+      reason: Hugging Faceなど主要なAIライブラリとの強力な連携
   minus_points:
     - point: 0
-      reason: "特になし（一部エッジ環境ではTensorFlowに一歩譲る場面もあるが大幅な減点対象ではない）"
-  summary: "AI研究・開発における業界標準フレームワーク。学習コストも比較的低く、強力なエコシステムを持つ。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（一部エッジ環境ではTensorFlowに一歩譲る場面もあるが大幅な減点対象ではない）
+  summary: AI研究・開発における業界標準フレームワーク。学習コストも比較的低く、強力なエコシステムを持つ。
 links:
-  github: "https://github.com/pytorch/pytorch"
-  deepwiki: "https://deepwiki.com/pytorch/pytorch"
-  codewiki: "https://codewiki.google/github.com/pytorch/pytorch"
-  documentation: "https://pytorch.org/docs/stable/index.html"
+  github: https://github.com/pytorch/pytorch
+  deepwiki: https://deepwiki.com/pytorch/pytorch
+  codewiki: https://codewiki.google/github.com/pytorch/pytorch
+  documentation: https://pytorch.org/docs/stable/index.html
 relationships:
   related_tools:
-    - "TensorFlow"
+    - TensorFlow
 ---
 
 # **PyTorch 調査レポート**
