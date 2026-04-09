@@ -6,11 +6,12 @@ category: テスト管理
 developer: Qase Inc.
 official_site: https://qase.io/
 date: '2026-02-01'
-last_updated: '2026-02-01'
+last_updated: '2026-04-09'
 tags:
   - AI
   - テスト管理
   - テスト自動化
+  - SaaS
   - 開発者ツール
 description: AIを活用したモダンなテスト管理プラットフォーム。手動・自動テストの一元管理が可能。
 quick_summary:
@@ -65,7 +66,6 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.qase.io/](https://docs.qase.io/)
   * APIドキュメント: [https://developers.qase.io/](https://developers.qase.io/)
-  * レビューサイト: [G2](https://www.g2.com/products/qase/reviews)
 * **カテゴリ**: テスト管理 (Test Management System)
 * **概要**: 手動テストと自動テストを一元管理できる、AI搭載のモダンなテスト管理プラットフォーム。直感的なUIと高速な動作、強力な外部連携機能が特徴です。
 
@@ -180,8 +180,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, 公式サイト事例
-* **総合評価**: 4.5/5.0 (G2)
+* **調査対象**: G2 (Google検索結果スニペットより引用), Capterra, 公式サイト事例
+* **総合評価**: 4.5/5.0 (G2, 検索結果スニペットより)
 * **ポジティブな評価**:
   * 「UIが非常にクリーンで使いやすい」
   * 「Jiraとの統合がスムーズ」
@@ -189,13 +189,18 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
   * 「時々UIのマイナーなバグに遭遇する」
   * 「大規模なテストスイートでの検索パフォーマンスの改善要望」
+* **特徴的なユースケース**:
+  * モダンなUIで手動テストと自動テストを統合的に管理する目的で活用
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04**: Q1 2026 Product Updates (新機能追加や改善)
+* **2026-03**: February 2026 Product Updates (機能強化とパフォーマンス改善)
 * **2026-01-12**: Q4 2025 Product Updates - パフォーマンス向上と新機能追加
 * **2025-12-17**: Database Profiler - テスト中のデータベースクエリをキャプチャ・分析する機能
 * **2025-12-04**: Shared Logic Architecture - 共有ステップ等のロジック刷新による高速化
-* **2025-10**: Q3 2025 Product Updates - AI機能の拡充
+
+(出典: [公式ブログ](https://qase.io/blog/) など)
 
 ## **16. 類似ツールとの比較**
 

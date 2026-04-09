@@ -46,7 +46,6 @@ relationships:
     - Qase
     - TestLink
     - Jira
-    - Selenium
     - Kiwi TCMS
     - Qangaroo
 ---
