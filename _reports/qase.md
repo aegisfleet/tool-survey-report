@@ -50,6 +50,7 @@ relationships:
     - TestLink
     - Jira
     - Kiwi TCMS
+    - Quality Tracker
 ---
 
 
