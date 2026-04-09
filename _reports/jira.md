@@ -51,9 +51,7 @@ relationships:
     - GitHub
     - GitLab
     - Notion
-    - Findy Team+
-    - Kiwi TCMS
-    - Qangaroo
+    - Qase
 ---
 
 
