@@ -48,6 +48,7 @@ relationships:
     - Jira
     - Selenium
     - Kiwi TCMS
+    - Qangaroo
 ---
 
 

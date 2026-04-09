@@ -6,11 +6,11 @@ category: テスト管理
 developer: 株式会社テクノデジタル
 official_site: https://qangaroo.jp/
 date: '2026-02-01'
-last_updated: '2026-02-01'
+last_updated: '2026-04-09'
 tags:
   - SaaS
-  - テスト管理
   - クラウド
+  - 開発者ツール
 description: Excelライクな操作性で直感的にテストケースを作成・実行できるクラウド型テスト管理ツール
 quick_summary:
   has_free_plan: true
@@ -20,7 +20,7 @@ quick_summary:
     - QAエンジニア
     - 開発チーム
     - Web制作会社
-  latest_highlight: 2026年1月21日にメンテナンス実施
+  latest_highlight: 2026年3月23日にメンテナンスのお知らせ
   update_frequency: 中
 evaluation:
   score: 78
@@ -203,6 +203,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-23**: メンテナンスのお知らせ。
 * **2026-01-21**: メンテナンスの実施（システム安定性の向上）。
 * **2025-03-17**: メンテナンスの実施。
 * **2025-01-15**: メンテナンスの実施。
