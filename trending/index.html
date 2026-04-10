@@ -38,7 +38,7 @@ description: "日々の業界動向、セキュリティ情報、注目のトレ
       {% if report.tags and report.tags.size > 0 %}
       <div class="report-tags">
         {% for tag in report.tags limit:5 %}
-        <span class="tag">#{{ tag }}</span>
+        <span class="tag">{{ tag }}</span>
         {% endfor %}
       </div>
       {% endif %}
