@@ -1,52 +1,52 @@
 ---
-title: "Testcase Management 調査レポート"
-tool_name: "Testcase Management"
-tool_reading: "テストケースマネジメント"
-category: "テスト管理"
-developer: "株式会社セナネットワークス (Sena Networks Inc.)"
-official_site: "https://www.sena-networks.co.jp/service/testcase_management_details"
-date: "2026-04-11"
-last_updated: "2026-04-11"
+title: Testcase Management 調査レポート
+tool_name: Testcase Management
+tool_reading: テストケースマネジメント
+category: テスト管理
+developer: 株式会社セナネットワークス (Sena Networks Inc.)
+official_site: https://www.sena-networks.co.jp/service/testcase_management_details
+date: '2026-04-11'
+last_updated: '2026-04-11'
 tags:
-  - "Redmine"
-  - "テスト管理"
-  - "プラグイン"
-  - "品質管理"
-  - "無料"
-description: "Redmineにテスト管理機能を拡張する無料プラグイン。テストケースの作成から実行、進捗管理までを一元化し、QA業務の効率化を支援する。"
+  - Redmine
+  - テスト管理
+  - プラグイン
+  - 品質管理
+  - 無料
+description: Redmineにテスト管理機能を拡張する無料プラグイン。テストケースの作成から実行、進捗管理までを一元化し、QA業務の効率化を支援する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "QAエンジニア"
-    - "開発チーム"
-    - "Redmineユーザー"
-  latest_highlight: "Redmine 5系への対応"
-  update_frequency: "低"
+    - QAエンジニア
+    - 開発チーム
+    - Redmineユーザー
+  latest_highlight: Redmine 5系への対応
+  update_frequency: 低
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Redmineのプラグインとして無料で利用でき、導入コストがかからない"
+      reason: Redmineのプラグインとして無料で利用でき、導入コストがかからない
     - point: 3
-      reason: "テスト失敗時にバグ修正チケットを直接起票できる連携機能"
+      reason: テスト失敗時にバグ修正チケットを直接起票できる連携機能
     - point: 2
-      reason: "テストケースのインポート・エクスポートに対応しており、既存資産を活用しやすい"
+      reason: テストケースのインポート・エクスポートに対応しており、既存資産を活用しやすい
   minus_points:
     - point: -3
-      reason: "詳細なマニュアルやサポート情報は問い合わせベースとなる可能性がある"
+      reason: 詳細なマニュアルやサポート情報は問い合わせベースとなる可能性がある
     - point: -2
-      reason: "機能がシンプルで、専用の有償ツールと比較すると分析機能などは限定的"
-  summary: "Redmineユーザーにとって、追加コストなしでテスト管理を統合できる有用な選択肢。シンプルながら必要な機能を押さえている。"
+      reason: 機能がシンプルで、専用の有償ツールと比較すると分析機能などは限定的
+  summary: Redmineユーザーにとって、追加コストなしでテスト管理を統合できる有用な選択肢。シンプルながら必要な機能を押さえている。
 links:
-  github: "https://gitlab.com/redmine-plugin-testcase-management/redmine-plugin-testcase-management"
-  documentation: "https://www.sena-networks.co.jp/service/testcase_management_details"
+  github: https://gitlab.com/redmine-plugin-testcase-management/redmine-plugin-testcase-management
+  documentation: https://www.sena-networks.co.jp/service/testcase_management_details
 relationships:
-  parent: "Redmine"
+  parent: Redmine
   related_tools:
-    - "Quality Tracker"
+    - Quality Tracker
 ---
 
 # **Testcase Management 調査レポート**
