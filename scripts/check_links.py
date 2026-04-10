@@ -137,7 +137,9 @@ def _check_link_logic(page, url):
             title_text = page.title().lower()
             has_404_keywords = False
             is_codewiki = "codewiki.google" in page.url
-            is_github = "github.com" in page.url
+            parsed_page_url = urlparse(page.url)
+            page_host = (parsed_page_url.hostname or "").lower()
+            is_github = page_host == "github.com" or page_host.endswith(".github.com")
             
             if is_codewiki:
                 # CodeWiki specific check
