@@ -49,6 +49,7 @@ relationships:
   related_tools:
     - Docker
     - Wine
+    - Homebrew
 ---
 
 
