@@ -5,13 +5,11 @@ tool_reading: クオリティフォワード
 category: テスト管理
 developer: 株式会社ベリサーブ
 official_site: https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/
-date: '2026-02-01'
-last_updated: '2026-02-01'
+date: '2026-04-10'
+last_updated: '2026-04-10'
 tags:
   - SaaS
-  - テスト管理
   - プロジェクト管理
-  - 品質管理
 description: 開発スピードと品質の向上を支援するテスト管理ツール。ExcelライクなUIで直感的に操作でき、リアルタイムな進捗可視化を実現する。
 quick_summary:
   has_free_plan: true
@@ -41,8 +39,6 @@ evaluation:
     - point: -2
       reason: Excelに比べると装飾などの柔軟性が劣る
   summary: Excel管理からの脱却を目指す日本企業に最適。低コストで導入でき、スムーズにテスト管理の効率化を実現できる。
-links:
-  documentation: https://qualityforward.zendesk.com/hc/ja
 relationships:
   related_tools:
     - CAT
@@ -66,7 +62,6 @@ relationships:
 * **開発元**: 株式会社ベリサーブ
 * **公式サイト**: [https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/](https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/)
 * **関連リンク**:
-  * ドキュメント: [https://qualityforward.zendesk.com/hc/ja](https://qualityforward.zendesk.com/hc/ja)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/qualityforward/reviews)
 * **カテゴリ**: テスト管理
 * **概要**: 開発スピードと品質の向上を支援するクラウド型テスト管理ツール。Excelやスプレッドシートで行われていた非効率なテスト管理を刷新し、リアルタイムな進捗把握と品質分析を可能にする。
@@ -187,7 +182,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: ITreview (2025年1月時点のレビュー含む)
+* **調査対象**: ITreview (2026年4月時点のレビュー含む)
 * **総合評価**: 4.0/5.0 (ITreview)
 * **ポジティブな評価**:
   * 「何をやったか、どういう結果になったかが見える化できる。定例会を省略できるほど進捗管理が楽になった。」
