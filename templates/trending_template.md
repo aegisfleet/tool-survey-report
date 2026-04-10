@@ -4,7 +4,7 @@ date: "YYYY-MM-DD"
 last_updated: "YYYY-MM-DD"
 description: "[本日の主なトピック3点程度を100文字程度で要約して記述]"
 categories: ["Daily Topics"]
-tags: ["Trending", "Security", "Releases"]
+tags: ["[ツール名1]", "[ツール名2]"]
 ---
 
 # **本日の AI/開発ツール トピックス (${date})**
