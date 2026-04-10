@@ -5,8 +5,8 @@ tool_reading: テストケースマネジメント
 category: テスト管理
 developer: 株式会社セナネットワークス (Sena Networks Inc.)
 official_site: https://www.sena-networks.co.jp/service/testcase_management_details
-date: '2026-02-01'
-last_updated: '2026-02-01'
+date: '2026-04-11'
+last_updated: '2026-04-11'
 tags:
   - Redmine
   - テスト管理
@@ -41,15 +41,13 @@ evaluation:
       reason: 機能がシンプルで、専用の有償ツールと比較すると分析機能などは限定的
   summary: Redmineユーザーにとって、追加コストなしでテスト管理を統合できる有用な選択肢。シンプルながら必要な機能を押さえている。
 links:
+  github: https://gitlab.com/redmine-plugin-testcase-management/redmine-plugin-testcase-management
   documentation: https://www.sena-networks.co.jp/service/testcase_management_details
 relationships:
   parent: Redmine
   related_tools:
     - Quality Tracker
 ---
-
-
-
 
 # **Testcase Management 調査レポート**
 
@@ -59,6 +57,9 @@ relationships:
 * **ツールの読み方**: テストケースマネジメント
 * **開発元**: 株式会社セナネットワークス (Sena Networks Inc.)
 * **公式サイト**: [https://www.sena-networks.co.jp/service/testcase_management_details](https://www.sena-networks.co.jp/service/testcase_management_details)
+* **関連リンク**:
+  * GitHub: [https://gitlab.com/redmine-plugin-testcase-management/redmine-plugin-testcase-management](https://gitlab.com/redmine-plugin-testcase-management/redmine-plugin-testcase-management)
+  * ドキュメント: [https://www.sena-networks.co.jp/service/testcase_management_details](https://www.sena-networks.co.jp/service/testcase_management_details)
 * **カテゴリ**: テスト管理
 * **概要**: Testcase Managementは、Redmineにテスト管理機能を追加するための無料プラグインです。Excelなどで行われている煩雑なテスト管理をRedmine上に一元化し、QA（品質保証）担当者と開発チーム間のコミュニケーションを円滑にします。
 
@@ -89,15 +90,18 @@ relationships:
   * Redmine 4.1以降 (5系にも対応)
   * データベース: PostgreSQL(12以降), MySQL 8以降, MariaDB 10.2以降
 * **インストール/導入**:
-  公式サイトの案内または問い合わせを通じてプラグインを入手し、Redmineのプラグインディレクトリ（`plugins/`）に配置してインストールします。
+
   ```bash
   # 一般的なプラグインインストール手順
   bundle install
   bundle exec rake redmine:plugins:migrate RAILS_ENV=production
   ```
+
 * **初期設定**:
   * Redmineの管理画面からプラグインの設定を確認・有効化します。
   * プロジェクトごとのモジュール設定で「Testcase Management」を有効にします。
+* **クイックスタート**:
+  * 各プロジェクトの「Testcase Management」タブからテストケースの登録と実行を開始します。
 
 ## **5. 特徴・強み (Pros)**
 
@@ -108,22 +112,30 @@ relationships:
 ## **6. 弱み・注意点 (Cons)**
 
 * **機能のシンプルさ**: 専用の商用テスト管理ツール（TestRailやQuality Trackerなど）と比較すると、分析機能やカスタマイズ性は限定的です。
-* **情報の少なさ**: オープンなGitHubリポジトリなどが見当たらないため、詳細な技術情報やトラブルシューティング情報は公式への問い合わせが必要になる場合があります。
+* **情報の少なさ**: GitLabでのリポジトリは存在するものの、詳細な技術情報やトラブルシューティング情報は公式への問い合わせが必要になる場合があります。
+* **サポートの手薄さ**: 日本語対応は標準で行われていますが、サポートや詳細マニュアルは問い合わせ（有償サポート等）ベースとなります。
 
 ## **7. 料金プラン**
 
-* **無料プラグイン**: 無料で利用可能です。
-* **問い合わせ**: 詳細は公式サイトのお問い合わせフォームから連絡が必要です。
+| プラン名 | 料金 | 主な特徴 |
+|---------|------|---------|
+| **無料プラグイン** | 無料 | ライセンス費用無料、全ての基本機能を利用可能 |
+| **サポートサービス** | 360,000円(税抜)〜 | 時間制のサポートサービス。導入アップデートや技術サポート |
+
+* **課金体系**: サポートサービスは時間制（インシデント数）
+* **無料トライアル**: プラグイン自体が無料のためトライアルの概念なし
 
 ## **8. 導入実績・事例**
 
-* **導入企業**: 具体的な企業名は公開されていませんが、Redmineを利用する開発会社やシステムインテグレーターでの利用が想定されます。
+* **導入企業**: 公開事例なし。ただし、Redmineを利用する開発会社やシステムインテグレーターでの利用が想定されます。
+* **導入事例**: 公開事例なし。
 * **対象業界**: Webシステム開発、アプリ開発など、Redmineが普及しているソフトウェア開発業界。
 
 ## **9. サポート体制**
 
-* **ドキュメント**: 公式サイトに基本的な機能紹介があります。詳細なマニュアルはプラグインに同梱されているか、問い合わせにて提供される可能性があります。
-* **公式サポート**: セナネットワークスの公式サイトより問い合わせが可能です。
+* **ドキュメント**: 公式サイトに基本的な機能紹介があります。詳細なマニュアルはプラグインに同梱されているか、サポート契約での提供となります。
+* **コミュニティ**: 公式なコミュニティは見当たらず。
+* **公式サポート**: セナネットワークスの公式サイトより問い合わせ（サポートサービス）が可能です。
 
 ## **10. エコシステムと連携**
 
@@ -143,6 +155,7 @@ relationships:
 
 * **認証**: Redmineの認証基盤を利用します。LDAP連携や2段階認証など、Redmine側の設定に依存します。
 * **データ管理**: Redmineのデータベースに保存されるため、自社サーバー（オンプレミス）でデータを管理でき、セキュリティポリシーに合わせやすいです。
+* **準拠規格**: 公式サイトでは公開されていない。個別の問い合わせが必要。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
@@ -151,24 +164,32 @@ relationships:
 
 ## **13. ベストプラクティス**
 
-* **効果的な活用法**:
+* **効果的な活用法 (Modern Practices)**:
   * **Excelからの脱却**: 共有フォルダにあるExcelファイルでの管理をやめ、すべてのテストケースをRedmineに集約することで、最新版管理のトラブルをなくす。
   * **チケット連携の徹底**: テストNG時は必ず連携機能を使ってチケット化し、トレーサビリティを確保する。
+* **陥りやすい罠 (Antipatterns)**:
+  * Redmineのバージョンアップ時にプラグインの互換性確認を怠り、動作しなくなる（特にメジャーバージョンアップ時）。
 
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: 公式サイトおよび一般的なRedmineプラグインの評判
+* **総合評価**: G2やCapterraでのレビュー登録なし。
 * **ポジティブな評価**:
   * 「無料でここまでできるのはありがたい」
   * 「Redmineの画面で完結するのが良い」
+  * 「QAと開発チームの垣根を越えるスマートなテスト管理ができる」（公式サイトより引用）
 * **ネガティブな評価 / 改善要望**:
   * 「ダウンロードリンクがわかりにくい（問い合わせが必要）」
+* **特徴的なユースケース**:
+  * Excelシートを使ったテスト管理や外部ツールの連携など、煩雑な作業負担を削減する目的で利用。
 
 ## **15. 直近半年のアップデート情報**
 
-* **2022-11-30**: Redmineプラグイン「Testcase Management」の無償提供を開始 (直近の大きなニュースとして)
-  * 現在はRedmine 5系にも対応済み。
-  (出典: [セナネットワークス ニュース](https://www.sena-networks.co.jp/news/news20))
+* **2022-12-20**: v1.6.2 - プラグイン情報のURLと著者URLの更新
+* **2022-12-20**: v1.6.1 - MariaDB/MySQL利用時のDBマイグレーションエラーの修正、著者情報の追記
+* **2022-08-09**: v1.6.0 - テスト計画、テストケース、テストケース実行の左揃えと省略しない表示への改善、他プラグインとの競合による500エラーの修正
+
+(出典: [GitLab Changelog](https://gitlab.com/redmine-plugin-testcase-management/redmine-plugin-testcase-management/-/blob/main/CHANGELOG.md) など)
 
 ## **16. 類似ツールとの比較**
 
@@ -176,15 +197,15 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | Testcase Management | Redmineup TestLodge | Quality Tracker |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | テスト管理 | ◯ | ◎ | ◎ |
-| **連携** | Redmine統合 | ◎<br><small>(プラグイン)</small> | ◯<br><small>(外部連携)</small> | ◯<br><small>(外部連携)</small> |
-| **コスト** | 無料利用 | ◎ | △<br><small>(有料)</small> | △<br><small>(有料)</small> |
-| **導入** | オンプレミス | ◎ | △<br><small>(SaaS)</small> | △<br><small>(SaaS)</small> |
+| **基本機能** | テスト管理 | ◯<br><small>Redmine内完結</small> | ◎<br><small>使いやすいUI</small> | ◎<br><small>正確な予実管理</small> |
+| **連携** | Redmine統合 | ◎<br><small>プラグイン</small> | ◯<br><small>外部連携</small> | ◯<br><small>外部連携</small> |
+| **コスト** | 無料利用 | ◎<br><small>完全無料</small> | △<br><small>有料</small> | △<br><small>有料</small> |
+| **導入** | オンプレミス | ◎<br><small>Redmineに依存</small> | △<br><small>SaaS</small> | △<br><small>SaaS</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
-|---|---|---|---|---|
+|---------|------|------|------|------------------|
 | **Testcase Management** | Redmineプラグイン | 無料、Redmine完全統合、シンプル | 機能が限定的、サポートが問い合わせベース | Redmineを利用しており、コストをかけずにテスト管理をシステム化したい場合。 |
 | **Redmineup TestLodge** | クラウド型テスト管理 | 使いやすいUI、多くのBTSと連携可能 | Redmineとは別ツールとなる、ランニングコスト | 独立した使いやすいテスト管理専用ツールを求めている場合。 |
 | **Quality Tracker** | EVMによる進捗管理 | 正確な予実管理、日本企業向け機能 | Redmineプラグインではない、有料 | より高度な品質管理と進捗の可視化が必要な場合。 |

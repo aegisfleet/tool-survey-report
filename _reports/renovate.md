@@ -8,32 +8,32 @@ official_site: https://github.com/renovatebot/renovate
 date: '2026-02-18'
 last_updated: '2026-02-18'
 tags:
-- DevSecOps
-- オープンソース
-- 依存関係管理
-- 自動化
-- 開発者ツール
+  - DevSecOps
+  - オープンソース
+  - 依存関係管理
+  - 自動化
+  - 開発者ツール
 description: 多数のプラットフォームと言語に対応した、高機能な依存関係自動更新ツール
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - DevOpsエンジニア
-  - オープンソースメンテナ
+    - 開発者
+    - DevOpsエンジニア
+    - オープンソースメンテナ
   latest_highlight: 2026年1月にv43をリリースし、セキュリティ機能を大幅強化
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 対応プラットフォームと言語が非常に豊富
-  - point: 5
-    reason: 依存関係ダッシュボード機能が便利
-  - point: 5
-    reason: マージコンフィデンス（信頼度）機能による安全性
+    - point: 5
+      reason: 対応プラットフォームと言語が非常に豊富
+    - point: 5
+      reason: 依存関係ダッシュボード機能が便利
+    - point: 5
+      reason: マージコンフィデンス（信頼度）機能による安全性
   minus_points: []
   summary: 多機能かつ柔軟な設定が可能で、大規模プロジェクトにも対応できる強力な依存関係管理ツール
 links:
@@ -42,8 +42,8 @@ links:
   documentation: https://docs.renovatebot.com/
 relationships:
   related_tools:
-  - Dependabot
-  - pinact
+    - Dependabot
+    - pinact
 ---
 # **Renovate 調査レポート**
 
