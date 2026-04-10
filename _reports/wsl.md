@@ -2,14 +2,15 @@
 title: Windows Subsystem for Linux (WSL) 調査レポート
 tool_name: WSL
 tool_reading: ダブルエスエル / ウィンドウズ サブシステム フォー リナックス
-category: 開発者環境
+category: OS/プラットフォーム
 developer: Microsoft
 official_site: https://learn.microsoft.com/windows/wsl/
 date: '2026-04-10'
 last_updated: '2026-04-10'
 tags:
-  - OS・仮想化
-  - 開発ツール
+  - 開発者ツール
+  - Linux
+  - Windows
   - Microsoft
 description: Windows上でLinux環境をシームレスに実行できる機能
 quick_summary:
