@@ -1,48 +1,45 @@
 ---
-title: "Windows Subsystem for Linux (WSL) 調査レポート"
-tool_name: "WSL"
-tool_reading: "ダブルエスエル / ウィンドウズ サブシステム フォー リナックス"
-category: "開発者環境"
-developer: "Microsoft"
-official_site: "https://learn.microsoft.com/windows/wsl/"
-date: "2026-04-10"
-last_updated: "2026-04-10"
+title: Windows Subsystem for Linux (WSL) 調査レポート
+tool_name: WSL
+tool_reading: ダブルエスエル / ウィンドウズ サブシステム フォー リナックス
+category: 開発者環境
+developer: Microsoft
+official_site: https://learn.microsoft.com/windows/wsl/
+date: '2026-04-10'
+last_updated: '2026-04-10'
 tags:
-  - "OS・仮想化"
-  - "開発ツール"
-  - "Microsoft"
-description: "Windows上でLinux環境をシームレスに実行できる機能"
-
+  - OS・仮想化
+  - 開発ツール
+  - Microsoft
+description: Windows上でLinux環境をシームレスに実行できる機能
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "インフラエンジニア"
-  latest_highlight: "2025年12月: WSL 2.6.3 リリース (WSLGショートカット生成の問題修正など)"
-  update_frequency: "高"
-
+    - 開発者
+    - インフラエンジニア
+  latest_highlight: '2025年12月: WSL 2.6.3 リリース (WSLGショートカット生成の問題修正など)'
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Windows上でLinuxをシームレスに利用できる利便性が非常に高い"
+      reason: Windows上でLinuxをシームレスに利用できる利便性が非常に高い
     - point: 5
-      reason: "WSL 2によるパフォーマンスの大幅な向上と完全なシステムコール互換性"
+      reason: WSL 2によるパフォーマンスの大幅な向上と完全なシステムコール互換性
     - point: 3
-      reason: "オープンソース化による透明性と開発速度の向上"
+      reason: オープンソース化による透明性と開発速度の向上
   minus_points:
-    - point: -0
-      reason: ""
-  summary: "Windows開発者にとって、Linux環境を手軽かつ強力に利用できる必須ツール"
-
+    - point: 0
+      reason: ''
+  summary: Windows開発者にとって、Linux環境を手軽かつ強力に利用できる必須ツール
 links:
-  github: "https://github.com/microsoft/WSL"
-  deepwiki: "https://deepwiki.com/microsoft/WSL"
-  codewiki: "https://codewiki.google/github.com/microsoft/WSL"
-  documentation: "https://learn.microsoft.com/windows/wsl/"
+  github: https://github.com/microsoft/WSL
+  deepwiki: https://deepwiki.com/microsoft/WSL
+  codewiki: https://codewiki.google/github.com/microsoft/WSL
+  documentation: https://learn.microsoft.com/windows/wsl/
 ---
 
 # **WSL (Windows Subsystem for Linux) 調査レポート**
