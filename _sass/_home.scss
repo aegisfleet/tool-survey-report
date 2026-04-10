@@ -177,7 +177,7 @@
 .random-picks {
     @include card(map-get($spacers, 5));
     margin-bottom: map-get($spacers, 5);
-    background: linear-gradient(135deg, darken(#ff7733, 30%) 0%, darken(#ff5566, 30%) 100%);
+    background: var(--color-random-picks-bg);
     position: relative;
     overflow: hidden;
 
@@ -198,7 +198,7 @@
 
     h2 {
         margin: 0 0 map-get($spacers, 1) 0;
-        color: $white;
+        color: var(--color-random-picks-text);
         font-size: 1.75rem;
         font-weight: $font-weight-bold;
         display: flex;
@@ -216,15 +216,15 @@
     }
 
     .picks-desc {
-        color: rgba($white, 0.9);
+        color: var(--color-random-picks-desc);
         font-size: $font-size-base;
         margin: 0;
     }
 
     .refresh-btn {
-        background: rgba($white, 0.2);
-        border: 2px solid rgba($white, 0.5);
-        color: $white;
+        background: var(--color-random-picks-btn-bg);
+        border: 2px solid var(--color-random-picks-btn-border);
+        color: var(--color-random-picks-btn-text);
         padding: map-get($spacers, 2) map-get($spacers, 3);
         border-radius: $border-radius-xl;
         cursor: pointer;
