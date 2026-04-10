@@ -48,6 +48,7 @@ relationships:
     - Claude for Financial Services Plugins
   related_tools:
     - Claude Code
+    - Claude for Chrome
 ---
 
 

@@ -48,6 +48,7 @@ relationships:
     - GitHub Copilot
     - Cursor
     - Windsurf
+    - Claude for Chrome
     - Cline
     - Roo Code
     - Devin

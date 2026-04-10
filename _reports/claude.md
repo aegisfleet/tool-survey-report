@@ -45,6 +45,7 @@ relationships:
   children:
     - Claude Code
     - Claude Cowork
+    - Claude for Chrome
   related_tools:
     - Moltbot
     - ChatGPT
