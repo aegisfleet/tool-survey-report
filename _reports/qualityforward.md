@@ -6,7 +6,7 @@ category: テスト管理
 developer: 株式会社ベリサーブ
 official_site: https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/
 date: '2026-02-01'
-last_updated: '2026-02-01'
+last_updated: '2026-04-10'
 tags:
   - SaaS
   - テスト管理
@@ -202,11 +202,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-02-14**: 品質のベストプラクティスに関するイベント開催（予定/開催済み）。
-* **2024-12-26**: 開発者向けサミットでのセッションレポート公開。
-* **2024-11-XX**: テスト要求ツリー機能の強化やUI改善などが定期的に行われている（レビュー情報より推測）。
+* **2025-10-XX〜2026-04-10**: 公式サイトのニュースやリリースノートにて、直近半年におけるQualityForward固有の製品機能アップデート情報は確認できなかった。
 
-(出典: [公式サイト ニュース](https://www.veriserve.co.jp/helloqualityworld/news/) および [ITreview](https://www.itreview.jp/products/qualityforward/reviews))
+(出典: [公式サイト ニュース](https://www.veriserve.co.jp/helloqualityworld/news/))
 
 ## **16. 類似ツールとの比較**
 

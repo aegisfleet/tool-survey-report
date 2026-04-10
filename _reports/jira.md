@@ -52,6 +52,7 @@ relationships:
     - GitLab
     - Notion
     - Qase
+    - QualityForward
 ---
 
 
