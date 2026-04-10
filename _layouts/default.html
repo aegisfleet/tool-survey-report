@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  <!-- Theme early detection -->
+  <script>
+    (function () {
+      const STORAGE_KEY = 'theme-preference';
+      const storedTheme = localStorage.getItem(STORAGE_KEY);
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
+    })();
+  </script>
+
   <!-- SEO Meta Tags -->
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description"

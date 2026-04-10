@@ -1052,7 +1052,7 @@ function initThemeToggle() {
   }
 
   // テーマを適用
-  function applyTheme(theme) {
+  function applyTheme(theme, announce = true) {
     const root = document.documentElement;
 
     if (theme === 'dark') {
@@ -1061,8 +1061,8 @@ function initThemeToggle() {
       root.setAttribute('data-theme', 'light');
     }
 
-    // スクリーンリーダー向けにテーマ変更をアナウンス
-    if (typeof window.announceToScreenReader === 'function') {
+    // スクリーンリーダー向けにテーマ変更をアナウンス（初期化時は行わない）
+    if (announce && typeof window.announceToScreenReader === 'function') {
       const message = theme === 'dark' ? 'ダークモードに切り替えました' : 'ライトモードに切り替えました';
       window.announceToScreenReader(message);
     }
@@ -1076,8 +1076,8 @@ function initThemeToggle() {
     applyTheme(next);
   }
 
-  // 初期テーマを適用
-  applyTheme(getCurrentTheme());
+  // 初期テーマを適用（アナウンスはスキップ）
+  applyTheme(getCurrentTheme(), false);
 
   // テーマ切替ボタンのイベントリスナー
   const themeToggleButtons = document.querySelectorAll('.theme-toggle');
