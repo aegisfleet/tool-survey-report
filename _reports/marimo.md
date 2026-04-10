@@ -2,7 +2,7 @@
 title: marimo 調査レポート
 tool_name: marimo
 tool_reading: マリモ
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: Marimo Inc.
 official_site: https://marimo.io/
 date: '2026-04-09'

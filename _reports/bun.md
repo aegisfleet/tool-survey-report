@@ -2,7 +2,7 @@
 title: Bun 調査レポート
 tool_name: Bun
 tool_reading: バン
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: Anthropic (旧 Oven)
 official_site: https://bun.com/
 date: '2026-02-02'

@@ -2,7 +2,7 @@
 title: OpenSpec 調査レポート
 tool_name: OpenSpec
 tool_reading: オープンスペック
-category: 開発者ツール
+category: API/仕様管理
 developer: Fission-AI
 official_site: https://openspec.dev/
 date: '2026-03-11'

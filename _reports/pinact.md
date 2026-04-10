@@ -2,51 +2,48 @@
 title: pinact 調査レポート
 tool_name: pinact
 tool_reading: ピンアクト
-category: 開発者ツール
+category: 開発ライフサイクル管理
 developer: suzuki-shunsuke
 official_site: https://github.com/suzuki-shunsuke/pinact
 date: '2026-03-12'
 last_updated: '2026-03-12'
 tags:
-  - CLI
-  - GitHub Actions
-  - オープンソース
-  - セキュリティ
-  - 自動化
+- CLI
+- GitHub Actions
+- オープンソース
+- セキュリティ
+- 自動化
+- 開発者ツール
 description: GitHub Actionsおよび再利用可能ワークフローのバージョンをコミットハッシュで固定・更新するためのCLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-    - 開発者
-    - DevSecOpsエンジニア
+  - 開発者
+  - DevSecOpsエンジニア
   latest_highlight: v3.9.0でバージョンタグコメントのセパレーター設定をサポート
   update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
-    - point: 5
-      reason: GitHub Actionsのセキュリティプラクティス（コミットSHAによる固定）を簡単に実現できる
-    - point: 3
-      reason: Renovateが対応できないPRマージ前のバージョン固定が可能
-    - point: 3
-      reason: レビューコメントの自動作成やSARIF形式出力などCI/CDパイプラインとの親和性が高い
-    - point: 2
-      reason: GitHub Enterprise Server (GHES)にも対応している
+  - point: 5
+    reason: GitHub Actionsのセキュリティプラクティス（コミットSHAによる固定）を簡単に実現できる
+  - point: 3
+    reason: Renovateが対応できないPRマージ前のバージョン固定が可能
+  - point: 3
+    reason: レビューコメントの自動作成やSARIF形式出力などCI/CDパイプラインとの親和性が高い
+  - point: 2
+    reason: GitHub Enterprise Server (GHES)にも対応している
   minus_points: []
   summary: GitHub Actionsを多用するプロジェクトにおいて、セキュリティと保守性を高めるために非常に有用なツール
 links:
   github: https://github.com/suzuki-shunsuke/pinact
 relationships:
   related_tools:
-    - Renovate
+  - Renovate
 ---
-
-
-
-
 # **pinact 調査レポート**
 
 ## **1. 基本情報**

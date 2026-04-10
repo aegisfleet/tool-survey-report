@@ -28,16 +28,21 @@
   - **AIコードエディタ**: AI機能が統合されたコードエディタ（例：Cursor, Windsurf）
   - **自律型AIエージェント**: 自律的にタスクを実行するAIシステム（例：Devin, Claude Code, OpenHands）
   - **生成AI**: 汎用AIチャットボット・言語モデル（例：ChatGPT, Claude, Gemini）
-  - **AI開発基盤**: LLM開発・運用のためのプラットフォーム（例：Hugging Face, Dify, LangChain）
+  - **AI開発基盤**: LLM開発、RAG、MCPサーバー/基盤、エージェント基盤（例：Hugging Face, Dify, LangChain, MCP）
   - **AI検索エンジン**: AI技術を活用した検索サービス（例：Perplexity, Felo）
 
   **開発ツール**
   - **OS/プラットフォーム**: オペレーティングシステム、言語ランタイム、マネージドプラットフォーム（例：Android, Ubuntu, Node.js, Vercel）
-  - **開発者ツール**: 開発プロセスを支援する汎用ツール（例：Docker, Git, npm, Vite, MCP関連）
+  - **ビルドツール/ランタイム**: ビルド、パッケージ管理、コンテナ（例：Vite, npm, bun, Docker, Podman）
+  - **開発者生産性分析**: 組織・生産性・品質の可視化と計測（例：Findy Team+, Microsoft Work IQ）
+  - **開発ライフサイクル管理**: 依存関係更新、フック設定、CI/CD補助（例：Renovate, Dependabot, Lefthook, pinact）
+  - **セキュリティ/解析**: 脆弱性診断、リバースエンジニアリング、フォレンジック（例：Sherlock, SHIFT DQS, Litebox）
+  - **API/仕様管理**: 仕様定義、ドキュメント管理、通信ライブラリ（例：OpenSpec, Axios）
+  - **開発ユーティリティ**: エミュレータ、自動化スクリプト、DB管理補助（例：Tera Term, AutoHotkey, NocoDB）
   - **IDE/エディタ**: 統合開発環境・コードエディタ（例：VS Code, IntelliJ IDEA）
   - **Webフレームワーク**: Webアプリケーション開発フレームワーク（例：Next.js, Astro, Hugo）
   - **モバイル開発**: モバイルアプリ開発ツール・フレームワーク（例：Flutter, Android Studio）
-  - **バージョン管理**: ソースコードの変更履歴管理ツール（例：GitHub, GitLab）
+  - **バージョン管理**: ソースコードの変更履歴管理ツール（例：GitHub, GitLab, GitKraken）
 
   **テスト/品質**
   - **テスト/QA**: テスト自動化・品質保証ツール全般（例：Selenium, Playwright, Cypress）

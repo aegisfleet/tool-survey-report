@@ -2,7 +2,7 @@
 title: Findy Team+ 調査レポート
 tool_name: Findy Team+
 tool_reading: ファインディ チームプラス
-category: 開発者ツール
+category: 開発者生産性分析
 developer: ファインディ株式会社
 official_site: https://findy-team.io/
 date: '2026-01-28'

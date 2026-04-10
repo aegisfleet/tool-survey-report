@@ -2,7 +2,7 @@
 title: Biome 調査レポート
 tool_name: Biome
 tool_reading: バイオーム
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: Biome Developers
 official_site: https://biomejs.dev/
 date: '2026-02-17'

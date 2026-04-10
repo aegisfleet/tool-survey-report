@@ -2,7 +2,7 @@
 title: clasp 調査レポート
 tool_name: clasp
 tool_reading: クラスプ
-category: 開発者ツール
+category: 開発ライフサイクル管理
 developer: Google
 official_site: https://developers.google.com/apps-script/guides/clasp
 date: '2026-03-27'

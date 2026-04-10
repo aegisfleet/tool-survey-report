@@ -2,7 +2,7 @@
 title: AutoHotkey 調査レポート
 tool_name: AutoHotkey
 tool_reading: オートホットキー
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: AutoHotkey Community (Chris Mallett, Steve Gray 等)
 official_site: https://www.autohotkey.com/
 date: '2026-03-27'

@@ -2,7 +2,7 @@
 title: AsyncReview 調査レポート
 tool_name: AsyncReview
 tool_reading: アシンクレビュー
-category: 開発者ツール
+category: 開発ライフサイクル管理
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/AsyncReview
 date: '2026-02-11'

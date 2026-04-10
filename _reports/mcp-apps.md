@@ -2,7 +2,7 @@
 title: MCP Apps 調査レポート
 tool_name: MCP Apps
 tool_reading: エムシーピー アップス
-category: 開発者ツール
+category: AI開発基盤
 developer: Anthropic (Model Context Protocol Project)
 official_site: https://modelcontextprotocol.io/docs/extensions/apps
 date: '2026-03-10'

@@ -2,7 +2,7 @@
 title: GitKraken 調査レポート
 tool_name: GitKraken
 tool_reading: ギットクラーケン
-category: 開発者ツール
+category: バージョン管理
 developer: GitKraken
 official_site: https://www.gitkraken.com/
 date: '2026-03-17'

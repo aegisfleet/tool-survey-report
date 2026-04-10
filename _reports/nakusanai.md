@@ -2,7 +2,7 @@
 title: ナクサナイ 調査レポート
 tool_name: ナクサナイ
 tool_reading: ナクサナイ
-category: ユーティリティ
+category: その他
 developer: 株式会社SHIFT
 official_site: https://nakusanai.jp/
 date: '2026-03-11'

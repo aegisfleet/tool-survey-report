@@ -2,7 +2,7 @@
 title: Nexus Repository 調査レポート
 tool_name: Nexus Repository
 tool_reading: ネクサスリポジトリ
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: Sonatype
 official_site: https://www.sonatype.com/products/sonatype-nexus-repository
 date: '2026-03-22'

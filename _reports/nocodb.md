@@ -2,7 +2,7 @@
 title: NocoDB 調査レポート
 tool_name: NocoDB
 tool_reading: ノコディービー
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: NocoDB Inc.
 official_site: https://nocodb.com/
 date: '2026-01-29'

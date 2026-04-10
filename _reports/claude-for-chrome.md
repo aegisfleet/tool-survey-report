@@ -2,7 +2,7 @@
 title: Claude for Chrome 調査レポート
 tool_name: Claude for Chrome
 tool_reading: クロード・フォー・クローム
-category: AIエージェント / ブラウザ拡張機能
+category: 自律型AIエージェント
 developer: Anthropic PBC
 official_site: https://claude.com/claude-for-chrome
 date: '2026-04-10'

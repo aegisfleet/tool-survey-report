@@ -2,7 +2,7 @@
 title: Docker 調査レポート
 tool_name: Docker
 tool_reading: ドッカー
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: Docker, Inc.
 official_site: https://www.docker.com/
 date: '2026-02-14'

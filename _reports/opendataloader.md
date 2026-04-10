@@ -2,7 +2,7 @@
 title: OpenDataLoader 調査レポート
 tool_name: OpenDataLoader
 tool_reading: オープンデータローダー
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: Hancom / OpenDataLoader Project
 official_site: https://opendataloader.org/
 date: '2026-03-20'

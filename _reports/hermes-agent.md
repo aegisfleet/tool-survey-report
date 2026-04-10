@@ -2,7 +2,7 @@
 title: Hermes Agent 調査レポート
 tool_name: Hermes Agent
 tool_reading: エルメスエージェント / ハーメスエージェント
-category: AIエージェント
+category: 自律型AIエージェント
 developer: Nous Research
 official_site: https://hermes-agent.nousresearch.com
 date: '2026-04-10'

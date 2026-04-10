@@ -2,7 +2,7 @@
 title: picomatch 調査レポート
 tool_name: picomatch
 tool_reading: ピコマッチ
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: Jon Schlinkert
 official_site: https://github.com/micromatch/picomatch
 date: '2026-04-09'

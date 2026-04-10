@@ -2,7 +2,7 @@
 title: PyTorch 調査レポート
 tool_name: PyTorch
 tool_reading: パイトーチ
-category: 機械学習 / ディープラーニング
+category: AI開発基盤
 developer: PyTorch Foundation (The Linux Foundation)
 official_site: https://pytorch.org/
 date: '2026-04-09'

@@ -2,7 +2,7 @@
 title: npm 調査レポート
 tool_name: npm
 tool_reading: エヌピーエム
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: GitHub (Microsoft)
 official_site: https://www.npmjs.com/
 date: '2026-03-31'

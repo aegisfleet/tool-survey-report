@@ -2,7 +2,7 @@
 title: AGENTS.md 調査レポート
 tool_name: AGENTS.md
 tool_reading: エージェンツ ドット エムディー
-category: 開発者ツール
+category: AI開発基盤
 developer: LF Projects, LLC
 official_site: https://agents.md/
 date: '2026-02-03'

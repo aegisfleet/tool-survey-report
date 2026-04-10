@@ -2,7 +2,7 @@
 title: Google Maps Platform 調査レポート
 tool_name: Google Maps Platform
 tool_reading: グーグル マップ プラットフォーム
-category: 開発者ツール
+category: その他
 developer: Google
 official_site: https://developers.google.com/maps
 date: '2026-02-04'

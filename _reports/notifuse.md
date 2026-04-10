@@ -2,7 +2,7 @@
 title: Notifuse 調査レポート
 tool_name: Notifuse
 tool_reading: ノティフューズ
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: Notifuse
 official_site: https://www.notifuse.com/
 date: '2025-12-21'

@@ -2,7 +2,7 @@
 title: Agent Trace 調査レポート
 tool_name: Agent Trace
 tool_reading: エージェントトレース
-category: 開発者ツール
+category: AI開発基盤
 developer: オープンコミュニティ (Cursor主導)
 official_site: https://agent-trace.dev/
 date: '2026-03-10'

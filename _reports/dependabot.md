@@ -2,7 +2,7 @@
 title: Dependabot 調査レポート
 tool_name: Dependabot
 tool_reading: ディペンダボット / デペンダボット
-category: 開発者ツール
+category: 開発ライフサイクル管理
 developer: GitHub (Microsoft)
 official_site: https://github.com/dependabot
 date: '2026-02-18'

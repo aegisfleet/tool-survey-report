@@ -2,7 +2,7 @@
 title: Chrome DevTools MCP 調査レポート
 tool_name: Chrome DevTools MCP
 tool_reading: クローム デブツールズ エムシーピー
-category: 開発者ツール
+category: AI開発基盤
 developer: Google LLC
 official_site: https://github.com/ChromeDevTools/chrome-devtools-mcp
 date: '2026-03-12'

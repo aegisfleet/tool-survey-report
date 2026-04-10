@@ -2,7 +2,7 @@
 title: Spec Kit 調査レポート
 tool_name: Spec Kit
 tool_reading: スペックキット
-category: 開発者ツール
+category: 開発ライフサイクル管理
 developer: GitHub
 official_site: https://github.github.com/spec-kit/
 date: '2026-03-09'

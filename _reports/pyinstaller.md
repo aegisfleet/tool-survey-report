@@ -2,7 +2,7 @@
 title: PyInstaller 調査レポート
 tool_name: PyInstaller
 tool_reading: パイインストーラー
-category: 開発者ツール
+category: ビルドツール/ランタイム
 developer: PyInstaller Development Team
 official_site: https://pyinstaller.org/
 date: '2025-12-06'

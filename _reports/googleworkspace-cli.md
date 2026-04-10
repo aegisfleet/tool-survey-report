@@ -2,7 +2,7 @@
 title: Google Workspace CLI 調査レポート
 tool_name: Google Workspace CLI (gws)
 tool_reading: グーグル ワークスペース シーエルアイ / ジーダブリューエス
-category: 開発者ツール
+category: 開発ライフサイクル管理
 developer: Google
 official_site: https://developers.google.com/workspace
 date: '2026-03-05'

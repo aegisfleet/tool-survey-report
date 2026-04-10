@@ -2,7 +2,7 @@
 title: GitLens 調査レポート
 tool_name: GitLens
 tool_reading: ギットレンズ
-category: 開発者ツール
+category: バージョン管理
 developer: GitKraken
 official_site: https://www.gitkraken.com/gitlens
 date: '2026-03-17'
