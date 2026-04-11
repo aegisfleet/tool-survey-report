@@ -56,6 +56,43 @@ layout: default
       </div>
     </section>
 
+    <!-- Bluesky タイムライン -->
+    <section class="bluesky-widget-section" aria-labelledby="bluesky-title">
+      <div class="bluesky-header">
+        <div>
+          <h2 id="bluesky-title">🦋 Bluesky トレンド</h2>
+          <p class="bluesky-desc">各分野の最新トレンド情報をBlueskyからお届け</p>
+        </div>
+        <button type="button" class="bluesky-shuffle-btn" id="bluesky-shuffle" aria-label="別のアカウントを表示">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+          </svg>
+          シャッフル
+        </button>
+      </div>
+      <div class="bluesky-account-links">
+        <a href="https://bsky.app/profile/dailyqiitatrends.bsky.social" target="_blank" rel="noopener" class="bluesky-account-btn" data-handle="dailyqiitatrends.bsky.social" title="Qiita Trends">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Qiita
+        </a>
+        <a href="https://bsky.app/profile/dailyzenntrends.bsky.social" target="_blank" rel="noopener" class="bluesky-account-btn" data-handle="dailyzenntrends.bsky.social" title="Zenn Trends">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Zenn
+        </a>
+        <a href="https://bsky.app/profile/dailygithubtrends.bsky.social" target="_blank" rel="noopener" class="bluesky-account-btn" data-handle="dailygithubtrends.bsky.social" title="GitHub Trends">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          GitHub
+        </a>
+        <a href="https://bsky.app/profile/dailygenaitrends.bsky.social" target="_blank" rel="noopener" class="bluesky-account-btn" data-handle="dailygenaitrends.bsky.social" title="GenAI Trends">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          GenAI
+        </a>
+      </div>
+      <div class="bluesky-widget-grid" id="bluesky-widget-container">
+        <!-- Widgets will be injected by JS -->
+      </div>
+    </section>
+
     <!-- ランダムピックアップ -->
     <section class="random-picks">
       <div class="picks-header">

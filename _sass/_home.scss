@@ -173,6 +173,133 @@
     }
 }
 
+
+// Bluesky Widget Section
+.bluesky-widget-section {
+    @include card(map-get($spacers, 4));
+    margin-bottom: map-get($spacers, 5);
+    background: var(--color-bg-content);
+    border: 1px solid var(--color-border);
+    position: relative;
+    overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+        padding: map-get($spacers, 3);
+    }
+
+    .bluesky-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: map-get($spacers, 3);
+        flex-wrap: wrap;
+        gap: map-get($spacers, 2);
+
+        h2 {
+            margin: 0 0 map-get($spacers, 1) 0;
+            color: #1185fe;
+            font-size: 1.5rem;
+            font-weight: $font-weight-bold;
+        }
+
+        .bluesky-desc {
+            margin: 0;
+            color: var(--color-text-muted);
+            font-size: $font-size-sm;
+        }
+    }
+
+    .bluesky-shuffle-btn {
+        background: linear-gradient(135deg, #0085ff, #1185fe);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        color: $white;
+        padding: map-get($spacers, 2) map-get($spacers, 3);
+        border-radius: $border-radius-xl;
+        cursor: pointer;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-sm;
+        transition: $transition-base;
+        display: flex;
+        align-items: center;
+        gap: map-get($spacers, 1);
+
+        &:hover {
+            background: linear-gradient(135deg, #1185fe, #339dff);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(17, 133, 254, 0.35);
+        }
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .bluesky-account-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: map-get($spacers, 2);
+        margin-bottom: map-get($spacers, 3);
+    }
+
+    .bluesky-account-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        border-radius: $border-radius-xl;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        text-decoration: none;
+        border: 2px solid transparent;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        background: linear-gradient(135deg, #0085ff, #1185fe);
+        color: $white;
+        cursor: pointer;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(17, 133, 254, 0.35);
+            background: linear-gradient(135deg, #1185fe, #339dff);
+            color: $white;
+            text-decoration: none;
+        }
+
+        &.active {
+            background: linear-gradient(135deg, #ff7733, #ff5566);
+            border-color: transparent;
+            box-shadow: 0 4px 16px rgba(255, 119, 51, 0.3);
+            color: $white;
+
+            &:hover {
+                box-shadow: 0 6px 20px rgba(255, 119, 51, 0.4);
+            }
+        }
+
+        .bluesky-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+    }
+
+    .bluesky-widget-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: map-get($spacers, 3);
+        min-height: 200px;
+
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-breakpoint-down(sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+
 // Random picks section - Featured design
 .random-picks {
     @include card(map-get($spacers, 5));
