@@ -2,7 +2,7 @@
 title: Homebrew 調査レポート
 tool_name: Homebrew
 tool_reading: ホームブリュー
-category: OS/プラットフォーム
+category: パッケージ管理
 developer: Homebrew contributors
 official_site: https://brew.sh/
 date: '2026-04-10'

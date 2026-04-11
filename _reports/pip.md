@@ -2,7 +2,7 @@
 title: pip 調査レポート
 tool_name: pip
 tool_reading: ピップ
-category: パッケージ管理ツール
+category: パッケージ管理
 developer: The pip developers (Python Packaging Authority)
 official_site: https://pip.pypa.io/
 date: '2026-04-11'

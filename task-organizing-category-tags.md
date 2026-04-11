@@ -32,8 +32,10 @@
   - **AI検索エンジン**: AI技術を活用した検索サービス（例：Perplexity, Felo）
 
   **開発ツール**
-  - **OS/プラットフォーム**: オペレーティングシステム、言語ランタイム、マネージドプラットフォーム（例：Android, Ubuntu, Node.js, Vercel）
-  - **ビルドツール/ランタイム**: ビルド、パッケージ管理、コンテナ（例：Vite, npm, bun, Docker, Podman）
+  - **OS/プラットフォーム**: オペレーティングシステム、マネージドプラットフォーム（例：Android, Ubuntu, Vercel）
+  - **言語ランタイム/実行環境**: プログラミング言語の実行環境、互換レイヤー（例：Node.js, Deno, Bun, Wine）
+  - **ビルドツール/ランタイム**: ビルド、コンテナ（例：Vite, Docker, Podman）
+  - **パッケージ管理**: 言語パッケージマネージャー、システムパッケージ管理、アーティファクト管理（例：npm, pip, uv, Homebrew, Artifactory）
   - **開発者生産性分析**: 組織・生産性・品質の可視化と計測（例：Findy Team+, Microsoft Work IQ）
   - **開発ライフサイクル管理**: 依存関係更新、フック設定、CI/CD補助（例：Renovate, Dependabot, Lefthook, pinact）
   - **セキュリティ/解析**: 脆弱性診断、リバースエンジニアリング、フォレンジック（例：Sherlock, SHIFT DQS, Litebox）

@@ -2,7 +2,7 @@
 title: uv 調査レポート
 tool_name: uv
 tool_reading: ユーブイ
-category: 開発者ツール
+category: パッケージ管理
 developer: Astral
 official_site: https://docs.astral.sh/uv
 date: '2026-04-11'

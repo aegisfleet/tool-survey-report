@@ -2,7 +2,7 @@
 title: Deno 調査レポート
 tool_name: Deno
 tool_reading: デノ
-category: OS/プラットフォーム
+category: 言語ランタイム/実行環境
 developer: Deno Land Inc.
 official_site: https://deno.com/
 date: '2025-12-20'

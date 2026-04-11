@@ -2,7 +2,7 @@
 title: Wine (WineHQ) 調査レポート
 tool_name: Wine
 tool_reading: ワイン
-category: OS/プラットフォーム
+category: 言語ランタイム/実行環境
 developer: WineHQ
 official_site: https://www.winehq.org/
 date: '2026-02-13'

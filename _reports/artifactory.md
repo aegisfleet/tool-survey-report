@@ -2,7 +2,7 @@
 title: JFrog Artifactory 調査レポート
 tool_name: JFrog Artifactory
 tool_reading: ジェイフロッグ アーティファクトリー
-category: ビルドツール/ランタイム
+category: パッケージ管理
 developer: JFrog
 official_site: https://jfrog.com/artifactory/
 date: '2026-01-28'

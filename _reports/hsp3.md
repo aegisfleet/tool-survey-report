@@ -2,7 +2,7 @@
 title: HSP3 調査レポート
 tool_name: HSP3
 tool_reading: エイチエスピースリー / ホットスーププロセッサ
-category: OS/プラットフォーム
+category: 言語ランタイム/実行環境
 developer: ONION software (おにたま)
 official_site: https://hsp.tv/
 date: '2026-02-03'
