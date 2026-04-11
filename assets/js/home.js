@@ -31,14 +31,7 @@ const categoryEmojiRules = [
   { keywords: ['開発ライフサイクル管理'], emoji: '🔄' },
   { keywords: ['api/仕様管理', 'api'], emoji: '🔌' },
   {
-    keywords: [
-      'os/プラットフォーム',
-      'os',
-      'プラットフォーム',
-      'android',
-      'ubuntu',
-      'vercel',
-    ],
+    keywords: ['os/プラットフォーム', 'os', 'プラットフォーム', 'android', 'ubuntu', 'vercel'],
     emoji: '💻',
   },
   { keywords: ['エディタ', 'ide', '開発者ツール', 'バージョン管理', 'git', 'フック', '開発ツール'], emoji: '🔧' },
