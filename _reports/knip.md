@@ -1,58 +1,55 @@
 ---
-title: "Knip 調査レポート"
-tool_name: "Knip"
-tool_reading: "ニップ"
-category: "開発ツール"
-developer: "Lars Kappert / webpro.nl"
-official_site: "https://knip.dev/"
-date: "2026-04-11"
-last_updated: "2026-04-11"
+title: Knip 調査レポート
+tool_name: Knip
+tool_reading: ニップ
+category: 開発ツール
+developer: Lars Kappert / webpro.nl
+official_site: https://knip.dev/
+date: '2026-04-11'
+last_updated: '2026-04-11'
 tags:
-  - "lint"
-  - "dependency-analysis"
-  - "typescript"
-  - "オープンソース"
-  - "CI/CD"
-description: "JavaScriptおよびTypeScriptプロジェクト内の未使用ファイル、エクスポート、依存関係を検出し、削除・自動修正するためのCLIツール"
-
+  - lint
+  - dependency-analysis
+  - typescript
+  - オープンソース
+  - CI/CD
+description: JavaScriptおよびTypeScriptプロジェクト内の未使用ファイル、エクスポート、依存関係を検出し、削除・自動修正するためのCLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンドエンジニア"
-    - "バックエンドエンジニア"
-    - "開発チーム"
-  latest_highlight: "ピア依存関係の解決やReact Router対応など、各種修正と機能追加を含むKnip 6.3.1のリリース"
-  update_frequency: "高"
-
+    - フロントエンドエンジニア
+    - バックエンドエンジニア
+    - 開発チーム
+  latest_highlight: ピア依存関係の解決やReact Router対応など、各種修正と機能追加を含むKnip 6.3.1のリリース
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "依存関係からエクスポート、ファイルまで包括的に未使用コードを検出できる独自機能"
+      reason: 依存関係からエクスポート、ファイルまで包括的に未使用コードを検出できる独自機能
     - point: 5
-      reason: "自動修正（--fix）機能をサポートしており、整理が迅速"
+      reason: 自動修正（--fix）機能をサポートしており、整理が迅速
     - point: 5
-      reason: "100以上のプラグインを持ち、主要フレームワークに対応する高い拡張性"
+      reason: 100以上のプラグインを持ち、主要フレームワークに対応する高い拡張性
     - point: 3
-      reason: "大規模なモノレポに対する優れたサポート"
+      reason: 大規模なモノレポに対する優れたサポート
   minus_points:
-    - point: -0
-      reason: "大規模なレガシーコードベースでは初期設定や調整に手間がかかる場合がある"
-  summary: "コードベースの健全性を維持し、デッドコードを撲滅するための強力で必須レベルの開発ツール"
-
+    - point: 0
+      reason: 大規模なレガシーコードベースでは初期設定や調整に手間がかかる場合がある
+  summary: コードベースの健全性を維持し、デッドコードを撲滅するための強力で必須レベルの開発ツール
 links:
-  github: "https://github.com/webpro-nl/knip"
-  deepwiki: "https://deepwiki.com/webpro-nl/knip"
-  documentation: "https://knip.dev/"
+  github: https://github.com/webpro-nl/knip
+  deepwiki: https://deepwiki.com/webpro-nl/knip
+  documentation: https://knip.dev/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "ESLint"
-    - "Biome"
+    - ESLint
+    - Biome
 ---
 
 # **Knip 調査レポート**
