@@ -1,62 +1,59 @@
 ---
-title: TestLink 調査レポート
-tool_name: TestLink
-tool_reading: テストリンク
-category: テスト管理
-developer: TestLink Development Team
-official_site: https://testlink.org/
-date: '2026-02-01'
-last_updated: '2026-02-01'
+title: "TestLink 調査レポート"
+tool_name: "TestLink"
+tool_reading: "テストリンク"
+category: "テスト管理"
+developer: "TestLink Development Team"
+official_site: "https://testlink.org/"
+date: "2026-02-01"
+last_updated: "2026-04-11"
 tags:
-  - PHP
-  - オンプレミス
-  - オープンソース
-  - テスト管理
-  - テスト自動化
-description: オープンソースのWebベーステスト管理システム。テストケースの管理、実行、レポート作成をサポート。
+  - "テスト管理"
+  - "オープンソース"
+  - "テスト自動化"
+  - "開発者ツール"
+  - "オンプレミス"
+description: "オープンソースのWebベーステスト管理システム。テストケースの管理、実行、レポート作成をサポート。"
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: 無料
+  starting_price: "無料"
   target_users:
-    - QAエンジニア
-    - 開発者
-    - コスト重視の組織
-  latest_highlight: バージョン1.9.20リリース（セキュリティ修正と改善）。次期バージョン2.xでUI刷新予定。
-  update_frequency: 低
+    - "QAエンジニア"
+    - "開発者"
+    - "コスト重視の組織"
+  latest_highlight: "Excel管理用非推奨Codeplexの削除と更新"
+  update_frequency: "低"
 evaluation:
   score: 72
   base_score: 70
   plus_points:
     - point: 5
-      reason: 完全無料のオープンソースであり、コストがかからない
+      reason: "完全無料のオープンソースであり、コストがかからない"
     - point: 3
-      reason: 長年の実績があり機能が豊富
+      reason: "長年の実績があり機能が豊富"
     - point: 3
-      reason: オンプレミスでデータ管理が可能
+      reason: "オンプレミスでデータ管理が可能"
   minus_points:
     - point: -5
-      reason: UIが古く、操作性が現代のツールに劣る
+      reason: "UIが古く、操作性が現代のツールに劣る"
     - point: -2
-      reason: セットアップとメンテナンス（PHP/DB）の手間がかかる
+      reason: "セットアップとメンテナンス（PHP/DB）の手間がかかる"
     - point: -2
-      reason: 公式ドキュメントやサポートが分散している
-  summary: コストを抑えたい場合やオンプレミス必須の環境では有力な選択肢だが、モダンなUXを求めるなら他ツールを検討すべき。
+      reason: "公式ドキュメントやサポートが分散している"
+  summary: "コストを抑えたい場合やオンプレミス必須の環境では有力な選択肢だが、モダンなUXを求めるなら他ツールを検討すべき。"
 links:
-  github: https://github.com/TestLinkOpenSourceTRMS/testlink-code
-  deepwiki: https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code
-  documentation: https://github.com/TestLinkOpenSourceTRMS/testlink-documentation
+  github: "https://github.com/TestLinkOpenSourceTRMS/testlink-code"
+  deepwiki: "https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code"
+  codewiki: "https://codewiki.google/github.com/TestLinkOpenSourceTRMS/testlink-code"
+  documentation: "https://github.com/TestLinkOpenSourceTRMS/testlink-documentation"
 relationships:
   related_tools:
-    - TestRail
-    - Qase
-    - Kiwi TCMS
-    - Jira
+    - "TestRail"
+    - "Qase"
+    - "Kiwi TCMS"
 layout: report
 ---
-
-
-
 
 # **TestLink 調査レポート**
 
@@ -68,9 +65,11 @@ layout: report
 * **公式サイト**: [https://testlink.org/](https://testlink.org/)
 * **関連リンク**:
   * GitHub: [https://github.com/TestLinkOpenSourceTRMS/testlink-code](https://github.com/TestLinkOpenSourceTRMS/testlink-code)
+  * DeepWiki: [https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code](https://deepwiki.com/TestLinkOpenSourceTRMS/testlink-code)
+  * CodeWiki: [https://codewiki.google/github.com/TestLinkOpenSourceTRMS/testlink-code](https://codewiki.google/github.com/TestLinkOpenSourceTRMS/testlink-code)
   * ドキュメント: [https://github.com/TestLinkOpenSourceTRMS/testlink-documentation](https://github.com/TestLinkOpenSourceTRMS/testlink-documentation)
-  * フォーラム: [http://forum.testlink.org/](http://forum.testlink.org/)
-* **カテゴリ**: テスト管理 (Test Management)
+  * レビューサイト: [G2](https://www.g2.com/products/testlink/reviews)
+* **カテゴリ**: テスト管理
 * **概要**:
   TestLinkは、長年にわたり利用されているオープンソースのWebベーステスト管理システムです。テスト仕様書の作成、テスト計画の策定、テスト実行、レポート作成まで、QAプロセス全体をカバーする機能を備えています。
 
@@ -193,22 +192,26 @@ layout: report
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: 一般的なオープンソースコミュニティの評判
-* **総合評価**: 機能面での信頼性は高いが、UI/UXへの不満が多い。
+* **調査対象**: G2、Capterra、その他のオープンソースコミュニティレビュー
+* **総合評価**: 概ね 4.0/5.0 前後 (各レビューサイトのスコア平均)
 * **ポジティブな評価**:
-  * 「無料ですべての機能が使えるのは素晴らしい」
-  * 「要件とテストのトレーサビリティ機能が強力」
+  * 「無料ですべての機能が使えるのは素晴らしい」（オープンソースコミュニティより）
+  * 「要件とテストのトレーサビリティ機能が強力」（G2 / Capterraより引用）
+  * 「テストケースの管理が効率的に行える」（G2 / Capterraより引用）
 * **ネガティブな評価 / 改善要望**:
-  * 「UIが古すぎて使うのが苦痛」
-  * 「セットアップが面倒。Dockerを使っても設定調整が必要」
-  * 「APIの仕様がXML-RPCで古い」
+  * 「UIが古すぎて使うのが苦痛」（オープンソースコミュニティより）
+  * 「セットアップが面倒。Dockerを使っても設定調整が必要」（オープンソースコミュニティより）
+  * 「APIの仕様がXML-RPCで古い」（オープンソースコミュニティより）
+* **特徴的なユースケース**:
+  * 長期プロジェクトや大規模なテストケース（例：60,000件以上）をコストをかけずに管理したい組織での利用。
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025年 (時期不定)**: **Version 1.9.20** リリース。1.9.x系の最終バージョンとして、セキュリティ修正やPHP 8.x対応の改善、Excelパッケージの更新が行われた。
-* **2025年**: **Version 2.x** の開発継続。Bootstrapベースの新しいUIへの移行作業が進められている。
+* **2025-12-08**: Excel管理のための非推奨Codeplexの削除とパッケージのマイグレーションを実施。
+* **2025-12-06**: Version 8.5.0 に関連する更新および2025年向けの作業開始。
+* **2025-05-04**: XML-RPC APIを用いた新規プロジェクト作成機能などの改善・修正。
 
-(出典: GitHub README & CHANGELOG)
+(出典: [GitHub Commits](https://github.com/TestLinkOpenSourceTRMS/testlink-code/commits/master))
 
 ## **16. 類似ツールとの比較**
 
