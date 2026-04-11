@@ -2,7 +2,7 @@
 title: ESLint 調査レポート
 tool_name: ESLint
 tool_reading: イーエスリント
-category: コード品質
+category: リンター/フォーマッタ
 developer: ESLint Team (OpenJS Foundation)
 official_site: https://eslint.org/
 date: '2026-02-20'

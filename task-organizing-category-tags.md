@@ -35,6 +35,7 @@
   - **OS/プラットフォーム**: オペレーティングシステム、マネージドプラットフォーム（例：Android, Ubuntu, Vercel）
   - **言語ランタイム/実行環境**: プログラミング言語の実行環境、互換レイヤー（例：Node.js, Deno, Bun, Wine）
   - **ビルドツール/ランタイム**: ビルド、コンテナ（例：Vite, Docker, Podman）
+  - **リンター/フォーマッタ**: 静的解析、コード整形、未使用コード検出（例：ESLint, Biome, Knip, Markdownlint）
   - **パッケージ管理**: 言語パッケージマネージャー、システムパッケージ管理、アーティファクト管理（例：npm, pip, uv, Homebrew, Artifactory）
   - **開発者生産性分析**: 組織・生産性・品質の可視化と計測（例：Findy Team+, Microsoft Work IQ）
   - **開発ライフサイクル管理**: 依存関係更新、フック設定、CI/CD補助（例：Renovate, Dependabot, Lefthook, pinact）
