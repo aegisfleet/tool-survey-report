@@ -57,6 +57,7 @@ relationships:
     - Roo Code
     - Claude Code
     - Visual Studio Code
+    - Grok CLI
 ---
 
 

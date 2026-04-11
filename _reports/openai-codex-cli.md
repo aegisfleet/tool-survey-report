@@ -53,6 +53,7 @@ relationships:
     - Symphony
     - SkillsMP
     - Agentic Workflows
+    - Grok CLI
 ---
 
 
