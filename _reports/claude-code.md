@@ -55,6 +55,7 @@ relationships:
     - Claude Cowork
     - Claw Code
     - TAKT
+    - Grok CLI
 ---
 
 
