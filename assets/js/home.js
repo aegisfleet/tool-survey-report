@@ -738,7 +738,7 @@ document.addEventListener('DOMContentLoaded', () => {
         widget.setAttribute('data-width', '100%');
         widget.setAttribute('data-height', height);
         widget.setAttribute('data-lang', 'ja');
-        widget.setAttribute('data-ui', '0');
+        widget.setAttribute('data-ui', '1');
         widget.setAttribute('data-pin', '0');
         widget.setAttribute('data-rp', '0');
         widget.setAttribute('data-thread', '0');
