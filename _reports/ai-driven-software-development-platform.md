@@ -1,52 +1,44 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AI-Driven Software Development Platform 調査レポート"
-tool_name: "AI-Driven Software Development Platform"
-tool_reading: "エーアイ ドリブン ソフトウェア デベロップメント プラットフォーム / AI-DSDP"
-category: "AI開発基盤"
-developer: "富士通株式会社"
-official_site: "https://global.fujitsu/ja-jp/technology/key-technologies/ai/ai-dsdp"
-date: "2026-04-11"
-last_updated: "2026-04-11"
+title: AI-Driven Software Development Platform 調査レポート
+tool_name: AI-Driven Software Development Platform
+tool_reading: エーアイ ドリブン ソフトウェア デベロップメント プラットフォーム / AI-DSDP
+category: AI開発基盤
+developer: 富士通株式会社
+official_site: https://global.fujitsu/ja-jp/technology/key-technologies/ai/ai-dsdp
+date: '2026-04-11'
+last_updated: '2026-04-11'
 tags:
-  - "エンタープライズ"
-  - "AI開発基盤"
-  - "レガシーモダナイゼーション"
-  - "自動化"
-description: "要件定義から結合テストまでのシステム開発全工程を自動化する、富士通のエンタープライズ向けAI開発基盤"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - エンタープライズ
+  - AI開発基盤
+  - レガシーモダナイゼーション
+  - 自動化
+description: 要件定義から結合テストまでのシステム開発全工程を自動化する、富士通のエンタープライズ向けAI開発基盤
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "個別見積もり"
+  starting_price: 個別見積もり
   target_users:
-    - "エンタープライズ"
-    - "システムインテグレーター"
-    - "ITエンジニア"
-  latest_highlight: "2026年2月17日にAIエージェントによるシステム開発を刷新する基盤を発表・運用開始"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - エンタープライズ
+    - システムインテグレーター
+    - ITエンジニア
+  latest_highlight: 2026年2月17日にAIエージェントによるシステム開発を刷新する基盤を発表・運用開始
+  update_frequency: 不定期
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "複雑な既存システムの改修をAIエージェントが自律的に全工程(要件定義からテストまで)実行する画期的なアプローチ"
+      reason: 複雑な既存システムの改修をAIエージェントが自律的に全工程(要件定義からテストまで)実行する画期的なアプローチ
     - point: 5
-      reason: "独自のLLM「Takane」を活用した高い日本語・法令文書の理解力"
+      reason: 独自のLLM「Takane」を活用した高い日本語・法令文書の理解力
     - point: 5
-      reason: "既存システムやドメイン知識をAI活用可能な形式に再構築する「AI-Ready Engineering」の実現"
+      reason: 既存システムやドメイン知識をAI活用可能な形式に再構築する「AI-Ready Engineering」の実現
   minus_points:
     - point: -5
-      reason: "エンタープライズ向けのソリューションであり、現時点での導入の敷居やコスト、一般的な個人開発者向けのアクセスに制限がある"
-  summary: "既存の大規模システムの改修・保守という日本のシステム開発における重大な課題に対し、複数のAIエージェントの協調によってアプローチする強力なエンタープライズ向けソリューション"
-
-# 【任意項目】該当するもののみ記載
+      reason: エンタープライズ向けのソリューションであり、現時点での導入の敷居やコスト、一般的な個人開発者向けのアクセスに制限がある
+  summary: 既存の大規模システムの改修・保守という日本のシステム開発における重大な課題に対し、複数のAIエージェントの協調によってアプローチする強力なエンタープライズ向けソリューション
 links:
-  documentation: "https://global.fujitsu/ja-jp/pr/news/2026/02/17-01"
+  documentation: https://global.fujitsu/ja-jp/pr/news/2026/02/17-01
 ---
 
 # **AI-Driven Software Development Platform 調査レポート**
