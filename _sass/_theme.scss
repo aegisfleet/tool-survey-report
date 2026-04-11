@@ -61,6 +61,14 @@
     --color-random-picks-btn-border: rgba(#{$primary-color}, 0.4);
     --color-random-picks-btn-text: #{$primary-color};
 
+    // bluesky-widget section colors
+    --color-bluesky-bg: linear-gradient(135deg, #{lighten(#1185fe, 43%)} 0%, #{lighten(#339dff, 43%)} 100%);
+    --color-bluesky-text: #1185fe;
+    --color-bluesky-desc: #{$text-color};
+    --color-bluesky-btn-bg: rgba(#1185fe, 0.08);
+    --color-bluesky-btn-border: rgba(#1185fe, 0.4);
+    --color-bluesky-btn-text: #1185fe;
+
     // Theme icon visibility
     --theme-icon-light-display: none;
     --theme-icon-dark-display: block;
@@ -118,6 +126,14 @@
         --color-random-picks-btn-border: rgba(#{$white}, 0.5);
         --color-random-picks-btn-text: #{$white};
 
+        // bluesky-widget section colors
+        --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
+        --color-bluesky-text: #{$white};
+        --color-bluesky-desc: rgba(#{$white}, 0.9);
+        --color-bluesky-btn-bg: rgba(#{$white}, 0.2);
+        --color-bluesky-btn-border: rgba(#{$white}, 0.5);
+        --color-bluesky-btn-text: #{$white};
+
         --theme-icon-light-display: block;
         --theme-icon-dark-display: none;
     }
@@ -173,6 +189,14 @@
     --color-random-picks-btn-bg: rgba(#{$white}, 0.2);
     --color-random-picks-btn-border: rgba(#{$white}, 0.5);
     --color-random-picks-btn-text: #{$white};
+
+    // bluesky-widget section colors
+    --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
+    --color-bluesky-text: #{$white};
+    --color-bluesky-desc: rgba(#{$white}, 0.9);
+    --color-bluesky-btn-bg: rgba(#{$white}, 0.2);
+    --color-bluesky-btn-border: rgba(#{$white}, 0.5);
+    --color-bluesky-btn-text: #{$white};
 
     --theme-icon-light-display: block;
     --theme-icon-dark-display: none;
