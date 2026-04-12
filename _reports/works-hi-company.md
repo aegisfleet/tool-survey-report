@@ -6,13 +6,10 @@ category: 人事労務
 developer: 株式会社Works Human Intelligence
 official_site: https://www.works-hi.co.jp/products
 date: '2026-02-01'
-last_updated: '2026-02-01'
+last_updated: '2026-04-12'
 tags:
-  - SaaS
-  - タレントマネジメント
   - 人事労務
   - 勤怠管理
-  - 給与計算
 description: 大手法人向け統合型人事システム。人事管理、給与計算、勤怠管理、タレントマネジメント等の人的資本マネジメントにまつわる業務領域を広くカバーします。
 quick_summary:
   has_free_plan: false
@@ -21,7 +18,7 @@ quick_summary:
   target_users:
     - 大企業
     - 人事部
-  latest_highlight: 2025年12月に人件費計画機能を追加
+  latest_highlight: 2026年4月に半導体製造装置大手TOWAが「COMPANY Talent Management」シリーズを採用
   update_frequency: 中
 evaluation:
   score: 77
@@ -60,9 +57,6 @@ relationships:
 * **開発元**: 株式会社Works Human Intelligence
 * **公式サイト**: [https://www.works-hi.co.jp/products](https://www.works-hi.co.jp/products)
 * **関連リンク**:
-  * X: [https://x.com/COMPANY_jinji](https://x.com/COMPANY_jinji)
-  * Facebook: [https://www.facebook.com/WorksHI.official/](https://www.facebook.com/WorksHI.official/)
-  * note: [https://note.com/works_hi](https://note.com/works_hi)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/company/reviews)
 * **カテゴリ**: 人事労務
 * **概要**: 大手法人向け統合型人事システム。人事管理、給与計算、勤怠管理、タレントマネジメント等の人的資本マネジメントにまつわる業務領域を広くカバーします。
@@ -202,7 +196,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-20**: 大和証券グループが統合人事システム「COMPANY」の採用を発表（約14,000名規模）。
+* **2026-04-07**: 半導体製造装置大手TOWA、「COMPANY Talent Management」シリーズで国内外の人材データを一元化
+* **2026-03-31**: 統合人事システム「COMPANY」、住友金属鉱山で採用
+* **2026-03-26**: 名古屋市立大学、「COMPANY Talent Management」シリーズを採用
 * **2025-12-24**: 「COMPANY Talent Management」シリーズに人件費計画機能を追加。
 * **2025-11-27**: 「COMPANY Talent Management」シリーズで組織サーベイ機能をリリース。
 * **2025-11-12**: はたらく個人の成長を加速する新製品「COMPANY Me」を提供開始。
