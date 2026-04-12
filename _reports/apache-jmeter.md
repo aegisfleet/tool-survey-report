@@ -6,14 +6,13 @@ category: テスト/QA
 developer: Apache Software Foundation
 official_site: https://jmeter.apache.org/
 date: '2025-10-18'
-last_updated: '2026-02-02'
+last_updated: '2026-04-13'
 tags:
   - API
   - Java
   - オープンソース
   - テスト自動化
   - 負荷テスト
-  - 開発者ツール
 description: Webアプリケーションのパフォーマンス測定と負荷テストのために設計された、100% Pure Javaで開発されているオープンソースソフトウェアです。
 quick_summary:
   has_free_plan: true
@@ -53,8 +52,6 @@ relationships:
   children: []
   related_tools:
     - Karate
-    - Playwright
-    - Selenium
 ---
 
 
@@ -72,7 +69,6 @@ relationships:
   * GitHub: [https://github.com/apache/jmeter](https://github.com/apache/jmeter)
   * CodeWiki: [https://codewiki.google/github.com/apache/jmeter](https://codewiki.google/github.com/apache/jmeter)
   * ドキュメント: [https://jmeter.apache.org/usermanual/index.html](https://jmeter.apache.org/usermanual/index.html)
-  * レビューサイト: [G2](https://www.g2.com/products/apache-jmeter/reviews) | [Capterra](https://www.capterra.com/p/142263/JMeter/)
 * **カテゴリ**: テスト/QA
 * **概要**: Webアプリケーションや多様なサービスに対し、機能的な振る舞いの負荷テストとパフォーマンス測定を行うために設計された、100% Pure Javaのオープンソースソフトウェアです。
 
@@ -198,9 +194,9 @@ Apache JMeterはオープンソースソフトウェアであり、Apache Licens
 
 * **調査対象**: G2, Capterra, ITreview
 * **総合評価**:
-  * 4.4/5.0 (G2, 90+ reviews)
-  * 4.6/5.0 (Capterra, 80+ reviews)
-  * 4.2/5.0 (ITreview, 20+ reviews)
+  * 4.4/5.0 (G2, 90+ reviews) (G2より引用)
+  * 4.6/5.0 (Capterra, 80+ reviews) (Capterraより引用)
+  * 4.2/5.0 (ITreview, 20+ reviews) (ITreviewより引用)
 * **ポジティブな評価**:
   * オープンソースで無料にも関わらず、エンタープライズ級の非常に高機能なテストができる点が最も評価されている。
   * HTTP/HTTPSだけでなく、JDBCやJMSなど、対応プロトコルの幅広さが強力。
@@ -214,7 +210,7 @@ Apache JMeterはオープンソースソフトウェアであり、Apache Licens
 
 ## **15. 直近半年のアップデート情報**
 
-2024年1月のv5.6.3リリース以降、大きな機能追加を伴うメジャーアップデートは行われておらず、安定版としての運用が続いている。直近半年（2025年8月〜2026年1月）においても、目立ったリリースは確認されていない。
+2024年1月のv5.6.3リリース以降、大きな機能追加を伴うメジャーアップデートは行われておらず、安定版としての運用が続いている。直近半年（2025年10月〜2026年4月）においても、目立ったリリースは確認されていない。
 
 * **2024-01-20 (v5.6.3)**:
   * バグ修正と依存ライブラリの更新が中心のメンテナンスリリース。
