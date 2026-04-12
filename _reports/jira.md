@@ -45,6 +45,7 @@ links:
   documentation: https://confluence.atlassian.com/jira
 relationships:
   related_tools:
+    - TestRail
     - Redmine
     - Backlog
     - Linear
