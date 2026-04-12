@@ -6,7 +6,7 @@ category: テスト管理
 developer: Gurock (Sembi)
 official_site: https://www.testrail.com/
 date: '2026-02-01'
-last_updated: '2026-02-01'
+last_updated: '2026-04-12'
 tags:
   - テスト管理
   - プロジェクト管理
@@ -21,7 +21,7 @@ quick_summary:
     - QAエンジニア
     - テストマネージャー
     - 開発者
-  latest_highlight: 2026年1月にTestRail 10をリリース（Jiraデータ連携強化）
+  latest_highlight: 2026年3月にTestRail 10.2をリリース（AIテストスクリプト生成等を追加）
   update_frequency: 高
 evaluation:
   score: 82
@@ -61,7 +61,6 @@ relationships:
 * **公式サイト**: [https://www.testrail.com/](https://www.testrail.com/)
 * **関連リンク**:
   * ドキュメント: [https://support.testrail.com/hc/en-us/](https://support.testrail.com/hc/en-us/)
-  * レビューサイト: [G2](https://www.g2.com/products/testrail/reviews) | [Capterra](https://www.capterra.com/p/128204/TestRail/)
 * **カテゴリ**: テスト管理ツール (Test Management Tool)
 * **概要**:
     TestRailは、テストケースの管理、テスト実行の計画、結果の追跡を一元的に行うためのWebベースのテスト管理ツールです。QAチームや開発チームがテスト活動全体を可視化し、効率的に運用することを支援します。
@@ -183,6 +182,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
+* **調査対象**: G2, Capterra (Google検索結果からの引用)
 * **総合評価**: G2やCapterraにおいて「Leader」や「High Performer」の評価を獲得しており、平均スコアは4.3〜4.5/5.0程度と高い。
 * **ポジティブな評価**:
     * 「UIが非常に使いやすく、チームへの定着が早かった」
@@ -195,9 +195,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-21**: **TestRail 10** リリース。Jira Issue Connect機能により、TestRail内でJiraのライブデータを直接参照可能に。
+* **2026-03-26**: **TestRail 10.2** リリース。AIによるテストスクリプト生成、Jiraのカバレッジチェック、完全なBDDワークフローのサポートを追加。
 * **2026-01-30**: **Generative AI** 機能の強化。要件定義からのテストケース生成や、BDDシナリオの作成支援機能を追加。
-* **2025年後半**: パフォーマンス改善とセキュリティ強化のアップデートを継続的に実施。
+* **2026-01-21**: **TestRail 10** リリース。Jira Issue Connect機能により、TestRail内でJiraのライブデータを直接参照可能に。
 
 (出典: [TestRail Blog](https://www.testrail.com/blog/))
 
