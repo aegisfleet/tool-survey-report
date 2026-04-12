@@ -6,13 +6,13 @@ category: テスト管理
 developer: TestLink Development Team
 official_site: https://testlink.org/
 date: '2026-02-01'
-last_updated: '2026-02-01'
+last_updated: '2026-04-12'
 tags:
-  - PHP
-  - オンプレミス
-  - オープンソース
   - テスト管理
+  - オープンソース
   - テスト自動化
+  - オンプレミス
+  - PHP
 description: オープンソースのWebベーステスト管理システム。テストケースの管理、実行、レポート作成をサポート。
 quick_summary:
   has_free_plan: true
@@ -22,7 +22,7 @@ quick_summary:
     - QAエンジニア
     - 開発者
     - コスト重視の組織
-  latest_highlight: バージョン1.9.20リリース（セキュリティ修正と改善）。次期バージョン2.xでUI刷新予定。
+  latest_highlight: 2025年12月にVersion 1.9.20リリース（セキュリティ修正と改善）。次期バージョン2.xでUI刷新予定。
   update_frequency: 低
 evaluation:
   score: 72
@@ -51,7 +51,7 @@ relationships:
     - TestRail
     - Qase
     - Kiwi TCMS
-    - Jira
+    - QualityForward
 layout: report
 ---
 
@@ -69,7 +69,6 @@ layout: report
 * **関連リンク**:
   * GitHub: [https://github.com/TestLinkOpenSourceTRMS/testlink-code](https://github.com/TestLinkOpenSourceTRMS/testlink-code)
   * ドキュメント: [https://github.com/TestLinkOpenSourceTRMS/testlink-documentation](https://github.com/TestLinkOpenSourceTRMS/testlink-documentation)
-  * フォーラム: [http://forum.testlink.org/](http://forum.testlink.org/)
 * **カテゴリ**: テスト管理 (Test Management)
 * **概要**:
   TestLinkは、長年にわたり利用されているオープンソースのWebベーステスト管理システムです。テスト仕様書の作成、テスト計画の策定、テスト実行、レポート作成まで、QAプロセス全体をカバーする機能を備えています。
@@ -151,7 +150,7 @@ layout: report
 ## **9. サポート体制**
 
 * **ドキュメント**: GitHub Wikiやフォーラムに情報があるが、体系的な公式マニュアルはやや古い場合がある。
-* **コミュニティ**: ユーザーフォーラム（英語）で質問が可能だが、回答が得られるとは限らない。
+* **コミュニティ**: かつて存在した公式フォーラムは現在アクセスできない状態であり、活発なコミュニティ支援は期待しづらい。
 * **公式サポート**: 開発チームによる有償サポートやカスタマイズ対応も一部存在するが、基本はセルフサービス。
 
 ## **10. エコシステムと連携**
@@ -193,22 +192,25 @@ layout: report
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: 一般的なオープンソースコミュニティの評判
-* **総合評価**: 機能面での信頼性は高いが、UI/UXへの不満が多い。
+* **調査対象**: G2, Capterra, ITreviewなどの主要レビューサイト
+* **総合評価**: G2、Capterra、ITreviewにレビューの登録なし。（以下は一般的なオープンソースコミュニティの評判からの収集）
 * **ポジティブな評価**:
   * 「無料ですべての機能が使えるのは素晴らしい」
   * 「要件とテストのトレーサビリティ機能が強力」
+  * 「要件管理からテストケース、テスト実行まで一元管理できる」
 * **ネガティブな評価 / 改善要望**:
   * 「UIが古すぎて使うのが苦痛」
   * 「セットアップが面倒。Dockerを使っても設定調整が必要」
   * 「APIの仕様がXML-RPCで古い」
+* **特徴的なユースケース**:
+  * 予算がないプロジェクトや、セキュリティの観点でオンプレミス必須の環境での標準テスト管理ツールとして利用される。
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025年 (時期不定)**: **Version 1.9.20** リリース。1.9.x系の最終バージョンとして、セキュリティ修正やPHP 8.x対応の改善、Excelパッケージの更新が行われた。
-* **2025年**: **Version 2.x** の開発継続。Bootstrapベースの新しいUIへの移行作業が進められている。
+* **2025-12-08**: **Version 1.9.20** リリース。1.9.x系の最終バージョンとして、セキュリティ修正やPHP 8.x対応の改善、Excelパッケージの更新が行われた。
+* **2025-01-01**: **Version 2.x** の開発継続。Bootstrapベースの新しいUIへの移行作業が進められている。
 
-(出典: GitHub README & CHANGELOG)
+(出典: [GitHub Releases](https://github.com/TestLinkOpenSourceTRMS/testlink-code/tags) など)
 
 ## **16. 類似ツールとの比較**
 
