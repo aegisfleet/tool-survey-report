@@ -44,6 +44,7 @@ evaluation:
   summary: 導入の容易さと拡張性に優れる構成管理の定番ツール。小規模から大規模まで対応可能だが、エンタープライズ機能は有償。
 links:
   github: https://github.com/ansible/ansible
+  deepwiki: https://deepwiki.com/ansible/ansible
   documentation: https://docs.ansible.com/
 relationships:
   related_tools:

@@ -37,6 +37,8 @@ evaluation:
   summary: 自己改善能力と多様な連携が魅力的なOSSエージェント。
 links:
   github: https://github.com/NousResearch/hermes-agent
+  deepwiki: https://deepwiki.com/NousResearch/hermes-agent
+  codewiki: https://codewiki.google/github.com/NousResearch/hermes-agent
   documentation: https://hermes-agent.nousresearch.com/docs/
 relationships:
   related_tools:

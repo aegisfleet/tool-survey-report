@@ -50,6 +50,7 @@ relationships:
     - Hono
     - Vite
     - npm
+    - Yarn
 ---
 
 

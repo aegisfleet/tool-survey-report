@@ -49,6 +49,7 @@ relationships:
     - Bun
     - pnpm
     - Homebrew
+    - Yarn
 ---
 
 # **npm 調査レポート**

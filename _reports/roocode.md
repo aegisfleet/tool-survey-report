@@ -42,6 +42,7 @@ evaluation:
   summary: 個人のコーディング支援からチームでの自律エージェント活用まで対応する、柔軟かつ強力なプラットフォーム。
 links:
   github: https://github.com/RooCodeInc/Roo-Code
+  codewiki: https://codewiki.google/github.com/RooCodeInc/Roo-Code
   deepwiki: https://deepwiki.com/RooCodeInc/Roo-Code
   documentation: https://docs.roocode.com/
 relationships:

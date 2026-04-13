@@ -42,6 +42,7 @@ evaluation:
   summary: 多言語対応と高度な音声デザイン機能を持つ、強力なオープンソースのTTSモデル
 links:
   github: https://github.com/OpenBMB/VoxCPM
+  deepwiki: https://deepwiki.com/OpenBMB/VoxCPM
   codewiki: https://codewiki.google/github.com/OpenBMB/VoxCPM
   documentation: https://voxcpm.readthedocs.io/en/latest/
 relationships:
