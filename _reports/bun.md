@@ -9,7 +9,9 @@ date: '2026-02-02'
 last_updated: '2026-04-13'
 tags:
   - JavaScript
+  - TypeScript
   - オープンソース
+  - サーバーレス
   - 開発者ツール
 description: 高速な起動と実行速度を誇る、オールインワンのJavaScript/TypeScriptランタイム。2025年にAnthropicにより買収。
 quick_summary:
