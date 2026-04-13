@@ -50,6 +50,7 @@ relationships:
     - Bun
     - Hono
     - Axios
+    - nvm
 ---
 
 
