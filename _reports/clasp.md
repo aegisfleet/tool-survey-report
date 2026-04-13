@@ -38,7 +38,7 @@ evaluation:
   summary: GAS開発をモダンにする強力なCLIツール。3.x以降はTypeScript対応に工夫が必要だが、エコシステム統合により価値が高い。
 links:
   github: https://github.com/google/clasp
-  codewiki: "https://codewiki.google/github.com/google/clasp"
+  codewiki: https://codewiki.google/github.com/google/clasp
   deepwiki: https://deepwiki.com/google/clasp
   documentation: https://github.com/google/clasp/tree/master/docs
 relationships:

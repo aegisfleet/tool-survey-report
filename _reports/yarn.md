@@ -1,56 +1,53 @@
 ---
-title: "Yarn 調査レポート"
-tool_name: "Yarn"
-tool_reading: "ヤーン"
-category: "パッケージ管理"
-developer: "Yarn Contributors"
-official_site: "https://yarnpkg.com/"
-date: "2026-04-13"
-last_updated: "2026-04-13"
+title: Yarn 調査レポート
+tool_name: Yarn
+tool_reading: ヤーン
+category: パッケージ管理
+developer: Yarn Contributors
+official_site: https://yarnpkg.com/
+date: '2026-04-13'
+last_updated: '2026-04-13'
 tags:
-  - "JavaScript"
-  - "Node.js"
-  - "オープンソース"
-  - "パッケージマネージャー"
-description: "WorkspacesやPlug'n'Play(PnP)機能など、モダンな開発ワークフローを牽引するNode.js向けパッケージマネージャー。"
-
+  - JavaScript
+  - Node.js
+  - オープンソース
+  - パッケージマネージャー
+description: WorkspacesやPlug'n'Play(PnP)機能など、モダンな開発ワークフローを牽引するNode.js向けパッケージマネージャー。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンドエンジニア"
-    - "バックエンドエンジニア"
-    - "大規模プロジェクト・モノレポ開発者"
-  latest_highlight: "Yarn 4によるパフォーマンス向上と、Corepackを通じた導入の簡略化"
-  update_frequency: "中"
-
+    - フロントエンドエンジニア
+    - バックエンドエンジニア
+    - 大規模プロジェクト・モノレポ開発者
+  latest_highlight: Yarn 4によるパフォーマンス向上と、Corepackを通じた導入の簡略化
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Workspacesのネイティブサポートなど、大規模なモノレポ開発に長けている"
+      reason: Workspacesのネイティブサポートなど、大規模なモノレポ開発に長けている
     - point: 7
-      reason: "Plug'n'Play(PnP)やZero-Installsによるインストール時間の大幅削減と再現性の確保"
+      reason: Plug'n'Play(PnP)やZero-Installsによるインストール時間の大幅削減と再現性の確保
     - point: 5
-      reason: "npmと比べてインストールが高速で、キャッシュ機能が優秀"
+      reason: npmと比べてインストールが高速で、キャッシュ機能が優秀
   minus_points:
     - point: -3
-      reason: "Classic(v1)からBerry(v2以降)への移行ハードルが高い"
+      reason: Classic(v1)からBerry(v2以降)への移行ハードルが高い
     - point: -2
-      reason: "PnPモードが一部のライブラリ（フラットなnode_modulesを前提とするもの）と互換性がない場合がある"
-  summary: "モノレポや高度な依存関係管理に強いが、エコシステムとの互換性に配慮が必要な高機能パッケージマネージャー"
-
+      reason: PnPモードが一部のライブラリ（フラットなnode_modulesを前提とするもの）と互換性がない場合がある
+  summary: モノレポや高度な依存関係管理に強いが、エコシステムとの互換性に配慮が必要な高機能パッケージマネージャー
 links:
-  github: "https://github.com/yarnpkg/berry"
-  deepwiki: "https://deepwiki.com/yarnpkg/berry"
-  documentation: "https://yarnpkg.com/getting-started"
+  github: https://github.com/yarnpkg/berry
+  deepwiki: https://deepwiki.com/yarnpkg/berry
+  documentation: https://yarnpkg.com/getting-started
 relationships:
   related_tools:
-    - "npm"
-    - "pnpm"
-    - "bun"
+    - npm
+    - pnpm
+    - bun
 ---
 
 # **Yarn 調査レポート**

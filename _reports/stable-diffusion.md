@@ -42,7 +42,7 @@ evaluation:
   summary: カスタマイズ性とプライバシー保護に優れた最強のローカル画像生成AIだが、導入にはハードウェアと知識が必要
 links:
   github: https://github.com/Stability-AI/generative-models
-  deepwiki: "https://deepwiki.com/Stability-AI/generative-models"
+  deepwiki: https://deepwiki.com/Stability-AI/generative-models
   codewiki: https://codewiki.google/github.com/Stability-AI/generative-models
   documentation: https://platform.stability.ai/docs
 relationships:

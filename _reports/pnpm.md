@@ -39,7 +39,7 @@ evaluation:
   summary: 速度・ディスク効率・厳格な依存関係管理を兼ね備えた、現在のJavaScriptエコシステムにおける最有力なパッケージマネージャーの1つ。
 links:
   github: https://github.com/pnpm/pnpm
-  deepwiki: "https://deepwiki.com/pnpm/pnpm"
+  deepwiki: https://deepwiki.com/pnpm/pnpm
   documentation: https://pnpm.io/motivation
 relationships:
   related_tools:
