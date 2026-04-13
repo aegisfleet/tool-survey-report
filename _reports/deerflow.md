@@ -37,6 +37,7 @@ evaluation:
   summary: 複雑なタスクを柔軟にこなす、極めて高く評価されている強力なオープンソースSuperAgentフレームワーク
 links:
   github: https://github.com/bytedance/deer-flow
+  codewiki: "https://codewiki.google/github.com/bytedance/deer-flow"
   deepwiki: https://deepwiki.com/bytedance/deer-flow
 relationships:
   related_tools:

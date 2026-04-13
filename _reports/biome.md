@@ -41,6 +41,7 @@ evaluation:
   summary: パフォーマンスとDX（開発者体験）を最優先するプロジェクトに最適。ESLint/Prettierからの置き換え候補として有力。
 links:
   github: https://github.com/biomejs/biome
+  deepwiki: "https://deepwiki.com/biomejs/biome"
   codewiki: https://codewiki.google/github.com/biomejs/biome
   documentation: https://biomejs.dev/guides/getting-started/
 relationships:

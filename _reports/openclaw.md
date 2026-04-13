@@ -40,6 +40,8 @@ evaluation:
   summary: プライバシー重視かつ高機能なオープンソースのパーソナルAIアシスタント。技術的なセットアップが必要だが、その柔軟性と機能性は圧倒的。
 links:
   github: https://github.com/openclaw/openclaw
+  deepwiki: "https://deepwiki.com/openclaw/openclaw"
+  codewiki: "https://codewiki.google/github.com/openclaw/openclaw"
   documentation: https://docs.openclaw.ai/
 relationships:
   children:
