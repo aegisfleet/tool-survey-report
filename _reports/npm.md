@@ -47,6 +47,7 @@ relationships:
   parent: Node.js
   related_tools:
     - Bun
+    - pnpm
     - Homebrew
 ---
 
