@@ -9,7 +9,9 @@ date: '2026-01-29'
 last_updated: '2026-02-02'
 tags:
   - JavaScript
+  - TypeScript
   - オープンソース
+  - サーバーレス
   - 開発者ツール
 description: 非同期イベント駆動型のJavaScriptランタイム環境で、スケーラブルなネットワークアプリケーションの構築に使用されます。
 quick_summary:

@@ -8,13 +8,10 @@ official_site: https://hono.dev/
 date: '2026-02-06'
 last_updated: '2026-02-06'
 tags:
-  - Bun
-  - Cloudflare Workers
-  - Deno
-  - Edge Computing
   - TypeScript
-  - Webフレームワーク
+  - JavaScript
   - オープンソース
+  - Webフレームワーク
   - 開発者ツール
 description: Web標準に準拠した、あらゆるJavaScriptランタイムで動作する超高速・軽量なWebフレームワーク
 quick_summary:
