@@ -47,7 +47,7 @@ relationships:
   related_tools:
     - npm
     - pnpm
-    - bun
+    - Bun
 ---
 
 # **Yarn 調査レポート**

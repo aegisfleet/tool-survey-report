@@ -4,14 +4,13 @@ tool_name: Bun
 tool_reading: バン
 category: 言語ランタイム/実行環境
 developer: Anthropic (旧 Oven)
-official_site: https://bun.com/
+official_site: https://bun.sh/
 date: '2026-02-02'
-last_updated: '2026-02-02'
+last_updated: '2026-04-13'
 tags:
   - JavaScript
-  - TypeScript
   - オープンソース
-  - ランタイム
+  - 開発者ツール
 description: 高速な起動と実行速度を誇る、オールインワンのJavaScript/TypeScriptランタイム。2025年にAnthropicにより買収。
 quick_summary:
   has_free_plan: true
@@ -21,7 +20,7 @@ quick_summary:
     - Web開発者
     - バックエンドエンジニア
     - AIエージェント開発者
-  latest_highlight: 2025年12月にAnthropicによる買収を発表。v1.3.8をリリース。
+  latest_highlight: 2026年4月にv1.3.12をリリース。
   update_frequency: 高
 evaluation:
   score: 85
@@ -63,10 +62,10 @@ relationships:
 * **ツール名**: Bun
 * **ツールの読み方**: バン
 * **開発元**: Anthropic (旧 Oven)
-* **公式サイト**: [https://bun.com/](https://bun.com/)
+* **公式サイト**: [https://bun.sh/](https://bun.sh/)
 * **関連リンク**:
   * GitHub: [https://github.com/oven-sh/bun](https://github.com/oven-sh/bun)
-  * ドキュメント: [https://bun.com/docs](https://bun.com/docs)
+  * ドキュメント: [https://bun.sh/docs](https://bun.sh/docs)
 * **カテゴリ**: 開発者ツール
 * **概要**: 高速なJavaScriptランタイムであり、パッケージマネージャ、バンドラ、テストランナーを含むオールインワンツールキットです。Node.jsのドロップインリプレースメントを目指して開発されており、圧倒的な起動速度と実行パフォーマンスを特徴としています。2025年12月にAnthropicに買収され、Claude CodeなどのAIツールのインフラ基盤としても重要な役割を担っています。
 
@@ -146,8 +145,8 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: [公式サイト](https://bun.com/docs)に詳細なドキュメントが整備されています。
-* **コミュニティ**: [Discord](https://bun.com/discord)コミュニティが非常に活発で、開発者やユーザー同士の交流が行われています。
+* **ドキュメント**: [公式サイト](https://bun.sh/docs)に詳細なドキュメントが整備されています。
+* **コミュニティ**: [Discord](https://bun.sh/discord)コミュニティが非常に活発で、開発者やユーザー同士の交流が行われています。
 * **公式サポート**: Anthropicによる買収後もOSSとしての開発体制は維持されていますが、エンタープライズサポートの形態が変わる可能性があります。
 
 ## **10. エコシステムと連携**
@@ -190,7 +189,7 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: X (Twitter), GitHub Discussions, テックブログ
-* **総合評価**: パフォーマンスへの評価に加え、Anthropicによる買収で将来性への安心感が増している。
+* **総合評価**: パフォーマンスへの評価に加え、Anthropicによる買収で将来性への安心感が増している。※G2にレビューの登録なし。
 * **ポジティブな評価**:
   * 「`bun install` が速すぎて、今までの待ち時間が嘘のようだ」
   * 「Anthropicがバックについたことで、安心して本番環境に投入できる」
@@ -204,25 +203,28 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-10**: v1.3.12リリース。バグ修正とパフォーマンス改善。
+* **2026-03-18**: v1.3.11リリース。バグ修正と安定性向上。
+* **2026-02-26**: v1.3.10リリース。細かな機能強化。
+* **2026-02-08**: v1.3.9リリース。JSCアップグレードなど。
 * **2026-01-27**: v1.3.8リリース。CommonMark準拠のMarkdownパーサー `Bun.markdown` を組み込み。
 * **2026-01-23**: v1.3.7リリース。JSCアップグレードによるパフォーマンス改善。
 * **2026-01-20**: v1.3.6リリース。`Bun.Archive` と `Bun.JSONC` の追加。
 * **2026-01-08**: v1.3.4リリース。`URLPattern` APIのサポートなど。
 * **2025-12-02**: **AnthropicによるBunの買収を発表**。OSSとしての開発継続と、AIツールインフラとしての強化を表明。
-* **2025-11-XX**: v1.2系におけるNode.js互換性の向上とバグ修正。
 
-(出典: [Bun Blog](https://bun.com/blog))
+(出典: [Bun Blog](https://bun.sh/blog))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Bun) | Node.js | Deno |
-|:---:|:---|:---:|:---:|:---:|
-| **パフォーマンス** | 起動・実行速度 | ◎<br><small>業界最速クラス</small> | ◯<br><small>十分高速だがBunに劣る</small> | ◯<br><small>Node.jsと同等以上</small> |
-| **DX** | ツール統合 | ◎<br><small>全部入り</small> | △<br><small>要組み合わせ</small> | ◎<br><small>Lint/Fmt等内蔵</small> |
-| **互換性** | npm対応 | ◯<br><small>高い互換性を持つ</small> | ◎<br><small>本家</small> | ◯<br><small>互換機能あり</small> |
-| **将来性** | AI統合 | ◎<br><small>Anthropic傘下</small> | ◯<br><small>標準的</small> | ◎<br><small>エッジAIに注力</small> |
+| 機能カテゴリ | 機能項目 | 本ツール (Bun) | Node.js | Deno | npm |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **パフォーマンス** | 起動・実行速度 | ◎<br><small>業界最速クラス</small> | ◯<br><small>十分高速だがBunに劣る</small> | ◯<br><small>Node.jsと同等以上</small> | △<br><small>インストール速度は相対的に遅い</small> |
+| **DX** | ツール統合 | ◎<br><small>全部入り</small> | △<br><small>要組み合わせ</small> | ◎<br><small>Lint/Fmt等内蔵</small> | ◯<br><small>基本的なツールは揃うがバンドラ等は外部</small> |
+| **互換性** | npm対応 | ◯<br><small>高い互換性を持つ</small> | ◎<br><small>本家</small> | ◯<br><small>互換機能あり</small> | ◎<br><small>公式標準</small> |
+| **将来性** | AI統合 | ◎<br><small>Anthropic傘下</small> | ◯<br><small>標準的</small> | ◎<br><small>エッジAIに注力</small> | ◯<br><small>標準インフラとして安定</small> |
 
 ### **16.2 詳細比較**
 
@@ -231,6 +233,7 @@ relationships:
 | **Bun** | パフォーマンスとDXの最大化 | 圧倒的な速度、オールインワン、Anthropicの支援 | 安定性と互換性が発展途上 | 速度重視、新規開発、AIツール開発 |
 | **Node.js** | 業界標準の安定性 | 巨大なエコシステム、豊富なドキュメント、企業サポート | ツールチェーンが複雑、歴史的負債 | 安定性最優先、既存システム保守 |
 | **Deno** | セキュリティとWeb標準 | 堅牢なセキュリティ、モダンな設計、Deno Deploy | パフォーマンス（対Bun）、独自エコシステム | セキュリティ重視、サーバーレス（Edge） |
+| **npm** | JavaScriptの公式・標準パッケージマネージャー | Node.js標準バンドル、巨大なコミュニティ、安定性 | 速度面やディスク効率で後発ツールに劣る | 新規導入の手間を省きたい、最も標準的な構成を採用したい場合 |
 
 ## **17. 総評**
 
