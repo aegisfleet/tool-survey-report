@@ -1,60 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ChatDev 調査レポート"
-tool_name: "ChatDev"
-tool_reading: "チャットデブ"
-category: "AIエージェントフレームワーク"
-developer: "OpenBMB"
-official_site: "https://github.com/OpenBMB/ChatDev"
-date: "2026-04-14"
-last_updated: "2026-04-14"
+title: ChatDev 調査レポート
+tool_name: ChatDev
+tool_reading: チャットデブ
+category: AIエージェントフレームワーク
+developer: OpenBMB
+official_site: https://github.com/OpenBMB/ChatDev
+date: '2026-04-14'
+last_updated: '2026-04-14'
 tags:
-  - "AI"
-  - "マルチエージェント"
-  - "オープンソース"
-  - "ノーコード"
-  - "Python"
-description: "LLMを活用したマルチエージェント協調により、ソフトウェア開発から様々なタスクまでを自動化するノーコードプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - マルチエージェント
+  - オープンソース
+  - ノーコード
+  - Python
+description: LLMを活用したマルチエージェント協調により、ソフトウェア開発から様々なタスクまでを自動化するノーコードプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "リサーチャー"
-    - "プロダクトマネージャー"
-  latest_highlight: "2026年3月にOpenClawの統合とPython SDKをリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - リサーチャー
+    - プロダクトマネージャー
+  latest_highlight: 2026年3月にOpenClawの統合とPython SDKをリリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "バージョン2.0でノーコードのマルチエージェントプラットフォームに進化し、使い勝手が大幅に向上"
+      reason: バージョン2.0でノーコードのマルチエージェントプラットフォームに進化し、使い勝手が大幅に向上
     - point: 4
-      reason: "ゲーム開発やデータ分析など、多様なタスクに対応できる高い柔軟性"
+      reason: ゲーム開発やデータ分析など、多様なタスクに対応できる高い柔軟性
     - point: 4
-      reason: "活発なオープンソースコミュニティと頻繁なアップデート"
+      reason: 活発なオープンソースコミュニティと頻繁なアップデート
   minus_points:
     - point: -2
-      reason: "日本語の公式ドキュメントやサポートが一部限定的"
-  summary: "ソフトウェア開発を超えて多様なタスクに対応できる強力なノーコードマルチエージェント基盤"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語の公式ドキュメントやサポートが一部限定的
+  summary: ソフトウェア開発を超えて多様なタスクに対応できる強力なノーコードマルチエージェント基盤
 links:
-  github: "https://github.com/OpenBMB/ChatDev"
-  deepwiki: "https://deepwiki.com/OpenBMB/ChatDev"
+  github: https://github.com/OpenBMB/ChatDev
+  deepwiki: https://deepwiki.com/OpenBMB/ChatDev
 relationships:
   related_tools:
-    - "crewai"
-    - "metagpt"
-    - "dify"
-    - "autogpt"
+    - crewai
+    - metagpt
+    - dify
+    - autogpt
 ---
 
 # **ChatDev 調査レポート**
