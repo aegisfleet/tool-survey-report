@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "CrewAI 調査レポート"
-tool_name: "CrewAI"
-tool_reading: "クルーエーアイ"
-category: "AIエージェントフレームワーク"
-developer: "CrewAI Inc."
-official_site: "https://crewai.com/"
-date: "2026-04-14"
-last_updated: "2026-04-14"
+title: CrewAI 調査レポート
+tool_name: CrewAI
+tool_reading: クルーエーアイ
+category: AIエージェントフレームワーク
+developer: CrewAI Inc.
+official_site: https://crewai.com/
+date: '2026-04-14'
+last_updated: '2026-04-14'
 tags:
-  - "AI"
-  - "マルチエージェント"
-  - "オープンソース"
-  - "Python"
-  - "ワークフロー自動化"
-description: "役割ベースの自律型AIエージェントを協調させ、複雑なタスクを自動化するマルチエージェントフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - マルチエージェント
+  - オープンソース
+  - Python
+  - ワークフロー自動化
+description: 役割ベースの自律型AIエージェントを協調させ、複雑なタスクを自動化するマルチエージェントフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AI開発者"
-    - "データサイエンティスト"
-    - "企業・スタートアップ"
-  latest_highlight: "CrewAI AMP Cloud / Factoryの展開によるエンタープライズ機能の強化"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AI開発者
+    - データサイエンティスト
+    - 企業・スタートアップ
+  latest_highlight: CrewAI AMP Cloud / Factoryの展開によるエンタープライズ機能の強化
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "CrewsとFlowsの組み合わせによる、自律性と制御のバランスが優れたアーキテクチャ"
+      reason: CrewsとFlowsの組み合わせによる、自律性と制御のバランスが優れたアーキテクチャ
     - point: 5
-      reason: "LangChainに依存しない軽量・高速な実行パフォーマンス"
+      reason: LangChainに依存しない軽量・高速な実行パフォーマンス
     - point: 5
-      reason: "エンタープライズ向けの管理機能(CrewAI AMP)の充実"
+      reason: エンタープライズ向けの管理機能(CrewAI AMP)の充実
   minus_points:
     - point: -3
-      reason: "日本語でのサポート・公式ドキュメントがやや不足"
-  summary: "軽量かつ柔軟で、実運用に耐えうる強力なマルチエージェントオーケストレーションツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語でのサポート・公式ドキュメントがやや不足
+  summary: 軽量かつ柔軟で、実運用に耐えうる強力なマルチエージェントオーケストレーションツール
 links:
-  github: "https://github.com/crewaiinc/crewai"
-  deepwiki: "https://deepwiki.com/crewaiinc/crewai"
-  codewiki: "https://codewiki.google/github.com/crewaiinc/crewai"
-  documentation: "https://docs.crewai.com/"
+  github: https://github.com/crewaiinc/crewai
+  deepwiki: https://deepwiki.com/crewaiinc/crewai
+  codewiki: https://codewiki.google/github.com/crewaiinc/crewai
+  documentation: https://docs.crewai.com/
 ---
 
 # **CrewAI 調査レポート**
