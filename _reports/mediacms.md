@@ -6,12 +6,12 @@ category: 動画/メディア
 developer: Markos Gogoulos / MediaCMS.io
 official_site: https://mediacms.io/
 date: '2026-02-02'
-last_updated: '2026-02-02'
+last_updated: '2026-04-14'
 tags:
+  - オープンソース
   - CMS
   - Django
   - React
-  - オープンソース
   - 動画配信
 description: YouTubeライクな動画共有サイトを構築できる、モダンなオープンソースCMS。DjangoとReactを採用し、セルフホストでメディア資産を管理可能。
 quick_summary:
@@ -22,7 +22,7 @@ quick_summary:
     - 教育機関
     - 企業内ポータル
     - メディア組織
-  latest_highlight: 2025年11月にv7.2.0をリリース。機能改善とバグ修正。
+  latest_highlight: 2026年2月にv7.6.0をリリース。SECURITY.mdの作成やUI改善。
   update_frequency: 中
 evaluation:
   score: 82
@@ -210,9 +210,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-11-11 (v7.2.0)**: 最新リリース。依存ライブラリの更新、セキュリティ修正、パフォーマンス改善が含まれる。
-* **2025-05-xx (v7.1.0)**: マイナーアップデート。UIの微調整とバグフィックス。
-* **2024-12-xx (v7.0.0)**: メジャーアップデート。Whisper連携の強化、Reactコンポーネントの刷新。
+* **2026-02-07 (v7.6.0)**: SECURITY.mdの作成などセキュリティとコンプライアンスに関する情報が整備された。
+* **2026-02-06 (v7.5.0)**: バージョンのバンプ。
+* **2026-02-06 (v7.4.0)**: 動画プレーヤーのコンテキストメニューに共有/埋め込みオプションが追加された。
+* **2026-02-06 (v7.3.0)**: 持続的な「埋め込みモード」の実装や、チャプターエディターとトリミングエディターの視覚的区別の改善など、UIや連携機能の強化が行われた。
 
 (出典: [GitHub Releases](https://github.com/mediacms-io/mediacms/releases))
 
