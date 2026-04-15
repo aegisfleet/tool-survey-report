@@ -55,6 +55,7 @@ relationships:
     - Terraform
     - Ansible
     - Grafana
+    - Proxmox VE
   parent: Google Cloud
 ---
 

@@ -46,6 +46,7 @@ links:
 relationships:
   related_tools:
     - draw.io (diagrams.net)
+    - Proxmox VE
 ---
 
 # **Scanopy 調査レポート**
