@@ -51,6 +51,7 @@ relationships:
     - Terraform
     - AWS CloudFormation
     - OpenTofu
+    - fakecloud
 ---
 
 
@@ -230,18 +231,19 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | LocalStack | Moto | AWS Sandbox |
-|:---:|:---|:---:|:---:|:---:|
-| **エミュレーション** | 対応サービス数 | ◎<br><small>100+</small> | ◯<br><small>主要サービス</small> | ◎<br><small>全サービス(実物)</small> |
-| **利用形態** | 実行環境 | ◎<br><small>Docker/単体</small> | ◯<br><small>Pythonライブラリ</small> | △<br><small>クラウド接続必須</small> |
-| **コスト** | 利用料金 | ◯<br><small>無料〜有料</small> | ◎<br><small>完全無料(OSS)</small> | △<br><small>従量課金</small> |
-| **開発効率** | デプロイ速度 | ◎<br><small>即時</small> | ◎<br><small>即時</small> | △<br><small>待ち時間あり</small> |
+| 機能カテゴリ | 機能項目 | LocalStack | Moto | AWS Sandbox | fakecloud |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **エミュレーション** | 対応サービス数 | ◎<br><small>100+</small> | ◯<br><small>主要サービス</small> | ◎<br><small>全サービス(実物)</small> | ◯<br><small>主要22サービスをサポート</small> |
+| **利用形態** | 実行環境 | ◎<br><small>Docker/単体</small> | ◯<br><small>Pythonライブラリ</small> | △<br><small>クラウド接続必須</small> | ◎<br><small>単一バイナリで動作（19MB）</small> |
+| **コスト** | 利用料金 | ◯<br><small>無料〜有料</small> | ◎<br><small>完全無料(OSS)</small> | △<br><small>従量課金</small> | ◎<br><small>完全無料(OSS)</small> |
+| **開発効率** | デプロイ速度 | ◎<br><small>即時</small> | ◎<br><small>即時</small> | △<br><small>待ち時間あり</small> | ◎<br><small>即時</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **LocalStack** | Dockerベースの包括的AWSエミュレータ | 対応サービス数が圧倒的に多い。IaC連携が強力。他言語からも利用容易。 | リソース消費が大きい。完全互換ではない。 | 本格的なAWSアプリの統合テスト、広範なサービスを利用する場合。 |
+| **fakecloud** | 完全無料・単一バイナリのAWSエミュレーター | アカウント不要、軽量で高速、高度な機能も無料 | 対応サービスが22種類に限定 | コストをかけずに主要AWSサービスのローカルテスト環境を構築したい場合 |
 | **Moto** | Pythonライブラリベースのモック | 軽量。Pythonテストコード内で簡単に使える。 | Python以外の言語からは使いにくい（Server ModeもあるがLocalStackの方が統合されている）。 | Pythonプロジェクトの単体テスト、軽量なモックが必要な場合。 |
 | **AWS Sandbox (Cloud)** | 実際のAWS環境（隔離環境） | 本番と全く同じ挙動（100%の互換性）。 | 課金が発生する。デプロイ待ち時間がある。 | 本番デプロイ直前の最終確認、エミュレータでは再現できない機能の検証。 |
 
