@@ -1,65 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Proxmox VE 調査レポート"
-tool_name: "Proxmox VE"
-tool_reading: "プロックスモックス ヴイイー"
-category: "インフラ/クラウド"
-developer: "Proxmox Server Solutions GmbH"
-official_site: "https://www.proxmox.com/en/products/proxmox-virtual-environment/overview"
-date: "2026-04-15"
-last_updated: "2026-04-15"
+title: Proxmox VE 調査レポート
+tool_name: Proxmox VE
+tool_reading: プロックスモックス ヴイイー
+category: インフラ/クラウド
+developer: Proxmox Server Solutions GmbH
+official_site: https://www.proxmox.com/en/products/proxmox-virtual-environment/overview
+date: '2026-04-15'
+last_updated: '2026-04-15'
 tags:
-  - "オープンソース"
-  - "仮想化"
-  - "コンテナ"
-  - "KVM"
-  - "LXC"
-description: "KVM仮想マシンとLXCコンテナを統合管理できる、オープンソースのエンタープライズ向けサーバー仮想化プラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - 仮想化
+  - コンテナ
+  - KVM
+  - LXC
+description: KVM仮想マシンとLXCコンテナを統合管理できる、オープンソースのエンタープライズ向けサーバー仮想化プラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "インフラエンジニア"
-    - "システム管理者"
-    - "ホームラボ愛好家"
-  latest_highlight: "2025年11月に最新バージョン 9.1 をリリース"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - インフラエンジニア
+    - システム管理者
+    - ホームラボ愛好家
+  latest_highlight: 2025年11月に最新バージョン 9.1 をリリース
+  update_frequency: 中
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "無償（オープンソース）でありながら、エンタープライズ向けの機能（クラスタリング、HA、ライブマイグレーション等）がフルに利用できる"
+      reason: 無償（オープンソース）でありながら、エンタープライズ向けの機能（クラスタリング、HA、ライブマイグレーション等）がフルに利用できる
     - point: 5
-      reason: "KVMとLXCの両方を単一のWeb GUIから直感的に一元管理可能"
+      reason: KVMとLXCの両方を単一のWeb GUIから直感的に一元管理可能
     - point: 3
-      reason: "ZFSやCephといった高度なストレージ技術が標準で統合されている"
+      reason: ZFSやCephといった高度なストレージ技術が標準で統合されている
     - point: 2
-      reason: "バックアップ機能が組み込まれており、Proxmox Backup Serverとの連携も強力"
+      reason: バックアップ機能が組み込まれており、Proxmox Backup Serverとの連携も強力
   minus_points:
     - point: -2
-      reason: "有償の主要仮想化製品（VMware等）と比較すると、サードパーティ製バックアップ・エコシステムの対応がやや少ない"
-  summary: "コストパフォーマンスに優れた強力な仮想化基盤であり、個人からエンタープライズまで幅広く活用できる"
-
-# 【任意項目】該当するもののみ記載
+      reason: 有償の主要仮想化製品（VMware等）と比較すると、サードパーティ製バックアップ・エコシステムの対応がやや少ない
+  summary: コストパフォーマンスに優れた強力な仮想化基盤であり、個人からエンタープライズまで幅広く活用できる
 links:
-  github: "https://git.proxmox.com/"
-  documentation: "https://pve.proxmox.com/pve-docs/"
+  github: https://git.proxmox.com/
+  documentation: https://pve.proxmox.com/pve-docs/
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools:
-    - "Docker"
-    - "Kubernetes"
-    - "Ansible"
-    - "Ubuntu"
-    - "Scanopy"
+    - Docker
+    - Kubernetes
+    - Ansible
+    - Ubuntu
+    - Scanopy
 ---
 
 # **Proxmox VE 調査レポート**

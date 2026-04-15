@@ -50,7 +50,7 @@ relationships:
     - Docker
     - Wine
     - Homebrew
-    - "Proxmox VE"
+    - Proxmox VE
 ---
 
 
