@@ -6,11 +6,11 @@ category: AI開発基盤
 developer: The Linux Foundation
 official_site: https://a2a-protocol.org/
 date: '2026-02-03'
-last_updated: '2026-02-03'
+last_updated: '2026-04-16'
 tags:
-  - MCP
-  - The Linux Foundation
+  - AI開発基盤
   - エージェント
+  - オープンソース
   - プロトコル
   - 相互運用性
 description: 異なるプラットフォーム上のAIエージェント同士が相互に通信し、タスクを委任・連携するためのユニバーサルな標準プロトコル
@@ -182,6 +182,8 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
   * 「まだ仕様が新しく、実装例が少ない」
   * 「既存のシステムに組み込む際のベストプラクティスがもっと欲しい」
+* **特徴的なユースケース**:
+  * 自律型エージェントの専門性を活かし、特定のタスク（例えば旅行予約）を別の特化型エージェントに委任するようなマルチエージェント連携が期待されている。
 
 ## **15. 直近半年のアップデート情報**
 
@@ -195,12 +197,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | A2A Protocol | MCP | 独自API連携 |
-|:---:|:---|:---:|:---:|:---:|
-| **通信対象** | 相手 | エージェント対エージェント | エージェント対ツール | システム対システム |
-| **状態保持** | ステートフル | ◎<br><small>マルチターン対話</small> | △<br><small>基本ステートレス</small> | △<br><small>実装次第</small> |
-| **標準化** | 統一規格 | ◎<br><small>Linux Foundation</small> | ◎<br><small>オープン標準</small> | ×<br><small>バラバラ</small> |
-| **発見機能** | Discovery | ◎<br><small>Agent Card</small> | ◯<br><small>サーバー機能</small> | ×<br><small>手動設定</small> |
+| 機能カテゴリ | 機能項目 | A2A Protocol | MCP | LangChain/LangGraph | 独自API連携 |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **通信対象** | 相手 | エージェント対エージェント | エージェント対ツール | 内部エージェント/ツール | システム対システム |
+| **状態保持** | ステートフル | ◎<br><small>マルチターン対話</small> | △<br><small>基本ステートレス</small> | ◎<br><small>グラフ状態管理</small> | △<br><small>実装次第</small> |
+| **標準化** | 統一規格 | ◎<br><small>Linux Foundation</small> | ◎<br><small>オープン標準</small> | △<br><small>フレームワーク依存</small> | ×<br><small>バラバラ</small> |
+| **発見機能** | Discovery | ◎<br><small>Agent Card</small> | ◯<br><small>サーバー機能</small> | △<br><small>一部対応</small> | ×<br><small>手動設定</small> |
 
 ### **16.2 詳細比較**
 
