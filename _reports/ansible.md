@@ -54,6 +54,7 @@ relationships:
     - AWS CloudFormation
     - Kubernetes
     - Podman
+    - "Proxmox VE"
 ---
 
 

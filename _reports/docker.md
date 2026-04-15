@@ -56,6 +56,7 @@ relationships:
     - dockur/windows
     - JFrog Artifactory
     - Ubuntu
+    - "Proxmox VE"
 ---
 
 
