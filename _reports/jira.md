@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - TestRail
     - Redmine
+    - Trac
     - Backlog
     - Linear
     - GitHub
