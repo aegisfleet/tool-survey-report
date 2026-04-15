@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "fakecloud 調査レポート"
-tool_name: "fakecloud"
-tool_reading: "フェイククラウド"
-category: "開発ユーティリティ"
-developer: "faisca"
-official_site: "https://fakecloud.dev/"
-date: "2026-04-16"
-last_updated: "2026-04-16"
+title: fakecloud 調査レポート
+tool_name: fakecloud
+tool_reading: フェイククラウド
+category: 開発ユーティリティ
+developer: faisca
+official_site: https://fakecloud.dev/
+date: '2026-04-16'
+last_updated: '2026-04-16'
 tags:
-  - "オープンソース"
-  - "クラウド"
-  - "開発者ツール"
-  - "テスト自動化"
-description: "ローカル環境で動作する軽量で完全無料のAWSエミュレーター"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - クラウド
+  - 開発者ツール
+  - テスト自動化
+description: ローカル環境で動作する軽量で完全無料のAWSエミュレーター
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-  latest_highlight: "v0.9.2リリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - QAエンジニア
+  latest_highlight: v0.9.2リリース
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 10
-      reason: "完全無料でアカウント登録不要、OSSとして利用可能"
+      reason: 完全無料でアカウント登録不要、OSSとして利用可能
     - point: 8
-      reason: "単一バイナリによる軽量な動作と高速な起動"
+      reason: 単一バイナリによる軽量な動作と高速な起動
     - point: 5
-      reason: "テスト専用のファーストパーティSDKの提供"
+      reason: テスト専用のファーストパーティSDKの提供
   minus_points:
     - point: -3
-      reason: "サポート対象のAWSサービス数が22に限定されている"
-  summary: "軽量かつ完全無料であり、ローカルでのAWS統合テストにおいて強力な選択肢"
-
-# 【任意項目】該当するもののみ記載
+      reason: サポート対象のAWSサービス数が22に限定されている
+  summary: 軽量かつ完全無料であり、ローカルでのAWS統合テストにおいて強力な選択肢
 links:
-  github: "https://github.com/faiscadev/fakecloud"
-  deepwiki: "https://deepwiki.com/faiscadev/fakecloud"
-  documentation: "https://fakecloud.dev/docs/"
+  github: https://github.com/faiscadev/fakecloud
+  deepwiki: https://deepwiki.com/faiscadev/fakecloud
+  documentation: https://fakecloud.dev/docs/
 relationships:
   related_tools:
-    - "LocalStack"
+    - LocalStack
 ---
 
 # **fakecloud 調査レポート**
