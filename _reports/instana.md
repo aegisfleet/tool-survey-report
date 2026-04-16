@@ -1,60 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "IBM Instana 調査レポート"
-tool_name: "IBM Instana"
-tool_reading: "インスタナ"
-category: "オブザーバビリティ"
-developer: "IBM"
-official_site: "https://www.ibm.com/jp-ja/products/instana"
-date: "2026-04-16"
-last_updated: "2026-04-16"
+title: IBM Instana 調査レポート
+tool_name: IBM Instana
+tool_reading: インスタナ
+category: オブザーバビリティ
+developer: IBM
+official_site: https://www.ibm.com/jp-ja/products/instana
+date: '2026-04-16'
+last_updated: '2026-04-16'
 tags:
-  - "APM"
-  - "オブザーバビリティ"
-  - "クラウド監視"
-  - "AIOps"
-  - "エンタープライズ"
-description: "エージェント型AIを搭載し、アプリケーションからインフラストラクチャまでフルスタックの自動オブザーバビリティを提供するプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - APM
+  - オブザーバビリティ
+  - クラウド監視
+  - AIOps
+  - エンタープライズ
+description: エージェント型AIを搭載し、アプリケーションからインフラストラクチャまでフルスタックの自動オブザーバビリティを提供するプラットフォーム
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "¥3,187/月 (Essentials)"
+  starting_price: ¥3,187/月 (Essentials)
   target_users:
-    - "SRE / DevOpsエンジニア"
-    - "IT運用チーム"
-    - "開発者"
-  latest_highlight: "AIエージェントによるインシデント調査の自動化・ワンクリック調査機能の提供"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - SRE / DevOpsエンジニア
+    - IT運用チーム
+    - 開発者
+  latest_highlight: AIエージェントによるインシデント調査の自動化・ワンクリック調査機能の提供
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ワンライナーで導入可能なエージェントと自動検出・マッピング機能の利便性"
+      reason: ワンライナーで導入可能なエージェントと自動検出・マッピング機能の利便性
     - point: 5
-      reason: "1秒単位のメトリクス収集と全リクエストのトレースによる高い可視性"
+      reason: 1秒単位のメトリクス収集と全リクエストのトレースによる高い可視性
     - point: 4
-      reason: "課金体系がシンプル（ユーザー数・アプリ数無制限、ホスト単位）"
+      reason: 課金体系がシンプル（ユーザー数・アプリ数無制限、ホスト単位）
     - point: 3
-      reason: "Gartner Magic Quadrantのリーダー選出、ITreview等での高い評価"
+      reason: Gartner Magic Quadrantのリーダー選出、ITreview等での高い評価
     - point: 2
-      reason: "日本語UI・ドキュメントに対応し、国内事例が豊富"
+      reason: 日本語UI・ドキュメントに対応し、国内事例が豊富
   minus_points:
     - point: -4
-      reason: "小規模・単一アプリではオーバースペックでコスト高になる可能性がある"
-  summary: "複雑な環境の監視を極限まで自動化し、シンプルな課金体系で大規模運用に適した強力なオブザーバビリティプラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 小規模・単一アプリではオーバースペックでコスト高になる可能性がある
+  summary: 複雑な環境の監視を極限まで自動化し、シンプルな課金体系で大規模運用に適した強力なオブザーバビリティプラットフォーム
 links:
-  documentation: "https://www.ibm.com/docs/en/instana-observability"
+  documentation: https://www.ibm.com/docs/en/instana-observability
 relationships:
   related_tools:
-    - "Datadog"
+    - Datadog
 ---
 
 # **IBM Instana 調査レポート**
