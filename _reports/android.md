@@ -47,8 +47,6 @@ links:
 relationships:
   related_tools:
     - Android Studio
-    - Android Use
-    - AluminiumOS
   children:
     - AluminiumOS
     - Android Use
