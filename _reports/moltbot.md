@@ -48,7 +48,6 @@ relationships:
   children: []
   related_tools:
     - OpenHands
-    - Claude
     - AutoGPT
 ---
 

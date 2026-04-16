@@ -47,14 +47,13 @@ relationships:
     - Claude Cowork
     - Claude for Chrome
   related_tools:
-    - Moltbot
     - ChatGPT
     - DeepSeek
     - Gemini
+    - Grok
     - Model Context Protocol
     - MCP Apps
-    - TradingAgents
-    - Grok
+    - Agent Skills
 ---
 
 
