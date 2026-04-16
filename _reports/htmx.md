@@ -1,54 +1,50 @@
 ---
-title: "htmx 調査レポート"
-tool_name: "htmx"
-tool_reading: "エイチティーエムエックス"
-category: "Webフレームワーク"
-developer: "Big Sky Software"
-official_site: "https://htmx.org/"
-date: "2026-04-17"
-last_updated: "2026-04-17"
+title: htmx 調査レポート
+tool_name: htmx
+tool_reading: エイチティーエムエックス
+category: Webフレームワーク
+developer: Big Sky Software
+official_site: https://htmx.org/
+date: '2026-04-17'
+last_updated: '2026-04-17'
 tags:
-  - "JavaScript"
-  - "Webフレームワーク"
-  - "UIライブラリ"
-  - "オープンソース"
-  - "フロントエンド"
-description: "HTMLの属性を拡張し、JavaScriptを記述せずにAJAX、CSSトランジション、WebSocketなどを利用できるようにする軽量ライブラリ。"
-
+  - JavaScript
+  - Webフレームワーク
+  - UIライブラリ
+  - オープンソース
+  - フロントエンド
+description: HTMLの属性を拡張し、JavaScriptを記述せずにAJAX、CSSトランジション、WebSocketなどを利用できるようにする軽量ライブラリ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "バックエンドエンジニア"
-    - "フロントエンドエンジニア"
-  latest_highlight: "v2.0.7がリリースされ、現在は2026年夏リリース目標のv4のベータ版が開発中。"
-  update_frequency: "高"
-
+    - バックエンドエンジニア
+    - フロントエンドエンジニア
+  latest_highlight: v2.0.7がリリースされ、現在は2026年夏リリース目標のv4のベータ版が開発中。
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "JavaScriptをほとんど書かずに高度なUIが実現でき、学習コストが低い"
+      reason: JavaScriptをほとんど書かずに高度なUIが実現でき、学習コストが低い
     - point: 5
-      reason: "依存関係がなく、非常に軽量（約16KB min.gz）である"
+      reason: 依存関係がなく、非常に軽量（約16KB min.gz）である
     - point: 5
-      reason: "ReactやVueなどのSPAフレームワークの代替として実用的で、バックエンドとの親和性が高い"
+      reason: ReactやVueなどのSPAフレームワークの代替として実用的で、バックエンドとの親和性が高い
   minus_points:
     - point: 0
-      reason: ""
-  summary: "既存のサーバーサイドレンダリング環境と非常に相性が良く、少ないコードでモダンなUXを提供する強力なツール。"
-
+      reason: ''
+  summary: 既存のサーバーサイドレンダリング環境と非常に相性が良く、少ないコードでモダンなUXを提供する強力なツール。
 links:
-  github: "https://github.com/bigskysoftware/htmx"
-  deepwiki: "https://deepwiki.com/bigskysoftware/htmx"
-  documentation: "https://htmx.org/docs/"
-
+  github: https://github.com/bigskysoftware/htmx
+  deepwiki: https://deepwiki.com/bigskysoftware/htmx
+  documentation: https://htmx.org/docs/
 relationships:
   related_tools:
-    - "React"
-    - "Vue.js"
+    - React
+    - Vue.js
 ---
 
 # **htmx 調査レポート**
