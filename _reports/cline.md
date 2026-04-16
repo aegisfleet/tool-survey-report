@@ -55,9 +55,8 @@ relationships:
     - GitHub Copilot
     - Windsurf
     - Roo Code
-    - Claude Code
     - Visual Studio Code
-    - Grok CLI
+    - AGENTS.md
 ---
 
 
