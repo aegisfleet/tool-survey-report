@@ -38,9 +38,15 @@ const categoryEmojiRules = [
     keywords: ['os/プラットフォーム', 'os', 'プラットフォーム', 'android', 'ubuntu', 'vercel'],
     emoji: '💻',
   },
-  { keywords: ['ide/エディタ', 'エディタ', 'ide', '開発者ツール', 'バージョン管理', 'git', 'フック', '開発ツール'], emoji: '🔧' },
+  {
+    keywords: ['ide/エディタ', 'エディタ', 'ide', '開発者ツール', 'バージョン管理', 'git', 'フック', '開発ツール'],
+    emoji: '🔧',
+  },
   { keywords: ['ユーティリティ', '便利ツール'], emoji: '🛠️' },
-  { keywords: ['インフラ/クラウド', 'インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化', 'iac'], emoji: '☁️' },
+  {
+    keywords: ['インフラ/クラウド', 'インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化', 'iac'],
+    emoji: '☁️',
+  },
   { keywords: ['デザインツール', 'デザイン'], emoji: '🎨' },
   { keywords: ['動画/メディア'], emoji: '🎥' },
   { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📋' },
