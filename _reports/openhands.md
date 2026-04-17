@@ -48,11 +48,9 @@ relationships:
     - Accomplish
     - Devin
     - AutoGPT
-    - Google Jules
     - Agent Zero
     - Cursor
     - GitHub Copilot
-    - Claw Code
 ---
 
 # **OpenHands 調査レポート**
