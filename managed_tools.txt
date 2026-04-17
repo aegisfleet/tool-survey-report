@@ -1,0 +1,354 @@
+tool_name: A2A Protocol
+tool_name: AGENTIC STAR
+tool_name: AGENTS.md
+tool_name: AI-Driven Software Development Platform
+tool_name: APM
+tool_name: AWS CloudFormation
+tool_name: AWS DevOps Agent
+tool_name: AWS Frontier Agents
+tool_name: AWS MCP Servers
+tool_name: AWS Security Hub
+tool_name: Accomplish
+tool_name: AdGuard
+tool_name: Affinity
+tool_name: Agent Lightning
+tool_name: Agent Skills
+tool_name: Agent Trace
+tool_name: Agent Zero
+tool_name: AgentScope
+tool_name: Agentic Workflows
+tool_name: All SVG Icons
+tool_name: Allure Report
+tool_name: AluminiumOS
+tool_name: Amazon Athena
+tool_name: Amazon Bedrock
+tool_name: Amazon Bedrock AgentCore Runtime
+tool_name: Amazon GuardDuty
+tool_name: Amazon OpenSearch Service
+tool_name: Amazon Q Developer
+tool_name: Amazon QuickSight
+tool_name: Android
+tool_name: Android Studio
+tool_name: Android Use
+tool_name: Ansible
+tool_name: Apache JMeter
+tool_name: Apache Superset
+tool_name: Appium
+tool_name: Apple Creator Studio
+tool_name: Aqua Voice
+tool_name: Archon
+tool_name: Arnis
+tool_name: Astro
+tool_name: AsyncReview
+tool_name: Autify
+tool_name: AutoGPT
+tool_name: AutoHotkey
+tool_name: AviUtl
+tool_name: Axios
+tool_name: Backlog
+tool_name: Biome
+tool_name: Bito
+tool_name: Brainbase
+tool_name: Build by Grok
+tool_name: Bun
+tool_name: CAT
+tool_name: COMPANY
+tool_name: Canva
+tool_name: ChatDev
+tool_name: ChatGPT
+tool_name: Chrome DevTools MCP
+tool_name: Circleback
+tool_name: Claude
+tool_name: Claude Code
+tool_name: Claude Cowork
+tool_name: Claude for Chrome
+tool_name: Claude for Financial Services Plugins
+tool_name: Claw Code
+tool_name: Cline
+tool_name: Cloudflare
+tool_name: Code Wiki
+tool_name: CodeQL
+tool_name: CodeRabbit
+tool_name: CodeceptJS
+tool_name: Codex app
+tool_name: Codex cloud
+tool_name: Context7
+tool_name: Copilot Cowork
+tool_name: CrewAI
+tool_name: Cucumber
+tool_name: Cursor
+tool_name: Cypress
+tool_name: DaVinci Resolve
+tool_name: Database Rider
+tool_name: Datadog
+tool_name: Deep Agents
+tool_name: Deep-Live-Cam
+tool_name: DeepSeek
+tool_name: DeepWiki
+tool_name: DeepWiki-Open
+tool_name: DeerFlow
+tool_name: Delphi
+tool_name: Deno
+tool_name: Dependabot
+tool_name: Devin
+tool_name: Dexter
+tool_name: Dify
+tool_name: Docker
+tool_name: Docswell
+tool_name: ESLint
+tool_name: Eclipse IDE
+tool_name: ElevenLabs
+tool_name: Felo
+tool_name: Ferret-UI
+tool_name: Figma
+tool_name: Findy Team+
+tool_name: Fluorite Game Engine
+tool_name: Flutter
+tool_name: Foundry Local
+tool_name: GIMP
+tool_name: Gamma
+tool_name: Gauge
+tool_name: Gemini
+tool_name: Gemini Skills
+tool_name: Genspark
+tool_name: GitHub
+tool_name: GitHub Actions
+tool_name: GitHub Copilot
+tool_name: GitHub Copilot CLI
+tool_name: GitHub Copilot SDK
+tool_name: GitKraken
+tool_name: GitLab
+tool_name: GitLab CI/CD
+tool_name: GitLab Duo
+tool_name: GitLens
+tool_name: Google Antigravity
+tool_name: Google Cloud
+tool_name: Google Disco
+tool_name: Google Illuminate
+tool_name: Google Jules
+tool_name: Google Learning
+tool_name: Google Maps Platform
+tool_name: Google Opal
+tool_name: Google Stitch
+tool_name: Google Workspace CLI (gws)
+tool_name: Google Workspace Studio
+tool_name: Google 広告
+tool_name: Grafana
+tool_name: Grok
+tool_name: Grok CLI
+tool_name: HSP3
+tool_name: Hermes Agent
+tool_name: Homebrew
+tool_name: Hono
+tool_name: Hugging Face
+tool_name: Hugo
+tool_name: Hunyuan 3D
+tool_name: IBM Instana
+tool_name: IntelliJ IDEA
+tool_name: Irodori-TTS
+tool_name: JFrog Artifactory
+tool_name: JUnit
+tool_name: JaCoCo
+tool_name: Jekyll
+tool_name: Jenkins
+tool_name: Jinba
+tool_name: Jira
+tool_name: Jujutsu
+tool_name: KING OF TIME
+tool_name: Karate
+tool_name: Karpenter
+tool_name: Keepa
+tool_name: Kibana
+tool_name: Kiro
+tool_name: Kiwi TCMS
+tool_name: Knip
+tool_name: Kodus
+tool_name: Kotlin Multiplatform
+tool_name: Kubernetes
+tool_name: LITRON CORE
+tool_name: LM Studio
+tool_name: LangChain
+tool_name: Lefthook
+tool_name: Let's Encrypt
+tool_name: Letta
+tool_name: LilysAI
+tool_name: Linear
+tool_name: LiteBox
+tool_name: LocalStack
+tool_name: Looker Studio
+tool_name: Luma AI
+tool_name: MCP Apps
+tool_name: MagicPod
+tool_name: Magika
+tool_name: Make
+tool_name: Manus
+tool_name: MarkItDown
+tool_name: MediaCMS
+tool_name: Microsoft 365 Copilot
+tool_name: Microsoft Agent Framework
+tool_name: Microsoft Power Automate
+tool_name: Microsoft PowerToys
+tool_name: Microsoft Work IQ
+tool_name: Microsoft 広告
+tool_name: Miro
+tool_name: MiroFish
+tool_name: Mobile Next
+tool_name: Model Context Protocol
+tool_name: Moltbot
+tool_name: MoneyPrinterV2
+tool_name: NemoClaw
+tool_name: New Relic
+tool_name: Nexus Repository
+tool_name: Nginx
+tool_name: Niji Journey
+tool_name: NocoDB
+tool_name: Node.js
+tool_name: NotebookLM
+tool_name: Notely Voice
+tool_name: Notifuse
+tool_name: Notion
+tool_name: OAuth
+tool_name: OBS Background Removal
+tool_name: OBS Studio
+tool_name: OFUSE
+tool_name: Obsidian
+tool_name: Ollama
+tool_name: Opcode
+tool_name: OpenAI Codex CLI
+tool_name: OpenAI Frontier
+tool_name: OpenClaw
+tool_name: OpenCode
+tool_name: OpenDataLoader
+tool_name: OpenHands
+tool_name: OpenID
+tool_name: OpenPencil
+tool_name: OpenSpec
+tool_name: OpenTofu
+tool_name: Oracle AI Database Private Agent Factory
+tool_name: POPOPO
+tool_name: PageAgent
+tool_name: Paperclip
+tool_name: Perplexity
+tool_name: Playwright
+tool_name: Playwright CLI
+tool_name: Playwright Test Agents
+tool_name: Plugin Installation Manager Tool
+tool_name: Podman
+tool_name: Pomelli
+tool_name: PraisonAI
+tool_name: ProducerAI
+tool_name: Proxmox VE
+tool_name: Pulumi
+tool_name: PyInstaller
+tool_name: PyTest
+tool_name: PyTorch
+tool_name: Qangaroo
+tool_name: Qase
+tool_name: Qodo
+tool_name: Quality Tracker
+tool_name: QualityForward
+tool_name: Qwen-Image-Layered
+tool_name: Rakuten AI
+tool_name: Ranorex Studio
+tool_name: React
+tool_name: React Testing Library
+tool_name: Redmine
+tool_name: Remotion
+tool_name: Render
+tool_name: Renovate
+tool_name: RevenueCat
+tool_name: Robot Framework
+tool_name: Roo Code
+tool_name: SHIFT DQS for リバースエンジニアリング
+tool_name: Salesforce
+tool_name: Scanopy
+tool_name: Seedance 2.0
+tool_name: Selenium
+tool_name: Sherlock
+tool_name: SkillsMP
+tool_name: SmartHR
+tool_name: Snowflake
+tool_name: SonarQube
+tool_name: SonarQube Cloud
+tool_name: Sourcery
+tool_name: Speaker Deck
+tool_name: Spec Kit
+tool_name: Splunk
+tool_name: Splunk AppDynamics
+tool_name: Spring Boot
+tool_name: Square
+tool_name: Squid
+tool_name: Stable Diffusion
+tool_name: Strands Agents
+tool_name: Suno
+tool_name: Symphony
+tool_name: TAKT
+tool_name: TOKIUM
+tool_name: Tableau
+tool_name: TensorFlow
+tool_name: Tera Term
+tool_name: Terraform
+tool_name: TestLink
+tool_name: TestRail
+tool_name: Testcase Management
+tool_name: TextFX
+tool_name: TigerFS
+tool_name: Trac
+tool_name: TradingAgents
+tool_name: Trivy
+tool_name: UI-TARS Desktop
+tool_name: Ubuntu
+tool_name: UiPath
+tool_name: Vercel
+tool_name: Vercel Agent Skills
+tool_name: Vertex AI
+tool_name: Vertex AI Studio
+tool_name: Visual Studio Code
+tool_name: Vite
+tool_name: Vitest
+tool_name: VoxCPM
+tool_name: WSL
+tool_name: Waves Place
+tool_name: WiFi DensePose
+tool_name: Windsurf
+tool_name: Wine
+tool_name: WordPress
+tool_name: Workato
+tool_name: Yarn
+tool_name: Yew
+tool_name: Z.ai
+tool_name: Zapier
+tool_name: Zscaler
+tool_name: act
+tool_name: axe DevTools
+tool_name: cc-sdd
+tool_name: clasp
+tool_name: codoc
+tool_name: dockur/windows
+tool_name: draw.io (diagrams.net)
+tool_name: fakecloud
+tool_name: htmx
+tool_name: mabl
+tool_name: marimo
+tool_name: markdownlint
+tool_name: n8n
+tool_name: npm
+tool_name: nvm
+tool_name: picomatch
+tool_name: pinact
+tool_name: pip
+tool_name: pnpm
+tool_name: uv
+tool_name: いいフォント
+tool_name: さくらのAI
+tool_name: ふるさとチョイス
+tool_name: まん福
+tool_name: ジョブカン勤怠管理
+tool_name: タックスナップ
+tool_name: ナクサナイ
+tool_name: ネムラナイ
+tool_name: マネーフォワード クラウド勤怠
+tool_name: ワスレナイ
+tool_name: 天才くん
+tool_name: 詐欺バスター Lite
+tool_name: 詐欺対策 by NTTタウンページ
