@@ -5,8 +5,8 @@ tool_reading: オートジーピーティー
 category: 自律型AIエージェント
 developer: Significant Gravitas
 official_site: https://agpt.co/
-date: '2026-02-03'
-last_updated: '2026-02-03'
+date: '2026-04-18'
+last_updated: '2026-04-18'
 tags:
   - AI
   - Python
@@ -24,7 +24,7 @@ quick_summary:
     - 開発者
     - AI研究者
     - ビジネスユーザー
-  latest_highlight: 2026年1月にv0.6.45をリリース。ClaudeCodeBlockの追加や検索機能の強化が行われた
+  latest_highlight: 2026年4月にv0.6.56をリリース。ファイルアップロードの不具合修正やUIの改善が行われた
   update_frequency: 高
 evaluation:
   score: 75
@@ -59,7 +59,6 @@ relationships:
     - AgentScope
     - MoneyPrinterV2
     - OpenClaw
-    - Moltbot
 ---
 
 # **AutoGPT 調査レポート**
@@ -215,6 +214,17 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-15 (v0.6.56)**:
+  * ワークスペースのファイルダウンロードやアップロードの不具合修正。
+  * スケジューラの時間指定や未公開バナーの修正などのテスト改善。
+  * Mistral、Grok 3、Cohere Command AなどのLLMモデルの追加サポート。
+* **2026-03-12 (v0.6.51)**:
+  * Claude Sonnet 4.6やPerplexity Sonar Reasoning ProモデルなどのLLM対応追加。
+  * プロンプト構築ロジックの中央集約とMarketplace DBレイヤーのリファクタリング。
+* **2026-03-04 (v0.6.50)**:
+  * コパイロットチャットへのファイルアップロード機能の追加。
+  * マルチステップ対応のブラウザ自動化ツールの追加。
+  * MCPサーバーの検出と実行機能の実装。
 * **2026-01-28 (v0.6.45)**:
   * Sentryのアラート削減やチャットリダイレクトの修正など、安定性向上のためのバグ修正。
 * **2026-01-28 (v0.6.44)**:
@@ -225,18 +235,6 @@ relationships:
   * Agent Builderのインタラクティブなチュートリアル追加。
   * ストア、ドキュメント、ブロックに対するハイブリッド検索機能。
   * 新しいLLM Picker UIの実装。
-* **2026-01-14 (v0.6.42)**:
-  * Reddit OAuth2連携と高度なRedditブロックの追加。
-  * WordPress連携ブロック（投稿取得、下書き保存）の追加。
-  * 承認が必要なブロックのためのHuman-in-the-Loopレビューシステムの実装。
-* **2026-01-07 (v0.6.41)**:
-  * `SmartDecisionMakerBlock` へのエージェントモード追加による自律ループの実現。
-  * OAuth APIとSSO（シングルサインオン）の実装。
-  * Google Docs連携ブロックの追加。
-* **2025-12-11 (v0.6.40)**:
-  * オンボーディングタスクのバックエンド実装。
-  * ビルダーの検索履歴機能。
-  * Google Sheets/Drive連携の強化と新ブロック追加。
 
 (出典: [GitHub Releases](https://github.com/Significant-Gravitas/AutoGPT/releases))
 

@@ -54,10 +54,8 @@ relationships:
     - Claude Code
     - Cursor
     - Windsurf
-    - Cline
-    - Roo Code
     - OpenHands
-    - Claw Code
+    - AutoGPT
 ---
 
 # **Devin 調査レポート**
