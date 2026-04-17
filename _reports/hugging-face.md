@@ -2,7 +2,7 @@
 title: Hugging Face 調査レポート
 tool_name: Hugging Face
 tool_reading: ハギングフェイス
-category: AI開発基盤
+category: LLMプラットフォーム
 developer: Hugging Face
 official_site: https://huggingface.co/
 date: '2026-02-05'
@@ -55,9 +55,6 @@ relationships:
     - UI-TARS Desktop
 ---
 
-
-
-
 # **Hugging Face 調査レポート**
 
 ## **1. 基本情報**
@@ -70,7 +67,7 @@ relationships:
   * GitHub: [https://github.com/huggingface](https://github.com/huggingface)
   * ドキュメント: [https://huggingface.co/docs](https://huggingface.co/docs)
   * レビューサイト: [G2](https://www.g2.com/products/hugging-face/reviews)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: Hugging Faceは、機械学習コミュニティがモデル、データセット、アプリケーションを協力して構築・共有するためのオープンソースプラットフォームです。AI開発のGitHubとも呼ばれ、自然言語処理を中心に画像、音声など多様なAIモデルのハブとなっています。
 
 ## **2. 目的と主な利用シーン**

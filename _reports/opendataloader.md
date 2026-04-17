@@ -46,9 +46,6 @@ relationships:
     - LangChain
 ---
 
-
-
-
 # **OpenDataLoader 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/opendataloader-project/opendataloader-pdf](https://github.com/opendataloader-project/opendataloader-pdf)
   * ドキュメント: [https://opendataloader.org/docs](https://opendataloader.org/docs)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: OpenDataLoaderは、RAGパイプライン向けに最適化されたAI対応のオープンソースPDFパーサーです。正確な読み取り順序の維持、すべての要素へのバウンディングボックスの付与など、LLMがPDFデータを正しく理解するために必要な構造化データ抽出機能を提供します。
 
 ## **2. 目的と主な利用シーン**

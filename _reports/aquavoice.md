@@ -43,9 +43,6 @@ relationships:
     - Windsurf
 ---
 
-
-
-
 # **Aqua Voice 調査レポート**
 
 ## **1. 基本情報**
@@ -56,7 +53,7 @@ relationships:
 * **公式サイト**: [https://aquavoice.com/](https://aquavoice.com/)
 * **関連リンク**:
   * ドキュメント: [https://aquavoice.com/guide](https://aquavoice.com/guide)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: AIコーディング支援
 * **概要**: Aqua Voiceは、開発者やAIツールのユーザーに向けて最適化された高度な音声入力ツールです。独自の音声認識モデル「Avalon」を搭載し、画面上のコンテキスト（コードや既存のテキスト）を理解しながら、高精度で技術用語やAI関連のプロンプトをテキスト化します。
 
 ## **2. 目的と主な利用シーン**

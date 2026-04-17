@@ -2,7 +2,7 @@
 title: Amazon Bedrock AgentCore Runtime 調査レポート
 tool_name: Amazon Bedrock AgentCore Runtime
 tool_reading: アマゾン ベッドロック エージェントコア ランタイム
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/bedrock/agentcore/
 date: '2026-01-28'
@@ -52,9 +52,6 @@ relationships:
     - Docker
 ---
 
-
-
-
 # **Amazon Bedrock AgentCore Runtime 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html)
   * 料金ページ: [https://aws.amazon.com/bedrock/agentcore/pricing/](https://aws.amazon.com/bedrock/agentcore/pricing/)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: Amazon Bedrock AgentCore Runtimeは、AIエージェントやツールをデプロイ・実行するための、安全でサーバーレスなホスティング環境です。インフラの管理を必要とせず、エージェントの推論プロセス（I/O待ち時間）に最適化された料金体系を提供します。LangGraphやCrewAIなど任意のフレームワークを利用可能です。
 
 ## **2. 目的と主な利用シーン**

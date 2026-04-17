@@ -47,9 +47,6 @@ relationships:
   parent: OAuth
 ---
 
-
-
-
 # **OpenID 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
   * 仕様書一覧: [https://openid.net/developers/specs/](https://openid.net/developers/specs/)
   * 認定済み製品: [https://openid.net/certification/](https://openid.net/certification/)
   * ニュース: [https://openid.net/news/](https://openid.net/news/)
-* **カテゴリ**: 認証・ID管理 / セキュリティ標準
+* **カテゴリ**: CDN/セキュリティ / セキュリティ標準
 * **概要**: OpenID、特に現在主流のOpenID Connect (OIDC) は、OAuth 2.0プロトコルの上に構築されたシンプルなIDレイヤーです。クライアント（アプリ）は、Authorization Server（IDプロバイダー）によって行われた認証に基づいてエンドユーザーの本人確認を行い、基本的なプロフィール情報を取得することができます。
 
 ## **2. 目的と主な利用シーン**

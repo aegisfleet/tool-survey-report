@@ -2,7 +2,7 @@
 title: Google Learning 調査レポート
 tool_name: Google Learning
 tool_reading: グーグル ラーニング
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: Google
 official_site: https://learning.google.com/
 date: '2026-02-23'
@@ -48,9 +48,6 @@ relationships:
     - NotebookLM
 ---
 
-
-
-
 # **Google Learning 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
 * **関連リンク**:
   * Google for Education: [https://edu.google.com/](https://edu.google.com/)
   * Grow with Google: [https://grow.google/](https://grow.google/)
-* **カテゴリ**: 教育・学習プラットフォーム
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: Google Learningは、「世界中の誰もが、世界のあらゆることを学べるように支援する」というミッションのもと、Googleが提供する学習リソースやツールを集約したポータルサイト。「School（学校）」「Work（仕事）」「Life（生活）」の3つのカテゴリに分けられ、目的に応じた学習ツールやコンテンツにアクセスできる。
 
 ## **2. 目的と主な利用シーン**

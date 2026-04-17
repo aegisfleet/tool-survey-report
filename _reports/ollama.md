@@ -2,7 +2,7 @@
 title: Ollama 調査レポート
 tool_name: Ollama
 tool_reading: オラマ
-category: AI開発基盤
+category: LLMプラットフォーム
 developer: Ollama Inc.
 official_site: https://ollama.com/
 date: '2025-10-24'
@@ -54,9 +54,6 @@ relationships:
     - Foundry Local
 ---
 
-
-
-
 # **Ollama 調査レポート**
 
 ## **1. 基本情報**
@@ -69,7 +66,7 @@ relationships:
   * GitHub: [https://github.com/ollama/ollama](https://github.com/ollama/ollama)
   * CodeWiki: [https://codewiki.google/github.com/ollama/ollama](https://codewiki.google/github.com/ollama/ollama)
   * ドキュメント: [https://ollama.com/docs](https://ollama.com/docs)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: オープンソースの大規模言語モデル（LLM）をローカル環境で簡単にセットアップし、実行するためのフレームワーク。シンプルなコマンド体系とOpenAI互換APIを提供し、開発者がAIアプリケーションを迅速に構築・テストすることを可能にする。
 
 ## **2. 目的と主な利用シーン**

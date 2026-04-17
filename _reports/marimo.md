@@ -58,7 +58,7 @@ relationships: {}
 * **関連リンク**:
   * GitHub: [https://github.com/marimo-team/marimo](https://github.com/marimo-team/marimo)
   * ドキュメント: [https://docs.marimo.io/](https://docs.marimo.io/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: データの変換、モデルのトレーニング、SQLクエリの実行などを直感的に行える、AIネイティブでリアクティブなPythonノートブックです。Jupyterの隠し状態の問題を解決し、純粋なPythonスクリプト（`.py`ファイル）として保存されるため、Gitでのバージョン管理やアプリとしてのデプロイが容易です。
 
 ## **2. 目的と主な利用シーン**

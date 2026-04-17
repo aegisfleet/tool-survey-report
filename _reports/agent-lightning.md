@@ -2,7 +2,7 @@
 title: Agent Lightning 調査レポート
 tool_name: Agent Lightning
 tool_reading: エージェント ライトニング
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Microsoft (Research)
 official_site: https://microsoft.github.io/agent-lightning/
 date: '2026-02-23'
@@ -48,9 +48,6 @@ relationships:
     - LangChain
 ---
 
-
-
-
 # **Agent Lightning 調査レポート**
 
 ## **1. 基本情報**
@@ -70,7 +67,7 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/microsoft/agent-lightning](https://codewiki.google/github.com/microsoft/agent-lightning)
   * ドキュメント: [https://microsoft.github.io/agent-lightning/stable/](https://microsoft.github.io/agent-lightning/stable/)
   * 論文: [https://arxiv.org/abs/2508.03680](https://arxiv.org/abs/2508.03680)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: Agent Lightningは、AIエージェントを「最適化（学習）」させるためのオープンソースフレームワークです。強化学習（RL）や自動プロンプト最適化（APO）などのアルゴリズムを用いて、LangChainやAutoGenなどで作られた既存のエージェントを、コード変更を最小限に抑えつつ（Zero Code Change）高性能化することができます。
 
 ## **2. 目的と主な利用シーン**

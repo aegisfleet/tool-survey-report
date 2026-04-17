@@ -50,9 +50,6 @@ relationships:
     - Ubuntu
 ---
 
-
-
-
 # **Wine (WineHQ) 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
   * Gitリポジトリ: [GitLab](https://gitlab.winehq.org/wine/wine)
   * ドキュメント: [WineHQ Wiki](https://wiki.winehq.org/)
   * アプリケーションデータベース: [Wine AppDB](https://appdb.winehq.org/)
-* **カテゴリ**: 互換レイヤー
+* **カテゴリ**: 言語ランタイム/実行環境
 * **概要**: Wine (Wine Is Not an Emulator) は、Linux、macOS、BSDなどのPOSIX準拠オペレーティングシステム上でWindowsアプリケーションを実行可能にする互換レイヤーです。エミュレータとは異なり、Windows API呼び出しをPOSIX呼び出しに即座に変換するため、パフォーマンスの低下を最小限に抑えてネイティブに近い速度で動作します。
 
 ## **2. 目的と主な利用シーン**

@@ -53,9 +53,6 @@ relationships:
     - Quality Tracker
 ---
 
-
-
-
 # **Qangaroo 調査レポート**
 
 ## **1. 基本情報**

@@ -51,9 +51,6 @@ relationships:
     - Visual Studio Code
 ---
 
-
-
-
 # **HSP3 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/onitama/OpenHSP](https://github.com/onitama/OpenHSP)
   * ドキュメント: [https://hsp.tv/make/hsp3.html](https://hsp.tv/make/hsp3.html)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 言語ランタイム/実行環境
 * **概要**: 1997年から開発が続けられている日本製のプログラミング言語です。BASICに似た簡単な文法で、Windowsアプリや2D/3Dゲームを誰でも手軽に作成・配布できることを目指して設計されています。
 
 ## **2. 目的と主な利用シーン**

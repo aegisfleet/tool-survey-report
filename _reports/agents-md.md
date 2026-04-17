@@ -2,7 +2,7 @@
 title: AGENTS.md 調査レポート
 tool_name: AGENTS.md
 tool_reading: エージェンツ ドット エムディー
-category: AI開発基盤
+category: AIエージェント基盤
 developer: LF Projects, LLC
 official_site: https://agents.md/
 date: '2026-02-03'
@@ -42,9 +42,6 @@ relationships:
     - Cline
 ---
 
-
-
-
 # **AGENTS.md 調査レポート**
 
 ## **1. 基本情報**
@@ -55,7 +52,7 @@ relationships:
 * **公式サイト**: [https://agents.md/](https://agents.md/)
 * **関連リンク**:
   * ドキュメント: [https://agents.md/index](https://agents.md/index)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: AGENTS.mdは、AIコーディングエージェントのための専用READMEフォーマットです。人間向けのREADME.mdとは異なり、AIエージェントがプロジェクトの構造、規約、手順を理解するために最適化されたコンテキストや指示を提供することを目的としています。
 
 ## **2. 目的と主な利用シーン**

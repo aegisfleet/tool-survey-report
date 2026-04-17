@@ -45,9 +45,6 @@ relationships:
     - GitLab
 ---
 
-
-
-
 # **Findy Team+ 調査レポート**
 
 ## **1. 基本情報**
@@ -58,7 +55,7 @@ relationships:
 * **公式サイト**: [https://findy-team.io/](https://findy-team.io/)
 * **関連リンク**:
   * ドキュメント: [https://findy-team.io/](https://findy-team.io/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発者生産性分析
 * **概要**: GitHub、GitLab、Jiraなどの開発ツールと連携し、エンジニアリング組織の生産性やパフォーマンスを自動で可視化・分析するサービス。「Four Keys」や「SPACE」フレームワークなどの指標を用い、チームの振り返りやプロセス改善を支援する。
 
 ## **2. 目的と主な利用シーン**

@@ -48,9 +48,6 @@ relationships:
     - Visual Studio Code
 ---
 
-
-
-
 # **Microsoft PowerToys 調査レポート**
 
 ## **1. 基本情報**
@@ -63,7 +60,7 @@ relationships:
   * GitHub: [https://github.com/microsoft/PowerToys](https://github.com/microsoft/PowerToys)
   * CodeWiki: [https://codewiki.google/github.com/microsoft/PowerToys](https://codewiki.google/github.com/microsoft/PowerToys)
   * ドキュメント: [https://learn.microsoft.com/en-us/windows/powertoys/](https://learn.microsoft.com/en-us/windows/powertoys/)
-* **カテゴリ**: ユーティリティ / 生産性向上
+* **カテゴリ**: 開発ユーティリティ / 生産性向上
 * **概要**: Windowsのシェル体験を調整・効率化するためのユーティリティセット。ウィンドウ管理、キーボードショートカットの変更、画像のリサイズ、カラーピッカーなど、Windows標準にはない便利な機能を多数提供する。
 
 ## **2. 目的と主な利用シーン**

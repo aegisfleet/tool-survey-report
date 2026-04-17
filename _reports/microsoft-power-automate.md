@@ -55,9 +55,6 @@ relationships:
     - AutoHotkey
 ---
 
-
-
-
 # **Microsoft Power Automate 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
 * **公式サイト**: [https://powerautomate.microsoft.com/](https://powerautomate.microsoft.com/)
 * **関連リンク**:
   * ドキュメント: [https://learn.microsoft.com/ja-jp/power-automate/](https://learn.microsoft.com/ja-jp/power-automate/)
-* **カテゴリ**: ワークフロー自動化, RPA (Robotic Process Automation)
+* **カテゴリ**: ワークフロー自動化
 * **概要**: Microsoft Power Automateは、ローコードのアプローチとAIを組み合わせ、個人のタスクから組織全体の複雑なプロセスまで、幅広いワークフローを自動化・最適化するためのクラウドベースのサービスです。特にMicrosoft 365製品群との強力な連携を特徴とします。
 
 ## **2. 目的と主な利用シーン**

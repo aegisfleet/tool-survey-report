@@ -2,7 +2,7 @@
 title: AWS DevOps Agent 調査レポート
 tool_name: AWS DevOps Agent
 tool_reading: エーダブリューエス デボオプス エージェント
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/devops-agent/
 date: '2026-02-04'
@@ -43,6 +43,7 @@ relationships:
     - Amazon Q Developer
     - Datadog
 ---
+
 # **AWS DevOps Agent 調査レポート**
 
 ## **1. 基本情報**
@@ -54,7 +55,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/devopsagent/latest/userguide/](https://docs.aws.amazon.com/devopsagent/latest/userguide/)
   * ブログ: [https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview](https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview)
-* **カテゴリ**: DevOps, AIOps
+* **カテゴリ**: AIエージェント基盤
 * **概要**: AWS DevOps Agentは、生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェントです。AWSの可観測性ツールやサードパーティ製ツールと連携し、インシデント発生時に自律的にトリアージを行い、根本原因を特定して解決策を提案します。
 
 ## **2. 目的と主な利用シーン**

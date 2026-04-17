@@ -39,6 +39,7 @@ relationships:
   related_tools:
     - GitHub Copilot
 ---
+
 # **SHIFT DQS for リバースエンジニアリング 調査レポート**
 
 ## **1. 基本情報**
@@ -50,7 +51,7 @@ relationships:
 * **関連リンク**:
   * ニュースリリース: [URL](https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/)
   * IR資料: [URL](https://finance-frontend-pc-dist.west.edge.storage-yahoo.jp/disclosure/20260217/20260217563906.pdf)
-* **カテゴリ**: モダナイゼーション / システム可視化
+* **カテゴリ**: セキュリティ/解析 / システム可視化
 * **概要**: 株式会社SHIFTが提供する、AIを活用したモダナイゼーション支援サービスです。システムのソースコードを基にAIで内部仕様と外部仕様を解析し、システム概要や画面仕様書など46種類のドキュメントを自動生成することで、レガシーシステムの可視化と刷新を強力に支援します。
 
 ## **2. 目的と主な利用シーン**

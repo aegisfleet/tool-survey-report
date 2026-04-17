@@ -39,9 +39,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **詐欺対策 by NTTタウンページ 調査レポート**
 
 ## **1. 基本情報**

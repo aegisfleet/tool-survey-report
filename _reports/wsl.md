@@ -54,7 +54,7 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/WSL](https://github.com/microsoft/WSL)
   * ドキュメント: [https://learn.microsoft.com/windows/wsl/](https://learn.microsoft.com/windows/wsl/)
-* **カテゴリ**: 開発者環境, OS・仮想化
+* **カテゴリ**: OS/プラットフォーム
 * **概要**: Windowsオペレーティングシステム上で、従来の仮想マシンやデュアルブートを設定するオーバーヘッドなしに、Linux環境（ほとんどのコマンドラインツール、ユーティリティ、アプリケーションを含む）を直接実行できるようにする機能。
 
 ## **2. 目的と主な利用シーン**

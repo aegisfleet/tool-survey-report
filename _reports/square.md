@@ -2,7 +2,7 @@
 title: Square 調査レポート
 tool_name: Square
 tool_reading: スクエア
-category: EC/決済
+category: ビジネスツール
 developer: Block, Inc.
 official_site: https://squareup.com/
 date: '2026-04-07'
@@ -58,7 +58,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://developer.squareup.com/us/en](https://developer.squareup.com/us/en)
   * レビューサイト: [Capterra](https://www.capterra.com/p/275802/Square-Point-of-Sale/)
-* **カテゴリ**: POS・決済システム
+* **カテゴリ**: ビジネスツール / POS・決済システム
 * **概要**: Squareは、スマートフォンやタブレットをPOSレジとして利用できる決済サービスから発展した、ビジネス運営のための統合プラットフォーム。実店舗での対面決済から、オンライン販売、在庫管理、スタッフ管理、顧客管理まで、ビジネスに必要なあらゆるツールを一つのシステムで提供する。
 
 ## **2. 目的と主な利用シーン**

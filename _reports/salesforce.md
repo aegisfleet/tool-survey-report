@@ -2,7 +2,7 @@
 title: Salesforce 調査レポート
 tool_name: Salesforce
 tool_reading: セールスフォース
-category: 顧客管理
+category: ビジネスツール
 developer: Salesforce, Inc.
 official_site: https://www.salesforce.com/jp/
 date: '2026-01-13'
@@ -51,9 +51,6 @@ relationships:
     - Google 広告
 ---
 
-
-
-
 # **Salesforce 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://help.salesforce.com/s/](https://help.salesforce.com/s/)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/salesforce-sales-cloud/reviews)
-* **カテゴリ**: 顧客管理
+* **カテゴリ**: ビジネスツール
 * **概要**: 世界No.1のシェアを誇る統合CRMプラットフォーム。営業、サービス、マーケティングなどの顧客接点を一元管理し、自律型AI「Agentforce」により、データ分析からタスク実行までを自動化・効率化する。
 
 ## **2. 目的と主な利用シーン**

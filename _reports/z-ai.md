@@ -48,9 +48,6 @@ relationships:
     - Gemini
 ---
 
-
-
-
 # **Z.ai (Zhipu AI) 調査レポート**
 
 ## **1. 基本情報**

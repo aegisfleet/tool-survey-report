@@ -51,9 +51,6 @@ relationships:
     - SonarQube
 ---
 
-
-
-
 # **ESLint 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
   * GitHub: [https://github.com/eslint/eslint](https://github.com/eslint/eslint)
   * CodeWiki: [https://codewiki.google/github.com/eslint/eslint](https://codewiki.google/github.com/eslint/eslint)
   * ドキュメント: [https://eslint.org/docs/latest/](https://eslint.org/docs/latest/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: リンター/フォーマッタ
 * **概要**: ESLintは、JavaScript、JSX、TypeScriptなどのコードに含まれる問題を静的に解析し、発見・修正するためのオープンソースツールです。コードの品質維持、バグの早期発見、コーディングスタイルの統一に広く利用されています。
 
 ## **2. 目的と主な利用シーン**

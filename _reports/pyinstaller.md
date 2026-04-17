@@ -51,9 +51,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **PyInstaller 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
   * GitHub: [https://github.com/pyinstaller/pyinstaller](https://github.com/pyinstaller/pyinstaller)
   * ドキュメント: [https://pyinstaller.org/en/stable/](https://pyinstaller.org/en/stable/)
   * レビューサイト: G2、Capterra等は登録なし（OSSツールのため）
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: ビルドツール/ランタイム
 * **概要**: Pythonプログラムとその依存ライブラリ、Pythonインタープリタ自体を解析・収集し、単一のパッケージ（フォルダまたは単一ファイル）にまとめるツールです。ユーザーはPythonをインストールすることなくアプリケーションを実行できます。
 
 ## **2. 目的と主な利用シーン**

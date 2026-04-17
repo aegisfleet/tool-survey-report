@@ -51,9 +51,6 @@ relationships:
     - Claude for Chrome
 ---
 
-
-
-
 # **Claude Cowork 調査レポート**
 
 ## **1. 基本情報**

@@ -57,7 +57,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/micromatch/picomatch](https://github.com/micromatch/picomatch)
   * ドキュメント: [https://github.com/micromatch/picomatch#readme](https://github.com/micromatch/picomatch#readme)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: ビルドツール/ランタイム
 * **概要**: JavaScriptで書かれた、依存関係を持たない超高速で正確なglobマッチングライブラリ。標準および拡張Bash glob機能（braces、extglobs、POSIXブラケット、正規表現）をフルサポートしている。
 
 ## **2. 目的と主な利用シーン**

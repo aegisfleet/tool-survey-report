@@ -44,6 +44,7 @@ relationships:
   related_tools:
     - Renovate
 ---
+
 # **pinact 調査レポート**
 
 ## **1. 基本情報**
@@ -54,7 +55,7 @@ relationships:
 * **公式サイト**: [https://github.com/suzuki-shunsuke/pinact](https://github.com/suzuki-shunsuke/pinact)
 * **関連リンク**:
   * GitHub: [https://github.com/suzuki-shunsuke/pinact](https://github.com/suzuki-shunsuke/pinact)
-* **カテゴリ**: DevSecOps / 依存関係自動更新
+* **カテゴリ**: 開発ライフサイクル管理 / 依存関係自動更新
 * **概要**: GitHub ActionsのワークフローファイルやComposite Actionにおいて、利用するActionや再利用可能ワークフローのバージョンをコミットハッシュに固定（pin）するためのCLIツール。バージョンの更新やバージョンアノテーションの検証もサポートする。
 
 ## **2. 目的と主な利用シーン**

@@ -49,9 +49,6 @@ relationships:
     - Snowflake
 ---
 
-
-
-
 # **Amazon Athena 調査レポート**
 
 ## **1. 基本情報**
@@ -63,7 +60,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/athena/latest/ug/what-is.html](https://docs.aws.amazon.com/athena/latest/ug/what-is.html)
   * レビューサイト: [G2](https://www.g2.com/products/amazon-athena/reviews)
-* **カテゴリ**: データ分析 / クラウド
+* **カテゴリ**: インフラ/クラウド
 * **概要**: Amazon Athenaは、標準SQLを使用してAmazon S3内のデータを直接分析できるインタラクティブなクエリサービス。サーバーレスであるためインフラのセットアップや管理が不要で、実行したクエリでスキャンされたデータ量に応じた従量課金で利用できる。
 
 ## **2. 目的と主な利用シーン**

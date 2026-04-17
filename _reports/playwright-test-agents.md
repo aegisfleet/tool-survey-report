@@ -57,9 +57,6 @@ relationships:
     - Selenium
 ---
 
-
-
-
 # **Playwright Test Agents 調査レポート**
 
 ## **1. 基本情報**

@@ -51,9 +51,6 @@ relationships:
   related_tools: null
 ---
 
-
-
-
 # **Notifuse 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
   * GitHub: [https://github.com/notifuse/notifuse](https://github.com/notifuse/notifuse)
   * ドキュメント: [https://docs.notifuse.com/](https://docs.notifuse.com/)
   * レビューサイト: G2, Capterra, ITreviewにレビューの登録なし
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: Notifuseは、セルフホスト可能なオープンソースのメールマーケティングおよびトランザクションメールプラットフォームです。Mailchimpなどの代替として設計されており、MJMLベースのビジュアルエディタ、マーケティングオートメーション、AIアシスタント機能を特徴としています。
 
 ## **2. 目的と主な利用シーン**

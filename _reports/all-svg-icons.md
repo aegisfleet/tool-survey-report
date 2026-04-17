@@ -40,9 +40,6 @@ relationships:
     - Canva
 ---
 
-
-
-
 # **All SVG Icons 調査レポート**
 
 ## **1. 基本情報**

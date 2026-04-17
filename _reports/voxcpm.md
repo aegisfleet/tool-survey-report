@@ -61,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM)
   * ドキュメント: [https://voxcpm.readthedocs.io/en/latest/](https://voxcpm.readthedocs.io/en/latest/)
-* **カテゴリ**: AI/機械学習
+* **カテゴリ**: 生成AI / 機械学習
 * **概要**: VoxCPMは、多言語音声生成、クリエイティブな音声デザイン、高品質な音声クローニングを実現するトークナイザーフリーのTTS（Text-to-Speech）システムです。エンドツーエンドの拡散自己回帰アーキテクチャにより、連続的な音声表現を直接生成します。
 
 ## **2. 目的と主な利用シーン**

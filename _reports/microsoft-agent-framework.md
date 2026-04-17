@@ -1,49 +1,45 @@
 ---
-title: Microsoft Agent Framework 調査レポート
-tool_name: Microsoft Agent Framework
-tool_reading: マイクロソフト エージェント フレームワーク
-category: AI開発基盤
-developer: Microsoft
-official_site: https://learn.microsoft.com/en-us/agent-framework/
+category: AIエージェント基盤
 date: '2026-03-28'
-last_updated: '2026-03-28'
-tags:
-  - AI
-  - AI開発基盤
-  - エージェント
-  - オープンソース
-  - ワークフロー
 description: AutoGenとSemantic Kernelの次世代となる、エージェントとワークフローを構築するためのオープンソースAIフレームワーク
+developer: Microsoft
+evaluation:
+  base_score: 70
+  minus_points: []
+  plus_points:
+  - point: 5
+    reason: Semantic KernelとAutoGenの利点を統合した強力なアーキテクチャ
+  - point: 5
+    reason: オープンソースであり、エコシステムやエンタープライズ対応が充実している
+  score: 80
+  summary: 次世代のマルチエージェントオーケストレーションとエンタープライズ向け機能を兼ね備えた強力なフレームワーク
+last_updated: '2026-03-28'
+links:
+  codewiki: https://codewiki.google/github.com/microsoft/agent-framework
+  deepwiki: https://deepwiki.com/microsoft/agent-framework
+  github: https://github.com/microsoft/agent-framework
+official_site: https://learn.microsoft.com/en-us/agent-framework/
 quick_summary:
   has_free_plan: true
   is_oss: true
+  latest_highlight: パブリックプレビューの公開
   starting_price: 無料
   target_users:
-    - 開発者
-    - エンタープライズ
-  latest_highlight: パブリックプレビューの公開
+  - 開発者
+  - エンタープライズ
   update_frequency: 高
-evaluation:
-  score: 80
-  base_score: 70
-  plus_points:
-    - point: 5
-      reason: Semantic KernelとAutoGenの利点を統合した強力なアーキテクチャ
-    - point: 5
-      reason: オープンソースであり、エコシステムやエンタープライズ対応が充実している
-  minus_points: []
-  summary: 次世代のマルチエージェントオーケストレーションとエンタープライズ向け機能を兼ね備えた強力なフレームワーク
-links:
-  github: https://github.com/microsoft/agent-framework
-  deepwiki: https://deepwiki.com/microsoft/agent-framework
-  codewiki: https://codewiki.google/github.com/microsoft/agent-framework
 relationships:
   related_tools:
-    - A2A Protocol
+  - A2A Protocol
+tags:
+- AI
+- エージェント
+- オープンソース
+- ワークフロー
+title: Microsoft Agent Framework 調査レポート
+tool_name: Microsoft Agent Framework
+tool_reading: マイクロソフト エージェント フレームワーク
 ---
-
-
-
 
 # **Microsoft Agent Framework 調査レポート**
 
@@ -55,7 +51,7 @@ relationships:
 * **公式サイト**: [https://learn.microsoft.com/en-us/agent-framework/](https://learn.microsoft.com/en-us/agent-framework/)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/agent-framework](https://github.com/microsoft/agent-framework)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: Agent Frameworkは、堅牢で将来性のあるAIエージェントソリューションを構築するためのフレームワークです。単一エージェントから複雑なマルチエージェントオーケストレーションまで、AutoGenやSemantic Kernelの利点を組み合わせた次世代の基盤を提供します。
 
 ## **2. 目的と主な利用シーン**

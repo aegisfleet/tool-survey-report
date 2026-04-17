@@ -2,7 +2,7 @@
 title: LM Studio 調査レポート
 tool_name: LM Studio
 tool_reading: エルエムスタジオ
-category: AI開発基盤
+category: LLMプラットフォーム
 developer: Element Labs, Inc.
 official_site: https://lmstudio.ai/
 date: '2026-01-29'
@@ -49,9 +49,6 @@ relationships:
     - Foundry Local
 ---
 
-
-
-
 # **LM Studio 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
   * ドキュメント: [https://lmstudio.ai/docs/welcome](https://lmstudio.ai/docs/welcome)
   * 公式ブログ: [https://lmstudio.ai/blog](https://lmstudio.ai/blog)
   * Discord: [https://discord.gg/lmstudio](https://discord.gg/lmstudio)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: オープンソースの大規模言語モデル（LLM）をユーザーのローカルマシンやサーバー上で、プライベートかつオフラインで実行するためのプラットフォーム。直感的なGUIに加え、v0.4.0からはCLIのみで動作するヘッドレスモードも搭載し、開発からデプロイまで幅広く対応する。
 
 ## **2. 目的と主な利用シーン**

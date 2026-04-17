@@ -2,7 +2,7 @@
 title: Gemini Skills 調査レポート
 tool_name: Gemini Skills
 tool_reading: ジェミニ スキルズ
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: Google
 official_site: https://github.com/google-gemini/gemini-skills
 date: '2026-03-27'
@@ -48,9 +48,6 @@ relationships:
     - Vercel Agent Skills
 ---
 
-
-
-
 # **Gemini Skills 調査レポート**
 
 ## **1. 基本情報**
@@ -62,7 +59,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/google-gemini/gemini-skills](https://github.com/google-gemini/gemini-skills)
   * ドキュメント: [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: Gemini API、SDK、およびモデル/エージェントインタラクションに関するベストプラクティスやコンテキストを、LLMエージェントに提供するためのスキルライブラリ。
 
 ## **2. 目的と主な利用シーン**

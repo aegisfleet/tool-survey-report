@@ -59,9 +59,6 @@ relationships:
     - MoneyPrinterV2
 ---
 
-
-
-
 # **n8n 調査レポート**
 
 ## **1. 基本情報**
@@ -74,7 +71,7 @@ relationships:
   * GitHub: [https://github.com/n8n-io/n8n](https://github.com/n8n-io/n8n)
   * ドキュメント: [https://docs.n8n.io/](https://docs.n8n.io/)
   * レビューサイト: [G2](https://www.g2.com/products/n8n/reviews)
-* **カテゴリ**: ワークフロー自動化 (iPaaS)
+* **カテゴリ**: ワークフロー自動化
 * **概要**: オープンソースを基盤としたAIネイティブのワークフロー自動化ツール。ビジュアルエディタによる直感的な操作と、JavaScript/Pythonによるコード記述の柔軟性を両立しており、単純なタスク自動化から複雑なAIエージェントの構築まで幅広く対応する。
 
 ## **2. 目的と主な利用シーン**

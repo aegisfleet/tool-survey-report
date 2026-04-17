@@ -9,7 +9,7 @@ date: '2026-04-10'
 last_updated: '2026-04-10'
 tags:
   - ブラウザ拡張機能
-  - AIエージェント
+  - エージェント
   - 自動化
   - 業務効率化
 description: ブラウザのナビゲーション、クリック、フォーム入力を自動化し、日々のWeb作業をサポートするClaudeの公式Chrome拡張機能
@@ -57,7 +57,7 @@ relationships:
 * **公式サイト**: [https://claude.com/claude-for-chrome](https://claude.com/claude-for-chrome)
 * **関連リンク**:
   * ドキュメント: [https://support.claude.com/en/articles/12902428-using-claude-for-chrome-safely](https://support.claude.com/en/articles/12902428-using-claude-for-chrome-safely)
-* **カテゴリ**: AIエージェント / ブラウザ拡張機能
+* **カテゴリ**: 自律型AIエージェント / ブラウザ拡張機能
 * **概要**: ブラウザのナビゲーション、ボタンのクリック、フォームの入力を代行し、Webブラウザ上での様々な作業を自動化するClaudeの公式Chrome拡張機能。Claude CodeやClaude Coworkなどのエコシステムとシームレスに連携し、リサーチから成果物作成までの一連のワークフローを構築できます。
 
 ## **2. 目的と主な利用シーン**

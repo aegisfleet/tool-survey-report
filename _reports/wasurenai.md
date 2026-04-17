@@ -45,9 +45,6 @@ relationships:
     - ナクサナイ
 ---
 
-
-
-
 # **ワスレナイ 調査レポート**
 
 ## **1. 基本情報**
@@ -59,7 +56,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://manual.wasurenai.jp/](https://manual.wasurenai.jp/)
   * 運営会社: [株式会社SHIFT](https://www.shiftinc.jp/)
-* **カテゴリ**: SaaS管理 / IT資産管理
+* **カテゴリ**: その他 / IT資産管理
 * **概要**: 企業のSaaS利用状況を可視化し、コスト削減とセキュリティ強化を支援するSaaS管理プラットフォーム。利用料無料（フリープラン）でSaaS管理の課題を解決する。
 
 ## **2. 目的と主な利用シーン**

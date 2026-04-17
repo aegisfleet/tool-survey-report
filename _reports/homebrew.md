@@ -61,7 +61,7 @@ relationships:
   * GitHub: [https://github.com/Homebrew/brew](https://github.com/Homebrew/brew)
   * DeepWiki: [https://deepwiki.com/Homebrew/brew](https://deepwiki.com/Homebrew/brew)
   * ドキュメント: [https://docs.brew.sh/](https://docs.brew.sh/)
-* **カテゴリ**: OS/プラットフォーム
+* **カテゴリ**: パッケージ管理 / プラットフォーム
 * **概要**: macOSおよびLinux上でソフトウェアのインストールを簡単にするフリーでオープンソースのパッケージ管理システムです。ターミナル（CLI）上でコマンドを入力するだけで、必要なツールのダウンロード、依存関係の解決、インストールを一括で行えます。
 
 ## **2. 目的と主な利用シーン**

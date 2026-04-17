@@ -51,9 +51,6 @@ relationships:
     - Dify
 ---
 
-
-
-
 # **Google Opal 調査レポート**
 
 ## **1. 基本情報**

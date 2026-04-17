@@ -52,9 +52,6 @@ relationships:
     - JUnit
 ---
 
-
-
-
 # **Eclipse IDE 調査レポート**
 
 ## **1. 基本情報**

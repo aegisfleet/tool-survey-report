@@ -53,9 +53,6 @@ relationships:
     - nvm
 ---
 
-
-
-
 # **Node.js 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/nodejs/node](https://github.com/nodejs/node)
   * ドキュメント: [https://nodejs.org/en/docs/](https://nodejs.org/en/docs/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 言語ランタイム/実行環境
 * **概要**: Chrome V8 JavaScriptエンジンでビルドされた、非同期イベント駆動型のJavaScriptランタイム環境です。主にサーバーサイドで利用されますが、コマンドラインツールの作成などにも使用できます。
 
 ## **2. 目的と主な利用シーン**

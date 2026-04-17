@@ -49,9 +49,6 @@ relationships:
     - Looker Studio
 ---
 
-
-
-
 # **Amazon QuickSight 調査レポート**
 
 ## **1. 基本情報**
@@ -62,7 +59,7 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/quicksight/](https://aws.amazon.com/quicksight/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/quicksight/](https://docs.aws.amazon.com/quicksight/)
-* **カテゴリ**: BIツール
+* **カテゴリ**: データ分析
 * **概要**: Amazon QuickSightは、AWSが提供するクラウドネイティブなサーバーレスBIサービスです。インメモリエンジンのSPICEによる高速な集計・可視化に加え、生成AIアシスタント「Amazon Q」を統合し、自然言語でのデータ分析やレポート作成が可能です。
 
 ## **2. 目的と主な利用シーン**

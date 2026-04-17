@@ -54,9 +54,6 @@ relationships:
     - TestLink
 ---
 
-
-
-
 # **Kiwi TCMS 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/kiwitcms/Kiwi](https://github.com/kiwitcms/Kiwi)
   * ドキュメント: [https://kiwitcms.readthedocs.io/](https://kiwitcms.readthedocs.io/)
-* **カテゴリ**: テスト管理 (Test Management System)
+* **カテゴリ**: テスト管理
 * **概要**:
     Kiwi TCMSは、世界で最も人気のあるオープンソースのテスト管理システムの一つです。Red Hat社内で開発されたNitrateからフォークし、現在は活発なコミュニティによって開発されています。手動テストの管理だけでなく、自動テストフレームワークとの連携、バグトラッカーとの統合機能を提供し、QAプロセスの効率化を支援します。
 

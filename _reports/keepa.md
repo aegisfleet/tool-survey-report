@@ -45,9 +45,6 @@ links:
 relationships: {}
 ---
 
-
-
-
 # **Keepa 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships: {}
 * **関連リンク**:
   * ドキュメント/フォーラム: [https://keepa.com/#!discuss](https://keepa.com/#!discuss)
   * レビューサイト: [G2](https://www.g2.com/products/keepa/reviews) | [Trustpilot](https://www.trustpilot.com/review/keepa.com)
-* **カテゴリ**: EC・マーケットプレイス分析
+* **カテゴリ**: データ分析
 * **概要**: Amazonにおける商品の価格履歴、売れ筋ランキング、出品者数などの推移をグラフで可視化するツール。世界中のAmazonマーケットプレイスに対応し、50億以上の商品を追跡している。せどりやメーカー仕入れなどの物販ビジネスにおける市場分析や、一般ユーザーの買い時判断に広く利用されている。
 
 ## **2. 目的と主な利用シーン**

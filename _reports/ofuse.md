@@ -2,7 +2,7 @@
 title: OFUSE 調査レポート
 tool_name: OFUSE
 tool_reading: オフセ
-category: EC/決済
+category: ビジネスツール
 developer: 株式会社Sozi
 official_site: https://ofuse.me/
 date: '2026-04-07'
@@ -50,7 +50,7 @@ relationships:
 * **公式サイト**: [https://ofuse.me/](https://ofuse.me/)
 * **関連リンク**:
   * ドキュメント: [https://support.ofuse.me/hc](https://support.ofuse.me/hc)
-* **カテゴリ**: SaaS
+* **カテゴリ**: ビジネスツール / クリエイター支援
 * **概要**: ファンからクリエイターへ「1文字2円」でファンレターと支援金（投げ銭）を送ることができる応援プラットフォーム。メンバーシップ機能やラジオ機能も備え、多彩なファンコミュニケーションを支援する。
 
 ## **2. 目的と主な利用シーン**

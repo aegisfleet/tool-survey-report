@@ -51,9 +51,6 @@ relationships:
     - IntelliJ IDEA
 ---
 
-
-
-
 # **Spring Boot 調査レポート**
 
 ## **1. 基本情報**

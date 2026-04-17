@@ -55,9 +55,6 @@ relationships:
 layout: report
 ---
 
-
-
-
 # **TestLink 調査レポート**
 
 ## **1. 基本情報**
@@ -69,7 +66,7 @@ layout: report
 * **関連リンク**:
   * GitHub: [https://github.com/TestLinkOpenSourceTRMS/testlink-code](https://github.com/TestLinkOpenSourceTRMS/testlink-code)
   * ドキュメント: [https://github.com/TestLinkOpenSourceTRMS/testlink-documentation](https://github.com/TestLinkOpenSourceTRMS/testlink-documentation)
-* **カテゴリ**: テスト管理 (Test Management)
+* **カテゴリ**: テスト管理
 * **概要**:
   TestLinkは、長年にわたり利用されているオープンソースのWebベーステスト管理システムです。テスト仕様書の作成、テスト計画の策定、テスト実行、レポート作成まで、QAプロセス全体をカバーする機能を備えています。
 

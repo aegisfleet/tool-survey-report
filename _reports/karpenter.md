@@ -51,9 +51,6 @@ relationships:
   parent: Kubernetes
 ---
 
-
-
-
 # **Karpenter 調査レポート**
 
 ## **1. 基本情報**

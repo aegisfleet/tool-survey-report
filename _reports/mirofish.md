@@ -2,13 +2,13 @@
 title: MiroFish 調査レポート
 tool_name: MiroFish
 tool_reading: ミロフィッシュ
-category: AI開発基盤
+category: AIエージェント基盤
 developer: 666ghj (Shanda Group / 盛大集团 支援)
 official_site: https://mirofish.ai/
 date: '2026-04-01'
 last_updated: '2026-04-01'
 tags:
-  - AIエージェント
+  - エージェント
   - シミュレーション
   - オープンソース
   - データ分析
@@ -60,7 +60,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/666ghj/MiroFish](https://github.com/666ghj/MiroFish)
   * ドキュメント: [https://github.com/666ghj/MiroFish#readme](https://github.com/666ghj/MiroFish#readme)
-* **カテゴリ**: AI・機械学習
+* **カテゴリ**: AIエージェント基盤
 * **概要**: LLMを活用した多数の自律型AIエージェントをシミュレーション環境に配置し、それぞれの相互作用（群体知能）を観察することで、社会現象や世論の動向、未来の予測を行うオープンソースのエンジンです。
 
 ## **2. 目的と主な利用シーン**

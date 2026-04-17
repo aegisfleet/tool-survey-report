@@ -46,9 +46,6 @@ relationships:
     - Docker
 ---
 
-
-
-
 # **Plugin Installation Manager Tool 調査レポート**
 
 ## **1. 基本情報**

@@ -51,9 +51,6 @@ relationships:
     - Visual Studio Code
 ---
 
-
-
-
 # **Android Studio 調査レポート**
 
 ## **1. 基本情報**

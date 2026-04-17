@@ -45,9 +45,6 @@ relationships:
     - Stable Diffusion
 ---
 
-
-
-
 # **Niji Journey 調査レポート**
 
 ## **1. 基本情報**

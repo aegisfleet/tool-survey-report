@@ -44,9 +44,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **Deep-Live-Cam 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +54,7 @@ relationships:
 * **公式サイト**: [https://deeplivecam.net/](https://deeplivecam.net/)
 * **関連リンク**:
   * GitHub: [https://github.com/hacksider/Deep-Live-Cam](https://github.com/hacksider/Deep-Live-Cam)
-* **カテゴリ**: AI生成 / ディープフェイク
+* **カテゴリ**: 生成AI / ディープフェイク
 * **概要**: Deep-Live-Camは、たった1枚の画像からリアルタイムで顔を入れ替えたり、ビデオのディープフェイクを生成できるオープンソースのソフトウェアです。ストリーマーやVtuber、コンテンツクリエイター向けに設計されています。
 
 ## **2. 目的と主な利用シーン**

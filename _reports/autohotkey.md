@@ -49,9 +49,6 @@ relationships:
     - Zapier
 ---
 
-
-
-
 # **AutoHotkey 調査レポート**
 
 ## **1. 基本情報**
@@ -63,7 +60,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/AutoHotkey/AutoHotkey](https://github.com/AutoHotkey/AutoHotkey)
   * ドキュメント: [https://www.autohotkey.com/docs/v2/](https://www.autohotkey.com/docs/v2/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: AutoHotkey (AHK) は、Windows向けの無料でオープンソースのスクリプト言語です。ユーザーがあらゆる種類の定型的なタスク（フォームの自動入力、自動クリック、マクロ作成など）を簡単に構築できるように設計されています。
 
 ## **2. 目的と主な利用シーン**

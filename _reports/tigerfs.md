@@ -11,7 +11,7 @@ tags:
   - ファイルシステム
   - PostgreSQL
   - 開発者ツール
-  - AIエージェント
+  - エージェント
 description: PostgreSQLをバックエンドとした、AIエージェントと人間が同時並行で操作可能なファイルシステム
 quick_summary:
   has_free_plan: true
@@ -54,7 +54,7 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/timescale/tigerfs](https://github.com/timescale/tigerfs)
   * Hacker News (参考): [https://news.ycombinator.com/item?id=47430604](https://news.ycombinator.com/item?id=47430604)
-* **カテゴリ**: ファイルシステム
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: PostgreSQLをファイルシステムとしてマウントできるツール。ファイル操作（ls, cat, grepなど）を通じてデータベースとやり取りでき、AIエージェントと人間が完全なACID保証のもとで同じファイルを同時に操作できる。
 
 ## **2. 目的と主な利用シーン**

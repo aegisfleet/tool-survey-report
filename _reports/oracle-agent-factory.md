@@ -2,7 +2,7 @@
 title: Oracle AI Database Private Agent Factory 調査レポート
 tool_name: Oracle AI Database Private Agent Factory
 tool_reading: オラクル エーアイ データベース プライベート エージェント ファクトリー
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Oracle
 official_site: https://docs.oracle.com/en/database/oracle/agent-factory/
 date: '2026-03-31'
@@ -58,7 +58,7 @@ relationships:
 * **公式サイト**: [https://docs.oracle.com/en/database/oracle/agent-factory/](https://docs.oracle.com/en/database/oracle/agent-factory/)
 * **関連リンク**:
   * ドキュメント: [Agent Factory User's Guide (Release 25.3)](https://docs.oracle.com/en/database/oracle/agent-factory/25.3/paias/index.html)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: ビジネスユーザーとエンジニアの双方が、コードを書くことなくインテリジェントなAIエージェントを迅速に構築、テスト、デプロイできるノーコードプラットフォーム。エンタープライズデータとの安全な連携とマルチエージェントのオーケストレーションを実現します。
 
 ## **2. 目的と主な利用シーン**

@@ -44,9 +44,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **Tera Term 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +54,7 @@ relationships:
 * **公式サイト**: [https://teratermproject.github.io/](https://teratermproject.github.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/TeraTermProject/teraterm](https://github.com/TeraTermProject/teraterm)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: Tera TermはWindows環境で動作する定番のターミナルエミュレータです。telnet、SSH、シリアル通信などをサポートしており、リモートサーバーやネットワーク機器へのアクセスに広く利用されています。
 
 ## **2. 目的と主な利用シーン**

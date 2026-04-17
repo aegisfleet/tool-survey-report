@@ -46,9 +46,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **MediaCMS 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
   * GitHub: [https://github.com/mediacms-io/mediacms](https://github.com/mediacms-io/mediacms)
   * ドキュメント: [https://github.com/mediacms-io/mediacms/tree/main/docs](https://github.com/mediacms-io/mediacms/tree/main/docs)
   * デモサイト: [https://demo.mediacms.io/](https://demo.mediacms.io/)
-* **カテゴリ**: メディア管理・配信 (CMS)
+* **カテゴリ**: 動画/メディア
 * **概要**: YouTubeのような動画共有サイトを自前で構築できる、モダンなオープンソースCMS。Python (Django) と React で開発されており、レスポンシブなデザイン、強力な検索機能、多様なメディア形式への対応を備えています。
 
 ## **2. 目的と主な利用シーン**

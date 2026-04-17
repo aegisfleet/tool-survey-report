@@ -53,9 +53,6 @@ relationships:
     - Quality Tracker
 ---
 
-
-
-
 # **Qase 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.qase.io/](https://docs.qase.io/)
   * APIドキュメント: [https://developers.qase.io/](https://developers.qase.io/)
-* **カテゴリ**: テスト管理 (Test Management System)
+* **カテゴリ**: テスト管理
 * **概要**: 手動テストと自動テストを一元管理できる、AI搭載のモダンなテスト管理プラットフォーム。直感的なUIと高速な動作、強力な外部連携機能が特徴です。
 
 ## **2. 目的と主な利用シーン**

@@ -52,9 +52,6 @@ relationships:
     - codoc
 ---
 
-
-
-
 # **WordPress 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
   * GitHub: [https://github.com/WordPress/WordPress](https://github.com/WordPress/WordPress)
   * ドキュメント: [https://developer.wordpress.org/documentation/](https://developer.wordpress.org/documentation/)
   * レビューサイト: [G2](https://www.g2.com/products/wordpress/reviews) | [ITreview](https://www.itreview.jp/products/wordpress/reviews)
-* **カテゴリ**: CMS
+* **カテゴリ**: Webフレームワーク
 * **概要**: 世界のウェブサイトの40%以上で利用されている、オープンソースのコンテンツ管理システム（CMS）です。豊富なテーマ（デザイン）とプラグイン（拡張機能）により、個人のブログから大企業の公式サイト、Eコマースサイトまで、あらゆる種類のウェブサイトを柔軟に構築・管理できます。
 
 ## **2. 目的と主な利用シーン**

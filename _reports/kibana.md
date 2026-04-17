@@ -11,7 +11,7 @@ tags:
   - AI
   - ELK Stack
   - SIEM
-  - オブザーバビリティ
+  - 監視/可観測性
   - ダッシュボード
   - ログ管理
   - 可視化
@@ -53,9 +53,6 @@ relationships:
     - Datadog
     - Amazon OpenSearch Service
 ---
-
-
-
 
 # **Kibana 調査レポート**
 

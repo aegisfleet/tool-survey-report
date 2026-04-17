@@ -55,9 +55,6 @@ relationships:
     - Amazon Bedrock
 ---
 
-
-
-
 # **Amazon OpenSearch Service 調査レポート**
 
 ## **1. 基本情報**
@@ -72,7 +69,7 @@ relationships:
   * DeepWiki: [https://deepwiki.com/opensearch-project/OpenSearch](https://deepwiki.com/opensearch-project/OpenSearch)
   * ドキュメント: [https://docs.aws.amazon.com/opensearch-service/](https://docs.aws.amazon.com/opensearch-service/)
   * レビューサイト: [G2](https://www.g2.com/products/amazon-opensearch-service/reviews) | [Capterra](https://www.capterra.com/p/186598/Amazon-OpenSearch-Service/)
-* **カテゴリ**: 検索・分析エンジン / ベクトルデータベース
+* **カテゴリ**: インフラ/クラウド / ベクトルデータベース
 * **概要**: Amazon OpenSearch Serviceは、インタラクティブなログ分析、リアルタイムのアプリケーションモニタリング、ウェブサイト検索などを容易にするAWSのマネージドサービスです。オープンソースのOpenSearch（Elasticsearchのフォーク）をベースにしており、インフラのプロビジョニング、パッチ適用、バックアップなどの運用管理を自動化します。近年では、生成AIアプリケーション向けのベクトルデータベースとしての機能も強化されています。
 
 ## **2. 目的と主な利用シーン**

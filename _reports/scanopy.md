@@ -60,7 +60,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/scanopy/scanopy](https://github.com/scanopy/scanopy)
   * ドキュメント: [https://scanopy.net/docs](https://scanopy.net/docs)
-* **カテゴリ**: ネットワーク調査・ドキュメント作成
+* **カテゴリ**: ドキュメント/ナレッジ
 * **概要**: ネットワーク上のホストやサービスを自動で検出し、常に最新の状態に保たれるネットワークトポロジー図を生成するツール。手動での構成図メンテナンスを不要にする。
 
 ## **2. 目的と主な利用シーン**

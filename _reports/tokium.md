@@ -46,9 +46,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **TOKIUM 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://support.keihi.com/](https://support.keihi.com/)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/receipt-post/reviews)
-* **カテゴリ**: 支出管理クラウド, 経費精算, 請求書受領
+* **カテゴリ**: データ分析
 * **概要**: TOKIUM（旧 Dr.経費精算）は、経費精算、請求書受領、文書管理などを統合した支出管理プラットフォームです。領収書や請求書をスマートフォンで撮影または専用ポストに投函するだけで、データ化・原本保管まで代行してくれるため、経理業務の完全ペーパーレス化を実現します。
 
 ## **2. 目的と主な利用シーン**

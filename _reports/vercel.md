@@ -48,9 +48,6 @@ relationships:
     - Hono
 ---
 
-
-
-
 # **Vercel 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
 * **公式サイト**: [https://vercel.com](https://vercel.com)
 * **関連リンク**:
   * ドキュメント: [https://vercel.com/docs](https://vercel.com/docs)
-* **カテゴリ**: インフラ/クラウド
+* **カテゴリ**: OS/プラットフォーム / クラウド
 * **概要**: Vercelは、「The Frontend Cloud」を掲げるWebアプリケーション構築・デプロイプラットフォームです。Next.jsの開発元としても知られ、サーバーレスやエッジコンピューティング技術を背景に、高速なWebサイト配信とスムーズな開発フローを提供します。近年はAI SDKやAI Gateway、生成UIツール「v0」など、AIエンジニア向けの機能拡充に注力しています。
 
 ## **2. 目的と主な利用シーン**

@@ -44,9 +44,6 @@ relationships:
     - mabl
 ---
 
-
-
-
 # **ネムラナイ 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +54,7 @@ relationships:
 * **公式サイト**: [https://contents.shiftinc.jp/nemuranai/](https://contents.shiftinc.jp/nemuranai/)
 * **関連リンク**:
   * 公式サイト: [https://contents.shiftinc.jp/nemuranai/](https://contents.shiftinc.jp/nemuranai/)
-* **カテゴリ**: AIテスト / QAサービス
+* **カテゴリ**: テスト/QA / QAサービス
 * **概要**: 株式会社SHIFTが提供する、AIを活用した高品質・高効率なテスト実行サービス。SHIFTの品質保証ノウハウを学習したAIテストマネージャーが、24時間365日体制でテスト実行・監視を行い、開発スピードを落とさずに品質を担保する。
 
 ## **2. 目的と主な利用シーン**

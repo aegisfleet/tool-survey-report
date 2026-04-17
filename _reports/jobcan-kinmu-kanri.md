@@ -2,7 +2,7 @@
 title: ジョブカン勤怠管理 調査レポート
 tool_name: ジョブカン勤怠管理
 tool_reading: ジョブカンキンムカンリ
-category: 勤怠管理
+category: 人事労務
 developer: 株式会社DONUTS
 official_site: https://jobcan.ne.jp/
 date: '2026-01-29'
@@ -49,9 +49,6 @@ relationships:
     - SmartHR
 ---
 
-
-
-
 # **ジョブカン勤怠管理 調査レポート**
 
 ## **1. 基本情報**
@@ -62,7 +59,7 @@ relationships:
 * **公式サイト**: [https://jobcan.ne.jp/](https://jobcan.ne.jp/)
 * **関連リンク**:
   * レビューサイト: [ITreview](https://www.itreview.jp/products/jobcankintaikanri/reviews)
-* **カテゴリ**: 勤怠管理
+* **カテゴリ**: 人事労務
 * **概要**: 出勤管理、シフト管理、休暇・申請管理、工数管理の4つの機能から必要なものを自由に組み合わせて利用できるクラウド勤怠管理システム。シリーズ累計導入社数は30万社を超え、業界トップクラスの実績を持つ。
 
 ## **2. 目的と主な利用シーン**

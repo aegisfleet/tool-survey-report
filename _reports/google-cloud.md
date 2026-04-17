@@ -57,9 +57,6 @@ relationships:
     - Google 広告
 ---
 
-
-
-
 # **Google Cloud 調査レポート**
 
 ## **1. 基本情報**

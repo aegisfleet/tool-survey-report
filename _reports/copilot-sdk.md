@@ -2,7 +2,7 @@
 title: GitHub Copilot SDK 調査レポート
 tool_name: GitHub Copilot SDK
 tool_reading: ギットハブ コパイロット エスディーケー
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: GitHub (Microsoft)
 official_site: https://github.com/github/copilot-sdk
 date: '2026-03-02'
@@ -52,9 +52,6 @@ relationships:
     - Dify
 ---
 
-
-
-
 # **GitHub Copilot SDK 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
   * GitHub: [https://github.com/github/copilot-sdk](https://github.com/github/copilot-sdk)
   * CodeWiki: [https://codewiki.google/github.com/github/copilot-sdk](https://codewiki.google/github.com/github/copilot-sdk)
   * ドキュメント: [https://github.com/github/copilot-sdk/tree/main/docs](https://github.com/github/copilot-sdk/tree/main/docs)
-* **カテゴリ**: AIエージェント開発
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: GitHub Copilot SDKは、GitHub Copilotの強力なエージェント機能を、任意のアプリケーションやサービスに統合するための開発キットです。Copilot CLIのエンジンを利用し、計画立案、ツール実行、ファイル操作などの自律的なワークフローをプログラムから制御できます。
 
 ## **2. 目的と主な利用シーン**

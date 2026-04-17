@@ -2,7 +2,7 @@
 title: Vertex AI 調査レポート
 tool_name: Vertex AI
 tool_reading: バーテックス エーアイ
-category: AI開発基盤
+category: LLMプラットフォーム
 developer: Google
 official_site: https://cloud.google.com/vertex-ai
 date: '2026-04-02'
@@ -59,7 +59,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://cloud.google.com/vertex-ai/docs](https://cloud.google.com/vertex-ai/docs)
   * レビューサイト: [G2](https://www.g2.com/products/google-vertex-ai/reviews)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: Vertex AIは、Google Cloudが提供するフルマネージドな機械学習（ML）および生成AIプラットフォーム。データサイエンティストやMLエンジニアが、MLモデルや生成AIアプリケーションを迅速に構築、デプロイ、スケーリングできるように設計されている。AutoMLのようなノーコードツールから、カスタムトレーニング、MLOpsパイプラインまで、幅広いツールセットを統合している。
 
 ## **2. 目的と主な利用シーン**

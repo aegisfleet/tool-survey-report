@@ -2,7 +2,7 @@
 title: Vercel Agent Skills 調査レポート
 tool_name: Vercel Agent Skills
 tool_reading: ヴァーセル エージェント スキルズ / エージェント スキルズ
-category: AI開発基盤
+category: MCPサーバー/基盤
 developer: Vercel
 official_site: https://vercel.com/docs/agent-resources/skills
 date: '2026-03-19'
@@ -48,9 +48,6 @@ relationships:
     - Gemini Skills
 ---
 
-
-
-
 # **Vercel Agent Skills 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
 * **公式サイト**: [https://vercel.com/docs/agent-resources/skills](https://vercel.com/docs/agent-resources/skills)
 * **関連リンク**:
   * GitHub: [https://github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills)
-* **カテゴリ**: 開発ツール
+* **カテゴリ**: MCPサーバー/基盤
 * **概要**: AIエージェント（Claude Code、Cursor、Clineなど）にデータアクセス、自動化、ドメインロジックなどの具体的な振る舞いや機能を追加し、単なるチャット以上の実用的なワークフローを実行可能にするための機能とツールの集合です。
 
 ## **2. 目的と主な利用シーン**

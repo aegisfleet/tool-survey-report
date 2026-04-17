@@ -52,9 +52,6 @@ relationships:
     - Notion
 ---
 
-
-
-
 # **NocoDB 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
   * GitHub: [https://github.com/nocodb/nocodb](https://github.com/nocodb/nocodb)
   * ドキュメント: [https://docs.nocodb.com/](https://docs.nocodb.com/)
   * レビューサイト: [G2](https://www.g2.com/products/nocodb/reviews)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: NocoDBは、MySQL、PostgreSQL、SQL Server、SQLite、MariaDBなどの既存のSQLデータベースを、Airtableのようなスマートなスプレッドシートインターフェースに変換するオープンソースのノーコードプラットフォームです。データベースのデータを使って、コーディングなしで業務アプリケーションや管理画面を構築できます。
 
 ## **2. 目的と主な利用シーン**

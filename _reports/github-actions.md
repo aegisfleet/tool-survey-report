@@ -56,9 +56,6 @@ relationships:
     - Vercel Agent Skills
 ---
 
-
-
-
 # **GitHub Actions 調査レポート**
 
 ## **1. 基本情報**
@@ -72,7 +69,7 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/actions/runner](https://codewiki.google/github.com/actions/runner) （ランナー）
   * ドキュメント: [https://docs.github.com/ja/actions](https://docs.github.com/ja/actions)
   * レビューサイト: [G2](https://www.g2.com/products/github/reviews) | [ITreview](https://www.itreview.jp/products/github-actions/reviews)
-* **カテゴリ**: CI/CD, 自動化
+* **カテゴリ**: CI/CD / CD, 自動化
 * **概要**: GitHubリポジトリ内でソフトウェア開発ライフサイクル（SDLC）を自動化するためのプラットフォーム。CI/CDパイプラインだけでなく、Issue管理やリリース作業など、GitHub上のあらゆるイベントをトリガーとして任意のタスクを実行できる。
 
 ## **2. 目的と主な利用シーン**

@@ -2,7 +2,7 @@
 title: Google Illuminate 調査レポート
 tool_name: Google Illuminate
 tool_reading: グーグル イルミネート
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: Google
 official_site: https://illuminate.google.com/
 date: '2026-02-23'
@@ -48,9 +48,6 @@ relationships:
     - NotebookLM
 ---
 
-
-
-
 # **Google Illuminate 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
 * **公式サイト**: [https://illuminate.google.com/](https://illuminate.google.com/)
 * **関連リンク**:
   * レビュー記事: [Android Police](https://www.androidpolice.com/google-illuminate-best-research-tool-didnt-know-i-needed/) | [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate)
-* **カテゴリ**: AI学習・リサーチ, 教育
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: Google Labsの実験プロジェクトとして開発されたAIツール。学術論文（主にarXiv）や技術文書のURLを入力すると、その内容を要約し、2人のAIホストによる対話形式の音声コンテンツ（ポッドキャスト風）を生成する。これにより、論文を「読む」のではなく「聴く」体験を提供する。
 
 ## **2. 目的と主な利用シーン**

@@ -2,14 +2,14 @@
 title: Paperclip 調査レポート
 tool_name: Paperclip
 tool_reading: ペーパークリップ
-category: AIエージェントオーケストレーション
+category: AIエージェント基盤
 developer: Paperclip
 official_site: https://paperclip.ing/
 date: '2026-04-13'
 last_updated: '2026-04-13'
 tags:
   - オープンソース
-  - AIエージェント
+  - エージェント
   - オーケストレーション
   - 自動化
 description: 複数のAIエージェントを組織化し、目標管理、予算管理、タスクの実行をオーケストレーションするためのコントロールプレーンプラットフォーム
@@ -59,7 +59,7 @@ relationships:
   * GitHub: [https://github.com/paperclipai/paperclip](https://github.com/paperclipai/paperclip)
   * DeepWiki: [https://deepwiki.com/paperclipai/paperclip](https://deepwiki.com/paperclipai/paperclip)
   * ドキュメント: [https://docs.paperclip.ing/](https://docs.paperclip.ing/)
-* **カテゴリ**: AIエージェントオーケストレーション
+* **カテゴリ**: AIエージェント基盤
 * **概要**: AIエージェントを「従業員」として扱い、会社組織のようにオーケストレーションするコントロールプレーン。目標の整合性維持、タスクの自動委譲、各エージェントのトークン予算管理、および人間の介入によるガバナンスを提供する。
 
 ## **2. 目的と主な利用シーン**

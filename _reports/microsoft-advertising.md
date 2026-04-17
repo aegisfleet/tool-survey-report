@@ -44,9 +44,6 @@ relationships:
     - Google 広告
 ---
 
-
-
-
 # **Microsoft 広告 調査レポート**
 
 ## **1. 基本情報**

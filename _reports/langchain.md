@@ -2,7 +2,7 @@
 title: LangChain 調査レポート
 tool_name: LangChain
 tool_reading: ラングチェーン
-category: AI開発基盤
+category: AIエージェント基盤
 developer: LangChain, Inc.
 official_site: https://www.langchain.com/
 date: '2026-02-17'
@@ -60,9 +60,6 @@ relationships:
     - Hugging Face
 ---
 
-
-
-
 # **LangChain 調査レポート**
 
 ## **1. 基本情報**
@@ -82,7 +79,7 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/langchain-ai/langchain](https://codewiki.google/github.com/langchain-ai/langchain)
   * ドキュメント: [https://docs.langchain.com/](https://docs.langchain.com/)
   * レビューサイト: [G2](https://www.g2.com/products/langchain/reviews)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: LangChainは、大規模言語モデル（LLM）と外部データや計算リソースを結合し、高度なAIアプリケーションを構築するためのオープンソースフレームワークです。2025年後半にv1.0の安定版がリリースされ、特に「LangGraph」を用いた自律型エージェントの開発基盤としてデファクトスタンダードの地位を確立しています。
 
 ## **2. 目的と主な利用シーン**

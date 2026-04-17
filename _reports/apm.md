@@ -1,44 +1,43 @@
 ---
-title: APM 調査レポート
-tool_name: APM
-tool_reading: エーピーエム / エージェント パッケージ マネージャー
-category: AI開発基盤
-developer: Microsoft
-official_site: https://microsoft.github.io/apm/
+category: AI開発ライブラリ
 date: '2026-04-16'
-last_updated: '2026-04-16'
-tags:
-  - パッケージマネージャー
-  - AIエージェント
-  - オープンソース
-  - AI開発基盤
 description: AIエージェントのコンテキスト（指示、プロンプト、スキル等）を管理・共有するためのオープンソースのパッケージマネージャー
+developer: Microsoft
+evaluation:
+  base_score: 70
+  minus_points:
+  - point: 0
+    reason: 特になし
+  plus_points:
+  - point: 5
+    reason: npmやpipのようにAIエージェントのコンテキストを管理できる革新性
+  - point: 5
+    reason: 多様なAIコーディングエージェント(Copilot, Claude, Cursor等)のフォーマットへネイティブ対応
+  - point: 3
+    reason: オープンソースで活発に開発が継続されている
+  - point: 2
+    reason: ロックファイル(apm.lock.yaml)によるチーム間での再現性確保
+  score: 85
+  summary: AIコーディングツールのコンテキスト共有問題を解決する強力なインフラツールであり、チーム開発において高い効果を発揮する
+last_updated: '2026-04-16'
+official_site: https://microsoft.github.io/apm/
 quick_summary:
   has_free_plan: true
   is_oss: true
+  latest_highlight: v0.8.11リリースでスキル名競合時の警告やリモートデフォルトブランチの検出を修正
   starting_price: 無料
   target_users:
-    - 開発者
-    - AIエージェント利用者
-    - 開発チーム
-  latest_highlight: v0.8.11リリースでスキル名競合時の警告やリモートデフォルトブランチの検出を修正
+  - 開発者
+  - AIエージェント利用者
+  - 開発チーム
   update_frequency: 高
-evaluation:
-  score: 85
-  base_score: 70
-  plus_points:
-    - point: 5
-      reason: npmやpipのようにAIエージェントのコンテキストを管理できる革新性
-    - point: 5
-      reason: 多様なAIコーディングエージェント(Copilot, Claude, Cursor等)のフォーマットへネイティブ対応
-    - point: 3
-      reason: オープンソースで活発に開発が継続されている
-    - point: 2
-      reason: ロックファイル(apm.lock.yaml)によるチーム間での再現性確保
-  minus_points:
-    - point: 0
-      reason: 特になし
-  summary: AIコーディングツールのコンテキスト共有問題を解決する強力なインフラツールであり、チーム開発において高い効果を発揮する
+tags:
+- エージェント
+- オープンソース
+- パッケージマネージャー
+title: APM 調査レポート
+tool_name: APM
+tool_reading: エーピーエム / エージェント パッケージ マネージャー
 ---
 
 # **APM 調査レポート**
@@ -51,7 +50,7 @@ evaluation:
 * **公式サイト**: [https://microsoft.github.io/apm/](https://microsoft.github.io/apm/)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/apm](https://github.com/microsoft/apm)
-* **カテゴリ**: AI開発基盤 / パッケージマネージャー
+* **カテゴリ**: AI開発ライブラリ / パッケージマネージャー
 * **概要**: AIエージェントのコンテキスト（指示、スキル、プロンプト、MCPサーバーなど）を管理するためのオープンソースのパッケージマネージャーです。JavaScriptの`npm`やPythonの`pip`のように、`apm.yml`で依存関係を定義し、プロジェクト間で共有・再現可能なAIエージェントの設定を構築できます。
 
 ## **2. 目的と主な利用シーン**
@@ -196,7 +195,7 @@ evaluation:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **APM** | AIコンテキスト専用のパッケージマネージャ | 複数ツール向けに依存関係を解決して出力できる | 新しい概念であり、AI開発基盤自体の普及度合に依存する | チームで設定を統一・配布したい場合 |
+| **APM** | AIコンテキスト専用のパッケージマネージャ | 複数ツール向けに依存関係を解決して出力できる | 新しい概念であり、AI開発ライブラリ自体の普及度合に依存する | チームで設定を統一・配布したい場合 |
 | **言語向けパッケージマネージャ** | 言語ライブラリの管理 | 圧倒的な普及率 | AI設定の出力機能はない | APMの代替とはならない |
 | **各AIツールの独自設定機能** | CursorのRulesなど | GUI等から簡単に設定できる | ツール間での設定の使い回しが難しい | 特定のAIツールしか使用しない場合 |
 

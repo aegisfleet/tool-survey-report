@@ -1,61 +1,57 @@
 ---
-title: Vertex AI Studio 調査レポート
-tool_name: Vertex AI Studio
-tool_reading: バーテックス エーアイ スタジオ
-category: AI開発基盤
-developer: Google
-official_site: https://cloud.google.com/generative-ai-studio
+category: LLMプラットフォーム
 date: '2026-01-29'
-last_updated: '2026-04-02'
-tags:
-  - AI
-  - AI開発基盤
-  - Gemini
-  - Google Cloud
-  - MLOps
-  - 大規模言語モデル
-  - 生成AI
 description: Google Cloud上で生成AIモデルのプロトタイピング、カスタマイズ、本番環境への統合を迅速に行うための統合開発環境。
+developer: Google
+evaluation:
+  base_score: 70
+  minus_points:
+  - point: -3
+    reason: 多機能である反面、特に初心者にとっては学習コストが高く、プラットフォーム全体が複雑に感じられる場合がある。
+  - point: -2
+    reason: 利用するモデルやリソースごとに料金が細分化されており、コストの見積もりが複雑になりやすい。
+  plus_points:
+  - point: 10
+    reason: Gemini 3 Pro/Flashなど、Googleの最先端・高性能な基盤モデルを迅速に利用できる。
+  - point: 5
+    reason: プロンプト設計からチューニング、デプロイ、管理まで、エンドツーエンドのMLOps機能が単一プラットフォームに統合されている。
+  - point: 5
+    reason: Model Gardenを通じて、Google製モデルだけでなく、多数のオープンソースやパートナー製モデルにアクセスできる。
+  - point: 2
+    reason: 新規顧客向けの$300無料クレジットや、一部機能の無料利用枠が提供されている。
+  score: 87
+  summary: Googleの最新AIモデルを活用した開発から運用までをカバーする、極めて強力で包括的なAI開発プラットフォーム。
+last_updated: '2026-04-02'
+links:
+  documentation: https://cloud.google.com/vertex-ai/docs
+official_site: https://cloud.google.com/generative-ai-studio
 quick_summary:
   has_free_plan: true
   is_oss: false
+  latest_highlight: 2026年3月にVector Search 2.0が一般提供開始
   starting_price: 無料枠あり（従量課金）
   target_users:
-    - AI/MLエンジニア
-    - アプリケーション開発者
-    - データサイエンティスト
-  latest_highlight: 2026年3月にVector Search 2.0が一般提供開始
+  - AI/MLエンジニア
+  - アプリケーション開発者
+  - データサイエンティスト
   update_frequency: 高
-evaluation:
-  score: 87
-  base_score: 70
-  plus_points:
-    - point: 10
-      reason: Gemini 3 Pro/Flashなど、Googleの最先端・高性能な基盤モデルを迅速に利用できる。
-    - point: 5
-      reason: プロンプト設計からチューニング、デプロイ、管理まで、エンドツーエンドのMLOps機能が単一プラットフォームに統合されている。
-    - point: 5
-      reason: Model Gardenを通じて、Google製モデルだけでなく、多数のオープンソースやパートナー製モデルにアクセスできる。
-    - point: 2
-      reason: 新規顧客向けの$300無料クレジットや、一部機能の無料利用枠が提供されている。
-  minus_points:
-    - point: -3
-      reason: 多機能である反面、特に初心者にとっては学習コストが高く、プラットフォーム全体が複雑に感じられる場合がある。
-    - point: -2
-      reason: 利用するモデルやリソースごとに料金が細分化されており、コストの見積もりが複雑になりやすい。
-  summary: Googleの最新AIモデルを活用した開発から運用までをカバーする、極めて強力で包括的なAI開発プラットフォーム。
-links:
-  documentation: https://cloud.google.com/vertex-ai/docs
 relationships:
   parent: Vertex AI
   related_tools:
-    - Amazon Bedrock
-    - さくらのAI
-    - Gemini
+  - Amazon Bedrock
+  - さくらのAI
+  - Gemini
+tags:
+- AI
+- Gemini
+- Google Cloud
+- MLOps
+- 大規模言語モデル
+- 生成AI
+title: Vertex AI Studio 調査レポート
+tool_name: Vertex AI Studio
+tool_reading: バーテックス エーアイ スタジオ
 ---
-
-
-
 
 # **Vertex AI Studio 調査レポート**
 
@@ -67,7 +63,7 @@ relationships:
 * **公式サイト**: [https://cloud.google.com/generative-ai-studio](https://cloud.google.com/generative-ai-studio)
 * **関連リンク**:
   * ドキュメント: [https://cloud.google.com/vertex-ai/docs](https://cloud.google.com/vertex-ai/docs)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: Google Cloud上で生成AIモデルのプロトタイピング、カスタマイズ、本番環境への統合を迅速に行うための統合開発環境。開発者はコーディング不要のUIを通じて、Geminiをはじめとする最新の基盤モデルを試し、自社データでチューニングし、アプリケーションに組み込むまでの一連のワークフローを加速できる。
 
 ## **2. 目的と主な利用シーン**

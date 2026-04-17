@@ -42,9 +42,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **OBS Background Removal 調査レポート**
 
 ## **1. 基本情報**

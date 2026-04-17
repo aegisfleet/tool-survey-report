@@ -46,9 +46,6 @@ relationships:
     - OpenHands
 ---
 
-
-
-
 # **DeerFlow 調査レポート**
 
 ## **1. 基本情報**
@@ -59,7 +56,7 @@ relationships:
 * **公式サイト**: [https://deerflow.tech/](https://deerflow.tech/)
 * **関連リンク**:
   * GitHub: [https://github.com/bytedance/deer-flow](https://github.com/bytedance/deer-flow)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: サンドボックス、メモリ、ツール、スキル、サブエージェントを活用し、リサーチ、コーディング、作成などの複雑なタスクを自動化するオープンソースのSuperAgentフレームワークです。
 
 ## **2. 目的と主な利用シーン**

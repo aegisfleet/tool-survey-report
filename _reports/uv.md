@@ -54,7 +54,7 @@ relationships:
 * **公式サイト**: [https://docs.astral.sh/uv](https://docs.astral.sh/uv)
 * **関連リンク**:
   * GitHub: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: パッケージ管理
 * **概要**: uvはRustで書かれた、非常に高速なPythonのパッケージおよびプロジェクトマネージャー。従来のpipやpoetry、pyenvなどの複数のツールが担っていた役割を単一のツールで置き換えることを目指している。
 
 ## **2. 目的と主な利用シーン**

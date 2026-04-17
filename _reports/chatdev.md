@@ -2,7 +2,7 @@
 title: ChatDev 調査レポート
 tool_name: ChatDev
 tool_reading: チャットデブ
-category: AIエージェントフレームワーク
+category: AIエージェント基盤
 developer: OpenBMB
 official_site: https://github.com/OpenBMB/ChatDev
 date: '2026-04-14'
@@ -60,7 +60,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/OpenBMB/ChatDev](https://github.com/OpenBMB/ChatDev)
   * SaaSプラットフォーム: [https://chatdev.modelbest.cn/](https://chatdev.modelbest.cn/)
-* **カテゴリ**: AIエージェントフレームワーク
+* **カテゴリ**: AIエージェント基盤
 * **概要**: LLMを活用したマルチエージェント協調システムです。初期は仮想ソフトウェア開発会社として機能していましたが、バージョン2.0(DevAll)以降は、ソフトウェア開発だけでなく、データ分析や3D生成などあらゆるタスクをノーコードで構築・実行できる汎用的なプラットフォームへと進化しています。
 
 ## **2. 目的と主な利用シーン**

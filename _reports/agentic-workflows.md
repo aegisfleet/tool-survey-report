@@ -51,9 +51,6 @@ relationships:
     - GitHub Copilot
 ---
 
-
-
-
 # **Agentic Workflows 調査レポート**
 
 ## **1. 基本情報**

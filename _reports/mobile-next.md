@@ -52,9 +52,6 @@ relationships:
     - Model Context Protocol
 ---
 
-
-
-
 # **Mobile Next 調査レポート**
 
 ## **1. 基本情報**

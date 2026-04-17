@@ -51,9 +51,6 @@ relationships:
     - Qodo
 ---
 
-
-
-
 # **GitLab Duo 調査レポート**
 
 ## **1. 基本情報**

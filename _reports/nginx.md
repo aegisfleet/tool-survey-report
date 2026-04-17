@@ -47,9 +47,6 @@ relationships:
     - Cloudflare
 ---
 
-
-
-
 # **Nginx 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/nginx/nginx](https://github.com/nginx/nginx)
   * ドキュメント: [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
-* **カテゴリ**: Webサーバー
+* **カテゴリ**: インフラ/クラウド
 * **概要**: Nginxは、HTTP Webサーバー、リバースプロキシ、ロードバランサー、TCP/UDPプロキシサーバーとして機能するオープンソースのソフトウェアです。高パフォーマンスと低メモリ消費を特徴としています。
 
 ## **2. 目的と主な利用シーン**

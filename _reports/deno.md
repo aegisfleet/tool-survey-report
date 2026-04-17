@@ -54,9 +54,6 @@ relationships:
     - Hono
 ---
 
-
-
-
 # **Deno 調査レポート**
 
 ## **1. 基本情報**
@@ -69,7 +66,7 @@ relationships:
   * GitHub: [https://github.com/denoland/deno](https://github.com/denoland/deno)
   * CodeWiki: [https://codewiki.google/github.com/denoland/deno](https://codewiki.google/github.com/denoland/deno)
   * ドキュメント: [https://docs.deno.com/](https://docs.deno.com/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 言語ランタイム/実行環境
 * **概要**: Node.jsの作者Ryan Dahl氏によって開発された、セキュリティと開発者体験（DX）を重視したモダンなJavaScript/TypeScriptランタイム。RustとV8エンジン上に構築されている。
 
 ## **2. 目的と主な利用シーン**

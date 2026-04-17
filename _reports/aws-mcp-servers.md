@@ -2,7 +2,7 @@
 title: AWS MCP Servers 調査レポート
 tool_name: AWS MCP Servers
 tool_reading: エーダブリューエス エムシーピー サーバーズ
-category: AI開発基盤
+category: MCPサーバー/基盤
 developer: AWS Labs
 official_site: https://awslabs.github.io/mcp/
 date: '2026-02-04'
@@ -50,9 +50,6 @@ relationships:
     - AWS CloudFormation
 ---
 
-
-
-
 # **AWS MCP Servers 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/awslabs/mcp](https://github.com/awslabs/mcp)
   * ドキュメント: [https://awslabs.github.io/mcp/](https://awslabs.github.io/mcp/)
-* **カテゴリ**: 開発者ツール / AWS
+* **カテゴリ**: MCPサーバー/基盤 / AWS
 * **概要**: AWS MCP Serversは、Model Context Protocol (MCP) に準拠した公式のMCPサーバー群です。これを使用することで、Claude DesktopやCursorなどのMCP対応クライアントから、AWSのリソース管理、CloudFormationによるデプロイ、Amazon Bedrockの利用、AWSドキュメントの検索などを直接行うことが可能になります。
 
 ## **2. 目的と主な利用シーン**

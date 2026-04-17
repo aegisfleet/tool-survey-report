@@ -1,57 +1,53 @@
 ---
-title: さくらのAI 調査レポート
-tool_name: さくらのAI
-tool_reading: さくらのエーアイ
-category: AI開発基盤
-developer: さくらインターネット株式会社
-official_site: https://www.sakura.ad.jp/aipf/
+category: LLMプラットフォーム
 date: '2025-12-16'
-last_updated: '2026-04-03'
-tags:
-  - AI
-  - AI開発基盤
-  - API
-  - クラウド
-  - 大規模言語モデル
-  - 生成AI
 description: 「国内完結」の安全性と「低コスト」を両立した、さくらインターネットが提供するAIプラットフォーム。
+developer: さくらインターネット株式会社
+evaluation:
+  base_score: 70
+  minus_points:
+  - point: -3
+    reason: 海外の巨大プラットフォームと比較して、利用可能なモデルの種類が限定的
+  - point: -3
+    reason: AWSやAzureのような周辺サービスとのエコシステムは発展途上
+  plus_points:
+  - point: 8
+    reason: データが日本国内で完結するため、データ主権やセキュリティ要件に強い
+  - point: 5
+    reason: OpenAI互換APIを提供しており、既存システムからの移行が容易
+  - point: 5
+    reason: 円建ての料金体系で為替リスクがなく、コストパフォーマンスが高い
+  score: 82
+  summary: データの安全性とコストを重視する国内プロジェクトに最適だが、モデルの多様性は限定的。
+last_updated: '2026-04-03'
+links:
+  documentation: https://manual.sakura.ad.jp/cloud/ai-engine/03-operation-guide.html
+official_site: https://www.sakura.ad.jp/aipf/
 quick_summary:
   has_free_plan: true
   is_oss: false
+  latest_highlight: 2025年12月にQwen3-Embedding-4Bモデルが追加
   starting_price: 無料
   target_users:
-    - 開発者
-    - 企業
-    - 官公庁
-  latest_highlight: 2025年12月にQwen3-Embedding-4Bモデルが追加
+  - 開発者
+  - 企業
+  - 官公庁
   update_frequency: 高
-evaluation:
-  score: 82
-  base_score: 70
-  plus_points:
-    - point: 8
-      reason: データが日本国内で完結するため、データ主権やセキュリティ要件に強い
-    - point: 5
-      reason: OpenAI互換APIを提供しており、既存システムからの移行が容易
-    - point: 5
-      reason: 円建ての料金体系で為替リスクがなく、コストパフォーマンスが高い
-  minus_points:
-    - point: -3
-      reason: 海外の巨大プラットフォームと比較して、利用可能なモデルの種類が限定的
-    - point: -3
-      reason: AWSやAzureのような周辺サービスとのエコシステムは発展途上
-  summary: データの安全性とコストを重視する国内プロジェクトに最適だが、モデルの多様性は限定的。
-links:
-  documentation: https://manual.sakura.ad.jp/cloud/ai-engine/03-operation-guide.html
 relationships:
   related_tools:
-    - Amazon Bedrock
-    - Rakuten AI
-    - Vertex AI Studio
+  - Amazon Bedrock
+  - Rakuten AI
+  - Vertex AI Studio
+tags:
+- AI
+- API
+- クラウド
+- 大規模言語モデル
+- 生成AI
+title: さくらのAI 調査レポート
+tool_name: さくらのAI
+tool_reading: さくらのエーアイ
 ---
-
-
-
 
 # **さくらのAI 調査レポート**
 
@@ -69,7 +65,7 @@ relationships:
 * **公式サイト**: [https://www.sakura.ad.jp/aipf/](https://www.sakura.ad.jp/aipf/)
 * **関連リンク**:
   * ドキュメント: [さくらのAI Engine マニュアル](https://manual.sakura.ad.jp/cloud/ai-engine/03-operation-guide.html)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: 「さくらのAI」は、さくらインターネットが提供するAIプラットフォームです。生成AI向けAPI「さくらのAI Engine」や法人向け「さくらのAIソリューション」で構成され、データが国外に出ない「国内完結型」の安全性と、円建ての低コストな料金体系を強みとしています。
 
 ## **2. 目的と主な利用シーン**
@@ -370,7 +366,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **さくらのAI** | データ国内完結型のAI開発基盤 | ・データ主権の確保<br>・円建ての安定した価格 | ・モデルの多様性<br>・エコシステムの発展性 | データセキュリティやコスト安定性を最優先する場合。 |
+| **さくらのAI** | データ国内完結型のLLMプラットフォーム | ・データ主権の確保<br>・円建ての安定した価格 | ・モデルの多様性<br>・エコシステムの発展性 | データセキュリティやコスト安定性を最優先する場合。 |
 | **Amazon Bedrock** | AWS統合型のAIプラットフォーム | ・豊富なモデル選択肢<br>・AWSサービスとの強力な連携 | ・ドル建ての価格変動<br>・データ海外転送の可能性 | 既存のAWSインフラを最大限に活用したい場合。 |
 | **Rakuten AI** | 楽天経済圏特化のAIプラットフォーム | ・日本語特化モデル<br>・楽天エコシステムとの連携 | ・汎用性の低さ | 楽天のサービスやデータを活用したビジネスを展開する場合。 |
 | **Vertex AI Studio** | Google CloudのAIプラットフォーム | ・Geminiなど最新モデル<br>・Google検索基盤との連携 | ・学習コストが高い | 高度なAI開発やGoogle Cloud環境での運用を行う場合。 |

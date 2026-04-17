@@ -63,7 +63,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/webpro-nl/knip](https://github.com/webpro-nl/knip)
   * DeepWiki: [https://deepwiki.com/webpro-nl/knip](https://deepwiki.com/webpro-nl/knip)
-* **カテゴリ**: 開発ツール
+* **カテゴリ**: リンター/フォーマッタ
 * **概要**: Knipは、JavaScriptおよびTypeScriptプロジェクト内の未使用ファイル、依存関係、エクスポートを検出し、コードベースをクリーンに保つための強力なオープンソースCLIツールです。
 
 ## **2. 目的と主な利用シーン**

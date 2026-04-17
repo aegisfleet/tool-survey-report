@@ -53,8 +53,6 @@ relationships:
     - Proxmox VE
 ---
 
-
-
 # **Ubuntu 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +64,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/canonical](https://github.com/canonical)
   * ドキュメント: [https://ubuntu.com/server/docs/](https://ubuntu.com/server/docs/)
-* **カテゴリ**: インフラ/クラウド
+* **カテゴリ**: OS/プラットフォーム / クラウド
 * **概要**: Ubuntuは、DebianをベースとしたオープンソースのLinuxディストリビューションです。使いやすさ、セキュリティ、安定性を重視し、デスクトップPCからクラウドサーバー、IoTデバイスまで、世界中で最も広く利用されているOSの一つです。
 
 ## **2. 目的と主な利用シーン**

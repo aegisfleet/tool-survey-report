@@ -44,9 +44,6 @@ relationships:
     - GitHub Copilot
 ---
 
-
-
-
 # **GitLens 調査レポート**
 
 ## **1. 基本情報**
@@ -58,7 +55,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/gitkraken/vscode-gitlens](https://github.com/gitkraken/vscode-gitlens)
   * ドキュメント: [https://help.gitkraken.com/gitlens/gitlens-home/](https://help.gitkraken.com/gitlens/gitlens-home/)
-* **カテゴリ**: 開発者ツール (Git拡張機能)
+* **カテゴリ**: バージョン管理
 * **概要**: GitLensは、VS CodeなどのモダンIDE向けに提供されている強力なGit拡張機能です。インラインBlameやリッチなホバー表示によってコードの作成者や履歴を視覚化し、リポジトリの理解とコラボレーションを支援します。
 
 ## **2. 目的と主な利用シーン**

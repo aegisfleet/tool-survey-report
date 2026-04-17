@@ -54,9 +54,6 @@ relationships:
     - LilysAI
 ---
 
-
-
-
 # **NotebookLM 調査レポート**
 
 ## **1. 基本情報**
@@ -73,7 +70,7 @@ relationships:
 * **公式サイト**: [https://notebooklm.google.com/](https://notebooklm.google.com/)
 * **関連リンク**:
   * コミュニティ: [Discord](https://discord.gg/notebooklm)
-* **カテゴリ**: 生成AI, リサーチツール
+* **カテゴリ**: 生成AI
 * **概要**: Googleが開発した「AIリサーチアシスタント」。ユーザーがアップロードしたドキュメント（PDF, テキスト, Googleドライブファイルなど）の内容を理解し、それに基づいて質問への回答、要約、アイデア出しを行う。最新のGeminiモデルを搭載し、Deep Research機能によりWeb上の情報収集も自動化できる。
 
 ## **2. 目的と主な利用シーン**

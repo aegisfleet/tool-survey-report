@@ -50,9 +50,6 @@ relationships:
   parent: Gemini
 ---
 
-
-
-
 # **Google Antigravity 調査レポート**
 
 ## **1. 基本情報**

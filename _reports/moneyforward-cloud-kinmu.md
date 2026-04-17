@@ -2,7 +2,7 @@
 title: マネーフォワード クラウド勤怠 調査レポート
 tool_name: マネーフォワード クラウド勤怠
 tool_reading: マネーフォワード クラウドキンタイ
-category: 勤怠管理
+category: 人事労務
 developer: 株式会社マネーフォワード
 official_site: https://biz.moneyforward.com/attendance/
 date: '2026-01-29'
@@ -49,9 +49,6 @@ relationships:
     - ジョブカン勤怠管理
 ---
 
-
-
-
 # **マネーフォワード クラウド勤怠 調査レポート**
 
 ## **1. 基本情報**
@@ -63,7 +60,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://biz.moneyforward.com/support/attendance/](https://biz.moneyforward.com/support/attendance/)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/manefowadokuraudokintai/reviews)
-* **カテゴリ**: 勤怠管理
+* **カテゴリ**: 人事労務
 * **概要**: 多様な働き方に対応し、日々の打刻から休暇管理、給与計算連携までを自動化するクラウド型勤怠管理システム。特にマネーフォワード クラウドシリーズ（給与、会計、経費など）とのシームレスな連携に強みを持ち、バックオフィス業務全体の効率化を実現します。
 
 ## **2. 目的と主な利用シーン**

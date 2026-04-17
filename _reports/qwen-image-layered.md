@@ -51,9 +51,6 @@ relationships:
     - Canva
 ---
 
-
-
-
 # **Qwen-Image-Layered 調査レポート**
 
 ## **1. 基本情報**

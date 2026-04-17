@@ -50,9 +50,6 @@ relationships:
     - Miro
 ---
 
-
-
-
 # **draw.io (diagrams.net) 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
   * GitHub: [https://github.com/jgraph/drawio](https://github.com/jgraph/drawio)
   * ドキュメント: [https://www.drawio.com/doc/](https://www.drawio.com/doc/)
   * 情報サイト: [https://www.drawio.com/](https://www.drawio.com/)
-* **カテゴリ**: 作図ツール
+* **カテゴリ**: デザインツール
 * **概要**: Webブラウザ上で動作する無料の作図ツール。フローチャート、UML、ER図、ネットワーク図など多様な図を作成できる。アカウント登録なしで利用でき、作成したデータはGoogle Drive、OneDrive、ローカルデバイスなどに保存可能。
 
 ## **2. 目的と主な利用シーン**

@@ -54,9 +54,6 @@ relationships:
     - GitHub Actions
 ---
 
-
-
-
 # **act (nektos/act) 調査レポート**
 
 ## **1. 基本情報**
@@ -70,7 +67,7 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/nektos/act](https://codewiki.google/github.com/nektos/act)
   * ドキュメント: [https://nektosact.com/introduction.html](https://nektosact.com/introduction.html)
   * レビューサイト: なし (GitHub Stars: 68k+ / 2026年1月時点)
-* **カテゴリ**: DevOps / CI/CD
+* **カテゴリ**: CI/CD
 * **概要**: GitHub Actionsのワークフロー定義ファイル（`.github/workflows`）を読み込み、Dockerコンテナを使用してローカル環境で実行するコマンドラインツール。「Think globally, act locally」を掲げ、クラウドへのプッシュなしでCI/CDパイプラインのテストを可能にする。
 
 ## **2. 目的と主な利用シーン**

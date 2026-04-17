@@ -2,7 +2,7 @@
 title: Claude for Financial Services Plugins 調査レポート
 tool_name: Claude for Financial Services Plugins
 tool_reading: クロード フォー ファイナンシャル サービス プラグイン
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: Anthropic
 official_site: https://github.com/anthropics/financial-services-plugins
 date: '2026-03-27'
@@ -48,9 +48,6 @@ relationships:
     - Claude Code
 ---
 
-
-
-
 # **Claude for Financial Services Plugins 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
 * **公式サイト**: [https://github.com/anthropics/financial-services-plugins](https://github.com/anthropics/financial-services-plugins)
 * **関連リンク**:
   * GitHub: [https://github.com/anthropics/financial-services-plugins](https://github.com/anthropics/financial-services-plugins)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: Claude for Financial Services Pluginsは、Claude（Claude CoworkやClaude Code）を金融サービス専門のAIアシスタントに強化するためのオープンソースのプラグイン群である。投資銀行、株式調査、未公開株、ウェルスマネジメントといった金融特化のワークフローをサポートし、MCP経由で専門的なデータソースと連携して高度な分析やドキュメント作成を可能にする。
 
 ## **2. 目的と主な利用シーン**

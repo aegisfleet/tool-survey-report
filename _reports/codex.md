@@ -45,9 +45,6 @@ relationships:
     - Devin
 ---
 
-
-
-
 # **Codex cloud 調査レポート**
 
 ## **1. 基本情報**

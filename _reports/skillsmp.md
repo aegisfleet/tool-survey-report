@@ -2,7 +2,7 @@
 title: SkillsMP 調査レポート
 tool_name: SkillsMP
 tool_reading: スキルズエムピー / スキルズマーケットプレイス
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Godi13 (Community Project)
 official_site: https://github.com/Godi13
 date: '2026-01-25'
@@ -47,9 +47,6 @@ relationships:
     - OpenAI Codex CLI
 ---
 
-
-
-
 # **SkillsMP 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **公式サイト**: [https://github.com/Godi13](https://github.com/Godi13)
 * **関連リンク**:
   * GitHub: [https://github.com/Godi13](https://github.com/Godi13)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: SkillsMPは、Claude CodeやOpenAI Codex CLIなどのAIエージェント向けスキル（Agent Skills）を集めた最大のマーケットプレイスです。GitHub上で公開されている `SKILL.md` 形式のスキルをアグリゲートし、AIセマンティック検索やカテゴリ分類機能を提供しています。
 
 ## **2. 目的と主な利用シーン**

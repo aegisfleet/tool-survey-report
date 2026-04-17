@@ -56,9 +56,6 @@ relationships:
     - draw.io (diagrams.net)
 ---
 
-
-
-
 # **Miro 調査レポート**
 
 ## **1. 基本情報**

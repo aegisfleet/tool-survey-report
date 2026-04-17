@@ -57,7 +57,7 @@ relationships:
   * GitHub: [https://github.com/squid-cache/squid](https://github.com/squid-cache/squid)
   * DeepWiki: [https://deepwiki.com/squid-cache/squid](https://deepwiki.com/squid-cache/squid)
   * ドキュメント: [https://wiki.squid-cache.org/](https://wiki.squid-cache.org/)
-* **カテゴリ**: プロキシサーバー
+* **カテゴリ**: インフラ/クラウド
 * **概要**: Squidは、HTTP、HTTPS、FTPなどの通信をサポートする高機能なキャッシングプロキシサーバーです。頻繁にリクエストされるWebページをキャッシュして再利用することで、ネットワーク帯域幅の削減と応答時間の短縮を実現します。
 
 ## **2. 目的と主な利用シーン**

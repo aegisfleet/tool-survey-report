@@ -59,9 +59,6 @@ relationships:
     - Proxmox VE
 ---
 
-
-
-
 # **Docker 調査レポート**
 
 ## **1. 基本情報**
@@ -75,7 +72,7 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/docker/cli](https://codewiki.google/github.com/docker/cli)
   * ドキュメント: [https://docs.docker.com/](https://docs.docker.com/)
   * レビューサイト: [G2](https://www.g2.com/products/docker-inc-docker/reviews) | [ITreview](https://www.itreview.jp/products/docker/reviews)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: ビルドツール/ランタイム
 * **概要**: Dockerは、アプリケーションをコンテナと呼ばれる軽量でポータブルな独立した環境にパッケージ化し、ビルド、テスト、デプロイを迅速に行うためのプラットフォームです。コンテナ技術のデファクトスタンダードとして、Webアプリケーション開発からAI/MLワークフローまで、あらゆる環境で一貫した動作を実現します。
 
 ## **2. 目的と主な利用シーン**

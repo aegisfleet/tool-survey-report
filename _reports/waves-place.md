@@ -47,9 +47,6 @@ relationships:
     - ElevenLabs
 ---
 
-
-
-
 # **Waves Place 調査レポート**
 
 ## **1. 基本情報**
@@ -62,7 +59,7 @@ relationships:
   * ニュースリリース (カシオ): [https://www.casio.co.jp/release/2025/0826-wp-st/](https://www.casio.co.jp/release/2025/0826-wp-st/)
   * ニュースリリース (AIdeaLab): [https://aidealab.com/news/VeW_JaR8](https://aidealab.com/news/VeW_JaR8)
   * レビュー記事 (DTM Station): [https://www.dtmstation.com/archives/74733.html](https://www.dtmstation.com/archives/74733.html)
-* **カテゴリ**: AI効果音生成 (Sound Effects Generation)
+* **カテゴリ**: 動画/メディア
 * **概要**: カシオ計算機が提供する、日本語のテキスト入力からAIが効果音を生成するWebサービス。株式会社AIdeaLabと共同開発した技術を使用しており、動画制作や楽曲制作、ライブ配信などで使用できるオリジナルの効果音を簡単に作成できる。
 
 ## **2. 目的と主な利用シーン**

@@ -2,7 +2,7 @@
 title: codoc 調査レポート
 tool_name: codoc
 tool_reading: コードク
-category: EC/決済
+category: ビジネスツール
 developer: codoc株式会社
 official_site: https://codoc.jp/
 date: '2026-04-07'
@@ -56,7 +56,7 @@ relationships:
 * **公式サイト**: [https://codoc.jp/](https://codoc.jp/)
 * **関連リンク**:
   * ドキュメント: [https://codoc.jp/docs/faq](https://codoc.jp/docs/faq)
-* **カテゴリ**: 決済/課金
+* **カテゴリ**: ビジネスツール
 * **概要**: タグをコピー＆ペーストするだけで、既存のWebサイトにペイウォール（課金）機能を導入できるサービスです。記事の単体販売、定期購読（サブスクリプション）、投げ銭（チップ）など、多様なコンテンツ販売を手軽に実現できます。
 
 ## **2. 目的と主な利用シーン**

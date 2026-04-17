@@ -52,9 +52,6 @@ relationships:
     - Google Disco
 ---
 
-
-
-
 # **Genspark 調査レポート**
 
 ## **1. 基本情報**

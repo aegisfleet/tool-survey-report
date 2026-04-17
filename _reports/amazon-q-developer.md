@@ -56,9 +56,6 @@ relationships:
     - GitHub Copilot CLI
 ---
 
-
-
-
 # **Amazon Q Developer 調査レポート**
 
 ## **1. 基本情報**

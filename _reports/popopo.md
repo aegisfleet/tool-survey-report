@@ -44,9 +44,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **POPOPO 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +54,7 @@ relationships:
 * **公式サイト**: [https://www.popopo.com/ja/](https://www.popopo.com/ja/)
 * **関連リンク**:
   * ドキュメント: [https://help.popopo.com/hc/ja-jp](https://help.popopo.com/hc/ja-jp)
-* **カテゴリ**: コミュニケーション
+* **カテゴリ**: ドキュメント/ナレッジ
 * **概要**: POPOPOは、カメラを使わずにリアルタイムでカメラカットを自動生成するテレビ通話アプリである。「ホロスーツ」と呼ばれるアバターに着替え、顔出し不要で通話やライブ配信が可能。日常の会話を映画のワンシーンのように演出する。
 
 ## **2. 目的と主な利用シーン**

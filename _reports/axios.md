@@ -57,7 +57,7 @@ relationships:
 * **公式サイト**: [https://axios-http.com/](https://axios-http.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/axios/axios](https://github.com/axios/axios)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: API/仕様管理
 * **概要**: ブラウザおよびNode.js環境で動作する、PromiseベースのHTTPクライアントライブラリです。シンプルで拡張性の高いインターフェースを提供し、JavaScriptでのHTTP通信を容易にします。
 
 ## **2. 目的と主な利用シーン**

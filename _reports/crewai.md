@@ -2,7 +2,7 @@
 title: CrewAI 調査レポート
 tool_name: CrewAI
 tool_reading: クルーエーアイ
-category: AIエージェントフレームワーク
+category: AIエージェント基盤
 developer: CrewAI Inc.
 official_site: https://crewai.com/
 date: '2026-04-14'
@@ -56,7 +56,7 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/crewaiinc/crewai](https://github.com/crewaiinc/crewai)
   * ドキュメント: [https://docs.crewai.com/](https://docs.crewai.com/)
-* **カテゴリ**: AIエージェントフレームワーク
+* **カテゴリ**: AIエージェント基盤
 * **概要**: CrewAIは、自律型AIエージェントのチーム（Crews）と、イベント駆動型のワークフロー（Flows）を構築・管理するためのオープンソースのPythonフレームワークです。複雑なタスクを役割分担したエージェントの協調によって解決します。
 
 ## **2. 目的と主な利用シーン**

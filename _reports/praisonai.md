@@ -2,7 +2,7 @@
 title: PraisonAI 調査レポート
 tool_name: PraisonAI
 tool_reading: プレイソンエーアイ
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Mervin Praison
 official_site: https://docs.praison.ai/
 date: '2026-04-07'
@@ -60,7 +60,7 @@ relationships:
 * **公式サイト**: [https://docs.praison.ai/](https://docs.praison.ai/)
 * **関連リンク**:
   * GitHub: [https://github.com/MervinPraison/PraisonAI](https://github.com/MervinPraison/PraisonAI)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: PraisonAIは、シンプルなタスクから複雑な課題までを自動化・解決するための、実運用レベルのマルチAIエージェントフレームワークである。Auto-GenやCrewAIの概念を取り入れ、ローコードまたはYAML設定だけで、自己内省（Self-reflection）やRAG、メモリ機能を持つエージェントチームを容易に構築・管理できる。
 
 ## **2. 目的と主な利用シーン**

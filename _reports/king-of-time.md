@@ -2,7 +2,7 @@
 title: KING OF TIME 調査レポート
 tool_name: KING OF TIME
 tool_reading: キングオブタイム
-category: 勤怠管理
+category: 人事労務
 developer: 株式会社ヒューマンテクノロジーズ
 official_site: https://www.kingoftime.jp/
 date: '2026-01-29'
@@ -52,9 +52,6 @@ relationships:
     - マネーフォワード クラウド勤怠
 ---
 
-
-
-
 # **KING OF TIME 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://support.ta.kingoftime.jp/hc/ja](https://support.ta.kingoftime.jp/hc/ja)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/kintaikanrishisutemu-king-of-time/reviews)
-* **カテゴリ**: 勤怠管理
+* **カテゴリ**: 人事労務
 * **概要**: クラウド型勤怠管理システムとして市場シェアNo.1を誇るSaaS。PC、モバイル、ICカード、生体認証など業界最多クラスの打刻方法に対応し、複雑なシフトや残業、休暇管理を柔軟に一元化。あらゆる業種・規模の企業の勤怠管理を効率化する。
 
 ## **2. 目的と主な利用シーン**

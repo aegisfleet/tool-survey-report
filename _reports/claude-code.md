@@ -58,9 +58,6 @@ relationships:
     - Grok CLI
 ---
 
-
-
-
 # **Claude Code 調査レポート**
 
 ## **1. 基本情報**

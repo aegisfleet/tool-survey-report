@@ -47,9 +47,6 @@ relationships:
     - Google Cloud
 ---
 
-
-
-
 # **Google Maps Platform 調査レポート**
 
 ## **1. 基本情報**
@@ -62,7 +59,7 @@ relationships:
   * ドキュメント: [https://developers.google.com/maps/documentation](https://developers.google.com/maps/documentation)
   * GitHub: [https://github.com/googlemaps](https://github.com/googlemaps)
   * レビューサイト: [G2](https://www.g2.com/products/google-maps-platform/reviews) | [Capterra](https://www.capterra.com/p/168436/Google-Maps-Platform/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: その他
 * **概要**: Google Maps Platform は、Google マップの強力なデータと機能を独自のアプリケーションに統合できるAPIとSDKのセットです。静的・動的な地図表示だけでなく、ルート検索、場所の検索（POI）、ジオコーディング、標高データ、そして近年では大気質や花粉情報などの環境データも提供しています。
 
 ## **2. 目的と主な利用シーン**

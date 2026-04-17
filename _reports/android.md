@@ -52,9 +52,6 @@ relationships:
     - Android Use
 ---
 
-
-
-
 # **Android (AOSP) 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://source.android.com/docs](https://source.android.com/docs)
   * リポジトリ: [https://android.googlesource.com/](https://android.googlesource.com/)
-* **カテゴリ**: オペレーティングシステム
+* **カテゴリ**: OS/プラットフォーム
 * **概要**: Linuxカーネルをベースとしたオープンソースのモバイルオペレーティングシステム。スマートフォンやタブレットだけでなく、時計（Wear OS）、テレビ（Android TV）、自動車（Android Automotive）など、多様なデバイスの基盤として採用されている。
 
 ## **2. 目的と主な利用シーン**

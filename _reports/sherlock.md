@@ -54,7 +54,7 @@ relationships:
 * **公式サイト**: [https://sherlockproject.xyz/](https://sherlockproject.xyz/)
 * **関連リンク**:
   * GitHub: [https://github.com/sherlock-project/sherlock](https://github.com/sherlock-project/sherlock)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: セキュリティ/解析
 * **概要**: 特定のユーザー名が登録されているSNSやWebサービスを横断的に検索できるオープンソースのOSINT（オープンソース・インテリジェンス）ツールです。400以上のプラットフォームを一度にスキャンし、対象ユーザーのデジタルフットプリントを効率的に調査できます。
 
 ## **2. 目的と主な利用シーン**

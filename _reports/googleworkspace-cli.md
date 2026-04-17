@@ -47,9 +47,6 @@ relationships:
     - Google Cloud
 ---
 
-
-
-
 # **Google Workspace CLI (gws) 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/googleworkspace/cli](https://github.com/googleworkspace/cli)
   * CodeWiki: [https://codewiki.google/github.com/googleworkspace/cli](https://codewiki.google/github.com/googleworkspace/cli)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ライフサイクル管理
 * **概要**: Google WorkspaceのAPIをターミナルやスクリプト、AIエージェントから操作するためのCLIツールです。Discovery Serviceを使用してコマンドを動的に構築し、Drive、Gmail、CalendarなどすべてのWorkspace APIに対する操作をボイラープレートなしで実現します。
 
 ## **2. 目的と主な利用シーン**

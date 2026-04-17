@@ -63,7 +63,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/npm/cli](https://github.com/npm/cli)
   * ドキュメント: [https://docs.npmjs.com/](https://docs.npmjs.com/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: パッケージ管理
 * **概要**: npmは、Node.js向けの公式パッケージマネージャーであり、世界最大規模のソフトウェアレジストリです。JavaScriptコードの共有、再利用、依存関係の管理を簡素化し、現代のWeb開発において欠かせない基盤となっています。
 
 ## **2. 目的と主な利用シーン**

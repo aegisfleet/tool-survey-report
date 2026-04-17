@@ -49,9 +49,6 @@ relationships:
     - ESLint
 ---
 
-
-
-
 # **Biome 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
   * GitHub: [https://github.com/biomejs/biome](https://github.com/biomejs/biome)
   * CodeWiki: [https://codewiki.google/github.com/biomejs/biome](https://codewiki.google/github.com/biomejs/biome)
   * ドキュメント: [https://biomejs.dev/guides/getting-started/](https://biomejs.dev/guides/getting-started/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: リンター/フォーマッタ
 * **概要**: Biomeは、Webプロジェクトの健全性を維持するための高速なツールチェーンです。Rustで構築されており、JavaScript, TypeScript, JSX, JSON, CSS, GraphQLのフォーマッターとリンターを単一のツールとして提供します。PrettierやESLintの代替として設計されており、圧倒的なパフォーマンスと設定の簡素さを特徴としています。
 
 ## **2. 目的と主な利用シーン**

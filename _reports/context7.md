@@ -2,7 +2,7 @@
 title: Context7 調査レポート
 tool_name: Context7
 tool_reading: コンテキストセブン
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: Upstash
 official_site: https://context7.com/
 date: '2026-01-28'
@@ -49,9 +49,6 @@ relationships:
     - Claude Code
 ---
 
-
-
-
 # **Context7 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
   * GitHub: [https://github.com/upstash/context7](https://github.com/upstash/context7)
   * CodeWiki: [https://codewiki.google/github.com/upstash/context7](https://codewiki.google/github.com/upstash/context7)
   * ドキュメント: [https://context7.com/docs](https://context7.com/docs)
-* **カテゴリ**: 開発者ツール / MCPサーバー
+* **カテゴリ**: AI開発ライブラリ / MCPサーバー
 * **概要**: Context7は、LLM (Large Language Models) に最新のライブラリドキュメントとコード例を供給するためのMCPサーバーです。LLMのトレーニングデータに含まれない新しいライブラリや、バージョンアップにより変更されたAPI仕様などをリアルタイムに取得し、AIの回答精度を向上させます。
 
 ## **2. 目的と主な利用シーン**

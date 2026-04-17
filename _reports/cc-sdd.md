@@ -2,7 +2,7 @@
 title: cc-sdd 調査レポート
 tool_name: cc-sdd
 tool_reading: シーシーエスディーディー
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: gotalab
 official_site: https://github.com/gotalab/cc-sdd
 date: '2026-03-09'
@@ -53,9 +53,6 @@ relationships:
     - GitHub Copilot
 ---
 
-
-
-
 # **cc-sdd 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
   * GitHub: [https://github.com/gotalab/cc-sdd](https://github.com/gotalab/cc-sdd)
   * CodeWiki: [https://codewiki.google/github.com/gotalab/cc-sdd](https://codewiki.google/github.com/gotalab/cc-sdd)
   * npm: [https://www.npmjs.com/package/cc-sdd](https://www.npmjs.com/package/cc-sdd)
-* **カテゴリ**: AI開発補助ツール
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: cc-sddは、Claude CodeやCursorをはじめとする様々なAIコーディングエージェントに対して、構造化された「仕様書駆動開発（Spec-Driven Development）」のワークフローを導入するためのコマンドラインツールです。Kiro IDEにインスパイアされたアプローチを採用しています。
 
 ## **2. 目的と主な利用シーン**

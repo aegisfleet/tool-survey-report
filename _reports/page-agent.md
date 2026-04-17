@@ -49,8 +49,6 @@ relationships:
     - MagicPod
 ---
 
-
-
 # **PageAgent 調査レポート**
 
 ## **1. 基本情報**
@@ -62,7 +60,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/alibaba/page-agent](https://github.com/alibaba/page-agent)
   * ドキュメント: [https://alibaba.github.io/page-agent/docs/introduction/overview](https://alibaba.github.io/page-agent/docs/introduction/overview)
-* **カテゴリ**: AIエージェント / 自動化ツール
+* **カテゴリ**: 自律型AIエージェント / 自動化ツール
 * **概要**: PageAgentは、Webページ内に直接組み込むことができるGUIエージェントライブラリです。ブラウザ拡張機能やPython、バックエンドを必要とせず、クライアントサイドのJavaScriptのみで自然言語によるWebページのDOM操作を実現します。
 
 ## **2. 目的と主な利用シーン**

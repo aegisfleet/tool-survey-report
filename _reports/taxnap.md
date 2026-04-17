@@ -35,9 +35,6 @@ evaluation:
 relationships: {}
 ---
 
-
-
-
 # **タックスナップ 調査レポート**
 
 ## **1. 基本情報**
@@ -48,7 +45,7 @@ relationships: {}
 * **公式サイト**: [https://taxnap.com/](https://taxnap.com/)
 * **関連リンク**:
   * レビューサイト: [App Store](https://apps.apple.com/jp/app/%E7%A2%BA%E5%AE%9A%E7%94%B3%E5%91%8A%E3%81%AA%E3%82%89%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8A%E3%83%83%E3%83%97-%E9%9D%92%E8%89%B2%E7%94%B3%E5%91%8A-%E7%99%BD%E8%89%B2%E7%94%B3%E5%91%8A/id6446676243) | [Google Play](https://play.google.com/store/apps/details?id=com.txto.taxnap&hl=ja)
-* **カテゴリ**: 業務系ツール
+* **カテゴリ**: データ分析
 * **概要**: 個人事業主・フリーランス・副業のための「頑張らなくていい確定申告アプリ」。初めての方でも、スマホひとつで自動計算・e-Tax提出まで完結し、青色申告・白色申告の両方に対応している。
 
 ## **2. 目的と主な利用シーン**

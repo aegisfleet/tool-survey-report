@@ -56,7 +56,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/pypa/pip](https://github.com/pypa/pip)
   * PyPI: [https://pypi.org/project/pip/](https://pypi.org/project/pip/)
-* **カテゴリ**: 開発者ツール, パッケージ管理
+* **カテゴリ**: パッケージ管理
 * **概要**: pipは、Pythonのパッケージインストーラーです。Python Package Index (PyPI) やその他のインデックスからパッケージをインストール・管理するために使用されます。
 
 ## **2. 目的と主な利用シーン**

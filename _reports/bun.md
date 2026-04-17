@@ -54,9 +54,6 @@ relationships:
     - Yarn
 ---
 
-
-
-
 # **Bun 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/oven-sh/bun](https://github.com/oven-sh/bun)
   * ドキュメント: [https://bun.sh/docs](https://bun.sh/docs)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 言語ランタイム/実行環境
 * **概要**: 高速なJavaScriptランタイムであり、パッケージマネージャ、バンドラ、テストランナーを含むオールインワンツールキットです。Node.jsのドロップインリプレースメントを目指して開発されており、圧倒的な起動速度と実行パフォーマンスを特徴としています。2025年12月にAnthropicに買収され、Claude CodeなどのAIツールのインフラ基盤としても重要な役割を担っています。
 
 ## **2. 目的と主な利用シーン**

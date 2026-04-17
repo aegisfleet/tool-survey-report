@@ -2,7 +2,7 @@
 title: Chrome DevTools MCP 調査レポート
 tool_name: Chrome DevTools MCP
 tool_reading: クローム デブツールズ エムシーピー
-category: AI開発基盤
+category: MCPサーバー/基盤
 developer: Google LLC
 official_site: https://github.com/ChromeDevTools/chrome-devtools-mcp
 date: '2026-03-12'
@@ -48,9 +48,6 @@ relationships:
     - Model Context Protocol
 ---
 
-
-
-
 # **Chrome DevTools MCP 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
 * **公式サイト**: [https://github.com/ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 * **関連リンク**:
   * GitHub: [https://github.com/ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: MCPサーバー/基盤
 * **概要**: AIコーディングアシスタント（Gemini、Claude、Cursor、Copilotなど）に対して、ライブのChromeブラウザを制御および検査する能力を提供するModel-Context-Protocol (MCP) サーバーです。自動化、詳細なデバッグ、パフォーマンス分析を行うことができます。
 
 ## **2. 目的と主な利用シーン**

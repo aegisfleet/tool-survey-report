@@ -2,7 +2,7 @@
 title: Agent Trace 調査レポート
 tool_name: Agent Trace
 tool_reading: エージェントトレース
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: オープンコミュニティ (Cursor主導)
 official_site: https://agent-trace.dev/
 date: '2026-03-10'
@@ -46,9 +46,6 @@ relationships:
     - OpenCode
 ---
 
-
-
-
 # **Agent Trace 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/cursor/agent-trace](https://github.com/cursor/agent-trace)
   * DeepWiki: [https://deepwiki.com/cursor/agent-trace](https://deepwiki.com/cursor/agent-trace)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: AIエージェントやAIコーディングツールが生成したコードと、人間が記述したコードをバージョン管理されたコードベース上で区別し、追跡するためのベンダーニュートラルなオープン仕様。AIの貢献を記録する標準フォーマットを提供している。
 
 ## **2. 目的と主な利用シーン**

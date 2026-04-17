@@ -53,9 +53,6 @@ relationships:
     - Build by Grok
 ---
 
-
-
-
 # **Grok 調査レポート**
 
 ## **1. 基本情報**

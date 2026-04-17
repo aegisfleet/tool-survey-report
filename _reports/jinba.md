@@ -41,9 +41,6 @@ links:
 relationships: {}
 ---
 
-
-
-
 # **Jinba 調査レポート**
 
 ## **1. 基本情報**
@@ -54,7 +51,7 @@ relationships: {}
 * **公式サイト**: [https://jinba.io/](https://jinba.io/)
 * **関連リンク**:
   * ドキュメント: [https://carnot.mintlify.app/en/introduction](https://carnot.mintlify.app/en/introduction)
-* **カテゴリ**: AIワークフロー自動化
+* **カテゴリ**: ワークフロー自動化
 * **概要**: Jinbaは、自然言語を用いてエンタープライズ向けのワークフローを構築・実行・デプロイできるプラットフォームである。フローの構築環境、実行環境、およびAIツール管理環境の3つのプロダクトから構成されており、API、Webhook、MCPサーバーなど多様な形式でのデプロイを即座に行うことができる。
 
 ## **2. 目的と主な利用シーン**

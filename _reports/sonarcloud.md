@@ -46,9 +46,6 @@ relationships:
     - SonarQube
 ---
 
-
-
-
 # **SonarQube Cloud 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
   * ドキュメント: [https://docs.sonarcloud.io/](https://docs.sonarcloud.io/)
   * レビューサイト: [G2](https://www.g2.com/products/sonarqube/reviews) | [Capterra](https://www.capterra.com/p/168436/SonarCloud/)
   * コミュニティ: [https://community.sonarsource.com/c/sc/9](https://community.sonarsource.com/c/sc/9)
-* **カテゴリ**: コード品質, 静的解析 (SAST), DevSecOps
+* **カテゴリ**: コード品質
 * **概要**: SonarQube Cloud は、開発者のワークフローに統合されたクラウドベースのコード品質・セキュリティ分析サービスです。40以上の言語に対応し、バグ、脆弱性、コードの臭い（Code Smells）を自動検出し、プルリクエストの段階で修正を促します。SonarQube のSaaS版として位置づけられ、インフラ管理不要で利用できます。
 
 ## **2. 目的と主な利用シーン**

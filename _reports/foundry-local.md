@@ -2,7 +2,7 @@
 title: Foundry Local 調査レポート
 tool_name: Foundry Local
 tool_reading: ファウンドリ ローカル
-category: AI開発基盤
+category: LLMプラットフォーム
 developer: Microsoft
 official_site: https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic
 date: '2025-12-07'
@@ -47,9 +47,6 @@ relationships:
     - LM Studio
 ---
 
-
-
-
 # **Foundry Local 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **公式サイト**: [https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic)
 * **関連リンク**:
   * ドキュメント: [https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic](https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/get-started?view=foundry-classic)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: Microsoftが提供するオンデバイスAI推論ソリューション。CLI、SDK、REST APIを介してローカルハードウェア（PCやエッジデバイス）上でAIモデルを実行する。クラウドコストの削減、データプライバシーの確保、低遅延応答を実現することを目的としている。
 
 ## **2. 目的と主な利用シーン**

@@ -60,9 +60,6 @@ relationships:
     - TAKT
 ---
 
-
-
-
 # **Cursor 調査レポート**
 
 ## **1. 基本情報**

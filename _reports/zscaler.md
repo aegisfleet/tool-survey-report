@@ -46,9 +46,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **Zscaler 調査レポート**
 
 ## **1. 基本情報**
@@ -59,7 +56,7 @@ relationships:
 * **公式サイト**: [https://www.zscaler.com/](https://www.zscaler.com/)
 * **関連リンク**:
   * レビューサイト: [G2](https://www.g2.com/products/zscaler-zero-trust-cloud/reviews) | [Capterra](https://www.capterra.com/p/175516/Zscaler-Internet-Access/reviews/) | [Gartner Peer Insights](https://www.gartner.com/reviews/market/network-security-microsegmentation/vendor/zscaler)
-* **カテゴリ**: セキュリティ (SSE, SASE, ゼロトラスト)
+* **カテゴリ**: CDN/セキュリティ
 * **概要**: Zscalerは、従来の境界防御型セキュリティから脱却し、ユーザー、デバイス、アプリケーションを直接かつ安全に接続するクラウドネイティブなゼロトラスト・セキュリティ・プラットフォームです。ZIA (Secure Internet Access) や ZPA (Secure Private Access) を中核に、サイバー脅威からの保護とデータ損失の防止を実現します。
 
 ## **2. 目的と主な利用シーン**

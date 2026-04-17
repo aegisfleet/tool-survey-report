@@ -42,9 +42,6 @@ relationships:
     - Flutter
 ---
 
-
-
-
 # **Fluorite Game Engine 調査レポート**
 
 ## **1. 基本情報**
@@ -55,7 +52,7 @@ relationships:
 * **公式サイト**: [https://fluorite.game/](https://fluorite.game/)
 * **関連リンク**:
   * ドキュメント: [公式サイト参照](https://fluorite.game/) (Coming Soon)
-* **カテゴリ**: ゲームエンジン / Flutterパッケージ
+* **カテゴリ**: モバイル開発 / Flutterパッケージ
 * **概要**: Flutterと完全に統合された初のコンソールグレードゲームエンジン。C++で書かれた高性能なECS（Entity-Component-System）コアを持ちながら、Dartでゲームロジックを記述できる。レンダリングにはGoogleのFilamentを採用し、Vulkanなどの最新APIに対応している。
 
 ## **2. 目的と主な利用シーン**

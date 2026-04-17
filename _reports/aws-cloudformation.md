@@ -57,9 +57,6 @@ relationships:
     - AWS MCP Servers
 ---
 
-
-
-
 # **AWS CloudFormation 調査レポート**
 
 ## **1. 基本情報**

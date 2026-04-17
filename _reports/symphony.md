@@ -43,9 +43,6 @@ relationships:
     - Linear
 ---
 
-
-
-
 # **Symphony 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +54,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/openai/symphony](https://github.com/openai/symphony)
   * CodeWiki: [https://codewiki.google/github.com/openai/symphony](https://codewiki.google/github.com/openai/symphony)
-* **カテゴリ**: AIエージェント・オーケストレーション
+* **カテゴリ**: 自律型AIエージェント
 * **概要**: Symphonyは、コーディングエージェントの作業を分離された自律的な実装プロセスに変換するツールです。エンジニアがエージェントを直接監督する代わりに、プロジェクトのタスク単位で作業を管理できるようになります。
 
 ## **2. 目的と主な利用シーン**

@@ -58,9 +58,6 @@ relationships:
     - Ferret-UI
 ---
 
-
-
-
 # **UI-TARS Desktop 調査レポート**
 
 ## **1. 基本情報**
@@ -81,7 +78,7 @@ relationships:
   * DeepWiki: [https://deepwiki.com/bytedance/UI-TARS-desktop](https://deepwiki.com/bytedance/UI-TARS-desktop)
   * モデルリポジトリ: [https://github.com/bytedance/UI-TARS](https://github.com/bytedance/UI-TARS)
   * 論文 (arXiv): [UI-TARS: Pioneering Automated GUI Interaction with Native Agents](https://arxiv.org/abs/2501.12326)
-* **カテゴリ**: 自律型AIエージェント, 自動化ツール
+* **カテゴリ**: 自律型AIエージェント
 * **概要**: ByteDanceが開発した「UI-TARS」モデルをベースにした、デスクトップ操作用の自律型AIエージェントアプリケーション。Vision-Language Model (VLM) を活用し、人間のように画面を見てクリックや入力を行うことができ、アクセシビリティツリーの情報も併用することで高い操作精度を実現している。Windows、macOS、Linuxで動作する。
 
 ## **2. 目的と主な利用シーン**

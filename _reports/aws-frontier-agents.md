@@ -51,9 +51,6 @@ relationships:
     - AWS DevOps Agent
 ---
 
-
-
-
 # **AWS Frontier Agents 調査レポート**
 
 ## **1. 基本情報**

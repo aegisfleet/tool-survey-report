@@ -58,7 +58,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/apache/superset](https://github.com/apache/superset)
   * レビューサイト: [ITreview](https://research.com/software/reviews/apache-superset)
-* **カテゴリ**: BIツール
+* **カテゴリ**: データ分析
 * **概要**: Apache Supersetは、高速で軽量、かつ直感的な操作が可能な最新のデータ探索・可視化プラットフォームである。シンプルな折れ線グラフから詳細な地理空間チャートまで、あらゆるスキルセットのユーザーがデータを簡単に探索し、視覚化できる豊富なオプションを備えている。
 
 ## **2. 目的と主な利用シーン**

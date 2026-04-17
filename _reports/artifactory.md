@@ -53,9 +53,6 @@ relationships:
     - Docker
 ---
 
-
-
-
 # **JFrog Artifactory 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
   * GitHub: [https://github.com/jfrog](https://github.com/jfrog)
   * ドキュメント: [https://jfrog.com/help/r/artifactory](https://jfrog.com/help/r/artifactory)
   * レビューサイト: [G2](https://www.g2.com/products/jfrog-artifactory/reviews)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: パッケージ管理
 * **概要**: JFrog Artifactoryは、ソフトウェア開発ライフサイクル（SDLC）全体を通じてバイナリとアーティファクトを管理・制御・追跡するためのユニバーサルリポジトリマネージャーです。Maven, npm, Docker, PyPI, Helmなど30以上のパッケージタイプをネイティブにサポートし、「Single Source of Truth（信頼できる唯一の情報源）」として機能します。
 
 ## **2. 目的と主な利用シーン**

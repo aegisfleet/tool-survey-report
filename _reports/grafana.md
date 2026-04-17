@@ -9,7 +9,7 @@ date: '2026-03-01'
 last_updated: '2026-03-01'
 tags:
   - SaaS
-  - オブザーバビリティ
+  - 監視/可観測性
   - オープンソース
   - ダッシュボード
   - 可視化
@@ -54,9 +54,6 @@ relationships:
     - Splunk AppDynamics
     - New Relic
 ---
-
-
-
 
 # **Grafana 調査レポート**
 

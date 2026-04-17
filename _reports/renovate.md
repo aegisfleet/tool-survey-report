@@ -45,6 +45,7 @@ relationships:
     - Dependabot
     - pinact
 ---
+
 # **Renovate 調査レポート**
 
 ## **1. 基本情報**
@@ -56,7 +57,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/renovatebot/renovate](https://github.com/renovatebot/renovate)
   * ドキュメント: [https://docs.renovatebot.com/](https://docs.renovatebot.com/)
-* **カテゴリ**: DevSecOps / 依存関係自動更新
+* **カテゴリ**: 開発ライフサイクル管理 / 依存関係自動更新
 * **概要**:
   GitHub, GitLab, Bitbucket, Azure DevOps など多数のプラットフォームに対応した依存関係自動更新ツール。
   npm, Maven, Python, NuGet など90以上のパッケージマネージャーをサポートし、設定の柔軟性と自動化機能の豊富さが特徴。

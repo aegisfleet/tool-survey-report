@@ -44,9 +44,6 @@ relationships:
     - Docker
 ---
 
-
-
-
 # **LiteBox 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +54,7 @@ relationships:
 * **公式サイト**: [https://github.com/microsoft/litebox](https://github.com/microsoft/litebox)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/litebox](https://github.com/microsoft/litebox)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: セキュリティ/解析
 * **概要**: ホストに対するインターフェースを大幅に削減することでアタックサーフェスを減少させる、セキュリティに焦点を当てたサンドボックス型のライブラリOSです。
 
 ## **2. 目的と主な利用シーン**

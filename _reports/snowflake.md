@@ -59,7 +59,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.snowflake.com/](https://docs.snowflake.com/)
   * レビューサイト: [G2](https://www.g2.com/products/snowflake/reviews) | [Capterra](https://www.capterra.com/p/148267/Snowflake/reviews/)
-* **カテゴリ**: BIツール
+* **カテゴリ**: データ分析
 * **概要**: Snowflakeは、データウェアハウス、データレイク、データエンジニアリング、データサイエンス、データアプリケーション開発、およびデータ共有を単一のプラットフォームで提供する、完全マネージド型のクラウドデータプラットフォーム（AI Data Cloud）です。ストレージとコンピュートを分離した独自のアーキテクチャにより、高いスケーラビリティとパフォーマンスを実現しています。
 
 ## **2. 目的と主な利用シーン**

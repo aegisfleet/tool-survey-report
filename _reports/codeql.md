@@ -51,9 +51,6 @@ relationships:
     - Dependabot
 ---
 
-
-
-
 # **CodeQL 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
   * GitHub: [https://github.com/github/codeql](https://github.com/github/codeql)
   * CodeWiki: [https://codewiki.google/github.com/github/codeql](https://codewiki.google/github.com/github/codeql) （クエリとライブラリのリポジトリ）
   * ドキュメント: [https://codeql.github.com/docs/](https://codeql.github.com/docs/)
-* **カテゴリ**: セキュリティ・静的解析 (SAST)
+* **カテゴリ**: CDN/セキュリティ
 * **概要**: GitHubが開発・提供するセマンティックコード解析エンジン。コードをデータベース化し、SQLのようなクエリ言語「QL」を使って検索することで、脆弱性やバグを特定する。GitHub Advanced Securityの中核技術として利用されている。
 
 ## **2. 目的と主な利用シーン**

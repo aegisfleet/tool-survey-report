@@ -45,9 +45,6 @@ relationships:
   parent: null
 ---
 
-
-
-
 # **clasp 調査レポート**
 
 ## **1. 基本情報**
@@ -59,7 +56,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/google/clasp](https://github.com/google/clasp)
   * ドキュメント: [https://github.com/google/clasp/tree/master/docs](https://github.com/google/clasp/tree/master/docs)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ライフサイクル管理
 * **概要**: claspはGoogle Apps Script（GAS）のプロジェクトをブラウザ上のエディタではなく、ローカル環境のターミナルから開発・デプロイ・管理できるようにするオープンソースのCLIツールである。コードをGitなどでバージョン管理可能にし、モダンな開発フローを実現する。
 
 ## **2. 目的と主な利用シーン**

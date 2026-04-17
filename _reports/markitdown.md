@@ -2,7 +2,7 @@
 title: MarkItDown 調査レポート
 tool_name: MarkItDown
 tool_reading: マークイットダウン
-category: 開発者ツール
+category: AI開発ライブラリ
 developer: Microsoft
 official_site: https://github.com/microsoft/markitdown
 date: '2026-04-11'
@@ -10,7 +10,7 @@ last_updated: '2026-04-11'
 tags:
   - Python
   - Markdown
-  - LLM
+  - 大規模言語モデル
   - RAG
   - オープンソース
 description: 様々なファイルやOfficeドキュメントをMarkdownに変換し、LLM等でのテキスト分析に活用できるPythonの軽量ユーティリティ
@@ -53,7 +53,7 @@ relationships:
 * **公式サイト**: [https://github.com/microsoft/markitdown](https://github.com/microsoft/markitdown)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/markitdown](https://github.com/microsoft/markitdown)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: MarkItDownは、PDF、Word、Excel、PowerPoint、画像などの多様なファイルをMarkdown形式に変換するPythonライブラリです。大規模言語モデル（LLM）等でのテキスト分析やRAG構成時のデータ前処理に最適です。
 
 ## **2. 目的と主な利用シーン**

@@ -2,7 +2,7 @@
 title: Dify 調査レポート
 tool_name: Dify
 tool_reading: ディファイ
-category: AI開発基盤
+category: AIエージェント基盤
 developer: LangGenius, Inc.
 official_site: https://dify.ai/
 date: '2026-02-11'
@@ -63,9 +63,6 @@ relationships:
     - Brainbase
 ---
 
-
-
-
 # **Dify 調査レポート**
 
 ## **1. 基本情報**
@@ -84,7 +81,7 @@ relationships:
   * GitHub: [https://github.com/langgenius/dify](https://github.com/langgenius/dify)
   * ドキュメント: [https://docs.dify.ai/](https://docs.dify.ai/)
   * レビューサイト: [G2](https://www.g2.com/products/dify-ai/reviews)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: Difyは、LLM（大規模言語モデル）を活用したAIアプリケーションを迅速に開発・運用するためのオープンソースプラットフォームです。直感的なUIを通じて、AIワークフローの構築、RAG（Retrieval-Augmented Generation）パイプラインの作成、AIエージェントの開発、モデル管理、運用監視（オブザーバビリティ）などを一元的に行えます。ノーコード・ローコードでの開発に対応しており、プロトタイピングから本番運用までをシームレスに支援します。
 
 ## **2. 目的と主な利用シーン**

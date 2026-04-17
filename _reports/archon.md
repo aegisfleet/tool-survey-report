@@ -2,14 +2,14 @@
 title: Archon 調査レポート
 tool_name: Archon
 tool_reading: アルコン
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Coleam00 (オープンソース)
 official_site: https://archon.diy
 date: '2026-04-10'
 last_updated: '2026-04-10'
 tags:
   - オープンソース
-  - AIエージェント
+  - エージェント
   - ワークフロー
   - 自動化
 description: AIコーディングエージェントのためのワークフローエンジン。開発プロセスをYAMLで定義し、決定論的かつ再現可能なAIコーディングを実現する。
@@ -56,7 +56,7 @@ relationships:
 * **公式サイト**: [https://archon.diy](https://archon.diy)
 * **関連リンク**:
   * GitHub: [https://github.com/coleam00/Archon](https://github.com/coleam00/Archon)
-* **カテゴリ**: AI コーディングエージェント
+* **カテゴリ**: AIエージェント基盤
 * **概要**: ArchonはAIコーディングエージェントのためのワークフローエンジンである。プランニング、実装、検証、コードレビュー、PR作成といった開発プロセスをYAMLベースで定義し、AIを使ったコーディングを決定論的かつ再現可能なものにする。
 
 ## **2. 目的と主な利用シーン**

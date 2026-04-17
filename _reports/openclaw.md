@@ -51,9 +51,6 @@ relationships:
     - AutoGPT
 ---
 
-
-
-
 # **OpenClaw 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)
   * ドキュメント: [https://docs.openclaw.ai/](https://docs.openclaw.ai/)
-* **カテゴリ**: AIエージェント / パーソナルアシスタント
+* **カテゴリ**: 自律型AIエージェント / パーソナルアシスタント
 * **概要**: ユーザー自身のマシン上で動作するオープンソースのパーソナルAIアシスタント。WhatsAppやTelegramなどの使い慣れたチャットアプリを通じて指示を出し、Webブラウジング、ファイル操作、カレンダー管理など多岐にわたるタスクを自動化できる。プライバシーを重視した設計が特徴。
 
 ## **2. 目的と主な利用シーン**

@@ -45,9 +45,6 @@ relationships:
     - Stable Diffusion
 ---
 
-
-
-
 # **Seedance 2.0 (SeaDance AI) 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
 * **公式サイト**: [https://seadanceai.com/](https://seadanceai.com/)
 * **関連リンク**:
   * ドキュメント: 公式サイト内にFAQあり
-* **カテゴリ**: AI画像・動画生成
+* **カテゴリ**: 動画/メディア
 * **概要**: FLUX.2、Veo3.1、Sora 2 pro、Kling 3.0、Wan 3.0といった複数の最先端AIモデルを統合した、オールインワンのAI画像・動画生成プラットフォーム。高品質なビジュアルコンテンツの生成から編集までをワンストップで提供する。
 
 ## **2. 目的と主な利用シーン**

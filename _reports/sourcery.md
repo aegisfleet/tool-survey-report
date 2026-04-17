@@ -49,9 +49,6 @@ relationships:
     - SonarQube
 ---
 
-
-
-
 # **Sourcery 調査レポート**
 
 ## **1. 基本情報**

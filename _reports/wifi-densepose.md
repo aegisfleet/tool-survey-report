@@ -45,6 +45,7 @@ links:
   deepwiki: https://deepwiki.com/ruvnet/wifi-densepose
 relationships: {}
 ---
+
 # **WiFi DensePose 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +58,7 @@ relationships: {}
   * GitHub: [https://github.com/ruvnet/wifi-densepose](https://github.com/ruvnet/wifi-densepose)
   * CodeWiki: [https://codewiki.google/github.com/ruvnet/wifi-densepose](https://codewiki.google/github.com/ruvnet/wifi-densepose)
   * DeepWiki: [https://deepwiki.com/ruvnet/wifi-densepose](https://deepwiki.com/ruvnet/wifi-densepose)
-* **カテゴリ**: IoT/ハードウェア
+* **カテゴリ**: セキュリティ/解析 / ハードウェア
 * **概要**:
   市販のWiFi信号（CSIデータなど）を用いて、カメラや専用のウェアラブルデバイスを一切使用せずに、リアルタイムで人間の姿勢推定、バイタルサインの監視、および存在検知を行うシステム。
   物理ベースの信号処理と機械学習（RuVectorクレートを活用）を組み合わせ、高い精度と高速な処理（Rust製で54K fps）を実現している。

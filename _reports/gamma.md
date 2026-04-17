@@ -55,9 +55,6 @@ relationships:
     - Speaker Deck
 ---
 
-
-
-
 # **Gamma 調査レポート**
 
 ## **1. 基本情報**

@@ -35,9 +35,6 @@ links:
 relationships: {}
 ---
 
-
-
-
 # **Notely Voice 調査レポート**
 
 ## **1. 基本情報**

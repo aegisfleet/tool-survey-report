@@ -47,6 +47,7 @@ links:
 relationships:
   related_tools: []
 ---
+
 # **Arnis 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +58,7 @@ relationships:
 * **公式サイト**: [https://arnismc.com/](https://arnismc.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/louis-e/arnis](https://github.com/louis-e/arnis)
-* **カテゴリ**: ゲーム開発ツール
+* **カテゴリ**: 開発ユーティリティ
 * **概要**: 現実世界の地理データ（OpenStreetMapや標高データ）を元に、Minecraftのワールド（Java版およびBedrock版）を自動生成するオープンソースのデスクトップアプリケーション。直感的なUIで地図上のエリアを選択するだけで、建物、道路、地形をMinecraft内に再現できる。
 
 ## **2. 目的と主な利用シーン**

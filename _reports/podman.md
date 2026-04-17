@@ -55,9 +55,6 @@ relationships:
     - Wine
 ---
 
-
-
-
 # **Podman 調査レポート**
 
 ## **1. 基本情報**
@@ -70,7 +67,7 @@ relationships:
   * GitHub: [https://github.com/containers/podman](https://github.com/containers/podman)
   * CodeWiki: [https://codewiki.google/github.com/containers/podman](https://codewiki.google/github.com/containers/podman)
   * ドキュメント: [https://docs.podman.io/en/latest/](https://docs.podman.io/en/latest/)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: ビルドツール/ランタイム
 * **概要**: Podman (Pod Manager) は、OCI(Open Container Initiative)準拠のコンテナエンジンです。Dockerの代替として設計され、デーモンレスアーキテクチャとルートレスコンテナ実行を特徴とし、セキュリティとKubernetesとの親和性に優れています。
 
 ## **2. 目的と主な利用シーン**

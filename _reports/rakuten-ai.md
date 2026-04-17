@@ -50,9 +50,6 @@ relationships:
     - さくらのAI
 ---
 
-
-
-
 # **Rakuten AI 調査レポート**
 
 ## **1. 基本情報**

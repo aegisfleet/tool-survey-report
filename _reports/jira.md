@@ -57,9 +57,6 @@ relationships:
     - QualityForward
 ---
 
-
-
-
 # **Jira 調査レポート**
 
 ## **1. 基本情報**

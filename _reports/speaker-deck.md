@@ -51,9 +51,6 @@ relationships:
     - Canva
 ---
 
-
-
-
 # **Speaker Deck 調査レポート**
 
 ## **1. 基本情報**

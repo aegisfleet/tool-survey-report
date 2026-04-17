@@ -2,7 +2,7 @@
 title: Agent Skills 調査レポート
 tool_name: Agent Skills
 tool_reading: エージェント スキルズ
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Anthropic / Agent Skills Project
 official_site: https://agentskills.io/home
 date: '2026-02-03'
@@ -44,9 +44,6 @@ relationships:
     - Claude
 ---
 
-
-
-
 # **Agent Skills 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
   * GitHub: [https://github.com/agentskills/agentskills](https://github.com/agentskills/agentskills)
   * ドキュメント: [https://agentskills.io/what-are-skills](https://agentskills.io/what-are-skills)
   * 仕様書: [https://agentskills.io/specification](https://agentskills.io/specification)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: Agent Skillsは、AIエージェントに対して専門知識や特定のタスク実行能力（スキル）を付与するための、軽量でオープンな標準フォーマットです。フォルダとMarkdownファイル (`SKILL.md`) をベースにしており、エージェントが必要なコンテキストを効率的に読み込み、実行することを可能にします。
 
 ## **2. 目的と主な利用シーン**

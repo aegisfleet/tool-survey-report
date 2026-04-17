@@ -53,9 +53,6 @@ relationships:
     - Agent Trace
 ---
 
-
-
-
 # **Google Jules 調査レポート**
 
 ## **1. 基本情報**

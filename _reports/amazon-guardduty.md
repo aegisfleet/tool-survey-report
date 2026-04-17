@@ -48,9 +48,6 @@ relationships:
     - AWS Security Hub
 ---
 
-
-
-
 # **Amazon GuardDuty 調査レポート**
 
 ## **1. 基本情報**
@@ -69,7 +66,7 @@ relationships:
   * ドキュメント: [https://docs.aws.amazon.com/guardduty/](https://docs.aws.amazon.com/guardduty/)
   * 料金ページ: [https://aws.amazon.com/guardduty/pricing/](https://aws.amazon.com/guardduty/pricing/)
   * FAQ: [https://aws.amazon.com/guardduty/faqs/](https://aws.amazon.com/guardduty/faqs/)
-* **カテゴリ**: セキュリティ
+* **カテゴリ**: CDN/セキュリティ
 * **概要**: Amazon GuardDutyは、AWSアカウント、ワークロード、およびデータを保護するためのインテリジェントな脅威検出サービスです。AWS環境内のログを継続的に監視・分析し、機械学習と脅威インテリジェンスを活用して、不正アクセスやマルウェア感染などのセキュリティ脅威を自動的に検出します。
 
 ## **2. 目的と主な利用シーン**

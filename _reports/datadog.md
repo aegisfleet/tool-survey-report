@@ -12,7 +12,7 @@ tags:
   - APM
   - DevOps
   - SaaS
-  - オブザーバビリティ
+  - 監視/可観測性
   - セキュリティ
   - ログ管理
   - 監視
@@ -57,9 +57,6 @@ relationships:
     - Amazon OpenSearch Service
     - Kubernetes
 ---
-
-
-
 
 # **Datadog 調査レポート**
 

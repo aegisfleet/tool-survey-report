@@ -46,9 +46,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **Irodori-TTS 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
   * GitHub: [https://github.com/Aratako/Irodori-TTS](https://github.com/Aratako/Irodori-TTS)
   * Hugging Face Model Card: [https://huggingface.co/Aratako/Irodori-TTS-500M](https://huggingface.co/Aratako/Irodori-TTS-500M)
   * Demo Space: [https://huggingface.co/spaces/Aratako/Irodori-TTS-500M-Demo](https://huggingface.co/spaces/Aratako/Irodori-TTS-500M-Demo)
-* **カテゴリ**: AI/音声合成
+* **カテゴリ**: 動画/メディア / 音声合成
 * **概要**: Irodori-TTSは、Rectified Flow Diffusion Transformer (RF-DiT) アーキテクチャをベースにした日本語テキスト音声合成（TTS）モデルです。連続的なDACVAE潜在変数を用いており、少量の参照音声からのゼロショットボイスクローニングや、入力テキストに絵文字を埋め込むことでのスタイル・効果音制御に対応しています。
 
 ## **2. 目的と主な利用シーン**

@@ -1,44 +1,43 @@
 ---
-title: AI-Driven Software Development Platform 調査レポート
-tool_name: AI-Driven Software Development Platform
-tool_reading: エーアイ ドリブン ソフトウェア デベロップメント プラットフォーム / AI-DSDP
-category: AI開発基盤
-developer: 富士通株式会社
-official_site: https://global.fujitsu/ja-jp/technology/key-technologies/ai/ai-dsdp
+category: AI開発ライブラリ
 date: '2026-04-11'
+description: 要件定義から結合テストまでのシステム開発全工程を自動化する、富士通のエンタープライズ向けAI開発プラットフォーム
+developer: 富士通株式会社
+evaluation:
+  base_score: 70
+  minus_points:
+  - point: -5
+    reason: エンタープライズ向けのソリューションであり、現時点での導入の敷居やコスト、一般的な個人開発者向けのアクセスに制限がある
+  plus_points:
+  - point: 10
+    reason: 複雑な既存システムの改修をAIエージェントが自律的に全工程(要件定義からテストまで)実行する画期的なアプローチ
+  - point: 5
+    reason: 独自のLLM「Takane」を活用した高い日本語・法令文書の理解力
+  - point: 5
+    reason: 既存システムやドメイン知識をAI活用可能な形式に再構築する「AI-Ready Engineering」の実現
+  score: 85
+  summary: 既存の大規模システムの改修・保守という日本のシステム開発における重大な課題に対し、複数のAIエージェントの協調によってアプローチする強力なエンタープライズ向けソリューション
 last_updated: '2026-04-11'
-tags:
-  - エンタープライズ
-  - AI開発基盤
-  - レガシーモダナイゼーション
-  - 自動化
-description: 要件定義から結合テストまでのシステム開発全工程を自動化する、富士通のエンタープライズ向けAI開発基盤
+links:
+  documentation: https://global.fujitsu/ja-jp/pr/news/2026/02/17-01
+official_site: https://global.fujitsu/ja-jp/technology/key-technologies/ai/ai-dsdp
 quick_summary:
   has_free_plan: false
   is_oss: false
+  latest_highlight: 2026年2月17日にAIエージェントによるシステム開発を刷新する基盤を発表・運用開始
   starting_price: 個別見積もり
   target_users:
-    - エンタープライズ
-    - システムインテグレーター
-    - ITエンジニア
-  latest_highlight: 2026年2月17日にAIエージェントによるシステム開発を刷新する基盤を発表・運用開始
+  - エンタープライズ
+  - システムインテグレーター
+  - ITエンジニア
   update_frequency: 不定期
-evaluation:
-  score: 85
-  base_score: 70
-  plus_points:
-    - point: 10
-      reason: 複雑な既存システムの改修をAIエージェントが自律的に全工程(要件定義からテストまで)実行する画期的なアプローチ
-    - point: 5
-      reason: 独自のLLM「Takane」を活用した高い日本語・法令文書の理解力
-    - point: 5
-      reason: 既存システムやドメイン知識をAI活用可能な形式に再構築する「AI-Ready Engineering」の実現
-  minus_points:
-    - point: -5
-      reason: エンタープライズ向けのソリューションであり、現時点での導入の敷居やコスト、一般的な個人開発者向けのアクセスに制限がある
-  summary: 既存の大規模システムの改修・保守という日本のシステム開発における重大な課題に対し、複数のAIエージェントの協調によってアプローチする強力なエンタープライズ向けソリューション
-links:
-  documentation: https://global.fujitsu/ja-jp/pr/news/2026/02/17-01
+tags:
+- エンタープライズ
+- レガシーモダナイゼーション
+- 自動化
+title: AI-Driven Software Development Platform 調査レポート
+tool_name: AI-Driven Software Development Platform
+tool_reading: エーアイ ドリブン ソフトウェア デベロップメント プラットフォーム / AI-DSDP
 ---
 
 # **AI-Driven Software Development Platform 調査レポート**
@@ -51,7 +50,7 @@ links:
 * **公式サイト**: [https://global.fujitsu/ja-jp/technology/key-technologies/ai/ai-dsdp](https://global.fujitsu/ja-jp/technology/key-technologies/ai/ai-dsdp)
 * **関連リンク**:
   * プレスリリース: [https://global.fujitsu/ja-jp/pr/news/2026/02/17-01](https://global.fujitsu/ja-jp/pr/news/2026/02/17-01)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: 既存システムを対象に、要件定義から設計、実装、結合テストに至るまでの開発工程をAIにより自動化する開発基盤です。独自の大規模言語モデル「Takane」を中核とする複数のAIエージェントが協調して動作し、人の判断や創造性を支える基盤として機能します。
 
 ## **2. 目的と主な利用シーン**
@@ -129,7 +128,7 @@ links:
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
 | **レガシーシステム言語（Java / COBOL等）** | ◎ | 長年の運用で複雑化したエンタープライズ資産の仕様をAIが読み解き、改修箇所を特定することに特化している。 | 暗黙知や不完全なドキュメントが多い場合、AI-Ready化の事前作業が膨大になる可能性がある。 |
-| **モダンWebスタック（React / Node.js等）** | ◯ | 通常のAI開発基盤と同様に対応可能。 | 本基盤の最大の強みである「法令理解」や「大規模既存システムの解析」というメリットが活きにくい小規模プロジェクトにはオーバースペックとなる可能性がある。 |
+| **モダンWebスタック（React / Node.js等）** | ◯ | 通常のAI開発プラットフォームと同様に対応可能。 | 本基盤の最大の強みである「法令理解」や「大規模既存システムの解析」というメリットが活きにくい小規模プロジェクトにはオーバースペックとなる可能性がある。 |
 
 ## **11. セキュリティとコンプライアンス**
 

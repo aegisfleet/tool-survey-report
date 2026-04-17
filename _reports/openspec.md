@@ -48,9 +48,6 @@ relationships:
     - Windsurf
 ---
 
-
-
-
 # **OpenSpec 調査レポート**
 
 ## **1. 基本情報**
@@ -63,7 +60,7 @@ relationships:
   * GitHub: [https://github.com/Fission-AI/OpenSpec/](https://github.com/Fission-AI/OpenSpec/)
   * ドキュメント: [https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md](https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md)
   * Discord: [https://discord.gg/YctCnvvshC](https://discord.gg/YctCnvvshC)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: API/仕様管理
 * **概要**: OpenSpecは、AIコーディングアシスタントを利用する開発者向けの、軽量な仕様駆動型（Spec-driven）フレームワークです。チャットセッションが終了してもコンテキストが消えないよう、仕様をコードベース内に保存・管理します。
 
 ## **2. 目的と主な利用シーン**

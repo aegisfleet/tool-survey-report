@@ -51,9 +51,6 @@ relationships:
     - Snowflake
 ---
 
-
-
-
 # **Tableau 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
   * ドキュメント: [https://help.tableau.com/current/pro/desktop/ja-jp/default.htm](https://help.tableau.com/current/pro/desktop/ja-jp/default.htm)
   * レビューサイト: [G2](https://www.g2.com/products/tableau/reviews)
   * Tableau Public (無料版): [https://public.tableau.com/s/](https://public.tableau.com/s/)
-* **カテゴリ**: BIツール
+* **カテゴリ**: データ分析
 * **概要**: Tableauは、データを視覚的に分析・共有するためのビジネスインテリジェンス（BI）プラットフォームです。ドラッグ＆ドロップによる直感的な操作で、複雑なデータから美しいダッシュボードを作成できる点が特徴です。Salesforceによる買収以降、AI機能（Einstein）との統合が進んでいます。
 
 ## **2. 目的と主な利用シーン**

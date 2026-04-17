@@ -50,9 +50,6 @@ relationships:
     - Google Jules
 ---
 
-
-
-
 # **Agent Zero 調査レポート**
 
 ## **1. 基本情報**

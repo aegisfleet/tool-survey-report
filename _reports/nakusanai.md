@@ -40,9 +40,6 @@ relationships:
     - ワスレナイ
 ---
 
-
-
-
 # **ナクサナイ 調査レポート**
 
 ## **1. 基本情報**
@@ -55,7 +52,7 @@ relationships:
   * iOSアプリ (App Store): [https://apps.apple.com/jp/app/%E3%83%8A%E3%82%AF%E3%82%B5%E3%83%8A%E3%82%A4/id6755753166](https://apps.apple.com/jp/app/%E3%83%8A%E3%82%AF%E3%82%B5%E3%83%8A%E3%82%A4/id6755753166)
   * Androidアプリ (Google Play): [https://play.google.com/store/apps/details?id=jp.shiftinc.nakusanai](https://play.google.com/store/apps/details?id=jp.shiftinc.nakusanai)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/nakusanai/profile)
-* **カテゴリ**: 業務系ツール
+* **カテゴリ**: その他
 * **概要**: 資産と契約の情報を紐づけて一元管理できるクラウド型の資産管理サービス。煩雑なExcel管理から脱却し、スマートフォンアプリでのQRコードスキャンを利用した棚卸しや契約更新漏れ防止を完全無料で実現する。
 
 ## **2. 目的と主な利用シーン**

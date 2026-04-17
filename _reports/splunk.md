@@ -12,7 +12,7 @@ tags:
   - DevOps
   - SIEM
   - SaaS
-  - オブザーバビリティ
+  - 監視/可観測性
   - セキュリティ
   - ビッグデータ
   - ログ管理
@@ -56,9 +56,6 @@ relationships:
     - Amazon OpenSearch Service
     - Grafana
 ---
-
-
-
 
 # **Splunk 調査レポート**
 

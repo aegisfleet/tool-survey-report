@@ -2,7 +2,7 @@
 title: Amazon Bedrock 調査レポート
 tool_name: Amazon Bedrock
 tool_reading: アマゾン ベッドロック
-category: AI開発基盤
+category: LLMプラットフォーム
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/bedrock/
 date: '2026-03-26'
@@ -39,7 +39,7 @@ evaluation:
       reason: 料金体系がモデルやリージョン毎に異なり複雑
     - point: -2
       reason: 各社の最新モデルが利用可能になるまでにタイムラグが生じることがある
-  summary: 豊富なモデル選択肢とAWS連携が強みのエンタープライズ向けAI開発基盤だが、料金体系の複雑さに注意が必要。
+  summary: 豊富なモデル選択肢とAWS連携が強みのエンタープライズ向けAI開発プラットフォームだが、料金体系の複雑さに注意が必要。
 links:
   documentation: https://docs.aws.amazon.com/bedrock/
 relationships:
@@ -54,9 +54,6 @@ relationships:
     - さくらのAI
     - Strands Agents
 ---
-
-
-
 
 # **Amazon Bedrock 調査レポート**
 
@@ -75,7 +72,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/bedrock/](https://docs.aws.amazon.com/bedrock/)
   * レビューサイト: [G2](https://www.g2.com/products/amazon-bedrock/reviews)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: LLMプラットフォーム
 * **概要**: Amazon Bedrockは、Anthropic, Meta, Mistral AI, Cohere, Amazonなどの主要な高性能基盤モデル（FM）を単一のAPIを介して提供するフルマネージドサービスです。サーバーレスな環境で、RAG（検索拡張生成）やエージェント機能などを活用し、セキュアな生成AIアプリケーションを迅速に構築・デプロイできます。
 
 ## **2. 目的と主な利用シーン**

@@ -2,7 +2,7 @@
 title: AgentScope 調査レポート
 tool_name: AgentScope
 tool_reading: エージェントスコープ
-category: AI開発基盤
+category: AIエージェント基盤
 developer: Alibaba
 official_site: https://doc.agentscope.io/
 date: '2026-03-26'
@@ -55,9 +55,6 @@ relationships:
     - AutoGPT
 ---
 
-
-
-
 # **AgentScope 調査レポート**
 
 ## **1. 基本情報**
@@ -69,7 +66,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/agentscope-ai/agentscope](https://github.com/agentscope-ai/agentscope)
   * ドキュメント: [https://doc.agentscope.io/tutorial/index.html](https://doc.agentscope.io/tutorial/index.html)
-* **カテゴリ**: マルチエージェント基盤
+* **カテゴリ**: AIエージェント基盤
 * **概要**: AgentScopeは、Alibabaがオープンソースとして公開している、マルチエージェントAIアプリケーションを構築するための本番環境向けフレームワークです。単純なReActエージェントから複雑なマルチエージェントワークフローまで、柔軟なメッセージルーティング（MsgHub）と豊富なツール・メモリ抽象化を用いて構築できます。
 
 ## **2. 目的と主な利用シーン**

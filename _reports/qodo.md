@@ -52,9 +52,6 @@ relationships:
     - Amazon Q Developer
 ---
 
-
-
-
 # **Qodo 調査レポート**
 
 ## **1. 基本情報**

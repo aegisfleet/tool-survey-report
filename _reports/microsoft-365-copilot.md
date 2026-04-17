@@ -56,9 +56,6 @@ relationships:
     - Gamma
 ---
 
-
-
-
 # **Microsoft 365 Copilot 調査レポート**
 
 ## **1. 基本情報**

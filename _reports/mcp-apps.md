@@ -2,7 +2,7 @@
 title: MCP Apps 調査レポート
 tool_name: MCP Apps
 tool_reading: エムシーピー アップス
-category: AI開発基盤
+category: MCPサーバー/基盤
 developer: Anthropic (Model Context Protocol Project)
 official_site: https://modelcontextprotocol.io/docs/extensions/apps
 date: '2026-03-10'
@@ -50,9 +50,6 @@ relationships:
     - Agent Skills
 ---
 
-
-
-
 # **MCP Apps 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/modelcontextprotocol/ext-apps](https://github.com/modelcontextprotocol/ext-apps)
   * ドキュメント: [https://modelcontextprotocol.io/docs/extensions/apps](https://modelcontextprotocol.io/docs/extensions/apps)
-* **カテゴリ**: 開発者ツール / AIエージェント拡張
+* **カテゴリ**: MCPサーバー/基盤 / AIエージェント拡張
 * **概要**: AIチャットインターフェース内でインタラクティブなUIを表示するためのModel Context Protocol (MCP) の拡張機能。テキストだけでは表現しきれないデータ可視化や複雑な操作フォームなどを、チャットのコンテキスト内で安全に提供することを可能にする。
 
 ## **2. 目的と主な利用シーン**

@@ -28,7 +28,10 @@
   - **AIコードエディタ**: AI機能が統合されたコードエディタ（例：Cursor, Windsurf）
   - **自律型AIエージェント**: 自律的にタスクを実行するAIシステム（例：Devin, Claude Code, OpenHands）
   - **生成AI**: 汎用AIチャットボット・言語モデル（例：ChatGPT, Claude, Gemini）
-  - **AI開発基盤**: LLM開発、RAG、MCPサーバー/基盤、エージェント基盤（例：Hugging Face, Dify, LangChain, MCP）
+  - **AIエージェント基盤**: エージェント構築フレームワーク、自律型エージェント用プロトコル、オーケストレーション（例：LangChain, CrewAI, Microsoft Agent Framework）
+  - **LLMプラットフォーム**: マネージドLLMサービス、クラウドAI基盤、ローカルLLM実行環境（例：Hugging Face, Amazon Bedrock, Vertex AI, Ollama）
+  - **MCPサーバー/基盤**: Model Context Protocolに関連する基盤・リファレンス実装・サーバー（例：MCP, AWS MCP Servers）
+  - **AI開発ライブラリ**: 機械学習ライブラリ、SDK、AI用可観測性/トレースツール（例：PyTorch, TensorFlow, Agent Trace）
   - **AI検索エンジン**: AI技術を活用した検索サービス（例：Perplexity, Felo）
 
   **開発ツール**
@@ -56,7 +59,7 @@
   **インフラ/運用**
   - **構成管理**: Infrastructure as Code・プロビジョニングツール（例：Terraform, Ansible）
   - **インフラ/クラウド**: クラウドサービス・インフラ管理（例：AWS, Azure）
-  - **監視/可観測性**: 監視・ログ・APMツール（例：Datadog, Grafana）
+  - **監視/可観測性**: 監視・ログ・APM・オブザーバビリティツール（例：Datadog, Grafana, Instana）
   - **CDN/セキュリティ**: CDN・WAF・セキュリティサービス（例：Cloudflare）
 
   **業務系ツール**

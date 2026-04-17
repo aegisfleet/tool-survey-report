@@ -46,9 +46,6 @@ relationships:
   related_tools: []
 ---
 
-
-
-
 # **AdGuard 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/AdguardTeam](https://github.com/AdguardTeam)
   * ドキュメント: [https://adguard.com/kb/](https://adguard.com/kb/)
-* **カテゴリ**: セキュリティ
+* **カテゴリ**: CDN/セキュリティ
 * **概要**: Web上の広告、トラッカー、悪意のあるドメインをブロックする包括的なソフトウェアおよびサービス群です。ブラウザ拡張機能にとどまらず、Windows、Mac、Android、iOS向けのスタンドアロンアプリやDNS、VPNサービスも提供しています。
 
 ## **2. 目的と主な利用シーン**

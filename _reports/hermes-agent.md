@@ -9,7 +9,7 @@ date: '2026-04-10'
 last_updated: '2026-04-10'
 tags:
   - オープンソース
-  - AIエージェント
+  - エージェント
   - 自動化
 description: 自己改善ループを備え、時間とともに成長し、サーバー上で動作してタスクを自律的に実行するAIエージェント。
 quick_summary:
@@ -56,7 +56,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
   * ドキュメント: [https://hermes-agent.nousresearch.com/docs/](https://hermes-agent.nousresearch.com/docs/)
-* **カテゴリ**: AIエージェント
+* **カテゴリ**: 自律型AIエージェント
 * **概要**: Nous Researchによって開発された、時間とともに成長し、自律的にタスクを実行するAIエージェント。サーバー上に常駐し、学習ループを備えているため、使用されるほどに賢くなります。
 
 ## **2. 目的と主な利用シーン**

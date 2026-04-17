@@ -2,7 +2,7 @@
 title: Model Context Protocol (MCP) 調査レポート
 tool_name: Model Context Protocol
 tool_reading: モデルコンテキストプロトコル
-category: AI開発基盤
+category: MCPサーバー/基盤
 developer: Anthropic
 official_site: https://modelcontextprotocol.io/
 date: '2026-02-03'
@@ -56,9 +56,6 @@ relationships:
     - Mobile Next
 ---
 
-
-
-
 # **Model Context Protocol (MCP) 調査レポート**
 
 ## **1. 基本情報**
@@ -70,7 +67,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/modelcontextprotocol](https://github.com/modelcontextprotocol)
   * ドキュメント: [https://modelcontextprotocol.io/introduction](https://modelcontextprotocol.io/introduction)
-* **カテゴリ**: 開発者ツール / AIプロトコル
+* **カテゴリ**: MCPサーバー/基盤 / AIプロトコル
 * **概要**: Model Context Protocol (MCP) は、AIモデルと外部のデータ、ツール、プロンプトを接続するためのオープン標準プロトコルです。これまでAIアプリケーションごとに個別に実装されていた統合（インテグレーション）を標準化し、一度サーバーを構築すれば、CursorやClaude Desktopなど、あらゆるMCP対応クライアントから利用可能にします。いわば「AIアプリケーションのためのUSBポート」のような役割を果たします。
 
 ## **2. 目的と主な利用シーン**

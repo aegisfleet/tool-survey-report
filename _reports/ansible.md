@@ -57,9 +57,6 @@ relationships:
     - Proxmox VE
 ---
 
-
-
-
 # **Ansible 調査レポート**
 
 ## **1. 基本情報**

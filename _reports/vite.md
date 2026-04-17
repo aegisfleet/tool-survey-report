@@ -51,9 +51,6 @@ relationships:
     - Bun
 ---
 
-
-
-
 # **Vite 調査レポート**
 
 ## **1. 基本情報**
@@ -66,7 +63,7 @@ relationships:
   * GitHub: [https://github.com/vitejs/vite](https://github.com/vitejs/vite)
   * ドキュメント: [https://ja.vite.dev/guide/](https://ja.vite.dev/guide/)
   * Discord: [https://chat.vite.dev](https://chat.vite.dev)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: ビルドツール/ランタイム
 * **概要**: Viteは、現代のWebプロジェクトのために設計された、高速で軽量なフロントエンドビルドツールです。開発時にはブラウザのネイティブESモジュール機能を利用してサーバーを即座に起動し、本番ビルド時にはRolldown（旧来はRollup）を使用して高度に最適化された静的アセットを生成します。
 
 ## **2. 目的と主な利用シーン**

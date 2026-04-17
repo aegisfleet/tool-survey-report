@@ -2,7 +2,7 @@
 title: TensorFlow 調査レポート
 tool_name: TensorFlow
 tool_reading: テンソルフロー
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: Google
 official_site: https://www.tensorflow.org/
 date: '2026-02-08'
@@ -49,9 +49,6 @@ relationships:
     - Hugging Face
 ---
 
-
-
-
 # **TensorFlow 調査レポート**
 
 ## **1. 基本情報**
@@ -71,7 +68,7 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/tensorflow/tensorflow](https://codewiki.google/github.com/tensorflow/tensorflow)
   * DeepWiki: [https://deepwiki.com/tensorflow/tensorflow](https://deepwiki.com/tensorflow/tensorflow)
   * ドキュメント: [https://www.tensorflow.org/api_docs](https://www.tensorflow.org/api_docs)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: AI開発ライブラリ
 * **概要**: TensorFlowは、研究者や開発者が機械学習モデルを容易に構築、デプロイできるように設計された、エンドツーエンドのオープンソースプラットフォームです。データフローグラフを使用した柔軟なアーキテクチャにより、デスクトップ、サーバー、モバイルデバイスなど多様なプラットフォームで計算を展開できます。
 
 ## **2. 目的と主な利用シーン**

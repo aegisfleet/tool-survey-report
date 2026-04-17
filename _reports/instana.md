@@ -2,14 +2,14 @@
 title: IBM Instana 調査レポート
 tool_name: IBM Instana
 tool_reading: インスタナ
-category: オブザーバビリティ
+category: 監視/可観測性
 developer: IBM
 official_site: https://www.ibm.com/jp-ja/products/instana
 date: '2026-04-16'
 last_updated: '2026-04-16'
 tags:
   - APM
-  - オブザーバビリティ
+  - 監視/可観測性
   - クラウド監視
   - AIOps
   - エンタープライズ
@@ -60,7 +60,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://www.ibm.com/docs/en/instana-observability](https://www.ibm.com/docs/en/instana-observability)
   * レビューサイト: [Gartner Peer Insights](https://www.gartner.com/reviews/product/ibm-instana-observability) | [ITreview](https://www.itreview.jp/products/ibm-observability-by-instana/reviews)
-* **カテゴリ**: オブザーバビリティ / APM (Application Performance Monitoring)
+* **カテゴリ**: 監視/可観測性 / APM (Application Performance Monitoring)
 * **概要**: クラウドネイティブなマイクロサービス環境向けに設計されたフルスタックの自動オブザーバビリティプラットフォームです。エージェントを1つ導入するだけでインフラからアプリまでを自動検出し、1秒単位のメトリクスと全リクエストの分散トレースを収集・分析します。AIを活用して根本原因を特定し、平均修復時間（MTTR）の短縮を支援します。
 
 ## **2. 目的と主な利用シーン**

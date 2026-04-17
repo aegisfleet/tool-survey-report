@@ -53,9 +53,6 @@ relationships:
     - UiPath
 ---
 
-
-
-
 # **Workato 調査レポート**
 
 ## **1. 基本情報**
@@ -73,7 +70,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.workato.com/](https://docs.workato.com/)
   * レビューサイト: [G2](https://www.g2.com/products/workato/reviews) | [Capterra](https://www.capterra.com/p/146067/Workato/) | [ITreview](https://www.itreview.jp/products/workato/reviews)
-* **カテゴリ**: ワークフロー自動化 (iPaaS)
+* **カテゴリ**: ワークフロー自動化
 * **概要**: 企業内で使用される様々なアプリケーションやデータベースを連携させ、複雑な業務プロセスを自動化する統合プラットフォーム（iPaaS）。セキュリティとガバナンス機能に強みを持ち、IT部門だけでなく業務部門（ビジネスユーザー）でも利用可能なローコード環境を提供する。
 
 ## **2. 目的と主な利用シーン**

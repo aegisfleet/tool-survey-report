@@ -10,7 +10,7 @@ last_updated: '2026-04-05'
 tags:
   - APM
   - SaaS
-  - オブザーバビリティ
+  - 監視/可観測性
   - ログ管理
   - 監視
 description: New Relicは、インフラ、アプリケーション、ログ、ユーザー体験を統合的に監視・分析できるフルスタックオブザーバビリティプラットフォームです。
@@ -49,9 +49,6 @@ relationships:
     - Grafana
     - Splunk
 ---
-
-
-
 
 # **New Relic 調査レポート**
 

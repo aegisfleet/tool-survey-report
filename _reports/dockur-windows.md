@@ -50,9 +50,6 @@ relationships:
     - Docker
 ---
 
-
-
-
 # **dockur/windows 調査レポート**
 
 ## **1. 基本情報**
@@ -65,7 +62,7 @@ relationships:
   * GitHub: [https://github.com/dockur/windows](https://github.com/dockur/windows)
   * CodeWiki: [https://codewiki.google/github.com/dockur/windows](https://codewiki.google/github.com/dockur/windows)
   * Docker Hub: [https://hub.docker.com/r/dockurr/windows](https://hub.docker.com/r/dockurr/windows)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: OS/プラットフォーム
 * **概要**: dockur/windowsは、Dockerコンテナ内でWindows OSを実行するためのオープンソースツールです。QEMUとKVM技術をバックエンドに使用し、ISOイメージのダウンロードからWindowsのインストール、初期設定までを自動化します。
 
 ## **2. 目的と主な利用シーン**

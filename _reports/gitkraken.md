@@ -52,9 +52,6 @@ relationships:
     - GitLab
 ---
 
-
-
-
 # **GitKraken 調査レポート**
 
 ## **1. 基本情報**
@@ -67,7 +64,7 @@ relationships:
   * ドキュメント: [https://help.gitkraken.com/](https://help.gitkraken.com/)
   * GitLens: [https://www.gitkraken.com/gitlens](https://www.gitkraken.com/gitlens)
   * GitKraken CLI: [https://www.gitkraken.com/cli](https://www.gitkraken.com/cli)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: バージョン管理
 * **概要**: GitKrakenは、直感的なGit GUI（GitKraken Desktop）、VS CodeなどのIDE向け拡張機能（GitLens）、ターミナル向けのGitKraken CLIなどを提供するDevEx(Developer Experience)プラットフォームです。視覚的なコミットグラフやAIアシスタント機能により、開発チームの生産性とコラボレーションを向上させます。
 
 ## **2. 目的と主な利用シーン**

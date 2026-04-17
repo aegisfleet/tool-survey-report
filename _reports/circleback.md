@@ -45,9 +45,6 @@ relationships:
     - Microsoft 365 Copilot
 ---
 
-
-
-
 # **Circleback 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
   * ドキュメント: [https://support.circleback.ai/](https://support.circleback.ai/)
   * リリースノート: [https://circleback.ai/releases](https://circleback.ai/releases)
   * レビューサイト: [G2](https://www.g2.com/products/circleback-ai-inc-circleback/reviews) | [Product Hunt](https://www.producthunt.com/products/circleback-3)
-* **カテゴリ**: AI議事録・会議アシスタント
+* **カテゴリ**: プロジェクト管理
 * **概要**: Circlebackは、Zoom、Google Meet、Microsoft Teamsなどのオンライン会議や対面会議に対応したAIミーティングアシスタントです。会議の自動録音、高精度な文字起こし、要約に加え、アクションアイテムの抽出と外部ツール（Notion, CRM等）への自動連携を行い、議事録作成とタスク管理の時間を大幅に削減します。2026年からはMCP (Model Context Protocol) にも対応し、外部AIからのデータアクセスが可能になりました。
 
 ## **2. 目的と主な利用シーン**

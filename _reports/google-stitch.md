@@ -53,9 +53,6 @@ relationships:
     - Gemini
 ---
 
-
-
-
 # **Google Stitch 調査レポート**
 
 ## **1. 基本情報**

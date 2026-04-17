@@ -44,9 +44,6 @@ relationships:
     - Model Context Protocol
 ---
 
-
-
-
 # **Microsoft Work IQ 調査レポート**
 
 ## **1. 基本情報**
@@ -58,7 +55,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [README](https://github.com/microsoft/work-iq-mcp/blob/main/README.md)
   * アナウンス: [Ignite 2025 Book of News](https://news.microsoft.com/ignite-2025-book-of-news/)
-* **カテゴリ**: AI開発基盤
+* **カテゴリ**: 開発者生産性分析
 * **概要**: Microsoft Work IQ (MCP Server) は、AIエージェントがMicrosoft 365のデータ（メール、会議、ドキュメント、Teamsメッセージ、連絡先など）に安全かつ自然言語でアクセスするためのインターフェースを提供します。Model Context Protocol (MCP) に準拠しており、GitHub Copilot CLIやその他のMCP対応クライアントから利用可能です。
 
 ## **2. 目的と主な利用シーン**

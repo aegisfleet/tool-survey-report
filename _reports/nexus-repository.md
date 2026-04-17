@@ -50,9 +50,6 @@ relationships:
     - Jenkins
 ---
 
-
-
-
 # **Nexus Repository 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/sonatype/nexus-public](https://github.com/sonatype/nexus-public)
   * ドキュメント: [https://help.sonatype.com/repomanager3](https://help.sonatype.com/repomanager3)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: パッケージ管理
 * **概要**: Nexus Repositoryは、開発プロセスで生成されるバイナリやビルド成果物（アーティファクト）を一元管理するためのリポジトリマネージャーです。Maven, npm, Docker, PyPIなど、世界中の主要なパッケージフォーマットを幅広くサポートし、ソフトウェアサプライチェーンの中核として機能します。
 
 ## **2. 目的と主な利用シーン**

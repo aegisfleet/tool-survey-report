@@ -46,9 +46,6 @@ relationships:
     - Claude
 ---
 
-
-
-
 # **Spec Kit 調査レポート**
 
 ## **1. 基本情報**
@@ -60,7 +57,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/github/spec-kit](https://github.com/github/spec-kit)
   * CodeWiki: [https://codewiki.google/github.com/github/spec-kit](https://codewiki.google/github.com/github/spec-kit)
-* **カテゴリ**: 開発者ツール
+* **カテゴリ**: 開発ライフサイクル管理
 * **概要**: 仕様駆動開発（Spec-Driven Development）を実現するためのオープンソースツールキットです。仕様を単なるガイドではなく実行可能なものとし、多様なAIエージェントと連携して仕様から直接動作するコードを生成・リファクタリングします。
 
 ## **2. 目的と主な利用シーン**

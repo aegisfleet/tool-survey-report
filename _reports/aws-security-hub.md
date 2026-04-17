@@ -47,9 +47,6 @@ relationships:
     - Amazon GuardDuty
 ---
 
-
-
-
 # **AWS Security Hub 調査レポート**
 
 ## **1. 基本情報**
@@ -68,7 +65,7 @@ relationships:
   * ドキュメント: [https://docs.aws.amazon.com/securityhub/](https://docs.aws.amazon.com/securityhub/)
   * 料金ページ: [https://aws.amazon.com/security-hub/pricing/](https://aws.amazon.com/security-hub/pricing/)
   * FAQ: [https://aws.amazon.com/security-hub/faqs/](https://aws.amazon.com/security-hub/faqs/)
-* **カテゴリ**: セキュリティ / CSPM (Cloud Security Posture Management) / CNAPP (Cloud Native Application Protection Platform)
+* **カテゴリ**: CDN/セキュリティ / CSPM (Cloud Security Posture Management) / CNAPP (Cloud Native Application Protection Platform)
 * **概要**: AWS Security Hubは、AWS環境全体のセキュリティアラートとコンプライアンス状況を一元管理する統合セキュリティサービスです。Amazon GuardDuty、Amazon Inspector、Amazon MacieなどのAWSセキュリティサービスやサードパーティ製品からの検出結果を集約・相関分析し、リスクの高い問題を自動的に優先順位付けします。
 
 ## **2. 目的と主な利用シーン**

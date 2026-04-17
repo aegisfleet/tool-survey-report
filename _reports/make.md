@@ -53,9 +53,6 @@ relationships:
     - Google Workspace Studio
 ---
 
-
-
-
 # **Make 調査レポート**
 
 ## **1. 基本情報**

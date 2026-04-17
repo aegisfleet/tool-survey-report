@@ -41,9 +41,6 @@ relationships:
   related_tools: null
 ---
 
-
-
-
 # **詐欺バスター Lite 調査レポート**
 
 ## **1. 基本情報**

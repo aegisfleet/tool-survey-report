@@ -46,9 +46,6 @@ relationships:
     - Google Cloud
 ---
 
-
-
-
 # **Render 調査レポート**
 
 ## **1. 基本情報**
@@ -61,7 +58,7 @@ relationships:
   * ドキュメント: [https://render.com/docs](https://render.com/docs)
   * GitHub: [https://github.com/render-oss](https://github.com/render-oss)
   * ステータス: [https://status.render.com](https://status.render.com)
-* **カテゴリ**: PaaS / クラウド
+* **カテゴリ**: インフラ/クラウド
 * **概要**: Renderは、「Your fastest path to production」を掲げるフルマネージドなPaaS（Platform as a Service）です。Webサービス、静的サイト、バックグラウンドワーカー、Cronジョブ、マネージドPostgreSQL/Redisなどを統合的に提供し、開発者はインフラ構築の手間なくアプリケーションをデプロイできます。Herokuの現代的で安価な代替手段として広く認知されています。
 
 ## **2. 目的と主な利用シーン**

@@ -2,7 +2,7 @@
 title: PyTorch 調査レポート
 tool_name: PyTorch
 tool_reading: パイトーチ
-category: AI開発基盤
+category: AI開発ライブラリ
 developer: PyTorch Foundation (The Linux Foundation)
 official_site: https://pytorch.org/
 date: '2026-04-09'
@@ -61,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/pytorch/pytorch](https://github.com/pytorch/pytorch)
   * ドキュメント: [https://pytorch.org/docs/stable/index.html](https://pytorch.org/docs/stable/index.html)
-* **カテゴリ**: 機械学習 / ディープラーニング
+* **カテゴリ**: AI開発ライブラリ / ディープラーニング
 * **概要**: 強力なGPUアクセラレーションと、動的計算グラフ（テープベースのオートグラディエントシステム）を利用して深いニューラルネットワークを構築できるPython向けオープンソースライブラリ。研究用途から本番環境まで幅広くAI開発を支えている。
 
 ## **2. 目的と主な利用シーン**

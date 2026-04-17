@@ -50,9 +50,6 @@ relationships:
     - Google 広告
 ---
 
-
-
-
 # **Looker Studio 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.cloud.google.com/looker/docs/studio](https://docs.cloud.google.com/looker/docs/studio)
   * レビューサイト: [Capterra](https://www.capterra.com/p/169053/Looker/)
-* **カテゴリ**: BIツール
+* **カテゴリ**: データ分析
 * **概要**: Looker Studioは、多様なデータを視覚化し、インタラクティブなダッシュボードやレポートを簡単に作成・共有できるGoogleの無料BI（ビジネスインテリジェンス）ツールである。2022年にGoogle Data Studioから名称変更された。
 
 ## **2. 目的と主な利用シーン**

@@ -46,6 +46,7 @@ links:
 relationships:
   related_tools: []
 ---
+
 # **Lefthook 調査レポート**
 
 ## **1. 基本情報**
@@ -57,7 +58,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/evilmartians/lefthook](https://github.com/evilmartians/lefthook)
   * ドキュメント: [https://lefthook.dev/](https://lefthook.dev/)
-* **カテゴリ**: Gitフックマネージャー
+* **カテゴリ**: 開発ライフサイクル管理
 * **概要**: Go言語で記述された高速かつ強力なGitフック管理ツール。コマンドの並列実行や、globパターンによる柔軟なファイルフィルタリングをサポートし、あらゆる言語のプロジェクトで利用可能。特にモノレポ構成や大規模プロジェクトでのパフォーマンスに定評がある。
 
 ## **2. 目的と主な利用シーン**

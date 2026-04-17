@@ -50,9 +50,6 @@ relationships:
     - Claude Code
 ---
 
-
-
-
 # **AsyncReview 調査レポート**
 
 ## **1. 基本情報**
@@ -64,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/AsyncFuncAI/AsyncReview](https://github.com/AsyncFuncAI/AsyncReview)
   * CodeWiki: [https://codewiki.google/github.com/AsyncFuncAI/AsyncReview](https://codewiki.google/github.com/AsyncFuncAI/AsyncReview)
-* **カテゴリ**: 開発ツール / AI・機械学習
+* **カテゴリ**: 開発ライフサイクル管理 / AI・機械学習
 * **概要**: AsyncReviewは、単なる差分チェックではなく、Recursive Language Models (RLM)を使用してリポジトリ全体を自律的に探索・理解し、コードレビューを行うAIエージェントです。提案内容をサンドボックスで検証してから回答するため、信頼性が高く、幻覚（ハルシネーション）が少ないのが特徴です。DeepWiki Openの後継プロジェクトとしても位置づけられています。
 
 ## **2. 目的と主な利用シーン**

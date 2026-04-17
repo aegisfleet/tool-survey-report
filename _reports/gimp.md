@@ -51,9 +51,6 @@ relationships:
     - Apple Creator Studio
 ---
 
-
-
-
 # **GIMP 調査レポート**
 
 ## **1. 基本情報**
