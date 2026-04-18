@@ -601,15 +601,45 @@
     flex-wrap: wrap;
     gap: map-get($spacers, 4);
 
+    .reports-title-container {
+        display: flex;
+        align-items: center;
+        gap: map-get($spacers, 3);
+        flex-wrap: wrap;
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
     h2 {
         margin: 0;
         color: $primary-color;
         font-size: 1.75rem;
 
         @include media-breakpoint-down(md) {
-            width: 100%;
             text-align: center;
-            margin-bottom: map-get($spacers, 3);
+        }
+    }
+
+    .reports-count-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 1rem;
+        background: rgba($primary-color, 0.1);
+        color: $primary-color;
+        border-radius: 20px;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        border: 1px solid rgba($primary-color, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 4px rgba($primary-color, 0.05);
+        
+        &.hidden {
+            opacity: 0;
+            transform: translateY(5px);
+            pointer-events: none;
         }
     }
 

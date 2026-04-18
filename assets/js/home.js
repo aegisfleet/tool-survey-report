@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const interestChips = Array.from(document.querySelectorAll('.interest-chip'));
   const interestReset = document.getElementById('interest-reset');
   const reportsGrid = document.getElementById('reports-grid');
+  const reportsCountContainer = document.getElementById('reports-count-container');
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
   const tagElements = document.querySelectorAll('.tag');
@@ -243,6 +244,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // レポート件数を更新する関数
+  function updateReportsCount(count) {
+    if (!reportsCountContainer) return;
+
+    // アニメーションのために一度要素を隠す（オプションだが、プレミアム感のため）
+    reportsCountContainer.style.opacity = '0';
+    reportsCountContainer.style.transform = 'translateY(5px)';
+
+    setTimeout(() => {
+      reportsCountContainer.textContent = `${count}件のレポートを表示中`;
+      reportsCountContainer.style.opacity = '1';
+      reportsCountContainer.style.transform = 'translateY(0)';
+    }, 100);
+  }
+
   // Filter and sort function
   window.filterAndSort = (shouldSave = true) => {
     const rawSearchTerm = searchInput.value.toLowerCase().trim();
@@ -356,6 +372,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       noResults.style.display = 'block';
     }
+
+    // 件数表示を更新
+    updateReportsCount(filteredCards.length);
 
     // Update visual states immediately
     updateTagStates();
@@ -481,9 +500,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (restored) {
       filterAndSort(false); // 復元時は保存しない
     } else {
-      // 初期状態でも状態を更新
-      updateTagStates();
-      updateCategoryStates();
+      // 初期状態でも状態を更新して初期表示を行う
+      filterAndSort(false);
     }
   }
 
