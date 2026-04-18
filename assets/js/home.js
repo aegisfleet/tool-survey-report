@@ -260,12 +260,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Filter and sort function
-  window.filterAndSort = (shouldSave = true) => {
-    const rawSearchTerm = searchInput.value.toLowerCase().trim();
+  const filterAndSort = (shouldSave = true) => {
+    const rawSearchTerm = (searchInput?.value || '').toLowerCase().trim();
     const searchTerm = toHiragana(rawSearchTerm);
-    const selectedTag = tagFilter.value;
-    const selectedCategory = categoryFilter.value;
-    const sortBy = sortSelect.value;
+    const selectedTag = tagFilter?.value || '';
+    const selectedCategory = categoryFilter?.value || '';
+    const sortBy = sortSelect?.value || 'date-desc';
 
     const filteredCards = reportCards.filter((card) => {
       const orGroups = searchTerm
@@ -390,6 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
       updateURL(selectedCategory);
     }
   };
+  window.filterAndSort = filterAndSort;
 
   // URLを更新する関数（カテゴリフィルタの状態を反映）
   const siteName = homeContainer?.dataset.siteTitle || document.title;
