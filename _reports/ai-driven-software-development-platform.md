@@ -6,15 +6,15 @@ developer: 富士通株式会社
 evaluation:
   base_score: 70
   minus_points:
-  - point: -5
-    reason: エンタープライズ向けのソリューションであり、現時点での導入の敷居やコスト、一般的な個人開発者向けのアクセスに制限がある
+    - point: -5
+      reason: エンタープライズ向けのソリューションであり、現時点での導入の敷居やコスト、一般的な個人開発者向けのアクセスに制限がある
   plus_points:
-  - point: 10
-    reason: 複雑な既存システムの改修をAIエージェントが自律的に全工程(要件定義からテストまで)実行する画期的なアプローチ
-  - point: 5
-    reason: 独自のLLM「Takane」を活用した高い日本語・法令文書の理解力
-  - point: 5
-    reason: 既存システムやドメイン知識をAI活用可能な形式に再構築する「AI-Ready Engineering」の実現
+    - point: 10
+      reason: 複雑な既存システムの改修をAIエージェントが自律的に全工程(要件定義からテストまで)実行する画期的なアプローチ
+    - point: 5
+      reason: 独自のLLM「Takane」を活用した高い日本語・法令文書の理解力
+    - point: 5
+      reason: 既存システムやドメイン知識をAI活用可能な形式に再構築する「AI-Ready Engineering」の実現
   score: 85
   summary: 既存の大規模システムの改修・保守という日本のシステム開発における重大な課題に対し、複数のAIエージェントの協調によってアプローチする強力なエンタープライズ向けソリューション
 last_updated: '2026-04-11'
@@ -27,14 +27,14 @@ quick_summary:
   latest_highlight: 2026年2月17日にAIエージェントによるシステム開発を刷新する基盤を発表・運用開始
   starting_price: 個別見積もり
   target_users:
-  - エンタープライズ
-  - システムインテグレーター
-  - ITエンジニア
+    - エンタープライズ
+    - システムインテグレーター
+    - ITエンジニア
   update_frequency: 不定期
 tags:
-- エンタープライズ
-- レガシーモダナイゼーション
-- 自動化
+  - エンタープライズ
+  - レガシーモダナイゼーション
+  - 自動化
 title: AI-Driven Software Development Platform 調査レポート
 tool_name: AI-Driven Software Development Platform
 tool_reading: エーアイ ドリブン ソフトウェア デベロップメント プラットフォーム / AI-DSDP

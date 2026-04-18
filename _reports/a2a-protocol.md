@@ -6,15 +6,15 @@ developer: The Linux Foundation
 evaluation:
   base_score: 70
   minus_points:
-  - point: 0
-    reason: プロトコル自体が新しいため、普及とエコシステムの拡大はこれから
+    - point: 0
+      reason: プロトコル自体が新しいため、普及とエコシステムの拡大はこれから
   plus_points:
-  - point: 5
-    reason: 異なるエージェントフレームワーク間の壁を取り払う相互運用性
-  - point: 5
-    reason: MCPと補完関係にあり、ツール利用とエージェント連携を両立可能
-  - point: 5
-    reason: The Linux Foundationによる中立的な運営とオープン標準
+    - point: 5
+      reason: 異なるエージェントフレームワーク間の壁を取り払う相互運用性
+    - point: 5
+      reason: MCPと補完関係にあり、ツール利用とエージェント連携を両立可能
+    - point: 5
+      reason: The Linux Foundationによる中立的な運営とオープン標準
   score: 85
   summary: エージェント間連携のデファクトスタンダードとなる可能性を秘めた、極めて重要なプロトコル
 last_updated: '2026-04-16'
@@ -30,17 +30,17 @@ quick_summary:
   latest_highlight: The Linux Foundationによる標準化と複数言語SDKの提供
   starting_price: 無料
   target_users:
-  - AIエージェント開発者
-  - プラットフォームエンジニア
+    - AIエージェント開発者
+    - プラットフォームエンジニア
   update_frequency: 高
 relationships:
   related_tools:
-  - Microsoft Agent Framework
+    - Microsoft Agent Framework
 tags:
-- エージェント
-- オープンソース
-- プロトコル
-- 相互運用性
+  - エージェント
+  - オープンソース
+  - プロトコル
+  - 相互運用性
 title: A2A Protocol 調査レポート
 tool_name: A2A Protocol
 tool_reading: エーツーエー プロトコル
