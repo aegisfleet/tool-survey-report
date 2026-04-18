@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AWS CLI 調査レポート"
-tool_name: "AWS CLI"
-tool_reading: "エーダブリューエス シーエルアイ"
-category: "インフラ/クラウド"
-developer: "Amazon Web Services"
-official_site: "https://aws.amazon.com/jp/cli/"
-date: "2026-04-18"
-last_updated: "2026-04-18"
+title: AWS CLI 調査レポート
+tool_name: AWS CLI
+tool_reading: エーダブリューエス シーエルアイ
+category: インフラ/クラウド
+developer: Amazon Web Services
+official_site: https://aws.amazon.com/jp/cli/
+date: '2026-04-18'
+last_updated: '2026-04-18'
 tags:
-  - "AWS"
-  - "クラウド"
-  - "CLI"
-  - "オープンソース"
-  - "自動化"
-description: "コマンドラインからAWSサービスを管理し、スクリプトを使用して自動化できる統合ツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AWS
+  - クラウド
+  - CLI
+  - オープンソース
+  - 自動化
+description: コマンドラインからAWSサービスを管理し、スクリプトを使用して自動化できる統合ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "システム管理者"
-  latest_highlight: "AWS Interconnectなど新サービス対応やパフォーマンス向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+    - システム管理者
+  latest_highlight: AWS Interconnectなど新サービス対応やパフォーマンス向上
+  update_frequency: 高
 evaluation:
   score: 93
   base_score: 70
   plus_points:
     - point: 10
-      reason: "AWSサービスを網羅する公式の強力なCLIツール"
+      reason: AWSサービスを網羅する公式の強力なCLIツール
     - point: 5
-      reason: "オープンソースであり活発な開発・更新（高頻度なリリース）"
+      reason: オープンソースであり活発な開発・更新（高頻度なリリース）
     - point: 5
-      reason: "スクリプト自動化、コマンド補完など生産性向上の機能が豊富"
+      reason: スクリプト自動化、コマンド補完など生産性向上の機能が豊富
     - point: 3
-      reason: "無料で使用でき、追加コストなし"
+      reason: 無料で使用でき、追加コストなし
   minus_points: []
-  summary: "AWS環境を運用・自動化する上で必須となる、非常に強力で洗練された公式コマンドラインツール"
-
-# 【任意項目】該当するもののみ記載
+  summary: AWS環境を運用・自動化する上で必須となる、非常に強力で洗練された公式コマンドラインツール
 links:
-  github: "https://github.com/aws/aws-cli"
-  deepwiki: "https://deepwiki.com/aws/aws-cli"
-  documentation: "https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html"
+  github: https://github.com/aws/aws-cli
+  deepwiki: https://deepwiki.com/aws/aws-cli
+  documentation: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html
 relationships:
   related_tools:
-    - "AWS CloudFormation"
-    - "AWS DevOps Agent"
-    - "AWS MCP Servers"
-    - "AWS Security Hub"
+    - AWS CloudFormation
+    - AWS DevOps Agent
+    - AWS MCP Servers
+    - AWS Security Hub
 ---
 
 # **AWS CLI 調査レポート**
