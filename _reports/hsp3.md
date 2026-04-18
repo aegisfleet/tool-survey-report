@@ -6,9 +6,9 @@ category: 言語ランタイム/実行環境
 developer: ONION software (おにたま)
 official_site: https://hsp.tv/
 date: '2026-02-03'
-last_updated: '2026-02-03'
+last_updated: '2026-04-19'
 tags:
-  - OpenHSP
+  - オープンソース
   - Windows
   - ゲーム開発
   - プログラミング言語
@@ -42,13 +42,11 @@ evaluation:
   summary: プログラミング入門や小規模ツール開発において、圧倒的な手軽さと安心感を提供する国産ツール。
 links:
   github: https://github.com/onitama/OpenHSP
-  deepwiki: https://deepwiki.com/onitama/OpenHSP
   documentation: https://hsp.tv/make/hsp3.html
 relationships:
   parent: ''
   children: []
-  related_tools:
-    - Visual Studio Code
+  related_tools: []
 ---
 
 # **HSP3 調査レポート**
@@ -164,7 +162,7 @@ relationships:
 
 * **認証**: ツール自体に認証機能はない。作成したアプリへの実装は開発者次第。
 * **データ管理**: ローカルファイル操作が基本。暗号化プラグイン等を利用可能。
-* **準拠規格**: 特に明示なし。作成されたEXEファイルにはデジタル署名を付与することが推奨される（誤検知回避のため）。
+* **準拠規格**: 公式サイトで公開されていない。問い合わせが必要。作成されたEXEファイルにはデジタル署名を付与することが推奨される（誤検知回避のため）。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
