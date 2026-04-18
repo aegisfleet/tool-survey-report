@@ -52,6 +52,7 @@ relationships:
     - UI-TARS Desktop
     - LM Studio
     - Foundry Local
+    - Thunderbolt
 ---
 
 # **Ollama 調査レポート**

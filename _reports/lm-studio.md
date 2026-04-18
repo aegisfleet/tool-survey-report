@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - Ollama
     - Foundry Local
+    - Thunderbolt
 ---
 
 # **LM Studio 調査レポート**
