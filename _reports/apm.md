@@ -6,17 +6,17 @@ developer: Microsoft
 evaluation:
   base_score: 70
   minus_points:
-  - point: 0
-    reason: 特になし
+    - point: 0
+      reason: 特になし
   plus_points:
-  - point: 5
-    reason: npmやpipのようにAIエージェントのコンテキストを管理できる革新性
-  - point: 5
-    reason: 多様なAIコーディングエージェント(Copilot, Claude, Cursor等)のフォーマットへネイティブ対応
-  - point: 3
-    reason: オープンソースで活発に開発が継続されている
-  - point: 2
-    reason: ロックファイル(apm.lock.yaml)によるチーム間での再現性確保
+    - point: 5
+      reason: npmやpipのようにAIエージェントのコンテキストを管理できる革新性
+    - point: 5
+      reason: 多様なAIコーディングエージェント(Copilot, Claude, Cursor等)のフォーマットへネイティブ対応
+    - point: 3
+      reason: オープンソースで活発に開発が継続されている
+    - point: 2
+      reason: ロックファイル(apm.lock.yaml)によるチーム間での再現性確保
   score: 85
   summary: AIコーディングツールのコンテキスト共有問題を解決する強力なインフラツールであり、チーム開発において高い効果を発揮する
 last_updated: '2026-04-16'
@@ -27,14 +27,14 @@ quick_summary:
   latest_highlight: v0.8.11リリースでスキル名競合時の警告やリモートデフォルトブランチの検出を修正
   starting_price: 無料
   target_users:
-  - 開発者
-  - AIエージェント利用者
-  - 開発チーム
+    - 開発者
+    - AIエージェント利用者
+    - 開発チーム
   update_frequency: 高
 tags:
-- エージェント
-- オープンソース
-- パッケージマネージャー
+  - エージェント
+  - オープンソース
+  - パッケージマネージャー
 title: APM 調査レポート
 tool_name: APM
 tool_reading: エーピーエム / エージェント パッケージ マネージャー

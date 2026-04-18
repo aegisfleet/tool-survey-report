@@ -6,19 +6,19 @@ developer: Google
 evaluation:
   base_score: 70
   minus_points:
-  - point: -3
-    reason: 多機能である反面、特に初心者にとっては学習コストが高く、プラットフォーム全体が複雑に感じられる場合がある。
-  - point: -2
-    reason: 利用するモデルやリソースごとに料金が細分化されており、コストの見積もりが複雑になりやすい。
+    - point: -3
+      reason: 多機能である反面、特に初心者にとっては学習コストが高く、プラットフォーム全体が複雑に感じられる場合がある。
+    - point: -2
+      reason: 利用するモデルやリソースごとに料金が細分化されており、コストの見積もりが複雑になりやすい。
   plus_points:
-  - point: 10
-    reason: Gemini 3 Pro/Flashなど、Googleの最先端・高性能な基盤モデルを迅速に利用できる。
-  - point: 5
-    reason: プロンプト設計からチューニング、デプロイ、管理まで、エンドツーエンドのMLOps機能が単一プラットフォームに統合されている。
-  - point: 5
-    reason: Model Gardenを通じて、Google製モデルだけでなく、多数のオープンソースやパートナー製モデルにアクセスできる。
-  - point: 2
-    reason: 新規顧客向けの$300無料クレジットや、一部機能の無料利用枠が提供されている。
+    - point: 10
+      reason: Gemini 3 Pro/Flashなど、Googleの最先端・高性能な基盤モデルを迅速に利用できる。
+    - point: 5
+      reason: プロンプト設計からチューニング、デプロイ、管理まで、エンドツーエンドのMLOps機能が単一プラットフォームに統合されている。
+    - point: 5
+      reason: Model Gardenを通じて、Google製モデルだけでなく、多数のオープンソースやパートナー製モデルにアクセスできる。
+    - point: 2
+      reason: 新規顧客向けの$300無料クレジットや、一部機能の無料利用枠が提供されている。
   score: 87
   summary: Googleの最新AIモデルを活用した開発から運用までをカバーする、極めて強力で包括的なAI開発プラットフォーム。
 last_updated: '2026-04-02'
@@ -31,23 +31,23 @@ quick_summary:
   latest_highlight: 2026年3月にVector Search 2.0が一般提供開始
   starting_price: 無料枠あり（従量課金）
   target_users:
-  - AI/MLエンジニア
-  - アプリケーション開発者
-  - データサイエンティスト
+    - AI/MLエンジニア
+    - アプリケーション開発者
+    - データサイエンティスト
   update_frequency: 高
 relationships:
   parent: Vertex AI
   related_tools:
-  - Amazon Bedrock
-  - さくらのAI
-  - Gemini
+    - Amazon Bedrock
+    - さくらのAI
+    - Gemini
 tags:
-- AI
-- Gemini
-- Google Cloud
-- MLOps
-- 大規模言語モデル
-- 生成AI
+  - AI
+  - Gemini
+  - Google Cloud
+  - MLOps
+  - 大規模言語モデル
+  - 生成AI
 title: Vertex AI Studio 調査レポート
 tool_name: Vertex AI Studio
 tool_reading: バーテックス エーアイ スタジオ
