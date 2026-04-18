@@ -6,17 +6,17 @@ developer: さくらインターネット株式会社
 evaluation:
   base_score: 70
   minus_points:
-  - point: -3
-    reason: 海外の巨大プラットフォームと比較して、利用可能なモデルの種類が限定的
-  - point: -3
-    reason: AWSやAzureのような周辺サービスとのエコシステムは発展途上
+    - point: -3
+      reason: 海外の巨大プラットフォームと比較して、利用可能なモデルの種類が限定的
+    - point: -3
+      reason: AWSやAzureのような周辺サービスとのエコシステムは発展途上
   plus_points:
-  - point: 8
-    reason: データが日本国内で完結するため、データ主権やセキュリティ要件に強い
-  - point: 5
-    reason: OpenAI互換APIを提供しており、既存システムからの移行が容易
-  - point: 5
-    reason: 円建ての料金体系で為替リスクがなく、コストパフォーマンスが高い
+    - point: 8
+      reason: データが日本国内で完結するため、データ主権やセキュリティ要件に強い
+    - point: 5
+      reason: OpenAI互換APIを提供しており、既存システムからの移行が容易
+    - point: 5
+      reason: 円建ての料金体系で為替リスクがなく、コストパフォーマンスが高い
   score: 82
   summary: データの安全性とコストを重視する国内プロジェクトに最適だが、モデルの多様性は限定的。
 last_updated: '2026-04-03'
@@ -29,21 +29,21 @@ quick_summary:
   latest_highlight: 2025年12月にQwen3-Embedding-4Bモデルが追加
   starting_price: 無料
   target_users:
-  - 開発者
-  - 企業
-  - 官公庁
+    - 開発者
+    - 企業
+    - 官公庁
   update_frequency: 高
 relationships:
   related_tools:
-  - Amazon Bedrock
-  - Rakuten AI
-  - Vertex AI Studio
+    - Amazon Bedrock
+    - Rakuten AI
+    - Vertex AI Studio
 tags:
-- AI
-- API
-- クラウド
-- 大規模言語モデル
-- 生成AI
+  - AI
+  - API
+  - クラウド
+  - 大規模言語モデル
+  - 生成AI
 title: さくらのAI 調査レポート
 tool_name: さくらのAI
 tool_reading: さくらのエーアイ

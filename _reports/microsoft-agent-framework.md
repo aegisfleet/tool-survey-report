@@ -7,10 +7,10 @@ evaluation:
   base_score: 70
   minus_points: []
   plus_points:
-  - point: 5
-    reason: Semantic KernelとAutoGenの利点を統合した強力なアーキテクチャ
-  - point: 5
-    reason: オープンソースであり、エコシステムやエンタープライズ対応が充実している
+    - point: 5
+      reason: Semantic KernelとAutoGenの利点を統合した強力なアーキテクチャ
+    - point: 5
+      reason: オープンソースであり、エコシステムやエンタープライズ対応が充実している
   score: 80
   summary: 次世代のマルチエージェントオーケストレーションとエンタープライズ向け機能を兼ね備えた強力なフレームワーク
 last_updated: '2026-03-28'
@@ -25,17 +25,17 @@ quick_summary:
   latest_highlight: パブリックプレビューの公開
   starting_price: 無料
   target_users:
-  - 開発者
-  - エンタープライズ
+    - 開発者
+    - エンタープライズ
   update_frequency: 高
 relationships:
   related_tools:
-  - A2A Protocol
+    - A2A Protocol
 tags:
-- AI
-- エージェント
-- オープンソース
-- ワークフロー
+  - AI
+  - エージェント
+  - オープンソース
+  - ワークフロー
 title: Microsoft Agent Framework 調査レポート
 tool_name: Microsoft Agent Framework
 tool_reading: マイクロソフト エージェント フレームワーク
