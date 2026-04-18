@@ -8,31 +8,31 @@ official_site: https://aws.amazon.com/devops-agent/
 date: '2026-02-04'
 last_updated: '2026-02-04'
 tags:
-  - AIOps
-  - AWS
-  - DevOps
-  - インシデント対応
-  - エージェント
-  - 開発者ツール
+- AIOps
+- AWS
+- DevOps
+- インシデント対応
+- エージェント
+- 開発者ツール
 description: 生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: プレビュー中は無料
   target_users:
-    - DevOpsエンジニア
-    - SRE
-    - クラウド運用担当者
+  - DevOpsエンジニア
+  - SRE
+  - クラウド運用担当者
   latest_highlight: インシデント対応時間を大幅に短縮する自律型エージェントとしてプレビュー公開
   update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-    - point: 5
-      reason: AWSネイティブな統合による深い可観測性と操作性
-    - point: 5
-      reason: インシデント対応の自律化による運用負荷の大幅な軽減
+  - point: 5
+    reason: AWSネイティブな統合による深い可観測性と操作性
+  - point: 5
+    reason: インシデント対応の自律化による運用負荷の大幅な軽減
   minus_points: []
   summary: AWS環境における運用オペレーションを自律化し、障害対応時間を劇的に短縮する革新的なツール。
 links:
@@ -40,8 +40,9 @@ links:
 relationships:
   parent: AWS Frontier Agents
   related_tools:
-    - Amazon Q Developer
-    - Datadog
+  - Amazon Q Developer
+  - Datadog
+  - AWS CLI
 ---
 
 # **AWS DevOps Agent 調査レポート**
