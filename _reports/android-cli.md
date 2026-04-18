@@ -39,6 +39,9 @@ evaluation:
   summary: Android開発の自動化やAIエージェントとの連携において必須となる強力な公式CLIツール
 links:
   documentation: https://developer.android.com/tools/agents/android-cli
+relationships:
+  related_tools:
+    - Android Skills
 ---
 
 # **Android CLI 調査レポート**
