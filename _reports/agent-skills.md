@@ -42,6 +42,7 @@ relationships:
     - Model Context Protocol
     - MCP Apps
     - Claude
+    - Android Skills
 ---
 
 # **Agent Skills 調査レポート**
