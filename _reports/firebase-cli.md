@@ -37,7 +37,7 @@ evaluation:
   summary: Firebaseプロジェクトの運用・開発において不可欠な強力なCLIツール
 links:
   github: https://github.com/firebase/firebase-tools
-  deepwiki: "https://deepwiki.com/firebase/firebase-tools"
+  deepwiki: https://deepwiki.com/firebase/firebase-tools
 relationships:
   parent: Firebase
 ---
