@@ -6,13 +6,12 @@ category: MCPサーバー/基盤
 developer: Anthropic
 official_site: https://modelcontextprotocol.io/
 date: '2026-02-03'
-last_updated: '2026-02-03'
+last_updated: '2026-04-19'
 tags:
   - AI
   - オープンソース
-  - プロトコル
-  - 標準化
   - 開発者ツール
+  - API
 description: AIモデルと外部のデータ・ツールを接続するためのオープン標準プロトコル
 quick_summary:
   has_free_plan: true
@@ -21,7 +20,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIエンジニア
-  latest_highlight: 主要なAIエディタ（Cursor, Windsurf）やClaude Desktopでの採用が加速
+  latest_highlight: 2026年4月にメンテナー体制の拡充を発表、コミュニティ主導の開発が加速
   update_frequency: 高
 evaluation:
   score: 95
@@ -39,7 +38,7 @@ evaluation:
   summary: AIアプリケーションのエコシステムを根底から変える、事実上の標準（デファクトスタンダード）となるプロトコル
 links:
   github: https://github.com/modelcontextprotocol
-  documentation: https://modelcontextprotocol.io/introduction
+  documentation: https://modelcontextprotocol.io/docs
 relationships:
   parent: ''
   children:
@@ -52,7 +51,6 @@ relationships:
     - Windsurf
     - Cline
     - Agent Skills
-    - UI-TARS Desktop
     - Mobile Next
 ---
 
@@ -66,7 +64,7 @@ relationships:
 * **公式サイト**: [https://modelcontextprotocol.io/](https://modelcontextprotocol.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/modelcontextprotocol](https://github.com/modelcontextprotocol)
-  * ドキュメント: [https://modelcontextprotocol.io/introduction](https://modelcontextprotocol.io/introduction)
+  * ドキュメント: [https://modelcontextprotocol.io/docs](https://modelcontextprotocol.io/docs)
 * **カテゴリ**: MCPサーバー/基盤 / AIプロトコル
 * **概要**: Model Context Protocol (MCP) は、AIモデルと外部のデータ、ツール、プロンプトを接続するためのオープン標準プロトコルです。これまでAIアプリケーションごとに個別に実装されていた統合（インテグレーション）を標準化し、一度サーバーを構築すれば、CursorやClaude Desktopなど、あらゆるMCP対応クライアントから利用可能にします。いわば「AIアプリケーションのためのUSBポート」のような役割を果たします。
 
@@ -186,6 +184,7 @@ Model Context Protocol 自体はオープンソース（MITライセンス）で
 * **効果的な活用法 (Modern Practices)**:
   * **Smitheryの利用**: MCPサーバーの検索・インストールにCLIツール `smithery` を使うと設定が楽になる。
   * **単一責任の原則**: 1つのMCPサーバーに機能を詰め込みすぎず、機能ごとにサーバーを分ける。
+  * **MCP Appsの活用**: UI拡張機能を利用してインタラクティブなコンポーネントを提供する。
 * **陥りやすい罠 (Antipatterns)**:
   * **重すぎる処理**: タイムアウトを考慮せず、長時間かかる処理を同期的に実行させる。
   * **過剰な権限**: `rm -rf` のような危険なコマンドをガードなしで実行できるようにする。
@@ -203,11 +202,11 @@ Model Context Protocol 自体はオープンソース（MITライセンス）で
 
 ## **15. 直近半年のアップデート情報**
 
-* **2024-11**: Model Context Protocol オープンソース公開。
-* **2024-12**: SDKのアップデート、コミュニティサーバーの拡充。
-* **2025-01**: MCP Apps (UI拡張) の仕様公開。
+* **2026-04-08**: メンテナー体制の拡充（Core MaintainerおよびLead Maintainerの追加）
+* **2026-03-16**: ツールアノテーションに関する機能追加と議論の進展
+* **2026-01-26**: 公式拡張機能としての「MCP Apps」のリリース
 
-(出典: [Model Context Protocol Blog](https://modelcontextprotocol.io/blog))
+(出典: [Model Context Protocol Blog](https://blog.modelcontextprotocol.io/))
 
 ## **16. 類似ツールとの比較**
 

@@ -57,6 +57,7 @@ relationships:
     - Roo Code
     - Visual Studio Code
     - AGENTS.md
+    - Model Context Protocol
 ---
 
 # **Cline 調査レポート**
