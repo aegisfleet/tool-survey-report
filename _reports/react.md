@@ -6,13 +6,11 @@ category: Webフレームワーク
 developer: Meta / React Foundation
 official_site: https://react.dev/
 date: '2026-02-03'
-last_updated: '2026-02-03'
+last_updated: '2026-04-19'
 tags:
   - JavaScript
-  - UIライブラリ
-  - Webフレームワーク
   - オープンソース
-  - コンポーネント指向
+  - Webフレームワーク
 description: Webおよびネイティブユーザーインターフェースを構築するためのライブラリ。React Compilerによる自動最適化やServer Componentsによるフルスタック機能を提供。
 quick_summary:
   has_free_plan: true
@@ -21,7 +19,7 @@ quick_summary:
   target_users:
     - フロントエンドエンジニア
     - フルスタックエンジニア
-  latest_highlight: 2025年10月にReact Compiler v1.0が正式リリースされ、手動メモ化が不要に
+  latest_highlight: 2026年2月にReact FoundationがLinux Foundation配下で正式に発足
   update_frequency: 高
 evaluation:
   score: 92
@@ -68,10 +66,8 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/facebook/react](https://github.com/facebook/react)
   * CodeWiki: [https://codewiki.google/github.com/facebook/react](https://codewiki.google/github.com/facebook/react)
-  * DeepWiki: [https://deepwiki.com/facebook/react](https://deepwiki.com/facebook/react)
   * ドキュメント: [https://react.dev/reference/react](https://react.dev/reference/react)
-  * ブログ: [https://react.dev/blog](https://react.dev/blog)
-* **カテゴリ**: Webフレームワーク / UIライブラリ
+* **カテゴリ**: Webフレームワーク
 * **概要**: ユーザーインターフェースを構築するためのJavaScriptライブラリ。コンポーネントベースのアーキテクチャを採用し、宣言的なView作成が可能。最新版ではReact Compilerによる自動最適化や、React Server Components (RSC) によるサーバーサイド機能の統合が進んでいる。
 
 ## **2. 目的と主な利用シーン**
@@ -208,12 +204,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-02-24**: **The React Foundation** - The React FoundationがLinux Foundation配下で正式に発足したことの発表。
 * **2025-12-11**: **Security Fix** - RSCにおける追加の脆弱性対応。
 * **2025-12-03**: **Security Fix** - RSCにおけるクリティカルなリモートコード実行の脆弱性を修正 (v19.2.1)。
 * **2025-10-16**: **React Conf 2025 Recap** - コミュニティイベントの開催報告。
 * **2025-10-07**: **React Compiler v1.0** - コンパイラの最初の安定版リリース。
 * **2025-10-07**: **React Foundation 設立** - コミュニティ主導のガバナンス体制へ移行。
-* **2025-10-01**: **React v19.2** - Activity機能の追加、パフォーマンス計測機能の強化。
 
 (出典: [React Blog](https://react.dev/blog))
 
