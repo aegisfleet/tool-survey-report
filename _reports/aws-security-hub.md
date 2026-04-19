@@ -8,11 +8,8 @@ official_site: https://aws.amazon.com/security-hub/
 date: '2026-02-04'
 last_updated: '2026-02-04'
 tags:
-  - AWS
-  - CNAPP
-  - CSPM
-  - セキュリティ
-  - 脆弱性管理
+  - SaaS
+  - クラウド
 description: AWS環境全体のセキュリティ状況を可視化し、リスクベースの優先順位付けと自動修復を提供する統合クラウドセキュリティソリューション
 quick_summary:
   has_free_plan: true

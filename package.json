@@ -9,5 +9,8 @@
     "lint:yaml": "node scripts/check_frontmatter.js",
     "format:check": "biome format --check .",
     "check": "biome ci ."
+  },
+  "dependencies": {
+    "playwright": "^1.59.1"
   }
 }

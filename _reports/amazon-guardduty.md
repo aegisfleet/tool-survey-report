@@ -6,13 +6,10 @@ category: CDN/セキュリティ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/guardduty/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-20'
 tags:
-  - AWS
-  - IDS
-  - セキュリティ
-  - マルウェア対策
-  - 脅威検知
+  - SaaS
+  - クラウド
 description: AWSアカウント、ワークロード、データを継続的に監視し、機械学習と統合された脅威インテリジェンスを使用して悪意のあるアクティビティを検出するフルマネージド型脅威検出サービス
 quick_summary:
   has_free_plan: false
