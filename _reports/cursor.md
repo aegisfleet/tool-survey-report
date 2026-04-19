@@ -58,6 +58,7 @@ relationships:
     - Devin
     - OpenHands
     - TAKT
+    - Model Context Protocol
 ---
 
 # **Cursor 調査レポート**

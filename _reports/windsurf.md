@@ -51,6 +51,7 @@ relationships:
     - Roo Code
     - Claude Code
     - Devin
+    - Model Context Protocol
 ---
 
 # **Windsurf 調査レポート**
