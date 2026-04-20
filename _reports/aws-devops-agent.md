@@ -1,29 +1,29 @@
 ---
-title: "AWS DevOps Agent 調査レポート"
-tool_name: "AWS DevOps Agent"
-tool_reading: "エーダブリューエス デボオプス エージェント"
-category: "自律型AIエージェント"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/devops-agent/"
-date: "2026-04-20"
-last_updated: "2026-04-20"
+title: AWS DevOps Agent 調査レポート
+tool_name: AWS DevOps Agent
+tool_reading: エーダブリューエス デボオプス エージェント
+category: 自律型AIエージェント
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/devops-agent/
+date: '2026-04-20'
+last_updated: '2026-04-20'
 tags:
-  - "エージェント"
-  - "自律型"
-  - "DevOps"
-  - "クラウド"
-  - "開発者ツール"
-description: "生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェント。"
+  - エージェント
+  - 自律型
+  - DevOps
+  - クラウド
+  - 開発者ツール
+description: 生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "2ヶ月無料トライアル"
+  starting_price: 2ヶ月無料トライアル
   target_users:
-    - "DevOpsエンジニア"
-    - "SRE"
-    - "クラウド運用担当者"
-  latest_highlight: "2026年3月に一般公開（GA）され、2ヶ月の無料トライアルを提供開始"
-  update_frequency: "高"
+    - DevOpsエンジニア
+    - SRE
+    - クラウド運用担当者
+  latest_highlight: 2026年3月に一般公開（GA）され、2ヶ月の無料トライアルを提供開始
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
@@ -33,14 +33,14 @@ evaluation:
     - point: 5
       reason: インシデント対応の自律化による運用負荷の大幅な軽減
   minus_points: []
-  summary: "AWS環境における運用オペレーションを自律化し、障害対応時間を劇的に短縮する革新的なツール。"
+  summary: AWS環境における運用オペレーションを自律化し、障害対応時間を劇的に短縮する革新的なツール。
 links:
-  documentation: "https://docs.aws.amazon.com/devopsagent/latest/userguide/"
+  documentation: https://docs.aws.amazon.com/devopsagent/latest/userguide/
 relationships:
-  parent: "AWS Frontier Agents"
+  parent: AWS Frontier Agents
   related_tools:
-    - "Amazon Q Developer"
-    - "Datadog"
+    - Amazon Q Developer
+    - Datadog
 ---
 
 # **AWS DevOps Agent 調査レポート**
