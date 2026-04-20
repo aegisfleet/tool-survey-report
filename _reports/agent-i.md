@@ -1,50 +1,42 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Agent i 調査レポート"
-tool_name: "Agent i"
-tool_reading: "エージェント アイ"  # カタカナ。複数ある場合は「 A / B 」のように併記
-category: "生成AI"
-developer: "LINEヤフー株式会社"
-official_site: "https://events.yahoo.co.jp/agent-i/"
-date: "2026-04-20"
-last_updated: "2026-04-20"
+title: Agent i 調査レポート
+tool_name: Agent i
+tool_reading: エージェント アイ
+category: 生成AI
+developer: LINEヤフー株式会社
+official_site: https://events.yahoo.co.jp/agent-i/
+date: '2026-04-20'
+last_updated: '2026-04-20'
 tags:
-  - "AI"
-  - "生成AI"
-  - "会話型AI"
-  - "SaaS"
-description: "「LINE」と「Yahoo! JAPAN」からワンタップで利用できる、日常生活に寄り添うAIエージェント"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - 生成AI
+  - 会話型AI
+  - SaaS
+description: 「LINE」と「Yahoo! JAPAN」からワンタップで利用できる、日常生活に寄り添うAIエージェント
 quick_summary:
-  has_free_plan: true  # 無料プランの有無
-  is_oss: false  # OSS（オープンソース）かどうか
-  starting_price: "無料"  # 最低価格（無料の場合は「無料」）
-  target_users:  # 想定ユーザー（1-3項目）
-    - "一般ユーザー"
-    - "Yahoo! JAPANユーザー"
-    - "LINEユーザー"
-  latest_highlight: "2026年4月20日 新ブランド「Agent i」として提供開始"  # 直近1ヶ月の注目アップデート
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  has_free_plan: true
+  is_oss: false
+  starting_price: 無料
+  target_users:
+    - 一般ユーザー
+    - Yahoo! JAPANユーザー
+    - LINEユーザー
+  latest_highlight: 2026年4月20日 新ブランド「Agent i」として提供開始
+  update_frequency: 高
 evaluation:
-  score: 80  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 80
+  base_score: 70
+  plus_points:
     - point: 5
-      reason: "LINEとYahoo! JAPANの強力なプラットフォーム連携"
+      reason: LINEとYahoo! JAPANの強力なプラットフォーム連携
     - point: 5
-      reason: "日常生活に特化した領域エージェントの提供"
-  minus_points:  # 減点項目（各項目: 点数と理由）
+      reason: 日常生活に特化した領域エージェントの提供
+  minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "LINEとYahoo! JAPANの日常的なサービス連携により、生活支援ツールとして高い利便性を持つ"  # 評価の要約（1文）
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: LINEとYahoo! JAPANの日常的なサービス連携により、生活支援ツールとして高い利便性を持つ
 links:
-  documentation: "https://search.yahoo.co.jp/guidelines/generativeaiguideline"
+  documentation: https://search.yahoo.co.jp/guidelines/generativeaiguideline
 relationships: {}
 ---
 
