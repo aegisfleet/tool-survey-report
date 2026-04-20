@@ -54,6 +54,7 @@ relationships:
     - Cursor
     - AWS CloudFormation
     - GitHub Copilot CLI
+    - AWS DevOps Agent
 ---
 
 # **Amazon Q Developer 調査レポート**

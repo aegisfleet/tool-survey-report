@@ -56,6 +56,7 @@ relationships:
     - Grafana
     - Amazon OpenSearch Service
     - Kubernetes
+    - AWS DevOps Agent
 ---
 
 # **Datadog 調査レポート**
