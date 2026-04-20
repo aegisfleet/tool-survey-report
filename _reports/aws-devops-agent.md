@@ -1,30 +1,29 @@
 ---
-title: AWS DevOps Agent 調査レポート
-tool_name: AWS DevOps Agent
-tool_reading: エーダブリューエス デボオプス エージェント
-category: AIエージェント基盤
-developer: Amazon Web Services (AWS)
-official_site: https://aws.amazon.com/devops-agent/
-date: '2026-02-04'
-last_updated: '2026-02-04'
+title: "AWS DevOps Agent 調査レポート"
+tool_name: "AWS DevOps Agent"
+tool_reading: "エーダブリューエス デボオプス エージェント"
+category: "自律型AIエージェント"
+developer: "Amazon Web Services (AWS)"
+official_site: "https://aws.amazon.com/devops-agent/"
+date: "2026-04-20"
+last_updated: "2026-04-20"
 tags:
-  - AIOps
-  - AWS
-  - DevOps
-  - インシデント対応
-  - エージェント
-  - 開発者ツール
-description: 生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェント。
+  - "エージェント"
+  - "自律型"
+  - "DevOps"
+  - "クラウド"
+  - "開発者ツール"
+description: "生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェント。"
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: プレビュー中は無料
+  starting_price: "2ヶ月無料トライアル"
   target_users:
-    - DevOpsエンジニア
-    - SRE
-    - クラウド運用担当者
-  latest_highlight: インシデント対応時間を大幅に短縮する自律型エージェントとしてプレビュー公開
-  update_frequency: 高
+    - "DevOpsエンジニア"
+    - "SRE"
+    - "クラウド運用担当者"
+  latest_highlight: "2026年3月に一般公開（GA）され、2ヶ月の無料トライアルを提供開始"
+  update_frequency: "高"
 evaluation:
   score: 80
   base_score: 70
@@ -34,14 +33,14 @@ evaluation:
     - point: 5
       reason: インシデント対応の自律化による運用負荷の大幅な軽減
   minus_points: []
-  summary: AWS環境における運用オペレーションを自律化し、障害対応時間を劇的に短縮する革新的なツール。
+  summary: "AWS環境における運用オペレーションを自律化し、障害対応時間を劇的に短縮する革新的なツール。"
 links:
-  documentation: https://docs.aws.amazon.com/devopsagent/latest/userguide/
+  documentation: "https://docs.aws.amazon.com/devopsagent/latest/userguide/"
 relationships:
-  parent: AWS Frontier Agents
+  parent: "AWS Frontier Agents"
   related_tools:
-    - Amazon Q Developer
-    - Datadog
+    - "Amazon Q Developer"
+    - "Datadog"
 ---
 
 # **AWS DevOps Agent 調査レポート**
@@ -54,8 +53,8 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/devops-agent/](https://aws.amazon.com/devops-agent/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/devopsagent/latest/userguide/](https://docs.aws.amazon.com/devopsagent/latest/userguide/)
-  * ブログ: [https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview](https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview)
-* **カテゴリ**: AIエージェント基盤
+  * ブログ: [https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview/](https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview/)
+* **カテゴリ**: 自律型AIエージェント
 * **概要**: AWS DevOps Agentは、生成AIを活用して運用上の問題検出、診断、修復を加速する自律型AIエージェントです。AWSの可観測性ツールやサードパーティ製ツールと連携し、インシデント発生時に自律的にトリアージを行い、根本原因を特定して解決策を提案します。
 
 ## **2. 目的と主な利用シーン**
@@ -95,7 +94,7 @@ relationships:
 
 ## **6. 弱み・注意点 (Cons)**
 
-* **プレビュー段階**: 現在はプレビュー版であり、機能や利用可能なリージョンに制限がある可能性があります。
+* **利用可能なリージョンの制限**: GAされましたが、利用可能なリージョンには制限がある可能性があります。
 * **言語対応**: 主なインターフェースや生成されるレポートは英語が中心となる可能性があります（日本語対応状況は要確認）。
 * **サードパーティ連携の範囲**: 主要なツールには対応していますが、すべての運用ツールを網羅しているわけではありません。
 
@@ -103,10 +102,10 @@ relationships:
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **プレビュー** | 無料 | プレビュー期間中は追加料金なしで利用可能（AWSリソース利用料は別途発生） |
+| **無料トライアル** | 無料 | 新規顧客向けに2ヶ月間提供（AWSリソース利用料は別途発生） |
 
-* **課金体系**: 正式リリース後の体系は未定ですが、エージェントの処理量や分析データ量に基づく課金が予想されます。
-* **無料トライアル**: プレビュー期間自体がトライアルとして機能します。
+* **課金体系**: 分析データ量や処理量に基づく従量課金。
+* **無料トライアル**: 新規顧客向けに2ヶ月間の無料トライアルが用意されています。
 
 ## **8. 導入実績・事例**
 
@@ -169,15 +168,16 @@ relationships:
   * 「着陸ゾーン（Landing Zone）全体のトポロジーを推論できる能力が素晴らしい」（RMIT University）
   * 「運用パターンから学習する能力が、エンジニアリング効率の向上につながる」（Deriv）
 * **ネガティブな評価 / 改善要望**:
-  * 現時点ではプレビュー版であるため、広範なユーザーレビューはまだ少ない。
+  * G2、Capterra、ITreviewにレビューの登録なし。
 * **特徴的なユースケース**:
   * 大規模な大学システムにおけるゼロタッチエンジニアリングの追求（RMIT University）。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-31**: AWS DevOps Agentが一般公開（GA）され、新規顧客向けに2ヶ月の無料トライアルの提供を開始。
 * **2025-12-01**: AWS re:Invent 2025にて「AWS DevOps Agent」としてプレビュー公開。インシデント対応の加速とシステム信頼性の向上を目的とする。
 
-(出典: [AWS Blog](https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview))
+(出典: [AWS Blog](https://aws.amazon.com/blogs/aws/aws-devops-agent-helps-you-accelerate-incident-response-and-improve-system-reliability-preview/))
 
 ## **16. 類似ツールとの比較**
 
