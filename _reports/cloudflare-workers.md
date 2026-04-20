@@ -38,7 +38,7 @@ evaluation:
   summary: 優れたパフォーマンスと低コストを両立し、モダンなWebアプリケーション開発に最適
 links:
   github: https://github.com/cloudflare/workers-sdk
-  deepwiki: "https://deepwiki.com/cloudflare/workers-sdk"
+  deepwiki: https://deepwiki.com/cloudflare/workers-sdk
   documentation: https://developers.cloudflare.com/workers/
 relationships:
   parent: Cloudflare
