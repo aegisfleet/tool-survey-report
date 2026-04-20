@@ -53,6 +53,7 @@ relationships:
     - LangChain
     - さくらのAI
     - Strands Agents
+    - AWS MCP Servers
 ---
 
 # **Amazon Bedrock 調査レポート**
