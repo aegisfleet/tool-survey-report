@@ -1,52 +1,44 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Burp Suite 調査レポート"
-tool_name: "Burp Suite"
-tool_reading: "バープスイート"
-category: "セキュリティテスト"
-developer: "PortSwigger"
-official_site: "https://portswigger.net/burp"
-date: "2026-04-20"
-last_updated: "2026-04-20"
+title: Burp Suite 調査レポート
+tool_name: Burp Suite
+tool_reading: バープスイート
+category: セキュリティテスト
+developer: PortSwigger
+official_site: https://portswigger.net/burp
+date: '2026-04-20'
+last_updated: '2026-04-20'
 tags:
-  - "セキュリティ"
-  - "ペネトレーションテスト"
-  - "DAST"
-  - "脆弱性スキャナー"
-description: "Webアプリケーションのセキュリティテストおよびペネトレーションテストのための業界標準ツールキット。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - セキュリティ
+  - ペネトレーションテスト
+  - DAST
+  - 脆弱性スキャナー
+description: Webアプリケーションのセキュリティテストおよびペネトレーションテストのための業界標準ツールキット。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$499/年"
+  starting_price: $499/年
   target_users:
-    - "セキュリティエンジニア"
-    - "ペネトレーションテスター"
-    - "DevSecOpsチーム"
-  latest_highlight: "2026年4月にCustom CA certificate機能やhost-level SOCKS bypass機能を備えた2026.3.2をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - セキュリティエンジニア
+    - ペネトレーションテスター
+    - DevSecOpsチーム
+  latest_highlight: 2026年4月にCustom CA certificate機能やhost-level SOCKS bypass機能を備えた2026.3.2をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "ペネトレーションテスト業界のデファクトスタンダードであり、機能が極めて豊富"
+      reason: ペネトレーションテスト業界のデファクトスタンダードであり、機能が極めて豊富
     - point: 5
-      reason: "BApp Storeによる拡張性が高く、カスタマイズが容易"
+      reason: BApp Storeによる拡張性が高く、カスタマイズが容易
     - point: 3
-      reason: "アップデートが高頻度で提供される"
+      reason: アップデートが高頻度で提供される
   minus_points:
     - point: -3
-      reason: "Community Edition（無料版）では脆弱性スキャナーが利用できない"
-  summary: "プロフェッショナルなWebセキュリティ診断において不可欠なツールだが、無料版には一部機能制限がある"
-
-# 【任意項目】該当するもののみ記載
+      reason: Community Edition（無料版）では脆弱性スキャナーが利用できない
+  summary: プロフェッショナルなWebセキュリティ診断において不可欠なツールだが、無料版には一部機能制限がある
 links:
-  documentation: "https://portswigger.net/burp/documentation"
+  documentation: https://portswigger.net/burp/documentation
 relationships:
   related_tools: []
 ---
