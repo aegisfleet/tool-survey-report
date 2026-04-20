@@ -6,13 +6,12 @@ category: CDN/セキュリティ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/guardduty/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-20'
 tags:
   - AWS
-  - IDS
   - セキュリティ
   - マルウェア対策
-  - 脅威検知
+  - クラウド
 description: AWSアカウント、ワークロード、データを継続的に監視し、機械学習と統合された脅威インテリジェンスを使用して悪意のあるアクティビティを検出するフルマネージド型脅威検出サービス
 quick_summary:
   has_free_plan: false
@@ -64,8 +63,6 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/jp/guardduty/](https://aws.amazon.com/jp/guardduty/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/guardduty/](https://docs.aws.amazon.com/guardduty/)
-  * 料金ページ: [https://aws.amazon.com/guardduty/pricing/](https://aws.amazon.com/guardduty/pricing/)
-  * FAQ: [https://aws.amazon.com/guardduty/faqs/](https://aws.amazon.com/guardduty/faqs/)
 * **カテゴリ**: CDN/セキュリティ
 * **概要**: Amazon GuardDutyは、AWSアカウント、ワークロード、およびデータを保護するためのインテリジェントな脅威検出サービスです。AWS環境内のログを継続的に監視・分析し、機械学習と脅威インテリジェンスを活用して、不正アクセスやマルウェア感染などのセキュリティ脅威を自動的に検出します。
 
@@ -292,13 +289,13 @@ relationships:
 * **調査対象**: G2, ITreview
 * **総合評価**: 4.5/5.0 (G2)
 * **ポジティブな評価**:
-  * 「スイッチを入れるだけで安心感が得られる。導入の手間がほぼゼロ。」
-  * 「エージェントレスでここまで詳細に可視化できるのは素晴らしい。」
-  * 「コストが予測しやすく、効果に対して非常に安価だと感じる。」
+  * 「スイッチを入れるだけで安心感が得られる。導入の手間がほぼゼロ。」（G2より引用）
+  * 「エージェントレスでここまで詳細に可視化できるのは素晴らしい。」（G2より引用）
+  * 「コストが予測しやすく、効果に対して非常に安価だと感じる。」（G2より引用）
 * **ネガティブな評価 / 改善要望**:
-  * 「大量のログが出る環境だと、予想以上にコストがかかる場合がある。」
-  * 「検知内容が専門的すぎて、どう対処すればいいか迷うことがある。」
-  * 「誤検知（False Positive）を減らすためのチューニングが少し難しい。」
+  * 「大量のログが出る環境だと、予想以上にコストがかかる場合がある。」（G2より引用）
+  * 「検知内容が専門的すぎて、どう対処すればいいか迷うことがある。」（G2より引用）
+  * 「誤検知（False Positive）を減らすためのチューニングが少し難しい。」（G2より引用）
 * **特徴的なユースケース**:
   * セキュリティ部門がないスタートアップが、とりあえずのセキュリティ対策として導入し、Slack通知で運用するケース。
 
@@ -316,14 +313,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2026-01-15**: **脅威検出モデルのアップデート**
-  * 新たなランサムウェアの挙動やC&Cサーバーとの通信パターンに対応するため、機械学習モデルが更新されました。
-* **2025-12-01**: **Aurora Limitless DatabaseのRDS Protection価格改定**
-  * Aurora Limitlessデータベースの有料利用に対するRDS Protectionの課金が正式に適用開始されました。
-* **継続的アップデート**: **脅威インテリジェンスの更新**
-  * AWSおよびパートナーからのフィードに基づき、悪意のあるIPアドレスやドメインのリストが自動的に更新されています。
+* **2025-12-05**: **GuardDuty Extended Threat Detection (EC2/ECS)**
+  * Amazon EC2インスタンスの攻撃シーケンスカバレッジと脅威分析を向上させるためのRuntime Monitoring機能が拡張されました。
+* **2025-11-12**: **Malware Protection for AWS Backupの追加**
+  * Amazon EC2、Amazon EBS、およびAmazon S3バックアップに対するマルウェア検出機能が提供され、復旧時のビジネス中断を最小限に抑える機能が追加されました。
+* **2025-09-24**: **カスタムエンティティリストの一般提供**
+  * GuardDutyのカスタム脅威検出機能が強化され、独自のドメインベースの脅威インテリジェンス（エンティティリスト）を統合できるようになりました。
 
-(出典: [AWS What's New](https://aws.amazon.com/new/), [GuardDuty Release Notes](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty-document-history.html))
+(出典: [AWS What's New](https://aws.amazon.com/new/))
 
 ## **16. 類似ツールとの比較**
 
