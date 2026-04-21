@@ -6,12 +6,12 @@ category: CDN/セキュリティ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/security-hub/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-22'
 tags:
+  - クラウド
   - AWS
-  - CNAPP
-  - CSPM
   - セキュリティ
+  - CSPM
   - 脆弱性管理
 description: AWS環境全体のセキュリティ状況を可視化し、リスクベースの優先順位付けと自動修復を提供する統合クラウドセキュリティソリューション
 quick_summary:
@@ -65,7 +65,8 @@ relationships:
   * ドキュメント: [https://docs.aws.amazon.com/securityhub/](https://docs.aws.amazon.com/securityhub/)
   * 料金ページ: [https://aws.amazon.com/security-hub/pricing/](https://aws.amazon.com/security-hub/pricing/)
   * FAQ: [https://aws.amazon.com/security-hub/faqs/](https://aws.amazon.com/security-hub/faqs/)
-* **カテゴリ**: CDN/セキュリティ / CSPM (Cloud Security Posture Management) / CNAPP (Cloud Native Application Protection Platform)
+  * レビューサイト: [G2](https://www.g2.com/products/aws-security-hub/reviews)
+* **カテゴリ**: CDN/セキュリティ
 * **概要**: AWS Security Hubは、AWS環境全体のセキュリティアラートとコンプライアンス状況を一元管理する統合セキュリティサービスです。Amazon GuardDuty、Amazon Inspector、Amazon MacieなどのAWSセキュリティサービスやサードパーティ製品からの検出結果を集約・相関分析し、リスクの高い問題を自動的に優先順位付けします。
 
 ## **2. 目的と主な利用シーン**
@@ -318,16 +319,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-12-XX (推定)**: **統一セキュリティソリューションの正式リリース (GA)**
-  * CSPM機能に加え、InspectorやGuardDutyの検出結果を統合・相関分析する機能が一般提供開始。リスクベースの優先順位付けが強化された。
-* **2025-11-XX (推定)**: **新料金体系（Streamlined Pricing）の導入**
-  * 従来のチェック回数ベースから、EC2やLambdaなどのリソース数ベースの料金体系へ移行。コスト予測が容易に。
-* **2025-10-XX (推定)**: **攻撃パス分析 (Attack Path Analysis) の機能強化**
-  * ネットワーク到達可能性と脆弱性情報を組み合わせた攻撃パスの可視化機能が強化され、より複雑な攻撃シナリオに対応。
-* **2025-09-XX (推定)**: **OCSF (Open Cybersecurity Schema Framework) v1.1 サポート**
-  * セキュリティ検出結果の標準フォーマットとしてOCSFの最新バージョンに対応し、相互運用性が向上。
+* **2026-02-XX**: **Security Hub Extended Partner Solutions**
+  * Security Hubコンソールから直接、必要なパートナーセキュリティソリューションを従量課金または定額制で選択・導入できるようになった。
+* **2025-12-XX**: **リスク分析と統合管理のGA（一般提供）**
+  * ほぼリアルタイムのリスク分析、高度なトレンド把握、AWSの複数セキュリティサービスにまたがる統合された有効化と管理、および合理化された料金体系が一般提供された。
+* **2025-06-XX**: **リスクの優先順位付けとスケーラブルな対応**
+  * 脅威検出や脆弱性管理からのセキュリティシグナルを相関・強化することで、重大な問題を特定し、優先順位を付ける機能が強化された。
 
-(出典: [AWS Security Hub Features](https://aws.amazon.com/security-hub/features/), [AWS Security Hub FAQ](https://aws.amazon.com/security-hub/faqs/) - ※日付は機能リリースのアナウンス時期からの推定を含む)
+(出典: [AWS What's New](https://aws.amazon.com/new/))
 
 ## **16. 類似ツールとの比較**
 
