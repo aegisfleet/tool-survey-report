@@ -8,35 +8,35 @@ official_site: https://aws.amazon.com/jp/guardduty/
 date: '2026-02-04'
 last_updated: '2026-04-20'
 tags:
-- AWS
-- セキュリティ
-- マルウェア対策
-- クラウド
+  - AWS
+  - セキュリティ
+  - マルウェア対策
+  - クラウド
 description: AWSアカウント、ワークロード、データを継続的に監視し、機械学習と統合された脅威インテリジェンスを使用して悪意のあるアクティビティを検出するフルマネージド型脅威検出サービス
 quick_summary:
   has_free_plan: false
   is_oss: false
   starting_price: $4.00/100万イベント (CloudTrail)
   target_users:
-  - セキュリティ担当者
-  - DevOpsエンジニア
-  - AWS管理者
+    - セキュリティ担当者
+    - DevOpsエンジニア
+    - AWS管理者
   latest_highlight: Aurora Limitless Databaseへの対応とRDS保護の強化
   update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
-  - point: 5
-    reason: ワンクリックで全アカウントに導入可能な容易さ
-  - point: 5
-    reason: AWSネイティブ統合によるシームレスな運用
-  - point: 5
-    reason: AI/MLを活用した高精度な異常検知
-  - point: 4
-    reason: エージェントレスでパフォーマンス影響がない
-  - point: 3
-    reason: 日本語ドキュメントとサポートが充実
+    - point: 5
+      reason: ワンクリックで全アカウントに導入可能な容易さ
+    - point: 5
+      reason: AWSネイティブ統合によるシームレスな運用
+    - point: 5
+      reason: AI/MLを活用した高精度な異常検知
+    - point: 4
+      reason: エージェントレスでパフォーマンス影響がない
+    - point: 3
+      reason: 日本語ドキュメントとサポートが充実
   minus_points: []
   summary: AWS環境におけるセキュリティ対策の「一丁目一番地」。導入の手軽さと強力な検知能力を兼ね備え、必須レベルのサービス。
 links:
@@ -44,7 +44,7 @@ links:
 relationships:
   parent: null
   related_tools:
-  - AWS Security Hub
+    - AWS Security Hub
 ---
 
 # **Amazon GuardDuty 調査レポート**
