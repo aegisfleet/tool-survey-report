@@ -41,6 +41,7 @@ relationships:
     - Amazon Bedrock
     - さくらのAI
     - Gemini
+    - Gemini Enterprise Agent Platform
 tags:
   - AI
   - Gemini
