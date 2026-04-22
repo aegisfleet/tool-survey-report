@@ -1,52 +1,44 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Spanner Omni 調査レポート"
-tool_name: "Spanner Omni"
-tool_reading: "スパナー オムニ"
-category: "データベース"
-developer: "Google Cloud"
-official_site: "https://cloud.google.com/products/spanner/omni"
-date: "2026-04-23"
-last_updated: "2026-04-23"
+title: Spanner Omni 調査レポート
+tool_name: Spanner Omni
+tool_reading: スパナー オムニ
+category: データベース
+developer: Google Cloud
+official_site: https://cloud.google.com/products/spanner/omni
+date: '2026-04-23'
+last_updated: '2026-04-23'
 tags:
-  - "データベース"
-  - "マネージドサービス"
-  - "クラウド"
-description: "Google Cloud以外（オンプレミス、他社クラウド、ローカル環境）でも稼働可能な、自己管理型のダウンロード版Google Spannerデータベース。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - データベース
+  - マネージドサービス
+  - クラウド
+description: Google Cloud以外（オンプレミス、他社クラウド、ローカル環境）でも稼働可能な、自己管理型のダウンロード版Google Spannerデータベース。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "プレビュー版は無料"
+  starting_price: プレビュー版は無料
   target_users:
-    - "大企業"
-    - "開発者"
-  latest_highlight: "2026年4月のGoogle Cloud Next'26でプレビュー版が発表・公開された"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - 開発者
+  latest_highlight: 2026年4月のGoogle Cloud Next'26でプレビュー版が発表・公開された
+  update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Spannerの強力なスケーラビリティと一貫性を、Google Cloud外でも利用できる画期的な柔軟性"
+      reason: Spannerの強力なスケーラビリティと一貫性を、Google Cloud外でも利用できる画期的な柔軟性
     - point: 5
-      reason: "オンプレミスからクラウドまで、ハイブリッド/マルチクラウドでの高いレジリエンス"
+      reason: オンプレミスからクラウドまで、ハイブリッド/マルチクラウドでの高いレジリエンス
     - point: 3
-      reason: "リレーショナル、グラフ、ベクターなど複数のデータモデルに対応した相互運用性"
+      reason: リレーショナル、グラフ、ベクターなど複数のデータモデルに対応した相互運用性
   minus_points:
-    - point: -0
-      reason: "特になし（ただしプレビュー版のためエンタープライズ機能は一部未搭載）"
-  summary: "Google Cloudの枠組みを越えて動作するようになった強力な分散データベース"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 特になし（ただしプレビュー版のためエンタープライズ機能は一部未搭載）
+  summary: Google Cloudの枠組みを越えて動作するようになった強力な分散データベース
 links:
-  documentation: "https://docs.cloud.google.com/spanner-omni/overview"
+  documentation: https://docs.cloud.google.com/spanner-omni/overview
 relationships:
-  parent: "Google Cloud"
+  parent: Google Cloud
 ---
 
 # **Spanner Omni 調査レポート**
