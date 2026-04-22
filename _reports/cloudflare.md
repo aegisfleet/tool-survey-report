@@ -6,15 +6,14 @@ category: CDN/セキュリティ
 developer: Cloudflare, Inc.
 official_site: https://www.cloudflare.com/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-22'
 tags:
-  - AI
-  - CDN
-  - DDoS対策
-  - DNS
+  - クラウド
+  - セキュリティ
   - WAF
-  - Zero Trust
-description: Webサイトのパフォーマンス向上とセキュリティ対策を統合したグローバルクラウドネットワーク
+  - CDN
+  - ゼロトラスト
+description: Cloudflareは、世界中に展開されたエッジネットワークを通じて、Webサイトの高速化（CDN）と高度なセキュリティ（WAF・DDoS対策）を統合して提供するプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -44,6 +43,8 @@ evaluation:
 links:
   documentation: https://developers.cloudflare.com/
 relationships:
+  children:
+    - Cloudflare Workers
   related_tools:
     - Vercel
     - Google Cloud
@@ -63,7 +64,6 @@ relationships:
 * **公式サイト**: [https://www.cloudflare.com/](https://www.cloudflare.com/)
 * **関連リンク**:
   * ドキュメント: [https://developers.cloudflare.com/](https://developers.cloudflare.com/)
-  * レビューサイト: [G2](https://www.g2.com/products/cloudflare/reviews)
 * **カテゴリ**: CDN/セキュリティ
 * **概要**: Cloudflareは、Webサイトやアプリケーションのパフォーマンス向上、セキュリティ強化、信頼性向上を実現するための統合型グローバルクラウドネットワークサービスです。CDN、WAF、DDoS防御、サーバーレスコンピューティングなどの機能を包括的に提供します。
 
@@ -145,7 +145,7 @@ relationships:
 ## **9. サポート体制**
 
 * **ドキュメント**: [Cloudflare Developers](https://developers.cloudflare.com/) に網羅的な技術ドキュメントがある。
-* **コミュニティ**: [Community Forum](https://community.cloudflare.com/) や Discordサーバーが活発。
+* **コミュニティ**: ユーザーフォーラムやDiscordサーバーが活発。
 * **公式サポート**:
   * Free: コミュニティのみ。
   * Pro: メールサポート（応答数日）。
@@ -196,15 +196,15 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, X (Twitter)
-* **総合評価**: 4.7/5.0 (G2)
+* **総合評価**: 4.7/5.0 (G2による引用)
 * **ポジティブな評価**:
-  * 「無料プランの太っ腹さは異常。個人開発者の救世主。」
-  * 「DDoS攻撃が来た際も、ボタン一つ（Under Attack Mode）で防御でき、サイトが落ちなかった。」
-  * 「Workersのデプロイが一瞬で終わり、体験が良い。」
+  * 「無料プランの太っ腹さは異常。個人開発者の救世主。」（SNS等のレビューより要約）
+  * 「DDoS攻撃が来た際も、ボタン一つ（Under Attack Mode）で防御でき、サイトが落ちなかった。」（ユーザーレビューより要約）
+  * 「Workersのデプロイが一瞬で終わり、体験が良い。」（ユーザーレビューより要約）
 * **ネガティブな評価 / 改善要望**:
-  * 「サポートからの返信が遅い（特に下位プラン）。」
-  * 「機能が多すぎて使いこなせていない気がする。」
-  * 「Enterpriseプランの価格が非公開で、見積もりが取りにくい。」
+  * 「サポートからの返信が遅い（特に下位プラン）。」（ユーザーレビューより要約）
+  * 「機能が多すぎて使いこなせていない気がする。」（ユーザーレビューより要約）
+  * 「Enterpriseプランの価格が非公開で、見積もりが取りにくい。」（ユーザーレビューより要約）
 * **特徴的なユースケース**:
   * 海外からのアクセスが多いサイトで、Cloudflare導入により表示速度が数秒改善した事例。
 
