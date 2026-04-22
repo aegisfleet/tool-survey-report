@@ -54,6 +54,7 @@ relationships:
     - さくらのAI
     - Strands Agents
     - AWS MCP Servers
+    - Gemini Enterprise Agent Platform
 ---
 
 # **Amazon Bedrock 調査レポート**
