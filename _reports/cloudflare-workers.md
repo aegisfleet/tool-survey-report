@@ -44,9 +44,7 @@ relationships:
   parent: Cloudflare
   children: []
   related_tools:
-    - vercel
-    - aws
-    - deno
+    - Vercel
 ---
 
 # **Cloudflare Workers 調査レポート**
