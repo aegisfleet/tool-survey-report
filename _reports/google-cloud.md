@@ -48,6 +48,7 @@ relationships:
     - Gemini
     - Kubernetes
     - Looker Studio
+    - Spanner Omni
   related_tools:
     - Terraform
     - Google Workspace CLI (gws)
