@@ -44,6 +44,7 @@ relationships:
   related_tools:
     - GitHub Actions
     - Jenkins
+    - GitLab CI/CD
 ---
 
 # **Trivy 調査レポート**
