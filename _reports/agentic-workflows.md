@@ -49,6 +49,7 @@ relationships:
     - Claude Code
     - OpenAI Codex CLI
     - GitHub Copilot
+    - GitLab CI/CD
 ---
 
 # **Agentic Workflows 調査レポート**

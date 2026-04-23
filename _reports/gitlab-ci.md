@@ -6,7 +6,7 @@ category: CI/CD
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/solutions/continuous-integration/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-23'
 tags:
   - CI/CD
   - DevOps
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - エンタープライズ
-  latest_highlight: 2026年1月にGitLab Duo Agent Platformが一般公開(GA)
+  latest_highlight: 2026年4月リリースのGitLab 18.11にて、Agentic SAST Vulnerability Resolution（脆弱性解決）が一般公開(GA)
   update_frequency: 高
 evaluation:
   score: 85
@@ -47,6 +47,8 @@ relationships:
     - GitHub Actions
     - Jenkins
     - act
+    - Trivy
+    - Agentic Workflows
 ---
 
 # **GitLab CI/CD 調査レポート**
@@ -190,8 +192,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2 (2026年1月時点のデータに基づく)
-* **総合評価**: 4.5/5.0
+* **調査対象**: G2 (2026年4月時点のGoogle検索結果スニペットより引用)
+* **総合評価**: 4.5/5.0 (G2)
 * **ポジティブな評価**:
   * 「GitHub Actionsと比較しても遜色ない、あるいはそれ以上に統合された強力なCI/CD機能。」
   * 「セルフホストが可能で、オンプレミス環境での運用において非常に信頼性が高い。」
@@ -203,10 +205,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-16 (GitLab 18.11)**: Agentic SAST Vulnerability Resolution（エージェントによるSAST脆弱性解決）が一般公開。CI Expert Agent (Beta) 導入。
+* **2026-03-19 (GitLab 18.10)**: SAST false positive detection（SAST誤検知のAI判定）が一般公開。Free階層でのGitLab Credits購入が可能に。
+* **2026-02-19 (GitLab 18.9)**: Agentic SAST Vulnerability Resolution (Beta) の導入。Cloud Native Hybridでのゼロダウンタイムアップグレードを公式サポート。
 * **2026-01-15 (GitLab 18.8)**: GitLab Duo Agent Platformが一般公開(GA)。Planner AgentやSecurity Analyst AgentなどのAIエージェントが利用可能に。
 * **2025-12-18 (GitLab 18.7)**: GitLab Duo分析ダッシュボードの改善、シークレット妥当性の自動チェック機能追加。
 * **2025-11-20 (GitLab 18.6)**: 生産性を重視した新UIデザインの導入、CI/CDコンポーネントのメタデータ参照機能。
-* **2025-10-16 (GitLab 18.5)**: GitLab Duo Planner Agent (Beta) の導入、Maven仮想レジストリUIなど。
 
 (出典: [GitLab Releases](https://about.gitlab.com/releases/categories/releases/))
 
