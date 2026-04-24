@@ -44,6 +44,7 @@ relationships:
   parent: Google Cloud
   children:
     - Vertex AI Studio
+    - agents-cli
   related_tools:
     - Amazon Bedrock
 ---
