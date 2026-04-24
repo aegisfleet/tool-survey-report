@@ -1,47 +1,47 @@
 ---
-title: "OSV-Scanner 調査レポート"
-tool_name: "OSV-Scanner"
-tool_reading: "オーエスブイスキャナー"
-category: "開発者ツール"
-developer: "Google / OpenSSF"
-official_site: "https://google.github.io/osv-scanner/"
-date: "2026-04-25"
-last_updated: "2026-04-25"
+title: OSV-Scanner 調査レポート
+tool_name: OSV-Scanner
+tool_reading: オーエスブイスキャナー
+category: 開発者ツール
+developer: Google / OpenSSF
+official_site: https://google.github.io/osv-scanner/
+date: '2026-04-25'
+last_updated: '2026-04-25'
 tags:
-  - "脆弱性スキャナー"
-  - "オープンソース"
-  - "セキュリティ"
-  - "コンテナ"
-description: "プロジェクトの依存関係に含まれる脆弱性をOSV.devデータベースを利用して検出するオープンソースの脆弱性スキャナー"
+  - 脆弱性スキャナー
+  - オープンソース
+  - セキュリティ
+  - コンテナ
+description: プロジェクトの依存関係に含まれる脆弱性をOSV.devデータベースを利用して検出するオープンソースの脆弱性スキャナー
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "セキュリティエンジニア"
-  latest_highlight: "OSV-Scanner V2のリリースにより、自動修復（Guided Remediation）機能などが追加。"
-  update_frequency: "高"
+    - 開発者
+    - セキュリティエンジニア
+  latest_highlight: OSV-Scanner V2のリリースにより、自動修復（Guided Remediation）機能などが追加。
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "分散型で高品質なOSV.devデータベースを利用し、誤検知が少ない。"
+      reason: 分散型で高品質なOSV.devデータベースを利用し、誤検知が少ない。
     - point: 5
-      reason: "コンテナ、ディレクトリ、ロックファイルなど幅広いスキャン対象に対応。"
+      reason: コンテナ、ディレクトリ、ロックファイルなど幅広いスキャン対象に対応。
     - point: 3
-      reason: "コール分析や自動修復（Guided Remediation）機能などの先進的な機能を提供。"
+      reason: コール分析や自動修復（Guided Remediation）機能などの先進的な機能を提供。
   minus_points: []
-  summary: "高品質な脆弱性データベースを利用した、多機能かつ信頼性の高いオープンソース脆弱性スキャナー。"
+  summary: 高品質な脆弱性データベースを利用した、多機能かつ信頼性の高いオープンソース脆弱性スキャナー。
 links:
-  github: "https://github.com/google/osv-scanner"
-  codewiki: "https://codewiki.google/github.com/google/osv-scanner"
+  github: https://github.com/google/osv-scanner
+  codewiki: https://codewiki.google/github.com/google/osv-scanner
 relationships:
   related_tools:
-    - "Trivy"
-    - "Grype"
-    - "Syft"
+    - Trivy
+    - Grype
+    - Syft
 ---
 
 # **OSV-Scanner 調査レポート**
