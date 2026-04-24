@@ -54,6 +54,7 @@ relationships:
     - DeepSeek
     - Grok
     - Microsoft 365 Copilot
+    - Qwen
 ---
 
 # **ChatGPT 調査レポート**

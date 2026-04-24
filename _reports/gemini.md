@@ -61,6 +61,7 @@ relationships:
     - Claude
     - Grok
     - DeepSeek
+    - Qwen
 ---
 
 # **Gemini 調査レポート**

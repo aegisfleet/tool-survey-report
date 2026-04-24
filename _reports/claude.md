@@ -54,6 +54,7 @@ relationships:
     - Model Context Protocol
     - MCP Apps
     - Agent Skills
+    - Qwen
 ---
 
 # **Claude 調査レポート**
