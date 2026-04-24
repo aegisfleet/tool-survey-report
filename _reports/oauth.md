@@ -6,7 +6,7 @@ category: CDN/セキュリティ
 developer: IETF (Internet Engineering Task Force)
 official_site: https://oauth.net/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-25'
 tags:
   - API
   - セキュリティ
@@ -287,7 +287,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: 開発者コミュニティ (Stack Overflow, GitHub, Tech Blogs)
+* **調査対象**: 開発者コミュニティ (Stack Overflow, GitHub, Tech Blogs)。※オープン標準プロトコルであるため、G2、Capterra、ITreviewなどのSaaSレビューサイトには登録されていない。
 * **総合評価**: 業界標準として不可欠な存在 (N/A)
 * **ポジティブな評価**:
   * 「パスワード管理の責任から解放され、セキュリティリスクを下げられる」
@@ -314,9 +314,9 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-01**: **IETF OAuth 2.1 Draft Progress**: OAuth 2.0のベストプラクティスを統合したOAuth 2.1の策定作業が継続中。PKCEの義務化やImplicit Grantの削除などが盛り込まれている。
+* **2026-04**: **IETF OAuth 2.1 Draft Progress**: OAuth 2.0のベストプラクティスを統合したOAuth 2.1の策定作業が最終段階に向けて継続中。PKCEの義務化やImplicit Grantの削除などが盛り込まれている。
+* **2025-01**: **IETF OAuth 2.1 Draft Progress**: OAuth 2.0のベストプラクティスを統合したOAuth 2.1の策定作業が継続中。
 * **2024-10**: **Browser Security Updates**: ブラウザのサードパーティCookie廃止に伴い、ブラウザベースのアプリ（SPA）におけるトークン管理の手法について議論が進んでいる（FedCMなど）。
-* **2024-08**: **GNAP (Grant Negotiation and Authorization Protocol)**: 次世代の認可プロトコルとしての議論が進んでいるが、OAuth 2.0/2.1との互換性はないため、並行して開発されている。
 
 (出典: [IETF Datatracker](https://datatracker.ietf.org/wg/oauth/about/), [OAuth.net](https://oauth.net/))
 
