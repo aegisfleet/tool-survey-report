@@ -1,52 +1,44 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "agents-cli 調査レポート"
-tool_name: "agents-cli"
-tool_reading: "エージェンツ・シーエルアイ"
-category: "AIエージェント基盤"
-developer: "Google"
-official_site: "https://google.github.io/agents-cli/"
-date: "2026-04-25"
-last_updated: "2026-04-25"
+title: agents-cli 調査レポート
+tool_name: agents-cli
+tool_reading: エージェンツ・シーエルアイ
+category: AIエージェント基盤
+developer: Google
+official_site: https://google.github.io/agents-cli/
+date: '2026-04-25'
+last_updated: '2026-04-25'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "開発者ツール"
-  - "CLI"
-description: "AIコーディングエージェントにGoogle CloudでのADKエージェント構築・デプロイ機能を追加するCLIツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+  - CLI
+description: AIコーディングエージェントにGoogle CloudでのADKエージェント構築・デプロイ機能を追加するCLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-  latest_highlight: "コーディングエージェントにAgent RuntimeやCloud Runへのデプロイ機能を付与"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+  latest_highlight: コーディングエージェントにAgent RuntimeやCloud Runへのデプロイ機能を付与
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "お気に入りのコーディングエージェント（Gemini CLI, Claude Codeなど）にGoogle Cloud向けのスキルを追加できる"
+      reason: お気に入りのコーディングエージェント（Gemini CLI, Claude Codeなど）にGoogle Cloud向けのスキルを追加できる
     - point: 5
-      reason: "開発から評価、デプロイメントまでCLIで一貫して行える"
+      reason: 開発から評価、デプロイメントまでCLIで一貫して行える
   minus_points:
     - point: 0
-      reason: "特筆すべき減点なし"
-  summary: "既存のAIコーディングアシスタントを活用してGoogle Cloud向けのエンタープライズ対応エージェントを構築する強力な補助ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特筆すべき減点なし
+  summary: 既存のAIコーディングアシスタントを活用してGoogle Cloud向けのエンタープライズ対応エージェントを構築する強力な補助ツール
 links:
-  github: "https://github.com/google/agents-cli"
-  deepwiki: "https://deepwiki.com/google/agents-cli"
+  github: https://github.com/google/agents-cli
+  deepwiki: https://deepwiki.com/google/agents-cli
 relationships:
-  parent: "Gemini Enterprise Agent Platform"
+  parent: Gemini Enterprise Agent Platform
 ---
 
 # **agents-cli 調査レポート**
