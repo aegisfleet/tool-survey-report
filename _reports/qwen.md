@@ -1,52 +1,52 @@
 ---
-title: "Qwen 調査レポート"
-tool_name: "Qwen"
-tool_reading: "クウェン"
-category: "生成AI"
-developer: "Alibaba Cloud / Qwen team"
-official_site: "https://qwen.ai/"
-date: "2026-04-25"
-last_updated: "2026-04-25"
+title: Qwen 調査レポート
+tool_name: Qwen
+tool_reading: クウェン
+category: 生成AI
+developer: Alibaba Cloud / Qwen team
+official_site: https://qwen.ai/
+date: '2026-04-25'
+last_updated: '2026-04-25'
 tags:
-  - "AI"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "会話型AI"
-description: "Alibaba Cloudが開発した、強力な推論能力とマルチモーダル機能を備えた最先端の大規模言語モデルおよびAIアシスタント。"
+  - AI
+  - 生成AI
+  - 大規模言語モデル
+  - 会話型AI
+description: Alibaba Cloudが開発した、強力な推論能力とマルチモーダル機能を備えた最先端の大規模言語モデルおよびAIアシスタント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "従量課金"
+  starting_price: 従量課金
   target_users:
-    - "開発者"
-    - "データサイエンティスト"
-    - "一般ユーザー"
-  latest_highlight: "2026年4月に100万トークンのコンテキストと高度な推論機能を持つQwen 3.6 Plusをリリース"
-  update_frequency: "高"
+    - 開発者
+    - データサイエンティスト
+    - 一般ユーザー
+  latest_highlight: 2026年4月に100万トークンのコンテキストと高度な推論機能を持つQwen 3.6 Plusをリリース
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Qwen 3.6 Plusによる高度な推論機能(Hybrid Thinking)と100万トークンの長文脈処理能力"
+      reason: Qwen 3.6 Plusによる高度な推論機能(Hybrid Thinking)と100万トークンの長文脈処理能力
     - point: 6
-      reason: "画像や動画の理解・生成にも対応する強力なマルチモーダル機能を提供している"
+      reason: 画像や動画の理解・生成にも対応する強力なマルチモーダル機能を提供している
     - point: 4
-      reason: "Deep ResearchやWeb Devなど、実践的で高度なエージェント機能が統合されている"
+      reason: Deep ResearchやWeb Devなど、実践的で高度なエージェント機能が統合されている
   minus_points:
     - point: 0
-      reason: "特に大きな減点要素は見当たらない"
-  summary: "優れた推論能力と長文処理能力を持ち、高度なマルチモーダルタスクにも対応する強力なAIプラットフォーム。"
+      reason: 特に大きな減点要素は見当たらない
+  summary: 優れた推論能力と長文処理能力を持ち、高度なマルチモーダルタスクにも対応する強力なAIプラットフォーム。
 links:
-  github: "https://github.com/QwenLM/Qwen3.6"
+  github: https://github.com/QwenLM/Qwen3.6
 relationships:
   parent: null
   children: []
   related_tools:
-    - "ChatGPT"
-    - "Claude"
-    - "Gemini"
-    - "Qwen-Image-Layered"
+    - ChatGPT
+    - Claude
+    - Gemini
+    - Qwen-Image-Layered
 ---
 
 # **Qwen 調査レポート**
