@@ -53,9 +53,9 @@ relationships:
     - Terraform
     - Google Workspace CLI (gws)
     - Cloudflare
-    - Google Maps Platform
     - Render
     - Google 広告
+    - Google Maps Platform
 ---
 
 # **Google Cloud 調査レポート**

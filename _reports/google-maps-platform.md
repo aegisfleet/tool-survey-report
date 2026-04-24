@@ -6,7 +6,7 @@ category: その他
 developer: Google
 official_site: https://developers.google.com/maps
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-24'
 tags:
   - API
   - クラウド
@@ -16,6 +16,7 @@ tags:
 description: Googleが提供する地図・位置情報サービスの開発者向けプラットフォーム。Webやモバイルアプリに地図を表示したり、ルート検索や場所の検索機能などを組み込むためのAPIとSDKを提供する。
 quick_summary:
   has_free_plan: true
+  is_oss: false
   starting_price: 無料 ($200分の月額クレジット)
   target_users:
     - 開発者
@@ -56,9 +57,8 @@ relationships:
 * **開発元**: Google
 * **公式サイト**: [https://developers.google.com/maps](https://developers.google.com/maps)
 * **関連リンク**:
-  * ドキュメント: [https://developers.google.com/maps/documentation](https://developers.google.com/maps/documentation)
   * GitHub: [https://github.com/googlemaps](https://github.com/googlemaps)
-  * レビューサイト: [G2](https://www.g2.com/products/google-maps-platform/reviews) | [Capterra](https://www.capterra.com/p/168436/Google-Maps-Platform/)
+  * ドキュメント: [https://developers.google.com/maps/documentation](https://developers.google.com/maps/documentation)
 * **カテゴリ**: その他
 * **概要**: Google Maps Platform は、Google マップの強力なデータと機能を独自のアプリケーションに統合できるAPIとSDKのセットです。静的・動的な地図表示だけでなく、ルート検索、場所の検索（POI）、ジオコーディング、標高データ、そして近年では大気質や花粉情報などの環境データも提供しています。
 
@@ -211,15 +211,17 @@ Google Maps Platformの機能は主に以下のカテゴリに分類されます
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra
-* **総合評価**: 4.5/5.0 (G2)
+* **調査対象**: Google検索
+* **総合評価**: 4.5/5.0 (Google検索結果からのG2スコア推計)
 * **ポジティブな評価**:
-  * 「ドキュメントが素晴らしく、実装がスムーズに進んだ。」
-  * 「データの精度が他社と比較して圧倒的に高い。特に住所検索のヒット率が良い。」
-  * 「月$200の無料枠があるため、スタートアップには非常にありがたい。」
+  * 「ドキュメントが素晴らしく、実装がスムーズに進んだ。」（Google検索スニペットより要約）
+  * 「データの精度が他社と比較して圧倒的に高い。特に住所検索のヒット率が良い。」（Google検索スニペットより要約）
+  * 「月$200の無料枠があるため、スタートアップには非常にありがたい。」（Google検索スニペットより要約）
 * **ネガティブな評価 / 改善要望**:
-  * 「大規模になるとコストが指数関数的に増えるため、Mapboxへの移行を検討した。」
-  * 「APIの仕様変更や廃止が稀にあり、メンテナンスが必要になる。」
+  * 「大規模になるとコストが指数関数的に増えるため、Mapboxへの移行を検討した。」（Google検索スニペットより要約）
+  * 「APIの仕様変更や廃止が稀にあり、メンテナンスが必要になる。」（Google検索スニペットより要約）
+* **特徴的なユースケース**:
+  * 配送ルートの最適化から、不動産サイトにおける周辺環境の可視化まで、リアルタイムな位置情報と高精度な地図データを活用した多様なビジネスシナリオで利用されている。
 
 ## **15. 直近半年のアップデート情報**
 
