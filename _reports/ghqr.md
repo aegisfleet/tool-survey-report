@@ -1,48 +1,45 @@
 ---
-title: "GitHub Quick Review 調査レポート"
-tool_name: "GitHub Quick Review"
-tool_reading: "ギットハブ クイック レビュー / ジーエイチキューアール"
-category: "セキュリティ・コンプライアンス"
-developer: "Microsoft"
-official_site: "https://github.com/microsoft/ghqr"
-date: "2026-04-25"
-last_updated: "2026-04-25"
+title: GitHub Quick Review 調査レポート
+tool_name: GitHub Quick Review
+tool_reading: ギットハブ クイック レビュー / ジーエイチキューアール
+category: セキュリティ・コンプライアンス
+developer: Microsoft
+official_site: https://github.com/microsoft/ghqr
+date: '2026-04-25'
+last_updated: '2026-04-25'
 tags:
-  - "GitHub"
-  - "セキュリティ"
-  - "OSS"
-  - "開発ツール"
-description: "GitHubエンタープライズ、組織、リポジトリのセキュリティとベストプラクティスを評価する強力なCLIツール。"
-
+  - GitHub
+  - セキュリティ
+  - OSS
+  - 開発ツール
+description: GitHubエンタープライズ、組織、リポジトリのセキュリティとベストプラクティスを評価する強力なCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "セキュリティチーム"
-    - "DevOpsエンジニア"
-    - "GitHub管理者"
-  latest_highlight: "2026年4月にリポジトリスキャン機能やGHE.comサポートが追加されたv0.2.0をリリース"
-  update_frequency: "高"
-
+    - セキュリティチーム
+    - DevOpsエンジニア
+    - GitHub管理者
+  latest_highlight: 2026年4月にリポジトリスキャン機能やGHE.comサポートが追加されたv0.2.0をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "MCP（Model Context Protocol）をサポートし、AIツールと容易に連携可能"
+      reason: MCP（Model Context Protocol）をサポートし、AIツールと容易に連携可能
     - point: 5
-      reason: "多岐にわたるセキュリティチェックをコマンドひとつで自動化できる"
+      reason: 多岐にわたるセキュリティチェックをコマンドひとつで自動化できる
     - point: 5
-      reason: "Excel, Markdown, JSONなど多様な出力形式をサポート"
+      reason: Excel, Markdown, JSONなど多様な出力形式をサポート
   minus_points:
     - point: -3
-      reason: "情報が公式GitHubリポジトリに限られており、日本語ドキュメントがない"
-  summary: "GitHubのセキュリティリスクを網羅的に特定でき、AI連携も可能な実用性の高いツール"
-
+      reason: 情報が公式GitHubリポジトリに限られており、日本語ドキュメントがない
+  summary: GitHubのセキュリティリスクを網羅的に特定でき、AI連携も可能な実用性の高いツール
 links:
-  github: "https://github.com/microsoft/ghqr"
-  deepwiki: "https://deepwiki.com/microsoft/ghqr"
+  github: https://github.com/microsoft/ghqr
+  deepwiki: https://deepwiki.com/microsoft/ghqr
 ---
 
 # **GitHub Quick Review 調査レポート**
