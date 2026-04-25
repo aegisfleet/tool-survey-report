@@ -6,10 +6,9 @@ category: CDN/セキュリティ
 developer: OpenID Foundation
 official_site: https://openid.net/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-25'
 tags:
   - ID管理
-  - OIDC
   - SSO
   - セキュリティ
   - 標準規格
@@ -62,10 +61,8 @@ relationships:
 * **開発元**: OpenID Foundation (OIDF)
 * **公式サイト**: [https://openid.net/](https://openid.net/)
 * **関連リンク**:
-  * 仕様書一覧: [https://openid.net/developers/specs/](https://openid.net/developers/specs/)
-  * 認定済み製品: [https://openid.net/certification/](https://openid.net/certification/)
-  * ニュース: [https://openid.net/news/](https://openid.net/news/)
-* **カテゴリ**: CDN/セキュリティ / セキュリティ標準
+  * ドキュメント: [https://openid.net/developers/specs/](https://openid.net/developers/specs/)
+* **カテゴリ**: CDN/セキュリティ
 * **概要**: OpenID、特に現在主流のOpenID Connect (OIDC) は、OAuth 2.0プロトコルの上に構築されたシンプルなIDレイヤーです。クライアント（アプリ）は、Authorization Server（IDプロバイダー）によって行われた認証に基づいてエンドユーザーの本人確認を行い、基本的なプロフィール情報を取得することができます。
 
 ## **2. 目的と主な利用シーン**
@@ -315,11 +312,11 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2026-01-20**: **OpenID Federation 1.0 Final Vote**: 大規模な信頼チェーンを構築するためのOpenID Federation 1.0仕様の最終投票通知が出された。
-* **2026-01-12**: **Authorization API 1.0 (AuthZEN) Approved**: 認可の決定と執行を分離し、標準化するためのAuthZEN API仕様が承認された。
-* **2025-12-29**: **OpenID4VC HAIP 1.0 Approved**: Verifiable Credentials (VC) を交換するための高保証相互運用性プロファイル (HAIP) が最終承認された。
-* **2025-10-07**: **AI Agent Identity Whitepaper**: AIエージェントの認証・認可に関する課題と解決策をまとめたホワイトペーパーが公開された。
-* **2025-09-26**: **FAPI 2.0 Message Signing Approved**: 金融グレードのAPIセキュリティを強化するメッセージ署名仕様が承認された。
+* **2026-04-24**: **GDC Conference 参加登録開始**: OpenID Foundationメンバー向けにGDC Conferenceの参加登録が開始された。([詳細](https://openid.net/calling-all-members-register-for-the-gdc-conference-now/))
+* **2026-04-24**: **OpenID Connect ASC 1.0 投票通知**: OpenID Connect Advanced Syntax for Claims (ASC) 1.0のProposed Implementer’s Draftに関する承認投票が開始された。([詳細](https://openid.net/notice-of-vote-to-approve-the-proposed-implementers-draft-of-openid-connect-advanced-syntax-for-claims-asc-1-0/))
+* **2026-04-15**: **OpenID Federation 1.1 最終仕様 投票通知**: OpenID Federation 1.1のFinal Specificationsに関する承認投票が開始された。([詳細](https://openid.net/notice-of-vote-to-approve-proposed-openid-federation-1-1-final-specifications/))
+* **2026-04-13**: **政府向け Verifiable Credentials 解説**: 政府機関が知るべきVerifiable Credentialsに関する知見や情報が公開された。([詳細](https://openid.net/what-governments-need-to-know-about-verifiable-credentials/))
+* **2026-04-09**: **eKYCワークアイテム発表とNIST SP 1800-42歓迎**: OIDFがNIST SP 1800-42を歓迎するとともに、新たなeKYC関連のワークアイテムを発表した。([詳細](https://openid.net/oidf-welcomes-nist-sp-1800-42-and-announces-ekyc-work-item/))
 
 (出典: [OpenID Foundation News](https://openid.net/news/))
 
