@@ -41,6 +41,9 @@ links:
   deepwiki: https://deepwiki.com/microsoft/WSL
   codewiki: https://codewiki.google/github.com/microsoft/WSL
   documentation: https://learn.microsoft.com/windows/wsl/
+relationships:
+  related_tools:
+    - dockur/windows
 ---
 
 # **WSL (Windows Subsystem for Linux) 調査レポート**

@@ -6,13 +6,13 @@ category: OS/プラットフォーム
 developer: dockur
 official_site: https://github.com/dockur/windows
 date: '2026-02-05'
-last_updated: '2026-02-05'
+last_updated: '2026-04-26'
 tags:
-  - Docker
-  - KVM
-  - Windows
   - オープンソース
   - コンテナ
+  - 開発環境
+  - 開発者ツール
+  - 自動化
 description: Dockerコンテナ内でWindowsを動作させるためのツール。KVMアクセラレーションを利用し、ISOのダウンロードからインストールまでを全自動で行う。
 quick_summary:
   has_free_plan: true
@@ -48,6 +48,8 @@ links:
 relationships:
   related_tools:
     - Docker
+    - Ubuntu
+    - WSL
 ---
 
 # **dockur/windows 調査レポート**
@@ -202,9 +204,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-11-22**: **v5.14 リリース**。VirtIOドライバがv1.9.49に更新され、QEMUベースイメージもv7.29にアップデート。安定性とパフォーマンスが向上。
-* **2025-11-12**: **v5.13 リリース**。Windows Serverのダウンロードリンクが更新され、Win9x系OS向けのネットワークアダプタ修正が含まれた。
-* **2025-10-22**: **v5.12 リリース**。共有フォルダに関するSELinuxの警告機能追加や、wsddnパッケージの更新が行われた。
+* **2025-11-22**: **v5.14 リリース**。Workspaces configurationの更新、VirtIOドライバ(v1.9.49)やQEMUベースイメージ(v7.29)のアップデートなど。
+* **2025-11-12**: **v5.13 リリース**。Windows Serverダウンロードリンクの更新、Win9x用ネットワークアダプタ修正、QEMUベースイメージ(v7.28)のアップデートなど。
+* **2025-10-22**: **v5.12 リリース**。wsddnパッケージ(v1.22)やQEMUベースイメージ(v7.27)のアップデート、共有フォルダのSELinux警告追加、SeaBIOS control charactersの削除など。
 
 (出典: [GitHub Releases](https://github.com/dockur/windows/releases))
 
