@@ -6,7 +6,7 @@ category: 自律型AIエージェント
 developer: Amazon Web Services
 official_site: https://strandsagents.com/
 date: '2026-02-04'
-last_updated: '2026-02-04'
+last_updated: '2026-04-25'
 tags:
   - AWS
   - MCP
@@ -23,7 +23,8 @@ quick_summary:
     - AIエンジニア
     - AWSユーザー
     - ソフトウェア開発者
-  latest_highlight: 2026年1月にv1.24.0がリリースされ、実験的な双方向ストリーミング機能などが強化
+    - Web開発者
+  latest_highlight: 2026年4月にTypeScript SDK（@strands-agents/sdk）やSteering middleware機能などが強化
   update_frequency: 高
 evaluation:
   score: 78
@@ -43,7 +44,7 @@ links:
   github: https://github.com/strands-agents/sdk-python
   codewiki: https://codewiki.google/github.com/strands-agents/sdk-python
   deepwiki: https://deepwiki.com/strands-agents/sdk-python
-  documentation: https://strandsagents.com/latest/documentation/docs/
+  documentation: https://strandsagents.com/docs/user-guide/quickstart/overview/
 relationships:
   parent: ''
   children: []
@@ -63,7 +64,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/strands-agents/sdk-python](https://github.com/strands-agents/sdk-python)
   * CodeWiki: [https://codewiki.google/github.com/strands-agents/sdk-python](https://codewiki.google/github.com/strands-agents/sdk-python)
-  * ドキュメント: [https://strandsagents.com/latest/documentation/docs/](https://strandsagents.com/latest/documentation/docs/)
+  * ドキュメント: [https://strandsagents.com/docs/user-guide/quickstart/overview/](https://strandsagents.com/docs/user-guide/quickstart/overview/)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: Strands Agentsは、AWSが主導して開発しているオープンソースのAIエージェント構築フレームワークです。「Model-driven approach（モデル駆動型アプローチ）」を掲げ、数行のコードで、単純なチャットボットから複雑なマルチエージェントシステムまでを構築できることを目指しています。Amazon Bedrockをはじめとする主要なLLMプロバイダーとネイティブに統合されています。
 
@@ -84,6 +85,7 @@ relationships:
 * **Bidirectional Streaming (Experimental)**: 音声とテキストのリアルタイム双方向通信をサポートし、中断可能な自然な会話体験を実現。
 * **Structural Output**: Pydanticモデルを用いた構造化出力をサポートし、型安全なデータ連携が可能。
 * **Multi-agent Patterns**: Agent-to-Agent (A2A), Swarm, Graph, Workflowといった多様なマルチエージェントパターンを実装可能。
+* **Steering Middleware**: ツール呼び出し前やモデル応答後にフックして入出力を検証・修正できるミドルウェア機能を備え、100%のタスク正確性を目指す。
 * **AWS Integration**: AgentCore, Lambda, EC2, EKSなど、AWSの各種コンピューティングサービスへのデプロイが容易。
 
 ## **4. 開始手順・セットアップ**
@@ -93,10 +95,13 @@ relationships:
   * AWS Credentials (Amazon Bedrock利用時) または 各種APIキー
 * **インストール/導入**:
   ```bash
-  # Python環境の作成とインストール
+  # Pythonの場合
   python -m venv .venv
   source .venv/bin/activate
   pip install strands-agents strands-agents-tools
+
+  # TypeScriptの場合
+  npm install @strands-agents/sdk
   ```
 * **初期設定**:
   * 環境変数に必要なAPIキーを設定（例: `OPENAI_API_KEY`, `AWS_PROFILE` 等）。
@@ -207,10 +212,10 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-XX**: TypeScript SDK (`@strands-agents/sdk`) が正式公開され、Node.js環境での利用が容易に。
+* **2026-03-XX**: Steering Middleware（エージェントループのミドルウェア）が導入され、ツール呼び出し前後の検証や修正が可能に。
 * **2026-01-29 (v1.24.0)**: 最新リリース。機能改善とバグ修正。
 * **2026-01-XX**: 実験的な双方向ストリーミング機能の追加（Nova Sonic, Gemini Live, OpenAI Realtime対応）。
-* **2025-XX-XX**: コミュニティツールパッケージの拡充。
-* **2025-XX-XX**: MCP (Model Context Protocol) への対応強化。
 
 (出典: [GitHub Releases](https://github.com/strands-agents/sdk-python/releases))
 
