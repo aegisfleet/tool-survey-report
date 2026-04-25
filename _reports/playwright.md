@@ -56,6 +56,7 @@ relationships:
     - Playwright Test Agents
     - Playwright CLI
   related_tools:
+    - Browser Harness
     - Cypress
     - Selenium
     - Autify
