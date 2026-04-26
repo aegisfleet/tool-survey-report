@@ -6,12 +6,11 @@ category: AIコーディング支援
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/gitlab-duo/
 date: '2026-02-05'
-last_updated: '2026-02-05'
+last_updated: '2026-04-26'
 tags:
   - AI
   - CI/CD
   - DevOps
-  - DevSecOps
   - エージェント
   - コーディング支援
 description: GitLabのDevSecOpsプラットフォームに統合されたAI機能群。コード生成からセキュリティスキャン、自律型エージェントによるタスク実行まで、開発ライフサイクル全体を支援する。
@@ -23,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - セキュリティ担当者
-  latest_highlight: 2026年1月にGitLab Duo Agent Platformと自律型エージェント機能が正式リリース
+  latest_highlight: 2026年4月にAgentic SAST Vulnerability Resolution（自律的脆弱性解決）機能とData Analyst Agentが正式リリース
   update_frequency: 高
 evaluation:
   score: 82
@@ -47,7 +46,6 @@ relationships:
   related_tools:
     - GitHub Copilot
     - Amazon Q Developer
-    - Cursor
     - Qodo
 ---
 
@@ -196,11 +194,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-15 (GitLab 18.8)**: **GitLab Duo Agent Platform**、Planner Agent、Security Analyst Agentが正式リリース。自律的なタスク実行が可能に。
-* **2025-12-18 (GitLab 18.7)**: GitLab Duo Analyticsダッシュボードの改善、シークレット有効性チェック機能の追加。
-* **2025-11-20 (GitLab 18.6)**: 生産性を向上させる新UIの導入、限定的ながら正確なコード検索（Exact Code Search）機能の追加。
-* **2025-10-16 (GitLab 18.5)**: GitLab Duo Planner AgentとSecurity Analyst Agentのベータ版公開。Maven仮想レジストリUIの改善。
-* **2025-09-18 (GitLab 18.4)**: GitLab Duo Model Selectionが一般提供開始（GA）。利用するAIモデルを選択可能に。
+* **2026-04-16**: (GitLab 18.11) Agentic SAST Vulnerability Resolution（自律的脆弱性解決）機能とData Analyst Agentが正式リリース。CI Expert Agentのベータ版提供開始。
+* **2026-03-19**: (GitLab 18.10) AIによるSASTおよびシークレットの誤検知（False Positive）検出機能が一般提供開始。
+* **2026-02-19**: (GitLab 18.9) SAST脆弱性解決のベータ版提供開始。クラウドライセンスを持つセルフマネージド環境でDuo Agent Platformが利用可能に。
+* **2026-01-15**: (GitLab 18.8) GitLab Duo Agent Platformが一般提供開始。Planner Agent、Security Analyst Agentが正式リリース。
+* **2025-12-18**: (GitLab 18.7) SAST誤検知検出（ベータ版）の導入および、Agentic ChatとAgentで別々のAIモデルを選択可能に。
 
 (出典: [GitLab Releases](https://about.gitlab.com/releases/))
 
