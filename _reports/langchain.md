@@ -58,7 +58,6 @@ relationships:
     - Amazon Bedrock
     - Amazon Bedrock AgentCore Runtime
     - Hugging Face
-    - Strands Agents
 ---
 
 # **LangChain 調査レポート**

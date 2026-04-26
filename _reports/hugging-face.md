@@ -5,8 +5,8 @@ tool_reading: ハギングフェイス
 category: LLMプラットフォーム
 developer: Hugging Face
 official_site: https://huggingface.co/
-date: '2026-02-05'
-last_updated: '2026-02-05'
+date: '2026-04-26'
+last_updated: '2026-04-26'
 tags:
   - AI
   - オープンソース
@@ -44,6 +44,7 @@ evaluation:
   summary: AI開発における巨大なエコシステムと活発なOSSコミュニティが強みだが、情報の多さと日本語情報の不足が課題。
 links:
   github: https://github.com/huggingface
+  deepwiki: https://deepwiki.com/huggingface/huggingface
   documentation: https://huggingface.co/docs
 relationships:
   related_tools:
@@ -65,8 +66,8 @@ relationships:
 * **公式サイト**: [https://huggingface.co/](https://huggingface.co/)
 * **関連リンク**:
   * GitHub: [https://github.com/huggingface](https://github.com/huggingface)
+  * DeepWiki: [https://deepwiki.com/huggingface/huggingface](https://deepwiki.com/huggingface/huggingface)
   * ドキュメント: [https://huggingface.co/docs](https://huggingface.co/docs)
-  * レビューサイト: [G2](https://www.g2.com/products/hugging-face/reviews)
 * **カテゴリ**: LLMプラットフォーム
 * **概要**: Hugging Faceは、機械学習コミュニティがモデル、データセット、アプリケーションを協力して構築・共有するためのオープンソースプラットフォームです。AI開発のGitHubとも呼ばれ、自然言語処理を中心に画像、音声など多様なAIモデルのハブとなっています。
 
@@ -197,8 +198,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Twitter(X), 開発者ブログ
-* **総合評価**: 4.6/5.0 (G2)
+* **調査対象**: Google検索 (G2のレビュー情報), Twitter(X), 開発者ブログ
+* **総合評価**: 4.6/5.0 （Google検索より引用）
 * **ポジティブな評価**:
   * 「AI開発におけるGitHub。これなしでの開発は考えられない。」
   * 「Transformersライブラリの抽象化が素晴らしく、最新論文の実装をすぐに試せる。」
