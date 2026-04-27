@@ -52,7 +52,6 @@ relationships:
     - Stable Diffusion
     - Amazon Bedrock
     - TensorFlow
-    - Hunyuan 3D
     - UI-TARS Desktop
 ---
 

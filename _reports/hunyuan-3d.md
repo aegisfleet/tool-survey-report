@@ -6,13 +6,11 @@ category: 生成AI
 developer: Tencent
 official_site: https://hunyuan.tencent.com/hunyuan-3d
 date: '2026-02-05'
-last_updated: '2026-02-05'
+last_updated: '2026-04-27'
 tags:
-  - 3D
   - AI
   - オープンソース
   - 生成AI
-  - 画像生成
 description: テキストや画像から高品質な3Dモデルを生成するTencent社のオープンソースAIモデル。
 quick_summary:
   has_free_plan: true
@@ -22,7 +20,7 @@ quick_summary:
     - 3Dアーティスト
     - ゲーム開発者
     - Eコマース事業者
-  latest_highlight: 2025年12月にHunyuanWorld-1.5 (WorldPlay) をリリース
+  latest_highlight: 2025年10月にライセンスを更新（Hunyuan3D-2の最新コミット）
   update_frequency: 高
 evaluation:
   score: 85
@@ -37,13 +35,12 @@ evaluation:
       reason: なし
   summary: オープンソース3D生成AIの最高峰であり、商用利用にも耐える品質とカスタマイズ性を持つ。
 links:
-  github: https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1
-  deepwiki: https://deepwiki.com/Tencent-Hunyuan/Hunyuan3D-2.1
-  documentation: https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/README.md
+  github: https://github.com/Tencent-Hunyuan/Hunyuan3D-2
+  deepwiki: https://deepwiki.com/Tencent-Hunyuan/Hunyuan3D-2
+  documentation: https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/main/README.md
 relationships:
   related_tools:
     - Stable Diffusion
-    - Hugging Face
     - Luma AI
 ---
 
@@ -62,8 +59,8 @@ relationships:
 * **開発元**: Tencent
 * **公式サイト**: [https://hunyuan.tencent.com/hunyuan-3d](https://hunyuan.tencent.com/hunyuan-3d)
 * **関連リンク**:
-  * GitHub: [https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)
-  * ドキュメント: [https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/README.md](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/blob/main/README.md)
+  * GitHub: [https://github.com/Tencent-Hunyuan/Hunyuan3D-2](https://github.com/Tencent-Hunyuan/Hunyuan3D-2)
+  * ドキュメント: [https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/main/README.md](https://github.com/Tencent-Hunyuan/Hunyuan3D-2/blob/main/README.md)
 * **カテゴリ**: 生成AI
 * **概要**: Tencentが開発した、テキストや画像から高品質な3Dアセットや3Dワールドを生成するオープンソースのAIモデルシリーズ。最新版のHunyuan 3D 3.0やHunyuanWorldでは、画期的なアーキテクチャにより、商用レベルの精密な3Dモデルや没入型ワールドを数分で生成可能です。
 
@@ -113,8 +110,8 @@ relationships:
   * GitHubアカウント（コード取得用）
 * **インストール/導入**:
   ```bash
-  git clone https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1.git
-  cd Hunyuan3D-2.1
+  git clone https://github.com/Tencent-Hunyuan/Hunyuan3D-2.git
+  cd Hunyuan3D-2
   pip install -r requirements.txt
   ```
 * **初期設定**:
