@@ -1,48 +1,45 @@
 ---
-title: "ふるさとチョイス 調査レポート"
-tool_name: "ふるさとチョイス"
-tool_reading: "フルサトチョイス"
-category: "その他"
-developer: "株式会社トラストバンク"
-official_site: "https://www.furusato-tax.jp/"
-date: "2026-02-06"
-last_updated: "2026-04-28"
+title: ふるさとチョイス 調査レポート
+tool_name: ふるさとチョイス
+tool_reading: フルサトチョイス
+category: その他
+developer: 株式会社トラストバンク
+official_site: https://www.furusato-tax.jp/
+date: '2026-02-06'
+last_updated: '2026-04-28'
 tags:
-  - "Webサービス"
-  - "ふるさと納税"
-  - "クラウドファンディング"
-  - "地域活性化"
-description: "日本最大級のふるさと納税ポータルサイト。圧倒的な掲載品数と自治体数を誇り、災害支援やクラウドファンディングなど地域課題解決にも注力している。"
-
+  - Webサービス
+  - ふるさと納税
+  - クラウドファンディング
+  - 地域活性化
+description: 日本最大級のふるさと納税ポータルサイト。圧倒的な掲載品数と自治体数を誇り、災害支援やクラウドファンディングなど地域課題解決にも注力している。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "納税者"
-    - "地方自治体応援者"
-  latest_highlight: "掲載お礼の品数が76万点超（2026年2月時点）"
-  update_frequency: "高"
-
+    - 納税者
+    - 地方自治体応援者
+  latest_highlight: 掲載お礼の品数が76万点超（2026年2月時点）
+  update_frequency: 高
 evaluation:
   score: 92
   base_score: 70
   plus_points:
     - point: 10
-      reason: "掲載品数が76万点以上と圧倒的No.1"
+      reason: 掲載品数が76万点以上と圧倒的No.1
     - point: 5
-      reason: "提携自治体数が1,700以上で全国をほぼ網羅"
+      reason: 提携自治体数が1,700以上で全国をほぼ網羅
     - point: 5
-      reason: "災害支援時の代理寄付など、社会貢献性の高い取り組みが迅速"
+      reason: 災害支援時の代理寄付など、社会貢献性の高い取り組みが迅速
     - point: 5
-      reason: "「チョイスPay」やポイント制など、独自の実用的な仕組みが豊富"
+      reason: 「チョイスPay」やポイント制など、独自の実用的な仕組みが豊富
   minus_points:
     - point: -3
-      reason: "ポイント還元率単体で見ると、楽天ふるさと納税（SPU）に劣る場合がある"
-  summary: "品揃えと自治体網羅率は最強。単なる返礼品獲得だけでなく、地域の応援や災害支援を行いたいユーザーにとってベストなプラットフォーム。"
-
+      reason: ポイント還元率単体で見ると、楽天ふるさと納税（SPU）に劣る場合がある
+  summary: 品揃えと自治体網羅率は最強。単なる返礼品獲得だけでなく、地域の応援や災害支援を行いたいユーザーにとってベストなプラットフォーム。
 links:
-  documentation: "https://www.furusato-tax.jp/about/guide"
+  documentation: https://www.furusato-tax.jp/about/guide
 ---
 
 # **ふるさとチョイス 調査レポート**
