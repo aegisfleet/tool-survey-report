@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Transformers.js Gemma 4 Browser Assistant 調査レポート"
-tool_name: "Transformers.js Gemma 4 Browser Assistant"
-tool_reading: "トランスフォーマージェイエス・ジェンマ・フォー・ブラウザ・アシスタント"
-category: "AIブラウザ拡張機能"
-developer: "Nico Martin"
-official_site: "https://chromewebstore.google.com/detail/transformersjs-gemma-4-br/dhaknnnkcdkjhcclchmnfdhddoehoool"
-date: "2026-04-28"
-last_updated: "2026-04-28"
+title: Transformers.js Gemma 4 Browser Assistant 調査レポート
+tool_name: Transformers.js Gemma 4 Browser Assistant
+tool_reading: トランスフォーマージェイエス・ジェンマ・フォー・ブラウザ・アシスタント
+category: AIブラウザ拡張機能
+developer: Nico Martin
+official_site: https://chromewebstore.google.com/detail/transformersjs-gemma-4-br/dhaknnnkcdkjhcclchmnfdhddoehoool
+date: '2026-04-28'
+last_updated: '2026-04-28'
 tags:
-  - "AI"
-  - "ブラウザ拡張機能"
-  - "オープンソース"
-  - "ローカルLLM"
-  - "プライバシー"
-description: "Transformers.jsとGemma 4を利用し、WebGPUによりブラウザ上でローカル動作するChrome拡張AIアシスタント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - ブラウザ拡張機能
+  - オープンソース
+  - ローカルLLM
+  - プライバシー
+description: Transformers.jsとGemma 4を利用し、WebGPUによりブラウザ上でローカル動作するChrome拡張AIアシスタント。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "プライバシー重視のユーザー"
-  latest_highlight: "Chrome Web Storeでの公開"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - プライバシー重視のユーザー
+  latest_highlight: Chrome Web Storeでの公開
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "外部サーバーを一切使わず、ローカルで完結するためプライバシー保護に優れる"
+      reason: 外部サーバーを一切使わず、ローカルで完結するためプライバシー保護に優れる
     - point: 5
-      reason: "オープンソースであり完全無料で利用可能"
+      reason: オープンソースであり完全無料で利用可能
   minus_points:
     - point: -3
-      reason: "WebGPU対応のモダンGPUが必須であり、環境を選ぶ"
+      reason: WebGPU対応のモダンGPUが必須であり、環境を選ぶ
     - point: -2
-      reason: "初回利用時にモデルのダウンロードが必要（数GB）"
-  summary: "プライバシーを重視するユーザーやローカル環境でAIを利用したい開発者にとって、強力で無料で使えるツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 初回利用時にモデルのダウンロードが必要（数GB）
+  summary: プライバシーを重視するユーザーやローカル環境でAIを利用したい開発者にとって、強力で無料で使えるツール。
 links:
-  github: "https://github.com/nico-martin/gemma4-browser-extension"
-  deepwiki: "https://deepwiki.com/nico-martin/gemma4-browser-extension"
+  github: https://github.com/nico-martin/gemma4-browser-extension
+  deepwiki: https://deepwiki.com/nico-martin/gemma4-browser-extension
 relationships:
   related_tools:
-    - "Ollama"
+    - Ollama
 ---
 
 # **Transformers.js Gemma 4 Browser Assistant 調査レポート**
