@@ -45,6 +45,7 @@ relationships:
   children: []
   related_tools:
     - Vercel
+    - Hono
 ---
 
 # **Cloudflare Workers 調査レポート**
