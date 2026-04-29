@@ -6,7 +6,7 @@ category: 動画/メディア
 developer: Luma Labs, Inc.
 official_site: https://lumalabs.ai/
 date: '2026-02-06'
-last_updated: '2026-02-06'
+last_updated: '2026-04-30'
 tags:
   - 3D
   - AI
@@ -45,8 +45,6 @@ evaluation:
 links:
   documentation: https://lumalabs.ai/learning-hub
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Hunyuan 3D
 ---
@@ -244,9 +242,9 @@ relationships:
 - 「不明」「見つからず」のみの記載は避ける
 -->
 
-* **認証**: 公式サイトにはSSOや2段階認証に関する詳細な記載はない。APIはBearer Token認証を使用。
+* **認証**: 公式サイトでは公開されていない。個別の問い合わせが必要。APIはBearer Token認証を使用。
 * **データ管理**: Enterpriseプランでは、入力・出力データをモデルの学習に利用しないオプションが提供される。
-* **準拠規格**: 公式サイトではISO27001やSOC2などの認証取得に関する公開情報はない。
+* **準拠規格**: 公式サイトでは公開されていない。個別の問い合わせが必要。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
