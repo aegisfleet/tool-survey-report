@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - Tableau
     - Looker Studio
+    - Amazon Quick
 ---
 
 # **Amazon QuickSight 調査レポート**
