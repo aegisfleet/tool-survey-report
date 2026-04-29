@@ -40,6 +40,9 @@ evaluation:
   summary: 品揃えと自治体網羅率は最強。単なる返礼品獲得だけでなく、地域の応援や災害支援を行いたいユーザーにとってベストなプラットフォーム。
 links:
   documentation: https://www.furusato-tax.jp/about/guide
+relationships:
+  related_tools:
+    - まん福
 ---
 
 # **ふるさとチョイス 調査レポート**
