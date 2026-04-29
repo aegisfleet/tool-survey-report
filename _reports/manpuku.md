@@ -5,8 +5,8 @@ tool_reading: マンプク
 category: その他
 developer: 株式会社SHIFT
 official_site: https://www.manpuku.app/
-date: '2026-02-06'
-last_updated: '2026-02-06'
+date: '2026-04-30'
+last_updated: '2026-04-30'
 tags:
   - ESG
   - SaaS
@@ -37,7 +37,8 @@ evaluation:
 links:
   documentation: https://www.manpuku.app/
 relationships:
-  related_tools: []
+  related_tools:
+    - ふるさとチョイス
 ---
 
 # **まん福 調査レポート**
@@ -49,7 +50,7 @@ relationships:
 * **開発元**: 株式会社SHIFT
 * **公式サイト**: [https://www.manpuku.app/](https://www.manpuku.app/)
 * **関連リンク**:
-  * 公式サイト: [https://www.manpuku.app/](https://www.manpuku.app/)
+  * ドキュメント: [https://www.manpuku.app/](https://www.manpuku.app/)
 * **カテゴリ**: その他
 * **概要**: 従業員向けの福利厚生型ふるさと納税サービス。企業が導入することで、従業員は簡単にふるさと納税を利用でき、企業は退職率の低下防止やESG経営の一助として活用できる。初期費用や月額費用がかからないプランもあり、手軽に導入できるのが特徴。
 
@@ -150,10 +151,10 @@ relationships:
 
 ## **13. ベストプラクティス**
 
-* **効果的な活用法**:
+* **効果的な活用法 (Modern Practices)**:
   * 年末調整の時期に合わせて社内でキャンペーンを行う。
   * 企業のCSR活動の一環として、特定の地域への寄付を推奨する。
-* **陥りやすい罠**:
+* **陥りやすい罠 (Antipatterns)**:
   * 導入したものの周知不足で利用率が上がらない（定期的なアナウンスが必要）。
 
 ## **14. ユーザーの声（レビュー分析）**
@@ -170,6 +171,8 @@ relationships:
 
 * **2026-02-06**: 調査日現在、公式サイトでの目立った大型アップデート告知は確認できず。定期的に特集（季節の返礼品など）が更新されている。
 
+(出典: [公式サイト](https://www.manpuku.app/) など)
+
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
@@ -178,8 +181,8 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 返礼品掲載数 | ◯<br><small>厳選</small> | ◎<br><small>最大級</small> | ◎<br><small>非常に多い</small> |
 | **導入形態** | 福利厚生導入 | ◎<br><small>特化型</small> | △<br><small>個人利用主</small> | △<br><small>個人利用主</small> |
-| **コスト** | 企業負担 | ◎<br><small>0円〜</small> | - | - |
-| **独自性** | ESG/CSR連携 | ◎ | ◯ | ◯ |
+| **コスト** | 企業負担 | ◎<br><small>0円〜</small> | -<br><small>-</small> | -<br><small>-</small> |
+| **独自性** | ESG/CSR連携 | ◎<br><small>連携可</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> |
 
 ### **16.2 詳細比較**
 
