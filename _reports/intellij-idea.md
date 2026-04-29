@@ -5,15 +5,15 @@ tool_reading: インテリジェイ アイデア
 category: IDE/エディタ
 developer: JetBrains
 official_site: https://www.jetbrains.com/idea/
-date: '2026-02-06'
-last_updated: '2026-02-06'
+date: '2026-04-29'
+last_updated: '2026-04-29'
 tags:
   - AI
   - IDE
   - Java
   - Kotlin
   - 開発者ツール
-description: JetBrainsが開発する、JavaおよびKotlin開発に特化した強力な統合開発環境（IDE）。高度なリファクタリング機能、インテリジェントなコード補完、AI Assistantを統合。
+description: JetBrainsが開発する、JavaおよびKotlin開発に特化した強力な統合開発環境（IDE）。高度なリファクタリング機能、インテリジェントなコード補完、AI Assistantを備える。
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -47,7 +47,7 @@ links:
   deepwiki: https://deepwiki.com/JetBrains/intellij-community
   documentation: https://www.jetbrains.com/help/idea/
 relationships:
-  parent: null
+  parent: ''
   children:
     - Android Studio
     - Kotlin Multiplatform
@@ -57,7 +57,6 @@ relationships:
     - Eclipse IDE
     - Spring Boot
     - Flutter
-    - Kotlin Multiplatform
     - Delphi
 ---
 
@@ -71,6 +70,7 @@ relationships:
 * **公式サイト**: [https://www.jetbrains.com/idea/](https://www.jetbrains.com/idea/)
 * **関連リンク**:
   * GitHub: [https://github.com/JetBrains/intellij-community](https://github.com/JetBrains/intellij-community) (Community Edition)
+  * DeepWiki: [https://deepwiki.com/JetBrains/intellij-community](https://deepwiki.com/JetBrains/intellij-community)
   * ドキュメント: [https://www.jetbrains.com/help/idea/](https://www.jetbrains.com/help/idea/)
   * レビューサイト: [G2](https://www.g2.com/products/intellij-idea/reviews) | [Capterra](https://www.capterra.com/p/146648/IntelliJ-IDEA/) | [ITreview](https://www.itreview.jp/products/intellij-idea/reviews)
 * **カテゴリ**: IDE/エディタ
@@ -151,8 +151,7 @@ relationships:
 | **Ultimate (法人)** | $59.90/月 または $599/年 | 法人向けのライセンス管理機能付き。 |
 | **All Products Pack** | $28.90/月 (個人) | IntelliJ IDEA Ultimateを含むJetBrainsの全デスクトップツールが利用可能。 |
 
-* **課金体系**: ユーザー単位のサブスクリプション（月額または年額）。年数を重ねると継続割引（最大40%）が適用されます。
-* **AI Assistant**: 別途アドオンとして購入が必要（個人: $10/月、法人: $10/月〜）。
+* **課金体系**: ユーザー単位のサブスクリプション（月額または年額）。年数を重ねると継続割引（最大40%）が適用されます。また、AI Assistantは別途アドオンとして購入が必要です（個人: $10/月、法人: $10/月〜）。
 * **無料トライアル**: Ultimate版は30日間の無料トライアルが利用可能です。
 
 ## **8. 導入実績・事例**
