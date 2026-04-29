@@ -59,6 +59,7 @@ relationships:
     - OpenHands
     - TAKT
     - Model Context Protocol
+    - IntelliJ IDEA
 ---
 
 # **Cursor 調査レポート**

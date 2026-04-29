@@ -60,6 +60,7 @@ relationships:
     - RevenueCat
     - Mobile Next
     - Fluorite Game Engine
+    - IntelliJ IDEA
 ---
 
 # **Flutter 調査レポート**
