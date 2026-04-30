@@ -6,13 +6,12 @@ category: テスト/QA
 developer: Testing Library
 official_site: https://testing-library.com/docs/react-testing-library/intro/
 date: '2026-02-06'
-last_updated: '2026-02-06'
+last_updated: '2026-05-01'
 tags:
   - JavaScript
-  - React
   - オープンソース
   - テスト自動化
-  - フロントエンド
+  - 開発者ツール
 description: Reactコンポーネントをユーザーの使用方法に近い形でテストするための軽量なライブラリ。実装詳細ではなくDOMノードに対する検証を重視する。
 quick_summary:
   has_free_plan: true
@@ -21,7 +20,7 @@ quick_summary:
   target_users:
     - フロントエンドエンジニア
     - React開発者
-  latest_highlight: React 19および最新のReact Server Components (RSC) テストパターンの確立
+  latest_highlight: 2026年1月にv16.3.2をリリース
   update_frequency: 高
 evaluation:
   score: 95
@@ -180,18 +179,26 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: GitHub, Twitter, 技術ブログ
+* **調査対象**: G2、Capterra、ITreviewにレビューの登録なし。GitHub、Twitter、技術ブログ等から収集。
 * **総合評価**: 4.9/5.0 (推定)
 * **ポジティブな評価**:
   * 「Enzymeからの移行でテストが壊れにくくなり、メンテナンスコストが激減した。」
   * 「アクセシビリティを意識する良いきっかけになった。」
+  * 「ドキュメントが豊富で、エコシステム（Jest, Vitest等）との連携がスムーズ。」
 * **ネガティブな評価 / 改善要望**:
   * 「非同期処理の待機（waitFor）でたまにハマることがある。」
+  * 「DOMに直接依存しないテストは書きやすいが、一部の複雑なコンポーネントで苦戦する。」
+  * 「見えない要素のテストが意図的に難しくされているのが不便に感じることがある。」
+* **特徴的なユースケース**:
+  * 「MSWと組み合わせて、バックエンドAPIをモックした統合テストを強力に推進している。」
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01**: React 19のServer Actionsや新しいHooksに対応するためのマイナーアップデートが継続的に行われている。
-* **2025-10**: `user-event`ライブラリのパフォーマンス改善と、新しいブラウザイベントへの追従。
+* **2026-01-19**: v16.3.2のリリース。
+* **2025-12-15**: v16.3.1のリリース（Trusted publishingへの切り替えなど）。
+* **2025-04-02**: v16.3.0のリリース。
+
+(出典: [リリースノート](https://github.com/testing-library/react-testing-library/releases) など)
 
 ## **16. 類似ツールとの比較**
 
