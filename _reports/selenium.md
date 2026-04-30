@@ -49,6 +49,7 @@ relationships:
     - Cypress
     - Appium
     - MagicPod
+    - React Testing Library
     - Autify
     - Robot Framework
     - Karate
