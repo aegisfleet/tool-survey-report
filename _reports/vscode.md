@@ -54,6 +54,7 @@ relationships:
     - Cline
     - Eclipse
     - Android Studio
+    - Obsidian
 ---
 
 # **Visual Studio Code 調査レポート**
