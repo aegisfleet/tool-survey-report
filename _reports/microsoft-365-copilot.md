@@ -47,7 +47,7 @@ relationships:
     - Microsoft Work IQ
     - Copilot Cowork
   related_tools:
-    - "天才くん"
+    - 天才くん
     - ChatGPT
     - Gemini
     - GitHub Copilot

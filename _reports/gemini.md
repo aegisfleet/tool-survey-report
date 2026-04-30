@@ -51,7 +51,7 @@ relationships:
     - Google Jules
     - Google Stitch
   related_tools:
-    - "天才くん"
+    - 天才くん
     - Google Learning
     - ChatGPT
     - Google 広告
