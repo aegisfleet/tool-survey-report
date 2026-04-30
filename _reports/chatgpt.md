@@ -47,6 +47,7 @@ relationships:
     - OpenAI Codex CLI
     - Codex cloud
   related_tools:
+    - "天才くん"
     - Amazon Bedrock
     - Gemini
     - Claude
