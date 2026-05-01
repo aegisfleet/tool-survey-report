@@ -55,6 +55,7 @@ relationships:
     - MCP Apps
     - Agent Skills
     - Qwen
+    - UI-TARS Desktop
 ---
 
 # **Claude 調査レポート**

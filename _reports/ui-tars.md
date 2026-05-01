@@ -6,16 +6,13 @@ category: 自律型AIエージェント
 developer: ByteDance
 official_site: https://github.com/bytedance/UI-TARS-desktop
 date: '2026-02-06'
-last_updated: '2026-02-06'
+last_updated: '2026-05-01'
 tags:
   - AI
-  - ByteDance
-  - GUI
-  - MCP
   - エージェント
   - オープンソース
-  - デスクトップ操作
   - 自律型
+  - デスクトップ操作
 description: VLMを活用し、人間のようにPC画面を見て操作する自律型GUIエージェント。アクセシビリティツリーと視覚情報の両方を利用して高精度な操作を実現。
 quick_summary:
   has_free_plan: true
@@ -25,7 +22,7 @@ quick_summary:
     - 開発者
     - AI研究者
     - 自動化エンジニア
-  latest_highlight: 2025年11月にAgent TARS CLI v0.3.0リリース、MCPに完全対応
+  latest_highlight: 2025年11月にUI-TARS Desktop v0.3.0リリース（ストリーミングサポート等）
   update_frequency: 高
 evaluation:
   score: 82
@@ -312,12 +309,8 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-11-05**: **Agent TARS CLI v0.3.0 リリース**
-  ストリーミングサポートの追加、複数ツールの並列実行、AIOエージェントサンドボックスのサポートなど、エンジニアリング面での強化が行われた。
-* **2025-09-04**: **UI-TARS-2 モデル公開**
-  UI-TARS-1.5からのメジャーアップグレード。「All In One」エージェントモデルとして、GUI操作、ゲーム、コーディング、ツール使用の能力が統合された。
-* **2025-06-12**: **UI-TARS Desktop v0.2.0 リリース**
-  リモートコンピュータ操作機能およびリモートブラウザ操作機能が追加され、手元のマシンから遠隔地の環境を制御可能になった。
+* **2025-11-04**: **v0.3.0 リリース**
+  ストリーミングサポートの追加や並列実行対応、Agent Sandboxのサポートなど、Agent TARS CLIやDesktopアプリ全体の機能が強化された。
 
 (出典: [GitHub Releases](https://github.com/bytedance/UI-TARS-desktop/releases))
 
