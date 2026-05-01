@@ -5,24 +5,24 @@ tool_reading: ヴィート
 category: ビルドツール/ランタイム
 developer: VoidZero Inc. & Vite Contributors
 official_site: https://ja.vite.dev/
-date: "2026-02-06"
-last_updated: "2026-05-02"
+date: '2026-02-06'
+last_updated: '2026-05-02'
 tags:
-  - "JavaScript"
-  - "TypeScript"
-  - "オープンソース"
-  - "ビルドツール"
-  - "開発者ツール"
-description: "次世代のフロントエンドビルドツール。ネイティブESMを利用した高速な開発サーバーと、Rolldownによる最適化されたビルドを提供。"
+  - JavaScript
+  - TypeScript
+  - オープンソース
+  - ビルドツール
+  - 開発者ツール
+description: 次世代のフロントエンドビルドツール。ネイティブESMを利用した高速な開発サーバーと、Rolldownによる最適化されたビルドを提供。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Web開発者"
-    - "フロントエンドエンジニア"
-  latest_highlight: "2026年3月にメジャーアップデート版であるv8.0.0をリリース"
-  update_frequency: "高"
+    - Web開発者
+    - フロントエンドエンジニア
+  latest_highlight: 2026年3月にメジャーアップデート版であるv8.0.0をリリース
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
