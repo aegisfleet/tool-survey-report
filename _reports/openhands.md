@@ -51,6 +51,7 @@ relationships:
     - Agent Zero
     - Cursor
     - GitHub Copilot
+    - UI-TARS Desktop
 ---
 
 # **OpenHands 調査レポート**
