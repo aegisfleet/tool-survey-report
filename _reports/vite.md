@@ -6,15 +6,13 @@ category: ビルドツール/ランタイム
 developer: VoidZero Inc. & Vite Contributors
 official_site: https://ja.vite.dev/
 date: '2026-02-06'
-last_updated: '2026-02-06'
+last_updated: '2026-05-02'
 tags:
   - JavaScript
   - TypeScript
-  - Web開発
   - オープンソース
   - ビルドツール
   - 開発者ツール
-  - 高速化
 description: 次世代のフロントエンドビルドツール。ネイティブESMを利用した高速な開発サーバーと、Rolldownによる最適化されたビルドを提供。
 quick_summary:
   has_free_plan: true
@@ -23,7 +21,7 @@ quick_summary:
   target_users:
     - Web開発者
     - フロントエンドエンジニア
-  latest_highlight: 2026年2月現在、Rust製の高速バンドラRolldownを採用したVite 8のベータ版が公開中
+  latest_highlight: 2026年3月にメジャーアップデート版であるv8.0.0をリリース
   update_frequency: 高
 evaluation:
   score: 95
@@ -129,8 +127,8 @@ relationships:
 |---------|------|---------|
 | **オープンソース** | 無料 | MITライセンス。すべての機能を無料で利用可能。 |
 
-* **課金体系**: なし
-* **無料トライアル**: なし
+* **課金体系**: 該当なし
+* **無料トライアル**: 該当なし
 
 ## **8. 導入実績・事例**
 
@@ -188,7 +186,7 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: X (Twitter), GitHub, 開発者ブログ, State of JS Survey
-* **総合評価**: 開発者満足度は非常に高く、「もうWebpackには戻れない」という声が多数。State of JSなどの調査でも常に上位にランクイン。
+* **総合評価**: 開発者満足度は非常に高く、「もうWebpackには戻れない」という声が多数。State of JSなどの調査でも常に上位にランクイン。（G2、Capterra、ITreviewにレビューの登録なし。）
 * **ポジティブな評価**:
   * 「起動が一瞬で終わる。開発のリズムが途切れない」
   * 「設定ファイルを書かなくても動くのが最高」
@@ -201,12 +199,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02-05**: **v8.0.0-beta.13** - バグ修正と安定性の向上。
-* **2026-02-03**: **v8.0.0-beta.12** - Rolldown統合の調整とパフォーマンス改善。
-* **2026-01-29**: **v8.0.0-beta.11** - Environment APIの機能強化。
-* **2026-01-07**: **v8.0.0-beta.6** - Rolldown統合のベータテスト開始。
-* **2025-12-XX**: **v7.0 リリース** - Environment APIの安定化とビルドプロセスの見直し。
-* **2025-11-XX**: **v6.0 リリース** - Experimental Environment APIの導入。
+* **2026-04-23**: **v8.0.10** - バグ修正とパフォーマンス改善。
+* **2026-04-09**: **v8.0.8** - バグ修正とパフォーマンス改善。
+* **2026-03-12**: **v8.0.0 リリース** - Rolldown（1.0.0-rc）の更新およびTypeScriptプラグイン関連の警告追加など。
+* **2025-12-15**: **v7.3.0 リリース** - esbuildのアップデート。
+* **2025-11-05**: **v7.2.0 リリース** - sass-embeddedのフォールバック対応等のバグ修正。
+* **2025-08-07**: **v7.1.0 リリース** - 各種安定化と修正。
 
 (出典: [Vite GitHub Releases](https://github.com/vitejs/vite/releases))
 
