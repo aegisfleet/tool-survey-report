@@ -50,7 +50,6 @@ relationships:
   parent: null
   children: []
   related_tools:
-    - ワスレナイ
     - Figma
     - Canva
     - draw.io (diagrams.net)

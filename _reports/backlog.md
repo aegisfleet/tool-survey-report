@@ -44,7 +44,6 @@ links:
   documentation: https://support-ja.backlog.com/hc/ja
 relationships:
   related_tools:
-    - ワスレナイ
     - Jira
     - Redmine
     - Quality Tracker
