@@ -1,60 +1,52 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Scrapling 調査レポート"
-tool_name: "Scrapling"
-tool_reading: "スクラップリング"  # カタカナ。複数ある場合は「 A / B 」のように併記
-category: "開発者ツール"
-developer: "Karim Shoair (D4Vinci)"
-official_site: "https://scrapling.readthedocs.io/en/latest/"
-date: "2026-05-02"
-last_updated: "2026-05-02"
+title: Scrapling 調査レポート
+tool_name: Scrapling
+tool_reading: スクラップリング
+category: 開発者ツール
+developer: Karim Shoair (D4Vinci)
+official_site: https://scrapling.readthedocs.io/en/latest/
+date: '2026-05-02'
+last_updated: '2026-05-02'
 tags:
-  - "Webスクレイピング"
-  - "Python"
-  - "オープンソース"
-  - "AI"
-description: "単一リクエストから大規模クローリングまで対応し、AIとの連携や強力なアンチボット回避機能を持つ適応型Webスクレイピングフレームワーク。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Webスクレイピング
+  - Python
+  - オープンソース
+  - AI
+description: 単一リクエストから大規模クローリングまで対応し、AIとの連携や強力なアンチボット回避機能を持つ適応型Webスクレイピングフレームワーク。
 quick_summary:
-  has_free_plan: true  # 無料プランの有無
-  is_oss: true  # OSS（オープンソース）かどうか
-  starting_price: "無料"  # 最低価格（無料の場合は「無料」）
-  target_users:  # 想定ユーザー（1-3項目）
-    - "開発者"
-    - "データエンジニア"
-  latest_highlight: "スクリーンショットMCPツールとカスタムセッションIDの追加"  # 直近1ヶ月の注目アップデート
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  has_free_plan: true
+  is_oss: true
+  starting_price: 無料
+  target_users:
+    - 開発者
+    - データエンジニア
+  latest_highlight: スクリーンショットMCPツールとカスタムセッションIDの追加
+  update_frequency: 高
 evaluation:
-  score: 87  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 87
+  base_score: 70
+  plus_points:
     - point: 5
-      reason: "Cloudflareなどの強力なアンチボット回避機能を標準で搭載"
+      reason: Cloudflareなどの強力なアンチボット回避機能を標準で搭載
     - point: 5
-      reason: "MCPサーバー機能によるAIチャットボットとの連携がシームレス"
+      reason: MCPサーバー機能によるAIチャットボットとの連携がシームレス
     - point: 4
-      reason: "適応型スクレイピングでウェブサイトの構造変更に強い"
+      reason: 適応型スクレイピングでウェブサイトの構造変更に強い
     - point: 3
-      reason: "Spider機能によるスケーラブルなクローリングが可能"
-  minus_points:  # 減点項目（各項目: 点数と理由）
-    - point: -0
-      reason: "特になし"
-  summary: "AI時代のモダンなWebスクレイピング要求に応える高性能かつ柔軟なOSSフレームワーク"  # 評価の要約（1文）
-
-# 【任意項目】該当するもののみ記載
+      reason: Spider機能によるスケーラブルなクローリングが可能
+  minus_points:
+    - point: 0
+      reason: 特になし
+  summary: AI時代のモダンなWebスクレイピング要求に応える高性能かつ柔軟なOSSフレームワーク
 links:
-  github: "https://github.com/D4Vinci/Scrapling"
-  deepwiki: "https://deepwiki.com/D4Vinci/Scrapling"
-  codewiki: "https://codewiki.google/github.com/D4Vinci/Scrapling"
+  github: https://github.com/D4Vinci/Scrapling
+  deepwiki: https://deepwiki.com/D4Vinci/Scrapling
+  codewiki: https://codewiki.google/github.com/D4Vinci/Scrapling
 relationships:
   related_tools:
-    - "beautifulsoup"
-    - "scrapy"
-    - "playwright"
+    - beautifulsoup
+    - scrapy
+    - playwright
 ---
 
 # **Scrapling 調査レポート**
