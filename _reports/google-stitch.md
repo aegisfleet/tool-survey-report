@@ -51,6 +51,7 @@ relationships:
   related_tools:
     - Figma
     - Gemini
+    - design.md
 ---
 
 # **Google Stitch 調査レポート**
