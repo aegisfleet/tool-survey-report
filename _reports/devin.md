@@ -49,13 +49,13 @@ relationships:
   children:
     - DeepWiki
   related_tools:
-    - Accomplish
     - GitHub Copilot
     - Claude Code
     - Cursor
     - Windsurf
     - OpenHands
     - AutoGPT
+    - Opcode
 ---
 
 # **Devin 調査レポート**

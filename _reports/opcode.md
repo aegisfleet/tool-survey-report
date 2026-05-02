@@ -6,13 +6,9 @@ category: AIコーディング支援
 developer: winfunc (Asterisk)
 official_site: https://opcode.sh/
 date: '2026-02-07'
-last_updated: '2026-02-07'
+last_updated: '2026-05-03'
 tags:
   - AI
-  - Claude
-  - GUI
-  - Rust
-  - TypeScript
   - エージェント
   - オープンソース
   - コーディング支援
@@ -47,10 +43,9 @@ links:
   github: https://github.com/winfunc/opcode
   deepwiki: https://deepwiki.com/winfunc/opcode
 relationships:
-  parent: ''
+  parent: 'Claude Code'
   children: []
   related_tools:
-    - Claude Code
     - OpenHands
     - Devin
 ---
@@ -285,8 +280,8 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: GitHub Issues, X (Twitter)
-* **総合評価**: リリース前（ビルド必須）段階のためレビューサイトのスコアはありませんが、SNSでの期待度は非常に高いです。
+* **調査対象**: G2, Capterra, GitHub Issues, X (Twitter)
+* **総合評価**: G2やCapterra等の主要レビューサイトには未登録（2026年5月時点）。SNSやGitHub等での期待度は非常に高い。
 * **ポジティブな評価**:
   * 「Claude Codeの履歴が見やすくなるのは神機能」
   * 「MCPの設定がGUIでできるのは助かる」
@@ -294,6 +289,7 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
   * 「ビルドエラーが出て起動できない（Windows環境など）」
   * 「早くインストーラー（.exe / .dmg）を配布してほしい」
+  * 「Claude Code CLIのセットアップが必要で初心者にはまだハードルが高い」
 * **特徴的なユースケース**:
   * チーム内でのベストプラクティス共有のために、共通の `CLAUDE.md` をGUIで編集・管理する。
 
