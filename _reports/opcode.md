@@ -43,7 +43,7 @@ links:
   github: https://github.com/winfunc/opcode
   deepwiki: https://deepwiki.com/winfunc/opcode
 relationships:
-  parent: 'Claude Code'
+  parent: Claude Code
   children: []
   related_tools:
     - OpenHands
