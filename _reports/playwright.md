@@ -61,6 +61,7 @@ relationships:
     - Selenium
     - Autify
     - MagicPod
+    - Vitest
     - React Testing Library
     - mabl
     - Robot Framework

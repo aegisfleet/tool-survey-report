@@ -52,6 +52,7 @@ relationships:
     - mabl
     - Appium
     - Karate
+    - Vitest
 ---
 
 # **Cypress 調査レポート**

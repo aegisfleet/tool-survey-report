@@ -51,6 +51,7 @@ relationships:
     - MagicPod
     - React Testing Library
     - Autify
+    - Vitest
     - Robot Framework
     - Karate
     - Kiwi TCMS
