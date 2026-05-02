@@ -1,55 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "design.md 調査レポート"
-tool_name: "design.md"
-tool_reading: "デザインマークダウン"
-category: "デザインツール"
-developer: "Google Labs"
-official_site: "https://github.com/google-labs-code/design.md"
-date: "2026-05-02"
-last_updated: "2026-05-02"
+title: design.md 調査レポート
+tool_name: design.md
+tool_reading: デザインマークダウン
+category: デザインツール
+developer: Google Labs
+official_site: https://github.com/google-labs-code/design.md
+date: '2026-05-02'
+last_updated: '2026-05-02'
 tags:
-  - "オープンソース"
-  - "コーディング支援"
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-description: "AIエージェントにデザインシステムを永続的かつ構造的に理解させるためのフォーマット仕様です。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - コーディング支援
+  - AI
+  - エージェント
+  - 開発者ツール
+description: AIエージェントにデザインシステムを永続的かつ構造的に理解させるためのフォーマット仕様です。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "デザイナー"
-    - "AIエージェント"
-  latest_highlight: "CLIによるlint、diff、exportに対応"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - デザイナー
+    - AIエージェント
+  latest_highlight: CLIによるlint、diff、exportに対応
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AIエージェントに特化した独自のアプローチを提供"
+      reason: AIエージェントに特化した独自のアプローチを提供
     - point: 5
-      reason: "W3C Design Token Format互換の拡張性"
+      reason: W3C Design Token Format互換の拡張性
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "AI時代のコーディングエージェントに不可欠なデザインシステム共有フォーマットとして高い可能性を秘めている"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: AI時代のコーディングエージェントに不可欠なデザインシステム共有フォーマットとして高い可能性を秘めている
 links:
-  github: "https://github.com/google-labs-code/design.md"
-  deepwiki: "https://deepwiki.com/google-labs-code/design.md"
-  codewiki: "https://codewiki.google/github.com/google-labs-code/design.md"
+  github: https://github.com/google-labs-code/design.md
+  deepwiki: https://deepwiki.com/google-labs-code/design.md
+  codewiki: https://codewiki.google/github.com/google-labs-code/design.md
 relationships:
-  parent: "Google Stitch"
+  parent: Google Stitch
 ---
 
 # **design.md 調査レポート**
