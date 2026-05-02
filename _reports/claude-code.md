@@ -43,7 +43,8 @@ links:
   documentation: https://docs.claude.com/en/docs/claude-code
 relationships:
   parent: Claude
-  children: []
+  children:
+    - Opcode
   related_tools:
     - GitHub Copilot
     - Cursor

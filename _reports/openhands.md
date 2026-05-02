@@ -45,9 +45,9 @@ links:
   documentation: https://docs.openhands.dev/
 relationships:
   related_tools:
-    - Accomplish
     - Devin
     - AutoGPT
+    - Opcode
     - Agent Zero
     - Cursor
     - GitHub Copilot
