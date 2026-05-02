@@ -49,7 +49,6 @@ links:
   documentation: https://support.smarthr.jp/ja/
 relationships:
   related_tools:
-    - ワスレナイ
     - COMPANY
     - KING OF TIME
     - ジョブカン勤怠管理
