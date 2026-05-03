@@ -56,6 +56,7 @@ relationships:
     - Agent Skills
     - Qwen
     - UI-TARS Desktop
+    - Rakuten AI
 ---
 
 # **Claude 調査レポート**
