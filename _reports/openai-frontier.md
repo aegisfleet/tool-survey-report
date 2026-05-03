@@ -5,25 +5,25 @@ tool_reading: オープンエーアイ フロンティア
 category: 自律型AIエージェント
 developer: OpenAI
 official_site: https://openai.com/frontier
-date: "2026-02-07"
-last_updated: "2026-05-03"
+date: '2026-02-07'
+last_updated: '2026-05-03'
 tags:
-  - "AI"
-  - "エージェント"
-  - "大規模言語モデル"
-  - "自律型"
-  - "生成AI"
-description: "GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。"
+  - AI
+  - エージェント
+  - 大規模言語モデル
+  - 自律型
+  - 生成AI
+description: GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "従量課金 (Enterprise/Team)"
+  starting_price: 従量課金 (Enterprise/Team)
   target_users:
-    - "研究者"
-    - "ソフトウェアエンジニア"
-    - "データサイエンティスト"
-  latest_highlight: "2026年2月にパブリックベータ公開。3つの特化型エージェントを提供。"
-  update_frequency: "高"
+    - 研究者
+    - ソフトウェアエンジニア
+    - データサイエンティスト
+  latest_highlight: 2026年2月にパブリックベータ公開。3つの特化型エージェントを提供。
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
@@ -44,9 +44,9 @@ links:
   documentation: https://platform.openai.com/docs/frontier
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "AWS Frontier Agents"
-    - "Devin"
+    - ChatGPT
+    - AWS Frontier Agents
+    - Devin
 ---
 
 # **OpenAI Frontier 調査レポート**
