@@ -56,6 +56,7 @@ relationships:
     - OpenHands
     - AutoGPT
     - Opcode
+    - OpenAI Frontier
 ---
 
 # **Devin 調査レポート**
