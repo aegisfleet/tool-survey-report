@@ -57,6 +57,7 @@ relationships:
     - Microsoft 365 Copilot
     - Qwen
     - OpenAI Frontier
+    - Rakuten AI
 ---
 
 # **ChatGPT 調査レポート**

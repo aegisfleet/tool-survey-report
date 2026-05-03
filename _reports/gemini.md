@@ -58,6 +58,7 @@ relationships:
     - Vertex AI
     - Vertex AI Studio
     - TradingAgents
+    - Rakuten AI
     - Microsoft 365 Copilot
     - Claude
     - Grok
