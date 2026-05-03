@@ -5,26 +5,25 @@ tool_reading: オープンエーアイ フロンティア
 category: 自律型AIエージェント
 developer: OpenAI
 official_site: https://openai.com/frontier
-date: '2026-02-07'
-last_updated: '2026-02-07'
+date: "2026-02-07"
+last_updated: "2026-05-03"
 tags:
-  - AI
-  - OpenAI
-  - エージェント
-  - 大規模言語モデル
-  - 研究開発
-  - 自律型
-description: GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。
+  - "AI"
+  - "エージェント"
+  - "大規模言語モデル"
+  - "自律型"
+  - "生成AI"
+description: "GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。"
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: 従量課金 (Enterprise/Team)
+  starting_price: "従量課金 (Enterprise/Team)"
   target_users:
-    - 研究者
-    - ソフトウェアエンジニア
-    - データサイエンティスト
-  latest_highlight: 2026年2月にパブリックベータ公開。3つの特化型エージェントを提供。
-  update_frequency: 高
+    - "研究者"
+    - "ソフトウェアエンジニア"
+    - "データサイエンティスト"
+  latest_highlight: "2026年2月にパブリックベータ公開。3つの特化型エージェントを提供。"
+  update_frequency: "高"
 evaluation:
   score: 84
   base_score: 70
@@ -45,10 +44,9 @@ links:
   documentation: https://platform.openai.com/docs/frontier
 relationships:
   related_tools:
-    - ChatGPT
-    - AWS Frontier Agents
-    - Devin
-    - LangChain
+    - "ChatGPT"
+    - "AWS Frontier Agents"
+    - "Devin"
 ---
 
 # **OpenAI Frontier 調査レポート**
@@ -167,12 +165,17 @@ Python SDKが充実しており、LangChainやLlamaIndexなどのフレームワ
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: クローズドベータ参加者のブログ、SNS（X, LinkedIn）
+* **総合評価**: (G2、Capterraにレビュー登録なし。SNSの定性評価が中心)
 * **ポジティブな評価**:
   * 「自分専用の優秀な研究助手ができたようだ。寝ている間に論文を読み漁ってくれる。」
   * 「リファクタリングのような退屈だが認知負荷の高い作業から解放された。」
+  * 「複数ツールの組み合わせによるタスク自動化が、1つのプロンプトで完結するようになった。」
 * **ネガティブな評価 / 改善要望**:
   * 「コストが見積もりにくい。気づいたらクレジットを大量に消費していた。」
   * 「時々、同じループに陥って抜け出せなくなることがある。」
+  * 「実行プロセスがブラックボックス化しやすく、途中での軌道修正が難しい。」
+* **特徴的なユースケース**:
+  * 「社内の分散したナレッジベースから特定の条件に合致する情報を抽出し、新規プロジェクトの提案書を自動作成する。」
 
 ## **15. 直近半年のアップデート情報**
 

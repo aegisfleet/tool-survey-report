@@ -56,6 +56,7 @@ relationships:
     - Grok
     - Microsoft 365 Copilot
     - Qwen
+    - OpenAI Frontier
 ---
 
 # **ChatGPT 調査レポート**
