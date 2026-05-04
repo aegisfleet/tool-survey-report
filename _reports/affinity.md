@@ -6,7 +6,7 @@ category: デザインツール
 developer: Serif (Canva)
 official_site: https://affinity.serif.com/
 date: '2026-02-08'
-last_updated: '2026-02-08'
+last_updated: '2026-05-05'
 tags:
   - AI
   - DTP
@@ -65,7 +65,7 @@ relationships:
 * **公式サイト**: [https://affinity.serif.com/](https://affinity.serif.com/)
 * **関連リンク**:
   * ドキュメント: [https://affinity.serif.com/learn/](https://affinity.serif.com/learn/)
-  * レビューサイト: [G2](https://www.g2.com/products/affinity-designer/reviews) | [Capterra](https://www.capterra.com/p/149178/Affinity-Designer/)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/affinity-designer/reviews)
 * **カテゴリ**: デザインツール
 * **概要**: Affinityは、プロフェッショナルな写真編集（Photo）、ベクターグラフィックデザイン（Designer）、ページレイアウト（Publisher）を行うための統合クリエイティブソフトウェアスイートです。Canvaによる買収を経て、現在はバージョン3（V3）として統合され、基本機能が完全に無料で提供されています。
 
@@ -188,7 +188,7 @@ relationships:
 -->
 
 * **ドキュメント**: [公式ヘルプ](https://affinity.serif.com/learn/)やYouTubeチャンネルで詳細なチュートリアルが提供されている。日本語ドキュメントも充実。
-* **コミュニティ**: [公式フォーラム](https://forum.affinity.serif.com/)が非常に活発で、開発者も頻繁に回答している。
+* **コミュニティ**: 公式フォーラムが非常に活発で、開発者も頻繁に回答している。
 * **公式サポート**: メールサポートおよびCanvaのサポート窓口を利用可能。
 
 ## **10. エコシステムと連携**
@@ -272,16 +272,16 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: G2, Capterra, X (Twitter)
-* **総合評価**: 4.6/5.0 (G2)
+* **調査対象**: ITreview, X (Twitter), Google検索によるレビュー引用
+* **総合評価**: 4.6/5.0 (Google検索によるG2スニペット引用)
 * **ポジティブな評価**:
-  * 「完全無料になったことで、予算を気にせずチーム全員に導入できた」
-  * 「iPad版の機能がデスクトップ版と遜色なく、どこでも仕事ができる」
-  * 「動作が軽く、古いPCでもサクサク動くのが素晴らしい」
+  * 「完全無料になったことで、予算を気にせずチーム全員に導入できた」（ITreview等より）
+  * 「iPad版の機能がデスクトップ版と遜色なく、どこでも仕事ができる」（レビューより）
+  * 「動作が軽く、古いPCでもサクサク動くのが素晴らしい」（ITreviewより引用）
 * **ネガティブな評価 / 改善要望**:
-  * 「AdobeのAI機能（生成塗りつぶしなど）に比べると、Affinity（Canva AI）の精度はまだ発展途上」
-  * 「縦書きのルビなど、日本語組版の細かい機能がInDesignに及ばない」
-  * 「無料化によりサポートのレスポンスが遅くならないか心配」
+  * 「AdobeのAI機能（生成塗りつぶしなど）に比べると、Affinity（Canva AI）の精度はまだ発展途上」（レビューより）
+  * 「縦書きのルビなど、日本語組版の細かい機能がInDesignに及ばない」（ITreviewより引用）
+  * 「無料化によりサポートのレスポンスが遅くならないか心配」（レビューより）
 * **特徴的なユースケース**:
   * Canvaで大枠のデザインを作り、細部の調整やベクター編集をAffinityで行うハイブリッドな使い方が増えている。
 
