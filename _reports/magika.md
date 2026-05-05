@@ -41,7 +41,7 @@ evaluation:
   summary: 軽量かつ高速で高精度なファイルタイプ判定を実現し、実環境への導入が容易
 links:
   github: https://github.com/google/magika
-  codewiki: "https://codewiki.google/github.com/google/magika"
+  codewiki: https://codewiki.google/github.com/google/magika
   deepwiki: https://deepwiki.com/google/magika
 relationships:
   parent: ''

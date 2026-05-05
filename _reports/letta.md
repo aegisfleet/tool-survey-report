@@ -40,7 +40,7 @@ evaluation:
   summary: 永続メモリを持つエージェント開発において、最も先進的かつ実用的なフレームワークの一つ。
 links:
   github: https://github.com/letta-ai/letta
-  deepwiki: "https://deepwiki.com/letta-ai/letta"
+  deepwiki: https://deepwiki.com/letta-ai/letta
   codewiki: https://codewiki.google/github.com/letta-ai/letta
   documentation: https://docs.letta.com/
 relationships:

@@ -46,7 +46,7 @@ evaluation:
   summary: 高いカスタマイズ性とセキュリティを誇るが、コスト管理と学習曲線が課題となる上級者向けAIエージェント。
 links:
   github: https://github.com/cline/cline
-  codewiki: "https://codewiki.google/github.com/cline/cline"
+  codewiki: https://codewiki.google/github.com/cline/cline
   deepwiki: https://deepwiki.com/cline/cline
   documentation: https://docs.cline.bot/
 relationships:

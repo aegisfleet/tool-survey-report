@@ -33,7 +33,7 @@ evaluation:
   summary: AIエージェントにAndroidの専門知識を付与する強力なオープンソースリソース
 links:
   github: https://github.com/android/skills
-  codewiki: "https://codewiki.google/github.com/android/skills"
+  codewiki: https://codewiki.google/github.com/android/skills
   deepwiki: https://deepwiki.com/android/skills
 relationships:
   related_tools:
