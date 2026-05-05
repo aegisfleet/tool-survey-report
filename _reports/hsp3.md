@@ -42,6 +42,7 @@ evaluation:
   summary: プログラミング入門や小規模ツール開発において、圧倒的な手軽さと安心感を提供する国産ツール。
 links:
   github: https://github.com/onitama/OpenHSP
+  deepwiki: https://deepwiki.com/onitama/OpenHSP
   documentation: https://hsp.tv/make/hsp3.html
 relationships:
   parent: ''

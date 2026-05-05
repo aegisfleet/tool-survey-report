@@ -43,6 +43,7 @@ evaluation:
   summary: シンプルで軽量だが、UIの古さと構築の手間がネック。Python環境との親和性は高い。
 links:
   github: https://github.com/edgewall/trac
+  deepwiki: https://deepwiki.com/edgewall/trac
   documentation: https://trac.edgewall.org/wiki/TracGuide
 relationships:
   related_tools:

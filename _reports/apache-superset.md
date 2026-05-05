@@ -39,6 +39,7 @@ evaluation:
   summary: 強力なSQLエディタと多彩なグラフ表現を備えた、OSS BIツールの決定版
 links:
   github: https://github.com/apache/superset
+  codewiki: https://codewiki.google/github.com/apache/superset
   deepwiki: https://deepwiki.com/apache/superset
 relationships:
   related_tools:

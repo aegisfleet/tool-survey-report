@@ -40,6 +40,7 @@ evaluation:
   summary: 圧倒的な柔軟性と実績を誇るWeb自動化の標準ツールだが、習得には一定の技術力が求められる
 links:
   github: https://github.com/SeleniumHQ/selenium
+  deepwiki: https://deepwiki.com/SeleniumHQ/selenium
   codewiki: https://codewiki.google/github.com/SeleniumHQ/selenium
   documentation: https://www.selenium.dev/documentation/
 relationships:
