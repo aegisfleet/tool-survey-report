@@ -36,6 +36,7 @@ evaluation:
   summary: 高品質な脆弱性データベースを利用した、多機能かつ信頼性の高いオープンソース脆弱性スキャナー。
 links:
   github: https://github.com/google/osv-scanner
+  deepwiki: "https://deepwiki.com/google/osv-scanner"
   codewiki: https://codewiki.google/github.com/google/osv-scanner
 relationships:
   related_tools:

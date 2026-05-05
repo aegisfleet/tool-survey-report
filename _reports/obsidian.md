@@ -46,7 +46,6 @@ links:
 relationships:
   related_tools:
     - Notion
-    - Visual Studio Code
 ---
 
 # **Obsidian 調査レポート**

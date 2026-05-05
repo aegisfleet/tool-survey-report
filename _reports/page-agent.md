@@ -39,6 +39,7 @@ evaluation:
   summary: 既存のWebアプリケーションに容易にAIコパイロットを組み込める画期的なオープンソースツール
 links:
   github: https://github.com/alibaba/page-agent
+  codewiki: "https://codewiki.google/github.com/alibaba/page-agent"
   deepwiki: https://deepwiki.com/alibaba/page-agent
   documentation: https://alibaba.github.io/page-agent/docs/introduction/overview
 relationships:

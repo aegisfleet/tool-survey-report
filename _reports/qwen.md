@@ -39,6 +39,7 @@ evaluation:
   summary: 優れた推論能力と長文処理能力を持ち、高度なマルチモーダルタスクにも対応する強力なAIプラットフォーム。
 links:
   github: https://github.com/QwenLM/Qwen3.6
+  deepwiki: "https://deepwiki.com/QwenLM/Qwen3.6"
 relationships:
   parent: null
   children: []
