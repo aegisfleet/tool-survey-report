@@ -6,7 +6,7 @@ category: 自律型AIエージェント
 developer: OpenAI
 official_site: https://github.com/openai/symphony
 date: '2026-03-06'
-last_updated: '2026-03-06'
+last_updated: '2026-05-05'
 tags:
   - AI
   - オープンソース
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 開発チーム
     - ソフトウェアエンジニア
-  latest_highlight: Elixir/OTPに基づくリファレンス実装を試験的に公開
+  latest_highlight: Codex app-serverモデル設定の追加とサービス仕様(SPEC)の明確化
   update_frequency: 不定期
 evaluation:
   score: 80
@@ -179,9 +179,13 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-27**: Codex app-serverのモデル（gpt-5.5等）を`--config model`経由で設定できるように修正。
+* **2026-04-27**: サービス仕様書（`SPEC.md`）のRFCスタイル要件定義を明確化し、Codexプロトコルの詳細仕様を整備。
+* **2026-03-19**: エージェントランナーでのSSHリトライフェイルオーバーをオーケストレータ側での管理に変更し、プロセス分離を強化。
+* **2026-03-16**: Codexからの非JSON出力を起因とする、不正なプロトコルイベント（`:malformed`）に関するエラーを修正。
 * **2024-11-20**: GitHubリポジトリ上で実験的なリファレンス実装（Elixir版）と設計仕様（SPEC.md）を公開。
 
-(出典: [GitHubリポジトリ](https://github.com/openai/symphony))
+(出典: [GitHubリポジトリ](https://github.com/openai/symphony/commits/main/))
 
 ## **16. 類似ツールとの共同比較**
 
