@@ -53,9 +53,8 @@ relationships:
     - Cline
     - Roo Code
     - Claude Code
-    - Devin
     - GitLab Duo
-    - OpenHands
+    - Visual Studio Code
 ---
 
 # **GitHub Copilot 調査レポート**

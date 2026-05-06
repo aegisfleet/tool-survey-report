@@ -6,11 +6,10 @@ category: IDE/エディタ
 developer: Microsoft
 official_site: https://code.visualstudio.com/
 date: '2026-02-08'
-last_updated: '2026-02-08'
+last_updated: '2026-05-07'
 tags:
   - AI
   - IDE
-  - エディタ
   - オープンソース
   - 開発者ツール
 description: Microsoftが開発した、無料で高機能なオープンソースのコードエディタ。豊富な拡張機能により、あらゆる言語での開発に対応し、AIによるコーディング支援も強力です。
@@ -22,7 +21,7 @@ quick_summary:
     - 開発者
     - Webデザイナー
     - 学生
-  latest_highlight: 2026年1月にAIエージェントのスキル機能（実験的）を追加
+  latest_highlight: 2026年5月にエージェントとブラウザのスムーズな連携機能を追加
   update_frequency: 高
 evaluation:
   score: 95
@@ -52,9 +51,8 @@ relationships:
     - IntelliJ IDEA
     - Windsurf
     - Cline
-    - Eclipse
+    - Eclipse IDE
     - Android Studio
-    - Edit
 ---
 
 # **Visual Studio Code 調査レポート**
@@ -209,12 +207,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-06 (v1.119)**: エージェントとブラウザのスムーズな連携機能、エージェントセッションのOpenTelemetryによるトレース機能、Todoリスト管理の最適化によるトークン使用量削減などが追加された。
+* **2026-04-29 (v1.118)**: Copilot CLIセッションのリモートコントロール機能、セマンティック検索によるコードベース検索、スキル専用のコンテキストによるチャット品質向上、チャットセッションの履歴分析機能が追加された。
+* **2026-04-22 (v1.117)**: Copilot Business/Enterprise向けに、自身のAPIキーを使用して好みのモデル（OpenRouter、Ollama、Googleなど）を利用できるBYOK（Bring Your Own Key）機能が追加された。
 * **2026-01-08 (v1.108)**: AIに新しい能力を教える「エージェントスキル」機能が実験的に導入された。また、エージェントセッションビューの改善や、ターミナルのIntelliSense機能のUXが再設計された。
 * **2025-11-07 (v1.107)**: 組織内で承認された拡張機能のみを配布できるプライベートマーケットプレイス機能が追加された。サイドバーに複数のAIエージェントの状態を管理する「Agent Sessions」ビューが新設された。
 * **2025-10-10 (v1.106)**: 拡張機能を通じてサードパーティ製の言語モデル（Hugging Faceなど）をチャット機能で利用できる`Language Model Chat Provider API` が公開された。
-* **2025-09-05 (v1.105)**: AIアシスタントがマージコンフリクトの解決を支援する機能が追加された。
-* **2025-08-08 (v1.104)**: ワークスペースに`AGENTS.md`ファイルを置くことで、AIエージェントにプロジェクト固有の指示を与えられるようになった。
-* **2025-07-11 (v1.103)**: 有料のGitHub Copilotプラン向けに、OpenAIの最新モデルであるGPT-5およびGPT-5 miniが利用可能になった。
 
 (出典: [VS Code Updates](https://code.visualstudio.com/updates))
 
