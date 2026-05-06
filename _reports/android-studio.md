@@ -45,7 +45,7 @@ relationships:
   parent: IntelliJ IDEA
   children: []
   related_tools:
-    - Eclipse
+    - Eclipse IDE
     - Flutter
     - Kotlin Multiplatform
     - Visual Studio Code
