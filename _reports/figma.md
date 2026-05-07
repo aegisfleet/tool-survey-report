@@ -56,6 +56,7 @@ relationships:
     - GIMP
     - OpenPencil
     - いいフォント
+    - Open CoDesign
 ---
 
 # **Figma 調査レポート**
