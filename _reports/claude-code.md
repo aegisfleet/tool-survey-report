@@ -57,6 +57,7 @@ relationships:
     - Claw Code
     - TAKT
     - Grok CLI
+    - Open CoDesign
 ---
 
 # **Claude Code 調査レポート**
