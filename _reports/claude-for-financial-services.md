@@ -39,7 +39,7 @@ evaluation:
   summary: 金融業界に特化した実践的なAIエージェント・テンプレート群であり、専門データソースへの接続とワークフロー自動化のベストプラクティスを提示している
 links:
   github: https://github.com/anthropics/financial-services
-  deepwiki: "https://deepwiki.com/anthropics/financial-services"
+  deepwiki: https://deepwiki.com/anthropics/financial-services
 ---
 
 # **Claude for Financial Services 調査レポート**
