@@ -6,7 +6,7 @@ category: デザインツール
 developer: OpenPencil
 official_site: https://openpencil.dev/
 date: '2026-03-15'
-last_updated: '2026-03-15'
+last_updated: '2026-05-07'
 tags:
   - AI
   - オープンソース
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - UI/UXデザイナー
     - 開発者
-  latest_highlight: AIネイティブでFigma互換性を持つオープンソースツールとして登場
+  latest_highlight: v0.11.8 および v0.11.7 のリリースで MCP サーバーの stdio 対応やバグ修正が行われました
   update_frequency: 高
 evaluation:
   score: 75
@@ -175,10 +175,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-XX-XX**: 活発な開発が進行中。FigmaのMCP機能制限などを背景に、オープンソースの代替として機能拡充が続けられている。
-* **2025-XX-XX**: プロジェクトが公開され、ローカルファーストかつFigma互換の機能が実装。
+* **2026-04-23**: v0.11.8 リリース。Windows における MCP サーバーの起動不具合や WebSocket の接続不具合などを修正。
+* **2026-04-22**: v0.11.7 リリース。MCP サーバーの stdio トランスポート対応(`openpencil-mcp`)、`list_available_fonts` や `open_file`, `new_document` などのMCPツール追加。JSXレンダラーの拡張など多数の機能追加と修正を実施。
+* **2026-04-08**: v0.11.6 および v0.11.5 などのリリースが連続して行われ、活発な開発が進行中。
 
-(出典: [GitHubリポジトリ](https://github.com/open-pencil/open-pencil))
+(出典: [リリースノート](https://github.com/open-pencil/open-pencil/releases))
 
 ## **16. 類似ツールとの比較**
 
