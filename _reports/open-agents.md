@@ -1,47 +1,44 @@
 ---
-title: "Open Agents 調査レポート"
-tool_name: "Open Agents"
-tool_reading: "オープンエージェンツ"
-category: "AI開発エージェント"
-developer: "Vercel Labs"
-official_site: "https://open-agents.dev/"
-date: "2026-05-08"
-last_updated: "2026-05-08"
+title: Open Agents 調査レポート
+tool_name: Open Agents
+tool_reading: オープンエージェンツ
+category: AI開発エージェント
+developer: Vercel Labs
+official_site: https://open-agents.dev/
+date: '2026-05-08'
+last_updated: '2026-05-08'
 tags:
-  - "AIエージェント"
-  - "Vercel"
-  - "オープンソース"
-  - "開発ツール"
-description: "Vercel上でクラウドベースのコーディングエージェントを構築・実行するためのオープンソースのリファレンスアプリケーション"
-
+  - AIエージェント
+  - Vercel
+  - オープンソース
+  - 開発ツール
+description: Vercel上でクラウドベースのコーディングエージェントを構築・実行するためのオープンソースのリファレンスアプリケーション
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（インフラ費用は別途）"
+  starting_price: 無料（インフラ費用は別途）
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "セキュリティ強化と不具合修正の継続的なアップデート"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+  latest_highlight: セキュリティ強化と不具合修正の継続的なアップデート
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Vercelのインフラ（Sandbox, Workflow SDK等）を活用した実践的でスケーラブルなアーキテクチャ"
+      reason: Vercelのインフラ（Sandbox, Workflow SDK等）を活用した実践的でスケーラブルなアーキテクチャ
     - point: 5
-      reason: "エージェント実行環境とサンドボックスを分離する設計による高い安全性"
+      reason: エージェント実行環境とサンドボックスを分離する設計による高い安全性
     - point: 5
-      reason: "オープンソースであり、独自のツールや機能の拡張が容易"
+      reason: オープンソースであり、独自のツールや機能の拡張が容易
   minus_points:
     - point: -3
-      reason: "初期セットアップ（OAuthや環境変数など）のハードルがやや高い"
-  summary: "Vercel環境で独自のAIエージェントを構築するための優れたリファレンス実装だが、導入には一定のインフラ知識が必要"
-
+      reason: 初期セットアップ（OAuthや環境変数など）のハードルがやや高い
+  summary: Vercel環境で独自のAIエージェントを構築するための優れたリファレンス実装だが、導入には一定のインフラ知識が必要
 links:
-  github: "https://github.com/vercel-labs/open-agents"
-  deepwiki: "https://deepwiki.com/vercel-labs/open-agents"
+  github: https://github.com/vercel-labs/open-agents
+  deepwiki: https://deepwiki.com/vercel-labs/open-agents
 ---
 
 # **Open Agents 調査レポート**
