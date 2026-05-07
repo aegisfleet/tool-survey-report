@@ -1,53 +1,46 @@
 ---
-# 【必須項目】
-title: "Mattermost 調査レポート"
-tool_name: "Mattermost"
-tool_reading: "マターモースト"
-category: "コミュニケーション"
-developer: "Mattermost Inc."
-official_site: "https://mattermost.com/"
-date: "2026-05-07"
-last_updated: "2026-05-07"
+title: Mattermost 調査レポート
+tool_name: Mattermost
+tool_reading: マターモースト
+category: コミュニケーション
+developer: Mattermost Inc.
+official_site: https://mattermost.com/
+date: '2026-05-07'
+last_updated: '2026-05-07'
 tags:
-  - "チャット"
-  - "オープンソース"
-  - "コラボレーション"
-  - "DevSecOps"
-description: "安全なコラボレーションを実現するためのオープンソースのメッセージング・自動化プラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - チャット
+  - オープンソース
+  - コラボレーション
+  - DevSecOps
+description: 安全なコラボレーションを実現するためのオープンソースのメッセージング・自動化プラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発チーム"
-    - "セキュリティチーム"
-    - "エンタープライズ企業"
-  latest_highlight: "v11.7.0リリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発チーム
+    - セキュリティチーム
+    - エンタープライズ企業
+  latest_highlight: v11.7.0リリース
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オンプレミスやプライベートクラウドでのセキュアな運用が可能"
+      reason: オンプレミスやプライベートクラウドでのセキュアな運用が可能
     - point: 4
-      reason: "G2で4.3/5.0という高評価"
+      reason: G2で4.3/5.0という高評価
     - point: 4
-      reason: "Playbooksによるワークフロー自動化機能の充実"
+      reason: Playbooksによるワークフロー自動化機能の充実
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "セキュリティとコンプライアンスが重要な組織に最適なオープンソースのコラボレーションプラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: セキュリティとコンプライアンスが重要な組織に最適なオープンソースのコラボレーションプラットフォーム
 links:
-  github: "https://github.com/mattermost/mattermost"
-  deepwiki: "https://deepwiki.com/mattermost/mattermost"
-  documentation: "https://docs.mattermost.com/"
+  github: https://github.com/mattermost/mattermost
+  deepwiki: https://deepwiki.com/mattermost/mattermost
+  documentation: https://docs.mattermost.com/
 ---
 
 # **Mattermost 調査レポート**
