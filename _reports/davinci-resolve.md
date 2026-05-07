@@ -54,6 +54,7 @@ relationships:
     - AviUtl
     - Apple Creator Studio
     - Remotion
+    - OpenCut
 ---
 
 # **DaVinci Resolve 調査レポート**
