@@ -62,10 +62,7 @@ relationships:
     - Autify
     - MagicPod
     - Vitest
-    - React Testing Library
-    - mabl
-    - Robot Framework
-    - Appium
+    - CodeceptJS
 ---
 
 # **Playwright 調査レポート**

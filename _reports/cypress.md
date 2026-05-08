@@ -50,9 +50,8 @@ relationships:
     - Autify
     - MagicPod
     - mabl
-    - Appium
-    - Karate
     - Vitest
+    - CodeceptJS
 ---
 
 # **Cypress 調査レポート**
