@@ -47,6 +47,7 @@ relationships:
     - Apple Creator Studio
     - Remotion
     - OpenCut
+    - Blender
 ---
 
 # **AviUtl 調査レポート**

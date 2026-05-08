@@ -47,6 +47,7 @@ relationships:
     - Apple Creator Studio
     - Figma
     - GIMP
+    - Blender
 ---
 
 # **Affinity 調査レポート**
