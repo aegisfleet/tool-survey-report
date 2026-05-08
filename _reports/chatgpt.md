@@ -1,59 +1,59 @@
 ---
-title: "ChatGPT 調査レポート"
-tool_name: "ChatGPT"
-tool_reading: "チャットジーピーティー"
-category: "生成AI"
-developer: "OpenAI"
-official_site: "https://openai.com/chatgpt"
-date: "2026-02-09"
-last_updated: "2026-05-08"
+title: ChatGPT 調査レポート
+tool_name: ChatGPT
+tool_reading: チャットジーピーティー
+category: 生成AI
+developer: OpenAI
+official_site: https://openai.com/chatgpt
+date: '2026-02-09'
+last_updated: '2026-05-08'
 tags:
-  - "AI"
-  - "会話型AI"
-  - "大規模言語モデル"
-  - "生成AI"
-  - "開発者ツール"
-description: "OpenAIによって開発された、自然言語処理と生成に優れた能力を持つ最先端の会話型AIモデル。"
+  - AI
+  - 会話型AI
+  - 大規模言語モデル
+  - 生成AI
+  - 開発者ツール
+description: OpenAIによって開発された、自然言語処理と生成に優れた能力を持つ最先端の会話型AIモデル。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "開発者"
-    - "コンテンツ制作者"
-    - "一般ユーザー"
-  latest_highlight: "推論能力を強化したo1モデルおよびリアルタイム検索機能Searchを正式リリース"
-  update_frequency: "高"
+    - 開発者
+    - コンテンツ制作者
+    - 一般ユーザー
+  latest_highlight: 推論能力を強化したo1モデルおよびリアルタイム検索機能Searchを正式リリース
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "推論モデルo1やマルチモーダルモデルGPT-4oにより、業界最高水準の性能と汎用性を実現"
+      reason: 推論モデルo1やマルチモーダルモデルGPT-4oにより、業界最高水準の性能と汎用性を実現
     - point: 5
-      reason: "Canvas機能やSearch機能など、単なるチャットを超えた新しいUI/UXの提供"
+      reason: Canvas機能やSearch機能など、単なるチャットを超えた新しいUI/UXの提供
     - point: 5
-      reason: "GPTsエコシステムやAPI連携の豊富さにより、カスタマイズ性と拡張性が極めて高い"
+      reason: GPTsエコシステムやAPI連携の豊富さにより、カスタマイズ性と拡張性が極めて高い
   minus_points:
     - point: -3
-      reason: "依然としてハルシネーションのリスクがあり、特に専門的な内容ではファクトチェックが不可欠"
+      reason: 依然としてハルシネーションのリスクがあり、特に専門的な内容ではファクトチェックが不可欠
     - point: -2
-      reason: "高度な機能（o1 Proモード等）は高額なプランに限定される場合がある"
-  summary: "モデル性能、機能性、エコシステムの全てで市場をリードし、推論能力の強化により複雑なタスクへの対応力が向上した。"
+      reason: 高度な機能（o1 Proモード等）は高額なプランに限定される場合がある
+  summary: モデル性能、機能性、エコシステムの全てで市場をリードし、推論能力の強化により複雑なタスクへの対応力が向上した。
 links:
-  documentation: "https://help.openai.com/en/"
+  documentation: https://help.openai.com/en/
 relationships:
   children:
-    - "OpenAI Codex CLI"
-    - "Codex cloud"
+    - OpenAI Codex CLI
+    - Codex cloud
   related_tools:
-    - "Gemini"
-    - "Claude"
-    - "Grok"
-    - "DeepSeek"
-    - "Amazon Bedrock"
-    - "Microsoft 365 Copilot"
-    - "Qwen"
+    - Gemini
+    - Claude
+    - Grok
+    - DeepSeek
+    - Amazon Bedrock
+    - Microsoft 365 Copilot
+    - Qwen
 ---
 
 # **ChatGPT 調査レポート**
