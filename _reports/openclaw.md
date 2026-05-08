@@ -47,6 +47,7 @@ relationships:
   children:
     - NemoClaw
     - Moltbot
+    - ClawHub
   related_tools:
     - AutoGPT
 ---
