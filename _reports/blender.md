@@ -1,49 +1,49 @@
 ---
-title: "Blender 調査レポート"
-tool_name: "Blender"
-tool_reading: "ブレンダー"
-category: "デザインツール"
-developer: "Blender Foundation"
-official_site: "https://www.blender.org/"
-date: "2026-05-08"
-last_updated: "2026-05-08"
+title: Blender 調査レポート
+tool_name: Blender
+tool_reading: ブレンダー
+category: デザインツール
+developer: Blender Foundation
+official_site: https://www.blender.org/
+date: '2026-05-08'
+last_updated: '2026-05-08'
 tags:
-  - "オープンソース"
-  - "3D"
-  - "CG"
-  - "アニメーション"
-  - "VFX"
-  - "動画編集"
-description: "モデリング、アニメーション、レンダリング、VFXなど3D制作の全工程をサポートする無料かつオープンソースの統合型3DCGソフトウェア。"
+  - オープンソース
+  - 3D
+  - CG
+  - アニメーション
+  - VFX
+  - 動画編集
+description: モデリング、アニメーション、レンダリング、VFXなど3D制作の全工程をサポートする無料かつオープンソースの統合型3DCGソフトウェア。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "3Dアーティスト"
-    - "アニメーター"
-    - "ゲーム開発者"
-  latest_highlight: "Blender 5.1がリリースされ、パフォーマンスと安定性が向上"
-  update_frequency: "高"
+    - 3Dアーティスト
+    - アニメーター
+    - ゲーム開発者
+  latest_highlight: Blender 5.1がリリースされ、パフォーマンスと安定性が向上
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "プロフェッショナル用途にも耐える極めて多機能な3D統合環境が完全に無料で提供されている"
+      reason: プロフェッショナル用途にも耐える極めて多機能な3D統合環境が完全に無料で提供されている
     - point: 8
-      reason: "モデリングからアニメーション、レンダリング、コンポジットまで1つのソフトで完結する"
+      reason: モデリングからアニメーション、レンダリング、コンポジットまで1つのソフトで完結する
     - point: 5
-      reason: "オープンソースであり、活発なコミュニティと豊富なアドオン、チュートリアルが存在する"
+      reason: オープンソースであり、活発なコミュニティと豊富なアドオン、チュートリアルが存在する
     - point: 5
-      reason: "定期的なメジャーアップデートにより、業界標準に匹敵する機能が続々と追加されている"
+      reason: 定期的なメジャーアップデートにより、業界標準に匹敵する機能が続々と追加されている
   minus_points:
     - point: -3
-      reason: "機能が膨大で独自のUI/UXを持つため、習得するまでの学習コストが高い"
-  summary: "完全無料でプロ品質の3D制作が可能な、業界で最も勢いのあるオープンソース3DCGソフトウェア"
+      reason: 機能が膨大で独自のUI/UXを持つため、習得するまでの学習コストが高い
+  summary: 完全無料でプロ品質の3D制作が可能な、業界で最も勢いのあるオープンソース3DCGソフトウェア
 links:
-  github: "https://projects.blender.org/blender/blender"
-  documentation: "https://docs.blender.org/manual/"
+  github: https://projects.blender.org/blender/blender
+  documentation: https://docs.blender.org/manual/
 relationships:
   parent: null
   children: []
