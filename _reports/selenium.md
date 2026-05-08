@@ -50,12 +50,8 @@ relationships:
     - Cypress
     - Appium
     - MagicPod
-    - React Testing Library
     - Autify
-    - Vitest
-    - Robot Framework
-    - Karate
-    - Kiwi TCMS
+    - CodeceptJS
 ---
 
 # **Selenium 調査レポート**
