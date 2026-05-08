@@ -55,6 +55,7 @@ relationships:
     - Apple Creator Studio
     - Remotion
     - OpenCut
+    - Blender
 ---
 
 # **DaVinci Resolve 調査レポート**
