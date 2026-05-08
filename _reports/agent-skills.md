@@ -43,6 +43,7 @@ relationships:
     - MCP Apps
     - Claude
     - Android Skills
+    - Waza
 ---
 
 # **Agent Skills 調査レポート**
