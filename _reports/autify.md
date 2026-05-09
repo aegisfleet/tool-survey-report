@@ -47,7 +47,6 @@ relationships:
     - Selenium
     - Cypress
     - Playwright
-    - Playwright Test Agents
     - ネムラナイ
 ---
 

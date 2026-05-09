@@ -50,7 +50,7 @@ relationships:
     - Appium
     - Cypress
     - Playwright
-    - Playwright Test Agents
+    - ネムラナイ
 ---
 
 # **MagicPod 調査レポート**
