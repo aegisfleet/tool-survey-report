@@ -53,6 +53,7 @@ relationships:
     - Cline
     - Roo Code
     - Claude Code
+    - CodeRabbit
     - GitLab Duo
     - Visual Studio Code
 ---
