@@ -45,13 +45,13 @@ links:
   documentation: https://www.selenium.dev/documentation/
 relationships:
   related_tools:
-    - Browser Harness
     - Playwright
     - Cypress
     - Appium
     - MagicPod
     - Autify
     - CodeceptJS
+    - Cucumber
 ---
 
 # **Selenium 調査レポート**
