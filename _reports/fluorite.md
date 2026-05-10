@@ -1,53 +1,45 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Fluorite Game Engine 調査レポート"
-tool_name: "Fluorite Game Engine"
-tool_reading: "フローライト"
-category: "📱 モバイル開発"
-developer: "Toyota Connected North America"
-official_site: "https://fluorite.game/"
-date: "2026-02-10"
-last_updated: "2026-05-11"
+title: Fluorite Game Engine 調査レポート
+tool_name: Fluorite Game Engine
+tool_reading: フローライト
+category: 📱 モバイル開発
+developer: Toyota Connected North America
+official_site: https://fluorite.game/
+date: '2026-02-10'
+last_updated: '2026-05-11'
 tags:
-  - "オープンソース"
-  - "モバイル開発"
-  - "ゲームエンジン"
-  - "3D"
-  - "Flutter"
-description: "Flutterと完全に統合されたコンソールグレードの3Dゲームエンジン"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - モバイル開発
+  - ゲームエンジン
+  - 3D
+  - Flutter
+description: Flutterと完全に統合されたコンソールグレードの3Dゲームエンジン
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (推定)"
+  starting_price: 無料 (推定)
   target_users:
-    - "Flutter開発者"
-    - "ゲーム開発者"
-  latest_highlight: "公式サイトにてプレビュー情報公開中 (Coming Soon)"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - Flutter開発者
+    - ゲーム開発者
+  latest_highlight: 公式サイトにてプレビュー情報公開中 (Coming Soon)
+  update_frequency: 不定期
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Flutterとの完全統合という独自の強み"
+      reason: Flutterとの完全統合という独自の強み
     - point: 3
-      reason: "Toyota Connectedによる開発という信頼性"
+      reason: Toyota Connectedによる開発という信頼性
   minus_points:
     - point: -3
-      reason: "現時点で詳細ドキュメントやリポジトリが未公開"
-  summary: "Flutterで本格的な3Dゲームを開発できる可能性を秘めた期待のエンジンだが、現在はプレビュー段階"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現時点で詳細ドキュメントやリポジトリが未公開
+  summary: Flutterで本格的な3Dゲームを開発できる可能性を秘めた期待のエンジンだが、現在はプレビュー段階
 links:
-  documentation: "https://fluorite.game/"
+  documentation: https://fluorite.game/
 relationships:
   related_tools:
-    - "Flutter"
+    - Flutter
 ---
 
 # **Fluorite Game Engine 調査レポート**
