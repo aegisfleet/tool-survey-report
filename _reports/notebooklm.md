@@ -52,6 +52,7 @@ relationships:
     - Perplexity
     - Claude
     - LilysAI
+    - Huxe
 ---
 
 # **NotebookLM 調査レポート**
