@@ -6,7 +6,7 @@ category: AIコードエディタ
 developer: Anysphere, Inc.
 official_site: https://cursor.com/
 date: '2025-10-19'
-last_updated: '2026-02-10'
+last_updated: '2026-05-10'
 tags:
   - AI
   - IDE
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIエンジニア
-  latest_highlight: 2026年1月にCLI機能が大幅に強化され、モデル管理やルール編集が可能に
+  latest_highlight: 2026年5月に「Security Reviewer」と「Vulnerability Scanner」のセキュリティ関連機能を追加
   update_frequency: 高
 evaluation:
   score: 88
@@ -209,6 +209,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-07**: 「Security Reviewer」と「Vulnerability Scanner」のセキュリティ関連機能を追加。
 * **2026-01-08**: CLI機能の強化。モデル選択、ルール管理、MCPサーバーの有効/無効化などがコマンドラインから可能に。
 * **2025-12-22 (v2.3)**: レイアウトのカスタマイズ機能と全体的な安定性の向上。
 * **2025-12-18**: エンタープライズ向け機能（会話インサイト、共有可能な会話トランスクリプト、請求グループ、サービスアカウント）を追加。
