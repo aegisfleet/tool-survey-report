@@ -1,48 +1,45 @@
 ---
-title: "Huxe 調査レポート"
-tool_name: "Huxe"
-tool_reading: "ヒュクス / ハックス"
-category: "生成AI"
-developer: "Huxe AI, Inc."
-official_site: "https://www.huxe.com/"
-date: "2026-05-10"
-last_updated: "2026-05-10"
+title: Huxe 調査レポート
+tool_name: Huxe
+tool_reading: ヒュクス / ハックス
+category: 生成AI
+developer: Huxe AI, Inc.
+official_site: https://www.huxe.com/
+date: '2026-05-10'
+last_updated: '2026-05-10'
 tags:
-  - "AI"
-  - "生成AI"
-  - "音声AI"
-description: "日々の情報やメール、カレンダーをパーソナライズされた音声インテリジェンスや対話型ポッドキャストに変換するパーソナルオーディオアシスタント。"
-
+  - AI
+  - 生成AI
+  - 音声AI
+description: 日々の情報やメール、カレンダーをパーソナライズされた音声インテリジェンスや対話型ポッドキャストに変換するパーソナルオーディオアシスタント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般ユーザー"
-    - "ビジネスパーソン"
-  latest_highlight: "Google NotebookLMの元リーダーRaiza Martin氏らが開発"
-  update_frequency: "高"
-
+    - 一般ユーザー
+    - ビジネスパーソン
+  latest_highlight: Google NotebookLMの元リーダーRaiza Martin氏らが開発
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "インタラクティブな音声対話とパーソナライズされたポッドキャスト体験が革新的である"
+      reason: インタラクティブな音声対話とパーソナライズされたポッドキャスト体験が革新的である
     - point: 3
-      reason: "メールやカレンダーなどの個人データとのシームレスな連携機能を備えている"
+      reason: メールやカレンダーなどの個人データとのシームレスな連携機能を備えている
     - point: 2
-      reason: "モバイルアプリ（iOS/Android）で完全無料で利用可能"
+      reason: モバイルアプリ（iOS/Android）で完全無料で利用可能
   minus_points:
     - point: -2
-      reason: "現時点ではモバイルアプリのみの提供となっている"
-  summary: "個人の情報収集を「聴く」体験に最適化した画期的なパーソナルAIアシスタント。"
-
+      reason: 現時点ではモバイルアプリのみの提供となっている
+  summary: 個人の情報収集を「聴く」体験に最適化した画期的なパーソナルAIアシスタント。
 links:
-  documentation: "https://www.huxe.com/blog"
+  documentation: https://www.huxe.com/blog
 relationships:
   related_tools:
-    - "NotebookLM"
+    - NotebookLM
 ---
 
 # **Huxe 調査レポート**
