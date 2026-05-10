@@ -2,7 +2,7 @@
 title: Vercel Agent Skills 調査レポート
 tool_name: Vercel Agent Skills
 tool_reading: ヴァーセル エージェント スキルズ / エージェント スキルズ
-category: MCPサーバー/基盤
+category: 🧩 MCPサーバー/基盤
 developer: Vercel
 official_site: https://vercel.com/docs/agent-resources/skills
 date: '2026-03-19'

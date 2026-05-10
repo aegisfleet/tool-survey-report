@@ -2,7 +2,7 @@
 title: agents-cli 調査レポート
 tool_name: agents-cli
 tool_reading: エージェンツ・シーエルアイ
-category: AIエージェント基盤
+category: 🛠️ AIエージェント基盤
 developer: Google
 official_site: https://google.github.io/agents-cli/
 date: '2026-04-25'

@@ -2,7 +2,7 @@
 title: Google Jules 調査レポート
 tool_name: Google Jules
 tool_reading: グーグル ジュールズ
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Google
 official_site: https://jules.google/
 date: '2025-10-18'

@@ -2,7 +2,7 @@
 title: Model Context Protocol (MCP) 調査レポート
 tool_name: Model Context Protocol
 tool_reading: モデルコンテキストプロトコル
-category: MCPサーバー/基盤
+category: 🧩 MCPサーバー/基盤
 developer: Anthropic
 official_site: https://modelcontextprotocol.io/
 date: '2026-02-03'

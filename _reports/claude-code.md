@@ -2,7 +2,7 @@
 title: Claude Code 調査レポート
 tool_name: Claude Code
 tool_reading: クロード コード
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Anthropic
 official_site: https://claude.ai/code
 date: '2026-01-24'

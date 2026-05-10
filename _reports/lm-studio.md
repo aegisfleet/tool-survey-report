@@ -2,7 +2,7 @@
 title: LM Studio 調査レポート
 tool_name: LM Studio
 tool_reading: エルエムスタジオ
-category: LLMプラットフォーム
+category: 🧠 LLMプラットフォーム
 developer: Element Labs, Inc.
 official_site: https://lmstudio.ai/
 date: '2026-01-29'

@@ -2,7 +2,7 @@
 title: OBS Studio 調査レポート
 tool_name: OBS Studio
 tool_reading: オービーエス スタジオ
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: Lain / OBS Studio Contributors
 official_site: https://obsproject.com/
 date: '2026-03-10'

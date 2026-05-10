@@ -2,7 +2,7 @@
 title: DeepWiki-Open 調査レポート
 tool_name: DeepWiki-Open
 tool_reading: ディープウィキ オープン
-category: ドキュメント/ナレッジ
+category: 📖 ドキュメント/ナレッジ
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/deepwiki-open
 date: '2026-02-11'

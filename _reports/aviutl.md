@@ -2,7 +2,7 @@
 title: AviUtl 調査レポート
 tool_name: AviUtl
 tool_reading: エーブイアイユーティル / アビユートル
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: ＫＥＮくん
 official_site: https://spring-fragrance.mints.ne.jp/aviutl/
 date: '2026-02-18'

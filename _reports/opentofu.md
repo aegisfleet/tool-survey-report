@@ -2,7 +2,7 @@
 title: OpenTofu 調査レポート
 tool_name: OpenTofu
 tool_reading: オープントフ
-category: 構成管理
+category: ⚙️ 構成管理
 developer: Linux Foundation
 official_site: https://opentofu.org/
 date: '2025-10-27'

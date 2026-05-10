@@ -2,7 +2,7 @@
 title: Stable Diffusion 調査レポート
 tool_name: Stable Diffusion
 tool_reading: ステーブル・ディフュージョン
-category: 生成AI
+category: ✨ 生成AI
 developer: Stability AI
 official_site: https://stability.ai/
 date: '2026-04-07'

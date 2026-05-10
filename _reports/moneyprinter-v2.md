@@ -2,7 +2,7 @@
 title: MoneyPrinterV2 調査レポート
 tool_name: MoneyPrinterV2
 tool_reading: マネープリンターブイツー
-category: ワークフロー自動化
+category: ⚡ ワークフロー自動化
 developer: FujiwaraChoki
 official_site: https://github.com/FujiwaraChoki/MoneyPrinterV2
 date: '2026-03-21'

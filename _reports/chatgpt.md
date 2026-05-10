@@ -2,7 +2,7 @@
 title: ChatGPT 調査レポート
 tool_name: ChatGPT
 tool_reading: チャットジーピーティー
-category: 生成AI
+category: ✨ 生成AI
 developer: OpenAI
 official_site: https://openai.com/chatgpt
 date: '2026-02-09'

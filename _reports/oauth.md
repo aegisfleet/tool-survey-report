@@ -2,7 +2,7 @@
 title: OAuth 調査レポート
 tool_name: OAuth
 tool_reading: オーオース
-category: CDN/セキュリティ
+category: 🛡️ CDN/セキュリティ
 developer: IETF (Internet Engineering Task Force)
 official_site: https://oauth.net/
 date: '2026-02-04'

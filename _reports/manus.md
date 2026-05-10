@@ -2,7 +2,7 @@
 title: Manus 調査レポート
 tool_name: Manus
 tool_reading: マヌス
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Meta Platforms
 official_site: https://manus.im/
 date: '2026-03-03'

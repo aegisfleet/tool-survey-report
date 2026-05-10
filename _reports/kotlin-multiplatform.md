@@ -2,7 +2,7 @@
 title: Kotlin Multiplatform 調査レポート
 tool_name: Kotlin Multiplatform
 tool_reading: コトリン マルチプラットフォーム
-category: モバイル開発
+category: 📱 モバイル開発
 developer: JetBrains
 official_site: https://kotlinlang.org/multiplatform/
 date: '2026-02-15'

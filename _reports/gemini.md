@@ -2,7 +2,7 @@
 title: Gemini 調査レポート
 tool_name: Gemini
 tool_reading: ジェミニ
-category: 生成AI
+category: ✨ 生成AI
 developer: Google
 official_site: https://gemini.google.com/
 date: '2025-10-19'

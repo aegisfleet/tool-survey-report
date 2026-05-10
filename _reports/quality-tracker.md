@@ -2,7 +2,7 @@
 title: Quality Tracker 調査レポート
 tool_name: Quality Tracker
 tool_reading: クオリティトラッカー
-category: テスト管理
+category: 📋 テスト管理
 developer: バルテス株式会社 (VALTES CO.,LTD.)
 official_site: https://service.valtes.co.jp/qualitytracker/
 date: '2026-02-01'

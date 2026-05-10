@@ -2,7 +2,7 @@
 title: Codex cloud 調査レポート
 tool_name: Codex cloud
 tool_reading: コーデックス・クラウド
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: OpenAI
 official_site: https://developers.openai.com/codex/cloud
 date: '2026-03-19'

@@ -2,7 +2,7 @@
 title: Huxe 調査レポート
 tool_name: Huxe
 tool_reading: ヒュクス / ハックス
-category: 生成AI
+category: ✨ 生成AI
 developer: Huxe AI, Inc.
 official_site: https://www.huxe.com/
 date: '2026-05-10'

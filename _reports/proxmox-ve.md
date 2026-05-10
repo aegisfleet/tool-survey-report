@@ -2,7 +2,7 @@
 title: Proxmox VE 調査レポート
 tool_name: Proxmox VE
 tool_reading: プロックスモックス ヴイイー
-category: インフラ/クラウド
+category: ☁️ インフラ/クラウド
 developer: Proxmox Server Solutions GmbH
 official_site: https://www.proxmox.com/en/products/proxmox-virtual-environment/overview
 date: '2026-04-15'

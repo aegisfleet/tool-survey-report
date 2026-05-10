@@ -36,31 +36,31 @@ const categoryEmojiRules = [
   { keywords: ['api/仕様管理', 'api'], emoji: '🔌' },
   {
     keywords: ['os/プラットフォーム', 'os', 'プラットフォーム', 'android', 'ubuntu', 'vercel'],
-    emoji: '💻',
+    emoji: '🖥️',
   },
   {
     keywords: ['ide/エディタ', 'エディタ', 'ide', '開発者ツール', 'バージョン管理', 'git', 'フック', '開発ツール'],
     emoji: '🔧',
   },
-  { keywords: ['ユーティリティ', '便利ツール'], emoji: '🛠️' },
+  { keywords: ['開発ユーティリティ', 'ユーティリティ', '便利ツール'], emoji: '🛠️' },
   {
     keywords: ['インフラ/クラウド', 'インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化', 'iac'],
     emoji: '☁️',
   },
   { keywords: ['デザインツール', 'デザイン'], emoji: '🎨' },
   { keywords: ['動画/メディア'], emoji: '🎥' },
-  { keywords: ['プロジェクト管理', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📋' },
-  { keywords: ['ワークフロー', '自動化'], emoji: '⚡' },
-  { keywords: ['webフレームワーク', 'web', 'フレームワーク', 'cms', 'cdn', '検索'], emoji: '🌐' },
-  { keywords: ['監視/可観測性', '監視', 'セキュリティ', '認証', '脅威', '依存関係', '品質'], emoji: '🛡️' },
+  { keywords: ['プロジェクト管理'], emoji: '📅' },
+  { keywords: ['ワークフロー自動化', 'ワークフロー', '自動化'], emoji: '⚡' },
+  { keywords: ['ドキュメント/ナレッジ', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📖' },
+  { keywords: ['webフレームワーク', 'web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
+  { keywords: ['監視/可観測性', '監視', 'オブザーバビリティ'], emoji: '🕵️' },
+  { keywords: ['セキュリティ/解析', 'セキュリティ', '認証', '脅威', '解析'], emoji: '🛡️' },
+  { keywords: ['cdn/セキュリティ'], emoji: '🛡️' },
   { keywords: ['顧客管理', 'crm', 'saas'], emoji: '🤝' },
-  { keywords: ['モバイル'], emoji: '📱' },
-  { keywords: ['支出', '会計', '経理'], emoji: '💰' },
-  { keywords: ['作図', 'ダイアグラム'], emoji: '📐' },
-  { keywords: ['教育', '学習'], emoji: '🎓' },
-  { keywords: ['勤怠', '人事', '労務'], emoji: '🏢' },
+  { keywords: ['モバイル開発', 'モバイル'], emoji: '📱' },
+  { keywords: ['人事労務', '人事', '労務'], emoji: '👥' },
+  { keywords: ['勤怠管理', '勤怠'], emoji: '🏢' },
   { keywords: ['その他'], emoji: '📁' },
-  { keywords: ['ふるさと納税', '互換'], emoji: '🔹' },
 ];
 
 // カテゴリに対応する絵文字を取得するヘルパー関数（キーワード部分一致）
@@ -124,9 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = categoryEl.textContent.trim();
       const emoji = getEmojiForCategory(category);
 
-      // カテゴリ表示への絵文字付与
-      categoryEl.setAttribute('data-emoji', emoji);
-
       // タイトルへの絵文字付与
       const titleLink = card.querySelector('.report-title a');
       if (titleLink) {
@@ -146,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const emoji = getEmojiForCategory(displayCategory);
 
       // カテゴリ表示への絵文字付与
-      categoryEl.setAttribute('data-emoji', emoji);
+      // categoryEl.setAttribute('data-emoji', emoji); // 既にデータ側に絵文字が含まれる想定のため廃止
 
       // タイトルへの絵文字付与
       const titleEl = card.querySelector('.pick-title');

@@ -2,7 +2,7 @@
 title: Jujutsu (jj) 調査レポート
 tool_name: Jujutsu
 tool_reading: ジュジュツ
-category: バージョン管理
+category: 📂 バージョン管理
 developer: Open Source Community (Martin von Zweigbergk)
 official_site: https://jj-vcs.dev/
 date: '2026-01-28'

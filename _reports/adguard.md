@@ -2,7 +2,7 @@
 title: AdGuard 調査レポート
 tool_name: AdGuard
 tool_reading: アドガード
-category: CDN/セキュリティ
+category: 🛡️ CDN/セキュリティ
 developer: Adguard Software Ltd.
 official_site: https://adguard.com/
 date: '2026-03-12'

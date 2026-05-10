@@ -2,7 +2,7 @@
 title: AutoGPT 調査レポート
 tool_name: AutoGPT
 tool_reading: オートジーピーティー
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Significant Gravitas
 official_site: https://agpt.co/
 date: '2026-04-18'

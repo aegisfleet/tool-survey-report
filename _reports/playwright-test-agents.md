@@ -2,7 +2,7 @@
 title: Playwright Test Agents 調査レポート
 tool_name: Playwright Test Agents
 tool_reading: プレイライト テスト エージェント
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: Microsoft
 official_site: https://playwright.dev/docs/test-agents
 date: '2026-03-23'

@@ -2,7 +2,7 @@
 title: Open CoDesign 調査レポート
 tool_name: Open CoDesign
 tool_reading: オープン コーデザイン
-category: AIコーディング支援
+category: ⌨️ AIコーディング支援
 developer: OpenCoworkAI
 official_site: https://opencoworkai.github.io/open-codesign/
 date: '2026-05-07'

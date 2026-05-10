@@ -2,7 +2,7 @@
 title: Browser Harness 調査レポート
 tool_name: Browser Harness
 tool_reading: ブラウザハーネス
-category: AIエージェント / ブラウザ自動化
+category: 🤖 AIエージェント / ブラウザ自動化
 developer: Browser Use Team
 official_site: https://browser-use.com/
 date: '2026-04-25'

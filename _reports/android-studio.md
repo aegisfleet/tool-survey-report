@@ -2,7 +2,7 @@
 title: Android Studio 調査レポート
 tool_name: Android Studio
 tool_reading: アンドロイド スタジオ
-category: モバイル開発
+category: 📱 モバイル開発
 developer: Google
 official_site: https://developer.android.com/studio
 date: '2025-11-28'

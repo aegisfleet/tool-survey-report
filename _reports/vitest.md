@@ -2,7 +2,7 @@
 title: Vitest 調査レポート
 tool_name: Vitest
 tool_reading: ヴィーテスト / ヴァイテスト
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: VoidZero Inc. / Vitest Contributors
 official_site: https://vitest.dev/
 date: '2026-05-02'

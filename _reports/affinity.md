@@ -2,7 +2,7 @@
 title: Affinity 調査レポート
 tool_name: Affinity
 tool_reading: アフィニティ
-category: デザインツール
+category: 🎨 デザインツール
 developer: Serif (Canva)
 official_site: https://affinity.serif.com/
 date: '2026-02-08'

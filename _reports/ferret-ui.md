@@ -2,7 +2,7 @@
 title: Ferret-UI 調査レポート
 tool_name: Ferret-UI
 tool_reading: フェレット ユーアイ
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Apple
 official_site: https://machinelearning.apple.com/research/ferret-ui
 date: '2026-03-01'

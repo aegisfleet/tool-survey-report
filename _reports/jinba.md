@@ -2,7 +2,7 @@
 title: Jinba 調査レポート
 tool_name: Jinba
 tool_reading: ジンバ
-category: ワークフロー自動化
+category: ⚡ ワークフロー自動化
 developer: Carnot Inc.
 official_site: https://jinba.io/
 date: '2026-03-21'

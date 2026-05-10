@@ -2,7 +2,7 @@
 title: Qangaroo 調査レポート
 tool_name: Qangaroo
 tool_reading: カンガルー
-category: テスト管理
+category: 📋 テスト管理
 developer: 株式会社テクノデジタル
 official_site: https://qangaroo.jp/
 date: '2026-02-01'

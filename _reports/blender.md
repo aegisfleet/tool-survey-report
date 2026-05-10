@@ -2,7 +2,7 @@
 title: Blender 調査レポート
 tool_name: Blender
 tool_reading: ブレンダー
-category: デザインツール
+category: 🎨 デザインツール
 developer: Blender Foundation
 official_site: https://www.blender.org/
 date: '2026-05-08'

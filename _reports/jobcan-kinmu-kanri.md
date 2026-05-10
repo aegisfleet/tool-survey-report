@@ -2,7 +2,7 @@
 title: ジョブカン勤怠管理 調査レポート
 tool_name: ジョブカン勤怠管理
 tool_reading: ジョブカンキンムカンリ
-category: 人事労務
+category: 👥 人事労務
 developer: 株式会社DONUTS
 official_site: https://jobcan.ne.jp/
 date: '2026-01-29'

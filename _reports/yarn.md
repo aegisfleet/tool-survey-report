@@ -2,7 +2,7 @@
 title: Yarn 調査レポート
 tool_name: Yarn
 tool_reading: ヤーン
-category: パッケージ管理
+category: 📦 パッケージ管理
 developer: Yarn Contributors
 official_site: https://yarnpkg.com/
 date: '2026-04-13'

@@ -2,7 +2,7 @@
 title: Vite 調査レポート
 tool_name: Vite
 tool_reading: ヴィート
-category: ビルドツール/ランタイム
+category: 🏗️ ビルドツール/ランタイム
 developer: VoidZero Inc. & Vite Contributors
 official_site: https://ja.vite.dev/
 date: '2026-02-06'

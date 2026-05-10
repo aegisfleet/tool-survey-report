@@ -2,7 +2,7 @@
 title: Workato 調査レポート
 tool_name: Workato
 tool_reading: ワーカート
-category: ワークフロー自動化
+category: ⚡ ワークフロー自動化
 developer: Workato, Inc.
 official_site: https://www.workato.com/
 date: '2026-02-21'

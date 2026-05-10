@@ -2,7 +2,7 @@
 title: Android Skills 調査レポート
 tool_name: Android Skills
 tool_reading: アンドロイド スキルズ
-category: 開発者ツール
+category: 🛠️ 開発ユーティリティ
 developer: Google
 official_site: https://developer.android.com/tools/agents/android-skills
 date: '2026-04-18'

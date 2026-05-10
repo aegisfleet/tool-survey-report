@@ -1,5 +1,5 @@
 ---
-category: AI開発ライブラリ
+category: 📚 AI開発ライブラリ
 date: '2026-04-16'
 description: AIエージェントのコンテキスト（指示、プロンプト、スキル等）を管理・共有するためのオープンソースのパッケージマネージャー
 developer: Microsoft

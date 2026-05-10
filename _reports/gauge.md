@@ -2,7 +2,7 @@
 title: Gauge 調査レポート
 tool_name: Gauge
 tool_reading: ゲージ
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: ThoughtWorks (コミュニティ主導)
 official_site: https://gauge.org/
 date: '2025-12-06'

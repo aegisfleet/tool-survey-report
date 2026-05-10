@@ -2,7 +2,7 @@
 title: A2UI 調査レポート
 tool_name: A2UI
 tool_reading: エーツーユーアイ
-category: Developer Tools
+category: 🛠️ Developer Tools
 developer: Google
 official_site: https://a2ui.org/
 date: '2026-04-18'

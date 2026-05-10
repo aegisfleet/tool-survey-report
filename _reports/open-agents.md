@@ -2,7 +2,7 @@
 title: Open Agents 調査レポート
 tool_name: Open Agents
 tool_reading: オープンエージェンツ
-category: AI開発エージェント
+category: 🤖 自律型AIエージェント
 developer: Vercel Labs
 official_site: https://open-agents.dev/
 date: '2026-05-08'

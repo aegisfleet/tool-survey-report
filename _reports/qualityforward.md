@@ -2,7 +2,7 @@
 title: QualityForward 調査レポート
 tool_name: QualityForward
 tool_reading: クオリティフォワード
-category: テスト管理
+category: 📋 テスト管理
 developer: 株式会社ベリサーブ
 official_site: https://www.veriserve.co.jp/helloqualityworld/service/qualityforward/
 date: '2026-02-01'

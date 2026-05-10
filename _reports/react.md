@@ -2,7 +2,7 @@
 title: React 調査レポート
 tool_name: React
 tool_reading: リアクト
-category: Webフレームワーク
+category: 🌐 Webフレームワーク
 developer: Meta / React Foundation
 official_site: https://react.dev/
 date: '2026-02-03'

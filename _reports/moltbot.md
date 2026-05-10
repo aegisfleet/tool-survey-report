@@ -2,7 +2,7 @@
 title: Moltbot 調査レポート
 tool_name: Moltbot
 tool_reading: モルトボット
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Peter Steinberger & Community
 official_site: https://openclaw.ai/
 date: '2026-03-29'

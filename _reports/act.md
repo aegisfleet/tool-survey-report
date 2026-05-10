@@ -2,7 +2,7 @@
 title: act (nektos/act) 調査レポート
 tool_name: act
 tool_reading: アクト
-category: CI/CD
+category: 🚀 CI/CD
 developer: nektos
 official_site: https://nektosact.com/
 date: '2026-03-25'

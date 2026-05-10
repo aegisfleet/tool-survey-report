@@ -2,7 +2,7 @@
 title: Qodo 調査レポート
 tool_name: Qodo
 tool_reading: コド
-category: AIコーディング支援
+category: ⌨️ AIコーディング支援
 developer: Qodo (旧 CodiumAI)
 official_site: https://www.qodo.ai/
 date: '2026-03-05'

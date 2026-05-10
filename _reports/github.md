@@ -2,7 +2,7 @@
 title: GitHub 調査レポート
 tool_name: GitHub
 tool_reading: ギットハブ
-category: バージョン管理
+category: 📂 バージョン管理
 developer: Microsoft
 official_site: https://github.com
 date: '2026-02-26'

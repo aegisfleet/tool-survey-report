@@ -2,7 +2,7 @@
 title: Google Opal 調査レポート
 tool_name: Google Opal
 tool_reading: グーグル オパール
-category: ワークフロー自動化
+category: ⚡ ワークフロー自動化
 developer: Google
 official_site: https://developers.google.com/opal
 date: '2026-02-20'

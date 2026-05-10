@@ -2,7 +2,7 @@
 title: Agent i 調査レポート
 tool_name: Agent i
 tool_reading: エージェント アイ
-category: 生成AI
+category: ✨ 生成AI
 developer: LINEヤフー株式会社
 official_site: https://events.yahoo.co.jp/agent-i/
 date: '2026-04-20'

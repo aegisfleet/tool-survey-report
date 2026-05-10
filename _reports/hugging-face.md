@@ -2,7 +2,7 @@
 title: Hugging Face 調査レポート
 tool_name: Hugging Face
 tool_reading: ハギングフェイス
-category: LLMプラットフォーム
+category: 🧠 LLMプラットフォーム
 developer: Hugging Face
 official_site: https://huggingface.co/
 date: '2026-04-26'

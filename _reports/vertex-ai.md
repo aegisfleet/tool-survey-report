@@ -2,7 +2,7 @@
 title: Vertex AI 調査レポート
 tool_name: Vertex AI
 tool_reading: バーテックス エーアイ
-category: LLMプラットフォーム
+category: 🧠 LLMプラットフォーム
 developer: Google
 official_site: https://cloud.google.com/vertex-ai
 date: '2026-04-02'

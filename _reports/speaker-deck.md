@@ -2,7 +2,7 @@
 title: Speaker Deck 調査レポート
 tool_name: Speaker Deck
 tool_reading: スピーカーデック
-category: ドキュメント/ナレッジ
+category: 📖 ドキュメント/ナレッジ
 developer: Speaker Deck, LLC
 official_site: https://speakerdeck.com/
 date: '2026-01-23'

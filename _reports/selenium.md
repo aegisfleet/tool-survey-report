@@ -2,7 +2,7 @@
 title: Selenium 調査レポート
 tool_name: Selenium
 tool_reading: セレニウム
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: Software Freedom Conservancy
 official_site: https://www.selenium.dev/
 date: '2025-10-24'

@@ -2,7 +2,7 @@
 title: Fluorite Game Engine 調査レポート
 tool_name: Fluorite Game Engine
 tool_reading: フローライト
-category: モバイル開発
+category: 📱 モバイル開発
 developer: Toyota Connected North America
 official_site: https://fluorite.game/
 date: '2026-02-10'

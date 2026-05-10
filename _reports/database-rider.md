@@ -2,7 +2,7 @@
 title: Database Rider 調査レポート
 tool_name: Database Rider
 tool_reading: データベースライダー
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: Rafael M. Pestano and Community
 official_site: https://database-rider.github.io/database-rider/
 date: '2026-01-27'

@@ -2,7 +2,7 @@
 title: Copilot Cowork 調査レポート
 tool_name: Copilot Cowork
 tool_reading: コパイロット コワーク
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Microsoft
 official_site: https://adoption.microsoft.com/en-us/copilot/frontier-program/
 date: '2026-03-16'

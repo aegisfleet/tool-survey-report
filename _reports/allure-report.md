@@ -2,7 +2,7 @@
 title: Allure Report 調査レポート
 tool_name: Allure Report
 tool_reading: アリュール レポート
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: Qameta Software
 official_site: https://allurereport.org/
 date: '2026-02-18'

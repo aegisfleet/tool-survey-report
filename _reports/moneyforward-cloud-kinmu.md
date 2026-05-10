@@ -2,7 +2,7 @@
 title: マネーフォワード クラウド勤怠 調査レポート
 tool_name: マネーフォワード クラウド勤怠
 tool_reading: マネーフォワード クラウドキンタイ
-category: 人事労務
+category: 👥 人事労務
 developer: 株式会社マネーフォワード
 official_site: https://biz.moneyforward.com/attendance/
 date: '2026-01-29'

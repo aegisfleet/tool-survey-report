@@ -2,7 +2,7 @@
 title: AWS Frontier Agents 調査レポート
 tool_name: AWS Frontier Agents
 tool_reading: エーダブリューエス フロンティア エージェンツ
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/ai/frontier-agents/
 date: '2026-01-28'

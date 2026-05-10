@@ -2,7 +2,7 @@
 title: Figma 調査レポート
 tool_name: Figma
 tool_reading: フィグマ
-category: デザインツール
+category: 🎨 デザインツール
 developer: Figma, Inc.
 official_site: https://www.figma.com/
 date: '2026-02-19'

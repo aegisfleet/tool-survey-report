@@ -2,7 +2,7 @@
 title: IntelliJ IDEA 調査レポート
 tool_name: IntelliJ IDEA
 tool_reading: インテリジェイ アイデア
-category: IDE/エディタ
+category: 🔧 IDE/エディタ
 developer: JetBrains
 official_site: https://www.jetbrains.com/idea/
 date: '2026-04-29'

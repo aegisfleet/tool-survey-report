@@ -2,7 +2,7 @@
 title: Burp Suite 調査レポート
 tool_name: Burp Suite
 tool_reading: バープスイート
-category: セキュリティテスト
+category: 🛡️ セキュリティテスト
 developer: PortSwigger
 official_site: https://portswigger.net/burp
 date: '2026-04-20'

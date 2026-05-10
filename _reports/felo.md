@@ -2,7 +2,7 @@
 title: Felo 調査レポート
 tool_name: Felo
 tool_reading: フェロー
-category: AI検索エンジン
+category: 🔍 AI検索エンジン
 developer: Sparticle Inc.
 official_site: https://felo.ai
 date: '2026-02-24'

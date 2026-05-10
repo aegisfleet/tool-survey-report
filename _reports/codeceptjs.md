@@ -2,7 +2,7 @@
 title: CodeceptJS 調査レポート
 tool_name: CodeceptJS
 tool_reading: コードセプトジェイエス
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: CodeceptJS Team
 official_site: https://codecept.io/
 date: '2026-05-09'

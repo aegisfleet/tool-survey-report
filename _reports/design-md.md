@@ -2,7 +2,7 @@
 title: design.md 調査レポート
 tool_name: design.md
 tool_reading: デザインマークダウン
-category: デザインツール
+category: 🎨 デザインツール
 developer: Google Labs
 official_site: https://github.com/google-labs-code/design.md
 date: '2026-05-02'

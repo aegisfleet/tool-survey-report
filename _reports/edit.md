@@ -2,7 +2,7 @@
 title: Edit 調査レポート
 tool_name: Edit
 tool_reading: エディット / エムエスエディット
-category: IDE/エディタ
+category: 🔧 IDE/エディタ
 developer: Microsoft
 official_site: https://github.com/microsoft/edit
 date: '2026-05-05'

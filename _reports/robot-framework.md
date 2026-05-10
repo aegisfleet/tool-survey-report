@@ -2,7 +2,7 @@
 title: Robot Framework 調査レポート
 tool_name: Robot Framework
 tool_reading: ロボット フレームワーク
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: Robot Framework Foundation
 official_site: https://robotframework.org/
 date: '2025-12-07'

@@ -2,7 +2,7 @@
 title: OBS Background Removal 調査レポート
 tool_name: OBS Background Removal
 tool_reading: オービーエス バックグラウンド リムーバル
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: Roy Shilkrot
 official_site: https://royshil.github.io/obs-backgroundremoval/
 date: '2026-03-13'

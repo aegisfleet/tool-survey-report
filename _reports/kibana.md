@@ -2,7 +2,7 @@
 title: Kibana 調査レポート
 tool_name: Kibana
 tool_reading: キバナ
-category: 監視/可観測性
+category: 🕵️ 監視/可観測性
 developer: Elastic
 official_site: https://www.elastic.co/jp/kibana
 date: '2026-02-12'

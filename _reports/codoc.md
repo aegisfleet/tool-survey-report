@@ -2,7 +2,7 @@
 title: codoc 調査レポート
 tool_name: codoc
 tool_reading: コードク
-category: ビジネスツール
+category: 💼 ビジネスツール
 developer: codoc株式会社
 official_site: https://codoc.jp/
 date: '2026-04-07'

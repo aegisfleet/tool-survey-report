@@ -2,7 +2,7 @@
 title: GitLab Duo 調査レポート
 tool_name: GitLab Duo
 tool_reading: ギットラボ デュオ
-category: AIコーディング支援
+category: ⌨️ AIコーディング支援
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/gitlab-duo/
 date: '2026-02-05'

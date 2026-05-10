@@ -2,7 +2,7 @@
 title: Obsidian 調査レポート
 tool_name: Obsidian
 tool_reading: オブシディアン
-category: ドキュメント/ナレッジ
+category: 📖 ドキュメント/ナレッジ
 developer: Obsidian
 official_site: https://obsidian.md/
 date: '2026-02-06'

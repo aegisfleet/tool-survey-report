@@ -2,7 +2,7 @@
 title: Kiro 調査レポート
 tool_name: Kiro
 tool_reading: キロ
-category: AIコードエディタ
+category: 💻 AIコードエディタ
 developer: Amazon Web Services (AWS)
 official_site: https://kiro.dev/
 date: '2026-02-20'

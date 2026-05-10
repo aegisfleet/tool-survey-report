@@ -2,7 +2,7 @@
 title: AFFiNE 調査レポート
 tool_name: AFFiNE
 tool_reading: アファイン
-category: ナレッジ管理
+category: 📖 ナレッジ管理
 developer: Toeverything
 official_site: https://affine.pro/
 date: '2026-05-07'

@@ -2,7 +2,7 @@
 title: pinact 調査レポート
 tool_name: pinact
 tool_reading: ピンアクト
-category: 開発ライフサイクル管理
+category: 🔄 開発ライフサイクル管理
 developer: suzuki-shunsuke
 official_site: https://github.com/suzuki-shunsuke/pinact
 date: '2026-03-12'

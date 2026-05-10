@@ -2,7 +2,7 @@
 title: Visual Studio Code 調査レポート
 tool_name: Visual Studio Code
 tool_reading: ビジュアル スタジオ コード
-category: IDE/エディタ
+category: 🔧 IDE/エディタ
 developer: Microsoft
 official_site: https://code.visualstudio.com/
 date: '2026-02-08'

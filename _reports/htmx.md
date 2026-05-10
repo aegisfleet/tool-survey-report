@@ -2,7 +2,7 @@
 title: htmx 調査レポート
 tool_name: htmx
 tool_reading: エイチティーエムエックス
-category: Webフレームワーク
+category: 🌐 Webフレームワーク
 developer: Big Sky Software
 official_site: https://htmx.org/
 date: '2026-04-17'

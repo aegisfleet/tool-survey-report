@@ -2,7 +2,7 @@
 title: Seedance 2.0 (SeaDance AI) 調査レポート
 tool_name: Seedance 2.0
 tool_reading: シーダンス ニーテンゼロ (シーダンス エーアイ)
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: Seedance AI
 official_site: https://seadanceai.com/
 date: '2026-02-11'

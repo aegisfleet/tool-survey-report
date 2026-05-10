@@ -2,7 +2,7 @@
 title: Notely Voice 調査レポート
 tool_name: Notely Voice
 tool_reading: ノートリーボイス
-category: ドキュメント/ナレッジ
+category: 📖 ドキュメント/ナレッジ
 developer: Notely Voice, Inc.
 official_site: https://notelyvoice.com/
 date: '2026-03-16'

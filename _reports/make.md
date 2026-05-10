@@ -2,7 +2,7 @@
 title: Make 調査レポート
 tool_name: Make
 tool_reading: メイク
-category: ワークフロー自動化
+category: ⚡ ワークフロー自動化
 developer: Celonis / Make
 official_site: https://www.make.com/
 date: '2026-02-22'

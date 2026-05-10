@@ -2,7 +2,7 @@
 title: TAKT 調査レポート
 tool_name: TAKT
 tool_reading: タクト
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: nrslib
 official_site: https://github.com/nrslib/takt
 date: '2026-04-09'

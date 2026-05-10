@@ -2,7 +2,7 @@
 title: Plugin Installation Manager Tool 調査レポート
 tool_name: Plugin Installation Manager Tool
 tool_reading: プラグイン・インストレーション・マネージャー・ツール
-category: CI/CD
+category: 🚀 CI/CD
 developer: Jenkins
 official_site: https://github.com/jenkinsci/plugin-installation-manager-tool
 date: '2026-02-12'

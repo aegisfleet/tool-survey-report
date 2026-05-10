@@ -2,7 +2,7 @@
 title: Remotion 調査レポート
 tool_name: Remotion
 tool_reading: リモーション
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: Remotion AG
 official_site: https://www.remotion.dev/
 date: '2026-02-23'

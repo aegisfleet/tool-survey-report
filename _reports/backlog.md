@@ -2,7 +2,7 @@
 title: Backlog 調査レポート
 tool_name: Backlog
 tool_reading: バックログ
-category: プロジェクト管理
+category: 📅 プロジェクト管理
 developer: 株式会社ヌーラボ (Nulab)
 official_site: https://backlog.com/ja/
 date: '2026-01-28'

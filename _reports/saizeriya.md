@@ -2,7 +2,7 @@
 title: saizeriya 調査レポート
 tool_name: saizeriya
 tool_reading: サイゼリヤ
-category: 開発者ツール
+category: 🛠️ 開発ユーティリティ
 developer: pnsk-lab
 official_site: https://github.com/pnsk-lab/saizeriya
 date: '2026-05-04'

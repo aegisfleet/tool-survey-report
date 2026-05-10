@@ -2,7 +2,7 @@
 title: Moneytree 調査レポート
 tool_name: Moneytree
 tool_reading: マネーツリー
-category: 資産管理
+category: 💳 EC/決済
 developer: マネーツリー株式会社
 official_site: https://getmoneytree.com/jp/home
 date: '2026-05-08'

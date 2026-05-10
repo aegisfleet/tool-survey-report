@@ -2,7 +2,7 @@
 title: TextFX 調査レポート
 tool_name: TextFX
 tool_reading: テキストエフエックス
-category: 生成AI
+category: ✨ 生成AI
 developer: Google
 official_site: https://textfx.withgoogle.com/
 date: '2026-02-23'

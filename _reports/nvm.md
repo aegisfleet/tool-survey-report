@@ -1,7 +1,7 @@
 ---
 title: nvm 調査レポート
 tool_name: nvm
-category: パッケージ管理
+category: 📦 パッケージ管理
 developer: OpenJS Foundation
 official_site: https://github.com/nvm-sh/nvm
 date: '2026-04-13'

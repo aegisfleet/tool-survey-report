@@ -2,7 +2,7 @@
 title: ClawHub 調査レポート
 tool_name: ClawHub
 tool_reading: クローハブ
-category: 開発者ツール
+category: 🛠️ 開発ユーティリティ
 developer: Peter Steinberger & community
 official_site: https://clawhub.ai/
 date: '2026-05-08'

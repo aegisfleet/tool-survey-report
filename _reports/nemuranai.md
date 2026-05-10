@@ -2,7 +2,7 @@
 title: ネムラナイ 調査レポート
 tool_name: ネムラナイ
 tool_reading: ネムラナイ
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: 株式会社SHIFT
 official_site: https://contents.shiftinc.jp/nemuranai/
 date: '2026-02-09'

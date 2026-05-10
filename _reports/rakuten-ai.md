@@ -2,7 +2,7 @@
 title: Rakuten AI 調査レポート
 tool_name: Rakuten AI
 tool_reading: ラクテン エーアイ
-category: 生成AI
+category: ✨ 生成AI
 developer: Rakuten Group, Inc.
 official_site: https://ai.rakuten.co.jp/
 date: '2025-10-25'

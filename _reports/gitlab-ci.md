@@ -2,7 +2,7 @@
 title: GitLab CI/CD 調査レポート
 tool_name: GitLab CI/CD
 tool_reading: ギットラボ シーアイシーディ
-category: CI/CD
+category: 🚀 CI/CD
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/solutions/continuous-integration/
 date: '2026-02-04'

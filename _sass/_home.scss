@@ -462,9 +462,9 @@
             gap: map-get($spacers, 1);
             transition: $transition-base;
 
-            &::before {
-                content: attr(data-emoji);
-            }
+            // &::before {
+            //     content: attr(data-emoji);
+            // }
 
             &.clickable-category {
                 cursor: pointer;
@@ -635,7 +635,7 @@
         border: 1px solid rgba($primary-color, 0.2);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 2px 4px rgba($primary-color, 0.05);
-        
+
         &.hidden {
             opacity: 0;
             transform: translateY(5px);
@@ -918,10 +918,10 @@
                 display: none;
             }
 
-            &::before {
-                content: attr(data-emoji);
-                font-size: 1.1em;
-            }
+            // &::before {
+            //     content: attr(data-emoji);
+            //     font-size: 1.1em;
+            // }
 
             &.clickable-category {
                 cursor: pointer;

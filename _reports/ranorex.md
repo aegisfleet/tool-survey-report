@@ -2,7 +2,7 @@
 title: Ranorex Studio 調査レポート
 tool_name: Ranorex Studio
 tool_reading: ラノレックス スタジオ
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: Ranorex GmbH (Idera, Inc.)
 official_site: https://www.ranorex.com/
 official_site_ja: https://ranorex.techmatrix.jp/

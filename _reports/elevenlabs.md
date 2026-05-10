@@ -2,7 +2,7 @@
 title: ElevenLabs 調査レポート
 tool_name: ElevenLabs
 tool_reading: イレブンラボ
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: ElevenLabs
 official_site: https://elevenlabs.io/
 date: '2026-01-27'

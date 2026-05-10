@@ -2,7 +2,7 @@
 title: Autify 調査レポート
 tool_name: Autify
 tool_reading: オーティファイ
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: オーティファイ株式会社
 official_site: https://autify.jp/
 date: '2026-02-22'

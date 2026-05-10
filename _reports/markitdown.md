@@ -2,7 +2,7 @@
 title: MarkItDown 調査レポート
 tool_name: MarkItDown
 tool_reading: マークイットダウン
-category: AI開発ライブラリ
+category: 📚 AI開発ライブラリ
 developer: Microsoft
 official_site: https://github.com/microsoft/markitdown
 date: '2026-04-11'

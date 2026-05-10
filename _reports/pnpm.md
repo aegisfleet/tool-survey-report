@@ -2,7 +2,7 @@
 title: pnpm 調査レポート
 tool_name: pnpm
 tool_reading: ピーエヌピーエム
-category: パッケージ管理
+category: 📦 パッケージ管理
 developer: pnpm contributors (Zoltan Kochan)
 official_site: https://pnpm.io/
 date: '2026-04-13'

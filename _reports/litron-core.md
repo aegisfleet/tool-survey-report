@@ -2,7 +2,7 @@
 title: LITRON CORE 調査レポート
 tool_name: LITRON CORE
 tool_reading: リトロン コア
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: NTTデータ (NTT DATA)
 official_site: https://www.nttdata.com/jp/ja/lineup/litron-core/
 date: '2026-01-28'

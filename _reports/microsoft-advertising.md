@@ -2,7 +2,7 @@
 title: Microsoft 広告 調査レポート
 tool_name: Microsoft 広告
 tool_reading: マイクロソフト コウコク / マイクロソフト アドバタイジング
-category: その他
+category: 📁 その他
 developer: Microsoft
 official_site: https://about.ads.microsoft.com/
 date: '2026-04-05'

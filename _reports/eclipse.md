@@ -2,7 +2,7 @@
 title: Eclipse IDE 調査レポート
 tool_name: Eclipse IDE
 tool_reading: イクリプス / エクリプス
-category: IDE/エディタ
+category: 🔧 IDE/エディタ
 developer: Eclipse Foundation
 official_site: https://eclipseide.org/
 date: '2026-03-27'

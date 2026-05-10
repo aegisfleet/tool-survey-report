@@ -2,7 +2,7 @@
 title: GitHub Actions 調査レポート
 tool_name: GitHub Actions
 tool_reading: ギットハブ アクションズ
-category: CI/CD
+category: 🚀 CI/CD
 developer: GitHub
 official_site: https://github.com/features/actions
 date: '2026-01-17'

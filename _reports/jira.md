@@ -2,7 +2,7 @@
 title: Jira 調査レポート
 tool_name: Jira
 tool_reading: ジラ
-category: プロジェクト管理
+category: 📅 プロジェクト管理
 developer: Atlassian
 official_site: https://www.atlassian.com/software/jira
 date: '2026-01-28'

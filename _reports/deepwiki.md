@@ -2,7 +2,7 @@
 title: DeepWiki 調査レポート
 tool_name: DeepWiki
 tool_reading: ディープウィキ
-category: ドキュメント/ナレッジ
+category: 📖 ドキュメント/ナレッジ
 developer: Cognition
 official_site: https://deepwiki.com/
 date: '2026-04-04'

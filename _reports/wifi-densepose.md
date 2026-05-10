@@ -2,7 +2,7 @@
 title: WiFi DensePose 調査レポート
 tool_name: WiFi DensePose
 tool_reading: ワイファイ デンスポーズ
-category: セキュリティ/解析
+category: 🛡️ セキュリティ/解析
 developer: ruvnet
 official_site: https://github.com/ruvnet/wifi-densepose
 date: '2026-03-01'

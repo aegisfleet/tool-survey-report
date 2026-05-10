@@ -2,7 +2,7 @@
 title: JaCoCo 調査レポート
 tool_name: JaCoCo
 tool_reading: ジャココ
-category: コード品質
+category: ✅ コード品質
 developer: Mountainminds GmbH & Co. KG and Contributors
 official_site: https://www.jacoco.org/jacoco/
 date: '2025-10-22'

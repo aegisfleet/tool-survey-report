@@ -2,7 +2,7 @@
 title: Kiwi TCMS 調査レポート
 tool_name: Kiwi TCMS
 tool_reading: キウイ ティーシーエムエス
-category: テスト管理
+category: 📋 テスト管理
 developer: Kiwi TCMS Team
 official_site: https://kiwitcms.org/
 date: '2026-04-08'

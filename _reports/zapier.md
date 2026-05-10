@@ -2,7 +2,7 @@
 title: Zapier 調査レポート
 tool_name: Zapier
 tool_reading: ザピアー
-category: ワークフロー自動化
+category: ⚡ ワークフロー自動化
 developer: Zapier Inc.
 official_site: https://zapier.com/
 date: '2026-02-14'

@@ -2,7 +2,7 @@
 title: Suno 調査レポート
 tool_name: Suno
 tool_reading: スノ
-category: 動画/メディア
+category: 🎥 動画/メディア
 developer: Suno, Inc.
 official_site: https://suno.com/
 date: '2026-02-07'

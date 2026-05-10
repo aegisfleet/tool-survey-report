@@ -2,7 +2,7 @@
 title: Nginx 調査レポート
 tool_name: Nginx
 tool_reading: エンジンエックス
-category: インフラ/クラウド
+category: ☁️ インフラ/クラウド
 developer: F5, Inc.
 official_site: https://nginx.org/
 date: '2026-03-17'

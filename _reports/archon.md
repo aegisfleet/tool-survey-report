@@ -2,7 +2,7 @@
 title: Archon 調査レポート
 tool_name: Archon
 tool_reading: アルコン
-category: AIエージェント基盤
+category: 🛠️ AIエージェント基盤
 developer: Coleam00 (オープンソース)
 official_site: https://archon.diy
 date: '2026-04-10'

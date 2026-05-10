@@ -2,7 +2,7 @@
 title: Kubernetes 調査レポート
 tool_name: Kubernetes
 tool_reading: クバネティス / クーべネティス
-category: インフラ/クラウド
+category: ☁️ インフラ/クラウド
 developer: Cloud Native Computing Foundation (CNCF)
 official_site: https://kubernetes.io
 date: '2026-02-17'

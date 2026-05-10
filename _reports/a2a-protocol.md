@@ -1,5 +1,5 @@
 ---
-category: AIエージェント基盤
+category: 🛠️ AIエージェント基盤
 date: '2026-02-03'
 description: 異なるプラットフォーム上のAIエージェント同士が相互に通信し、タスクを委任・連携するためのユニバーサルな標準プロトコル
 developer: The Linux Foundation

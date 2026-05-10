@@ -2,7 +2,7 @@
 title: Splunk AppDynamics 調査レポート
 tool_name: Splunk AppDynamics
 tool_reading: スプランク アップダイナミクス
-category: 監視/可観測性
+category: 🕵️ 監視/可観測性
 developer: Splunk (a Cisco company)
 official_site: https://www.splunk.com/en_us/products/appdynamics.html
 date: '2026-05-08'

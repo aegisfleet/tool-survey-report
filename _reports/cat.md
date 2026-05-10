@@ -2,7 +2,7 @@
 title: CAT 調査レポート
 tool_name: CAT
 tool_reading: キャット
-category: テスト/QA
+category: 🧪 テスト/QA
 developer: 株式会社SHIFT
 official_site: https://www.catcloud.net/
 date: '2026-02-01'

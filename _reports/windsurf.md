@@ -2,7 +2,7 @@
 title: Windsurf 調査レポート
 tool_name: Windsurf
 tool_reading: ウィンドサーフ
-category: AIコードエディタ
+category: 💻 AIコードエディタ
 developer: Cognition, Inc.
 official_site: https://windsurf.com/
 date: '2025-10-21'

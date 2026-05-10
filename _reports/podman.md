@@ -2,7 +2,7 @@
 title: Podman 調査レポート
 tool_name: Podman
 tool_reading: ポッドマン
-category: ビルドツール/ランタイム
+category: 🏗️ ビルドツール/ランタイム
 developer: Red Hat
 official_site: https://podman.io/
 date: '2026-02-17'

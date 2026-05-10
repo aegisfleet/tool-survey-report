@@ -2,7 +2,7 @@
 title: LiteBox 調査レポート
 tool_name: LiteBox
 tool_reading: ライトボックス
-category: セキュリティ/解析
+category: 🛡️ セキュリティ/解析
 developer: Microsoft
 official_site: https://github.com/microsoft/litebox
 date: '2026-03-20'

@@ -2,7 +2,7 @@
 title: Paperclip 調査レポート
 tool_name: Paperclip
 tool_reading: ペーパークリップ
-category: AIエージェント基盤
+category: 🛠️ AIエージェント基盤
 developer: Paperclip
 official_site: https://paperclip.ing/
 date: '2026-04-13'

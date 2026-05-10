@@ -2,7 +2,7 @@
 title: Opcode 調査レポート
 tool_name: Opcode
 tool_reading: オペコード
-category: AIコーディング支援
+category: ⌨️ AIコーディング支援
 developer: winfunc (Asterisk)
 official_site: https://opcode.sh/
 date: '2026-02-07'

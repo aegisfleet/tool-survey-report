@@ -2,7 +2,7 @@
 title: いいフォント 調査レポート
 tool_name: いいフォント
 tool_reading: イイフォント
-category: デザインツール
+category: 🎨 デザインツール
 developer: いいフォント運営
 official_site: https://goodfreefonts.com/
 date: '2026-03-11'

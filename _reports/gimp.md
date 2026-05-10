@@ -2,7 +2,7 @@
 title: GIMP 調査レポート
 tool_name: GIMP
 tool_reading: ギンプ
-category: デザインツール
+category: 🎨 デザインツール
 developer: The GIMP Team
 official_site: https://www.gimp.org/
 date: '2026-02-16'

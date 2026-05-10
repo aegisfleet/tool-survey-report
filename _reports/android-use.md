@@ -2,7 +2,7 @@
 title: Android Use 調査レポート
 tool_name: Android Use
 tool_reading: アンドロイド ユース
-category: 自律型AIエージェント
+category: 🤖 自律型AIエージェント
 developer: Action State Labs
 official_site: https://github.com/actionstatelabs/android-action-kernel
 date: '2026-01-28'

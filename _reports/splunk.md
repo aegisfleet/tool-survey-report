@@ -2,7 +2,7 @@
 title: Splunk 調査レポート
 tool_name: Splunk
 tool_reading: スプランク
-category: 監視/可観測性
+category: 🕵️ 監視/可観測性
 developer: Splunk Inc. (Cisco)
 official_site: https://www.splunk.com/
 date: '2026-02-13'

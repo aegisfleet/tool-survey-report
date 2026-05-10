@@ -2,7 +2,7 @@
 title: Datadog 調査レポート
 tool_name: Datadog
 tool_reading: データドッグ
-category: 監視/可観測性
+category: 🕵️ 監視/可観測性
 developer: Datadog, Inc.
 official_site: https://www.datadoghq.com/
 date: '2025-10-25'

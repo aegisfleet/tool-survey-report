@@ -2,7 +2,7 @@
 title: Transformers.js Gemma 4 Browser Assistant 調査レポート
 tool_name: Transformers.js Gemma 4 Browser Assistant
 tool_reading: トランスフォーマージェイエス・ジェンマ・フォー・ブラウザ・アシスタント
-category: AIブラウザ拡張機能
+category: 🧩 AIブラウザ拡張機能
 developer: Nico Martin
 official_site: https://chromewebstore.google.com/detail/transformersjs-gemma-4-br/dhaknnnkcdkjhcclchmnfdhddoehoool
 date: '2026-04-28'
