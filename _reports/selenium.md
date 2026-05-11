@@ -51,7 +51,7 @@ relationships:
     - MagicPod
     - Autify
     - CodeceptJS
-    - Cucumber
+    - Ranorex Studio
 ---
 
 # **Selenium 調査レポート**

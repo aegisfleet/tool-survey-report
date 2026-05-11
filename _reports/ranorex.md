@@ -5,16 +5,13 @@ tool_reading: ラノレックス スタジオ
 category: 🧪 テスト/QA
 developer: Ranorex GmbH (Idera, Inc.)
 official_site: https://www.ranorex.com/
-official_site_ja: https://ranorex.techmatrix.jp/
-date: '2026-01-27'
-last_updated: '2026-02-10'
+date: '2026-05-11'
+last_updated: '2026-05-11'
 tags:
-  - E2Eテスト
-  - GUIテスト
-  - RPA
-  - Web
   - テスト自動化
+  - E2Eテスト
   - デスクトップ
+  - Web
   - モバイル
 description: デスクトップ、Web、モバイルアプリケーション向けの堅牢なGUIテスト自動化ツール。ローコードとフルコードの両アプローチに対応し、高精度なオブジェクト認識を特徴とする。日本国内ではテクマトリックス株式会社が販売・サポートを提供。
 quick_summary:
@@ -48,6 +45,7 @@ relationships:
   related_tools:
     - Playwright
     - Selenium
+    - Cypress
 ---
 
 # **Ranorex Studio 調査レポート**
@@ -58,10 +56,9 @@ relationships:
 * **ツールの読み方**: ラノレックス スタジオ
 * **開発元**: Ranorex GmbH (Idera, Inc.の子会社)
 * **公式サイト**: [https://www.ranorex.com/](https://www.ranorex.com/)
-* **日本国内販売元**: テクマトリックス株式会社 [https://ranorex.techmatrix.jp/](https://ranorex.techmatrix.jp/)
 * **関連リンク**:
   * ドキュメント: [https://support.ranorex.com/hc/en-us](https://support.ranorex.com/hc/en-us)
-  * レビューサイト: [G2](https://www.g2.com/products/ranorex-studio/reviews)
+  * 日本国内販売元: [https://ranorex.techmatrix.jp/](https://ranorex.techmatrix.jp/)
 * **カテゴリ**: テスト/QA
 * **概要**: Ranorex Studioは、デスクトップ、Web、モバイルアプリケーションのUIテストを自動化するための包括的なツールです。ローコードの記録機能と、C#やVB.NETによるフルコードの柔軟性を両立させ、高精度なオブジェクト認識技術により信頼性の高いテストを実現します。
 
@@ -177,8 +174,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: [G2](https://www.g2.com/products/ranorex-studio/reviews) (2026年1月時点)
-* **総合評価**: 4.5/5.0
+* **調査対象**: G2 (Google検索結果からの引用による)
+* **総合評価**: 4.5/5.0 (G2)
 * **ポジティブな評価**:
   * 「オブジェクト認識機能(Ranorex Spy)が非常に強力で、他のツールでは失敗するような動的UIでも安定してテストを実行できる」
   * 「デスクトップからWeb、モバイルまで、多様なプラットフォームを単一のツールでテストできる点が素晴らしい」
