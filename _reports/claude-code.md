@@ -58,6 +58,7 @@ relationships:
     - TAKT
     - Grok CLI
     - Open CoDesign
+    - AsyncReview
 ---
 
 # **Claude Code 調査レポート**

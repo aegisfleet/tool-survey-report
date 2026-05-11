@@ -2,16 +2,17 @@
 title: AsyncReview 調査レポート
 tool_name: AsyncReview
 tool_reading: アシンクレビュー
-category: 🔄 開発ライフサイクル管理
+category: 🤖 自律型AIエージェント
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/AsyncReview
-date: '2026-02-11'
-last_updated: '2026-02-11'
+date: '2026-05-12'
+last_updated: '2026-05-12'
 tags:
   - AI
-  - コードレビュー
-  - テスト自動化
-  - 開発ツール
+  - オープンソース
+  - エージェント
+  - 自律型
+  - 開発者ツール
 description: 再帰的言語モデル(RLM)を用いた、GitHub PR/Issue向けの自律型コードレビューエージェント
 quick_summary:
   has_free_plan: true
@@ -40,11 +41,8 @@ evaluation:
 links:
   github: https://github.com/AsyncFuncAI/AsyncReview
   codewiki: https://codewiki.google/github.com/AsyncFuncAI/AsyncReview
-  deepwiki: ''
   documentation: https://github.com/AsyncFuncAI/AsyncReview#readme
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - GitHub Copilot
     - Claude Code
@@ -130,6 +128,7 @@ relationships:
 | **OSS版** | 無料 | ソースコードは公開されており、自分でホスト・実行可能。ただしGemini APIの利用料は別途必要（Google AI Studioの無料枠範囲内なら無料）。 |
 
 * **課金体系**: ツール自体は無料。利用するLLM（Gemini）のAPI利用料に依存。
+* **無料トライアル**: なし（オープンソースであり、Gemini APIの無料枠が利用可能）
 
 ## **8. 導入実績・事例**
 
@@ -170,18 +169,24 @@ relationships:
 
 ## **13. ベストプラクティス**
 
-* **効果的な活用法**:
+* **効果的な活用法 (Modern Practices)**:
   * CI/CDパイプラインに組み込み、PR作成時に自動的に予備レビューを行わせる。
   * 複雑なバグの調査において、仮説検証を自律的に行わせる。
-* **陥りやすい罠**:
+* **陥りやすい罠 (Antipatterns)**:
   * 非常に巨大なリポジトリで全ファイルを対象にすると、API制限やトークン制限に引っかかる可能性があるため、範囲を絞る工夫が必要かもしれません。
 
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHub Star数やFork数、SNSでの言及
+* **総合評価**: 公開された評価スコアなし
 * **ポジティブな評価**:
   * 「ハルシネーションが減った」「実際に動くコードを提案してくれる」といった声が期待されます。
   * 「DeepWiki Openの後継として期待」
+  * 「差分だけでなくリポジトリ全体を考慮したレビューが優れている」
+* **ネガティブな評価 / 改善要望**:
+  * APIコストへの懸念が考えられます。
+  * 推論に時間がかかるため、単純なツールと比べて待たされるという声が想定されます。
+  * 初期設定の手間（APIキー等のセットアップ）に対する要望。
 * **特徴的なユースケース**:
   * 既存コードベースの仕様把握とドキュメント化（DeepWikiの系譜）
 
@@ -192,14 +197,14 @@ relationships:
 
 ## **16. 類似ツールとの比較**
 
-### **16.1 機能比較表**
+### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | AsyncReview | GitHub Copilot | Static Analysis Tools |
+| 機能カテゴリ | 機能項目 | AsyncReview | GitHub Copilot | Claude Code |
 |:---:|:---|:---:|:---:|:---:|
-| **解析深度** | コンテキスト理解 | ◎<br><small>全ファイル・依存関係</small> | △<br><small>開いているファイル中心</small> | ◯<br><small>静的解析範囲内</small> |
-| **信頼性** | コード検証 | ◎<br><small>実行・検証あり</small> | ×<br><small>生成のみ</small> | ◎<br><small>ルールベース</small> |
-| **自律性** | 計画・推論 | ◎<br><small>再帰的推論</small> | △<br><small>一発回答</small> | - |
-| **導入** | 手軽さ | ◯<br><small>npxコマンド</small> | ◎<br><small>IDE拡張</small> | △<br><small>設定ファイル必須</small> |
+| **解析深度** | コンテキスト理解 | ◎<br><small>全ファイル・依存関係</small> | △<br><small>開いているファイル中心</small> | ◎<br><small>Agentic Searchによる探索</small> |
+| **信頼性** | コード検証 | ◎<br><small>実行・検証あり</small> | ×<br><small>生成のみ</small> | ◯<br><small>テスト実行等のコマンド実行可能</small> |
+| **自律性** | 計画・推論 | ◎<br><small>再帰的推論</small> | △<br><small>一発回答</small> | ◎<br><small>計画・推論・実行ループ</small> |
+| **導入** | 手軽さ | ◯<br><small>npxコマンド</small> | ◎<br><small>IDE拡張</small> | ◯<br><small>CLI/IDE拡張</small> |
 
 ### **16.2 詳細比較**
 
@@ -207,6 +212,7 @@ relationships:
 |---------|------|------|------|------------------|
 | **AsyncReview** | 自律型エージェント | 検証に基づく高い信頼性、深い理解 | 速度、APIコスト | 複雑なロジックのレビュー、未知のコードベースの調査 |
 | **GitHub Copilot** | 補完・対話AI | 高速、IDE統合 | ハルシネーション、文脈理解の限界 | 日々のコーディング補助、簡単なリファクタリング |
+| **Claude Code** | 汎用的な自律型コーディングエージェント | 強力な推論能力と環境統合 | 無料枠がない | ターミナルからシームレスに自律的なタスクを依頼したい場合 |
 
 ## **17. 総評**
 

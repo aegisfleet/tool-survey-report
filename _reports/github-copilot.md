@@ -56,6 +56,7 @@ relationships:
     - CodeRabbit
     - GitLab Duo
     - Visual Studio Code
+    - AsyncReview
 ---
 
 # **GitHub Copilot 調査レポート**
