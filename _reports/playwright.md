@@ -62,7 +62,7 @@ relationships:
     - MagicPod
     - Cucumber
     - Vitest
-    - CodeceptJS
+    - Ranorex Studio
 ---
 
 # **Playwright 調査レポート**

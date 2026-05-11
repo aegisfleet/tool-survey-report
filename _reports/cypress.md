@@ -51,7 +51,7 @@ relationships:
     - MagicPod
     - mabl
     - Vitest
-    - CodeceptJS
+    - Ranorex Studio
 ---
 
 # **Cypress 調査レポート**
