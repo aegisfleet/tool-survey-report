@@ -49,6 +49,7 @@ relationships:
     - Flutter
     - Kotlin Multiplatform
     - Visual Studio Code
+    - Mobile Next
 ---
 
 # **Android Studio 調査レポート**
