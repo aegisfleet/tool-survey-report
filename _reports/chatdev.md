@@ -45,7 +45,7 @@ relationships:
   related_tools:
     - crewai
     - metagpt
-    - dify
+    - Dify
     - autogpt
 ---
 
