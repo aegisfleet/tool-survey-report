@@ -54,6 +54,7 @@ relationships:
     - GitLab CI/CD
     - act
     - Vercel Agent Skills
+    - Xcode Cloud
 ---
 
 # **GitHub Actions 調査レポート**
