@@ -49,7 +49,6 @@ relationships:
   parent: GitHub Copilot
   related_tools:
     - LangChain
-    - Dify
 ---
 
 # **GitHub Copilot SDK 調査レポート**

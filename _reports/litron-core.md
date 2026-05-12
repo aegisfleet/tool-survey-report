@@ -44,7 +44,6 @@ relationships:
   related_tools:
     - Microsoft 365 Copilot
     - UiPath
-    - Dify
 ---
 
 # **LITRON CORE 調査レポート**
