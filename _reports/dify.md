@@ -1,7 +1,7 @@
 ---
 title: Dify 調査レポート
 tool_name: Dify
-tool_reading: ディファイ
+tool_reading: ディフィー
 category: 🛠️ AIエージェント基盤
 developer: LangGenius, Inc.
 official_site: https://dify.ai/
@@ -74,7 +74,7 @@ relationships:
 -->
 
 * **ツール名**: Dify
-* **ツールの読み方**: ディファイ
+* **ツールの読み方**: ディフィー
 * **開発元**: LangGenius, Inc.
 * **公式サイト**: [https://dify.ai/](https://dify.ai/)
 * **関連リンク**:
