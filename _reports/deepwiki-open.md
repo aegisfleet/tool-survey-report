@@ -6,14 +6,14 @@ category: 📖 ドキュメント/ナレッジ
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/deepwiki-open
 date: '2026-02-11'
-last_updated: '2026-02-11'
+last_updated: '2026-05-12'
 tags:
   - AI
   - オープンソース
   - セルフホスト
   - ドキュメント生成
   - 開発者ツール
-description: GitHub/GitLab/Bitbucketリポジトリ向けのOSSドキュメント自動生成ツール。現在はメンテナンスモード。
+description: GitHub/GitLab/Bitbucketリポジトリ向けのOSSドキュメント自動生成ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -22,10 +22,10 @@ quick_summary:
     - 開発者
     - テックリード
     - OSSコントリビューター
-  latest_highlight: 開発リソースをAsyncReviewへ移行し、本プロジェクトはメンテナンスモードへ
-  update_frequency: 低
+  latest_highlight: 開発再開を発表し、AsyncReviewへの移行を撤回。BitbucketのAPIトークン認証に対応
+  update_frequency: 中
 evaluation:
-  score: 74
+  score: 79
   base_score: 70
   plus_points:
     - point: 8
@@ -35,15 +35,13 @@ evaluation:
     - point: 3
       reason: RAGやDeepResearchなどの高度なコード分析機能を搭載
   minus_points:
-    - point: -5
-      reason: 主要な開発が終了し、メンテナンスモードに移行している（将来性の懸念）
     - point: -3
       reason: DockerやAPIキーの管理など、導入・運用の技術的ハードルが高い
     - point: -2
       reason: 公式リリースがなく、安定版の特定が難しい
     - point: -2
       reason: ドキュメントの質が元のコードに依存する
-  summary: 強力なOSSツールだが、開発が縮小傾向にあるため、長期利用には注意が必要。
+  summary: 強力なOSSドキュメント生成ツールであり、セルフホストでのデータ管理や多様なLLMプロバイダー対応が魅力。
 links:
   github: https://github.com/AsyncFuncAI/deepwiki-open
   codewiki: https://codewiki.google/github.com/AsyncFuncAI/deepwiki-open
@@ -53,7 +51,7 @@ relationships:
   related_tools:
     - DeepWiki
     - Code Wiki
-    - Cline
+    - AsyncReview
 ---
 
 # **DeepWiki-Open 調査レポート**
@@ -70,7 +68,7 @@ relationships:
   * DeepWiki: [https://deepwiki.com/AsyncFuncAI/deepwiki-open](https://deepwiki.com/AsyncFuncAI/deepwiki-open)
   * ドキュメント: [https://asyncfunc.mintlify.app/](https://asyncfunc.mintlify.app/)
 * **カテゴリ**: ドキュメント/ナレッジ
-* **概要**: GitHub/GitLab/Bitbucketリポジトリのコードを解析し、Wiki形式のドキュメント、アーキテクチャ図、Q&A機能を自動生成するオープンソースツール。現在はメンテナンスモードに移行しており、主要な開発リソースは後継プロジェクトの「AsyncReview」に移っている。
+* **概要**: GitHub/GitLab/Bitbucketリポジトリのコードを解析し、Wiki形式のドキュメント、アーキテクチャ図、Q&A機能を自動生成するオープンソースツール。
 
 ## **2. 目的と主な利用シーン**
 
@@ -120,7 +118,6 @@ relationships:
 
 ## **6. 弱み・注意点 (Cons)**
 
-* **開発体制の縮小**: 開発者が「AsyncReview」に注力することを発表しており、本ツールはメンテナンスモードとなっているため、新機能の追加は期待しにくい。
 * **セットアップの手間**: 商用SaaS（DeepWikiなど）と異なり、サーバーの構築、Dockerの管理、APIキーの取得など、ユーザー自身で行うべき作業が多い。
 * **インフラリソース**: 特にローカルLLM（Ollama）を利用する場合、十分なVRAMを持つGPUなど、ハイスペックなマシンが必要になる。
 
@@ -182,7 +179,6 @@ relationships:
   * **Gemini Flashの活用**: コストを抑えつつ高速に生成したい場合、Google Gemini Flashモデルを選択する（無料枠や低価格設定が魅力）。
 * **陥りやすい罠 (Antipatterns)**:
   * **巨大リポジトリの一括生成**: 非常に大きなリポジトリを一度に解析しようとすると、APIレート制限やメモリ不足に陥る可能性がある。
-  * **メンテナンスモードの無視**: バグ修正や新機能追加が期待できないため、長期的な基幹システムとしての採用は慎重に行う。
 
 ## **14. ユーザーの声（レビュー分析）**
 
@@ -193,7 +189,6 @@ relationships:
   * 「Dockerで立ち上げるだけで、複雑なコードの解説が生成されるのは魔法のよう。」
 * **ネガティブな評価 / 改善要望**:
   * 「セットアップで躓くことが多い。特にAPIキー周りのエラーが分かりにくい。」
-  * 「開発がAsyncReviewに移ってしまったのが残念。」
 * **特徴的なユースケース**:
   * 予算の限られたスタートアップでの内部ドキュメント基盤。
   * オフライン環境（エアギャップ環境）での開発補助ツールとしての利用（Ollama利用時）。
@@ -202,7 +197,8 @@ relationships:
 
 GitHubのコミット履歴およびREADMEより抽出。
 
-* **2026-02-11**: プロジェクトのステータスを「メンテナンスモード」に変更し、AsyncReviewへの移行を発表。
+* **2026-04-21**: 開発再開を発表し、AsyncReviewへの移行アナウンスを撤回。
+* **2026-04-21**: Bitbucketのクローン認証をAPIトークン方式に更新。
 * **2026-01-08**: APIのインストール手順とプロジェクト構造のドキュメントを修正。
 * **2025-12-20**: Amazon Bedrockのサポートを拡充。
 * **2025-12-18**: エンベディングプロバイダーとしてAmazon Bedrockを追加。
@@ -225,17 +221,16 @@ GitHubのコミット履歴およびREADMEより抽出。
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **DeepWiki-Open** | OSSのドキュメント生成ツール | セルフホスト可能でカスタマイズ性が高い。ランニングコストを抑えられる。 | メンテナンスモードであり、セットアップが複雑。 | コスト重視、またはデータを外部に出せない環境。 |
+| **DeepWiki-Open** | OSSのドキュメント生成ツール | セルフホスト可能でカスタマイズ性が高い。ランニングコストを抑えられる。 | セットアップが複雑。 | コスト重視、またはデータを外部に出せない環境。 |
 | **DeepWiki (SaaS)** | Devin開発元の公式ツール | セットアップ不要で即座に利用可能。Devinとの連携が強力で品質が高い。 | プライベートリポジトリの利用にはコストがかかる可能性が高い。 | 手間をかけずに高品質なドキュメント生成を行いたい場合。 |
 | **Mintlify** | 開発者向けドキュメントプラットフォーム | デザインが美しく、VS Code拡張機能との連携でメンテナンスしやすい。 | AIによる全自動生成機能は限定的（補佐的な役割）。 | 公開用の高品質なAPIドキュメントやマニュアルを作りたい場合。 |
 
 ## **17. 総評**
 
 * **総合的な評価**:
-  DeepWiki-Openは、商用ツールに匹敵する機能を備えた、非常に野心的なオープンソースプロジェクトである。RAGやDeepResearchなどの先進的な機能を備え、セルフホスト需要に見事に応えている。しかし、開発主体が別プロジェクトへ移行したため、今後の機能拡張やサポートは期待薄となった。
+  DeepWiki-Openは、商用ツールに匹敵する機能を備えた、非常に野心的なオープンソースプロジェクトである。RAGやDeepResearchなどの先進的な機能を備え、セルフホスト需要に見事に応えている。
 * **推奨されるチームやプロジェクト**:
   * **セキュリティ要件が厳しい組織**: 金融・医療など、SaaS利用が制限される環境。
   * **技術力のあるチーム**: DockerやAPIの設定を自力で解決でき、必要であればコードを修正できるチーム。
 * **選択時のポイント**:
-  * **将来性**: 長期的な安定利用を求めるなら、メンテナンスが継続されている他ツールや商用版（DeepWiki）を検討すべき。
   * **コスト**: 初期構築の手間を許容できるなら、圧倒的なコストパフォーマンスを発揮する。

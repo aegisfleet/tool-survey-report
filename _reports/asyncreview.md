@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - GitHub Copilot
     - Claude Code
+    - DeepWiki-Open
 ---
 
 # **AsyncReview 調査レポート**
