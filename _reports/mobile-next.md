@@ -6,14 +6,13 @@ category: 📱 モバイル開発
 developer: Mobile Next
 official_site: https://mobilenexthq.com/
 date: '2026-02-11'
-last_updated: '2026-02-11'
+last_updated: '2026-05-13'
 tags:
   - AI
-  - MCP
-  - エージェント
   - オープンソース
+  - エージェント
   - テスト自動化
-  - モバイル
+  - 開発者ツール
 description: AIエージェントによるモバイルアプリ操作やテスト自動化を実現する、MCPサーバーやCLI、VS Code拡張機能を含むモバイル開発プラットフォーム
 quick_summary:
   has_free_plan: true
@@ -22,7 +21,7 @@ quick_summary:
   target_users:
     - モバイル開発者
     - QAエンジニア
-  latest_highlight: 2026年1月にCLIツールがアップデート
+  latest_highlight: 2026年5月にクラッシュレポート機能とiOS Device Kit対応を追加
   update_frequency: 中
 evaluation:
   score: 80
@@ -147,8 +146,7 @@ relationships:
 - 日本語対応の状況は必ず含める
 -->
 
-* **iOS実機設定の複雑さ**: iOS実機操作にはWebDriverAgentの手動セットアップなど、Appleのエコシステム特有の準備が必要。
-* **発展途上**: 2026年1月時点でバージョンが0.x系（例: `mobile-mcp` v0.0.38）であり、機能追加や仕様変更が頻繁に行われる可能性がある。
+* **発展途上**: 2026年5月時点でバージョンが0.x系であり、機能追加や仕様変更が頻繁に行われる可能性がある（WebDriverAgentからiOS Device Kitへの移行など）。
 * **環境依存**: XcodeやAndroid SDKなどのネイティブ開発ツールのインストールとパス設定が前提となる。
 * **日本語対応**: ドキュメントやCLIの出力は基本的に英語であり、日本語でのサポート情報は少ない。
 
@@ -303,11 +301,11 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2026-01-13**: `mobilecli` v0.0.50 リリース。JSON-RPC経由でのアプリ一覧取得やUI構造ダンプ機能を追加。
-* **2025-12-09**: `mobile-mcp` v0.0.38 リリース。iOSシミュレーターの操作パフォーマンス向上とWebDriverAgentの自動インストール機能を追加。
-* **2025-12-01**: `mobiledeck` v0.0.23 リリース。VS Code拡張機能の機能改善。
+* **2026-05-04**: `mobile-mcp` v0.0.54 リリース。iOS Device Kit利用時のブラックスクリーンの修正など。
+* **2026-05-01**: `mobile-mcp` v0.0.53 リリース。クラッシュレポートの取得ツール(`mobile_list_crashes`, `mobile_get_crash`)追加。WebDriverAgentからiOS Device Kitへの移行。
+* **2026-01-13**: `mobile-mcp` v0.0.50 リリース。JSON-RPC経由でのアプリ一覧取得やUI構造ダンプ機能を追加。
 
-(出典: [GitHub Releases](https://github.com/mobile-next))
+(出典: [GitHub Releases](https://github.com/mobile-next/mobile-mcp/releases) など)
 
 ## **16. 類似ツールとの比較**
 
