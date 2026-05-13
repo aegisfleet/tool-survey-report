@@ -300,7 +300,9 @@ try {
 
   // Trigger DOMContentLoaded
   if (documentListeners.DOMContentLoaded) {
-    documentListeners.DOMContentLoaded.forEach((cb) => cb());
+    documentListeners.DOMContentLoaded.forEach((cb) => {
+      cb();
+    });
   }
 
   // Verification Tests
