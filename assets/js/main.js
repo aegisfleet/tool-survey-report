@@ -10,7 +10,9 @@ const ScrollManager = (() => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        handlers.forEach((handler) => handler(scrollTop));
+        handlers.forEach((handler) => {
+          handler(scrollTop);
+        });
         ticking = false;
       });
       ticking = true;
@@ -455,10 +457,10 @@ function applyEmojisToHeadings() {
     基本情報: '📋',
     目的と主な利用シーン: '🎯',
     主要機能: '🛠️',
-    特徴・強み: '💪',
-    弱み・注意点: '⚠️',
+    '特徴・強み': '💪',
+    '弱み・注意点': '⚠️',
     料金プラン: '💰',
-    導入実績・事例: '🏢',
+    '導入実績・事例': '🏢',
     サポート体制: '📞',
     連携機能: '🔌',
     エコシステムと連携: '🔌',
@@ -474,9 +476,9 @@ function applyEmojisToHeadings() {
     // トレンドレポート用
     本日のまとめ: '🗒️',
     緊急セキュリティ情報: '🚨',
-    メジャーリリース・新機能: '🚀',
+    'メジャーリリース・新機能': '🚀',
     注目のトレンドツール: '🌟',
-    その他・Tips: '💡',
+    'その他・Tips': '💡',
   };
 
   const headings = reportContent.querySelectorAll('h2');
