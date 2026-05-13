@@ -1,6 +1,5 @@
 {
   "private": true,
-  "packageManager": "npm@10.8.2",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "js-yaml": "^4.1.1"
