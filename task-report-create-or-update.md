@@ -47,7 +47,7 @@
     - GitHubリポジトリが `https://github.com/{owner}/{repo}` の場合、DeepWikiのURLは `https://deepwiki.com/{owner}/{repo}` となる
     - 上記URLにアクセスしてページが存在するか確認する（または `site:deepwiki.com "{owner}/{repo}"` で検索）
     - CodeWikiはオープンソースの場合、URL `https://codewiki.google/github.com/{owner}/{repo}` を記載する
-    - **効率化**: `scripts/update_wiki_links.py [ファイルパス]` を実行することで、指定したレポートのGitHubリンクをチェックし、DeepWiki・CodeWikiリンクを自動で更新・追記できる（引数を省略した場合は全レポートを一括チェックする）。
+    - **効率化**: `pnpm install --frozen-lockfile` を実行して依存関係を最新化した後、`pnpm run update-wiki [ファイルパス]` （または `python3 scripts/update_wiki_links.py [ファイルパス]`）を実行することで、指定したレポートのGitHubリンクをチェックし、DeepWiki・CodeWikiリンクを自動で更新・追記できる。
     - 存在する場合は `links.deepwiki` に、CodeWikiは `links.codewiki` に記載する
   - 公式ドキュメントサイトのURLを収集（公式サイトと異なる場合）
   - 主要レビューサイト（G2, Capterra, ITreview等）のツールページURLを収集
@@ -72,7 +72,7 @@
   - 必要なOS、ランタイム（Node.js, Python等）、依存ツール
   - アカウント登録の要否、クレカ登録の要否
 - **インストール手順**:
-  - 主要なインストールコマンド（npm, pip, brew, docker pull等）を記録
+  - 主要なインストールコマンド（pnpm, pip, brew, docker pull等）を記録
 - **初期設定**:
   - 必須の設定ファイルや環境変数（API Key等）
 - **Hello World**:
@@ -218,7 +218,7 @@
   - ロードマップに記載がある場合はその旨を明記する
 
 **リンク切れの確認:**
-- **必須**: `python3 scripts/check_links.py [ファイルパス]` を実行し、リンク切れ（404エラー）がないことを確認する
+- **必須**: `pnpm install --frozen-lockfile` を実行した後、`pnpm run check-links [ファイルパス]` （または `python3 scripts/check_links.py [ファイルパス]`）を実行し、リンク切れ（404エラー）がないことを確認する
 - 記載する全URLについて、ブラウザ等でアクセスし、ページが存在することを確認する
 - 「Page Not Found (404)」となるリンクは記載しない
 
@@ -414,8 +414,8 @@ relationships:
 - [ ] 料金プランが表形式で記載されている
 - [ ] 類似ツール比較が「機能比較表（星取表）」と「詳細比較」で構成されている
 - [ ] セキュリティ情報が「不明」のみで済まされていない
-- [ ] リンク切れがない（`python scripts/check_links.py` で確認）
-- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの記載を確認済み（`python3 scripts/update_wiki_links.py [ファイルパス]` を実行して、DeepWikiリンクが自動生成・追記されるか確認すること）
+- [ ] リンク切れがない（`pnpm run check-links` で確認。事前に `pnpm install --frozen-lockfile` を実行すること）
+- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの記載を確認済み（`pnpm run update-wiki [ファイルパス]` を実行して確認すること）
 
 ### 品質チェック
 
