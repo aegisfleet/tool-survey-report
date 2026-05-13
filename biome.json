@@ -1,8 +1,6 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "linter": {
     "enabled": true,
     "rules": {
@@ -69,7 +67,15 @@
     ]
   },
   "files": {
-    "include": ["assets/js/**/*.js", "tests/**/*.js"],
-    "ignore": ["node_modules", "_site", "vendor", ".sass-cache", ".jekyll-cache", "assets/css/main.scss"]
+    "includes": [
+      "**/assets/js/**/*.js",
+      "**/tests/**/*.js",
+      "!**/node_modules",
+      "!**/_site",
+      "!**/vendor",
+      "!**/.sass-cache",
+      "!**/.jekyll-cache",
+      "!**/assets/css/main.scss"
+    ]
   }
 }

@@ -201,7 +201,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const allTags = new Set();
   reportCards.forEach((card) => {
     const tags = card.dataset.tags.split(',').filter((tag) => tag.trim());
-    tags.forEach((tag) => allTags.add(tag.trim()));
+    tags.forEach((tag) => {
+      allTags.add(tag.trim());
+    });
   });
 
   Array.from(allTags)
@@ -357,7 +359,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Hide all cards first
-    reportCards.forEach((card) => (card.style.display = 'none'));
+    reportCards.forEach((card) => {
+      card.style.display = 'none';
+    });
 
     // Show filtered and sorted cards
     if (filteredCards.length > 0) {
@@ -770,7 +774,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // スクリプトを再読み込み
       const existingScripts = document.querySelectorAll('script[data-bluesky-timeline]');
-      existingScripts.forEach((s) => s.remove());
+      existingScripts.forEach((s) => {
+        s.remove();
+      });
 
       const script = document.createElement('script');
       script.src = `https://blueskytimeline.com/v2/timeline.js?t=${Date.now()}`;

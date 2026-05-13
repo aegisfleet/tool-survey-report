@@ -7,6 +7,7 @@ const testCases = [
   { input: '5', expected: 5, name: 'Another normal integer' },
   { input: '1; process.exit(1)', expected: 1, name: 'Injection attempt with semicolon' },
   { input: '10" + malicious', expected: 10, name: 'Injection attempt with quote' },
+  // biome-ignore lint/suspicious/noTemplateCurlyInString: test case for template syntax
   { input: '${{ 1 + 1 }}', expected: Number.NaN, name: 'Template syntax (should be string)' },
   { input: '', expected: Number.NaN, name: 'Empty string' },
   { input: undefined, expected: Number.NaN, name: 'Undefined' },
