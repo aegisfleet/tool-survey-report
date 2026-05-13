@@ -43,6 +43,7 @@ links:
 relationships:
   related_tools:
     - LocalStack
+    - Floci
 ---
 
 # **fakecloud 調査レポート**
@@ -191,20 +192,21 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | fakecloud | LocalStack |
-|:---:|:---|:---:|:---:|
-| **基本機能** | AWSローカルエミュレーション | ◯<br><small>主要22サービスをサポート</small> | ◎<br><small>対応サービス数が圧倒的に豊富</small> |
-| **ライセンス** | オープンソース / 無料利用 | ◎<br><small>完全無料・アカウント不要</small> | △<br><small>一部無料だが、アカウントとトークン必須（2026年3月以降）</small> |
-| **セットアップ** | 単体起動 | ◎<br><small>単一バイナリで動作（19MB）</small> | △<br><small>Dockerイメージでの起動が前提</small> |
-| **機能** | テスト専用SDK | ◎<br><small>5言語に対応</small> | ◯<br><small>Python, Javaなど一部対応</small> |
-| **高度な機能** | RDS/ElastiCache/Cognito等のローカル実行 | ◯<br><small>無料でフルサポート</small> | △<br><small>有料プラン（Pro/Enterprise）のみ提供</small> |
-| **非機能要件** | 日本語対応 | ×<br><small>英語のみ</small> | ×<br><small>英語のみ</small> |
+| 機能カテゴリ | 機能項目 | fakecloud | LocalStack | Floci |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | AWSローカルエミュレーション | ◯<br><small>主要22サービスをサポート</small> | ◎<br><small>対応サービス数が圧倒的に豊富</small> | ◯<br><small>主要47サービスをサポート</small> |
+| **ライセンス** | オープンソース / 無料利用 | ◎<br><small>完全無料・アカウント不要</small> | △<br><small>一部無料だが、アカウントとトークン必須（2026年3月以降）</small> | ◎<br><small>完全無料・アカウント不要</small> |
+| **セットアップ** | 単体起動 | ◎<br><small>単一バイナリで動作（19MB）</small> | △<br><small>Dockerイメージでの起動が前提</small> | △<br><small>Dockerイメージ・ソケット連携が前提</small> |
+| **機能** | テスト専用SDK | ◎<br><small>5言語に対応</small> | ◯<br><small>Python, Javaなど一部対応</small> | ◎<br><small>Testcontainers公式対応</small> |
+| **高度な機能** | RDS/ElastiCache/Cognito等のローカル実行 | ◯<br><small>無料でフルサポート</small> | △<br><small>有料プラン（Pro/Enterprise）のみ提供</small> | ◎<br><small>実エンジンのDocker連携で無料でフルサポート</small> |
+| **非機能要件** | 日本語対応 | ×<br><small>英語のみ</small> | ×<br><small>英語のみ</small> | ×<br><small>英語のみ</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **fakecloud** | 完全無料・単一バイナリのAWSエミュレーター | アカウント不要、軽量で高速、高度な機能も無料 | 対応サービスが22種類に限定 | コストをかけずに主要AWSサービスのローカルテスト環境を構築したい場合 |
+| **Floci** | 実エンジン統合型のエミュレーター | 完全無料。起動が高速。実エンジン（RDS, MSK等）による高い本番互換性。 | Dockerソケットのマウントが必要。対応サービスは主要なものに留まる。 | 無料でLocalStackの代替を探している場合。本番に近いデータベース挙動を検証したい場合。 |
 | **LocalStack** | デファクトスタンダードのAWSエミュレーター | 圧倒的な対応サービス数、エンタープライズ機能の充実 | トークン必須化、Docker前提の重い動作、高度な機能は有料 | 企業レベルで複雑なAWSアーキテクチャの完全なローカルクローンが必要な場合 |
 
 ## **17. 総評**
