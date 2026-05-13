@@ -15,6 +15,8 @@ updates:
       prefix: "ci"
       include: "scope"
     open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
 
   # Rubyの依存関係（Gemfile）を監視
   - package-ecosystem: "bundler"
@@ -31,6 +33,8 @@ updates:
       prefix: "build"
       include: "scope"
     open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
 
   # Pythonの依存関係（requirements.txt）を監視
   - package-ecosystem: "pip"
@@ -44,3 +48,22 @@ updates:
       - "dependencies"
       - "python"
     open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
+
+  # Node.js (pnpm) の依存関係を監視
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    labels:
+      - "dependencies"
+      - "javascript"
+    commit-message:
+      prefix: "chore"
+    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
