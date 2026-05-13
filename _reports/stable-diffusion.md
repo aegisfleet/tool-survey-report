@@ -49,7 +49,7 @@ relationships:
   parent: null
   children: []
   related_tools:
-    - Seedance 2.0
+    - Seavid AI
     - Niji Journey
     - Hugging Face
     - Qwen-Image-Layered
