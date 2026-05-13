@@ -1,11 +1,12 @@
 {
   "private": true,
+  "packageManager": "pnpm@9.15.9",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "js-yaml": "^4.1.1"
   },
   "scripts": {
-    "lint": "biome lint . && npm run lint:yaml",
+    "lint": "biome lint . && pnpm lint:yaml",
     "lint:yaml": "node scripts/check_frontmatter.js",
     "format:check": "biome format --check .",
     "check": "biome ci ."
