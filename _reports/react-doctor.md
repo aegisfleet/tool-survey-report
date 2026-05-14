@@ -1,53 +1,50 @@
 ---
-title: "React Doctor 調査レポート"
-tool_name: "React Doctor"
-tool_reading: "リアクトドクター"
-category: "開発者ツール"
-developer: "millionco"
-official_site: "https://react.doctor/"
-date: "2026-05-14"
-last_updated: "2026-05-14"
+title: React Doctor 調査レポート
+tool_name: React Doctor
+tool_reading: リアクトドクター
+category: 開発者ツール
+developer: millionco
+official_site: https://react.doctor/
+date: '2026-05-14'
+last_updated: '2026-05-14'
 tags:
-  - "React"
-  - "コードレビュー"
-  - "静的解析"
-  - "Linter"
-  - "オープンソース"
-description: "Reactコードベースの健全性をスコア化し、状態管理やパフォーマンスなどの問題を診断する静的解析ツール。"
-
+  - React
+  - コードレビュー
+  - 静的解析
+  - Linter
+  - オープンソース
+description: Reactコードベースの健全性をスコア化し、状態管理やパフォーマンスなどの問題を診断する静的解析ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "React開発者"
-    - "フロントエンドエンジニア"
-  latest_highlight: "Next.js、Vite、React Nativeに対応"
-  update_frequency: "高"
-
+    - React開発者
+    - フロントエンドエンジニア
+  latest_highlight: Next.js、Vite、React Nativeに対応
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "セットアップ不要でコマンド一つで診断可能"
+      reason: セットアップ不要でコマンド一つで診断可能
     - point: 5
-      reason: "スコア化による明確な指標提供"
+      reason: スコア化による明確な指標提供
     - point: 5
-      reason: "CI連携が容易（GitHub Actions提供）"
+      reason: CI連携が容易（GitHub Actions提供）
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "Reactのベストプラクティスを自動でチェックし、コード品質向上に貢献する強力なツール。"
-
+      reason: 特になし
+  summary: Reactのベストプラクティスを自動でチェックし、コード品質向上に貢献する強力なツール。
 links:
-  github: "https://github.com/millionco/react-doctor"
-  deepwiki: "https://deepwiki.com/millionco/react-doctor"
-  documentation: "https://github.com/millionco/react-doctor"
+  github: https://github.com/millionco/react-doctor
+  deepwiki: https://deepwiki.com/millionco/react-doctor
+  documentation: https://github.com/millionco/react-doctor
 relationships:
   related_tools:
-    - "eslint"
-    - "oxlint"
+    - eslint
+    - oxlint
 ---
 
 # **React Doctor 調査レポート**
