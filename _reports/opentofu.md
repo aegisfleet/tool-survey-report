@@ -6,7 +6,7 @@ category: ⚙️ 構成管理
 developer: Linux Foundation
 official_site: https://opentofu.org/
 date: '2025-10-27'
-last_updated: '2026-02-12'
+last_updated: '2026-05-15'
 tags:
   - DevOps
   - IaC
@@ -22,7 +22,7 @@ quick_summary:
   target_users:
     - インフラエンジニア
     - DevOpsエンジニア
-  latest_highlight: 2026年1月にv1.11.4をリリース。セキュリティと安定性が向上
+  latest_highlight: 2026年5月にv1.12.0をリリース。Dynamic prevent_destroy等が追加
   update_frequency: 高
 evaluation:
   score: 87
@@ -203,15 +203,15 @@ OpenTofuはオープンソースソフトウェアのため、すべての機能
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-14 (v1.12.0)**: Dynamic prevent_destroy機能の追加、Provider Checksum改善等の追加。
+* **2026-05-14 (v1.11.8)**: HTTP2処理に関するセキュリティ脆弱性の修正。
+* **2026-05-11 (v1.11.7)**: ローカルキャッシュインストール時の競合に関するバグ修正。
 * **2026-01-21 (v1.11.4)**: .zipアーカイブ処理に関するセキュリティ修正を含むメンテナンスリリース。
 * **2026-01-13 (v1.11.3)**: `import`ブロックやStateロックに関する複数のバグ修正。
-* **2025-12-19 (v1.11.2)**: `plan -generate-config-out` コマンドやHelm/Kubernetesプロバイダー利用時のバグ修正。
 * **2025-12-09 (v1.11.0)**:
   * **Ephemeral Values**: Stateファイルに保存されない一時的な値を扱えるようになり、セキュリティが向上。
   * **Write Only Attributes**: 読み取り専用APIを持たない属性の管理が可能に。
   * **enabled Meta-Argument**: `count` を使わずにリソースの作成条件を記述できる新機能。
-* **2025-12-08 (v1.10.8)**: TLS証明書処理におけるDoS脆弱性への対応を含むセキュリティアップデート。
-* **2025-10-15 (v1.10.0)**: OCIレジストリのサポート改善や、S3バックエンドでのネイティブなStateロックなどが追加。
 
 (出典: [GitHub Releases](https://github.com/opentofu/opentofu/releases))
 

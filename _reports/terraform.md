@@ -57,6 +57,7 @@ relationships:
     - AWS CloudFormation
     - LocalStack
     - Kubernetes
+    - OpenTofu
 ---
 
 # **Terraform 調査レポート**
