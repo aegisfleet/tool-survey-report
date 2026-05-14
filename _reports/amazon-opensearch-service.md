@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - データエンジニア
     - SRE
-  latest_highlight: 2025年12月にベクトル検索のGPUアクセラレーションとOpenSearch 3.3のサポートを追加
+  latest_highlight: 2026年5月にVPCドメインからのエグレストラフィックのルーティングをサポート
   update_frequency: 高
 evaluation:
   score: 85
@@ -215,10 +215,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-12-02**: **OpenSearch 3.3のサポート**: パフォーマンスの向上や新機能を含む最新バージョンのサポートが開始された。(出典: AWS What's New)
-* **2025-12-02**: **ベクトル検索のGPUアクセラレーション**: ベクトルインデックスの作成と検索においてGPUを利用可能になり、パフォーマンスが大幅に向上。(出典: AWS What's New)
-* **2025-12-02**: **Graviton4インスタンス (R8g等) のサポート**: 最新のAWS Gravitonプロセッサを搭載したインスタンスタイプが利用可能になり、コストパフォーマンスが向上。(出典: AWS What's New)
-* **2025-07-30**: **Amazon OpenSearch Service Zero-ETL integration with Amazon DynamoDB**: DynamoDBのデータをコードを書かずにOpenSearchに取り込み、高度な検索が可能に。(出典: AWS What's New)
+* **2026-05-06**: **VPCを経由したドメインのエグレストラフィックのルーティング**: VPCドメインからのエグレストラフィックを独自のVPCを経由してルーティングすることが可能になりました。(出典: Document history for Amazon OpenSearch Service)
+* **2026-03-17**: **OpenSearch 3.4および3.5のサポート**: パフォーマンスの向上や新機能を含む最新バージョンのサポートが開始されました。(出典: Document history for Amazon OpenSearch Service)
+* **2025-12-02**: **ベクトル検索のGPUアクセラレーション、自動最適化、ベクトルインジェスト**: ベクトル検索の高速化や、ベクトルデータの自動最適化・簡素化されたインジェスト機能が追加されました。(出典: Document history for Amazon OpenSearch Service)
+* **2025-11-19**: **OpenSearch 3.3のサポート**: パフォーマンスの向上や新機能を含むバージョンのサポートが開始されました。(出典: Document history for Amazon OpenSearch Service)
+* **2025-10-17**: **Graviton4ベースのインスタンスファミリーのサポート**: 最新のAWS Gravitonプロセッサを搭載したインスタンスタイプ(c8g, m8g, r8g, r8gd)が利用可能になり、コストパフォーマンスが向上しました。(出典: Document history for Amazon OpenSearch Service)
 
 ## **16. 類似ツールとの比較**
 
