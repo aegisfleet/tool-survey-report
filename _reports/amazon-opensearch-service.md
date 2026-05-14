@@ -5,10 +5,10 @@ tool_reading: アマゾン オープンサーチ サービス
 category: ☁️ インフラ/クラウド
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/opensearch-service/
-date: '2026-02-12'
-last_updated: '2026-02-12'
+date: '2026-05-14'
+last_updated: '2026-05-14'
 tags:
-  - AWS
+  - クラウド
   - ベクトルデータベース
   - ログ分析
   - 検索エンジン
@@ -52,7 +52,6 @@ relationships:
     - Kibana
     - Splunk
     - Datadog
-    - Amazon Bedrock
 ---
 
 # **Amazon OpenSearch Service 調査レポート**
@@ -68,7 +67,6 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/opensearch-project/OpenSearch](https://codewiki.google/github.com/opensearch-project/OpenSearch)
   * DeepWiki: [https://deepwiki.com/opensearch-project/OpenSearch](https://deepwiki.com/opensearch-project/OpenSearch)
   * ドキュメント: [https://docs.aws.amazon.com/opensearch-service/](https://docs.aws.amazon.com/opensearch-service/)
-  * レビューサイト: [G2](https://www.g2.com/products/amazon-opensearch-service/reviews) | [Capterra](https://www.capterra.com/p/186598/Amazon-OpenSearch-Service/)
 * **カテゴリ**: インフラ/クラウド / ベクトルデータベース
 * **概要**: Amazon OpenSearch Serviceは、インタラクティブなログ分析、リアルタイムのアプリケーションモニタリング、ウェブサイト検索などを容易にするAWSのマネージドサービスです。オープンソースのOpenSearch（Elasticsearchのフォーク）をベースにしており、インフラのプロビジョニング、パッチ適用、バックアップなどの運用管理を自動化します。近年では、生成AIアプリケーション向けのベクトルデータベースとしての機能も強化されています。
 
@@ -202,8 +200,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Capterra, AWS事例
-* **総合評価**: 4.2/5.0 (G2)
+* **調査対象**: Tech系メディアのレビュー記事、AWS公式サイトの事例等
+* **総合評価**: レビューサイトへのリンクがないため該当なし
 * **ポジティブな評価**:
   * 「AWS環境であれば、数分でElasticsearch/OpenSearch互換の環境が手に入り、運用も楽。」
   * 「他のAWSサービスとの連携が非常にスムーズで、ログ収集から可視化までのパイプライン構築が簡単。」
