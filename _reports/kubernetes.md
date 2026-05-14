@@ -51,11 +51,10 @@ relationships:
     - Google Cloud
     - Docker
     - Podman
-    - Datadog
     - Terraform
     - Ansible
     - Grafana
-    - Proxmox VE
+    - OpenTofu
   parent: Google Cloud
 ---
 
