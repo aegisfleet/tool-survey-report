@@ -6,15 +6,13 @@ category: 🕵️ 監視/可観測性
 developer: Elastic
 official_site: https://www.elastic.co/jp/kibana
 date: '2026-02-12'
-last_updated: '2026-02-12'
+last_updated: '2026-05-15'
 tags:
   - AI
   - ELK Stack
   - SIEM
-  - 監視/可観測性
-  - ダッシュボード
   - ログ管理
-  - 可視化
+  - ダッシュボード
 description: Elasticsearchデータの可視化・探索・管理を行うための主要なインターフェース。AIアシスタントやES|QLを搭載し、ログ分析からセキュリティ監視まで幅広く対応。
 quick_summary:
   has_free_plan: true
@@ -24,7 +22,7 @@ quick_summary:
     - DevOpsエンジニア
     - セキュリティアナリスト
     - データサイエンティスト
-  latest_highlight: 2026年2月、バージョン9.3リリース。AIアシスタント機能とES|QLエディタの更なる強化。
+  latest_highlight: 2026年5月、バージョン9.4リリース。機能強化や安定性向上。
   update_frequency: 高
 evaluation:
   score: 82
@@ -66,7 +64,7 @@ relationships:
   * GitHub: [https://github.com/elastic/kibana](https://github.com/elastic/kibana)
   * ドキュメント: [https://www.elastic.co/guide/en/kibana/current/index.html](https://www.elastic.co/guide/en/kibana/current/index.html)
   * レビューサイト: [G2](https://www.g2.com/products/kibana/reviews) | [Capterra](https://www.capterra.com/p/168472/Kibana/)
-* **カテゴリ**: 監視/可観測性
+* **カテゴリ**: 🕵️ 監視/可観測性
 * **概要**: Kibanaは、Elasticsearchに格納されたデータを検索、可視化、分析するためのユーザーインターフェースです。ELK Stack（Elasticsearch, Logstash, Kibana）の可視化層として機能し、ログ分析、インフラ監視、アプリケーションパフォーマンス監視（APM）、セキュリティ情報イベント管理（SIEM）など、多岐にわたるユースケースに対応します。近年は生成AIを活用した「AI Assistant」機能の統合が進んでいます。
 
 ## **2. 目的と主な利用シーン**
@@ -211,13 +209,13 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-12**: **Kibana 9.4.1 リリース**。安定性やバグ修正。(出典: GitHub Releases)
+* **2026-05-05**: **Kibana 9.4.0 リリース**。最新の機能追加と改善。(出典: GitHub Releases)
+* **2026-04-30**: **Kibana 9.3.4 リリース**。安定性の向上。(出典: GitHub Releases)
+* **2026-04-08**: **Kibana 9.2.8 リリース**。マイナーアップデートおよびバグ修正。(出典: GitHub Releases)
 * **2026-02-03**: **Kibana 9.3.0 リリース**。セキュリティパッチおよびAI Assistantのコンテキスト理解能力が向上。(出典: Elastic Release Notes)
-* **2026-01-28**: **Kibana 9.2.5 リリース**。バグ修正および安定性の向上。(出典: Elastic Release Notes)
-* **2025-10-21**: **Kibana 9.2 リリース**。ES|QLのエディタ機能が強化され、オートコンプリートとエラーハイライトが改善。(出典: Elastic Blog)
-* **2025-07-23**: **Kibana 9.1 リリース**。ダッシュボードのレンダリングパフォーマンスが向上。(出典: Elastic Blog)
-* **2025-04-10**: **Kibana 9.0 リリース**。メジャーバージョンアップ。Serverlessアーキテクチャへのネイティブ対応が強化され、初期設定がさらに簡略化された。(出典: Elastic Blog)
 
-(出典: [Elastic Release Notes](https://www.elastic.co/guide/en/kibana/current/release-notes.html))
+(出典: [GitHub Releases](https://github.com/elastic/kibana/releases), [Elastic Release Notes](https://www.elastic.co/guide/en/kibana/current/release-notes.html))
 
 ## **16. 類似ツールとの比較**
 
