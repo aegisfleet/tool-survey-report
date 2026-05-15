@@ -47,6 +47,7 @@ relationships:
   children:
     - GitHub Copilot SDK
     - GitHub Copilot CLI
+    - GitHub Copilot app
   related_tools:
     - Cursor
     - Windsurf
