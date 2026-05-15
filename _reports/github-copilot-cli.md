@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - Playwright CLI
     - Claude Code
+    - GitHub Copilot app
     - Amazon Q Developer
     - TAKT
 ---
