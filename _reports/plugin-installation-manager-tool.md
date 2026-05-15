@@ -6,12 +6,13 @@ category: 🚀 CI/CD
 developer: Jenkins
 official_site: https://github.com/jenkinsci/plugin-installation-manager-tool
 date: '2026-02-12'
-last_updated: '2026-02-12'
+last_updated: '2026-05-15'
 tags:
   - CI/CD
-  - CLI
   - DevOps
   - Java
+  - オープンソース
+  - CLI
   - Jenkins
 description: Jenkinsプラグインとその依存関係を効率的にダウンロード・管理するためのCLIツール。
 quick_summary:
@@ -182,7 +183,7 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: GitHub Stars, Issues
+* **調査対象**: GitHub Stars, Issues (G2、Capterra、ITreviewにレビューの登録なし)
 * **総合評価**: GitHub Stars 440以上 (2026年2月時点)
 * **ポジティブな評価**:
     * "Dockerイメージでのプラグイン管理が劇的に楽になった"

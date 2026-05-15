@@ -57,6 +57,7 @@ relationships:
     - JFrog Artifactory
     - Ubuntu
     - Proxmox VE
+    - Plugin Installation Manager Tool
 ---
 
 # **Docker 調査レポート**
