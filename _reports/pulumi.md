@@ -6,7 +6,7 @@ category: ⚙️ 構成管理
 developer: Pulumi Corp.
 official_site: https://www.pulumi.com/
 date: '2025-10-27'
-last_updated: '2026-02-12'
+last_updated: '2026-05-16'
 tags:
   - AI
   - DevOps
@@ -23,7 +23,7 @@ quick_summary:
     - DevOpsエンジニア
     - 開発者
     - プラットフォームエンジニア
-  latest_highlight: 2026年1月 Pulumi Copilotによる自然言語でのインフラ管理機能強化
+  latest_highlight: 2026年5月 `pulumi cloud api`コマンドなど多数の機能強化を含むv3.235.0がリリース
   update_frequency: 高
 evaluation:
   score: 83
@@ -217,12 +217,14 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-01-08**: Pulumi Copilotの発表。自然言語でインフラを生成・管理できるAIアシスタント。 (出典: Pulumi Blog)
-* **2025-12-15**: Pulumi ESC (Environments, Secrets, and Configuration) のGA。環境変数やシークレットの一元管理機能。 (出典: Pulumi Blog)
-* **2025-11-20**: Pulumi DeploymentsのGA。Gitベースのワークフローでインフラを継続的にデプロイする機能。 (出典: Pulumi Blog)
-* **2025-09-10**: AWS Native Provider v2.0のリリース。AWSの最新サービスへの対応を強化。 (出典: Pulumi Blog)
+* **2026-05-08**: v3.237.0リリース。`pulumi cloud api`に対する`lang`および`os`クエリパラメータの自動入力機能や、テンプレートからPulumiパッケージをブートストラップする`pulumi package new`を追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases/tag/v3.237.0))
+* **2026-05-06**: v3.236.0リリース。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases/tag/v3.236.0))
+* **2026-05-05**: v3.235.0リリース。ログの復号化用`pulumi logs decrypt`の追加、`hcl`コンバータのバンドル、および任意のPulumi Cloud APIを呼び出せる`pulumi cloud api`コマンド群を追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases/tag/v3.235.0))
+* **2026-01-08**: Pulumi Copilotの発表。自然言語でインフラを生成・管理できるAIアシスタント。 (出典: [Pulumi Blog](https://www.pulumi.com/blog/))
+* **2025-12-15**: Pulumi ESC (Environments, Secrets, and Configuration) のGA。環境変数やシークレットの一元管理機能。 (出典: [Pulumi Blog](https://www.pulumi.com/blog/))
+* **2025-11-20**: Pulumi DeploymentsのGA。Gitベースのワークフローでインフラを継続的にデプロイする機能。 (出典: [Pulumi Blog](https://www.pulumi.com/blog/))
 
-(出典: [Pulumi Blog](https://www.pulumi.com/blog/))
+(出典: [Pulumi Blog](https://www.pulumi.com/blog/) / [GitHub Releases](https://github.com/pulumi/pulumi/releases))
 
 ## **16. 類似ツールとの比較**
 
