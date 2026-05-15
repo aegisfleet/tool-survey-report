@@ -82,6 +82,7 @@ relationships:
   * GitHub Actionsを利用していること（CIでの利用時）
 * **インストール/導入**:
   GitHub ActionsのワークフローYAMLにステップを追加するだけで導入可能です（npmの場合）。
+
   ```yaml
   steps:
     - uses: actions/checkout@v4
@@ -89,6 +90,7 @@ relationships:
     - run: npm install
     - run: npm test
   ```
+
 * **初期設定**:
   特別な設定ファイルやシークレットは不要です。既存の `package-lock.json` 等がある場合は、一度プロキシを経由するよう再生成することが推奨されます。
 * **クイックスタート**:
