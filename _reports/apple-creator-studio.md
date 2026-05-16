@@ -1,19 +1,19 @@
 ---
-title: "Apple Creator Studio 調査レポート"
-tool_name: "Apple Creator Studio"
-tool_reading: "アップル クリエイター スタジオ"
-category: "🎥 動画/メディア"
-developer: "Apple"
-official_site: "https://www.apple.com/jp/final-cut-pro/"
-date: "2026-05-17"
-last_updated: "2026-05-17"
+title: Apple Creator Studio 調査レポート
+tool_name: Apple Creator Studio
+tool_reading: アップル クリエイター スタジオ
+category: 🎥 動画/メディア
+developer: Apple
+official_site: https://www.apple.com/jp/final-cut-pro/
+date: '2026-05-17'
+last_updated: '2026-05-17'
 tags:
-  - "動画編集"
-  - "画像編集"
-  - "音楽制作"
-  - "SaaS"
-  - "Apple"
-description: "Appleのプロ向けクリエイティブアプリ（Final Cut Pro, Logic Pro, Pixelmator Proなど）を統合したサブスクリプションサービス。"
+  - 動画編集
+  - 画像編集
+  - 音楽制作
+  - SaaS
+  - Apple
+description: Appleのプロ向けクリエイティブアプリ（Final Cut Pro, Logic Pro, Pixelmator Proなど）を統合したサブスクリプションサービス。
 quick_summary:
   has_free_plan: false
   is_oss: false
