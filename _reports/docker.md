@@ -58,6 +58,7 @@ relationships:
     - Ubuntu
     - Proxmox VE
     - Plugin Installation Manager Tool
+    - Wine
 ---
 
 # **Docker 調査レポート**
