@@ -211,7 +211,8 @@ layout: default
               {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
               {%- for category in all_categories -%}
               {%- if category and category != '' -%}
-              <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category }}</option>
+              <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category
+                }}</option>
               {%- endif -%}
               {%- endfor -%}
             </select>
@@ -398,6 +399,6 @@ layout: default
 </div>
 
 <script>
-  window.CATEGORY_EMOJIS = {{ site.data.categories | jsonify }};
+  window.CATEGORY_EMOJIS = JSON.parse('{{ site.data.categories | jsonify }}');
 </script>
 <script src="{{ '/assets/js/home.js' | relative_url }}"></script>

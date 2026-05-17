@@ -2,10 +2,6 @@
 layout: default
 ---
 
----
-layout: default
----
-
 <article class="report-article" itemscope itemtype="http://schema.org/Article">
   <header class="report-header">
     <div class="report-breadcrumb">
@@ -13,7 +9,8 @@ layout: default
         <ol class="breadcrumb">
           <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
           {%- if page.category -%}
-          <li><a href="{{ '/' | relative_url }}?category={{ page.category | url_encode }}">{{ site.data.categories[page.category] | default: '🔹' }} {{ page.category }}</a></li>
+          <li><a href="{{ '/' | relative_url }}?category={{ page.category | url_encode }}">{{
+              site.data.categories[page.category] | default: '🔹' }} {{ page.category }}</a></li>
           {%- endif -%}
           <li aria-current="page">{{ page.tool_name | default: page.title }}</li>
         </ol>
@@ -64,7 +61,8 @@ layout: default
       </div>
       {%- endif -%}
 
-      {%- if page.official_site or page.links.documentation or page.links.github or page.links.deepwiki or page.links.codewiki -%}
+      {%- if page.official_site or page.links.documentation or page.links.github or page.links.deepwiki or
+      page.links.codewiki -%}
       <div class="hero-links">
         {%- if page.official_site -%}
         <a href="{{ page.official_site }}" target="_blank" rel="noopener" class="hero-link-btn" title="公式サイト">
