@@ -6,7 +6,7 @@ category: ビルドツール/ランタイム
 developer: Docker, Inc.
 official_site: https://www.docker.com/
 date: '2026-02-14'
-last_updated: '2026-02-14'
+last_updated: '2026-05-17'
 tags:
   - AI
   - DevOps
@@ -54,11 +54,8 @@ relationships:
     - act
     - LocalStack
     - dockur/windows
-    - JFrog Artifactory
-    - Ubuntu
-    - Proxmox VE
-    - Plugin Installation Manager Tool
-    - Wine
+    - picomatch
+    - PyInstaller
 ---
 
 # **Docker 調査レポート**
@@ -73,7 +70,7 @@ relationships:
   * GitHub: [https://github.com/docker/cli](https://github.com/docker/cli)
   * CodeWiki: [https://codewiki.google/github.com/docker/cli](https://codewiki.google/github.com/docker/cli)
   * ドキュメント: [https://docs.docker.com/](https://docs.docker.com/)
-  * レビューサイト: [G2](https://www.g2.com/products/docker-inc-docker/reviews) | [ITreview](https://www.itreview.jp/products/docker/reviews)
+  * レビューサイト: [ITreview](https://www.itreview.jp/products/docker/reviews)
 * **カテゴリ**: ビルドツール/ランタイム
 * **概要**: Dockerは、アプリケーションをコンテナと呼ばれる軽量でポータブルな独立した環境にパッケージ化し、ビルド、テスト、デプロイを迅速に行うためのプラットフォームです。コンテナ技術のデファクトスタンダードとして、Webアプリケーション開発からAI/MLワークフローまで、あらゆる環境で一貫した動作を実現します。
 
@@ -205,7 +202,7 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, ITreview, 技術ブログ (2025-2026年)
-* **総合評価**: 4.6/5.0 (G2) - 開発者にとってなくてはならないツールとして不動の地位を築いています。
+* **総合評価**: 4.6/5.0 (Google検索結果から確認されたG2のスコア) - 開発者にとってなくてはならないツールとして不動の地位を築いています。
 * **ポジティブな評価**:
   * 「環境構築の手間がほぼゼロになり、新しいメンバーのオンボーディングが数分で終わるようになった。」
   * 「Docker DesktopのAI機能が便利。自然言語でDockerfileを書けるので、試行錯誤が減った。」
