@@ -53,6 +53,7 @@ relationships:
     - Windsurf
     - Cline
     - Roo Code
+    - Code Wiki
     - Claude Code
     - CodeRabbit
     - GitLab Duo
