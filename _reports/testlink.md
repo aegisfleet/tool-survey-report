@@ -2,7 +2,7 @@
 title: TestLink 調査レポート
 tool_name: TestLink
 tool_reading: テストリンク
-category: 📋 テスト管理
+category: テスト生成/品質QA
 developer: TestLink Development Team
 official_site: https://testlink.org/
 date: '2026-02-01'

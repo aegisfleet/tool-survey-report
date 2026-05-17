@@ -2,7 +2,7 @@
 title: Google Workspace Studio 調査レポート
 tool_name: Google Workspace Studio
 tool_reading: グーグル ワークスペース スタジオ
-category: ⚡ ワークフロー自動化
+category: ワークフロー自動化
 developer: Google
 official_site: https://developers.google.com/workspace/add-ons/studio
 date: '2026-01-25'

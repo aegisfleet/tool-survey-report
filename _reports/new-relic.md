@@ -2,7 +2,7 @@
 title: New Relic 調査レポート
 tool_name: New Relic
 tool_reading: ニューレリック
-category: 🕵️ 監視/可観測性
+category: 監視/可観測性
 developer: New Relic, Inc.
 official_site: https://newrelic.com/
 date: '2026-04-05'

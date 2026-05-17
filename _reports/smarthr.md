@@ -2,7 +2,7 @@
 title: SmartHR 調査レポート
 tool_name: SmartHR
 tool_reading: スマートエイチアール
-category: 👥 人事労務
+category: ビジネス/業務ツール
 developer: 株式会社SmartHR
 official_site: https://smarthr.jp/
 date: '2025-10-24'

@@ -2,7 +2,7 @@
 title: Astro 調査レポート
 tool_name: Astro
 tool_reading: アストロ
-category: 🌐 Webフレームワーク
+category: Webフレームワーク
 developer: Astro Technology Company (Joined Cloudflare)
 official_site: https://astro.build/
 date: '2026-02-21'

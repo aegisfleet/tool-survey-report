@@ -2,7 +2,7 @@
 title: Mobile Next 調査レポート
 tool_name: Mobile Next
 tool_reading: モバイルネクスト
-category: 📱 モバイル開発
+category: モバイル開発
 developer: Mobile Next
 official_site: https://mobilenexthq.com/
 date: '2026-02-11'

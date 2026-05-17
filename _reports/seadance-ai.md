@@ -2,7 +2,7 @@
 title: Seavid AI 調査レポート
 tool_name: Seavid AI
 tool_reading: シービッド エーアイ
-category: 🎥 動画/メディア
+category: 動画/メディア
 developer: Seavid AI
 official_site: https://seavidgen.com/
 date: '2026-02-11'

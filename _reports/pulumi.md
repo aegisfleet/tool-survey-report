@@ -2,7 +2,7 @@
 title: Pulumi 調査レポート
 tool_name: Pulumi
 tool_reading: プルミ
-category: ⚙️ 構成管理
+category: 構成管理
 developer: Pulumi Corp.
 official_site: https://www.pulumi.com/
 date: '2025-10-27'

@@ -2,7 +2,7 @@
 title: Google Stitch 調査レポート
 tool_name: Google Stitch
 tool_reading: グーグルステッチ
-category: 🎨 デザインツール
+category: デザインツール
 developer: Google
 official_site: https://stitch.withgoogle.com/
 date: '2026-02-22'

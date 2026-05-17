@@ -2,7 +2,7 @@
 title: axe DevTools 調査レポート
 tool_name: axe DevTools
 tool_reading: アックス デブツールズ
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: Deque Systems
 official_site: https://www.deque.com/axe/devtools/
 date: '2026-02-19'

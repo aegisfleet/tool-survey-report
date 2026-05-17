@@ -2,7 +2,7 @@
 title: Secretlint 調査レポート
 tool_name: Secretlint
 tool_reading: シークレットリント
-category: 🛡️ セキュリティ/解析
+category: セキュリティ/解析
 developer: azu
 official_site: https://github.com/secretlint/secretlint
 date: '2026-04-22'

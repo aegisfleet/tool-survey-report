@@ -2,7 +2,7 @@
 title: Jekyll 調査レポート
 tool_name: Jekyll
 tool_reading: ジキル
-category: 🌐 Webフレームワーク
+category: Webフレームワーク
 developer: Tom Preston-Werner and volunteers
 official_site: https://jekyllrb.com/
 date: '2026-01-27'

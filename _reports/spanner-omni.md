@@ -2,7 +2,7 @@
 title: Spanner Omni 調査レポート
 tool_name: Spanner Omni
 tool_reading: スパナー オムニ
-category: 🛠️ 開発ユーティリティ
+category: ターミナル/シェル
 developer: Google Cloud
 official_site: https://cloud.google.com/products/spanner/omni
 date: '2026-04-23'

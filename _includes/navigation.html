@@ -32,7 +32,7 @@
         {% assign category_reports = site.reports | where: "category", category %}
         <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}" class="nav-dropdown-item"
           role="menuitem">
-          {{ category }}
+          {{ site.data.categories[category] | default: '🔹' }} {{ category }}
           <span class="dropdown-count">{{ category_reports.size }}</span>
         </a>
         {% endif %}

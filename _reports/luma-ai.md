@@ -2,7 +2,7 @@
 title: Luma AI 調査レポート
 tool_name: Luma AI
 tool_reading: ルマエーアイ
-category: 🎥 動画/メディア
+category: 動画/メディア
 developer: Luma Labs, Inc.
 official_site: https://lumalabs.ai/
 date: '2026-02-06'

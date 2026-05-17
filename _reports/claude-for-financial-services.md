@@ -2,7 +2,7 @@
 title: Claude for Financial Services 調査レポート
 tool_name: Claude for Financial Services
 tool_reading: クロード・フォー・ファイナンシャル・サービシズ
-category: 🛠️ AIエージェントフレームワーク
+category: AIエージェント基盤
 developer: Anthropic
 official_site: https://github.com/anthropics/financial-services
 date: '2026-05-08'

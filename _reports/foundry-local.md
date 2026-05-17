@@ -2,7 +2,7 @@
 title: Foundry Local 調査レポート
 tool_name: Foundry Local
 tool_reading: ファウンドリ ローカル
-category: 🧠 LLMプラットフォーム
+category: LLMプラットフォーム
 developer: Microsoft
 official_site: https://learn.microsoft.com/en-us/azure/ai-foundry/foundry-local/what-is-foundry-local?view=foundry-classic
 date: '2025-12-07'

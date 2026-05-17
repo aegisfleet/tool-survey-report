@@ -2,7 +2,7 @@
 title: AI/ナビ搭載 業務自動化RPA RKシリーズ 調査レポート
 tool_name: AI/ナビ搭載 業務自動化RPA RKシリーズ
 tool_reading: アールケーシリーズ
-category: 🤖 RPAツール
+category: ワークフロー自動化
 developer: 株式会社キーエンス
 official_site: https://www.keyence.co.jp/ss/products/software/rk/007/2023_01.jsp
 date: '2026-05-07'

@@ -2,7 +2,7 @@
 title: Amazon Quick 調査レポート
 tool_name: Amazon Quick
 tool_reading: アマゾン クイック
-category: 🤖 自律型AIエージェント
+category: 汎用AIエージェント
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/quicksuite/
 date: '2026-04-29'

@@ -2,7 +2,7 @@
 title: MCP Apps 調査レポート
 tool_name: MCP Apps
 tool_reading: エムシーピー アップス
-category: 🧩 MCPサーバー/基盤
+category: MCPサーバー/基盤
 developer: Anthropic (Model Context Protocol Project)
 official_site: https://modelcontextprotocol.io/docs/extensions/apps
 date: '2026-03-10'

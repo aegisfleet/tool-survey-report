@@ -2,7 +2,7 @@
 title: React Testing Library 調査レポート
 tool_name: React Testing Library
 tool_reading: リアクトテスティングライブラリ
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: Testing Library
 official_site: https://testing-library.com/docs/react-testing-library/intro/
 date: '2026-02-06'

@@ -2,7 +2,7 @@
 title: Salesforce 調査レポート
 tool_name: Salesforce
 tool_reading: セールスフォース
-category: 💼 ビジネスツール
+category: ビジネス/業務ツール
 developer: Salesforce, Inc.
 official_site: https://www.salesforce.com/jp/
 date: '2026-01-13'

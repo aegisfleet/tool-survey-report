@@ -2,7 +2,7 @@
 title: Terraform 調査レポート
 tool_name: Terraform
 tool_reading: テラフォーム
-category: ⚙️ 構成管理
+category: 構成管理
 developer: HashiCorp (IBM Company)
 official_site: https://www.hashicorp.com/products/terraform
 date: '2026-02-13'

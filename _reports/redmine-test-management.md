@@ -2,7 +2,7 @@
 title: Testcase Management 調査レポート
 tool_name: Testcase Management
 tool_reading: テストケースマネジメント
-category: 📋 テスト管理
+category: テスト生成/品質QA
 developer: 株式会社セナネットワークス (Sena Networks Inc.)
 official_site: https://www.sena-networks.co.jp/service/testcase_management_details
 date: '2026-04-11'

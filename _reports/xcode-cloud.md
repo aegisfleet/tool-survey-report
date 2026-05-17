@@ -2,7 +2,7 @@
 title: Xcode Cloud 調査レポート
 tool_name: Xcode Cloud
 tool_reading: エックスコード クラウド
-category: 🚀 CI/CD
+category: その他
 developer: Apple Inc.
 official_site: https://developer.apple.com/xcode-cloud/
 date: '2026-05-12'

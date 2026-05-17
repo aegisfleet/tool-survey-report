@@ -2,7 +2,7 @@
 title: Google Disco 調査レポート
 tool_name: Google Disco
 tool_reading: グーグル ディスコ
-category: 🔍 AI検索エンジン
+category: AI検索/ブラウザ拡張
 developer: Google Labs
 official_site: https://labs.google/disco
 date: '2026-01-27'

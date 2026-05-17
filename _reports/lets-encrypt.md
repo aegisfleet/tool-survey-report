@@ -2,7 +2,7 @@
 title: Let's Encrypt 調査レポート
 tool_name: Let's Encrypt
 tool_reading: レッツ・エンクリプト
-category: 🛡️ CDN/セキュリティ
+category: CDN/セキュリティ
 developer: Internet Security Research Group (ISRG)
 official_site: https://letsencrypt.org/
 date: '2026-02-22'

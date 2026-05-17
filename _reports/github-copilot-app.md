@@ -2,7 +2,7 @@
 title: GitHub Copilot app 調査レポート
 tool_name: GitHub Copilot app
 tool_reading: ギットハブ コパイロット アップ
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: GitHub (Microsoft)
 official_site: https://github.com/github/app
 date: '2026-05-15'

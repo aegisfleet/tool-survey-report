@@ -2,7 +2,7 @@
 title: DeepSeek 調査レポート
 tool_name: DeepSeek
 tool_reading: ディープシーク
-category: ✨ 生成AI
+category: AIチャット/アシスタント
 developer: DeepSeek
 official_site: https://www.deepseek.com/
 date: '2025-10-23'

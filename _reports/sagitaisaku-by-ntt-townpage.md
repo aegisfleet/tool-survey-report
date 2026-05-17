@@ -2,7 +2,7 @@
 title: 詐欺対策 by NTTタウンページ 調査レポート
 tool_name: 詐欺対策 by NTTタウンページ
 tool_reading: サギタイサク バイ エヌティティタウンページ
-category: 🛡️ CDN/セキュリティ
+category: CDN/セキュリティ
 developer: NTTタウンページ株式会社 / トビラシステムズ株式会社
 official_site: https://itp.ne.jp/sagitaisaku
 date: '2026-03-13'

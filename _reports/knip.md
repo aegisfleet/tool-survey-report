@@ -2,7 +2,7 @@
 title: Knip 調査レポート
 tool_name: Knip
 tool_reading: ニップ
-category: 🧹 リンター/フォーマッタ
+category: コード品質/静的解析
 developer: Lars Kappert / webpro.nl
 official_site: https://knip.dev/
 date: '2026-04-11'

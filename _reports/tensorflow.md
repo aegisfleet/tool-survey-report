@@ -2,7 +2,7 @@
 title: TensorFlow 調査レポート
 tool_name: TensorFlow
 tool_reading: テンソルフロー
-category: 📚 AI開発ライブラリ
+category: AI開発ライブラリ
 developer: Google
 official_site: https://www.tensorflow.org/
 date: '2026-02-08'

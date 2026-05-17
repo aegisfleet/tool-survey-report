@@ -2,7 +2,7 @@
 title: Hunyuan 3D 調査レポート
 tool_name: Hunyuan 3D
 tool_reading: フュンユエン スリーディー
-category: ✨ 生成AI
+category: AIチャット/アシスタント
 developer: Tencent
 official_site: https://hunyuan.tencent.com/hunyuan-3d
 date: '2026-02-05'

@@ -2,7 +2,7 @@
 title: Kodus 調査レポート
 tool_name: Kodus
 tool_reading: コダス
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: Kodus
 official_site: https://kodus.io/
 date: '2026-03-05'

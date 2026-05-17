@@ -2,7 +2,7 @@
 title: Thunderbolt 調査レポート
 tool_name: Thunderbolt
 tool_reading: サンダーボルト
-category: 🧠 LLMプラットフォーム
+category: LLMプラットフォーム
 developer: Mozilla (thunderbird)
 official_site: https://thunderbolt.io/
 date: '2026-04-18'

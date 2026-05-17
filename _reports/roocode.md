@@ -2,7 +2,7 @@
 title: Roo Code 調査レポート
 tool_name: Roo Code
 tool_reading: ルーコード
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: Roo Code Inc.
 official_site: https://roocode.com/
 date: '2026-02-25'

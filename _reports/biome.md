@@ -2,7 +2,7 @@
 title: Biome 調査レポート
 tool_name: Biome
 tool_reading: バイオーム
-category: 🧹 リンター/フォーマッタ
+category: コード品質/静的解析
 developer: Biome Developers
 official_site: https://biomejs.dev/
 date: '2026-02-17'

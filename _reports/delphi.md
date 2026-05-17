@@ -2,7 +2,7 @@
 title: Delphi 調査レポート
 tool_name: Delphi
 tool_reading: デルファイ
-category: 🔧 IDE/エディタ
+category: IDE/エディタ
 developer: Embarcadero
 official_site: https://www.embarcadero.com/jp/products/delphi
 date: '2025-01-21'

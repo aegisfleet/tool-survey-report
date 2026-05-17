@@ -2,7 +2,7 @@
 title: OpenHands 調査レポート
 tool_name: OpenHands
 tool_reading: オープンハンズ
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: All Hands AI
 official_site: https://openhands.dev/
 date: '2026-03-31'

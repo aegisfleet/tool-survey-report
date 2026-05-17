@@ -2,7 +2,7 @@
 title: Miro 調査レポート
 tool_name: Miro
 tool_reading: ミロ
-category: 🎨 デザインツール
+category: デザインツール
 developer: Miro
 official_site: https://miro.com/
 date: '2026-01-26'

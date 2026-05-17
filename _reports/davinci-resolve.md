@@ -2,7 +2,7 @@
 title: DaVinci Resolve 調査レポート
 tool_name: DaVinci Resolve
 tool_reading: ダビンチリゾルブ
-category: 🎥 動画/メディア
+category: 動画/メディア
 developer: Blackmagic Design
 official_site: https://www.blackmagicdesign.com/products/davinciresolve
 date: '2025-11-06'

@@ -2,7 +2,7 @@
 title: Linear 調査レポート
 tool_name: Linear
 tool_reading: リニア
-category: 📅 プロジェクト管理
+category: プロジェクト管理/生産性
 developer: Linear Orbit, Inc.
 official_site: https://linear.app/
 date: '2026-01-31'

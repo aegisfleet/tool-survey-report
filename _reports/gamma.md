@@ -2,7 +2,7 @@
 title: Gamma 調査レポート
 tool_name: Gamma
 tool_reading: ガンマ
-category: 🎨 デザインツール
+category: デザインツール
 developer: Gamma Tech, Inc.
 official_site: https://gamma.app/
 date: '2026-01-23'

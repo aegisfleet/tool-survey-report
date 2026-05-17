@@ -2,7 +2,7 @@
 title: Amazon Bedrock 調査レポート
 tool_name: Amazon Bedrock
 tool_reading: アマゾン ベッドロック
-category: 🧠 LLMプラットフォーム
+category: LLMプラットフォーム
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/bedrock/
 date: '2026-03-26'

@@ -11,69 +11,11 @@ const FILTER_STATE_KEY = 'homeFilterState';
 const STRIP_EMOJI_RE = /^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u;
 const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
 
-// カテゴリごとの絵文字マッピングルール（上から順にマッチしたものが適用される）
-const categoryEmojiRules = [
-  { keywords: ['自律型aiエージェント', 'エージェント'], emoji: '🤖' },
-  { keywords: ['aiコーディング支援'], emoji: '⌨️' },
-  { keywords: ['aiコードエディタ', 'cursor', 'windsurf'], emoji: '💻' },
-  { keywords: ['mcpサーバー/基盤', 'mcp'], emoji: '🧩' },
-  { keywords: ['aiエージェント基盤'], emoji: '🛠️' },
-  { keywords: ['llmプラットフォーム', 'llm'], emoji: '🧠' },
-  { keywords: ['ai開発ライブラリ'], emoji: '📚' },
-  { keywords: ['ai検索エンジン', 'felo', 'perplexity'], emoji: '🔍' },
-  { keywords: ['生成ai'], emoji: '✨' },
-  { keywords: ['データ分析', 'bi', '分析'], emoji: '📊' },
-  { keywords: ['ec/決済', '決済', 'pos', '課金'], emoji: '💳' },
-  { keywords: ['テスト管理'], emoji: '📋' },
-  { keywords: ['テスト/qa', 'テスト', 'qa'], emoji: '🧪' },
-  { keywords: ['コード品質'], emoji: '✅' },
-  { keywords: ['パッケージ管理', 'npm', 'pip', 'uv', 'homebrew'], emoji: '📦' },
-  { keywords: ['ビルドツール/ランタイム', 'ビルドツール', 'vite', 'docker', 'podman'], emoji: '🏗️' },
-  { keywords: ['言語ランタイム/実行環境', 'ランタイム', 'node.js', 'deno', 'bun', 'wine'], emoji: '🚀' },
-  { keywords: ['リンター/フォーマッタ', 'リンター', 'フォーマッタ', 'eslint', 'biome'], emoji: '🧹' },
-  { keywords: ['開発者生産性分析', '生産性'], emoji: '📈' },
-  { keywords: ['開発ライフサイクル管理'], emoji: '🔄' },
-  { keywords: ['api/仕様管理', 'api'], emoji: '🔌' },
-  {
-    keywords: ['os/プラットフォーム', 'os', 'プラットフォーム', 'android', 'ubuntu', 'vercel'],
-    emoji: '🖥️',
-  },
-  {
-    keywords: ['ide/エディタ', 'エディタ', 'ide', '開発者ツール', 'バージョン管理', 'git', 'フック', '開発ツール'],
-    emoji: '🔧',
-  },
-  { keywords: ['開発ユーティリティ', 'ユーティリティ', '便利ツール'], emoji: '🛠️' },
-  {
-    keywords: ['インフラ/クラウド', 'インフラ', 'クラウド', 'ci/cd', 'devops', '構成管理', '仮想化', 'iac'],
-    emoji: '☁️',
-  },
-  { keywords: ['デザインツール', 'デザイン'], emoji: '🎨' },
-  { keywords: ['動画/メディア'], emoji: '🎥' },
-  { keywords: ['プロジェクト管理'], emoji: '📅' },
-  { keywords: ['ワークフロー自動化', 'ワークフロー', '自動化'], emoji: '⚡' },
-  { keywords: ['ドキュメント/ナレッジ', 'ドキュメント', 'ナレッジ', '議事録'], emoji: '📖' },
-  { keywords: ['webフレームワーク', 'web', 'フレームワーク', 'cms', 'cdn'], emoji: '🌐' },
-  { keywords: ['監視/可観測性', '監視', 'オブザーバビリティ'], emoji: '🕵️' },
-  { keywords: ['セキュリティ/解析', 'セキュリティ', '認証', '脅威', '解析'], emoji: '🛡️' },
-  { keywords: ['cdn/セキュリティ'], emoji: '🛡️' },
-  { keywords: ['顧客管理', 'crm', 'saas'], emoji: '🤝' },
-  { keywords: ['モバイル開発', 'モバイル'], emoji: '📱' },
-  { keywords: ['人事労務', '人事', '労務'], emoji: '👥' },
-  { keywords: ['勤怠管理', '勤怠'], emoji: '🏢' },
-  { keywords: ['その他'], emoji: '📁' },
-];
-
-// カテゴリに対応する絵文字を取得するヘルパー関数（キーワード部分一致）
+// カテゴリに対応する絵文字を取得するヘルパー関数
 function getEmojiForCategory(category) {
-  if (!category) return '🔹';
-  const lowerCat = category.toLowerCase();
-
-  for (const rule of categoryEmojiRules) {
-    if (rule.keywords.some((kw) => lowerCat.includes(kw))) {
-      return rule.emoji;
-    }
-  }
-  return '🔹';
+  if (!category || !window.CATEGORY_EMOJIS) return '🔹';
+  const cleanCat = stripEmoji(category);
+  return window.CATEGORY_EMOJIS[cleanCat] || '🔹';
 }
 
 // 既存の絵文字や特殊マーク、先頭スペースを除去するヘルパー関数
@@ -155,18 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // カテゴリフィルタのオプションに絵文字を追加する関数
-  function updateCategoryFilterOptions() {
-    const options = categoryFilter.querySelectorAll('option');
-    options.forEach((option) => {
-      if (option.value === '') return; // "すべてのカテゴリ" はスキップ
-      const category = stripEmoji(categoryFilter.querySelector(`option[value="${option.value}"]`).textContent); // 既存絵文字を除去して判定
-      const emoji = getEmojiForCategory(category);
 
-      // 常に最新の絵文字で上書き（キーワードルール変更に対応するため）
-      option.textContent = `${emoji} ${category}`;
-    });
-  }
 
   // フィルタ状態を保存する関数
   function saveFilterState() {
@@ -657,10 +588,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ページロード時にランダムシャッフル
   shuffleRandomPicks();
 
-  // 初期化処理（絵文字適用とフィルタ更新）
+  // 初期化処理（絵文字適用）
   function initEmojiApplication() {
     applyEmojisToCategories();
-    updateCategoryFilterOptions();
   }
 
   // DOMContentLoadedで実行（すでにDOMContentLoaded内のため即時実行とおなじだが、念のため）

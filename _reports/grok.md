@@ -2,7 +2,7 @@
 title: Grok 調査レポート
 tool_name: Grok
 tool_reading: グロック
-category: ✨ 生成AI
+category: AIチャット/アシスタント
 developer: xAI
 official_site: https://x.ai/grok
 date: '2025-10-23'

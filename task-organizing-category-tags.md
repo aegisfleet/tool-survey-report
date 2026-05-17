@@ -23,66 +23,66 @@
 
 - **カテゴリ（推奨の正規化語）**
 
-  カテゴリ名には、対応する絵文字を先頭に付与した状態で記述する。
+  フロントマターの `category` には、プレーンテキストのみで記述すること。**絵文字を含めてはならない**（絵文字はUI表示時に `_data/categories.yml` を参照してシステム側で自動付与される）。
 
   **AI関連**
-  - **⌨️ AIコーディング支援**: AI技術を使ったコード生成・補完ツール（例：GitHub Copilot, Cline）
-  - **💻 AIコードエディタ**: AI機能が統合されたコードエディタ（例：Cursor, Windsurf）
-  - **🤖 自律型AIエージェント**: 自律的にタスクを実行するAIシステム（例：Devin, Claude Code, OpenHands）
-  - **✨ 生成AI**: 汎用AIチャットボット・言語モデル（例：ChatGPT, Claude, Gemini）
-  - **🛠️ AIエージェント基盤**: エージェント構築フレームワーク、自律型エージェント用プロトコル、オーケストレーション（例：LangChain, CrewAI, Microsoft Agent Framework）
-  - **🧠 LLMプラットフォーム**: マネージドLLMサービス、クラウドAI基盤、ローカルLLM実行環境（例：Hugging Face, Amazon Bedrock, Vertex AI, Ollama）
-  - **🧩 MCPサーバー/基盤**: Model Context Protocolに関連する基盤・リファレンス実装・サーバー（例：MCP, AWS MCP Servers）
-  - **📚 AI開発ライブラリ**: 機械学習ライブラリ、SDK、AI用可観測性/トレースツール（例：PyTorch, TensorFlow, Agent Trace）
-  - **🔍 AI検索エンジン**: AI技術を活用した検索サービス（例：Perplexity, Felo）
-  - **🧩 AIブラウザ拡張機能**: ブラウザ上で動作するAI支援拡張機能
+  - **AIコーディング支援**: AI技術を使ったコード生成・補完ツール（例：GitHub Copilot, Cline）
+  - **AIコードエディタ**: AI機能が統合されたコードエディタ（例：Cursor, Windsurf）
+  - **自律型AIエージェント**: 自律的にタスクを実行するAIシステム（例：Devin, Claude Code, OpenHands）
+  - **生成AI**: 汎用AIチャットボット・言語モデル（例：ChatGPT, Claude, Gemini）
+  - **AIエージェント基盤**: エージェント構築フレームワーク、自律型エージェント用プロトコル、オーケストレーション（例：LangChain, CrewAI, Microsoft Agent Framework）
+  - **LLMプラットフォーム**: マネージドLLMサービス、クラウドAI基盤、ローカルLLM実行環境（例：Hugging Face, Amazon Bedrock, Vertex AI, Ollama）
+  - **MCPサーバー/基盤**: Model Context Protocolに関連する基盤・リファレンス実装・サーバー（例：MCP, AWS MCP Servers）
+  - **AI開発ライブラリ**: 機械学習ライブラリ、SDK、AI用可観測性/トレースツール（例：PyTorch, TensorFlow, Agent Trace）
+  - **AI検索エンジン**: AI技術を活用した検索サービス（例：Perplexity, Felo）
+  - **AIブラウザ拡張機能**: ブラウザ上で動作するAI支援拡張機能
 
   **開発ツール**
-  - **🖥️ OS/プラットフォーム**: オペレーティングシステム、マネージドプラットフォーム（例：Android, Ubuntu, Vercel）
-  - **🚀 言語ランタイム/実行環境**: プログラミング言語の実行環境、互換レイヤー（例：Node.js, Deno, Bun, Wine）
-  - **🏗️ ビルドツール/ランタイム**: ビルド、コンテナ（例：Vite, Docker, Podman）
-  - **🧹 リンター/フォーマッタ**: 静的解析、コード整形、未使用コード検出（例：ESLint, Biome, Knip, Markdownlint）
-  - **📦 パッケージ管理**: 言語パッケージマネージャー、システムパッケージ管理、アーティファクト管理（例：pnpm, pip, uv, Homebrew, Artifactory）
-  - **📈 開発者生産性分析**: 組織・生産性・品質の可視化と計測（例：Findy Team+, Microsoft Work IQ）
-  - **🔄 開発ライフサイクル管理**: 依存関係更新、フック設定、CI/CD補助（例：Renovate, Dependabot, Lefthook, pinact）
-  - **🛡️ セキュリティ/解析**: 脆弱性診断、リバースエンジニアリング、フォレンジック（例：Sherlock, SHIFT DQS, Litebox）
-  - **🛡️ セキュリティ・コンプライアンス**: セキュリティガバナンス、ポリシー管理
-  - **🔌 API/仕様管理**: 仕様定義、ドキュメント管理、通信ライブラリ（例：OpenSpec, Axios）
-  - **🛠️ 開発ユーティリティ**: エミュレータ、自動化スクリプト、DB管理補助（例：Tera Term, AutoHotkey, NocoDB）
-  - **🔧 IDE/エディタ**: 統合開発環境・コードエディタ（例：VS Code, IntelliJ IDEA）
-  - **🌐 Webフレームワーク**: Webアプリケーション開発フレームワーク（例：Next.js, Astro, Hugo）
-  - **📱 モバイル開発**: モバイルアプリ開発ツール・フレームワーク（例：Flutter, Android Studio）
-  - **📂 バージョン管理**: ソースコードの変更履歴管理ツール（例：GitHub, GitLab, GitKraken）
+  - **OS/プラットフォーム**: オペレーティングシステム、マネージドプラットフォーム（例：Android, Ubuntu, Vercel）
+  - **言語ランタイム/実行環境**: プログラミング言語の実行環境、互換レイヤー（例：Node.js, Deno, Bun, Wine）
+  - **ビルドツール/ランタイム**: ビルド、コンテナ（例：Vite, Docker, Podman）
+  - **リンター/フォーマッタ**: 静的解析、コード整形、未使用コード検出（例：ESLint, Biome, Knip, Markdownlint）
+  - **パッケージ管理**: 言語パッケージマネージャー、システムパッケージ管理、アーティファクト管理（例：pnpm, pip, uv, Homebrew, Artifactory）
+  - **開発者生産性分析**: 組織・生産性・品質の可視化と計測（例：Findy Team+, Microsoft Work IQ）
+  - **開発ライフサイクル管理**: 依存関係更新、フック設定、CI/CD補助（例：Renovate, Dependabot, Lefthook, pinact）
+  - **セキュリティ/解析**: 脆弱性診断、リバースエンジニアリング、フォレンジック（例：Sherlock, SHIFT DQS, Litebox）
+  - **セキュリティ・コンプライアンス**: セキュリティガバナンス、ポリシー管理
+  - **API/仕様管理**: 仕様定義、ドキュメント管理、通信ライブラリ（例：OpenSpec, Axios）
+  - **開発ユーティリティ**: エミュレータ、自動化スクリプト、DB管理補助（例：Tera Term, AutoHotkey, NocoDB）
+  - **IDE/エディタ**: 統合開発環境・コードエディタ（例：VS Code, IntelliJ IDEA）
+  - **Webフレームワーク**: Webアプリケーション開発フレームワーク（例：Next.js, Astro, Hugo）
+  - **モバイル開発**: モバイルアプリ開発ツール・フレームワーク（例：Flutter, Android Studio）
+  - **バージョン管理**: ソースコードの変更履歴管理ツール（例：GitHub, GitLab, GitKraken）
 
   **テスト/品質**
-  - **🧪 テスト/QA**: テスト自動化・品質保証ツール全般（例：Selenium, Playwright, Cypress）
-  - **📋 テスト管理**: テスト計画・実行・進捗管理ツール（例：TestRail, QualityForward, Qase）
-  - **✅ コード品質**: 静的解析・コードカバレッジツール（例：SonarQube, JaCoCo）
-  - **🚀 CI/CD**: 継続的インテグレーション・デプロイメントツール（例：GitHub Actions, Jenkins）
+  - **テスト/QA**: テスト自動化・品質保証ツール全般（例：Selenium, Playwright, Cypress）
+  - **テスト管理**: テスト計画・実行・進捗管理ツール（例：TestRail, QualityForward, Qase）
+  - **コード品質**: 静的解析・コードカバレッジツール（例：SonarQube, JaCoCo）
+  - **CI/CD**: 継続的インテグレーション・デプロイメントツール（例：GitHub Actions, Jenkins）
 
   **インフラ/運用**
-  - **⚙️ 構成管理**: Infrastructure as Code・プロビジョニングツール（例：Terraform, Ansible）
-  - **☁️ インフラ/クラウド**: クラウドサービス・インフラ管理（例：AWS, Azure）
-  - **🕵️ 監視/可観測性**: 監視・ログ・APM・オブザーバビリティツール（例：Datadog, Grafana, Instana）
-  - **🛡️ CDN/セキュリティ**: CDN・WAF・セキュリティサービス（例：Cloudflare）
+  - **構成管理**: Infrastructure as Code・プロビジョニングツール（例：Terraform, Ansible）
+  - **インフラ/クラウド**: クラウドサービス・インフラ管理（例：AWS, Azure）
+  - **監視/可観測性**: 監視・ログ・APM・オブザーバビリティツール（例：Datadog, Grafana, Instana）
+  - **CDN/セキュリティ**: CDN・WAF・セキュリティサービス（例：Cloudflare）
 
   **業務系ツール**
-  - **🤝 顧客管理**: CRM・営業支援システム（例：Salesforce, HubSpot）
-  - **🏢 勤怠管理**: 勤怠管理・タイムトラッキングツール（例：KING OF TIME）
-  - **👥 人事労務**: 人事・労務管理システム（例：SmartHR, freee人事労務）
-  - **📅 プロジェクト管理**: タスク・プロジェクト管理ツール（例：Jira, Linear）
-  - **⚡ ワークフロー自動化**: ノーコード/ローコードの自動化ツール（例：Zapier, n8n）
-  - **🤖 RPAツール**: 定型業務自動化ツール
-  - **📖 ドキュメント/ナレッジ**: ドキュメント管理・ナレッジベース（例：Notion, Confluence, 議事録共有）
-  - **📊 データ分析**: BIツール、データウェアハウス、分析プラットフォーム（例：Tableau, Snowflake, Looker）
-  - **💳 EC/決済**: POS、決済代行、課金管理、EC支援（例：Square, Stripe, codoc）
-  - **💼 ビジネスツール**: 汎用業務効率化ツール
-  - **💬 コミュニケーション**: メッセンジャー、会議ツール
+  - **顧客管理**: CRM・営業支援システム（例：Salesforce, HubSpot）
+  - **勤怠管理**: 勤怠管理・タイムトラッキングツール（例：KING OF TIME）
+  - **人事労務**: 人事・労務管理システム（例：SmartHR, freee人事労務）
+  - **プロジェクト管理**: タスク・プロジェクト管理ツール（例：Jira, Linear）
+  - **ワークフロー自動化**: ノーコード/ローコードの自動化ツール（例：Zapier, n8n）
+  - **RPAツール**: 定型業務自動化ツール
+  - **ドキュメント/ナレッジ**: ドキュメント管理・ナレッジベース（例：Notion, Confluence, 議事録共有）
+  - **データ分析**: BIツール、データウェアハウス、分析プラットフォーム（例：Tableau, Snowflake, Looker）
+  - **EC/決済**: POS、決済代行、課金管理、EC支援（例：Square, Stripe, codoc）
+  - **ビジネスツール**: 汎用業務効率化ツール
+  - **コミュニケーション**: メッセンジャー、会議ツール
 
   **その他**
-  - **🎨 デザインツール**: 画像編集・デザイン作成ツール（例：Canva, Figma, Affinity）
-  - **🎥 動画/メディア**: 動画編集・生成ツール（例：DaVinci Resolve, ElevenLabs）
-  - **📁 その他**: 上記のいずれにも該当しない特殊なツール（例：ふるさと納税支援、広告ツール）
+  - **デザインツール**: 画像編集・デザイン作成ツール（例：Canva, Figma, Affinity）
+  - **動画/メディア**: 動画編集・生成ツール（例：DaVinci Resolve, ElevenLabs）
+  - **その他**: 上記のいずれにも該当しない特殊なツール（例：ふるさと納税支援、広告ツール）
 
 - **タグ（正規化リスト）**
 

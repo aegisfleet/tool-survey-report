@@ -2,7 +2,7 @@
 title: Qwen 調査レポート
 tool_name: Qwen
 tool_reading: クウェン
-category: ✨ 生成AI
+category: AIチャット/アシスタント
 developer: Alibaba Cloud / Qwen team
 official_site: https://qwen.ai/
 date: '2026-04-25'

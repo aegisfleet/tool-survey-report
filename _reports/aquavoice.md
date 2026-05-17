@@ -2,7 +2,7 @@
 title: Aqua Voice 調査レポート
 tool_name: Aqua Voice
 tool_reading: アクアボイス
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: Aqua Voice
 official_site: https://aquavoice.com/
 date: '2026-03-01'

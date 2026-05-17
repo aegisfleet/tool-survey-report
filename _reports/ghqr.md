@@ -2,7 +2,7 @@
 title: GitHub Quick Review 調査レポート
 tool_name: GitHub Quick Review
 tool_reading: ギットハブ クイック レビュー / ジーエイチキューアール
-category: 🛡️ セキュリティ・コンプライアンス
+category: セキュリティ/解析
 developer: Microsoft
 official_site: https://github.com/microsoft/ghqr
 date: '2026-04-25'

@@ -2,7 +2,7 @@
 title: OpenClaw 調査レポート
 tool_name: OpenClaw
 tool_reading: オープンクロー
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: Peter Steinberger & community
 official_site: https://openclaw.ai/
 date: '2026-04-09'

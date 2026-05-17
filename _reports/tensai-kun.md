@@ -2,7 +2,7 @@
 title: 天才くん 調査レポート
 tool_name: 天才くん
 tool_reading: テンサイクン
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: 株式会社SHIFT
 official_site: https://tensaikun.jp/
 date: '2026-02-06'

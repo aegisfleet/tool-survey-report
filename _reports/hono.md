@@ -2,7 +2,7 @@
 title: Hono 調査レポート
 tool_name: Hono
 tool_reading: ホノ
-category: 🌐 Webフレームワーク
+category: Webフレームワーク
 developer: Yusuke Wada and contributors
 official_site: https://hono.dev/
 date: '2026-02-06'

@@ -2,7 +2,7 @@
 title: CodeRabbit 調査レポート
 tool_name: CodeRabbit
 tool_reading: コードラビット
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: CodeRabbit Inc.
 official_site: https://coderabbit.ai/
 date: '2025-10-19'

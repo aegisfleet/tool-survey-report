@@ -2,7 +2,7 @@
 title: Amazon GuardDuty 調査レポート
 tool_name: Amazon GuardDuty
 tool_reading: アマゾン ガードデューティ
-category: 🛡️ CDN/セキュリティ
+category: CDN/セキュリティ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/guardduty/
 date: '2026-02-04'

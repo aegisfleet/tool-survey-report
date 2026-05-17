@@ -2,7 +2,7 @@
 title: Sourcery 調査レポート
 tool_name: Sourcery
 tool_reading: ソーサリー
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: Sourcery AI
 official_site: https://sourcery.ai/
 date: '2026-03-05'

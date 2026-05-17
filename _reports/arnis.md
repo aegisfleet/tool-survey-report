@@ -2,7 +2,7 @@
 title: Arnis 調査レポート
 tool_name: Arnis
 tool_reading: アーニス
-category: 🛠️ 開発ユーティリティ
+category: 開発ユーティリティ
 developer: Louis Erbkamm
 official_site: https://arnismc.com/
 date: '2026-03-20'

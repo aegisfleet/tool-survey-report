@@ -2,7 +2,7 @@
 title: Flutter 調査レポート
 tool_name: Flutter
 tool_reading: フラッター
-category: 📱 モバイル開発
+category: モバイル開発
 developer: Google
 official_site: https://flutter.dev/
 date: '2026-02-15'

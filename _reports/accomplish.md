@@ -2,7 +2,7 @@
 title: Accomplish 調査レポート
 tool_name: Accomplish
 tool_reading: アコンプリッシュ
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: Accomplish
 official_site: https://accomplish.ai/
 date: '2026-04-04'

@@ -2,7 +2,7 @@
 title: OSV-Scanner 調査レポート
 tool_name: OSV-Scanner
 tool_reading: オーエスブイスキャナー
-category: 🛠️ 開発ユーティリティ
+category: ターミナル/シェル
 developer: Google / OpenSSF
 official_site: https://google.github.io/osv-scanner/
 date: '2026-04-25'

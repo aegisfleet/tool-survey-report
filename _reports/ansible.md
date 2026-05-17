@@ -2,7 +2,7 @@
 title: Ansible 調査レポート
 tool_name: Ansible
 tool_reading: アンシブル
-category: ⚙️ 構成管理
+category: 構成管理
 developer: Red Hat
 official_site: https://www.ansible.com/
 date: '2025-10-27'

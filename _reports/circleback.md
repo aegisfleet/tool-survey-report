@@ -2,7 +2,7 @@
 title: Circleback 調査レポート
 tool_name: Circleback
 tool_reading: サークルバック
-category: 📅 プロジェクト管理
+category: プロジェクト管理/生産性
 developer: Circleback AI, Inc.
 official_site: https://circleback.ai/
 date: '2026-03-26'

@@ -2,7 +2,7 @@
 title: Qase 調査レポート
 tool_name: Qase
 tool_reading: ケース
-category: 📋 テスト管理
+category: テスト生成/品質QA
 developer: Qase Inc.
 official_site: https://qase.io/
 date: '2026-02-01'

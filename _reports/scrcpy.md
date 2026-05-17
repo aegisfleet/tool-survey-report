@@ -2,7 +2,7 @@
 title: scrcpy 調査レポート
 tool_name: scrcpy
 tool_reading: スクリーンコピー
-category: 開発ツール
+category: 開発ユーティリティ
 developer: Genymobile
 official_site: https://github.com/Genymobile/scrcpy
 date: '2026-05-16'

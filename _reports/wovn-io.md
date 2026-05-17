@@ -2,7 +2,7 @@
 title: WOVN.io 調査レポート
 tool_name: WOVN.io
 tool_reading: ウォーブン
-category: 🛠️ 開発ユーティリティ
+category: 開発ユーティリティ
 developer: Wovn Technologies株式会社
 official_site: https://wovn.io/
 date: '2026-04-22'

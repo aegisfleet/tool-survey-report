@@ -2,7 +2,7 @@
 title: MagicPod 調査レポート
 tool_name: MagicPod
 tool_reading: マジックポッド
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: MagicPod Inc.
 official_site: https://magicpod.com/
 date: '2025-10-21'

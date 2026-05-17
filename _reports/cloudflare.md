@@ -2,7 +2,7 @@
 title: Cloudflare 調査レポート
 tool_name: Cloudflare
 tool_reading: クラウドフレア
-category: 🛡️ CDN/セキュリティ
+category: CDN/セキュリティ
 developer: Cloudflare, Inc.
 official_site: https://www.cloudflare.com/
 date: '2026-02-04'

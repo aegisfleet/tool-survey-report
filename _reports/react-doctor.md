@@ -2,7 +2,7 @@
 title: React Doctor 調査レポート
 tool_name: React Doctor
 tool_reading: リアクトドクター
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: millionco
 official_site: https://react.doctor/
 date: '2026-05-14'

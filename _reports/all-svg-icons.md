@@ -2,7 +2,7 @@
 title: All SVG Icons 調査レポート
 tool_name: All SVG Icons
 tool_reading: オールエスブイジーアイコンズ
-category: 🎨 デザインツール
+category: デザインツール
 developer: All SVG Icons
 official_site: https://allsvgicons.com/
 date: '2026-03-11'

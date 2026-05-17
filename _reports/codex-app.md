@@ -2,7 +2,7 @@
 title: Codex app 調査レポート
 tool_name: Codex app
 tool_reading: コーデックス・アップ
-category: ⌨️ AIコーディング支援
+category: AIコーディング支援
 developer: OpenAI
 official_site: https://developers.openai.com/codex/app
 date: '2026-03-19'

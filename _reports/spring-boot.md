@@ -2,7 +2,7 @@
 title: Spring Boot 調査レポート
 tool_name: Spring Boot
 tool_reading: スプリングブート
-category: 🌐 Webフレームワーク
+category: Webフレームワーク
 developer: Broadcom (VMware)
 official_site: https://spring.io/projects/spring-boot
 date: '2026-04-06'

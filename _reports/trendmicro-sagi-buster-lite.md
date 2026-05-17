@@ -2,7 +2,7 @@
 title: 詐欺バスター Lite 調査レポート
 tool_name: 詐欺バスター Lite
 tool_reading: サギバスター ライト
-category: 🛡️ CDN/セキュリティ
+category: CDN/セキュリティ
 developer: トレンドマイクロ株式会社
 official_site: https://www.trendmicro.com/ja_jp/forHome/products/sb-lite.html
 date: '2026-03-12'

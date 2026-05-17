@@ -2,7 +2,7 @@
 title: IBM Instana 調査レポート
 tool_name: IBM Instana
 tool_reading: インスタナ
-category: 🕵️ 監視/可観測性
+category: 監視/可観測性
 developer: IBM
 official_site: https://www.ibm.com/jp-ja/products/instana
 date: '2026-04-16'

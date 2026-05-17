@@ -2,7 +2,7 @@
 title: PyTest 調査レポート
 tool_name: PyTest
 tool_reading: パイテスト
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: pytest-dev team
 official_site: https://pytest.org/
 date: '2025-10-22'

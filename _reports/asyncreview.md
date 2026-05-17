@@ -2,7 +2,7 @@
 title: AsyncReview 調査レポート
 tool_name: AsyncReview
 tool_reading: アシンクレビュー
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/AsyncReview
 date: '2026-05-12'

@@ -2,7 +2,7 @@
 title: Strands Agents 調査レポート
 tool_name: Strands Agents
 tool_reading: ストランズ エージェンツ
-category: 🤖 自律型AIエージェント
+category: 汎用AIエージェント
 developer: Amazon Web Services
 official_site: https://strandsagents.com/
 date: '2026-02-04'

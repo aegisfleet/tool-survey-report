@@ -2,7 +2,7 @@
 title: Zscaler 調査レポート
 tool_name: Zscaler
 tool_reading: ジースケラー
-category: 🛡️ CDN/セキュリティ
+category: CDN/セキュリティ
 developer: Zscaler, Inc.
 official_site: https://www.zscaler.com/
 date: '2026-03-27'

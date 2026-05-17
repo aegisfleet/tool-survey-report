@@ -2,7 +2,7 @@
 title: Grok CLI 調査レポート
 tool_name: Grok CLI
 tool_reading: グロック シーエルアイ
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: superagent-ai
 official_site: https://grokcli.io/
 date: '2026-04-12'

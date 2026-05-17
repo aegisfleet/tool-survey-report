@@ -2,7 +2,7 @@
 title: Karate 調査レポート
 tool_name: Karate
 tool_reading: カラテ
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: Karate Labs Inc.
 official_site: https://www.karatelabs.io/
 date: '2026-03-21'

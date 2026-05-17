@@ -2,7 +2,7 @@
 title: VoxCPM 調査レポート
 tool_name: VoxCPM
 tool_reading: ボックスシーピーエム
-category: ✨ 生成AI
+category: AIチャット/アシスタント
 developer: OpenBMB
 official_site: https://github.com/OpenBMB/VoxCPM
 date: '2026-04-10'

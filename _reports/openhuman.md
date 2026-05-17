@@ -2,7 +2,7 @@
 title: OpenHuman 調査レポート
 tool_name: OpenHuman
 tool_reading: オープンヒューマン
-category: AIエージェント
+category: コーディングエージェント
 developer: TinyHumans AI
 official_site: https://tinyhumans.ai/openhuman
 date: '2026-05-14'

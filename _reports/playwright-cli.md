@@ -2,7 +2,7 @@
 title: Playwright CLI 調査レポート
 tool_name: Playwright CLI
 tool_reading: プレイライト シーエルアイ
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: Microsoft
 official_site: https://github.com/microsoft/playwright-cli
 date: '2026-02-26'

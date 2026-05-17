@@ -2,7 +2,7 @@
 title: OpenCut 調査レポート
 tool_name: OpenCut
 tool_reading: オープンカット
-category: 🎥 動画/メディア
+category: 動画/メディア
 developer: OpenCut-app (オープンソースコミュニティ)
 official_site: https://opencut.app/
 date: '2026-05-07'

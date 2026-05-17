@@ -2,7 +2,7 @@
 title: Grafana 調査レポート
 tool_name: Grafana
 tool_reading: グラファナ
-category: 🕵️ 監視/可観測性
+category: 監視/可観測性
 developer: Grafana Labs
 official_site: https://grafana.com/
 date: '2026-03-01'

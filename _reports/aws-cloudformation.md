@@ -2,7 +2,7 @@
 title: AWS CloudFormation 調査レポート
 tool_name: AWS CloudFormation
 tool_reading: エーダブリューエス クラウドフォーメーション
-category: ⚙️ 構成管理
+category: 構成管理
 developer: Amazon Web Services
 official_site: https://aws.amazon.com/cloudformation/
 date: '2025-10-27'

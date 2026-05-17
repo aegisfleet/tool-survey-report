@@ -2,7 +2,7 @@
 title: Google Antigravity 調査レポート
 tool_name: Google Antigravity
 tool_reading: グーグル アンチグラビティ
-category: 💻 AIコードエディタ
+category: AIコーディング支援
 developer: Google
 official_site: https://antigravity.google/
 date: '2026-02-28'

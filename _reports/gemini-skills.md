@@ -2,7 +2,7 @@
 title: Gemini Skills 調査レポート
 tool_name: Gemini Skills
 tool_reading: ジェミニ スキルズ
-category: 📚 AI開発ライブラリ
+category: AI開発ライブラリ
 developer: Google
 official_site: https://github.com/google-gemini/gemini-skills
 date: '2026-03-27'

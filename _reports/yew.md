@@ -2,7 +2,7 @@
 title: Yew 調査レポート
 tool_name: Yew
 tool_reading: ユー
-category: 🌐 Webフレームワーク
+category: Webフレームワーク
 developer: Yewstack (Open Source Community)
 official_site: https://yew.rs/
 date: '2026-04-04'

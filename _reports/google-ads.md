@@ -2,7 +2,7 @@
 title: Google 広告 調査レポート
 tool_name: Google 広告
 tool_reading: グーグルコウコク / グーグルアズ
-category: 📁 その他
+category: その他
 developer: Google
 official_site: https://business.google.com/jp/google-ads/
 date: '2026-04-04'

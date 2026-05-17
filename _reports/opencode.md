@@ -2,7 +2,7 @@
 title: OpenCode 調査レポート
 tool_name: OpenCode
 tool_reading: オープンコード
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: Anomaly
 official_site: https://opencode.ai/
 date: '2026-03-12'

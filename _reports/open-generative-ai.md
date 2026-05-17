@@ -2,7 +2,7 @@
 title: Open Generative AI 調査レポート
 tool_name: Open Generative AI
 tool_reading: オープン ジェネレーティブ エーアイ
-category: クリエイティブツール
+category: その他
 developer: Anil-matcha
 official_site: https://dev.muapi.ai/open-generative-ai
 date: '2026-05-17'

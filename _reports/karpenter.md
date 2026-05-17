@@ -2,7 +2,7 @@
 title: Karpenter 調査レポート
 tool_name: Karpenter
 tool_reading: カーペンター
-category: ☁️ インフラ/クラウド
+category: インフラ/クラウド
 developer: AWS (Cloud Native Computing Foundation)
 official_site: https://karpenter.sh/
 date: '2025-11-18'

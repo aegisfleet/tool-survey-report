@@ -2,7 +2,7 @@
 title: Node.js 調査レポート
 tool_name: Node.js
 tool_reading: ノードジェイエス
-category: 🚀 言語ランタイム/実行環境
+category: 言語ランタイム/実行環境
 developer: OpenJS Foundation
 official_site: https://nodejs.org/
 date: '2026-01-29'

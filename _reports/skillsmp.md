@@ -2,7 +2,7 @@
 title: SkillsMP 調査レポート
 tool_name: SkillsMP
 tool_reading: スキルズエムピー / スキルズマーケットプレイス
-category: 🛠️ AIエージェント基盤
+category: AIエージェント基盤
 developer: Godi13 (Community Project)
 official_site: https://github.com/Godi13
 date: '2026-01-25'

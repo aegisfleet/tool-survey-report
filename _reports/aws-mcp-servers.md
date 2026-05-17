@@ -2,7 +2,7 @@
 title: AWS MCP Servers 調査レポート
 tool_name: AWS MCP Servers
 tool_reading: エーダブリューエス エムシーピー サーバーズ
-category: 🧩 MCPサーバー/基盤
+category: MCPサーバー/基盤
 developer: AWS Labs
 official_site: https://awslabs.github.io/mcp/
 date: '2026-04-21'

@@ -2,7 +2,7 @@
 title: Playwright 調査レポート
 tool_name: Playwright
 tool_reading: プレイライト
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: Microsoft
 official_site: https://playwright.dev/
 date: '2025-10-18'

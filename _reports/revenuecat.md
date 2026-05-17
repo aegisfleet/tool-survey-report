@@ -2,7 +2,7 @@
 title: RevenueCat 調査レポート
 tool_name: RevenueCat
 tool_reading: レベニューキャット
-category: 📱 モバイル開発
+category: モバイル開発
 developer: RevenueCat
 official_site: https://www.revenuecat.com/
 date: '2026-03-14'

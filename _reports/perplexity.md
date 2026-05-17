@@ -2,7 +2,7 @@
 title: Perplexity 調査レポート
 tool_name: Perplexity
 tool_reading: パープレキシティ
-category: 🔍 AI検索エンジン
+category: AI検索/ブラウザ拡張
 developer: Perplexity AI, Inc.
 official_site: https://www.perplexity.ai/
 date: '2026-01-27'

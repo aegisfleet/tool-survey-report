@@ -2,7 +2,7 @@
 title: Firebase CLI 調査レポート
 tool_name: Firebase CLI
 tool_reading: ファイアベース・シーエルアイ
-category: 🛠️ 開発ユーティリティ
+category: ターミナル/シェル
 developer: Google
 official_site: https://firebase.google.com/docs/cli
 date: '2026-04-18'

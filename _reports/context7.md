@@ -2,7 +2,7 @@
 title: Context7 調査レポート
 tool_name: Context7
 tool_reading: コンテキストセブン
-category: 📚 AI開発ライブラリ
+category: AI開発ライブラリ
 developer: Upstash
 official_site: https://context7.com/
 date: '2026-01-28'

@@ -2,7 +2,7 @@
 title: Trac 調査レポート
 tool_name: Trac
 tool_reading: トラック
-category: 📅 プロジェクト管理
+category: プロジェクト管理/生産性
 developer: Edgewall Software
 official_site: https://trac.edgewall.org/
 date: '2026-04-15'

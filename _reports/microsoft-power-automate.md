@@ -2,7 +2,7 @@
 title: Microsoft Power Automate 調査レポート
 tool_name: Microsoft Power Automate
 tool_reading: マイクロソフト パワー オートメート
-category: ⚡ ワークフロー自動化
+category: ワークフロー自動化
 developer: Microsoft
 official_site: https://powerautomate.microsoft.com/
 date: '2026-01-26'

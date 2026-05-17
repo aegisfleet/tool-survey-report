@@ -2,7 +2,7 @@
 title: OpenPencil 調査レポート
 tool_name: OpenPencil
 tool_reading: オープンペンシル
-category: 🎨 デザインツール
+category: デザインツール
 developer: OpenPencil
 official_site: https://openpencil.dev/
 date: '2026-03-15'

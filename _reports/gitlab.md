@@ -2,7 +2,7 @@
 title: GitLab 調査レポート
 tool_name: GitLab
 tool_reading: ギットラボ
-category: 📂 バージョン管理
+category: バージョン管理
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/
 date: '2026-02-27'

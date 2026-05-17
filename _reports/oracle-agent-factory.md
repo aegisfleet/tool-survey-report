@@ -2,7 +2,7 @@
 title: Oracle AI Database Private Agent Factory 調査レポート
 tool_name: Oracle AI Database Private Agent Factory
 tool_reading: オラクル エーアイ データベース プライベート エージェント ファクトリー
-category: 🛠️ AIエージェント基盤
+category: AIエージェント基盤
 developer: Oracle
 official_site: https://docs.oracle.com/en/database/oracle/agent-factory/
 date: '2026-03-31'

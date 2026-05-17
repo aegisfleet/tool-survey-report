@@ -2,7 +2,7 @@
 title: Amazon Bedrock AgentCore Runtime 調査レポート
 tool_name: Amazon Bedrock AgentCore Runtime
 tool_reading: アマゾン ベッドロック エージェントコア ランタイム
-category: 🛠️ AIエージェント基盤
+category: AIエージェント基盤
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/bedrock/agentcore/
 date: '2026-01-28'

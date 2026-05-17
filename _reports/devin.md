@@ -2,7 +2,7 @@
 title: Devin 調査レポート
 tool_name: Devin
 tool_reading: デビン
-category: 🤖 自律型AIエージェント
+category: コーディングエージェント
 developer: Cognition Labs
 official_site: https://devin.ai/
 date: '2026-01-27'

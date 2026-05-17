@@ -2,7 +2,7 @@
 title: Nexus Repository 調査レポート
 tool_name: Nexus Repository
 tool_reading: ネクサスリポジトリ
-category: 📦 パッケージ管理
+category: パッケージ管理
 developer: Sonatype
 official_site: https://www.sonatype.com/products/sonatype-nexus-repository
 date: '2026-03-22'

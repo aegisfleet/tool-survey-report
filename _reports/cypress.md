@@ -2,7 +2,7 @@
 title: Cypress 調査レポート
 tool_name: Cypress
 tool_reading: サイプレス
-category: 🧪 テスト/QA
+category: E2E/ブラウザテスト
 developer: Cypress.io
 official_site: https://www.cypress.io/
 date: '2026-01-28'

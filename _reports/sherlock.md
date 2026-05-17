@@ -2,7 +2,7 @@
 title: Sherlock 調査レポート
 tool_name: Sherlock
 tool_reading: シャーロック
-category: 🛡️ セキュリティ/解析
+category: セキュリティ/解析
 developer: Sherlock Project
 official_site: https://sherlockproject.xyz/
 date: '2026-04-05'
