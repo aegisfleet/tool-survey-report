@@ -509,7 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // すべてのレポートからランダムに4つ選択（スコアと無料プラン情報も取得）
     const randomValues = new Uint32Array(allReportCards.length);
     if (allReportCards.length > 0) {
-      window.crypto.getRandomValues(randomValues);
+      globalThis.crypto.getRandomValues(randomValues);
     }
 
     const shuffled = allReportCards
