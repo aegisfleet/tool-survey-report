@@ -97,8 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-
-
   // フィルタ状態を保存する関数
   function saveFilterState() {
     const state = {
