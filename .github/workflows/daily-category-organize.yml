@@ -1,0 +1,243 @@
+name: Daily Category Organize with Jules
+
+on:
+  schedule:
+    # 日本時間の12時 (UTC: 3) に実行
+    # daily-report-maintenance.yml (UTC: 5, 13, 21) と時間帯が重複しない
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'ドライラン（PRを作成せず、プロンプトのみ確認）'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  contents: read
+
+jobs:
+  organize-categories:
+    name: Organize categories/tags using Jules API
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Collect category statistics and call Jules API
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            // _reportsディレクトリ内のすべてのMarkdownファイルを取得
+            const reportsDir = '_reports';
+            const files = fs.readdirSync(reportsDir).filter(file => file.endsWith('.md'));
+
+            if (files.length === 0) {
+              core.info('No report files found in _reports directory');
+              return;
+            }
+
+            // カテゴリ件数を集計
+            const categoryCounts = {};
+            for (const file of files) {
+              const filePath = path.join(reportsDir, file);
+              const content = fs.readFileSync(filePath, 'utf8');
+
+              const frontMatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+              if (frontMatterMatch) {
+                const frontMatter = frontMatterMatch[1];
+                const categoryMatch = frontMatter.match(/^category:\s*["']?([^"'\r\n]+)["']?/m);
+                if (categoryMatch) {
+                  const category = categoryMatch[1].trim();
+                  categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+                }
+              }
+            }
+
+            // 件数でソートして表示
+            const sortedCategories = Object.entries(categoryCounts)
+              .sort((a, b) => b[1] - a[1]);
+
+            core.info('=== カテゴリ別件数 ===');
+            for (const [cat, count] of sortedCategories) {
+              core.info(`  ${count}件: ${cat}`);
+            }
+
+            // 統合・分割対象の抽出
+            const toMerge = sortedCategories.filter(([, count]) => count <= 2);
+            const toSplit = sortedCategories.filter(([, count]) => count >= 10);
+
+            core.info(`\n統合候補（1〜2件）: ${toMerge.length}カテゴリ`);
+            for (const [cat, count] of toMerge) {
+              core.info(`  - ${cat} (${count}件)`);
+            }
+            core.info(`分割候補（10件以上）: ${toSplit.length}カテゴリ`);
+            for (const [cat, count] of toSplit) {
+              core.info(`  - ${cat} (${count}件)`);
+            }
+
+            // 変更が不要な場合はスキップ
+            if (toMerge.length === 0 && toSplit.length === 0) {
+              core.info('\n統合・分割が必要なカテゴリはありません。ワークフローを終了します。');
+              return;
+            }
+
+            // ドライランの場合はここで終了
+            const isDryRun = process.env.DRY_RUN === 'true';
+            if (isDryRun) {
+              core.info('\n[DRY RUN] Jules APIは呼び出しません。統計情報のみ表示しました。');
+              return;
+            }
+
+            // Jules API呼び出し
+            const julesApiUrl = 'https://jules.googleapis.com/v1alpha/sessions';
+            const apiKey = process.env.JULES_API_KEY;
+
+            if (!apiKey) {
+              core.error('JULES_API_KEY secret is not set');
+              process.exit(1);
+            }
+
+            const todayJST = new Date().toLocaleDateString('sv-SE', { timeZone: 'Asia/Tokyo' });
+
+            // カテゴリ統計をプロンプト用にフォーマット
+            const categoryStatsLines = sortedCategories
+              .map(([cat, count]) => `  - ${cat}: ${count}件`)
+              .join('\n');
+            const mergeCandidates = toMerge.map(([cat, count]) => `  - ${cat} (${count}件)`).join('\n');
+            const splitCandidates = toSplit.map(([cat, count]) => `  - ${cat} (${count}件)`).join('\n');
+
+            const promptLines = [
+              `task-organizing-category-tags.md の「カテゴリの統合・分割基準」セクションに従い、${todayJST} のカテゴリ整理作業を実施せよ。`,
+              '',
+              '## 作業の背景',
+              '',
+              '本日時点のカテゴリ別件数を集計した結果、以下の通りである：',
+              '',
+              '### 全カテゴリ件数（降順）',
+              categoryStatsLines,
+              '',
+              '### 統合候補（1〜2件のカテゴリ）',
+              mergeCandidates || '  なし',
+              '',
+              '### 分割候補（10件以上のカテゴリ）',
+              splitCandidates || '  なし',
+              '',
+              '## 実行する作業',
+              '',
+              '### ステップ1: カテゴリ統合',
+              '- task-organizing-category-tags.md の「統合の判定基準」に従い、統合候補カテゴリを処理せよ',
+              '- 統合を見送るケースに該当する場合は変更しなくてよい',
+              '- 変更が必要な場合は、対象レポートの category フィールドを更新し、_data/categories.yml も同期せよ',
+              '',
+              '### ステップ2: カテゴリ分割',
+              '- task-organizing-category-tags.md の「分割の判定基準」に従い、分割候補カテゴリを処理せよ',
+              '- 分割を見送るケースに該当する場合は変更しなくてよい',
+              '- 変更が必要な場合は、標準語彙リストに新カテゴリを追記してから対象レポートを更新せよ',
+              '',
+              '### ステップ3: タグ整理（カテゴリ変更に伴うもののみ）',
+              '- カテゴリ変更したレポートについて、task-organizing-category-tags.md の変更ルールに従いタグも整合させよ',
+              '',
+              '### 注意事項',
+              '- task-organizing-category-tags.md の「編集前チェックリスト」を全項目確認すること',
+              '- last_updated フィールドは更新しないこと（カテゴリ整理は内容変更ではないため）',
+              '- 変更後は git diff で意図しない変更がないことを確認してから PR を作成すること',
+              '- 変更が不要と判断した場合は、その理由をコミットメッセージに記載すること',
+            ];
+
+            const prompt = promptLines.join('\n');
+            core.info(`\nJules API プロンプト:\n${prompt}`);
+
+            const requestBody = {
+              prompt: prompt,
+              sourceContext: {
+                source: `sources/github/${context.repo.owner}/${context.repo.repo}`,
+                githubRepoContext: {
+                  startingBranch: "main"
+                }
+              },
+              requirePlanApproval: false,
+              automationMode: `AUTO_CREATE_PR`,
+              title: `Daily Category Organize - ${todayJST}`
+            };
+
+            // リトライ機能付きのJules API呼び出し
+            const maxRetries = 3;
+            const retryDelay = 30000; // 30秒
+            let lastError = null;
+            let success = false;
+
+            for (let attempt = 1; attempt <= maxRetries; attempt++) {
+              core.info(`Jules API call attempt ${attempt}/${maxRetries}...`);
+
+              if (attempt > 1) {
+                core.info(`Waiting ${retryDelay / 1000} seconds before retry...`);
+                await new Promise(resolve => setTimeout(resolve, retryDelay));
+              }
+
+              try {
+                const response = await fetch(julesApiUrl, {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'X-Goog-Api-Key': apiKey
+                  },
+                  body: JSON.stringify(requestBody)
+                });
+
+                if (!response.ok) {
+                  const errorText = await response.text();
+                  const errorMessage = `Jules API call failed: ${response.status} ${response.statusText}`;
+                  core.error(errorMessage);
+                  core.error(`Error response: ${errorText}`);
+
+                  lastError = new Error(`${errorMessage}\nResponse: ${errorText}`);
+
+                  // 4xx系エラーの場合はリトライしない
+                  if (response.status >= 400 && response.status < 500) {
+                    core.error('Client error (4xx) detected. Not retrying.');
+                    break;
+                  }
+
+                  if (attempt === maxRetries) {
+                    break;
+                  }
+
+                  core.warning(`Server error (5xx) detected. Will retry (${attempt}/${maxRetries})`);
+                  continue;
+                }
+
+                const result = await response.json();
+                core.info('Jules API call successful!');
+                core.info(`Response: ${JSON.stringify(result, null, 2)}`);
+
+                core.setOutput('session_id', result.sessionId || 'unknown');
+                success = true;
+                break;
+
+              } catch (error) {
+                lastError = error;
+                core.error(`Error calling Jules API (attempt ${attempt}): ${error.message}`);
+
+                if (attempt === maxRetries) {
+                  core.error(`All ${maxRetries} attempts failed.`);
+                } else {
+                  core.warning(`Will retry (${attempt}/${maxRetries})`);
+                }
+              }
+            }
+
+            if (!success) {
+              core.error(`Jules API call failed: ${lastError ? lastError.message : 'Unknown error'}`);
+              process.exit(1);
+            }
