@@ -43,7 +43,6 @@ links:
 relationships:
   related_tools:
     - ChatGPT
-    - Gemini
     - Claude
     - Grok
     - さくらのAI
