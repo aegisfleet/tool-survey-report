@@ -507,8 +507,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (allReportCards.length <= 4) return;
 
     // すべてのレポートからランダムに4つ選択（スコアと無料プラン情報も取得）
+    const randomValues = new Uint32Array(allReportCards.length);
+    if (allReportCards.length > 0) {
+      globalThis.crypto.getRandomValues(randomValues);
+    }
+
     const shuffled = allReportCards
-      .map((card) => ({
+      .map((card, idx) => ({
         url: card.querySelector('a')?.href || '#',
         // タイトルから既存の絵文字を除去して取得
         title: stripEmoji(card.querySelector('.report-title a')?.textContent || '') || 'Unknown',
@@ -516,12 +521,9 @@ document.addEventListener('DOMContentLoaded', () => {
         score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
         hasFreePlan: !!card.querySelector('.card-free-badge'),
         isOss: card.dataset.isOss === 'true',
+        _sort: randomValues[idx],
       }))
-      .sort(() => {
-        const array = new Uint32Array(1);
-        window.crypto.getRandomValues(array);
-        return array[0] / 0xffffffff - 0.5;
-      })
+      .sort((a, b) => a._sort - b._sort)
       .slice(0, 4);
 
     // ピックカードを更新
