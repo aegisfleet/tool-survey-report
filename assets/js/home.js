@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
   const tagElements = document.querySelectorAll('.tag');
-  let categoryElements = document.querySelectorAll('.clickable-category');
+  const categoryElements = document.querySelectorAll('.clickable-category');
 
   // Pre-calculate sort values to improve performance
   reportCards.forEach((card) => {
@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-
 
   // フィルタ状態を保存する関数
   function saveFilterState() {
@@ -579,8 +577,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-    // キャッシュを更新
-    categoryElements = document.querySelectorAll('.clickable-category');
     // シャッフル後に現在のフィルタ状態に合わせてアクティブ表示を更新
     updateCategoryStates();
   }
