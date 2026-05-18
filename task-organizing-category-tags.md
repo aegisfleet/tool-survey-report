@@ -203,6 +203,47 @@ grep -h "^category:" _reports/*.md \
 3. **タグ統一**: 英語/日本語混在は日本語に統一（例: "Agent" → "エージェント"）。
 4. **タグ数制限**: 多すぎる場合は関連性の高い上位5つに絞る。
 
+#### ⚠️ 一括置換の禁止と安全な変更手順
+
+**カテゴリ・タグの変更に `sed` や検索置換ツールの一括実行を使ってはならない。**
+単語の一致によって `relationships` の `tool_name` 参照や本文中の固有名詞が意図せず書き換えられ、リレーションが崩壊するリスクがあるため。
+
+**禁止パターン（例）**:
+```bash
+# NG: ファイル全体を対象とした置換 → relationships や本文も書き換わる危険がある
+sed -i 's/AIコーディング支援/AIコードアシスタント/g' _reports/*.md
+```
+
+**許可パターン（YAMLフロントマターの `category:` 行のみを対象にする）**:
+```bash
+# OK: フロントマターの category: 行のみを対象に限定した置換
+python3 - << 'EOF'
+import re, glob
+
+OLD = "AIコーディング支援"
+NEW = "AIコードアシスタント"
+
+for path in glob.glob("_reports/*.md"):
+    text = open(path).read()
+    # フロントマター（--- ... ---）内の category: 行のみ置換
+    def replace_in_frontmatter(m):
+        fm = re.sub(
+            r'^(category:\s*["\']?)' + re.escape(OLD) + r'(["\']?\s*)$',
+            r'\g<1>' + NEW + r'\g<2>',
+            m.group(0), flags=re.MULTILINE
+        )
+        return fm
+    new_text = re.sub(r'^---\n[\s\S]*?\n---', replace_in_frontmatter, text, count=1)
+    if new_text != text:
+        open(path, 'w').write(new_text)
+        print(f"Updated: {path}")
+EOF
+```
+
+**変更後は必ず以下を実行**（次の「ステップ4」参照）:
+- `git diff` でフロントマター外が書き換えられていないことを確認
+- リレーション整合性スクリプトで `relationships` の参照が壊れていないことを確認
+
 #### 関連付け（relationships）ルール
 
 1. **設定基準**:
@@ -261,6 +302,12 @@ grep -h "^category:" _reports/*.md \
 - [ ] 最小変更の原則遵守
 - [ ] `last_updated` 非更新の確認
 
+### 変更後チェックリスト（カテゴリ変更を伴う作業では必須）
+
+- [ ] `git diff` でフロントマター外（`relationships`・`tool_name`・本文）が変更されていないことを確認
+- [ ] リレーション整合性スクリプトを実行し、壊れた参照が0件であることを確認
+- [ ] 一括置換ツールを使用していないことを確認
+
 ## 実務手順（段階的アプローチ）
 
 ### ステップ1: 作業対象の選定
@@ -278,14 +325,36 @@ grep -h "^category:" _reports/*.md \
 ### ステップ3: 変更実行
 
 1. **1ファイルずつ編集**: 即座にYAMLチェック
+   - 一括置換ツールの使用は禁止（「変更ルール > ⚠️ 一括置換の禁止」参照）
+   - カテゴリ変更が必要な場合は、許可された Python スクリプトパターンを使用する
 2. **中間確認**: 3ファイル毎に整合性チェック
 
 ### ステップ4: 検証とコミット
 
-1. **YAML構文チェック**: 全ファイルのパース確認
-2. **関連付け整合性**: 参照先存在・双方向関係・循環参照を確認
-3. **差分確認**: `git diff` で意図しない変更チェック
-4. **コミットメッセージへの明記**: 関連レポートの双方向リンクを確認した結果をコミットメッセージに明記する。変更が不要だった場合（例：「双方向リンクは既に存在していたため変更なし」）もその旨を記載する。
+1. **差分確認（最優先）**: `git diff` で **フロントマター外が書き換えられていないこと** を先に確認する
+   - `relationships`、`tool_name`、本文が意図せず変更されていた場合は `git checkout -- <ファイル名>` で即リバートする
+2. **YAML構文チェック**: 全変更ファイルのパース確認
+   ```bash
+   python3 -c "import yaml, glob; [yaml.safe_load(open(f).read().split('---')[1]) for f in glob.glob('_reports/*.md')]; print('YAML OK')"
+   ```
+3. **リレーション整合性チェック（必須）**: カテゴリ変更を行った場合、以下を実行して `relationships` が壊れていないことを確認する
+   ```bash
+   # 存在しない tool_name の検出（壊れたリレーションが0件であること）
+   grep "^tool_name:" _reports/*.md | sed 's/.*tool_name: ["'\'']*//;s/["'\'']*$//' | sort | uniq > /tmp/managed_tools.txt
+   python3 -c "
+   import yaml, glob
+   m = set(open('/tmp/managed_tools.txt').read().splitlines())
+   errors = []
+   for f in glob.glob('_reports/*.md'):
+       v = yaml.safe_load(open(f).read().split('---')[1]).get('relationships', {}) or {}
+       for t in v.get('children',[]) + v.get('related_tools',[]) + ([v['parent']] if 'parent' in v else []):
+           if t not in m:
+               errors.append(f'{f}: \"{t}\" not found')
+   print('\n'.join(errors) if errors else 'Relationships OK')
+   "
+   ```
+4. **関連付け整合性**: 参照先存在・双方向関係・循環参照を確認
+5. **コミットメッセージへの明記**: 「一括置換なし、リレーション整合性チェック済み」を明記する。変更が不要だった場合もその旨を記載する。
 
 ## 判断基準
 
