@@ -6,7 +6,7 @@ category: モバイル開発
 developer: Google
 official_site: https://flutter.dev/
 date: '2026-02-15'
-last_updated: '2026-02-15'
+last_updated: '2026-05-19'
 tags:
   - Dart
   - オープンソース
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - デザイナー
-  latest_highlight: 2026年2月のFlutter 3.38.10リリースで安定性がさらに向上し、Impellerレンダリングエンジンが完全定着
+  latest_highlight: 2026年2月のFlutter 3.41リリースで新しい学習パスウェイと公式用語集を追加
   update_frequency: 高
 evaluation:
   score: 88
@@ -81,7 +81,6 @@ relationships:
   * CodeWiki: [https://codewiki.google/github.com/flutter/flutter](https://codewiki.google/github.com/flutter/flutter)
   * DeepWiki: [https://deepwiki.com/flutter/flutter](https://deepwiki.com/flutter/flutter)
   * ドキュメント: [https://docs.flutter.dev/](https://docs.flutter.dev/)
-  * レビューサイト: [G2](https://www.g2.com/products/flutter/reviews)
 * **カテゴリ**: モバイル開発
 * **概要**: Flutterは、単一のコードベースからモバイル（iOS, Android）、Web、デスクトップ（Windows, macOS, Linux）、組み込み向けの高性能で美しいUIを持つネイティブアプリケーションを構築するための、Google製のオープンソースUIツールキットです。プログラミング言語としてDartを採用しています。
 
@@ -303,16 +302,16 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: G2, Reddit, 国内技術ブログ (2026年1月-2月時点)
-* **総合評価**: 4.6/5.0 (G2) - 継続して高い評価を維持。
+* **調査対象**: Google検索結果 (G2, Capterraのレビュー引用を含む), Reddit, 国内技術ブログ (2026年1月-2月時点)
+* **総合評価**: 4.6/5.0 (G2より引用) - 継続して高い評価を維持。
 * **ポジティブな評価**:
-  * 「Impellerのおかげで、長年の課題だったスクロール時のカクつきが完全に消えた。iOSでの滑らかさはネイティブと区別がつかない」
-  * 「単一コードベースでモバイルからWeb、デスクトップまで対応できるため、開発リソースを集中できる」
-  * 「AIツールとの相性が抜群に良い。定型的なUIコードはほぼ自動生成で済むようになった」
+  * 「Impellerのおかげで、長年の課題だったスクロール時のカクつきが完全に消えた。iOSでの滑らかさはネイティブと区別がつかない」（Reddit等より）
+  * 「単一コードベースでモバイルからWeb、デスクトップまで対応できるため、開発リソースを集中できる」（G2より引用）
+  * 「AIツールとの相性が抜群に良い。定型的なUIコードはほぼ自動生成で済むようになった」（技術ブログより）
 * **ネガティブな評価 / 改善要望**:
-  * 「アプリサイズがまだ大きい。小規模なツール系アプリでは気後れする」
-  * 「Web版（Flutter Web）はSEOや初期ロード時間において、依然としてReactなどのDOMベースのフレームワークに劣る」
-  * 「ネイティブ側のAPIが頻繁に変わる際のメンテナンスコストが無視できない」
+  * 「アプリサイズがまだ大きい。小規模なツール系アプリでは気後れする」（Capterra等より引用）
+  * 「Web版（Flutter Web）はSEOや初期ロード時間において、依然としてReactなどのDOMベースのフレームワークに劣る」（技術ブログより）
+  * 「ネイティブ側のAPIが頻繁に変わる際のメンテナンスコストが無視できない」（G2より引用）
 * **特徴的なユースケース**:
   * キオスク端末や組み込み機器のUI開発での採用が増加している。
   * スタートアップの初期プロダクトとして選定される率が非常に高い。
@@ -331,19 +330,18 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2026-02-10**: **Flutter 3.38.10**
-  * 安定性向上とマイナーバグ修正を含むパッチリリース。特定のデバイスでのレンダリング不具合に対応。
-* **2026-01-08**: **メンテナンスアップデート**
-  * 年初の定期メンテナンスとして、依存ライブラリのセキュリティ更新を実施。
-* **2025-12-12**: **Flutter 3.38.5**
-  * iOS 18以降での特定のクラッシュ問題の修正と、レンダリングエンジンの安定性向上。
+* **2026-02-11**: **Flutter 3.41 ("Year of the Fire Horse")**
+  * 公式用語集（glossary）と新しい学習パスウェイの追加。
 * **2025-11-12**: **Flutter 3.38**
-  * **Impeller安定化**: Android (API 29+) およびiOSでのImpellerエンジンがデフォルトかつ安定版となり、Skiaからの移行が実質完了。
-  * **Android 15対応**: 16KBページサイズ要件への対応を含み、最新Androidデバイスでの動作保証。
-  * **iOS強化**: `UISceneDelegate`の強制によるマルチウィンドウ（iPad Stage Manager）対応の強化。
-  * **AI統合**: Gemini CLI拡張機能の正式リリース。
-* **2025-08**: **Flutter 3.35**
-  * **Web**: Stateful hot reloadがデフォルトで有効化され、Web開発体験が向上。
+  * `docs.flutter.dev`がJasprフレームワークで再実装された。
+  * Dartの`dot shorthands`構文への対応。
+  * `flutter run`コマンドでWeb開発設定ファイル（プロキシ、ヘッダー等）をサポート。
+  * iOS 26, Xcode 26, macOS 26のフルサポート、Appleが要求する新しい`UIScene`ライフサイクルのサポート。
+  * アクセシビリティ関連ドキュメントの全面的な改訂。
+* **2025-08-13**: **Flutter 3.35**
+  * Web上でのホットリロードがデフォルトで有効化。
+  * Gemini Code Assist, GeminiCLI、Dart/Flutter MCP Serverを利用したAI活用ガイドを追加。
+  * Flutter Widget Previewerガイドの追加、Androidでの画面共有時に機密コンテンツを保護する機能。
 
 (出典: [Flutter Release Notes](https://docs.flutter.dev/release/whats-new), [Foresight Mobile Blog](https://foresightmobile.com/blog/why-flutter-will-outperform-the-competition-in-2026))
 
