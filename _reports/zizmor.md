@@ -2,7 +2,7 @@
 title: zizmor 調査レポート
 tool_name: zizmor
 tool_reading: ジズモア
-category: セキュリティ
+category: セキュリティ/解析
 developer: zizmorcore
 official_site: https://zizmor.sh/
 date: '2026-05-17'

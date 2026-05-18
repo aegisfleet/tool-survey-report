@@ -2,7 +2,7 @@
 title: GitHub Actions 調査レポート
 tool_name: GitHub Actions
 tool_reading: ギットハブ アクションズ
-category: その他
+category: 開発ライフサイクル管理
 developer: GitHub
 official_site: https://github.com/features/actions
 date: '2026-01-17'

@@ -2,7 +2,7 @@
 title: Trivy 調査レポート
 tool_name: Trivy
 tool_reading: トリヴィ
-category: その他
+category: セキュリティ/解析
 developer: Aqua Security
 official_site: https://trivy.dev/
 date: '2026-04-05'

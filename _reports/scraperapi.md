@@ -2,7 +2,7 @@
 title: ScraperAPI 調査レポート
 tool_name: ScraperAPI
 tool_reading: スクレイパーエーピーアイ
-category: Webスクレイピング
+category: データ分析
 developer: ScraperAPI
 official_site: https://www.scraperapi.com/
 date: '2026-05-18'

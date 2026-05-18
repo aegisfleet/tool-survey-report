@@ -2,7 +2,7 @@
 title: Jenkins 調査レポート
 tool_name: Jenkins
 tool_reading: ジェンキンス
-category: その他
+category: 開発ライフサイクル管理
 developer: CloudBees, Inc. and the Jenkins community
 official_site: https://www.jenkins.io/
 date: '2026-01-27'
