@@ -2,7 +2,7 @@
 title: ScrapingBee 調査レポート
 tool_name: ScrapingBee
 tool_reading: スクレイピングビー
-category: Webスクレイピング
+category: データ分析
 developer: ScrapingBee
 official_site: https://www.scrapingbee.com/
 date: '2026-05-18'

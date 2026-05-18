@@ -2,7 +2,7 @@
 title: x-algorithm 調査レポート
 tool_name: x-algorithm
 tool_reading: エックスアルゴリズム
-category: その他
+category: データ分析
 developer: xAI
 official_site: https://github.com/xai-org/x-algorithm
 date: '2026-05-16'
