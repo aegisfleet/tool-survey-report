@@ -516,12 +516,9 @@ document.addEventListener('DOMContentLoaded', () => {
         score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
         hasFreePlan: !!card.querySelector('.card-free-badge'),
         isOss: card.dataset.isOss === 'true',
+        _sort: Math.random(),
       }))
-      .sort(() => {
-        const array = new Uint32Array(1);
-        window.crypto.getRandomValues(array);
-        return array[0] / 0xffffffff - 0.5;
-      })
+      .sort((a, b) => a._sort - b._sort)
       .slice(0, 4);
 
     // ピックカードを更新
