@@ -65,6 +65,7 @@ class HTMLElement {
 
 // Setup minimal global environment
 global.window = {
+  CATEGORY_EMOJIS: { 自律型AIエージェント: '🤖' },
   location: { search: '' },
   addEventListener: (event, cb) => {
     if (event === 'load') setTimeout(cb, 0);
