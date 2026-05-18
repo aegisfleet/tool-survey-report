@@ -9,6 +9,9 @@ Gemfile.lock
 vendor/
 /.bundle
 
+# Node
+node_modules/
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -23,23 +26,20 @@ Thumbs.db
 *.swo
 *~
 
-# Node modules (if using npm/yarn)
-node_modules/
-
 # Logs
 *.log
 
-# Verification scripts and artifacts
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Temporary / ad-hoc scripts at repository root
+# (scripts/ directory is intentionally excluded from this rule)
+/*.py
+/*.sh
+
+# Verification artifacts
 verification/
-verify_*.py
-playwright_script.py
-*_verification.py
 screenshot*.png
 verification.png
 verify_*.png
-
-# Python
-__pycache__/
-*.py[cod]
-node_modules/
-*.pyc
