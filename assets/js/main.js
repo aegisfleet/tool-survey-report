@@ -801,7 +801,7 @@ function enhanceFormAccessibility() {
   // Add error message containers
   const formFields = document.querySelectorAll('input, select, textarea');
   formFields.forEach((field) => {
-    if (!field.nextElementSibling || !field.nextElementSibling.classList.contains('error-message')) {
+    if (!field.nextElementSibling?.classList.contains('error-message')) {
       const errorContainer = document.createElement('div');
       errorContainer.className = 'error-message';
       errorContainer.style.cssText = `
