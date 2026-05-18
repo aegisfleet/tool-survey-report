@@ -31,6 +31,7 @@
   > 作業開始前に必ず以下のコマンドで現在の語彙を取得し、そこに存在するカテゴリ名のみを使用すること。
 
   **現在の有効カテゴリ一覧の取得コマンド**:
+
   ```bash
   # _data/categories.yml のキー（カテゴリ名）を一覧表示
   python3 -c "
@@ -45,7 +46,6 @@
   1. 上記コマンドで現在の語彙を確認する
   2. `_data/categories.yml` に変更（追加・削除・キー名変更）を加える
   3. その後、レポートの `category` フィールドを変更する（`_data/categories.yml` に存在しないカテゴリ名は使用禁止）
-
 
 - **タグ（正規化リスト）**
 
@@ -148,7 +148,6 @@ for cat in sorted(used - defined):
 EOF
 ```
 
-
 #### 統合の判定基準
 
 - **対象**: ツール登録数が **1〜2件** のカテゴリ
@@ -211,12 +210,14 @@ EOF
 単語の一致によって `relationships` の `tool_name` 参照や本文中の固有名詞が意図せず書き換えられ、リレーションが崩壊するリスクがあるため。
 
 **禁止パターン（例）**:
+
 ```bash
 # NG: ファイル全体を対象とした置換 → relationships や本文も書き換わる危険がある
 sed -i 's/AIコーディング支援/AIコードアシスタント/g' _reports/*.md
 ```
 
 **許可パターン（YAMLフロントマターの `category:` 行のみを対象にする）**:
+
 ```bash
 # OK: フロントマターの category: 行のみを対象に限定した置換
 python3 - << 'EOF'
@@ -243,6 +244,7 @@ EOF
 ```
 
 **変更後は必ず以下を実行**（次の「ステップ4」参照）:
+
 - `git diff` でフロントマター外が書き換えられていないことを確認
 - リレーション整合性スクリプトで `relationships` の参照が壊れていないことを確認
 
@@ -336,10 +338,13 @@ EOF
 1. **差分確認（最優先）**: `git diff` で **フロントマター外が書き換えられていないこと** を先に確認する
    - `relationships`、`tool_name`、本文が意図せず変更されていた場合は `git checkout -- <ファイル名>` で即リバートする
 2. **YAML構文チェック**: 全変更ファイルのパース確認
+
    ```bash
    python3 -c "import yaml, glob; [yaml.safe_load(open(f).read().split('---')[1]) for f in glob.glob('_reports/*.md')]; print('YAML OK')"
    ```
+
 3. **リレーション整合性チェック（必須）**: カテゴリ変更を行った場合、以下を実行して `relationships` が壊れていないことを確認する
+
    ```bash
    # 存在しない tool_name の検出（壊れたリレーションが0件であること）
    grep "^tool_name:" _reports/*.md | sed 's/.*tool_name: ["'\'']*//;s/["'\'']*$//' | sort | uniq > /tmp/managed_tools.txt
@@ -355,6 +360,7 @@ EOF
    print('\n'.join(errors) if errors else 'Relationships OK')
    "
    ```
+
 4. **関連付け整合性**: 参照先存在・双方向関係・循環参照を確認
 5. **コミットメッセージへの明記**: 「一括置換なし、リレーション整合性チェック済み」を明記する。変更が不要だった場合もその旨を記載する。
 
@@ -393,6 +399,7 @@ EOF
    - 大規模な整理を行う際は、以下のワンライナー等を用いて機械的にチェックすることを推奨する。
 
    **A. 存在しない tool_name の検出**
+
    ```bash
    # 管理対象の全 tool_name を抽出
    grep "^tool_name:" _reports/*.md | sed 's/.*tool_name: "\(.*\)"/\1/' | sed "s/.*tool_name: \(.*\)/\1/" | sort | uniq > managed_tools.txt
@@ -402,6 +409,7 @@ EOF
    ```
 
    **B. children と related_tools の重複検出**
+
    ```bash
    python3 -c "import yaml, glob; [([print(f'{f}: {overlap}') for overlap in set(v.get('children',[]) or []).intersection(set(v.get('related_tools',[]) or [])) if overlap]) for f in glob.glob('_reports/*.md') for v in [yaml.safe_load(open(f).read().split('---')[1]).get('relationships', {})] if v]"
    ```
@@ -450,4 +458,5 @@ grep -l "category.*AI.*コーディング" _reports/*.md
 カテゴリやタグの整理を行った後は、ホーム画面のフィルタ機能が正しく動作することを確認する。
 
 詳細な検証手順や自動テスト手法については、以下を参照のこと：
+
 - [ブラウザ動作確認ワークフロー](.agent/workflows/browser-test.md)
