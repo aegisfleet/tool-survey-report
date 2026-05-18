@@ -44,7 +44,6 @@ links:
 relationships:
   related_tools:
     - ChatGPT
-    - Gemini
     - Grok
 ---
 

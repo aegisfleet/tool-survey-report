@@ -40,7 +40,6 @@ evaluation:
   summary: Webマーケティングにおいて必須級のツールであり、機能・リーチ共に最高水準だが、運用スキルまたはAIへの適切な指示が求められる
 relationships:
   related_tools:
-    - Gemini
     - Google Cloud
     - Salesforce
     - Zapier

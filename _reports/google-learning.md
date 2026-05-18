@@ -44,7 +44,6 @@ relationships:
     - NotebookLM
   related_tools:
     - Google Cloud
-    - Gemini
     - NotebookLM
 ---
 

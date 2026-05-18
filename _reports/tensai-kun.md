@@ -42,7 +42,6 @@ relationships:
   related_tools:
     - ChatGPT
     - Microsoft 365 Copilot
-    - Gemini
 ---
 
 # **天才くん 調査レポート**
