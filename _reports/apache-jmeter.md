@@ -2,7 +2,7 @@
 title: Apache JMeter 調査レポート
 tool_name: Apache JMeter
 tool_reading: アパッチ ジェイメーター
-category: E2E/ブラウザテスト
+category: テストフレームワーク/ライブラリ
 developer: Apache Software Foundation
 official_site: https://jmeter.apache.org/
 date: '2025-10-18'

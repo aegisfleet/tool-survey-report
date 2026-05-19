@@ -2,7 +2,7 @@
 title: KING OF TIME 調査レポート
 tool_name: KING OF TIME
 tool_reading: キングオブタイム
-category: ビジネス/業務ツール
+category: 勤怠管理/人事労務
 developer: 株式会社ヒューマンテクノロジーズ
 official_site: https://www.kingoftime.jp/
 date: '2026-01-29'

@@ -2,7 +2,7 @@
 title: JUnit 調査レポート
 tool_name: JUnit
 tool_reading: ジェイユニット
-category: E2E/ブラウザテスト
+category: テストフレームワーク/ライブラリ
 developer: JUnit Team
 official_site: https://junit.org/
 date: '2025-10-22'

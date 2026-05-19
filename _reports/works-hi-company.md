@@ -2,7 +2,7 @@
 title: COMPANY 調査レポート
 tool_name: COMPANY
 tool_reading: カンパニー
-category: ビジネス/業務ツール
+category: 勤怠管理/人事労務
 developer: 株式会社Works Human Intelligence
 official_site: https://www.works-hi.co.jp/products
 date: '2026-02-01'
