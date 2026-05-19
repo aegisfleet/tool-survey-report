@@ -5,8 +5,8 @@ tool_reading: ギンプ
 category: デザインツール
 developer: The GIMP Team
 official_site: https://www.gimp.org/
-date: '2026-02-16'
-last_updated: '2026-02-16'
+date: '2026-05-20'
+last_updated: '2026-05-20'
 tags:
   - オープンソース
   - グラフィックデザイン
@@ -69,7 +69,6 @@ relationships:
   * GitHub: [https://github.com/GNOME/gimp](https://github.com/GNOME/gimp)
   * DeepWiki: [https://deepwiki.com/GNOME/gimp](https://deepwiki.com/GNOME/gimp)
   * ドキュメント: [https://www.gimp.org/docs/](https://www.gimp.org/docs/)
-  * レビューサイト: [G2](https://www.g2.com/products/gimp/reviews) | [ITreview](https://www.itreview.jp/products/gimp/reviews)
 * **カテゴリ**: デザインツール
 * **概要**: GIMPは、世界中で広く利用されている無料のオープンソース画像編集ソフトウェアです。写真のレタッチ、画像の合成、アイコン作成など、Adobe Photoshopに匹敵する高度な編集機能を備え、バージョン3.0からは非破壊編集にも対応しました。
 
@@ -284,14 +283,14 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: GIMP公式サイトニュースコメント、Reddit、技術ブログ (2025年-2026年時点の評価)
+* **調査対象**: Google検索経由での各種レビューサイト、GIMP公式サイトニュースコメント、Reddit、技術ブログ (2025年-2026年時点の評価)
 * **総合評価**: 4.3/5.0 (各所レビューの平均的傾向)。待望のメジャーアップデートにより再評価が進んでいる。
 * **ポジティブな評価**:
-  * 「7年待った甲斐があった。非破壊編集のおかげで作業効率が劇的に上がった」
-  * 「HiDPIモニターでもUIが綺麗に表示されるようになり、目が疲れなくなった」
+  * 「7年待った甲斐があった。非破壊編集のおかげで作業効率が劇的に上がった」（Google検索経由のレビューより要約）
+  * 「HiDPIモニターでもUIが綺麗に表示されるようになり、目が疲れなくなった」（コミュニティレビューより要約）
   * 「Python 3対応により、新しいプラグイン開発がしやすくなった」
 * **ネガティブな評価 / 改善要望**:
-  * 「フィルタを重ねるとプレビューが遅くなる。最適化が必要」
+  * 「フィルタを重ねるとプレビューが遅くなる。最適化が必要」（Google検索経由のレビューより要約）
   * 「Photoshopの最新のAI生成塗りつぶし機能に比べると、まだ機能差を感じる」
 * **特徴的なユースケース**:
   * Linux環境でのWeb開発者が、アイコンやモックアップ作成のメインツールとして利用。
