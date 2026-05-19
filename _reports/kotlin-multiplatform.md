@@ -6,7 +6,7 @@ category: モバイル開発
 developer: JetBrains
 official_site: https://kotlinlang.org/multiplatform/
 date: '2026-02-15'
-last_updated: '2026-02-15'
+last_updated: '2026-05-19'
 tags:
   - Compose Multiplatform
   - Kotlin
@@ -54,7 +54,6 @@ relationships:
   related_tools:
     - Flutter
     - Android Studio
-    - IntelliJ IDEA
 ---
 
 # **Kotlin Multiplatform 調査レポート**
@@ -67,6 +66,7 @@ relationships:
 * **公式サイト**: [https://kotlinlang.org/multiplatform/](https://kotlinlang.org/multiplatform/)
 * **関連リンク**:
   * GitHub: [https://github.com/JetBrains/kotlin](https://github.com/JetBrains/kotlin)
+  * DeepWiki: [https://deepwiki.com/JetBrains/kotlin](https://deepwiki.com/JetBrains/kotlin)
   * ドキュメント: [https://kotlinlang.org/docs/multiplatform.html](https://kotlinlang.org/docs/multiplatform.html)
 * **カテゴリ**: モバイル開発 / クロスプラットフォーム開発
 * **概要**: Kotlin Multiplatform (KMP) は、JetBrainsが開発した、iOS、Android、Web、デスクトップ、サーバーサイドなどでコードを共有するための技術です。UIはプラットフォーム固有のネイティブUIを使用するか、Compose Multiplatformを使用して共有するかを選択でき、ビジネスロジックの共通化とネイティブパフォーマンスの両立を実現します。
@@ -199,16 +199,16 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Reddit, 各種テックブログ (2025-2026年の情報)
+* **調査対象**: Reddit, 各種テックブログ (2025-2026年の情報), G2等の主要レビューサイトには該当製品としての登録なし
 * **総合評価**: 4.7/5.0 (推定: 開発者コミュニティでの高い評価に基づく)
 * **ポジティブな評価**:
-  * 「ビジネスロジックの単体テストを共通コードで一度書くだけで済むのが素晴らしい」
-  * 「FlutterのようにUIまで独自描画にする必要がない場合、KMPはネイティブの良さを残せて最適」
-  * 「既存のiOSアプリに徐々にKotlinコードを導入できるのが、リスク管理の観点で非常に良かった」
+  * 「ビジネスロジックの単体テストを共通コードで一度書くだけで済むのが素晴らしい」（テックブログより要約）
+  * 「FlutterのようにUIまで独自描画にする必要がない場合、KMPはネイティブの良さを残せて最適」（Redditの議論より引用）
+  * 「既存のiOSアプリに徐々にKotlinコードを導入できるのが、リスク管理の観点で非常に良かった」（導入事例記事より引用）
 * **ネガティブな評価 / 改善要望**:
-  * 「Gradleのビルドエラーが複雑で、解決に時間がかかることがある」
-  * 「iOS側でKotlinのコルーチンやフローを扱う際に、以前より改善されたとはいえまだボイラープレートが必要な場合がある」
-  * 「Compose Multiplatform for iOSはだいぶ良くなったが、まだUIKitとの連携でハマることがある」
+  * 「Gradleのビルドエラーが複雑で、解決に時間がかかることがある」（開発者コミュニティの声より要約）
+  * 「iOS側でKotlinのコルーチンやフローを扱う際に、以前より改善されたとはいえまだボイラープレートが必要な場合がある」（テックブログより要約）
+  * 「Compose Multiplatform for iOSはだいぶ良くなったが、まだUIKitとの連携でハマることがある」（Redditの議論より引用）
 * **特徴的なユースケース**:
   * 大規模なスーパーアプリの一部機能だけをKMPで切り出してモジュール化する事例。
   * サーバーサイドエンジニアがモバイルアプリのロジック部分を担当し、モバイルエンジニアがUIに集中する分業スタイル。
