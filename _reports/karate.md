@@ -2,7 +2,7 @@
 title: Karate 調査レポート
 tool_name: Karate
 tool_reading: カラテ
-category: E2E/ブラウザテスト
+category: テストフレームワーク/ライブラリ
 developer: Karate Labs Inc.
 official_site: https://www.karatelabs.io/
 date: '2026-03-21'
@@ -10,7 +10,6 @@ last_updated: '2026-03-21'
 tags:
   - API
   - BDD
-  - E2Eテスト
   - Java
   - オープンソース
   - テスト自動化
