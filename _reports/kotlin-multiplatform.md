@@ -6,7 +6,7 @@ category: モバイル開発
 developer: JetBrains
 official_site: https://kotlinlang.org/multiplatform/
 date: '2026-02-15'
-last_updated: '2026-05-19'
+last_updated: '2026-05-20'
 tags:
   - Compose Multiplatform
   - Kotlin
@@ -22,7 +22,7 @@ quick_summary:
     - モバイルアプリ開発者
     - Android/iOSエンジニア
     - 大規模開発チーム
-  latest_highlight: 2025年にCompose Multiplatform for iOSが安定版(Stable)に到達し、UI共有の実用性が飛躍的に向上
+  latest_highlight: 最新のKotlin 2.3.0およびCompose Multiplatform 1.11.0により、iOSパフォーマンスとビルド速度がさらに進化
   update_frequency: 高
 evaluation:
   score: 85
@@ -215,15 +215,22 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-15**: **Compose Multiplatform 1.11.0 リリース**
+  * iOSでのレンダリング処理のスレッドオフロード（別スレッド描画）がデフォルトとなり、UIパフォーマンスが劇的に向上。
+  * iOSでの実験的なネイティブテキスト入力サポートおよびWebでのスクロールパフォーマンスを大幅改善。
+* **2026-03-19**: **Compose Multiplatform 1.10.3 リリース**
+  * 非Androidプラットフォーム向けの Navigation 3 と、共通コード内での統一された `@Preview` アノテーションをサポート。
+* **2026-01-13**: **Compose Multiplatform 1.10.0 リリース**
+  * `@Preview` アノテーションの共通コード化や Navigation 3 をサポート。Compose Hot Reload が安定版として同梱。
+* **2025-12-16**: **Kotlin 2.3.0 リリース**
+  * K2コンパイラの高速化、インクリメンタルビルド強化。Kotlin/Nativeリリースビルドで最大40%のパフォーマンス向上。
+  * Swiftへの直接エクスポート機能（Swift Export）の進展と、KMPツールの安定化。
 * **2025-11-XX**: **Kotlin 2.1.20 リリース**
   * K2コンパイラのさらなる最適化とビルド速度向上。
   * Swiftへのエクスポート機能の改善（ジェネリクス対応の強化）。
 * **2025-10-XX**: **Compose Multiplatform 1.8.0**
   * iOSにおけるスクロールパフォーマンスの大幅改善。
   * リソース管理（画像・フォント）のAPIが統一化され、より使いやすく。
-* **2025-05-XX**: **Compose Multiplatform for iOS Stable化**
-  * iOSターゲットが正式にStableとなり、プロダクション利用が推奨される段階に到達。
-  * Accessibility APIのサポート強化。
 
 (出典: [JetBrains Blog](https://blog.jetbrains.com/kotlin/), [Kotlin Releases](https://github.com/JetBrains/kotlin/releases))
 
