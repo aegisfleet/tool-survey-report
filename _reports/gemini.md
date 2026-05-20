@@ -340,7 +340,7 @@ relationships:
 * **2026-01-16**: iOS 18において、Siriの一部機能にGeminiを利用するパートナーシップが正式に有効化されたと報じられる。
 * **2026-01-06**: CES 2026にて、Google TVにGeminiを統合し、自然言語での検索や情報表示機能を提供することを発表。
 
-(出典: [Google AI Blog](https://blog.google/technology/ai/google-io-2026-gemini-3-5-flash-spark-omni/), [Google AI Studio Release Notes](https://ai.google.dev/release-notes), [Gemini Apps Updates](https://gemini.google.com/updates))
+(出典: [Google AI Blog](https://blog.google/technology/ai/google-gemini-3-5-flash-announcement/), [Google AI Studio Release Notes](https://ai.google.dev/gemini-api/docs/release-notes), [Gemini Apps Updates](https://gemini.google.com/updates))
 
 ## **16. 類似ツールとの比較**
 
