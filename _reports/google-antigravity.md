@@ -48,6 +48,8 @@ relationships:
     - Cursor
     - Windsurf
   parent: Gemini
+  children:
+    - Antigravity CLI
 ---
 
 # **Google Antigravity 調査レポート**
