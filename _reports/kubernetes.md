@@ -6,7 +6,7 @@ category: インフラ/クラウド
 developer: Cloud Native Computing Foundation (CNCF)
 official_site: https://kubernetes.io
 date: '2026-02-17'
-last_updated: '2026-02-17'
+last_updated: '2026-05-22'
 tags:
   - DevOps
   - オーケストレーション
@@ -23,7 +23,7 @@ quick_summary:
     - DevOpsエンジニア
     - インフラエンジニア
     - SRE
-  latest_highlight: 2025年12月リリースのv1.35でPodの垂直スケーリング機能がGA(正式版)に
+  latest_highlight: 2026年5月リリースのv1.36でVolume Group SnapshotsとDeclarative ValidationがGA(正式版)に
   update_frequency: 高
 evaluation:
   score: 78
@@ -94,6 +94,8 @@ relationships:
 * **自動ビンパッキング**: リソース要件と制約に基づいて、コンテナを最適なノードに配置し、リソース使用率を高める。
 * **自己修復 (Self-healing)**: 失敗したコンテナの再起動、ノード障害時のコンテナの再スケジューリング、ヘルスチェックに応答しないコンテナの強制終了を行う。
 * **Secretと構成管理**: パスワード、OAuthトークン、SSHキーなどの機密情報を、コンテナイメージを再構築することなく更新・管理する。
+* **Declarative Validation**: APIスキーマ内で宣言的なバリデーションルールを定義でき、安定したAPI操作を保証する。
+* **Volume Group Snapshots**: 複数のボリュームのスナップショットを一貫性を保った状態で取得できる。
 
 ## **4. 開始手順・セットアップ**
 
@@ -217,9 +219,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-13 (v1.36)**: **Volume Group Snapshots / Declarative Validation (GA)**: Volume Group Snapshots機能やDeclarative Validation機能がGA（正式版）となり、より安定したストレージ管理やAPI検証が可能に。Server-Side Sharded List and Watchによる拡張性向上も追加。
 * **2025-12-17 (v1.35)**: **In-place Pod Vertical Scaling (GA)**: Podを再起動することなくCPU/メモリのリソース要求・制限を変更可能に。AI/MLワークロードやJavaアプリの運用に革新をもたらす。
 * **2025-08-27 (v1.34)**: **VolumeAttributesClass (Beta)**: ストレージの性能（IOPS等）を動的に変更する機能がベータに。Job ManagedBy (Alpha)も導入。
-* **2025-04-15 (v1.33)**: **Sidecar Containers (GA)**: サイドカーコンテナのライフサイクル管理機能が正式版に。ログ収集やプロキシの運用が安定。
 
 (出典: [Kubernetes Release Notes](https://kubernetes.io/releases/))
 
@@ -246,7 +248,7 @@ relationships:
 ## **17. 総評**
 
 * **総合的な評価**:
-  * Kubernetesは、コンテナオーケストレーションの**絶対的な王者**であり、現代のクラウドネイティブ開発において避けては通れない存在。v1.35での「In-place Pod Vertical Scaling」のGA化など、運用現場の課題（AIワークロード対応やコスト最適化）解決に向けた進化を続けており、信頼性は揺るがない。
+  * Kubernetesは、コンテナオーケストレーションの**絶対的な王者**であり、現代のクラウドネイティブ開発において避けては通れない存在。v1.36でのVolume Group SnapshotsやDeclarative ValidationのGA化など、運用現場の課題（大規模対応や安定性向上）解決に向けた進化を続けており、信頼性は揺るがない。
 * **推奨されるチームやプロジェクト**:
   * マイクロサービスアーキテクチャを採用する中〜大規模プロジェクト。
   * 将来的にシステムが拡大する見込みがあるスタートアップ。
