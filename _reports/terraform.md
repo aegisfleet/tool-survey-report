@@ -53,6 +53,7 @@ relationships:
     - Ansible
     - Pulumi
     - AWS CloudFormation
+    - Kubernetes
 ---
 
 # **Terraform 調査レポート**
