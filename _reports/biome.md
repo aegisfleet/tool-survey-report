@@ -6,15 +6,12 @@ category: コード品質/静的解析
 developer: Biome Developers
 official_site: https://biomejs.dev/
 date: '2026-02-17'
-last_updated: '2026-02-17'
+last_updated: '2026-05-21'
 tags:
-  - Formatter
-  - Linter
-  - Rust
-  - Web開発
-  - コード品質
+  - オープンソース
   - 開発者ツール
-  - 高速化
+  - コード品質
+  - Rust
 description: Prettier互換のフォーマッターと高機能なリンターを統合した、Rust製の高速なWeb開発向けツールチェーン。
 quick_summary:
   has_free_plan: true
@@ -23,7 +20,7 @@ quick_summary:
   target_users:
     - 開発者
     - Webプロジェクト
-  latest_highlight: 2026年2月にv2.4をリリース。Playwright対応ルールの強化など。
+  latest_highlight: 2026年5月にv2.4.15をリリース。各種リンタールールの追加とバグ修正が継続的に行われている。
   update_frequency: 高
 evaluation:
   score: 85
@@ -189,6 +186,13 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+- **2026-05-09 (v2.4.15)**: パッチリリース。`useTestHooksInOrder`, `useVueNextTickPromise`, `noVueVOnNumberValues` などのルールの追加。
+- **2026-05-01 (v2.4.14)**: パッチリリース。`useTestHooksOnTop` などのルールの追加や `noMisleadingReturnType` のバグ修正。
+- **2026-04-23 (v2.4.13)**: パッチリリース。`noUnnecessaryTemplateExpression` ルールの追加や `noMisleadingReturnType` のバグ修正。
+- **2026-04-14 (v2.4.12)**: パッチリリース。`noIdenticalTestTitle`, `noComponentHookFactories` ルールの追加や `useForOf` の診断メッセージ改善。
+- **2026-04-09 (v2.4.11)**: パッチリリース。`useConsistentTestIt`, `useExplicitReturnType` などのルールの追加。
+- **2026-03-30 (v2.4.10)**: パッチリリース。`noImpliedEval` ルールの追加や `noUnusedVariables`, `noNegationElse` のバグ修正。
+- **2026-03-25 (v2.4.9)**: パッチリリース。CSSルール `noDuplicateSelectors` の追加など。
 * **2026-02-16 (v2.4.2)**: パッチリリース。バグ修正。
 * **2026-02-12 (v2.4.0)**: マイナーリリース。Playwright向けの新しいリンタールール (`noConditionalExpect`, `noPlaywrightElementHandle` 等) の追加。`useImportType` の改善など。
 * **2026-01-29 (v2.3.15)**: パッチリリース。`noNestedPromises` ルールなどの追加。
@@ -197,7 +201,7 @@ relationships:
 * **2026-01-07 (v2.3.9)**: パッチリリース。`noScriptUrl`, `useAwaitThenable` 等のルール追加。
 * **2025-11-25 (v2.3.0)**: マイナーリリース。`baseUrl` のサポート、`init` コマンドの強化、CSS Modules / Tailwind CSS 対応の強化など。
 
-(出典: [GitHub Releases](https://github.com/biomejs/biome/releases), [CHANGELOG.md](https://github.com/biomejs/biome/blob/main/packages/@biomejs/biome/CHANGELOG.md))
+(出典: [GitHub Releases](https://github.com/biomejs/biome/releases), [CHANGELOG.md](https://github.com/biomejs/biome/blob/main/CHANGELOG.md))
 
 ## **16. 類似ツールとの比較**
 
