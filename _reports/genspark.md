@@ -2,7 +2,7 @@
 title: Genspark 調査レポート
 tool_name: Genspark
 tool_reading: ジェンスパーク
-category: コーディングエージェント
+category: ビジネス/業務ツール
 developer: GENSPARK INC
 official_site: https://www.genspark.ai/
 date: '2026-02-26'

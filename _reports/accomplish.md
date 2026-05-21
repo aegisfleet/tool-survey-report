@@ -2,7 +2,7 @@
 title: Accomplish 調査レポート
 tool_name: Accomplish
 tool_reading: アコンプリッシュ
-category: コーディングエージェント
+category: デスクトップ/GUIエージェント
 developer: Accomplish
 official_site: https://accomplish.ai/
 date: '2026-04-04'

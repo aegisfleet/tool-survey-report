@@ -2,7 +2,7 @@
 title: UI-TARS Desktop 調査レポート
 tool_name: UI-TARS Desktop
 tool_reading: ユーアイターズ デスクトップ
-category: コーディングエージェント
+category: デスクトップ/GUIエージェント
 developer: ByteDance
 official_site: https://github.com/bytedance/UI-TARS-desktop
 date: '2026-02-06'

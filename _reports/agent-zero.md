@@ -2,7 +2,7 @@
 title: Agent Zero 調査レポート
 tool_name: Agent Zero
 tool_reading: エージェント・ゼロ
-category: コーディングエージェント
+category: 汎用AIエージェント
 developer: Agent Zero, s.r.o.
 official_site: https://www.agent-zero.ai/
 date: '2026-03-11'

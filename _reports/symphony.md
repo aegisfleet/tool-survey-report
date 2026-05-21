@@ -2,7 +2,7 @@
 title: Symphony 調査レポート
 tool_name: Symphony
 tool_reading: シンフォニー
-category: コーディングエージェント
+category: 開発ライフサイクル管理
 developer: OpenAI
 official_site: https://github.com/openai/symphony
 date: '2026-03-06'
