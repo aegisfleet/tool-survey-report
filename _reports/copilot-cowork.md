@@ -2,7 +2,7 @@
 title: Copilot Cowork 調査レポート
 tool_name: Copilot Cowork
 tool_reading: コパイロット コワーク
-category: コーディングエージェント
+category: 汎用AIエージェント
 developer: Microsoft
 official_site: https://adoption.microsoft.com/en-us/copilot/frontier-program/
 date: '2026-03-16'

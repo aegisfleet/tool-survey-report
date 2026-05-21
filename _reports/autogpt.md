@@ -2,17 +2,15 @@
 title: AutoGPT 調査レポート
 tool_name: AutoGPT
 tool_reading: オートジーピーティー
-category: コーディングエージェント
+category: AIエージェント基盤
 developer: Significant Gravitas
 official_site: https://agpt.co/
 date: '2026-04-18'
 last_updated: '2026-04-18'
 tags:
   - AI
-  - Python
   - エージェント
   - オープンソース
-  - 大規模言語モデル
   - 自動化
   - 自律型
 description: 目標を設定するだけでタスクを自律的に実行するAIエージェント構築プラットフォーム。GUIベースのビルダーで、ノーコードでのエージェント開発も可能。

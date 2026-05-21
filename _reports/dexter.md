@@ -2,7 +2,7 @@
 title: Dexter 調査レポート
 tool_name: Dexter
 tool_reading: デクスター
-category: コーディングエージェント
+category: ビジネス/業務ツール
 developer: virattt
 official_site: https://github.com/virattt/dexter
 date: '2026-03-27'
