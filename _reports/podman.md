@@ -6,7 +6,7 @@ category: ビルドツール/ランタイム
 developer: Red Hat
 official_site: https://podman.io/
 date: '2026-02-17'
-last_updated: '2026-02-17'
+last_updated: '2026-05-23'
 tags:
   - DevOps
   - オープンソース
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - インフラエンジニア
     - SRE
-  latest_highlight: 2025年12月にv5.7.1をリリース。セキュリティ強化とQuadletの機能拡充を実施
+  latest_highlight: 2026年4月にv5.8.2をリリース。v5.8.0ではQuadletのマルチファイルサポートやSQLiteへのデータベース移行機能が追加された
   update_frequency: 高
 evaluation:
   score: 88
@@ -90,7 +90,7 @@ relationships:
 * **Docker CLI互換**: `alias docker=podman` でほぼそのまま使えるほど、Dockerコマンドとの高い互換性を持っています。
 * **Kubernetes連携**: `podman generate kube` で実行中のPodからKubernetesマニフェストを生成、`podman play kube` でマニフェストからPodを再生できます。
 * **Podman Desktop**: GUIでコンテナやPod、イメージを管理できるデスクトップツール。Docker Desktopの代替として機能します。
-* **Quadlet**: SystemdユニットファイルとしてコンテナやPodを管理する仕組み。Systemdとの統合を容易にします。
+* **Quadlet**: SystemdユニットファイルとしてコンテナやPodを管理する仕組み。Systemdとの統合を容易にします。単一ファイルに複数のQuadletを定義する機能もサポートしています。
 
 ## **4. 開始手順・セットアップ**
 
@@ -188,6 +188,7 @@ relationships:
   * **ルートレスでの運用**: 可能な限りルートレスモードを利用し、セキュリティを最大化する。
   * **Quadletの活用**: 本番環境でのコンテナ管理には、従来の`podman run`スクリプトではなくSystemdユニット（Quadlet）を利用する。
   * **Pod単位の設計**: 密結合なコンテナ群はPodとしてまとめ、Kubernetesへの移行を見据えた設計を行う。
+  * **データベースの移行管理**: BoltDBからSQLiteへの移行が進行中（v6.0でBoltDBサポート終了予定）であるため、移行に伴う設定（自動マイグレーションなど）を適切に管理・確認する。
 * **陥りやすい罠 (Antipatterns)**:
   * **安易なsudo利用**: ルートレスが推奨される環境で、習慣的にsudoを使ってしまうとPodmanのメリットが薄れる。
   * **Docker Composeへの過度な依存**: PodmanでもComposeは使えるが、Kubernetesマニフェスト（Pod YAML）への移行を検討すべき。
@@ -208,13 +209,18 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-14 (v5.8.2)**: WindowsのHyper-Vバックエンド使用時における重大なセキュリティ脆弱性（CVE-2026-33414）を修正。各種バグ修正も実施。
+* **2026-03-11 (v5.8.1)**: Quadlet使用時のBoltDBからSQLiteへの自動マイグレーションに関連する重大なバグを修正。
+* **2026-02-12 (v5.8.0)**:
+  * **Quadlet強化**: `podman quadlet install` で複数のQuadletを含むファイルのインストールに対応。AppArmorプロファイルのサポート。
+  * **パフォーマンス改善**: REST APIストリーミングの代わりにVMのファイルシステムから直接ロードする機能や、`podman exec --no-session` オプションを追加。
+  * **データベース移行**: 再起動時に従来のBoltDBデータベースからSQLiteへの自動移行をサポート。
 * **2025-12-10 (v5.7.1)**: FreeBSDでのバグ修正や、`podman system migrate`のパニック修正など、安定性向上のためのマイナーアップデート。
 * **2025-11-11 (v5.7.0)**:
   * **TLS/mTLSサポート**: リモートクライアントとAPIサーバー間の接続暗号化を強化。
   * **複数ファイル対応**: `podman kube play/down` で複数のYAMLファイルを一度に処理可能に。
   * **セキュリティ対応**: runcコンテナのエスケープ脆弱性 (CVE-2025-52881) への対処。
   * **Quadlet強化**: `.artifact` ファイルのサポートなど。
-* **2025-09-30 (v5.6.2)**: `podman machine` の状態管理に関するバグ修正など。
 
 (出典: [GitHub Releases](https://github.com/containers/podman/releases))
 
