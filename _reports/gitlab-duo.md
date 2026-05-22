@@ -6,7 +6,7 @@ category: AIコーディング支援
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/gitlab-duo/
 date: '2026-02-05'
-last_updated: '2026-04-26'
+last_updated: '2026-05-22'
 tags:
   - AI
   - CI/CD
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - セキュリティ担当者
-  latest_highlight: 2026年4月にAgentic SAST Vulnerability Resolution（自律的脆弱性解決）機能とData Analyst Agentが正式リリース
+  latest_highlight: 2026年5月にGitLab 19.0がリリースされ、Duo Agent Platformでセルフホスト用オープンソースモデルやClaude Opus 4.7等のサポートを追加
   update_frequency: 高
 evaluation:
   score: 82
@@ -194,7 +194,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-04-16**: (GitLab 18.11) Agentic SAST Vulnerability Resolution（自律的脆弱性解決）機能とData Analyst Agentが正式リリース。CI Expert Agentのベータ版提供開始。
+* **2026-05-21**: (GitLab 19.0) **Duo Agent PlatformのAIモデル拡張およびセルフホスト対応**: 自律型エージェント開発環境で、オンプレミス等のセルフホスト環境向けにオープンソースモデル（Mistral Devstral 2 123B, GLM-5.1, Kimi-K2.6, MiniMax-M2.7）が追加。また、クラウド管理型モデルとして Anthropic Claude Opus 4.7 や Google Gemini models が正式サポート。(出典: [GitLab Releases](https://about.gitlab.com/releases/))
+* **2026-04-16**: (GitLab 18.11) Agentic SAST Vulnerability Resolution（自律的脆弱性解決）機能とData Analyst Agentが正式リリース。CI Expert Agent of ベータ版提供開始。
 * **2026-03-19**: (GitLab 18.10) AIによるSASTおよびシークレットの誤検知（False Positive）検出機能が一般提供開始。
 * **2026-02-19**: (GitLab 18.9) SAST脆弱性解決のベータ版提供開始。クラウドライセンスを持つセルフマネージド環境でDuo Agent Platformが利用可能に。
 * **2026-01-15**: (GitLab 18.8) GitLab Duo Agent Platformが一般提供開始。Planner Agent、Security Analyst Agentが正式リリース。
@@ -208,19 +209,19 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | GitLab Duo | GitHub Copilot | Amazon Q Developer |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | コード補完・生成 | ◯<br><small>標準的</small> | ◎<br><small>高速・高精度</small> | ◯<br><small>AWSに強い</small> |
+| **基本機能** | コード補完・生成 | ◯<br><small>標準的</small> | ◎<br><small>高速・高精度</small> | ◯<br><small>AWSに強い<br>(※新規登録停止・終息期)</small> |
 | **チャット** | 自然言語対話 | ◎<br><small>Web/IDE両対応</small> | ◎<br><small>IDE統合が強力</small> | ◎<br><small>AWSコンソール統合</small> |
 | **セキュリティ** | 脆弱性修正提案 | ◎<br><small>解説・自動MR作成</small> | ◯<br><small>解説・修正提案</small> | ◯<br><small>スキャン・解説</small> |
 | **運用・CI/CD** | 根本原因分析 | ◎<br><small>CIログ解析が強力</small> | △<br><small>拡張機能依存</small> | ◯<br><small>AWSログ解析</small> |
-| **エージェント** | 自律タスク実行 | ◎<br><small>Agent Platform</small> | ◯<br><small>Workspace Agent等</small> | △<br><small>限定的</small> |
+| **エージェント** | 自律タスク実行 | ◎<br><small>Agent Platform</small> | ◯<br><small>Workspace Agent等</small> | △<br><small>限定的<br>(※Kiroへの移行中)</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **GitLab Duo** | DevSecOpsプラットフォーム統合型 | CI/CDやセキュリティを含むライフサイクル全体をカバー。Agentic AIによる自律化。 | GitLab環境への依存。IDE補完の速度感。 | GitLabをメインのDevOps基盤として利用している場合。セキュリティ重視。 |
+| **GitLab Duo** | DevSecOpsプラットフォーム統合型 | CI/CDやセキュリティを含むライフサイクル全体をカバー。Agentic AIによる自律化。GitLab 19.0で最新モデルやオープンソースモデルのセルフホスト対応を追加。 | GitLab環境への依存。IDE補完の速度感。 | GitLabをメインのDevOps基盤として利用している場合。セキュリティ重視。 |
 | **GitHub Copilot** | コーディング特化型 | 圧倒的なユーザー数とエコシステム。IDE体験の洗練度。 | ライフサイクル後半（運用・CI）の支援はGitLabに比べると限定的。 | GitHubを利用している、または純粋なコーディング支援を最優先する場合。 |
-| **Amazon Q Developer** | AWS特化型 | AWSリソースの知識、AWSコンソールでの操作支援。 | AWS以外の環境での汎用性。 | AWSを中心としたクラウドネイティブ開発を行っている場合。 |
+| **Amazon Q Developer** | AWS特化型（終息・移行期） | AWSリソースの知識、AWSコンソールでの操作支援。 | 2027年4月末にサポート終了予定であり、新規登録は不可。開発の軸はKiroへ移行している。 | 既存ユーザーでAWSを中心としたクラウドネイティブ開発を行っている場合。 |
 
 ## **17. 総評**
 
