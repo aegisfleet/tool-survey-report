@@ -2,11 +2,11 @@
 title: Allure Report 調査レポート
 tool_name: Allure Report
 tool_reading: アリュール レポート
-category: E2E/ブラウザテスト
+category: テスト生成/品質QA
 developer: Qameta Software
 official_site: https://allurereport.org/
 date: '2026-02-18'
-last_updated: '2026-02-18'
+last_updated: '2026-05-23'
 tags:
   - CI/CD
   - E2Eテスト
@@ -21,10 +21,10 @@ quick_summary:
     - QAエンジニア
     - テスト自動化エンジニア
     - 開発者
-  latest_highlight: 2025年12月にv2.36.0リリース。Playwrightトレース添付やWebP対応などが追加。
+  latest_highlight: Allure 3ブランドテーマとダークモードの追加、Jira Cloud連携のサポートなど
   update_frequency: 高
 evaluation:
-  score: 85
+  score: 87
   base_score: 70
   plus_points:
     - point: 5
@@ -33,6 +33,8 @@ evaluation:
       reason: 対応する言語・フレームワークが極めて豊富
     - point: 5
       reason: PlaywrightやCypressなどモダンなフレームワークとの連携も強化されている
+    - point: 2
+      reason: ダークモード対応やJira Cloud連携など継続的な機能改善
   minus_points:
     - point: 0
       reason: 特になし（OSSとして十分な機能を持つ）
@@ -99,6 +101,8 @@ relationships:
 * **Playwrightトレースのサポート**: Playwrightのトレースファイルを添付ファイルとしてレポート内で直接閲覧可能（v2.35.0以降）。
 * **詳細なコンテキスト**: ステップごとの実行状況、パラメータ、環境情報などを構造化して表示。
 * **履歴管理（History）**: 過去のテスト結果との傾向比較や、リトライ履歴の表示が可能。
+* **UI/UXの改善**: ダークモードとAllure 3ブランドテーマのサポート。
+* **外部ツール連携の強化**: Jira Cloud連携をサポート。
 * **CI/CD統合**: Jenkins, GitHub Actions, GitLab CI, BambooなどのCIツールと連携し、ビルドごとのレポート生成を自動化。
 
 ## **4. 開始手順・セットアップ**
@@ -144,6 +148,7 @@ relationships:
 -->
 
 * **視覚的なわかりやすさ**: モダンで直感的なUIを持ち、テスト結果の全体像から詳細までをドリルダウンで容易に確認できる。
+* **最新のUIトレンド**: ダークモードやアクセシビリティチェックを搭載し、より見やすいUIを提供している。
 * **圧倒的な対応範囲**: ほぼ全ての主要なプログラミング言語とテストフレームワークに対応しており、技術スタックを選ばずに導入できる。
 * **モジュール性と拡張性**: 必要な情報だけを表示したり、プラグインで機能を拡張したりできる柔軟性がある。
 * **オープンソース**: 無料で利用でき、コミュニティによる活発な開発が行われているため、情報も豊富。
@@ -220,6 +225,7 @@ relationships:
 * **外部サービス連携**:
   * **テストフレームワーク**: JUnit, TestNG, Pytest, Cucumber, Playwright, Cypress, WebdriverIO, SpecFlowなど。
   * **CIツール**: Jenkins, GitHub Actions, GitLab CI, TeamCity, Bamboo, CircleCI。
+  * **プロジェクト管理**: Jira Cloud連携。
 
 ### **10.2 技術スタックとの相性**
 
@@ -257,6 +263,7 @@ relationships:
 -->
 
 * **UI/UX**: 非常に洗練されており、左側のナビゲーションと右側の詳細パネルという構成で、迷うことなく操作できる。グラフやチャートも自動生成され、視認性が高い。
+  * Allure 3ブランドテーマとダークモードに対応し、より見やすいUIが提供されている。
 * **学習コスト**: 低い。各テストフレームワークへの導入はアダプターパッケージを入れるだけで済み、基本的なレポートは設定なしでも生成される。リッチな情報を付加するためのアノテーション（`@Step`, `@Description`など）も直感的。
 
 ## **13. ベストプラクティス**
@@ -312,6 +319,20 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-22**: **Allure 2.42.0**
+  * Allure 3ブランドテーマ、ダークモード、アクセシビリティスモークチェックの追加。
+* **2026-05-11**: **Allure 2.41.0**
+  * HTTP Exchangeアタッチメントのサポート追加。
+* **2026-05-06**: **Allure 2.40.0**
+  * 新しいWeb機能の追加、Playwright E2Eの導入、E2EテストでのスクリーンショットとPlaywrightトレースの有効化。
+* **2026-04-09**: **Allure 2.39.0**
+  * 依存関係の更新およびPlaywright E2Eの導入。
+* **2026-03-18**: **Allure 2.38.1**
+  * UTF-8環境プロパティのサポート、アタッチメント関連のバグ修正。
+* **2026-03-13**: **Allure 2.38.0**
+  * アタッチメントのパストラバーサル修正、XSS脆弱性の防止などセキュリティの向上。
+* **2026-02-20**: **Allure 2.37.0**
+  * Jira Cloudのサポート追加、中国語翻訳の修正。
 * **2025-12-10**: **Allure 2.36.0**
   * ハンガリー語翻訳の追加、XHTMLレンダリングのサポート、依存関係の更新（Lombok, SpotBugsなど）。
 * **2025-09-03**: **Allure 2.35.0**
