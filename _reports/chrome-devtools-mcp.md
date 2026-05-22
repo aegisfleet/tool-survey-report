@@ -1,12 +1,12 @@
 ---
-title: Chrome DevTools MCP 調査レポート
-tool_name: Chrome DevTools MCP
-tool_reading: クローム デブツールズ エムシーピー
+title: Chrome DevTools for agents 調査レポート
+tool_name: Chrome DevTools for agents
+tool_reading: クローム デブツールズ フォー エージェンツ
 category: MCPサーバー/基盤
 developer: Google LLC
 official_site: https://github.com/ChromeDevTools/chrome-devtools-mcp
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-05-22'
 tags:
   - AI
   - MCP
@@ -48,12 +48,12 @@ relationships:
     - Model Context Protocol
 ---
 
-# **Chrome DevTools MCP 調査レポート**
+# **Chrome DevTools for agents 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: Chrome DevTools MCP
-* **ツールの読み方**: クローム デブツールズ エムシーピー
+* **ツール名**: Chrome DevTools for agents
+* **ツールの読み方**: クローム デブツールズ フォー エージェンツ
 * **開発元**: Google LLC (Chrome DevTools チーム)
 * **公式サイト**: [https://github.com/ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)
 * **関連リンク**:
@@ -187,6 +187,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-18**: v1.0.1 リリース
+* **2026-05-18**: v1.0.0 リリース
+* **2026-05-12**: v0.26.0 リリース
 * **2026-03-11**: v0.20.0 リリース
 * **2025-XX-XX**: Chrome 144以降における `--autoConnect` オプションの追加。既存のブラウザへのより簡単な接続をサポート。
 * **2025-XX-XX**: パフォーマンス測定ツールの拡充（`performance_start_trace`, `performance_analyze_insight` など）。
@@ -197,7 +200,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Chrome DevTools MCP) | Puppeteer / Playwright (直接利用) | Browser-use |
+| 機能カテゴリ | 機能項目 | 本ツール (Chrome DevTools for agents) | Puppeteer / Playwright (直接利用) | Browser-use |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | ブラウザ自動操作 | ◎<br><small>AI向けにツール化済み</small> | ◯<br><small>コード実装が必要</small> | ◎<br><small>AI特化型自動化</small> |
 | **分析機能** | Lighthouse / パフォーマンス | ◎<br><small>DevToolsネイティブ統合</small> | △<br><small>追加実装・連携が必要</small> | △<br><small>操作メインで分析機能は弱い</small> |
@@ -215,7 +218,7 @@ relationships:
 ## **17. 総評**
 
 * **総合的な評価**:
-  Chrome DevTools MCPは、AIコーディングアシスタントに「目」と「手」を与える画期的なツールです。単なるクリックや入力の自動化にとどまらず、Lighthouse監査やパフォーマンスプロファイリングといった、通常は開発者が手動で行う高度な分析タスクまでAIに委譲できる点が最大の魅力です。Google公式のプロジェクトである安心感もあり、フロントエンド開発のパラダイムを大きく変える可能性を秘めています。
+  Chrome DevTools for agentsは、AIコーディングアシスタントに「目」と「手」を与える画期的なツールです。単なるクリックや入力の自動化にとどまらず、Lighthouse監査やパフォーマンスプロファイリングといった、通常は開発者が手動で行う高度な分析タスクまでAIに委譲できる点が最大の魅力です。Google公式のプロジェクトである安心感もあり、フロントエンド開発のパラダイムを大きく変える可能性を秘めています。
 * **推奨されるチームやプロジェクト**:
   * Cursor、Claude Code、GitHub CopilotなどのMCP対応AIエージェントを日常的に利用しているすべての開発チーム。
   * 特にUIの検証、アクセシビリティ改善、パフォーマンス・チューニングに課題を抱えるフロントエンドチーム。
