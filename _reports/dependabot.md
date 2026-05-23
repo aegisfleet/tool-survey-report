@@ -1,56 +1,56 @@
 ---
-title: "Dependabot 調査レポート"
-tool_name: "Dependabot"
-tool_reading: "ディペンダボット / デペンダボット"
-category: "開発ライフサイクル管理"
-developer: "GitHub (Microsoft)"
-official_site: "https://github.com/dependabot"
-date: "2026-05-24"
-last_updated: "2026-05-24"
+title: Dependabot 調査レポート
+tool_name: Dependabot
+tool_reading: ディペンダボット / デペンダボット
+category: 開発ライフサイクル管理
+developer: GitHub (Microsoft)
+official_site: https://github.com/dependabot
+date: '2026-05-24'
+last_updated: '2026-05-24'
 tags:
-  - "CI/CD"
-  - "DevOps"
-  - "開発者ツール"
-  - "オープンソース"
-  - "セキュリティ"
-  - "自動化"
-description: "GitHubに統合された依存関係自動更新ツール。脆弱性修正とバージョンアップを自動化し、セキュアな開発を支援する。"
+  - CI/CD
+  - DevOps
+  - 開発者ツール
+  - オープンソース
+  - セキュリティ
+  - 自動化
+description: GitHubに統合された依存関係自動更新ツール。脆弱性修正とバージョンアップを自動化し、セキュアな開発を支援する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "セキュリティエンジニア"
-    - "OSSメンテナ"
-  latest_highlight: "2026年5月にPython 3.9の非推奨化およびプライベートレジストリ向けOIDC認証サポートを拡大"
-  update_frequency: "高"
+    - 開発者
+    - セキュリティエンジニア
+    - OSSメンテナ
+  latest_highlight: 2026年5月にPython 3.9の非推奨化およびプライベートレジストリ向けOIDC認証サポートを拡大
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: "GitHub完全統合による導入ハードルの低さとシームレスな体験"
+      reason: GitHub完全統合による導入ハードルの低さとシームレスな体験
     - point: 5
-      reason: "セキュリティアップデート（脆弱性修正）が無料で利用可能"
+      reason: セキュリティアップデート（脆弱性修正）が無料で利用可能
     - point: 3
-      reason: "広範なエコシステム（言語・パッケージマネージャ）への対応"
+      reason: 広範なエコシステム（言語・パッケージマネージャ）への対応
   minus_points:
     - point: 0
-      reason: "特になし（GitHub利用者にとってはほぼ必須ツール）"
-  summary: "GitHub利用者であれば導入しない理由がない、強力かつ手軽な依存関係管理ツール。"
+      reason: 特になし（GitHub利用者にとってはほぼ必須ツール）
+  summary: GitHub利用者であれば導入しない理由がない、強力かつ手軽な依存関係管理ツール。
 links:
-  github: "https://github.com/dependabot/dependabot-core"
-  deepwiki: "https://deepwiki.com/dependabot/dependabot-core"
-  codewiki: "https://codewiki.google/github.com/dependabot/dependabot-core"
-  documentation: "https://docs.github.com/ja/code-security/dependabot"
+  github: https://github.com/dependabot/dependabot-core
+  deepwiki: https://deepwiki.com/dependabot/dependabot-core
+  codewiki: https://codewiki.google/github.com/dependabot/dependabot-core
+  documentation: https://docs.github.com/ja/code-security/dependabot
 relationships:
-  parent: "GitHub"
+  parent: GitHub
   related_tools:
-    - "CodeQL"
-    - "CodeRabbit"
-    - "SonarQube"
-    - "Renovate"
+    - CodeQL
+    - CodeRabbit
+    - SonarQube
+    - Renovate
 ---
 
 # **Dependabot 調査レポート**
