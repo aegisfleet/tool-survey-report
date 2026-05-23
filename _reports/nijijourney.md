@@ -2,7 +2,7 @@
 title: Niji Journey 調査レポート
 tool_name: Niji Journey
 tool_reading: ニジジャーニー
-category: AIチャット/アシスタント
+category: AI画像/メディア生成
 developer: Spellbrush & Midjourney
 official_site: https://nijijourney.com/
 date: '2026-01-27'

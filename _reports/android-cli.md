@@ -2,7 +2,7 @@
 title: Android CLI 調査レポート
 tool_name: Android CLI
 tool_reading: アンドロイド シーエルアイ
-category: ターミナル/シェル
+category: モバイル開発
 developer: Google
 official_site: https://developer.android.com/tools/agents/android-cli
 date: '2026-04-18'
@@ -10,8 +10,8 @@ last_updated: '2026-04-18'
 tags:
   - Android
   - CLI
-  - AI Agent
-  - Automation
+  - エージェント
+  - 自動化
 description: AIエージェントのワークフローに適した、Android開発を効率化する公式コマンドラインツール
 quick_summary:
   has_free_plan: true

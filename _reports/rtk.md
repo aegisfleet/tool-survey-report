@@ -2,14 +2,14 @@
 title: RTK 調査レポート
 tool_name: RTK
 tool_reading: アールティーケー
-category: ターミナル/シェル
+category: 開発ユーティリティ
 developer: Patrick Szymkowiak
 official_site: https://www.rtk-ai.app/
 date: '2026-05-05'
 last_updated: '2026-05-05'
 tags:
   - オープンソース
-  - CLIツール
+  - CLI
   - AI支援開発
   - コスト削減
 description: LLMのトークン消費量を60-90%削減するCLIプロキシツール

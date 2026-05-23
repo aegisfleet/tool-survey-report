@@ -2,7 +2,7 @@
 title: Stable Diffusion 調査レポート
 tool_name: Stable Diffusion
 tool_reading: ステーブル・ディフュージョン
-category: AIチャット/アシスタント
+category: AI画像/メディア生成
 developer: Stability AI
 official_site: https://stability.ai/
 date: '2026-04-07'

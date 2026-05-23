@@ -2,7 +2,7 @@
 title: Deep-Live-Cam 調査レポート
 tool_name: Deep-Live-Cam
 tool_reading: ディープライブカム
-category: AIチャット/アシスタント
+category: AI画像/メディア生成
 developer: hacksider
 official_site: https://deeplivecam.net/
 date: '2026-03-28'

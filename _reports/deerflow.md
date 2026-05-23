@@ -2,7 +2,7 @@
 title: DeerFlow 調査レポート
 tool_name: DeerFlow
 tool_reading: ディアフロー
-category: ターミナル/シェル
+category: 汎用AIエージェント
 developer: Bytedance
 official_site: https://deerflow.tech/
 date: '2026-03-01'
@@ -11,7 +11,7 @@ tags:
   - AI
   - エージェント
   - オープンソース
-  - 開発ツール
+  - 開発者ツール
 description: データ分析からコーディングまで自動化するオープンソースのSuperAgentフレームワーク
 quick_summary:
   has_free_plan: true

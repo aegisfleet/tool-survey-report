@@ -2,7 +2,7 @@
 title: Antigravity CLI 調査レポート
 tool_name: Antigravity CLI
 tool_reading: アンチグラビティ シーエルアイ
-category: ターミナル/シェル
+category: AIコーディング支援
 developer: Google
 official_site: https://antigravity.google/product/antigravity-cli
 date: '2026-05-20'
