@@ -6,7 +6,7 @@ category: 動画/メディア
 developer: ＫＥＮくん
 official_site: https://spring-fragrance.mints.ne.jp/aviutl/
 date: '2026-02-18'
-last_updated: '2026-02-18'
+last_updated: '2026-05-23'
 tags:
   - プラグイン
   - 動画編集
@@ -20,7 +20,7 @@ quick_summary:
     - 個人クリエイター
     - MAD制作者
     - YouTuber
-  latest_highlight: 2026年2月14日にAviUtl ExEdit2 beta33が公開
+  latest_highlight: 2026年5月17日にAviUtl ExEdit2 beta46が公開
   update_frequency: 高
 evaluation:
   score: 80
@@ -113,7 +113,7 @@ relationships:
   * Windows 10以降
   * DirectX 11.3、AVX2が利用可能なCPU/GPU（ExEdit2の場合）
 * **インストール/導入**:
-  1. 公式サイトからインストーラ版「AviUtl2beta33_setup.exe」（または最新版）をダウンロード。
+  1. 公式サイトからインストーラ版「AviUtl2beta46_setup.exe」（または最新版）をダウンロード。
   2. インストーラを実行し、画面の指示に従ってインストール。
   3. 必要に応じて「AviUtl2_Language」などの言語ファイルを導入（D&Dで設定可能）。
 * **初期設定**:
@@ -292,6 +292,10 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-17**: AviUtl ExEdit2 beta46 公開
+* **2026-05-10**: AviUtl ExEdit2 beta45 公開
+* **2026-05-04**: AviUtl ExEdit2 beta44 公開
+* **2026-04-28**: AviUtl ExEdit2 beta43b 公開
 * **2026-02-14**: AviUtl ExEdit2 beta33 公開（バグ修正、機能改善）
 * **2026-02-08**: AviUtl ExEdit2 beta32 公開
 * **2026-02-01**: AviUtl ExEdit2 beta31 公開
