@@ -2,11 +2,11 @@
 title: CodeQL 調査レポート
 tool_name: CodeQL
 tool_reading: コードキューエル
-category: CDN/セキュリティ
+category: コード品質/静的解析
 developer: GitHub
 official_site: https://codeql.github.com/
 date: '2026-02-18'
-last_updated: '2026-02-18'
+last_updated: '2026-05-23'
 tags:
   - DevSecOps
   - GitHub
@@ -21,7 +21,7 @@ quick_summary:
     - セキュリティエンジニア
     - 開発者
     - OSSメンテナ
-  latest_highlight: 2026年2月にKotlin 2.3.0対応やLLMプロンプトインジェクション検知を追加
+  latest_highlight: 2026年5月のアップデート(v2.25.4)でSwift 6.3.1対応やVercel serverless functionsサポートを追加
   update_frequency: 高
 evaluation:
   score: 85
@@ -87,6 +87,7 @@ relationships:
 * **バリアント分析**: 一つの脆弱性パターンから、類似した脆弱性をコードベース全体から一網打尽に検出する。
 * **テイントトラッキング**: ユーザー入力などの信頼できないデータが、危険なシンク（SQL実行箇所など）に到達するまでのフローを追跡する。
 * **GitHub Advanced Security統合**: GitHub ActionsやPull Request画面と深く統合されており、開発ワークフロー内で自然に利用できる。
+* **クラウドネイティブ対応**: JavaScript/TypeScript環境でのVercel serverless functionsなど、最新のデプロイ環境の解析をサポート。
 * **CodeQL CLI**: ローカル環境やGitHub以外のCIシステムでも解析を実行できるコマンドラインツール。
 
 ## **4. 開始手順・セットアップ**
@@ -182,7 +183,7 @@ CodeQL自体は、GitHub Advanced Security (GHAS) の一部として提供され
 |:---|:---:|:---|:---|
 | **GitHub Actions** | ◎ | 純正アクションで設定不要に近い | 特になし |
 | **Java / Kotlin** | ◯ | ビルドプロセスにフックして解析可能 | ビルド時間が延びる可能性あり |
-| **JavaScript / TypeScript** | ◎ | ビルド不要で解析可能、人気が高い | 大規模なモノレポでは解析時間が長くなる傾向 |
+| **JavaScript / TypeScript** | ◎ | ビルド不要で解析可能。Vercel serverless functionsにも対応。 | 大規模なモノレポでは解析時間が長くなる傾向 |
 | **PHP** | × | 公式サポートなし | コミュニティベースの対応はあるかもしれないが非推奨 |
 
 ## **11. セキュリティとコンプライアンス**
@@ -221,10 +222,14 @@ CodeQL自体は、GitHub Advanced Security (GHAS) の一部として提供され
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-21 (v2.25.5)**: C/C++の解析改善（`fscanf`など）。
+* **2026-05-05 (v2.25.4)**: Swift 6.3.1対応、JavaScript/TypeScriptでVercel serverless functions（`@vercel/node`）のサポートを追加。
+* **2026-04-30 (v2.25.3)**: C#での`useless-tostring-call`クエリの精度向上。
+* **2026-03-19 (v2.25.0)**: C#での新しいリモートソースモデリング追加（`System.Net.WebSockets::ReceiveAsync`）。Swift 6.2.4対応。
+* **2026-03-05 (v2.24.3)**: Java 26のサポート追加。
 * **2026-02-05 (v2.24.1)**: Kotlin 2.3.0への対応、PythonでのLLMプロンプトインジェクション検知クエリ（実験的）の追加。
 * **2026-01-26 (v2.24.0)**: JavaScript/TypeScriptで巨大ファイル（行長200文字超）を最小化ファイルとみなしてスキップする改善、Swift 6.2.3対応。
 * **2026-01-09 (v2.23.9)**: 各種言語のバグ修正と安定性向上。
-* **2025-12-10 (v2.23.8)**: C# 12の機能サポート強化。
 
 (出典: [CodeQL Changelog](https://codeql.github.com/docs/codeql-overview/codeql-changelog/))
 
