@@ -2,7 +2,7 @@
 title: marimo 調査レポート
 tool_name: marimo
 tool_reading: マリモ
-category: ターミナル/シェル
+category: データ分析
 developer: Marimo Inc.
 official_site: https://marimo.io/
 date: '2026-04-09'

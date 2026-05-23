@@ -2,7 +2,7 @@
 title: Microsoft PowerToys 調査レポート
 tool_name: Microsoft PowerToys
 tool_reading: マイクロソフト パワートイズ
-category: ターミナル/シェル
+category: OS/プラットフォーム
 developer: Microsoft
 official_site: https://learn.microsoft.com/en-us/windows/powertoys/
 date: '2026-01-28'

@@ -2,7 +2,7 @@
 title: fakecloud 調査レポート
 tool_name: fakecloud
 tool_reading: フェイククラウド
-category: ターミナル/シェル
+category: インフラ/クラウド
 developer: faisca
 official_site: https://fakecloud.dev/
 date: '2026-04-16'

@@ -2,7 +2,7 @@
 title: Scrapling 調査レポート
 tool_name: Scrapling
 tool_reading: スクラップリング
-category: ターミナル/シェル
+category: AI開発ライブラリ
 developer: Karim Shoair (D4Vinci)
 official_site: https://scrapling.readthedocs.io/en/latest/
 date: '2026-05-02'

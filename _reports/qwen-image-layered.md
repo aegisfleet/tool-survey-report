@@ -2,7 +2,7 @@
 title: Qwen-Image-Layered 調査レポート
 tool_name: Qwen-Image-Layered
 tool_reading: クウェン・イメージ・レイヤード
-category: AIチャット/アシスタント
+category: AI画像/メディア生成
 developer: Alibaba Cloud / QwenLM Team
 official_site: https://github.com/QwenLM/Qwen-Image-Layered
 date: '2026-01-30'

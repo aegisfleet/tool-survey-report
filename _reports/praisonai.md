@@ -2,7 +2,7 @@
 title: PraisonAI 調査レポート
 tool_name: PraisonAI
 tool_reading: プレイソンエーアイ
-category: AIエージェント基盤
+category: マルチエージェント基盤
 developer: Mervin Praison
 official_site: https://docs.praison.ai/
 date: '2026-04-07'
