@@ -2,7 +2,7 @@
 title: Bito 調査レポート
 tool_name: Bito
 tool_reading: ビト
-category: AIコーディング支援
+category: AIコードレビュー
 developer: Bito Inc.
 official_site: https://bito.ai/
 date: '2026-03-05'

@@ -2,7 +2,7 @@
 title: Kiro 調査レポート
 tool_name: Kiro
 tool_reading: キロ
-category: AIコーディング支援
+category: AIエディタ/IDE
 developer: Amazon Web Services (AWS)
 official_site: https://kiro.dev/
 date: '2026-02-20'
