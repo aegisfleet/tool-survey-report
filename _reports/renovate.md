@@ -6,7 +6,7 @@ category: 開発ライフサイクル管理
 developer: Mend.io (旧 WhiteSource)
 official_site: https://github.com/renovatebot/renovate
 date: '2026-02-18'
-last_updated: '2026-02-18'
+last_updated: '2026-05-24'
 tags:
   - DevSecOps
   - オープンソース
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - オープンソースメンテナ
-  latest_highlight: 2026年1月にv43をリリースし、セキュリティ機能を大幅強化
+  latest_highlight: 2026年5月のv43.195等で各種プラットフォーム対応強化とrust-toolchainサポートを実施
   update_frequency: 高
 evaluation:
   score: 85
@@ -86,6 +86,8 @@ relationships:
 * **スケジュール実行**: アップデートの確認やPR作成のスケジュールを細かく設定可能（例: 週末のみ、営業時間外など）。
 * **モノレポサポート**: LernaやNxなどのモノレポツールに対応し、関連パッケージを一括更新。
 * **多言語・多プラットフォーム**: 90以上のパッケージマネージャーと、GitHub, GitLab, Bitbucketなどの主要プラットフォームをサポート。
+
+* **新機能の継続的サポート**: `rust-toolchain`の追加や`mise`のロックファイルサポート、`pip-compile`での`uv`サポートなど、最新技術への対応が迅速。
 
 ## **4. 開始手順・セットアップ**
 
@@ -166,6 +168,7 @@ relationships:
 | **Java (Maven/Gradle)** | ◎ | 主要なビルドツールをサポート。 | Gradle Wrapperの更新も可能 |
 | **Python (pip/poetry)** | ◎ | pip, poetry, pipenvなどをサポート。 | 特になし |
 | **Docker** | ◎ | Dockerfile内のイメージタグ更新に対応。 | タグの命名規則に注意が必要 |
+| **Rust (rust-toolchain)** | ◎ | 新たにrust-toolchainマネージャーが追加され、関連依存の管理が容易になった。 | 特になし |
 
 ## **11. セキュリティとコンプライアンス**
 
@@ -203,6 +206,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-22 (v43.195.0)**: github-runnersデータソースの安定化、Windows-11-armラベルの追加。pip-compileにおいてuvの--constraintエイリアスおよび--overridesをサポート。
+* **2026-05-20 (v43.188.0)**: 新たなパッケージマネージャーとしてrust-toolchainをサポート。
+* **2026-05-19 (v43.186.0)**: miseのロックファイルサポートを追加。
 * **2026-01-29 (v43.0.0)**:
   * **セキュリティ強化**: "Unsafe commands"（Gradle Wrapperの実行など）がデフォルトで無効化。
   * **シェル実行の制限**: `postUpgradeTasks` がデフォルトでシェル経由で実行されなくなった。
@@ -216,13 +222,14 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Renovate | Dependabot | Snyk Open Source |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 自動PR作成 | ◎ | ◎ | ◎ |
-| **対応範囲** | プラットフォーム | ◎<br><small>GitHub, GitLab, Bitbucket等多数</small> | ◯<br><small>GitHub中心 (他は要自前)</small> | ◯<br><small>主要なGitホスティング</small> |
-| **管理機能** | ダッシュボード | ◎<br><small>Issueベースのダッシュボード</small> | × | ◯<br><small>SaaSコンソール</small> |
-| **効率化** | グループ化更新 | ◎<br><small>柔軟なルール設定が可能</small> | △<br><small>設定可能だが簡易的</small> | ◯ |
-| **信頼性** | マージ信頼度 | ◎<br><small>4種類の指標で評価</small> | △<br><small>互換性スコアのみ</small> | ◯<br><small>Snyk独自スコア</small> |
+| 機能カテゴリ | 機能項目 | Renovate | Dependabot | Snyk Open Source | pinact |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | 自動PR作成 | ◎ | ◎ | ◎ | △<br><small>手動またはCI実行が必要</small> |
+| **対応範囲** | プラットフォーム | ◎<br><small>GitHub, GitLab, Bitbucket等多数</small> | ◯<br><small>GitHub中心 (他は要自前)</small> | ◯<br><small>主要なGitホスティング</small> | △<br><small>GitHub Actions専用</small> |
+| **管理機能** | ダッシュボード | ◎<br><small>Issueベースのダッシュボード</small> | × | ◯<br><small>SaaSコンソール</small> | - |
+| **効率化** | グループ化更新 | ◎<br><small>柔軟なルール設定が可能</small> | △<br><small>設定可能だが簡易的</small> | ◯ | - |
+| **信頼性** | マージ信頼度 | ◎<br><small>4種類の指標で評価</small> | △<br><small>互換性スコアのみ</small> | ◯<br><small>Snyk独自スコア</small> | - |
+| **セキュリティ** | コミットSHA固定 | ◯<br><small>PRとして提案可能</small> | × | ◯ | ◎<br><small>ローカルで即座に実行可能</small> |
 
 ### **16.2 詳細比較**
 
@@ -231,6 +238,7 @@ relationships:
 | **Renovate** | 高機能・高カスタマイズ性 | 対応プラットフォームと言語の多さ、設定の柔軟性、ダッシュボード機能。 | 設定が複雑になりがち。 | GitHub以外を使っている、または高度な自動化を行いたい場合。 |
 | **Dependabot** | GitHubネイティブ | GitHubとの完全な統合、設定不要ですぐに使える手軽さ。 | カスタマイズ性に制限がある。GitHub以外では使いにくい。 | GitHubを使用していて、手軽に始めたい場合。 |
 | **Snyk** | セキュリティ重視 | 脆弱性スキャンとの統合が強力。 | 依存関係更新機能単体としてはRenovateに劣る部分がある。 | セキュリティ対策を最優先し、Snykエコシステムを利用している場合。 |
+| **pinact** | GitHub Actionsのバージョン固定に特化したCLIツール | ローカルで即座に実行可能。PRマージ前に固定を強制できる | Actions以外の依存関係管理には使えない | 開発フローの中でActionのバージョン固定を即座に行いたい場合。 |
 
 ## **17. 総評**
 
