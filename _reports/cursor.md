@@ -2,7 +2,7 @@
 title: Cursor 調査レポート
 tool_name: Cursor
 tool_reading: カーソル
-category: AIコーディング支援
+category: AIエディタ/IDE
 developer: Anysphere, Inc.
 official_site: https://cursor.com/
 date: '2025-10-19'
