@@ -6,7 +6,7 @@ category: E2E/ブラウザテスト
 developer: Deque Systems
 official_site: https://www.deque.com/axe/devtools/
 date: '2026-02-19'
-last_updated: '2026-02-19'
+last_updated: '2026-05-25'
 tags:
   - AI
   - SaaS
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - QAエンジニア
     - アクセシビリティ専門家
-  latest_highlight: 2026年1月にVersion 4.120.1をリリース
+  latest_highlight: 2026年5月にVersion 4.129.1をリリース（axe-core 4.11.3/4.11.4サポート追加）
   update_frequency: 高
 evaluation:
   score: 85
@@ -61,7 +61,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/dequelabs/axe-core](https://github.com/dequelabs/axe-core) （コアエンジン）
   * ドキュメント: [https://docs.deque.com/devtools-for-web/4/en/](https://docs.deque.com/devtools-for-web/4/en/)
-  * レビューサイト: [Chrome Web Store](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd) | [G2](https://www.g2.com/products/deque-systems-axe-devtools/reviews)
+  * レビューサイト: [Chrome Web Store](https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd)
 * **カテゴリ**: テスト/QA
 * **概要**: Webおよびモバイルアプリケーションのアクセシビリティ（a11y）における問題を検出し、修正を支援する包括的なテストスイート。業界標準のaxe-coreエンジンをベースに、AIを活用したガイド付きテストやチャットボット機能を提供し、開発ライフサイクル全体でのコンプライアンス準拠を支援する。
 
@@ -80,10 +80,11 @@ relationships:
 ## **3. 主要機能**
 
 * **自動スキャン (Automated Testing)**: ワンクリックでページ全体をスキャンし、WCAG違反などのアクセシビリティ問題を検出する（全問題の約57%をカバー）。
-* **Intelligent Guided Tests (IGT)**: AIを活用した対話形式のテスト機能。キーボード操作、モーダル、フォームなどの複雑な検証を、専門知識なしで実施可能にする（Pro版）。
+* **Intelligent Guided Tests (IGT)**: AIを活用した対話形式のテスト機能。キーボード操作（Automated Keyboard IGT含む）、モーダル、フォームなどの複雑な検証を、専門知識なしで実施可能にする（Pro版）。
 * **Axe Assistant**: アクセシビリティの知識ベースを学習したAIチャットボット。検出された問題の修正方法やコード例を具体的に提示する（Pro版/Add-on）。
 * **Axe MCP Server**: Model Context Protocol (MCP) に対応し、CursorなどのAIエディタから直接axeの機能を利用可能にする（Pro版）。
 * **コンポーネント単位スキャン**: ページ全体だけでなく、特定のUIコンポーネントのみを対象としたスキャンが可能。
+* **Auto Replay**: 自動化された再テスト機能により、問題の修正を素早く確認できる。
 * **CI/CD・課題管理統合**: Jiraへのチケット起票や、主要なCIツールとの連携により、開発フローに完全に組み込める。
 
 ## **4. 開始手順・セットアップ**
@@ -197,7 +198,7 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: Chrome Web Store, G2
-* **総合評価**: 4.8/5.0 (Chrome Web Store), 4.6/5.0 (G2)
+* **総合評価**: 4.8/5.0 (Chrome Web Store), 4.6/5.0 (G2より引用)
 * **ポジティブな評価**:
   * 「Lighthouseよりも遥かに詳細で、かつ実用的なアドバイスが得られる」
   * 「Intelligent Guided Testsのおかげで、アクセシビリティ専門家を雇う予算がなくても一定の品質を担保できた」
@@ -209,6 +210,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-19**: **axe DevTools Extension 4.129.1** リリース。axe-core 4.11.3/4.11.4のサポート追加、Interactive Elements IGTの強化。
+* **2026-05-01**: **axe DevTools Extension 4.128.0** リリース。Auto Replay機能のベータ版バッジを削除。
+* **2026-04-20**: **axe DevTools Extension 4.127.1** リリース。Automated Keyboard IGTのサポート追加。
 * **2026-01-14**: **axe DevTools Extension 4.120.1** リリース。バグ修正とパフォーマンス改善。
 * **2025-12-16**: **axe DevTools Extension 4.118.2** リリース。細かなバグ修正とパフォーマンス向上。
 * **2025-12-01**: **Axe Assistant & MCP Server** 正式リリース。AIチャットボットによる修正支援と、Cursor等のAIエディタ向けサーバー機能を追加。
@@ -224,7 +228,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | axe DevTools | Lighthouse | WAVE | Accessibility Insights |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 自動スキャン | ◎<br><small>高精度・低誤検知</small> | ◯<br><small>axeベースだが簡易</small> | ◯<br><small>視覚的オーバーレイ</small> | ◎<br><small>axeベース</small> |
-| **高度な検証** | ガイド付きテスト | ◎<br><small>AI活用 (IGT)</small> | × | × | ◯<br><small>詳細なマニュアル手順</small> |
+| **高度な検証** | ガイド付きテスト | ◎<br><small>AI活用 (IGT、Automated Keyboard等)</small> | × | × | ◯<br><small>詳細なマニュアル手順</small> |
 | **自動化** | CI/CD統合 | ◎<br><small>主要ツール網羅</small> | ◯<br><small>CIツールあり</small> | △<br><small>API利用</small> | ◯<br><small>Azure DevOps等</small> |
 | **AI/支援** | AI修正提案 | ◎<br><small>Axe Assistant</small> | × | × | × |
 
