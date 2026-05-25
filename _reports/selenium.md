@@ -52,6 +52,7 @@ relationships:
     - Autify
     - CodeceptJS
     - Ranorex Studio
+    - axe DevTools
 ---
 
 # **Selenium 調査レポート**
