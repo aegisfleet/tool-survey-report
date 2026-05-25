@@ -6,14 +6,14 @@ category: 動画/メディア
 developer: Blackmagic Design
 official_site: https://www.blackmagicdesign.com/products/davinciresolve
 date: '2025-11-06'
-last_updated: '2026-02-19'
+last_updated: '2026-05-26'
 tags:
   - AI
-  - VFX
-  - カラーグレーディング
-  - ポストプロダクション
   - 動画編集
+  - 画像編集
+  - VFX
   - 音声編集
+  - ポストプロダクション
 description: 編集、カラーコレクション、VFX、モーショングラフィックス、オーディオポストプロダクションを統合したプロフェッショナル向けオールインワン動画編集ソフトウェア。
 quick_summary:
   has_free_plan: true
@@ -23,7 +23,7 @@ quick_summary:
     - 映像クリエイター
     - カラリスト
     - YouTuber
-  latest_highlight: 2026年2月にv20.4をリリースし、パフォーマンスと安定性を向上
+  latest_highlight: 2026年5月にv21 Public Beta 3をリリース。IntelliSearchなどの新AIツールやPhotoページの追加、MultiMasterコラボレーションの改善等を含む。
   update_frequency: 高
 evaluation:
   score: 88
@@ -74,9 +74,9 @@ relationships:
 * **公式サイト**: [https://www.blackmagicdesign.com/products/davinciresolve](https://www.blackmagicdesign.com/products/davinciresolve)
 * **関連リンク**:
   * ドキュメント: [https://www.blackmagicdesign.com/products/davinciresolve/training](https://www.blackmagicdesign.com/products/davinciresolve/training)
-  * レビューサイト: [G2](https://www.g2.com/products/davinci-resolve/reviews) | [Capterra](https://www.capterra.com/p/209733/DaVinci-Resolve/) | [ITreview](https://www.itreview.jp/products/davinci-resolve/reviews)
+  * レビューサイト: [Capterra](https://www.capterra.com/p/209733/DaVinci-Resolve/) | [ITreview](https://www.itreview.jp/products/davinci-resolve/reviews)
 * **カテゴリ**: 動画/メディア
-* **概要**: 編集、カラーコレクション、ビジュアルエフェクト（VFX）、モーショングラフィックス、オーディオポストプロダクションの機能を単一のソフトウェアに統合したオールインワン・ソリューション。AIによる自動化機能も大幅に強化され、初心者からハリウッドのプロフェッショナルまで広く利用されている。
+* **概要**: 編集、カラーコレクション、ビジュアルエフェクト（VFX）、モーショングラフィックス、オーディオポストプロダクションの機能を単一のソフトウェアに統合したオールインワン・ソリューション。AIによる自動化機能の強化や、v21でのPhotoページ追加による写真編集対応など、初心者からハリウッドのプロフェッショナルまで広く利用されている。
 
 ## **2. 目的と主な利用シーン**
 
@@ -108,6 +108,8 @@ relationships:
 * **DaVinci AI Neural Engine**: 顔認識、オブジェクト検出、スマートリフレーム、マジックマスクなど、AIとディープラーニングを活用した自動化機能群。
 * **AI Animated Subtitles**: 音声に合わせて字幕を自動生成し、アニメーション効果を適用できる機能。
 * **AI Multicam SmartSwitch**: 話者を検出してカメラアングルを自動で切り替える、マルチカム編集の自動化機能。
+* **IntelliSearch & CineFocus (v21追加機能)**: IntelliSearch（AIによる高速なメディア検索・分析）や、CineFocus（AIフォーカス調整）など、AIツールが大幅に拡充。
+* **Photoページ (v21追加機能)**: 動画編集に加えて、静止画の管理・編集・カラーコレクションに特化した新しいページ。写真編集にも対応可能に。
 
 ## **4. 特徴・強み (Pros)**
 
@@ -256,8 +258,8 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: G2, Capterra, ITreview
-* **総合評価**: 4.7/5.0 (G2), 4.8/5.0 (Capterra)
+* **調査対象**: Capterra, ITreview
+* **総合評価**: 4.8/5.0 (Capterra)
 * **ポジティブな評価**:
   * 「これが無料とは信じられない。プロが必要とするほぼ全ての機能が揃っている」
   * 「カラーグレーディングの操作性と結果は他のソフトの追随を許さない」
@@ -269,7 +271,7 @@ relationships:
 * **特徴的なユースケース**:
   * Adobe Premiere Proで編集を行い、XMLでDaVinci Resolveに送ってカラーグレーディングのみを行うワークフロー。
 
-## **14. 直近半年のアップデート情報**
+## **15. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -279,6 +281,9 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-14 (v21 Public Beta 3)**: MultiMasterコラボレーションのワークフロー改善、Sony Alpha 7 Vのライブキャプチャサポート、静止画のカラーマネジメント改善など。
+* **2026-04-28 (v21 Public Beta 2)**: 静止画のクロップ/フリップ/回転の動作一貫性向上、Apple Vision Proワークフローの機能強化。
+* **2026-04-14 (v21 Public Beta 1)**: IntelliSearch、CineFocus、顔認識ツール等の新AIツールの追加。写真編集用の「Photoページ」やFairlightフォルダ機能、MultiMasterトリムパスなどの新機能搭載。
 * **2026-02-15 (v20.4)**: パフォーマンスの最適化と、不具合の修正、および一部の新しいメディア形式へのサポートを追加。
 * **2025-10-XX (v20.3)**: メディア管理機能の強化と、多数の安定性向上パッチのリリース。
 * **2025-05-28 (v20.0)**: メジャーアップデート。
@@ -288,9 +293,9 @@ relationships:
     * **Film Look Creator**: Resolve FXに追加された、フィルムルックを簡単に再現するツール。
     * **AI Audio Assistant**: 音声の分類とミックス調整を自動化。
 
-(出典: [Blackmagic Design 公式サイト](https://www.blackmagicdesign.com/products/davinciresolve/whatsnew))
+(出典: [製品アップデート情報](https://www.blackmagicdesign.com/products/davinciresolve/whatsnew))
 
-## **15. 類似ツールとの比較**
+## **16. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -298,7 +303,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **15.1 機能比較表 (星取表)**
+### **16.1 機能比較表 (星取表)**
 
 <!--
 【記載ルール】
@@ -315,10 +320,11 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 編集機能 | ◎<br><small>All-in-One</small> | ◎<br><small>業界標準</small> | ◯<br><small>高速・直感的</small> | ◯<br><small>拡張性高</small> |
 | **映像処理** | カラー | ◎<br><small>業界最高峰</small> | ◯<br><small>Lumetri</small> | ◯<br><small>標準的</small> | △<br><small>プラグイン要</small> |
-| **AI機能** | 自動化 | ◎<br><small>Neural Engine</small> | ◯<br><small>Sensei</small> | △<br><small>限定的</small> | ×<br><small>ほぼなし</small> |
+| **静止画処理** | 写真編集 | ◯<br><small>v21のPhotoページ</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
+| **AI機能** | 自動化 | ◎<br><small>IntelliSearch等</small> | ◯<br><small>Sensei</small> | △<br><small>限定的</small> | ×<br><small>ほぼなし</small> |
 | **コスト** | 無料利用 | ◎<br><small>高機能無料版</small> | ×<br><small>有料のみ</small> | ×<br><small>有料のみ</small> | ◎<br><small>完全無料</small> |
 
-### **15.2 詳細比較**
+### **16.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -332,7 +338,7 @@ relationships:
 | **Final Cut Pro** | Mac専用エディター | 高速な動作、直感的なマグネティックタイムライン | Mac専用、Windows非対応、独自UI | Macユーザーで、速度と直感性を重視する場合。 |
 | **AviUtl** | 無料拡張型エディター | 完全無料、軽量、プラグインによる無限の拡張性 | 導入難易度、UIが古い、安定性 | スペックの低いPCで、コストゼロで始めたい場合。 |
 
-## **16. 総評**
+## **17. 総評**
 
 <!--
 【ガイドライン】
@@ -341,7 +347,7 @@ relationships:
 -->
 
 * **総合的な評価**:
-  DaVinci Resolveは、無料版であっても他の高価な有料ソフトに匹敵、あるいは凌駕する機能を持つ、極めてコストパフォーマンスの高いツールである。特にDaVinci Resolve 20で追加されたAI機能群は、面倒な単純作業を劇的に効率化しており、クリエイターがより創造的な作業に集中できる環境を提供している。
+  DaVinci Resolveは、無料版であっても他の高価な有料ソフトに匹敵、あるいは凌駕する機能を持つ、極めてコストパフォーマンスの高いツールである。特にv21で追加されたPhotoページによる写真編集対応や、IntelliSearchをはじめとするAI機能のさらなる拡充により、クリエイターが画像と動画の制作をワンストップで行える統合環境としてさらに進化している。
 * **推奨されるチームやプロジェクト**:
   * 予算を抑えつつ、プロクオリティの映像制作を目指す個人やスタートアップ。
   * 色彩表現を重視する映画、CM、MV制作チーム。
