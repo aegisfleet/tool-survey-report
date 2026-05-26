@@ -53,6 +53,7 @@ relationships:
     - Workato
     - Microsoft 365 Copilot
     - AutoHotkey
+    - Google Opal
 ---
 
 # **Microsoft Power Automate 調査レポート**
