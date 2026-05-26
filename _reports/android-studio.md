@@ -50,6 +50,7 @@ relationships:
     - Kotlin Multiplatform
     - Visual Studio Code
     - Mobile Next
+    - Delphi
 ---
 
 # **Android Studio 調査レポート**

@@ -6,7 +6,7 @@ category: IDE/エディタ
 developer: Embarcadero
 official_site: https://www.embarcadero.com/jp/products/delphi
 date: '2025-01-21'
-last_updated: '2026-02-20'
+last_updated: '2026-05-26'
 tags:
   - AI
   - IDE
@@ -25,7 +25,7 @@ quick_summary:
     - 業務アプリ開発者
     - Windowsアプリ開発者
     - モバイルアプリ開発者
-  latest_highlight: 2025年12月にRAD Studio 13 Florenceがリリースされ、RAD AI Companion等のAI機能が強化
+  latest_highlight: 2026年3月にRAD Studio 13.1 Florence Update 1がリリースされ、Windows on Arm (Arm64EC) や新しいFireMonkey Style Designerに対応。5月には新しい開発ワークフローも発表された。
   update_frequency: 中
 evaluation:
   score: 85
@@ -93,6 +93,10 @@ relationships:
 * **WebStencils**: サーバーサイドのデータ処理とHTMLテンプレートを統合し、Web開発を支援する新機能。HTMX等との連携も強化されています。
 * **Android 15 (API Level 35) 対応**: 最新のAndroid APIに対応し、Google Playストアの要件を満たすアプリ開発が可能です。
 * **ライブプレビュー**: 設計時にUIの見た目をリアルタイムで確認しながら開発が可能。
+* **Windows on Arm (Arm64EC) 対応**: Windows Armデバイス向けに、Intelエミュレーションなしで動作するネイティブArmバイナリを生成可能です。
+* **Bookmarks アドオン統合**: コードの特定行にジャンプできる強力なブックマーク機能（旧サードパーティ製）がIDE標準として統合されています。
+* **FireMonkey Style Designer**: FireMonkey向けのUIスタイル（色、背景、フォント等）を直感的に作成・管理できる新しいデザインツールです。
+* **SmartCore AI Component Pack**: OpenAI, Claude, Gemini, Ollamaなど様々なLLMを統合できるコンポーネント群で、AI機能を容易に組み込めます。
 
 ## **4. 開始手順・セットアップ**
 
@@ -207,15 +211,25 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-12-XX**: **RAD Studio 13 Florence リリース**
-  * RAD AI Companionの搭載。
+* **2026-05-20**: **A New RAD Studio Workflow Is Coming**
+  * 新しい開発ワークフローが発表されました。
+* **2026-03-20**: **RAD Studio 13.1 Florence Update 1 リリース**
+  * Delphi Arm64EC (Windows on Arm) ネイティブコンパイラ。
+  * 新しいFireMonkey Style Designer。
+  * iOS 26、Android API-Level 36.1サポート。
+  * IDEへのBookmarksアドオン統合。
+  * Windows 11固有のVCLスタイル追加。
+  * DelphiLSPのLSIF対応によるコードナビゲーションの高速化。
+* **2025-10-13**: **RAD Studio 13 Florence リリース**
+  * SmartCore AIコンポーネントパックとRAD AI Companionの搭載。
+  * C++Builderの最新C++23サポートと64ビット版IDE。
+  * WebBroker/WebStencilsのセッション管理など大幅な機能強化。
   * Android 15 (API Level 35) への対応。
-  * WebStencilsの機能強化（HTMX連携など）。
   * Windows 11 UIスタイルの完全対応強化。
 * **2025-11-XX**: **Delphi 13 プレビュー/Update**
   * (以前の情報のアップデートとして記載) Android 16 (Baklava) への早期対応サポート等が発表。
 
-(出典: [Embarcadero Blogs](https://blogs.embarcadero.com/))
+(出典: [Embarcadero Blogs - RAD Studio](https://blogs.embarcadero.com/category/rad-studio/))
 
 ## **16. 類似ツールとの比較**
 
@@ -224,7 +238,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | Delphi | Visual Studio (C#) | IntelliJ IDEA (Java/Kotlin) | VS Code |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **GUI開発** | デザイナー | ◎<br><small>VCL/FMX</small> | ◎<br><small>WinForms/WPF</small> | △<br><small>Swing/FX (別途必要)</small> | ×<br><small>なし</small> |
-| **マルチPF** | クロスコンパイル | ◎<br><small>単一コードでNative生成</small> | ◯<br><small>MAUI等</small> | ◯<br><small>JVM/KMP</small> | △<br><small>拡張機能依存</small> |
+| **マルチPF** | クロスコンパイル | ◎<br><small>Windows Arm64含む全主要PFへNative生成</small> | ◯<br><small>MAUI等</small> | ◯<br><small>JVM/KMP</small> | △<br><small>拡張機能依存</small> |
 | **AI支援** | コード生成 | ◯<br><small>RAD AI Companion</small> | ◎<br><small>GitHub Copilot</small> | ◎<br><small>AI Assistant</small> | ◎<br><small>Copilot/Cursor等</small> |
 | **DB接続** | 接続性 | ◎<br><small>FireDAC (標準搭載)</small> | ◯<br><small>ADO.NET / EF</small> | ◯<br><small>JDBC / JPA</small> | △<br><small>拡張機能依存</small> |
 | **コスト** | 初期費用 | △<br><small>Pro以上は高額</small> | ◯<br><small>Communityあり</small> | ◯<br><small>Communityあり</small> | ◎<br><small>無料</small> |
@@ -233,7 +247,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Delphi** | RADツールの元祖。ネイティブコード生成。 | GUI開発の圧倒的な速さとクロスプラットフォーム対応。 | 言語人口の少なさ、ライセンスコスト。 | Windows業務アプリや、単一コードでのマルチデバイス展開を最優先する場合。 |
+| **Delphi** | RADツールの元祖。ネイティブコード生成。 | GUI開発の圧倒的な速さとWindows on Armも含むクロスプラットフォーム対応。SmartCore AIによるAI統合。 | 言語人口の少なさ、ライセンスコスト。 | Windows業務アプリや、単一コードでのマルチデバイス展開を最優先する場合。 |
 | **Visual Studio** | Microsoft標準のIDE。.NET開発のデファクト。 | Windows親和性、C#のエコシステム、Azure連携。 | クロスプラットフォーム(MAUI)は発展途上な面も。 | .NET/C#エコシステムを中心とする場合。 |
 | **IntelliJ IDEA** | Java/Kotlin開発の最高峰IDE。 | 強力なリファクタリング、Android開発との親和性。 | GUIデザイナーはDelphiほど直感的ではない。 | JavaバックエンドやAndroidネイティブ開発を行う場合。 |
 
