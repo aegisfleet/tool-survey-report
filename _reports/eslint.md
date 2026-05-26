@@ -6,7 +6,7 @@ category: コード品質/静的解析
 developer: ESLint Team (OpenJS Foundation)
 official_site: https://eslint.org/
 date: '2026-02-20'
-last_updated: '2026-02-20'
+last_updated: '2026-05-27'
 tags:
   - JavaScript
   - Linter
@@ -24,7 +24,7 @@ quick_summary:
     - JavaScript開発者
     - TypeScript開発者
     - Webプロジェクト
-  latest_highlight: 2026年2月にv10.0.0をリリース。メジャーアップデート。
+  latest_highlight: 2026年5月にv10.4.0をリリース。新機能の追加とバグ修正が継続的に行われている。
   update_frequency: 高
 evaluation:
   score: 95
@@ -194,6 +194,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-15 (v10.4.0)**: マイナーアップデート。`for-direction` ルールの機能追加や複数のバグ修正。
+* **2026-05-01 (v10.3.0)**: マイナーアップデート。新機能の追加とバグ修正。
+* **2026-04-17 (v10.2.1)**: パッチリリース。バグ修正。
 * **2026-02-06 (v10.0.0)**: メジャーアップデート。新機能の追加とバグ修正、破壊的変更を含む。
 * **2026-01-27 (v10.0.0-rc.2)**: リリース候補版。
 * **2026-01-23 (v10.0.0-rc.1)**: リリース候補版。
