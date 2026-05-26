@@ -12,7 +12,8 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
-const reportsDir = path.resolve(__dirname, '../_reports');
+const targetDir = process.env.REPORTS_DIR || path.resolve(__dirname, '../_reports');
+const reportsDir = path.resolve(targetDir);
 const files = fs.readdirSync(reportsDir).filter(f => f.endsWith('.md'));
 
 const isFixMode = process.argv.includes('--fix');

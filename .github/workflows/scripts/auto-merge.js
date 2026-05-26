@@ -9,6 +9,9 @@ const { execSync } = require('child_process');
 
 const ALLOWED_AUTHORS = ['google-labs-jules', 'google-labs-jules[bot]', 'aegisfleet'];
 
+const prSrcPath = process.env.PR_SRC_PATH || '';
+const getPath = (file) => prSrcPath ? `${prSrcPath}/${file}` : file;
+
 /**
  * Validates the contents and structure of _data/categories.yml if it has changed.
  * @param {Array<string>} files List of changed files in the PR
@@ -25,7 +28,7 @@ async function validateCategoriesYaml(files, owner, repo, prNumber, github, core
 
   core.info('Validating _data/categories.yml...');
   try {
-    const content = fs.readFileSync('_data/categories.yml', 'utf8');
+    const content = fs.readFileSync(getPath('_data/categories.yml'), 'utf8');
     const parsed = yaml.load(content);
     if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
       throw new Error('YAML content is not a valid key-value mapping.');
@@ -90,7 +93,7 @@ async function validateMarkdownFrontmatter(files, owner, repo, prNumber, github,
     core.info(`Validating frontmatter: ${file}`);
     let content;
     try {
-      content = fs.readFileSync(file, 'utf8');
+      content = fs.readFileSync(getPath(file), 'utf8');
     } catch (err) {
       if (err.code === 'ENOENT') {
         core.info(`  File ${file} not found (possibly deleted) — skipping validation.`);
@@ -217,7 +220,8 @@ async function validateMarkdownFrontmatter(files, owner, repo, prNumber, github,
 async function autoFixYamlFormat(owner, repo, prNumber, github, core) {
   core.info('Auto-fixing YAML formatting...');
   try {
-    const commitLog = execSync('git log -1 --pretty=format:"%B"').toString();
+    const cwd = prSrcPath ? { cwd: prSrcPath } : {};
+    const commitLog = execSync('git log -1 --pretty=format:"%B"', cwd).toString();
     if (commitLog.includes('[skip ci]') && commitLog.includes('Auto-fix YAML formatting in frontmatter')) {
       core.warning('Detected a previous auto-fix commit. Bailing out to prevent infinite loop.');
       const errorMsg = '⚠️ YAMLフォーマットの自動修正を試みましたが、繰り返し失敗している可能性があります。[skip ci] タグを持つコミットがすでに存在するため、無限ループを防ぐために処理を中止しました。手動でフォーマットを確認してください。';
@@ -230,16 +234,20 @@ async function autoFixYamlFormat(owner, repo, prNumber, github, core) {
       throw new Error('Auto-fix aborted to prevent infinite loop.');
     }
 
-    execSync('pnpm lint:yaml --fix', { stdio: 'inherit' });
+    // ベースの安全なスクリプトを実行し、PR側の reportsDir を環境変数で渡して修正
+    execSync('node scripts/check_frontmatter.js --fix', {
+      stdio: 'inherit',
+      env: { ...process.env, REPORTS_DIR: prSrcPath ? `${prSrcPath}/_reports` : '_reports' }
+    });
 
-    execSync('git config user.name "github-actions[bot]"');
-    execSync('git config user.email "github-actions[bot]@users.noreply.github.com"');
-    execSync('git add _reports/ _trending/');
+    execSync('git config user.name "github-actions[bot]"', cwd);
+    execSync('git config user.email "github-actions[bot]@users.noreply.github.com"', cwd);
+    execSync('git add _reports/ _trending/', cwd);
 
-    const status = execSync('git status --porcelain _reports/ _trending/').toString();
+    const status = execSync('git status --porcelain _reports/ _trending/', cwd).toString();
     if (status.trim().length > 0) {
-      execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"');
-      execSync('git push');
+      execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"', cwd);
+      execSync('git push', cwd);
 
       core.info('Changes have been pushed. Waiting 3 seconds for GitHub to update PR state...');
       await new Promise(resolve => setTimeout(resolve, 3000));
