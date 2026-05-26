@@ -6,7 +6,7 @@ category: デザインツール
 developer: Figma, Inc.
 official_site: https://www.figma.com/
 date: '2026-02-19'
-last_updated: '2026-02-19'
+last_updated: '2026-05-26'
 tags:
   - SaaS
   - UI/UXデザイン
@@ -23,12 +23,14 @@ quick_summary:
     - UI/UXデザイナー
     - プロダクトマネージャー
     - エンジニア
-  latest_highlight: 2025年末にAIサイト作成機能（Figma Sites）やMCPサーバー対応を発表
+  latest_highlight: 2026年5月にFigma専用AIエージェント（ベータ版）や、Figma Buzzでの一括編集機能などを発表
   update_frequency: 高
 evaluation:
-  score: 88
+  score: 90
   base_score: 70
   plus_points:
+    - point: 2
+      reason: Figma専用AIエージェントによる自動化・アシスト機能が追加
     - point: 10
       reason: 業界標準ツールとして圧倒的なシェアとエコシステムを持つ
     - point: 5
@@ -42,7 +44,7 @@ evaluation:
       reason: Dev Modeの有償化やプラン改定によりコストが増加傾向
     - point: -2
       reason: 高機能化に伴い、初学者にはインターフェースが複雑化している
-  summary: 価格改定によるコスト増はあるが、AI機能や開発連携の強化により「プロダクト開発プラットフォーム」としての地位は不動。
+  summary: 価格改定によるコスト増はあるが、Figma専用AIエージェントや一括編集機能(Buzz)などAI・運用機能のさらなる強化により、「プロダクト開発プラットフォーム」としての地位は不動。
 links:
   documentation: https://help.figma.com/hc/ja
 relationships:
@@ -117,6 +119,9 @@ relationships:
 * **バリアントと変数 (Variables)**: コンポーネントの状態管理や、色・数値・文字列の変数管理により、高度なデザインシステムを構築可能。
 * **MCP Server連携**: デザイン情報をAIコーディングエディタ（Cursor, Windsurf等）に提供し、実装コードの生成精度を向上させる機能。
 * **FigJam統合**: オンラインホワイトボード「FigJam」とシームレスに連携し、アイデア出しからデザインまでをワンプラットフォームで完結。
+
+* **Figma Agent**: デザイン作業を支援・自動化するための専用AIエージェント。既存のデザインシステムを尊重しつつ、デザインの生成やリミックス、単純作業の自動化を実行可能。
+* **Figma Buzz**: キャンペーンアセットの作成・一括編集・リサイズ機能。スプレッドシートを用いた一括作成から、各プラットフォーム向けの一括出力に対応。
 
 ## **4. 開始手順・セットアップ**
 
@@ -324,12 +329,16 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-22**: **Figma Buzz / Grid**: Figma Buzzでのキャンペーンアセット一括作成・編集・リサイズ機能（Bulk edit）や、Gridの行・列の入れ替え・自動配置機能をリリース。
+* **2026-05-20**: **Figma Agent (Beta)**: デザイン環境に直接組み込まれた専用AIエージェントのベータ展開を開始。
+* **2026-05-18**: **Figma Slides Sections**: Figma Slidesにセクション機能を追加し、スライドの整理・ナビゲーションを強化。
+* **2026-05-11**: **Figma Make Custom skills**: Figma MakeにCustom skills機能を追加し、マークダウンファイルで独自の規約やワークフローを定義可能に。
 * **2025-11-XX**: **MCP Server GA**: Figmaのデザイン情報をAIコーディングエディタ（Cursor等）に提供するプロトコルに対応。
 * **2025-10-XX**: **Figma Sites (Beta)**: デザインから直接Webサイトを公開できる機能の発表・ベータ展開。
 * **2025-10-XX**: **Figma AI 2.0**: プロトタイプ生成精度が向上し、実データ連携（Supabase等）が可能に。
 * **2025-06-26**: **UI3 (新UI) 正式リリース**: インターフェースの大幅刷新。
 
-(出典: [Figma Release Notes](https://releases.figma.com/), [Schema 2025 Recap](https://help.figma.com/))
+(出典: [Figma Release Notes](https://releases.figma.com/), [Schema 2025 Recap](https://www.figma.com/blog/))
 
 ## **16. 類似ツールとの比較**
 
@@ -359,6 +368,7 @@ relationships:
 | **コラボレーション** | リアルタイム編集 | ◎<br><small>業界最高水準</small> | ◯<br><small>良好</small> | △<br><small>同期遅延あり</small> | △<br><small>Macのみ</small> | △<br><small>ローカル主体</small> |
 | **開発連携** | コード生成 | ◎<br><small>Dev Mode, Code Connect</small> | ◎<br><small>SVG/CSS標準準拠</small> | △<br><small>基本機能のみ</small> | ◯<br><small>要プラグイン</small> | ◎<br><small>読書可能なMCP連携</small> |
 | **Web構築** | サイト公開 | ◯<br><small>Figma Sites (Beta)</small> | × | × | × | × |
+| **AI機能** | エージェント支援 | ◎<br><small>Figma Agent (Beta)</small> | × | × | × | ◎<br><small>AIネイティブ</small> |
 | **非機能要件** | コスト | △<br><small>値上げ傾向</small> | ◎<br><small>OSS・無料</small> | ◯<br><small>CCに含まれる</small> | ◯<br><small>買い切りあり(過去)</small> | ◎<br><small>OSS・無料</small> |
 
 ### **16.2 詳細比較**
@@ -370,7 +380,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Figma** | クラウドネイティブ、オールインワン | 機能の豊富さ、AI連携、エコシステム、サイト構築まで可能 | コストが高い、オフライン不可 | 予算があり、最新のフローで開発したいチーム |
+| **Figma** | クラウドネイティブ、オールインワン | 機能の豊富さ、AIエージェント連携による自動化、エコシステム、サイト構築まで可能 | コストが高い、オフライン不可 | 予算があり、AIエージェントと最新のフローで開発したいチーム |
 | **OpenPencil** | AIネイティブ、ローカルファースト、OSS | Figmaファイル互換、制限のないMCP連携、完全無料 | エコシステムが発展途上、クラウドベースの共有はFigmaに劣る | 開発とデザインをAIでシームレスに繋ぎたいエンジニア、ローカル環境を重視するチーム |
 | **Penpot** | オープンソース、標準規格準拠 | 完全無料（セルフホスト可）、SVG/CSSベースで開発者に優しい | プラグインが少ない、機能面でFigmaに追従中 | コストを抑えたい、OSSを重視する、Linux環境 |
 | **Sketch** | Macネイティブ | Macでの高速な動作、ローカルファイル管理 | Windows/ブラウザ非対応、コラボレーションが弱い | 全員がMacユーザーで、ローカル管理を好む場合 |
