@@ -51,6 +51,7 @@ relationships:
     - IntelliJ IDEA
     - Windsurf
     - Cline
+    - Delphi
     - Eclipse IDE
     - Android Studio
 ---

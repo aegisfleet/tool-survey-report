@@ -50,6 +50,7 @@ relationships:
     - Visual Studio Code
     - Android Studio
     - JUnit
+    - Delphi
 ---
 
 # **Eclipse IDE 調査レポート**

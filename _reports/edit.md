@@ -41,6 +41,7 @@ links:
 relationships:
   related_tools:
     - Visual Studio Code
+    - Delphi
 ---
 
 # **Edit 調査レポート**
