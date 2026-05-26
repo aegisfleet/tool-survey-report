@@ -10,7 +10,7 @@
     "lint:yaml": "node scripts/check_frontmatter.js",
     "format:check": "biome format --check .",
     "check": "biome ci .",
-    "check-links": "python3 scripts/check_links.py",
-    "update-wiki": "python3 scripts/update_wiki_links.py"
+    "check-links": "PYTHONPATH=. uv run scripts/check_links.py",
+    "update-wiki": "PYTHONPATH=. uv run scripts/update_wiki_links.py"
   }
 }

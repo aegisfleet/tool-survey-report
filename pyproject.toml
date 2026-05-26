@@ -1,0 +1,13 @@
+[project]
+name = "tool-survey-report"
+version = "0.1.0"
+description = "A repository for tool survey reports"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright==1.59.0",
+    "pyyaml==6.0.3",
+]
+
+[tool.uv]
+exclude-newer = "7 days"

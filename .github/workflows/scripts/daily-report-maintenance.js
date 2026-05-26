@@ -169,7 +169,7 @@ function buildJulesPrompt(toolName, reportPath, todayJST, templateContent) {
     `- ${toolName}と同カテゴリまたはrelated_toolsに含まれるレポートとの双方向整合性を確保せよ`,
     '',
     '### ステップ3: リンクチェック',
-    `- 作業完了後、\`python3 scripts/check_links.py ${reportPath}\` を実行してリンク切れを確認せよ`,
+    `- 作業完了後、\`PYTHONPATH=. uv run scripts/check_links.py ${reportPath}\` を実行してリンク切れを確認せよ`,
     '- 404エラー（リンク切れ）が検出された場合は、正しいURLに修正するか、リンクを削除する',
     '- 403エラー（アクセス拒否）の場合はGoogle検索で追加検証を行う：',
     '  - `site:g2.com \"ツール名\"` 等で検索し、ページの実在性を確認せよ',

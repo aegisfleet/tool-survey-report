@@ -8,7 +8,7 @@ except ImportError:
     # If playwright is missing, we raise a clear error at import time if not in a testing environment.
     # This avoids a confusing TypeError when sync_playwright() is called later.
     if os.environ.get('TESTING') != '1':
-        raise ImportError("playwright is not installed. Please run: pip install playwright && playwright install chromium")
+        raise ImportError("playwright is not installed. Please run: uv sync && uv run playwright install chromium")
     sync_playwright = None
 
 REPORTS_DIR = '_reports'

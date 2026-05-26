@@ -242,7 +242,7 @@ def main():
 
     if use_browser:
         if not HAS_PLAYWRIGHT:
-            print("Error: Playwright is not installed. Run: pip install playwright && playwright install chromium")
+            print("Error: Playwright is not installed. Run: uv sync && uv run playwright install chromium")
             sys.exit(1)
         print("Using browser mode (Playwright) for accurate checking...")
     else:
