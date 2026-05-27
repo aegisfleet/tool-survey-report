@@ -2,17 +2,17 @@
 title: LiteLLM 調査レポート
 tool_name: LiteLLM
 tool_reading: ライトエルエルエム
-category: AIゲートウェイ
+category: LLMプラットフォーム
 developer: BerriAI
 official_site: https://www.litellm.ai/
 date: '2026-05-26'
 last_updated: '2026-05-26'
 tags:
-  - AIゲートウェイ
-  - LLMルーター
+  - 大規模言語モデル
+  - AI
+  - API
   - オープンソース
-  - 開発ツール
-  - APIゲートウェイ
+  - 開発者ツール
 description: OpenAI互換のフォーマットで100以上のLLMプロバイダーへのアクセス、コスト追跡、フォールバックを提供するAIゲートウェイ・Python SDK。
 quick_summary:
   has_free_plan: true
@@ -44,9 +44,9 @@ links:
   documentation: https://docs.litellm.ai/docs/
 relationships:
   related_tools:
-    - langchain
-    - openai
-    - anthropic
+    - LangChain
+    - ChatGPT
+    - Claude
 ---
 
 # **LiteLLM 調査レポート**
