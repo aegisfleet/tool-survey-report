@@ -6,7 +6,7 @@ category: AIエディタ/IDE
 developer: Amazon Web Services (AWS)
 official_site: https://kiro.dev/
 date: '2026-02-20'
-last_updated: '2026-02-20'
+last_updated: '2026-05-27'
 tags:
   - AI
   - IDE
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - SaaS開発チーム
-  latest_highlight: 2026年2月にデザインファーストな仕様策定フローやバグ修正専用フローを追加
+  latest_highlight: 2026年5月にKiro Web（プレビュー）公開、Claude Opus 4.7対応、およびHIPAA準拠を発表
   update_frequency: 高
 evaluation:
   score: 82
@@ -66,7 +66,7 @@ relationships:
   * ブログ: [https://kiro.dev/blog/](https://kiro.dev/blog/)
   * Changelog: [https://kiro.dev/changelog/](https://kiro.dev/changelog/)
 * **カテゴリ**: AIコードエディタ
-* **概要**: Kiroは、自然言語プロンプトからEARS記法の要件定義書、システム設計、実装タスクを生成し、それに基づいて自律エージェントがコーディングを行う「スペック駆動開発 (Spec-Driven Development)」を採用したAIネイティブIDEです。AWS内の小規模チームによって開発・運営されています。
+* **概要**: Kiroは、自然言語プロンプトからEARS記法の要件定義書、システム設計、実装タスクを生成し、それに基づいて自律エージェントがコーディングを行う「スペック駆動開発 (Spec-Driven Development)」を採用したAIネイティブIDEです。IDEやCLIのほか、ブラウザベースで利用可能なKiro Webも提供されています。AWS内の小規模チームによって開発・運営されています。
 
 ## **2. 目的と主な利用シーン**
 
@@ -88,6 +88,9 @@ relationships:
 * **Native MCP Support**: Model Context Protocol (MCP) にネイティブ対応し、外部データソースやツールと連携可能です。
 * **VS Code互換**: VS Codeベースで構築されており、既存の拡張機能、テーマ、設定をそのまま利用できます。
 * **CLI**: ターミナルからエージェント機能を利用できるCLIツールも提供されています。
+* **Kiro Web (Preview)**: ブラウザ上からチャットやバグ修正、PR作成などのエンドツーエンドのタスクを実行可能です。
+* **Parallel Task Execution**: 独立したタスクを並行して実行でき、開発の高速化に寄与します。
+* **Quick Plan**: 既知のスコープにおいて承認プロセスをスキップし、迅速に実装へ移行できます。
 
 ## **4. 開始手順・セットアップ**
 
@@ -164,7 +167,7 @@ relationships:
 
 * **認証**: GitHub, Google, AWS Builder ID, AWS IAM Identity Center (SSO), Okta, Microsoft Entra ID。
 * **データ管理**: ユーザーのコードはモデルのトレーニングに使用されません。データは暗号化されて保存されます。
-* **準拠規格**: SOC 2 Type II 準拠。GDPR対応。AWS GovCloud (US) リージョン対応。
+* **準拠規格**: SOC 2 Type II 準拠。GDPR対応。AWS GovCloud (US) リージョン対応。HIPAA準拠。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
@@ -197,13 +200,17 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-26**: [General] HIPAA準拠のサービスとして追加。
+* **2026-05-20**: [CLI 2.4] 会話の巻き戻し、推論労力（Effort）のコントロール機能を追加。
+* **2026-05-07**: [Web] ブラウザベースのKiro Web (Preview) を公開。
+* **2026-05-07**: [Models] Claude Opus 4.7 のサポートとAdaptive Thinking機能を追加。
 * **2026-02-18**: [IDE 0.10] Design-First Feature Specs, Bugfix Specs, Task Hooks, MCP Promptsの追加。
 * **2026-02-17**: [Models] Claude Sonnet 4.6 のサポート開始。
 * **2026-02-13**: [CLI 1.26.0] ファイル参照(@path)、動的モデル選択機能の追加。
 * **2026-02-05**: [IDE 0.9] Custom Subagents, Agent Skills, Pre/Post Tool Use Hooksの追加。
 * **2026-02-10**: DeepSeek, MiniMax, Qwen のオープンウェイトモデルを利用可能に。
 
-(出典: [Kiro Changelog](https://kiro.dev/changelog/))
+(出典: [Kiro Changelog](https://kiro.dev/changelog/feed.rss))
 
 ## **16. 類似ツールとの比較**
 
@@ -212,6 +219,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | 本ツール | Cursor | Windsurf | GitHub Copilot |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | AIコード補完 | ◯<br><small>標準的</small> | ◎<br><small>高速・高精度</small> | ◎<br><small>文脈理解深い</small> | ◎<br><small>業界標準</small> |
+| **プラットフォーム** | Web UI対応 | ◎<br><small>Kiro Web</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
 | **開発手法** | スペック駆動開発 | ◎<br><small>独自機能</small> | -<br><small>-</small> | -<br><small>-</small> | -<br><small>-</small> |
 | **自律性** | エージェント機能 | ◎<br><small>Kiro Agents</small> | ◯<br><small>Composer</small> | ◎<br><small>Cascade</small> | △<br><small>Workspace</small> |
 | **エコシステム** | MCP対応 | ◎<br><small>ネイティブ対応</small> | -<br><small>非対応</small> | ◎<br><small>対応</small> | -<br><small>拡張で対応可</small> |
@@ -220,7 +228,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Kiro** | スペック駆動開発 | 要件定義から実装までの一貫性、AWS連携 | 日本語情報の少なさ | 設計から実装まで構造的に進めたい場合、AWS環境 |
+| **Kiro** | スペック駆動開発 | 要件定義から実装までの一貫性、AWS連携、Web版対応、Claude Opus 4.7（Adaptive Thinking対応） | 日本語情報の少なさ | 設計から実装まで構造的に進めたい場合、AWS環境 |
 | **Cursor** | AIネイティブエディタ | 圧倒的なUXと速度、Tab補完の精度 | 独自の開発フロー（Spec等）は弱い | 高速なコーディング体験を最優先する場合 |
 | **Windsurf** | Agentic IDE | 深い文脈理解とCascadeによる自律操作 | 比較的新しい | 文脈理解を重視したエージェント機能を使いたい場合 |
 | **GitHub Copilot** | 汎用支援ツール | 圧倒的な普及率、GitHub連携 | 自律的なタスク実行は限定的 | 既存のエディタ環境を変えずにAI支援を受けたい場合 |

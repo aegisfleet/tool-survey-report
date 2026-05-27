@@ -49,6 +49,7 @@ links:
   documentation: https://cursor.com/docs
 relationships:
   related_tools:
+    - Kiro
     - GitHub Copilot
     - Windsurf
     - Cline
@@ -56,7 +57,6 @@ relationships:
     - Claude Code
     - Visual Studio Code
     - Devin
-    - OpenHands
     - TAKT
     - Model Context Protocol
     - Mobile Next

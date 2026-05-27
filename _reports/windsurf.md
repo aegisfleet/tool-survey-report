@@ -44,6 +44,7 @@ links:
   documentation: https://docs.windsurf.com/
 relationships:
   related_tools:
+    - Kiro
     - Visual Studio Code
     - Cursor
     - GitHub Copilot
@@ -51,7 +52,6 @@ relationships:
     - Roo Code
     - Claude Code
     - Devin
-    - Model Context Protocol
 ---
 
 # **Windsurf 調査レポート**
