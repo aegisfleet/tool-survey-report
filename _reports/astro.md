@@ -6,7 +6,7 @@ category: Webフレームワーク
 developer: Astro Technology Company (Joined Cloudflare)
 official_site: https://astro.build/
 date: '2026-02-21'
-last_updated: "2026-05-28"
+last_updated: '2026-05-28'
 tags:
   - JavaScript
   - Webフレームワーク
@@ -22,7 +22,7 @@ quick_summary:
     - Web開発者
     - コンテンツ制作者
     - マーケティング担当者
-  latest_highlight: "Astro 6.3で実験的な高度なルーティング（Advanced Routing）機能などを追加"
+  latest_highlight: Astro 6.3で実験的な高度なルーティング（Advanced Routing）機能などを追加
   update_frequency: 高
 evaluation:
   score: 93
