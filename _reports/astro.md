@@ -6,7 +6,7 @@ category: Webフレームワーク
 developer: Astro Technology Company (Joined Cloudflare)
 official_site: https://astro.build/
 date: '2026-02-21'
-last_updated: '2026-02-21'
+last_updated: "2026-05-28"
 tags:
   - JavaScript
   - Webフレームワーク
@@ -22,7 +22,7 @@ quick_summary:
     - Web開発者
     - コンテンツ制作者
     - マーケティング担当者
-  latest_highlight: 2026年1月にAstro Technology CompanyがCloudflareに参加。Astro v6 Betaがリリース。
+  latest_highlight: "Astro 6.3で実験的な高度なルーティング（Advanced Routing）機能などを追加"
   update_frequency: 高
 evaluation:
   score: 93
@@ -94,7 +94,9 @@ relationships:
 * **好きなUIフレームワークを利用可能 (Bring Your Own Framework)**: React, Vue, Svelte, Solid, Preactなど、既存のUIフレームワークコンポーネントをそのままAstroプロジェクト内で利用・共存させることができます。
 * **Astro DB**: SQLベース（LibSQL）のフルマネージドデータベース。Astroプロジェクトに統合されており、設定不要で利用開始できます。
 * **View Transitions APIの統合**: ブラウザネイティブのView Transitions APIを簡単に利用でき、MPA（複数ページ構成）でありながらSPA（単一ページ構成）のような、ページ間のシームレスなアニメーションを数行のコードで実装できます。
-* **SVGOによるSVG最適化**: ビルド時にSVGファイルを自動的に最適化し、ファイルサイズを削減してパフォーマンスを向上させます。
+* **高度なルーティング (Experimental Advanced Routing)**: 開発者がリクエストパイプラインを完全に制御し、Honoなどのフレームワークを統合して独自のミドルウェアやロジックを柔軟に配置できます。
+* **カスタムロガー (Experimental Logger)**: JSON出力を含むカスタムロガーをサポートし、構造化ログやAIコーディングエージェントとの連携を強力に支援します。
+* **SVG最適化API**: `svgOptimizer`オプションを通じて、任意の最適化ライブラリ（SVGOやOxVGなど）を利用してビルド時にSVGファイルを最適化できます（セキュリティ強化のためデフォルトでは無効化されています）。
 
 ## **4. 開始手順・セットアップ**
 
@@ -170,6 +172,7 @@ Astro自体はオープンソース（MITライセンス）のプロジェクト
 | **Vue.js** | ◎ | Single File Components (.vue) をサポート。 | 特になし。 |
 | **Svelte** | ◎ | コンパイラ同士の相性が良く、非常に軽量な出力が可能。 | 特になし。 |
 | **Cloudflare Pages** | ◎ | 公式アダプターがあり、Server Islandsなどの最新機能をフル活用できる。 | Cloudflare独自の機能に依存しすぎると他への移行が難しくなる。 |
+| **Hono** | ◎ | 実験的な高度なルーティングにより、Honoのミドルウェア等をAstroのパイプラインに直接統合可能。 | 実験的機能のため、API仕様が変更される可能性がある。 |
 
 ## **11. セキュリティとコンプライアンス**
 
@@ -209,21 +212,22 @@ Astro自体はオープンソース（MITライセンス）のプロジェクト
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-07**: **Astro 6.3 リリース**
+  - Honoなどをサポートする実験的な高度なルーティング（Advanced Routing）機能の導入、外部画像URLの自動リダイレクト追従サポート、SVG最適化のデフォルト無効化（セキュリティのため）などの改善が追加されました。
+* **2026-04-30**: **Astro 6.2 リリース**
+  - JSON出力に対応した実験的なカスタムロガー、特定のライブラリに依存しない新しいSVG最適化API、実験的なフォントファイルURL取得ヘルパーなどが追加されました。また、Vite 8をサポートするAstro v7のアルファ版も公開されました。
+* **2026-03-26**: **Astro 6.1 リリース**
+  - Sharp画像最適化のコーデック単位のデフォルト設定、MarkdownのSmartyPantsに関する詳細な設定機能、インテグレーション向けのi18nフォールバックルーティングのサポートなどが追加されました。
+* **2026-03-10**: **Astro 6.0 リリース**
+  - 開発サーバーの再設計、組み込みのフォントAPI、Live Content Collectionsの安定化、コンテンツセキュリティポリシー（CSP）のサポートなどが導入されました。
 * **2026-01-31**: **Astro v6 Beta リリース & Cloudflare参加発表**
   - Astro Technology CompanyがCloudflareに参加することを発表。同時に、次期メジャーバージョンであるv6のベータ版がリリースされました。
-  (出典: [What's new in Astro - January 2026](https://astro.build/blog/whats-new-january-2026/))
 * **2026-01-29**: **Astro 5.17 リリース**
   - 開発ツールバーの配置設定、Partitioned cookiesのサポート、新しい画像最適化オプションが追加されました。
-  (出典: [Astro 5.17](https://astro.build/blog/astro-5170/))
 * **2026-01-13**: **Astro 6 Beta 詳細発表**
   - 再設計された開発サーバー、レンダリングパフォーマンスの向上、CSPやフォント関連の新APIが導入されました。
-  (出典: [Astro 6 Beta](https://astro.build/blog/astro-6-beta/))
-* **2025-12-30**: **Astro v6 Alpha リリース**
-  - v6に向けた最初のアルファ版が公開され、実験的な機能のテストが開始されました。
-  (出典: [What's new in Astro - December 2025](https://astro.build/blog/whats-new-december-2025/))
-* **2025-11-20**: **Astro 5.16 リリース**
-  - SVGOによるSVGの自動最適化機能を実験的に導入。CLIにインタラクティブなショートカットを追加。
-  (出典: [Astro 5.16](https://astro.build/blog/astro-5160/))
+
+(出典: [Astro Blog](https://astro.build/blog/))
 
 ## **16. 類似ツールとの比較**
 
