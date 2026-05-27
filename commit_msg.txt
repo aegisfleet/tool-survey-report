@@ -1,5 +1,0 @@
-Refactor category: Merge 'AIゲートウェイ' and review split candidates
-
-- Merged 'AIゲートウェイ' (1 item, litellm.md) into 'LLMプラットフォーム' following standard vocabulary, removing obsolete tags, and fixing related_tools links to exact slugs.
-- Reviewed split candidates for 10+ item categories (e.g. AIエージェント基盤, インフラ/クラウド, E2E/ブラウザテスト, etc.). Decided not to split any at this time because these categories are accurate as-is and further subdividing them would yield highly fragmented categories (<= 2 items) or lacks clear distinct standard vocabulary axes according to the guidelines ("同一カテゴリが適切で分割軸が見当たらない場合").
-- Checked relationships integrity and YAML syntax. All tests passed.
