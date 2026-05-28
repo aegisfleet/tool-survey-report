@@ -43,8 +43,10 @@ links:
   deepwiki: https://deepwiki.com/crewaiinc/crewai
   codewiki: https://codewiki.google/github.com/crewaiinc/crewai
   documentation: https://docs.crewai.com/
+relationships:
+  related_tools:
+    - Agent Governance Toolkit
 ---
-
 # **CrewAI 調査レポート**
 
 ## **1. 基本情報**

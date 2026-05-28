@@ -56,10 +56,9 @@ relationships:
     - AutoGPT
     - GitHub Copilot SDK
     - Amazon Bedrock
-    - Amazon Bedrock AgentCore Runtime
     - Hugging Face
+    - Agent Governance Toolkit
 ---
-
 # **LangChain 調査レポート**
 
 ## **1. 基本情報**

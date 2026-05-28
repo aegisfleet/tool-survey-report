@@ -31,6 +31,7 @@ quick_summary:
 relationships:
   related_tools:
     - A2A Protocol
+    - Agent Governance Toolkit
 tags:
   - AI
   - エージェント
@@ -40,7 +41,6 @@ title: Microsoft Agent Framework 調査レポート
 tool_name: Microsoft Agent Framework
 tool_reading: マイクロソフト エージェント フレームワーク
 ---
-
 # **Microsoft Agent Framework 調査レポート**
 
 ## **1. 基本情報**

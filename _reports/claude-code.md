@@ -49,18 +49,11 @@ relationships:
     - GitHub Copilot
     - Cursor
     - Windsurf
-    - Claude for Chrome
     - Cline
-    - Roo Code
     - Devin
-    - Claude Cowork
-    - Claw Code
-    - TAKT
     - Grok CLI
-    - Open CoDesign
-    - AsyncReview
+    - Agent Governance Toolkit
 ---
-
 # **Claude Code 調査レポート**
 
 ## **1. 基本情報**
