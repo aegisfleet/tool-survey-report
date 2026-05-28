@@ -5,7 +5,7 @@
 
 const fs = require('fs');
 const yaml = require('js-yaml');
-const { execSync } = require('child_process');
+const { execSync, execFileSync } = require('child_process');
 
 const ALLOWED_AUTHORS = ['google-labs-jules', 'google-labs-jules[bot]', 'aegisfleet'];
 
@@ -249,7 +249,7 @@ async function autoFixYamlFormat(owner, repo, prNumber, github, core, pr) {
     if (status.trim().length > 0) {
       execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"', cwd);
       const headBranch = pr.head.ref;
-      execSync(`git push origin HEAD:${headBranch}`, cwd);
+      execFileSync('git', ['push', 'origin', `HEAD:${headBranch}`], cwd);
 
       core.info('Changes have been pushed. Waiting 3 seconds for GitHub to update PR state...');
       await new Promise(resolve => setTimeout(resolve, 3000));
@@ -334,9 +334,9 @@ module.exports = async ({ github, context, core }) => {
   // 4. Draft to Ready conversion if applicable
   if (pr.draft) {
     core.info('PR is draft and only touches reports/categories — converting to ready and adding comment.');
-    const exec = require('node:util').promisify(require('node:child_process').exec);
+    const execFile = require('node:util').promisify(require('node:child_process').execFile);
     try {
-      const { stdout, stderr } = await exec(`gh pr ready ${prNumber}`);
+      const { stdout, stderr } = await execFile('gh', ['pr', 'ready', String(prNumber)]);
       core.info(`gh pr ready output: ${stdout}`);
       if (stderr) core.warning(`gh pr ready stderr: ${stderr}`);
     } catch (error) {
