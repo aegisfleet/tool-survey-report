@@ -1,58 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "winapp CLI 調査レポート"
-tool_name: "winapp CLI"
-tool_reading: "ウィンアップ シーエルアイ"
-category: "開発ユーティリティ"
-developer: "Microsoft"
-official_site: "https://github.com/microsoft/winappCli"
-date: "2026-05-28"
-last_updated: "2026-05-28"
+title: winapp CLI 調査レポート
+tool_name: winapp CLI
+tool_reading: ウィンアップ シーエルアイ
+category: 開発ユーティリティ
+developer: Microsoft
+official_site: https://github.com/microsoft/winappCli
+date: '2026-05-28'
+last_updated: '2026-05-28'
 tags:
-  - "CLI"
-  - "Windows"
-  - "開発者ツール"
-  - "パッケージ管理"
-  - "オープンソース"
-description: "Windows SDK管理、パッケージ化、マニフェスト生成などを単一のコマンドラインインターフェースで提供するツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CLI
+  - Windows
+  - 開発者ツール
+  - パッケージ管理
+  - オープンソース
+description: Windows SDK管理、パッケージ化、マニフェスト生成などを単一のコマンドラインインターフェースで提供するツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Windowsアプリ開発者"
-    - "クロスプラットフォーム開発者"
-  latest_highlight: "v0.3.1にて--のパススルー引数サポートやプレーンテキストプログレスのサポートを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - Windowsアプリ開発者
+    - クロスプラットフォーム開発者
+  latest_highlight: v0.3.1にて--のパススルー引数サポートやプレーンテキストプログレスのサポートを追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "複雑なWindows API呼び出しやパッケージ化の準備作業を大幅に簡略化"
+      reason: 複雑なWindows API呼び出しやパッケージ化の準備作業を大幅に簡略化
     - point: 5
-      reason: "ElectronやTauriなどクロスプラットフォーム環境から容易にWindowsネイティブAPIへアクセス可能"
+      reason: ElectronやTauriなどクロスプラットフォーム環境から容易にWindowsネイティブAPIへアクセス可能
     - point: 5
-      reason: "完全なオープンソースであり、Microsoft公式の強力なバックアップ"
+      reason: 完全なオープンソースであり、Microsoft公式の強力なバックアップ
   minus_points:
     - point: 0
-      reason: "特になし（Preview版のフィードバックが活発）"
-  summary: "クロスプラットフォーム開発者がWindowsネイティブ機能を導入するための強力かつ効率的なCLIツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし（Preview版のフィードバックが活発）
+  summary: クロスプラットフォーム開発者がWindowsネイティブ機能を導入するための強力かつ効率的なCLIツール
 links:
-  github: "https://github.com/microsoft/winappCli"
-  deepwiki: "https://deepwiki.com/microsoft/winappCli"
-  codewiki: "https://codewiki.google/github.com/microsoft/winappCli"
-  documentation: "https://github.com/microsoft/winappCli/blob/main/docs/usage.md"
+  github: https://github.com/microsoft/winappCli
+  deepwiki: https://deepwiki.com/microsoft/winappCli
+  codewiki: https://codewiki.google/github.com/microsoft/winappCli
+  documentation: https://github.com/microsoft/winappCli/blob/main/docs/usage.md
 relationships:
-  parent: "Microsoft"
+  parent: Microsoft
   children: []
   related_tools: []
 ---
