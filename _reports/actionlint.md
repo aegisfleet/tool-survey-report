@@ -1,59 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "actionlint 調査レポート"
-tool_name: "actionlint"
-tool_reading: "アクションリント"
-category: "セキュリティ/解析"
-developer: "rhysd"
-official_site: "https://rhysd.github.io/actionlint/"
-date: "2026-05-27"
-last_updated: "2026-05-27"
+title: actionlint 調査レポート
+tool_name: actionlint
+tool_reading: アクションリント
+category: セキュリティ/解析
+developer: rhysd
+official_site: https://rhysd.github.io/actionlint/
+date: '2026-05-27'
+last_updated: '2026-05-27'
 tags:
-  - "オープンソース"
-  - "セキュリティ"
-  - "静的解析"
-  - "GitHub Actions"
-  - "CI/CD"
-description: "GitHub Actionsワークフローファイルの構文エラーやセキュリティの問題を検出する、高速な静的解析ツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - セキュリティ
+  - 静的解析
+  - GitHub Actions
+  - CI/CD
+description: GitHub Actionsワークフローファイルの構文エラーやセキュリティの問題を検出する、高速な静的解析ツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevSecOpsエンジニア"
-  latest_highlight: "2026年3月にv1.7.12をリリース（on.scheduleのタイムゾーン設定に対応など）"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevSecOpsエンジニア
+  latest_highlight: 2026年3月にv1.7.12をリリース（on.scheduleのタイムゾーン設定に対応など）
+  update_frequency: 中
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 5
-      reason: "依存関係がなくGo言語で書かれているため非常に高速に動作する"
+      reason: 依存関係がなくGo言語で書かれているため非常に高速に動作する
     - point: 5
-      reason: "GitHub Actions特有の式(${{ }})に対する強力な型チェックやコンテキスト検証が充実している"
+      reason: GitHub Actions特有の式(${{ }})に対する強力な型チェックやコンテキスト検証が充実している
     - point: 4
-      reason: "shellcheckやpyflakesとの統合によるrunステップのスクリプト検査が可能"
+      reason: shellcheckやpyflakesとの統合によるrunステップのスクリプト検査が可能
     - point: 3
-      reason: "WebAssemblyによるブラウザ上のプレイグラウンド環境を提供している"
+      reason: WebAssemblyによるブラウザ上のプレイグラウンド環境を提供している
   minus_points:
-    - point: -0
-      reason: "特になし"
-  summary: "GitHub Actionsを利用するプロジェクトにおいて、デバッグや不要なCI実行時間を削減できる必須級のLintツール"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 特になし
+  summary: GitHub Actionsを利用するプロジェクトにおいて、デバッグや不要なCI実行時間を削減できる必須級のLintツール
 links:
-  github: "https://github.com/rhysd/actionlint"
-  deepwiki: "https://deepwiki.com/rhysd/actionlint"
-  documentation: "https://github.com/rhysd/actionlint/blob/main/docs/usage.md"
+  github: https://github.com/rhysd/actionlint
+  deepwiki: https://deepwiki.com/rhysd/actionlint
+  documentation: https://github.com/rhysd/actionlint/blob/main/docs/usage.md
 relationships:
   related_tools:
-    - "zizmor"
+    - zizmor
 ---
 
 # **actionlint 調査レポート**
