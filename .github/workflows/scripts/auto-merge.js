@@ -216,8 +216,9 @@ async function validateMarkdownFrontmatter(files, owner, repo, prNumber, github,
  * @param {number} prNumber PR number
  * @param {object} github GitHub Octokit client
  * @param {object} core GitHub Actions Core helper
+ * @param {object} pr Pull request object
  */
-async function autoFixYamlFormat(owner, repo, prNumber, github, core) {
+async function autoFixYamlFormat(owner, repo, prNumber, github, core, pr) {
   core.info('Auto-fixing YAML formatting...');
   try {
     const cwd = prSrcPath ? { cwd: prSrcPath } : {};
@@ -247,7 +248,8 @@ async function autoFixYamlFormat(owner, repo, prNumber, github, core) {
     const status = execSync('git status --porcelain _reports/ _trending/', cwd).toString();
     if (status.trim().length > 0) {
       execSync('git commit -m "Auto-fix YAML formatting in frontmatter [skip ci]"', cwd);
-      execSync('git push', cwd);
+      const headBranch = pr.head.ref;
+      execSync(`git push origin HEAD:${headBranch}`, cwd);
 
       core.info('Changes have been pushed. Waiting 3 seconds for GitHub to update PR state...');
       await new Promise(resolve => setTimeout(resolve, 3000));
@@ -326,7 +328,7 @@ module.exports = async ({ github, context, core }) => {
 
   // 3. Format fixing if required
   if (needsFix) {
-    await autoFixYamlFormat(owner, repo, prNumber, github, core);
+    await autoFixYamlFormat(owner, repo, prNumber, github, core, pr);
   }
 
   // 4. Draft to Ready conversion if applicable
