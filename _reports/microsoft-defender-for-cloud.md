@@ -1,53 +1,53 @@
 ---
-title: "Microsoft Defender for Cloud 調査レポート"
-tool_name: "Microsoft Defender for Cloud"
-tool_reading: "マイクロソフト ディフェンダー フォー クラウド"
-category: "セキュリティ"
-developer: "Microsoft"
-official_site: "https://azure.microsoft.com/ja-jp/products/defender-for-cloud/"
-date: "2026-05-28"
-last_updated: "2026-05-28"
+title: Microsoft Defender for Cloud 調査レポート
+tool_name: Microsoft Defender for Cloud
+tool_reading: マイクロソフト ディフェンダー フォー クラウド
+category: セキュリティ
+developer: Microsoft
+official_site: https://azure.microsoft.com/ja-jp/products/defender-for-cloud/
+date: '2026-05-28'
+last_updated: '2026-05-28'
 tags:
-  - "クラウドセキュリティ"
-  - "CSPM"
-  - "CWPP"
-  - "DevSecOps"
-  - "CNAPP"
-description: "Azure、AWS、Google Cloudなどのマルチクラウドおよびハイブリッド環境全体を保護する、統合型のクラウドネイティブアプリケーション保護プラットフォーム (CNAPP)。"
+  - クラウドセキュリティ
+  - CSPM
+  - CWPP
+  - DevSecOps
+  - CNAPP
+description: Azure、AWS、Google Cloudなどのマルチクラウドおよびハイブリッド環境全体を保護する、統合型のクラウドネイティブアプリケーション保護プラットフォーム (CNAPP)。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (Foundational CSPM)"
+  starting_price: 無料 (Foundational CSPM)
   target_users:
-    - "セキュリティエンジニア"
-    - "クラウドアーキテクト"
-    - "DevOpsエンジニア"
-  latest_highlight: "Microsoft Agent 365 (プレビュー) の一部として、AIエージェントの姿勢管理と脅威保護機能を提供"
-  update_frequency: "高"
+    - セキュリティエンジニア
+    - クラウドアーキテクト
+    - DevOpsエンジニア
+  latest_highlight: Microsoft Agent 365 (プレビュー) の一部として、AIエージェントの姿勢管理と脅威保護機能を提供
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "マルチクラウド (Azure, AWS, GCP) に対応し、包括的なCNAPPソリューションを提供"
+      reason: マルチクラウド (Azure, AWS, GCP) に対応し、包括的なCNAPPソリューションを提供
     - point: 5
-      reason: "Microsoftの幅広いセキュリティエコシステム (Sentinelなど) と強力に統合"
+      reason: Microsoftの幅広いセキュリティエコシステム (Sentinelなど) と強力に統合
     - point: 4
-      reason: "AIエージェント (Agentic AI) や開発ライフサイクル (DevSecOps) にいち早く対応"
+      reason: AIエージェント (Agentic AI) や開発ライフサイクル (DevSecOps) にいち早く対応
     - point: 3
-      reason: "日本語UIおよび充実した日本語公式ドキュメント"
+      reason: 日本語UIおよび充実した日本語公式ドキュメント
   minus_points:
     - point: -3
-      reason: "複数のMicrosoftポータルをまたがる設定が必要で、初期設定やUIが複雑"
+      reason: 複数のMicrosoftポータルをまたがる設定が必要で、初期設定やUIが複雑
     - point: -2
-      reason: "ワークロードごとのライセンス体系が複雑で、コストの見積もりが難しい"
-  summary: "Microsoftエコシステムに親和性が高く、マルチクラウド環境での統合的なセキュリティ基盤として強力な機能を提供するソリューション。"
+      reason: ワークロードごとのライセンス体系が複雑で、コストの見積もりが難しい
+  summary: Microsoftエコシステムに親和性が高く、マルチクラウド環境での統合的なセキュリティ基盤として強力な機能を提供するソリューション。
 links:
-  documentation: "https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/"
+  documentation: https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/
 relationships:
   related_tools:
-    - "amazon-guardduty"
-    - "microsoft-365-copilot"
+    - amazon-guardduty
+    - microsoft-365-copilot
 ---
 
 # **Microsoft Defender for Cloud 調査レポート**
