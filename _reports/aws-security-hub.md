@@ -45,6 +45,7 @@ relationships:
   children: []
   related_tools:
     - Amazon GuardDuty
+    - Google AI Threat Defense
 ---
 
 # **AWS Security Hub 調査レポート**
