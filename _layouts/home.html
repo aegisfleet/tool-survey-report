@@ -204,11 +204,6 @@ layout: default
           <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
         </div>
         <div class="reports-controls">
-          <div class="search-container">
-            <input type="text" id="report-search" placeholder="ツール名、説明、タグで検索..." class="search-input">
-            <button type="button" class="search-clear" id="search-clear" aria-label="検索をクリア">×</button>
-          </div>
-
           <div class="filter-container">
             <select id="tag-filter" class="tag-filter">
               <option value="">すべてのタグ</option>
@@ -238,6 +233,15 @@ layout: default
               <option value="free">無料順</option>
             </select>
           </div>
+          <button type="button" id="filter-reset-all" class="filter-reset-all-btn" title="すべてのフィルタをクリア">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+              <path d="M21 3v5h-5"/>
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+              <path d="M3 21v-5h5"/>
+            </svg>
+            条件をクリア
+          </button>
         </div>
       </div>
 

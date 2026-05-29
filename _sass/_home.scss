@@ -960,6 +960,40 @@
     padding: 0;
 }
 
+// filter-reset-all-btn
+.filter-reset-all-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-content);
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    border-radius: $border-radius-lg;
+    height: 40px;
+    padding: 0 map-get($spacers, 3);
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+
+    &:hover {
+        border-color: $primary-color;
+        color: $primary-color;
+        background: rgba($primary-color, 0.04);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba($primary-color, 0.1);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
 // Reports grid
 .reports-grid {
     display: grid;
