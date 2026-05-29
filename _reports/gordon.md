@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Docker Gordon 調査レポート"
-tool_name: "Gordon"
-tool_reading: "ゴードン"
-category: "AIアシスタント"
-developer: "Docker Inc."
-official_site: "https://www.docker.com/products/gordon/"
-date: "2026-05-29"
-last_updated: "2026-05-29"
+title: Docker Gordon 調査レポート
+tool_name: Gordon
+tool_reading: ゴードン
+category: AIアシスタント
+developer: Docker Inc.
+official_site: https://www.docker.com/products/gordon/
+date: '2026-05-29'
+last_updated: '2026-05-29'
 tags:
-  - "Docker"
-  - "コンテナ"
-  - "AI"
-  - "開発者ツール"
-description: "Docker環境に特化し、コンテナのデバッグやDockerfile生成などのタスクを支援するAIエージェント。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - Docker
+  - コンテナ
+  - AI
+  - 開発者ツール
+description: Docker環境に特化し、コンテナのデバッグやDockerfile生成などのタスクを支援するAIエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-  latest_highlight: "Docker Desktop 4.61でベータ版として提供開始"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - DevOpsエンジニア
+  latest_highlight: Docker Desktop 4.61でベータ版として提供開始
+  update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Dockerの実行環境を直接把握し、具体的なコマンド提案と実行ができる"
+      reason: Dockerの実行環境を直接把握し、具体的なコマンド提案と実行ができる
     - point: 5
-      reason: "既存のDockerアカウントを持っていれば無料で始められる"
+      reason: 既存のDockerアカウントを持っていれば無料で始められる
     - point: 3
-      reason: "Docker DesktopおよびCLIにネイティブ統合されている"
+      reason: Docker DesktopおよびCLIにネイティブ統合されている
   minus_points:
     - point: 0
-      reason: "現在特に目立った減点はないが、新しいツールであるため情報が限られる"
-  summary: "Docker環境におけるトラブルシューティングや環境構築を劇的に効率化するポテンシャルを持つ。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現在特に目立った減点はないが、新しいツールであるため情報が限られる
+  summary: Docker環境におけるトラブルシューティングや環境構築を劇的に効率化するポテンシャルを持つ。
 links:
-  documentation: "https://docs.docker.com/ai/gordon/"
+  documentation: https://docs.docker.com/ai/gordon/
 relationships:
-  parent: "Docker"
+  parent: Docker
   related_tools:
-    - "Docker Desktop"
-    - "Docker Scout"
+    - Docker Desktop
+    - Docker Scout
 ---
 
 # **Docker Gordon 調査レポート**
