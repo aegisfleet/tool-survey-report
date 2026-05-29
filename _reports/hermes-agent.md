@@ -8,32 +8,32 @@ official_site: https://hermes-agent.nousresearch.com
 date: '2026-04-10'
 last_updated: '2026-05-28'
 tags:
-- オープンソース
-- エージェント
-- 自動化
+  - オープンソース
+  - エージェント
+  - 自動化
 description: 自己改善ループを備え、時間とともに成長し、サーバー上で動作してタスクを自律的に実行するAIエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - 研究者
+    - 開発者
+    - 研究者
   latest_highlight: 2026年5月リリースのv0.15.1にてKanbanマルチエージェント、ローカルダッシュボード、TUI刷新など大幅な機能拡張を実施。v0.8.0が2026年4月8日にリリース。
   update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 高度な自律性と自己改善能力を持つ。
-  - point: 3
-    reason: オープンソースであり、セルフホストが可能。
-  - point: 2
-    reason: 豊富なプラットフォーム連携が可能。
+    - point: 5
+      reason: 高度な自律性と自己改善能力を持つ。
+    - point: 3
+      reason: オープンソースであり、セルフホストが可能。
+    - point: 2
+      reason: 豊富なプラットフォーム連携が可能。
   minus_points:
-  - point: 0
-    reason: 特になし
+    - point: 0
+      reason: 特になし
   summary: 自己改善能力と多様な連携が魅力的なOSSエージェント。
 links:
   github: https://github.com/NousResearch/hermes-agent
@@ -42,7 +42,7 @@ links:
   documentation: https://hermes-agent.nousresearch.com/docs/
 relationships:
   related_tools:
-  - OpenHands
+    - OpenHands
 ---
 
 # **Hermes Agent 調査レポート**
