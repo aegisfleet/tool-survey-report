@@ -77,6 +77,7 @@ class BrowserTestRunner:
     def apply_dark_mode(self):
         if self.args.dark_mode:
             print("Enabling Dark Mode...")
+            self.page.evaluate("document.documentElement.setAttribute('data-theme', 'dark')")
             self.page.evaluate("document.body.setAttribute('data-theme', 'dark')")
             # Also dispatch event if needed, but attribute change is usually enough for CSS
             self.page.wait_for_timeout(500)

@@ -4,107 +4,87 @@ description: ブラウザでWebページを動作確認する
 
 # ブラウザ動作確認ワークフロー
 
-WSL環境ではAntigravityの`browser_subagent`が動作しないため、Playwrightを使用してブラウザ操作を行う。
+WSL環境やその他のヘッドレス環境では、Playwrightを使用したブラウザスクリプト `scripts/browser_test.py` を使用して動作確認を行います。
 
 ## 前提条件
 
-### Jekyllサーバーの起動
-
-ブラウザテスト前に、Jekyllサーバーを起動する必要がある。
-
+### 1. 依存関係のインストール
+Playwrightがインストールされていない場合は、以下のコマンドでインストールします。
 ```bash
-bundle exec jekyll server &
+pnpm dlx playwright install chromium
 ```
 
-サーバー起動後、約3-5秒待機してからアクセスする。
+### 2. Jekyllサーバーの起動
+テスト前に、検証用のJekyllサーバーを別ターミナルまたはバックグラウンドで起動します。
+```bash
+bundle exec jekyll serve --port 4000 --host 127.0.0.1
+```
+※ポートがすでに使われている場合は `--port 4001` のように別ポートを指定します。
 
-### 重要: URLについて
-
-このプロジェクトではbaseURLに `/tool-survey-report/` が設定されているため、ローカルでのアクセスURLは以下となる:
-
+### 3. 重要: URLのベースパスについて
+このプロジェクトではbaseURLに `/tool-survey-report/` が設定されているため、ローカルでのアクセスURLは以下となります。
 - **ホーム画面**: `http://127.0.0.1:4000/tool-survey-report/`
 
-❌ `http://127.0.0.1:4000/` では404になるので注意。
+> [!WARNING]
+> `http://127.0.0.1:4000/` では404エラーになるため、必ず末尾に `/tool-survey-report/` を付与してください。
 
-## 使用方法
+---
+
+## 実行時の重要ルール
+
+> [!IMPORTANT]
+> **1. PYTHONPATHの指定**
+> `scripts/browser_test.py` を実行する際は、インポートエラーを防ぐため、必ず `PYTHONPATH=.` をプレフィックスとして指定するか、`-m` フラグを使用してください。
+>
+> **2. ローカルIP制限の回避 (--allow-internal-ips)**
+> セキュリティのためのSSRF制限により、デフォルトではローカルIP（`127.0.0.1`等）へのアクセスがブロックされます。ローカルサーバーに対してテストを行う場合は、必ず **`--allow-internal-ips`** フラグを付与してください。
+
+---
+
+## 使用方法（コマンド例）
 
 ### 1. ページを開いてスクリーンショットを取得
-
 ```bash
-// turbo
-python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "/tmp/screenshot.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action screenshot --output "screenshot.png"
 ```
 
-### 2. 特定の要素を確認
-
-要素セレクタを指定して存在確認を行う:
-
+### 2. 特定の要素を確認（存在確認）
+指定した要素がページ上に存在するかチェックします。
 ```bash
-// turbo
-python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action check --selector "h1"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action check --selector ".hero-search"
 ```
 
 ### 3. ダークモードで確認
-
+テーマ設定は `document.documentElement` (`<html>` 要素) の `data-theme="dark"` 属性に適用されます。`--dark-mode` オプションでダークモード状態でのスクリーンショットを取得できます。
 ```bash
-// turbo
-python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "/tmp/dark_mode.png" --dark-mode
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --dark-mode --action screenshot --output "dark_mode.png"
 ```
 
 ### 4. モバイル表示で確認
-
 ```bash
-// turbo
-python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "/tmp/mobile.png" --mobile
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --mobile --action screenshot --output "mobile.png"
 ```
 
-### 5. クリック操作
-
+### 5. クリック操作のシミュレーション
+特定の要素をクリックした後の状態を確認します。
 ```bash
-python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action click --selector "#search-input" --output "/tmp/after_click.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action click --selector ".search-chip:first-child" --output "after_click.png"
 ```
 
-### 6. フォーム入力
-
+### 6. テキスト入力のシミュレーション
 ```bash
-python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action input --selector "#search-input" --input-text "検索テキスト" --output "/tmp/after_input.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action input --selector "#hero-search-input" --input-text "Playwright" --output "after_input.png"
 ```
 
 ### 7. Jekyllサーバーの停止
-
-テスト完了後、サーバーを停止:
-
+テスト完了後、バックグラウンドのサーバーを停止します。
 ```bash
-// turbo
 pkill -f "jekyll"
 ```
 
-## Jekyll環境での検証（詳細手順）
+---
 
-WSL環境や特定の制限下で `jekyll serve` による直接アクセスが困難な場合や、より確実な動作確認を要する場合は、以下のビルド＆サーブ方式を推奨する。
-
-### 1. Jekyllビルド
-このプロジェクトは `/tool-survey-report/` 下で動作するため、ビルド時にベースURLを指定する必要がある。
-```bash
-bundle exec jekyll build --baseurl /tool-survey-report
-```
-
-### 2. 開発サーバー起動（Python HTTP Server）
-ビルド済みの `_site` ディレクトリの階層を維持したままサーブする。
-```bash
-# _site 以下のパス構造を維持するため一時的なディレクトリを作成
-mkdir -p /tmp/serve_root/tool-survey-report
-cp -r _site/* /tmp/serve_root/tool-survey-report/
-python3 -m http.server 4000 --directory /tmp/serve_root
-```
-
-### 3. ブラウザでの確認ポイント
-- **興味別チップのクリック**: 各ボタンをクリックした際、セレクトボックスが連動し、レポートカードが正しく絞り込まれること。
-- **カテゴリフィルタ**: 整理されたカテゴリ名が表示され、正しい絵文字が付与されていること。
-- **タグの表示**: カード内のタグをクリックして、そのタグでのフィルタリングが機能すること。
-- **共有用URL**: `?category=...` を含むURLでアクセスし、フィルタ状態が復元されること。
-
-## オプション一覧
+## 主なオプション一覧
 
 - `--url`: ターゲットURL (必須)
 - `--action`: 実行アクション (`screenshot` (default), `check`, `text`, `click`, `input`)
@@ -112,7 +92,8 @@ python3 -m http.server 4000 --directory /tmp/serve_root
 - `--output`: スクリーンショット保存パス
 - `--input-text`: 入力テキスト (`input`アクション用)
 - `--wait`: 待機時間 (秒)
-- `--dark-mode`: ダークモードを有効化
-- `--mobile`: モバイルビューポートで実行
+- `--dark-mode`: ダークモードを有効化 (`<html>` と `<body>` の両方に `data-theme="dark"` を設定します)
+- `--mobile`: モバイルビューポート (375x667) で実行
 - `--full-page`: フルページスクリーンショットを撮影
 - `--show-browser`: ブラウザGUIを表示 (デフォルトはヘッドレス)
+- `--allow-internal-ips`: ローカルIP (127.0.0.1など) へのアクセスを許可 (ローカルテスト時に必須)
