@@ -6,7 +6,7 @@ category: 汎用AIエージェント
 developer: Nous Research
 official_site: https://hermes-agent.nousresearch.com
 date: '2026-04-10'
-last_updated: '2026-04-10'
+last_updated: '2026-05-28'
 tags:
   - オープンソース
   - エージェント
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 開発者
     - 研究者
-  latest_highlight: v0.8.0が2026年4月8日にリリース。
+  latest_highlight: 2026年5月リリースのv0.15.1にてKanbanマルチエージェント、ローカルダッシュボード、TUI刷新など大幅な機能拡張を実施。v0.8.0が2026年4月8日にリリース。
   update_frequency: 高
 evaluation:
   score: 80
@@ -42,7 +42,7 @@ links:
   documentation: https://hermes-agent.nousresearch.com/docs/
 relationships:
   related_tools:
-    - openhands
+    - OpenHands
 ---
 
 # **Hermes Agent 調査レポート**
@@ -70,8 +70,10 @@ relationships:
 
 ## **3. 主要機能**
 
-* **自己改善学習ループ**: エージェント自身が経験からスキルを作成し、使用中にそれらを改善し続ける。
-* **マルチプラットフォーム対応**: Telegram, Discord, Slack, WhatsApp, Signal, Email, CLIなど、単一のゲートウェイから複数のプラットフォームで利用可能。
+* **自己改善学習ループ**: エージェント自身が経験からスキルを作成し、使用中にそれらを改善し続ける。バックグラウンドでのスキル自律整理機能も搭載。
+* **マルチプラットフォーム対応**: Telegram, Discord, Slack, WhatsApp, Signal, Email, WeChat, iMessage, Google Chat, Microsoft Teams, CLIなど20以上のプラットフォームで利用可能。
+* **Kanbanマルチエージェント基盤**: タスクの自動分解や複数ワーカーへの割り当て、リトライ等を管理する耐久性のあるボード機能。
+* **ローカルWebダッシュボード & 高度なTUI**: インタラクティブなTUI（React/Ink製）やWebブラウザからエージェントとやり取り・管理ができる。
 * **メモリ機能**: セッションをまたいだFTS5によるクロスセッションの記憶の検索・再呼び出し、ユーザーモデリング。
 * **スケジュール自動化**: 定期的なバックアップ、監査、日次レポート作成などをスケジュール（Cron）で実行可能。
 * **分離されたサンドボックス環境**: Local, Docker, SSH, Singularity, Modal、Daytonaなどのバックエンドで動作可能。
@@ -97,9 +99,10 @@ relationships:
 ## **5. 特徴・強み (Pros)**
 
 * スキルの自己生成と学習機能があり、使い込むほどパーソナライズされ最適化される。
+* Kanbanを用いたマルチエージェントシステムにより、複雑なタスクの並行処理や自動分割が可能。
 * ノートPCなどのローカル端末に依存せず、クラウドやサーバー上に展開しやすい。
-* DiscordやTelegramなど、多くのコミュニケーションプラットフォームとの統合が標準で可能。
-* MCP (Model Context Protocol) 統合により拡張性が高い。
+* 20以上のコミュニケーションプラットフォームとの統合が標準で可能。
+* MCP (Model Context Protocol) 統合やプラグインシステムによる高い拡張性を持つ。
 
 ## **6. 弱み・注意点 (Cons)**
 
@@ -133,7 +136,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: MCP (Model Context Protocol) を通じて任意のサーバーと連携可能。
-* **外部サービス連携**: Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Mattermost, Email, SMS, DingTalk, Feishu, WeCom, Home Assistant など。
+* **外部サービス連携**: Telegram, Discord, Slack, WhatsApp, Signal, Matrix, Mattermost, Email, SMS, DingTalk, Feishu, WeCom, Home Assistant, WeChat, iMessage, Google Chat, Microsoft Teamsなど、20以上のプラットフォームをサポート。
 
 ### **10.2 技術スタックとの相性**
 
@@ -176,7 +179,14 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-04-08**: Hermes Agent v0.8.0 リリース (最新版)
+* **2026-05-29**: v0.15.1 リリース。ダッシュボードのループバックモードでのリロードループ修正、MCPやDockerのバグフィックスを実施。
+* **2026-05-28**: v0.15.0 "The Velocity Release" リリース。Kanbanマルチエージェント基盤の大幅拡張、Cold-startのパフォーマンス向上、TUIセッションオーケストレーター、新しい画像生成プロバイダーなどを追加。
+* **2026-05-16**: v0.14.0 "The Foundation Release" リリース。Grokネイティブ対応、Microsoft Teamsエンドツーエンド連携、X (Twitter) 検索ツール等を追加。
+* **2026-05-07**: v0.13.0 "The Tenacity Release" リリース。Kanbanマルチエージェントボード機能の拡充やGoogle Chat対応などを追加。
+* **2026-04-30**: v0.12.0 "The Curator Release" リリース。バックグラウンドでのスキル自律整理機能、新しい推論プロバイダ等の追加。
+* **2026-04-23**: v0.11.0 "The Interface Release" リリース。React/InkによるTUI刷新、QQBot対応、プラグインシステムの拡張。
+* **2026-04-13**: v0.9.0 "The everywhere release" リリース。ローカルWebダッシュボード追加、Termux(Android)対応、iMessage、WeChat対応など。
+* **2026-04-08**: Hermes Agent v0.8.0 リリース。バックグラウンドプロセスの自動通知、モデルのライブ切り替え等に対応。
 
 (出典: [GitHub Releases](https://github.com/NousResearch/hermes-agent/releases) )
 

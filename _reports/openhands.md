@@ -52,6 +52,7 @@ relationships:
     - Cursor
     - GitHub Copilot
     - UI-TARS Desktop
+    - Hermes Agent
 ---
 
 # **OpenHands 調査レポート**
