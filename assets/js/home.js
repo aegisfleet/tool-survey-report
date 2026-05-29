@@ -41,8 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryFilter = document.getElementById('category-filter');
   const categoryFilterClear = document.getElementById('category-filter-clear');
   const sortSelect = document.getElementById('sort-select');
-  const interestChips = Array.from(document.querySelectorAll('.interest-chip'));
-  const interestReset = document.getElementById('interest-reset');
+  // Hero search elements
+  const heroSearchInput = document.getElementById('hero-search-input');
+  const heroSearchClear = document.getElementById('hero-search-clear');
+  const heroSearchChips = Array.from(document.querySelectorAll('.hero-search-chip'));
   const reportsGrid = document.getElementById('reports-grid');
   const reportsCountContainer = document.getElementById('reports-count-container');
   const noResults = document.getElementById('no-results');
@@ -356,8 +358,109 @@ document.addEventListener('DOMContentLoaded', () => {
     history.replaceState(null, '', url.toString());
   }
 
+  // ============================================
+  // Hero Search: sync & shortcuts
+  // ============================================
+
+  // Update hero search clear button visibility
+  function updateHeroSearchClear() {
+    if (!heroSearchClear) return;
+    if (heroSearchInput && heroSearchInput.value.length > 0) {
+      heroSearchClear.classList.add('visible');
+    } else {
+      heroSearchClear.classList.remove('visible');
+    }
+  }
+
+  // Update hero search chip active states
+  function updateHeroSearchChipStates() {
+    if (!heroSearchInput) return;
+    const currentSearch = heroSearchInput.value.trim();
+    heroSearchChips.forEach((chip) => {
+      if (chip.dataset.searchTerm === currentSearch && currentSearch !== '') {
+        chip.classList.add('active');
+      } else {
+        chip.classList.remove('active');
+      }
+    });
+  }
+
+  // Sync hero search → report search and trigger filter
+  function syncHeroToReport() {
+    if (heroSearchInput && searchInput) {
+      searchInput.value = heroSearchInput.value;
+    }
+    updateHeroSearchClear();
+    updateHeroSearchChipStates();
+    filterAndSort();
+  }
+
+  // Sync report search → hero search
+  function syncReportToHero() {
+    if (searchInput && heroSearchInput) {
+      heroSearchInput.value = searchInput.value;
+    }
+    updateHeroSearchClear();
+    updateHeroSearchChipStates();
+  }
+
+  // Hero search input events
+  if (heroSearchInput) {
+    heroSearchInput.addEventListener('input', syncHeroToReport);
+  }
+
+  // Hero search clear
+  if (heroSearchClear) {
+    heroSearchClear.addEventListener('click', () => {
+      if (heroSearchInput) heroSearchInput.value = '';
+      syncHeroToReport();
+      heroSearchInput?.focus();
+    });
+  }
+
+  // Hero search chips (popular keywords)
+  heroSearchChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const term = chip.dataset.searchTerm || '';
+      if (heroSearchInput) {
+        // If same term already active, clear it (toggle behavior)
+        if (heroSearchInput.value.trim() === term) {
+          heroSearchInput.value = '';
+        } else {
+          heroSearchInput.value = term;
+        }
+      }
+      syncHeroToReport();
+      // Scroll to reports section for immediate results visibility
+      const reportsSection = document.querySelector('.reports-section');
+      if (reportsSection) {
+        reportsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  // Keyboard shortcut: "/" to focus hero search
+  document.addEventListener('keydown', (e) => {
+    // Don't trigger if user is already typing in an input/textarea
+    const activeEl = document.activeElement;
+    if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.tagName === 'SELECT')) {
+      // If Escape is pressed inside hero search, blur it
+      if (e.key === 'Escape' && activeEl === heroSearchInput) {
+        heroSearchInput.blur();
+      }
+      return;
+    }
+
+    if (e.key === '/' && heroSearchInput) {
+      e.preventDefault();
+      heroSearchInput.focus();
+      heroSearchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+
   // Event listeners
   searchInput.addEventListener('input', () => {
+    syncReportToHero();
     filterAndSort();
   });
   tagFilter.addEventListener('change', () => {
@@ -370,34 +473,9 @@ document.addEventListener('DOMContentLoaded', () => {
     filterAndSort();
   });
 
-  interestChips.forEach((chip) => {
-    chip.addEventListener('click', () => {
-      const suggestedSearch = chip.dataset.interestSearch || '';
-      const suggestedTag = chip.dataset.interestTag || '';
-      const suggestedCategory = chip.dataset.interestCategory || '';
-      const suggestedSort = chip.dataset.interestSort || 'date-desc';
-
-      searchInput.value = suggestedSearch;
-      tagFilter.value = suggestedTag;
-      categoryFilter.value = suggestedCategory.toLowerCase(); // カテゴリフィルタは小文字でマッチさせる
-      sortSelect.value = suggestedSort;
-
-      filterAndSort();
-    });
-  });
-
-  if (interestReset) {
-    interestReset.addEventListener('click', () => {
-      searchInput.value = '';
-      tagFilter.value = '';
-      categoryFilter.value = '';
-      sortSelect.value = 'date-desc';
-      filterAndSort();
-    });
-  }
-
   searchClear.addEventListener('click', () => {
     searchInput.value = '';
+    syncReportToHero();
     filterAndSort();
   });
 
@@ -415,8 +493,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
   const tagParam = urlParams.get('tag');
   const categoryParam = urlParams.get('category');
+  const searchParam = urlParams.get('q');
 
-  if (tagParam || categoryParam) {
+  if (searchParam) {
+    // URLのクエリパラメータで検索
+    searchInput.value = searchParam;
+    if (heroSearchInput) heroSearchInput.value = searchParam;
+    updateHeroSearchClear();
+    updateHeroSearchChipStates();
+    filterAndSort();
+  } else if (tagParam || categoryParam) {
     // URLパラメータがある場合は優先
     if (tagParam) tagFilter.value = tagParam;
     if (categoryParam) {
@@ -430,6 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const restored = restoreFilterState();
     if (restored) {
       filterAndSort(false); // 復元時は保存しない
+      syncReportToHero(); // ヒーロー検索にも同期
     } else {
       // 初期状態でも状態を更新して初期表示を行う
       filterAndSort(false);
