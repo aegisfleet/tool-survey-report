@@ -660,7 +660,7 @@
         }
 
         // Focus時にアイコンの色も変更
-        &:focus ~ .hero-search-box-icon {
+        &:focus~.hero-search-box-icon {
             stroke: $primary-color;
         }
 
@@ -672,7 +672,7 @@
     }
 
     // Icon color change on focus (sibling selector fix)
-    .hero-search-input:focus + .hero-search-clear + .hero-search-shortcut + .hero-search-box-icon,
+    .hero-search-input:focus+.hero-search-clear+.hero-search-shortcut+.hero-search-box-icon,
     &:focus-within .hero-search-box-icon {
         stroke: $primary-color;
     }
