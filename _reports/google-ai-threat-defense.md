@@ -1,55 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Google AI Threat Defense 調査レポート"
-tool_name: "Google AI Threat Defense"
-tool_reading: "グーグル エーアイ スレット ディフェンス"
-category: "セキュリティ/解析"
-developer: "Google Cloud"
-official_site: "https://cloud.google.com/security/ai-threat-defense"
-date: "2026-05-29"
-last_updated: "2026-05-29"
+title: Google AI Threat Defense 調査レポート
+tool_name: Google AI Threat Defense
+tool_reading: グーグル エーアイ スレット ディフェンス
+category: セキュリティ/解析
+developer: Google Cloud
+official_site: https://cloud.google.com/security/ai-threat-defense
+date: '2026-05-29'
+last_updated: '2026-05-29'
 tags:
-  - "AI"
-  - "セキュリティ"
-  - "クラウド"
-  - "自動化"
-description: "AI駆動の攻撃をしのぐために設計された、常時稼働の自律型サイバーセキュリティプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - セキュリティ
+  - クラウド
+  - 自動化
+description: AI駆動の攻撃をしのぐために設計された、常時稼働の自律型サイバーセキュリティプラットフォーム
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "セキュリティチーム"
-    - "エンジニアリングチーム"
-    - "大企業"
-  latest_highlight: "2026年5月、Google CloudがGoogle AI Threat Defenseを発表"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - セキュリティチーム
+    - エンジニアリングチーム
+    - 大企業
+  latest_highlight: 2026年5月、Google CloudがGoogle AI Threat Defenseを発表
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Mandiant、Wiz、Geminiなど業界最高水準の技術を統合した包括的ソリューション"
+      reason: Mandiant、Wiz、Geminiなど業界最高水準の技術を統合した包括的ソリューション
     - point: 5
-      reason: "単なる脆弱性発見だけでなく、優先順位付けから修正（パッチ生成）まで自律的に行う点"
+      reason: 単なる脆弱性発見だけでなく、優先順位付けから修正（パッチ生成）まで自律的に行う点
     - point: 5
-      reason: "Googleの強固なセキュリティインフラと運用実績に基づく信頼性"
+      reason: Googleの強固なセキュリティインフラと運用実績に基づく信頼性
   minus_points:
     - point: -3
-      reason: "導入・運用には一定の規模とコストが必要と推測されるエンタープライズ向けソリューション"
-  summary: "複数の最先端AI・セキュリティ技術を融合し、自律的な防御を実現する次世代セキュリティプラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 導入・運用には一定の規模とコストが必要と推測されるエンタープライズ向けソリューション
+  summary: 複数の最先端AI・セキュリティ技術を融合し、自律的な防御を実現する次世代セキュリティプラットフォーム
 links:
-  documentation: "https://cloud.google.com/security/ai-threat-defense"
+  documentation: https://cloud.google.com/security/ai-threat-defense
 relationships:
   related_tools:
-    - "AWS Security Hub"
+    - AWS Security Hub
 ---
 
 # **Google AI Threat Defense 調査レポート**
