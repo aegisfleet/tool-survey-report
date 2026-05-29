@@ -6,7 +6,7 @@ category: ワークフロー自動化
 developer: Workato, Inc.
 official_site: https://www.workato.com/
 date: '2026-02-21'
-last_updated: '2026-02-21'
+last_updated: '2026-05-29'
 tags:
   - AI
   - iPaaS
@@ -22,17 +22,19 @@ quick_summary:
     - 大企業
     - 情報システム部門
     - 業務部門
-  latest_highlight: 2026年1月にAnthropic Connectorを強化しAIエージェント連携を促進
+  latest_highlight: 2026年5月にAgent Studioを強化（Geniesの全体利用、Slackネイティブ対応）。オンプレミス向けAPI Edge GatewayやSCIM 2.0にも対応
   update_frequency: 高
 evaluation:
-  score: 78
+  score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: エンタープライズレベルの強力なセキュリティとガバナンス
+      reason: エンタープライズレベルの強力なセキュリティとガバナンス（SCIM 2.0、中国リージョン対応など）
     - point: 5
-      reason: 1000以上のコネクタと柔軟な自動化機能
+      reason: 1000以上のコネクタとData Pipelinesによる強力なデータオーケストレーション
     - point: 3
+      reason: Agent Studioによる高度なAIエージェント構築と運用基盤の提供
+    - point: 2
       reason: 日本語UI対応と国内サポート体制の強化
   minus_points:
     - point: -3
@@ -104,8 +106,9 @@ relationships:
 
 * **Recipe (レシピ)**: 「トリガー（きっかけ）」と「アクション（処理）」を組み合わせた自動化フローを作成する機能。条件分岐やループ処理などの複雑なロジックもGUIで構築可能。
 * **Connector (コネクタ)**: Salesforce, SAP, Oracle, Slackなど1000以上のアプリケーションやデータベースへ接続するための部品。事前定義されたコネクタによりAPIの知識がなくても連携が可能。
-* **Workbot**: SlackやMicrosoft Teams、Facebook Workplaceなどのチャットツール上で動作するボットを作成し、チャット画面から業務システムを操作・参照できる機能。
-* **API Management**: 作成したレシピをAPIエンドポイントとして公開し、外部からのアクセスを管理・制御する機能。
+* **Data Pipelines**: 大規模なデータ連携（ETL/ELT）に特化した機能。SalesforceやS3からSnowflakeやDatabricksへ、自動スキーマ変更検知や増分同期を用いたパイプラインを構築可能。
+* **Agent Studio**: 自律型AIエージェント（Genies）を構築・管理する機能。Slackなどのチャネルにネイティブ対応し、MCPサーバーを通じて外部システムと連携する高度なアシスタントを作成できる。
+* **API Edge Gateway**: API Management機能の拡張。オンプレミスやプライベートクラウド内にゲートウェイをデプロイし、トラフィックやデータを外部に出さずにAPIの管理・運用が可能。
 * **Workflow Apps**: 人間の承認や判断が必要なプロセスを含むアプリケーションを、ローコードで構築する機能。
 * **Workato Copilot**: 生成AIを活用して、自然言語での指示からレシピのドラフトを作成したり、レシピの説明文を自動生成したりする開発支援機能。
 
@@ -214,8 +217,10 @@ relationships:
 - 主要連携サービスを5-10個リストアップ
 -->
 
-* **API**: Workato自体がAPIプラットフォームとして機能し、作成したレシピをREST APIとして公開可能（API Management機能）。
+* **API**: Workato自体がAPIプラットフォームとして機能し、作成したレシピをREST APIとして公開可能（API Management機能）。API Edge Gatewayによりオンプレミス環境でのAPI提供もサポート。
 * **外部サービス連携**: Salesforce, NetSuite, ServiceNow, Jira, Slack, Microsoft Teams, Google Workspace, AWS, Azure, SAPなど、1000以上のコネクタを標準提供。HTTPコネクタを使用すれば、標準コネクタがないREST/SOAP APIとも連携可能。
+* **MCP (Model Context Protocol) サーバー**: AIエージェント向けに、Slack, GitHub, Salesforce, Notion, Dropbox, Freshdesk, ZoomInfoなど多数の外部システムと連携するプレビルドMCPサーバーを提供。
+* **データプラットフォーム連携**: Data Pipelines機能を通じ、Snowflake, Databricks, BigQueryなどのデータウェアハウスへシームレスにデータ統合が可能。
 
 ### **10.2 技術スタックとの相性**
 
@@ -241,8 +246,8 @@ relationships:
 - 「不明」「見つからず」のみの記載は避ける
 -->
 
-* **認証**: SAML 2.0によるシングルサインオン (SSO)、多要素認証 (2FA) に対応。
-* **データ管理**: 顧客独自の暗号化キーを使用するBYOK (Bring Your Own Key) に対応。データの保存リージョン（米国、欧州、日本など）を選択可能。
+* **認証**: SAML 2.0によるシングルサインオン (SSO)、多要素認証 (2FA) に対応。Workato IdentityではSCIM 2.0によるユーザーおよびグループの自動プロビジョニングをサポート。
+* **データ管理**: 顧客独自の暗号化キーを使用するBYOK (Bring Your Own Key) に対応。データの保存リージョンとして米国、欧州、日本に加え、中国（AWS China）を選択可能になり、厳しいデータレジデンシー要件に対応。
 * **準拠規格**: SOC 2 Type 2, ISO 27001, HIPAA, GDPR, PCI-DSS Level 1, IRAP, CCPAなど、国際的なセキュリティ基準に多数準拠。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
@@ -309,14 +314,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2026-01-05**: **Anthropic Connector**: 「Connector of the Month」としてAnthropicコネクタがハイライトされ、AIエージェント機能との連携が強化されました。
-* **2025-12-25**: **Introduction to Agent Studio**: AIエージェント（Genies）を構築・デプロイ・管理するための「Agent Studio」向け公式トレーニングコースがWorkato Academyで公開されました。
-* **2025-12-10**: **Community Build Event**: パートナーや顧客開発者が集まり、実際の自動化ユースケースを共有・構築するイベントが開催され、多数の新しいレシピがコミュニティに追加されました。
-* **2025-11-05**: **日本語UIの正式リリース**: 製品UIの完全日本語化に加え、日本国内向けのAIエージェント機能強化を発表。
-* **2025-06-23**: **Model Selector Node**: 複数のLLMをワークフローに接続し、入力に応じて使用するモデルを動的に切り替える機能が追加されました。
-* **2025-04-14**: **Microsoft Fabric Integration**: データエンジニアリング向けのMicrosoft Fabricエコシステムとの連携機能に関する議論とベストプラクティスが公開されました。
+* **2026-05-26**: **Data Pipelines強化**: 接続先の拡大（Snowflake, Databricks等）、自動スキーマ変更検知、パイプラインダッシュボードなどのエンタープライズ向け機能が追加。
+* **2026-05-18**: **Agent Studio機能強化**: GeniesやKnowledge Baseがワークスペースのプロジェクト間で横断利用可能になり、GeniesのSlackネイティブチャネルサポート（スレッドコンテキスト把握等）が追加。
+* **2026-04**: **API Edge Gateway & China Data Center**: オンプレミス環境でAPIトラフィックを管理できるEdge Gateway、および中国国内でのデータ処理・保管を完了させるChina Data Centerがリリース。
+* **2026-04**: **Workato Identity SCIM 2.0対応**: IDプロバイダーからのユーザー/グループのInbound Provisioning（自動同期・オフボーディング）に対応。
+* **2026-01-05**: **Anthropic Connector**: 「Connector of the Month」としてAnthropicコネクタがハイライトされ、AIエージェント機能との連携が強化。
+* **2025-12-25**: **Introduction to Agent Studio**: AIエージェント（Genies）を構築・デプロイ・管理するための「Agent Studio」向け公式トレーニングコースがWorkato Academyで公開。
 
-(出典: [Workato Product Hub](https://www.workato.com/product-hub/))
+(出典: [Workato Changelog](https://www.workato.com/product-hub/changelog/))
 
 ## **16. 類似ツールとの比較**
 
@@ -344,7 +349,7 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 連携アプリ数 | ◎<br><small>1000+</small> | ◎<br><small>6000+</small> | ◯<br><small>1600+</small> | ◎<br><small>1000+</small> |
 | **カテゴリ特定** | 複雑なロジック | ◎<br><small>高度な分岐・ループ</small> | △<br><small>可能だが制限あり</small> | ◎<br><small>視覚的に構築可能</small> | ◯<br><small>可能</small> |
-| **エンタープライズ** | セキュリティ/ガバナンス | ◎<br><small>SOC2, ISO27001, 監査ログ</small> | △<br><small>Enterpriseプランのみ</small> | ◯<br><small>Enterpriseプランあり</small> | ◎<br><small>MS365準拠</small> |
+| **エンタープライズ** | セキュリティ/ガバナンス | ◎<br><small>SOC2, ISO27001, 監査ログ, SCIM 2.0, API Edge Gateway</small> | △<br><small>Enterpriseプランのみ</small> | ◯<br><small>Enterpriseプランあり</small> | ◎<br><small>MS365準拠</small> |
 | **非機能要件** | 日本語対応 | ◯<br><small>UI/サポート対応</small> | △<br><small>一部のみ</small> | ×<br><small>英語のみ</small> | ◎<br><small>完全対応</small> |
 
 ### **16.2 詳細比較**
