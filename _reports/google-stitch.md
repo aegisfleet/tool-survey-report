@@ -6,7 +6,7 @@ category: デザインツール
 developer: Google
 official_site: https://stitch.withgoogle.com/
 date: '2026-02-22'
-last_updated: '2026-02-22'
+last_updated: '2026-05-30'
 tags:
   - AI
   - Gemini
@@ -23,7 +23,7 @@ quick_summary:
     - 開発者
     - デザイナー
     - プロダクトマネージャー
-  latest_highlight: Gemini 2.5 Pro/Flashモデルを搭載し、画像からのUI生成に対応
+  latest_highlight: Gemini 3.5 Pro/Flashモデルを搭載し、画像からのUI生成に対応
   update_frequency: 高
 evaluation:
   score: 78
@@ -32,7 +32,7 @@ evaluation:
     - point: 5
       reason: テキストプロンプトから数秒でUIのプロトタイプを作成できる
     - point: 3
-      reason: Gemini 2.5 Proによる画像（スケッチやワイヤーフレーム）からのUI生成に対応
+      reason: Gemini 3.5 Proによる画像（スケッチやワイヤーフレーム）からのUI生成に対応
     - point: 3
       reason: 生成されたUIをFigma形式やHTML/CSSコードとしてエクスポート可能
     - point: 3
@@ -71,7 +71,7 @@ relationships:
 * **関連リンク**:
   * 公式サイト: [https://stitch.withgoogle.com/](https://stitch.withgoogle.com/)
 * **カテゴリ**: デザインツール
-* **概要**: Google Stitchは、テキストプロンプトや手書きのスケッチ、スクリーンショットから、レスポンシブなUIデザインを自動生成するAIツールです。GoogleのGemini 2.5モデル（FlashおよびPro）を搭載しており、デザインのバリエーション作成やコード生成を迅速に行うことができます。
+* **概要**: Google Stitchは、テキストプロンプトや手書きのスケッチ、スクリーンショットから、レスポンシブなUIデザインを自動生成するAIツールです。GoogleのGemini 3.5モデル（FlashおよびPro）を搭載しており、デザインのバリエーション作成やコード生成を迅速に行うことができます。
 
 ## **2. 目的と主な利用シーン**
 
@@ -103,7 +103,7 @@ relationships:
 -->
 
 * **テキストからのUI生成**: 自然言語で作りたいアプリやWebサイトの概要を入力するだけで、複数の画面デザインを生成。
-* **画像からのUI生成 (Experimental Mode)**: 手書きのワイヤーフレームや既存のデザイン画像をアップロードし、それを基にUIを生成（Gemini 2.5 Proを使用）。
+* **画像からのUI生成 (Experimental Mode)**: 手書きのワイヤーフレームや既存のデザイン画像をアップロードし、それを基にUIを生成（Gemini 3.5 Proを使用）。
 * **バリエーション生成**: 生成された画面の一部を選択し、指示を与えることで、デザインのバリエーションや修正案を即座に作成。
 * **Figmaエクスポート (Standard Mode)**: 生成されたデザインを、レイヤー構造を保ったままFigmaにコピー＆ペースト可能（Auto Layout対応）。
 * **コードエクスポート**: デザインをHTML/CSSコードとして出力し、開発環境ですぐに利用可能。
@@ -136,8 +136,8 @@ relationships:
 - 競合との差別化ポイントを明確に
 -->
 
-* **高速なプロトタイピング**: Gemini 2.5 Flashモデルにより、プロンプト入力から数秒でデザイン案が出力されるスピード感。
-* **マルチモーダル入力**: Gemini 2.5 Proモデルを活用し、テキストだけでなく画像（スケッチ等）の意図を汲み取ったデザイン生成が可能。
+* **高速なプロトタイピング**: Gemini 3.5 Flashモデルにより、プロンプト入力から数秒でデザイン案が出力されるスピード感。
+* **マルチモーダル入力**: Gemini 3.5 Proモデルを活用し、テキストだけでなく画像（スケッチ等）の意図を汲み取ったデザイン生成が可能。
 * **直感的な操作性**: 複雑なデザインツール（Figma等）の知識がなくても、チャット形式でデザインを修正・改善できる。
 * **開発連携**: 生成されたデザインからクリーンなHTML/CSSコードを取得でき、エンジニアへのハンドオフがスムーズ。
 
@@ -300,11 +300,11 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025年後半**: **Gemini 2.5モデルの統合**: バックエンドモデルがGemini 2.5 Flash/Proにアップグレードされ、生成速度と画質が向上。
+* **2026-05-19**: **Gemini 3.5モデルの統合**: バックエンドモデルがGemini 3.5 Flash/Proにアップグレードされ、生成速度と画質が向上。
 * **2025年後半**: **Experimental Modeの追加**: 画像入力（マルチモーダル）に対応し、手書きスケッチからの生成が可能に。
 * **2025年5月**: **Googleによる買収・統合**: 元となったサービス（Galileo AI）がGoogleに買収され、"Google Stitch" としてリブランディング・再リリース。
 
-(出典: LogRocket Blog, UX Pilot Blog)
+(出典: [Google Labs Product Updates](https://labs.google.com/), [Google AI Blog](https://blog.google/technology/ai/))
 
 ## **16. 類似ツールとの比較**
 
