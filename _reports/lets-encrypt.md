@@ -6,7 +6,7 @@ category: CDN/セキュリティ
 developer: Internet Security Research Group (ISRG)
 official_site: https://letsencrypt.org/
 date: '2026-02-22'
-last_updated: '2026-02-22'
+last_updated: '2026-05-30'
 tags:
   - SSL
   - TLS
@@ -22,7 +22,7 @@ quick_summary:
     - Webサイト管理者
     - 開発者
     - インフラエンジニア
-  latest_highlight: 2026年1月に短期間証明書とIPアドレス証明書の一般提供を開始
+  latest_highlight: 2026年4月に「Webサイトが壊れていることを確認する難しさ」についての記事を公開
   update_frequency: 高
 evaluation:
   score: 85
@@ -36,7 +36,7 @@ evaluation:
       reason: 7億以上のWebサイトで利用されており、広範な信頼を得ている
   minus_points:
     - point: -3
-      reason: 証明書の有効期限が90日と短く、自動更新の設定が必須
+      reason: 証明書の有効期限が90日（今後45日に短縮予定）と短く、自動更新の設定が必須
   summary: コストをかけずにWebサイトをHTTPS化するためのデファクトスタンダード
 links:
   github: https://github.com/letsencrypt
@@ -117,7 +117,7 @@ relationships:
 
 ## **6. 弱み・注意点 (Cons)**
 
-* **有効期限が短い**: 証明書の有効期限は90日間と短く設定されています（一般的な有償証明書は1年）。自動更新の設定が事実上必須です。
+* **有効期限が短い**: 証明書の有効期限は現在90日間と短く設定されています（一般的な有償証明書は1年）。さらに今後2年間で段階的に45日へと短縮される予定です。自動更新の設定が事実上必須です。
 * **DV証明書のみ**: ドメインの所有確認のみを行うDV（Domain Validation）証明書に限られ、組織の実在性を証明するOV（Organization Validation）やEV（Extended Validation）証明書は発行できません。
 * **サポート体制**: 電話やメールによる個別サポートはなく、コミュニティフォーラムやドキュメントによるセルフサポートが基本です。
 * **レート制限**: 短期間に大量の証明書を発行する場合、レート制限（Rate Limits）に抵触する可能性があります。
@@ -196,6 +196,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-10**: The difficulty of making sure your website is broken に関する記事を公開。
+* **2026-03-17**: ACME Renewal Information (ARI) による証明書更新の簡素化を発表。
+* **2026-03-11**: 短期間（6日間）証明書とIPアドレス証明書の一般提供をCertbotで開始。
+* **2026-02-24**: 今後2年間で証明書のデフォルト有効期限を90日から64日、最終的に45日へと短縮する方針を発表。
+* **2026-02-18**: DNS-PERSIST-01: DNSベースのチャレンジ検証の新しいモデルを発表。
 * **2026-01-15**: 短期間（6日間）証明書とIPアドレス証明書の一般提供を開始。
 * **2025-12-29**: 年末のエグゼクティブディレクターからのメッセージを公開し、年間の成長と進歩を報告。
 * **2025-12-09**: Let's Encrypt証明書発行10周年を記念する記事を公開。
@@ -210,14 +215,14 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 無料発行 | ◎<br><small>完全無料</small> | ◯<br><small>3つまで無料</small> | ◎<br><small>CDN利用で無料</small> | ×<br><small>高額</small> |
 | **自動化** | ACME対応 | ◎<br><small>標準</small> | ◎<br><small>対応</small> | -<br><small>自動管理</small> | △<br><small>一部対応</small> |
-| **信頼性** | 有効期限 | △<br><small>90日</small> | △<br><small>90日</small> | ◎<br><small>1年(自動更新)</small> | ◎<br><small>1年</small> |
+| **信頼性** | 有効期限 | △<br><small>90日(今後45日予定)</small> | △<br><small>90日</small> | ◎<br><small>1年(自動更新)</small> | ◎<br><small>1年</small> |
 | **種類** | OV/EV対応 | ×<br><small>非対応</small> | ×<br><small>有料プランのみ</small> | ◯<br><small>有料プラン</small> | ◎<br><small>対応</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Let's Encrypt** | 無料・自動化のパイオニア | 完全無料、広範なエコシステム、ベンダー中立 | サポートなし、DVのみ、90日期限 | コストを抑えたい個人・中小規模サイト、自動化したい場合。 |
+| **Let's Encrypt** | 無料・自動化のパイオニア | 完全無料、広範なエコシステム、ベンダー中立 | サポートなし、DVのみ、90日期限(今後45日予定) | コストを抑えたい個人・中小規模サイト、自動化したい場合。 |
 | **ZeroSSL** | Let's Encryptの代替となる無料CA | Web UIが使いやすい、無制限の無料プランはない | 無料枠に制限あり（3つまで） | Let's Encrypt以外の無料CAを使いたい場合。Web管理画面を好む場合。 |
 | **Cloudflare** | CDN付属のSSL機能 | CDNとセットで簡単にHTTPS化、設定不要 | オリジンサーバーとCloudflare間の暗号化は別途必要 | CloudflareのCDNを利用する場合。 |
 | **有料SSL** | 従来の認証局による証明書 | 企業認証(OV/EV)が可能、手厚いサポート、補償あり | コストがかかる、発行手続きが煩雑な場合がある | 金融機関やECサイトなど、高い信頼性と実在証明が求められる場合。 |
