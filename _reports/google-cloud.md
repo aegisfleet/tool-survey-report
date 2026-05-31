@@ -50,6 +50,7 @@ relationships:
     - Looker Studio
     - Spanner Omni
   related_tools:
+    - Google Learning
     - Terraform
     - Google Workspace CLI (gws)
     - Cloudflare
