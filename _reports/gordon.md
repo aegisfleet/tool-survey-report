@@ -2,16 +2,17 @@
 title: Docker Gordon 調査レポート
 tool_name: Gordon
 tool_reading: ゴードン
-category: AIアシスタント
+category: AIコーディング支援
 developer: Docker Inc.
 official_site: https://www.docker.com/products/gordon/
 date: '2026-05-29'
 last_updated: '2026-05-29'
 tags:
-  - Docker
-  - コンテナ
   - AI
+  - エージェント
   - 開発者ツール
+  - コンテナ
+  - Docker
 description: Docker環境に特化し、コンテナのデバッグやDockerfile生成などのタスクを支援するAIエージェント。
 quick_summary:
   has_free_plan: true

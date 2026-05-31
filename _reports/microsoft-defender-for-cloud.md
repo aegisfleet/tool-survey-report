@@ -2,17 +2,17 @@
 title: Microsoft Defender for Cloud 調査レポート
 tool_name: Microsoft Defender for Cloud
 tool_reading: マイクロソフト ディフェンダー フォー クラウド
-category: セキュリティ
+category: セキュリティ/解析
 developer: Microsoft
 official_site: https://azure.microsoft.com/ja-jp/products/defender-for-cloud/
 date: '2026-05-28'
 last_updated: '2026-05-28'
 tags:
-  - クラウドセキュリティ
+  - クラウド
+  - セキュリティ
   - CSPM
   - CWPP
   - DevSecOps
-  - CNAPP
 description: Azure、AWS、Google Cloudなどのマルチクラウドおよびハイブリッド環境全体を保護する、統合型のクラウドネイティブアプリケーション保護プラットフォーム (CNAPP)。
 quick_summary:
   has_free_plan: true
