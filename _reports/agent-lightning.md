@@ -6,7 +6,7 @@ category: AIエージェント基盤
 developer: Microsoft (Research)
 official_site: https://microsoft.github.io/agent-lightning/
 date: '2026-02-23'
-last_updated: '2026-02-23'
+last_updated: '2026-05-31'
 tags:
   - AI
   - MLOps
@@ -22,7 +22,7 @@ quick_summary:
   target_users:
     - AIリサーチャー
     - AIエンジニア
-  latest_highlight: 2025年12月にv0.3.0をリリース。Tinkerとの連携やvLLMによる学習高速化を実現
+  latest_highlight: 2025年12月にv0.3.0をリリースし、Tinker連携やAgent-lightning Dashboard、RESTful APIの安定化などを実現
   update_frequency: 高
 evaluation:
   score: 78
@@ -100,7 +100,7 @@ relationships:
   * **Automatic Prompt Optimization (APO)**: プロンプトを自動的に修正して最適化。
   * **Supervised Fine-tuning (SFT)**: 教師あり学習による微調整。
 * **スケーラブルな実行基盤**: 学習を行う「Algorithm」とエージェントを実行する「Runner」が独立しており、並列分散処理が可能。
-* **統合された可観測性**: エージェントの実行ログ（Trace）を自動収集し、学習データとして活用するための「LightningStore」と「Tracer」を提供。
+* **統合された可観測性**: エージェントの実行ログ（Trace）を自動収集し、学習データとして活用するための「LightningStore」と「Tracer」を提供。v0.3.0よりOTel Semantic ConventionsやAgent-lightning Dashboardも提供。
 
 ## **4. 開始手順・セットアップ**
 
@@ -219,9 +219,10 @@ relationships:
 
 * **API**: RESTful APIを提供し、外部システムからLightningStoreへのアクセスが可能。
 * **外部サービス連携**:
-  * **LLM**: OpenAI, vLLMなど、OpenAI互換APIを持つモデルサーバーと連携可能。
+  * **LLM**: OpenAI, Azure OpenAI, vLLMなど、OpenAI互換APIを持つモデルサーバーと連携可能。
   * **Agent Frameworks**: LangChain, AutoGen, CrewAI, Microsoft Agent Frameworkなど多数。
   * **Tuning Tools**: Tinker（エージェントチューニングツール）との連携が可能。
+  * **Databases**: LightningStoreの代替バックエンドとしてMongoDBをサポート。
 
 ### **10.2 技術スタックとの相性**
 
@@ -258,7 +259,7 @@ relationships:
 - 実際の使用感や、類似ツールとの比較を含める
 -->
 
-* **UI/UX**: 学習状況を可視化するためのダッシュボード（Vite製）が提供されており、ブラウザでメトリクスを確認できる。
+* **UI/UX**: 学習状況の可視化や実験のデバッグを行うための公式Webアプリケーション「Agent-lightning Dashboard」が提供されている。
 * **学習コスト**: エージェント構築の知識に加え、ML/RLの知識も必要となるため、学習コストは高い部類に入る。
 
 ## **13. ベストプラクティス**
@@ -313,7 +314,7 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-12-24**: **v0.3.0 Release**: エージェントの学習プロセスをさらに安定化させるためのコア機能の強化とバグ修正が含まれた最新バージョン。
+* **2025-12-24**: **v0.3.0 Release**: Tinker連携のサポート、Azure OpenAI連携、MongoDBベースのLightning Store、RESTful APIの安定化、OTel Semantic Conventions対応、Agent-lightning Dashboard など多数の機能拡張を含むメジャーリリース。
 * **2025-12-17**: **Trajectory Level Aggregation**: エージェントの行動履歴（軌跡）を集約することで学習を高速化する新しい手法に関するブログ記事を公開。
 * **2025-11-04**: **Tinker連携**: エージェントチューニングツール「Tinker」との統合により、デバッグと最適化のサイクルがさらに高速化。
 * **2025-10-22**: **Retokenization Drift対策**: vLLMとの連携強化により、トークン化の不一致による学習精度の低下を防ぐ機能を実装。
