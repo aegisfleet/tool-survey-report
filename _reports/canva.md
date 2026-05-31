@@ -6,7 +6,7 @@ category: デザインツール
 developer: Canva Pty Ltd.
 official_site: https://www.canva.com/
 date: '2026-02-23'
-last_updated: '2026-02-23'
+last_updated: '2026-05-31'
 tags:
   - AI
   - SaaS
@@ -22,7 +22,7 @@ quick_summary:
     - マーケター
     - 中小企業
     - 個人クリエイター
-  latest_highlight: 2025年後半にAI機能を大幅強化する「Imagination Era」を発表
+  latest_highlight: 2026年2月・4月にCavalry、MangoAI、Simtheory、Orttoを買収し、AIワークフロー・マーケティング自動化を大幅強化
   update_frequency: 高
 evaluation:
   score: 92
@@ -76,7 +76,7 @@ relationships:
   * ドキュメント: [Design School](https://www.canva.com/design-school/)
   * レビューサイト: [G2](https://www.g2.com/products/canva/reviews) | [ITreview](https://www.itreview.jp/products/canva/reviews)
 * **カテゴリ**: デザインツール
-* **概要**: Canvaは、単なるグラフィックデザインツールから、AIを全面的に統合した総合ビジュアルコミュニケーションプラットフォームへと進化を遂げた。「Imagination Era」のビジョンの下、デザイン、AI、マーケティング分析をシームレスに連携。プロ向けデザインスイート「Affinity」の無料提供や、AIマーケティングエンジン「Canva Grow」の搭載により、初心者からプロのクリエイター、マーケティングチームまで、あらゆるユーザーのクリエイティブ活動をワンストップで支援する。
+* **概要**: Canvaは、単なるグラフィックデザインツールから、AIを全面的に統合した総合ビジュアルコミュニケーションプラットフォームへと進化を遂げた。「Imagination Era」のビジョンの下、デザイン、AI、マーケティング分析をシームレスに連携。さらに2026年のSimtheoryやOrttoなどの買収により、AIワークフロー自動化と高度なマーケティング自動化機能も統合。プロ向けデザインスイート「Affinity」の完全無料提供も相まって、初心者からプロのクリエイター、マーケティングチームまで、あらゆるユーザーのクリエイティブ活動とビジネス推進をワンストップで支援する。
 
 ## **2. 目的と主な利用シーン**
 
@@ -90,8 +90,8 @@ relationships:
 * **想定利用者**: 個人クリエイター、フリーランサー、中小企業のマーケティング担当者、大企業のブランド管理部門など、幅広い層を対象とする。
 * **利用シーン**:
   * **AIによるコンテンツ制作**: プロンプト一つでプレゼンテーションやSNS投稿のデザイン案を自動生成。
-  * **マーケティングキャンペーン**: 「Canva Grow」を使い、ブランド情報に基づいた広告をAIで生成し、主要プラットフォームで配信・分析。
-  * **動画コンテンツ制作**: 「Video 2.0」を活用し、テンプレートやAI機能を使って高品質な動画を短時間で作成。
+  * **マーケティングキャンペーン**: 「Canva Grow」や買収したOrtto・MangoAIの技術を使い、ブランド情報に基づいた広告をAIで生成し、主要プラットフォームでの配信から高度なマーケティング自動化・分析までを一元管理。
+  * **動画コンテンツ制作**: 「Video 2.0」やCavalryの技術を活用し、テンプレートやAI機能を使ってプロフェッショナルなアニメーションを含む高品質な動画を短時間で作成。
   * **プロフェッショナルなデザイン作業**: 「Affinity」スイートを使い、高度な写真編集やベクターデザインをオフラインで実施。
   * **チームでの共同作業**: ブランドキットで一貫性を保ちながら、リアルタイムでデザインを共同編集。
 
@@ -103,6 +103,8 @@ relationships:
 - 各機能は1-2文で概要を説明
 -->
 
+* **AIワークフローと自動化 (Simtheory / Ortto)**: SimtheoryによるAIワークフロー自動化と、Orttoによる高度なマーケティング自動化を統合。
+* **高度なアニメーションと動画広告 (Cavalry / MangoAI)**: Cavalryの技術による強力なアニメーション制作と、MangoAIによる広告パフォーマンス最適化。
 * **AI機能群 (Imagination Era)**: 単一のプロンプトから編集可能なデザイン（プレゼン、動画など）を自動生成、3Dモデル生成、「Ask @Canva」によるAIアシスタント機能など。
 * **Visual Suite**: 文書作成、プレゼンテーション、ホワイトボード、動画編集、Webサイト作成などが統合されたスイート。
 * **Video 2.0**: 直感的なタイムラインとAIによる自動編集機能を備えた、コンテンツ制作者向けの新しい動画エディタ。
@@ -143,7 +145,7 @@ relationships:
 -->
 
 * **圧倒的な使いやすさ**: 専門知識がなくても、直感的な操作でプロ並みのデザインが作成可能。
-* **オールインワン**: デザインだけでなく、印刷発注、SNS投稿管理、マーケティング分析まで完結する。
+* **オールインワン**: デザインだけでなく、印刷発注、SNS投稿管理、マーケティング自動化、ワークフロー分析まで完結する。
 * **Affinityスイートの無料提供**: 高価なプロ向けツールが追加費用なしで利用できる点は、他社にはない圧倒的な強み。
 * **マルチプラットフォーム**: Webブラウザ、デスクトップアプリ、モバイルアプリでシームレスに連携。
 
@@ -173,7 +175,7 @@ relationships:
 |---------|------|---------|
 | **無料プラン** | 無料 | 基本機能、無料テンプレート、**Affinityスイート**利用可、5GBストレージ |
 | **Canva Pro** | $12.99/月 (または¥1,500/月) | プレミアム素材、AIツール無制限、1TBストレージ、ブランドキット、SNS予約投稿 |
-| **Canva Business** | $20/月 | Proの全機能 + **Canva Grow Insights**、高度なチーム連携、承認フロー |
+| **Canva Business** | $20/月 | Proの全機能 + **Canva Grow Insights / AIワークフロー(Simtheory / Ortto)**、高度なチーム連携、承認フロー |
 | **Canva Enterprise** | 要問い合わせ | SSO、監査ログ、専任サポート、IP補償 |
 
 * **課金体系**: ユーザー数に応じた課金（Business/Enterprise）、または個人（Pro）。
@@ -222,7 +224,8 @@ relationships:
 * **外部サービス連携**:
   * **ストレージ**: Google Drive, Dropbox, Box
   * **SNS**: Instagram, Facebook, TikTok, LinkedIn, Twitter(X)
-  * **その他**: Slack, Microsoft Teams, HubSpot
+  * **マーケティング / 自動化**: Ortto, Simtheory, HubSpot, Salesforce
+  * **その他**: Slack, Microsoft Teams
 
 ### **10.2 技術スタックとの相性**
 
@@ -314,6 +317,10 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-04-XX**: **SimtheoryとOrttoの買収**
+  * AIワークフローツール「Simtheory」とマーケティング自動化ツール「Ortto」を買収。
+* **2026-02-23**: **CavalryとMangoAIの買収**
+  * アニメーションソフトウェアの「Cavalry」と、動画広告パフォーマンス改善に特化した「MangoAI」を買収。
 * **2025年後半**: **Imagination Era発表**
   * プロンプトからのデザイン自動生成、3Dエレメント生成、スタイル統一機能「Style Match」などを実装。
 * **2025-10-20**: **Canva Create 2025**
@@ -323,7 +330,7 @@ relationships:
 * **2025-05-15**: **Canva Enterprise発表**
   * 大企業向けのセキュリティ強化プラン。
 
-(出典: [Canva Create 2025 Launches](https://www.canva.com/canva-create/launches/))
+(出典: [Canva Newsroom](https://www.canva.com/newsroom/news/) など)
 
 ## **16. 類似ツールとの比較**
 
@@ -352,7 +359,7 @@ relationships:
 | **基本機能** | デザイン作成 | ◎<br><small>直感的・高速</small> | ◎<br><small>プロ品質</small> | ◯<br><small>Web/UI向け</small> | △<br><small>簡易的</small> |
 | **AI機能** | 生成AI活用 | ◎<br><small>全機能に統合</small> | ◎<br><small>Firefly強力</small> | △<br><small>プラグイン等</small> | ◎<br><small>DALL-E 3</small> |
 | **専門性** | ベクター/写真編集 | ◎<br><small>Affinity付属</small> | ◎<br><small>業界標準</small> | △<br><small>ベクターのみ</small> | ×<br><small>非対応</small> |
-| **ビジネス** | マーケティング分析 | ◎<br><small>Canva Grow</small> | △<br><small>一部ツール</small> | ×<br><small>なし</small> | ×<br><small>なし</small> |
+| **ビジネス** | マーケティング分析/自動化 | ◎<br><small>Grow/Ortto</small> | △<br><small>一部ツール</small> | ×<br><small>なし</small> | ×<br><small>なし</small> |
 | **非機能** | 日本語対応 | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> | △<br><small>UIのみ</small> | ◯<br><small>対応</small> |
 
 ### **16.2 詳細比較**
@@ -364,7 +371,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Canva** | デザインからマーケティングまで一気通貫のプラットフォーム。 | 圧倒的な使いやすさ、Affinity無料付帯、コストパフォーマンス。 | ピクセル単位の極めて高度なレタッチはAdobe PSに分がある。 | コストを抑えてプロ品質のデザイン環境を整えたい全ユーザー。 |
+| **Canva** | デザインからマーケティング、AIワークフロー自動化まで一気通貫のプラットフォーム。 | 圧倒的な使いやすさ、Affinity無料付帯、Simtheory/Ortto等による高度な自動化、コストパフォーマンス。 | ピクセル単位の極めて高度なレタッチはAdobe PSに分がある。 | コストを抑えてプロ品質のデザイン環境を整えたい全ユーザー。 |
 | **Adobe CC** | 業界標準のプロフェッショナルツール群。 | 機能の深さとエコシステムの広さ。プロの現場でのデファクトスタンダード。 | 高価。学習コストが高い。ツールごとの連携がCanvaほどシームレスではない。 | プロのデザイナー、印刷業界、映像制作会社。 |
 | **Figma** | UI/UXデザインとプロトタイピングに特化。 | Web/アプリデザインの効率性、エンジニアへのハンドオフ機能。 | 印刷物や動画、画像加工には不向き。 | Webサイトやアプリ開発のUIデザインを行う場合。 |
 | **Microsoft Designer** | Microsoft 365と連携したAIデザインツール。 | Office製品との親和性。DALL-E 3による高品質な画像生成。 | 編集機能が限定的で、細かいレイアウト調整に向かない。 | Officeユーザーがプレゼン資料の画像をサクッと作りたい場合。 |
