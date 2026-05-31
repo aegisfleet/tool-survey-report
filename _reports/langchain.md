@@ -58,6 +58,7 @@ relationships:
     - Amazon Bedrock
     - Hugging Face
     - Agent Governance Toolkit
+    - Agent Lightning
 ---
 # **LangChain 調査レポート**
 
