@@ -36,8 +36,8 @@ updates:
     cooldown:
       default-days: 7
 
-  # Pythonの依存関係（requirements.txt）を監視
-  - package-ecosystem: "pip"
+  # Python (uv) の依存関係を監視
+  - package-ecosystem: "uv"
     directory: "/"
     schedule:
       interval: "weekly"
