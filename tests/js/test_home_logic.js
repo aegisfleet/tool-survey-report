@@ -258,7 +258,7 @@ reportsGrid.appendChild(card3);
 // Mock document
 global.document = {
   getElementById: (id) => {
-    if (id === 'report-search') return searchInput;
+    if (id === 'hero-search-input') return searchInput;
     if (id === 'tag-filter') return tagFilter;
     if (id === 'category-filter') return categoryFilter;
     if (id === 'sort-select') return sortSelect;
