@@ -190,7 +190,7 @@ global.URLSearchParams = class {
 
 // Create mock elements
 const searchInput = new HTMLElement('input');
-searchInput.attributes.id = 'report-search';
+searchInput.attributes.id = 'hero-search-input';
 searchInput.value = '';
 
 const tagFilter = new HTMLElement('select');
@@ -258,13 +258,13 @@ reportsGrid.appendChild(card3);
 // Mock document
 global.document = {
   getElementById: (id) => {
-    if (id === 'report-search') return searchInput;
+    if (id === 'hero-search-input' || id === 'report-search') return searchInput;
     if (id === 'tag-filter') return tagFilter;
     if (id === 'category-filter') return categoryFilter;
     if (id === 'sort-select') return sortSelect;
     if (id === 'reports-grid') return reportsGrid;
     if (id === 'no-results') return noResults;
-    if (id === 'search-clear') return new HTMLElement('button');
+    if (id === 'hero-search-clear' || id === 'search-clear') return new HTMLElement('button');
     if (id === 'tag-filter-clear') return new HTMLElement('button');
     if (id === 'category-filter-clear') return new HTMLElement('button');
     if (id === 'refresh-picks') return new HTMLElement('button');
