@@ -591,7 +591,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // すべてのレポートからランダムに4つ選択（スコアと無料プラン情報も取得）
     const randomValues = new Uint32Array(allReportCards.length);
     if (allReportCards.length > 0) {
-      globalThis.crypto.getRandomValues(randomValues);
+      crypto.getRandomValues(randomValues);
     }
 
     const shuffled = allReportCards
@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const shuffled = [...arr];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const array = new Uint32Array(1);
-        globalThis.crypto.getRandomValues(array);
+        crypto.getRandomValues(array);
         const j = array[0] % (i + 1);
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
