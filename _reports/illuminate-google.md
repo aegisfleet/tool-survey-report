@@ -1,30 +1,27 @@
 ---
-title: Google Illuminate 調査レポート
-tool_name: Google Illuminate
-tool_reading: グーグル イルミネート
-category: AI開発ライブラリ
-developer: Google
-official_site: https://illuminate.google.com/
-date: '2026-02-23'
-last_updated: '2026-02-23'
+title: "Google Illuminate 調査レポート"
+tool_name: "Google Illuminate"
+tool_reading: "グーグル イルミネート"
+category: "AI開発ライブラリ"
+developer: "Google"
+official_site: "https://illuminate.google.com/"
+date: "2026-02-23"
+last_updated: "2026-06-02"
 tags:
-  - AI
-  - Audio
-  - Education
-  - Google
-  - Podcast
-  - Research
-description: 学術論文や技術文書をAIが分析し、ポッドキャストスタイルの音声会話に変換して学習を支援する実験的ツール。
+  - "AI"
+  - "生成AI"
+  - "会話型AI"
+description: "学術論文や技術文書をAIが分析し、ポッドキャストスタイルの音声会話に変換して学習を支援する実験的ツール。"
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: 無料
+  starting_price: "無料"
   target_users:
-    - 研究者
-    - 学生
-    - エンジニア
-  latest_highlight: 学術論文を音声会話に変換し、トランスクリプトと同期再生が可能
-  update_frequency: 中
+    - "研究者"
+    - "学生"
+    - "エンジニア"
+  latest_highlight: "トランスクリプトの同期機能と自然な会話形式への変換技術を継続的に強化"
+  update_frequency: "中"
 evaluation:
   score: 80
   base_score: 70
@@ -45,7 +42,7 @@ relationships:
   parent: null
   children: []
   related_tools:
-    - NotebookLM
+    - "NotebookLM"
 ---
 
 # **Google Illuminate 調査レポート**
@@ -63,7 +60,7 @@ relationships:
 * **開発元**: Google (Google Labs)
 * **公式サイト**: [https://illuminate.google.com/](https://illuminate.google.com/)
 * **関連リンク**:
-  * レビュー記事: [Android Police](https://www.androidpolice.com/google-illuminate-best-research-tool-didnt-know-i-needed/) | [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate)
+  * レビュー記事: [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate)
 * **カテゴリ**: AI開発ライブラリ
 * **概要**: Google Labsの実験プロジェクトとして開発されたAIツール。学術論文（主にarXiv）や技術文書のURLを入力すると、その内容を要約し、2人のAIホストによる対話形式の音声コンテンツ（ポッドキャスト風）を生成する。これにより、論文を「読む」のではなく「聴く」体験を提供する。
 
@@ -258,7 +255,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: Android Police, XDA Developers, NanoBits, X (Twitter)
+* **調査対象**: NanoBits, X (Twitter)
 * **総合評価**: 論文読みの負担を軽減するツールとして非常に高く評価されている。
 * **ポジティブな評価**:
   * 「論文を読むのが苦痛だったが、ラジオ感覚で聴けるようになって革命的だ」
@@ -279,10 +276,10 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-07-12**: **音声概説機能の強化**: トランスクリプトの精度向上や再生体験の改善（XDAの記事など）。
+* **2025-07-12**: **音声概説機能の強化**: トランスクリプトの精度向上や再生体験の改善。
 * **2024-09-19**: **パブリックベータ展開**: 一般ユーザーへの公開範囲が拡大し、arXiv検索機能などが利用可能に。
 
-(出典: [XDA Developers](https://www.xda-developers.com/illuminate-google-labs-experiment/), [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate))
+(出典: [Google Illuminate 公式サイト](https://illuminate.google.com/))
 
 ## **16. 類似ツールとの比較**
 
