@@ -42,6 +42,7 @@ relationships:
   parent: ''
   children:
     - NotebookLM
+    - Google Illuminate
   related_tools:
     - Google Cloud
 ---

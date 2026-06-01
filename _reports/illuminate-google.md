@@ -6,15 +6,16 @@ category: AI開発ライブラリ
 developer: Google
 official_site: https://illuminate.google.com/
 date: '2026-02-23'
-last_updated: '2026-02-23'
+last_updated: '2026-06-01'
 tags:
   - AI
   - Audio
+  - Video
   - Education
   - Google
   - Podcast
   - Research
-description: 学術論文や技術文書をAIが分析し、ポッドキャストスタイルの音声会話に変換して学習を支援する実験的ツール。
+description: 学術論文や技術文書をAIが分析し、ポッドキャストスタイルの音声会話やショート動画に変換して学習を支援する実験的ツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -23,7 +24,7 @@ quick_summary:
     - 研究者
     - 学生
     - エンジニア
-  latest_highlight: 学術論文を音声会話に変換し、トランスクリプトと同期再生が可能
+  latest_highlight: 学術論文からTikTokスタイルの解説ショート動画を生成する「Sparks」機能を追加
   update_frequency: 中
 evaluation:
   score: 80
@@ -42,7 +43,7 @@ evaluation:
 links:
   documentation: https://illuminate.google.com/home
 relationships:
-  parent: null
+  parent: Google Learning
   children: []
   related_tools:
     - NotebookLM
@@ -63,9 +64,9 @@ relationships:
 * **開発元**: Google (Google Labs)
 * **公式サイト**: [https://illuminate.google.com/](https://illuminate.google.com/)
 * **関連リンク**:
-  * レビュー記事: [Android Police](https://www.androidpolice.com/google-illuminate-best-research-tool-didnt-know-i-needed/) | [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate)
+  * レビュー記事: [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate)
 * **カテゴリ**: AI開発ライブラリ
-* **概要**: Google Labsの実験プロジェクトとして開発されたAIツール。学術論文（主にarXiv）や技術文書のURLを入力すると、その内容を要約し、2人のAIホストによる対話形式の音声コンテンツ（ポッドキャスト風）を生成する。これにより、論文を「読む」のではなく「聴く」体験を提供する。
+* **概要**: Google Labsの実験プロジェクトとして開発されたAIツール。学術論文（主にarXiv）や技術文書のURLを入力すると、その内容を要約し、2人のAIホストによる対話形式の音声コンテンツ（ポッドキャスト風）や、TikTokスタイルのショート解説動画を生成する。これにより、論文を「読む」のではなく「聴く・観る」体験を提供する。
 
 ## **2. 目的と主な利用シーン**
 
@@ -75,12 +76,13 @@ relationships:
 - 想定利用者を具体的に記載
 -->
 
-* **解決する課題**: 専門用語が多く難解な学術論文を読むハードルを下げ、移動中や作業中でも知識を効率的にインプットできるようにする。
+* **解決する課題**: 専門用語が多く難解な学術論文を読むハードルを下げ、移動中や作業中でも知識を効率的かつ視覚・聴覚的にインプットできるようにする。
 * **想定利用者**: 研究者、大学院生・学生、エンジニア、最新技術トレンドをキャッチアップしたいビジネスパーソン。
 * **利用シーン**:
   * **通勤・通学中の学習**: 移動時間に論文の概要をポッドキャスト感覚で聴く。
+  * **視覚的な学習（Visual learning）**: 難解な概念を、ショート動画で視覚的にすばやく理解する。
   * **ながら作業**: 家事や単純作業をしながら、最新の研究成果をインプットする。
-  * **スクリーニング**: 論文の全文を読む前に音声で概要を把握し、精読する価値があるか判断する。
+  * **スクリーニング**: 論文の全文を読む前に音声や動画で概要を把握し、精読する価値があるか判断する。
 
 ## **3. 主要機能**
 
@@ -91,6 +93,7 @@ relationships:
 -->
 
 * **AI音声会話生成**: 論文の内容を基に、2人のAIエージェント（ホストとゲスト役）が対話形式で解説する音声を生成する。
+* **ショート解説動画生成 (Sparks)**: 論文から、TikTokやYouTube Shortsのような短い縦型解説動画を自動生成する。
 * **インタラクティブ・トランスクリプト**: 音声再生に合わせてトランスクリプト（文字起こし）がハイライト表示され、テキストをクリックするとその時点から再生できる。
 * **ライブラリ保存**: 生成した音声コンテンツはライブラリに保存され、後からいつでも聞き返すことができる。
 * **arXiv検索連携**: ツール内で直接arXivの論文を検索し、そのまま音声生成に利用できる。
@@ -258,7 +261,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: Android Police, XDA Developers, NanoBits, X (Twitter)
+* **調査対象**: XDA Developers, NanoBits, X (Twitter)
 * **総合評価**: 論文読みの負担を軽減するツールとして非常に高く評価されている。
 * **ポジティブな評価**:
   * 「論文を読むのが苦痛だったが、ラジオ感覚で聴けるようになって革命的だ」
@@ -280,9 +283,10 @@ relationships:
 -->
 
 * **2025-07-12**: **音声概説機能の強化**: トランスクリプトの精度向上や再生体験の改善（XDAの記事など）。
+* **2025-05-19**: **Sparks機能の追加**: 論文の内容を基に、TikTokスタイルのショート解説動画を生成する機能が追加。
 * **2024-09-19**: **パブリックベータ展開**: 一般ユーザーへの公開範囲が拡大し、arXiv検索機能などが利用可能に。
 
-(出典: [XDA Developers](https://www.xda-developers.com/illuminate-google-labs-experiment/), [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate))
+(出典: [Neowin](https://www.neowin.net/), [XDA Developers](https://www.xda-developers.com/), [NanoBits](https://nanobits.beehiiv.com/p/3-minutes-to-master-any-research-paper-with-google-illuminate))
 
 ## **16. 類似ツールとの比較**
 
@@ -299,14 +303,15 @@ relationships:
 | **入力ソース** | 論文(arXiv)/URL | ◎<br><small>特化</small> | ◎<br><small>多様</small> | ◯<br><small>Browse</small> |
 | **ファイル** | PDFアップロード | ×<br><small>URLのみ</small> | ◎<br><small>対応</small> | ◎<br><small>対応</small> |
 | **出力形式** | 音声対話生成 | ◎<br><small>標準</small> | ◎<br><small>標準</small> | △<br><small>Advanced Voice</small> |
+| **出力形式** | ショート動画生成 | ◎<br><small>Sparks機能</small> | ×<br><small>非対応</small> | ×<br><small>Sora連携次第</small> |
 | **トランスクリプト** | 同期再生 | ◎<br><small>対応</small> | ×<br><small>非同期</small> | - |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Google Illuminate** | 論文の音声化に特化したシンプルツール。 | 論文URLを貼るだけで即座に対話形式の音声を生成。トランスクリプト同期が便利。 | ファイルアップロード不可。機能が限定的。 | 論文を移動中に「聴いて」概要を把握したい場合。 |
-| **NotebookLM** | 包括的なAIリサーチアシスタント。 | PDFやGoogle Docsなど多様なソースに対応し、Deep Researchも可能。 | Illuminateに比べると多機能すぎて、単に聴くだけならオーバースペックな場合も。 | 複数の資料を読み込んで深く分析・学習したい場合。 |
+| **Google Illuminate** | 論文の音声化・動画化に特化したシンプルツール。 | 論文URLを貼るだけで即座に対話形式の音声や、TikTok風のショート解説動画を生成できる。トランスクリプト同期も便利。 | ファイルアップロード不可。機能が限定的。 | 論文を移動中に「聴いて」概要を把握したい場合や、短い動画で視覚的に理解したい場合。 |
+| **NotebookLM** | 包括的なAIリサーチアシスタント。 | PDFやGoogle Docsなど多様なソースに対応し、Deep Researchも可能。 | Illuminateのように動画生成には非対応。多機能すぎて、単に聴くだけならオーバースペックな場合も。 | 複数の資料を読み込んで深く分析・学習したい場合。 |
 | **ChatGPT** | 汎用AIチャット。 | どんな質問にも答えられる汎用性。Advanced Voice Modeで対話可能。 | 長文論文の正確な要約や、対話形式のポッドキャスト生成はプロンプト工夫が必要。 | 論文の内容について自由に質問したり議論したりしたい場合。 |
 
 ## **17. 総評**
@@ -318,9 +323,9 @@ relationships:
 -->
 
 * **総合的な評価**:
-  Google Illuminateは、学術情報のインプット方法に「聴覚」という新しい選択肢をもたらす革新的なツールである。機能はシンプルだが、論文を読む前のスクリーニングや、隙間時間の学習において絶大な効果を発揮する。
+  Google Illuminateは、学術情報のインプット方法に「聴覚」と「視覚的なショート動画」という新しい選択肢をもたらす革新的なツールである。機能はシンプルだが、論文を読む前のスクリーニングや、隙間時間の学習において絶大な効果を発揮する。
 * **推奨されるチームやプロジェクト**:
   * **研究室・アカデミア**: 最新論文のキャッチアップを効率化したい学生や研究者。
   * **エンジニアリングチーム**: 新技術のホワイトペーパーや論文を共有し合うチーム。
 * **選択時のポイント**:
-  「手持ちのPDFを分析したい」ならNotebookLM、「Web上の論文や記事を手軽に聴きたい」ならIlluminateを選ぶとよい。両者は補完関係にあり、目的に応じて使い分けるのがベストプラクティスである。
+  「手持ちのPDFを分析したい」ならNotebookLM、「Web上の論文や記事を手軽に聴いたり、ショート動画で観たい」ならIlluminateを選ぶとよい。両者は補完関係にあり、目的に応じて使い分けるのがベストプラクティスである。
