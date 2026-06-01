@@ -429,7 +429,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     // Don't trigger if user is already typing in an input/textarea
     const activeEl = document.activeElement;
-    if (activeEl && (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.tagName === 'SELECT')) {
+    if (
+      activeEl &&
+      (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.tagName === 'SELECT')
+    ) {
       // If Escape is pressed inside hero search, blur it
       if (e.key === 'Escape' && activeEl === heroSearchInput) {
         heroSearchInput.blur();
