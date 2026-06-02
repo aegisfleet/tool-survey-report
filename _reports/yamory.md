@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "yamory 調査レポート"
-tool_name: "yamory"
-tool_reading: "ヤモリー"
-category: "セキュリティ/脆弱性管理"
-developer: "株式会社アシュアード (Visionalグループ)"
-official_site: "https://yamory.io/"
-date: "2026-06-02"
-last_updated: "2026-06-02"
+title: yamory 調査レポート
+tool_name: yamory
+tool_reading: ヤモリー
+category: セキュリティ/脆弱性管理
+developer: 株式会社アシュアード (Visionalグループ)
+official_site: https://yamory.io/
+date: '2026-06-02'
+last_updated: '2026-06-02'
 tags:
-  - "脆弱性管理"
-  - "SBOM"
-  - "クラウドセキュリティ"
-  - "SCA"
-description: "ソフトウェア内部の構成からホスト、コンテナ、クラウド、ネットワーク機器まで全レイヤーの脆弱性を一元管理・可視化できる国内唯一のクラウドサービス。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - 脆弱性管理
+  - SBOM
+  - クラウドセキュリティ
+  - SCA
+description: ソフトウェア内部の構成からホスト、コンテナ、クラウド、ネットワーク機器まで全レイヤーの脆弱性を一元管理・可視化できる国内唯一のクラウドサービス。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "開発部門"
-    - "セキュリティ担当者"
-    - "情報システム部門"
-  latest_highlight: "Laravel-Lang を狙ったサプライチェーン攻撃の特徴と対応策に関する情報を発信"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発部門
+    - セキュリティ担当者
+    - 情報システム部門
+  latest_highlight: Laravel-Lang を狙ったサプライチェーン攻撃の特徴と対応策に関する情報を発信
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "特許取得のオートトリアージ機能による優先順位付けが秀逸"
+      reason: 特許取得のオートトリアージ機能による優先順位付けが秀逸
     - point: 4
-      reason: "クラウド連携のみでインフラからアプリケーションまで一括スキャン可能"
+      reason: クラウド連携のみでインフラからアプリケーションまで一括スキャン可能
     - point: 4
-      reason: "日本語UIおよび手厚いテクニカルサポートが充実"
+      reason: 日本語UIおよび手厚いテクニカルサポートが充実
     - point: 4
-      reason: "ISMS認証取得および経済産業省の適合認定など高い信頼性"
+      reason: ISMS認証取得および経済産業省の適合認定など高い信頼性
     - point: 3
-      reason: "SBOM対応（インポート・エクスポート）によるサプライチェーン保護"
+      reason: SBOM対応（インポート・エクスポート）によるサプライチェーン保護
   minus_points:
     - point: -3
-      reason: "具体的な料金プランが非公開であり、事前のコスト試算が難しい"
+      reason: 具体的な料金プランが非公開であり、事前のコスト試算が難しい
     - point: -2
-      reason: "G2やCapterraなどのグローバルなレビューサイトでの評価が少ない"
-  summary: "国産ならではの手厚いサポートと、オートトリアージ等の独自機能を備えた優秀な脆弱性管理プラットフォーム。"
-
-# 【任意項目】該当するもののみ記載
+      reason: G2やCapterraなどのグローバルなレビューサイトでの評価が少ない
+  summary: 国産ならではの手厚いサポートと、オートトリアージ等の独自機能を備えた優秀な脆弱性管理プラットフォーム。
 links:
-  documentation: "https://yamory.io/faq"
+  documentation: https://yamory.io/faq
 relationships:
   related_tools:
-    - "Trivy"
+    - Trivy
 ---
 
 # **yamory 調査レポート**
