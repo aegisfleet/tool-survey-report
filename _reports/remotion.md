@@ -6,7 +6,7 @@ category: 動画/メディア
 developer: Remotion AG
 official_site: https://www.remotion.dev/
 date: '2026-02-23'
-last_updated: '2026-02-23'
+last_updated: '2026-06-02'
 tags:
   - React
   - TypeScript
@@ -22,7 +22,7 @@ quick_summary:
     - Web開発者
     - スタートアップ
     - SaaS企業
-  latest_highlight: 2026年2月にWeb Renderer向けVercelパッケージとAmazon Linux 2023対応を追加
+  latest_highlight: 2026年5月にエフェクトシステム（@remotion/effects）やHtmlInCanvasコンポーネントを追加
   update_frequency: 高
 evaluation:
   score: 88
@@ -104,6 +104,8 @@ relationships:
 * **パラメータ化**: JSONなどの外部データを受け取り、コンテンツを動的に変化させる動画テンプレートを作成可能。
 * **Web Renderer**: ブラウザ上で直接動画をレンダリングする機能（クライアントサイドレンダリング）。
 * **Remotion on Vercel**: Vercel Functionsを使用して動画をレンダリングするための公式パッケージ（v4.0.426で強化）。
+* **エフェクトシステム**: `@remotion/effects`により、ブラーや波形などの視覚効果を容易に追加可能。
+* **HtmlInCanvas**: キャンバス内でのHTML要素の描画サポート。
 
 ## **4. 開始手順・セットアップ**
 
@@ -223,6 +225,7 @@ relationships:
   * **AWS Lambda**: サーバーレスレンダリングのための公式パッケージを提供。
   * **Vercel**: Vercel Functionsでのレンダリングをサポート（v4.0.426〜）。
   * **Google Cloud Run**: コンテナベースのレンダリングに対応。
+  * **ElevenLabs**: テキスト読み上げとキャプション生成用の専用パッケージ `@remotion/elevenlabs` を提供。
 
 ### **10.2 技術スタックとの相性**
 
@@ -307,6 +310,9 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-22 (v4.0.465)**: 専用のエフェクトシステム `@remotion/effects` をリリースし、ブラー等の視覚効果が追加しやすくなった。
+* **2026-05-01 (v4.0.455)**: `<HtmlInCanvas>` コンポーネントを追加し、キャンバス内でのHTML要素の描画をサポート。
+* **2026-03-31 (v4.0.443)**: ElevenLabsの出力をキャプションに変換する専用パッケージ `@remotion/elevenlabs` を追加。
 * **2026-02-20 (v4.0.427)**: 音声スケジューリングの修正とStudioでの無限ループバグの修正により、安定性が向上。
 * **2026-02-20 (v4.0.426)**: Web Renderer向けに新しいVercelパッケージ`@remotion/vercel`を追加し、Vercel Sandboxでのレンダリングをサポート。Zod v4スキーマのサポートを追加。
 * **2026-02-13 (v4.0.422)**: ElevenLabs TTSを使用したナレーション生成スキルを追加。
@@ -340,7 +346,7 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **制作手法** | アプローチ | コード (React) | GUI | コード (Canvas) | CLI / Script |
 | **動的生成** | パラメータ化 | ◎<br><small>得意領域</small> | △<br><small>スクリプトで可</small> | ◯<br><small>可能</small> | ◯<br><small>フィルタで可</small> |
-| **表現力** | 視覚効果 | ◯<br><small>Web技術依存</small> | ◎<br><small>業界標準</small> | ◯<br><small>描画API依存</small> | △<br><small>基本的</small> |
+| **表現力** | 視覚効果 | ◎<br><small>独自エフェクト</small> | ◎<br><small>業界標準</small> | ◯<br><small>描画API依存</small> | △<br><small>基本的</small> |
 | **開発体験** | バージョン管理 | ◎<br><small>Git管理可</small> | ×<br><small>バイナリ</small> | ◎<br><small>Git管理可</small> | ◯<br><small>コマンド管理</small> |
 | **学習コスト** | 難易度 | 中<br><small>React必須</small> | 高<br><small>専門知識</small> | 中<br><small>TS必須</small> | 高<br><small>コマンド複雑</small> |
 
