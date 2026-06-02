@@ -5,8 +5,8 @@ tool_reading: テキストエフエックス
 category: AIチャット/アシスタント
 developer: Google
 official_site: https://textfx.withgoogle.com/
-date: '2026-02-23'
-last_updated: '2026-02-23'
+date: '2026-06-03'
+last_updated: '2026-06-03'
 tags:
   - AI
   - Google
@@ -17,13 +17,13 @@ tags:
 description: GoogleとラッパーLupe Fiascoが共同開発した、ラッパーやライター向けの創造的執筆支援AIツール群。
 quick_summary:
   has_free_plan: true
-  is_oss: false
+  is_oss: true
   starting_price: 無料
   target_users:
     - ラッパー
     - 作詞家
     - ライター
-  latest_highlight: Google PaLM 2モデルを活用した10種類の創造的ツールを提供
+  latest_highlight: オープンソース実験プロジェクトとしてgoogle/generative-ai-docsリポジトリで提供され、直近ではタイポ修正など軽微な更新が行われている
   update_frequency: 低
 evaluation:
   score: 78
@@ -42,12 +42,10 @@ evaluation:
       reason: 実験的なツールであり、長文生成には向かない
   summary: 創造的な言葉遊びや韻踏みに特化したユニークな無料ツールだが、日本語未対応が惜しまれる。
 links:
+  github: "https://github.com/google/generative-ai-docs/tree/main/demos/palm/web/textfx"
   documentation: https://developers.googleblog.com/how-its-made-textfx-is-a-suite-of-ai-tools-made-in-collaboration-with-lupe-fiasco/
 relationships:
-  related_tools:
-    - Gemini
-    - ChatGPT
-    - Claude
+  related_tools: []
 ---
 
 # **TextFX 調査レポート**
@@ -65,6 +63,7 @@ relationships:
 * **開発元**: Google (Google Creative Lab)
 * **公式サイト**: [https://textfx.withgoogle.com/](https://textfx.withgoogle.com/)
 * **関連リンク**:
+  * GitHub: [https://github.com/google/generative-ai-docs/tree/main/demos/palm/web/textfx](https://github.com/google/generative-ai-docs/tree/main/demos/palm/web/textfx)
   * ドキュメント: [Google Developers Blog](https://developers.googleblog.com/how-its-made-textfx-is-a-suite-of-ai-tools-made-in-collaboration-with-lupe-fiasco/)
 * **カテゴリ**: 生成AI
 * **概要**: Googleの大規模言語モデルPaLM 2を活用し、グラミー賞受賞ラッパーLupe Fiascoと共同開発されたAI実験ツール。ライターやアーティストが創造的なプロセスを拡張するための10種類のユニークな機能を提供する。
@@ -208,7 +207,7 @@ relationships:
 - 主要連携サービスを5-10個リストアップ
 -->
 
-* **API**: 公式には一般公開されたAPIはないが、バックエンドでPaLM APIを使用している。GitHubにサンプルコード（textfx-palm-api）があるが、現在はメンテナンスされていない可能性がある。
+* **API**: 公式には一般公開されたAPIはないが、バックエンドでPaLM APIを使用している。コードは`google/generative-ai-docs`リポジトリでオープンソースとして公開されており、MakerSuite（現在のGoogle AI Studio）を使用してPaLM APIと連携する仕組みを確認できる。
 * **外部サービス連携**: 直接的な外部連携機能（Slack連携など）はない。生成されたテキストをコピーして他のツールで使用する形式。
 
 ### **10.2 技術スタックとの相性**
@@ -300,10 +299,11 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2024-11-25**: 複数ファイルにわたるタイポの修正および依存関係パッケージ（Vite、React DevTools等）のアップデートを実施し、プロジェクトのメンテナンスを継続。
+* **2023-08-02**: `google/generative-ai-docs`リポジトリにてソースコードを公開。
 * **2023-05-10**: Google I/O 2023にてTextFXを発表および公開。
-* **現状**: 2023年のリリース以降、大きな機能追加やアップデートは公式発表されていない。実験的プロジェクトとして安定稼働を続けている。
 
-(出典: [Google The Keyword Blog](https://blog.google/technology/ai/google-io-2023-keynote-sundar-pichai/))
+(出典: [製品アップデート情報 (GitHub Commits)](https://github.com/google/generative-ai-docs/commits/main/demos/palm/web/textfx) | [Google The Keyword Blog](https://blog.google/technology/ai/google-io-2023-keynote-sundar-pichai/))
 
 ## **16. 類似ツールとの比較**
 
