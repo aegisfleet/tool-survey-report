@@ -42,7 +42,7 @@ evaluation:
       reason: 実験的なツールであり、長文生成には向かない
   summary: 創造的な言葉遊びや韻踏みに特化したユニークな無料ツールだが、日本語未対応が惜しまれる。
 links:
-  github: "https://github.com/google/generative-ai-docs/tree/main/demos/palm/web/textfx"
+  github: https://github.com/google/generative-ai-docs/tree/main/demos/palm/web/textfx
   documentation: https://developers.googleblog.com/how-its-made-textfx-is-a-suite-of-ai-tools-made-in-collaboration-with-lupe-fiasco/
 relationships:
   related_tools: []
