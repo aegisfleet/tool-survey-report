@@ -54,8 +54,8 @@ relationships:
     - Pomelli
     - Miro
     - Gamma
+    - Felo
     - Speaker Deck
-    - Apple Creator Studio
 ---
 
 # **Canva 調査レポート**
