@@ -1,0 +1,6 @@
+Update Gamma report with Create with Agent feature
+
+- Added Create with Agent information.
+- Updated relations between Gamma and Microsoft 365 Copilot.
+- Updated evaluation.
+- Added recent features.
