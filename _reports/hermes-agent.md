@@ -6,7 +6,7 @@ category: 汎用AIエージェント
 developer: Nous Research
 official_site: https://hermes-agent.nousresearch.com
 date: '2026-04-10'
-last_updated: '2026-05-28'
+last_updated: '2026-06-04'
 tags:
   - オープンソース
   - エージェント
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 開発者
     - 研究者
-  latest_highlight: 2026年5月リリースのv0.15.1にてKanbanマルチエージェント、ローカルダッシュボード、TUI刷新など大幅な機能拡張を実施。v0.8.0が2026年4月8日にリリース。
+  latest_highlight: v0.15.2にてMacOS/Windows/Linux対応のデスクトップアプリがリリースされ、Nous Portalのサブスクリプション(Free/Plus/Super/Ultra)が導入されました。
   update_frequency: 高
 evaluation:
   score: 80
@@ -73,6 +73,7 @@ relationships:
 * **自己改善学習ループ**: エージェント自身が経験からスキルを作成し、使用中にそれらを改善し続ける。バックグラウンドでのスキル自律整理機能も搭載。
 * **マルチプラットフォーム対応**: Telegram, Discord, Slack, WhatsApp, Signal, Email, WeChat, iMessage, Google Chat, Microsoft Teams, CLIなど20以上のプラットフォームで利用可能。
 * **Kanbanマルチエージェント基盤**: タスクの自動分解や複数ワーカーへの割り当て、リトライ等を管理する耐久性のあるボード機能。
+* **デスクトップアプリ**: macOS, Windows, Linuxにネイティブ対応したデスクトップアプリケーションが提供され、ローカル環境での利用が容易になりました。
 * **ローカルWebダッシュボード & 高度なTUI**: インタラクティブなTUI（React/Ink製）やWebブラウザからエージェントとやり取り・管理ができる。
 * **メモリ機能**: セッションをまたいだFTS5によるクロスセッションの記憶の検索・再呼び出し、ユーザーモデリング。
 * **スケジュール自動化**: 定期的なバックアップ、監査、日次レポート作成などをスケジュール（Cron）で実行可能。
@@ -82,16 +83,22 @@ relationships:
 ## **4. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Linux, macOS, または WSL2 (Windows)。Android (Termux) にも対応。
+  * macOS 12+, Windows 10/11, 任意のLinuxディストリビューション、WSL2、Android (Termux)。
 * **インストール/導入**:
-
-  ```bash
-  curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
-  ```
+  * **デスクトップアプリの場合**: 公式サイトの[ダウンロードページ](https://hermes-agent.nousresearch.com/desktop#downloads)からOSに合わせたインストーラー（dmg/exe）をダウンロードして実行。
+  * **CLI (Linux, macOS, WSL2, Termux)**:
+    ```bash
+    curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+    ```
+  * **CLI (Windows PowerShell)**: ネイティブWindows環境でもWSLなしで動作します。
+    ```powershell
+    iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)
+    ```
 
 * **初期設定**:
   * インストール後に以下のコマンドで設定を開始。
   * `hermes setup` （フルセットアップウィザード）
+  * `hermes setup --portal` （Nous Portalを利用する場合、OAuthでログインしツールゲートウェイを有効化）
 * **クイックスタート**:
   * `hermes` （インタラクティブCLIで会話を開始）
   * `hermes gateway` （Telegramなどのプラットフォーム向けにゲートウェイを起動）
@@ -106,18 +113,20 @@ relationships:
 
 ## **6. 弱み・注意点 (Cons)**
 
-* Windowsネイティブでの動作がサポートされていない（WSL2が必須）。
-* セットアップや自前ホスティングに関する技術的な知識がある程度必要。
+* セットアップや自前ホスティングに関する技術的な知識がある程度必要（ただし、デスクトップ版のリリースにより導入ハードルは大きく下がっています）。
 * 日本語対応はUIやドキュメントでは限定的であり、英語ベースの操作が中心となる。
 
 ## **7. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **無料プラン** | 無料 | オープンソースであり、無料で利用可能。自前のサーバー費用やAPI利用料は別途発生する。 |
+| **OSS版 (Bring Your Own Keys)** | 無料 | ソフトウェア自体は無料で利用可能。API利用料やサーバー費用はユーザーが負担。 |
+| **Nous Portal: Free** | 無料 | Hermes Agentを利用するためのNous Portalの無料ティア。 |
+| **Nous Portal: Plus** | 有料 | Hermes Agentの利用クレジット、300以上のモデルへのアクセス、組み込みツール（Web検索、画像生成など）の利用が含まれる。 |
+| **Nous Portal: Super** | 有料 | Plusプランの上位ティア。 |
+| **Nous Portal: Ultra** | 有料 | 最上位ティア。 |
 
-* **課金体系**: ソフトウェア自体は無料（MITライセンス）。利用するLLM（OpenRouter, OpenAI等）のAPI料金やサーバーホスティング代がかかる。
-* **無料トライアル**: 全機能無料。
+* **課金体系**: ソフトウェア自体は無料（MITライセンス）。自身のAPIキーを使用することも、Nous Portalサブスクリプションに加入してすべての機能（300+モデル、Web検索、画像生成、TTS、クラウドブラウザなど）を1つのサブスクリプションでカバーすることも可能です。
 
 ## **8. 導入実績・事例**
 
@@ -179,6 +188,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-29**: v0.15.2 リリース。macOS、Windows、Linux向けのデスクトップアプリがリリース。Windowsネイティブでの動作サポート、Nous Portalとの統合（`hermes setup --portal`）によるAPIキー管理の簡素化が追加されました。
 * **2026-05-29**: v0.15.1 リリース。ダッシュボードのループバックモードでのリロードループ修正、MCPやDockerのバグフィックスを実施。
 * **2026-05-28**: v0.15.0 "The Velocity Release" リリース。Kanbanマルチエージェント基盤の大幅拡張、Cold-startのパフォーマンス向上、TUIセッションオーケストレーター、新しい画像生成プロバイダーなどを追加。
 * **2026-05-16**: v0.14.0 "The Foundation Release" リリース。Grokネイティブ対応、Microsoft Teamsエンドツーエンド連携、X (Twitter) 検索ツール等を追加。
@@ -205,7 +215,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール** | サーバー常駐・マルチプラットフォーム対応の自律学習エージェント | Discord等のUI統合が容易、学習ループ | Windowsネイティブ非対応 | 常にアクセス可能なAIアシスタントをサーバーに置きたい場合 |
+| **本ツール** | サーバー常駐・マルチプラットフォーム対応の自律学習エージェント | Discord等のUI統合が容易、学習ループ | 初心者にはセットアップがやや複雑 | 常にアクセス可能なAIアシスタントをサーバーに置きたい場合 |
 | **OpenHands** | ソフトウェア開発に特化したオープンソースエージェント | コード修正やIssue解決が得意 | チャットツール連携は主目的ではない | コーディング作業を完全に自動化したい場合 |
 
 ## **17. 総評**
