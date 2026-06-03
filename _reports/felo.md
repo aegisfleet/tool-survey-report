@@ -6,7 +6,7 @@ category: AI検索/ブラウザ拡張
 developer: Sparticle Inc.
 official_site: https://felo.ai
 date: '2026-02-24'
-last_updated: '2026-02-24'
+last_updated: '2026-06-03'
 tags:
   - AI
   - Canvas
@@ -22,7 +22,7 @@ quick_summary:
     - リサーチャー
     - コンテンツ制作者
     - グローバルチーム
-  latest_highlight: 2026年2月にAI Slidesのテンプレートアップロード機能を追加
+  latest_highlight: 2026年4月にAIランディングページエージェント、5月に新決済通貨を追加
   update_frequency: 高
 evaluation:
   score: 85
@@ -85,6 +85,7 @@ relationships:
 * **AI Slides**: トピックやドキュメントから、デザインされたプレゼンテーション資料を自動生成します。ブランドテンプレートの適用やテンプレートアップロードが可能になり、カスタマイズ性が向上しています。
 * **X Research**: Twitter (X) の高度な検索機能を活用し、リアルタイムのソーシャルインテリジェンス（トレンド、評判分析など）を提供する機能です。
 * **AI Mind Map**: 任意のコンテンツからAIが自動的にマインドマップを生成し、構造化された思考整理を支援します。
+* **AIランディングページエージェント**: ランディングページを自動で生成・編集できるエージェント機能です。
 * **MCP連携**: Model Context Protocolに対応し、Notionなどの外部ツールと連携してデータを操作できます。
 
 ## **4. 開始手順・セットアップ**
@@ -121,7 +122,7 @@ relationships:
 | **Pro Plan** | $14.99/月 | ・毎月大量のクレジット付与<br>・GPT-4o, Claude 3.5 Sonnet, o1, Gemini 3.0 Proなどの高度なモデル利用<br>・リサーチモード、高度な画像生成へのアクセス |
 | **Enterprise** | 要問い合わせ | ・SSO (シングルサインオン)<br>・IP制限、2要素認証<br>・データ共有無効化オプション<br>・クレジット消費管理ダッシュボード |
 
-* **課金体系**: クレジット制（検索、スライド生成、高度なモデル利用などで消費）
+* **課金体系**: クレジット制（検索、スライド生成、高度なモデル利用などで消費）。決済通貨として日本円や米ドルに加え、ユーロ（EUR）、中国人民元（CNY）、韓国ウォン（KRW）、タイバーツ（THB）など多通貨に対応。
 * **無料トライアル**: Freeプランが実質的な永続トライアルとして機能します。
 
 ## **8. 導入実績・事例**
@@ -140,7 +141,7 @@ relationships:
 
 ### **10.1 API・外部サービス連携**
 
-* **API**: 一般公開されたREST APIの情報は確認できませんが、**MCP (Model Context Protocol)** への対応を進めています。
+* **API**: Chat APIが一般公開されており、開発者が直接FeloのAI検索・生成機能を利用可能です。また、**MCP (Model Context Protocol)** への対応も進めています。
 * **外部サービス連携**:
   * **Notion**: MCPツールを通じてNotionのデータベースを検索・操作可能。
   * **Canva**: 生成したスライドをCanvaで編集するためのエクスポート連携（一部機能）。
@@ -192,6 +193,10 @@ Feloは主にエンドユーザー向けのSaaSですが、MCP対応により開
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-14**: ユーロや中国人民元など新しい決済通貨への対応を追加。
+* **2026-04-27**: 画像生成モデル「GPT-Image-2」を追加。エンタープライズ版でのCSV一括招待やAI Designerのテンプレートカテゴリを追加。
+* **2026-04-20**: AIランディングページエージェントを追加。
+* **2026-03-02**: Chat APIを一般公開。LiveDocのホーム画面での検索やCanvas内のアーティファクト検索に対応。
 * **2026-02-02**: AI Slidesのテンプレートアップロード対応、LiveDocのバーチャルグループ共有機能の追加。
 * **2026-01-21**: Canvas UI刷新、自動イラスト生成機能の追加、AI Slidesの非同期生成対応。
 * **2025-12-29**: Canvasでのリアルタイム音声記録と画像翻訳機能の追加。
@@ -211,7 +216,7 @@ Feloは主にエンドユーザー向けのSaaSですが、MCP対応により開
 | **検索** | 出典付き回答 | ◎<br><small>多言語に強い</small> | ◎<br><small>精度・信頼性高い</small> | ◯<br><small>エージェントが検索</small> | ◯<br><small>タブ依存</small> |
 | **生成** | スライド/資料 | ◎<br><small>PPT/PDF生成</small> | △<br><small>テキスト中心</small> | ◎<br><small>Sparkpages生成</small> | ◎<br><small>GenTabs生成</small> |
 | **整理** | キャンバス/UI | ◎<br><small>無限キャンバス</small> | △<br><small>コレクション機能</small> | ◯<br><small>ページ形式</small> | ◎<br><small>動的UI</small> |
-| **拡張性** | エージェント/API | ◯<br><small>MCP対応</small> | ◯<br><small>API提供</small> | ◎<br><small>マルチエージェント</small> | △<br><small>実験段階</small> |
+| **拡張性** | エージェント/API | ◎<br><small>Chat API/MCP対応</small> | ◯<br><small>API提供</small> | ◎<br><small>マルチエージェント</small> | △<br><small>実験段階</small> |
 
 ### **16.2 詳細比較**
 
