@@ -2,7 +2,7 @@
 title: yamory 調査レポート
 tool_name: yamory
 tool_reading: ヤモリー
-category: セキュリティ/脆弱性管理
+category: セキュリティ/解析
 developer: 株式会社アシュアード (Visionalグループ)
 official_site: https://yamory.io/
 date: '2026-06-02'
@@ -11,6 +11,7 @@ tags:
   - 脆弱性管理
   - SBOM
   - クラウドセキュリティ
+  - SaaS
   - SCA
 description: ソフトウェア内部の構成からホスト、コンテナ、クラウド、ネットワーク機器まで全レイヤーの脆弱性を一元管理・可視化できる国内唯一のクラウドサービス。
 quick_summary:
