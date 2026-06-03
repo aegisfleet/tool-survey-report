@@ -2,14 +2,15 @@
 title: Microsoft Scout 調査レポート
 tool_name: Microsoft Scout
 tool_reading: マイクロソフト スカウト
-category: AIエージェント
+category: 汎用AIエージェント
 developer: Microsoft
 official_site: https://learn.microsoft.com/en-us/microsoft-scout/get-started
 date: '2026-06-03'
 last_updated: '2026-06-03'
 tags:
   - Microsoft 365
-  - AIアプリケーション
+  - AI
+  - エージェント
   - 自動化
   - デスクトップツール
 description: ファイルシステム、シェル、ブラウザ、Microsoft 365を横断して自律的にタスクを実行できるデスクトップAIアプリケーション
