@@ -40,7 +40,6 @@ evaluation:
 links:
   github: https://github.com/yahir0/Roola
   deepwiki: https://deepwiki.com/yahir0/Roola
-  codewiki: https://codewiki.google/github.com/yahir0/Roola
 relationships:
   related_tools:
     - Claude Code
@@ -57,7 +56,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/yahir0/Roola](https://github.com/yahir0/Roola)
   * DeepWiki: [https://deepwiki.com/yahir0/Roola](https://deepwiki.com/yahir0/Roola)
-  * CodeWiki: [https://codewiki.google/github.com/yahir0/Roola](https://codewiki.google/github.com/yahir0/Roola)
 * **カテゴリ**: 開発ユーティリティ
 * **概要**: 開発者のためのmacOS/Windows対応ファイルエクスプローラ。よく使う「ディレクトリ＋動作」をワンクリックで起動できるランチャー機能を搭載している。
 
