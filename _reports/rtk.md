@@ -6,7 +6,7 @@ category: 開発ユーティリティ
 developer: Patrick Szymkowiak
 official_site: https://www.rtk-ai.app/
 date: '2026-05-05'
-last_updated: '2026-05-05'
+last_updated: '2026-06-04'
 tags:
   - オープンソース
   - CLI
@@ -20,7 +20,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIエージェント利用者
-  latest_highlight: v0.38.0リリース
+  latest_highlight: v0.42.1リリース
   update_frequency: 高
 evaluation:
   score: 85
@@ -191,7 +191,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-04-29**: v0.38.0 リリース (各種コマンドのパーサー改善など)
+* **2026-06-03**: v0.42.1 リリース (openclawプラグインでの危険なコマンド実行を回避するための修正など)
+* **2026-05-13**: v0.40.0 リリース (Android/Kotlin向けのGradleサポート追加、Hermes Agentサポートの追加など)
+* **2026-04-29**: v0.38.0 リリース (GitLab CLIサポート追加など)
 
 (出典: [リリースノート](https://github.com/rtk-ai/rtk/releases) )
 
