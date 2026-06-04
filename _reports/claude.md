@@ -6,14 +6,14 @@ category: AIチャット/アシスタント
 developer: Anthropic
 official_site: https://claude.ai/
 date: '2025-10-18'
-last_updated: '2026-02-25'
+last_updated: '2026-06-05'
 tags:
   - AI
   - エージェント
   - コーディング支援
   - 大規模言語モデル
   - 生成AI
-description: Anthropicが開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。Claude 4.5シリーズを搭載し、高い推論能力と安全性、そして自律的なエージェント機能（Claude Code）を提供します。
+description: Anthropicが開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。Claude 4.8 / 4.5シリーズを搭載し、高い推論能力と安全性、そして自律的なエージェント機能（Claude Code）を提供します。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -22,14 +22,14 @@ quick_summary:
     - 開発者
     - データサイエンティスト
     - 一般ユーザー
-  latest_highlight: 2026年1月にClaude Code v2.1をリリースし、エージェント機能を強化
+  latest_highlight: 2026年5月にClaude Opus 4.8がリリースされ、1Mトークンのコンテキストウィンドウをサポート
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: Claude 4.5 Opus/Sonnetによる高い推論能力と長文脈理解
+      reason: Claude Opus 4.8/Sonnetによる高い推論能力と長文脈理解
     - point: 5
       reason: Claude Codeによる自律的なコーディングエージェント機能が強力
     - point: 5
@@ -77,7 +77,7 @@ relationships:
   * ドキュメント: [https://docs.anthropic.com/](https://docs.anthropic.com/)
   * APIドキュメント: [https://docs.anthropic.com/en/api/getting-started](https://docs.anthropic.com/en/api/getting-started)
 * **カテゴリ**: 生成AI
-* **概要**: Anthropic社が開発した、安全性と信頼性を重視した最先端の大規模言語モデル（LLM）。最新の「Claude 4.5」ファミリー（Opus/Sonnet/Haiku）を搭載し、卓越した推論能力、長大なコンテキスト処理、そして自律的なタスク実行能力（エージェント機能）を提供する。特にコーディングや複雑な文書作成において高い評価を得ている。
+* **概要**: Anthropic社が開発した、安全性と信頼性を重視した最先端の大規模言語モデル（LLM）。最新のClaudeモデルファミリー（Opus/Sonnet/Haiku）を搭載し、卓越した推論能力、長大なコンテキスト処理、そして自律的なタスク実行能力（エージェント機能）を提供する。特にコーディングや複雑な文書作成において高い評価を得ている。
 
 ## **2. 目的と主な利用シーン**
 
@@ -103,8 +103,8 @@ relationships:
 - 各機能は1-2文で概要を説明
 -->
 
-* **Claude 4.5 モデルファミリー**:
-    * **Claude 4.5 Opus**: 最も高性能なモデル。複雑な推論、高度な数学・科学タスク、大規模なコーディングに最適。
+* **Claude 4.8 / 4.5 モデルファミリー**:
+    * **Claude Opus 4.8**: 最も高性能なモデル。複雑な推論、高度な数学・科学タスク、大規模なコーディングに最適。
     * **Claude 4.5 Sonnet**: 性能と速度のバランスに優れたモデル。日常的なタスクから開発まで幅広く対応。
     * **Claude 4.5 Haiku**: 最も高速かつ低コストなモデル。リアルタイム応答や大量の単純タスク処理向け。
 * **Artifacts**: 生成されたコード、ドキュメント、図表をチャットとは別のウィンドウでプレビュー・編集できる機能。Reactコンポーネントの即時レンダリングなどが可能。
@@ -145,7 +145,7 @@ relationships:
 -->
 
 * **自然で人間らしい文章生成**: 機械的さが少なく、日本語のニュアンスも正確に捉えた自然な文章を生成する能力に定評がある。
-* **強力なコーディング能力**: 特にClaude 4.5 Opus/Sonnetは、複雑なロジックの実装やバグ修正において非常に高い信頼性を誇る。
+* **強力なコーディング能力**: 特にClaude Opus 4.8/Sonnetは、複雑なロジックの実装やバグ修正において非常に高い信頼性を誇る。
 * **Artifactsによる作業効率化**: コードやドキュメントをチャットの流れから切り離して確認・編集できるため、成果物の作成プロセスがスムーズ。
 * **安全性と倫理観**: Anthropicの「Constitution AI（憲法AI）」アプローチにより、有害な出力やバイアスを抑制する設計がなされている。
 
@@ -174,7 +174,7 @@ relationships:
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
 | **Free** | 無料 | Claude 4.5 Sonnetへの限定アクセス（使用回数制限あり）。 |
-| **Pro** | $20/月 | Claude 4.5 Opus/Haikuを含む全モデルへのアクセス。使用回数上限の緩和。Projects機能。 |
+| **Pro** | $20/月 | Claude Opus 4.8/Haikuを含む全モデルへのアクセス。使用回数上限の緩和。Projects機能。 |
 | **Team** | $25/ユーザー/月 | 5名から。Proの全機能に加え、より高い使用上限、管理機能。 |
 | **Enterprise** | 要問い合わせ | SSO、高度なセキュリティ、専用サポート、大規模なコンテキスト。 |
 
@@ -319,13 +319,17 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-28**: **Claude Opus 4.8 リリース**: 1Mトークンのコンテキストウィンドウをサポートし、Adaptive thinkingによるトークン効率が向上した最高性能モデルが登場。
+* **2026-05-19**: **Claude Managed Agents 自社ホスト機能追加**: Anthropicのインフラに加え、自社ホスト環境でのエージェントの安全な実行（Self-hosted sandboxes）が可能になった。
+* **2026-04-16**: **Claude Opus 4.7 リリース**: 複雑な推論やエージェンティックコーディングに優れたモデルが登場。
+* **2026-04-08**: **Claude Managed Agents (Public Beta) 公開**: Claudeを自律型エージェントとして実行するための、安全なサンドボックスと組み込みツールを備えたフルマネージド実行環境。
 * **2026-01-XX**: **Claude Code v2.1 リリース**: ターミナルベースのエージェント機能が強化され、タスク管理やカスタムキーバインディングが追加された。
 * **2025-11-24**: **Claude 4.5 Opus/Sonnet/Haiku リリース**: 推論能力、速度、コスト効率が大幅に向上した新モデルファミリーが登場。
 * **2025-12-09**: **MCP (Model Context Protocol) のオープン標準化**: 外部ツール連携のためのプロトコルを公開し、エコシステムの拡大を発表。
 * **2025-10-XX**: **Claude Computer Use (Beta) 公開**: AIが画面操作を行う機能がAPI経由で利用可能になった。
 * **2025-09-XX**: **Claude Code (Beta) 公開**: 開発者向けの自律型コーディングエージェントの提供を開始。
 
-(出典: [Anthropic Changelog](https://docs.anthropic.com/en/release-notes/overview))
+(出典: [Anthropic Release Notes](https://docs.anthropic.com/en/release-notes/overview))
 
 ## **16. 類似ツールとの比較**
 
@@ -339,7 +343,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール (Claude) | ChatGPT | Gemini |
 |:---:|:---|:---:|:---:|:---:|
-| **モデル性能** | 推論・論理的思考 | ◎<br><small>4.5 Opus</small> | ◎<br><small>o1</small> | ◎<br><small>3 Pro</small> |
+| **モデル性能** | 推論・論理的思考 | ◎<br><small>Opus 4.8</small> | ◎<br><small>o1</small> | ◎<br><small>3 Pro</small> |
 | **UI/UX** | プレビュー機能 | ◎<br><small>Artifacts</small> | ◎<br><small>Canvas</small> | △<br><small>なし</small> |
 | **開発支援** | 自律エージェント | ◎<br><small>Claude Code</small> | ◯<br><small>GPTs</small> | ◯<br><small>Agent Mode</small> |
 | **検索・情報** | リアルタイム検索 | △<br><small>弱い</small> | ◎<br><small>Search</small> | ◎<br><small>Google検索</small> |
@@ -367,7 +371,7 @@ relationships:
 -->
 
 * **総合的な評価**:
-  Claudeは、特に「開発者」と「ナレッジワーカー」にとって最高のパートナーとなるAIである。Claude 4.5による高い知能に加え、ArtifactsやClaude Codeといった機能は、チャットボットの枠を超えて実際の作業を代行・支援する「エージェント」へと進化している。汎用的な検索やエンターテインメント用途よりも、実務における生産性向上に特化したツールと言える。
+  Claudeは、特に「開発者」と「ナレッジワーカー」にとって最高のパートナーとなるAIである。Claude 4.8 / 4.5による高い知能に加え、ArtifactsやClaude Codeといった機能は、チャットボットの枠を超えて実際の作業を代行・支援する「エージェント」へと進化している。汎用的な検索やエンターテインメント用途よりも、実務における生産性向上に特化したツールと言える。
 * **推奨されるチームやプロジェクト**:
   * ソフトウェア開発チーム（コード生成、レビュー、リファクタリング）。
   * 複雑なドキュメント作成や分析を行うリサーチ・法務・コンサルティングチーム。
