@@ -49,6 +49,7 @@ relationships:
     - GitHub Copilot app
     - Amazon Q Developer
     - TAKT
+    - Headroom
 ---
 
 # **GitHub Copilot CLI 調査レポート**
