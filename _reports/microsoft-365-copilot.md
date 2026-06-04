@@ -46,6 +46,7 @@ relationships:
   children:
     - Microsoft Work IQ
     - Copilot Cowork
+    - Microsoft Copilot Studio
   related_tools:
     - 天才くん
     - ChatGPT
