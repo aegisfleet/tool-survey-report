@@ -59,6 +59,7 @@ relationships:
     - Devin
     - TAKT
     - Model Context Protocol
+    - Headroom
     - Mobile Next
 ---
 

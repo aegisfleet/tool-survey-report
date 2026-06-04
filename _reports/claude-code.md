@@ -54,6 +54,7 @@ relationships:
     - Grok CLI
     - Roola
     - Agent Governance Toolkit
+    - Headroom
 ---
 # **Claude Code 調査レポート**
 
