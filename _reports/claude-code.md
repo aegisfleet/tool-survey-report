@@ -52,6 +52,7 @@ relationships:
     - Cline
     - Devin
     - Grok CLI
+    - Roola
     - Agent Governance Toolkit
 ---
 # **Claude Code 調査レポート**
