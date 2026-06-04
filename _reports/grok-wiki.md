@@ -1,59 +1,52 @@
 ---
-# 【必須項目】
-title: "Grok-Wiki 調査レポート"
-tool_name: "Grok-Wiki"
-tool_reading: "グロックウィキ"
-category: "ドキュメント/ナレッジ"
-developer: "AsyncFuncAI"
-official_site: "https://grok-wiki.com/"
-date: "2026-06-04"
-last_updated: "2026-06-04"
+title: Grok-Wiki 調査レポート
+tool_name: Grok-Wiki
+tool_reading: グロックウィキ
+category: ドキュメント/ナレッジ
+developer: AsyncFuncAI
+official_site: https://grok-wiki.com/
+date: '2026-06-04'
+last_updated: '2026-06-04'
 tags:
-  - "AI"
-  - "ドキュメント生成"
-  - "デスクトップアプリ"
-  - "ローカル実行"
-  - "開発者ツール"
-description: "ローカルのCLIエージェントを活用し、GitHubリポジトリやローカルフォルダからソースコードに基づいたWikiやドキュメントを生成するデスクトップアプリ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - ドキュメント生成
+  - デスクトップアプリ
+  - ローカル実行
+  - 開発者ツール
+description: ローカルのCLIエージェントを活用し、GitHubリポジトリやローカルフォルダからソースコードに基づいたWikiやドキュメントを生成するデスクトップアプリ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "テクニカルライター"
-  latest_highlight: "v0.0.20でローカルCLIエージェント選択機能の安定性を向上"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - テクニカルライター
+  latest_highlight: v0.0.20でローカルCLIエージェント選択機能の安定性を向上
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 4
-      reason: "ローカルで動作するエージェントを使用し、高いプライバシーを確保できる"
+      reason: ローカルで動作するエージェントを使用し、高いプライバシーを確保できる
     - point: 4
-      reason: "コードの変更に追従するドキュメント生成が容易"
+      reason: コードの変更に追従するドキュメント生成が容易
     - point: 3
-      reason: "複数のローカルCLIエージェント（Grok, Codex, Claude Code, Pi, Antigravity）に対応"
+      reason: 複数のローカルCLIエージェント（Grok, Codex, Claude Code, Pi, Antigravity）に対応
   minus_points:
     - point: -1
-      reason: "現在はmacOS (Apple Silicon) のみに対応している"
-  summary: "プライバシーを重視し、自身の好みのローカルエージェントを用いてコードのドキュメント化を強力にサポートするMac向けツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現在はmacOS (Apple Silicon) のみに対応している
+  summary: プライバシーを重視し、自身の好みのローカルエージェントを用いてコードのドキュメント化を強力にサポートするMac向けツール
 links:
-  github: "https://github.com/AsyncFuncAI/grok-wiki"
-  deepwiki: "https://deepwiki.com/AsyncFuncAI/grok-wiki"
+  github: https://github.com/AsyncFuncAI/grok-wiki
+  deepwiki: https://deepwiki.com/AsyncFuncAI/grok-wiki
 relationships:
   related_tools:
-    - "Code Wiki"
-    - "Grok CLI"
-    - "Claude Code"
-    - "OpenAI Codex CLI"
-    - "Google Antigravity"
+    - Code Wiki
+    - Grok CLI
+    - Claude Code
+    - OpenAI Codex CLI
+    - Google Antigravity
 ---
 
 # **Grok-Wiki 調査レポート**
