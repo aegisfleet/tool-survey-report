@@ -6,7 +6,7 @@ category: デザインツール
 developer: Gamma Tech, Inc.
 official_site: https://gamma.app/
 date: '2026-01-23'
-last_updated: "2026-06-04"
+last_updated: '2026-06-04'
 tags:
   - AI
   - エージェント
@@ -24,7 +24,7 @@ quick_summary:
     - ビジネスパーソン
     - スタートアップ
     - マーケター
-  latest_highlight: "AIエージェントと対話しながら資料を作成できる「Create with Agent」機能を導入"
+  latest_highlight: AIエージェントと対話しながら資料を作成できる「Create with Agent」機能を導入
   update_frequency: 高
 evaluation:
   score: 85
