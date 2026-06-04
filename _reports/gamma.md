@@ -6,7 +6,7 @@ category: デザインツール
 developer: Gamma Tech, Inc.
 official_site: https://gamma.app/
 date: '2026-01-23'
-last_updated: '2026-02-24'
+last_updated: '2026-06-04'
 tags:
   - AI
   - エージェント
@@ -24,7 +24,7 @@ quick_summary:
     - ビジネスパーソン
     - スタートアップ
     - マーケター
-  latest_highlight: 2025年9月に「Gamma 3.0」とAIエージェント機能をリリース
+  latest_highlight: AIエージェントと対話しながら資料を作成できる「Create with Agent」機能を導入
   update_frequency: 高
 evaluation:
   score: 85
@@ -71,7 +71,6 @@ relationships:
 * **公式サイト**: [https://gamma.app/](https://gamma.app/)
 * **関連リンク**:
   * ドキュメント: [Help Center](https://help.gamma.app/)
-  * レビューサイト: [Capterra](https://www.capterra.com/p/10002120/Gamma/) | [G2](https://www.g2.com/products/gamma-ai/reviews)
 * **カテゴリ**: デザインツール
 * **概要**: Gammaは、AIを活用してプレゼンテーション、ドキュメント、Webページを生成・編集するクラウドベースのデザインツール。「Gamma 3.0」で導入された「Gamma Agent」により、チャット形式でデザインや構成の指示出しが可能となり、単なる自動生成ツールから「AIデザインパートナー」へと進化した。
 
@@ -106,6 +105,7 @@ relationships:
 -->
 
 * **Gamma Agent**: 対話形式（チャット）でスライドの修正、画像の差し替え、テキストの要約・翻訳などを指示できるAIパートナー機能。
+* **Create with Agent**: 複数のソース（PDF、ドキュメント、プレゼンテーション、Webサイトなど）をインポートし、AIエージェントと対話しながらアウトラインを構築し、そこから資料を自動生成する機能。
 * **AIによる自動生成**: トピックを入力するだけ、または既存のメモやドキュメントを貼り付けるだけで、構成からデザインまで一貫した資料を生成。
 * **Smart Diagrams**: テキストで指示するだけで、フローチャート、ベン図、ガントチャートなどの図解を自動生成し、デザインに馴染ませる。
 * **Mass Automation (API)**: APIを利用して、テンプレートから数百種類のパーソナライズされたプレゼンテーションを一括生成（Proプラン以上）。
@@ -291,7 +291,7 @@ relationships:
 - ポジティブ・ネガティブ各3項目以上
 -->
 
-* **調査対象**: Max Productive AI Review (2025/9), WPCrafter (2026/1), G2/Capterra
+* **調査対象**: Max Productive AI Review (2025/9), WPCrafter (2026/1), Google検索結果のスニペット等
 * **総合評価**: 4.8/5.0 (Max Productive AI), 9/10 (WPCrafter)
 * **ポジティブな評価**:
   * 「資料作成にかかる時間が1/10になった。もう以前のやり方には戻れない」
@@ -315,9 +315,11 @@ relationships:
   1. GitHubリポジトリの `CHANGELOG.md`
   2. GitHub Releases
   3. 公式ブログ / ニュース
-- 情報源のURLを記載
+- 情報源のURLを記載。**【重要】特定の古い日時の記事等に固定せず、常に最新情報が掲載・蓄積される公式の永続的なインデックスURL（製品アップデートカテゴリ、リリースノート一覧、コミュニティポータル等）を記載・更新すること。オープンソース（OSS）ツールを調査する場合において、GitHub等のリリースノートやリポジトリの内容を出典として参考にする際は、特定のリリースバージョン個別URL（例：`/releases/tag/v1.0.0`）に固定するのではなく、常に最新の更新履歴にアクセスできるリポジトリの永続リンク（例：`/releases` や `CHANGELOG.md` への直接リンク等）を出典URLとして設定すること。**
 -->
 
+* **2026-05**: **Create with Agent 導入**
+  * 様々なソース（PDF, DOC, Web等）を読み込ませてAIエージェントと対話しながら構成・アウトラインを作成し、その後スライドを生成する新しい作成フローを追加。
 * **2025-11-20**: **Gamma API 一般公開 (GA)**
   * Proプラン以上のユーザーがAPIを利用可能に。ZapierやMakeとの連携も正式サポート。
 * **2025-09-15**: **Gamma 3.0 リリース**
@@ -327,7 +329,7 @@ relationships:
 * **2025-08-10**: **画像生成モデルの刷新**
   * Fluxなどの最新モデルを統合し、スライド内画像の生成品質が大幅に向上。
 
-(出典: [Gamma Changelog](https://gamma.canny.io/changelog), Max Productive AI Review)
+(出典: [Gamma Help Center - Updates & Announcements](https://help.gamma.app/) など)
 
 ## **16. 類似ツールとの比較**
 
@@ -353,7 +355,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | Gamma | Canva | Microsoft 365 Copilot | Plus AI |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **作成方式** | テキストtoスライド | ◎<br><small>構成から一括生成</small> | ◯<br><small>Magic Design</small> | ◯<br><small>Wordから変換</small> | ◎<br><small>リミックス機能</small> |
+| **作成方式** | テキストtoスライド | ◎<br><small>構成から一括生成、Agentと対話</small> | ◯<br><small>Magic Design</small> | ◯<br><small>Wordから変換</small> | ◎<br><small>リミックス機能</small> |
 | **デザイン** | 自由度 | △<br><small>ブロック制約あり</small> | ◎<br><small>ドラッグ&ドロップ</small> | ◎<br><small>PPT完全互換</small> | ◎<br><small>PPTネイティブ</small> |
 | **AI機能** | 対話型編集 | ◎<br><small>Gamma Agent</small> | △<br><small>Magic Edit</small> | ◎<br><small>Copilot Chat</small> | ◯<br><small>AI Remix</small> |
 | **自動化** | API生成 | ◎<br><small>大量生成対応</small> | ◯<br><small>Autofill API</small> | △<br><small>Graph API</small> | △<br><small>限定的</small> |

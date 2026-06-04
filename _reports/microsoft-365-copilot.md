@@ -53,7 +53,6 @@ relationships:
     - Gemini
     - GitHub Copilot
     - Microsoft Power Automate
-    - AGENTIC STAR
     - Circleback
     - Gamma
 ---
