@@ -42,7 +42,7 @@ evaluation:
   summary: 複雑な科学研究やエンタープライズR&Dにおけるナレッジディスカバリーと実験自動化を牽引する強力なプラットフォーム
 links:
   github: https://github.com/microsoft/discovery
-  deepwiki: "https://deepwiki.com/microsoft/discovery"
+  deepwiki: https://deepwiki.com/microsoft/discovery
 relationships:
   related_tools: []
 ---
