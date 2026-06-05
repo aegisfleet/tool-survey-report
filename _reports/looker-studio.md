@@ -2,7 +2,7 @@
 title: Looker Studio 調査レポート
 tool_name: Looker Studio
 tool_reading: ルッカースタジオ
-category: データ分析
+category: BI/データ可視化
 developer: Google
 official_site: https://cloud.google.com/looker-studio?hl=ja
 date: '2026-03-04'

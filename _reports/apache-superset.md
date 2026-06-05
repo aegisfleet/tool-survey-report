@@ -2,7 +2,7 @@
 title: Apache Superset 調査レポート
 tool_name: Apache Superset
 tool_reading: アパッチ スーパーセット
-category: データ分析
+category: BI/データ可視化
 developer: Apache Software Foundation
 official_site: https://superset.apache.org/
 date: '2026-03-29'
