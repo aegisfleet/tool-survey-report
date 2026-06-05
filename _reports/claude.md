@@ -343,7 +343,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール (Claude) | ChatGPT | Gemini |
 |:---:|:---|:---:|:---:|:---:|
-| **モデル性能** | 推論・論理的思考 | ◎<br><small>Opus 4.8</small> | ◎<br><small>o1</small> | ◎<br><small>3 Pro</small> |
+| **モデル性能** | 推論・論理的思考 | ◎<br><small>Opus 4.8</small> | ◎<br><small>GPT-5.4 Thinking</small> | ◎<br><small>3.1 Pro</small> |
 | **UI/UX** | プレビュー機能 | ◎<br><small>Artifacts</small> | ◎<br><small>Canvas</small> | △<br><small>なし</small> |
 | **開発支援** | 自律エージェント | ◎<br><small>Claude Code</small> | ◯<br><small>GPTs</small> | ◯<br><small>Agent Mode</small> |
 | **検索・情報** | リアルタイム検索 | △<br><small>弱い</small> | ◎<br><small>Search</small> | ◎<br><small>Google検索</small> |
