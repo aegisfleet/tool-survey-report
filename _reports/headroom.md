@@ -2,7 +2,7 @@
 title: Headroom 調査レポート
 tool_name: Headroom
 tool_reading: ヘッドルーム
-category: AIエージェント基盤
+category: コーディングエージェント
 developer: chopratejas
 official_site: https://github.com/chopratejas/headroom
 date: '2026-06-05'

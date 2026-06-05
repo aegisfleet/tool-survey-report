@@ -2,7 +2,7 @@
 title: mabl 調査レポート
 tool_name: mabl
 tool_reading: メイブル
-category: E2E/ブラウザテスト
+category: テスト自動化SaaS
 developer: mabl Inc.
 official_site: https://www.mabl.com/ja/
 date: '2026-01-28'

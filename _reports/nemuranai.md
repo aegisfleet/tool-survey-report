@@ -2,7 +2,7 @@
 title: ネムラナイ 調査レポート
 tool_name: ネムラナイ
 tool_reading: ネムラナイ
-category: E2E/ブラウザテスト
+category: テスト自動化SaaS
 developer: 株式会社SHIFT
 official_site: https://contents.shiftinc.jp/nemuranai/
 date: '2026-02-09'

@@ -2,7 +2,7 @@
 title: Presenton 調査レポート
 tool_name: Presenton
 tool_reading: プレゼントン
-category: AI・機械学習
+category: デザインツール
 developer: Presenton Inc.
 official_site: https://presenton.ai/
 date: '2026-06-04'
@@ -10,7 +10,7 @@ last_updated: '2026-06-04'
 tags:
   - プレゼンテーション
   - オープンソース
-  - AI・機械学習
+  - AI
   - 自動化
   - デスクトップアプリ
 description: プロンプトやドキュメントからスライドを自動生成する、オープンソースのAIプレゼンテーションツール
@@ -49,9 +49,8 @@ links:
 relationships:
   related_tools:
     - Gamma
-    - gamma
-    - chatgpt
-    - ollama
+    - ChatGPT
+    - Ollama
 ---
 
 # **Presenton 調査レポート**

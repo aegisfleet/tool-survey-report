@@ -2,7 +2,7 @@
 title: Dreambeans 調査レポート
 tool_name: Dreambeans
 tool_reading: ドリームビーンズ
-category: AIアシスタント
+category: AIチャット/アシスタント
 developer: Google (Google Labs)
 official_site: https://labs.google/dreambeans
 date: '2026-06-05'
@@ -36,10 +36,10 @@ evaluation:
 links:
   documentation: https://blog.google/innovation-and-ai/models-and-research/google-labs/dreambeans/
 relationships:
-  parent: Google AI
+  parent: Gemini
   children: []
   related_tools:
-    - gemini
+    - Gemini
 ---
 
 # **Dreambeans 調査レポート**
