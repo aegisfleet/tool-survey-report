@@ -6,7 +6,7 @@ category: デザインツール
 developer: JGraph Ltd
 official_site: https://app.diagrams.net/
 date: '2026-02-25'
-last_updated: '2026-02-25'
+last_updated: '2026-06-05'
 tags:
   - オープンソース
   - ダイアグラム
@@ -21,7 +21,7 @@ quick_summary:
     - エンジニア
     - デザイナー
     - ビジネスパーソン
-  latest_highlight: 2026年2月にv29.5系がリリースされ、機能改善が継続中
+  latest_highlight: 2026年5月にメジャーバージョンv30.0.0がリリースされ、GCP3ステンシルやアダプティブカラー機能が追加された
   update_frequency: 高
 evaluation:
   score: 85
@@ -44,7 +44,7 @@ evaluation:
 links:
   github: https://github.com/jgraph/drawio
   deepwiki: https://deepwiki.com/jgraph/drawio
-  documentation: https://www.drawio.com/doc/
+  documentation: https://www.drawio.com/docs/
 relationships:
   related_tools:
     - Miro
@@ -60,7 +60,7 @@ relationships:
 * **公式サイト**: [https://app.diagrams.net/](https://app.diagrams.net/)
 * **関連リンク**:
   * GitHub: [https://github.com/jgraph/drawio](https://github.com/jgraph/drawio)
-  * ドキュメント: [https://www.drawio.com/doc/](https://www.drawio.com/doc/)
+  * ドキュメント: [https://www.drawio.com/docs/](https://www.drawio.com/docs/)
   * 情報サイト: [https://www.drawio.com/](https://www.drawio.com/)
 * **カテゴリ**: デザインツール
 * **概要**: Webブラウザ上で動作する無料の作図ツール。フローチャート、UML、ER図、ネットワーク図など多様な図を作成できる。アカウント登録なしで利用でき、作成したデータはGoogle Drive、OneDrive、ローカルデバイスなどに保存可能。
@@ -80,7 +80,8 @@ relationships:
 
 ## **3. 主要機能**
 
-* **豊富な図形ライブラリ**: フローチャート、UML、BPMN、ネットワーク機器（AWS, Azure, GCP, Cisco等）など、多種多様なアイコンが標準で利用可能。
+* **豊富な図形ライブラリ**: フローチャート、UML、BPMN、ネットワーク機器（AWS, Azure, GCP, Cisco等）など、多種多様なアイコンが標準で利用可能。新しいGCP3ステンシルなど継続的にアップデートされている。
+* **マルチカラーサポート**: 多くのステンシルでカラーの柔軟な変更（マルチカラー機能）がサポートされ、図の表現力が向上している。
 * **多様な保存先**: Google Drive, OneDrive, Dropbox, GitHub, GitLab, ローカルデバイスなど、ユーザーが保存先を自由に選択できる。
 * **インポート/エクスポート**: XML形式（.drawio）での保存に加え、PNG, JPEG, SVG, PDF, HTML形式でのエクスポートが可能。Visio (.vsdx) ファイルのインポートも対応。
 * **VS Code連携**: 非公式だが公式推奨のVS Code拡張機能（hediet.vscode-drawio）を使用することで、エディタ内で直接作図が可能。
@@ -139,7 +140,7 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: [公式サイト](https://www.drawio.com/doc/)に詳細なユーザーガイド、チュートリアル、ビデオガイドがある。
+* **ドキュメント**: [公式サイト](https://www.drawio.com/docs/)に詳細なユーザーガイド、チュートリアル、ビデオガイドがある。
 * **コミュニティ**: GitHubのIssueやDiscussions、Stack Overflowなどで活発に情報交換が行われている。
 * **公式サポート**: Web版（無料ユーザー）向けの個別サポートはないが、GitHub経由でのバグ報告は可能。Atlassian版ユーザーには商用サポートが提供される。
 
@@ -197,13 +198,16 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-27**: v30.0.4 リリース (GCP3ステンシルの更新など)
+* **2026-05-26**: v30.0.3 リリース (DOMPurifyのアップグレード、UI改善、マルチカラー対応の拡張など)
+* **2026-05-09**: v30.0.0 リリース (メジャーリリース: アダプティブカラーのページ設定追加、フローティングウィンドウの状態保持など)
 * **2026-02-22**: v29.5.2 リリース (バグ修正)
 * **2026-02-20**: v29.5.1 リリース
 * **2026-01-28**: v29.3.6 リリース
 * **2026-01-08**: v29.3.0 リリース (機能改善)
 * **2025-12-19**: v29.2.9 リリース
 
-(出典: [GitHub Releases](https://github.com/jgraph/drawio/releases))
+(出典: [GitHub Releases](https://github.com/jgraph/drawio/blob/master/ChangeLog))
 
 ## **16. 類似ツールとの比較**
 
@@ -216,6 +220,7 @@ relationships:
 | **コスト** | 無料プラン | ◎<br><small>全機能無料</small> | △<br><small>制限あり</small> | △<br><small>制限あり</small> | ×<br><small>有料のみ</small> |
 | **プラットフォーム** | オフライン利用 | ◯<br><small>Desktop版</small> | △<br><small>限定的</small> | △ | ◎ |
 | **開発者向け** | VS Code連携 | ◎ | × | × | × |
+| **拡張性** | AI作図/生成支援 | × | ◎<br><small>Miro AI搭載</small> | ◯<br><small>Lucid AI搭載</small> | × |
 
 ### **16.2 詳細比較**
 
