@@ -57,7 +57,6 @@ relationships:
     - Windsurf
     - Roo Code
     - Visual Studio Code
-    - AGENTS.md
     - Model Context Protocol
 ---
 
