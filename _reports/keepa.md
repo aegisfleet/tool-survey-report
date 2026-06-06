@@ -6,7 +6,7 @@ category: データ分析
 developer: Keepa.com
 official_site: https://keepa.com/
 date: '2026-02-25'
-last_updated: '2026-02-25'
+last_updated: '2026-06-06'
 tags:
   - Amazon
   - EC
@@ -22,7 +22,7 @@ quick_summary:
     - Amazon出品者
     - せどり実践者
     - 一般購入者
-  latest_highlight: 継続的な対応国とデータポイントの拡大
+  latest_highlight: 2025年10月に在庫切れおよび再入荷の通知（Stock Alerts）機能を追加
   update_frequency: 高
 evaluation:
   score: 76
@@ -42,7 +42,10 @@ evaluation:
   summary: Amazon物販には不可欠なツールであり、データの質と量は他を圧倒するが、本格的な利用にはコストがかかる
 links:
   documentation: https://keepa.com/#!discuss
-relationships: {}
+relationships:
+  related_tools:
+    - ScraperAPI
+    - ScrapingBee
 ---
 
 # **Keepa 調査レポート**
@@ -90,7 +93,7 @@ relationships: {}
 
 * **価格履歴グラフ**: 新品、中古、Amazon直販など、コンディションごとの価格推移を長期間にわたりグラフ表示する。
 * **売れ筋ランキング履歴**: Amazonの売れ筋ランキング（Sales Rank）の推移を表示し、商品の需要や回転率を把握できる（有料版）。
-* **価格・在庫アラート**: 指定した価格を下回った場合や、在庫が復活した際にメールや通知を受け取れる。
+* **価格・在庫アラート**: 指定した価格を下回った場合や、在庫切れ時および在庫が復活（再入荷）した際にメールや通知を受け取れる（Stock Alerts）。
 * **Buy Box（カートボックス）統計**: カートボックスを獲得している出品者、価格、獲得率などの統計情報を確認できる。
 * **Product Finder**: カテゴリ、価格帯、ランキング、出品者数など、詳細な条件を指定して商品を検索・抽出できる（Premium Data Access）。
 * **ブラウザ拡張機能**: Chrome、Firefox、Edgeなどにインストールすることで、Amazon商品ページ内にKeepaのグラフを直接埋め込んで表示する。
@@ -291,15 +294,17 @@ relationships: {}
   1. GitHubリポジトリの `CHANGELOG.md`
   2. GitHub Releases
   3. 公式ブログ / ニュース
-- 情報源のURLを記載
+- 情報源のURLを記載。**【重要】特定の古い日時の記事等に固定せず、常に最新情報が掲載・蓄積される公式の永続的なインデックスURL（製品アップデートカテゴリ、リリースノート一覧、コミュニティポータル等）を記載・更新すること。オープンソース（OSS）ツールを調査する場合において、GitHub等のリリースノートやリポジトリの内容を出典として参考にする際は、特定のリリースバージョン個別URL（例：`/releases/tag/v1.0.0`）に固定するのではなく、常に最新の更新履歴にアクセスできるリポジトリの永続リンク（例：`/releases` や `CHANGELOG.md` への直接リンク等）を出典URLとして設定すること。**
 -->
 
+* **2025-10-21**: **在庫アラート（Stock Alerts）の追加**:
+    * 追跡対象の商品が在庫切れ（Out of stock）または再入荷（Back in stock）した際に通知を受け取れる機能が追加された。
 * **2025年内 (継続)**: **対応マーケットプレイスの拡大とデータ精度の向上**:
     * 新興国のAmazonマーケットプレイスへの対応や、追跡対象商品の拡大を常時行っている。
 * **2025年内 (継続)**: **モバイルアプリの機能改善**:
     * iOS/AndroidアプリのUI改善や、デスクトップ版機能（Product Finderの一部機能など）のモバイル対応を順次進めている。
 
-(出典: 公式サイトおよびアプリ更新履歴)
+(出典: [Keepa 新着情報 / ニュース](https://keepa.com/#!news))
 
 ## **16. 類似ツールとの比較**
 
@@ -326,6 +331,7 @@ relationships: {}
 | 機能カテゴリ | 機能項目 | Keepa | CamelCamelCamel | Helium 10 |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 価格履歴グラフ | ◎<br><small>詳細な履歴、多コンディション対応</small> | ◯<br><small>新品・中古・Amazonのみ</small> | ◯<br><small>Keepaと同等機能あり</small> |
+| **基本機能** | 在庫通知アラート | ◎<br><small>在庫切れや再入荷時に通知</small> | -<br><small>不明</small> | -<br><small>不明</small> |
 | **分析機能** | 売れ筋ランキング履歴 | ◎<br><small>有料版で詳細表示可能</small> | ×<br><small>非対応</small> | ◎<br><small>詳細なランキング追跡が可能</small> |
 | **検索・リサーチ** | 商品フィルタリング | ◎<br><small>Product Finderで超詳細検索が可能</small> | △<br><small>基本的な検索のみ</small> | ◎<br><small>Black Box機能で高度な検索が可能</small> |
 | **開発者向け** | API提供 | ◎<br><small>トークン制で柔軟に利用可能</small> | ×<br><small>非公開</small> | △<br><small>一部APIありだが限定的</small> |
