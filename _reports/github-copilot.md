@@ -51,12 +51,10 @@ relationships:
     - Cursor
     - Windsurf
     - Cline
-    - RooCode
-    - CodeWiki
-    - Claude Code
+    - Roo Code
+    - Visual Studio Code
     - CodeRabbit
     - GitLab Duo
-    - VSCode
     - Mobile Next
 ---
 
