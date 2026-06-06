@@ -43,7 +43,7 @@ links:
   documentation: https://docs.scraperapi.com/
 relationships:
   related_tools:
-    - "Keepa"
+    - Keepa
     - ScrapingBee
 ---
 

@@ -44,8 +44,8 @@ links:
   documentation: https://keepa.com/#!discuss
 relationships:
   related_tools:
-    - "ScraperAPI"
-    - "ScrapingBee"
+    - ScraperAPI
+    - ScrapingBee
 ---
 
 # **Keepa 調査レポート**
