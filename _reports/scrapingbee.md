@@ -41,6 +41,7 @@ links:
   documentation: https://www.scrapingbee.com/documentation/
 relationships:
   related_tools:
+    - "Keepa"
     - Scrapling
 ---
 
