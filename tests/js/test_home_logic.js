@@ -247,13 +247,27 @@ function createReportCard(title, tags, category, date, score) {
   return card;
 }
 
-const card1 = createReportCard('Tool A', ['tag1', 'tag2'], 'Development', '2023-01-01', '80');
+const card1 = createReportCard('ToolA', ['tag1', 'tag2'], 'Development', '2023-01-01', '80');
 const card2 = createReportCard('Tool B', ['tag2', 'tag3'], 'Design', '2023-02-01', '90');
 const card3 = createReportCard('Tool C', ['tag1'], 'Development', '2023-03-01', '70');
 
 reportsGrid.appendChild(card1);
 reportsGrid.appendChild(card2);
 reportsGrid.appendChild(card3);
+
+// 制限件数テストのためにさらに12枚のカードを追加（合計15枚）
+for (let i = 0; i < 12; i++) {
+  const card = createReportCard(`Extra Tool ${i}`, ['tag1'], 'Development', `2023-04-${i+1 < 10 ? '0' + (i+1) : i+1}`, '60');
+  reportsGrid.appendChild(card);
+}
+
+// Mock buttons and containers for new features
+const loadMoreBtn = new HTMLElement('button');
+loadMoreBtn.attributes.id = 'load-more-btn';
+const loadMoreContainer = new HTMLElement('div');
+loadMoreContainer.attributes.id = 'load-more-container';
+const reportsCountContainer = new HTMLElement('span');
+reportsCountContainer.attributes.id = 'reports-count-container';
 
 // Mock document
 global.document = {
@@ -264,6 +278,9 @@ global.document = {
     if (id === 'sort-select') return sortSelect;
     if (id === 'reports-grid') return reportsGrid;
     if (id === 'no-results') return noResults;
+    if (id === 'load-more-btn') return loadMoreBtn;
+    if (id === 'load-more-container') return loadMoreContainer;
+    if (id === 'reports-count-container') return reportsCountContainer;
     if (id === 'hero-search-clear' || id === 'search-clear') return new HTMLElement('button');
     if (id === 'tag-filter-clear') return new HTMLElement('button');
     if (id === 'category-filter-clear') return new HTMLElement('button');
@@ -276,7 +293,11 @@ global.document = {
     return null;
   },
   querySelectorAll: (selector) => {
-    if (selector === '.report-card') return [card1, card2, card3];
+    if (selector === '.report-card') {
+      return reportsGrid.children.filter((c) => c.className?.includes('report-card'));
+    }
+    if (selector === '.tag') return [];
+    if (selector === '.clickable-category') return [];
     if (selector === '.pick-card') return [];
     return [];
   },
@@ -309,21 +330,29 @@ try {
   console.log('Running verification tests...');
   let passed = true;
 
-  // Test 1: Initial state (all cards visible)
-  if (reportsGrid.children.length !== 3) {
-    console.error(`Test 1 Failed: Expected 3 cards initially, got ${reportsGrid.children.length}`);
+  // Test 1: Initial state (15 cards total, but limited to 12 visible, 3 hidden)
+  const visibleCardsInit = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  const hiddenCardsInit = reportsGrid.children.filter((c) => c.style.display === 'none');
+  if (visibleCardsInit.length !== 12 || hiddenCardsInit.length !== 3) {
+    console.error(`Test 1 Failed: Expected 12 visible and 3 hidden cards initially, got ${visibleCardsInit.length} visible, ${hiddenCardsInit.length} hidden`);
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error('Test 1 Failed: Load More container is not displayed.');
     passed = false;
   } else {
-    console.log('Test 1 Passed: Initial state correct.');
+    console.log('Test 1 Passed: Initial state (limited display and load more button) correct.');
   }
 
-  // Test 2: Search filter
-  searchInput.value = 'Tool A';
-  window.filterAndSort(false);
+  // Test 2: Search filter (should show only 1 matching card, all other cards hidden, no load more button)
+  searchInput.value = 'ToolA';
+  window.filterAndSort(false, true);
 
   const visibleCardsSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsSearch.length !== 1 || visibleCardsSearch[0].dataset.toolName !== 'Tool A') {
+  if (visibleCardsSearch.length !== 1 || visibleCardsSearch[0].dataset.toolName !== 'ToolA') {
     console.error('Test 2 Failed: Search filter failed.');
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'none') {
+    console.error('Test 2 Failed: Load More button should be hidden during filtering.');
     passed = false;
   } else {
     console.log('Test 2 Passed: Search filter correct.');
@@ -331,11 +360,11 @@ try {
 
   // Reset search
   searchInput.value = '';
-  window.filterAndSort(false);
+  window.filterAndSort(false, true);
 
   // Test 3: Tag filter
   tagFilter.value = 'tag3';
-  window.filterAndSort(false);
+  window.filterAndSort(false, true);
 
   const visibleCardsTag = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsTag.length !== 1 || visibleCardsTag[0].dataset.toolName !== 'Tool B') {
@@ -347,20 +376,17 @@ try {
     console.log('Test 3 Passed: Tag filter correct.');
   }
 
-  // Test 4: Category filter
+  // Test 4: Category filter (Development category has 14 cards, should show all 14, no load more button)
   tagFilter.value = '';
-  categoryFilter.value = 'Development'; // Note: In real app this might be lowercase depending on option value
-
-  // We need to make sure the card category matches exactly or logic handles it.
-  // In script: card.dataset.category === selectedCategory
-  // Mock data has 'Development'. Let's set filter to 'Development'.
-
-  window.filterAndSort(false);
+  categoryFilter.value = 'Development';
+  window.filterAndSort(false, true);
 
   const visibleCardsCat = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  // Should be Tool A and Tool C
-  if (visibleCardsCat.length !== 2) {
-    console.error(`Test 4 Failed: Category filter failed. Expected 2 cards, got ${visibleCardsCat.length}`);
+  if (visibleCardsCat.length !== 14) {
+    console.error(`Test 4 Failed: Category filter failed. Expected 14 cards, got ${visibleCardsCat.length}`);
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'none') {
+    console.error('Test 4 Failed: Load More button should be hidden during filtering.');
     passed = false;
   } else {
     console.log('Test 4 Passed: Category filter correct.');
@@ -369,20 +395,82 @@ try {
   // Test 5: Sorting (Date Desc) - Default
   categoryFilter.value = '';
   sortSelect.value = 'date-desc';
-  window.filterAndSort(false);
+  window.filterAndSort(false, true);
 
-  // Order should be: Tool C (Mar), Tool B (Feb), Tool A (Jan)
-  const cardsDateDesc = reportsGrid.children;
-  if (
-    cardsDateDesc[0].dataset.toolName === 'Tool C' &&
-    cardsDateDesc[1].dataset.toolName === 'Tool B' &&
-    cardsDateDesc[2].dataset.toolName === 'Tool A'
-  ) {
+  // Order of cards in grid should be sorted, showing 12 visible
+  const cardsDateDesc = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  let isSorted = true;
+  for (let i = 0; i < cardsDateDesc.length - 1; i++) {
+    const date1 = new Date(cardsDateDesc[i].dataset.date).getTime();
+    const date2 = new Date(cardsDateDesc[i+1].dataset.date).getTime();
+    if (date1 < date2) {
+      isSorted = false;
+      break;
+    }
+  }
+
+  if (isSorted && cardsDateDesc.length === 12) {
     console.log('Test 5 Passed: Sort date-desc correct.');
   } else {
-    console.error('Test 5 Failed: Sort date-desc failed.');
-    console.log(cardsDateDesc.map((c) => c.dataset.toolName));
+    console.error(`Test 5 Failed: Sort date-desc failed. Visible count: ${cardsDateDesc.length}`);
+    console.log(cardsDateDesc.map((c) => `${c.dataset.toolName} (${c.dataset.date})`));
     passed = false;
+  }
+
+  // Test 6: Verify limits reset
+  window.filterAndSort(false, true);
+  const visibleCards6 = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  const hiddenCards6 = reportsGrid.children.filter((c) => c.style.display === 'none');
+  if (visibleCards6.length !== 12 || hiddenCards6.length !== 3) {
+    console.error(`Test 6 Failed: Count limit failed. Visible: ${visibleCards6.length}, Hidden: ${hiddenCards6.length}`);
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error('Test 6 Failed: Load More container is not displayed.');
+    passed = false;
+  } else {
+    console.log('Test 6 Passed: Reset count limits correct.');
+  }
+
+  // Test 7: Load More button click behavior
+  if (loadMoreBtn.listeners['click']) {
+    loadMoreBtn.listeners['click'].forEach((cb) => cb());
+  }
+
+  const visibleCards7 = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCards7.length !== 15) {
+    console.error(`Test 7 Failed: Load More failed to show all cards. Visible: ${visibleCards7.length}`);
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'none') {
+    console.error('Test 7 Failed: Load More container still displayed.');
+    passed = false;
+  } else {
+    console.log('Test 7 Passed: Load More click loaded all cards and hid the button.');
+  }
+
+  // Test 8: Filter activation and button suppression
+  searchInput.value = 'Extra Tool';
+  window.filterAndSort(false, true);
+
+  const visibleCards8 = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCards8.length !== 12) {
+    console.error(`Test 8 Failed: Filter did not show all matching cards. Visible: ${visibleCards8.length}`);
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'none') {
+    console.error('Test 8 Failed: Load More container should be hidden when filter is active.');
+    passed = false;
+  } else {
+    console.log('Test 8 Passed: Filter shows all matching cards and hides button.');
+  }
+
+  // Search filter post-clear
+  searchInput.value = '';
+  window.filterAndSort(false, true);
+  const visibleCards8Post = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCards8Post.length !== 12 || loadMoreContainer.style.display !== 'flex') {
+    console.error(`Test 8 Post-Clear Failed: Should return to limit. Visible: ${visibleCards8Post.length}, Button: ${loadMoreContainer.style.display}`);
+    passed = false;
+  } else {
+    console.log('Test 8 Post-Clear Passed: Reset successfully to limit.');
   }
 
   if (passed) {

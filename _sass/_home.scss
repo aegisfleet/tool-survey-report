@@ -1417,3 +1417,48 @@
 #main-content .content-wrapper {
     background-color: transparent !important;
 }
+
+// Load more button styles
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: map-get($spacers, 4);
+    margin-bottom: map-get($spacers, 2);
+}
+
+.load-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--color-bg-content);
+    color: $primary-color;
+    border: 2px solid rgba($primary-color, 0.2);
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+    border-radius: $border-radius-xl;
+    padding: 12px 36px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba($primary-color, 0.05);
+
+    svg {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        border-color: $primary-color;
+        background: rgba($primary-color, 0.04);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba($primary-color, 0.15);
+
+        svg {
+            transform: translateY(3px);
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba($primary-color, 0.1);
+    }
+}

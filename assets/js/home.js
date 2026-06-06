@@ -50,6 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tagElements = document.querySelectorAll('.tag');
   const categoryElements = document.querySelectorAll('.clickable-category');
 
+  // 表示件数の制御用変数
+  const INITIAL_SHOW_COUNT = 12;
+  const LOAD_MORE_COUNT = 12;
+  let currentShowCount = INITIAL_SHOW_COUNT;
+
   // Pre-calculate sort values to improve performance
   reportCards.forEach((card) => {
     card._timestamp = card.dataset.date ? new Date(card.dataset.date).getTime() : 0;
@@ -173,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // レポート件数を更新する関数
-  function updateReportsCount(count) {
+  function updateReportsCount(visibleCount, totalCount, isFilterActive) {
     if (!reportsCountContainer) return;
 
     // アニメーションのために一度要素を隠す（オプションだが、プレミアム感のため）
@@ -181,14 +186,22 @@ document.addEventListener('DOMContentLoaded', () => {
     reportsCountContainer.style.transform = 'translateY(5px)';
 
     setTimeout(() => {
-      reportsCountContainer.textContent = `${count}件のレポートを表示中`;
+      if (isFilterActive) {
+        reportsCountContainer.textContent = `${totalCount}件のレポートがヒット`;
+      } else {
+        reportsCountContainer.textContent = `${visibleCount} / ${totalCount}件のレポートを表示中`;
+      }
       reportsCountContainer.style.opacity = '1';
       reportsCountContainer.style.transform = 'translateY(0)';
     }, 100);
   }
 
   // Filter and sort function
-  const filterAndSort = (shouldSave = true) => {
+  const filterAndSort = (shouldSave = true, resetCount = true) => {
+    if (resetCount) {
+      currentShowCount = INITIAL_SHOW_COUNT;
+    }
+
     const rawSearchTerm = (heroSearchInput?.value || '').toLowerCase().trim();
     const searchTerm = toHiragana(rawSearchTerm);
     const selectedTag = tagFilter?.value || '';
@@ -287,6 +300,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // フィルタがアクティブかどうか判定（表示数が減少する可能性のあるソート条件もフィルタとみなす）
+    const isFilterActive =
+      searchTerm !== '' ||
+      selectedTag !== '' ||
+      selectedCategory !== '' ||
+      sortBy === 'oss' ||
+      sortBy === 'free';
+
     // Hide all cards first
     reportCards.forEach((card) => {
       card.style.display = 'none';
@@ -294,8 +315,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Show filtered and sorted cards
     if (filteredCards.length > 0) {
-      filteredCards.forEach((card) => {
-        card.style.display = 'block';
+      filteredCards.forEach((card, index) => {
+        if (isFilterActive || index < currentShowCount) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
         reportsGrid.appendChild(card); // Re-append to maintain order
       });
       noResults.style.display = 'none';
@@ -303,8 +328,19 @@ document.addEventListener('DOMContentLoaded', () => {
       noResults.style.display = 'block';
     }
 
+    // もっと見るボタンの制御
+    const loadMoreContainer = document.getElementById('load-more-container');
+    if (loadMoreContainer) {
+      if (!isFilterActive && filteredCards.length > currentShowCount) {
+        loadMoreContainer.style.display = 'flex';
+      } else {
+        loadMoreContainer.style.display = 'none';
+      }
+    }
+
     // 件数表示を更新
-    updateReportsCount(filteredCards.length);
+    const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
+    updateReportsCount(visibleCount, filteredCards.length, isFilterActive);
 
     // Update visual states immediately
     updateTagStates();
@@ -481,6 +517,15 @@ document.addEventListener('DOMContentLoaded', () => {
       updateHeroSearchClear();
       updateHeroSearchChipStates();
       filterAndSort();
+    });
+  }
+
+  // もっと見るボタンのクリックイベント
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      currentShowCount += LOAD_MORE_COUNT;
+      filterAndSort(false, false); // 保存せず、カウントもリセットしない
     });
   }
 
