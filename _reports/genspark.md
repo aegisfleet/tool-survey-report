@@ -5,8 +5,8 @@ tool_reading: ジェンスパーク
 category: ビジネス/業務ツール
 developer: GENSPARK INC
 official_site: https://www.genspark.ai/
-date: '2026-02-26'
-last_updated: '2026-02-26'
+date: '2026-06-07'
+last_updated: '2026-06-07'
 tags:
   - AI
   - エージェント
@@ -22,7 +22,7 @@ quick_summary:
     - コンテンツ制作者
     - マーケター
     - リサーチャー
-  latest_highlight: 2026年初頭にWorkspace 2.0へ進化し、音声入力機能Speaklyなどを追加
+  latest_highlight: 2026年4月にWorkspace 4.0をリリースし、どこでも動作するAI従業員を実現
   update_frequency: 高
 evaluation:
   score: 78
@@ -48,7 +48,6 @@ relationships:
   related_tools:
     - Perplexity
     - Felo
-    - Devin
     - Google Disco
 ---
 
@@ -64,7 +63,7 @@ relationships:
   * アプリストア: [App Store](https://apps.apple.com/us/app/genspark-ai-workspace/id6739554054)
   * 公式ブログ: [Blog](https://mainfunc.ai/blog)
 * **カテゴリ**: 自律型AIエージェント
-* **概要**: Gensparkは、単なるAI検索やチャットボットを超え、リサーチ、執筆、データ分析、スライド作成などの業務タスクを自律的に実行する「All-in-One AI Workspace」です。Workspace 2.0へのアップデートにより、スプレッドシート操作や会議の自動記録など、ビジネスの現場で必要とされる機能を包括的に提供しています。
+* **概要**: Gensparkは、単なるAI検索やチャットボットを超え、リサーチ、執筆、データ分析、スライド作成などの業務タスクを自律的に実行する「All-in-One AI Workspace」です。Workspace 3.0および4.0へのアップデートにより、AI従業員（Genspark Claw）の導入や、スプレッドシート操作や会議の自動記録など、ビジネスの現場で必要とされる機能を包括的に提供しています。
 
 ## **2. 目的と主な利用シーン**
 
@@ -81,11 +80,11 @@ relationships:
 ## **3. 主要機能**
 
 * **Multi-Agent System**: 「Research Agent」「Writer Agent」など、タスクに応じて専門のエージェントが連携し、複雑な指示を自律的に実行します。
+* **Genspark Claw (AI従業員)**: Workspace 3.0で導入された機能で、独自のクラウドコンピュータ上で稼働し、Webブラウザの操作などをユーザーに代わって自律的に実行します。
 * **Sparkpages**: リサーチ結果を、画像・動画・引用リンクを含む構造化されたWebページ形式のレポートとして生成します。
-* **AI Sheets**: "Excel runs on autopilot" と謳われる機能で、指示出しだけでデータの自動収集、数式構築、テンプレート作成を行います。
-* **AI Docs**: 用途に合わせた数百種類のテンプレートを活用し、プロフェッショナルなドキュメントの下書きを自律的に作成します。
-* **Speakly**: 音声入力を単なる文字起こしではなく、文脈を理解して洗練されたメッセージやメール、文章に変換する高度な音声入力機能です。
-* **AI Meeting Notes**: 会議を録音・自動文字起こしし、参加者全員に共有可能なノートを生成します。
+* **AI Sheets / Docs**: "Excel runs on autopilot" と謳われる機能で、指示出しだけでデータの自動収集や数式構築、テンプレートを活用したドキュメント作成を自律的に行います。
+* **Speakly**: モバイルにも対応した高度な音声入力機能で、文脈を理解して洗練されたメッセージや文章に変換します。
+* **AI Meeting Notes**: 会議を録音・自動文字起こしし、参加者全員に共有可能なノートを生成します（Workspace 3.0で強化）。
 
 ## **4. 開始手順・セットアップ**
 
@@ -102,8 +101,8 @@ relationships:
 
 ## **5. 特徴・強み (Pros)**
 
-* **圧倒的なオールインワン**: リサーチツール、Office互換ツール、会議ツール、開発ツール（AI Developer）が一つのワークスペースに統合されており、ツール切り替えのコストを削減できます。
-* **Workspace 2.0の進化**: 従来の「検索＆生成」に加え、スプレッドシートやドキュメント作成といった実務的な機能が大幅に強化されています。
+* **圧倒的なオールインワン**: リサーチツール、Office互換ツール、会議ツール、開発ツールが一つのワークスペースに統合されており、ツール切り替えのコストを削減できます。
+* **AI従業員（Genspark Claw）の導入**: Workspace 3.0/4.0への進化により、単なる「生成」を超えて、独自のクラウド環境で自律的に作業を代行する「AI従業員」としての能力を獲得しました。
 * **高い更新頻度**: 数日〜1週間単位でアップデートが行われ、バグ修正や機能改善が迅速に実施されています。
 
 ## **6. 弱み・注意点 (Cons)**
@@ -170,27 +169,30 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: App Store (US), ユーザーレビュー
-* **総合評価**: 4.7/5.0 (App Store / 1.3K Ratings)
+* **調査対象**: App Store (US)
+* **総合評価**: 4.7/5.0
 * **ポジティブな評価**:
-  * 「デスクトップ、ブラウザ、スマホアプリすべてで使えるのが素晴らしい。」
-  * 「過小評価されている（Underrated）。リサーチから長文レポート作成までこれ一つで完結する。」
+  * 「デスクトップ、ブラウザ、スマホアプリすべてで使えるのが素晴らしい。リサーチから長文レポート作成までこれ一つで完結する。」
   * 「無料枠が毎日復活するので、ヘビーユーザーでなければ無料で使い続けられる。」
+  * 「ユーザーガイドやマニュアル作成において、ドラフト版を高速に作成するために利用でき、非常に効率的。」
 * **ネガティブな評価 / 改善要望**:
-  * 「WordやPDFにエクスポートした際、レイアウトやスペースが崩れることがある。」
+  * 「WordやPDFにエクスポートした際、レイアウトやスペースが崩れることがある。フォーマットの再現性向上が望まれる。」
   * 「機能が多すぎて、どこに何があるか分かりにくいことがある。」
+  * 「Plusプラン（$24.99）の『無制限チャット』を利用していたが、途中でクレジット切れとなり上位プランを要求されたという不満の声もある（トークン消費の不透明さ）。」
 * **特徴的なユースケース**:
   * ユーザーガイドやマニュアル作成において、ドラフト版を高速に作成するために利用されている。
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-04-08**: 「Genspark AI Workspace 4.0」リリース。AI従業員がどこにでも展開可能に。
+* **2026-03-12**: 「Genspark AI Workspace 3.0」および「Genspark Claw」リリース。AI従業員が独自のクラウドコンピュータ上で稼働開始。新しいワークフロー、チーム機能、Meeting Bots、モバイル向けSpeakly、Chrome拡張機能を追加。
+* **2026-01-28**: 「Genspark AI Workspace 2.0」リリース。タイピング不要で音声のみで作業が完了するよう機能を強化。
 * **2026-01-23**: Version 2.7.2 リリース。機能改善とバグ修正。
 * **2026-01-14**: Version 2.6.0 リリース。
-* **2026-01-XX**: 「Genspark Workspace 2.0」への進化。AI Sheets, AI Docsなどのオフィス機能強化。
 * **2025-12-XX**: 音声入力機能「Speakly」の導入。
 * **2025-11-29**: Version 2.5.0 リリース。
 
-(出典: App Store Version History / 公式サイト)
+(出典: [Genspark Blog](https://mainfunc.ai/blog) / App Store Version History)
 
 ## **16. 類似ツールとの比較**
 
@@ -199,9 +201,9 @@ relationships:
 | 機能カテゴリ | 機能項目 | Genspark | Perplexity | Felo | Google Disco |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **リサーチ** | 検索・情報収集 | ◎<br><small>エージェント連携</small> | ◎<br><small>高精度・高速</small> | ◎<br><small>多言語対応</small> | ◯<br><small>タブ連携</small> |
-| **オフィス機能** | シート・文書 | ◎<br><small>AI Sheets/Docs</small> | ×<br><small>非対応</small> | △<br><small>スライドのみ</small> | △<br><small>GenTabs</small> |
-| **マルチモーダル** | 音声・画像 | ◎<br><small>Speakly/画像生成</small> | △<br><small>画像生成のみ</small> | ◯<br><small>画像認識</small> | △<br><small>限定的</small> |
-| **自律性** | タスク完結 | ◎<br><small>マルチエージェント</small> | △<br><small>対話型</small> | ◯<br><small>一部自動化</small> | ◯<br><small>タブ操作</small> |
+| **オフィス機能** | シート・文書 | ◎<br><small>AI Sheets/Docs</small> | ×<br><small>非対応</small> | △<br><small>スライド等</small> | △<br><small>GenTabs</small> |
+| **マルチモーダル** | 音声・画像 | ◎<br><small>Speakly/画像・動画生成</small> | ◯<br><small>画像生成/ファイル分析</small> | ◯<br><small>画像生成/認識</small> | △<br><small>限定的</small> |
+| **自律性** | タスク完結 | ◎<br><small>Claw（AI従業員）等</small> | ◯<br><small>Agent API</small> | ◎<br><small>Chat API/MCP/Agent</small> | ◯<br><small>タブ操作</small> |
 
 ### **16.2 詳細比較**
 
@@ -215,7 +217,7 @@ relationships:
 ## **17. 総評**
 
 * **総合的な評価**:
-  Gensparkは「AI検索エンジン」という枠組みを超え、Microsoft OfficeやGoogle Workspaceのような「業務スイート」をAIネイティブに再構築しようとしています。特にWorkspace 2.0でのシートやドキュメント機能の強化、Speaklyによる音声入力の統合は、実務での利用価値を大きく高めています。
+  Gensparkは「AI検索エンジン」という枠組みを超え、Microsoft OfficeやGoogle Workspaceのような「業務スイート」をAIネイティブに再構築しようとしています。特にWorkspace 3.0および4.0でのAI従業員（Genspark Claw）の導入、各種オフィス機能・音声入力の統合は、実務での利用価値を大きく高めています。
 * **推奨されるチームやプロジェクト**:
   リソースが限られているスタートアップや、リサーチから資料作成までを一人でこなす必要があるフリーランス、マーケターに最適です。
 * **選択時のポイント**:
