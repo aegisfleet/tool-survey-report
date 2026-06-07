@@ -1,48 +1,48 @@
 ---
-title: "Open Code Review 調査レポート"
-tool_name: "Open Code Review"
-tool_reading: "オープンコードレビュー"
-category: "AIコーディング支援"
-developer: "Alibaba Group"
-official_site: "https://alibaba.github.io/open-code-review/"
-date: "2026-06-07"
-last_updated: "2026-06-07"
+title: Open Code Review 調査レポート
+tool_name: Open Code Review
+tool_reading: オープンコードレビュー
+category: AIコーディング支援
+developer: Alibaba Group
+official_site: https://alibaba.github.io/open-code-review/
+date: '2026-06-07'
+last_updated: '2026-06-07'
 tags:
-  - "オープンソース"
-  - "コードレビュー"
-  - "CLI"
-  - "AIエージェント"
-description: "決定論的エンジニアリングとAIエージェントを組み合わせ、コードレビューの精度を高めるCLIツール。"
+  - オープンソース
+  - コードレビュー
+  - CLI
+  - AIエージェント
+description: 決定論的エンジニアリングとAIエージェントを組み合わせ、コードレビューの精度を高めるCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-  latest_highlight: "2026年6月にv1.2.4をリリースし、日本語ドキュメントを追加。"
-  update_frequency: "高"
+    - 開発者
+    - DevOpsエンジニア
+  latest_highlight: 2026年6月にv1.2.4をリリースし、日本語ドキュメントを追加。
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、セルフホストでのLLM利用によりデータガバナンスとコストが柔軟に調整可能。"
+      reason: オープンソースであり、セルフホストでのLLM利用によりデータガバナンスとコストが柔軟に調整可能。
     - point: 5
-      reason: "決定論的パイプラインとAIのハイブリッド構造により、レビューの漏れや位置ズレ（ハルシネーション）を削減。"
+      reason: 決定論的パイプラインとAIのハイブリッド構造により、レビューの漏れや位置ズレ（ハルシネーション）を削減。
     - point: 3
-      reason: "Claude CodeプラグインやCLIコマンドとしての統合が非常に容易。"
+      reason: Claude CodeプラグインやCLIコマンドとしての統合が非常に容易。
   minus_points:
     - point: -2
-      reason: "CLI中心の操作となるため、GUIベースの統合レビューツールに比べると利用のハードルが少しある可能性がある。"
-  summary: "コードレビューのノイズ低減と安定性に注力した、実践的かつ高度にカスタマイズ可能なオープンソースツール。"
+      reason: CLI中心の操作となるため、GUIベースの統合レビューツールに比べると利用のハードルが少しある可能性がある。
+  summary: コードレビューのノイズ低減と安定性に注力した、実践的かつ高度にカスタマイズ可能なオープンソースツール。
 links:
-  github: "https://github.com/alibaba/open-code-review"
-  deepwiki: "https://deepwiki.com/alibaba/open-code-review"
+  github: https://github.com/alibaba/open-code-review
+  deepwiki: https://deepwiki.com/alibaba/open-code-review
 relationships:
   related_tools:
-    - "CodeRabbit"
-    - "Claude Code"
+    - CodeRabbit
+    - Claude Code
 ---
 
 # **Open Code Review 調査レポート**
