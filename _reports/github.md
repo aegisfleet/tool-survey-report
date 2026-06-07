@@ -6,7 +6,7 @@ category: バージョン管理
 developer: Microsoft
 official_site: https://github.com
 date: '2026-02-26'
-last_updated: '2026-02-26'
+last_updated: '2026-06-07'
 tags:
   - AI
   - CI/CD
@@ -14,6 +14,8 @@ tags:
   - オープンソース
   - バージョン管理
   - 開発者ツール
+  - エージェント
+  - 自動化
 description: AIを搭載したコードホスティングプラットフォーム。バージョン管理、CI/CD、プロジェクト管理など、開発のライフサイクル全体をサポートします。
 quick_summary:
   has_free_plan: true
@@ -23,7 +25,7 @@ quick_summary:
     - 開発者
     - オープンソースコミュニティ
     - 企業
-  latest_highlight: 2026年2月にGitHub Copilot Workspaceが一般提供開始
+  latest_highlight: 2026年6月にCopilotの100万トークンコンテキスト対応、Agent apps、Cloud/Local Sandboxが公開
   update_frequency: 高
 evaluation:
   score: 96
@@ -95,10 +97,11 @@ relationships:
 
 * **リポジトリ**: Gitリポジトリのホスティング（公開・非公開）。
 * **Pull Request**: コードレビュー、ディスカッション、マージを行うための中心的機能。
-* **GitHub Actions**: リポジトリ内のイベントをトリガーに、CI/CDなどのワークフローを自動化。
+* **GitHub Actions**: リポジトリ内のイベントをトリガーに、CI/CDなどのワークフローを自動化。Copilotによる失敗時の自動修正提案も可能。
 * **GitHub Issues & Projects**: タスク管理、バグ追跡、プロジェクトの進捗可視化。
-* **GitHub Copilot**: AIがコード補完、チャットでの質疑応答、ドキュメント作成などを支援するAIペアプログラマー。
-* **Agent HQ**: 開発者がCopilotやサードパーティ製、自作のAIエージェントを統一されたワークフローで利用・管理できるハブ機能。
+* **GitHub Copilot**: AIがコード補完、チャットでの質疑応答、ドキュメント作成などを支援するAIペアプログラマー。100万トークンコンテキストや推論レベルの調整、Pull Requestでのリッチなコンテキスト連携にも対応。
+* **Agent HQ & Agent apps**: 開発者がCopilotやサードパーティ製(Marketplace)、自作のAIエージェントを統一されたワークフローで利用・管理できる機能。
+* **Copilot Sandboxes & Automations**: クラウドまたはローカルでのセキュアな隔離環境でのエージェント実行、およびタスクの定期・自動実行機能。
 * **GitHub Advanced Security**: 依存関係の脆弱性スキャン（Dependabot）、静的解析（CodeQL）、シークレットスキャンなどの高度なセキュリティ機能。
 * **GitHub Pages**: 静的なウェブサイトのホスティング。
 
@@ -146,8 +149,9 @@ relationships:
 | **Free** | 無料 | 無制限の公開・非公開リポジトリ, 2,000分のActions/月, 500MBのPackagesストレージ。Copilotは限定的な利用が可能。 |
 | **Team** | $4/ユーザー/月 | Freeプランの全機能に加え、保護されたブランチ、コードオーナー機能、3,000分のActions/月など、チーム開発向けの機能が強化。 |
 | **Enterprise** | $21/ユーザー/月 | SAML SSO, 高度な監査ログ, データ所在地の選択など、エンタープライズ向けの高度なセキュリティとコンプライアンス機能。 |
+| **Copilot Max** | - | 既存のStudent, Pro, Pro+向けのアップグレードプラン。パワーユーザー向けにより多くの利用枠を提供。 |
 
-* **課金体系**: ユーザー単位の月額または年額課金。
+* **課金体系**: ユーザー単位の月額または年額課金。Copilotは全てのプランで**従量課金（AIクレジットベース）**へと移行しており、無料枠を超えた分は追加のクレジット消費となる（ユーザー単位の予算管理も可能）。また、CopilotによるコードレビューはActionsの実行時間も消費する。
 * **無料トライアル**: Enterpriseプランで30日間の無料トライアルが利用可能。
 
 ## **8. 導入実績・事例**
@@ -219,6 +223,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-04**: GitHub Copilotの100万トークンコンテキスト対応と、推論レベルの設定が可能に。Copilot ChatでPull Requestのリッチなコンテキストが利用可能になり、失敗したActionsをCopilotが自動修正する機能も追加。
+* **2026-06-02**: GitHub上でサードパーティ等のエージェントアプリを実行できる「Agent apps」が登場。また、Copilotをクラウド・ローカルの隔離環境（Sandbox）で実行・自動化（Automations）する機能のパブリックプレビューが開始。
+* **2026-06-02**: CopilotがGemini 3.1 Pro (Preview) / 3.5 Flash および Microsoftの「MAI-Code-1-Flash」モデルに対応。
+* **2026-06-01**: 全てのCopilotプランが利用量ベース（従量課金）へ移行し、パワーユーザー向けの「Copilot Max」が追加された。
 * **2026-02-15**: GitHub Copilot Workspaceが一般提供開始（GA）。Issueから仕様策定、実装、PR作成までをAIが自律的に実行し、開発者はレビューと承認に集中できる環境を実現。
 * **2026-01-20**: GitHub Advanced SecurityにAIによる自動修正機能（Autofix）が正式搭載。CodeQLで検出された脆弱性に対し、修正コードをAIが提案・適用可能に。
 * **2025-11-12**: GitHub CopilotがOpenAIの最新モデルであるGPT-5.1のプレビューに対応。より高度で正確なコード生成と推論が可能に。
@@ -236,15 +244,15 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | バージョン管理 | ◎<br><small>業界標準</small> | ◎<br><small>同等機能</small> | ◯<br><small>標準的</small> | ◯<br><small>標準的</small> |
 | **CI/CD** | パイプライン | ◎<br><small>Actions (強力)</small> | ◎<br><small>CI/CD統合 (強力)</small> | △<br><small>Pipelines (制限あり)</small> | ◯<br><small>Pipelines (多機能)</small> |
-| **AI支援** | コーディング | ◎<br><small>Copilot (最先端)</small> | ◯<br><small>Duo (追随)</small> | △<br><small>Atlassian Intelligence</small> | ◯<br><small>Copilot連携</small> |
+| **AI支援** | コーディング | ◎<br><small>Copilot (最先端)</small> | ◎<br><small>Duo Agent GA</small> | △<br><small>Atlassian Intelligence</small> | ◯<br><small>Copilot連携</small> |
 | **非機能要件** | 日本語対応 | ◯<br><small>ほぼ対応</small> | △<br><small>英語中心</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **GitHub** | AIと開発者コミュニティを核とした統合開発プラットフォーム | Copilotによる強力なAI支援、世界最大のエコシステム、優れたCI/CD連携 | 機能が豊富でやや複雑、高度な機能は有料 | AIを活用した最新の開発体験やオープンソースでの協業を重視する場合。 |
-| **GitLab** | 単一のアプリケーションでDevOpsライフサイクル全体をカバーする「オールインワン」プラットフォーム | CI/CD機能が強力に統合、セルフホスト（オンプレミス）での運用に定評 | UIのレスポンスが遅いと感じる場合がある | 単一のツールでDevOps全体を完結させたい、またはセルフホスト要件がある場合。 |
+| **GitHub** | AIと開発者コミュニティを核とした統合開発プラットフォーム | Copilot cloud agent, Agent apps, Sandboxesによる強力なAI拡張性、世界最大のエコシステム、優れたCI/CD連携 | 機能が豊富でやや複雑、高度な機能は有料 | AIを活用した最新の開発体験やオープンソースでの協業を重視する場合。 |
+| **GitLab** | 単一のアプリケーションでDevOpsライフサイクル全体をカバーする「オールインワン」プラットフォーム | CI/CD機能が強力に統合、GitLab Duo Agent PlatformによるAI自律機能、セルフホスト（オンプレミス）での運用に定評 | UIのレスポンスが遅いと感じる場合がある | 単一のツールでDevOps全体を完結させたい、またはセルフホスト要件がある場合。 |
 | **Bitbucket** | Atlassian製品（Jira, Confluence）とのシームレスな連携が特徴 | Jiraとの連携が非常にスムーズで、課題とコードの連携が強力 | 無料プランでのCI/CD実行時間に制限あり | すでにJiraやConfluenceをチームの中心ツールとして利用している場合。 |
 | **Azure DevOps** | Microsoft製品エコシステムとの強力な連携 | Azureクラウドとの親和性が高く、Windowsベースの開発に強み | Git以外のバージョン管理（TFVC）もサポートするが故の複雑さ | 開発基盤としてAzureを全面的に採用している場合。 |
 
