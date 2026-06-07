@@ -328,12 +328,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (CodeRabbit) | GitHub Copilot | SonarQube | Qodo |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **レビュー** | 自動PRレビュー | ◎<br><small>文脈理解・対話可能</small> | ◯<br><small>PR要約・限定的レビュー</small> | ×<br><small>静的解析レポートのみ</small> | ◎<br><small>Qodo Mergeによる高度なレビュー</small> |
-| **品質管理** | 静的解析連携 | ◎<br><small>40+ツール連携とノイズ低減</small> | △<br><small>拡張機能依存</small> | ◎<br><small>厳格なルールベース解析</small> | ◯<br><small>Rules Systemによる規約の強制</small> |
-| **プラットフォーム** | IDE連携 | ◯<br><small>VS Code, Windsurf, Cursor等</small> | ◎<br><small>主要IDE網羅・インライン補完</small> | ◯<br><small>SonarLint連携</small> | ◎<br><small>テスト自動生成が強力</small> |
-| **非機能要件** | 日本語対応 | △<br><small>AIの出力は対応可能</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> |
+| 機能カテゴリ | 機能項目 | 本ツール (CodeRabbit) | GitHub Copilot | SonarQube | Qodo | Open Code Review |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **レビュー** | 自動PRレビュー | ◎<br><small>文脈理解・対話可能</small> | ◯<br><small>PR要約・限定的レビュー</small> | ×<br><small>静的解析レポートのみ</small> | ◎<br><small>Qodo Mergeによる高度なレビュー</small> | ◎<br><small>決定論的ルールとLLMのハイブリッドによる高精度なレビュー</small> |
+| **品質管理** | 静的解析連携 | ◎<br><small>40+ツール連携とノイズ低減</small> | △<br><small>拡張機能依存</small> | ◎<br><small>厳格なルールベース解析</small> | ◯<br><small>Rules Systemによる規約の強制</small> | △<br><small>AIの判断とルールマッチング主導</small> |
+| **プラットフォーム** | IDE連携 | ◯<br><small>VS Code, Windsurf, Cursor等</small> | ◎<br><small>主要IDE網羅・インライン補完</small> | ◯<br><small>SonarLint連携</small> | ◎<br><small>テスト自動生成が強力</small> | △<br><small>エージェント拡張(Claude Code等)やCLIが主</small> |
+| **非機能要件** | 日本語対応 | △<br><small>AIの出力は対応可能</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> | ◯<br><small>ドキュメント対応、LLMの出力で対応可能</small> |
 
 ### **16.2 詳細比較**
 
@@ -343,6 +343,7 @@ relationships:
 | **GitHub Copilot** | 開発中のコーディング支援とチャットがメインのAIアシスタント。 | コーディング中の生産性向上とインライン補完に絶大な効果。 | PRレビュー機能の専門性や静的解析ツールとの統合力はCodeRabbitに譲る。 | 開発スピードとコーディングの効率化を最優先したい場合。 |
 | **SonarQube** | ルールベース静的解析の定番ツール。 | 品質ゲート機能による厳格で再現性のあるコード品質管理。オンプレミスの運用実績。 | LLMのような意図を汲んだ柔軟なレビューや解説は不得意。 | 組織全体で厳格なコーディング規約やセキュリティ基準を強制したい場合。 |
 | **Qodo** | 品質・テスト生成に特化したAI開発プラットフォーム。 | IDEでのエッジケースを網羅したテスト自動生成と、PR上での文脈を理解したレビューの両立。 | 静的解析ツール群との広範なエコシステム統合という点ではCodeRabbitとアプローチが異なる。 | コード品質の担保とテストカバレッジの向上を開発の初期段階から重視するチーム。 |
+| **Open Code Review** | 決定論的エンジニアリングとAIエージェントのハイブリッド。 | OSSとして提供され、セルフホストでのLLM利用により高いカスタマイズ性とデータ保護が可能。Claude Code等のエージェント連携も強力。 | SaaSのようなプラットフォームへの密結合な自動化（PRコメントなど）にはCI等の構築が必要。 | 自社のLLMを活用したい、または開発者のローカル環境/CLIでのレビューを強化したい場合。 |
 
 ## **17. 総評**
 
