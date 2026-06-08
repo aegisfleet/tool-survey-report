@@ -139,11 +139,11 @@ clearBtn.attributes.id = 'hero-search-clear';
 
 const chip1 = new HTMLElement('button');
 chip1.className = 'hero-search-chip';
-chip1.dataset = { searchTerm: 'AI' };
+chip1.dataset = { searchTerm: 'Next.js' };
 
 const chip2 = new HTMLElement('button');
 chip2.className = 'hero-search-chip';
-chip2.dataset = { searchTerm: '脆弱性' };
+chip2.dataset = { searchTerm: 'RCE' };
 
 // Create a report card
 function createTrendingCard(title, tags, category, date, desc) {
@@ -184,7 +184,7 @@ function createTrendingCard(title, tags, category, date, desc) {
 }
 
 const card1 = createTrendingCard('AI Trend Report', ['AI', 'LLM'], 'Daily Topics', '2026-06-08', 'PilotDeck and other tools.');
-const card2 = createTrendingCard('Security Alert: Twig', ['Twig', '脆弱性'], 'Security', '2026-06-07', 'Critical vulnerability found in Twig sandbox.');
+const card2 = createTrendingCard('Security Alert: Twig', ['Twig', '脆弱性', 'RCE'], 'Security', '2026-06-07', 'Critical vulnerability found in Twig sandbox.');
 const card3 = createTrendingCard('Gitツール', ['Git', 'CLI'], 'Daily Topics', '2026-06-06', 'Automating daily tasks with Git hooks.');
 
 reportsGrid.appendChild(card1);
@@ -294,7 +294,7 @@ try {
   }
   const visibleCardsChip = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsChip.length !== 1 || !visibleCardsChip[0].dataset.title.includes('twig')) {
-    console.error(`Test 5 Failed: Chip click for '脆弱性' expected 1 card, got ${visibleCardsChip.length}`);
+    console.error(`Test 5 Failed: Chip click for 'RCE' expected 1 card, got ${visibleCardsChip.length}`);
     passed = false;
   } else {
     console.log('Test 5 Passed: Chip click verified.');
