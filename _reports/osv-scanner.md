@@ -6,7 +6,7 @@ category: セキュリティ/解析
 developer: Google / OpenSSF
 official_site: https://google.github.io/osv-scanner/
 date: '2026-04-25'
-last_updated: '2026-04-25'
+last_updated: '2026-06-08'
 tags:
   - 脆弱性スキャナー
   - オープンソース
@@ -20,7 +20,7 @@ quick_summary:
   target_users:
     - 開発者
     - セキュリティエンジニア
-  latest_highlight: OSV-Scanner V2のリリースにより、自動修復（Guided Remediation）機能などが追加。
+  latest_highlight: v2.3.8がリリースされ、依存関係の競合によるインストール問題が修正されました。
   update_frequency: 高
 evaluation:
   score: 83
@@ -182,6 +182,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-08**: v2.3.8 リリース（依存関係の競合修正などのバグ修正）
+* **2026-05-01**: v2.3.6 リリース（パッケージ名オーバーライドの正規表現マッチ対応やHomebrewインベントリスキャンのサポートなど）
 * **2026-03-25**: v2.3.5 リリース（バグ修正および各種スキャン精度の向上）
 * **2025-12-XX**: v2 ベータリリースと自動修復（Guided Remediation）機能の追加
 * **2025-10-XX**: コール分析とライセンススキャン機能の強化
