@@ -6,7 +6,7 @@ category: バージョン管理
 developer: GitLab Inc.
 official_site: https://about.gitlab.com/
 date: '2026-02-27'
-last_updated: '2026-02-27'
+last_updated: '2026-06-08'
 tags:
   - AI
   - CI/CD
@@ -23,7 +23,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - エンタープライズ
-  latest_highlight: 2026年2月にGitLab Duo Agent Platformと自律型エージェント機能が正式リリース
+  latest_highlight: GitLab 18.11がリリースされ、Vulnerability resolution generally available on GitLab Duo Agent Platform
   update_frequency: 高
 evaluation:
   score: 90
@@ -98,6 +98,8 @@ relationships:
   * **テスト生成**: マージリクエストの差分に基づき、単体テストや結合テストのコードを自動生成（Duo Proアドオン）。
   * **脆弱性の説明と修正**: 検出された脆弱性の内容を自然言語で解説し、修正コードを提案（Duo Enterpriseアドオン）。
   * **根本原因分析**: CI/CDパイプラインの失敗原因を特定し、解決策を提示（Duo Enterpriseアドオン）。
+  * **Vulnerability resolution generally available**: Vulnerability resolution generally available on GitLab Duo Agent Platform
+  * **SAST false positive detection**: SAST false positive detection with GitLab Duo Agent Platform
 * **WikiとPages**: プロジェクトごとのドキュメント管理機能(Wiki)と、静的サイトのホスティング機能(GitLab Pages)。
 
 ## **4. 開始手順・セットアップ**
@@ -212,13 +214,13 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02-15**: **GitLab Duo Agent Platform (GA)**: Planner AgentやSecurity Analyst Agentなど、自律型AIエージェント機能が一般提供開始。
-* **2026-01-22**: **GitLab 18.8**: セキュリティダッシュボードの改善、CI/CDパイプラインの可視化強化。
+* **2026-04-16**: **GitLab 18.11**: Vulnerability resolution generally available on GitLab Duo Agent Platform
+* **2026-03-19**: **GitLab 18.10**: SAST false positive detection with GitLab Duo Agent Platform
+* **2026-02-19**: **GitLab 18.9**: GitLab Duo Agent Platform Self-Hosted models now available for cloud licenses
+* **2026-01-15**: **GitLab 18.8**: GitLab Duo Agent Platform now generally available
 * **2025-12-18**: **GitLab 18.7**: AIエージェント機能の進化、ガバナンス機能の強化、開発者体験の向上が含まれる。
-* **2025-11-21**: **GitLab 18.6**: 新しいナビゲーションデザインの導入、検索機能の強化。
-* **2025-10-17**: **GitLab 18.5**: Maven仮想レジストリUIの改善、Duo Chatの精度向上。
 
-(出典: [GitLab Releases](https://about.gitlab.com/releases/))
+(出典: [GitLab Releases](https://docs.gitlab.com/releases/))
 
 ## **16. 類似ツールとの比較**
 
