@@ -34,8 +34,6 @@ class HTMLElement {
     if (selector === '.meta-item.category') return this.children.find((c) => c.className === 'meta-item category');
     if (selector === '.report-title a')
       return this.children.find((c) => c.tagName === 'H3')?.children.find((c) => c.tagName === 'A');
-    if (selector === '.pick-category') return this.children.find((c) => c.className === 'pick-category');
-    if (selector === '.pick-title') return this.children.find((c) => c.className === 'pick-title');
     return null;
   }
   setAttribute(k, v) {
@@ -120,13 +118,10 @@ globalThis.document = {
     if (id === 'search-clear') return new HTMLElement('button');
     if (id === 'tag-filter-clear') return new HTMLElement('button');
     if (id === 'category-filter-clear') return new HTMLElement('button');
-    if (id === 'refresh-picks') return new HTMLElement('button');
-    if (id === 'random-picks-grid') return new HTMLElement('div');
     return null;
   },
   querySelectorAll: (selector) => {
     if (selector === '.report-card') return reportCards;
-    if (selector === '.pick-card') return [];
     if (selector === '.interest-chip') return [];
     return [];
   },

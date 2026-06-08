@@ -53,13 +53,6 @@
     --color-border-table: #{$border-color};
     --color-border-table-inner: #{$border-light};
 
-    // random-picks section colors
-    --color-random-picks-bg: linear-gradient(135deg, #{lighten(#ff7733, 36%)} 0%, #{lighten(#ff5566, 36%)} 100%);
-    --color-random-picks-text: #{$primary-color};
-    --color-random-picks-desc: #{$text-color};
-    --color-random-picks-btn-bg: rgba(#{$primary-color}, 0.08);
-    --color-random-picks-btn-border: rgba(#{$primary-color}, 0.4);
-    --color-random-picks-btn-text: #{$primary-color};
 
     // bluesky-widget section colors
     --color-bluesky-bg: linear-gradient(135deg, #{lighten(#1185fe, 43%)} 0%, #{lighten(#339dff, 43%)} 100%);
@@ -118,13 +111,6 @@
         --color-border-table: #808080;
         --color-border-table-inner: #505050;
 
-        // random-picks section colors
-        --color-random-picks-bg: linear-gradient(135deg, #{darken(#ff7733, 30%)} 0%, #{darken(#ff5566, 30%)} 100%);
-        --color-random-picks-text: #{$white};
-        --color-random-picks-desc: rgba(#{$white}, 0.9);
-        --color-random-picks-btn-bg: rgba(#{$white}, 0.2);
-        --color-random-picks-btn-border: rgba(#{$white}, 0.5);
-        --color-random-picks-btn-text: #{$white};
 
         // bluesky-widget section colors
         --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
@@ -182,13 +168,6 @@
     --color-border-table: #808080;
     --color-border-table-inner: #505050;
 
-    // random-picks section colors
-    --color-random-picks-bg: linear-gradient(135deg, #{darken(#ff7733, 30%)} 0%, #{darken(#ff5566, 30%)} 100%);
-    --color-random-picks-text: #{$white};
-    --color-random-picks-desc: rgba(#{$white}, 0.9);
-    --color-random-picks-btn-bg: rgba(#{$white}, 0.2);
-    --color-random-picks-btn-border: rgba(#{$white}, 0.5);
-    --color-random-picks-btn-text: #{$white};
 
     // bluesky-widget section colors
     --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
