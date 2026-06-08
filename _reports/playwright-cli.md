@@ -6,7 +6,7 @@ category: E2E/ブラウザテスト
 developer: Microsoft
 official_site: https://github.com/microsoft/playwright-cli
 date: '2026-02-26'
-last_updated: '2026-02-26'
+last_updated: '2026-06-08'
 tags:
   - AI
   - CLI
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - AIエージェント開発者
     - QAエンジニア
-  latest_highlight: 2026年2月にリリースされたv0.1.1でAIスキルとしての安定性が向上
+  latest_highlight: 2026年5月のv0.1.13でChrome拡張機能経由でのブラウザレベルコマンドやマルチタブに対応
   update_frequency: 高
 evaluation:
   score: 88
@@ -101,6 +101,8 @@ relationships:
 * **スキルとしての統合**: `playwright-cli install --skills` コマンドにより、Claude Codeなどのエージェントに「ブラウザ操作スキル」として簡単に登録できます。
 * **多彩なブラウザ操作**: `open`, `click`, `type`, `screenshot`, `pdf` など、Playwrightの主要機能をCLIコマンドとして網羅しています。
 * **モニタリングダッシュボード**: `playwright-cli show` で実行中のセッションを可視化し、エージェントの操作をリアルタイムで監視・制御できます。
+* **ダッシュボード上のUIレビュー**: `playwright-cli annotate` やマルチスクリーンショットによるUIレビュー機能を備え、エージェントに視覚的・構造的なフィードバックを与えやすくなっています。
+* **Chrome拡張機能の高度な連携**: Chrome拡張機能モード(`attach --extension`)にて、複数タブのサポート(`tab-new`, `tab-list`)やブラウザレベルのCDPコマンド(`cookie-list`, `state-save`等)に対応し、より柔軟な操作が可能です。
 
 ## **4. 開始手順・セットアップ**
 
@@ -249,7 +251,7 @@ relationships:
 - 実際の使用感や、類似ツールとの比較を含める
 -->
 
-* **UI/UX**: 基本はCUIですが、`playwright-cli show` コマンドによるダッシュボード機能があり、視覚的に操作状況を確認できる点が優れています。
+* **UI/UX**: 基本はCUIですが、`playwright-cli show` コマンドによるダッシュボード機能があり、視覚的に操作状況を確認できる点が優れています。さらに、マルチスクリーンショットでのUIレビューや `playwright-cli annotate` 機能により、AIエージェントの操作に対する視覚的フィードバックが容易に行えます。
 * **学習コスト**: AIエージェントに指示を出すだけで使えるため、人間がコマンドの詳細を覚える必要はほとんどなく、学習コストは極めて低いです。
 
 ## **13. ベストプラクティス**
@@ -302,6 +304,9 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-07 (v0.1.13)**: Chrome拡張機能モードにおけるブラウザレベルのCDPコマンド(`cookie-list`, `state-save`等)への対応バグ修正。
+* **2026-05-06 (v0.1.12)**: Chrome拡張機能の複数タブ対応(`tab-new`, `tab-list`)。ダッシュボードのマルチスクリーンショットUIレビュー機能の追加。
+* **2026-05-01 (v0.1.11)**: `playwright-cli annotate` コマンドで null viewport 時のフォールバック動作を改善。
 * **2026-02-14 (v0.1.1)**: 初期メジャーリリース以降のバグ修正と安定性向上。AIスキルとしての登録プロセスの改善。
 * **2026-01-XX**: Playwright CLIとしてのリブランディングと、MCPサーバー版との明確な棲み分けを発表。
 * **2025-12-XX**: ダッシュボード機能 (`playwright-cli show`) の追加。セッション管理機能の強化。
@@ -318,12 +323,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Playwright CLI | Playwright MCP | Selenium |
-|:---:|:---|:---:|:---:|:---:|
-| **AI連携** | トークン効率 | ◎<br><small>CLI+Skills</small> | ◯<br><small>MCP</small> | ×<br><small>非対応</small> |
-| **操作性** | 導入容易性 | ◎<br><small>npm install</small> | ◯<br><small>MCP設定必要</small> | △<br><small>Driver管理必要</small> |
-| **機能** | セッション管理 | ◎<br><small>永続化対応</small> | ◎<br><small>永続化対応</small> | △<br><small>手動実装</small> |
-| **用途** | コーディング | ◎<br><small>エージェント向け</small> | ◯<br><small>探索的タスク向け</small> | △<br><small>従来のテスト</small> |
+| 機能カテゴリ | 機能項目 | Playwright CLI | Selenium |
+|:---:|:---|:---:|:---:|
+| **AI連携** | トークン効率 | ◎<br><small>CLI+Skills</small> | ×<br><small>非対応</small> |
+| **操作性** | 導入容易性 | ◎<br><small>npm install</small> | △<br><small>Driver管理必要</small> |
+| **機能** | セッション管理 | ◎<br><small>永続化対応</small> | △<br><small>手動実装</small> |
+| **用途** | コーディング | ◎<br><small>エージェント向け</small> | △<br><small>従来のテスト</small> |
 
 ### **16.2 詳細比較**
 
@@ -335,7 +340,6 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Playwright CLI** | AIエージェントが「スキル」として使うためのCLI。 | 軽量、高速、トークン節約。エージェントとの相性が抜群。 | 複雑なプログラム的制御は苦手。 | Claude Code等のコーディングエージェントにブラウザ操作をさせたい場合。 |
-| **Playwright MCP** | MCPプロトコルに準拠したサーバー実装。 | リッチな構造化データを提供し、標準的なMCPクライアントから利用可能。 | CLI版に比べるとトークン消費が多くなりがち。 | CursorやWindsurfなど、MCPネイティブな環境で探索的な操作を行う場合。 |
 | **Selenium** | 歴史あるブラウザ自動化フレームワーク。 | 言語バインディングが豊富で、レガシーシステムにも対応。 | AI連携の標準機能がなく、動作も比較的重い。 | 古いシステムのテストや、特定の言語（Java等）での実装が必須の場合。 |
 
 ## **17. 総評**

@@ -127,43 +127,6 @@ layout: default
       </div>
     </section>
 
-    <!-- ランダムピックアップ -->
-    <section class="random-picks">
-      <div class="picks-header">
-        <div>
-          <h2>🎲 おすすめピックアップ</h2>
-          <p class="picks-desc">ランダムに選ばれた4つのレポートをご紹介</p>
-        </div>
-        <button type="button" class="refresh-btn" id="refresh-picks" aria-label="別のレポートを表示">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
-          </svg>
-          シャッフル
-        </button>
-      </div>
-      <div class="picks-grid" id="random-picks-grid">
-        {%- assign all_reports = site.reports | sort: 'last_updated' | reverse -%}
-        {%- for report in all_reports limit: 4 -%}
-        <a href="{{ report.url | relative_url }}" class="pick-card" data-url="{{ report.url | relative_url }}"
-          data-title="{{ report.tool_name | default: report.title }}" data-desc="{{ report.description }}">
-          <span class="pick-title">{{ report.tool_name | default: report.title }}</span>
-          <span class="pick-category clickable-category" data-category="{{ report.category | downcase }}" role="button"
-            tabindex="0">{{ site.data.categories[report.category] | default: '🔹' }} {{ report.category }}</span>
-          <div class="pick-meta">
-            {%- if report.quick_summary.is_oss -%}
-            <span class="pick-oss-badge">OSS</span>
-            {%- elsif report.quick_summary.has_free_plan -%}
-            <span class="pick-free-badge">💚 無料プランあり</span>
-            {%- endif -%}
-            {%- if report.evaluation.score -%}
-            <span class="pick-score">{{ report.evaluation.score }}点</span>
-            {%- endif -%}
-          </div>
-        </a>
-        {%- endfor -%}
-      </div>
-    </section>
-
     <section class="hero-search" aria-labelledby="hero-search-title">
       <div class="hero-search-inner">
         <div class="hero-search-heading">

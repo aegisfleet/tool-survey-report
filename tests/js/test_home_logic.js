@@ -84,9 +84,6 @@ class HTMLElement {
     if (selector === 'option') {
       return this.children.filter((c) => c.tagName === 'OPTION');
     }
-    if (selector === '.pick-card') {
-      return this.children.filter((c) => c.className?.includes('pick-card'));
-    }
     if (selector === '.report-card') {
       // Search recursively
       let results = [];
@@ -284,8 +281,6 @@ global.document = {
     if (id === 'hero-search-clear' || id === 'search-clear') return new HTMLElement('button');
     if (id === 'tag-filter-clear') return new HTMLElement('button');
     if (id === 'category-filter-clear') return new HTMLElement('button');
-    if (id === 'refresh-picks') return new HTMLElement('button');
-    if (id === 'random-picks-grid') return new HTMLElement('div');
     return null;
   },
   querySelector: (selector) => {
@@ -298,7 +293,6 @@ global.document = {
     }
     if (selector === '.tag') return [];
     if (selector === '.clickable-category') return [];
-    if (selector === '.pick-card') return [];
     return [];
   },
   addEventListener: (event, callback) => {
@@ -433,7 +427,7 @@ try {
 
   // Test 7: Load More button click behavior
   if (loadMoreBtn.listeners['click']) {
-    loadMoreBtn.listeners['click'].forEach((cb) => cb());
+    loadMoreBtn.listeners['click'].forEach((cb) => { cb(); });
   }
 
   const visibleCards7 = reportsGrid.children.filter((c) => c.style.display !== 'none');
