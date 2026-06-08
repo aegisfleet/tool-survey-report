@@ -79,27 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
         titleLink.textContent = `${emoji} ${currentTitle}`;
       }
     });
-
-    // ピックアップカード
-    document.querySelectorAll('.pick-card').forEach((card) => {
-      const categoryEl = card.querySelector('.pick-category');
-      if (!categoryEl) return;
-
-      // data-category または テキストから取得
-      const displayCategory = categoryEl.textContent.trim();
-      const emoji = getEmojiForCategory(displayCategory);
-
-      // カテゴリ表示への絵文字付与
-      // categoryEl.setAttribute('data-emoji', emoji); // 既にデータ側に絵文字が含まれる想定のため廃止
-
-      // タイトルへの絵文字付与
-      const titleEl = card.querySelector('.pick-title');
-      if (titleEl) {
-        // 既存の絵文字や特殊マーク、先頭スペースを一度すべて除去して再付与（べき等性を確保）
-        const currentTitle = stripEmoji(titleEl.textContent);
-        titleEl.textContent = `${emoji} ${currentTitle}`;
-      }
-    });
   }
 
   // フィルタ状態を保存する関数
@@ -619,96 +598,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 50);
   }
 
-  // ランダムピックアップのシャッフル処理
-  function shuffleRandomPicks() {
-    const picksGrid = document.getElementById('random-picks-grid');
-    if (!picksGrid) return;
-
-    const pickCards = Array.from(picksGrid.querySelectorAll('.pick-card'));
-    const allReportCards = reportCards;
-
-    if (allReportCards.length <= 4) return;
-
-    // すべてのレポートからランダムに4つ選択（スコアと無料プラン情報も取得）
-    const randomValues = new Uint32Array(allReportCards.length);
-    if (allReportCards.length > 0) {
-      globalThis.crypto.getRandomValues(randomValues);
-    }
-
-    const shuffled = allReportCards
-      .map((card, idx) => ({
-        url: card.querySelector('a')?.href || '#',
-        // タイトルから既存の絵文字を除去して取得
-        title: stripEmoji(card.querySelector('.report-title a')?.textContent || '') || 'Unknown',
-        category: card.querySelector('.meta-item.category')?.textContent?.trim() || '',
-        score: card.querySelector('.card-score-badge')?.textContent?.trim() || '',
-        hasFreePlan: !!card.querySelector('.card-free-badge'),
-        isOss: card.dataset.isOss === 'true',
-        _sort: randomValues[idx],
-      }))
-      .sort((a, b) => a._sort - b._sort)
-      .slice(0, 4);
-
-    // ピックカードを更新
-    pickCards.forEach((card, index) => {
-      if (shuffled[index]) {
-        card.href = shuffled[index].url;
-
-        // カテゴリと絵文字の決定
-        const category = shuffled[index].category;
-        const emoji = getEmojiForCategory(category);
-
-        // タイトル設定（絵文字付き）
-        card.querySelector('.pick-title').textContent = `${emoji} ${shuffled[index].title}`;
-
-        // カテゴリ設定
-        const pc = card.querySelector('.pick-category');
-        pc.textContent = category;
-        pc.dataset.category = (category || '').toLowerCase();
-        pc.setAttribute('data-emoji', emoji);
-
-        // メタコンテナを取得または作成
-        let metaContainer = card.querySelector('.pick-meta');
-        if (!metaContainer) {
-          metaContainer = document.createElement('div');
-          metaContainer.className = 'pick-meta';
-          card.appendChild(metaContainer);
-        }
-
-        // メタコンテナを一旦クリアして再描画
-        metaContainer.innerHTML = '';
-
-        // OSS バッジを最優先
-        if (shuffled[index].isOss) {
-          const ossBadge = document.createElement('span');
-          ossBadge.className = 'pick-oss-badge';
-          ossBadge.textContent = 'OSS';
-          metaContainer.appendChild(ossBadge);
-        }
-        // OSSでない場合にのみ無料プランバッジ
-        else if (shuffled[index].hasFreePlan) {
-          const freeBadge = document.createElement('span');
-          freeBadge.className = 'pick-free-badge';
-          freeBadge.textContent = '💚 無料プランあり';
-          metaContainer.appendChild(freeBadge);
-        }
-
-        // スコアバッジを追加
-        if (shuffled[index].score) {
-          const scoreEl = document.createElement('span');
-          scoreEl.className = 'pick-score';
-          scoreEl.textContent = shuffled[index].score;
-          metaContainer.appendChild(scoreEl);
-        }
-      }
-    });
-    // シャッフル後に現在のフィルタ状態に合わせてアクティブ表示を更新
-    updateCategoryStates();
-  }
-
-  // ページロード時にランダムシャッフル
-  shuffleRandomPicks();
-
   // 初期化処理（絵文字適用）
   function initEmojiApplication() {
     applyEmojisToCategories();
@@ -720,19 +609,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 画像読み込み完了など、少し遅れてレイアウトが変わる可能性も考慮し、
   // window.onloadのタイミングでも再適用を試みる（既存チェックがあるため安全）
   window.addEventListener('load', initEmojiApplication);
-
-  // リフレッシュボタンのクリックイベント
-  const refreshBtn = document.getElementById('refresh-picks');
-  if (refreshBtn) {
-    refreshBtn.addEventListener('click', function () {
-      shuffleRandomPicks();
-      // ボタンを一瞬回転させるアニメーション
-      this.style.transform = 'scale(1.1) rotate(180deg)';
-      setTimeout(() => {
-        this.style.transform = '';
-      }, 300);
-    });
-  }
 
   // ========================================
   // Bluesky Widget
