@@ -2,15 +2,15 @@
 title: CopilotKit 調査レポート
 tool_name: CopilotKit
 tool_reading: コパイロットキット
-category: AI開発者ツール
+category: AI開発ライブラリ
 developer: Tawkit, Inc.
 official_site: https://www.copilotkit.ai/
 date: '2026-06-06'
 last_updated: '2026-06-06'
 tags:
-  - React
+  - JavaScript
   - 生成AI
-  - UIフレームワーク
+  - 開発者ツール
   - エージェント
   - オープンソース
 description: ReactアプリにAIチャットや生成AIコンポーネントを簡単に組み込めるフルスタックエージェントSDK
