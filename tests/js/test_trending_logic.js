@@ -110,7 +110,7 @@ global.window = {
   },
   CATEGORY_EMOJIS: {
     'daily topics': '📅',
-    'security': '🚨'
+    security: '🚨',
   },
   addEventListener: (event, callback) => {
     if (!windowListeners[event]) windowListeners[event] = [];
@@ -183,9 +183,27 @@ function createTrendingCard(title, tags, category, date, desc) {
   return card;
 }
 
-const card1 = createTrendingCard('AI Trend Report', ['AI', 'LLM'], 'Daily Topics', '2026-06-08', 'PilotDeck and other tools.');
-const card2 = createTrendingCard('Security Alert: Twig', ['Twig', '脆弱性', 'RCE'], 'Security', '2026-06-07', 'Critical vulnerability found in Twig sandbox.');
-const card3 = createTrendingCard('Gitツール', ['Git', 'CLI'], 'Daily Topics', '2026-06-06', 'Automating daily tasks with Git hooks.');
+const card1 = createTrendingCard(
+  'AI Trend Report',
+  ['AI', 'LLM'],
+  'Daily Topics',
+  '2026-06-08',
+  'PilotDeck and other tools.',
+);
+const card2 = createTrendingCard(
+  'Security Alert: Twig',
+  ['Twig', '脆弱性', 'RCE'],
+  'Security',
+  '2026-06-07',
+  'Critical vulnerability found in Twig sandbox.',
+);
+const card3 = createTrendingCard(
+  'Gitツール',
+  ['Git', 'CLI'],
+  'Daily Topics',
+  '2026-06-06',
+  'Automating daily tasks with Git hooks.',
+);
 
 reportsGrid.appendChild(card1);
 reportsGrid.appendChild(card2);
@@ -230,7 +248,9 @@ try {
 
   // Trigger DOMContentLoaded
   if (documentListeners.DOMContentLoaded) {
-    documentListeners.DOMContentLoaded.forEach((cb) => { cb(); });
+    documentListeners.DOMContentLoaded.forEach((cb) => {
+      cb();
+    });
   }
 
   // Verification Tests
@@ -250,12 +270,16 @@ try {
   searchInput.value = 'Security';
   // Trigger search change (normally handles input event)
   if (searchInput.listeners.input) {
-    searchInput.listeners.input.forEach((cb) => { cb(); });
+    searchInput.listeners.input.forEach((cb) => {
+      cb();
+    });
   }
 
   const visibleCardsSearch1 = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsSearch1.length !== 1 || !visibleCardsSearch1[0].dataset.title.includes('twig')) {
-    console.error(`Test 2 Failed: Search for 'Security' expected 1 card containing 'twig', got ${visibleCardsSearch1.length}`);
+    console.error(
+      `Test 2 Failed: Search for 'Security' expected 1 card containing 'twig', got ${visibleCardsSearch1.length}`,
+    );
     passed = false;
   } else {
     console.log('Test 2 Passed: Title search verified.');
@@ -265,7 +289,9 @@ try {
   // Katakana input "ツール" -> Hiragana normalized "つーる"
   searchInput.value = 'ツール';
   if (searchInput.listeners.input) {
-    searchInput.listeners.input.forEach((cb) => { cb(); });
+    searchInput.listeners.input.forEach((cb) => {
+      cb();
+    });
   }
 
   const visibleCardsSearch2 = reportsGrid.children.filter((c) => c.style.display !== 'none');
@@ -278,7 +304,9 @@ try {
 
   // Test 4: Clear search
   if (clearBtn.listeners.click) {
-    clearBtn.listeners.click.forEach((cb) => { cb(); });
+    clearBtn.listeners.click.forEach((cb) => {
+      cb();
+    });
   }
   const visibleCardsClear = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsClear.length !== 3) {
@@ -290,7 +318,9 @@ try {
 
   // Test 5: Chip click behavior
   if (chip2.listeners.click) {
-    chip2.listeners.click.forEach((cb) => { cb(); });
+    chip2.listeners.click.forEach((cb) => {
+      cb();
+    });
   }
   const visibleCardsChip = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsChip.length !== 1 || !visibleCardsChip[0].dataset.title.includes('twig')) {
@@ -303,11 +333,15 @@ try {
   // Test 6: No results message display
   searchInput.value = 'NonexistentKeyword';
   if (searchInput.listeners.input) {
-    searchInput.listeners.input.forEach((cb) => { cb(); });
+    searchInput.listeners.input.forEach((cb) => {
+      cb();
+    });
   }
   const visibleCardsEmpty = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsEmpty.length !== 0 || noResults.style.display !== 'block') {
-    console.error(`Test 6 Failed: Expected 0 cards and no-results displayed, got visible cards: ${visibleCardsEmpty.length}, no-results style: ${noResults.style.display}`);
+    console.error(
+      `Test 6 Failed: Expected 0 cards and no-results displayed, got visible cards: ${visibleCardsEmpty.length}, no-results style: ${noResults.style.display}`,
+    );
     passed = false;
   } else {
     console.log('Test 6 Passed: No results verified.');

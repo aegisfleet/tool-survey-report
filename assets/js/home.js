@@ -281,11 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // フィルタがアクティブかどうか判定（表示数が減少する可能性のあるソート条件もフィルタとみなす）
     const isFilterActive =
-      searchTerm !== '' ||
-      selectedTag !== '' ||
-      selectedCategory !== '' ||
-      sortBy === 'oss' ||
-      sortBy === 'free';
+      searchTerm !== '' || selectedTag !== '' || selectedCategory !== '' || sortBy === 'oss' || sortBy === 'free';
 
     // Hide all cards first
     reportCards.forEach((card) => {
@@ -602,8 +598,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 50);
   }
 
-
-
   // 初期化処理（絵文字適用）
   function initEmojiApplication() {
     applyEmojisToCategories();
@@ -615,8 +609,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 画像読み込み完了など、少し遅れてレイアウトが変わる可能性も考慮し、
   // window.onloadのタイミングでも再適用を試みる（既存チェックがあるため安全）
   window.addEventListener('load', initEmojiApplication);
-
-
 
   // ========================================
   // Bluesky Widget
