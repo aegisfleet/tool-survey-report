@@ -302,11 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // フィルタがアクティブかどうか判定（表示数が減少する可能性のあるソート条件もフィルタとみなす）
     const isFilterActive =
-      searchTerm !== '' ||
-      selectedTag !== '' ||
-      selectedCategory !== '' ||
-      sortBy === 'oss' ||
-      sortBy === 'free';
+      searchTerm !== '' || selectedTag !== '' || selectedCategory !== '' || sortBy === 'oss' || sortBy === 'free';
 
     // Hide all cards first
     reportCards.forEach((card) => {

@@ -136,7 +136,9 @@ global.window = {
     windowListeners[event].push(callback);
   },
   matchMedia: () => ({ matches: false, addEventListener: () => {} }),
-  requestAnimationFrame: (cb) => cb(),
+  requestAnimationFrame: (cb) => {
+    cb();
+  },
   crypto: {
     getRandomValues: (arr) => {
       for (let i = 0; i < arr.length; i++) arr[i] = Math.floor(Math.random() * 0xffffffff);
@@ -257,7 +259,13 @@ reportsGrid.appendChild(card3);
 
 // 制限件数テストのためにさらに12枚のカードを追加（合計15枚）
 for (let i = 0; i < 12; i++) {
-  const card = createReportCard(`Extra Tool ${i}`, ['tag1'], 'Development', `2023-04-${i+1 < 10 ? '0' + (i+1) : i+1}`, '60');
+  const card = createReportCard(
+    `Extra Tool ${i}`,
+    ['tag1'],
+    'Development',
+    `2023-04-${i + 1 < 10 ? `0${i + 1}` : i + 1}`,
+    '60',
+  );
   reportsGrid.appendChild(card);
 }
 
@@ -334,7 +342,9 @@ try {
   const visibleCardsInit = reportsGrid.children.filter((c) => c.style.display !== 'none');
   const hiddenCardsInit = reportsGrid.children.filter((c) => c.style.display === 'none');
   if (visibleCardsInit.length !== 12 || hiddenCardsInit.length !== 3) {
-    console.error(`Test 1 Failed: Expected 12 visible and 3 hidden cards initially, got ${visibleCardsInit.length} visible, ${hiddenCardsInit.length} hidden`);
+    console.error(
+      `Test 1 Failed: Expected 12 visible and 3 hidden cards initially, got ${visibleCardsInit.length} visible, ${hiddenCardsInit.length} hidden`,
+    );
     passed = false;
   } else if (loadMoreContainer.style.display !== 'flex') {
     console.error('Test 1 Failed: Load More container is not displayed.');
@@ -402,7 +412,7 @@ try {
   let isSorted = true;
   for (let i = 0; i < cardsDateDesc.length - 1; i++) {
     const date1 = new Date(cardsDateDesc[i].dataset.date).getTime();
-    const date2 = new Date(cardsDateDesc[i+1].dataset.date).getTime();
+    const date2 = new Date(cardsDateDesc[i + 1].dataset.date).getTime();
     if (date1 < date2) {
       isSorted = false;
       break;
@@ -422,7 +432,9 @@ try {
   const visibleCards6 = reportsGrid.children.filter((c) => c.style.display !== 'none');
   const hiddenCards6 = reportsGrid.children.filter((c) => c.style.display === 'none');
   if (visibleCards6.length !== 12 || hiddenCards6.length !== 3) {
-    console.error(`Test 6 Failed: Count limit failed. Visible: ${visibleCards6.length}, Hidden: ${hiddenCards6.length}`);
+    console.error(
+      `Test 6 Failed: Count limit failed. Visible: ${visibleCards6.length}, Hidden: ${hiddenCards6.length}`,
+    );
     passed = false;
   } else if (loadMoreContainer.style.display !== 'flex') {
     console.error('Test 6 Failed: Load More container is not displayed.');
@@ -432,8 +444,10 @@ try {
   }
 
   // Test 7: Load More button click behavior
-  if (loadMoreBtn.listeners['click']) {
-    loadMoreBtn.listeners['click'].forEach((cb) => cb());
+  if (loadMoreBtn.listeners.click) {
+    loadMoreBtn.listeners.click.forEach((cb) => {
+      cb();
+    });
   }
 
   const visibleCards7 = reportsGrid.children.filter((c) => c.style.display !== 'none');
@@ -467,7 +481,9 @@ try {
   window.filterAndSort(false, true);
   const visibleCards8Post = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCards8Post.length !== 12 || loadMoreContainer.style.display !== 'flex') {
-    console.error(`Test 8 Post-Clear Failed: Should return to limit. Visible: ${visibleCards8Post.length}, Button: ${loadMoreContainer.style.display}`);
+    console.error(
+      `Test 8 Post-Clear Failed: Should return to limit. Visible: ${visibleCards8Post.length}, Button: ${loadMoreContainer.style.display}`,
+    );
     passed = false;
   } else {
     console.log('Test 8 Post-Clear Passed: Reset successfully to limit.');
