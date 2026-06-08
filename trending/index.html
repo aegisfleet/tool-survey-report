@@ -5,17 +5,60 @@ description: "日々の業界動向、セキュリティ情報、注目のトレ
 ---
 
 <div class="home-container">
-  <header class="reports-header" style="margin-bottom: 2rem;">
+  <header class="reports-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
     <div>
       <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem; color: var(--color-primary);">📈 {{ page.title }}</h1>
       <p style="color: var(--color-text-muted); font-size: 1.1rem;">{{ page.description }}</p>
     </div>
+    <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
   </header>
 
-  <div class="reports-grid">
+  <!-- 検索ボックス -->
+  <section class="hero-search" aria-labelledby="hero-search-title" style="margin-bottom: 2.5rem;">
+    <div class="hero-search-inner">
+      <div class="hero-search-heading">
+        <h2 id="hero-search-title">
+          <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          気になるトレンドを検索
+        </h2>
+        <p class="hero-search-desc">タイトル・キーワード・タグで検索して、最新のトレンドレポートを見つけましょう</p>
+      </div>
+      <div class="hero-search-box">
+        <svg class="hero-search-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.35-4.35" />
+        </svg>
+        <input type="text" id="hero-search-input" class="hero-search-input" placeholder="例: AI, 脆弱性, セキュリティ ..."
+          autocomplete="off" aria-label="トレンドレポートを検索">
+        <button type="button" class="hero-search-clear" id="hero-search-clear" aria-label="検索をクリア">×</button>
+        <kbd class="hero-search-shortcut" aria-hidden="true">/</kbd>
+      </div>
+      <div class="hero-search-hints">
+        <span class="hero-search-hints-label">人気のキーワード:</span>
+        <button type="button" class="hero-search-chip" data-search-term="AI">AI</button>
+        <button type="button" class="hero-search-chip" data-search-term="脆弱性">脆弱性</button>
+        <button type="button" class="hero-search-chip" data-search-term="セキュリティ">セキュリティ</button>
+        <button type="button" class="hero-search-chip" data-search-term="GitHub">GitHub</button>
+        <button type="button" class="hero-search-chip" data-search-term="LLM">LLM</button>
+        <button type="button" class="hero-search-chip" data-search-term="Claude">Claude</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="reports-grid" id="reports-grid">
     {% assign sorted_trending = site.trending | sort: 'date' | reverse %}
     {% for report in sorted_trending %}
-    <article class="report-card trending-card">
+    <article class="report-card trending-card"
+      data-title="{{ report.title | downcase }}"
+      data-description="{{ report.description | downcase }}"
+      data-date="{{ report.date | date: '%Y-%m-%d' }}"
+      data-tags="{{ report.tags | join: ',' | downcase }}"
+      data-category="{{ report.categories | first | downcase }}">
       <div class="report-card-header">
         <h2 class="report-title">
           <a href="{{ report.url | relative_url }}">{{ report.title }}</a>
@@ -26,7 +69,7 @@ description: "日々の業界動向、セキュリティ情報、注目のトレ
             📅 {{ report.date | date: "%Y年%m月%d日" }}
           </time>
           {% if report.categories %}
-          <span class="meta-item category" data-emoji="🗒️">{{ report.categories | first }}</span>
+          <span class="meta-item category" data-emoji="🗒️" data-category="{{ report.categories | first | downcase }}">{{ report.categories | first }}</span>
           {% endif %}
         </div>
       </div>
@@ -38,7 +81,7 @@ description: "日々の業界動向、セキュリティ情報、注目のトレ
       {% if report.tags and report.tags.size > 0 %}
       <div class="report-tags">
         {% for tag in report.tags limit:5 %}
-        <span class="tag">{{ tag }}</span>
+        <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
         {% endfor %}
       </div>
       {% endif %}
@@ -50,9 +93,18 @@ description: "日々の業界動向、セキュリティ情報、注目のトレ
     {% endfor %}
   </div>
 
+  <div class="no-results" id="no-results" style="display: none;">
+    <p>検索条件に一致するトレンドレポートが見つかりませんでした。</p>
+  </div>
+
   {% if site.trending.size == 0 %}
   <div class="no-reports">
     <p>まだトレンドレポートがありません。</p>
   </div>
   {% endif %}
 </div>
+
+<script>
+  window.CATEGORY_EMOJIS = JSON.parse('{{ site.data.categories | jsonify }}');
+</script>
+<script src="{{ '/assets/js/trending.js' | relative_url }}"></script>

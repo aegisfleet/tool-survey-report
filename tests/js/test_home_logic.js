@@ -427,7 +427,7 @@ try {
 
   // Test 7: Load More button click behavior
   if (loadMoreBtn.listeners['click']) {
-    loadMoreBtn.listeners['click'].forEach((cb) => cb());
+    loadMoreBtn.listeners['click'].forEach((cb) => { cb(); });
   }
 
   const visibleCards7 = reportsGrid.children.filter((c) => c.style.display !== 'none');
