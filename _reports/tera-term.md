@@ -6,7 +6,7 @@ category: 開発ユーティリティ
 developer: TeraTerm Project
 official_site: https://teratermproject.github.io/
 date: '2026-02-28'
-last_updated: '2026-02-28'
+last_updated: '2026-06-10'
 tags:
   - SSH
   - Windows
@@ -21,7 +21,7 @@ quick_summary:
     - 開発者
     - インフラエンジニア
     - ネットワークエンジニア
-  latest_highlight: SSH対応の拡充やWindows上での安定したエミュレーション
+  latest_highlight: 2026年4月にv5.6.1リリース、PQC（耐量子暗号）対応やx64/arm64ネイティブ対応の拡充
   update_frequency: 中
 evaluation:
   score: 80
@@ -68,8 +68,9 @@ relationships:
 
 ## **3. 主要機能**
 
-* **プロトコルサポート**: SSH1、SSH2、Telnet、シリアル接続など多彩な通信方式に対応。
-* **文字コード対応**: UTF-8はもちろん、Shift_JIS、EUC-JPなどの複数の日本語文字コードに標準で対応。
+* **アーキテクチャ対応**: Windowsのx64およびarm64バイナリをネイティブサポート。
+* **プロトコルサポート**: SSH1、SSH2（PQC：耐量子暗号を含むハイブリッド鍵交換方式対応）、Telnet、シリアル接続など多彩な通信方式に対応。
+* **文字コード対応**: UTF-8はもちろん、Shift_JIS、EUC-JPなどの複数の日本語文字コードに標準で対応。ユーザーによるコードポイントごとの文字幅指定も可能。
 * **マクロ機能 (TTL)**: Tera Term Languageによる強力なマクロスクリプト作成が可能で、自動ログインやコマンドの自動実行を支援。
 * **ログ保存**: セッション中のすべての送受信データをログファイルとして自動的または手動で保存可能。
 * **ファイル転送**: ZMODEM、XMODEM、YMODEM、Kermit、SCPなど、多様なファイル転送プロトコルをサポート。
@@ -168,7 +169,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02-28**: Tera Term 5.6.0 のリリース。最新のセキュリティアップデートや不具合修正を含む。（※調査日時点での最新リリースとして記録）
+* **2026-04-28**: Tera Term 5.6.1 リリース。Broadcast commandダイアログの改行コードの不具合、古いテーマファイルの読み込み不具合、背景画像の色不具合などの修正。
+* **2026-02-28**: Tera Term 5.6.0 リリース。PQC（耐量子暗号）を組み合わせたハイブリッド鍵交換方式（mlkem768x25519-sha256、sntrup761x25519-sha512）の対応、Unicode文字幅の指定、ダム端末のエミュレーションサポート追加。
+* **2026-01-21**: Tera Term 5.5.2 リリース。コマンドラインオプション/Vでの非表示不具合およびマクロ送信時のローカルエコーの不具合修正。
+* **2025-11-17**: Tera Term 5.5.1 リリース。ファイル複数選択時のクラッシュ問題やSCPファイル転送の低速化問題の修正。
+* **2025-09-16**: Tera Term 5.5.0 リリース。x64およびarm64バイナリの提供開始、SSH2のcurve25519鍵交換方式対応、シリアルポート送信待ち時間設定の新しいマクロコマンドの追加。
 
 (出典: [GitHub Releases](https://github.com/TeraTermProject/teraterm/releases))
 
@@ -178,16 +183,17 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール (Tera Term) | PuTTY | Windows Terminal |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | SSH接続 | ◎<br><small>SSH1/SSH2対応</small> | ◎<br><small>広く普及</small> | ◯<br><small>内部でOpenSSH利用</small> |
+| **基本機能** | SSH接続 | ◎<br><small>SSH1/SSH2対応、PQC(耐量子暗号)サポート</small> | ◎<br><small>広く普及</small> | ◯<br><small>内部でOpenSSH利用</small> |
 | **拡張機能** | シリアル通信 | ◎<br><small>標準機能で強力</small> | ◯<br><small>対応している</small> | ×<br><small>基本的にCLIランチャー</small> |
 | **自動化** | マクロ機能 | ◎<br><small>独自のTTLマクロ</small> | △<br><small>外部スクリプト依存</small> | △<br><small>PowerShell等に依存</small> |
 | **操作性** | タブ付きUI | △<br><small>標準では弱い</small> | △<br><small>派生版で対応</small> | ◎<br><small>標準でモダンなタブ管理</small> |
+| **アーキテクチャ** | ネイティブ対応 | ◎<br><small>x64/arm64対応</small> | ◯<br><small>各種アーキテクチャ対応</small> | ◎<br><small>Windows標準、arm64対応</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール** | 日本発の定番ターミナルエミュレータ | マクロ機能（TTL）、シリアル通信、日本語対応に優れる | UIが古く、Windows専用 | マクロを使った自動化や、シリアル接続を多用する保守作業 |
+| **本ツール** | 日本発の定番ターミナルエミュレータ | マクロ機能（TTL）、シリアル通信、日本語対応、PQC対応に優れる | UIが古く、Windows専用 | マクロを使った自動化や、シリアル接続、PQC(耐量子暗号)環境を必要とする場合 |
 | **PuTTY** | 世界的に有名なSSH/Telnetクライアント | 軽量、ポータブル、世界標準 | マクロ機能がない、日本語対応は派生版が必要な場合がある | グローバルな環境や、単なるSSH接続のみが必要な場合 |
 | **Windows Terminal** | Microsoft公式のモダンなターミナル | タブUI、GPUアクセラレーション、WSLとの強力な連携 | シリアル通信などの古いプロトコルには不向き | WSLやPowerShellをメインで使い、モダンなUIを好む場合 |
 
