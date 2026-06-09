@@ -2,7 +2,7 @@
 title: xurl 調査レポート
 tool_name: xurl
 tool_reading: エックス・ユーアールエル
-category: CLIツール
+category: 開発ユーティリティ
 developer: xdevplatform
 official_site: https://github.com/xdevplatform/xurl
 date: '2026-06-09'
