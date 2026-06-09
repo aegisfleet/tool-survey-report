@@ -2,15 +2,18 @@
 title: Google Antigravity 調査レポート
 tool_name: Google Antigravity
 tool_reading: グーグル アンチグラビティ
-category: AIコーディング支援
+category: AIエディタ/IDE
 developer: Google
 official_site: https://antigravity.google/
 date: '2026-02-28'
-last_updated: '2026-02-28'
+last_updated: '2026-06-10'
 tags:
   - AI
-  - IDE
+  - 生成AI
+  - オープンソース
+  - テスト自動化
   - エージェント
+  - IDE
   - コーディング支援
   - 開発者ツール
 description: AIを単なるツールではなく自律的なアクターとして活用する、エージェントファーストな新しい開発プラットフォーム。
@@ -20,7 +23,7 @@ quick_summary:
   starting_price: 無料
   target_users:
     - 開発者
-  latest_highlight: 2026年2月にAccount Remediation Pathwayを追加（v1.19.6）
+  latest_highlight: Antigravity 2.0のバグ修正やAntigravity IDE連携の強化など（v2.0.x）
   update_frequency: 高
 evaluation:
   score: 85
@@ -87,6 +90,7 @@ relationships:
 * **Skills (プログレッシブ・ディスクロージャー)**: プロジェクトに特有の知識やコーディング規約などを「スキル」として定義し、必要な時だけエージェントのコンテキストにロードさせる機能（ツールブロートの防止）。
 * **Rules & Workflows**: エージェントの挙動をカスタマイズするためのガイドライン（Rules）や、オンデマンドで呼び出せる保存済みのプロンプトセット（Workflows）。
 * **セキュリティ・ポリシー制御**: エージェントによるターミナルやブラウザの操作に対する権限管理機能（Secure Mode、Allow List / Deny List、JavaScript実行ポリシーなど）。
+* **Antigravity IDE 統合**: 現在のプロジェクトを専用のIDE環境であるAntigravity IDEで直接開き、シームレスに開発を継続可能。
 
 ## **4. 開始手順・セットアップ**
 
@@ -144,7 +148,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: MCP (Model Context Protocol) サーバーへの接続をサポート（エディタ内から `@` を使用して MCP サーバーを参照可能）。
-* **外部サービス連携**: Chromeブラウザ（専用の拡張機能を介したブラウザ自動化連携）、Google Cloud Platform（Codelabsにて連携・デプロイ方法が公開）。
+* **外部サービス連携**: Chromeブラウザ（専用の拡張機能を介したブラウザ自動化連携）、Google Cloud Platform（Codelabsにて連携・デプロイ方法が公開）、Antigravity IDE（プロジェクトの直接展開・同期）。
 
 ### **10.2 技術スタックとの相性**
 
@@ -189,6 +193,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-03 (v2.0.11)**: Antivirus and Open IDE fixes (ウイルス対策ソフトの影響による起動時の黒画面問題、Open IDEボタン関連の修正)
+* **2026-05-28 (v2.0.10)**: AGY 2.0 Bug fixes (G1クレジット適用バグの修正、安定性と操作性の向上)
+* **2026-05-22 (v2.0.6)**: Antigravity IDE integration (Antigravity IDEが未インストールの場合はインストールボタンを、インストール済みの場合はIDEでプロジェクトを開くボタンを追加)
+* **2026-05-19 (v2.0.1)**: AGY 2.0 Bug Fixes (CJK文字のプロジェクト名移行問題、v1.0からのインポート時の重複作成問題、Google Oneクレジット適用問題の修正)
 * **2026-02-26 (v1.19.6)**: Account Remediation Pathway
 * **2026-02-26 (v1.19.5)**: Browser Fix
 * **2026-02-25 (v1.19.4)**: Stability and UI Improvements
@@ -215,7 +223,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール (Antigravity) | Cursor | Windsurf | VS Code |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | エディタ統合 | ◎<br><small>VS Codeフォーク</small> | ◎<br><small>VS Codeフォーク</small> | ◎<br><small>独自IDEとプラグイン</small> | -<br><small>ベース</small> |
+| **基本機能** | エディタ統合 | ◎<br><small>Antigravity IDE連携搭載</small> | ◎<br><small>VS Codeフォーク</small> | ◎<br><small>独自IDEとプラグイン</small> | -<br><small>ベース</small> |
 | **カテゴリ特定** | エージェント自律性 | ◎<br><small>複数並行・ブラウザ操作</small> | ◎<br><small>Multi-Agent機能</small> | ◎<br><small>Cascadeエージェント</small> | ×<br><small>なし</small> |
 | **エンタープライズ** | 検証の自動化 | ◎<br><small>動画等Artifactを生成</small> | △<br><small>ブラウザ自動化は弱い</small> | ◯<br><small>ライブプレビュー搭載</small> | ×<br><small>なし</small> |
 | **非機能要件** | セキュリティ管理 | ◯<br><small>細かい実行ポリシー管理</small> | ◯<br><small>SOC2等</small> | ◎<br><small>SOC2/FedRAMP</small> | ◎<br><small>標準機能</small> |
