@@ -2,7 +2,7 @@
 title: Semgrep 調査レポート
 tool_name: Semgrep
 tool_reading: セムグレップ
-category: セキュリティ
+category: セキュリティ/解析
 developer: Semgrep, Inc.
 official_site: https://semgrep.dev/
 date: '2026-06-08'
@@ -44,8 +44,8 @@ links:
   documentation: https://docs.semgrep.dev/
 relationships:
   related_tools:
-    - sonarqube
-    - trivy
+    - "SonarQube"
+    - "Trivy"
 ---
 
 # **Semgrep 調査レポート**
