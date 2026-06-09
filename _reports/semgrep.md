@@ -44,8 +44,8 @@ links:
   documentation: https://docs.semgrep.dev/
 relationships:
   related_tools:
-    - "SonarQube"
-    - "Trivy"
+    - SonarQube
+    - Trivy
 ---
 
 # **Semgrep 調査レポート**
