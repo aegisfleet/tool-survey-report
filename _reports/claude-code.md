@@ -55,6 +55,7 @@ relationships:
     - Roola
     - Agent Governance Toolkit
     - Headroom
+    - Aqua Voice
 ---
 # **Claude Code 調査レポート**
 

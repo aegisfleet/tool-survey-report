@@ -32,7 +32,9 @@ evaluation:
 links:
   github: https://github.com/Notely-Voice/NotelyVoice
   deepwiki: https://deepwiki.com/Notely-Voice/NotelyVoice
-relationships: {}
+relationships:
+  related_tools:
+    - Aqua Voice
 ---
 
 # **Notely Voice 調査レポート**

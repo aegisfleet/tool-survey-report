@@ -61,6 +61,7 @@ relationships:
     - Model Context Protocol
     - Headroom
     - Mobile Next
+    - Aqua Voice
 ---
 
 # **Cursor 調査レポート**

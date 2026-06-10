@@ -52,6 +52,7 @@ relationships:
     - Roo Code
     - Claude Code
     - Devin
+    - Aqua Voice
 ---
 
 # **Windsurf 調査レポート**
