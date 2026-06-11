@@ -44,6 +44,7 @@ links:
   documentation: https://alibaba.github.io/page-agent/docs/introduction/overview
 relationships:
   related_tools:
+    - Ferret-UI
     - Playwright
     - Selenium
     - Autify

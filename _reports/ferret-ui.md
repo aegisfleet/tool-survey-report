@@ -6,7 +6,7 @@ category: ブラウザ操作エージェント
 developer: Apple
 official_site: https://machinelearning.apple.com/research/ferret-ui
 date: '2026-03-01'
-last_updated: '2026-03-01'
+last_updated: '2026-06-11'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - AI研究者
     - 自動化エンジニア
-  latest_highlight: 2026年2月に小型でオンデバイス動作が可能な「Ferret-UI Lite」を発表。
+  latest_highlight: 2026年2月に小型でオンデバイス動作が可能な「Ferret-UI Lite」を発表。Chain-of-Thought推論と視覚的なツール利用技術により推論性能を強化。
   update_frequency: 不定期
 evaluation:
   score: 75
@@ -36,7 +36,9 @@ evaluation:
 relationships:
   related_tools:
     - UI-TARS Desktop
-    - Claude
+    - Claude for Chrome
+    - PageAgent
+    - Browser Harness
 ---
 
 # **Ferret-UI 調査レポート**
@@ -67,7 +69,7 @@ relationships:
 * **UIナビゲーション**: 与えられた指示に基づいて、次にどのアクション（クリック、スクロールなど）を行うべきかを予測し、自律的にタスクを進行する。
 * **Chain-of-Thought 推論**: 複雑なGUIタスクにおいて、段階的な思考プロセス（Chain-of-Thought）を用いて推論精度を高める。
 * **クロスプラットフォーム対応 (Ferret-UI 2以降)**: iOS、Android、iPad、Web、Apple TVなど、解像度やアスペクト比が異なる多様なプラットフォームのUIを普遍的に理解する。
-* **オンデバイス実行 (Ferret-UI Lite)**: パラメータサイズを3B（30億）に抑え、モバイル端末などのリソースが限られた環境でも高速かつ高精度に動作する。
+* **オンデバイス実行 (Ferret-UI Lite)**: パラメータサイズを3B（30億）に抑え、モバイル端末などのリソースが限られた環境でも高速かつ高精度に動作する。ScreenSpot-V2等で高いスコアを達成している。
 
 ## **4. 開始手順・セットアップ**
 
@@ -157,7 +159,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02**: 「Ferret-UI Lite: Lessons from Building Small On-Device GUI Agents」の論文をarXivにて公開。モバイル、Web、デスクトップを横断して動作する3BサイズのオンデバイスGUIエージェントを発表。
+* **2026-02**: 「Ferret-UI Lite: Lessons from Building Small On-Device GUI Agents」の論文をarXivにて公開。モバイル、Web、デスクトップを横断して動作する3BサイズのオンデバイスGUIエージェントを発表。ScreenSpot-V2等で高いスコアを達成。
 * **2025-04**: 「Ferret-UI 2: Mastering Universal User Interface Understanding Across Platforms」を発表。iPhone、Android、iPad、Web、AppleTVなど多様なプラットフォームのUI理解に対応した汎用モデル（Ferret-UI 2）を公開。
 * **2024-09**: 初代「Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs」を発表。モバイルUI画面の理解に特化した新しいMLLMとして登場。
 
@@ -167,20 +169,22 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | Claude (Computer Use) | UI-TARS Desktop |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | GUIのグラウンディング | ◎<br><small>オンデバイスで高精度</small> | ◯<br><small>座標指定による操作</small> | ◎<br><small>ネイティブなGUI理解</small> |
-| **カテゴリ特定** | クロスプラットフォーム | ◎<br><small>モバイル/Web/TV網羅</small> | ◯<br><small>主にPC/Web</small> | ◯<br><small>主にデスクトップ</small> |
-| **エンタープライズ** | オンデバイス動作 | ◎<br><small>3Bモデルで実現可能</small> | ×<br><small>クラウドAPI必須</small> | △<small>ローカル実行は重い</small> |
-| **非機能要件** | 利用可能性 | ×<br><small>研究段階、未公開</small> | ◎<br><small>APIとして広く提供</small> | ◯<br><small>OSSとして公開</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | Claude for Chrome | UI-TARS Desktop | PageAgent | Browser Harness |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **基本機能** | GUIのグラウンディング | ◎<br><small>オンデバイスで高精度</small> | ◯<br><small>座標指定による操作</small> | ◎<br><small>ネイティブなGUI理解</small> | ◯<br><small>テキストDOMベース</small> | ◎<br><small>CDP直接通信</small> |
+| **カテゴリ特定** | クロスプラットフォーム | ◎<br><small>モバイル/Web/TV網羅</small> | ◯<br><small>主にPC/Web</small> | ◯<br><small>主にデスクトップ</small> | ◯<br><small>Webページのみ</small> | ◯<br><small>ブラウザのみ</small> |
+| **エンタープライズ** | オンデバイス動作 | ◎<br><small>3Bモデルで実現可能</small> | ×<br><small>クラウドAPI必須</small> | △<br><small>ローカル実行は重い</small> | ◎<br><small>クライアント完結</small> | ◯<br><small>ローカル/クラウド両対応</small> |
+| **非機能要件** | 利用可能性 | ×<br><small>研究段階、未公開</small> | ◯<br><small>有料プラン限定</small> | ◯<br><small>OSSとして公開</small> | ◎<br><small>OSSとして公開</small> | ◯<br><small>OSSとして公開</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **本ツール** | AppleによるGUI理解特化MLLM | モバイルやオンデバイスでの実行に向けた高い最適化、プライバシー重視 | 商用・一般利用ができない、クローズドな研究 | 現時点では技術研究の参考、将来的なAppleプラットフォームでの利用 |
-| **Claude** | Anthropicの最先端LLMによるPC操作機能 | 強力な汎用推論能力、既存APIでの容易な導入 | クラウド通信が必須、UI特化モデルではない | 汎用的なPC自動化やブラウザ操作を素早く実装したい場合 |
+| **Claude for Chrome** | Claudeの公式ブラウザ拡張機能による操作代行 | 既存のウェブサイトをAPI不要で直接操作可能、Cowork等との連携 | セキュリティリスクへの注意が必要、有料プラン限定 | 毎日のウェブ上の定型作業やリサーチを自動化したい場合 |
 | **UI-TARS Desktop** | GUI操作に特化したオープンソースのVLM | ネイティブなGUI理解、オープンソース | モデルサイズが大きくローカル実行のハードルが高い | ローカルで自律的なデスクトップ操作エージェントを構築したい場合 |
+| **PageAgent** | Webページ内に組み込むGUIエージェント | 導入が容易。バックエンド不要。テキストベースで高速。 | OSレベルやブラウザ全体の自動化には不向き。 | 自社のSaaS製品にAIコパイロットや自動入力機能を追加したい場合。 |
+| **Browser Harness** | AIが直接CDPを叩く自己修復型ハーネス | 抽象化による文脈喪失がない。未知のタスクに適応可能。 | 非常に優秀なLLMが必要。制御が難しい。 | AIエージェントに自律的にブラウザ上の未知のタスクを解決させたい場合。 |
 
 ## **17. 総評**
 

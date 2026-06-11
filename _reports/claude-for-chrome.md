@@ -43,6 +43,7 @@ links:
 relationships:
   parent: Claude
   related_tools:
+    - Ferret-UI
     - Claude Code
     - Claude Cowork
 ---
