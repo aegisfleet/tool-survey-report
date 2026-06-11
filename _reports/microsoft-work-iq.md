@@ -6,7 +6,7 @@ category: プロジェクト管理/生産性
 developer: Microsoft
 official_site: https://github.com/microsoft/work-iq-mcp
 date: '2026-01-25'
-last_updated: '2026-03-01'
+last_updated: '2026-06-12'
 tags:
   - AI
   - CLI
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - Microsoft 365 ユーザー
-  latest_highlight: 2025年11月のIgnite 2025でPublic Previewとして発表
+  latest_highlight: 2026年5月にプレビュー版の読み書き機能(workiq-preview)や各種プラグインが追加
   update_frequency: 高
 evaluation:
   score: 75
@@ -70,6 +70,7 @@ relationships:
 ## **3. 主要機能**
 
 * **自然言語クエリ**: メール、会議、ドキュメント、Teams、連絡先などのMicrosoft 365データを自然言語で検索・取得可能。
+* **プレビュー版による書き込み機能 (`workiq-preview`)**: メール送信、イベント作成、ファイルのアップロードなど、M365データへの直接的な書き込みが可能。
 * **MCPサーバー**: Model Context Protocol (MCP) に準拠したサーバーとして動作し、様々なMCPクライアント（Claude Desktop, GitHub Copilotなど）と接続可能。
 * **CLIツール**: `workiq` コマンドラインツールを提供し、手動でのクエリ実行やインタラクティブな対話が可能。
 * **GitHub Copilot統合**: GitHub Copilot CLIのプラグインとして簡単にインストール・利用可能。
@@ -171,7 +172,7 @@ relationships:
 ## **14. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHub Repository Stars/Forks, X(Twitter)
-* **総合評価**: GitHub Star 240+ (2026年1月時点)
+* **総合評価**: GitHub Star 870+ (2026年6月時点)
 * **ポジティブな評価**:
   * 「ターミナルからメールや予定を確認できるのは開発フローを中断させなくて良い」
   * 「MCPに対応しているため、自作のエージェントに組み込みやすい」
@@ -181,7 +182,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2025-11-18**: Microsoft Ignite 2025にてWork IQおよびMCPサーバーのPublic Previewが発表。(出典: [Microsoft 365 Blog](https://www.microsoft.com/en-us/microsoft-365/blog/2025/11/18/microsoft-ignite-2025-copilot-and-agents-built-to-power-the-frontier-firm/))
+* **2026-05-25**: `workiq-preview` プラグインがリリース。自然言語検索に加え、メール送信、イベント作成、ファイルのアップロードなどのM365データへの書き込み（エンティティツール）がプレビューとして利用可能に。
+* **2025-11-18**: Microsoft Ignite 2025にてWork IQおよびMCPサーバーのPublic Previewが発表。
+
+(出典: [Microsoft Work IQ Commits](https://github.com/microsoft/work-iq-mcp/commits/main))
 
 ## **16. 類似ツールとの比較**
 
@@ -190,6 +194,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | 本ツール | Glean | Microsoft Graph API |
 |:---:|:---|:---:|:---:|:---:|
 | **データアクセス** | 自然言語クエリ | ◎<br><small>自然言語で検索可能</small> | ◎<br><small>横断検索に特化</small> | ×<br><small>コード記述とAPI呼び出しが必要</small> |
+| **データ書き込み** | M365データ更新 | ◯<br><small>プレビュー機能で対応</small> | ×<br><small>基本は検索のみ</small> | ◎<br><small>REST APIで全て対応可能</small> |
 | **統合** | MCP対応 | ◎<br><small>公式提供</small> | △<br><small>独自コネクタ等</small> | ×<br><small>非対応</small> |
 | **対象** | M365データ | ◎<br><small>特化</small> | ◎<br><small>多岐にわたるSaaS対応</small> | ◎<br><small>全データにアクセス可能</small> |
 | **導入** | 手軽さ | ◎<br><small>npm install</small> | △<br><small>エンタープライズ契約が必要</small> | △<br><small>アプリ登録・実装が必要</small> |
@@ -198,7 +203,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Microsoft Work IQ** | M365専用のMCPサーバー＆CLI。 | Microsoft公式、MCP準拠、Copilot CLI連携。無料。 | M365データに限定される。プレビュー版。 | 開発者が個人のM365データをAIエージェントから利用したい場合。 |
+| **Microsoft Work IQ** | M365専用のMCPサーバー＆CLI。 | Microsoft公式、MCP準拠、Copilot CLI連携。無料。直近で書き込み機能にも対応。 | M365データに限定される。プレビュー版。 | 開発者が個人のM365データをAIエージェントから利用したい場合。 |
 | **Glean** | 企業向け横断検索・AIプラットフォーム。 | M365以外にもSlack, Jira, GitHubなど多数のSaaSを横断検索可能。 | 高額なエンタープライズ契約が必要。 | 全社的なナレッジ検索・活用基盤を構築する場合。 |
 | **Microsoft Graph API** | M365データにアクセスするためのREST API。 | 柔軟性が高く、あらゆるアプリケーションに組み込み可能。 | 実装工数がかかる。自然言語処理は自前で実装が必要。 | 独自のカスタムアプリケーションを開発する場合。 |
 

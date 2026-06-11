@@ -56,6 +56,7 @@ relationships:
     - CodeRabbit
     - GitLab Duo
     - Mobile Next
+    - Microsoft Work IQ
 ---
 
 # **GitHub Copilot 調査レポート**

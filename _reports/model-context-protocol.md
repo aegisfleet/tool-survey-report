@@ -45,6 +45,7 @@ relationships:
     - AWS MCP Servers
     - Context7
     - MCP Apps
+    - Microsoft Work IQ
   related_tools:
     - Claude
     - Cursor
