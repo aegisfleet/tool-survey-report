@@ -1,55 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "yt-dlp 調査レポート"
-tool_name: "yt-dlp"
-tool_reading: "ワイティー・ディーエルピー"
-category: "開発者ツール"
-developer: "yt-dlp community"
-official_site: "https://github.com/yt-dlp/yt-dlp"
-date: "2026-06-11"
-last_updated: "2026-06-11"
+title: yt-dlp 調査レポート
+tool_name: yt-dlp
+tool_reading: ワイティー・ディーエルピー
+category: 開発者ツール
+developer: yt-dlp community
+official_site: https://github.com/yt-dlp/yt-dlp
+date: '2026-06-11'
+last_updated: '2026-06-11'
 tags:
-  - "ダウンローダー"
-  - "オープンソース"
-  - "CLIツール"
-  - "動画"
-  - "音声"
-description: "多数のサイトに対応した、機能が豊富なコマンドライン型の動画・音声ダウンローダー"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - ダウンローダー
+  - オープンソース
+  - CLIツール
+  - 動画
+  - 音声
+description: 多数のサイトに対応した、機能が豊富なコマンドライン型の動画・音声ダウンローダー
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "一般ユーザー"
-  latest_highlight: "2026年6月に最新の安定版(2026.06.09)をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 一般ユーザー
+  latest_highlight: 2026年6月に最新の安定版(2026.06.09)をリリース
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 10
-      reason: "数千のサイトをサポートし、極めて多機能"
+      reason: 数千のサイトをサポートし、極めて多機能
     - point: 5
-      reason: "活発なオープンソース開発と頻繁なアップデート"
+      reason: 活発なオープンソース開発と頻繁なアップデート
     - point: 5
-      reason: "高度なフォーマット選択やメタデータ操作機能"
+      reason: 高度なフォーマット選択やメタデータ操作機能
   minus_points:
     - point: -3
-      reason: "CLIツールのため、一般ユーザーには学習コストがある"
-  summary: "対応サイトの多さと機能の豊富さで業界標準と言えるダウンローダーだが、CLI操作が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: CLIツールのため、一般ユーザーには学習コストがある
+  summary: 対応サイトの多さと機能の豊富さで業界標準と言えるダウンローダーだが、CLI操作が必要
 links:
-  github: "https://github.com/yt-dlp/yt-dlp"
-  deepwiki: "https://deepwiki.com/yt-dlp/yt-dlp"
+  github: https://github.com/yt-dlp/yt-dlp
+  deepwiki: https://deepwiki.com/yt-dlp/yt-dlp
 relationships:
-  related_tools:
+  related_tools: null
 ---
 
 # **yt-dlp 調査レポート**
