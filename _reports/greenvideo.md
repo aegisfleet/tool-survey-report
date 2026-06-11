@@ -2,7 +2,7 @@
 title: GreenVideo 調査レポート
 tool_name: GreenVideo
 tool_reading: グリーンビデオ
-category: 動画ダウンロード
+category: 動画/メディア
 developer: GreenVideo
 official_site: https://greenvideo.cc/
 date: '2026-06-11'
