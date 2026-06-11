@@ -6,7 +6,7 @@ category: 監視/可観測性
 developer: Grafana Labs
 official_site: https://grafana.com/
 date: '2026-03-01'
-last_updated: '2026-03-01'
+last_updated: '2026-06-12'
 tags:
   - SaaS
   - 監視/可観測性
@@ -23,7 +23,7 @@ quick_summary:
     - DevOpsエンジニア
     - SRE
     - データアナリスト
-  latest_highlight: 2026年1月、Visualization Suggestionsがデフォルト機能として強化
+  latest_highlight: 2026年4月、ダッシュボードのGit Sync機能やAI機能(Grafana Assistant)を含むGrafana 13.0がリリース
   update_frequency: 高
 evaluation:
   score: 85
@@ -88,7 +88,8 @@ relationships:
 
 ## **3. 主要機能**
 
-* **ダッシュボードと可視化**: ヒートマップ、ヒストグラム、グラフ、ジオマップなど、豊富で美しいパネルを使用してデータを可視化。ドラッグ＆ドロップでレイアウト可能。
+* **ダッシュボードと可視化**: ヒートマップ、ヒストグラム、グラフ、ジオマップなど、豊富で美しいパネルを使用してデータを可視化。ドラッグ＆ドロップでレイアウト可能。Git Sync機能（GA）により、ダッシュボードやフォルダのバージョン管理をGitと直接同期可能。
+* **AIアシスタント (Grafana Assistant)**: AIを活用し、ダッシュボードテンプレートのカスタマイズやパネルの自動提案を行う機能により、可視化の構築を大幅に効率化。
 * **プラグインアーキテクチャ**: データソースプラグイン（バックエンド接続）とパネルプラグイン（可視化）により、機能を無限に拡張可能。
 * **アラート機能**: 複数のデータソースにまたがるアラート条件を一元管理し、Slack, PagerDuty, Emailなどに通知。
 * **データ探索 (Explore)**: ダッシュボードを作成せずに、クエリをアドホックに実行してデータを深掘り分析。
@@ -137,7 +138,7 @@ relationships:
 |---|---|---|
 | **Grafana OSS** | 無料 | セルフホスト。全機能が利用可能（エンタープライズ機能を除く）。自前で運用が必要。 |
 | **Grafana Cloud Free** | 無料 | 永久無料。3ユーザー、10kシリーズのメトリクス、50GBのログ、50GBのトレースが含まれるマネージドサービス。 |
-| **Grafana Cloud Pro** | $29/月 + 利用量 | 1ユーザー含む（追加$8/ユーザー）。使用量に応じた従量課金。長期データ保持。 |
+| **Grafana Cloud Pro** | $8/月〜 + 利用量 | 1アクティブユーザーあたり$8/月〜（Enterpriseプラグイン利用時は$55/月〜）。使用量に応じた従量課金。長期データ保持。 |
 | **Grafana Cloud Advanced** | $299/月〜 | エンタープライズ向けのSLA、セキュリティ、コンプライアンス対応。 |
 | **Grafana Enterprise** | 要問い合わせ | セルフホスト版のエンタープライズ機能（SSO、監査ログ、データソース権限管理など）。 |
 
@@ -214,24 +215,26 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02-25**: Grafana 12.4.0 リリース。(出典: GitHub Releases)
-* **2026-01-22**: Visualization Suggestionsがアップデートされ、パネル可視化のデフォルトの選択方法となる。より適切な提案が可能に。(出典: Grafana Whats New)
-* **2025-12-19**: Suggested Dashboards機能の導入。接続されたデータソースに基づいて、事前に構築されたダッシュボードを提案し、初期構築の手間を削減。(出典: Grafana Whats New)
-* **2025-11-19**: Grafana 12.3 リリース。キャンバスパネルの強化や、アラート管理のUI改善が含まれる。(出典: Grafana Release Notes)
-* **2025-09-23**: Grafana 12.2 リリース。相関付け（Correlations）機能の強化により、異なるデータソース間のドリルダウンが容易に。(出典: Grafana Release Notes)
+* **2026-06-09**: Grafana 13.0.2 および 12.4.4 がリリース。バグ修正とセキュリティの向上。
+* **2026-04-17**: Grafana 13.0 がリリース。ダッシュボードのGit Sync機能の一般提供（GA）や、AIアシスタント（Grafana Assistant）によるテンプレートカスタマイズ機能が追加。
+* **2026-02-25**: Grafana 12.4.0 リリース。アラート管理画面のUI改善やRBAC権限の追加など。
+* **2026-01-22**: Visualization Suggestionsがアップデートされ、パネル可視化のデフォルトの選択方法となる。より適切な提案が可能に。
+* **2025-12-19**: Suggested Dashboards機能の導入。接続されたデータソースに基づいて、事前に構築されたダッシュボードを提案し、初期構築の手間を削減。
+* **2025-11-19**: Grafana 12.3 リリース。キャンバスパネルの強化や、アラート管理のUI改善が含まれる。
+* **2025-09-23**: Grafana 12.2 リリース。相関付け（Correlations）機能の強化により、異なるデータソース間のドリルダウンが容易に。
 
-(出典: [Grafana What's New](https://grafana.com/whats-new/), [GitHub Releases](https://github.com/grafana/grafana/releases))
+(出典: [Grafana What's New](https://grafana.com/docs/grafana/latest/whatsnew/), [GitHub Releases](https://github.com/grafana/grafana/releases))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Grafana | Datadog | Splunk |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 可視化・ダッシュボード | ◎<br><small>業界最高水準の柔軟性</small> | ◎<br><small>直感的で洗練されている</small> | ◯<br><small>多機能だがやや独特</small> |
-| **データ処理** | データ収集・保存 | △<br><small>外部データソースに依存</small> | ◎<br><small>オールインワン</small> | ◎<br><small>強力なインデックス</small> |
-| **エンタープライズ** | SaaS / マネージド | ◯<br><small>Grafana Cloud</small> | ◎<br><small>SaaSネイティブ</small> | ◎<br><small>Cloud / On-prem</small> |
-| **非機能要件** | コスト | ◎<br><small>OSSは無料、Cloudも安価</small> | △<br><small>積み上げ式で高くなりがち</small> | △<br><small>データ量で高額化</small> |
+| 機能カテゴリ | 機能項目 | Grafana | Datadog | Splunk | Kibana |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | 可視化・ダッシュボード | ◎<br><small>業界最高水準の柔軟性</small> | ◎<br><small>直感的で洗練されている</small> | ◯<br><small>多機能だがやや独特</small> | ◎<br><small>表現力豊かな可視化機能</small> |
+| **データ処理** | データ収集・保存 | △<br><small>外部データソースに依存</small> | ◎<br><small>オールインワン</small> | ◎<br><small>強力なインデックス</small> | ◯<br><small>Elasticsearchとの強力な連携</small> |
+| **エンタープライズ** | SaaS / マネージド | ◯<br><small>Grafana Cloud</small> | ◎<br><small>SaaSネイティブ</small> | ◎<br><small>Cloud / On-prem</small> | ◎<br><small>Elastic Cloud等で提供</small> |
+| **非機能要件** | コスト | ◎<br><small>OSSは無料、Cloudも安価</small> | △<br><small>積み上げ式で高くなりがち</small> | △<br><small>データ量で高額化</small> | ◯<br><small>OSS無料、有償は機能やデータ量依存</small> |
 
 ### **16.2 詳細比較**
 
