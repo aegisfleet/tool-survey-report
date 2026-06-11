@@ -225,7 +225,7 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | ログ検索・分析 | ◎<br><small>全文検索最強</small> | ◯<br><small>Lokiと連携</small> | ◎<br><small>SPLが強力</small> | ◯<br><small>SaaS型</small> |
 | **可視化** | ダッシュボード | ◎<br><small>Lensが優秀</small> | ◎<br><small>多様なパネル</small> | ◯<br><small>機能十分</small> | ◎<br><small>UXが良い</small> |
-| **分析** | AI/機械学習 | ◎<br><small>AI Assistant</small> | △<br><small>限定的</small> | ◯<br><small>AI機能あり</small> | ◎<br><small>Watchdog</small> |
+| **分析** | AI/機械学習 | ◎<br><small>AI Assistant</small> | ◯<br><small>Grafana Assistant</small> | ◯<br><small>AI機能あり</small> | ◎<br><small>Watchdog</small> |
 | **コスト** | 無料利用 | ◯<br><small>Basic無料</small> | ◎<br><small>OSS無料</small> | △<br><small>制限あり</small> | △<br><small>無料枠小</small> |
 
 ### **16.2 詳細比較**
