@@ -42,6 +42,7 @@ links:
   deepwiki: https://deepwiki.com/browser-use/browser-harness
 relationships:
   related_tools:
+    - Ferret-UI
     - Playwright
     - Selenium
 ---
