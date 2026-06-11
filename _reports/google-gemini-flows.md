@@ -6,7 +6,7 @@ category: ワークフロー自動化
 developer: Google
 official_site: https://developers.google.com/workspace/add-ons/studio
 date: '2026-01-25'
-last_updated: '2026-03-01'
+last_updated: '2026-06-11'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - Google Workspaceユーザー
     - ビジネスユーザー
-  latest_highlight: 2025年後半よりLimited Previewとして展開中。圧倒的な需要によりロールアウト調整中。
+  latest_highlight: 2026年6月にGoogle Workspace MCP serversが公開され、AIエージェントからの直接アクセスが可能に
   update_frequency: 高
 evaluation:
   score: 80
@@ -85,6 +85,7 @@ relationships:
 * **Input/Output Variables**: ステップ間でデータを受け渡すための変数機能。メールアドレスや日付、ファイルIDなどを動的に扱えます。
 * **Agentic AI**: 単純なif-thenルールだけでなく、Geminiがコンテキストを理解して判断を下す（例：メールの緊急度判定）ステップを組み込めます。
 * **Apps Script連携**: 標準で用意されていない機能も、Google Apps Scriptでカスタムステップを作成することで拡張可能です。
+* **MCP (Model Context Protocol) サーバー**: ClaudeやGoogle Antigravityなどの外部AIアプリケーションからGoogle Workspaceのデータ（Gmail, Drive, Calendar等）に安全にアクセスし、直接操作できるリモートMCPサーバー機能を提供。
 
 ## **4. 開始手順・セットアップ**
 
@@ -140,7 +141,9 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: `Flows` はApps Script等から拡張可能です。また、Google Workspace APIsを活用して詳細な操作が可能です。
-* **外部サービス連携**: 現状はGoogle Workspaceアプリ（Gmail, Drive, Chat, Calendar, Tasks, Sheets, Docs, Slides, Forms, Meet）が中心です。外部サービスとの接続は「Connect your add-on to third-party services」としてガイドされていますが、Apps Script等を用いた開発が必要です。
+* **外部サービス連携**:
+  * 現状はGoogle Workspaceアプリ（Gmail, Drive, Chat, Calendar, Tasks, Sheets, Docs, Slides, Forms, Meet）が中心です。
+  * **外部AI連携**: Google Workspace MCP serversを通じて、ClaudeやGoogle Antigravityといった外部のMCP対応AIクライアントからGoogle WorkspaceのAPIを直接呼び出すことが可能です。
 
 ### **10.2 技術スタックとの相性**
 
@@ -186,6 +189,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-05**: Google Workspace MCP serversの公式ドキュメントが公開。ClaudeやGoogle AntigravityなどのAIエージェントからGoogle Workspaceデータへの安全なアクセスが可能になった。
+* **2026-04-20**: 公式ドキュメントの更新が行われた（最終更新日）。
 * **2025-12-11**: ドキュメント更新。Workspace StudioのガイドラインやAPIリファレンスが整備された。
 * **2025-H2**: Google Workspace Studio (Flows) のLimited Previewプログラムが拡大され、多くの機能がテスト可能になった。
 * **2025-Mid**: Google I/OやCloud Next等のイベントで、Geminiを活用した自動化構想が発表された。
@@ -198,8 +203,8 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール | Microsoft Power Automate | Zapier | Make |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 連携アプリ数 | △<br><small>Google中心</small> | ◎<br><small>MS + 1000+</small> | ◎<br><small>8000+</small> | ◯<br><small>1600+</small> |
-| **AI機能** | AIによる判断 | ◎<br><small>Geminiネイティブ</small> | ◯<br><small>Copilot / AI Builder</small> | ◯<br><small>AI Agents</small> | △<br><small>AIモジュール連携</small> |
+| **基本機能** | 連携アプリ数 | △<br><small>Google中心</small> | ◎<br><small>MS + 1000+</small> | ◎<br><small>8500+</small> | ◯<br><small>1600+</small> |
+| **AI機能** | AIによる判断 | ◎<br><small>Geminiネイティブ</small> | ◯<br><small>Copilot / AI Builder</small> | ◯<br><small>AI Agents</small> | ◎<br><small>Make AI Agents搭載</small> |
 | **構築** | 自然言語作成 | ◎<br><small>対話型作成</small> | ◯<br><small>Copilot支援</small> | ◯<br><small>Copilot支援</small> | △<br><small>手動メイン</small> |
 | **信頼性** | セキュリティ | ◎<br><small>Google基盤</small> | ◎<br><small>MS基盤</small> | ◯<br><small>SOC2等</small> | ◯<br><small>SOC2等</small> |
 
@@ -209,8 +214,8 @@ relationships:
 |---------|------|------|------|------------------|
 | **本ツール** | Google Workspace特化のAI自動化 | Googleアプリとの親和性、Geminiによる高度な判断、ノーコード | サードパーティ連携の弱さ、まだプレビュー段階 | 業務がGoogle Workspaceで完結しており、AIでインテリジェントに自動化したい場合。 |
 | **Microsoft Power Automate** | Microsoft 365特化＋RPA | MS製品との統合、デスクトップ操作(RPA)も可能 | ライセンスが複雑、学習コストがやや高い | Microsoft 365中心の環境。RPAも必要な場合。 |
-| **Zapier** | SaaS連携のデファクト | 圧倒的な連携数、誰でも使える簡単さ | コストが高くなりがち、複雑なロジックは苦手 | Google以外の多様なSaaSを連携させたい場合。 |
-| **Make** | 複雑なロジックが得意 | 視覚的なフロー構築、柔軟なデータ処理、コスパ | 初心者には難しい | 複雑な条件分岐やデータ加工が必要な高度な自動化。 |
+| **Zapier** | SaaS連携のデファクト | 連携数(8500+)、AI機能の充実、エコシステムの成熟度、学習コストの低さ。 | コストが高くなりがち、複雑なロジックは苦手 | Google以外の多様なSaaSを連携させたい場合。 |
+| **Make** | 複雑なロジックが得意 | 複雑なワークフローを視覚的に構築可能、柔軟なデータ処理、コストパフォーマンスの高さ。 | 初心者には難しい | 複雑な条件分岐やデータ加工が必要な高度な自動化。 |
 
 ## **17. 総評**
 
