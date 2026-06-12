@@ -1,12 +1,12 @@
 ---
-title: "RuView 調査レポート"
-tool_name: "RuView"
-tool_reading: "ルービュー / ワイファイ デンスポーズ"
+title: RuView 調査レポート
+tool_name: RuView
+tool_reading: ルービュー / ワイファイ デンスポーズ
 category: セキュリティ/解析
 developer: ruvnet
-official_site: "https://github.com/ruvnet/RuView"
+official_site: https://github.com/ruvnet/RuView
 date: '2026-03-01'
-last_updated: "2026-06-13"
+last_updated: '2026-06-13'
 tags:
   - スマートホーム
   - AI
@@ -24,7 +24,7 @@ quick_summary:
     - 研究者
     - 開発者
     - インフラ/設備管理者
-  latest_highlight: "2026年6月にv1701をリリースし、Home Assistant・Matter連携やプラグインのセキュリティ（Ed25519署名）を強化"
+  latest_highlight: 2026年6月にv1701をリリースし、Home Assistant・Matter連携やプラグインのセキュリティ（Ed25519署名）を強化
   update_frequency: 高
 evaluation:
   score: 83
@@ -41,9 +41,9 @@ evaluation:
       reason: 日本語のドキュメントやサポートが不足
   summary: プライバシーを保護しつつ高度な人間のセンシングを可能にする画期的な技術であり、導入のしやすさとコストパフォーマンスに優れている
 links:
-  github: "https://github.com/ruvnet/RuView"
-  codewiki: "https://codewiki.google/github.com/ruvnet/RuView"
-  deepwiki: "https://deepwiki.com/ruvnet/RuView"
+  github: https://github.com/ruvnet/RuView
+  codewiki: https://codewiki.google/github.com/ruvnet/RuView
+  deepwiki: https://deepwiki.com/ruvnet/RuView
 relationships: {}
 ---
 
