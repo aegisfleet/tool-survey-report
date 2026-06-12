@@ -1,13 +1,14 @@
 ---
-title: WiFi DensePose 調査レポート
-tool_name: WiFi DensePose
-tool_reading: ワイファイ デンスポーズ
+title: RuView 調査レポート
+tool_name: RuView
+tool_reading: ルービュー / ワイファイ デンスポーズ
 category: セキュリティ/解析
 developer: ruvnet
-official_site: https://github.com/ruvnet/wifi-densepose
+official_site: https://github.com/ruvnet/RuView
 date: '2026-03-01'
-last_updated: '2026-03-01'
+last_updated: '2026-06-13'
 tags:
+  - スマートホーム
   - AI
   - IoT
   - Rust
@@ -23,7 +24,7 @@ quick_summary:
     - 研究者
     - 開発者
     - インフラ/設備管理者
-  latest_highlight: 2026年3月にエンドツーエンドのトレーニングパイプラインとDockerイメージを公開
+  latest_highlight: 2026年6月にv1701をリリースし、Home Assistant・Matter連携やプラグインのセキュリティ（Ed25519署名）を強化
   update_frequency: 高
 evaluation:
   score: 83
@@ -40,24 +41,24 @@ evaluation:
       reason: 日本語のドキュメントやサポートが不足
   summary: プライバシーを保護しつつ高度な人間のセンシングを可能にする画期的な技術であり、導入のしやすさとコストパフォーマンスに優れている
 links:
-  github: https://github.com/ruvnet/wifi-densepose
-  codewiki: https://codewiki.google/github.com/ruvnet/wifi-densepose
-  deepwiki: https://deepwiki.com/ruvnet/wifi-densepose
+  github: https://github.com/ruvnet/RuView
+  codewiki: https://codewiki.google/github.com/ruvnet/RuView
+  deepwiki: https://deepwiki.com/ruvnet/RuView
 relationships: {}
 ---
 
-# **WiFi DensePose 調査レポート**
+# **RuView 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: WiFi DensePose
-* **ツールの読み方**: ワイファイ デンスポーズ
+* **ツール名**: RuView (旧: WiFi DensePose)
+* **ツールの読み方**: ルービュー / ワイファイ デンスポーズ
 * **開発元**: ruvnet
-* **公式サイト**: [https://github.com/ruvnet/wifi-densepose](https://github.com/ruvnet/wifi-densepose)
+* **公式サイト**: [https://github.com/ruvnet/RuView](https://github.com/ruvnet/RuView)
 * **関連リンク**:
-  * GitHub: [https://github.com/ruvnet/wifi-densepose](https://github.com/ruvnet/wifi-densepose)
-  * CodeWiki: [https://codewiki.google/github.com/ruvnet/wifi-densepose](https://codewiki.google/github.com/ruvnet/wifi-densepose)
-  * DeepWiki: [https://deepwiki.com/ruvnet/wifi-densepose](https://deepwiki.com/ruvnet/wifi-densepose)
+  * GitHub: [https://github.com/ruvnet/RuView](https://github.com/ruvnet/RuView)
+  * CodeWiki: [https://codewiki.google/github.com/ruvnet/RuView](https://codewiki.google/github.com/ruvnet/RuView)
+  * DeepWiki: [https://deepwiki.com/ruvnet/RuView](https://deepwiki.com/ruvnet/RuView)
 * **カテゴリ**: セキュリティ/解析 / ハードウェア
 * **概要**:
   市販のWiFi信号（CSIデータなど）を用いて、カメラや専用のウェアラブルデバイスを一切使用せずに、リアルタイムで人間の姿勢推定、バイタルサインの監視、および存在検知を行うシステム。
@@ -70,7 +71,7 @@ relationships: {}
 * **利用シーン**:
   * **医療・介護**: 高齢者施設での転倒検知、就寝中の呼吸・心拍モニタリング。プライバシーを侵害することなく24時間監視が可能。
   * **災害救助 (WiFi-Mat)**: 地震などの災害時に、瓦礫や障害物越しに生存者の呼吸を検知し、START式トリアージを自動で行う。
-  * **スマートホーム・ビルディング**: オフィスの利用状況（どのデスクが使用されているか等）の把握や、壁越しの照明・空調自動制御。
+  * **スマートホーム・ビルディング**: オフィスの利用状況（どのデスクが使用されているか等）の把握や、壁越しの照明・空調自動制御。Home AssistantやMatter（Apple Home, Google Home, Alexa等）と連携し、声での状態確認が可能。
   * **小売・飲食**: プライバシーを守りながらの顧客の動線分析、店舗内滞在時間の測定。
 
 ## **3. 主要機能**
@@ -81,6 +82,7 @@ relationships: {}
 * **マルチパーソン・トラッキング**: 1つのアクセスポイントで同時に3〜5人の姿勢やバイタルサインを個別にトラッキング可能。アクセスポイントを追加することで拡張可能。
 * **壁越しのセンシング (Through-Wall)**: 電波が壁や家具を通過する性質を利用し、カメラでは検知できない遮蔽物越しのセンシングに対応。
 * **自己学習AI (Self-Learning WiFi AI)**: 教師なしで各部屋の「指紋」を学習し、未知の環境にも自動で適応して環境の異常や人物の再識別を行う。
+* **スマートホーム連携**: HA-DISCO MQTTおよびMatterエンドポイントを通じて、Home Assistant, Apple Home, Google Home, Amazon Alexa等とネイティブに連携可能。
 * **WiFi-Mat (災害対応モジュール)**: 生存者の瓦礫越しでの検知と3Dローカライゼーション、優先度判定（STARTトリアージ）を行う専用モジュール。
 
 ## **4. 開始手順・セットアップ**
@@ -152,7 +154,7 @@ relationships: {}
 ### **10.1 API・外部サービス連携**
 
 * **API**: センシングデータやバイタルサイン、モデル設定などにアクセス可能なREST APIと、リアルタイムデータストリーミング用のWebSocket API（ポート3000および3001）が提供されている。
-* **外部サービス連携**: 提供されているAPIを介して、スマートホーム自動化（MQTTブリッジ）やカスタムダッシュボードとの連携が可能。
+* **外部サービス連携**: MQTT (HA-DISCO) および Matter を介して、Home Assistant, Apple Home, Google Home, Amazon Alexa などのスマートホームエコシステムとネイティブに連携可能。また、REST/WebSocket APIによるカスタムダッシュボードとの連携もサポートする。
 
 ### **10.2 技術スタックとの相性**
 
@@ -198,17 +200,21 @@ relationships: {}
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-12**: `v1701`リリース。ゼロワーニング対応など。
+* **2026-06-12**: `v1692`リリース。プラグインのセキュリティ（Ed25519署名、機能分離など）強化、Bounded RunModesの導入（ADR-162）。
+* **2026-06-12**: `v1689`リリース。ホームオートメーションエンジンのセキュリティ修正および機能強化（ADR-161）。
+* **2026-06-12**: `v1686`リリース。Edge-skill appliance対応および crates.io パブリッシュ対応。
 * **2026-03-01**: `v2.3.0`リリース。エンドツーエンドのトレーニングパイプライン（MM-Fi, Wi-Pose）、Dockerイメージ公開、およびバイタルサイン検知の追加。
 * **2026-02-28**: `v2.2.0`リリース。対話式のガイド付きインストーラ導入、6つのSOTA信号アルゴリズム、WiFi-Mat（災害対応モジュール）の追加。
 * **2026-02-28**: `v2.1.0`リリース。PythonからRustへの完全移植（810倍の高速化）、RuVectorの統合、Three.jsによる可視化。
 
-(出典: [GitHub Releases](https://github.com/ruvnet/wifi-densepose/releases))
+(出典: [GitHub Releases](https://github.com/ruvnet/RuView/releases))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | WiFi DensePose | 監視カメラ | スマートウォッチ | LiDARシステム |
+| 機能カテゴリ | 機能項目 | RuView | 監視カメラ | スマートウォッチ | LiDARシステム |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 姿勢推定 | ◎<br><small>WiFi電波を利用</small> | ◎<br><small>映像解析</small> | ×<br><small>非対応</small> | ◯<br><small>ポイントクラウド解析</small> |
 | **バイタル** | 呼吸・心拍 | ◯<br><small>電波の微細な変動から</small> | △<br><small>一部可能だが制限有</small> | ◎<br><small>直接計測で高精度</small> | ×<br><small>通常は非対応</small> |
@@ -219,7 +225,7 @@ relationships: {}
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **WiFi DensePose** | WiFi信号から人間の姿勢とバイタルを推測 | プライバシー保護、壁越し、安価なハードウェア | CSI対応ハードウェアが必要 | 医療・介護、更衣室、災害現場などプライバシーと壁透過が求められる環境 |
+| **RuView** | WiFi信号から人間の姿勢とバイタルを推測 | プライバシー保護、壁越し、安価なハードウェア | CSI対応ハードウェアが必要 | 医療・介護、更衣室、災害現場などプライバシーと壁透過が求められる環境 |
 | **監視カメラ** | 映像ベースのAI解析 | 高解像度、確立されたAI技術 | プライバシー問題、死角がある、暗闇・煙に弱い | 公共空間、顔認識など詳細な人物特定が必要な場合 |
 | **スマートウォッチ** | 身体に直接装着するセンサー | 高精度なバイタル計測、常時接続 | 装着が必要（非協力的だと不可） | 個人が自発的に健康管理を行う場合 |
 | **LiDARシステム** | レーザーを用いた3Dマッピング | 高精度な空間認識、暗闇でも動作 | 機器が高価、壁は透過できない | 自動運転、精密なロボットナビゲーション |
@@ -227,7 +233,7 @@ relationships: {}
 ## **17. 総評**
 
 * **総合的な評価**:
-  WiFi DensePoseは、プライバシー侵害の懸念からこれまでセンシングが困難だった空間（病室や更衣室など）や、カメラが機能しない環境（瓦礫の下、煙の中）でのモニタリングを可能にする画期的なソリューションである。Rustへの移行によりパフォーマンスも実用レベルに達しており、極めて高く評価できる。
+  RuViewは、プライバシー侵害の懸念からこれまでセンシングが困難だった空間（病室や更衣室など）や、カメラが機能しない環境（瓦礫の下、煙の中）でのモニタリングを可能にする画期的なソリューションである。Rustへの移行によりパフォーマンスも実用レベルに達しており、極めて高く評価できる。
 * **推奨されるチームやプロジェクト**:
   IoT開発チーム、医療・介護施設向けのソリューションプロバイダー、災害救助テクノロジーの研究機関、スマートホームシステム開発者。
 * **選択時のポイント**:
