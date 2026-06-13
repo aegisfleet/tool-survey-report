@@ -31,6 +31,7 @@ links:
 relationships:
   related_tools:
     - OBS Studio
+    - OpenLive3D
 ---
 
 # **Webcam Motion Capture 調査レポート**
