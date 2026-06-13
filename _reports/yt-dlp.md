@@ -2,17 +2,17 @@
 title: yt-dlp 調査レポート
 tool_name: yt-dlp
 tool_reading: ワイティー・ディーエルピー
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: yt-dlp community
 official_site: https://github.com/yt-dlp/yt-dlp
 date: '2026-06-11'
 last_updated: '2026-06-11'
 tags:
+  - 開発者ツール
   - ダウンローダー
   - オープンソース
   - CLIツール
   - 動画
-  - 音声
 description: 多数のサイトに対応した、機能が豊富なコマンドライン型の動画・音声ダウンローダー
 quick_summary:
   has_free_plan: true
