@@ -6,14 +6,14 @@ category: AI開発ライブラリ
 developer: GitHub (Microsoft)
 official_site: https://github.com/github/copilot-sdk
 date: '2026-03-02'
-last_updated: '2026-03-02'
+last_updated: '2026-06-13'
 tags:
   - AI
   - エージェント
   - オープンソース
   - 自律型
   - 開発者ツール
-description: GitHub Copilotのエージェント機能を任意のアプリケーションに組み込むためのSDK。Python, TypeScript, Go, .NETに対応。
+description: GitHub Copilotのエージェント機能を任意のアプリケーションに組み込むためのSDK。TypeScript, Python, Go, .NETに加え、RustとJavaに対応。
 quick_summary:
   has_free_plan: false
   is_oss: true
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - ツール製作者
     - 企業内開発チーム
-  latest_highlight: 2026年1月にv0.1.18リリース。Python, TS, Go, .NETをサポート
+  latest_highlight: 2026年6月にv1.0.0をリリース。RustおよびJava SDKを正式サポート。
   update_frequency: 高
 evaluation:
   score: 82
@@ -49,6 +49,7 @@ relationships:
   parent: GitHub Copilot
   related_tools:
     - LangChain
+    - Dify
 ---
 
 # **GitHub Copilot SDK 調査レポート**
@@ -77,7 +78,7 @@ relationships:
 
 ## **3. 主要機能**
 
-* **マルチ言語サポート**: Node.js (TypeScript), Python, Go, .NET向けのSDKを提供。
+* **マルチ言語サポート**: Node.js (TypeScript), Python, Go, .NETに加え、RustおよびJava向けのSDKを提供。
 * **エージェントワークフロー**: ユーザーの意図を理解し、計画（Plan）、ツール実行（Act）、結果確認（Review）のサイクルを自律的に回す機能。
 * **MCP (Model Context Protocol) 対応**: 標準化されたプロトコルで外部データソースやツールと容易に接続可能。
 * **BYOK (Bring Your Own Key)**: OpenAIやAnthropicなどのAPIキーを持ち込んで、Copilot以外のモデルも利用可能（設定による）。
@@ -87,7 +88,7 @@ relationships:
 ## **4. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Node.js (TypeScript), Python, Go, .NETのいずれかの実行環境
+  * Node.js (TypeScript), Python, Go, .NET, Rust, Javaのいずれかの実行環境
   * GitHub Copilot サブスクリプションを持つGitHubアカウント
 * **インストール/導入**:
   ```bash
@@ -149,6 +150,8 @@ relationships:
 | **Python** | ◎ | AI/データサイエンス分野との親和性が高く、ライブラリも豊富。 | 特になし |
 | **Go** | ◯ | パフォーマンス重視のCLIツール開発に向いている。 | ライブラリ数はTS/Pythonに劣る |
 | **.NET** | ◯ | 企業内システムやWindows向けアプリ開発に最適。 | クロスプラットフォーム対応に注意 |
+| **Rust** | ◯ | 安全性とパフォーマンスに優れたシステムツール開発に最適。 | 学習コストがやや高い |
+| **Java** | ◯ | エンタープライズシステムとの統合に有利。 | - |
 
 ## **11. セキュリティとコンプライアンス**
 
@@ -186,6 +189,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-10**: v1.0.1をリリース。Java SDKに `@CopilotExperimental` コンパイル時ゲートを追加。
+* **2026-06-02**: v1.0.0 (GA) をリリース。RustおよびJava SDKを正式サポートし、エンタープライズ向けの安定性を向上。
 * **2026-01-24 (v0.1.18)**: 最新の修正と安定性向上。
 * **2026-01-XX**: .NET SDKの初期プレビュー公開。
 * **2025-12-XX**: MCP (Model Context Protocol) サポートの追加。
@@ -203,6 +208,7 @@ relationships:
 | **セキュリティ** | データ保護 | ◎<br><small>GitHubの保証あり</small> | △<br><small>実装依存</small> | ◯<br><small>オンプレミス展開が可能</small> |
 | **開発容易性** | エージェント構築 | ◯<br><small>オーケストレーション内蔵</small> | △<br><small>柔軟だが複雑</small> | ◎<br><small>GUIによる視覚的な構築</small> |
 | **拡張性** | ツール連携 | ◎<br><small>MCP標準対応</small> | ◯<br><small>独自のTool概念</small> | ◯<br><small>豊富な外部ツール統合</small> |
+| **非機能要件** | 対応言語 | ◎<br><small>TS/Python/Go/.NET/Rust/Java</small> | ◯<br><small>Python/JS(TS)</small> | △<br><small>Python/JS中心</small> |
 
 ### **16.2 詳細比較**
 
