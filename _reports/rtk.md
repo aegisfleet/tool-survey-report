@@ -46,7 +46,7 @@ relationships:
     - cursor
     - windsurf
     - cline
-    - github-copilot-cli
+    - GitHub Copilot CLI
 ---
 
 # **RTK 調査レポート**
