@@ -6,7 +6,7 @@ category: インフラ/クラウド
 developer: AWS (Cloud Native Computing Foundation)
 official_site: https://karpenter.sh/
 date: '2025-11-18'
-last_updated: '2026-03-03'
+last_updated: '2026-06-15'
 tags:
   - DevOps
   - Kubernetes
@@ -22,7 +22,7 @@ quick_summary:
     - DevOpsエンジニア
     - SRE
     - プラットフォームエンジニア
-  latest_highlight: 2026年2月にv1.9.0をリリース。ノードプールコストメトリクスを追加。
+  latest_highlight: 2026年6月にv1.13.0をリリース。DRA (Dynamic Resource Allocation) デバイス割り当て追跡のサポートを追加。
   update_frequency: 高
 evaluation:
   score: 87
@@ -82,6 +82,7 @@ relationships:
 * **ワークロードの集約 (Consolidation)**: クラスタ内のノード使用率を継続的に監視し、ワークロードをより効率的で安価なノードに集約します。これにより、不要になったノードを安全に削除し、コストを削減します。
 * **ノードの有効期限切れとドリフト対応**: ノードの有効期限や構成の変更（ドリフト）を検出し、自動的にノードを入れ替えることで、セキュリティパッチ適用やOSアップグレードといった運用タスクを自動化します。
 * **柔軟なインスタンス選択**: オンデマンド、スポット、リザーブドインスタンスなど、様々な購入オプションを横断して最適なインスタンスを自動で選択し、コストと可用性のバランスを取ります。
+* **ノードの制限事項 (Node Limits)**: NodePoolに対するノード数の上限などを設定し、意図しないクラスタの肥大化を防ぐことができます。
 
 ## **4. 開始手順・セットアップ**
 
@@ -93,7 +94,7 @@ relationships:
   ```bash
   # Helmを使用したインストール例
   helm registry login public.ecr.aws
-  helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter --version v1.9.0     --namespace karpenter --create-namespace     --set settings.clusterName=${CLUSTER_NAME}     --set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=${KARPENTER_IAM_ROLE_ARN}
+  helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter --version v1.13.0     --namespace karpenter --create-namespace     --set settings.clusterName=${CLUSTER_NAME}     --set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=${KARPENTER_IAM_ROLE_ARN}
   ```
 * **初期設定**:
   * EC2NodeClassとNodePoolカスタムリソースを作成し、クラスタに適用します。
@@ -187,6 +188,9 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-10**: v1.13.0 - DRA (Dynamic Resource Allocation) デバイス割り当て追跡のサポート追加など。
+* **2026-04-24**: v1.12.0 - do-not-disruptアノテーションの猶予期間サポート追加など。
+* **2026-04-06**: v1.11.0 - クラウドプロバイダーのノード登録フック、NodePoolノード制限のサポート追加など。
 * **2026-02-06**: v1.9.0 - ノードプールコストメトリクスの追加、要件に対するGteおよびLte演算子のサポートなど。
 * **2026-01-15**: v1.8.2 - バグ修正リリース。以前のバージョンで発生したリグレッションの修正などが行われました。
 * **2026-01-13**: v1.8.1 - バグ修正および安定性の向上。
