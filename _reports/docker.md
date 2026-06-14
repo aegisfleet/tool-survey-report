@@ -55,7 +55,7 @@ relationships:
     - LocalStack
     - dockur/windows
     - picomatch
-    - PyInstaller
+    - Ubuntu
 ---
 
 # **Docker 調査レポート**
