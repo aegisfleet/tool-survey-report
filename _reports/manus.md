@@ -6,7 +6,7 @@ category: コーディングエージェント
 developer: Meta Platforms
 official_site: https://manus.im/
 date: '2026-03-03'
-last_updated: '2026-03-03'
+last_updated: '2026-06-15'
 tags:
   - AI
   - エージェント
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - 起業家
     - クリエイター
-  latest_highlight: 2025年12月にMeta Platformsへ参加、機能を大幅強化
+  latest_highlight: 2026年6月にCanva連携やZoom連携、Cloud Computerなどを追加し大幅機能強化
   update_frequency: 高
 evaluation:
   score: 85
@@ -93,8 +93,9 @@ relationships:
 
 * **Web App Builder**: 自然言語のプロンプトから、バックエンド、データベース、認証機能を備えたフルスタックWebアプリケーションを生成。
 * **Wide Research**: 複雑なトピックに関するリサーチを自動でサブタスクに分解し、Web上の情報を収集・分析してレポートを作成。
-* **AI Design**: インタラクティブな画像生成や編集、デザイン修正を会話形式で実行。
+* **AI Design & Connectors**: インタラクティブな画像生成やデザイン修正に加え、CanvaやZoom、Airtable、Notionなど多数の外部ツールと連携してタスクを自動化。
 * **Manus Browser Operator**: ユーザーに代わってWebブラウザを操作し、情報収集やフォーム入力などのタスクを実行。
+* **Cloud Computer & My Computer**: クラウド上の安全なサンドボックス環境（Cloud Computer）やユーザーのローカル環境（My Computer）で直接作業を実行。
 * **Mail Manus**: メール転送によるタスク作成や、返信の下書き作成などのメール管理支援。
 * **SEO Optimization**: 生成されたWebサイトに対して、AIが自動的にSEO対策（メタタグ生成、構造化データなど）を実施。
 * **コードエクスポート**: 生成されたアプリケーションのソースコードを完全にエクスポート可能（ベンダーロックインなし）。
@@ -206,10 +207,12 @@ relationships:
 -->
 
 * **API**: [Manus API](https://open.manus.ai/docs)を提供しており、外部アプリケーションからManusの機能を呼び出し可能。
-* **外部サービス連携**:
-  * **Slack**: Slack連携機能により、チャットからタスクを実行可能。
+* **外部サービス連携**: 多数の専用Connectorを提供しており、標準で連携可能。
+  * **Slack / Zoom**: チャットからのタスク実行や、ミーティングの録画・議事録の自動処理。
+  * **Canva**: リサーチからデザイン生成、コンテンツのリサイズやリパーパスまでを自動化。
+  * **Google Workspace**: Gmail（複数アカウント対応）、Google Calendar、Google Driveの自動化・連携。
+  * **Airtable / Notion**: データベースの検索、更新、レポート作成の自動化。
   * **Stripe**: 決済機能の組み込みを自動化。
-  * **Google Calendar**: 予定管理の自動化。
 
 ### **10.2 技術スタックとの相性**
 
@@ -300,9 +303,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2026-01-XX**: Metaエコシステムとの統合強化（予定）。
+* **2026-06-12**: Canva Connectorリリース（デザイン業務の自動化）。
+* **2026-06-09**: Zoom Connectorリリース。
+* **2026-06-05**: Airtable Connectorリリース。
+* **2026-05-18**: Scheduled Tasks 2.0リリース（タスクの定期実行機能強化）。
+* **2026-04-30**: Cloud Computerリリース（ビルド障壁を下げるクラウドサンドボックス環境）。
+* **2026-03-16**: My Computerリリース（ローカルデスクトップ環境での作業自動化）。
 * **2025-12-31**: Slack Integration発表。
-* **2025-12-29**: **Meta Platformsへの参加を発表**。
+* **2025-12-29**: Meta Platformsへの参加を発表。
 * **2025-12-22**: Manus Design View (AI Design) 機能の追加。
 * **2025-12-15**: 「Manus 1.6」リリース。モバイル開発対応や新エージェント「Max」の導入。
 
@@ -330,12 +338,13 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | Manus | Devin | OpenHands |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 自律コード生成 | ◎<br><small>フルスタック対応</small> | ◎<br><small>エンジニア特化</small> | ◯<br><small>オープンソース</small> |
-| **開発スタイル** | ノーコード利用 | ◎<br><small>会話のみで完結</small> | △<br><small>開発知識推奨</small> | ×<br><small>開発者向け</small> |
-| **多機能性** | リサーチ/デザイン | ◎<br><small>広範囲に対応</small> | △<br><small>開発周辺のみ</small> | △<br><small>主にコーディング</small> |
-| **非機能要件** | 日本語対応 | ◯<br><small>多言語出力可</small> | △<br><small>英語中心</small> | △<br><small>英語中心</small> |
+| 機能カテゴリ | 機能項目 | Manus | Devin | OpenHands | Google Jules |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | 自律コード生成 | ◎<br><small>フルスタック対応</small> | ◎<br><small>エンジニア特化</small> | ◯<br><small>オープンソース</small> | ◎<br><small>ワークフロー統合強力</small> |
+| **外部連携** | 外部ツール自動化 | ◎<br><small>Canva等多数対応</small> | △<br><small>コーディング中心</small> | △<br><small>コーディング中心</small> | ◯<br><small>CLI/API連携</small> |
+| **開発スタイル** | ノーコード利用 | ◎<br><small>会話のみで完結</small> | △<br><small>開発知識推奨</small> | ×<br><small>開発者向け</small> | △<br><small>開発知識推奨</small> |
+| **多機能性** | リサーチ/デザイン | ◎<br><small>広範囲に対応</small> | △<br><small>開発周辺のみ</small> | △<br><small>主にコーディング</small> | △<br><small>主にコーディング</small> |
+| **非機能要件** | 日本語対応 | ◯<br><small>多言語出力可</small> | △<br><small>英語中心</small> | △<br><small>英語中心</small> | ◯<br><small>多言語対応</small> |
 
 ### **16.2 詳細比較**
 
@@ -349,6 +358,7 @@ relationships:
 | **Manus** | 汎用自律型エージェント | アプリ開発からリサーチまで幅広く対応。ノーコードで利用可能。Metaの技術基盤。 | 開発者向けの細かい環境制御はDevinに劣る場合がある。 | アイデアを素早く形にしたい、開発以外のタスクも任せたい場合。 |
 | **Devin** | AIソフトウェアエンジニア | 既存のGitHubリポジトリに対する複雑な修正や機能追加が得意。 | コストが高め。開発者向けツールとしての色が濃い。 | 既存のソフトウェアプロジェクトに「AIエンジニア」として参加させたい場合。 |
 | **OpenHands** | OSSエージェント | オープンソースでカスタマイズ性が高く、セルフホスト可能。 | セットアップが必要。サポートはコミュニティベース。 | 自社環境で運用したい、コストを抑えたい、カスタマイズしたい場合。 |
+| **Google Jules** | ワークフロー統合型エージェント | Gemini 3 Proによる高い実行力と、CLI/API等開発フローへの強力な統合。 | エンタープライズ向けのガバナンス情報がまだ不足している。 | 既存の複雑な開発ワークフローにAIを組み込みたい場合。 |
 
 ## **17. 総評**
 
