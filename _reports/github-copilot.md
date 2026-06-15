@@ -57,6 +57,7 @@ relationships:
     - GitLab Duo
     - Mobile Next
     - Microsoft Work IQ
+    - Agentic Workflows
 ---
 
 # **GitHub Copilot 調査レポート**

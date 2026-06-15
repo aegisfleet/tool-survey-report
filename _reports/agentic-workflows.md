@@ -6,7 +6,7 @@ category: AIエージェント基盤
 developer: GitHub Next
 official_site: https://githubnext.com/projects/agentic-workflows/
 date: '2026-01-27'
-last_updated: '2026-03-04'
+last_updated: '2026-06-16'
 tags:
   - AI
   - CI/CD
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - OSSメンテナ
-  latest_highlight: 2026年3月4日にv0.53.1をリリース
+  latest_highlight: 2026年6月にv0.79.8をリリースし、httpnoctx等のLinterを追加
   update_frequency: 高
 evaluation:
   score: 80
@@ -84,6 +84,8 @@ relationships:
 * **マルチエンジン対応**: 特定のAIモデルに依存せず、Claude CodeやOpenAI Codex CLIなど複数の「コーディングエージェント」をエンジンとして利用可能。
 * **セキュリティとガードレール**: `safe-outputs` による書き込み制限、サンドボックス実行、人間によるレビュー（PR作成）を前提とした安全設計。
 * **gh aw CLI**: 自然言語で書かれたMarkdownファイルを、実行可能なGitHub Actions YAMLにコンパイルするためのCLIツール。
+* **Linter機能**: GoコードのHTTPコンテキスト未設定（`httpnoctx`）やハードコードされたファイルパス（`hardcodedfilepath`）を検出する機能が搭載されている。
+* **予算管理**: `max-ai-credits` など、利用可能なクレジット量を制御することで、過剰なAPI呼び出しを防ぐ。
 
 ## **4. 開始手順・セットアップ**
 
@@ -124,7 +126,7 @@ relationships:
 | **Research Prototype** | 無料 | ツール自体はGitHub CLI拡張として無償で利用可能。 |
 | **モデル利用料** | 変動 | バックエンドで使用するAIモデル（Claude Code等）のAPI利用料やサブスクリプションが別途必要になる場合がある。 |
 
-* **課金体系**: Agentic Workflows自体への課金はないが、実行基盤（GitHub Actionsの分数）とAIモデルのコストがかかる。
+* **課金体系**: Agentic Workflows自体への課金はないが、実行基盤（GitHub Actionsの分数）とAIモデルのコストがかかる。コスト超過を防ぐため、`max-ai-credits` といった予算管理機能が利用できる。
 * **無料トライアル**: なし（OSS/無料ツールのため）。
 
 ## **8. 導入実績・事例**
@@ -197,7 +199,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-03-04 (v0.53.1)**: 最新リリース。安定性向上とバグ修正が含まれる。
+* **2026-06-12 (v0.79.8)**: `httpnoctx` および `hardcodedfilepath` リンターの追加、AIクレジット制限を管理するための `max-effective-tokens` から `max-ai-credits` への移行を完了。
+* **2026-03-04 (v0.53.1)**: 安定性向上とバグ修正が含まれる。
 * **2026-01-27 (v0.37.26)**: 安定性の改善と各種バグ修正。
 * **2026-01-12**: "Peli's Agent Factory" 公開。エージェントワークフローの活用ガイドツアー。
 
@@ -211,7 +214,7 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 自然言語記述 | ◎<br><small>Markdownで記述</small> | ×<br><small>YAMLで記述</small> | ◯<br><small>対話的に指示</small> | △<br><small>補完のみ</small> |
 | **実行場所** | CI/CD統合 | ◎<br><small>Actions上で動作</small> | ◎<br><small>ネイティブ</small> | △<br><small>ローカル/SSH主体のCLI</small> | ×<br><small>IDE内</small> |
-| **自律性** | タスク遂行能力 | ◎<br><small>調査・判断・実行</small> | ×<br><small>定義された手順のみ</small> | ◎<br><small>自律的に遂行</small> | △<br><small>支援のみ</small> |
+| **自律性** | タスク遂行能力 | ◎<br><small>調査・判断・実行</small> | ×<br><small>定義された手順のみ</small> | ◎<br><small>自律的に遂行</small> | ◯<br><small>Copilot Agents機能</small> |
 | **安全性** | ガードレール | ◎<br><small>Safe Outputs等</small> | ◯<br><small>権限設定のみ</small> | ◯<br><small>確認プロンプト</small> | -<br><small>該当なし</small> |
 
 ### **16.2 詳細比較**
