@@ -57,6 +57,7 @@ relationships:
     - AutoGPT
     - Opcode
     - OpenAI Frontier
+    - Manus
 ---
 
 # **Devin 調査レポート**

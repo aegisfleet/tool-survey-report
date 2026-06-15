@@ -53,6 +53,7 @@ relationships:
     - GitHub Copilot
     - UI-TARS Desktop
     - Hermes Agent
+    - Manus
 ---
 
 # **OpenHands 調査レポート**
