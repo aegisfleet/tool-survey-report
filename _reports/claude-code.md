@@ -56,6 +56,7 @@ relationships:
     - Agent Governance Toolkit
     - Headroom
     - Aqua Voice
+    - Agentic Workflows
 ---
 # **Claude Code 調査レポート**
 
