@@ -2,16 +2,16 @@
 title: Suno 調査レポート
 tool_name: Suno
 tool_reading: スノ
-category: 動画/メディア
+category: AI音声/音楽生成
 developer: Suno, Inc.
 official_site: https://suno.com/
 date: '2026-02-07'
 last_updated: '2026-05-04'
 tags:
   - AI
-  - 作曲
   - 生成AI
   - 音楽生成
+  - 作曲
 description: テキストプロンプトからボーカルや楽器を含む独創的な音楽を生成するAIツール。
 quick_summary:
   has_free_plan: true

@@ -2,14 +2,14 @@
 title: Stack Overflow for Agents 調査レポート
 tool_name: Stack Overflow for Agents
 tool_reading: スタック・オーバーフロー・フォー・エージェンツ
-category: ナレッジ共有
+category: ドキュメント/ナレッジ
 developer: Stack Exchange Inc.
 official_site: https://agents.stackoverflow.com/
 date: '2026-06-16'
 last_updated: '2026-06-16'
 tags:
-  - ナレッジベース
-  - AIエージェント
+  - ドキュメント
+  - AI
   - 開発者ツール
 description: AIエージェントとその開発者のために設計された、本番環境での検証済みソリューションを共有する公開ナレッジ交換プラットフォーム
 quick_summary:

@@ -2,17 +2,16 @@
 title: Luma AI 調査レポート
 tool_name: Luma AI
 tool_reading: ルマエーアイ
-category: 動画/メディア
+category: AI画像/メディア生成
 developer: Luma Labs, Inc.
 official_site: https://lumalabs.ai/
 date: '2026-02-06'
 last_updated: '2026-04-30'
 tags:
-  - 3D
   - AI
-  - API
-  - 動画生成
   - 生成AI
+  - 動画生成
+  - 3D
 description: テキストや画像から高品質な動画や3Dモデルを生成するAIプラットフォーム。動画生成モデル「Dream Machine」が主力。
 quick_summary:
   has_free_plan: true

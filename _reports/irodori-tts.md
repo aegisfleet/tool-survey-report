@@ -2,17 +2,16 @@
 title: Irodori-TTS 調査レポート
 tool_name: Irodori-TTS
 tool_reading: イロドリ ティーティーエス
-category: 動画/メディア
+category: AI音声/音楽生成
 developer: Aratako
 official_site: https://github.com/Aratako/Irodori-TTS
 date: '2026-03-20'
 last_updated: '2026-03-20'
 tags:
   - AI
-  - TTS
-  - Voice Cloning
-  - オープンソース
   - 音声合成
+  - オープンソース
+  - TTS
 description: 絵文字によるスタイル制御が可能な、Flow Matchingベースの日本語テキスト音声合成（TTS）モデル
 quick_summary:
   has_free_plan: true
