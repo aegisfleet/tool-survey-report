@@ -2,7 +2,7 @@
 title: Webcam VTuber 調査レポート
 tool_name: Webcam VTuber
 tool_reading: ウェブカムブイチューバー
-category: VTuber配信ツール
+category: 動画/メディア
 developer: 株式会社ユーザーローカル
 official_site: https://vtuber.userlocal.jp/
 date: '2026-06-13'

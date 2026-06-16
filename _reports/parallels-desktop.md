@@ -2,7 +2,7 @@
 title: Parallels Desktop for Mac 調査レポート
 tool_name: Parallels Desktop for Mac
 tool_reading: パラレルス デスクトップ フォー マック
-category: 仮想化・エミュレーター
+category: OS/プラットフォーム
 developer: Parallels International GmbH
 official_site: https://www.parallels.com/products/desktop/
 date: '2026-06-14'
@@ -41,10 +41,6 @@ evaluation:
   summary: Mac上でWindowsを実行するための最も完成されたソリューションであり、特にApple Silicon環境でのパフォーマンスと使い勝手に優れている
 links:
   documentation: https://kb.parallels.com/
-relationships:
-  related_tools:
-    - VMware Fusion
-    - UTM
 ---
 
 # **Parallels Desktop for Mac 調査レポート**

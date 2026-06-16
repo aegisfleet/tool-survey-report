@@ -2,12 +2,13 @@
 title: Apple Container 調査レポート
 tool_name: Apple Container
 tool_reading: アップルコンテナ / コンテナ
-category: 開発者ツール
+category: 開発ユーティリティ
 developer: Apple
 official_site: https://github.com/apple/container
 date: '2026-06-14'
 last_updated: '2026-06-14'
 tags:
+  - 開発者ツール
   - コンテナ
   - 仮想化
   - macOS
