@@ -47,7 +47,7 @@ relationships:
   parent: Salesforce
   related_tools:
     - Amazon QuickSight
-    - Looker Studio
+    - Data Studio
     - Snowflake
 ---
 
@@ -198,7 +198,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Tableau | Microsoft Power BI | Amazon QuickSight | Looker Studio |
+| 機能カテゴリ | 機能項目 | Tableau | Microsoft Power BI | Amazon QuickSight | Data Studio |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 可視化・表現力 | ◎<br><small>非常に高い</small> | ◎<br><small>高い</small> | ◯<br><small>標準的</small> | △<br><small>簡易的</small> |
 | **コスト** | 開始コスト | △<br><small>高め</small> | ◯<br><small>安価</small> | ◎<br><small>従量制あり</small> | ◎<br><small>無料</small> |
@@ -213,7 +213,7 @@ relationships:
 | **Tableau** | 表現力とコミュニティ | 圧倒的なビジュアル表現力、データ探索の自由度、Salesforce連携 | コストが高い、学習曲線がやや急 | データの深掘り分析を重視し、予算がある場合。Salesforceユーザー。 |
 | **Power BI** | Microsoft統合 | Excelライクな操作感、Office 365との連携、低コスト | 大規模データ時のパフォーマンス調整が複雑 | Microsoft製品を中心に業務を行っている企業。 |
 | **Amazon QuickSight** | AWSサーバーレス | AWS上のデータとの親和性、閲覧コストの安さ、運用レス | 表現力の自由度はTableauに劣る | AWS基盤を利用しており、運用負荷を下げたい場合。 |
-| **Looker Studio** | Google無料ツール | 無料で利用可能、Google系サービス（GA4, Sheets）との連携が容易 | 機能が限定的、複雑な分析には不向き | 予算をかけずにWeb解析レポートなどを手軽に作りたい場合。 |
+| **Data Studio** | Google無料ツール | 無料で利用可能、Google系サービス（GA4, Sheets）との連携が容易 | 機能が限定的、複雑な分析には不向き | 予算をかけずにWeb解析レポートなどを手軽に作りたい場合。 |
 
 ## **17. 総評**
 

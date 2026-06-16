@@ -47,7 +47,7 @@ relationships:
     - Vertex AI
     - Gemini
     - Kubernetes
-    - Looker Studio
+    - Data Studio
     - Spanner Omni
   related_tools:
     - Google Learning

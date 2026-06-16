@@ -46,7 +46,7 @@ links:
 relationships:
   related_tools:
     - Tableau
-    - Looker Studio
+    - Data Studio
     - Amazon Quick
 ---
 
@@ -197,7 +197,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Amazon QuickSight | Tableau | Looker Studio |
+| 機能カテゴリ | 機能項目 | Amazon QuickSight | Tableau | Data Studio |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 視覚化・表現力 | ◯<br><small>標準的</small> | ◎<br><small>業界最高水準</small> | △<br><small>簡易的</small> |
 | **インフラ** | 管理運用 | ◎<br><small>完全サーバーレス</small> | △<br><small>Server管理が必要な場合あり</small> | ◎<br><small>完全SaaS・インフラ不要</small> |
@@ -211,7 +211,7 @@ relationships:
 |---|---|---|---|---|
 | **Amazon QuickSight** | AWSネイティブ・サーバーレス | サーバー管理不要、AWSデータとの親和性、安価な閲覧コスト | 表現力の自由度、非AWS連携の幅 | AWSを中心にデータ基盤を構築しており、運用負荷を下げたい場合。 |
 | **Tableau** | ビジュアル分析のデファクト | 圧倒的な表現力、強力なコミュニティ、直感的な深掘り分析 | ライセンスコストが高い、学習コストが高い | データの探索的分析を重視し、高度なビジュアライゼーションが必要な場合。 |
-| **Looker Studio** | Googleが提供する無料ツール | 完全無料から利用可能、Google広告やGA4等との容易な連携 | 複雑な計算や大規模データの処理性能に限界がある | コストをかけずにマーケティングデータ等を素早く可視化したい場合。 |
+| **Data Studio** | Googleが提供する無料ツール | 完全無料から利用可能、Google広告やGA4等との容易な連携 | 複雑な計算や大規模データの処理性能に限界がある | コストをかけずにマーケティングデータ等を素早く可視化したい場合。 |
 
 ## **17. 総評**
 

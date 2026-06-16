@@ -43,7 +43,7 @@ relationships:
     - Google Cloud
     - Salesforce
     - Zapier
-    - Looker Studio
+    - Data Studio
     - Microsoft 広告
 ---
 
