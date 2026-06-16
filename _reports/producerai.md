@@ -2,7 +2,7 @@
 title: ProducerAI 調査レポート
 tool_name: ProducerAI
 tool_reading: プロデューサーエーアイ
-category: 動画/メディア
+category: AI音声/音楽生成
 developer: Google Labs
 official_site: https://www.producer.ai/
 date: '2026-04-04'

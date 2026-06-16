@@ -2,16 +2,16 @@
 title: Seavid AI 調査レポート
 tool_name: Seavid AI
 tool_reading: シービッド エーアイ
-category: 動画/メディア
+category: AI画像/メディア生成
 developer: Seavid AI
 official_site: https://seavidgen.com/
 date: '2026-02-11'
 last_updated: '2026-05-13'
 tags:
   - AI
-  - 動画生成
   - 生成AI
   - 画像生成
+  - 動画生成
 description: 複数の最新AIモデルを統合し、画像・動画生成ツールを提供するオールインワンプラットフォーム。
 quick_summary:
   has_free_plan: true

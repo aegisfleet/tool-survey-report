@@ -2,16 +2,15 @@
 title: ElevenLabs 調査レポート
 tool_name: ElevenLabs
 tool_reading: イレブンラボ
-category: 動画/メディア
+category: AI音声/音楽生成
 developer: ElevenLabs
 official_site: https://elevenlabs.io/
 date: '2026-01-27'
 last_updated: '2026-03-07'
 tags:
   - AI
-  - 動画生成
   - 生成AI
-  - 音声合成
+  - 音声生成
   - 音楽生成
 description: 最先端のAI技術で、感情豊かな音声合成、音楽制作、動画生成までを可能にする総合メディアプラットフォーム。
 quick_summary:
