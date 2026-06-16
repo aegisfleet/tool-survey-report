@@ -12,5 +12,25 @@
     "check": "biome ci .",
     "check-links": "PYTHONPATH=. uv run scripts/check_links.py",
     "update-wiki": "PYTHONPATH=. uv run scripts/update_wiki_links.py"
-  }
+  },
+  "name": "app",
+  "version": "1.0.0",
+  "description": "![OGP画像](assets/images/default-ogp.png)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aegisfleet/tool-survey-report.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aegisfleet/tool-survey-report/issues"
+  },
+  "homepage": "https://github.com/aegisfleet/tool-survey-report#readme"
 }
