@@ -1,19 +1,19 @@
 ---
-title: Looker Studio 調査レポート
-tool_name: Looker Studio
-tool_reading: ルッカースタジオ
+title: Data Studio 調査レポート
+tool_name: Data Studio
+tool_reading: データスタジオ / ルッカースタジオ
 category: BI/データ可視化
 developer: Google
-official_site: https://cloud.google.com/looker-studio?hl=ja
-date: '2026-03-04'
-last_updated: '2026-03-04'
+official_site: https://cloud.google.com/data-studio?hl=ja
+date: '2026-06-16'
+last_updated: '2026-06-16'
 tags:
   - BI
   - Google Cloud
   - データ分析
   - データ可視化
   - 無料ツール
-description: 様々なデータソースを接続し、直感的な操作でインタラクティブなダッシュボードやレポートを作成できる無料のビジネスインテリジェンスツール
+description: 様々なデータソースを接続し、直感的な操作でインタラクティブなダッシュボードやレポートを作成できる無料のビジネスインテリジェンスツール (Looker Studioから名称変更)
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -22,7 +22,7 @@ quick_summary:
     - マーケター
     - データアナリスト
     - ビジネスリーダー
-  latest_highlight: '2026年1月: 強化されたConversational Analyticsの提供開始'
+  latest_highlight: '2026年6月: Data Studio Pro向けにCMEKなどのセキュリティ強化機能をリリース。また4月に「Data Studio」へ名称変更を実施。'
   update_frequency: 高
 evaluation:
   score: 83
@@ -39,9 +39,9 @@ evaluation:
   minus_points:
     - point: -2
       reason: 大規模データや複雑なクエリ処理時にパフォーマンスが低下する場合がある
-  summary: Googleエコシステムを利用している組織にとって最強の無料BIツールだが、高度なデータ処理にはエンタープライズ向けツールやLooker Studio Proの検討が必要
+  summary: Googleエコシステムを利用している組織にとって最強の無料BIツールだが、高度なデータ処理にはエンタープライズ向けツールやData Studio Proの検討が必要
 links:
-  documentation: https://docs.cloud.google.com/looker/docs/studio
+  documentation: https://docs.cloud.google.com/data-studio
 relationships:
   parent: Google Cloud
   related_tools:
@@ -50,19 +50,19 @@ relationships:
     - Google 広告
 ---
 
-# **Looker Studio 調査レポート**
+# **Data Studio (旧: Looker Studio) 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: Looker Studio (旧: Google Data Studio)
+* **ツール名**: Data Studio (旧: Data Studio / Google Data Studio)
 * **ツールの読み方**: ルッカースタジオ
 * **開発元**: Google
-* **公式サイト**: [https://cloud.google.com/looker-studio?hl=ja](https://cloud.google.com/looker-studio?hl=ja)
+* **公式サイト**: [https://cloud.google.com/data-studio?hl=ja](https://cloud.google.com/data-studio?hl=ja)
 * **関連リンク**:
-  * ドキュメント: [https://docs.cloud.google.com/looker/docs/studio](https://docs.cloud.google.com/looker/docs/studio)
+  * ドキュメント: [https://docs.cloud.google.com/data-studio](https://docs.cloud.google.com/data-studio)
   * レビューサイト: [Capterra](https://www.capterra.com/p/169053/Looker/)
 * **カテゴリ**: データ分析
-* **概要**: Looker Studioは、多様なデータを視覚化し、インタラクティブなダッシュボードやレポートを簡単に作成・共有できるGoogleの無料BI（ビジネスインテリジェンス）ツールである。2022年にGoogle Data Studioから名称変更された。
+* **概要**: Data Studioは、多様なデータを視覚化し、インタラクティブなダッシュボードやレポートを簡単に作成・共有できるGoogleの無料BI（ビジネスインテリジェンス）ツールである。2022年にGoogle Data StudioからLooker Studioに名称変更され、2026年4月に再びData Studioへと名称が戻された。
 
 ## **2. 目的と主な利用シーン**
 
@@ -89,7 +89,7 @@ relationships:
   * Googleアカウント（Workspace または Cloud Identity）が必要。
   * ブラウザ環境のみで動作し、インストールは不要。
 * **インストール/導入**:
-  1. [公式サイト](https://lookerstudio.google.com/)にアクセスし、Googleアカウントでログイン。
+  1. [公式サイト](https://datastudio.google.com/)にアクセスし、Googleアカウントでログイン。
   2. 初回利用時は利用規約に同意し、基本設定を完了する。
 * **初期設定**:
   1. 「作成」ボタンから「データソース」を選択。
@@ -116,8 +116,8 @@ relationships:
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Looker Studio (無料版)** | 無料 | 無制限のレポート作成と共有、800以上のデータソース接続、基本的な機能の利用が可能。個人のクリエイターや小規模チーム向け。 |
-| **Looker Studio Pro** | $9/ユーザー/プロジェクト/月 | 無料版の全機能に加え、エンタープライズレベルの管理機能、チームワークスペース、SLA付きサポート、高度なAI機能（Gemini連携）、専用モバイルアプリが利用可能。 |
+| **Data Studio (無料版)** | 無料 | 無制限のレポート作成と共有、800以上のデータソース接続、基本的な機能の利用が可能。個人のクリエイターや小規模チーム向け。 |
+| **Data Studio Pro** | $9/ユーザー/プロジェクト/月 | 無料版の全機能に加え、エンタープライズレベルの管理機能、チームワークスペース、SLA付きサポート、高度なAI機能（Gemini連携）、専用モバイルアプリが利用可能。 |
 
 * **課金体系**: Pro版はユーザー単位かつプロジェクト単位の月額課金（年間契約ベースの場合あり）。
 * **無料トライアル**: Pro版には30日間の無料トライアルがある。
@@ -126,7 +126,7 @@ relationships:
 
 * **導入企業**: パナソニック、WACUL、その他規模を問わず世界中の数多くの企業で利用されている。
 * **導入事例**:
-  * **パナソニック**: 海外マーケティングにおいて、各国のWebサイトデータをLooker Studioで可視化。紙のレポートからダッシュボードへ移行し、データに基づく議論ができるデジタルマーケティング集団への変革を推進。
+  * **パナソニック**: 海外マーケティングにおいて、各国のWebサイトデータをData Studioで可視化。紙のレポートからダッシュボードへ移行し、データに基づく議論ができるデジタルマーケティング集団への変革を推進。
   * **広告代理店・マーケティング会社**: クライアント向けの広告運用レポートやSEOレポートを自動化し、レポート作成工数を大幅に削減。
 * **対象業界**: 業界を問わず広く利用されているが、特にデジタルマーケティング、Eコマース、メディア、IT企業での採用が多い。
 
@@ -134,13 +134,13 @@ relationships:
 
 * **ドキュメント**: 公式のヘルプセンター、詳細なドキュメント、チュートリアル、Codelabs（開発者向けガイド）が充実している。
 * **コミュニティ**: Google Cloud Community内に活発なLookerフォーラムがあり、ユーザー同士のQ&Aやベストプラクティスの共有が行われている。
-* **公式サポート**: 無料版はコミュニティサポートのみ。Looker Studio Proを契約することで、Google Cloudのエンタープライズ向けカスタマーサポート（チケット制）にアクセス可能となる。
+* **公式サポート**: 無料版はコミュニティサポートのみ。Data Studio Proを契約することで、Google Cloudのエンタープライズ向けカスタマーサポート（チケット制）にアクセス可能となる。
 
 ## **10. エコシステムと連携**
 
 ### **10.1 API・外部サービス連携**
 
-* **API**: Looker Studio APIが提供されており、Google WorkspaceやCloud Identityの組織において、アセットの管理や権限設定を自動化できる。
+* **API**: Data Studio APIが提供されており、Google WorkspaceやCloud Identityの組織において、アセットの管理や権限設定を自動化できる。
 * **外部サービス連携**: Google製ツール（BigQuery、Google Analytics、Googleスプレッドシート等）にネイティブ対応。また、Supermetrics等のパートナー製コネクタを利用することで、Facebook Ads、Salesforce、HubSpot、MySQLなど数百の外部サービスと連携可能。
 
 ### **10.2 技術スタックとの相性**
@@ -154,7 +154,7 @@ relationships:
 ## **11. セキュリティとコンプライアンス**
 
 * **認証**: Googleアカウント連携。Google WorkspaceやCloud Identityを利用したSSO（シングルサインオン）やMFA（多要素認証）に対応。
-* **データ管理**: Looker Studio自体はデータを保存せず、クエリをデータソースにパススルーするアーキテクチャ。データは元のデータベースに留まる。
+* **データ管理**: Data Studio自体はデータを保存せず、クエリをデータソースにパススルーするアーキテクチャ。データは元のデータベースに留まる。Data Studio Proでは、顧客管理の暗号化鍵（CMEK）、顧客管理ストレージ、データレジデンシーなどの機能も提供。
 * **準拠規格**: Google Cloudのセキュリティ基準に準拠。HIPAA、SOC 1/2/3、ISO 27001などのコンプライアンス要件をサポートしている（組織のガバナンス要件に合わせた設定が可能）。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
@@ -165,10 +165,10 @@ relationships:
 ## **13. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * **BigQueryの活用**: 大量のデータを扱う場合、直接スプレッドシートやAPIに接続するのではなく、一度BigQueryにデータを統合・集計（データマート化）してからLooker Studioに接続することで、ダッシュボードのパフォーマンスを劇的に改善できる。
-  * **テンプレートの活用**: ゼロから作成せず、Looker Studioギャラリーやサードパーティが提供するテンプレートを複製してカスタマイズすることで工数を削減する。
+  * **BigQueryの活用**: 大量のデータを扱う場合、直接スプレッドシートやAPIに接続するのではなく、一度BigQueryにデータを統合・集計（データマート化）してからData Studioに接続することで、ダッシュボードのパフォーマンスを劇的に改善できる。
+  * **テンプレートの活用**: ゼロから作成せず、Data Studioギャラリーやサードパーティが提供するテンプレートを複製してカスタマイズすることで工数を削減する。
 * **陥りやすい罠 (Antipatterns)**:
-  * **過度なデータブレンド**: Looker Studio内で複数の重いデータソースを複雑にブレンドすると、著しいパフォーマンス低下を招く。結合処理はデータベース（BigQuery等）側で行うべき。
+  * **過度なデータブレンド**: Data Studio内で複数の重いデータソースを複雑にブレンドすると、著しいパフォーマンス低下を招く。結合処理はデータベース（BigQuery等）側で行うべき。
   * **1つのページにグラフを詰め込みすぎる**: 読み込みに時間がかかる原因となるため、ページを分割するか、重要なKPIに絞る。
 
 ## **14. ユーザーの声（レビュー分析）**
@@ -188,19 +188,20 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02**: Looker Studio Pro向けにConversational Analytics（Gemini連携）が強化され、プロンプトの解釈や計算結果の根拠（Show reasoning）を表示する機能が追加。BigQueryのSQL生成精度も向上。
-* **2026-02**: 特定のグラフやコンポーネントへの直接リンク（Direct link to a specific chart）の生成が可能になり、チーム間でのインサイト共有が容易に。
-* **2026-02**: 個別のグラフをPNG画像としてエクスポートする機能が追加。
-* **2026-02**: Google Workspace AdminコンソールからLooker Studio Proのサブスクリプション管理が直接可能に。
-* **2026-01**: Conversational Analyticsにおけるファジー検索の改善、レイテンシ削減など、AI機能の包括的な強化が実施。
+* **2026-06-11**: Data Studio Pro向けに、顧客管理の暗号化鍵（CMEK）、顧客管理ストレージ、データレジデンシーなどのセキュリティ・コンプライアンス強化機能を提供開始。
+* **2026-06-01**: Conversational AnalyticsがマルチリージョンのBigQueryデータエージェントをサポート。
+* **2026-04-16**: ツール名称を「Looker Studio」から「Data Studio」にリブランド。ホーム画面が刷新され、レポート、データソース、BigQueryの会話型エージェントなどに一元的にアクセス可能に。また、Gemini in Lookerが「Gemini in Data Studio」に名称変更。
+* **2026-02-12**: Data Studio Proサブスクリプションにおいて、アセットへのアクセスを中断することなくGoogle Cloudの請求先アカウントを変更できる機能が追加。
+* **2026-02-05**: Conversational Analyticsにおいて、プロンプトの解釈や計算結果の根拠（Show reasoning）を表示する機能が追加。個別のグラフをPNG画像としてエクスポートする機能が追加。
+* **2026-01-15**: 特定のグラフやコンポーネントをすべての閲覧者、または一部の閲覧者に対して非表示にする機能が追加。
 
-(出典: Google Developerフォーラム, Redditコミュニティのリリースノートサマリー等)
+(出典: [Data Studio release notes](https://docs.cloud.google.com/data-studio/release-notes))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Looker Studio | Power BI | Tableau | Domo |
+| 機能カテゴリ | 機能項目 | Data Studio | Power BI | Tableau | Domo |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | データ可視化・ダッシュボード | ◯<br><small>直感的で使いやすい</small> | ◎<br><small>高度な分析が可能</small> | ◎<br><small>最高峰の表現力</small> | ◎<br><small>ダッシュボード特化</small> |
 | **データ接続** | コネクタの豊富さ | ◯<br><small>Google系に強い。他はサードパーティ依存</small> | ◎<br><small>Microsoft系・その他網羅</small> | ◎<br><small>多様なDBにネイティブ対応</small> | ◎<br><small>1000以上のコネクタ</small> |
@@ -212,7 +213,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Looker Studio** | Googleが提供する無料のクラウドBI | 無料、簡単な操作、Google製品群との強力な連携。 | 大規模データの処理速度、高度なETL・データモデリング機能の欠如。 | コストをかけずに素早くマーケティングやWeb解析のダッシュボードを構築したい場合。 |
+| **Data Studio** | Googleが提供する無料のクラウドBI | 無料、簡単な操作、Google製品群との強力な連携。 | 大規模データの処理速度、高度なETL・データモデリング機能の欠如。 | コストをかけずに素早くマーケティングやWeb解析のダッシュボードを構築したい場合。 |
 | **Microsoft Power BI** | Microsoftの強力なBIプラットフォーム | 高度なデータモデリング、Office 365エコシステムとの統合、コストパフォーマンス（有料版でも安価）。 | 学習曲線が急、Macでのネイティブアプリ非対応（ブラウザ版のみ）。 | 既にMicrosoft環境（Excel, Azure等）を導入しており、全社的なBI基盤を構築したい企業。 |
 | **Tableau** | データ視覚化のゴールドスタンダード | 圧倒的な視覚化表現力、大規模データの高速処理、活発なユーザーコミュニティ。 | ライセンス費用が高額、習得に時間がかかる。 | 複雑なデータ分析や、高度な視覚的探索（ビジュアルアナリティクス）が必要なデータアナリスト向け。 |
 | **Looker (Core)** | GoogleのエンタープライズBIプラットフォーム | LookMLによる強力なデータガバナンスと一元管理、組み込みアナリティクス。 | 導入コストが高い、LookMLの学習が必要。 | 全社で「指標の定義」を統一し、高度なガバナンス下でデータを運用したい大規模組織。 |
@@ -220,11 +221,11 @@ relationships:
 ## **17. 総評**
 
 * **総合的な評価**:
-  Looker Studioは、「手軽さ」「コスト（無料）」「Googleエコシステムとの親和性」において右に出るものがない強力なデータ可視化ツールである。非エンジニアでも直感的にダッシュボードを構築でき、チーム内での共有も容易なため、BIツールの入門として最適な選択肢と言える。一方で、扱うデータ量が膨大になったり、複雑なデータ変換が必要になったりするとパフォーマンスの壁に直面するため、アーキテクチャの工夫（BigQueryでの事前集計など）や、用途に応じた上位ツール（Looker CoreやPower BIなど）への移行検討が必要になる。
+  Data Studioは、「手軽さ」「コスト（無料）」「Googleエコシステムとの親和性」において右に出るものがない強力なデータ可視化ツールである。非エンジニアでも直感的にダッシュボードを構築でき、チーム内での共有も容易なため、BIツールの入門として最適な選択肢と言える。一方で、扱うデータ量が膨大になったり、複雑なデータ変換が必要になったりするとパフォーマンスの壁に直面するため、アーキテクチャの工夫（BigQueryでの事前集計など）や、用途に応じた上位ツール（Looker CoreやPower BIなど）への移行検討が必要になる。
 * **推奨されるチームやプロジェクト**:
   * 予算をかけずにBIツールを導入したいスタートアップや中小企業。
   * Google Analytics、Google広告、Search Consoleのデータを頻繁に確認・報告するマーケティングチーム。
   * BigQueryをデータウェアハウスとして利用しているプロジェクト。
 * **選択時のポイント**:
-  * 高度なデータ変換（ETL）や複雑なデータ結合が必要な場合は、Looker Studio単体ではなくデータウェアハウス側の整備とセットで考えるか、他ツールの導入を検討すべきである。
-  * ガバナンスやサポート、より細かな権限管理が必要な場合は、Looker Studio Proへのアップグレードが有力な選択肢となる。
+  * 高度なデータ変換（ETL）や複雑なデータ結合が必要な場合は、Data Studio単体ではなくデータウェアハウス側の整備とセットで考えるか、他ツールの導入を検討すべきである。
+  * ガバナンスやサポート、より細かな権限管理が必要な場合は、Data Studio Proへのアップグレードが有力な選択肢となる。
