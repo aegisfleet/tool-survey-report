@@ -6,7 +6,7 @@ category: ワークフロー自動化
 developer: Microsoft
 official_site: https://powerautomate.microsoft.com/
 date: '2026-01-26'
-last_updated: '2026-03-04'
+last_updated: '2026-06-17'
 tags:
   - AI
   - RPA
@@ -22,7 +22,7 @@ quick_summary:
     - ビジネスユーザー
     - IT部門
     - 開発者
-  latest_highlight: 2025年12月にデスクトップフローのSAP GUIテーブル操作がGA
+  latest_highlight: 2026年6月に「Invoke LLM」アクション（ローカルLLM連携）や、UIの動的セレクタ機能が追加
   update_frequency: 高
 evaluation:
   score: 81
@@ -86,6 +86,8 @@ relationships:
 * **デスクトップフロー (RPA)**: APIを持たないレガシーシステムやデスクトップアプリの操作を、UI操作の記録・再生によって自動化します。Power Automate for desktopを利用します。
 * **AI Builder**: 専門知識なしでAIモデル（フォーム処理、物体検出、予測、テキスト分類など）を作成・利用し、フローにインテリジェンスを組み込めます。
 * **Copilot in Power Automate**: 自然言語でやりたいことを記述するだけでフローのドラフトを作成したり、既存のフローを修正・解説したりする生成AI機能です。
+* **ローカルLLM連携 (Invoke LLM)**: デスクトップフローからOllama等のローカルホストモデルを含む、OpenAIチャット完了APIと互換性のあるLLMサーバーにプロンプトを直接送信できます。
+* **Self-healing (自己修復機能)**: AIを活用し、実行時にUIやウェブ要素のターゲットが見つからない場合などに自動でフォールバック機構を働かせ、フローを自己修復します。
 * **プロセス/タスクマイニング**: 実際の業務ログやデスクトップ操作を分析し、プロセスのボトルネックや自動化可能な領域を特定・可視化します。
 * **管理センター**: 組織全体のフロー、コネクタ、ゲートウェイ、データ損失防止(DLP)ポリシーを一元管理し、ガバナンスを効かせることができます。
 
@@ -150,8 +152,8 @@ relationships:
 
 * **API**: カスタムコネクタを作成することで、OpenAPI (Swagger) 定義やPostmanコレクションをインポートし、任意のREST APIと連携可能です。
 * **外部サービス連携**: 1,000以上の認定コネクタが提供されています。
-  * **Microsoft製品**: Office 365, SharePoint, Teams, Excel, Azure DevOps, Dynamics 365
-  * **サードパーティ**: Salesforce, Google Workspace, ServiceNow, SAP, Adobe Creative Cloud, Twitter(X), Dropbox, Slack, JIRAなど。
+  * **Microsoft製品**: Office 365, SharePoint, Teams, Excel, Azure DevOps, Dynamics 365, Power Apps
+  * **サードパーティ**: Salesforce, Google Workspace, ServiceNow, SAP, Adobe Creative Cloud, Twitter(X), Dropbox, Slack, JIRAなど。Webhookベースのコネクタイベント待機にも対応。
 
 ### **10.2 技術スタックとの相性**
 
@@ -200,11 +202,13 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-15**: Build 2606リリース。「Invoke LLM」アクションが追加され、Ollama等ローカルホストのLLMに直接プロンプトを送信可能に。また、変数を用いたUI/Web要素の動的セレクタ（Get UI/web control）が導入された。
+* **2026-05-08**: Build 2605リリース。デスクトップフローに「Run Power App」アクション（プレビュー）が追加され、フローと連携するPower Appの直接起動が可能に。さらにバージョン比較機能が導入された。
+* **2026-04-16**: Build 2604リリース。Webhookベースのコネクタ実行がサポートされ、承認応答などのイベントを待機可能になった。Self-healing機能が「ウィンドウが見つからない」エラーにも対応。
+* **2026-03-05**: Build 2603リリース。AIを利用してUI要素が見つからない場合のエラーを自動修復する「Self-healing」機能（プレビュー）や、非アテンド型実行のビデオログ機能が追加。
 * **2025-12-18**: デスクトップフローのアクションとして「SAP GUIのテーブルを操作する」がGA（一般提供開始）。SAPの自動化機能が大幅に強化。
 * **2025-11-06**: クラウドフローデザイナーにブックマーク機能と複数フローの同時編集機能が追加され、大規模なフローの開発効率が向上。
 * **2025-10-21**: プロセスマイニング機能において、プロセスの比較機能と根本原因分析の自動化機能がプレビューとして追加。
-* **2025-09-22**: AI Builderのドキュメント処理モデルが強化され、手書き文字の認識精度が向上。
-* **2025-08-12**: Copilot in Power Automateが、より複雑な複数ステップのフロー生成や、既存フローの修正提案に対応。
 
 (出典: [Power Automate Release Notes](https://learn.microsoft.com/en-us/power-platform/released-versions/power-automate-desktop))
 
@@ -212,21 +216,23 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | UiPath | Zapier | Workato |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 連携アプリ数 | ◎<br><small>1000+</small> | ◯<br><small>数百+</small> | ◎<br><small>6000+</small> | ◎<br><small>1000+</small> |
-| **カテゴリ特定** | RPA機能 | ◎<br><small>標準搭載</small> | ◎<br><small>業界最高峰</small> | ×<br><small>なし</small> | △<br><small>一部自動化可</small> |
-| **エンタープライズ** | ガバナンス | ◎<br><small>M365統合</small> | ◎<br><small>高度な統制</small> | △<br><small>Enterpriseのみ</small> | ◎<br><small>強力</small> |
-| **非機能要件** | 日本語対応 | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> | △<br><small>一部のみ</small> | ◯<br><small>UI対応</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | UiPath | Zapier | Workato | Make |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **基本機能** | 連携アプリ数 | ◎<br><small>1000+</small> | ◯<br><small>数百+</small> | ◎<br><small>8500+</small> | ◎<br><small>1000+</small> | ◎<br><small>1500+</small> |
+| **カテゴリ特定** | RPA機能 | ◎<br><small>標準搭載</small> | ◎<br><small>業界最高峰</small> | ×<br><small>なし</small> | △<br><small>一部自動化可</small> | ×<br><small>なし</small> |
+| **カテゴリ特定** | AIエージェント連携 | ◎<br><small>Copilot・ローカルLLM</small> | ◎<br><small>高度な自律実行</small> | ◎<br><small>Zapier Agents/MCP</small> | ◎<br><small>Agent Studio</small> | ◎<br><small>Make AI Agents</small> |
+| **エンタープライズ** | ガバナンス | ◎<br><small>M365統合</small> | ◎<br><small>高度な統制</small> | △<br><small>Enterpriseのみ</small> | ◎<br><small>強力</small> | △<br><small>Enterpriseのみ</small> |
+| **非機能要件** | 日本語対応 | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> | △<br><small>一部のみ</small> | ◯<br><small>UI対応</small> | △<br><small>一部のみ</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **本ツール** | M365完全統合のiPaaS+RPAハイブリッド。 | Microsoft製品との親和性、コストパフォーマンス、ローコードとAIの融合。 | 複雑なRPA処理や大規模な例外処理はUiPathに劣る場合がある。 | Microsoft 365中心の業務環境で、デスクトップとクラウド両方の自動化を低コストで実現したい場合。 |
-| **UiPath** | RPA市場のリーダー。高度なAI機能と統制。 | 圧倒的なデスクトップ操作の安定性と機能の網羅性、日本語サポート。 | ライセンスが高額。習得難易度がやや高い。 | 大規模で複雑、かつミッションクリティカルな業務プロセスの自動化を全社展開する場合。 |
-| **Zapier** | 手軽なSaaS連携ツールの代表格。 | 圧倒的な連携サービス数、直感的なUI、導入の容易さ。 | RPA機能がない。複雑なエンタープライズ要件には不向き。 | クラウドサービス間のデータ連携を、非エンジニア主導で素早く安価に実現したい場合。 |
-| **Workato** | セキュリティ重視のエンタープライズiPaaS。 | IT部門と業務部門の協業を促す機能、強力なセキュリティとガバナンス。 | 導入コストが高い。学習コストが必要。 | 大企業で、セキュリティを担保しながら全社的なSaaS連携基盤を構築したい場合。 |
+| **UiPath** | RPA市場のリーダー。高度なAIエージェント機能と統制。 | 圧倒的なデスクトップ操作の安定性と機能の網羅性、日本語サポート。 | ライセンスが高額。習得難易度がやや高い。 | 大規模で複雑、かつミッションクリティカルな業務プロセスやエージェント自動化を全社展開する場合。 |
+| **Zapier** | 手軽なSaaS連携ツールの代表格。AIエージェント統合も強力。 | 8,500以上の圧倒的な連携サービス数、直感的なUI、MCP等最新AI連携の速さ。 | RPA機能がない。複雑なエンタープライズ要件や高度な条件分岐には不向き。 | クラウドサービス間のデータ連携やAIエージェント構築を、非エンジニア主導で素早く安価に実現したい場合。 |
+| **Workato** | セキュリティ重視のエンタープライズiPaaS。 | IT部門と業務部門の協業を促す機能、強力なセキュリティとガバナンス機能(SCIM 2.0等)。 | 導入コストが高い。学習コストが必要。 | 大企業で、セキュリティを担保しながら全社的なSaaS連携基盤やAIエージェント(Genies)を構築したい場合。 |
+| **Make** | 視覚的で柔軟なワークフロー自動化ツール。 | 複雑なデータ処理や分岐を直感的に構築可能。ネイティブなAIエージェント機能。 | RPA機能がない。Zapierと比較すると学習コストがやや高い。 | 複雑なAPI連携やAIエージェントを、エンジニアと非エンジニアが協力して柔軟に構築したい場合。 |
 
 ## **17. 総評**
 
