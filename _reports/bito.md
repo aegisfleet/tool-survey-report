@@ -6,7 +6,7 @@ category: AIコードレビュー
 developer: Bito Inc.
 official_site: https://bito.ai/
 date: '2026-03-05'
-last_updated: '2026-03-05'
+last_updated: '2026-06-17'
 tags:
   - AI
   - SaaS
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発チーム
     - ソフトウェアエンジニア
-  latest_highlight: 2026年2月にAI Code ReviewでのConfluence連携を追加
+  latest_highlight: 2026年6月にAzure DevOps対応やSlack連携（直接PR作成など）を追加
   update_frequency: 高
 evaluation:
   score: 83
@@ -54,7 +54,7 @@ relationships:
 * **公式サイト**: [https://bito.ai/](https://bito.ai/)
 * **関連リンク**:
   * ドキュメント: [https://docs.bito.ai/](https://docs.bito.ai/)
-  * レビューサイト: [G2](https://www.g2.com/products/bito/reviews) | [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Bito.Bito)
+  * レビューサイト: [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=Bito.Bito)
 * **カテゴリ**: AIコーディング支援
 * **概要**: Bitoは、コードベース全体を動的なナレッジグラフとしてインデックス化する「AI Architect」を中核とし、IDEやCLI、Gitワークフロー上で深く文脈を理解したAIコードレビューやコーディング支援を提供するプラットフォーム。
 
@@ -74,7 +74,9 @@ relationships:
 * **AI Code Review Agent (IDE連携)**: VS CodeやJetBrainsなどのIDE内で、コードを書きながら行単位のレビューや1クリック修正提案を受けられる機能。
 * **AI Code Review in CLI**: ターミナルから直接AIコードレビューを実行し、CI/CDパイプラインにも組み込める機能。
 * **プロジェクト固有ルール (Guideline) の適用**: `.cursor/rules/*.mdc` や `CLAUDE.md` などのガイドラインファイルを読み込み、プロジェクトのコーディング規約に沿ったレビューを行う機能。
-* **Jira / Confluence連携**: PRの要件がJiraチケットやConfluenceドキュメントと合致しているかをAIがクロスチェックする機能。
+* **Jira / Confluence / Linear連携**: PRの要件がJiraチケットやConfluenceドキュメントと合致しているかをAIがクロスチェックする機能。Linearとも連携し、技術設計やストーリーのブレイクダウンを行う。
+* **Bito AI Assistant for Slack**: Slack上でチームのコードベース、チケット、ドキュメントに基づいた質問応答ができ、直接MR/PRの作成やコードレビューも実行可能な機能。
+* **Agent Skills**: `bito-plan-to-agent-spec` や `bito-commit-review` などのスキルにより、計画から実装、コミット前レビューまでをコーディングエージェントから一貫して実行・検証できる機能。
 
 ## **4. 開始手順・セットアップ**
 
@@ -103,15 +105,21 @@ relationships:
 
 ## **7. 料金プラン**
 
+Bitoの料金プランは、製品ごとに分かれています。AI Architectは従量課金制、AI Code Reviewsはユーザー単位の課金制を採用しています。
+
+**AI Code Reviews の料金プラン (Per-seat)**
+
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Freeプラン** | 無料 | 個人開発者向け。IDEでのAIコーディング支援の基本機能など。 |
-| **Teamプラン** | $15/月 | 最大25名。AI Code Review Agent、行単位のPRフィードバック、コードベースを理解したレビュー（年払い時は$12/月）。 |
-| **Professionalプラン** | $25/月 | ユーザー数無制限。カスタムレビュールール、Jira連携、CI/CD連携など（年払い時は$20/月）。 |
-| **Enterpriseプラン** | カスタム | エンタープライズ向け。オンプレミス展開、専任アカウント管理、SAML SSOなど。 |
+| **Teamプラン** | $15/月 | 最大25名。Git, IDE, CLIでのAI Code Reviews、1クリック修正、コードベースを理解したフィードバック。月5,000行まで無料で、以降は1,000行につき$5の追加料金（年払い時は$12/月）。 |
+| **Professionalプラン** | $25/月 | ユーザー数無制限。カスタムレビューガイドライン、フィードバックからの自動学習、Jira/Confluence連携、CI/CDパイプラインレビューなど（年払い時は$20/月）。 |
+| **Enterpriseプラン** | カスタム | エンタープライズ向け。AI Architectを利用したリポジトリ横断のインパクト分析、オンプレミス展開、SAML SSO、専任サポートなど。 |
 
-* **課金体系**: ユーザー単位（月払い または 年払い）
-* **無料トライアル**: 14日間のフリートライアルあり。
+**AI Architect の料金プラン (Usage-based)**
+AI Architectはインデックス化するコードベースの規模やエージェントの利用量に応じた従量課金制となります。見積もりにはBitoチームへの問い合わせが必要です。
+
+* **課金体系**: AI Code Reviewsはユーザー単位（月払い または 年払い）、AI Architectは利用量ベースの従量課金。
+* **無料トライアル**: Professionalプラン向けに14日間のフリートライアルあり（クレジットカード不要）。
 
 ## **8. 導入実績・事例**
 
@@ -129,10 +137,11 @@ relationships:
 
 ### **10.1 API・外部サービス連携**
 
-* **API**: MCP (Model Context Protocol) サーバーとして動作し、外部のAIエージェントにコンテキストを提供可能。
+* **API**: MCP (Model Context Protocol) サーバーとして動作し、外部のAIエージェントにコンテキストを提供可能。SSO認証にも対応。
 * **外部サービス連携**:
-  * **Git**: GitHub, GitLab, Bitbucket（クラウド版・セルフホスト版）
-  * **プロジェクト管理**: Jira, Confluence
+  * **Git**: GitHub, GitLab, Bitbucket, Azure DevOps（クラウド版・セルフホスト版）
+  * **プロジェクト管理・ドキュメント**: Jira, Confluence, Linear
+  * **コミュニケーション**: Slack
 
 ### **10.2 技術スタックとの相性**
 
@@ -163,8 +172,8 @@ relationships:
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* **調査対象**: VS Code Marketplace, G2
-* **総合評価**: 概ね高評価
+* **調査対象**: VS Code Marketplace, Web上のレビュー（※G2の直接リンクは提供されていません）
+* **総合評価**: 4.0/5.0 前後 (VS Code Marketplace, 81件の評価に基づく)
 * **ポジティブな評価**:
   * 「プロジェクトの全体像を理解した上でコード提案してくれるため、一発で動作するコードが生成されやすい。」
   * 「PRのレビュー時間が大幅に短縮され、軽微なバグやセキュリティリスクを事前に潰せるのが良い。」
@@ -176,6 +185,15 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-11**: AI Architect のセルフホスト環境向けに Azure DevOps のサポートを追加。また、`bitoarch diagnose` コマンドが追加され、サポート時の診断が迅速に。
+* **2026-06-10**: Slack やコーディングエージェントから利用できる統合されたコードレビュースキル (`bito-code-review`) を追加。Slack から直接 MR/PR を作成可能になった。
+* **2026-05-08**: AI Architect が Linear と連携し、Issue に対する実現性評価や技術設計などを自動またはオンデマンドで分析可能になった。
+* **2026-04-24**: Bito AI Assistant と Slack 上の DM で直接対話が可能になった。
+* **2026-04-23**: AI Architect のナレッジグラフに Git のコミット履歴を含めることが可能になり、コードのホットスポットやアーキテクチャの変遷をより深く理解できるようになった。
+* **2026-04-20**: 3つの新しい Agent Skills (`bito-plan-to-agent-spec`, `bito-agent-spec-executor`, `bito-commit-review`) を導入し、計画からコミット前レビューまでを一貫して実行可能になった。
+* **2026-04-15**: Slack 用の Bito AI Assistant がリリース。Slack スレッドの文脈や共有ファイル、Jira/Confluence の詳細を自動で取得して回答する機能を備える。
+* **2026-04-08**: AI Architect MCP 向けに SSO (Single Sign-On) 認証のサポートを開始。
+* **2026-03-23**: Jira 内で動作する AI Architect が追加され、Epic や Story 作成時に技術設計やストーリーの分割プランを自動でコメントに投稿するようになった。
 * **2026-02-11**: Confluence連携をサポートし、PRの妥当性をConfluence上のドキュメント仕様と照らし合わせて検証可能になった。
 * **2026-01-19**: AI Code Reviews in CLI がリリースされ、ターミナルやCI/CD上でコードレビューが可能になった。
 * **2026-01-12**: AI Architect が Kubernetes デプロイメントをサポートし、エンタープライズのオーケストレーション環境に統合しやすくなった。
@@ -191,17 +209,18 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール | CodeRabbit | Cursor | GitHub Copilot |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **コードレビュー** | 自動PRレビュー | ◎<br><small>高度な文脈理解とJira連携等</small> | ◎<br><small>PRレビューに特化</small> | ×<br><small>エディタ機能中心</small> | ◯<br><small>Enterprise機能で一部対応</small> |
+| **コードレビュー** | 自動PRレビュー | ◎<br><small>高度な文脈理解とJira/Linear連携等</small> | ◎<br><small>PRレビューに特化</small> | ×<br><small>エディタ機能中心</small> | ◯<br><small>Enterprise機能で一部対応</small> |
 | **コンテキスト** | リポジトリ全体の理解 | ◎<br><small>ナレッジグラフ(AI Architect)による深い理解</small> | ◯<br><small>関連ファイルの参照</small> | ◯<br><small>ローカルワークスペースの理解</small> | ◯<br><small>ワークスペース検索</small> |
-| **環境** | 対応IDE/エディタ | ◎<br><small>VS Code, JetBrains, MCP経由で他エディタも</small> | ×<br><small>基本はGit上のみ</small> | △<br><small>専用エディタ(VS Codeフォーク)</small> | ◯<br><small>主要IDEに対応</small> |
-| **その他機能** | ドキュメント連携 | ◎<br><small>Jira, Confluence連携あり</small> | ◯<br><small>Jira, Linear連携あり</small> | ◯<br><small>Docs URLのインデックス化</small> | △<br><small>特定機能のみ</small> |
+| **環境** | 対応IDE/エディタ | ◎<br><small>VS Code, JetBrains, MCP経由で他エディタも</small> | ◯<br><small>VS Code, Windsurf, Cursor等に対応</small> | △<br><small>専用エディタ(VS Codeフォーク)</small> | ◎<br><small>主要IDEを幅広く網羅</small> |
+| **外部連携** | コミュニケーションツール | ◎<br><small>Slack上でコードベース理解やPR作成可能</small> | ◎<br><small>SlackエージェントによるリサーチやPR作成機能あり</small> | ×<br><small>未対応</small> | △<br><small>限定的</small> |
+| **その他機能** | ドキュメント連携 | ◎<br><small>Jira, Confluence, Linear連携あり</small> | ◯<br><small>Jira, Linear連携あり</small> | ◯<br><small>Docs URLのインデックス化</small> | △<br><small>特定機能のみ</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール** | ナレッジグラフを用いたシステム全体の理解 | マイクロサービス間の依存関係等、深いシステム理解に基づくレビュー | インデックス化など初期設定が必要 | 複雑なアーキテクチャを持ち、高精度なPRレビューとコーディング支援を両立したい場合 |
-| **CodeRabbit** | PR自動レビューに特化したSaaS | 設定が簡単で、PRへのコメントによるフィードバックが高速・高品質 | エディタ内でのリアルタイムなコーディング支援には非対応 | とにかくコードレビューの負荷を減らしたい、Git上でのレビューを自動化したい場合 |
+| **本ツール** | ナレッジグラフを用いたシステム全体の理解 | マイクロサービス間の依存関係等、深いシステム理解に基づくレビュー。Slack等からの直接アクションも可能 | インデックス化など初期設定が必要 | 複雑なアーキテクチャを持ち、高精度なPRレビューとコーディング支援を両立したい場合 |
+| **CodeRabbit** | レビュー自動化と静的解析連携に特化したSaaS | 40以上の解析ツールとAIを組み合わせた精度の高いノイズフィルタリング。設定の継承が強力 | IDEでのインラインコード補完やテスト生成機能は他ツールほど主軸ではない | とにかくコードレビューの負荷を減らしたい、既存のLint/SASTを活用したい場合 |
 | **Cursor** | AIファーストのコードエディタ | エディタとAIが統合された最高峰のUX | コードレビューの自動化ツールとしては機能しない | 開発者個人のコーディング体験・速度を最大化したい場合 |
 | **GitHub Copilot** | 業界標準のAIコーディングアシスタント | GitHubエコシステムとの強力な統合 | コードベース全体の深い意味的理解では劣る場合がある | すでにGitHubを全面的に導入しており、標準的な支援ツールを導入したい場合 |
 
