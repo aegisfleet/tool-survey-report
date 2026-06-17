@@ -83,6 +83,20 @@ if (document.readyState === 'loading') {
   initAll();
 }
 
+function toggleMenu(show, navToggle, navMenu, body) {
+  navToggle.setAttribute('aria-expanded', show);
+
+  if (show) {
+    navMenu.classList.add('active');
+    body.style.overflow = 'hidden'; // Lock body scroll
+    trapFocus(navMenu);
+  } else {
+    navMenu.classList.remove('active');
+    body.style.overflow = ''; // Unlock body scroll
+    removeFocusTrap();
+  }
+}
+
 // Mobile navigation functionality
 function initMobileNavigation() {
   const navToggle = document.querySelector('.nav-toggle');
@@ -96,43 +110,28 @@ function initMobileNavigation() {
       e.stopPropagation();
 
       const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-      toggleMenu(!isExpanded);
+      toggleMenu(!isExpanded, navToggle, navMenu, body);
     });
-
-    // Function to toggle menu state
-    function toggleMenu(show) {
-      navToggle.setAttribute('aria-expanded', show);
-
-      if (show) {
-        navMenu.classList.add('active');
-        body.style.overflow = 'hidden'; // Lock body scroll
-        trapFocus(navMenu);
-      } else {
-        navMenu.classList.remove('active');
-        body.style.overflow = ''; // Unlock body scroll
-        removeFocusTrap();
-      }
-    }
 
     // Close mobile menu when clicking a link
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach((link) => {
       link.addEventListener('click', () => {
-        toggleMenu(false);
+        toggleMenu(false, navToggle, navMenu, body);
       });
     });
 
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
       if (navMenu.classList.contains('active') && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-        toggleMenu(false);
+        toggleMenu(false, navToggle, navMenu, body);
       }
     });
 
     // Close mobile menu on escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-        toggleMenu(false);
+        toggleMenu(false, navToggle, navMenu, body);
         navToggle.focus();
       }
     });
