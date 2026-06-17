@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - Hugging Face
     - PyTorch
+    - Core AI Models
 ---
 
 # **TensorFlow 調査レポート**

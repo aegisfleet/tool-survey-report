@@ -6,7 +6,7 @@ category: AI開発ライブラリ
 developer: Apple
 official_site: https://github.com/apple/coreai-models
 date: '2026-06-14'
-last_updated: '2026-06-14'
+last_updated: '2026-06-18'
 tags:
   - オープンソース
   - Swift
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 開発者
     - iOS/macOSエンジニア
-  latest_highlight: 'Fix Gemma stop tokens: read additional EOS from tokenizer config'
+  latest_highlight: 'すべてのエンジンにTopPおよびMinPサンプリング機能を追加'
   update_frequency: 高
 evaluation:
   score: 80
@@ -36,7 +36,10 @@ evaluation:
 links:
   github: https://github.com/apple/coreai-models
   deepwiki: https://deepwiki.com/apple/coreai-models
-relationships: null
+relationships:
+  related_tools:
+    - PyTorch
+    - TensorFlow
 ---
 
 # **Core AI Models 調査レポート**
@@ -64,6 +67,7 @@ relationships: null
 ## **3. 主要機能**
 
 * **Model export**: Hugging FaceなどのオープンソースモデルをCore AIフォーマットに変換するレシピの提供。
+* **サンプリング機能**: CPU CompositeSamplerおよびGPU MPSGraphエンジンに対するTopPとMinPサンプリングのサポート。
 * **Reusable primitives**: PyTorchで独自のCore AIモデルを構築するための再利用可能なPythonモジュール。
 * **Runtime utilities**: macOSおよびiOS上でモデルを実行するための、Core AIフレームワーク上に構築されたSwiftパッケージ。
 * **Skills**: コーディングエージェント（Claude Code、Codex CLI、Gemini CLI等）がCore AIを効果的に活用できるようにするためのプラグイン機能。
@@ -152,6 +156,7 @@ relationships: null
 ## **13. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
+  * InferenceEngineプロトコルの `cancel()` メソッドを利用して、推論をキャンセル可能にする。
   * 提供されているコーディングエージェント用Skills（`working-with-coreai`, `model-authoring`, `model-compression-exploration`）を利用して、モデルの圧縮やエクスポートをシステム的に探索・構築する。
 * **陥りやすい罠 (Antipatterns)**:
   * 動作環境（macOS/iOS 27.0+）を満たしていない古いデバイスや環境での開発や実行を試みること。
@@ -169,6 +174,8 @@ relationships: null
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-17**: Add TopP and MinP sampling to all engines
+* **2026-06-15**: Add cancel() and isBusy to InferenceEngine protocol
 * **2026-06-14**: Fix Gemma stop tokens: read additional EOS from tokenizer config
 * **2026-06-13**: Whisper export traced with dynamic shapes
 * **2026-06-13**: rename export backend from MLIR to CoreAI
@@ -179,20 +186,20 @@ relationships: null
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | ツールA | ツールB | ツールC |
+| 機能カテゴリ | 機能項目 | 本ツール | PyTorch | TensorFlow | ツールC |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 機能1 | ◎<br><small>補足説明</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> |
-| **カテゴリ特定** | 機能2 | ◯<br><small>補足説明</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> |
-| **エンタープライズ** | SSO | -<br><small>該当なし</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> |
-| **非機能要件** | 日本語対応 | △<br><small>ドキュメントは英語中心</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> | -<br><small>比較対象なし</small> |
+| **基本機能** | オンデバイスAI実行 | ◎<br><small>Appleデバイスに最適化</small> | ◯<br><small>改善は進んでいる</small> | ◎<br><small>TensorFlow Lite等</small> | -<br><small>比較対象なし</small> |
+| **基本機能** | 動的計算グラフ | △<br><small>実行環境に依存</small> | ◎<br><small>Define-by-Runアーキテクチャによる直感的な構築</small> | ◯<br><small>即座に実行可能</small> | -<br><small>比較対象なし</small> |
+| **カテゴリ特定** | プラットフォーム統合 | ◎<br><small>Swiftパッケージによるシームレスな統合</small> | △<br><small>Apple Silicon (MPS)対応あり</small> | -<br><small>不明</small> | -<br><small>比較対象なし</small> |
+| **非機能要件** | 学習コスト | △<br><small>Core AIやPyTorch等の知識が必要</small> | △<br><small>不明</small> | △<br><small>機能が多岐にわたるため習得が難しい場合あり</small> | -<br><small>比較対象なし</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **本ツール** | Appleデバイス向けのAIモデル統合・変換ツール | オンデバイス実行に最適化 | 対応環境が限定的 | AppleプラットフォームでAIを活用する場合 |
-| **ツールA** | 比較対象なし | - | - | - |
-| **ツールB** | 比較対象なし | - | - | - |
+| **PyTorch** | AI開発ライブラリ | Define-by-Runアーキテクチャによる直感的な構築 | モバイルデバイスや組み込みデバイスでのデプロイメントにおいて改善中だが歴史的にTensorFlow Lite等に遅れをとっていた | 動的計算グラフを利用する場合 |
+| **TensorFlow** | AI開発ライブラリ | TFXやServingなど本番環境への強さ、スケーラビリティ | 初心者にとってはPyTorchなどの競合に比べて習得が難しい場合がある | TFXやServingなど本番環境へのデプロイを行う場合 |
 | **ツールC** | 比較対象なし | - | - | - |
 
 ## **17. 総評**
