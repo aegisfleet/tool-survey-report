@@ -625,11 +625,102 @@ document.addEventListener('DOMContentLoaded', () => {
   const blueskyShuffleBtn = document.getElementById('bluesky-shuffle');
 
   if (blueskyContainer && blueskyAccountBtns.length > 0) {
+    console.log("Bluesky init start");
     // 現在表示中のアカウントハンドル配列
     const activeHandles = [];
 
+    // テーマに応じたウィジェットテーマを返す
+    function getBlueskyTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      return currentTheme === 'light' ? 'light' : 'gray';
+    }
+
+    // 画面幅に応じたスロット数を返す
+    function getSlotCount() {
+      const width = window.innerWidth;
+      if (width >= 992) return 3;
+      if (width >= 768) return 2;
+      return 1;
+    }
+
+    // ウィジェットの高さを返す
+    function getWidgetHeight() {
+      return window.innerWidth < 768 ? '400px' : '500px';
+    }
+
+    // 配列をシャッフルする（Fisher-Yates）
+    function shuffleArray(arr) {
+      console.log("shuffleArray called with", arr);
+      const shuffled = [...arr];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const array = new Uint32Array(1);
+        window.crypto.getRandomValues(array);
+        const j = array[0] % (i + 1);
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    // ランダムにN個のアカウントを選択
+    function pickRandomHandles(accounts, count) {
+      console.log("pickRandomHandles called, count:", count);
+      return shuffleArray(accounts).slice(0, count);
+    }
+
+    // 全ウィジェットを描画
+    function renderBlueskyWidgets(container, buttons, activeList, handles) {
+      console.log("renderBlueskyWidgets called with handles:", handles);
+      activeList.length = 0;
+      activeList.push(...handles);
+      container.innerHTML = '';
+
+      const theme = getBlueskyTheme();
+      const height = getWidgetHeight();
+
+      handles.forEach((handle) => {
+        console.log("Appending widget for handle:", handle);
+        const widget = document.createElement('bst-widget');
+        widget.setAttribute('data-handle', handle);
+        widget.setAttribute('data-theme', theme);
+        widget.setAttribute('data-width', '100%');
+        widget.setAttribute('data-height', height);
+        widget.setAttribute('data-lang', 'ja');
+        widget.setAttribute('data-ui', '1');
+        widget.setAttribute('data-pin', '0');
+        widget.setAttribute('data-rp', '0');
+        widget.setAttribute('data-thread', '0');
+        widget.setAttribute('data-prof', '0');
+        container.appendChild(widget);
+      });
+
+      // スクリプトを再読み込み
+      const existingScripts = document.querySelectorAll('script[data-bluesky-timeline]');
+      existingScripts.forEach((s) => {
+        s.remove();
+      });
+
+      const script = document.createElement('script');
+      script.src = `https://blueskytimeline.com/v2/timeline.js?t=${Date.now()}`;
+      script.type = 'module';
+      script.defer = true;
+      script.setAttribute('data-bluesky-timeline', 'true');
+      document.body.appendChild(script);
+
+      // ボタンのアクティブ状態を更新
+      buttons.forEach((btn) => {
+        const handle = btn.getAttribute('data-handle');
+        if (activeList.includes(handle)) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+      console.log("renderBlueskyWidgets finished");
+    }
+
     // 初期表示：スロット数に応じてランダム選択
     const initialCount = getSlotCount();
+    console.log("Calling initial render, count:", initialCount);
     renderBlueskyWidgets(
       blueskyContainer,
       blueskyAccountBtns,
@@ -664,7 +755,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (blueskyShuffleBtn) {
       blueskyShuffleBtn.addEventListener('click', function () {
         const count = getSlotCount();
-        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, pickRandomHandles(count));
+        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, pickRandomHandles(blueskyAccounts, count));
         // アニメーション
         this.style.transform = 'scale(1.1) rotate(180deg)';
         setTimeout(() => {
