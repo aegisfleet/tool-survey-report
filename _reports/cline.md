@@ -6,13 +6,13 @@ category: AIコーディング支援
 developer: Cline Bot Inc.
 official_site: https://cline.bot/
 date: '2025-10-23'
-last_updated: '2026-03-05'
+last_updated: '2026-06-18'
 tags:
   - AI
-  - IDE
   - エージェント
   - オープンソース
   - コーディング支援
+  - 開発者ツール
 description: VS CodeなどのIDE内で動作する協調型AIコーディングエージェント。ローカルのコードベース全体を直接理解し、人間と協力して計画を立て、変更を実行する。
 quick_summary:
   has_free_plan: true
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - シニアエンジニア
     - セキュリティ意識の高い企業
-  latest_highlight: 2026年3月にユーザーエージェントヘッダーの追加とSDK機能の拡張を実施
+  latest_highlight: 2026年6月にClaude Fable 5やGPT-5.5等の最新モデルに対応し、CLIのskillコマンドを追加
   update_frequency: 高
 evaluation:
   score: 81
@@ -91,10 +91,11 @@ relationships:
 
 * **Plan Mode**: 変更を加える前に、コードベースを調査し、開発者と協力して包括的な実行計画を作成する。
 * **Agent Loop**: 計画に基づき、ファイルの読み取り、コードの編集、コマンドの実行といった一連のタスクを自律的に実行する。
-* **Model Freedom**: Claude (Opus 4.5), GPT (5.1), Gemini (3.0 Pro), Grok (4.1)など、最新の主要な大規模言語モデルを自由に切り替えて利用可能。ユーザー自身のAPIキーを使用する(BYOK)。
+* **Model Freedom**: Claude (Fable 5, Opus 4.8), GPT (5.5, 5.1), Gemini (3.5 Flash, 3.0 Pro), Grok (4.1), DeepSeek V4など、最新の主要な大規模言語モデルを自由に切り替えて利用可能。ユーザー自身のAPIキーを使用する(BYOK)。
 * **Client-side Architecture**: ユーザーのコードは外部サーバーに送信されず、ローカル環境で実行されるため、セキュリティが高い。
 * **.clinerules**: プロジェクト固有のコーディング規約やアーキテクチャパターンを定義し、Clineに遵守させることができる。
 * **Hooks & Workflows**: `TaskStart`, `TaskComplete`などのフックを利用して、外部ツールとの連携やカスタムワークフローの構築が可能。
+* **Skill / MCP Integration**: CLIから`cline skill`コマンドを使用してSkillを管理でき、また、事前入力されたMCPインストールウィザードでMCPサーバーのセットアップを迅速に行える。
 * **AGENTS.md Support**: プロジェクトルートの`AGENTS.md`ファイルに指示を記述することで、エージェントの振る舞いをリポジトリレベルで制御できる。
 * **Terminal Mastery**: ターミナル内で直接コマンドを実行し、その出力を解釈して次のアクションに繋げることができる。
 
@@ -116,7 +117,7 @@ relationships:
 
 * **オープンソース**: エージェントの動作が完全に透明であり、監査やカスタマイズが可能。
 * **高いコンテキスト理解能力**: コードベース全体を把握し、複雑な依存関係を考慮した上で変更を計画・実行できる。
-* **最新モデルへの迅速な対応**: Claude 4.5, GPT-5.1, Gemini 3.0といった最新・高性能モデルへの追随が非常に早い。
+* **最新モデルへの迅速な対応**: Claude Fable 5, GPT-5.5, DeepSeek V4といった最新・高性能モデルへの追随が非常に早い。
 * **Bring Your Own Key (BYOK) モデル**: 推論コストがプロバイダーへの直接支払いとなり、中間マージンが発生しないため、コストを予測・管理しやすい。
 * **セキュリティ**: コードがローカル環境から出ないため、企業の厳しいセキュリティ要件にも対応可能。SOC 2 Type I, GDPRに準拠。
 * **拡張性**: Hooks機能やリモートワークフローにより、CI/CDパイプラインへの統合や、独自の開発プロセスに合わせたカスタマイズが容易。
@@ -157,7 +158,7 @@ relationships:
 * **API**: Cline自体のAPI提供はないが、MCP (Model Context Protocol) を通じて外部APIやデータベースとの連携が可能。
 * **外部サービス連携**:
   * **IDE**: VS Code, JetBrains, Cursor, Windsurfに対応。
-  * **モデルプロバイダー**: Claude, GPT, Gemini, Grok, Perplexity, Bedrock, Vertex AI, Azure OpenAI, SAP AI Coreなど、主要なモデルプロバイダーと幅広く連携可能。
+  * **モデルプロバイダー**: Claude, GPT, Gemini, Grok, Perplexity, Bedrock, Vertex AI, Azure OpenAI, SAP AI Core, DeepSeek, Fireworks AI, Moonshot (Kimi), MiniMaxなど、主要なモデルプロバイダーと幅広く連携可能。
   * **Observability**: OpenTelemetryとの連携により、エージェントの利用状況やパフォーマンスを監視できる。
 
 ### **10.2 技術スタックとの相性**
@@ -210,6 +211,13 @@ relationships:
 
 (出典: [Cline GitHub Releases](https://github.com/cline/cline/releases))
 
+* **2026-06-17**: (CLI v3.0.27) `cline skill` コマンドを追加し、スキルのインストールと管理が可能に。事前入力済みのMCPインストールウィザードを追加。
+* **2026-06-11**: (v3.89.2) Node 24ランタイムで発生していたVS Code 1.123以降でのAnthropicプロバイダーの不具合を修正。
+* **2026-06-09**: (v3.89.0) Claude Fable 5モデルのサポートを追加。
+* **2026-06-05**: (v3.88.0) 最新のFireworks AIサーバーレスモデルを追加し、デフォルトのFireworksモデルをKimi K2.6に更新。
+* **2026-06-03**: (v3.87.0) MiniMax M3モデルのサポートを追加。
+* **2026-05-28**: (v3.86.0) Claude Opus 4.8プロバイダーのサポートと、Moonshot Kimi K2.6モデルのサポートを追加。
+* **2026-05-25**: (v3.85.0) SAP AI CoreでのGPT-5.5サポート、DeepSeek V4 FlashおよびProモデル、Gemini 3.5 Flashを追加。
 * **2026-03-03**: (v3.69.0) Clineバックエンドへのリクエストに `User-Agent` ヘッダーを追加。
 * **2026-02-27**: (v3.68.0) エンドポイントからの動的なClineプロバイダーモデル取得を追加し、CLIでのMarkdownフォーマットを追加。
 * **2026-02-24**: (v3.67.1) Cline SDK APIインターフェースを追加し、カスタムアプリケーションへの統合を可能に。Codex 5.3モデルをサポート。
@@ -249,7 +257,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Cline** | IDE/CLIで動作する協調型AIエージェント。BYOKモデル。 | オープンソース、高いセキュリティ、モデル選択の自由度。 | 学習コストが高く、API料金が変動する。 | セキュリティ要件が厳しい、または特定のLLMに縛られたくない場合。 |
+| **Cline** | IDE/CLIで動作する協調型AIエージェント。BYOKモデル。 | オープンソース、高いセキュリティ、最新モデル(GPT-5.5, Claude Fable 5等)への即時対応。 | 学習コストが高く、API料金が変動する。 | セキュリティ要件が厳しい、または特定のLLMに縛られたくない場合。 |
 | **Cursor** | AI機能を深く統合したフォーク版VS Code。 | コードベース全体を理解し、AIとの対話がスムーズ。 | サブスクリプションモデル。エディタの移行が必要。 | AIとの対話を中心とした開発スタイルを求める場合。 |
 | **GitHub Copilot** | コード補完・生成に特化したAIアシスタント。 | IDEとの統合が強力で手軽に利用開始できる。業界標準。 | BYOKではなくサブスクリプション。透明性はClineに劣る。 | 日常的なコーディングの効率化を求める場合。 |
 
@@ -260,7 +268,7 @@ relationships:
 * **推奨されるチームやプロジェクト**:
   * **セキュリティ要件が厳しいプロジェクト**: コードを外部に送信できず、ローカルで完結させる必要がある場合。
   * **大規模なリファクタリング**: コードベース全体を理解した上での複雑な変更が必要な場合。
-  * **最新モデルを活用したいチーム**: 特定のプロバイダーに依存せず、その時々の最良のモデル（Claude 4.5, GPT-5等）を柔軟に切り替えたい場合。
+  * **最新モデルを活用したいチーム**: 特定のプロバイダーに依存せず、その時々の最良のモデル（Claude Fable 5, GPT-5.5等）を柔軟に切り替えたい場合。
 * **選択時のポイント**:
   * **コントロールと透明性を重視する場合**: オープンソースで動作がすべて可視化されるClineが最適。
   * **コストの予測可能性を重視する場合**: CursorやCopilotのような定額サブスクリプションモデルが適している。
