@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 開発者
     - iOS/macOSエンジニア
-  latest_highlight: 'すべてのエンジンにTopPおよびMinPサンプリング機能を追加'
+  latest_highlight: すべてのエンジンにTopPおよびMinPサンプリング機能を追加
   update_frequency: 高
 evaluation:
   score: 80
