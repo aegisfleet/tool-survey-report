@@ -626,98 +626,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (blueskyContainer && blueskyAccountBtns.length > 0) {
     // 現在表示中のアカウントハンドル配列
-    let activeHandles = [];
-
-    // テーマに応じたウィジェットテーマを返す
-    function getBlueskyTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      return currentTheme === 'light' ? 'light' : 'gray';
-    }
-
-    // 画面幅に応じたスロット数を返す
-    function getSlotCount() {
-      const width = window.innerWidth;
-      if (width >= 992) return 3;
-      if (width >= 768) return 2;
-      return 1;
-    }
-
-    // ウィジェットの高さを返す
-    function getWidgetHeight() {
-      return window.innerWidth < 768 ? '400px' : '500px';
-    }
-
-    // 配列をシャッフルする（Fisher-Yates）
-    function shuffleArray(arr) {
-      const shuffled = [...arr];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const array = new Uint32Array(1);
-        window.crypto.getRandomValues(array);
-        const j = array[0] % (i + 1);
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      return shuffled;
-    }
-
-    // ランダムにN個のアカウントを選択
-    function pickRandomHandles(count) {
-      return shuffleArray(blueskyAccounts).slice(0, count);
-    }
-
-    // ボタンのアクティブ状態を更新
-    function updateButtonStates() {
-      blueskyAccountBtns.forEach((btn) => {
-        const handle = btn.getAttribute('data-handle');
-        if (activeHandles.includes(handle)) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-    }
-
-    // 全ウィジェットを描画
-    function renderBlueskyWidgets(handles) {
-      activeHandles = handles;
-      blueskyContainer.innerHTML = '';
-
-      const theme = getBlueskyTheme();
-      const height = getWidgetHeight();
-
-      handles.forEach((handle) => {
-        const widget = document.createElement('bst-widget');
-        widget.setAttribute('data-handle', handle);
-        widget.setAttribute('data-theme', theme);
-        widget.setAttribute('data-width', '100%');
-        widget.setAttribute('data-height', height);
-        widget.setAttribute('data-lang', 'ja');
-        widget.setAttribute('data-ui', '1');
-        widget.setAttribute('data-pin', '0');
-        widget.setAttribute('data-rp', '0');
-        widget.setAttribute('data-thread', '0');
-        widget.setAttribute('data-prof', '0');
-        blueskyContainer.appendChild(widget);
-      });
-
-      // スクリプトを再読み込み
-      const existingScripts = document.querySelectorAll('script[data-bluesky-timeline]');
-      existingScripts.forEach((s) => {
-        s.remove();
-      });
-
-      const script = document.createElement('script');
-      script.src = `https://blueskytimeline.com/v2/timeline.js?t=${Date.now()}`;
-      script.type = 'module';
-      script.defer = true;
-      script.setAttribute('data-bluesky-timeline', 'true');
-      document.body.appendChild(script);
-
-      updateButtonStates();
-    }
+    const activeHandles = [];
 
     // 初期表示：スロット数に応じてランダム選択
     const initialCount = getSlotCount();
-    renderBlueskyWidgets(pickRandomHandles(initialCount));
+    renderBlueskyWidgets(
+      blueskyContainer,
+      blueskyAccountBtns,
+      activeHandles,
+      pickRandomHandles(blueskyAccounts, initialCount),
+    );
 
     // ボタンクリック：非表示のアカウントをクリックでスワップ
     blueskyAccountBtns.forEach((btn) => {
@@ -738,7 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 最も古い（先頭の）スロットを入れ替え
         newHandles.shift();
         newHandles.push(handle);
-        renderBlueskyWidgets(newHandles);
+        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, newHandles);
       });
     });
 
@@ -746,7 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (blueskyShuffleBtn) {
       blueskyShuffleBtn.addEventListener('click', function () {
         const count = getSlotCount();
-        renderBlueskyWidgets(pickRandomHandles(count));
+        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, pickRandomHandles(count));
         // アニメーション
         this.style.transform = 'scale(1.1) rotate(180deg)';
         setTimeout(() => {
@@ -759,7 +677,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeObserver = new MutationObserver((mutations) => {
       for (const mutation of mutations) {
         if (mutation.attributeName === 'data-theme') {
-          renderBlueskyWidgets(activeHandles);
+          renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, activeHandles);
           break;
         }
       }
@@ -783,9 +701,12 @@ document.addEventListener('DOMContentLoaded', () => {
           if (newCount > activeHandles.length) {
             const inactiveHandles = blueskyAccounts.filter((h) => !activeHandles.includes(h));
             const additional = shuffleArray(inactiveHandles).slice(0, newCount - activeHandles.length);
-            renderBlueskyWidgets([...activeHandles, ...additional]);
+            renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, [
+              ...activeHandles,
+              ...additional,
+            ]);
           } else if (newCount < activeHandles.length) {
-            renderBlueskyWidgets(activeHandles.slice(0, newCount));
+            renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, activeHandles.slice(0, newCount));
           }
         }
       }, 300);
