@@ -48,6 +48,7 @@ links:
 relationships:
   related_tools:
     - TensorFlow
+    - Core AI Models
 ---
 
 # **PyTorch 調査レポート**
