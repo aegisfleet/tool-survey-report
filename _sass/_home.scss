@@ -422,7 +422,7 @@
 
     .hero-search-input {
         width: 100%;
-        padding: 18px 100px 18px 54px;
+        padding: 18px 160px 18px 54px;
         font-size: 1.125rem;
         font-weight: $font-weight-medium;
         border: 2px solid var(--color-border);
@@ -458,7 +458,7 @@
         }
 
         @include media-breakpoint-down(sm) {
-            padding: 14px 80px 14px 46px;
+            padding: 14px 105px 14px 46px;
             font-size: 1rem;
             border-radius: 12px;
         }
@@ -497,7 +497,7 @@
         }
 
         @include media-breakpoint-down(sm) {
-            right: 48px;
+            right: 16px;
         }
     }
 
@@ -526,10 +526,53 @@
         }
 
         @include media-breakpoint-down(sm) {
-            right: 12px;
-            width: 24px;
-            height: 24px;
-            font-size: $font-size-xs;
+            display: none;
+        }
+    }
+
+    .hero-search-count-badge {
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: $font-weight-semibold;
+        background-color: rgba($primary-color, 0.1);
+        color: $primary-color;
+        border: 1px solid rgba($primary-color, 0.15);
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        white-space: nowrap;
+        z-index: 2;
+
+        &:hover {
+            transform: translateY(-50%) scale(1.05);
+            background-color: rgba($primary-color, 0.15);
+            box-shadow: 0 2px 8px rgba($primary-color, 0.15);
+        }
+
+        &:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        &.no-matches {
+            background-color: rgba(#ff5566, 0.1);
+            color: #ff5566;
+            border-color: rgba(#ff5566, 0.15);
+
+            &:hover {
+                background-color: rgba(#ff5566, 0.15);
+                box-shadow: 0 2px 8px rgba(#ff5566, 0.15);
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            right: 52px;
+            padding: 3px 8px;
+            font-size: 0.75rem;
         }
     }
 

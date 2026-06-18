@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hero search elements
   const heroSearchInput = document.getElementById('hero-search-input');
   const heroSearchClear = document.getElementById('hero-search-clear');
+  const heroSearchCountBadge = document.getElementById('hero-search-count-badge');
   const heroSearchChips = Array.from(document.querySelectorAll('.hero-search-chip'));
   const reportsGrid = document.getElementById('reports-grid');
   const reportsCountContainer = document.getElementById('reports-count-container');
@@ -317,6 +318,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
     updateReportsCount(visibleCount, filteredCards.length, isFilterActive);
 
+    // 検索窓の中の件数バッジを更新
+    if (heroSearchCountBadge) {
+      if (searchTerm === '') {
+        heroSearchCountBadge.style.display = 'none';
+      } else {
+        const count = filteredCards.length;
+        heroSearchCountBadge.textContent = count > 0 ? `${count}件` : '0件';
+        heroSearchCountBadge.style.display = 'inline-block';
+        
+        if (count === 0) {
+          heroSearchCountBadge.classList.add('no-matches');
+        } else {
+          heroSearchCountBadge.classList.remove('no-matches');
+        }
+      }
+    }
+
     // Update visual states immediately
     updateTagStates();
     updateCategoryStates();
@@ -412,6 +430,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (heroSearchInput) heroSearchInput.value = '';
       handleSearchChange();
       heroSearchInput?.focus();
+    });
+  }
+
+  // Hero search count badge (click to scroll)
+  if (heroSearchCountBadge) {
+    heroSearchCountBadge.addEventListener('click', () => {
+      if (heroSearchInput) heroSearchInput.blur();
+      
+      const reportsSection = document.querySelector('.reports-section');
+      if (reportsSection) {
+        reportsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }
 
