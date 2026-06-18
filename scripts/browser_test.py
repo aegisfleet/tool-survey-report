@@ -45,6 +45,16 @@ class BrowserTestRunner:
         if self.args.allow_internal_ips:
             return
 
+        # Automatically allow localhost / 127.0.0.1 loopback for convenience
+        from urllib.parse import urlparse
+        try:
+            parsed = urlparse(url)
+            hostname = parsed.hostname
+            if hostname in ('localhost', '127.0.0.1', '0.0.0.0', '[::1]'):
+                return
+        except Exception:
+            pass
+
         try:
             validate_url_ssr_safe(url)
         except SSRFError as e:
@@ -74,6 +84,13 @@ class BrowserTestRunner:
             self.validate_url(self.args.url)
             self.page.goto(self.args.url)
             self.page.wait_for_load_state('networkidle')
+
+            if self.args.wait_for_selector:
+                print(f"Waiting for selector '{self.args.wait_for_selector}' to be visible...")
+                try:
+                    self.page.wait_for_selector(self.args.wait_for_selector, state='visible', timeout=10000)
+                except Exception as e:
+                    print(f"Warning: Timed out waiting for selector '{self.args.wait_for_selector}': {e}")
         except Exception as e:
             raise BrowserTestError(f"Error navigating to URL: {e}")
 
@@ -208,6 +225,7 @@ def main():
     parser.add_argument('--full-page', action='store_true', help='Capture full page screenshot')
     parser.add_argument('--show-browser', action='store_true', help='Show browser GUI (headless=False)')
     parser.add_argument('--allow-internal-ips', action='store_true', help='Allow access to internal/private IP addresses')
+    parser.add_argument('--wait-for-selector', help='Wait for this CSS selector to be visible before performing actions')
 
     args = parser.parse_args()
     run_browser_test(args)
