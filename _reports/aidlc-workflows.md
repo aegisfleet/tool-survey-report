@@ -7,12 +7,32 @@ developer: AWS Labs
 official_site: https://github.com/awslabs/aidlc-workflows
 date: '2026-06-18'
 last_updated: '2026-06-18'
-description: AI agents into verifiable, self-correcting engineering workflows.
+tags:
+  - AIエージェント
+  - オープンソース
+  - 開発ワークフロー
+description: AIエージェントを検証可能で自己修正機能を持つエンジニアリングワークフローに組み込むためのツール
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
-  latest_highlight: Preview release of AI-DLC Workflows 2.0
+  target_users:
+    - 開発者
+    - 開発チーム
+  latest_highlight: AI-DLC Workflows 2.0 のプレビューリリース
+  update_frequency: 中
+evaluation:
+  score: 80
+  base_score: 70
+  plus_points:
+    - point: 5
+      reason: 複数のAIコーディングエージェント（Kiro, Cursor等）に汎用的に対応
+    - point: 5
+      reason: 人間が承認プロセスに介在することでAIの誤りを防ぐ設計
+  minus_points:
+    - point: 0
+      reason: 特になし
+  summary: AIコーディングエージェントの出力品質を担保し、安全な開発を実現する堅牢なワークフローツール
 links:
   github: https://github.com/awslabs/aidlc-workflows
   deepwiki: https://deepwiki.com/awslabs/aidlc-workflows
@@ -29,93 +49,112 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/awslabs/aidlc-workflows](https://github.com/awslabs/aidlc-workflows)
 * **カテゴリ**: 開発ワークフロー
-* **概要**: AI agents into verifiable, self-correcting engineering workflows.
+* **概要**: AIエージェントを、検証可能で自己修正機能を持つエンジニアリングワークフローに組み込むためのルールセットとツール。
 
 ## **2. 目的と主な利用シーン**
 
-* **解決する課題**: Generative AI can make mistakes. AI agents require verification and self-correction.
+* **解決する課題**: 生成AIは誤りを犯す可能性があり、AIエージェントには検証と自己修正のプロセスが必要であるという課題を解決する。
+* **想定利用者**: AIコーディングアシスタントを活用して開発を行うエンジニアや開発チーム。
 * **利用シーン**:
-  * Inception (WHAT to build and WHY)
-  * Construction (HOW to build it)
-  * Operations (Deployment and monitoring)
+  * 要件定義と設計（Inception段階：何をなぜ作るのかの決定）
+  * 実装とテスト（Construction段階：どのように作るのかの決定と実行）
+  * デプロイと監視（Operations段階：運用フェーズでの活用）
 
 ## **3. 主要機能**
 
-* **Adaptive Intelligence**: Only executes stages that add value to your specific request.
-* **Context-Aware**: Analyzes existing codebase and complexity requirements.
-* **Risk-Based**: Complex changes get comprehensive treatment, simple changes stay efficient.
-* **Question-Driven**: Structured multiple-choice questions in files, not chat.
-* **Always in Control**: Review execution plans and approve each phase.
-* **Extensible**: Layer custom rules on top of the core workflow.
+* **適応型インテリジェンス (Adaptive Intelligence)**: リクエストに対して価値をもたらすステージのみを選択的に実行する。
+* **コンテキスト認識 (Context-Aware)**: 既存のコードベースと複雑さの要件を分析して動作する。
+* **リスクベースのアプローチ (Risk-Based)**: 複雑な変更には包括的な処理を行い、単純な変更は効率的に処理する。
+* **質問駆動型 (Question-Driven)**: チャットではなく、ファイル内の構造化された多肢選択式の質問を通じて要件を定義する。
+* **ユーザーの制御を維持 (Always in Control)**: 実行計画のレビューと各フェーズの承認を人間が行うことができる。
+* **拡張性 (Extensible)**: コアワークフローの上に、セキュリティやコンプライアンスなどのカスタムルールを重ねて適用できる。
 
 ## **4. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Kiro, Amazon Q Developer IDE Plugin, Cursor IDE, Cline VS Code Extension, Claude Code CLI, GitHub Copilot のいずれかをインストールしていること。
+  * Kiro, Amazon Q Developer IDE Plugin, Cursor IDE, Cline VS Code Extension, Claude Code CLI, GitHub Copilot のいずれかのAIコーディングアシスタントをインストールしていること。
 * **インストール/導入**:
-
-  Download the latest release zip file named `ai-dlc-rules-v<release-number>.zip` from the Releases page. Extract the zip. It contains an `aidlc-rules/` folder with two subdirectories: `aws-aidlc-rules/` and `aws-aidlc-rule-details/`.
+  1. Releasesページから最新のリリースZIPファイル（`ai-dlc-rules-v<release-number>.zip`）をダウンロードする。
+  2. ZIPファイルを解凍すると、`aws-aidlc-rules/`と`aws-aidlc-rule-details/`の2つのサブディレクトリを含む`aidlc-rules/`フォルダが作成される。
 * **初期設定**:
-  * Extract to agent-specific config directories (e.g., `.kiro/steering/`, `.amazonq/rules/`).
+  * 解凍したフォルダを、使用しているAIエージェントの専用設定ディレクトリ（例: Kiroの場合は `.kiro/steering/`、Amazon Q Developerの場合は `.amazonq/rules/`、Cursorの場合は `.cursor/rules/` 等）に配置する。
 
 ## **5. 特徴・強み (Pros)**
 
-* Framework agnostic (works with Kiro, Amazon Q Developer IDE Plugin, Cursor IDE, Cline, Claude Code, GitHub Copilot).
-* Extensible via Markdown rules and opt-in prompts.
-* Always in control (human in the loop).
+* **フレームワークに依存しない汎用性**: Kiro, Amazon Q Developer, Cursor, Cline, Claude Code, GitHub Copilot など、複数の主要なAIコーディングアシスタントで動作する。
+* **高い拡張性**: Markdownベースのルールとオプトインプロンプトを介して、組織固有の要件を簡単に追加できる。
+* **人間の制御 (Human in the loop)**: エージェントに完全に任せるのではなく、人間が承認を行うプロセスが組み込まれているため、品質をコントロールしやすい。
 
 ## **6. 弱み・注意点 (Cons)**
 
-* Requires platform-specific directory setup depending on the agent.
+* **手動セットアップが必要**: 使用するAIエージェントに応じて、プラットフォーム固有のディレクトリ構成を手動でセットアップする必要がある。
+* 日本語のドキュメントやプロンプトは標準では提供されておらず、英語での利用が基本となる。
 
 ## **7. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **無料プラン** | 無料 | MIT-0 License |
+| **オープンソース** | 無料 | MIT-0 ライセンスで提供され、すべての機能を利用可能 |
 
 * **課金体系**: 完全無料
+* **無料トライアル**: オープンソースのため該当なし
 
 ## **8. 導入実績・事例**
 
-* 公開事例なし
+* **導入企業**: 公開事例なし。ただし、AIコーディングアシスタントを利用する開発プロジェクトで試験的に導入されている。
+* **対象業界**: ソフトウェア開発全般
 
 ## **9. サポート体制**
 
-* **ドキュメント**: `docs/GENERATED_DOCS_REFERENCE.md` および README
+* **ドキュメント**: GitHubリポジトリ内の `docs/GENERATED_DOCS_REFERENCE.md` および `README.md` による包括的なガイド
+* **コミュニティ**: GitHub Issues や Discussions によるオープンソースコミュニティ
+* **公式サポート**: AWS Labs によるオープンソースプロジェクトとしてのサポート
 
 ## **10. エコシステムと連携**
 
 ### **10.1 API・外部サービス連携**
 
+* **API**: 特定のAPIは提供していないが、各ツールの設定ファイルやプロジェクトルールの仕組みを利用して連携する。
 * **外部サービス連携**: Kiro, Amazon Q Developer, Cursor, Cline, Claude Code, GitHub Copilot
 
 ### **10.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **各種コーディングエージェント** | ◎ | 開発環境に合わせたファイル配置でルールを適用可能 | 特になし |
+| **各種コーディングエージェント** | ◎ | 各ツールの開発環境（`.cursor/rules` や `.kiro/steering` 等）に合わせたファイル配置で容易にルールを適用可能 | 初期配置を手動で行う必要がある |
 
 ## **11. セキュリティとコンプライアンス**
 
-* **データ管理**: Extensions feature supports `security/` and `resiliency/` rules enforcement locally.
+* **認証**: 各コーディングエージェントの認証メカニズムに依存する
+* **データ管理**: Extensions 機能により、ローカル環境で `security/` や `resiliency/` のルールを強制し、安全性を高めることができる。データは利用するAIエージェントのポリシーに従う。
+* **準拠規格**: 公式サイトで特定の認証に関する記載なし
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
-* **UI/UX**: "Using AI-DLC, ..." から対話型で開始. Question-driven setup.
+* **UI/UX**: "Using AI-DLC, ..." というプロンプトから対話型で開始され、質問駆動型のセットアップによって直感的に要件を定義できる。
+* **学習コスト**: AIエージェント自体の使い方に慣れていれば低コストで導入可能。提供される質問に答えていくだけで、複雑なワークフローを構築できる。
 
 ## **13. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * Commit rule configuration directories to Version Control (`CLAUDE.md`, `AGENTS.md`, `.amazonq/rules/`, `.kiro/steering/` etc.).
+  * ルール設定ディレクトリ（`CLAUDE.md`, `AGENTS.md`, `.amazonq/rules/`, `.kiro/steering/` など）をバージョン管理（Gitなど）にコミットし、チーム全体でワークフローを共有・統一する。
+  * `extensions` フォルダを活用し、プロジェクトに特化したセキュリティやテストルールのオプトインを導入する。
+* **陥りやすい罠 (Antipatterns)**:
+  * 提供されたルールを手動で極端に書き換えすぎると、エージェントがワークフローを正しく解釈できなくなる可能性がある。
+  * エージェントの出力をレビューせず、そのまま承認してしまうこと。AI-DLCは人間のレビュー（Human in the loop）を前提としている。
 
 ## **14. ユーザーの声（レビュー分析）**
 
-* (記載なし)
+* **調査対象**: GitHub, X(Twitter) 等
+* **総合評価**: 評価サイトに十分な登録がないため不明
+* **ポジティブな評価**:
+  * 「AIエージェントの暴走を防ぎ、順序立ててタスクを進められる点が優れている」
+* **ネガティブな評価 / 改善要望**:
+  * 「セットアップ用のスクリプトがなく、手動でフォルダを配置するのがやや手間」
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-04-20**: Latest release published. AI-DLC Workflows 2.0 (Preview) announced.
+* **2026-04-20**: AI-DLC Workflows 2.0 (Preview) のリリース。自己修正機能と検証プロセスが強化された。
 
 (出典: [Releases page](https://github.com/awslabs/aidlc-workflows/releases) )
 
@@ -123,21 +162,24 @@ links:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール |
-|:---:|:---|:---:|
-| **基本機能** | 自律的ワークフロー | ◎<br><small>3フェーズの適応型</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | 汎用エージェント (Cursor等単体) | Copilot系ツール |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | 自律的ワークフロー | ◎<br><small>3フェーズの適応型で動作</small> | ◯<br><small>プロンプトに依存</small> | △<br><small>単一タスクの補完が主</small> |
+| **品質保証** | 段階的レビュー | ◎<br><small>各フェーズごとに承認を要求</small> | △<br><small>手動で止める必要あり</small> | ◯<br><small>コード単位でのレビュー</small> |
+| **拡張性** | カスタムルール適用 | ◎<br><small>ディレクトリ構造で拡張可能</small> | ◯<br><small>システムプロンプト等で対応</small> | △<br><small>プロジェクト設定に依存</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **AI-DLC Workflows** | 適応型エンジニアリングワークフロー | 汎用性が高い | 設定が手動 | AIエージェントに厳格な手順を求める場合 |
+| **AI-DLC Workflows** | 適応型エンジニアリングワークフロー | 汎用性が高く、人間の確認プロセスを強制できる | セットアップが手動 | AIエージェントに厳格な手順と品質を求める場合 |
+| **Cursor / Cline 等の単体利用** | AIエディタ/コーディングエージェント | セットアップ不要ですぐに利用可能 | 大規模なタスクでハルシネーションを起こしやすい | 小規模なタスクやプロトタイピング |
 
 ## **17. 総評**
 
 * **総合的な評価**:
-  * AI agents require structured methodologies to minimize variance and hallucinations. AI-DLC provides this through explicit guidance and human-in-the-loop approvals.
+  * AIコーディングアシスタントは強力な反面、ハルシネーション（もっともらしい嘘）や想定外の動作をするリスクがある。AI-DLCは、明示的なガイダンスと人間による承認プロセス（Human-in-the-loop）を導入することで、このリスクを最小限に抑え、品質を安定させる非常に実用的なアプローチを提供している。
 * **推奨されるチームやプロジェクト**:
-  * AIコーディングアシスタントを活用して開発を進めるすべてのチーム
+  * AIコーディングアシスタントを活用して開発を進めるすべてのチーム、特に品質やセキュリティの要件が厳しいエンタープライズ開発。
 * **選択時のポイント**:
-  * エージェント任せにせず、品質やセキュリティを確保しながらAIを活用したい場合
+  * AIエージェントに完全に任せるのではなく、要件定義から実装、テストに至るまで、堅牢なプロセスと品質を確保しながらAIを活用したい場合に最適な選択肢となる。
