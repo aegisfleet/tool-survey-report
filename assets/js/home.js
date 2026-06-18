@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const count = filteredCards.length;
         heroSearchCountBadge.textContent = count > 0 ? `${count}件` : '0件';
         heroSearchCountBadge.style.display = 'inline-block';
-        
+
         if (count === 0) {
           heroSearchCountBadge.classList.add('no-matches');
         } else {
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroSearchCountBadge) {
     heroSearchCountBadge.addEventListener('click', () => {
       if (heroSearchInput) heroSearchInput.blur();
-      
+
       const reportsSection = document.querySelector('.reports-section');
       if (reportsSection) {
         reportsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
