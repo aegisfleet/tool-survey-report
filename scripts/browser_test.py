@@ -33,7 +33,10 @@ class BrowserTestRunner:
         if self.args.mobile:
             viewport = self.VIEWPORT_MOBILE
             
-        return browser.new_page(viewport=viewport)
+        page = browser.new_page(viewport=viewport)
+        page.on("console", lambda msg: print(f"BROWSER CONSOLE [{msg.type}]: {msg.text}"))
+        page.on("pageerror", lambda err: print(f"BROWSER PAGE ERROR: {err}"))
+        return page
 
     def validate_url(self, url):
         """

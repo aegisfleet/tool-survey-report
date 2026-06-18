@@ -670,14 +670,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // 全ウィジェットを描画
     function renderBlueskyWidgets(container, buttons, activeList, handles) {
       console.log("renderBlueskyWidgets called with handles:", handles);
+      const safeHandles = [...handles];
       activeList.length = 0;
-      activeList.push(...handles);
+      activeList.push(...safeHandles);
       container.innerHTML = '';
 
       const theme = getBlueskyTheme();
       const height = getWidgetHeight();
 
-      handles.forEach((handle) => {
+      safeHandles.forEach((handle) => {
         console.log("Appending widget for handle:", handle);
         const widget = document.createElement('bst-widget');
         widget.setAttribute('data-handle', handle);
