@@ -6,6 +6,8 @@
     "js-yaml": "^4.2.0"
   },
   "scripts": {
+    "dev": "bundle exec jekyll serve --incremental --port 4000 --host 127.0.0.1",
+    "dev:fast": "bundle exec jekyll serve --config _config.yml,_config.dev.yml --incremental --port 4000 --host 127.0.0.1",
     "lint": "biome lint . && pnpm lint:yaml",
     "lint:yaml": "node scripts/check_frontmatter.js",
     "format:check": "biome format --check .",

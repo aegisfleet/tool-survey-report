@@ -46,6 +46,9 @@
   - コマンド: `pnpm install --frozen-lockfile`
   - これにより、`pnpm-lock.yaml` の意図しない更新を防ぎ、環境の一貫性を保つ。
 - **実行**: スクリプトの実行には `pnpm run <script>` または `pnpm <script>` を使用すること。
+  - **Jekyllサーバーの起動**:
+    - 通常起動: `pnpm run dev` または `pnpm dev`
+    - 高速起動（開発・デバッグ用）: `pnpm run dev:fast` または `pnpm dev:fast` （レポートの大半のビルドをスキップし、1.5秒程度で起動します）
 - **バイナリ実行**: `npx` の代わりに `pnpm dlx` を使用すること。
 - **Python環境の実行**: Pythonスクリプトやツールを実行する際は、一貫した仮想環境を使用するため、`uv run python3` または `.venv/bin/` 以下の実行ファイルを直接使用すること。
 - **堅牢な引数設計（注意点）**: スクリプト内で引数を追加・変更した際、テスト側のモック（`argparse.Namespace`）で属性エラーが発生するのを防ぐため、スクリプト内での引数へのアクセスは `getattr(self.args, 'name', default)` などを用いて安全に行うことを推奨する。

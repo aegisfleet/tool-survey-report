@@ -1,0 +1,22 @@
+# 開発・デバッグ用高速ビルド設定
+#
+# この設定ファイルを _config.yml に重ねて読み込ませることで、
+# 大半のレポート（_reports/）をビルド対象から除外して起動を高速化します。
+#
+# 使い方:
+# bundle exec jekyll serve --config _config.yml,_config.dev.yml
+
+exclude:
+  # _reports 配下の大半のファイルを除外（i で始まる一部のファイルのみビルド）
+  - "_reports/[a-h]*"
+  - "_reports/[j-z]*"
+  - "_reports/0*"
+  - "_reports/1*"
+  - "_reports/2*"
+  - "_reports/3*"
+  - "_reports/4*"
+  - "_reports/5*"
+  - "_reports/6*"
+  - "_reports/7*"
+  - "_reports/8*"
+  - "_reports/9*"

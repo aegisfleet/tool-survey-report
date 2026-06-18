@@ -18,10 +18,19 @@ uv run python3 -m playwright install chromium
 
 ### 2. Jekyllサーバーの起動
 テスト前に、検証用のJekyllサーバーを別ターミナルまたはバックグラウンドで起動します。
+
+**通常起動（全ビルド）:**
 ```bash
-bundle exec jekyll serve --port 4000 --host 127.0.0.1
+pnpm run dev
 ```
-※ポートがすでに使われている場合は `--port 4001` のように別ポートを指定します。
+
+**高速起動（開発・デバッグ用・推奨）:**
+レポート（`_reports/`）の大半をビルドから除外することで、約1.5秒で高速起動します。
+```bash
+pnpm run dev:fast
+```
+
+※ポートがすでに使われている場合は、`package.json` 内のコマンドのポート番号（`--port 4000`）を一時的に変更するなどして対応してください。
 
 ### 3. 重要: URLのベースパスについて
 このプロジェクトではbaseURLに `/tool-survey-report/` が設定されているため、ローカルでのアクセスURLは以下となります。
