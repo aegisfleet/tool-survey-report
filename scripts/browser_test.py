@@ -85,12 +85,13 @@ class BrowserTestRunner:
             self.page.goto(self.args.url)
             self.page.wait_for_load_state('networkidle')
 
-            if self.args.wait_for_selector:
-                print(f"Waiting for selector '{self.args.wait_for_selector}' to be visible...")
+            wait_for_selector = getattr(self.args, 'wait_for_selector', None)
+            if wait_for_selector:
+                print(f"Waiting for selector '{wait_for_selector}' to be visible...")
                 try:
-                    self.page.wait_for_selector(self.args.wait_for_selector, state='visible', timeout=10000)
+                    self.page.wait_for_selector(wait_for_selector, state='visible', timeout=10000)
                 except Exception as e:
-                    print(f"Warning: Timed out waiting for selector '{self.args.wait_for_selector}': {e}")
+                    print(f"Warning: Timed out waiting for selector '{wait_for_selector}': {e}")
         except Exception as e:
             raise BrowserTestError(f"Error navigating to URL: {e}")
 

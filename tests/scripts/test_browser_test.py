@@ -302,7 +302,7 @@ class TestBrowserTest(unittest.TestCase):
         runner = BrowserTestRunner(args)
 
         with self.assertRaises(BrowserTestError) as cm:
-            runner.validate_url('http://localhost')
+            runner.validate_url('http://loopback-domain.local')
         self.assertIn("Access to internal IP address 127.0.0.1 is restricted", str(cm.exception))
 
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
@@ -322,7 +322,7 @@ class TestBrowserTest(unittest.TestCase):
         runner = BrowserTestRunner(args)
 
         with self.assertRaises(BrowserTestError) as cm:
-            runner.validate_url('http://localhost')
+            runner.validate_url('http://loopback-domain.local')
         self.assertIn("Access to internal IP address ::1 is restricted", str(cm.exception))
 
     @patch('scripts.ssrf_utils.socket.getaddrinfo')
