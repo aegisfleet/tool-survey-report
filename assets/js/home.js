@@ -625,7 +625,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const blueskyShuffleBtn = document.getElementById('bluesky-shuffle');
 
   if (blueskyContainer && blueskyAccountBtns.length > 0) {
-    console.log("Bluesky init start");
+    console.log('Bluesky init start');
     // 現在表示中のアカウントハンドル配列
     const activeHandles = [];
 
@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 配列をシャッフルする（Fisher-Yates）
     function shuffleArray(arr) {
-      console.log("shuffleArray called with", arr);
+      console.log('shuffleArray called with', arr);
       const shuffled = [...arr];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const array = new Uint32Array(1);
@@ -663,13 +663,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ランダムにN個のアカウントを選択
     function pickRandomHandles(accounts, count) {
-      console.log("pickRandomHandles called, count:", count);
+      console.log('pickRandomHandles called, count:', count);
       return shuffleArray(accounts).slice(0, count);
     }
 
     // 全ウィジェットを描画
     function renderBlueskyWidgets(container, buttons, activeList, handles) {
-      console.log("renderBlueskyWidgets called with handles:", handles);
+      console.log('renderBlueskyWidgets called with handles:', handles);
       const safeHandles = [...handles];
       activeList.length = 0;
       activeList.push(...safeHandles);
@@ -679,7 +679,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const height = getWidgetHeight();
 
       safeHandles.forEach((handle) => {
-        console.log("Appending widget for handle:", handle);
+        console.log('Appending widget for handle:', handle);
         const widget = document.createElement('bst-widget');
         widget.setAttribute('data-handle', handle);
         widget.setAttribute('data-theme', theme);
@@ -716,12 +716,12 @@ document.addEventListener('DOMContentLoaded', () => {
           btn.classList.remove('active');
         }
       });
-      console.log("renderBlueskyWidgets finished");
+      console.log('renderBlueskyWidgets finished');
     }
 
     // 初期表示：スロット数に応じてランダム選択
     const initialCount = getSlotCount();
-    console.log("Calling initial render, count:", initialCount);
+    console.log('Calling initial render, count:', initialCount);
     renderBlueskyWidgets(
       blueskyContainer,
       blueskyAccountBtns,
@@ -756,7 +756,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (blueskyShuffleBtn) {
       blueskyShuffleBtn.addEventListener('click', function () {
         const count = getSlotCount();
-        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, pickRandomHandles(blueskyAccounts, count));
+        renderBlueskyWidgets(
+          blueskyContainer,
+          blueskyAccountBtns,
+          activeHandles,
+          pickRandomHandles(blueskyAccounts, count),
+        );
         // アニメーション
         this.style.transform = 'scale(1.1) rotate(180deg)';
         setTimeout(() => {
