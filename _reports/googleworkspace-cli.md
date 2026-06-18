@@ -6,7 +6,7 @@ category: 開発ライフサイクル管理
 developer: Google
 official_site: https://developers.google.com/workspace
 date: '2026-03-05'
-last_updated: '2026-03-05'
+last_updated: '2026-06-19'
 tags:
   - API
   - CLI
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - AIエージェント
     - システム管理者
-  latest_highlight: 2026年3月にv0.3.1をリリースし、AIスキル自動生成の更新とセキュリティ強化を実施
+  latest_highlight: 2026年3月にv0.22.5をリリース。AIスキルの最新化に加え、メール関連機能の大幅強化やGoogle Meet連携などを実施
   update_frequency: 高
 evaluation:
   score: 83
@@ -78,6 +78,7 @@ relationships:
 * **MCP (Model Context Protocol) サーバー**: `gws mcp`コマンドでMCPサーバーを起動し、Claude Desktop等のMCPクライアントにツールとして提供。
 * **マルチ認証フロー**: ローカル環境（対話型）、CI（ヘッドレス）、サービスアカウントなど、複数の認証フローに標準対応。
 * **自動ページネーション**: `--page-all`フラグにより、APIのページネーションを自動で処理し、結果をNDJSONとしてストリーム出力する。
+* **高度な連携機能**: Gmailにおける下書き保存や添付ファイルアップロード、カレンダーにおけるGoogle Meetビデオ会議URLの生成など、各Workspaceアプリに特化した便利機能を提供。
 
 ## **4. 開始手順・セットアップ**
 
@@ -189,6 +190,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-03-31**: v0.22.5 リリース。AIエージェント向けスキルの拡充と最新Google Discovery API仕様への同期。
+* **2026-03-24**: v0.22.0 リリース。Gmail関連コマンド（`+send`, `+reply`等）に下書き保存用の`--draft`フラグを追加。
+* **2026-03-18**: v0.20.0 リリース。Gmailでのメール転送時に元添付ファイルをデフォルトで含め、HTMLモードでのインライン画像を維持するよう改善。
+* **2026-03-18**: v0.18.0 リリース。Gmail連携の強化（`mail-builder`への移行、`--attach`による添付ファイルアップロード、`+read`ヘルパー追加など）およびターミナル出力の改善。
+* **2026-03-17**: v0.17.0 リリース。カレンダーの`+insert`コマンドでGoogle Meetのビデオ会議URL生成をサポート。
 * **2026-03-04**: v0.3.1 リリース。自動でGoogle Discovery APIの変更に追従するcronワークフローの追加。
 * **2026-03-04**: v0.2.0 リリース。AIエージェント向けの10のペルソナ（exec-assistant等）や50のマルチステップレシピの追加。および入力検証のセキュリティ強化。
 * **2026-03-03**: v0.1.5 リリース。細かな修正（GitHub APIのリリース情報より）。
@@ -202,7 +208,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | 本ツール (gws) | clasp | gcloud CLI | Terraform |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | Workspace API操作 | ◎<br><small>全APIに動的対応</small> | △<br><small>GAS経由のみ</small> | ×<br><small>GCP向け</small> | △<br><small>Google Workspace Providerで一部対応</small> |
-| **カテゴリ特定** | AI連携(MCP等) | ◎<br><small>標準でプロトコル完備</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
+| **カテゴリ特定** | AI連携(MCP等) | ◎<br><small>標準でプロトコル完備</small> | ◯<br><small>実験的機能として対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
 | **エンタープライズ** | サービスアカウント | ◯<br><small>標準サポート</small> | ×<br><small>非対応</small> | ◯<br><small>標準サポート</small> | ◯<br><small>標準サポート</small> |
 | **非機能要件** | 学習コスト | ◯<br><small>直感的</small> | △<br><small>GASの理解が必要</small> | ◯<br><small>直感的だがコマンド多</small> | △<br><small>HCLやIaCの概念理解が必要</small> |
 
