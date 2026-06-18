@@ -100,6 +100,7 @@ relationships:
   * Docker Engine (または Docker Desktop) がインストールされ、実行されていること。
   * Git がインストールされていること。
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install act
@@ -110,10 +111,12 @@ relationships:
   # Linux (Curl)
   curl -s https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
   ```
+
 * **初期設定**:
   * 初回実行時にデフォルトのDockerイメージサイズ（Large/Medium/Micro）を選択するプロンプトが表示される。
   * `.actrc` ファイルにデフォルトの引数を設定可能。
 * **クイックスタート**:
+
   ```bash
   # リポジトリのルートディレクトリで実行（デフォルトですべてのpushイベントを実行）
   act

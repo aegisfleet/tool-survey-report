@@ -109,13 +109,16 @@ relationships:
 * **前提条件**:
   * Node.js (v18以上推奨)
 * **インストール/導入**:
+
   ```bash
   npm init playwright@latest
   # 質問に答えるだけで設定ファイルやサンプルテストが生成される
   ```
+
 * **初期設定**:
   * `playwright.config.ts` で対象ブラウザやベースURLなどを設定。
 * **クイックスタート**:
+
   ```bash
   # テストの実行
   npx playwright test

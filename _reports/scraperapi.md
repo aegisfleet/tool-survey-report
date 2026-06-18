@@ -90,6 +90,7 @@ relationships:
   * アカウント作成後、ダッシュボードから一意のAPIキーを取得します。
 * **クイックスタート**:
   * APIキーを使用して、取得したいURLをエンドポイントに渡します（cURLの例）：
+
   ```bash
   curl "http://api.scraperapi.com?api_key=YOUR_API_KEY&url=https://httpbin.org/ip"
   ```

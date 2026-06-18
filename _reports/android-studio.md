@@ -94,10 +94,12 @@ relationships:
   * 16GB以上のRAM推奨 (AI機能やエミュレータの快適な動作のため)
 * **インストール/導入**:
   公式サイトからインストーラーをダウンロードして実行。
+
   ```bash
   # macOS (Homebrew)
   brew install --cask android-studio
   ```
+
 * **初期設定**:
   * 初回起動時のウィザードでSDKコンポーネントをダウンロード。
   * Gemini機能を利用するためにGoogleアカウントでログインし、AI機能を有効化。

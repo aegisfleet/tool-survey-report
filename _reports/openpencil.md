@@ -85,6 +85,7 @@ relationships:
   * macOS, Windows, またはLinux等のデスクトップ環境。
   * ローカルでの実行が基本。アカウント登録やサブスクリプションは不要。
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install open-pencil/tap/open-pencil
@@ -92,6 +93,7 @@ relationships:
   # MCPサーバーのインストール
   bun add -g @open-pencil/mcp
   ```
+
 * **初期設定**:
   * AI機能を利用する場合は、自身のOpenRouterなどのAPIキーを設定。
 * **クイックスタート**:

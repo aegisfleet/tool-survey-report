@@ -117,6 +117,7 @@ relationships:
   * Java 8以上（レポート生成ツール実行用）
   * 各テストフレームワークに応じたAllureアダプター
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install allure
@@ -127,14 +128,18 @@ relationships:
   # npm (Node.js)
   npm install -g allure-commandline
   ```
+
 * **初期設定**:
   * テストコード側でAllureのアダプターを設定（例: `pytest`なら `pip install allure-pytest`）。
 * **クイックスタート**:
   1. テストを実行して結果を出力:
+
      ```bash
      pytest --alluredir=allure-results
      ```
+
   2. レポートを生成して表示:
+
      ```bash
      allure serve allure-results
      ```

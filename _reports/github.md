@@ -114,6 +114,7 @@ relationships:
 * **インストール/導入**:
   * GitHub自体はSaaSであり、インストールの必要はない（Enterprise Serverを除く）。
   * ローカル環境にはGitをインストールする:
+
   ```bash
   # macOS (Homebrew)
   brew install git
@@ -121,6 +122,7 @@ relationships:
   # GitHub CLIのインストール
   brew install gh
   ```
+
 * **初期設定**:
   * アカウント作成後、SSHキーの生成と登録を行うことが推奨される。
   * 2段階認証 (2FA) の設定は必須化されつつある。

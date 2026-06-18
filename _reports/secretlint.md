@@ -79,20 +79,27 @@ links:
   * Node.js環境（Node.js 22以上）、またはDocker環境。アカウント登録は不要。
 * **インストール/導入**:
   Node.jsを使用する場合、以下のコマンドでインストールする。
+
   ```bash
   npm install secretlint @secretlint/secretlint-rule-preset-recommend --save-dev
   ```
+
   Dockerを使用する場合は以下のコマンドでスキャン可能（インストール不要）。
+
   ```bash
   docker run -v `pwd`:`pwd` -w `pwd` --rm -it secretlint/secretlint secretlint "**/*"
   ```
+
 * **初期設定**:
   プロジェクトのルートで以下のコマンドを実行し、設定ファイル（`.secretlintrc.json`）を生成する。
+
   ```bash
   npx secretlint --init
   ```
+
 * **クイックスタート**:
   すべてのファイルに対してLintを実行する。
+
   ```bash
   npx secretlint "**/*"
   ```

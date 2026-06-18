@@ -116,6 +116,7 @@ Google Maps Platformの機能は主に以下のカテゴリに分類されます
 * **初期設定**:
   * **APIキーの制限**: 取得したAPIキーに対して、不正利用を防ぐために「アプリケーションの制限」（HTTPリファラー、IPアドレス、Android/iOSアプリ）と「APIの制限」（使用可能なAPIの指定）を必ず設定する。
 * **Hello World (JavaScript API)**:
+
   ```html
   <script>
     function initMap() {
@@ -180,6 +181,7 @@ Google Maps Platformの機能は主に以下のカテゴリに分類されます
 ## **10. エコシステムと連携**
 
 ### **10.1 API・外部サービス連携**
+
 * **Google Cloud**: コンソールが統合されており、BigQueryやCloud Functionsと組み合わせたデータ分析やバックエンド処理が容易。
 * **Firebase**: モバイルアプリ開発において、Firebaseと組み合わせて位置情報機能を実装するケースが多い。
 

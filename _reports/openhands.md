@@ -121,6 +121,7 @@ relationships:
   * Docker（ローカル実行の場合）
   * LLMのAPIキー（OpenAI, Anthropicなど）
 * **インストール/導入**:
+
   ```bash
   # uvツールのインストール（未導入の場合）
   pip install uv
@@ -128,9 +129,11 @@ relationships:
   # OpenHandsのインストール
   uv tool install openhands --python 3.12
   ```
+
 * **初期設定**:
   * 初回起動時にLLMの設定ウィザードが表示されるため、APIキーを入力する。設定は `~/.openhands/settings.json` に保存される。
 * **クイックスタート**:
+
   ```bash
   # CLIモードで起動し、タスクを指示
   openhands -t "Create a simple Python HTTP server script"

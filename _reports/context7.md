@@ -94,6 +94,7 @@ relationships:
   * Context7 APIキー（推奨、無料プランあり）
 * **インストール/導入**:
   Cursorの設定ファイル (`~/.cursor/mcp.json` またはプロジェクトごとの `.cursor/mcp.json`) に以下を追加：
+
   ```json
   {
     "mcpServers": {
@@ -104,6 +105,7 @@ relationships:
     }
   }
   ```
+
 * **初期設定**:
   * [Context7 Dashboard](https://context7.com/dashboard) でAPIキーを取得する。
 * **クイックスタート**:

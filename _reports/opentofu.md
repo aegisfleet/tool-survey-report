@@ -95,6 +95,7 @@ relationships:
   * OS: Linux, macOS, Windows
   * アカウント作成不要
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install opentofu
@@ -103,6 +104,7 @@ relationships:
   # GPGキーとリポジトリ設定後に実行
   sudo apt-get install tofu
   ```
+
 * **初期設定**:
   * 必要に応じてクラウドプロバイダーの認証情報（AWS_ACCESS_KEY_IDなど）を環境変数に設定。
 * **クイックスタート**:

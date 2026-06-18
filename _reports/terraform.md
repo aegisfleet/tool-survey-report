@@ -96,6 +96,7 @@ relationships:
   * OS: macOS, Windows, Linux
   * クラウドプロバイダーのアカウント（AWS, Azure等）
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew tap hashicorp/tap
@@ -104,14 +105,17 @@ relationships:
   # Windows (Chocolatey)
   choco install terraform
   ```
+
 * **初期設定**:
   * クラウドプロバイダーの認証情報を環境変数に設定（例: `AWS_ACCESS_KEY_ID`）。
 * **クイックスタート**:
   1. `main.tf` を作成し、プロバイダーとリソースを記述。
+
      ```hcl
      provider "aws" { region = "us-west-2" }
      resource "aws_instance" "example" { ... }
      ```
+
   2. 初期化: `terraform init`
   3. 計画確認: `terraform plan`
   4. 適用: `terraform apply`

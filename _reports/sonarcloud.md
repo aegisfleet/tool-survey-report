@@ -87,7 +87,7 @@ relationships:
   * GitHub, Bitbucket, Azure DevOps, GitLab のいずれかのアカウント
   * 解析対象のソースコードがクラウド上のリポジトリにあること
 * **導入手順**:
-  1. 公式サイト (https://sonarcloud.io/) にアクセスし、既存のALMアカウント（GitHub等）でログイン。
+  1. 公式サイト (<https://sonarcloud.io/>) にアクセスし、既存のALMアカウント（GitHub等）でログイン。
   2. インポートしたい組織（Organization）を選択し、SonarQube Cloud アプリをインストール。
   3. 解析したいリポジトリを選択してプロジェクトを作成。
   4. Automatic Analysis 対応言語の場合は即座に解析開始。非対応言語（Java, C#など）の場合は、提供されるスニペットをCIパイプライン（GitHub Actions, .gitlab-ci.yml等）に追加。

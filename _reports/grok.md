@@ -96,17 +96,22 @@ relationships:
   * xAIアカウントの作成
   * API利用にはクレジットのチャージが必要
 * **インストール/導入**:
+
   ```bash
   # Python SDKのインストール
   pip install xai-sdk
   ```
+
 * **初期設定**:
   * APIキーを[Console](https://console.x.ai/)で発行し、環境変数に設定。
+
   ```bash
   export XAI_API_KEY="your_api_key"
   ```
+
 * **クイックスタート**:
   * **curlでのリクエスト例**:
+
   ```bash
   curl https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \

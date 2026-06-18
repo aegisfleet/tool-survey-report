@@ -84,6 +84,7 @@ relationships:
   * 任意の環境マネージャー（conda等）
   * 使用するLLMのAPIキー（OpenAI, Google, Anthropic, xAI, Alpha Vantage等）
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/TauricResearch/TradingAgents.git
   cd TradingAgents
@@ -91,16 +92,21 @@ relationships:
   conda activate tradingagents
   pip install .
   ```
+
 * **初期設定**:
   * 環境変数の設定
+
   ```bash
   cp .env.example .env
   # .envファイル内に各APIキーを記述する
   ```
+
 * **クイックスタート**:
+
   ```bash
   tradingagents
   ```
+
   CLIが起動し、ティッカーや日付を入力することで動作確認が可能。
 
 ## **5. 特徴・強み (Pros)**

@@ -93,6 +93,7 @@ relationships:
   * ホストOSがLinuxであり、KVMが有効になっていることが推奨されます（Windows/Macでも動作はしますが低速です）。
 * **インストール/導入**:
   `docker-compose.yml` を作成します。
+
   ```yaml
   services:
     windows:
@@ -110,12 +111,15 @@ relationships:
         - 3389:3389/udp
       stop_grace_period: 2m
   ```
+
 * **初期設定**:
   特に必要ありません。コンテナ起動時に自動的に設定が行われます。
 * **クイックスタート**:
+
   ```bash
   docker compose up -d
   ```
+
   ブラウザで `http://localhost:8006` にアクセスし、インストール状況を確認します。
 
 ## **5. 特徴・強み (Pros)**

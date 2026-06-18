@@ -109,6 +109,7 @@ relationships:
   * 必要に応じて、GitHub リポジトリ設定（Settings > Secrets and variables > Actions）からAPIキーなどのSecretを登録する
 * **クイックスタート**:
   * `.github/workflows/main.yml` に以下のような基本的な設定を記述してコミット＆プッシュする
+
   ```yaml
   name: Hello World
   on: [push]

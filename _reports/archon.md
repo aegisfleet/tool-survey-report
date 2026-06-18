@@ -96,6 +96,7 @@ relationships:
   インストール完了後、対象のプロジェクトディレクトリに移動してClaude Codeを起動し、セットアップコマンドを実行する。
 
 * **クイックスタート**:
+
   ```bash
   cd /path/to/your/project
   claude

@@ -84,11 +84,14 @@ relationships:
 * **インストール/導入**:
   ClawHubの機能はCLIを通じて利用します（通常、OpenClawや関連ツールとともにインストールされます）。
 * **初期設定**:
+
   ```bash
   # アカウント認証
   clawhub login
   ```
+
 * **クイックスタート**:
+
   ```bash
   # スキルの検索
   clawhub search <keyword>

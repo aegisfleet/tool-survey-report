@@ -84,16 +84,21 @@ relationships:
   * Googleアカウント
   * Google Apps Script APIの有効化 ([https://script.google.com/home/usersettings](https://script.google.com/home/usersettings))
 * **インストール/導入**:
+
   ```bash
   # グローバルにインストール
   npm install -g @google/clasp
   ```
+
 * **初期設定**:
+
   ```bash
   # Googleアカウントでログインして認証情報を保存
   clasp login
   ```
+
 * **クイックスタート**:
+
   ```bash
   # 新規プロジェクトの作成 (デフォルトはスタンドアロン)
   clasp create --title "My Script"

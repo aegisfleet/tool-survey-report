@@ -86,11 +86,13 @@ relationships:
   * Hugging Faceからのモデルダウンロード環境
 * **インストール/導入**:
   リポジトリをクローンし、依存関係をインストールする。
+
   ```bash
   git clone https://github.com/microsoft/VibeVoice
   cd VibeVoice
   pip install -e .
   ```
+
 * **初期設定**:
   Transformersライブラリを通じてモデルをロードし、スクリプトを実行する。
 * **クイックスタート**:

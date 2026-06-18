@@ -81,11 +81,14 @@ relationships:
   * Python 3.12以上が必要。
   * Eメールでのアウトリーチ機能を使用する場合は、Go言語環境が必要。
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/FujiwaraChoki/MoneyPrinterV2.git
   cd MoneyPrinterV2
   ```
+
 * **初期設定**:
+
   ```bash
   # サンプル設定ファイルをコピーして必要な値を入力
   cp config.example.json config.json
@@ -97,7 +100,9 @@ relationships:
   # 依存関係のインストール
   pip install -r requirements.txt
   ```
+
 * **クイックスタート**:
+
   ```bash
   # アプリケーションの実行
   python src/main.py

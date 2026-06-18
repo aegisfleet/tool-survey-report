@@ -85,16 +85,21 @@ relationships:
   * Node.js環境（npm）またはRust環境（Cargo）
   * Google Cloudのプロジェクト（自動セットアップも可能）
 * **インストール/導入**:
+
   ```bash
   # npm経由のインストール
   npm install -g @googleworkspace/cli
   ```
+
 * **初期設定**:
+
   ```bash
   # 対話型の認証セットアップ（Google Cloudプロジェクト設定とOAuthログイン）
   gws auth setup
   ```
+
 * **クイックスタート**:
+
   ```bash
   # Driveの直近5件のファイルをリスト表示
   gws drive files list --params '{"pageSize": 5}'

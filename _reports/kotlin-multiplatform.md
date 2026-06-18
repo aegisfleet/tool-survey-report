@@ -104,11 +104,13 @@ relationships:
   * Xcode (iOS開発を行う場合必須)
 * **インストール/導入**:
   KMP自体はKotlinプラグインに含まれているため、Android Studio等をインストールすれば利用可能です。
+
   ```bash
   # KDoctorによる環境チェック (推奨)
   brew install kdoctor
   kdoctor
   ```
+
 * **初期設定**:
   * Android Studioの「New Project」から「Kotlin Multiplatform App」ウィザードを選択。
   * 共有するターゲット（Android, iOS, Desktop等）とUIフレームワーク（Compose or Native）を選択。

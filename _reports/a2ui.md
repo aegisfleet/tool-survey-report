@@ -93,11 +93,14 @@ relationships:
   * APIキーの設定: `export GEMINI_API_KEY="your_gemini_api_key"`
 * **クイックスタート**:
   * エージェント（バックエンド）の実行:
+
     ```bash
     cd samples/agent/adk/restaurant_finder
     uv run .
     ```
+
   * クライアント（フロントエンド）のビルドと実行:
+
     ```bash
     cd renderers/markdown/markdown-it && npm install && npm run build
     cd ../../web_core && npm install && npm run build

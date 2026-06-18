@@ -88,10 +88,12 @@ relationships:
   * Java Runtime Environment (JRE) 8 または 17 (バージョンによる)
   * 十分なメモリ (最小4GB推奨)
 * **インストール/導入**:
+
   ```bash
   # Dockerを使用した起動例
   docker run -d -p 8081:8081 --name nexus sonatype/nexus3
   ```
+
 * **初期設定**:
   * 初回アクセス時にadminパスワード（コンテナ内のファイルに出力される）を入力してログイン。
   * ウィザードに従って匿名アクセスの可否などを設定。

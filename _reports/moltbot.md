@@ -98,10 +98,12 @@ relationships:
   * Node.js (v22以上推奨)
   * Anthropic (Claude) や OpenAI などのAPIキー（またはローカルLLM）
 * **インストール/導入**:
+
   ```bash
   # npm経由でインストールする場合 (リブランディング後はopenclawを利用)
   npm i -g openclaw
   ```
+
 * **初期設定**:
   * `openclaw onboard` コマンドを実行し、ウィザードに従って設定（モデル選択、チャットアプリ連携など）を行います。
 * **クイックスタート**:

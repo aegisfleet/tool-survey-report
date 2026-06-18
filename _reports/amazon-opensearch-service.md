@@ -103,10 +103,12 @@ relationships:
   * AWS CLIまたはAWSマネジメントコンソールへのアクセス権限
 * **インストール/導入**:
   AWSマネジメントコンソールから「ドメインの作成」または「コレクションの作成（サーバーレス）」を選択するだけで開始可能。
+
   ```bash
   # AWS CLIでのドメイン作成例
   aws opensearch create-domain --domain-name my-test-domain --engine-version OpenSearch_2.11 --cluster-config InstanceType=t3.small.search,InstanceCount=1 --ebs-options EBSEnabled=true,VolumeSize=10
   ```
+
 * **初期設定**:
   * アクセスポリシーの設定（IAMベースまたはIPベース）
   * VPC内での起動か、パブリックアクセスかの選択

@@ -95,15 +95,19 @@ relationships:
   * Node.js (v18以上推奨) がインストールされていること
   * npm, yarn, pnpm などのパッケージマネージャ
 * **インストール/導入**:
+
   ```bash
   # プロジェクトへのインストール
   npm install cypress --save-dev
   ```
+
 * **初期設定**:
   * 以下のコマンドを実行してCypressを開き、初期設定ウィザード（E2EまたはComponent Testingの選択）に従う。
+
   ```bash
   npx cypress open
   ```
+
 * **クイックスタート**:
   * `cypress/e2e` フォルダに `spec.cy.js` などのテストファイルを作成し、テストコードを記述する。
   * `npx cypress open` でTest Runnerを起動し、作成したスペックファイルを選択して実行する。

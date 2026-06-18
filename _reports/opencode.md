@@ -131,6 +131,7 @@ relationships:
   * macOS, Linux, または Windows (WSL推奨)
   * Node.js (npmインストールの場合)
 * **インストール/導入**:
+
   ```bash
   # 推奨インストール (macOS/Linux)
   curl -fsSL https://opencode.ai/install | bash
@@ -141,10 +142,12 @@ relationships:
   # Homebrew
   brew install anomalyco/tap/opencode
   ```
+
 * **初期設定**:
   * インストール後、`opencode` コマンドを実行してセットアップウィザードを開始。
   * 使用するLLMプロバイダーのAPIキーを設定、またはOpenCode Zenにログイン。
 * **クイックスタート**:
+
   ```bash
   # 現在のディレクトリでエージェントを起動
   opencode

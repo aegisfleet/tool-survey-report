@@ -95,11 +95,13 @@ relationships:
 * **初期設定**:
   * APIキー等の設定は `~/.takt/config.yaml` または環境変数で行う。
   * 設定例:
+
     ```yaml
     provider: claude
     model: sonnet
     language: ja
     ```
+
 * **クイックスタート**:
   * コマンドラインで `takt` を実行し、ワークフローを選択。
   * 「Add user authentication with JWT」等のタスクを指示し、`Queue as task` を選んでキューに追加。

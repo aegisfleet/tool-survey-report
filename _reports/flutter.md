@@ -134,16 +134,19 @@ relationships:
   * アカウント: Googleアカウント (推奨)
 * **インストール/導入**:
   公式サイトからSDKをダウンロードするか、バージョンマネージャーを使用。
+
   ```bash
   # FVM (Flutter Version Management) を使用する場合
   dart pub global activate fvm
   fvm install stable
   fvm global stable
   ```
+
 * **初期設定**:
   * パスを通し、`flutter doctor` コマンドで環境チェックを行う。
   * 必要な依存ツール（CocoaPodsなど）をインストール。
 * **クイックスタート**:
+
   ```bash
   # 新規プロジェクト作成
   flutter create my_app

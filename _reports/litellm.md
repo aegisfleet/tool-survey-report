@@ -90,17 +90,20 @@ relationships:
 * **インストール/導入**:
 
   Python SDKのインストール:
+
   ```bash
   uv add litellm
   ```
 
   プロキシサーバー（AI Gateway）のインストール:
+
   ```bash
   uv tool install 'litellm[proxy]'
   ```
 
 * **クイックスタート**:
   Python SDKでの実行例:
+
   ```python
   from litellm import completion
   import os
@@ -116,9 +119,11 @@ relationships:
   ```
 
   プロキシサーバーの起動例:
+
   ```bash
   litellm --model gpt-4o
   ```
+
   （起動後、`http://0.0.0.0:4000` をBase URLとして、OpenAIクライアントからアクセス可能になります。）
 
 ## **5. 特徴・強み (Pros)**

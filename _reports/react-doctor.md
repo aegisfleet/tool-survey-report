@@ -180,6 +180,7 @@ relationships:
 ## **15. 直近半年のアップデート情報**
 
 （詳細な更新履歴はGitHubのReleasesを参照）
+
 * 継続的に新しいルールやAIエージェント向けのインテグレーションが追加されている。
 
 (出典: [GitHubリポジトリ](https://github.com/millionco/react-doctor))

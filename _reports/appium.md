@@ -124,6 +124,7 @@ relationships:
   * 対象プラットフォームのSDK（Android SDK, Xcodeなど）のセットアップ
   * Java Development Kit (JDK)
 * **インストール/導入**:
+
   ```bash
   # Appiumサーバーのインストール
   npm install -g appium
@@ -131,13 +132,16 @@ relationships:
   # ドライバのインストール (例: Android UIAutomator2)
   appium driver install uiautomator2
   ```
+
 * **初期設定**:
   * `appium-doctor` を使用して環境変数の設定状況（JAVA_HOME, ANDROID_HOME等）を診断・修正します。
 * **クイックスタート**:
+
   ```bash
   # Appiumサーバーの起動
   appium
   ```
+
   その後、好みの言語のクライアントライブラリでスクリプトを実行します。
 
 ## **5. 特徴・強み (Pros)**

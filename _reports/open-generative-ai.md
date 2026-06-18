@@ -92,7 +92,7 @@ links:
   * デスクトップアプリ初回起動時、または開発サーバー起動時にMuapi.aiのAPIキーを入力（ローカルモデルのみを使用する場合はスキップ可能）。
 * **クイックスタート**:
   * 開発用デスクトップアプリの起動: `npm run electron:dev`
-  * 開発用Web版の起動: `npm run dev` (http://localhost:3000 にアクセス)
+  * 開発用Web版の起動: `npm run dev` (<http://localhost:3000> にアクセス)
 
 ## **5. 特徴・強み (Pros)**
 

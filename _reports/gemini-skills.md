@@ -85,6 +85,7 @@ relationships:
   * AIコーディングエージェント（Cursor, Claude Code等）
 * **インストール/導入**:
   Vercel skills CLI または Context7 skills CLI を使用してインストールする。
+
   ```bash
   # Vercel skills CLIを使用する場合 (特定のスキルをインストール)
   npx skills add google-gemini/gemini-skills --skill gemini-api-dev --global
@@ -92,6 +93,7 @@ relationships:
   # Context7 skills CLIを使用する場合
   npx ctx7 skills install /google-gemini/gemini-skills vertex-ai-api-dev
   ```
+
 * **初期設定**:
   インストール後、AIエージェントのコンテキストにスキルが追加され、関連するコーディングタスクで利用可能になる。
 * **クイックスタート**:

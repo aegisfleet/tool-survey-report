@@ -93,10 +93,12 @@ relationships:
   * GitHub Copilotの有効なサブスクリプション
   * 対応OS (Linux, macOS, Windows WSL/PowerShell)
 * **インストール/導入**:
+
   ```bash
   # GitHub CLIの拡張機能としてインストールする場合の例
   gh extension install github/gh-copilot
   ```
+
   ※ npmパッケージとして提供されるスタンドアロン版もあります。
 * **初期設定**:
   * 初回実行時にGitHubアカウントへの認証が求められます。

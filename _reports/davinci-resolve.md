@@ -287,11 +287,11 @@ relationships:
 * **2026-02-15 (v20.4)**: パフォーマンスの最適化と、不具合の修正、および一部の新しいメディア形式へのサポートを追加。
 * **2025-10-XX (v20.3)**: メディア管理機能の強化と、多数の安定性向上パッチのリリース。
 * **2025-05-28 (v20.0)**: メジャーアップデート。
-    * **AI IntelliScript**: テキストベースの編集を可能にするスクリプト解析機能。
-    * **AI Animated Subtitles**: 音声認識による字幕生成と自動アニメーション。
-    * **AI Multicam SmartSwitch**: 話者検出によるマルチカム編集の自動化。
-    * **Film Look Creator**: Resolve FXに追加された、フィルムルックを簡単に再現するツール。
-    * **AI Audio Assistant**: 音声の分類とミックス調整を自動化。
+  * **AI IntelliScript**: テキストベースの編集を可能にするスクリプト解析機能。
+  * **AI Animated Subtitles**: 音声認識による字幕生成と自動アニメーション。
+  * **AI Multicam SmartSwitch**: 話者検出によるマルチカム編集の自動化。
+  * **Film Look Creator**: Resolve FXに追加された、フィルムルックを簡単に再現するツール。
+  * **AI Audio Assistant**: 音声の分類とミックス調整を自動化。
 
 (出典: [製品アップデート情報](https://www.blackmagicdesign.com/products/davinciresolve/whatsnew))
 

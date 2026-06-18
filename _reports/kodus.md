@@ -87,9 +87,11 @@ relationships:
   * 自身のLLM APIキー（BYOK: Bring Your Own Key）。
 * **インストール/導入**:
   * Gitプラットフォームからアプリをインストールして開始するか、以下のコマンドでCLIをインストール。
+
   ```bash
   curl -fsSL https://review-skill.com/install | bash
   ```
+
 * **初期設定**:
   * 自身のAPIキー（OpenAI、Anthropic、Google等）を設定し、使用するモデルを選択。
 * **クイックスタート**:

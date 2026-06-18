@@ -73,9 +73,11 @@ relationships:
 * **前提条件**:
   * Androidデバイス または iOSデバイス
 * **インストール/導入**:
+
   ```bash
   # Google Playストア、App Store、またはF-Droidからインストール可能
   ```
+
 * **初期設定**:
   * インストール後、文字起こし機能を利用するためのAIモデルのダウンロードが必要
 * **クイックスタート**:
@@ -112,7 +114,7 @@ relationships:
 
 * **ドキュメント**: GitHubリポジトリのREADMEが主要なドキュメント
 * **コミュニティ**: GitHub Issuesでのバグ報告や機能要望の受付
-* **公式サポート**: サポート窓口の種類: メール (support@notelyvoice.ai)
+* **公式サポート**: サポート窓口の種類: メール (<support@notelyvoice.ai>)
 
 ## **10. エコシステムと連携**
 

@@ -116,6 +116,7 @@ relationships:
   * GitHubアカウント（リポジトリのクローン用）
 * **インストール/導入**:
   リリースバイナリがまだ提供されていないため、ソースコードからのビルドが必要です。
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/winfunc/opcode.git
@@ -127,6 +128,7 @@ relationships:
   # アプリケーションのビルドと起動 (開発モード)
   bun run tauri dev
   ```
+
 * **初期設定**:
   * 起動時に `~/.claude` ディレクトリが自動検出されます。
 * **クイックスタート**:

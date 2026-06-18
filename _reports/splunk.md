@@ -128,6 +128,7 @@ relationships:
   * Splunk Cloud Platform (SaaS): Webブラウザのみ
   * アカウント作成（無料トライアル利用時）
 * **インストール/導入**:
+
   ```bash
   # Linux (RPM) のインストール例
   rpm -i splunk-9.x.x-linux-2.6-x86_64.rpm
@@ -135,12 +136,13 @@ relationships:
   # サービスの開始とライセンス同意
   /opt/splunk/bin/splunk start --accept-license
   ```
+
 * **初期設定**:
   * 管理者パスワードの設定
   * Webインターフェースへのアクセス (デフォルトポート: 8000)
   * データの取り込み設定 (「Add Data」ウィザードまたはForwarderの設定)
 * **クイックスタート**:
-  1. Splunk Webにログイン (http://localhost:8000)
+  1. Splunk Webにログイン (<http://localhost:8000>)
   2. [Add Data] をクリックし、ローカルのログファイルをアップロード
   3. [Search & Reporting] アプリを開き、SPLクエリ (`index=main | head 10`) を実行してデータを確認
 

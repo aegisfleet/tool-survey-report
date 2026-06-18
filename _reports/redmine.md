@@ -103,10 +103,12 @@ relationships:
   * または、Docker環境
 * **インストール/導入**:
   公式Dockerイメージを使用する場合のコマンド例:
+
   ```bash
   # 最も簡単な起動方法 (SQLite3使用)
   docker run -d --name my-redmine -p 3000:3000 redmine
   ```
+
 * **初期設定**:
   * 管理者アカウント（admin/admin）でログインし、パスワードを変更。
   * 「管理」メニューからデフォルト設定（言語、認証など）を確認。

@@ -84,16 +84,21 @@ relationships:
   * Python 3.10以上
   * Java 11以上（`java -version` コマンドで確認可能）
 * **インストール/導入**:
+
   ```bash
   pip install -U opendataloader-pdf
   ```
+
   ハイブリッドモードを利用する場合は以下を実行：
+
   ```bash
   pip install -U "opendataloader-pdf[hybrid]"
   ```
+
 * **初期設定**:
   APIキーやクラウドの登録は不要で、ローカル環境ですぐに利用可能です。
 * **クイックスタート**:
+
   ```python
   import opendataloader_pdf
 

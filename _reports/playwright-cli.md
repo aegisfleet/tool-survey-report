@@ -116,15 +116,20 @@ relationships:
   * Node.js 18以上
   * PlaywrightがサポートするOS環境
 * **インストール/導入**:
+
   ```bash
   npm install -g @playwright/cli@latest
   ```
+
 * **初期設定**:
   * スキルとしてエージェントに登録する場合:
+
     ```bash
     playwright-cli install --skills
     ```
+
 * **クイックスタート**:
+
   ```bash
   # URLを開く
   playwright-cli open https://playwright.dev

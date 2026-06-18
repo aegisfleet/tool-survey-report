@@ -150,7 +150,7 @@ links:
 * **外部サービス連携**:
   * PostgreSQL (任意の環境)
   * Tiger Cloud (Timescale)
-  * Ghost (https://ghost.build)
+  * Ghost (<https://ghost.build>)
 
 ### **10.2 技術スタックとの相性**
 

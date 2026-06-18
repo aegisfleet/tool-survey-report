@@ -96,13 +96,16 @@ relationships:
   * アカウント作成は不要
 * **インストール/導入**:
   公式サイトからバイナリ(zipまたはtgz)をダウンロードし、解凍します。またはパッケージマネージャを使用します。
+
   ```bash
   # Homebrew (macOS)
   brew install jmeter
   ```
+
 * **初期設定**:
   * 特に必須の設定はありませんが、大規模テストを行う場合はヒープメモリの設定(`bin/jmeter`または`bin/jmeter.bat`)を調整します。
 * **クイックスタート**:
+
   ```bash
   # GUIモードの起動
   jmeter

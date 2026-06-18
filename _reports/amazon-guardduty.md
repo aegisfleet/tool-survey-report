@@ -115,10 +115,12 @@ relationships:
   2. 「今すぐ始める (Get Started)」をクリック。
   3. 「GuardDutyの有効化 (Enable GuardDuty)」ボタンをクリックするだけで、分析が開始される。
 * **CLIでの有効化**:
+
   ```bash
   # Detectorを作成して有効化
   aws guardduty create-detector --enable
   ```
+
 * **初期設定（推奨）**:
   * **S3 Protection / Kubernetes Protection 等の追加機能**: 必要に応じて設定画面から有効化（多くはデフォルトでONまたは推奨設定）。
   * **通知設定**: Amazon EventBridgeとSNSを組み合わせ、検出結果（Findings）をメールやSlackに通知する設定を行う。

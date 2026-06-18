@@ -85,17 +85,22 @@ relationships:
 * **前提条件**:
   * Node.js 20.19.0以上が必要。
 * **インストール/導入**:
+
   ```bash
   npm install -g @fission-ai/openspec@latest
   ```
+
 * **初期設定**:
   プロジェクトディレクトリに移動して初期化コマンドを実行します。
+
   ```bash
   cd your-project
   openspec init
   ```
+
 * **クイックスタート**:
   対応するAIアシスタントのチャットで以下のコマンドを入力し、機能提案を開始します。
+
   ```text
   /opsx:propose <what-you-want-to-build>
   ```

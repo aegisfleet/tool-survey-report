@@ -100,6 +100,7 @@ relationships:
 * **クイックスタート**:
   1. エディタ (`hsed3.exe`) を起動。
   2. 以下のコードを入力。
+
      ```hsp
      mes "Hello World!"
      button "OK", *exit
@@ -107,6 +108,7 @@ relationships:
      *exit
      end
      ```
+
   3. `F5` キーを押して実行。ウィンドウが表示される。
 
 ## **5. 特徴・強み (Pros)**

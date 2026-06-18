@@ -88,16 +88,19 @@ relationships:
   # グローバルインストール
   npm install -g @alibaba-group/open-code-review
   ```
+
   ※ GitHub Releasesからのバイナリ直接ダウンロードや、ソースからのビルドも可能。
 
 * **初期設定**:
   * 以下のコマンド、または環境変数でLLMのエンドポイントやAPIキーを設定する。
+
   ```bash
   ocr config set llm.url https://api.anthropic.com/v1/messages
   ocr config set llm.auth_token your-api-key-here
   ocr config set llm.model claude-opus-4-6
   ocr config set llm.use_anthropic true
   ```
+
 * **クイックスタート**:
   * ワークスペースの変更をレビュー: `ocr review`
   * ブランチ間の差分をレビュー: `ocr review --from main --to feature-branch`

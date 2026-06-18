@@ -100,17 +100,22 @@ relationships:
   * macOS, Linux, または Windows (WSL2推奨)
   * Anthropic (Claude) または OpenAI のAPIキー/サブスクリプション
 * **インストール/導入**:
+
   ```bash
   # インストール
   npm install -g openclaw@latest
   ```
+
 * **初期設定**:
+
   ```bash
   # セットアップウィザードの起動
   openclaw onboard
   ```
+
   ウィザードに従って、ゲートウェイの設定、ワークスペースの作成、チャネル（WhatsApp等）の連携、スキルのインストールを行う。
 * **クイックスタート**:
+
   ```bash
   # ゲートウェイの起動
   openclaw gateway --port 18789 --verbose

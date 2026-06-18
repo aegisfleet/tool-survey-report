@@ -97,6 +97,7 @@ relationships:
   * Python環境（推奨）
   * Hugging Faceアカウント（APIトークンの取得に必要）
 * **インストール/導入**:
+
   ```bash
   # TransformersとPyTorchのインストール例
   pip install transformers torch
@@ -104,12 +105,16 @@ relationships:
   # Hugging Face Hub CLIのインストール（ログイン用）
   pip install huggingface_hub
   ```
+
 * **初期設定**:
+
   ```bash
   # ターミナルでのログイン（アクセストークンが必要）
   huggingface-cli login
   ```
+
 * **クイックスタート**:
+
   ```python
   # パイプラインを使った感情分析の例
   from transformers import pipeline

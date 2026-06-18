@@ -114,10 +114,12 @@ relationships:
   * Android開発の場合: Android Studio (SDK)
   * Node.js環境
 * **インストール/導入**:
+
   ```bash
   # CLIツールのインストール
   npm install -g mobilecli
   ```
+
 * **初期設定**:
   * MCPサーバーの設定（Claude DesktopやCursorの設定ファイルに記述）
   * 必要に応じて `mobile-mcp` サーバーを起動

@@ -85,10 +85,13 @@ relationships:
   * 「Vertex AI API」の有効化。
   * 適切なIAM（Identity and Access Management）権限の設定。
 * **インストール/導入**:
+
   ```bash
   pip install google-genai
   ```
+
 * **クイックスタート**:
+
   ```python
   from google import genai
 

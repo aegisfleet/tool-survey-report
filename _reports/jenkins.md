@@ -96,10 +96,12 @@ relationships:
   * **Java 21以上**（バージョン2.545以降で必須）
   * Linux, Windows, macOSなどのOS環境、またはDocker環境
 * **インストール/導入**:
+
   ```bash
   # Dockerを使用したインストール例
   docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
   ```
+
 * **初期設定**:
   * ブラウザでアクセスし、初期管理者パスワードを入力してアンロック。
   * "Install suggested plugins" を選択して基本プラグインを導入。

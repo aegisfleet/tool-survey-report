@@ -84,12 +84,14 @@ relationships:
   * Node.jsおよびnpm/npx環境
   * 対応するAIエージェント（Claude Code, Cursor, Clineなど）
 * **インストール/導入**:
+
   ```bash
   # skills CLIを使用してスキルをインストール
   npx skills add <owner/repo>
   # 例：Vercel Agent Skillsをインストール
   npx skills add vercel-labs/agent-skills
   ```
+
 * **初期設定**:
   * インストールすると、エージェントがタスクを検出した際に関連するスキルが自動的に利用可能になります。
 * **クイックスタート**:

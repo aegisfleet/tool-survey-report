@@ -89,18 +89,23 @@ relationships:
   * Linuxディストリビューション（Ubuntu, Fedora, Arch Linuxなど）またはmacOS。
   * 管理者権限（sudo）。
 * **インストール/導入**:
+
   ```bash
   # Ubuntu/Debianの場合（公式リポジトリを追加後の例）
   sudo apt install --install-recommends winehq-stable
   ```
+
 * **初期設定**:
   * 初回起動時に自動的に設定ディレクトリ（`~/.wine`）が作成されます。
   * 必要に応じて設定ツールを起動：
+
     ```bash
     winecfg
     ```
+
 * **クイックスタート**:
   * Windowsアプリケーションのインストーラーを実行：
+
     ```bash
     wine setup.exe
     ```

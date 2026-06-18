@@ -85,6 +85,7 @@ relationships:
   2. 拡張機能のアイコンをクリックしてサイドパネルを開く。
   3. 初回使用時はモデルのダウンロードが自動的に行われます（1回のみ）。
 * **ソースからのビルド**:
+
   ```bash
   # リポジトリのクローンとインストール
   git clone https://github.com/nico-martin/gemma4-browser-extension.git
@@ -94,6 +95,7 @@ relationships:
   # ビルド
   pnpm run build
   ```
+
   その後、Chromeの拡張機能ページ（chrome://extensions/）でデベロッパーモードを有効にし、`dist`フォルダを「パッケージ化されていない拡張機能を読み込む」で読み込みます。
 
 ## **5. 特徴・強み (Pros)**

@@ -127,10 +127,12 @@ relationships:
   * Node.js (v18以降)
   * Anthropic API Key (またはClaude Proアカウント)
 * **インストール/導入**:
+
   ```bash
   # npm経由でインストール (コマンド例)
   npm install -g @anthropic-ai/claude-code
   ```
+
 * **初期設定**:
   * `claude login` コマンドで認証を行う。
   * 必要に応じて `CLAUDE_API_KEY` 環境変数を設定。

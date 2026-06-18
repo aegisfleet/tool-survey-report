@@ -120,13 +120,16 @@ relationships:
   * Python 3.8以上
   * ElevenLabsアカウント作成とAPIキーの取得
 * **インストール/導入**:
+
   ```bash
   # Python SDKのインストール
   pip install elevenlabs
   ```
+
 * **初期設定**:
   * 環境変数 `ELEVEN_API_KEY` にAPIキーを設定するか、コード内で指定する。
 * **クイックスタート**:
+
   ```python
   from elevenlabs.client import ElevenLabs
   from elevenlabs import play

@@ -90,15 +90,20 @@ links:
 
 * **初期設定**:
   * アプリの認証情報を追加:
+
     ```bash
     xurl auth apps add my-app --client-id YOUR_CLIENT_ID --client-secret YOUR_CLIENT_SECRET
     ```
+
   * OAuth 2.0でログイン（ユーザー認証）:
+
     ```bash
     xurl auth oauth2 --app my-app
     ```
+
 * **クイックスタート**:
   * 自身のユーザー情報を取得する:
+
     ```bash
     xurl /2/users/me
     ```

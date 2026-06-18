@@ -91,11 +91,13 @@ relationships:
   * Claude CodeやCodexなどのLLMエージェント
 * **インストール/導入**:
   Claude Code等に以下のプロンプトを直接渡すだけでエージェント自身がセットアップを行う：
+
   ```text
   Set up https://github.com/browser-use/browser-harness for me.
 
   Read `install.md` first to install and connect this repo to my real browser. Then read `SKILL.md` for normal usage. Always read `helpers.py` because that is where the functions are. When you open a setup or verification tab, activate it so I can see the active browser tab. After it is installed, open this repository in my browser and, if I am logged in to GitHub, ask me whether you should star it for me as a quick demo that the interaction works — only click the star if I say yes. If I am not logged in, just go to browser-use.com.
   ```
+
 * **初期設定**:
   * 指定されたURLを開き、リモートデバッグ（Remote debugging）のチェックボックスをオンにしてブラウザとの接続を許可する。
 

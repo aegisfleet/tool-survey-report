@@ -99,6 +99,7 @@ relationships:
   * Rust (Cargo) がインストールされていること（推奨）
   * Gitがインストールされていること
 * **インストール/導入**:
+
   ```bash
   # Cargoを使用する場合
   cargo install --locked jj-cli
@@ -106,13 +107,17 @@ relationships:
   # Homebrew (macOS/Linux)
   brew install jj
   ```
+
 * **初期設定**:
+
   ```bash
   # ユーザー情報の設定
   jj config set --user user.name "Your Name"
   jj config set --user user.email "you@example.com"
   ```
+
 * **クイックスタート**:
+
   ```bash
   # 既存のGitリポジトリでjjを使い始める
   cd my-git-repo

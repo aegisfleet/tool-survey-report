@@ -90,24 +90,29 @@ relationships:
 * **インストール/導入**:
 
   Homebrew（macOS等）の場合:
+
   ```bash
   brew install rtk
   ```
 
   または、インストールスクリプトを利用（Linux/macOS）:
+
   ```bash
   curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/refs/heads/master/install.sh | sh
   ```
 
 * **初期設定**:
   AIツールに合わせて初期化を行う。以下はClaude CodeやCopilot向けの例:
+
   ```bash
   rtk init -g
   ```
+
   ※他にもCursor(`--agent cursor`)、Windsurf(`--agent windsurf`)、Cline(`--agent cline`)などに対応したオプションがある。
 
 * **クイックスタート**:
   AIツールを再起動後、通常のコマンドを実行すると透過的にRTKが適用される。
+
   ```bash
   git status
   ```

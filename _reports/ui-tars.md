@@ -125,16 +125,19 @@ relationships:
 * **インストール/導入**:
   * **デスクトップアプリ版**: [GitHub Releases](https://github.com/bytedance/UI-TARS-desktop/releases) から最新版のインストーラ（`.dmg`, `.exe`）をダウンロードして実行。
   * **CLI版**:
+
     ```bash
     # npm経由でCLIをインストール
     npm install @agent-tars/cli@latest -g
     ```
+
 * **初期設定**:
   * アプリ起動後、設定画面でモデルプロバイダ（Ollama, VolcEngine, Anthropic等）を選択し、必要に応じてAPIキーやエンドポイントを入力する。
   * ローカル実行の場合、Ollama等で `ui-tars` モデルを事前にpullしておく。
 * **クイックスタート**:
   * デスクトップアプリを起動し、チャット欄に「ブラウザを開いて今日の天気を調べて」と入力して送信する。
   * CLIの場合:
+
     ```bash
     agent-tars
     ```

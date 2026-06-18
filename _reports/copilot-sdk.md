@@ -91,10 +91,12 @@ relationships:
   * Node.js (TypeScript), Python, Go, .NET, Rust, Javaのいずれかの実行環境
   * GitHub Copilot サブスクリプションを持つGitHubアカウント
 * **インストール/導入**:
+
   ```bash
   # Node.jsの場合
   npm install @github/copilot-sdk
   ```
+
 * **初期設定**:
   * GitHubアカウントでの認証（Copilot CLIやブラウザ経由）が必要。
 * **クイックスタート**:

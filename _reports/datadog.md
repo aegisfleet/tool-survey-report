@@ -99,13 +99,17 @@ relationships:
   * 監視対象のOSまたはクラウド環境へのアクセス権限
 * **インストール/導入**:
   * Linuxの場合（ワンラインインストール）:
+
   ```bash
   DD_API_KEY=YOUR_API_KEY DD_SITE="datadoghq.com" bash -c "$(curl -L https://s3.amazonaws.com/dd-agent/scripts/install_script_agent7.sh)"
   ```
+
   * Kubernetesの場合（Helm）:
+
   ```bash
   helm install datadog-agent datadog/datadog --set datadog.apiKey=YOUR_API_KEY
   ```
+
 * **初期設定**:
   * `datadog.yaml` ファイルでの基本設定（APIキー、サイト、タグなど）
   * インテグレーション画面からAWS/GCP/Azureなどのクラウド連携を有効化

@@ -88,6 +88,7 @@ relationships:
   * Maven または Gradle などのビルドツール
 * **インストール/導入**:
   Maven (`pom.xml`):
+
   ```xml
   <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -96,15 +97,19 @@ relationships:
       <scope>test</scope>
   </dependency>
   ```
+
   Gradle (`build.gradle`):
+
   ```groovy
   testImplementation 'org.junit.jupiter:junit-jupiter:6.0.3'
   test {
       useJUnitPlatform()
   }
   ```
+
 * **初期設定**: 特になし。依存関係を追加するだけで利用可能。
 * **クイックスタート**:
+
   ```java
   import org.junit.jupiter.api.Test;
   import static org.junit.jupiter.api.Assertions.assertEquals;

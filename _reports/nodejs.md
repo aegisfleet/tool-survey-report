@@ -94,25 +94,32 @@ relationships:
   * ターミナル（コマンドライン）の基本操作知識
 * **インストール/導入**:
   推奨される方法は、バージョンマネージャー（nvm, fnmなど）を使用することです。
+
   ```bash
   # nvmを使用する場合の例
   nvm install --lts
   nvm use --lts
   ```
+
   または公式サイトからインストーラーをダウンロードして実行します。
 * **初期設定**:
   * 特別な設定ファイルは必須ではありませんが、プロジェクトごとに `package.json` を作成します。
+
   ```bash
   mkdir my-app
   cd my-app
   npm init -y
   ```
+
 * **クイックスタート**:
   `index.js` ファイルを作成し、以下のコードを記述します。
+
   ```javascript
   console.log("Hello, Node.js!");
   ```
+
   以下のコマンドで実行します。
+
   ```bash
   node index.js
   ```

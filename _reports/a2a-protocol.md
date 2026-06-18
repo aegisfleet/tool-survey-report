@@ -89,10 +89,12 @@ tool_reading: エーツーエー プロトコル
   * Go, Python, JavaScript, Java, C#/.NET などの対応言語環境。
   * HTTPサーバーを公開できる環境（エージェント間通信のため）。
 * **導入 (Pythonの場合)**:
+
   ```bash
   # パッケージのインストール (例)
   pip install a2a-python
   ```
+
 * **初期設定**:
   * エージェントの機能を記述した Agent Card を作成し、公開サーバーに配置。
 * **クイックスタート**:

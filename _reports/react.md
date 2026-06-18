@@ -103,17 +103,21 @@ relationships:
   現在、公式ではフレームワークの使用またはViteの使用が推奨されており、**Create React App (CRA) は2025年に廃止されました**。
 
   **Viteを使用する場合 (SPA):**
+
   ```bash
   npm create vite@latest my-react-app -- --template react
   ```
 
   **Next.jsを使用する場合 (フルスタック):**
+
   ```bash
   npx create-next-app@latest
   ```
+
 * **初期設定**:
   * React Compilerを使用する場合、Babelプラグイン等の設定が必要（ViteやNext.jsの最新版では標準サポートまたはプラグインで容易に導入可能）。
 * **クイックスタート**:
+
   ```bash
   npm install
   npm run dev

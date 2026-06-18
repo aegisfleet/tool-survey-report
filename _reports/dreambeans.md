@@ -120,7 +120,7 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: 公式ブログや、公式サイト（https://labs.google/dreambeans）にFAQ（Help Center）が掲載されている。
+* **ドキュメント**: 公式ブログや、公式サイト（<https://labs.google/dreambeans）にFAQ（Help> Center）が掲載されている。
 * **コミュニティ**: 公式フォーラムなどの存在は明記されていない。
 * **公式サポート**: 実験的なLabs製品であるため、アプリ内のフィードバック機能を通じたサポートが中心となる。
 
@@ -141,7 +141,7 @@ relationships:
 
 * **認証**: GoogleアカウントによるOAuth/SSO認証。
 * **データ管理**: アプリ内でどのサービス（GmailやPhotosなど）を連携するか個別に制御可能。「Delete my data」から履歴の削除が可能。
-* **準拠規格**: Googleの標準的なプライバシーポリシー（https://policies.google.com/privacy）および利用規約に準拠する。
+* **準拠規格**: Googleの標準的なプライバシーポリシー（<https://policies.google.com/privacy）および利用規約に準拠する。>
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 

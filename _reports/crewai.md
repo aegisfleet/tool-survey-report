@@ -98,9 +98,11 @@ relationships:
   * `.env` ファイルに `OPENAI_API_KEY` などの環境変数を設定。
 * **クイックスタート**:
   * コマンドラインツールを使用して新規プロジェクトを作成:
+
     ```bash
     crewai create crew <project_name>
     ```
+
   * `agents.yaml` や `tasks.yaml`、`crew.py` を編集してエージェントとタスクを定義し、`crewai run` で実行。
 
 ## **5. 特徴・強み (Pros)**

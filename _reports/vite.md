@@ -94,18 +94,22 @@ relationships:
   * Node.js (バージョン18+ または 20+)
   * npm, yarn, pnpm, bun などのパッケージマネージャ
 * **インストール/導入**:
+
   ```bash
   # プロジェクト作成（対話形式）
   npm create vite@latest
   ```
+
 * **初期設定**:
   * プロジェクト作成時にフレームワーク（Vue, React, Svelte等）とバリアント（TypeScript等）を選択します。
   * `cd <project-name>` して `npm install` を実行します。
 * **クイックスタート**:
+
   ```bash
   # 開発サーバーの起動
   npm run dev
   ```
+
   ブラウザで `http://localhost:5173` にアクセスすると、アプリが表示されます。
 
 ## **5. 特徴・強み (Pros)**

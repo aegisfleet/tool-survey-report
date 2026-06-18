@@ -85,27 +85,36 @@ relationships:
   * アカウント作成やクレジットカード登録は不要。
 * **インストール/導入**:
   * **MacOS (Homebrew)**:
+
     ```bash
     brew install gitleaks
     ```
+
   * **Docker (DockerHub)**:
+
     ```bash
     docker pull zricethezav/gitleaks:latest
     ```
+
   * **Go (ソースから)**:
+
     ```bash
     git clone https://github.com/gitleaks/gitleaks.git
     cd gitleaks
     make build
     ```
+
 * **初期設定**:
   * 特別な設定なしですぐに利用開始可能。カスタムルールを利用する場合は、`.gitleaks.toml`設定ファイルを作成する。
 * **クイックスタート**:
   * ディレクトリのスキャン:
+
     ```bash
     gitleaks dir -v ./
     ```
+
   * Gitリポジトリのスキャン:
+
     ```bash
     gitleaks git -v
     ```

@@ -88,10 +88,12 @@ relationships:
   * Linux、Windows、UNIX、またはKubernetes等のサポート対象ホスト環境
 * **インストール/導入**:
   Instanaの最大の特徴である「ワンライナーエージェント」を実行します。
+
   ```bash
   # Linux環境でのインストール例（ワンライナーコマンド）
   curl -o setup_agent.sh https://setup.instana.io/agent && chmod 700 ./setup_agent.sh && sudo ./setup_agent.sh -a <AGENT_KEY> -t dynamic -e <ENDPOINT> -s -y
   ```
+
 * **初期設定**:
   * エージェントが起動すると、ホスト上のテクノロジースタック（Java, Node.js, データベース等）を自動的に検出し、必要なセンサーをダウンロードして設定します。手動でのコード改修は原則不要です。
 * **クイックスタート**:

@@ -89,6 +89,7 @@ relationships:
   プロジェクトのルートに `DESIGN.md` ファイルを作成し、YAMLフロントマターでトークンを定義します。
 
 * **クイックスタート**:
+
   ```bash
   # 作成したDESIGN.mdをリントする
   npx @google/design.md lint DESIGN.md

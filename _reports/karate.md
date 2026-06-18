@@ -101,6 +101,7 @@ relationships:
   * IDE (VS Code または IntelliJ IDEA推奨)
 * **インストール/導入**:
   Mavenプロジェクトの場合、`pom.xml`に依存関係を追加します:
+
   ```xml
   <dependency>
       <groupId>io.karatelabs</groupId>
@@ -109,11 +110,13 @@ relationships:
       <scope>test</scope>
   </dependency>
   ```
+
 * **初期設定**:
   * `src/test/java` 配下にテストランナー(JUnitクラス)を作成します。
   * `karate-config.js` を作成し、環境ごとの設定(ベースURLなど)を記述します。
 * **クイックスタート**:
   VS Code拡張機能を使用する場合、`.feature`ファイルを作成し、`Run`ボタンをクリックするだけでテストを実行できます。
+
   ```gherkin
   Feature: Hello World
     Scenario: Get Google

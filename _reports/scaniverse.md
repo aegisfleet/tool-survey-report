@@ -131,7 +131,7 @@ relationships:
 
 * **ドキュメント**: 公式サイトに「Niantic Spatial SDK Docs」およびスキャン手法の詳細なガイド（Scan Techniques）が用意されている。
 * **コミュニティ**: 「Developer Forums」が存在し、ユーザー同士でベストプラクティスの共有やトラブルシューティングが行われている。
-* **公式サポート**: サポート窓口（メール: support@nianticspatial.com）が用意されている。Enterpriseプランでは専任サポートおよびSLAが提供される。
+* **公式サポート**: サポート窓口（メール: <support@nianticspatial.com>）が用意されている。Enterpriseプランでは専任サポートおよびSLAが提供される。
 
 ## **10. エコシステムと連携**
 

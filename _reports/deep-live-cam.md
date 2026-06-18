@@ -83,6 +83,7 @@ relationships:
   * 推奨環境として、NVIDIA GPU (CUDA対応) または AMD GPU、Mac Silicon
 * **インストール/導入**:
   オープンソース版の手動インストール手順：
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/hacksider/Deep-Live-Cam.git
@@ -91,6 +92,7 @@ relationships:
   # 依存関係のインストール (環境に応じた requirements ファイルを使用)
   pip install -r requirements.txt
   ```
+
   ※または、公式サイトからPre-built版（Windows/Mac Silicon等）をダウンロード可能。
 * **クイックスタート**:
   1. 顔の画像を選択する。

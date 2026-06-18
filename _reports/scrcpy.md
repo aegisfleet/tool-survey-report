@@ -86,17 +86,22 @@ links:
 * **インストール/導入**:
 
   Linux (例: apt):
+
   ```bash
   sudo apt install scrcpy
   ```
+
   macOS (例: Homebrew):
+
   ```bash
   brew install scrcpy
   ```
+
   Windows: GitHubのReleaseページからzipファイルをダウンロードして解凍
 
 * **クイックスタート**:
   ターミナル（またはコマンドプロンプト）で以下のコマンドを実行する。
+
   ```bash
   scrcpy
   ```

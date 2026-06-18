@@ -102,6 +102,7 @@ relationships:
   * Windows 10/11 (WSL2推奨), macOS, またはLinux。
   * Docker Desktopを利用する場合はDockerアカウント（任意）。
 * **インストール/導入**:
+
   ```bash
   # Linux (Ubuntu) の場合
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
@@ -109,10 +110,12 @@ relationships:
   # macOS (Homebrew)
   brew install --cask docker
   ```
+
 * **初期設定**:
   * Docker Desktopの設定画面からリソース割り当て（CPU/メモリ）を調整。
   * 必要に応じてDocker Hubへのログイン (`docker login`)。
 * **クイックスタート**:
+
   ```bash
   # Hello Worldイメージの実行
   docker run hello-world

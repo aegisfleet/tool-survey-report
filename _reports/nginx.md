@@ -85,16 +85,19 @@ relationships:
   * Linux、macOS、Windowsなど主要なOSで動作可能。
   * アカウント作成は不要（オープンソース版の場合）。
 * **インストール/導入**:
+
   ```bash
   # Ubuntu/Debianの場合
   sudo apt update
   sudo apt install nginx
   ```
+
 * **初期設定**:
   * 主な設定ファイルは `/etc/nginx/nginx.conf` に配置される。
   * 各サイトの設定は `/etc/nginx/conf.d/` や `/etc/nginx/sites-available/` に記述する。
 * **クイックスタート**:
   * インストール後、以下のコマンドで起動・状態確認ができる。
+
   ```bash
   sudo systemctl start nginx
   sudo systemctl status nginx

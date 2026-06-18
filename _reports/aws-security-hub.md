@@ -125,10 +125,12 @@ relationships:
   2. 「Security Hubに移動」または「有効化」をクリック。
   3. 初回セットアップで、推奨されるセキュリティ基準（FSBPなど）が自動的に有効化される。
 * **CLIでの有効化**:
+
   ```bash
   # Security Hubの有効化
   aws securityhub enable-security-hub --enable-default-standards
   ```
+
 * **初期設定**:
   * **委任管理者の設定**: AWS Organizationsを使用する場合、セキュリティ管理用のアカウントを委任管理者に指定。
   * **統合の有効化**: GuardDuty、Inspectorなどの他のAWSサービスとの統合を確認（現在は自動的に統合される機能が多い）。

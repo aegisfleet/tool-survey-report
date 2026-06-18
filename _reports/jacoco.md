@@ -87,6 +87,7 @@ relationships:
   * Maven, Gradle, Ant などのビルドツール（推奨）
 * **インストール/導入 (Mavenの場合)**:
   `pom.xml` にプラグイン定義を追加します。
+
   ```xml
   <plugin>
       <groupId>org.jacoco</groupId>
@@ -108,10 +109,12 @@ relationships:
       </executions>
   </plugin>
   ```
+
 * **初期設定**:
   * 基本的な利用であれば、上記のようなプラグイン設定のみで動作します。
 * **クイックスタート**:
   * Mavenコマンドを実行してテストとカバレッジ計測を行います。
+
   ```bash
   mvn clean test
   # target/site/jacoco/index.html にレポートが生成されます

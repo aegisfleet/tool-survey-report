@@ -89,18 +89,23 @@ relationships:
 * **前提条件**:
   * Node.jsがインストールされていること。npmはNode.jsに標準でバンドルされているため、別途インストールは原則不要です。
 * **インストール/導入**:
+
   ```bash
   # Node.jsをインストールすると自動的に利用可能になります
   node -v
   npm -v
   ```
+
   最新版のnpmにアップデートする場合:
+
   ```bash
   npm install -g npm
   ```
+
 * **初期設定**:
   * プロジェクトディレクトリを作成し、初期化します。
 * **クイックスタート**:
+
   ```bash
   mkdir my-project
   cd my-project

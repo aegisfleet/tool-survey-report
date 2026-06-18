@@ -82,14 +82,18 @@ relationships:
   * Android CLIまたはAIエージェント（Gemini、Antigravityなど）
 * **インストール/導入**:
   Android CLIを使用してインストールするのが推奨されています。
+
   ```bash
   android skills add --all
   ```
+
 * **初期設定**:
   特定のスキル（例: `skill-name`）だけをインストールすることも可能です。
+
   ```bash
   android skills add --skill=skill-name
   ```
+
 * **クイックスタート**:
   Android Studioのチャットウィンドウなどで直接 `@skill-name` と入力してスキルを手動で呼び出すか、エージェントに関連するタスク（例: 「UIをedge-to-edgeにして」）をプロンプトとして入力すると、エージェントが自動的に関連スキルを有効化します。
 

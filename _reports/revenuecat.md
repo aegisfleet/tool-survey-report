@@ -88,15 +88,19 @@ relationships:
   * アプリのストア登録と課金アイテム（Product）の作成
 * **インストール/導入**:
   * **Flutter**:
+
     ```bash
     flutter pub add purchases_flutter
     ```
+
   * **React Native**:
+
     ```bash
     npm install react-native-purchases
     # or
     yarn add react-native-purchases
     ```
+
   * **iOS (Swift Package Manager)**:
     `https://github.com/RevenueCat/purchases-ios.git` を追加
 * **初期設定**:
@@ -104,6 +108,7 @@ relationships:
   2. ストアの共有シークレット（iOS）やサービスアカウントキー（Android）を設定。
   3. APIキー（Public SDK Key）を取得。
 * **クイックスタート (Flutterの例)**:
+
   ```dart
   import 'package:purchases_flutter/purchases_flutter.dart';
 

@@ -91,11 +91,13 @@ relationships:
   * AWS CLI、`eksctl`、`kubectl`、`helm`
   * Karpenterノード用IAMロールとインスタンスプロファイルの作成
 * **インストール/導入**:
+
   ```bash
   # Helmを使用したインストール例
   helm registry login public.ecr.aws
   helm upgrade --install karpenter oci://public.ecr.aws/karpenter/karpenter --version v1.13.0     --namespace karpenter --create-namespace     --set settings.clusterName=${CLUSTER_NAME}     --set serviceAccount.annotations."eks\.amazonaws\.com/role-arn"=${KARPENTER_IAM_ROLE_ARN}
   ```
+
 * **初期設定**:
   * EC2NodeClassとNodePoolカスタムリソースを作成し、クラスタに適用します。
 * **クイックスタート**:

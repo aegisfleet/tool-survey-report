@@ -118,10 +118,13 @@ relationships:
 * **初期設定**:
   * 特に設定ファイルやAPIキーは不要。
 * **クイックスタート**:
+
   ```bash
   docker compose up -d
   ```
+
   起動後、AWS CLIやSDKのエンドポイントを `http://localhost:4566` に向けるだけで利用可能。
+
   ```bash
   export AWS_ENDPOINT_URL=http://localhost:4566
   export AWS_DEFAULT_REGION=us-east-1
@@ -163,7 +166,7 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: 公式サイト（https://floci.io/）にて、マイグレーションガイド、各サービスの対応状況、ストレージ設定などのドキュメントが提供されている。
+* **ドキュメント**: 公式サイト（<https://floci.io/）にて、マイグレーションガイド、各サービスの対応状況、ストレージ設定などのドキュメントが提供されている。>
 * **コミュニティ**: Slackコミュニティ、GitHub Discussionsが存在し、質問や機能要望、バグ報告が活発に行われている。
 * **公式サポート**: オープンソースプロジェクトのため、商用サポートは提供されていない。Issueによるコミュニティサポートとなる。
 

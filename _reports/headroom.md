@@ -102,10 +102,13 @@ relationships:
   * 各種LLMプロバイダーのAPIキー（例：`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`）を環境変数に設定する。
 * **クイックスタート**:
   * 既存のエージェントをラップして起動する例:
+
     ```bash
     headroom wrap claude
     ```
+
   * ドロップインのプロキシとして起動する例:
+
     ```bash
     headroom proxy --port 8787
     ```

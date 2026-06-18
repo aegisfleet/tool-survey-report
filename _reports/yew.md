@@ -90,6 +90,7 @@ relationships:
   * WebAssemblyビルドターゲットの追加: `rustup target add wasm32-unknown-unknown`
   * Trunk (Wasmバンドラ) のインストール: `cargo install trunk`
 * **インストール/導入**:
+
   ```bash
   # 新しいプロジェクトの作成
   cargo new yew-app
@@ -99,13 +100,16 @@ relationships:
   # [dependencies]
   # yew = "0.22"
   ```
+
 * **初期設定**:
   * `index.html` を作成し、Wasmのエントリポイントを指定します。
 * **クイックスタート**:
+
   ```bash
   # 開発サーバーの起動
   trunk serve
   ```
+
   ブラウザで `http://localhost:8080` にアクセスして動作確認します。
 
 ## **5. 特徴・強み (Pros)**

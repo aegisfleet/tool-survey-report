@@ -94,6 +94,7 @@ relationships:
 * **前提条件**:
   * macOS, Linux, または Windows
 * **インストール/導入**:
+
   ```bash
   # macOS / Linux
   curl -fsSL https://deno.land/install.sh | sh
@@ -101,9 +102,11 @@ relationships:
   # Windows (PowerShell)
   irm https://deno.land/install.ps1 | iex
   ```
+
 * **初期設定**:
   * 環境変数`DENO_INSTALL`と`PATH`の設定が必要な場合がある。
 * **クイックスタート**:
+
   ```bash
   # Hello Worldの実行
   deno run https://examples.deno.land/hello-world.ts

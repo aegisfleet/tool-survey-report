@@ -102,6 +102,7 @@ relationships:
   1. リポジトリの「Settings」>「Code security and analysis」へ移動。
   2. 「Dependabot alerts」と「Dependabot security updates」を有効化（Enable）。
   3. バージョン更新を行いたい場合は、`.github/dependabot.yml` ファイルを作成。
+
   ```yaml
   version: 2
   updates:
@@ -110,6 +111,7 @@ relationships:
       schedule:
         interval: "weekly"
   ```
+
 * **クイックスタート**:
   上記の設定を行うと、即座に依存関係の解析が始まり、脆弱性が見つかればアラート通知とPR作成が行われる。
 

@@ -83,9 +83,9 @@ relationships:
 * **スターター依存関係 (Starter Dependencies)**: `spring-boot-starter-web`のように、特定の機能開発に必要なライブラリ群をまとめた「スターター」を提供し、ビルド設定を簡潔にします。
 * **本番向け機能**: ヘルスチェック、メトリクス、外部設定など、本番環境での運用に役立つ機能（Actuator）が標準で提供されます。
 * **Spring Boot 4.0での主な新機能**:
-    * コードベースの完全なモジュール化による、より軽量なJARの実現
-    * JSpecifyによるNullセーフティの向上
-    * Java 25のファーストクラスサポート（Java 17互換は維持）
+  * コードベースの完全なモジュール化による、より軽量なJARの実現
+  * JSpecifyによるNullセーフティの向上
+  * Java 25のファーストクラスサポート（Java 17互換は維持）
 
 ## **4. 開始手順・セットアップ**
 
@@ -93,14 +93,17 @@ relationships:
   * Java 17以上
   * Maven または Gradle
 * **インストール/導入**:
+
   ```bash
   # SDKMANを使用する場合
   sdk install springboot
   ```
+
   または [Spring Initializr](https://start.spring.io/) からプロジェクトを生成してダウンロード。
 * **初期設定**:
   * `application.properties` または `application.yml` にDB接続情報などの設定を記述。
 * **クイックスタート**:
+
   ```bash
   # プロジェクトのルートディレクトリで実行
   ./mvnw spring-boot:run

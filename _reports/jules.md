@@ -118,10 +118,12 @@ relationships:
   * Googleアカウント
   * Node.js (CLIツール利用時)
 * **インストール/導入**:
+
   ```bash
   # Jules Tools (CLI) のインストール
   npm install -g @google/jules
   ```
+
 * **初期設定**:
   * `jules login` コマンドでGoogleアカウントによる認証を行う。
   * プロジェクトルートに `.jules.yml` などの設定ファイルを配置する場合もある。

@@ -79,6 +79,7 @@ relationships: null
 * **インストール/導入**:
 
   Claude Code（プラグイン）の場合：
+
   ```bash
   # Marketplaceを追加
   /plugin marketplace add HKUDS/CLI-Anything
@@ -87,6 +88,7 @@ relationships: null
   ```
 
 * **クイックスタート**:
+
   ```bash
   # GIMP用のCLIを自動生成
   /cli-anything ./gimp

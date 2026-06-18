@@ -98,6 +98,7 @@ relationships:
   * CodeQL CLIを利用する場合は、対応OS（Linux, macOS, Windows）
 * **インストール/導入**:
   GitHub Actionsで利用する場合、ワークフローファイルに以下を追加するだけです。
+
   ```yaml
   name: "CodeQL"
   on:
@@ -125,6 +126,7 @@ relationships:
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
   ```
+
 * **初期設定**:
   * `codeql-action/init` アクションで解析対象の言語を指定する。
 * **クイックスタート**:

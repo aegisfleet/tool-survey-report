@@ -97,6 +97,7 @@ relationships:
   * 言語ランタイム: Node.js, Python, Go, .NET Core, Java (使用言語による)
   * Pulumi Cloudアカウント (無料、ローカル状態管理の場合は不要)
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install pulumi/tap/pulumi
@@ -107,10 +108,12 @@ relationships:
   # Windows (Winget)
   winget install pulumi
   ```
+
 * **初期設定**:
   * `pulumi login`: Pulumi Cloudへのログイン（または `pulumi login --local` でローカルモード）
   * クラウドプロバイダーの認証情報設定 (例: `export AWS_ACCESS_KEY_ID=...`)
 * **クイックスタート**:
+
   ```bash
   # 新規プロジェクトの作成
   mkdir my-project && cd my-project

@@ -94,14 +94,17 @@ relationships:
   * Node.js
   * Reactプロジェクト（Create React App, Vite, Next.jsなど）
 * **インストール/導入**:
+
   ```bash
   npm install --save-dev @testing-library/react @testing-library/dom
   # ユーザーイベント用（推奨）
   npm install --save-dev @testing-library/user-event
   ```
+
 * **初期設定**:
   * JestやVitestなどのテストランナーの設定ファイル（`setupTests.js`など）で、カスタムマッチャーを使用するために `@testing-library/jest-dom` をインポートすることが一般的です。
 * **クイックスタート**:
+
   ```jsx
   import { render, screen } from '@testing-library/react';
   import App from './App';

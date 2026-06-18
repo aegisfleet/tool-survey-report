@@ -94,6 +94,7 @@ relationships:
 * **初期設定**:
   * ポリシーファイル (`policy.yaml`) を作成し、デフォルトのアクションやルールを定義します。
 * **クイックスタート**:
+
   ```python
   from agentmesh.governance import govern
 

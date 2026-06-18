@@ -96,15 +96,18 @@ relationships:
   * Google Cloudアカウントおよびプロジェクトの作成
   * 請求先アカウントの設定
 * **インストール/導入**:
+
   ```bash
   # gcloud CLIとVertex AI SDK for Pythonのインストール
   pip install google-cloud-aiplatform
   ```
+
 * **初期設定**:
   * Google Cloud Consoleで「Vertex AI API」を有効化する。
   * 必要なサービスアカウントの権限設定（IAM）。
 * **クイックスタート**:
   * Python SDKを使用してGeminiモデルを呼び出す例:
+
     ```python
     import vertexai
     from vertexai.generative_models import GenerativeModel

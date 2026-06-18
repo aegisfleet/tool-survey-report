@@ -86,6 +86,7 @@ relationships:
   * npm
 * **インストール/導入**:
   MCPクライアントの設定ファイルに以下を追加します。
+
   ```json
   {
     "mcpServers": {
@@ -96,10 +97,12 @@ relationships:
     }
   }
   ```
+
 * **初期設定**:
   * 既存のChromeインスタンスに接続したい場合は `--autoConnect` フラグ（Chrome 144以上）や、リモートデバッグポートを有効にした上で `--browser-url` オプションを使用します。
 * **クイックスタート**:
   MCPクライアント内で以下のプロンプトを入力して動作確認を行います。
+
   ```
   Check the performance of https://developers.chrome.com
   ```

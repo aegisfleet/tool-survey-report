@@ -114,17 +114,22 @@ relationships:
   * Python 3.10以上
   * OpenAI互換API（vLLM等）または商用APIキー
 * **インストール/導入**:
+
   ```bash
   # PyPIからインストール
   pip install agentlightning
   ```
+
 * **初期設定**:
   * 環境変数にAPIキーを設定します。
+
   ```bash
   export OPENAI_API_KEY="..."
   ```
+
 * **クイックスタート**:
   * エージェントをラップしてトレーナーを起動する（擬似コード例）:
+
   ```python
   import agentlightning as agl
   # 既存のエージェントを定義

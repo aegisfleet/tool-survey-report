@@ -100,6 +100,7 @@ relationships:
   * 推奨スペック: 1.6 GHz以上のプロセッサ、1GB以上のRAM
 * **インストール/導入**:
   公式サイトからインストーラーをダウンロードして実行します。
+
   ```bash
   # macOS (Homebrewを使用する場合)
   brew install --cask visual-studio-code
@@ -107,6 +108,7 @@ relationships:
   # Windows (Wingetを使用する場合)
   winget install Microsoft.VisualStudioCode
   ```
+
 * **初期設定**:
   1. 起動後、画面右下の通知に従い、日本語化パック（Japanese Language Pack）をインストールして再起動。
   2. 左側のアクティビティバーから「拡張機能」アイコンをクリックし、必要な言語サポート（Python, Javaなど）をインストール。

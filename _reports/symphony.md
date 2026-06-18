@@ -81,6 +81,7 @@ relationships:
   * LinearのパーソナルAPIトークン (`LINEAR_API_KEY`)
   * Elixir/Erlang環境 (miseを利用したバージョン管理を推奨)
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/openai/symphony
   cd symphony/elixir
@@ -89,9 +90,11 @@ relationships:
   mise exec -- mix setup
   mise exec -- mix build
   ```
+
 * **初期設定**:
   * リポジトリ内の `WORKFLOW.md` を自身のプロジェクトにコピーしてカスタマイズします（Linearプロジェクトスラッグの設定など）。
 * **クイックスタート**:
+
   ```bash
   mise exec -- ./bin/symphony ./WORKFLOW.md
   ```

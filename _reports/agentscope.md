@@ -94,6 +94,7 @@ relationships:
   * Python 3.10以上
   * 利用するLLM（DashScope、OpenAIなど）のAPIキー
 * **インストール/導入**:
+
   ```bash
   # pipを使ったインストール
   pip install agentscope
@@ -101,12 +102,16 @@ relationships:
   # uvを使ったインストールも推奨されている
   uv pip install agentscope
   ```
+
 * **初期設定**:
   環境変数にAPIキーを設定します。
+
   ```bash
   export DASHSCOPE_API_KEY="your-api-key"
   ```
+
 * **クイックスタート**:
+
   ```python
   from agentscope.agent import ReActAgent, UserAgent
   from agentscope.model import DashScopeChatModel

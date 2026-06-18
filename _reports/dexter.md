@@ -78,11 +78,13 @@ relationships:
   * Financial Datasets API key
   * Exa API key (オプション)
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/virattt/dexter.git
   cd dexter
   bun install
   ```
+
 * **初期設定**:
   * `cp env.example .env` を実行し、必要なAPIキーを設定する。
 * **クイックスタート**:

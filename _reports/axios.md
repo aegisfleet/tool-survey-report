@@ -83,6 +83,7 @@ relationships:
 * **前提条件**:
   * Node.js環境またはブラウザ環境
 * **インストール/導入**:
+
   ```bash
   # npmを使用する場合
   npm install axios
@@ -90,9 +91,11 @@ relationships:
   # yarnを使用する場合
   yarn add axios
   ```
+
 * **初期設定**:
   特別な設定は不要で、インストール後すぐにインポートして使用可能。
 * **クイックスタート**:
+
   ```javascript
   import axios from 'axios';
 

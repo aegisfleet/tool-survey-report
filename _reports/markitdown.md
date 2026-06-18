@@ -89,10 +89,13 @@ relationships:
   * 基本的なローカル変換には設定不要。外部API(OpenAIやAzure)を利用する機能ではAPIキーなどの設定が必要。
 * **クイックスタート**:
   * CLIでの実行:
+
     ```bash
     markitdown path-to-file.pdf > document.md
     ```
+
   * Pythonコードでの実行:
+
     ```python
     from markitdown import MarkItDown
     md = MarkItDown()

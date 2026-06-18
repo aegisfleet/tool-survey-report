@@ -96,20 +96,25 @@ relationships:
 * **インストール/導入**:
   * **ブラウザ拡張機能**: Chrome Web Store等から「axe DevTools」をインストール。
   * **Playwright統合 (Free)**:
+
   ```bash
   npm install --save-dev @axe-core/playwright
   ```
+
   * **Playwright統合 (Pro)**:
+
   ```bash
   npm install --save-dev @axe-devtools/playwright
   # 別途APIキーの設定が必要
   ```
+
 * **初期設定**:
   * **ブラウザ拡張機能**: インストール後、開発者ツール（F12）を開き「axe DevTools」タブを選択。
   * **ライブラリ**: テストファイル内で `import AxeBuilder from '@axe-core/playwright';` をインポート。
 * **クイックスタート**:
   * **ブラウザ拡張機能**: 「Scan ALL of my page」ボタンをクリックすると、数秒で結果が表示される。
   * **Playwright**:
+
   ```javascript
   // テストコード例
   await page.goto('https://example.com');

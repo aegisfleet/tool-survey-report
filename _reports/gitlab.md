@@ -108,11 +108,13 @@ relationships:
   * SaaS版: GitLabアカウントの作成
   * Self-Managed版: Linuxサーバー (Ubuntu, CentOS等) または Kubernetesクラスタ
 * **インストール/導入**:
+
   ```bash
   # SaaS版はサインアップのみで利用可能
   # Self-Managed版 (Omnibus package on Ubuntu)
   sudo apt-get install gitlab-ee
   ```
+
 * **初期設定**:
   * 初回ログイン時のrootパスワード設定（Self-Managed版）
   * SSHキーの登録

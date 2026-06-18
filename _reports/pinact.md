@@ -80,13 +80,16 @@ relationships:
 * **前提条件**:
   * GitHub Access Token（任意だが、APIレートリミット回避のため推奨。環境変数 `PINACT_GITHUB_TOKEN` または `GITHUB_TOKEN` で設定）
 * **インストール/導入**:
+
   ```bash
   # Aquaを利用したインストール例
   aqua g -i suzuki-shunsuke/pinact
   ```
+
 * **初期設定**:
   * リポジトリルートで `pinact init` を実行し、必要に応じて設定ファイル（`.pinact.yaml`）を生成する。
 * **クイックスタート**:
+
   ```bash
   # カレントディレクトリ以下のワークフローファイルを対象にバージョンを固定
   pinact run
@@ -179,7 +182,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02-03**: v3.9.0リリース。バージョンタグコメントのセパレーター設定（例: ` # tag=`）をサポート。
+* **2026-02-03**: v3.9.0リリース。バージョンタグコメントのセパレーター設定（例: `# tag=`）をサポート。
 * **2025-09-08**: v3.8.0リリース。ghtknインテグレーションによるGitHub App User Access Tokenの作成をサポート。
 * **2025-06-25**: v3.7.0リリース。SARIFフォーマットでの出力をサポートし、reviewdogやCode Scanningとの連携が容易に。
 

@@ -106,10 +106,12 @@ relationships:
   * アカウント: GitHubアカウントまたはGoogleアカウント、Eメールでのサインアップが可能
 * **インストール/導入**:
   公式サイトからインストーラーをダウンロードして実行します。
+
   ```bash
   # macOS (Homebrewを使用する場合)
   brew install --cask cursor
   ```
+
 * **初期設定**:
   1. インストール後の初回起動時に、VS Codeの設定、拡張機能、キーバインドをワンクリックでインポート可能。
   2. `cursor` コマンドをCLIにインストール（コマンドパレットから `> Install 'cursor' command`）。

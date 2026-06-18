@@ -91,17 +91,20 @@ relationships:
 * **インストール/導入**:
 
   基本のパーサーエンジンのみをインストールする場合：
+
   ```bash
   pip install scrapling
   ```
 
   Fetcher（ブラウザ自動化）を使用する場合（ブラウザの依存関係もインストール）：
+
   ```bash
   pip install "scrapling[fetchers]"
   scrapling install
   ```
 
   AI MCPサーバー機能を含めて全てインストールする場合：
+
   ```bash
   pip install "scrapling[all]"
   scrapling install
@@ -111,6 +114,7 @@ relationships:
   * 特別な設定ファイルは不要です。必要に応じてプロキシやセッションをコード内で設定します。
 
 * **クイックスタート**:
+
   ```python
   from scrapling.fetchers import Fetcher
 

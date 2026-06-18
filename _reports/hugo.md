@@ -100,6 +100,7 @@ relationships:
   * 依存ツール: Git（オプションだが推奨）
   * アカウント作成: 不要
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install hugo
@@ -110,9 +111,11 @@ relationships:
   # Debian/Ubuntu
   sudo apt-get install hugo
   ```
+
 * **初期設定**:
   * 特になし。`hugo.toml` (旧 `config.toml`) でサイト全体の設定を行う。
 * **クイックスタート**:
+
   ```bash
   # 新しいサイトを作成
   hugo new site my-new-site

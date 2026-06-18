@@ -100,11 +100,13 @@ relationships:
   * セルフホスト版: Docker, Python 3.10+
   * OpenAI APIキー等
 * **インストール/導入**:
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/Significant-Gravitas/AutoGPT.git
   cd AutoGPT
   ```
+
 * **初期設定**:
   * `.env.template` を `.env` にコピーし、APIキーを設定。
   * `docker-compose up` で起動。

@@ -129,14 +129,17 @@ relationships:
 * **インストール/導入**:
   * Web版はブラウザからアクセスするのみで利用可能。
   * API利用の場合はPython SDKなどをインストール:
+
   ```bash
   pip install google-generativeai
   ```
+
 * **初期設定**:
   * APIキーを取得し、環境変数 `GOOGLE_API_KEY` に設定する。
 * **クイックスタート**:
   * **Web版**: [gemini.google.com](https://gemini.google.com/) にアクセスし、プロンプトを入力してチャットを開始。
   * **API版**:
+
   ```python
   import google.generativeai as genai
   genai.configure(api_key="YOUR_API_KEY")
@@ -187,8 +190,8 @@ relationships:
 | **Gemini API** | 従量課金 | モデルと入出力トークン数に応じた課金（例: Gemini 3.5 Flashは無料枠あり）。 |
 
 * **課金体系**:
-    * **Web版**: サブスクリプション（月額）
-    * **API**: トークン単位の従量課金制
+  * **Web版**: サブスクリプション（月額）
+  * **API**: トークン単位の従量課金制
 * **無料トライアル**: Gemini AI Proに2ヶ月の無料トライアルが提供される場合がある。
 
 ## **8. 導入実績・事例**

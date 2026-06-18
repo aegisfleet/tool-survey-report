@@ -93,11 +93,13 @@ relationships:
   * クラウド版: JFrogアカウントの作成。
   * セルフホスト版: Java Runtime, 対応OS (Linux, Docker等)。
 * **インストール/導入**:
+
   ```bash
   # Dockerでの起動例
   docker pull releases-docker.jfrog.io/jfrog/artifactory-oss:latest
   docker run -d -p 8081:8081 releases-docker.jfrog.io/jfrog/artifactory-oss:latest
   ```
+
 * **初期設定**:
   * 初回ログイン時に管理者パスワードを設定。
   * 「Onboarding Wizard」に従い、使用するパッケージ形式（Maven, npm, Dockerなど）を選択してリポジトリを自動作成。

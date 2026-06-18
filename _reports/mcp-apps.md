@@ -96,25 +96,32 @@ relationships:
   * MCPに対応したホストアプリケーション（Claude Desktop, VS Code等）
 * **インストール/導入**:
   AIコーディングエージェント（Claude Code等）を使用してセットアップする場合：
+
   ```bash
   # スキルのインストール（例）
   /plugin install mcp-apps@modelcontextprotocol-ext-apps
   ```
+
   手動でセットアップする場合：
+
   ```bash
   npm install @modelcontextprotocol/ext-apps @modelcontextprotocol/sdk
   npm install -D typescript vite vite-plugin-singlefile express cors
   ```
+
 * **初期設定**:
   `server.ts` でツールとリソースを登録する。
+
   ```typescript
   // ツールの登録（UIリソースへの参照を含む）
   registerAppTool(server, "tool-name", { ... }, handler);
   // UIリソースの登録
   registerAppResource(server, "ui://...", path, options, handler);
   ```
+
 * **クイックスタート**:
   AIエージェントに「カラーピッカーを表示するMCP Appを作成して」のように指示するか、サンプルプロジェクトをクローンして実行する。
+
   ```bash
   git clone https://github.com/modelcontextprotocol/ext-apps
   cd ext-apps/examples/basic-server-react

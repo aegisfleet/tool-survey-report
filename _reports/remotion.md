@@ -119,13 +119,16 @@ relationships:
   * Node.js (最新のLTS推奨)
   * FFmpeg (Remotionが自動的にダウンロード・管理可能)
 * **インストール/導入**:
+
   ```bash
   # 新規プロジェクトの作成
   npm init video
   ```
+
 * **初期設定**:
   * `remotion.config.ts` で解像度やFPS、出力設定などを構成。
 * **クイックスタート**:
+
   ```bash
   # プレビューサーバーの起動 (Studio)
   npm start

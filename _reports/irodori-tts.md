@@ -84,14 +84,17 @@ relationships:
   * `uv`（Pythonパッケージマネージャー）
   * CUDA対応GPU（推奨）、またはmacOS (MPS) / CPU
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/Aratako/Irodori-TTS.git
   cd Irodori-TTS
   uv sync
   ```
+
 * **初期設定**:
   * 必要なモデルのチェックポイントは推論時にHugging Face Hubから自動でダウンロード可能です。
 * **クイックスタート (CLI 推論)**:
+
   ```bash
   uv run python infer.py \
     --hf-checkpoint Aratako/Irodori-TTS-500M \
@@ -99,7 +102,9 @@ relationships:
     --no-ref \
     --output-wav outputs/sample.wav
   ```
+
 * **クイックスタート (Gradio Web UI)**:
+
   ```bash
   uv run python gradio_app.py --server-name 0.0.0.0 --server-port 7860
   ```

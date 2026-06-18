@@ -112,12 +112,14 @@ relationships:
   * JetBrainsアカウント（Community版は不要、Ultimate版試用・利用時に必要）
 * **インストール/導入**:
   推奨される方法は「JetBrains Toolbox App」を使用することです。これにより、複数のJetBrains製品のインストールとアップデートを一元管理できます。
+
   ```bash
   # macOS (Homebrewを使用する場合)
   brew install --cask jetbrains-toolbox
   # Linux (Ubuntu/Debian) - 公式サイトからtar.gzをDLまたはSnap
   sudo snap install intellij-idea-community --classic
   ```
+
 * **初期設定**:
   1. 初回起動時、以前の設定をインポートするか、デフォルト設定を使用するか選択します。
   2. テーマ（Light/Dark）やキーマップ（IntelliJ標準/VSCode互換など）を選択します。

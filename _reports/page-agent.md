@@ -87,15 +87,19 @@ relationships:
   * Node.js環境（NPMを使用する場合）、またはCDN経由での読み込み。
   * 使用するLLMのAPIキー（例：DashScopeのAPIキー等）。
 * **インストール/導入**:
+
   ```bash
   # NPMによるインストール
   npm install page-agent
   ```
+
   ```html
   <!-- CDNによる読み込み -->
   <script src="https://cdn.jsdelivr.net/npm/page-agent@1.5.5/dist/iife/page-agent.demo.js" crossorigin="true"></script>
   ```
+
 * **初期設定・クイックスタート**:
+
   ```javascript
   import { PageAgent } from 'page-agent'
 

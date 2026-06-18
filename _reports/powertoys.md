@@ -97,12 +97,14 @@ relationships:
   * x64 または ARM64 アーキテクチャ
 * **インストール/導入**:
   GitHubのリリースページからインストーラー（exe）をダウンロードするか、以下のコマンドを使用する。
+
   ```bash
   # Winget (推奨)
   winget install Microsoft.PowerToys --source winget
 
   # Microsoft Storeからもインストール可能
   ```
+
 * **初期設定**:
   * インストール後、タスクトレイにアイコンが表示される。
   * 設定画面を開き、管理者モードでの実行（「常に管理者として実行」）を推奨（一部機能で必要）。

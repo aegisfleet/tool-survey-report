@@ -81,12 +81,14 @@ links:
 
 * **初期設定**:
   * クライアントライブラリとしての利用の場合:
+
     ```bash
     bun add saizeriya.js
     ```
 
 * **クイックスタート**:
   * Betterzeriyaの起動:
+
     ```bash
     cd apps/betterzeriya
     bun dev

@@ -99,10 +99,12 @@ relationships:
   * Node.jsなどのランタイム（ソースからビルドする場合）
 * **インストール/導入**:
   * Dockerの場合:
+
   ```bash
   docker pull docker.elastic.co/kibana/kibana:9.3.0
   docker run --name kibana --net elastic -p 5601:5601 docker.elastic.co/kibana/kibana:9.3.0
   ```
+
   * Elastic Cloud（SaaS）の場合: 公式サイトからアカウントを作成し、クラスタをデプロイするだけで利用可能。
 * **初期設定**:
   * `kibana.yml` でElasticsearchのURLや認証情報を設定。

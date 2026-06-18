@@ -106,6 +106,7 @@ relationships:
   * 特に必要なし。インストール後すぐに利用可能。
 
 * **クイックスタート**:
+
   ```bash
   # 特定のファイルを判定
   magika ./tests_data/basic/python/code.py
@@ -146,7 +147,7 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: GitHubリポジトリのREADMEおよび公式ウェブサイト（https://securityresearch.google/magika/）にて、使い方やモデルのアーキテクチャに関する詳細な情報が提供されている。
+* **ドキュメント**: GitHubリポジトリのREADMEおよび公式ウェブサイト（<https://securityresearch.google/magika/）にて、使い方やモデルのアーキテクチャに関する詳細な情報が提供されている。>
 * **コミュニティ**: GitHubのIssueを通じたコミュニティサポート。
 * **公式サポート**: オープンソースプロジェクトのため、商用の公式サポートは提供されていない。セキュリティ上の問題については専用のメールアドレスが用意されている。
 

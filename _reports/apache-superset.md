@@ -86,6 +86,7 @@ relationships:
 * **前提条件**:
   * DockerおよびDocker Compose環境（推奨）
 * **インストール/導入**:
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/apache/superset.git
@@ -94,6 +95,7 @@ relationships:
   # Docker Composeを使用したビルドと起動
   docker compose up --build
   ```
+
 * **初期設定**:
   * 起動後、ブラウザで `http://localhost:9000/` にアクセス。
   * デフォルトの認証情報（ユーザー名: `admin` / パスワード: `admin`）でログインし、サンプルのダッシュボードを確認可能。

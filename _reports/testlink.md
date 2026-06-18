@@ -105,10 +105,12 @@ layout: report
   2. Webサーバーのドキュメントルートに配置。
   3. ブラウザでアクセスし、インストーラーに従ってデータベース接続情報などを設定。
   または、Dockerイメージを使用することも可能。
+
   ```bash
   # Dockerでの起動例（非公式イメージ等の利用が一般的）
   docker run -d -p 80:80 -e TESTLINK_DATABASE_PASSWORD=testlink bitnami/testlink:latest
   ```
+
 * **初期設定**:
   * `config.inc.php` でのログ設定やアップロード制限の設定。
   * 管理画面からのプロジェクト作成、ユーザー追加、ロール設定。

@@ -85,20 +85,24 @@ relationships:
   * Make、Docker（サンドボックス利用に推奨）
   * 各種LLMのAPIキー
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/bytedance/deer-flow.git
   cd deer-flow
   make config
   ```
+
 * **初期設定**:
   * `config.yaml` を編集し、利用するLLM（gpt-4, gemini-2.5-flashなど）を設定する。
   * プロジェクトルートの `.env` ファイルに `OPENAI_API_KEY` 等のAPIキーを記述する。
 * **クイックスタート**:
   * Docker環境で開発用サーバーを起動する場合：
+
   ```bash
   make docker-init
   make docker-start
   ```
+
   * ブラウザで `http://localhost:2026` にアクセスして利用を開始する。
 
 ## **5. 特徴・強み (Pros)**

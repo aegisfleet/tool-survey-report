@@ -100,14 +100,19 @@ relationships: {}
   * 特に追加の設定なく、インストール直後から利用可能です。
 * **クイックスタート**:
   * チュートリアルを開始する:
+
     ```bash
     marimo tutorial intro
     ```
+
   * 新しいノートブックを作成・編集する:
+
     ```bash
     marimo edit my_notebook.py
     ```
+
   * ノートブックをアプリとして実行する:
+
     ```bash
     marimo run my_notebook.py
     ```

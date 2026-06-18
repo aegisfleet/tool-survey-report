@@ -92,10 +92,12 @@ relationships:
   * Windows, macOS, Linux, iOS, Androidのいずれかが動作するデバイス。
   * アカウント作成は不要（Sync/Publish利用時のみ必要）。
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install --cask obsidian
   ```
+
   または公式サイトからインストーラーをダウンロードして実行。
 * **初期設定**:
   * アプリ起動後、「Create new vault」を選択し、ローカルフォルダを指定して保管庫（Vault）を作成する。
@@ -132,6 +134,7 @@ relationships:
 * **無料トライアル**: Sync/Publishにはトライアルなし（返金保証期間あり）。
 
 **アドオン:**
+
 * **Obsidian Sync**: $4/月（年払い）または $5/月（月払い）。端末間の同期、バージョン履歴、エンドツーエンド暗号化。
 * **Obsidian Publish**: $8/月（年払い）または $10/月（月払い）。ノートをWebサイトとして公開。
 

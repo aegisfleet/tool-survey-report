@@ -96,6 +96,7 @@ relationships:
   * Git
   * npm または Docker
 * **インストール/導入**:
+
   ```bash
   # npm経由でグローバルインストール
   npm install -g renovate
@@ -103,6 +104,7 @@ relationships:
   # またはnpxで実行
   npx renovate
   ```
+
 * **初期設定**:
   * `renovate.json` または `renovate.json5` をリポジトリルートに作成。
   * GitHub Appとして導入する場合は、Mend Renovate Appをインストールするだけで開始可能。

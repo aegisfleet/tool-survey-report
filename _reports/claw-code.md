@@ -82,12 +82,15 @@ relationships:
   * （Rust版を利用する場合はRustツールチェーン）
 * **インストール/導入**:
   リポジトリをクローンして利用する。
+
   ```bash
   git clone https://github.com/instructkr/claw-code
   cd claw-code
   ```
+
 * **クイックスタート**:
   Pythonワークスペースでのサマリーやマニフェストの出力：
+
   ```bash
   # サマリーの出力
   python3 -m src.main summary

@@ -112,14 +112,17 @@ relationships:
   * OpenIDプロバイダー（Google, Auth0など）のアカウントと、アプリケーション登録（Client ID/Secretの取得）。
   * 開発言語に応じたOIDCライブラリ（推奨）。
 * **インストール/導入 (Node.jsの例)**:
+
   ```bash
   # OpenID Foundation認定ライブラリのインストール
   npm install openid-client
   ```
+
 * **初期設定**:
   * Issuer（プロバイダーのURL）を指定してDiscoveryを行う。
   * Client ID, Client Secret, Redirect URIを設定する。
 * **クイックスタート (概念コード)**:
+
   ```javascript
   const { Issuer } = require('openid-client');
   // プロバイダーの探索

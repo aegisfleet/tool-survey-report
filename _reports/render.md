@@ -149,6 +149,7 @@ relationships:
 ## **10. エコシステムと連携**
 
 ### **10.1 API・外部サービス連携**
+
 * **API**: [Render API](https://api-docs.render.com/) を通じて、サービスの作成、デプロイ、スケール、ログ取得などをプログラムから制御可能。
 * **外部サービス連携**: Datadog, Scout APM, PaperTrailなどの監視・ログツールと連携可能。GitLab, Bitbucketともネイティブ連携。
 

@@ -92,15 +92,18 @@ relationships:
   * Docker（コンテナデプロイの場合）またはPython環境
 * **インストール/導入**:
   AWSマネジメントコンソール、またはAWS CLI/SDK、CloudFormationを使用してリソースを作成。
+
   ```bash
   # Boto3を使用したPython SDKのインストール例
   pip install boto3
   ```
+
 * **初期設定**:
   1. エージェントのコードを作成（例: `main.py`）。
   2. 依存関係（`requirements.txt`）を含めてZip化、またはDockerfileを作成してECRにプッシュ。
   3. AgentCore Runtimeで新しいエージェントを作成し、ソースを指定してデプロイ。
 * **クイックスタート**:
+
   ```python
   import boto3
 

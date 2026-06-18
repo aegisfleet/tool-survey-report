@@ -115,16 +115,19 @@ relationships:
   * Node.js (JavaScript版の場合)、Java (JVM版の場合) などのランタイム
   * テスト対象プロジェクトのセットアップ
 * **インストール/導入**:
+
   ```bash
   # JavaScript (Node.js) の場合
   npm install --save-dev @cucumber/cucumber
   ```
+
 * **初期設定**:
   * `cucumber.js` (または `cucumber.json`) 設定ファイルを作成し、テストファイルのパスなどを指定します。
 * **クイックスタート**:
   1. `.feature` ファイルを作成し、Gherkinでシナリオを記述。
   2. ステップ定義ファイル (`.js` や `.java`) を作成し、各ステップの実装を記述。
   3. テストを実行:
+
      ```bash
      npx cucumber-js
      ```

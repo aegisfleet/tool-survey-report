@@ -85,16 +85,21 @@ relationships:
   * Node.js環境（npm, yarn, pnpm, bunなど）
   * またはRust環境（cargo）
 * **インストール/導入**:
+
   ```bash
   # npmの場合
   npm install --save-dev --save-exact @biomejs/biome
   ```
+
 * **初期設定**:
+
   ```bash
   # 設定ファイル（biome.json）の生成
   npx @biomejs/biome init
   ```
+
 * **クイックスタート**:
+
   ```bash
   # フォーマット、リント、import整理を一括実行
   npx @biomejs/biome check --write ./src
@@ -186,13 +191,14 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-- **2026-05-09 (v2.4.15)**: パッチリリース。`useTestHooksInOrder`, `useVueNextTickPromise`, `noVueVOnNumberValues` などのルールの追加。
-- **2026-05-01 (v2.4.14)**: パッチリリース。`useTestHooksOnTop` などのルールの追加や `noMisleadingReturnType` のバグ修正。
-- **2026-04-23 (v2.4.13)**: パッチリリース。`noUnnecessaryTemplateExpression` ルールの追加や `noMisleadingReturnType` のバグ修正。
-- **2026-04-14 (v2.4.12)**: パッチリリース。`noIdenticalTestTitle`, `noComponentHookFactories` ルールの追加や `useForOf` の診断メッセージ改善。
-- **2026-04-09 (v2.4.11)**: パッチリリース。`useConsistentTestIt`, `useExplicitReturnType` などのルールの追加。
-- **2026-03-30 (v2.4.10)**: パッチリリース。`noImpliedEval` ルールの追加や `noUnusedVariables`, `noNegationElse` のバグ修正。
-- **2026-03-25 (v2.4.9)**: パッチリリース。CSSルール `noDuplicateSelectors` の追加など。
+* **2026-05-09 (v2.4.15)**: パッチリリース。`useTestHooksInOrder`, `useVueNextTickPromise`, `noVueVOnNumberValues` などのルールの追加。
+* **2026-05-01 (v2.4.14)**: パッチリリース。`useTestHooksOnTop` などのルールの追加や `noMisleadingReturnType` のバグ修正。
+* **2026-04-23 (v2.4.13)**: パッチリリース。`noUnnecessaryTemplateExpression` ルールの追加や `noMisleadingReturnType` のバグ修正。
+* **2026-04-14 (v2.4.12)**: パッチリリース。`noIdenticalTestTitle`, `noComponentHookFactories` ルールの追加や `useForOf` の診断メッセージ改善。
+* **2026-04-09 (v2.4.11)**: パッチリリース。`useConsistentTestIt`, `useExplicitReturnType` などのルールの追加。
+* **2026-03-30 (v2.4.10)**: パッチリリース。`noImpliedEval` ルールの追加や `noUnusedVariables`, `noNegationElse` のバグ修正。
+* **2026-03-25 (v2.4.9)**: パッチリリース。CSSルール `noDuplicateSelectors` の追加など。
+
 * **2026-02-16 (v2.4.2)**: パッチリリース。バグ修正。
 * **2026-02-12 (v2.4.0)**: マイナーリリース。Playwright向けの新しいリンタールール (`noConditionalExpect`, `noPlaywrightElementHandle` 等) の追加。`useImportType` の改善など。
 * **2026-01-29 (v2.3.15)**: パッチリリース。`noNestedPromises` ルールなどの追加。

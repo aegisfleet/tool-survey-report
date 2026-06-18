@@ -129,7 +129,7 @@ relationships:
 
 * **ドキュメント**: 公式のUser Guide（[https://aquavoice.com/guide](https://aquavoice.com/guide)）やFAQが提供されています。
 * **コミュニティ**: 公式Discordサーバーがあり、ユーザー間の情報交換やバグ報告が活発に行われています。
-* **公式サポート**: メール（support@withaqua.com）でのサポートが提供されています。
+* **公式サポート**: メール（<support@withaqua.com>）でのサポートが提供されています。
 
 ## **10. エコシステムと連携**
 

@@ -99,6 +99,7 @@ relationships:
   * **Control Node (実行環境)**: Linux, macOS, WSL等のPythonが動作する環境 (Windowsネイティブは非推奨)。Python 3.10以上推奨。
   * **Managed Node (管理対象)**: SSH接続が可能でPythonがインストールされているLinux/Unixサーバー、またはWinRMが有効なWindowsサーバー。
 * **インストール**:
+
   ```bash
   # pipxを使用したインストール (推奨)
   pipx install ansible
@@ -106,20 +107,26 @@ relationships:
   # または pipを使用
   python3 -m pip install --user ansible
   ```
+
 * **初期設定**:
   * `ansible.cfg` ファイルでデフォルト設定をカスタマイズ（任意）。
   * インベントリファイル (`hosts.ini` または `inventory.yml`) の作成。
 * **クイックスタート**:
   1. インベントリファイルの作成:
+
      ```ini
      [web]
      192.168.1.10
      ```
+
   2. Ad-hocコマンドで接続確認:
+
      ```bash
      ansible all -i hosts.ini -m ping
      ```
+
   3. シンプルなPlaybook (`site.yml`) の作成と実行:
+
      ```yaml
      - hosts: all
        tasks:
@@ -128,6 +135,7 @@ relationships:
              name: httpd
              state: present
      ```
+
      ```bash
      ansible-playbook -i hosts.ini site.yml
      ```

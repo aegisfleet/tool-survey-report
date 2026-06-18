@@ -99,13 +99,16 @@ relationships:
   * Node.js (npm) または Homebrew
   * ChatGPT Plus, Pro, Business, Edu, Enterprise アカウント、または OpenAI API キー
 * **インストール/導入**:
+
   ```bash
   # npmを使用したインストール
   npm i -g @openai/codex
   ```
+
 * **初期設定**:
   * 初回起動時にサインインが求められ、ChatGPTアカウントまたはAPIキーで認証を行います。
 * **クイックスタート**:
+
   ```bash
   # 対象のプロジェクトディレクトリに移動して実行
   cd your-project

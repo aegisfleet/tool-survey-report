@@ -118,11 +118,14 @@ relationships:
   2. アプリケーションにOAuthクライアントライブラリをインストールする。
   3. 認可リクエストのURLを構築し、ユーザーをリダイレクトする。
 * **インストール/導入 (Pythonでの例)**:
+
   ```bash
   # 一般的なOAuthライブラリのインストール例
   pip install requests-oauthlib
   ```
+
 * **クイックスタート (Client Credentials Flowの例)**:
+
   ```python
   from oauthlib.oauth2 import BackendApplicationClient
   from requests_oauthlib import OAuth2Session

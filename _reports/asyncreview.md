@@ -93,18 +93,23 @@ relationships:
   * GitHub Token (プライベートリポジトリの場合)
 * **インストール/導入**:
   インストール不要で `npx` コマンドから直接実行可能です。
+
   ```bash
   # エージェントスキルとして追加する場合
   npx skills add AsyncFuncAI/AsyncReview
   ```
+
 * **初期設定**:
   環境変数を設定します。
+
   ```bash
   export GEMINI_API_KEY="your-gemini-key"
   # プライベートリポジトリの場合
   export GITHUB_TOKEN="your-github-token"
   ```
+
 * **クイックスタート**:
+
   ```bash
   npx asyncreview review --url https://github.com/org/repo/pull/123 -q "Check for breaking changes"
   ```

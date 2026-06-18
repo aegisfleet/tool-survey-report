@@ -93,6 +93,7 @@ relationships:
 * **前提条件**:
   * macOS, Linux, または Windows 10以降
 * **インストール/導入**:
+
   ```bash
   # macOS, Linux, WSL
   curl -fsSL https://bun.sh/install | bash
@@ -100,9 +101,11 @@ relationships:
   # Windows (PowerShell)
   powershell -c "irm bun.sh/install.ps1 | iex"
   ```
+
 * **初期設定**:
   * インストール後、シェルの設定ファイル（`.bashrc`や`.zshrc`など）を再読み込みするか、ターミナルを再起動します。
 * **クイックスタート**:
+
   ```bash
   # プロジェクトの初期化
   mkdir my-app

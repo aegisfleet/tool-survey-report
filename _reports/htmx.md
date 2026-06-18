@@ -94,13 +94,17 @@ relationships:
   <!-- CDN経由で読み込む場合 -->
   <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
   ```
+
   npm経由の場合:
+
   ```bash
   npm install htmx.org
   ```
+
 * **初期設定**:
   * `script`タグで読み込むだけで完了。
 * **クイックスタート**:
+
   ```html
   <!-- ボタンをクリックすると /clicked にPOSTし、レスポンスでボタン自身を置き換える -->
   <button hx-post="/clicked" hx-swap="outerHTML">

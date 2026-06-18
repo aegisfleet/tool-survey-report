@@ -84,6 +84,7 @@ relationships:
   * Discordアカウント（PC/Web利用の場合）
   * Apple ID または Google アカウント（モバイルアプリ利用の場合）
 * **インストール/導入**:
+
   ```bash
   # Discord版: 公式サイトから招待リンクをクリックしてサーバーに参加
   https://nijijourney.com/ja/ -> "Discordに参加"
@@ -91,6 +92,7 @@ relationships:
   # アプリ版: ストアからダウンロード
   App Store / Google Play -> "Niji Journey" で検索
   ```
+
 * **初期設定**:
   * Discord版は `/subscribe` コマンドでサブスクリプション登録画面を開く。
   * アプリ版は初回起動時にプラン選択画面が表示される。
@@ -135,7 +137,7 @@ relationships:
 
 * **ドキュメント**: [公式ヘルプセンター](https://nijijourney.com/help-center)にてFAQや基本的な使い方がまとめられている。Midjourneyのドキュメントも併用可能。
 * **コミュニティ**: [公式Discordサーバー](https://nijijourney.com/ja/)が非常に活発で、日本語チャンネルも存在し、ノウハウ共有が盛ん。
-* **公式サポート**: メール（support@nijijourney.com）およびDiscord経由でのサポートに対応。日本語での問い合わせも可能。
+* **公式サポート**: メール（<support@nijijourney.com>）およびDiscord経由でのサポートに対応。日本語での問い合わせも可能。
 
 ## **10. エコシステムと連携**
 

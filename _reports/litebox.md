@@ -81,11 +81,13 @@ relationships:
   * Git
   * Rust環境（Cargoなど）
 * **インストール/導入**:
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/microsoft/litebox
   cd litebox
   ```
+
 * **初期設定**:
   * 開発中のプロジェクトであるため、具体的なビルド・実行コマンドについては公式リポジトリのドキュメントを参照する必要があります。
 * **クイックスタート**:

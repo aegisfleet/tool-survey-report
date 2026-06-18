@@ -127,6 +127,7 @@ relationships:
   * 最低スペック: CPU 2コア以上, RAM 4GB以上
 * **インストール/導入**:
   公式サイトで推奨されているDocker Composeを使用したセットアップ手順です。
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/langgenius/dify.git
@@ -138,6 +139,7 @@ relationships:
   # Dockerコンテナの起動
   docker compose up -d
   ```
+
 * **初期設定**:
   * ブラウザで `http://localhost/install` にアクセスし、管理者アカウントを作成します。
   * 必要なLLMプロバイダー（OpenAIなど）のAPIキーを「設定 > モデルプロバイダー」から登録します。

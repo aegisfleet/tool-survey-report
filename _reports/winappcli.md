@@ -89,17 +89,20 @@ relationships:
 * **インストール/導入**:
 
   **WinGetを使用する場合**:
+
   ```bash
   winget install Microsoft.winappcli --source winget
   ```
 
   **NPMを使用する場合**（Electronプロジェクトなど）:
+
   ```bash
   npm install @microsoft/winappcli --save-dev
   ```
 
 * **クイックスタート**:
   プロジェクトディレクトリで初期化し、必要に応じてパッケージアイデンティティを生成して実行します。
+
   ```bash
   # プロジェクトの初期化
   winapp init

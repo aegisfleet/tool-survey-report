@@ -90,6 +90,7 @@ relationships:
 * **インストール/導入**:
 
   公式サイトのインタラクティブツールを使用して環境に合わせたコマンドを取得可能。一般的な pip インストールの例（CUDA対応）:
+
   ```bash
   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
   ```
@@ -97,6 +98,7 @@ relationships:
 * **初期設定**:
   * 特に追加の設定ファイルなし。インストール後、スクリプト内で `import torch` するだけで利用可能。
 * **クイックスタート**:
+
   ```python
   import torch
   x = torch.rand(5, 3)

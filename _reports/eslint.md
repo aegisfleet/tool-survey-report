@@ -92,14 +92,17 @@ relationships:
 * **前提条件**:
   * Node.js (v18.18.0, v20.9.0, v21.1.0以上)
 * **インストール/導入**:
+
   ```bash
   npm init @eslint/config@latest
   # または
   npm install eslint --save-dev
   ```
+
 * **初期設定**:
   * 上記コマンドを実行すると対話形式で設定ファイル (`eslint.config.js` 等) が生成される。
 * **クイックスタート**:
+
   ```bash
   # コードの検査
   npx eslint .

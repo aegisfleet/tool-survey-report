@@ -92,15 +92,19 @@ relationships:
   * Node.js環境 (`npx` コマンドが利用可能であること)
 * **インストール/導入**:
   プロジェクトのルートディレクトリで以下のコマンドを実行します。
+
   ```bash
   npx cc-sdd@latest --claude --lang ja
   ```
+
   ※ `--claude` の部分は利用するエージェント（`--cursor`, `--windsurf` など）に変更可能。`--lang` で出力言語を指定します。
 * **クイックスタート**:
   インストール後、AIエージェントのチャットインターフェースから以下のコマンドで開発を開始します。
+
   ```text
   /kiro:spec-init <作りたい機能の概要>
   ```
+
   続いて、要件定義、設計、タスク分割のコマンドを順次実行していきます（例: `/kiro:spec-requirements`, `/kiro:spec-design`, `/kiro:spec-tasks`）。
 
 ## **5. 特徴・強み (Pros)**

@@ -97,6 +97,7 @@ relationships:
   * AWSマネジメントコンソールへのアクセス権限
 * **インストール/導入**:
   AWS CLIを使用する場合、AWS CLI自体をインストールします。CloudFormationの機能はAWS CLIに組み込まれています。
+
   ```bash
   # macOSの場合 (Homebrewを使用)
   brew install awscli
@@ -104,10 +105,12 @@ relationships:
   # バージョン確認
   aws --version
   ```
+
 * **初期設定**:
   * AWS IAMでCloudFormationを実行するための適切な権限（フルアクセスまたは最小権限）を持つIAMユーザーまたはロールを作成します。
 * **クイックスタート**:
   1. 以下のようなシンプルなS3バケットを作成するYAMLテンプレート（`template.yaml`）を作成します。
+
      ```yaml
      Resources:
        MyS3Bucket:
@@ -115,13 +118,17 @@ relationships:
          Properties:
            BucketName: 'my-unique-bucket-name-12345'
      ```
+
   2. AWS CLIを使用してスタックを作成します。
+
      ```bash
      aws cloudformation create-stack \
        --stack-name my-first-stack \
        --template-body file://template.yaml
      ```
+
   3. スタックの作成状況を確認します。
+
      ```bash
      aws cloudformation describe-stacks --stack-name my-first-stack
      ```

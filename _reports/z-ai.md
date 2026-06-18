@@ -113,14 +113,17 @@ relationships:
   * Z.aiアカウントの作成（[https://z.ai](https://z.ai)）
   * APIキーの取得
 * **インストール/導入**:
+
   ```bash
   pip install zai-sdk
   # または
   pip install openai
   ```
+
 * **初期設定**:
   * APIキーを環境変数などに設定。
 * **クイックスタート**:
+
   ```python
   from zai import ZaiClient
 

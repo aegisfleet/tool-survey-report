@@ -78,9 +78,11 @@ relationships:
 * **前提条件**:
   * GitHubリポジトリのクローン環境
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/xai-org/x-algorithm.git
   ```
+
 * **初期設定**:
   * 公式リポジトリのドキュメントに記載されている手順に従う。
 * **クイックスタート**:

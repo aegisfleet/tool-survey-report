@@ -102,14 +102,17 @@ relationships:
   * Python (pip)
   * LocalStackアカウント（Pro機能利用時）
 * **インストール/導入**:
+
   ```bash
   # CLIのインストール
   pip install localstack
   ```
+
 * **初期設定**:
   * `localstack login` コマンドでアカウント認証（Pro版の場合）。
   * `API_KEY` を環境変数に設定することも可能。
 * **クイックスタート**:
+
   ```bash
   # LocalStackの起動
   localstack start -d

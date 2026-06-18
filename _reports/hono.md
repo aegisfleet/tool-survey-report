@@ -97,6 +97,7 @@ relationships:
   * Node.js (v18以降推奨), Deno, または Bun
 * **インストール/導入**:
   `create-hono` コマンドを使用してプロジェクトを作成するのが最も簡単。
+
   ```bash
   # npmの場合
   npm create hono@latest
@@ -105,9 +106,11 @@ relationships:
   # denoの場合
   deno run -A npm:create-hono@latest
   ```
+
 * **初期設定**:
   * 対話形式でターゲットランタイム（aws-lambda, bun, cloudflare-workers, deno, nodejs, vercelなど）を選択するだけで、必要な設定ファイルが生成される。
 * **クイックスタート**:
+
   ```typescript
   import { Hono } from 'hono'
   const app = new Hono()

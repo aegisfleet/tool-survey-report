@@ -95,6 +95,7 @@ relationships:
 * **クイックスタート**:
   * バイナリを起動すると `http://localhost:4566` でリッスンを開始。
   * AWS CLIを使用する場合のコマンド例:
+
     ```bash
     aws --endpoint-url http://localhost:4566 sqs create-queue --queue-name my-queue
     ```
@@ -129,7 +130,7 @@ relationships:
 
 ## **9. サポート体制**
 
-* **ドキュメント**: 公式ドキュメントサイト（https://fakecloud.dev/docs）でGetting Started、サービスリファレンス、SDKガイドが網羅されている。
+* **ドキュメント**: 公式ドキュメントサイト（<https://fakecloud.dev/docs）でGetting> Started、サービスリファレンス、SDKガイドが網羅されている。
 * **コミュニティ**: GitHubのIssueを通じた活発なコミュニティサポート。
 * **公式サポート**: 無償のオープンソースプロジェクトのため、企業向けのSLAを伴う公式サポート体制はない。
 

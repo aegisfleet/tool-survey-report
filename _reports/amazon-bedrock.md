@@ -122,17 +122,22 @@ relationships:
   * Python 3.8以上（Boto3利用の場合）
   * **モデルアクセスの有効化**: Bedrockコンソールの「Model access」から利用したいモデルを有効化する必要がある（必須）。
 * **インストール/導入**:
+
   ```bash
   # AWS CLIとBoto3のインストール
   pip install boto3 awscli
   ```
+
 * **初期設定**:
   * AWSクレデンシャルの設定
+
   ```bash
   aws configure
   # Access Key ID, Secret Access Key, Region (us-east-1, ap-northeast-1 等) を入力
   ```
+
 * **クイックスタート (Python)**:
+
   ```python
   import boto3
   import json

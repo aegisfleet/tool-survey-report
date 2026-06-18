@@ -92,6 +92,7 @@ relationships:
   * Maven または Gradle
   * データベース (H2, MySQL, PostgreSQLなど)
 * **インストール/導入**:
+
   ```xml
   <!-- Maven: pom.xml -->
   <dependency>
@@ -101,9 +102,11 @@ relationships:
       <scope>test</scope>
   </dependency>
   ```
+
 * **初期設定**:
   * 基本的な設定は不要で、JDBC接続があれば動作します。必要に応じて`dbunit.yml`で詳細設定が可能です。
 * **クイックスタート**:
+
   ```java
   @DBRider // テストクラスに付与して機能を有効化
   @SpringBootTest // Spring Bootの場合

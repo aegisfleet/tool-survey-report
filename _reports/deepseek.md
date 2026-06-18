@@ -117,10 +117,13 @@ relationships:
   2. "Create new API key"をクリックしてキーを生成。
 * **インストール/導入**:
   OpenAI互換APIのため、OpenAIの公式SDKを利用可能。
+
   ```bash
   pip install openai
   ```
+
 * **クイックスタート (Python)**:
+
   ```python
   from openai import OpenAI
 

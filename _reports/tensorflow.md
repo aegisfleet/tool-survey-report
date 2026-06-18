@@ -120,13 +120,16 @@ relationships:
   * pip
   * GPUを使用する場合はCUDA/cuDNN環境
 * **インストール/導入**:
+
   ```bash
   # CPU版およびGPU版（最新バージョンでは統合されています）
   pip install tensorflow
   ```
+
 * **初期設定**:
   * 特になし（GPUの認識確認などは `tf.config.list_physical_devices('GPU')` で可能）
 * **クイックスタート**:
+
   ```python
   import tensorflow as tf
 

@@ -77,6 +77,7 @@ tool_reading: マイクロソフト エージェント フレームワーク
   * .NET (C#) または Python環境
   * Azure OpenAI, OpenAI などの LLMプロバイダーのアカウントおよびAPIキー
 * **インストール/導入**:
+
   ```bash
   # Pythonの場合
   pip install agent-framework --pre
@@ -88,6 +89,7 @@ tool_reading: マイクロソフト エージェント フレームワーク
   dotnet add package Azure.Identity
   dotnet add package Microsoft.Agents.AI.OpenAI --prerelease
   ```
+
 * **初期設定**:
   * `AZURE_OPENAI_ENDPOINT` などの環境変数を設定するか、`.env` ファイルを使用します。
 * **クイックスタート**:

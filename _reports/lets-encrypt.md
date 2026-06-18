@@ -88,15 +88,18 @@ relationships:
   * ドメイン名が設定され、サーバーのIPアドレスを指していること
   * SSHアクセスが可能なLinux環境（Ubuntu/Debian推奨）
 * **インストール/導入**:
+
   ```bash
   # Ubuntu/Debianの場合（snapdを使用する方法が推奨されています）
   sudo snap install core; sudo snap refresh core
   sudo snap install --classic certbot
   sudo ln -s /snap/bin/certbot /usr/bin/certbot
   ```
+
 * **初期設定**:
   * 特になし（Certbotが自動的に設定を行います）
 * **クイックスタート**:
+
   ```bash
   # Nginxの場合
   sudo certbot --nginx

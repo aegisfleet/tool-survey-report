@@ -86,6 +86,7 @@ relationships:
   * 連携するデータプロバイダー（MCPサーバー）のAPIキーまたはサブスクリプション。
 * **インストール/導入**:
   Claude Codeの場合、以下のコマンドを実行する。
+
   ```bash
   # マーケットプレイスの追加
   claude plugin marketplace add anthropics/financial-services-plugins
@@ -99,6 +100,7 @@ relationships:
   claude plugin install private-equity@financial-services-plugins
   claude plugin install wealth-management@financial-services-plugins
   ```
+
 * **初期設定**:
   * `.mcp.json` ファイルを編集し、社内ツールや特定のデータプロバイダーへの接続設定を行う。
 * **クイックスタート**:

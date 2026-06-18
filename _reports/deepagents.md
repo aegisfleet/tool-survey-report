@@ -89,12 +89,15 @@ relationships:
   * Python環境
   * 各種LLM APIキー
 * **インストール**:
+
   ```bash
   pip install -U deepagents
   # または
   uv add deepagents
   ```
+
 * **クイックスタート**:
+
   ```python
   from deepagents import create_deep_agent
 

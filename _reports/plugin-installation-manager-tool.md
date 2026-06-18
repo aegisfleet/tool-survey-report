@@ -64,14 +64,14 @@ relationships:
 ## **2. 目的と主な利用シーン**
 
 * **解決する課題**:
-    * 手動でのプラグインダウンロードや依存関係解決の複雑さと手間。
-    * Infrastructure as Code (IaC) 環境での再現性のあるプラグインセットアップ。
-    * 古いシェルスクリプトベースの管理からの脱却。
+  * 手動でのプラグインダウンロードや依存関係解決の複雑さと手間。
+  * Infrastructure as Code (IaC) 環境での再現性のあるプラグインセットアップ。
+  * 古いシェルスクリプトベースの管理からの脱却。
 * **想定利用者**: Jenkins管理者、DevOpsエンジニア、インフラ担当者。
 * **利用シーン**:
-    * Dockerfile内でのJenkinsプラグインのプリインストール。
-    * オフライン環境（エアギャップ環境）へのプラグイン持ち込み準備。
-    * CI/CDパイプライン構築時の初期セットアップ自動化。
+  * Dockerfile内でのJenkinsプラグインのプリインストール。
+  * オフライン環境（エアギャップ環境）へのプラグイン持ち込み準備。
+  * CI/CDパイプライン構築時の初期セットアップ自動化。
 
 ## **3. 主要機能**
 
@@ -88,17 +88,22 @@ relationships:
   * Java Runtime Environment (JRE) 11以上
   * （オプション）Docker環境
 * **インストール/導入**:
+
   ```bash
   # JARファイルを直接ダウンロードして実行する場合
   curl -L https://github.com/jenkinsci/plugin-installation-manager-tool/releases/download/2.14.0/jenkins-plugin-manager-2.14.0.jar -o jenkins-plugin-manager.jar
   java -jar jenkins-plugin-manager.jar --version
   ```
+
 * **Dockerでの利用**:
   Jenkins公式Dockerイメージには `jenkins-plugin-cli` として同梱されています。
+
   ```bash
   docker run --rm -it jenkins/jenkins:lts jenkins-plugin-cli --version
   ```
+
 * **クイックスタート**:
+
   ```bash
   # プラグインリストを作成
   echo "git" > plugins.txt
@@ -132,8 +137,8 @@ relationships:
 
 * **導入企業**: Jenkinsを利用してコンテナベースのCI/CD環境を構築している世界中の多くの企業。
 * **導入事例**:
-    * Jenkins公式Dockerイメージのビルドプロセスで標準的に利用されています。
-    * Jenkins Configuration as Code (JCasC) と組み合わせて、完全にコード化されたJenkins環境の構築に利用されています。
+  * Jenkins公式Dockerイメージのビルドプロセスで標準的に利用されています。
+  * Jenkins Configuration as Code (JCasC) と組み合わせて、完全にコード化されたJenkins環境の構築に利用されています。
 * **対象業界**: ソフトウェア開発を行う全業界。
 
 ## **9. サポート体制**
@@ -148,9 +153,9 @@ relationships:
 
 * **API**: Javaライブラリとしても提供されており、他のJavaアプリケーションからライブラリとして利用することも可能です。
 * **外部サービス連携**:
-    * **Jenkins Update Center**: プラグイン情報の取得元として標準連携。
-    * **Docker**: コンテナビルドプロセスへの統合。
-    * **Artifactory / Nexus**: プロキシ設定やカスタムURLを通じて、プライベートリポジトリからのプラグインダウンロードも可能。
+  * **Jenkins Update Center**: プラグイン情報の取得元として標準連携。
+  * **Docker**: コンテナビルドプロセスへの統合。
+  * **Artifactory / Nexus**: プロキシ設定やカスタムURLを通じて、プライベートリポジトリからのプラグインダウンロードも可能。
 
 ### **10.2 技術スタックとの相性**
 
@@ -186,14 +191,14 @@ relationships:
 * **調査対象**: GitHub Stars, Issues (G2、Capterra、ITreviewにレビューの登録なし)
 * **総合評価**: GitHub Stars 440以上 (2026年2月時点)
 * **ポジティブな評価**:
-    * "Dockerイメージでのプラグイン管理が劇的に楽になった"
-    * "依存関係地獄から解放された"
-    * "スクリプトで自動化しやすい"
+  * "Dockerイメージでのプラグイン管理が劇的に楽になった"
+  * "依存関係地獄から解放された"
+  * "スクリプトで自動化しやすい"
 * **ネガティブな評価 / 改善要望**:
-    * "エラーメッセージが時々わかりにくい"
-    * "古いプラグインバージョンの解決でハマることがある"
+  * "エラーメッセージが時々わかりにくい"
+  * "古いプラグインバージョンの解決でハマることがある"
 * **特徴的なユースケース**:
-    * 独自のJenkins Dockerイメージを構築する際の標準ツールとして定着しています。
+  * 独自のJenkins Dockerイメージを構築する際の標準ツールとして定着しています。
 
 ## **15. 直近半年のアップデート情報**
 

@@ -92,17 +92,22 @@ relationships:
   * 4+ vCPU, 16GB 推奨RAM, 40GB 以上の空きディスクスペース
   * NVIDIA API キー (NVIDIA Endpoint を使用する場合)
 * **インストール/導入**:
+
   ```bash
   # インストールスクリプトの実行
   curl -fsSL https://nvidia.com/nemoclaw.sh | bash
   ```
+
 * **初期設定**:
+
   ```bash
   # インタラクティブなオンボードウィザードを開始
   nemoclaw onboard
   ```
+
   ウィザードの指示に従い、APIキーの入力やモデルの設定を行います。
 * **クイックスタート**:
+
   ```bash
   # サンドボックス環境に接続
   nemoclaw my-assistant connect

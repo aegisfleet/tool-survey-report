@@ -96,10 +96,12 @@ relationships:
   * Docker Engine (推奨) または Java 17+ (ZIP版の場合)
   * 最低 2GB RAM (4GB以上推奨)
 * **インストール/導入 (Docker)**:
+
   ```bash
   # Community Edition (無料版) の実行
   docker run -d --name sonarqube -e SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true -p 9000:9000 sonarqube:community
   ```
+
 * **初期設定**:
   * ブラウザで `http://localhost:9000` にアクセス
   * 初期ログイン ID: `admin`, パスワード: `admin` (初回ログイン時に変更)

@@ -83,16 +83,19 @@ relationships:
   * Linux (Ubuntu, Debian, RHEL等), BSD, macOS, Windows(Cygwinベース)で動作。
   * アカウント作成やクレジットカード登録は不要。
 * **インストール/導入**:
+
   ```bash
   # Ubuntu/Debianでのインストール例
   sudo apt update
   sudo apt install squid
   ```
+
 * **初期設定**:
   * 主な設定ファイルは `/etc/squid/squid.conf` に配置される。
   * デフォルトではポート `3128` で待ち受ける（`http_port 3128`）。
   * テスト用にローカルネットワークからのアクセスを許可する場合、`acl` と `http_access` ディレクティブを編集する。
 * **クイックスタート**:
+
   ```bash
   # サービスの起動と状態確認
   sudo systemctl start squid

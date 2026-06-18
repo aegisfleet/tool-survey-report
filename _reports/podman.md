@@ -97,6 +97,7 @@ relationships:
 * **前提条件**:
   * Linux (RHEL, Fedora, Ubuntu等), macOS, Windows (WSL2)。
 * **インストール/導入**:
+
   ```bash
   # RHEL / CentOS / Fedora
   sudo dnf install -y podman
@@ -104,10 +105,12 @@ relationships:
   # macOS (Homebrew)
   brew install podman
   ```
+
 * **初期設定**:
   * (Linuxの場合) `podman info` で設定確認。基本的には設定不要。
   * (macOS/Windowsの場合) `podman machine init` と `podman machine start` でVMを起動。
 * **クイックスタート**:
+
   ```bash
   # Hello World
   podman run hello-world

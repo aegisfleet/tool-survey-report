@@ -98,6 +98,7 @@ relationships:
   ```bash
   android update
   ```
+
   CLIがインストールされているか確認するには、`which android` または `command -v android` を実行します。
 
 ## **5. 特徴・強み (Pros)**

@@ -90,11 +90,13 @@ relationships:
   * Docker Desktop (Windows/macOS) または Docker Engine (Linux)
   * OpenAI, Anthropic, OpenRouter等の各種LLMのAPIキー、あるいはOllamaなどのローカルLLM環境
 * **インストール/導入**:
+
   ```bash
   # Dockerイメージの取得と実行
   docker pull agent0ai/agent-zero
   docker run -p 50001:80 agent0ai/agent-zero
   ```
+
 * **初期設定**:
   * コンテナ起動後、ブラウザで `http://localhost:50001` にアクセス。
   * 「Settings」から使用するAIプロバイダ（OpenRouter, OpenAI等）のAPIキーを入力し、チャットモデルやユーティリティモデルを指定して「Save」する。

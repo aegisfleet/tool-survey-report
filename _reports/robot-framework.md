@@ -98,15 +98,18 @@ relationships:
 * **前提条件**:
   * Python (v3.6以上推奨) がインストールされていること。
 * **インストール/導入**:
+
   ```bash
   # pipを使用してインストール
   pip install robotframework
   ```
+
 * **初期設定**:
   * 特別な設定ファイルは不要ですが、必要に応じてテスト対象ライブラリ（SeleniumLibraryなど）を追加インストールします。
 * **クイックスタート**:
   1. テストファイル（`example.robot`）を作成。
   2. 以下のコマンドでテストを実行。
+
      ```bash
      robot example.robot
      ```

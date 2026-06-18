@@ -93,15 +93,18 @@ relationships: {}
   * ハードウェア: 高度な機能（姿勢推定、バイタルなど）にはCSIに対応したハードウェア（ESP32-S3、Intel 5300など）が必要だが、検証用や単純な存在検知には通常のWiFiでも可能。アカウント登録・クレカ登録は不要。
 * **インストール/導入 (Docker)**:
   最も簡単な開始方法はDockerイメージを使用すること。
+
   ```bash
   docker pull ruvnet/wifi-densepose:latest
   docker run -p 3000:3000 -p 3001:3001 -p 5005:5005/udp ruvnet/wifi-densepose:latest
   ```
+
 * **初期設定**:
   ハードウェア（ESP32-S3など）を使用する場合は、専用のファームウェアをフラッシュするスクリプトが用意されている。
   また、対話式のインストーラ (`./install.sh`) を実行することで環境に合わせた最適なプロファイルをセットアップ可能。
 * **クイックスタート**:
   Python API経由での呼び出し例：
+
   ```python
   from wifi_densepose import WiFiDensePose
 

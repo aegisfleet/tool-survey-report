@@ -133,7 +133,7 @@ relationships:
 
 * **ドキュメント**: 公式ドキュメント（[docs.sourcery.ai](https://docs.sourcery.ai/)）が用意されており、設定やルールの詳細が記載されている。
 * **コミュニティ**: GitHubリポジトリのIssueなどでフィードバックが可能。
-* **公式サポート**: メール（hello@sourcery.ai）での問い合わせ対応。Enterpriseプランでは専任のカスタマーサクセスマネージャーがつく。
+* **公式サポート**: メール（<hello@sourcery.ai>）での問い合わせ対応。Enterpriseプランでは専任のカスタマーサクセスマネージャーがつく。
 
 ## **10. エコシステムと連携**
 

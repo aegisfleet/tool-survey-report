@@ -85,6 +85,7 @@ relationships:
 * **インストール/導入**:
   * APIへのHTTPリクエストを利用するため、基本的にはcurlや各種言語のHTTPクライアントを利用します。
   * Pythonの場合は専用のライブラリも提供されています：
+
   ```bash
   pip install scrapingbee
   ```
@@ -94,6 +95,7 @@ relationships:
 
 * **クイックスタート**:
   * 取得したAPIキーを使って、APIエンドポイントにリクエストを送信します。
+
   ```bash
   curl "https://app.scrapingbee.com/api/v1?api_key=YOUR_API_KEY&url=https://httpbin.org/html&render_js=false"
   ```

@@ -82,20 +82,24 @@ relationships:
   * Node.js 18以上 (npmおよびnpxを含む)
   * Microsoft 365のテナントとアカウント (初回アクセス時にテナント管理者による承認が必要)
 * **インストール/導入**:
+
   ```bash
   # グローバルインストールの場合
   npm install -g @microsoft/workiq
   ```
+
 * **初期設定**:
   * 初回実行時に `workiq accept-eula` を実行し、EULAに同意する。
   * Entra IDによるデバイスコード認証やブラウザ認証が行われる。
 * **クイックスタート**:
   * GitHub Copilot CLIを使用する場合、以下のコマンドでプラグインを追加し利用可能。
+
   ```bash
   copilot
   /plugin marketplace add github/copilot-plugins
   /plugin install workiq@copilot-plugins
   ```
+
   * 単体のCLIとして利用する場合、`workiq ask -q "明日の予定を教えて"` で質問が可能。
   * MCPサーバーとして起動する場合、`npx -y @microsoft/workiq mcp` を実行する（各種エディタ等の設定ファイルにこのコマンドを記述する）。
 

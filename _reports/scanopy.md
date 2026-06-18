@@ -92,10 +92,12 @@ relationships:
   * スキャン対象のネットワークにデプロイする環境（Docker、Proxmox、Unraid等）
   * クラウド版の場合はアカウント登録。セルフホスト版の場合はホスティング環境
 * **インストール/導入** (セルフホスト時のDocker Compose例):
+
   ```bash
   curl -O https://raw.githubusercontent.com/scanopy/scanopy/refs/heads/main/docker-compose.yml
   docker compose up -d
   ```
+
 * **初期設定**:
   * `http://<your-server-ip>:60072` にアクセスし、アカウントを作成
   * 最初のディスカバリー（スキャン）が完了するのを待つ

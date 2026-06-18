@@ -102,12 +102,15 @@ relationships:
   * Git
 * **インストール/導入**:
   多くのユーザーは「WebUI」を利用して導入します。以下は標準的なライブラリ（Diffusers）での例です。
+
   ```bash
   pip install diffusers transformers accelerate torch
   ```
+
 * **初期設定**:
   Hugging Faceのアカウントを作成し、Access Tokenを取得してログインが必要な場合があります（モデルのダウンロード承認のため）。
 * **クイックスタート** (Pythonスクリプト例):
+
   ```python
   import torch
   from diffusers import StableDiffusion3Pipeline

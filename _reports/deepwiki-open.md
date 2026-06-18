@@ -94,17 +94,22 @@ relationships:
   * Docker および Docker Compose
   * 各種LLMプロバイダーのAPIキー（Google AI Studio, OpenAI, Azure等）または Ollama（ローカルLLM用）
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/AsyncFuncAI/deepwiki-open.git
   cd deepwiki-open
   ```
+
 * **初期設定**:
   `.env`ファイルを作成し、必要なAPIキーを設定する。
+
   ```bash
   echo "GOOGLE_API_KEY=your_key" > .env
   # 必要に応じて他のキーも追加
   ```
+
 * **クイックスタート**:
+
   ```bash
   docker-compose up
   # http://localhost:3000 にアクセスし、リポジトリURLを入力

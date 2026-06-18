@@ -120,7 +120,7 @@ relationships:
 
 * **ドキュメント**: [公式ドキュメント](https://google.github.io/agents-cli/)
 * **コミュニティ**: GitHub Issuesを活用したバグ報告や機能要望のコミュニティ
-* **公式サポート**: GitHub Issues経由での対応や、フィードバック用メールアドレス（agents-cli@google.com）が用意されています。
+* **公式サポート**: GitHub Issues経由での対応や、フィードバック用メールアドレス（<agents-cli@google.com>）が用意されています。
 
 ## **10. エコシステムと連携**
 

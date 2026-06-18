@@ -87,15 +87,18 @@ relationships:
   * インターネットブラウザ（Snowsight UIの利用）
 * **インストール/導入**:
   完全マネージドなSaaSであるため、ローカルへのインストールは不要です。コマンドラインツール（SnowSQL）などを利用する場合は以下のようにインストールします。
+
   ```bash
   # Python用コネクタのインストール
   pip install snowflake-connector-python
   ```
+
 * **初期設定**:
   * アカウント作成後、Web UI（Snowsight）にログイン
   * ウェアハウス（コンピュートリソース）とデータベース・スキーマの作成
 * **クイックスタート**:
   Snowsight上でSQLを実行し、サンプルデータセットに対してクエリを実行するのが最も簡単なHello Worldです。
+
   ```sql
   SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER LIMIT 10;
   ```

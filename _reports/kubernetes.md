@@ -103,14 +103,17 @@ relationships:
   * コンテナランタイム (Docker, containerdなど)
   * `kubectl` コマンドラインツール
 * **インストール/導入**:
+
   ```bash
   # ローカル環境での簡易セットアップ (minikube)
   curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
   sudo install minikube-linux-amd64 /usr/local/bin/minikube
   ```
+
 * **初期設定**:
   * `minikube start` でクラスタを起動
 * **クイックスタート**:
+
   ```bash
   # Nginxのデプロイ
   kubectl create deployment nginx --image=nginx

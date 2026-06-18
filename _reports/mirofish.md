@@ -90,6 +90,7 @@ relationships:
   * パッケージマネージャー `uv`
   * 各種LLM APIキー（OpenAI互換、例：Qwen-plusなど）および Zep Cloud APIキー
 * **インストール/導入**:
+
   ```bash
   # リポジトリのクローン
   git clone https://github.com/666ghj/MiroFish.git
@@ -98,6 +99,7 @@ relationships:
   # 依存関係の一括インストール
   npm run setup:all
   ```
+
 * **初期設定**:
   * `.env.example` を `.env` にコピーし、`LLM_API_KEY`、`LLM_BASE_URL`、`LLM_MODEL_NAME`、`ZEP_API_KEY` を設定する。
 * **クイックスタート**:

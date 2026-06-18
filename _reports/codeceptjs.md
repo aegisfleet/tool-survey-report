@@ -115,13 +115,16 @@ relationships:
 * **前提条件**:
   * Node.js (v18以上推奨)
 * **インストール/導入**:
+
   ```bash
   npm init codeceptjs .
   # インタラクティブなセットアップウィザードが起動します
   ```
+
 * **初期設定**:
   * `codecept.conf.js` または `codecept.conf.ts` ファイルで、使用するヘルパー（Playwright, WebDriver等）やブラウザの設定を行います。
 * **クイックスタート**:
+
   ```bash
   # テストの作成
   npx codeceptjs gt

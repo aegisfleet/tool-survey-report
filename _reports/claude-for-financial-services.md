@@ -83,6 +83,7 @@ links:
 * **インストール/導入**:
 
   **Claude Codeを利用したインストール例**:
+
   ```bash
   # マーケットプレイスの追加
   claude plugin marketplace add anthropics/claude-for-financial-services
@@ -97,10 +98,12 @@ links:
 * **初期設定**:
   * Managed Agentの場合: `.mcp.json`に自社データプロバイダーの設定を記載。
   * 展開スクリプトの実行:
+
     ```bash
     export ANTHROPIC_API_KEY=sk-ant-...
     scripts/deploy-managed-agent.sh gl-reconciler
     ```
+
 * **クイックスタート**:
   * Cowork上では、プラグイン追加画面からリポジトリのURLを入力することでエージェント群を有効化できる。
 

@@ -97,18 +97,22 @@ relationships:
   * ストレージ: 動画容量の約3倍（オリジナル＋エンコード済みファイル）
 * **インストール/導入**:
   MediaCMSはDocker Composeまたはシングルサーバー用のインストールスクリプトで導入可能です。
+
   ```bash
   # シングルサーバーへのインストール例 (Ubuntu)
   git clone https://github.com/mediacms-io/mediacms
   cd mediacms
   sudo bash install.sh
   ```
+
   または Docker Compose を使用:
+
   ```bash
   git clone https://github.com/mediacms-io/mediacms
   cd mediacms
   docker-compose up -d
   ```
+
 * **初期設定**:
   * `local_settings.py` または環境変数で、サイト名、ロゴ、メール設定などをカスタマイズ。
 * **クイックスタート**:

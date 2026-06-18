@@ -116,13 +116,16 @@ relationships:
   * RubyGems, GCC, Make
   * アカウント作成は不要（GitHub Pages利用時はGitHubアカウントが必要）
 * **インストール/導入**:
+
   ```bash
   # Ruby開発環境が整っている場合
   gem install jekyll bundler
   ```
+
 * **初期設定**:
   * `_config.yml` ファイルにてサイトのタイトル、URL、使用プラグインなどを設定します。
 * **クイックスタート**:
+
   ```bash
   jekyll new my-awesome-site
   cd my-awesome-site

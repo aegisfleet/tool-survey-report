@@ -99,13 +99,16 @@ relationships:
   * ハードウェア: 実行するモデルに応じたRAMおよびGPU（推奨）
 * **インストール/導入**:
   * **macOS / Linux**:
+
     ```bash
     curl -fsSL https://ollama.com/install.sh | sh
     ```
+
   * **Windows**: 公式サイトからインストーラーをダウンロードして実行。
 * **初期設定**:
   * 特になし。インストール後、自動的にサーバーが起動する。
 * **クイックスタート**:
+
   ```bash
   # モデル（Llama 3.2）をダウンロードしてチャットを開始
   ollama run llama3.2

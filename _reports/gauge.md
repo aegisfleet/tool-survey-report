@@ -116,6 +116,7 @@ relationships:
   * OS: Windows, macOS, Linux
   * 言語ランタイム（Node.js, Java, Pythonなど、使用する言語による）
 * **インストール/導入**:
+
   ```bash
   # macOS (Homebrew)
   brew install gauge
@@ -123,9 +124,11 @@ relationships:
   # npm
   npm install -g @getgauge/cli
   ```
+
 * **初期設定**:
   * VS Codeを使用する場合、"Gauge" 拡張機能をインストールします。
 * **クイックスタート**:
+
   ```bash
   # プロジェクトの作成 (例: JavaScript)
   gauge init js

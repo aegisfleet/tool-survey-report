@@ -86,11 +86,14 @@ relationships:
   * Python 3.11以上
   * Git
 * **インストール/導入**:
+
   ```bash
   # Persistent Installation (Recommended)
   uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
   ```
+
 * **初期設定**:
+
   ```bash
   # Create new project
   specify init <PROJECT_NAME> --ai claude
@@ -98,6 +101,7 @@ relationships:
   # Or initialize in existing project
   specify init . --ai claude
   ```
+
 * **クイックスタート**:
   プロジェクトディレクトリでAIエージェントを起動し、以下の順序でコマンドを実行します。
   1. `/speckit.constitution` でプロジェクトの原則を定義

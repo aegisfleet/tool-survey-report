@@ -87,10 +87,12 @@ relationships:
   * Node.js/TypeScriptなどの実行環境（リファレンス実装を使用する場合）。
 * **インストール/導入**:
   Agent Traceは仕様であるため、直接のインストールコマンドはない。AIツールの開発者は提供されているリファレンス実装を参考に組み込むことができる。
+
   ```bash
   # GitHubからリファレンス実装を取得する場合
   git clone https://github.com/cursor/agent-trace.git
   ```
+
 * **初期設定**:
   * AIコーディングツール側でファイルの変更を検知した際に、トレースデータを生成・保存するフックを実装する（例: `trace-hook.ts`）。
 * **クイックスタート**:

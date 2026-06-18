@@ -97,12 +97,14 @@ relationships:
   * Apache または Nginx Webサーバー
 * **インストール/導入**:
   手動インストールまたはホスティング会社の「簡単インストール」機能を利用。
+
   ```bash
   # WP-CLIを使用する場合
   wp core download --locale=ja
   wp config create --dbname=mysite --dbuser=root --dbpass=pass
   wp core install --url=example.com --title="My Site" --admin_user=admin --admin_password=strongpassword --admin_email=admin@example.com
   ```
+
 * **初期設定**:
   * `wp-config.php` でデータベース接続情報を設定。
   * 管理画面からサイトのタイトル、キャッチフレーズ、タイムゾーンを設定。

@@ -94,16 +94,21 @@ relationships:
   * Node.js環境
   * GitHub, GitLab, または Bitbucketアカウント
 * **インストール/導入**:
+
   ```bash
   # Vercel CLIのインストール
   npm i -g vercel
   ```
+
 * **初期設定**:
+
   ```bash
   # ログイン
   vercel login
   ```
+
 * **クイックスタート**:
+
   ```bash
   # プロジェクトのルートディレクトリで実行
   vercel
@@ -149,6 +154,7 @@ relationships:
 ## **10. エコシステムと連携**
 
 ### **10.1 API・外部サービス連携**
+
 * **API**: プロジェクト管理、デプロイ、DNS設定などほぼ全ての操作が可能なREST APIを提供。
 * **外部サービス連携**: Contentful, Sanity (CMS), Supabase, PlanetScale (DB), Datadog (監視) など、Marketplaceからワンクリックで連携可能。
 
@@ -180,7 +186,7 @@ relationships:
   * **ISR (Incremental Static Regeneration)**: 静的生成と動的更新のいいとこ取りをして、パフォーマンスと鮮度を両立させる。
 * **陥りやすい罠**:
   * **Serverless Functionsのタイムアウト**: デフォルトの実行時間制限（プランによる）を超えないように、重い処理は非同期キュー（Inngest等）に逃がす。
-  * ** `_middleware` の乱用**: すべてのリクエストで実行されるため、安易に重い処理を書くとレイテンシ悪化とコスト増につながる。
+  * **`_middleware` の乱用**: すべてのリクエストで実行されるため、安易に重い処理を書くとレイテンシ悪化とコスト増につながる。
 
 ## **14. ユーザーの声（レビュー分析）**
 

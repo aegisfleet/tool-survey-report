@@ -88,6 +88,7 @@ relationships:
   # Tsunamiを実行するQuick startコマンドの例
   bash -c "$(curl -sfL https://raw.githubusercontent.com/google/tsunami-security-scanner/master/quick_start.sh)"
   ```
+
 * **初期設定**:
   特別な認証は不要。ローカル環境等でスキャン対象(例: 脆弱なコンテナ)を用意し、Tsunamiのスクリプトからスキャンを実行する。
 * **クイックスタート**:

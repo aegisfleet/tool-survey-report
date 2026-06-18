@@ -94,17 +94,22 @@ relationships:
   * ハードウェア: 十分なRAM/VRAMを推奨（モデルサイズに依存）
 * **インストール/導入**:
   * **Mac/Linux**:
+
     ```bash
     curl -fsSL https://lmstudio.ai/install.sh | bash
     ```
+
   * **Windows**:
+
     ```powershell
     irm https://lmstudio.ai/install.ps1 | iex
     ```
+
 * **初期設定**:
   * GUI版は起動後に推奨モデルを自動提案。
   * CLI版は `lms init` 等で初期設定を確認。
 * **クイックスタート**:
+
   ```bash
   # モデルの検索とダウンロード
   lms get llama-3.2

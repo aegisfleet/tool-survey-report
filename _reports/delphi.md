@@ -105,10 +105,12 @@ relationships:
   * Embarcaderoアカウント (EDNアカウント)
 * **インストール/導入**:
   公式サイトからWebインストーラ(GetIt)またはISOイメージをダウンロードして実行します。
+
   ```bash
   # コマンドラインでのインストールではなく、GUIインストーラを使用します
   setup.exe
   ```
+
 * **初期設定**:
   * ライセンスキーの入力（またはCommunity Editionのライセンス取得）。
   * 必要なプラットフォーム（Android SDK/NDK等）の選択と追加インストール。

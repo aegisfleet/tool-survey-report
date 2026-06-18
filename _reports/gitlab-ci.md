@@ -96,6 +96,7 @@ relationships:
 * **初期設定**:
   * リポジトリのルートに `.gitlab-ci.yml` ファイルを作成するだけで有効化される。
 * **クイックスタート**:
+
   ```yaml
   # .gitlab-ci.yml の例
   build-job:
@@ -103,6 +104,7 @@ relationships:
     script:
       - echo "Hello, GitLab CI/CD!"
   ```
+
   上記ファイルをコミットすると、自動的にパイプラインが実行される。
 
 ## **5. 特徴・強み (Pros)**

@@ -95,25 +95,34 @@ relationships:
   * Go, Node.js, Ruby, Pythonなどのランタイム（インストール方法による）
 * **インストール/導入**:
   Go (推奨):
+
   ```bash
   go install github.com/evilmartians/lefthook@latest
   ```
+
   Node.js (npm):
+
   ```bash
   npm install lefthook --save-dev
   ```
+
   Ruby (gem):
+
   ```bash
   gem install lefthook
   ```
+
 * **初期設定**:
   設定ファイル `lefthook.yml` を作成。
+
   ```bash
   # Go版などの場合
   lefthook install
   ```
+
 * **クイックスタート**:
   `lefthook.yml` の例:
+
   ```yaml
   pre-commit:
     parallel: true
@@ -122,6 +131,7 @@ relationships:
         glob: "*.{js,ts}"
         run: npm run lint {staged_files}
   ```
+
   設定後、`git commit` を実行すると自動的にフックが動作する。
 
 ## **5. 特徴・強み (Pros)**

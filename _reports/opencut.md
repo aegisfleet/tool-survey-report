@@ -102,10 +102,12 @@ relationships:
   * `apps/web/.env.example` を `apps/web/.env.local` にコピーし、必要に応じて設定を確認。
 * **クイックスタート**:
   * DockerでデータベースとRedisを起動し、開発サーバーを立ち上げる：
+
     ```bash
     docker compose up -d db redis serverless-redis-http
     bun dev:web
     ```
+
   * アプリケーションは `http://localhost:3000` で利用可能になる。
   * セルフホスト（Docker経由）の場合は `docker compose up -d` を実行し、`http://localhost:3100` にアクセスする。
 

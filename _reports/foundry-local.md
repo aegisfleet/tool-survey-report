@@ -89,6 +89,7 @@ relationships:
 * **初期設定**:
   * NPUを利用する場合は、IntelまたはQualcommの専用ドライバをインストールする必要がある。
 * **クイックスタート**:
+
   ```bash
   # CLIコマンドのヘルプ表示
   foundry --help

@@ -102,15 +102,19 @@ relationships:
   * クラウド版の場合はアカウント作成のみで利用可能。
 * **インストール/導入**:
   * **Docker (推奨)**:
+
     ```bash
     docker volume create n8n_data
     docker run -it --rm --name n8n -p 5678:5678 -v n8n_data:/home/node/.n8n docker.n8n.io/n8nio/n8n
     ```
+
   * **npm**:
+
     ```bash
     npm install n8n -g
     n8n start
     ```
+
 * **初期設定**:
   * 初回起動時に管理者アカウント（オーナー）を作成。
   * SMTP設定や外部アクセスのためのURL設定（環境変数）を行う。

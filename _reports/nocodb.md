@@ -100,10 +100,12 @@ relationships:
   * Dockerが動作する環境（推奨）
   * または Node.js 環境
 * **インストール/導入**:
+
   ```bash
   # Dockerを使用したクイックスタート
   docker run -d --name nocodb -p 8080:8080 -v "$(pwd)"/nocodb:/usr/app/data/ nocodb/nocodb:latest
   ```
+
 * **初期設定**:
   * ブラウザで `http://localhost:8080/dashboard` にアクセス。
   * アカウントを作成（メールアドレスとパスワード）。

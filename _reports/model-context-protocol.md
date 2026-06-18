@@ -103,6 +103,7 @@ relationships:
 * **インストール/導入**:
   各クライアントの設定ファイルに、使用したいMCPサーバーのコマンドを記述する。
   例（Claude Desktopの場合 `~/Library/Application Support/Claude/claude_desktop_config.json`）:
+
   ```json
   {
     "mcpServers": {
@@ -113,6 +114,7 @@ relationships:
     }
   }
   ```
+
 * **初期設定**:
   * 必要なMCPサーバーをインストール（`npm install` や `pip install`、あるいは `npx`/`uvx` で直接実行）。
   * 設定ファイルを編集してクライアントを再起動。

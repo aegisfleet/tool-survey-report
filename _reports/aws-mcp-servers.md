@@ -91,9 +91,11 @@ relationships:
   * AWS CLIの設定済み（`~/.aws/credentials`）
   * MCP対応クライアント（Claude Desktop, Cursorなど）
 * **インストール/導入**:
+
   ```bash
   npx -y @awslabs/mcp-server-bedrock-kb --region us-east-1 --kb-id YOUR_KB_ID
   ```
+
 * **初期設定**:
   * AWSの認証情報は標準のプロファイル（default）または環境変数を使用する。
   * クライアント側（例: Claude Desktop）の設定ファイル `mcpServers` セクションに実行コマンドを追記する。

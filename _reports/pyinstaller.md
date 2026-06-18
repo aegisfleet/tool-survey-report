@@ -91,12 +91,15 @@ relationships:
   * Python 3.8以上（最新版ではPython 3.8-3.13に対応）
   * pipが利用可能な環境
 * **インストール/導入**:
+
   ```bash
   pip install pyinstaller
   ```
+
 * **初期設定**:
   * 特になし。必要に応じて `.spec` ファイル（設定ファイル）を生成してカスタマイズ可能。
 * **クイックスタート**:
+
   ```bash
   # スクリプトを単一の実行ファイルに変換
   pyinstaller --onefile your_script.py

@@ -95,6 +95,7 @@ relationships:
   * Java, Python, Node.jsなどの言語ランタイムがインストールされていること。
   * テスト対象となるWebブラウザ（Chrome, Firefoxなど）がインストールされていること。
 * **インストール/導入**:
+
   ```bash
   # Pythonの場合
   pip install selenium
@@ -102,10 +103,12 @@ relationships:
   # Node.jsの場合
   npm install selenium-webdriver
   ```
+
 * **初期設定**:
   * Selenium Managerが組み込まれているため、個別にChromeDriverなどをダウンロード・配置する必要は基本的になくなった（自動管理される）。
 * **クイックスタート**:
   * 以下はPythonでの簡単なスクリプト例：
+
   ```python
   from selenium import webdriver
 

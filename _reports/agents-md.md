@@ -81,6 +81,7 @@ relationships:
   リポジトリのルートディレクトリに `AGENTS.md` という名前のファイルを作成する。
 * **初期設定**:
   ファイル内にプロジェクトの概要、ビルド手順、テスト方法などを記述する。
+
   ```markdown
   # Project Overview
   This is a Python web application using Flask.
@@ -88,6 +89,7 @@ relationships:
   # Build Instructions
   Run `pip install -r requirements.txt`
   ```
+
 * **クイックスタート**:
   対応するAIツールを起動すると、自動的に `AGENTS.md` が読み込まれ、コンテキストとして利用される。
 

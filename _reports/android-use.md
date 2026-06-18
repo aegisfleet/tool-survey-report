@@ -119,15 +119,18 @@ relationships:
   * デバッグモードを有効にしたAndroid端末またはエミュレータ
   * OpenAI API Key
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/actionstatelabs/android-action-kernel
   cd android-action-kernel
   pip install -r requirements.txt
   ```
+
 * **初期設定**:
   * `.env` ファイルを作成し、`OPENAI_API_KEY` を設定します。
   * Android端末をPCに接続し、`adb devices` で認識されていることを確認します。
 * **クイックスタート**:
+
   ```bash
   # エージェントを実行し、目標を指示する
   python main.py --goal "Chromeを開いて天気予報を検索する"

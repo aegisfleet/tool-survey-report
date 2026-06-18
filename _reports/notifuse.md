@@ -94,12 +94,14 @@ relationships:
   * DockerおよびDocker Compose
   * メール配信プロバイダー（Amazon SESなど）のアカウントまたはSMTPサーバー
 * **インストール/導入**:
+
   ```bash
   # Docker Composeを使用したクイックスタート
   git clone https://github.com/notifuse/notifuse.git
   cd notifuse
   docker compose up -d
   ```
+
 * **初期設定**:
   * `http://localhost:3000` にアクセスし、セットアップウィザードに従って管理者アカウントと初期ワークスペースを作成。
 * **クイックスタート**:

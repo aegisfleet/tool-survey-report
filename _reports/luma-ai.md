@@ -111,6 +111,7 @@ relationships:
   * API利用の場合はAPIキーの取得
   * Python 3.8以上 または Node.js 18以上（SDK利用時）
 * **インストール/導入**:
+
   ```bash
   # Python SDK
   pip install lumaai
@@ -118,11 +119,13 @@ relationships:
   # Node.js SDK
   npm install lumaai
   ```
+
 * **初期設定**:
   * 環境変数 `LUMA_API_KEY` に取得したAPIキーを設定する。
 * **クイックスタート**:
   * **Web版**: 公式サイトにログインし、プロンプト入力欄にテキストを入力して「Generate」をクリックするだけで動画生成が開始される。
   * **API (Python例)**:
+
     ```python
     from lumaai import LumaAI
     client = LumaAI()

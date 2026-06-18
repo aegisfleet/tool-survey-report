@@ -98,10 +98,12 @@ relationships:
   * VS Code (またはCursorなどの互換エディタ)
   * 利用するLLMプロバイダーのAPIキー (Anthropic, OpenAI等) または Cloudアカウント
 * **インストール/導入**:
+
   ```bash
   # VS Code Marketplaceからインストール
   code --install-extension RooVeterinaryInc.roo-cline
   ```
+
 * **初期設定**:
   * 拡張機能の設定画面でAPIプロバイダーを選択し、キーを入力。
   * 必要に応じて `.rooignore` ファイルを作成し、AIに読み込ませたくないファイルを指定。

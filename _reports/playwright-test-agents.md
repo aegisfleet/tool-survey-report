@@ -107,12 +107,14 @@ Playwright Test Agentsは、以下の3つの主要なエージェントで構成
   * Playwrightのインストール済みプロジェクト
   * VS Code v1.105以上（VS Codeで使用する場合）
 * **インストール/導入**:
+
   ```bash
   # エージェント定義をプロジェクトに追加
   npx playwright init-agents --loop=vscode
   # または Claude Code用
   npx playwright init-agents --loop=claude
   ```
+
 * **初期設定**:
   * 生成された `.github/` フォルダ内のエージェント定義を使用します。
 * **クイックスタート**:

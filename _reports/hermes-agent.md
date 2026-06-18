@@ -87,10 +87,13 @@ relationships:
 * **インストール/導入**:
   * **デスクトップアプリの場合**: 公式サイトの[ダウンロードページ](https://hermes-agent.nousresearch.com/desktop#downloads)からOSに合わせたインストーラー（dmg/exe）をダウンロードして実行。
   * **CLI (Linux, macOS, WSL2, Termux)**:
+
     ```bash
     curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
     ```
+
   * **CLI (Windows PowerShell)**: ネイティブWindows環境でもWSLなしで動作します。
+
     ```powershell
     iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)
     ```

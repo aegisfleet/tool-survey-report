@@ -124,16 +124,21 @@ relationships:
   * Python 3.9以上 または Node.js 18以上
   * OpenAI等のAPIキー
 * **インストール/導入**:
+
   ```bash
   # Python版のインストール
   pip install langchain langchain-openai
   ```
+
 * **初期設定**:
   * 環境変数にAPIキーを設定します。
+
   ```bash
   export OPENAI_API_KEY="..."
   ```
+
 * **クイックスタート**:
+
   ```python
   from langchain_openai import ChatOpenAI
 

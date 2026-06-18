@@ -94,6 +94,7 @@ relationships:
   * Python 3.10以上
   * AWS Credentials (Amazon Bedrock利用時) または 各種APIキー
 * **インストール/導入**:
+
   ```bash
   # Pythonの場合
   python -m venv .venv
@@ -103,9 +104,11 @@ relationships:
   # TypeScriptの場合
   npm install @strands-agents/sdk
   ```
+
 * **初期設定**:
   * 環境変数に必要なAPIキーを設定（例: `OPENAI_API_KEY`, `AWS_PROFILE` 等）。
 * **クイックスタート**:
+
   ```python
   from strands import Agent
   from strands_tools import calculator

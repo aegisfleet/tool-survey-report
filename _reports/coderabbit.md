@@ -121,9 +121,11 @@ relationships:
 * **インストール/導入**:
   * **Gitプラットフォーム**: 各プラットフォームのマーケットプレイスまたはCodeRabbit公式サイトからアプリをインストールし、対象リポジトリを選択。
   * **CLI**:
+
     ```bash
     curl -fsSL https://cli.coderabbit.ai/install.sh | sh
     ```
+
 * **初期設定**:
   * リポジトリルートに `.coderabbit.yaml` を作成することで詳細な設定が可能（Web UIからも設定可能）。
 * **クイックスタート**:

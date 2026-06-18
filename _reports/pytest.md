@@ -94,18 +94,22 @@ relationships:
   * Python 3.8以上（PyTest 9.0.xの場合）
   * pip または他のPythonパッケージマネージャー
 * **インストール/導入**:
+
   ```bash
   # pipを使ったインストール
   pip install pytest
   ```
+
 * **初期設定**:
   * プロジェクトルートに `pytest.ini` または `pyproject.toml` を作成し、必要に応じて設定を記述する。
 * **クイックスタート**:
   * `test_sample.py` というファイルを作成し、以下のコードを記述する：
+
     ```python
     def test_answer():
         assert 3 + 4 == 7
     ```
+
   * ターミナルで `pytest` コマンドを実行し、テストがパスすることを確認する。
 
 ## **5. 特徴・強み (Pros)**

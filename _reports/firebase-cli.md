@@ -88,16 +88,20 @@ relationships:
 
 * **初期設定**:
   1. アカウントへのログイン:
+
      ```bash
      firebase login
      ```
+
   2. プロジェクトディレクトリの初期化（アプリのルートディレクトリで実行）:
+
      ```bash
      firebase init
      ```
 
 * **クイックスタート**:
   機能の開発・設定が完了したら、以下のコマンドでデプロイを行います。
+
   ```bash
   firebase deploy
   ```

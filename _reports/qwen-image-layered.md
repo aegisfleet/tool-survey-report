@@ -91,13 +91,16 @@ relationships:
   * Python環境（torch, diffusers等）
   * CUDA対応GPU（推奨）
 * **インストール/導入**:
+
   ```bash
   pip install git+https://github.com/huggingface/diffusers
   pip install python-pptx psd-tools
   ```
+
 * **初期設定**:
   * Hugging Faceからモデルの重みをダウンロード（自動）。
 * **クイックスタート**:
+
   ```python
   from diffusers import QwenImageLayeredPipeline
   import torch

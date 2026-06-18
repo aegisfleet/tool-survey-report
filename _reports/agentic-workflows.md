@@ -94,15 +94,19 @@ relationships:
   * `gh` (GitHub CLI) のインストール
   * AIエンジンの利用権限（例: Claude CodeやOpenAI Codex CLIへのアクセス）
 * **インストール/導入**:
+
   ```bash
   # gh aw 拡張機能のインストール
   gh extension install githubnext/gh-aw
   ```
+
 * **初期設定**:
   * リポジトリでセットアップウィザードを実行
+
   ```bash
   gh aw init
   ```
+
 * **クイックスタート**:
   * `workflow.md` ファイルを作成し、自然言語でタスクを記述。
   * `gh aw run` でローカル実行またはGitHub Actions用にコンパイル。

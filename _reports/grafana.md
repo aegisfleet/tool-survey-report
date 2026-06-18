@@ -102,6 +102,7 @@ relationships:
   * Debian または Ubuntu OS
   * インターネット接続
 * **インストール/導入**:
+
   ```bash
   # 依存パッケージのインストール
   sudo apt-get install -y apt-transport-https wget gnupg
@@ -109,13 +110,16 @@ relationships:
   # Grafanaパッケージのインストール
   sudo apt-get install grafana
   ```
+
 * **初期設定**:
   * インストール後、systemdを使ってサービスを起動・有効化する
 * **クイックスタート**:
+
   ```bash
   # Grafanaサーバーの起動
   sudo systemctl start grafana-server
   ```
+
   * 起動後、ブラウザで `http://localhost:3000` にアクセス
   * デフォルトのログイン情報は admin / admin
 

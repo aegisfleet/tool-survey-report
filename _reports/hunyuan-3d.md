@@ -109,14 +109,17 @@ relationships:
   * Python 3.9以上, CUDA 11.8以上
   * GitHubアカウント（コード取得用）
 * **インストール/導入**:
+
   ```bash
   git clone https://github.com/Tencent-Hunyuan/Hunyuan3D-2.git
   cd Hunyuan3D-2
   pip install -r requirements.txt
   ```
+
 * **初期設定**:
   * 事前学習済みモデルの重みをHugging Faceなどからダウンロードし、所定のディレクトリに配置。
 * **クイックスタート**:
+
   ```bash
   # Web UIの起動
   python app.py
