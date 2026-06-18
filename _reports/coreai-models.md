@@ -11,7 +11,7 @@ tags:
   - オープンソース
   - Swift
   - Python
-description: Model export recipes, Python primitives, and Swift runtime utilities for on-device AI
+description: オンデバイスAI構築のためのモデルエクスポートレシピ、Pythonプリミティブ、およびSwiftランタイムユーティリティ
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -53,7 +53,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/apple/coreai-models](https://github.com/apple/coreai-models)
 * **カテゴリ**: AI開発ライブラリ
-* **概要**: Model export recipes, Python primitives, and Swift runtime utilities for building on-device AI with Core AI. It allows developers to run machine learning models on Apple devices.
+* **概要**: Core AIを用いたオンデバイスAI構築のためのモデルエクスポートレシピ、Pythonプリミティブ、およびSwiftランタイムユーティリティ。開発者がAppleデバイス上で機械学習モデルを実行できるようにします。
 
 ## **2. 目的と主な利用シーン**
 
@@ -186,12 +186,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | PyTorch | TensorFlow | ツールC |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | オンデバイスAI実行 | ◎<br><small>Appleデバイスに最適化</small> | ◯<br><small>改善は進んでいる</small> | ◎<br><small>TensorFlow Lite等</small> | -<br><small>比較対象なし</small> |
-| **基本機能** | 動的計算グラフ | △<br><small>実行環境に依存</small> | ◎<br><small>Define-by-Runアーキテクチャによる直感的な構築</small> | ◯<br><small>即座に実行可能</small> | -<br><small>比較対象なし</small> |
-| **カテゴリ特定** | プラットフォーム統合 | ◎<br><small>Swiftパッケージによるシームレスな統合</small> | △<br><small>Apple Silicon (MPS)対応あり</small> | -<br><small>不明</small> | -<br><small>比較対象なし</small> |
-| **非機能要件** | 学習コスト | △<br><small>Core AIやPyTorch等の知識が必要</small> | △<br><small>不明</small> | △<br><small>機能が多岐にわたるため習得が難しい場合あり</small> | -<br><small>比較対象なし</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | PyTorch | TensorFlow |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | オンデバイスAI実行 | ◎<br><small>Appleデバイスに最適化</small> | ◯<br><small>改善は進んでいる</small> | ◎<br><small>TensorFlow Lite等</small> |
+| **基本機能** | 動的計算グラフ | △<br><small>実行環境に依存</small> | ◎<br><small>Define-by-Runアーキテクチャによる直感的な構築</small> | ◯<br><small>即座に実行可能</small> |
+| **カテゴリ特定** | プラットフォーム統合 | ◎<br><small>Swiftパッケージによるシームレスな統合</small> | △<br><small>Apple Silicon (MPS)対応あり</small> | -<br><small>不明</small> |
+| **非機能要件** | 学習コスト | △<br><small>Core AIやPyTorch等の知識が必要</small> | △<br><small>不明</small> | △<br><small>機能が多岐にわたるため習得が難しい場合あり</small> |
 
 ### **16.2 詳細比較**
 
@@ -200,7 +200,6 @@ relationships:
 | **本ツール** | Appleデバイス向けのAIモデル統合・変換ツール | オンデバイス実行に最適化 | 対応環境が限定的 | AppleプラットフォームでAIを活用する場合 |
 | **PyTorch** | AI開発ライブラリ | Define-by-Runアーキテクチャによる直感的な構築 | モバイルデバイスや組み込みデバイスでのデプロイメントにおいて改善中だが歴史的にTensorFlow Lite等に遅れをとっていた | 動的計算グラフを利用する場合 |
 | **TensorFlow** | AI開発ライブラリ | TFXやServingなど本番環境への強さ、スケーラビリティ | 初心者にとってはPyTorchなどの競合に比べて習得が難しい場合がある | TFXやServingなど本番環境へのデプロイを行う場合 |
-| **ツールC** | 比較対象なし | - | - | - |
 
 ## **17. 総評**
 
