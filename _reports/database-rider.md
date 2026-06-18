@@ -6,7 +6,7 @@ category: テストフレームワーク/ライブラリ
 developer: Rafael M. Pestano and Community
 official_site: https://database-rider.github.io/database-rider/
 date: '2026-01-27'
-last_updated: '2026-03-05'
+last_updated: '2026-06-18'
 tags:
   - JUnit
   - Java
@@ -21,10 +21,10 @@ quick_summary:
   target_users:
     - Java開発者
     - QAエンジニア
-  latest_highlight: 2024年7月のv1.44.0リリース以降、安定版として稼働
-  update_frequency: 低
+  latest_highlight: 2026年1月にOperation.CONTAINSの詳細なエラーメッセージ追加やIncludeReplacerのバグ修正など継続的なアップデートを実施
+  update_frequency: 中
 evaluation:
-  score: 78
+  score: 83
   base_score: 70
   plus_points:
     - point: 8
@@ -40,9 +40,7 @@ evaluation:
       reason: Javaエコシステムに特化しており、他言語プロジェクトでは利用できない。
     - point: -2
       reason: 日本語の情報源が少なく、学習は公式ドキュメント（英語）が中心となる。
-    - point: -5
-      reason: 最終更新から1年以上経過しており、将来的なメンテナンス継続性に懸念がある。
-  summary: Javaにおけるデータベーステストの生産性を劇的に向上させる強力なライブラリだが、直近の更新頻度が低い点に留意が必要。
+  summary: Javaにおけるデータベーステストの生産性を劇的に向上させる強力なライブラリ。
 links:
   github: https://github.com/database-rider/database-rider
   deepwiki: https://deepwiki.com/database-rider/database-rider
@@ -51,7 +49,6 @@ relationships:
   parent: JUnit
   related_tools:
     - Spring Boot
-    - Selenium
 ---
 
 # **Database Rider 調査レポート**
@@ -212,8 +209,8 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-2026年1月現在、直近半年間にリリースされたアップデートはありません。以下は最新のリリース情報です。
-
+* **2026-01-24**: `Operation.CONTAINS`利用時のエラーメッセージを詳細化し、トラブルシューティングを改善。
+* **2026-01-23**: `IncludeReplacer`使用時に非文字列カラムで発生していた`ClassCastException`のバグを修正。
 * **2024-07-25 (v1.44.0)**:
   * JSON Schemaのサポートを有効化。
   * JUnit 5のライフサイクルメソッド（`@BeforeAll`など）内での`@DBRider`アノテーションの挙動を改善。
@@ -226,7 +223,7 @@ relationships:
 * **2024-02-15 (v1.41.1)**:
   * `rider-junit5`モジュールにおけるJakarta classifierの不具合を修正。
 
-(出典: [GitHub Releases](https://github.com/database-rider/database-rider/releases))
+(出典: [GitHub Commits](https://github.com/database-rider/database-rider/commits/master))
 
 ## **16. 類似ツールとの比較**
 
@@ -251,7 +248,7 @@ relationships:
 ## **17. 総評**
 
 * **総合的な評価**:
-  * Database Riderは、Javaにおけるデータベース統合テストの複雑さと冗長さを解消するための、極めて効果的なソリューションです。DBUnitの堅牢な基盤と、JUnit 5のモダンな拡張モデルを組み合わせることで、開発者の生産性を飛躍的に向上させます。ただし、2024年7月以降アップデートが止まっているため、今後のメンテナンス状況には注意が必要です。
+  * Database Riderは、Javaにおけるデータベース統合テストの複雑さと冗長さを解消するための、極めて効果的なソリューションです。DBUnitの堅牢な基盤と、JUnit 5のモダンな拡張モデルを組み合わせることで、開発者の生産性を飛躍的に向上させます。
 * **推奨されるチームやプロジェクト**:
   * Spring Boot, Quarkus, Micronautなど、モダンなJavaフレームワークを使用するすべてのバックエンド開発チームに推奨されます。特に、CI/CDパイプラインでのテスト自動化を推進しているプロジェクトには必須のツールと言えるでしょう。
 * **選択時のポイント**:
