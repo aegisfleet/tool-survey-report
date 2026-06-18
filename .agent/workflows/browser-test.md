@@ -36,8 +36,12 @@ bundle exec jekyll serve --port 4000 --host 127.0.0.1
 > **1. PYTHONPATHの指定**
 > `scripts/browser_test.py` を実行する際は、インポートエラーを防ぐため、必ず `PYTHONPATH=.` をプレフィックスとして指定するか、`-m` フラグを使用してください。
 >
-> **2. ローカルIP制限の回避 (--allow-internal-ips)**
-> セキュリティのためのSSRF制限により、デフォルトではローカルIP（`127.0.0.1`等）へのアクセスがブロックされます。ローカルサーバーに対してテストを行う場合は、必ず **`--allow-internal-ips`** フラグを付与してください。
+> **2. ローカルIP制限の自動回避（localhost / 127.0.0.1）**
+> セキュリティのためのSSRF制限により、デフォルトではローカルIPへのアクセスがブロックされますが、**`localhost` や `127.0.0.1` などのループバックアドレスに対しては自動的に制限がスキップされます。** その他の内部IP（ローカルネットワーク内の別端末など）にアクセスする場合にのみ、**`--allow-internal-ips`** フラグを付与してください。
+
+> [!TIP]
+> **3. ブラウザのログとエラーの確認**
+> テスト実行時、ブラウザのコンソールログ（`console`）や JavaScript の例外エラー（`pageerror`）が自動的にターミナルへ出力されます。画面が正しく表示されない場合のデバッグに活用してください。
 
 ---
 
@@ -45,38 +49,44 @@ bundle exec jekyll serve --port 4000 --host 127.0.0.1
 
 ### 1. ページを開いてスクリーンショットを取得
 ```bash
-PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action screenshot --output "screenshot.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action screenshot --output "screenshot.png"
 ```
 
 ### 2. 特定の要素を確認（存在確認）
 指定した要素がページ上に存在するかチェックします。
 ```bash
-PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action check --selector ".hero-search"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action check --selector ".hero-search"
 ```
 
 ### 3. ダークモードで確認
 テーマ設定は `document.documentElement` (`<html>` 要素) の `data-theme="dark"` 属性に適用されます。`--dark-mode` オプションでダークモード状態でのスクリーンショットを取得できます。
 ```bash
-PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --dark-mode --action screenshot --output "dark_mode.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --dark-mode --action screenshot --output "dark_mode.png"
 ```
 
 ### 4. モバイル表示で確認
 ```bash
-PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --mobile --action screenshot --output "mobile.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --mobile --action screenshot --output "mobile.png"
 ```
 
 ### 5. クリック操作のシミュレーション
 特定の要素をクリックした後の状態を確認します。
 ```bash
-PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action click --selector ".search-chip:first-child" --output "after_click.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action click --selector ".search-chip:first-child" --output "after_click.png"
 ```
 
 ### 6. テキスト入力のシミュレーション
 ```bash
-PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --allow-internal-ips --action input --selector "#hero-search-input" --input-text "Playwright" --output "after_input.png"
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --action input --selector "#hero-search-input" --input-text "Playwright" --output "after_input.png"
 ```
 
-### 7. Jekyllサーバーの停止
+### 7. 動的要素の描画完了を待ってスクリーンショットを取得
+外部APIの読み込みなどで描画が遅れる要素（例: `bst-widget`）がある場合、その要素が表示されるまで待機してから撮影します。
+```bash
+PYTHONPATH=. python3 scripts/browser_test.py --url "http://127.0.0.1:4000/tool-survey-report/" --wait-for-selector "bst-widget" --action screenshot --output "screenshot_with_widgets.png"
+```
+
+### 8. Jekyllサーバーの停止
 テスト完了後、バックグラウンドのサーバーを停止します。
 ```bash
 pkill -f "jekyll"
@@ -96,4 +106,5 @@ pkill -f "jekyll"
 - `--mobile`: モバイルビューポート (375x667) で実行
 - `--full-page`: フルページスクリーンショットを撮影
 - `--show-browser`: ブラウザGUIを表示 (デフォルトはヘッドレス)
-- `--allow-internal-ips`: ローカルIP (127.0.0.1など) へのアクセスを許可 (ローカルテスト時に必須)
+- `--allow-internal-ips`: ローカルIP (127.0.0.1など) へのアクセスを許可 (※localhostや127.0.0.1は自動的に許可されます)
+- `--wait-for-selector`: 指定したCSSセレクタの要素が表示されるまで待機（最大10秒）
