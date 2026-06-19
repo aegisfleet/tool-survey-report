@@ -2,7 +2,7 @@
 title: yamory 調査レポート
 tool_name: yamory
 tool_reading: ヤモリー
-category: セキュリティ/解析
+category: セキュリティ
 developer: 株式会社アシュアード (Visionalグループ)
 official_site: https://yamory.io/
 date: '2026-06-02'

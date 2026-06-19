@@ -2,7 +2,7 @@
 title: actionlint 調査レポート
 tool_name: actionlint
 tool_reading: アクションリント
-category: セキュリティ/解析
+category: コード品質/静的解析
 developer: rhysd
 official_site: https://rhysd.github.io/actionlint/
 date: '2026-05-27'

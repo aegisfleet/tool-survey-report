@@ -2,7 +2,7 @@
 title: Tsunami Security Scanner 調査レポート
 tool_name: Tsunami Security Scanner
 tool_reading: ツナミ / ツナミ・セキュリティ・スキャナー
-category: セキュリティ/解析
+category: セキュリティ
 developer: Google
 official_site: https://google.github.io/tsunami-security-scanner/
 date: '2026-06-08'

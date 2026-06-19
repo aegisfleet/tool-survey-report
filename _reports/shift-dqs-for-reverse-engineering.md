@@ -2,7 +2,7 @@
 title: SHIFT DQS for リバースエンジニアリング 調査レポート
 tool_name: SHIFT DQS for リバースエンジニアリング
 tool_reading: シフト ディーキューエス フォー リバースエンジニアリング
-category: セキュリティ/解析
+category: セキュリティ
 developer: 株式会社SHIFT
 official_site: https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/
 date: '2026-03-06'
