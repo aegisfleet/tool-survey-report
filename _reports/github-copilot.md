@@ -52,8 +52,8 @@ relationships:
     - Windsurf
     - Cline
     - Roo Code
-    - Visual Studio Code
     - CodeRabbit
+    - Sourcery
     - GitLab Duo
     - Mobile Next
     - Microsoft Work IQ
