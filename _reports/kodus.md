@@ -6,11 +6,13 @@ category: AIコードレビュー
 developer: Kodus
 official_site: https://kodus.io/
 date: '2026-03-05'
-last_updated: '2026-03-05'
+last_updated: '2026-06-19'
 tags:
   - AI
   - オープンソース
   - コードレビュー
+  - CI/CD
+  - コーディング支援
   - 自動化
   - 開発者ツール
 description: LLMを自由に選択でき、チームの規約を学習して自動でコードレビューを行うオープンソースのAIコードレビューエージェント。
@@ -21,7 +23,7 @@ quick_summary:
   target_users:
     - 開発者
     - エンジニアリングチーム
-  latest_highlight: 1.0.88でMCPをカスタムルールとプロンプトで直接使用可能に
+  latest_highlight: 2026年6月にCockpit（エンジニアリングメトリクス）を強化し、設定のGit一元管理 (Centralized Config) を導入
   update_frequency: 高
 evaluation:
   score: 80
@@ -44,6 +46,7 @@ links:
 relationships:
   related_tools:
     - CodeRabbit
+    - GitHub Copilot
 ---
 
 # **Kodus 調査レポート**
@@ -77,7 +80,8 @@ relationships:
 * **Kody Rules（カスタムルール）**: 自然言語でレビューガイドラインを定義でき、チーム固有のアーキテクチャパターンやベストプラクティスを強制可能。
 * **コンテキスト学習**: プロジェクト全体の構造とロジックを深く理解し、プロジェクトごとの固有のニーズに合わせたレビューを提供。
 * **技術的負債の追跡 (Technical Debt Tracking)**: 実装されなかったAIの提案を自動的にIssue（課題）として変換し、技術的負債として蓄積・管理。
-* **エンジニアリングメトリクス (Cockpit)**: デプロイ頻度、サイクルタイム、バグ率、PRサイズなどのメトリクスを監視できるダッシュボード。
+* **エンジニアリングメトリクス (Cockpit)**: デプロイ頻度、サイクルタイム、バグ率、PRサイズなどのメトリクスを監視できるダッシュボード。運用メトリクスのウェアハウスからの分析機能を強化。
+* **集中管理 (Centralized Config)**: チーム全体の設定（Config-as-Code）を中央のGitリポジトリから一元管理・同期可能。
 * **MCP (Model Context Protocol) サーバー連携**: JiraやNotionなどの外部ツールと連携し、仕様やタスクを理解した上でコードをレビュー可能。
 
 ## **4. 開始手順・セットアップ**
@@ -184,13 +188,15 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-16**: (v2.1.22) Cockpit（エンジニアリングメトリクス）のアナリティクス運用ダッシュボードを強化。設定ファイル（Config-as-Code）のGitリポジトリ間同期・集中管理機能（Centralized Config）を導入。
+* **2026-05-27**: (v2.1.19) Kody RulesのUI改善（孤立したルールのチップ数の修正など）、SSOログイン時のユーザープロビジョニング改善。
 * **2025-12-12**: (v1.0.88) カスタムルールおよびプロンプト内でMCP (Model Context Protocol) が直接使用可能に。
 * **2025-11-06**: (v1.0.82) BYOK (自身のAPIキー利用) のサポート開始、Context Engineの導入。
 * **2025-10-02**: (v1.0.63) プラグイン連携機能 (Beta)、RBAC (ロールベースアクセス制御) の追加。
 * **2025-09-09**: (v1.0.51) 新しいコードレビューエンジンの導入。
 * **2025-08-29**: (v1.0.47) IDE（Cursorなど）のルールファイルとの自動同期機能を追加。
 
-(出典: [Kodus Changelog](https://kodus.io/changelog-en/) 等)
+(出典: [Kodus Changelog](https://github.com/kodustech/kodus-ai/releases))
 
 ## **16. 類似ツールとの比較**
 
@@ -202,6 +208,7 @@ relationships:
 | **柔軟性** | LLMの自由選択 (BYOK) | ◎<br><small>自由に選択可能</small> | △<br><small>モデル固定/選択制限あり</small> | ×<br><small>OpenAIモデルに固定</small> |
 | **コスト** | AI利用料のマージン | ◎<br><small>ゼロマークアップ</small> | △<br><small>バンドル料金</small> | △<br><small>定額料金に含まれる</small> |
 | **カスタマイズ** | チームルールの学習 | ◎<br><small>自然言語で設定可能</small> | ◯<br><small>設定ファイルで調整</small> | △<br><small>チャットコンテキスト依存</small> |
+| **集中管理** | 設定のリポジトリ間同期 | ◎<br><small>Centralized Config機能</small> | -<br><small>不明/該当なし</small> | -<br><small>不明/該当なし</small> |
 | **デプロイ** | セルフホスト対応 | ◎ | ◯<br><small>Enterpriseプランのみ</small> | × |
 
 ### **16.2 詳細比較**
