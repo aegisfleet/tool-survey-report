@@ -2,7 +2,7 @@
 title: Magika 調査レポート
 tool_name: Magika
 tool_reading: マジカ
-category: セキュリティ/解析
+category: セキュリティ
 developer: Google
 official_site: https://securityresearch.google/magika/
 date: '2026-04-14'

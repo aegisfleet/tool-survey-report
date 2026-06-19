@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud 調査レポート
 tool_name: Microsoft Defender for Cloud
 tool_reading: マイクロソフト ディフェンダー フォー クラウド
-category: セキュリティ/解析
+category: セキュリティ
 developer: Microsoft
 official_site: https://azure.microsoft.com/ja-jp/products/defender-for-cloud/
 date: '2026-05-28'

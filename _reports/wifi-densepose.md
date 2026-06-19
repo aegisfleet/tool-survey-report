@@ -2,7 +2,7 @@
 title: RuView 調査レポート
 tool_name: RuView
 tool_reading: ルービュー / ワイファイ デンスポーズ
-category: セキュリティ/解析
+category: セキュリティ
 developer: ruvnet
 official_site: https://github.com/ruvnet/RuView
 date: '2026-03-01'

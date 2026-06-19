@@ -2,7 +2,7 @@
 title: AI-DLC Workflows 調査レポート
 tool_name: AI-DLC Workflows
 tool_reading: エーアイディーエルシー ワークフローズ
-category: 開発ワークフロー
+category: 開発ライフサイクル管理
 developer: AWS Labs
 official_site: https://github.com/awslabs/aidlc-workflows
 date: '2026-06-18'
@@ -10,7 +10,7 @@ last_updated: '2026-06-18'
 tags:
   - AIエージェント
   - オープンソース
-  - 開発ワークフロー
+  - 開発ライフサイクル
 description: AIエージェントを検証可能で自己修正機能を持つエンジニアリングワークフローに組み込むためのツール
 quick_summary:
   has_free_plan: true
