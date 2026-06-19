@@ -58,6 +58,7 @@ relationships:
     - Mobile Next
     - Microsoft Work IQ
     - Agentic Workflows
+    - Kodus
 ---
 
 # **GitHub Copilot 調査レポート**
