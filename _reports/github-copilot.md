@@ -53,10 +53,8 @@ relationships:
     - Cline
     - Roo Code
     - CodeRabbit
-    - Sourcery
+    - Devin
     - GitLab Duo
-    - Mobile Next
-    - Microsoft Work IQ
     - Agentic Workflows
     - Kodus
 ---

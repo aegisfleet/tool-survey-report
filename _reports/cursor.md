@@ -49,19 +49,13 @@ links:
   documentation: https://cursor.com/docs
 relationships:
   related_tools:
-    - Kiro
     - GitHub Copilot
     - Windsurf
     - Cline
     - Roo Code
-    - Claude Code
     - Visual Studio Code
     - Devin
-    - TAKT
     - Model Context Protocol
-    - Headroom
-    - Mobile Next
-    - Aqua Voice
 ---
 
 # **Cursor 調査レポート**
