@@ -55,7 +55,7 @@ relationships:
     - Amazon Q Developer
     - LocalStack
     - AWS MCP Servers
-    - "AWS Blocks"
+    - AWS Blocks
 ---
 
 # **AWS CloudFormation 調査レポート**

@@ -47,7 +47,7 @@ relationships:
   related_tools:
     - Amazon Bedrock
     - AWS CloudFormation
-    - "AWS Blocks"
+    - AWS Blocks
 ---
 
 # **AWS MCP Servers 調査レポート**

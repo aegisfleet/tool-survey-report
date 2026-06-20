@@ -1,59 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "AWS Blocks 調査レポート"
-tool_name: "AWS Blocks"
-tool_reading: "エーダブリューエス ブロックス"
-category: "構成管理"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/products/developer-tools/blocks/"
-date: "2026-06-20"
-last_updated: "2026-06-20"
+title: AWS Blocks 調査レポート
+tool_name: AWS Blocks
+tool_reading: エーダブリューエス ブロックス
+category: 構成管理
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/products/developer-tools/blocks/
+date: '2026-06-20'
+last_updated: '2026-06-20'
 tags:
-  - "オープンソース"
-  - "インフラストラクチャ"
-  - "TypeScript"
-  - "構成管理"
-  - "AI"
-description: "数秒でフルスタックアプリを構築し、AWSインフラをコードから自動生成するTypeScriptフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - インフラストラクチャ
+  - TypeScript
+  - 構成管理
+  - AI
+description: 数秒でフルスタックアプリを構築し、AWSインフラをコードから自動生成するTypeScriptフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（AWSインフラ利用料のみ）"
+  starting_price: 無料（AWSインフラ利用料のみ）
   target_users:
-    - "フルスタック開発者"
-    - "スタートアップ"
-    - "AWSユーザー"
-  latest_highlight: "2026年6月にパブリックプレビューとして提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - フルスタック開発者
+    - スタートアップ
+    - AWSユーザー
+  latest_highlight: 2026年6月にパブリックプレビューとして提供開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ローカルでAWSアカウントなしで完全な動作確認ができる"
+      reason: ローカルでAWSアカウントなしで完全な動作確認ができる
     - point: 5
-      reason: "インフラ管理を不要にし、型安全性がフロントからバックエンドまで貫通する"
+      reason: インフラ管理を不要にし、型安全性がフロントからバックエンドまで貫通する
     - point: 5
-      reason: "AWS公式が提供するOSSであり、AWSのベストプラクティスが組み込まれている"
+      reason: AWS公式が提供するOSSであり、AWSのベストプラクティスが組み込まれている
   minus_points:
-    - point: -0
-      reason: "特筆すべき欠点はないが、プレビュー版であることには留意が必要"
-  summary: "AWS上のフルスタック開発において、ローカル開発体験と型安全性を劇的に向上させる強力なフレームワーク"
-
-# 【任意項目】該当するもののみ記載
+    - point: 0
+      reason: 特筆すべき欠点はないが、プレビュー版であることには留意が必要
+  summary: AWS上のフルスタック開発において、ローカル開発体験と型安全性を劇的に向上させる強力なフレームワーク
 links:
-  github: "https://github.com/aws-devtools-labs/aws-blocks"
-  deepwiki: "https://deepwiki.com/aws-devtools-labs/aws-blocks"
-  documentation: "https://docs.aws.amazon.com/blocks/latest/devguide/what-is-blocks.html"
+  github: https://github.com/aws-devtools-labs/aws-blocks
+  deepwiki: https://deepwiki.com/aws-devtools-labs/aws-blocks
+  documentation: https://docs.aws.amazon.com/blocks/latest/devguide/what-is-blocks.html
 relationships:
   related_tools:
-    - "AWS CloudFormation"
-    - "AWS MCP Servers"
+    - AWS CloudFormation
+    - AWS MCP Servers
 ---
 
 # **AWS Blocks 調査レポート**
