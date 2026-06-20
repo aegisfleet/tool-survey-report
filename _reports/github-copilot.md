@@ -54,9 +54,7 @@ relationships:
     - Roo Code
     - CodeRabbit
     - Devin
-    - GitLab Duo
-    - Agentic Workflows
-    - Kodus
+    - SHIFT DQS for リバースエンジニアリング
 ---
 
 # **GitHub Copilot 調査レポート**
