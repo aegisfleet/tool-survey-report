@@ -2,7 +2,7 @@
 title: OfficeCLI 調査レポート
 tool_name: OfficeCLI
 tool_reading: オフィスクライ
-category: AIエージェントツール
+category: MCPサーバー/基盤
 developer: iOfficeAI
 official_site: https://officecli.ai
 date: '2026-06-20'
@@ -11,10 +11,8 @@ tags:
   - オープンソース
   - CLI
   - AI
-  - Office
-  - Word
-  - Excel
-  - PowerPoint
+  - エージェント
+  - 自動化
 description: AIエージェントがWord、Excel、PowerPointファイルを読み取り、編集、自動化するために作られた初のOfficeスイートCLI
 quick_summary:
   has_free_plan: true
