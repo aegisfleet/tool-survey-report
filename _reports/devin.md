@@ -6,7 +6,7 @@ category: コーディングエージェント
 developer: Cognition Labs
 official_site: https://devin.ai/
 date: '2026-01-27'
-last_updated: '2026-03-06'
+last_updated: '2026-06-20'
 tags:
   - AI
   - エージェント
@@ -23,7 +23,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - プロダクトマネージャー
-  latest_highlight: 2026年2月にDevin 2.2、v3 API、Devin Reviewなどをリリース
+  latest_highlight: 2026年6月にMCP Marketplaceの拡張やGitLabネイティブ連携をリリース
   update_frequency: 高
 evaluation:
   score: 75
@@ -50,13 +50,11 @@ relationships:
     - DeepWiki
   related_tools:
     - GitHub Copilot
-    - Claude Code
     - Cursor
     - Windsurf
     - OpenHands
     - AutoGPT
     - Opcode
-    - OpenAI Frontier
     - Manus
 ---
 
@@ -109,6 +107,7 @@ relationships:
 * **継続的な学習**: プロジェクトのコンテキストや過去のやり取りを記憶し、将来のタスクに活かす「ナレッジベース」機能を備えています。
 * **リアルタイムコラボレーション**: ユーザーはDevinの作業をリアルタイムで確認し、IDEで直接コードを修正したり、チャットで指示を修正したりすることが可能です。
 * **多様なツール連携**: Slack、Microsoft Teams、Jira、GitHub、Linearなど、多くの開発ツールやサービスと連携できます。
+* **MCP連携と自動化**: Miro、Mixpanel、Postman、Figma、Datadogなど様々な外部サービスと連携可能なMCPサーバー機能と、特定のイベント(GitHub Push等)をトリガーとするオートメーション機能(自動化)を備えます。
 * **プルリクエストの自動作成**: タスクが完了すると、変更内容をまとめたプルリクエストを自動で作成します。
 
 ## **4. 開始手順・セットアップ**
@@ -218,8 +217,8 @@ relationships:
 - 主要連携サービスを5-10個リストアップ
 -->
 
-* **API (REST API)**: Teamプラン以上でREST API (現在はv3) が提供されています。セッションの作成・管理だけでなく、シークレット（Secret Manager連携など）やOrganization/メンバー管理、IPアクセスリストなど、Enterprise環境におけるIaC（Infrastructure as Code）や自動化に幅広く対応可能です。
-* **外部サービス連携**: GitHub, Slack, Microsoft Teams, Linear, Jira, Azure DevOps など、多くの開発ツールやサービスと連携できます。
+* **API (REST API)**: Teamプラン以上でREST API v3が提供されています。セッションの作成・管理、シークレット連携、Organization/メンバー管理、オートメーションのCRUD、PR Reviewステータスの取得など、Enterprise環境におけるIaC（Infrastructure as Code）や自動化に幅広く対応可能です。
+* **外部サービス連携**: GitHub, GitLab, Slack, Microsoft Teams, Linear, Jira, Azure DevOps など、多くの開発ツールやサービスと連携できます。さらにMCP Marketplaceを通じて、Miro、Figma、Datadog、Postman、Amplitudeなど多数のサービスと連携可能です。
 
 ### **10.2 技術スタックとの相性**
 
@@ -310,19 +309,20 @@ relationships:
   1. GitHubリポジトリの `CHANGELOG.md`
   2. GitHub Releases
   3. 公式ブログ / ニュース
-- 情報源のURLを記載
+- 情報源のURLを記載。**【重要】特定の古い日時の記事等に固定せず、常に最新情報が掲載・蓄積される公式の永続的なインデックスURL（製品アップデートカテゴリ、リリースノート一覧、コミュニティポータル等）を記載・更新すること。オープンソース（OSS）ツールを調査する場合において、GitHub等のリリースノートやリポジトリの内容を出典として参考にする際は、特定のリリースバージョン個別URL（例：`/releases/tag/v1.0.0`）に固定するのではなく、常に最新の更新履歴にアクセスできるリポジトリの永続リンク（例：`/releases` や `CHANGELOG.md` への直接リンク等）を出典URLとして設定すること。**
 -->
 
+* **2026-06-19**: MCP Marketplaceが拡張され、Miro、Postman、LaunchDarklyなど48以上の新しいMCPサーバーが追加。GitLabネイティブ連携(Devin Reviewのサポートを含む)がリリース。
+* **2026-06-17**: AxiomおよびFigma向けの公式MCP統合がリリース。Devin Reviewにセキュリティチェック機能などが追加。
+* **2026-06-03**: ユーザー固有の「Personal Automations」機能が追加され、スケジュールやトリガー実行の管理が強化。
+* **2026-05-22**: GitLabのインタラクティブPRレビューに対応し、DevinがGitLab上で直接コメントやスレッドの解決を行えるように。PostHog MCPの追加。
+* **2026-05-08**: PR Reviewをプログラムから実行可能な「Devin Review API」がリリース。
+* **2026-04-10**: AmplitudeなどのMCP対応、Browser Toolの挙動のネイティブ化（ファイルピッカー対応等）、Agent Client Protocolの拡張を実施。
 * **2026-02-27**: AskDevinがAskとPlanモードに拡張され、コード検索機能が向上。Devin ReviewにGitHubのコミットステータスチェック機能が追加。
 * **2026-02-24**: Devin 2.2がリリースされ、起動時間が3倍高速化。新しいUIとフルデスクトップテスト機能が追加。
 * **2026-02-20**: v3 APIが正式リリース（Role-Based Access Control、セッション属性などの新機能を含む）。またセッションリストの再設計やGitHub Enterprise Serverへの対応が追加。
-* **2026-02-13**: 全体的なデザイン改善、2倍高速な「Fast Mode」の追加、PRレビューのバッチコメント機能などが導入。
-* **2026-02-06**: 入力ボックスから直接セッションをスケジュール可能に。Enterpriseの組織選択ページや自動レビュー設定なども改善。
-* **2026-02-03**: 定期的なスケジュールセッション機能が追加。Devin ReviewでDraft PRのサポートなども導入。
-* **2026-01-22**: 複雑なPRを理解するための「Devin Review」がリリース。またリポジトリ設定時のAIによるサジェスト機能が追加。
-* **2026-01-09**: API経由でのセッション作成時にシークレット情報を渡せる機能や、Linearのネイティブ統合ツールが追加。
 
-(出典: [Official Release Notes](https://docs.devin.ai/release-notes/overview))
+(出典: [製品アップデート情報](https://docs.devin.ai/release-notes/overview))
 
 ## **16. 類似ツールとの比較**
 
