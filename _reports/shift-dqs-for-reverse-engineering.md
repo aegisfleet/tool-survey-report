@@ -4,7 +4,7 @@ tool_name: SHIFT DQS for リバースエンジニアリング
 tool_reading: シフト ディーキューエス フォー リバースエンジニアリング
 category: コード品質/静的解析
 developer: 株式会社SHIFT
-official_site: https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/
+official_site: https://contents.shiftinc.jp/dqs-re/
 date: '2026-03-06'
 last_updated: '2026-06-21'
 tags:
@@ -47,7 +47,7 @@ relationships:
 * **ツール名**: SHIFT DQS for リバースエンジニアリング
 * **ツールの読み方**: シフト ディーキューエス フォー リバースエンジニアリング
 * **開発元**: 株式会社SHIFT
-* **公式サイト**: [URL](https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/)
+* **公式サイト**: [URL](https://contents.shiftinc.jp/dqs-re/)
 * **関連リンク**:
   * ニュースリリース: [URL](https://www.shiftinc.jp/news/20260217_shift_dqs_for_re/)
   * 「SHIFT DQS for メンテナンスサポート」リリース: [URL](https://www.shiftinc.jp/news/20260602_dqs_for_ms/)
@@ -82,8 +82,8 @@ relationships:
   * 解析対象となる既存システムのソースコードの準備。
   * 株式会社SHIFTへの個別問い合わせと要件定義。
 * **導入手順**:
-  1. 公式サイト（コーポレートサイト）等からの問い合わせ。
-  2. 対象システムの現状ヒアリング・見積もり。
+  1. 公式サイト等からの問い合わせ、または無料簡易診断の申し込み。
+  2. 対象システムの現状ヒアリング・無料簡易診断・見積もり。
   3. ソースコードの提供とAIによる解析・ドキュメント生成の実施。
 
 ## **5. 特徴・強み (Pros)**
@@ -110,7 +110,7 @@ relationships:
 | **個別見積もり** | 要問い合わせ | 対象システムの規模、言語、解析範囲等に応じて変動。 |
 
 * **課金体系**: プロジェクト単位またはシステム規模単位での見積もりとなります。
-* **無料トライアル**: 公式サイト上で明確な無料トライアルの記載はありません。
+* **無料トライアル**: トライアルはありませんが、公式サイトからシステムの無料簡易診断を申し込むことができます。
 
 ## **8. 導入実績・事例**
 
