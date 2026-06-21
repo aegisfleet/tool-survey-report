@@ -36,7 +36,7 @@ evaluation:
   summary: ベンダーロックインを回避したい企業や、Theia・VSCodium等の代替IDEを利用する開発者にとって必須のインフラ
 links:
   github: https://github.com/eclipse-openvsx/openvsx
-  deepwiki: "https://deepwiki.com/eclipse-openvsx/openvsx"
+  deepwiki: https://deepwiki.com/eclipse-openvsx/openvsx
   documentation: https://github.com/eclipse-openvsx/openvsx/wiki
 relationships:
   related_tools:
