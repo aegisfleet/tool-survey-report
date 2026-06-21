@@ -6,7 +6,7 @@ category: AI検索/ブラウザ拡張
 developer: Google Labs
 official_site: https://labs.google/disco
 date: '2026-01-27'
-last_updated: '2026-03-07'
+last_updated: '2026-06-21'
 tags:
   - AI
   - エージェント
@@ -21,16 +21,18 @@ quick_summary:
     - アーリーアダプター
     - リサーチャー
     - 情報収集を行うユーザー
-  latest_highlight: 2026年1月現在もウェイトリスト制で、GenTabs機能がコアとして展開中
+  latest_highlight: 2026年6月に直感的なブラウジング操作を支援する「AI-Enabled Pointer」機能を追加
   update_frequency: 高
 evaluation:
-  score: 75
+  score: 77
   base_score: 70
   plus_points:
     - point: 5
       reason: 「GenTabs」という新しいブラウジング体験を提供し、タブの整理とタスク実行を革新
     - point: 3
       reason: Googleの最新Geminiモデルを活用した高いコンテキスト理解能力
+    - point: 2
+      reason: 「AI-Enabled Pointer」により、ページナビゲーションや情報抽出がより直感的に
   minus_points:
     - point: -3
       reason: 現在はウェイトリスト制の実験的プロダクトであり、一般利用が制限されている
@@ -72,6 +74,7 @@ relationships:
 ## **3. 主要機能**
 
 * **GenTabs**: 開いているタブの内容とユーザーのプロンプトに基づいて、カスタマイズされたインタラクティブなページ（GenTabs）を生成する機能。
+* **AI-Enabled Pointer**: 直感的なポインター操作により、Webページ上の特定箇所からインサイトを抽出し、サイドパネルでの対話、関連情報へのジャンプ、およびGenTabsへの直接情報追加が可能。
 * **コンテキスト認識**: ブラウザの履歴や開いているタブ、過去のチャット履歴など、ユーザーのコンテキストを深く理解して回答や提案を行う。
 * **インタラクティブUI**: 単なるテキスト要約ではなく、タイムライン、マップ、比較表など、操作可能なUIコンポーネントを含む回答を生成。
 * **ソースリンクの維持**: 生成された情報の元となったWebページへのリンクが明確に維持され、いつでも一次情報にアクセス可能。
@@ -94,6 +97,7 @@ relationships:
 ## **5. 特徴・強み (Pros)**
 
 * **ブラウジング体験の再定義**: 検索結果のリストや静的なページ閲覧から、「目的のために情報を組み立てる」という新しい体験へシフトしている。
+* **直感的なAIナビゲーション**: AI-Enabled Pointerにより、Webページ上の気になった箇所からシームレスにAIと対話し、情報をGenTabsに集約できる。
 * **動的なアプリ生成**: ユーザーのその場のニーズに合わせて、使い捨ての「ミニアプリ」を生成するような感覚で利用できる。
 * **情報の透明性**: 生成AIの課題であるハルシネーションに対し、元のタブへのリンクを保持することで信頼性を担保している。
 
@@ -177,6 +181,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-XX**: 直感的なブラウジング操作と情報抽出を支援する新機能「AI-Enabled Pointer」を追加。
 * **2026-01-27**: 現在もウェイトリスト登録を受付中。GenTabs機能を中心に実験運用が継続されている。
 * **2025-12-XX**: 一部のインフルエンサーやテスターによるデモ動画が公開され、SNSで話題となる。
 * **2025-XX-XX**: Google LabsにてDiscoのプロジェクトが公開され、ウェイトリスト登録開始。
@@ -190,6 +195,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | 本ツール | Perplexity | Felo | Genspark |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 検索精度 | ◯<br><small>タブ依存</small> | ◎<br><small>Web全体</small> | ◎<br><small>多言語</small> | ◎<br><small>エージェント</small> |
+| **UI操作** | ナビゲーション | ◎<br><small>AI-Enabled Pointer</small> | △<br><small>標準的なチャット</small> | ◯<br><small>Canvas上での操作</small> | △<br><small>多機能だが複雑</small> |
 | **生成機能** | アプリ/UI生成 | ◎<br><small>GenTabs</small> | △<br><small>テキスト</small> | ◎<br><small>スライド</small> | ◎<br><small>Sparkpages</small> |
 | **ソース** | コンテキスト | ◎<br><small>開いているタブ</small> | ◯<br><small>検索結果</small> | ◯<br><small>検索結果</small> | ◯<br><small>検索結果</small> |
 | **提供形態** | ブラウザ統合 | ◎<br><small>専用ブラウザ</small> | △<br><small>Web/Ext</small> | △<br><small>Web</small> | △<br><small>Web</small> |
