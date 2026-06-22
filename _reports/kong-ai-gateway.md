@@ -2,12 +2,13 @@
 title: Kong AI Gateway 調査レポート
 tool_name: Kong AI Gateway
 tool_reading: コング エーアイ ゲートウェイ
-category: AIインフラ
+category: インフラ/クラウド
 developer: Kong Inc.
 official_site: https://konghq.com/products/kong-ai-gateway
 date: '2026-06-22'
 last_updated: '2026-06-22'
 tags:
+  - AI
   - AIゲートウェイ
   - LLMプロキシ
   - APIゲートウェイ
