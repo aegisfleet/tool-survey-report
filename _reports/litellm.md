@@ -47,6 +47,7 @@ relationships:
     - LangChain
     - ChatGPT
     - Claude
+    - Portkey
 ---
 
 # **LiteLLM 調査レポート**
