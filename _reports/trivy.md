@@ -47,6 +47,7 @@ relationships:
     - GitLab CI/CD
     - Dependency-Check
     - Socket
+    - FOSSA
 ---
 
 # **Trivy 調査レポート**

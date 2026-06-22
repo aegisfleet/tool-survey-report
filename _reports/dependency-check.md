@@ -45,6 +45,7 @@ relationships:
   related_tools:
     - Dependabot
     - Trivy
+    - FOSSology
 ---
 
 # **Dependency-Check 調査レポート**
