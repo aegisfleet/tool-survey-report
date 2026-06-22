@@ -52,6 +52,7 @@ relationships:
     - SonarQube
     - Renovate
     - Dependency-Check
+    - Socket
 ---
 
 # **Dependabot 調査レポート**

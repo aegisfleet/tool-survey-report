@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - SonarQube
     - Trivy
+    - Socket
 ---
 
 # **Semgrep 調査レポート**
