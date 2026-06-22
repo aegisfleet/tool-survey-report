@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Kong AI Gateway 調査レポート"
-tool_name: "Kong AI Gateway"
-tool_reading: "コング エーアイ ゲートウェイ"
-category: "AIインフラ"
-developer: "Kong Inc."
-official_site: "https://konghq.com/products/kong-ai-gateway"
-date: "2026-06-22"
-last_updated: "2026-06-22"
+title: Kong AI Gateway 調査レポート
+tool_name: Kong AI Gateway
+tool_reading: コング エーアイ ゲートウェイ
+category: AIインフラ
+developer: Kong Inc.
+official_site: https://konghq.com/products/kong-ai-gateway
+date: '2026-06-22'
+last_updated: '2026-06-22'
 tags:
-  - "AIゲートウェイ"
-  - "LLMプロキシ"
-  - "APIゲートウェイ"
-  - "エンタープライズ"
-  - "オープンソース"
-description: "生成AIアプリケーションと各種LLMの中間に位置し、一元的なトラフィック制御、セキュリティポリシー適用、コスト管理を実現するエンタープライズ向けAIゲートウェイ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AIゲートウェイ
+  - LLMプロキシ
+  - APIゲートウェイ
+  - エンタープライズ
+  - オープンソース
+description: 生成AIアプリケーションと各種LLMの中間に位置し、一元的なトラフィック制御、セキュリティポリシー適用、コスト管理を実現するエンタープライズ向けAIゲートウェイ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (OSS版) / サブスクリプションは要問い合わせ"
+  starting_price: 無料 (OSS版) / サブスクリプションは要問い合わせ
   target_users:
-    - "プラットフォームエンジニア"
-    - "バックエンドエンジニア"
-    - "AIアプリ開発者"
-  latest_highlight: "Kong AI Gateway 3.14にてA2A (Agent-to-Agent) トラフィック管理とMCPをサポート"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - プラットフォームエンジニア
+    - バックエンドエンジニア
+    - AIアプリ開発者
+  latest_highlight: Kong AI Gateway 3.14にてA2A (Agent-to-Agent) トラフィック管理とMCPをサポート
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "強力なAPIゲートウェイ(Kong)としての実績と拡張性、エコシステムの広さ"
+      reason: 強力なAPIゲートウェイ(Kong)としての実績と拡張性、エコシステムの広さ
     - point: 5
-      reason: "Agent-to-Agent(A2A)やMCPなど最新のAIエージェントトレンドへの迅速な対応"
+      reason: Agent-to-Agent(A2A)やMCPなど最新のAIエージェントトレンドへの迅速な対応
     - point: 5
-      reason: "ハイブリッドなデプロイメント環境（Kubernetes、自己ホスト、クラウド）への柔軟な対応"
+      reason: ハイブリッドなデプロイメント環境（Kubernetes、自己ホスト、クラウド）への柔軟な対応
   minus_points:
     - point: -5
-      reason: "複雑な設定と学習コスト（Kongアーキテクチャの理解が必要）"
-  summary: "既存のAPI管理と統合できる強力なAIゲートウェイだが、導入や設定には一定のインフラ知識が求められる"
-
-# 【任意項目】該当するもののみ記載
+      reason: 複雑な設定と学習コスト（Kongアーキテクチャの理解が必要）
+  summary: 既存のAPI管理と統合できる強力なAIゲートウェイだが、導入や設定には一定のインフラ知識が求められる
 links:
-  github: "https://github.com/Kong/kong"
-  documentation: "https://developer.konghq.com/ai-gateway/"
+  github: https://github.com/Kong/kong
+  documentation: https://developer.konghq.com/ai-gateway/
 relationships:
-  parent: "Kong Gateway"
+  parent: Kong Gateway
   children: []
   related_tools: []
 ---
