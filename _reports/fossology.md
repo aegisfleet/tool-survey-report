@@ -1,53 +1,50 @@
 ---
-title: "FOSSology 調査レポート"
-tool_name: "FOSSology"
-tool_reading: "フォソロジー"
-category: "セキュリティ"
-developer: "The Linux Foundation"
-official_site: "https://www.fossology.org/"
-date: "2026-06-22"
-last_updated: "2026-06-22"
+title: FOSSology 調査レポート
+tool_name: FOSSology
+tool_reading: フォソロジー
+category: セキュリティ
+developer: The Linux Foundation
+official_site: https://www.fossology.org/
+date: '2026-06-22'
+last_updated: '2026-06-22'
 tags:
-  - "オープンソース"
-  - "コンプライアンス"
-  - "SCA"
-  - "ライセンス管理"
-description: "オープンソースのライセンス・著作権・輸出管理コンプライアンス管理システムおよびツールキット。"
-
+  - オープンソース
+  - コンプライアンス
+  - SCA
+  - ライセンス管理
+description: オープンソースのライセンス・著作権・輸出管理コンプライアンス管理システムおよびツールキット。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "コンプライアンス担当者"
-    - "法務・監査チーム"
-  latest_highlight: "SPDX 3.0形式のレポート対応とDebian 13・Tuxedoのサポートを追加（バージョン4.7.1）"
-  update_frequency: "中"
-
+    - 開発者
+    - コンプライアンス担当者
+    - 法務・監査チーム
+  latest_highlight: SPDX 3.0形式のレポート対応とDebian 13・Tuxedoのサポートを追加（バージョン4.7.1）
+  update_frequency: 中
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースプロジェクトのコンプライアンス標準ツールとしての実績"
+      reason: オープンソースプロジェクトのコンプライアンス標準ツールとしての実績
     - point: 5
-      reason: "ライセンス・著作権・輸出管理の包括的なスキャン機能"
+      reason: ライセンス・著作権・輸出管理の包括的なスキャン機能
     - point: 3
-      reason: "SPDXフォーマットやOSSelotなどエコシステムとの強力な連携"
+      reason: SPDXフォーマットやOSSelotなどエコシステムとの強力な連携
   minus_points:
     - point: -2
-      reason: "導入と運用にLinux・データベースの知識が必要で学習コストがある"
-  summary: "OSSライセンスコンプライアンスにおける強力なツールだが、環境構築・運用には一定の技術力が求められる"
-
+      reason: 導入と運用にLinux・データベースの知識が必要で学習コストがある
+  summary: OSSライセンスコンプライアンスにおける強力なツールだが、環境構築・運用には一定の技術力が求められる
 links:
-  github: "https://github.com/fossology/fossology"
-  deepwiki: "https://deepwiki.com/fossology/fossology"
-  documentation: "https://github.com/fossology/fossology/wiki"
+  github: https://github.com/fossology/fossology
+  deepwiki: https://deepwiki.com/fossology/fossology
+  documentation: https://github.com/fossology/fossology/wiki
 relationships:
   related_tools:
-    - "Dependency-Check"
-    - "Snyk Open Source"
+    - Dependency-Check
+    - Snyk Open Source
 ---
 
 # **FOSSology 調査レポート**
