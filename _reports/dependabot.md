@@ -51,6 +51,7 @@ relationships:
     - CodeRabbit
     - SonarQube
     - Renovate
+    - Dependency-Check
     - Socket
 ---
 
