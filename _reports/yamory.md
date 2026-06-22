@@ -49,6 +49,7 @@ links:
 relationships:
   related_tools:
     - Trivy
+    - FOSSA
 ---
 
 # **yamory 調査レポート**

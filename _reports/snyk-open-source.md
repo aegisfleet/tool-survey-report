@@ -46,6 +46,7 @@ relationships:
     - dependabot
     - trivy
     - renovate
+    - FOSSA
 ---
 
 # **Snyk Open Source 調査レポート**
