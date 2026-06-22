@@ -51,6 +51,7 @@ relationships:
     - CodeRabbit
     - SonarQube
     - Renovate
+    - Socket
 ---
 
 # **Dependabot 調査レポート**
