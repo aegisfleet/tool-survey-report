@@ -45,6 +45,7 @@ relationships:
     - GitHub Actions
     - Jenkins
     - GitLab CI/CD
+    - Dependency-Check
 ---
 
 # **Trivy 調査レポート**
