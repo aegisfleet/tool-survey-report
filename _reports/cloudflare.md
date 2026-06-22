@@ -52,6 +52,7 @@ relationships:
     - Astro
     - Let's Encrypt
     - Nginx
+    - Portkey
 ---
 
 # **Cloudflare 調査レポート**

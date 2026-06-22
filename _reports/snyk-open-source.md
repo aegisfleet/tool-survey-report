@@ -47,6 +47,7 @@ relationships:
     - Trivy
     - Renovate
     - FOSSology
+    - FOSSA
 ---
 
 # **Snyk Open Source 調査レポート**
