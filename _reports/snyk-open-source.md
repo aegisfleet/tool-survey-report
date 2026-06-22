@@ -1,51 +1,51 @@
 ---
-title: "Snyk Open Source 調査レポート"
-tool_name: "Snyk Open Source"
-tool_reading: "スニーク オープンソース"
-category: "セキュリティ"
-developer: "Snyk Ltd."
-official_site: "https://snyk.io/product/open-source-security-management/"
-date: "2026-06-22"
-last_updated: "2026-06-22"
+title: Snyk Open Source 調査レポート
+tool_name: Snyk Open Source
+tool_reading: スニーク オープンソース
+category: セキュリティ
+developer: Snyk Ltd.
+official_site: https://snyk.io/product/open-source-security-management/
+date: '2026-06-22'
+last_updated: '2026-06-22'
 tags:
-  - "セキュリティ"
-  - "SCA"
-  - "開発者ツール"
-  - "CI/CD"
-  - "DevSecOps"
-description: "開発者向けのソフトウェアコンポジション解析（SCA）ツール。オープンソースの依存関係に潜む脆弱性やライセンスリスクを早期に発見・修正する。"
+  - セキュリティ
+  - SCA
+  - 開発者ツール
+  - CI/CD
+  - DevSecOps
+description: 開発者向けのソフトウェアコンポジション解析（SCA）ツール。オープンソースの依存関係に潜む脆弱性やライセンスリスクを早期に発見・修正する。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "セキュリティエンジニア"
-  latest_highlight: "2026年6月にSnyk CLI v1.1305.1がリリース"
-  update_frequency: "高"
+    - 開発者
+    - セキュリティエンジニア
+  latest_highlight: 2026年6月にSnyk CLI v1.1305.1がリリース
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 5
-      reason: "開発者ファーストなUI/UXとIDE統合による早期修正"
+      reason: 開発者ファーストなUI/UXとIDE統合による早期修正
     - point: 4
-      reason: "自動で修正PRを作成する機能による運用負荷の軽減"
+      reason: 自動で修正PRを作成する機能による運用負荷の軽減
     - point: 5
-      reason: "独自の脆弱性データベースによる高い精度と網羅性"
+      reason: 独自の脆弱性データベースによる高い精度と網羅性
     - point: 3
-      reason: "多数の言語・パッケージマネージャに対応"
+      reason: 多数の言語・パッケージマネージャに対応
   minus_points:
     - point: -3
-      reason: "フル機能の利用や大規模運用においては高コストになる場合がある"
-  summary: "開発者に寄り添った直感的な操作と強力な自動化機能を備え、DevSecOpsの実現に欠かせないSCAプラットフォーム。"
+      reason: フル機能の利用や大規模運用においては高コストになる場合がある
+  summary: 開発者に寄り添った直感的な操作と強力な自動化機能を備え、DevSecOpsの実現に欠かせないSCAプラットフォーム。
 links:
-  documentation: "https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-open-source"
+  documentation: https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-open-source
 relationships:
   related_tools:
-    - "dependabot"
-    - "trivy"
-    - "renovate"
+    - dependabot
+    - trivy
+    - renovate
 ---
 
 # **Snyk Open Source 調査レポート**
