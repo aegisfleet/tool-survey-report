@@ -46,6 +46,7 @@ relationships:
     - Jenkins
     - GitLab CI/CD
     - Dependency-Check
+    - FOSSA
 ---
 
 # **Trivy 調査レポート**
