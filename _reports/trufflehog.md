@@ -1,51 +1,48 @@
 ---
-title: "TruffleHog 調査レポート"
-tool_name: "TruffleHog"
-tool_reading: "トリュフホッグ"
-category: "セキュリティ"
-developer: "Truffle Security Co."
-official_site: "https://trufflesecurity.com/"
-date: "2026-06-22"
-last_updated: "2026-06-22"
+title: TruffleHog 調査レポート
+tool_name: TruffleHog
+tool_reading: トリュフホッグ
+category: セキュリティ
+developer: Truffle Security Co.
+official_site: https://trufflesecurity.com/
+date: '2026-06-22'
+last_updated: '2026-06-22'
 tags:
-  - "セキュリティ"
-  - "オープンソース"
-  - "シークレットスキャン"
-  - "DevSecOps"
-  - "CI/CD"
-description: "リポジトリやSaaSスタック全体に隠れたパスワードやAPIキーなどのシークレットを検出し、ライブキーの検証も行う強力なシークレットスキャナー"
-
+  - セキュリティ
+  - オープンソース
+  - シークレットスキャン
+  - DevSecOps
+  - CI/CD
+description: リポジトリやSaaSスタック全体に隠れたパスワードやAPIキーなどのシークレットを検出し、ライブキーの検証も行う強力なシークレットスキャナー
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "セキュリティチーム"
-  latest_highlight: "オープンソース版はv3への完全リライトで大幅な機能強化を実施"
-  update_frequency: "高"
-
+    - 開発者
+    - セキュリティチーム
+  latest_highlight: オープンソース版はv3への完全リライトで大幅な機能強化を実施
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、無料で高度なシークレット検出が可能"
+      reason: オープンソースであり、無料で高度なシークレット検出が可能
     - point: 5
-      reason: "見つかったシークレットの有効性を自動で検証する機能（Verified）を備える"
+      reason: 見つかったシークレットの有効性を自動で検証する機能（Verified）を備える
     - point: 5
-      reason: "幅広いソース（Git, Docker, S3, GCS, Hugging Face等）をサポート"
+      reason: 幅広いソース（Git, Docker, S3, GCS, Hugging Face等）をサポート
   minus_points:
     - point: 0
-      reason: "特筆すべき大きな減点項目は見当たらない"
-  summary: "多様なデータソースに対応し、誤検知を減らす検証機能を備えた信頼性の高いシークレットスキャナー"
-
+      reason: 特筆すべき大きな減点項目は見当たらない
+  summary: 多様なデータソースに対応し、誤検知を減らす検証機能を備えた信頼性の高いシークレットスキャナー
 links:
-  github: "https://github.com/trufflesecurity/trufflehog"
-  deepwiki: "https://deepwiki.com/trufflesecurity/trufflehog"
+  github: https://github.com/trufflesecurity/trufflehog
+  deepwiki: https://deepwiki.com/trufflesecurity/trufflehog
 relationships:
   related_tools:
-    - "Gitleaks"
+    - Gitleaks
 ---
 
 # **TruffleHog 調査レポート**
