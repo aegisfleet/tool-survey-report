@@ -43,8 +43,9 @@ links:
   documentation: https://dependency-check.github.io/DependencyCheck/
 relationships:
   related_tools:
-    - Dependabot
-    - Trivy
+    - "Dependabot"
+    - "Trivy"
+    - "FOSSology"
 ---
 
 # **Dependency-Check 調査レポート**

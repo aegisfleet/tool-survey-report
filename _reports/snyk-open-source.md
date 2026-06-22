@@ -43,9 +43,10 @@ links:
   documentation: https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-open-source
 relationships:
   related_tools:
-    - dependabot
-    - trivy
-    - renovate
+    - "Dependabot"
+    - "Trivy"
+    - "Renovate"
+    - "FOSSology"
 ---
 
 # **Snyk Open Source 調査レポート**
