@@ -2,7 +2,7 @@
 title: Microsoft Defender for Cloud 調査レポート
 tool_name: Microsoft Defender for Cloud
 tool_reading: マイクロソフト ディフェンダー フォー クラウド
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: Microsoft
 official_site: https://azure.microsoft.com/ja-jp/products/defender-for-cloud/
 date: '2026-05-28'
@@ -46,8 +46,8 @@ links:
   documentation: https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/
 relationships:
   related_tools:
-    - amazon-guardduty
-    - microsoft-365-copilot
+    - Amazon GuardDuty
+    - Microsoft 365 Copilot
 ---
 
 # **Microsoft Defender for Cloud 調査レポート**

@@ -2,7 +2,7 @@
 title: FOSSology 調査レポート
 tool_name: FOSSology
 tool_reading: フォソロジー
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: The Linux Foundation
 official_site: https://www.fossology.org/
 date: '2026-06-22'

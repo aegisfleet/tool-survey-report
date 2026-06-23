@@ -2,7 +2,7 @@
 title: Snyk Code 調査レポート
 tool_name: Snyk Code
 tool_reading: スニーク コード
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: Snyk Ltd.
 official_site: https://snyk.io/product/snyk-code/
 date: '2026-06-22'
@@ -43,11 +43,11 @@ links:
   documentation: https://docs.snyk.io/scan-fix-and-prevent/scan-with-snyk/snyk-code
 relationships:
   related_tools:
-    - snyk-open-source
-    - sonarqube
-    - sonarcloud
-    - semgrep
-    - codeql
+    - Snyk Open Source
+    - SonarQube
+    - SonarQube Cloud
+    - Semgrep
+    - CodeQL
 ---
 
 # **Snyk Code 調査レポート**

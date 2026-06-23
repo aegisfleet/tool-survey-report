@@ -2,7 +2,7 @@
 title: OSV-Scanner 調査レポート
 tool_name: OSV-Scanner
 tool_reading: オーエスブイスキャナー
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: Google / OpenSSF
 official_site: https://google.github.io/osv-scanner/
 date: '2026-04-25'
@@ -41,8 +41,6 @@ links:
 relationships:
   related_tools:
     - Trivy
-    - Grype
-    - Syft
 ---
 
 # **OSV-Scanner 調査レポート**
