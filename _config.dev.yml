@@ -20,3 +20,4 @@ exclude:
   - "_reports/7*"
   - "_reports/8*"
   - "_reports/9*"
+exclude: ['vendor/bundle']
