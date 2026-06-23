@@ -2,7 +2,7 @@
 title: Gitleaks 調査レポート
 tool_name: Gitleaks
 tool_reading: ギットリークス
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: Zach Rice (zricethezav)
 official_site: https://gitleaks.io/
 date: '2026-05-20'

@@ -2,7 +2,7 @@
 title: FOSSA 調査レポート
 tool_name: FOSSA
 tool_reading: フォッサ
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: FOSSA, Inc.
 official_site: https://fossa.com/
 date: '2026-06-22'

@@ -2,7 +2,7 @@
 title: GitGuardian 調査レポート
 tool_name: GitGuardian
 tool_reading: ギットガーディアン
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: GitGuardian
 official_site: https://www.gitguardian.com/
 date: '2026-06-22'
@@ -47,8 +47,8 @@ relationships:
   parent: ''
   children: []
   related_tools:
-    - gitleaks
-    - trivy
+    - Gitleaks
+    - Trivy
 ---
 
 # **GitGuardian 調査レポート**
