@@ -49,7 +49,7 @@ links:
   documentation: https://cursor.com/docs
 relationships:
   related_tools:
-    - "Spec Kit"
+    - Spec Kit
     - GitHub Copilot
     - Windsurf
     - Cline
