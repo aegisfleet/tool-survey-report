@@ -49,6 +49,7 @@ relationships:
     - Cypress
     - Appium
     - MagicPod
+    - JUnit
     - Autify
     - CodeceptJS
     - Ranorex Studio
