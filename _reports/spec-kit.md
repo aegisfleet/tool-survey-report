@@ -6,7 +6,7 @@ category: 開発ライフサイクル管理
 developer: GitHub
 official_site: https://github.github.com/spec-kit/
 date: '2026-03-09'
-last_updated: '2026-03-09'
+last_updated: '2026-06-25'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - チーム
-  latest_highlight: AIエージェントを用いた仕様からのコード生成を実現
+  latest_highlight: 2026年6月にFirebender (IntelliJ/Android Studio) やZed、ZCodeとの連携機能を追加
   update_frequency: 高
 evaluation:
   score: 80
@@ -43,7 +43,8 @@ relationships:
   parent: GitHub
   related_tools:
     - GitHub Copilot
-    - Claude
+    - Claude Code
+    - Cursor
 ---
 
 # **Spec Kit 調査レポート**
@@ -72,7 +73,7 @@ relationships:
 ## **3. 主要機能**
 
 * **Specify CLI**: プロジェクトの初期化やツールのインストール状況確認を行うコマンドラインツール。
-* **AIエージェント統合**: Claude Code, GitHub Copilot, Cursor, Qwen, Windsurfなど、多数のAIコーディングエージェントをシームレスにサポート。
+* **AIエージェント統合**: Claude Code, GitHub Copilot, Cursor, Qwen, Windsurfに加え、Firebender (IntelliJ / Android Studio)、Zed、ZCodeなど、多数のAIコーディングエージェント・エディタをシームレスにサポート。
 * **スラッシュコマンド**: `/speckit.constitution`（原則定義）、`/speckit.specify`（仕様定義）、`/speckit.plan`（技術計画）、`/speckit.tasks`（タスク分解）、`/speckit.implement`（実装実行）など、構造化された開発フローを支援するコマンド群。
 * **マルチステップリファインメント**: 単一のプロンプトによるコード生成ではなく、仕様定義、計画、タスク分解、実装という複数ステップでの洗練プロセスを提供。
 * **Bring Your Own Agent**: サポート外のエージェントでも汎用オプションを使用して統合可能。
@@ -149,7 +150,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: CLIツールとして機能するため、外部公開APIは提供していない。
-* **外部サービス連携**: 各種AIコーディングエージェント（GitHub Copilot, Claude Code, Cursor, Gemini CLI, Windsurf等）と強力に連携。
+* **外部サービス連携**: 各種AIコーディングエージェント（GitHub Copilot, Claude Code, Cursor, Gemini CLI, Windsurf, Firebender, Zed, ZCode等）と強力に連携。
 
 ### **10.2 技術スタックとの相性**
 
@@ -192,6 +193,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-23**: v0.11.6 リリース。Spec Kit Preview extensionの更新やFirebenderエージェントリストの同期など。
+* **2026-06-22**: v0.11.5 リリース。ZCode (Z.AI) 連携の追加など。
+* **2026-06-16**: v0.11.0 リリース。Zed連携の追加や、コミュニティインストール可能なワークフローステップカタログの追加など。
+* **2026-06-11**: v0.10.2 リリース。Jira Integration (Sync Engine) などのコミュニティカタログの拡充。
 * **2026-03-03**: v0.1.13 リリース。継続的なバグ修正と各種AIエージェント統合の改善。
 
 (出典: [GitHub Releases](https://github.com/github/spec-kit/releases))
@@ -200,12 +205,12 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | GitHub Copilot | Cursor |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | コード生成 | ◎<br><small>仕様からの段階的生成</small> | ◎<br><small>リアルタイム補完・チャット</small> | ◎<br><small>エディタ統合型の強力な生成</small> |
-| **カテゴリ特定** | 仕様管理 | ◎<br><small>仕様をMarkdownで管理</small> | △<br><small>プロンプトベース</small> | △<br><small>プロンプト・Composerベース</small> |
-| **エンタープライズ** | マルチエージェント対応 | ◎<br><small>多数のエージェントをサポート</small> | ×<br><small>独自モデル</small> | ×<br><small>独自内蔵モデル</small> |
-| **非機能要件** | 技術非依存 | ◎<br><small>任意のスタックに対応</small> | ◯<br><small>主要言語に対応</small> | ◯<br><small>主要言語に対応</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | GitHub Copilot | Cursor | Claude Code |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | コード生成 | ◎<br><small>仕様からの段階的生成</small> | ◎<br><small>リアルタイム補完・チャット</small> | ◎<br><small>エディタ統合型の強力な生成</small> | ◎<br><small>ターミナルベースでの自律生成</small> |
+| **カテゴリ特定** | 仕様管理 | ◎<br><small>仕様をMarkdownで管理</small> | △<br><small>プロンプトベース</small> | △<br><small>プロンプトベース</small> | △<br><small>プロンプトベース</small> |
+| **エンタープライズ** | マルチエージェント対応 | ◎<br><small>多数のエージェントをサポート</small> | ×<br><small>独自モデル</small> | ×<br><small>独自内蔵モデル</small> | ×<br><small>独自モデル</small> |
+| **非機能要件** | 技術非依存 | ◎<br><small>任意のスタックに対応</small> | ◯<br><small>主要言語に対応</small> | ◯<br><small>主要言語に対応</small> | ◯<br><small>主要言語に対応</small> |
 
 ### **16.2 詳細比較**
 
@@ -214,6 +219,7 @@ relationships:
 | **本ツール** | 仕様駆動開発のフレームワーク | 計画から実装までを構造化、複数エージェント対応 | 単体では動作せずAIエージェントが必要 | 設計から実装までをAIと体系的に進めたい場合 |
 | **GitHub Copilot** | 汎用AIコーディングアシスタント | IDE統合、リアルタイム補完 | 仕様自体の管理機能はない | 日々のコーディング作業を効率化したい場合 |
 | **Cursor** | AIファーストなコードエディタ | ファイル横断の強力なコンテキスト理解 | エディタの乗り換えが必要 | エディタレベルで最高峰のAI支援を受けたい場合 |
+| **Claude Code** | ターミナルで動作する自律型エージェント | CLIベースでの高い自律性 | IDEに直接組み込まれたUIを持たない | コマンドラインからの自動化や、既存のエディタに依存しないコーディングを行いたい場合 |
 
 ## **17. 総評**
 

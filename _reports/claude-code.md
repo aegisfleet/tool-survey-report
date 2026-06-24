@@ -46,6 +46,7 @@ relationships:
   children:
     - Opcode
   related_tools:
+    - Spec Kit
     - GitHub Copilot
     - Cursor
     - Windsurf
