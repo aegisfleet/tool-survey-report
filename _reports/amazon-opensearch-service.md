@@ -2,7 +2,7 @@
 title: Amazon OpenSearch Service 調査レポート
 tool_name: Amazon OpenSearch Service
 tool_reading: アマゾン オープンサーチ サービス
-category: インフラ/クラウド
+category: クラウドサービス/PaaS
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/opensearch-service/
 date: '2026-05-14'

@@ -2,7 +2,7 @@
 title: TigerFS 調査レポート
 tool_name: TigerFS
 tool_reading: タイガーエフエス
-category: インフラ/クラウド
+category: インフラ/サーバー管理
 developer: Timescale
 official_site: https://tigerfs.io/
 date: '2026-04-05'

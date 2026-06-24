@@ -2,7 +2,7 @@
 title: Cloudflare Workers 調査レポート
 tool_name: Cloudflare Workers
 tool_reading: クラウドフレア ワーカーズ
-category: インフラ/クラウド
+category: クラウドサービス/PaaS
 developer: Cloudflare, Inc.
 official_site: https://developers.cloudflare.com/workers/
 date: '2026-04-21'

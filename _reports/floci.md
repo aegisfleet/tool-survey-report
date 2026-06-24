@@ -2,7 +2,7 @@
 title: Floci 調査レポート
 tool_name: Floci
 tool_reading: フロキ
-category: インフラ/クラウド
+category: テスト用インフラ
 developer: Floci コミュニティ
 official_site: https://floci.io/
 date: '2026-05-13'

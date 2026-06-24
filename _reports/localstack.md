@@ -2,7 +2,7 @@
 title: LocalStack 調査レポート
 tool_name: LocalStack
 tool_reading: ローカルスタック
-category: インフラ/クラウド
+category: テスト用インフラ
 developer: LocalStack GmbH
 official_site: https://www.localstack.cloud/
 date: '2026-03-29'

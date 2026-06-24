@@ -2,16 +2,16 @@
 title: Sakana AI 調査レポート
 tool_name: Sakana AI
 tool_reading: サカナエーアイ
-category: 自律型AIエージェント
+category: 汎用AIエージェント
 developer: Sakana AI 株式会社
 official_site: https://sakana.ai/
 date: '2026-06-23'
 last_updated: '2026-06-23'
 tags:
-  - 自律型エージェント
-  - リサーチ
-  - コーディング
-  - マルチエージェント
+  - AI
+  - エージェント
+  - 自律型
+  - コーディング支援
 description: 世界トップクラスのモデル群を動的に連携させ、推論やコーディング等の複雑なタスクを自律的に解決するマルチエージェント型AIサービス。
 quick_summary:
   has_free_plan: false
