@@ -2,7 +2,7 @@
 title: Spanner Omni 調査レポート
 tool_name: Spanner Omni
 tool_reading: スパナー オムニ
-category: インフラ/クラウド
+category: クラウドサービス/PaaS
 developer: Google Cloud
 official_site: https://cloud.google.com/products/spanner/omni
 date: '2026-04-23'

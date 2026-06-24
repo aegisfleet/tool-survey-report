@@ -2,7 +2,7 @@
 title: Google Cloud 調査レポート
 tool_name: Google Cloud
 tool_reading: グーグル クラウド
-category: インフラ/クラウド
+category: クラウドサービス/PaaS
 developer: Google
 official_site: https://cloud.google.com/
 date: '2026-03-27'

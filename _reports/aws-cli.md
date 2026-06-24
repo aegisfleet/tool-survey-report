@@ -2,7 +2,7 @@
 title: AWS CLI 調査レポート
 tool_name: AWS CLI
 tool_reading: エーダブリューエス シーエルアイ
-category: インフラ/クラウド
+category: インフラ/サーバー管理
 developer: Amazon Web Services
 official_site: https://aws.amazon.com/jp/cli/
 date: '2026-04-18'
