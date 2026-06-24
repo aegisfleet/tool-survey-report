@@ -8,51 +8,51 @@ official_site: https://jules.google/
 date: '2025-10-18'
 last_updated: '2026-06-24'
 tags:
-- AI
-- エージェント
-- コーディング支援
-- 自律型
-- 開発者ツール
+  - AI
+  - エージェント
+  - コーディング支援
+  - 自律型
+  - 開発者ツール
 description: Googleが開発した、ソフトウェア開発ワークフロー全体を支援するAI搭載の自律型コーディングエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: 無料
   target_users:
-  - 開発者
-  - エンジニアリングチーム
+    - 開発者
+    - エンジニアリングチーム
   latest_highlight: 2026年3月にGemini 3.1 Proを搭載、2月にはCI自動修正やMCPサーバー連携機能を追加
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-  - point: 8
-    reason: Gemini 3.1 Proを搭載し、自律的なタスク実行能力が高い
-  - point: 5
-    reason: CLI/API連携や非同期実行など開発ワークフローへの統合が強力
-  - point: 4
-    reason: CI自動修正やMCP連携機能により、開発ワークフローの自動化と拡張性がさらに向上
-  - point: 3
-    reason: 無料プランが提供されており導入しやすい
+    - point: 8
+      reason: Gemini 3.1 Proを搭載し、自律的なタスク実行能力が高い
+    - point: 5
+      reason: CLI/API連携や非同期実行など開発ワークフローへの統合が強力
+    - point: 4
+      reason: CI自動修正やMCP連携機能により、開発ワークフローの自動化と拡張性がさらに向上
+    - point: 3
+      reason: 無料プランが提供されており導入しやすい
   minus_points:
-  - point: -3
-    reason: エンタープライズ向けのガバナンスやセキュリティに関する情報が不足
-  - point: -2
-    reason: リアルタイムの対話的なコーディングには不向き
+    - point: -3
+      reason: エンタープライズ向けのガバナンスやセキュリティに関する情報が不足
+    - point: -2
+      reason: リアルタイムの対話的なコーディングには不向き
   summary: 開発ワークフローの自動化に強力な選択肢だが、エンタープライズ利用には情報開示が待たれる。
 links:
   documentation: https://jules.google/docs/
 relationships:
   parent: Gemini
   related_tools:
-  - Devin
-  - Agent Zero
-  - OpenHands
-  - Manus
-  - GitHub Copilot
-  - DeerFlow
-  - Agent Trace
+    - Devin
+    - Agent Zero
+    - OpenHands
+    - Manus
+    - GitHub Copilot
+    - DeerFlow
+    - Agent Trace
 ---
 
 # **Google Jules 調査レポート**
