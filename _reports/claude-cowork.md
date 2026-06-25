@@ -2,7 +2,7 @@
 title: Claude Cowork 調査レポート
 tool_name: Claude Cowork
 tool_reading: クロード コワーク
-category: 汎用AIエージェント
+category: デスクトップ/GUIエージェント
 developer: Anthropic
 official_site: https://claude.com/product/cowork
 date: '2026-03-16'

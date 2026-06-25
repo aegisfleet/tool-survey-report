@@ -2,7 +2,7 @@
 title: LITRON CORE 調査レポート
 tool_name: LITRON CORE
 tool_reading: リトロン コア
-category: 汎用AIエージェント
+category: ビジネス/業務ツール
 developer: NTTデータ (NTT DATA)
 official_site: https://www.nttdata.com/jp/ja/lineup/litron-core/
 date: '2026-01-28'

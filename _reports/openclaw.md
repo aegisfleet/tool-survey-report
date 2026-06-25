@@ -2,7 +2,7 @@
 title: OpenClaw 調査レポート
 tool_name: OpenClaw
 tool_reading: オープンクロー
-category: 汎用AIエージェント
+category: AIチャット/アシスタント
 developer: Peter Steinberger & community
 official_site: https://openclaw.ai/
 date: '2026-04-09'
