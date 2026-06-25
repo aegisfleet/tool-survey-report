@@ -1,59 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Browserbase 調査レポート"
-tool_name: "Browserbase"
-tool_reading: "ブラウザーベース"
-category: "ブラウザ操作エージェント"
-developer: "Browserbase Inc."
-official_site: "https://www.browserbase.com/"
-date: "2026-06-26"
-last_updated: "2026-06-26"
+title: Browserbase 調査レポート
+tool_name: Browserbase
+tool_reading: ブラウザーベース
+category: ブラウザ操作エージェント
+developer: Browserbase Inc.
+official_site: https://www.browserbase.com/
+date: '2026-06-26'
+last_updated: '2026-06-26'
 tags:
-  - "AI"
-  - "開発者ツール"
-  - "API"
-  - "自動化"
-  - "SaaS"
-description: "AIエージェント向けのクラウドベースのヘッドレスブラウザインフラストラクチャ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - 開発者ツール
+  - API
+  - 自動化
+  - SaaS
+description: AIエージェント向けのクラウドベースのヘッドレスブラウザインフラストラクチャ
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "開発者"
-    - "AIエージェントビルダー"
-    - "スタートアップ"
-  latest_highlight: "2026年6月にStagehand 3.6でWebMCPをサポート開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエージェントビルダー
+    - スタートアップ
+  latest_highlight: 2026年6月にStagehand 3.6でWebMCPをサポート開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "クラウド上で拡張性の高いヘッドレスブラウザ環境を提供し、インフラ管理の手間を削減する"
+      reason: クラウド上で拡張性の高いヘッドレスブラウザ環境を提供し、インフラ管理の手間を削減する
     - point: 5
-      reason: "オープンソースのAI自動化フレームワークStagehandをサポートし、LLMとの親和性が高い"
+      reason: オープンソースのAI自動化フレームワークStagehandをサポートし、LLMとの親和性が高い
     - point: 5
-      reason: "CAPTCHA回避やセッション永続化など、Webスクレイピングに必須の高度な機能を備えている"
+      reason: CAPTCHA回避やセッション永続化など、Webスクレイピングに必須の高度な機能を備えている
   minus_points:
     - point: -5
-      reason: "日本語のドキュメントやサポートが不足している"
-  summary: "AIエージェントのWebアクセス基盤として非常に強力だが、エンタープライズ向けの運用コストと日本語情報の少なさが課題"
-
-# 【任意項目】該当するもののみ記載
+      reason: 日本語のドキュメントやサポートが不足している
+  summary: AIエージェントのWebアクセス基盤として非常に強力だが、エンタープライズ向けの運用コストと日本語情報の少なさが課題
 links:
-  github: "https://github.com/browserbase"
-  documentation: "https://docs.browserbase.com/"
+  github: https://github.com/browserbase
+  documentation: https://docs.browserbase.com/
 relationships:
   related_tools:
-    - "Playwright"
-    - "Selenium"
-    - "CrewAI"
+    - Playwright
+    - Selenium
+    - CrewAI
 ---
 
 # **Browserbase 調査レポート**
