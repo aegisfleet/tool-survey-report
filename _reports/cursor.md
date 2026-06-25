@@ -57,6 +57,7 @@ relationships:
     - Visual Studio Code
     - Devin
     - Model Context Protocol
+    - Agent Trace
 ---
 
 # **Cursor 調査レポート**
