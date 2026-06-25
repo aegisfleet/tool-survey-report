@@ -6,7 +6,7 @@ category: AI開発ライブラリ
 developer: オープンコミュニティ (Cursor主導)
 official_site: https://agent-trace.dev/
 date: '2026-03-10'
-last_updated: '2026-03-10'
+last_updated: '2026-06-25'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIツール開発者
-  latest_highlight: 2026年1月にRFCとしてVersion 0.1.0が公開
+  latest_highlight: 2026年2月にスキーマのバージョン指定形式（semver）など仕様のアップデートを実施
   update_frequency: 不定期
 evaluation:
   score: 85
@@ -194,20 +194,21 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-02-06**: スキーマのバージョン指定形式（semver）など仕様のアップデートおよびドキュメントの改善を実施。
 * **2026-01**: Agent Trace Version 0.1.0 が Request for Comments (RFC) として公開される。
 
-(出典: [公式サイト](https://agent-trace.dev/), [GitHub](https://github.com/cursor/agent-trace))
+(出典: [公式サイト](https://agent-trace.dev/), [GitHub](https://github.com/cursor/agent-trace/commits/main))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Agent Trace | Model Context Protocol (MCP) | git blame (標準VCS) |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | トレース標準化 | ◎<br><small>コード生成元の特定</small> | ◯<br><small>ツール連携の標準化</small> | ◯<br><small>コミット単位の履歴</small> |
-| **カテゴリ特定** | AIモデル/会話連携 | ◎<br><small>モデル名やプロンプトのURLを記録</small> | ×<br><small>コンテキスト提供に特化</small> | ×<br><small>コミッターのみ記録</small> |
-| **エンタープライズ** | データ拡張性 | ◎<br><small>カスタムメタデータに対応</small> | ◎<br><small>多様なツール連携</small> | △<br><small>コミットメッセージへの依存</small> |
-| **非機能要件** | ベンダー非依存 | ◎<br><small>幅広いエコシステムの賛同</small> | ◎<br><small>オープン標準プロトコル</small> | ◎<br><small>普遍的なVCSの標準</small> |
+| 機能カテゴリ | 機能項目 | Agent Trace | Model Context Protocol (MCP) | git blame (標準VCS) | Cursor | Cline |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **基本機能** | トレース標準化 | ◎<br><small>コード生成元の特定</small> | ◯<br><small>ツール連携の標準化</small> | ◯<br><small>コミット単位の履歴</small> | - | - |
+| **カテゴリ特定** | AIモデル/会話連携 | ◎<br><small>モデル名やプロンプトのURLを記録</small> | ×<br><small>コンテキスト提供に特化</small> | ×<br><small>コミッターのみ記録</small> | - | - |
+| **エンタープライズ** | データ拡張性 | ◎<br><small>カスタムメタデータに対応</small> | ◎<br><small>多様なツール連携</small> | △<br><small>コミットメッセージへの依存</small> | - | - |
+| **非機能要件** | ベンダー非依存 | ◎<br><small>幅広いエコシステムの賛同</small> | ◎<br><small>オープン標準プロトコル</small> | ◎<br><small>普遍的なVCSの標準</small> | - | - |
 
 ### **16.2 詳細比較**
 
@@ -216,6 +217,8 @@ relationships:
 | **Agent Trace** | AI生成コードの来歴をファイル/行単位で記録するオープン仕様。 | AIモデル名やチャットログとの紐づけに特化。ハッシュによる移動追跡機能。 | 法的権利・品質評価機能は持たない。 | 開発組織として「AIがどこまでコードを書いたか」を分析・追跡したい場合。 |
 | **Model Context Protocol (MCP)** | AIモデルと外部ツール・データソースを繋ぐためのAnthropic主導の標準プロトコル。 | 任意のデータソースやツールをAIに安全に公開・連携できる。 | コード生成の「結果」を追跡・記録するものではない。 | AIに社内DBや外部ツールの実行権限を付与し、コンテキストを提供したい場合。 |
 | **git blame** | Git標準の行単位の変更履歴追跡機能。 | 追加ツール不要で、全てのGitリポジトリで即座に利用可能。 | AIによる生成か人間による記述かの区別ができない。 | 従来通り、コミッターベースで変更の責任者や意図（コミットログ）を確認したい場合。 |
+| **Cursor** | VS CodeベースのAIネイティブエディタ。 | 深い文脈理解、Composerによる強力な編集機能、既存VS Code環境との互換性。 | ベースのVS Code更新に追従するラグがある。独自の拡張機能ストアはない（VS Code用を使う）。 | コードベース全体にまたがる複雑なタスクをAIに任せたい場合。 |
+| **Cline** | IDE/CLIで動作する協調型AIエージェント。BYOKモデル。 | オープンソース、高いセキュリティ、最新モデル(GPT-5.5, Claude Fable 5等)への即時対応。 | 学習コストが高く、API料金が変動する。 | セキュリティ要件が厳しい、または特定のLLMに縛られたくない場合。 |
 
 ## **17. 総評**
 
