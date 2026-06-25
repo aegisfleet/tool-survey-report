@@ -2,14 +2,13 @@
 title: Amazon Quick 調査レポート
 tool_name: Amazon Quick
 tool_reading: アマゾン クイック
-category: 汎用AIエージェント
+category: BI/データ可視化
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/quicksuite/
 date: '2026-04-29'
 last_updated: '2026-04-29'
 tags:
   - AWS
-  - AI
   - エージェント
   - データ分析
   - 自動化

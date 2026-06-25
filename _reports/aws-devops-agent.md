@@ -2,7 +2,7 @@
 title: AWS DevOps Agent 調査レポート
 tool_name: AWS DevOps Agent
 tool_reading: エーダブリューエス デボオプス エージェント
-category: 汎用AIエージェント
+category: インフラ/サーバー管理
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/devops-agent/
 date: '2026-04-20'
