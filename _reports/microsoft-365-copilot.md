@@ -6,7 +6,7 @@ category: AIチャット/アシスタント
 developer: Microsoft
 official_site: https://www.microsoft.com/ja-jp/microsoft-365/copilot
 date: '2026-01-27'
-last_updated: '2026-03-10'
+last_updated: '2026-06-27'
 tags:
   - AI
   - SaaS
@@ -22,7 +22,7 @@ quick_summary:
     - ビジネスパーソン
     - 大企業
     - 中小企業
-  latest_highlight: 2026年3月にMicrosoft TeamsでのAI議事録機能を強化
+  latest_highlight: "Microsoft 365 Copilot Enterprise Searchにおいてワンクリック情報漏洩の脆弱性(CVE-2026-42824)が報告され、バックエンドで緩和策が適用された"
   update_frequency: 高
 evaluation:
   score: 85
@@ -244,6 +244,7 @@ relationships:
 * **認証**: Microsoft Entra ID (旧Azure AD) によるID管理と多要素認証(MFA)に対応。
 * **データ管理**: 顧客データはテナント内で完全に分離・保護され、基盤となる大規模言語モデルの学習には使用されない。データはMicrosoft 365のサービス境界内で処理される。
 * **準拠規格**: GDPR, ISO 27001, SOC 2など、主要な国際的・地域的なコンプライアンス基準に準拠。
+* **脆弱性への対応**: 2026年6月に、Microsoft 365 Copilot Enterprise SearchにおいてプロンプトインジェクションとSSRF等を組み合わせたワンクリック情報漏洩の脆弱性（CVE-2026-42824）が報告されたが、Microsoftによりバックエンドで緩和策が適用されている。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
@@ -308,6 +309,7 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-06-16**: Microsoft 365 Copilot Enterprise SearchにおけるプロンプトインジェクションとSSRFを組み合わせた「ワンクリック情報漏洩」の脆弱性（CVE-2026-42824）が報告され、Microsoftがバックエンドで緩和策を適用。
 * **2026-03-10**: Microsoft TeamsでのAI議事録機能が強化され、多言語対応のリアルタイム翻訳と要約の精度が向上。
 * **2026-02-15**: Copilot Studioでの外部API連携機能が拡充され、主要なSaaSとのコネクタが追加。
 * **2026-01-XX**: モバイルアプリにて音声ノートのキャプチャ機能が追加（ロードマップ）。
@@ -341,10 +343,11 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | Microsoft 365 Copilot | Gemini for Google Workspace | ChatGPT Enterprise |
 |:---:|:---|:---:|:---:|:---:|
-| **オフィス統合** | 文書・表計算連携 | ◎<br><small>Word/Excel完全統合</small> | ◎<br><small>Docs/Sheets完全統合</small> | △<br><small>ファイルアップロードのみ</small> |
+| **オフィス統合** | 文書・表計算連携 | ◎<br><small>Word/Excel完全統合</small> | ◎<br><small>Docs/Sheets完全統合</small> | ◯<br><small>Excel/Google Sheetsとのネイティブ連携</small> |
 | **組織データ** | 社内検索(RAG) | ◎<br><small>Microsoft Graph活用</small> | ◎<br><small>Drive/Gmail検索</small> | ◯<br><small>Company Knowledge</small> |
 | **会議支援** | 議事録・要約 | ◎<br><small>Teams統合</small> | ◎<br><small>Meet統合</small> | △<br><small>文字起こしデータの入力が必要</small> |
-| **拡張性** | カスタムエージェント | ◯<br><small>Copilot Studio</small> | ◯<br><small>Gems</small> | ◎<br><small>GPTs/API</small> |
+| **拡張性** | カスタムエージェント | ◯<br><small>Copilot Studio</small> | ◯<br><small>Gemini Spark/Gems</small> | ◎<br><small>GPTs/API</small> |
+| **推論・処理**| モデル性能 | ◯<br><small>GPT-4o等</small> | ◎<br><small>Gemini 3.5 Flash等の高速・自律型</small> | ◎<br><small>GPT-5.4 Thinking等の高度推論</small> |
 | **コスト** | ライセンス料 | △<br><small>$30/ユーザー/月</small> | △<br><small>$20-30/ユーザー/月</small> | △<br><small>要問い合わせ</small> |
 
 ### **16.2 詳細比較**
@@ -357,8 +360,8 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Microsoft 365 Copilot** | Microsoft 365製品群に深く統合されたAIアシスタント | Officeアプリとのシームレスな連携、組織データの安全な活用 | ライセンス費用が高額、Microsoftエコシステムへの依存 | Microsoft 365を全社的に利用しており、既存業務フローの効率化を最優先する場合 |
-| **Gemini for Google Workspace** | Google Workspace製品群に統合されたAIアシスタント | GoogleドキュメントやGmail等との連携、リアルタイム共同編集との親和性 | Microsoft Officeファイルとの互換性、Excelほど高度な分析は未達 | Google Workspaceを全社的に利用しており、コラボレーションの強化を重視する場合 |
-| **ChatGPT Enterprise** | OpenAIが提供する企業向けの汎用会話AIプラットフォーム | 高度な対話能力と汎用性、APIによる高いカスタマイズ性 | Officeアプリや組織データとの直接的なリアルタイム連携には工数が必要 | 特定業務の自動化や、カスタムAIチャットボット開発、高度な推論タスクを目的とする場合 |
+| **Gemini for Google Workspace** | Google Workspace製品群に統合されたAIアシスタント | Gemini 3.5 Flash等の超高速モデルや自律型エージェントGemini Sparkの統合、Google Workspaceとの親和性 | Microsoft Officeファイルとの互換性、頻繁なモデル名変更による学習コスト | Google Workspaceを全社的に利用しており、コラボレーションの強化や自律動作を重視する場合 |
+| **ChatGPT Enterprise** | OpenAIが提供する企業向けの汎用会話AIプラットフォーム | GPT-5ファミリー(GPT-5.4 Thinking等)による圧倒的な推論能力、CanvasやExcel連携による使い勝手 | Officeアプリや組織データとの直接的なリアルタイム連携にはまだ工数が必要 | 特定業務の自動化や、高度な論理的推論、コーディング、データ分析を1つのツールで完結させたい場合 |
 
 ## **17. 総評**
 
