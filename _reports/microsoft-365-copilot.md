@@ -22,7 +22,7 @@ quick_summary:
     - ビジネスパーソン
     - 大企業
     - 中小企業
-  latest_highlight: "Microsoft 365 Copilot Enterprise Searchにおいてワンクリック情報漏洩の脆弱性(CVE-2026-42824)が報告され、バックエンドで緩和策が適用された"
+  latest_highlight: Microsoft 365 Copilot Enterprise Searchにおいてワンクリック情報漏洩の脆弱性(CVE-2026-42824)が報告され、バックエンドで緩和策が適用された
   update_frequency: 高
 evaluation:
   score: 85
