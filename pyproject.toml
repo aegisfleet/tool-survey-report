@@ -6,9 +6,18 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "playwright==1.60.0",
-    "pytest>=9.1.1",
     "pyyaml==6.0.3",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=9.1.1",
 ]
 
 [tool.uv]
 exclude-newer = "7 days"
+
+[[tool.uv.index]]
+name = "flatt"
+url = "https://pypi.flatt.tech/simple/"
+default = true

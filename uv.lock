@@ -216,16 +216,21 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "playwright" },
-    { name = "pytest" },
     { name = "pyyaml" },
+]
+
+[package.optional-dependencies]
+test = [
+    { name = "pytest" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "playwright", specifier = "==1.60.0" },
-    { name = "pytest", specifier = ">=9.1.1" },
+    { name = "pytest", marker = "extra == 'test'", specifier = ">=9.1.1" },
     { name = "pyyaml", specifier = "==6.0.3" },
 ]
+provides-extras = ["test"]
 
 [[package]]
 name = "typing-extensions"
