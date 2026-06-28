@@ -6,7 +6,7 @@ category: 汎用AIエージェント
 developer: Agent Zero, s.r.o.
 official_site: https://www.agent-zero.ai/
 date: '2026-03-11'
-last_updated: '2026-03-11'
+last_updated: '2026-06-28'
 tags:
   - エージェント
   - オープンソース
@@ -21,7 +21,7 @@ quick_summary:
     - 開発者
     - 研究者
     - データアナリスト
-  latest_highlight: 2026年2月にSkills機能やGitプロジェクトのサポートを追加（v0.9.8.2）
+  latest_highlight: 2026年6月にv2.0〜v2.1をリリースし、ネイティブなResponses APIトランスポート対応や並列ツール呼び出し機能を強化
   update_frequency: 高
 evaluation:
   score: 83
@@ -47,7 +47,7 @@ relationships:
   related_tools:
     - Devin
     - OpenHands
-    - Google Jules
+    - AutoGPT
 ---
 
 # **Agent Zero 調査レポート**
@@ -78,6 +78,7 @@ relationships:
 ## **3. 主要機能**
 
 * **コンピュータを通じたツール活用**: PCのOS（主にDockerコンテナ内のLinux環境）を道具として利用。組み込みのツール（検索、コード実行、通信など）に加え、必要に応じて自身でコードを書いて新しいツールを生成・実行する。
+* **並列ツール呼び出し (Parallel tool calls)**: 複数の独立したツール呼び出しを並行して実行し、処理を高速化する専用ランタイムを搭載。
 * **マルチエージェント協調 (Multi-agent Cooperation)**: エージェントは上位エージェント（最初はユーザー）からの指示を受け、必要に応じてタスクを分解し、下位のサブエージェントを作成して協調動作を行う。
 * **持続的なメモリ (Persistent Memory)**: 過去のソリューション、コード、事実、指示などをベクトルデータベースに保存し、将来のタスク解決をより速く確実に行うための持続的記憶を持つ。
 * **プロジェクト隔離 (Projects)**: クライアントやタスクごとにワークスペースを分離し、専用のシステムプロンプト、メモリ、シークレット（APIキーなど）を隔離してコンテキストの混入を防ぐ。
@@ -143,8 +144,8 @@ relationships:
 
 ### **10.1 API・外部サービス連携**
 
-* **API**: 外部からAgent Zeroを操作するためのREST APIエンドポイントやWebSocket通信をサポートしている。
-* **外部サービス連携**: OpenAI, Anthropic, OpenRouter, Venice AI, AWS Bedrock, GitHub Copilot等の各種AIプロバイダとの連携。また、Model Context Protocol (MCP) を通じた外部サーバー連携に標準で対応。
+* **API**: 外部からAgent Zeroを操作するためのREST APIエンドポイントやWebSocket通信をサポートしている。ネイティブなResponses APIトランスポートに対応しており、未対応プロバイダの場合はChat Completions APIへ自動フォールバックする。
+* **外部サービス連携**: OpenAI, Anthropic, OpenRouter, Venice AI, AWS Bedrock, GitHub Copilot等の各種AIプロバイダとの連携。また、Model Context Protocol (MCP) を通じた外部サーバー連携に標準で対応。Telegramへのネイティブ統合もサポート。
 
 ### **10.2 技術スタックとの相性**
 
@@ -152,7 +153,7 @@ relationships:
 |:---|:---:|:---|:---|
 | **Docker** | ◎ | 公式にDockerコンテナが提供され、環境を汚さずに安全にコード実行が可能 | 特になし |
 | **Python** | ◎ | ツール自体がPythonで実装されており、エージェントもPythonを用いてツールを自動生成・実行する | 特になし |
-| **Ollama / Local LLM** | ◯ | ローカルでLLMを動かす構成に公式対応し、完全オフライン・機密データ処理が可能 | 安定した動作にはハイスペックなPCが必要 |
+| **Ollama / Local LLM** | ◎ | ローカルでLLMを動かす構成に公式対応。Ollama, LM Studio, vLLM, llama.cppなど多様なプロバイダをサポート | 安定した動作にはハイスペックなPCが必要 |
 | **MCP (Model Context Protocol)** | ◎ | クライアント・サーバー双方の機能に対応し、最新のツールエコシステムと統合可能 | プロンプト消費量が増える傾向がある |
 
 ## **11. セキュリティとコンプライアンス**
@@ -191,14 +192,15 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-26**: v2.1 - Responses APIのフォールバック処理の改善、MCP画像アタッチメントのマテリアライズ化、Responses API利用時のスキーマ正規化対応。
+* **2026-06-24**: v2.0 - ネイティブなResponses APIトランスポートへの対応、並列ツール呼び出し（Parallel tool calls）の追加、MCPサーバー設定のプロジェクトスコープ対応、oMLX / vLLM / LM Studio等のローカルLLMサポート強化。
 * **2026-02-24**: v0.9.8.2 - Skills機能（SKILL.md標準）、Gitプロジェクト機能の追加、Web UIの大幅リデザイン、Dev Tunnels連携。
 * **2025-XX-XX**: v0.9.7 - Projects管理機能の追加。専用のコンテキスト、メモリ、ファイル群を持たせることが可能に。
 * **2025-XX-XX**: v0.9.6 - メモリ管理ダッシュボードの追加、Github Copilotプロバイダのサポート。
 * **2025-XX-XX**: v0.9.5 - シークレット管理機能の追加。エージェントがクレデンシャルを直接見ずにAPI等を利用可能に。
 * **2025-XX-XX**: v0.9.4 - Agent to Agent (A2A) プロトコルのサポート。複数のエージェントインスタンス間での協調動作が可能に。
 
-(出典: [リリースノート](https://github.com/agent0ai/agent-zero/releases) )
-※ 調査時点における公式リポジトリのリリース履歴より
+(出典: [製品アップデート情報](https://github.com/agent0ai/agent-zero/releases) )
 
 ## **16. 類似ツールとの比較**
 
@@ -208,7 +210,7 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 自律型タスク実行 | ◎<br><small>動的ツール生成による柔軟な実行</small> | ◎<br><small>ソフトウェア開発に特化した高度な推論</small> | ◯<br><small>コンテナベースのコード実行</small> | ◯<br><small>プロンプトベースのタスク実行</small> |
 | **拡張性** | ツールの自作能力 | ◎<br><small>エージェント自身がコードを書き実行</small> | ◯<br><small>標準ツールを駆使</small> | ◯<br><small>限定的</small> | △<br><small>事前定義されたプラグイン中心</small> |
-| **連携機能** | MCPサポート | ◎<br><small>クライアント・サーバー両対応</small> | ◯<br><small>対応</small> | △<br><small>一部対応</small> | ×<br><small>非対応</small> |
+| **連携機能** | MCPサポート | ◎<br><small>クライアント・サーバー両対応</small> | ◎<br><small>マーケットプレイスなど充実</small> | ◯<br><small>対応</small> | ×<br><small>非対応</small> |
 | **非機能要件** | オープンソース | ◎<br><small>完全なOSS、MITライセンス</small> | ×<br><small>クローズドな商用SaaS</small> | ◎<br><small>完全なOSS</small> | ◎<br><small>完全なOSS</small> |
 
 ### **16.2 詳細比較**
