@@ -6,13 +6,13 @@ category: デザインツール
 developer: All SVG Icons
 official_site: https://allsvgicons.com/
 date: '2026-03-11'
-last_updated: '2026-03-11'
+last_updated: '2026-06-29'
 tags:
   - SVG
   - アイコン
   - オープンソース
   - 開発者ツール
-description: 250,000以上の無料SVGアイコンを検索、カスタマイズ、ダウンロードできるプラットフォーム
+description: 286,000以上の無料SVGアイコンを検索、カスタマイズ、ダウンロードできるプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -20,8 +20,8 @@ quick_summary:
   target_users:
     - 開発者
     - デザイナー
-  latest_highlight: 25万以上のアイコンを提供
-  update_frequency: 中
+  latest_highlight: 収録アイコン数が28.6万以上に拡大し、多数のフレームワーク向け活用ガイドが公開
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
@@ -49,7 +49,7 @@ relationships:
 * **開発元**: All SVG Icons
 * **公式サイト**: [https://allsvgicons.com/](https://allsvgicons.com/)
 * **カテゴリ**: デザインツール
-* **概要**: 220の厳選されたアイコンライブラリから250,000以上の無料SVGアイコンを検索、カスタマイズ、ダウンロードできるプラットフォーム。FlaticonやIconmonstrの代替として、完全無料・オープンソースのアイコンを提供している。
+* **概要**: 220の厳選されたアイコンライブラリから286,000以上の無料SVGアイコンを検索、カスタマイズ、ダウンロードできるプラットフォーム。FlaticonやIconmonstrの代替として、完全無料・オープンソースのアイコンを提供している。
 
 ## **2. 目的と主な利用シーン**
 
@@ -67,6 +67,8 @@ relationships:
 * **カスタマイズ機能**: ダウンロード前にアイコンのサイズ、色、線の太さなどをブラウザ上で調整可能。
 * **クリップボードへのコピー**: ワンクリックでSVGコードやJSXコードをクリップボードにコピーできる。
 * **最適化**: SVG Optimizer機能により、不要なコードを削除し、ファイルサイズを軽量化できる。
+* **SVG Sprite Maker**: アイコンを単一のスプライトシートにバンドルする機能。
+* **Developer Design Resources**: 開発者向けのアバタージェネレーターや無料イラスト集などのインデックスを提供。
 
 ## **4. 開始手順・セットアップ**
 
@@ -80,7 +82,7 @@ relationships:
 
 ## **5. 特徴・強み (Pros)**
 
-* **圧倒的な収録数**: 25万以上という膨大な数のアイコンが1つのプラットフォームに集約されており、複数のサイトを巡回する必要がない。
+* **圧倒的な収録数**: 28.6万以上という膨大な数のアイコンが1つのプラットフォームに集約されており、複数のサイトを巡回する必要がない。
 * **完全無料・オープンソース**: 全てのアイコンが無料であり、オープンソースとして提供されているため、商用利用もしやすい（※各ライブラリのライセンスに依存する部分もあるため確認は推奨）。
 * **開発者フレンドリー**: JSXやBase64での出力に対応しているため、フロントエンド開発のワークフローにスムーズに組み込める。
 
@@ -161,7 +163,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-20**: Astro、FigmaからReactへのパイプライン、Lucideカスタムアイコン追加、Phosphor Icons、Radix Icons、React Native、Svelte向けのSVGアイコン活用ガイドや、ダークモード対応に関する技術記事が一挙公開。
+* **2026-04-29**: Lucide vs Feather Icons、Phosphor Icons vs Lucide、Tabler Icons vs Font Awesome の比較記事が公開。
+* **2026-03-09**: Lucide vs Heroicons の比較記事が公開。
 * **2024-03-XX**: （公式サイトの更新履歴が公開されていないため、詳細なアップデート履歴は不明。継続的に新しいアイコンパックが追加されている。）
+
+(出典: [公式ブログ](https://allsvgicons.com/blog/) など)
 
 ## **16. 類似ツールとの比較**
 
@@ -169,7 +176,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | All SVG Icons | Flaticon | Iconmonstr | SVG Repo |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | アイコン収録数 | ◎<br><small>25万以上</small> | ◎<br><small>数百万以上</small> | △<br><small>数千程度</small> | ◯<br><small>50万以上</small> |
+| **基本機能** | アイコン収録数 | ◎<br><small>28.6万以上</small> | ◎<br><small>数百万以上</small> | △<br><small>数千程度</small> | ◯<br><small>50万以上</small> |
 | **開発者機能** | JSX/Base64出力 | ◎<br><small>標準対応</small> | △<br><small>非対応</small> | ×<br><small>非対応</small> | △<br><small>一部対応</small> |
 | **コスト** | 無料での利用 | ◎<br><small>完全無料</small> | ◯<br><small>一部無料(要クレジット)</small> | ◎<br><small>完全無料</small> | ◎<br><small>完全無料</small> |
 | **非機能要件** | 日本語検索 | ×<br><small>非対応</small> | ◯<br><small>対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
