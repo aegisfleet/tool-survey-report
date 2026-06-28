@@ -53,9 +53,9 @@ relationships:
     - LangChain
     - Devin
     - OpenHands
+    - Agent Zero
     - Letta
     - AgentScope
-    - MoneyPrinterV2
     - OpenClaw
 ---
 

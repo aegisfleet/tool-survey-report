@@ -54,7 +54,7 @@ relationships:
     - Windsurf
     - OpenHands
     - AutoGPT
-    - Opcode
+    - Agent Zero
     - Manus
 ---
 
