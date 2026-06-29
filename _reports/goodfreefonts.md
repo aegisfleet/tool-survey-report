@@ -6,7 +6,7 @@ category: デザインツール
 developer: いいフォント運営
 official_site: https://goodfreefonts.com/
 date: '2026-03-11'
-last_updated: '2026-03-11'
+last_updated: '2026-06-29'
 tags:
   - デザインツール
   - フォント
@@ -20,7 +20,7 @@ quick_summary:
     - デザイナー
     - クリエイター
     - 動画編集者
-  latest_highlight: 「えれがんと平成明朝」「わんぱくルイカ」などの新しいフォント情報が追加されました
+  latest_highlight: 「ささがきフォント」「まるべりぃ」などの新しいフォント情報が追加されました
   update_frequency: 高
 evaluation:
   score: 85
@@ -146,6 +146,7 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-29**: 「ささがきフォント」「まるべりぃ」など、新しいフォントの掲載が確認されています。（※サイト上の追加日順に基づく）
 * **2026-03**: 「えれがんと平成明朝」「わんぱくルイカ」など、新しいフォントの掲載が確認されています。（※サイト上の追加日順に基づく）
 
 (出典: [いいフォント 公式サイト](https://goodfreefonts.com/))
