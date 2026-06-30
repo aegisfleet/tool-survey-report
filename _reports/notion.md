@@ -6,7 +6,7 @@ category: ドキュメント/ナレッジ
 developer: Notion Labs, Inc.
 official_site: https://www.notion.com/
 date: '2026-03-11'
-last_updated: '2026-03-11'
+last_updated: '2026-07-01'
 tags:
   - AI
   - SaaS
@@ -22,7 +22,7 @@ quick_summary:
     - 個人ユーザー
     - スタートアップ
     - エンタープライズ
-  latest_highlight: 2025年11月にNotion 3.1をリリース。会議機能とエージェント機能を強化
+  latest_highlight: 2026年5月にNotion 3.5 Developer Platformをリリース。External Agents API、Workers、CLI、Webhookなどを導入。
   update_frequency: 高
 evaluation:
   score: 90
@@ -71,7 +71,7 @@ relationships:
   * ドキュメント: [https://www.notion.so/help](https://www.notion.so/help)
   * レビューサイト: [ITreview](https://www.itreview.jp/products/notion/reviews)
 * **カテゴリ**: ドキュメント/ナレッジ
-* **概要**: Notionは、ドキュメント作成、ナレッジベースの構築、タスク管理、データベース機能を柔軟に組み合わせ、個人やチームのワークフローを自由に構築できるオールインワンのAIワークスペースです。**Notion 3.0**で導入された**AIエージェント**機能に加え、**Notion 3.1**では会議機能やエンタープライズ検索が大幅に強化され、単なるドキュメントツールから自律的な業務代行プラットフォームへと進化しています。
+* **概要**: Notionは、ドキュメント作成、ナレッジベースの構築、タスク管理、データベース機能を柔軟に組み合わせ、個人やチームのワークフローを自由に構築できるオールインワンのAIワークスペースです。**Notion 3.0**で導入された**AIエージェント**機能に加え、**Notion 3.5 Developer Platform**により、External Agents APIやWorkersを利用した任意のデータソースの同期、カスタムツールの構築が可能となり、単なるドキュメントツールから自律的な業務代行・オーケストレーションプラットフォームへと進化しています。
 
 ## **2. 目的と主な利用シーン**
 
@@ -99,10 +99,11 @@ relationships:
 -->
 
 * **コネクテッドワークスペース**: ドキュメント、データベース、タスク管理を「ブロック」という単位で自由に組み合わせ、ページを作成できる。
-* **Notion Agents**: ドキュメント作成、情報収集、ツール横断検索、ワークフロー実行などを自律的に処理するAIエージェント。Notion 3.1ではコメントやCSVの読み込みが可能。
+* **Notion Agents & External Agents**: ドキュメント作成、情報収集、ツール横断検索などを自律処理するAIエージェント。3.5ではExternal Agents APIにより、外部のエージェント（Claude、Codexなど）を組み込み、Notionをオーケストレーション層として活用できる。
+* **Notion Workers**: カスタムコードを実行するためのホスト型ランタイム。Notion上にサーバーレスで自作ツールやWebhook、DB同期処理をデプロイし、AIエージェントの処理能力を拡張できる。
 * **Meetings Tab / AI Meeting Notes**: 会議の録音・文字起こし・要約を行い、カレンダーと同期して議事録を自動生成する機能。要約からトランスクリプトの該当箇所へジャンプできる。
 * **Enterprise Search**: Google CalendarやNotion Calendar、SlackのプライベートチャンネルやDMも含めた横断的な検索が可能。
-* **データベース**: スプレッドシートのように柔軟なデータ管理が可能。テーブル、ボード（かんばん）、リスト、カレンダー、ギャラリー、タイムラインなど多彩なビューでデータを可視化できる。
+* **データベース**: スプレッドシートのように柔軟なデータ管理が可能。テーブル、ボード（かんばん）、リスト、カレンダー、ギャラリー、タイムラインなど多彩なビューでデータを可視化でき、3.5以降ではWorkersを用いた外部APIからの自動同期にも対応する。
 * **外部サービス連携**: Slack, Jira, GitHub, Figma, Google Driveなど、多数の外部ツールと連携し、Notion内で情報を集約できる。
 
 ## **4. 開始手順・セットアップ**
@@ -167,7 +168,7 @@ relationships:
 | **ビジネスプラン** | $20/月 | SAML SSO, Agent, Enterprise Search, AI Meeting Notes |
 | **エンタープライズ** | 個別見積 | 監査ログ, SCIM, 無制限のページ履歴, 専任サポート |
 
-* **課金体系**: ユーザー単位の月額/年額課金。
+* **課金体系**: ユーザー単位の月額/年額課金。また、Notion Workersの実行には別途Notionクレジットが消費される（2026年8月11日より課金開始）。
 * **無料トライアル**: エンタープライズプランにはトライアルあり（要問い合わせ）。
 
 ## **8. 導入実績・事例**
@@ -209,8 +210,8 @@ relationships:
 - 主要連携サービスを5-10個リストアップ
 -->
 
-* **API**: REST APIが公開されており、データベースの操作やページの作成が可能。
-* **外部サービス連携**: Slack, Jira, GitHub, Asana, Trello, Google Drive, Dropbox, Figma, Miroなど70以上のツールと標準連携。ZapierやMakeを使えばさらに多くのツールと接続可能。
+* **API**: REST APIが公開されており、データベースの操作やページの作成が可能。Notion 3.5より、CLIやWebhookの双方向通信、Notion Agent SDKによる他アプリへのエージェント組み込み、さらにはExternal Agents APIによる外部エージェントの呼び出しをサポートするNotion Developer Platformが提供されている。
+* **外部サービス連携**: Slack, Jira, GitHub, Asana, Trello, Google Drive, Dropbox, Figma, Miroなど70以上のツールと標準連携。ZapierやMakeを使えばさらに多くのツールと接続可能。Notion Workersを用いれば、他サービスのAPIと直接通信するカスタム処理の構築も可能。
 
 ### **10.2 技術スタックとの相性**
 
@@ -303,11 +304,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
-* **2025-11-17**: **Notion 3.1リリース**。Meetings Tab、AI Meeting Notesの強化、Enterprise Searchの拡充。
-* **2025-09-18**: **Notion 3.0リリース**。自律型AIエージェント「Notion Agents」の導入。
-* **2025-08-01**: データベースのパフォーマンス改善と、大規模データセット向けのロード時間短縮。
+* **2026-05-26**: シンプルなテーブルでのセルのマージ機能を導入。
+* **2026-05-13**: **Notion 3.5: Developer Platformリリース**。External Agents API、Notion Workers、Webhook機能、CLIを導入。
+* **2026-05-07**: Custom AgentにPlan Modeを追加し、複雑な処理実行前に計画を確認可能に。
+* **2026-05-06**: Custom Agent Directoryを追加し、ワークスペース内のエージェント一覧管理が可能に。
+* **2026-05-05**: Custom Agent向けに、管理者向けの制御機能（Guardrails等）を強化。
+* **2026-05-01**: Custom AgentをSlackのプライベートチャンネルへ追加可能に。
 
-(出典: [Notion Releases](https://www.notion.com/releases), [Notion Blog](https://www.notion.com/blog))
+(出典: [Notion Releases](https://www.notion.com/releases))
 
 ## **16. 類似ツールとの比較**
 
@@ -331,12 +335,12 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | Notion | Coda | Confluence | Obsidian |
+| 機能カテゴリ | 機能項目 | Notion | Jira | Felo | Obsidian |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **ドキュメント** | 自由度/装飾 | ◎<br><small>ブロック型</small> | ◯<br><small>Canvas型</small> | ◯<br><small>従来型</small> | ◯<br><small>Markdown</small> |
-| **データベース** | リレーション/View | ◎<br><small>非常に強力</small> | ◎<br><small>数式・自動化強</small> | △<br><small>基本のみ</small> | △<br><small>プラグイン要</small> |
-| **AI/Agent** | 自律エージェント | ◎<br><small>3.1で強化</small> | ◯<br><small>AIアシスト</small> | ◯<br><small>Atlassian Intel.</small> | △<br><small>プラグイン</small> |
-| **非機能要件** | オフライン動作 | △<br><small>限定的</small> | △<br><small>限定的</small> | △<br><small>限定的</small> | ◎<br><small>完全対応</small> |
+| **ドキュメント** | 自由度/装飾 | ◎<br><small>ブロック型</small> | △<br><small>課題管理主体</small> | ◯<br><small>AI検索・翻訳連携</small> | ◯<br><small>Markdown</small> |
+| **データベース** | リレーション/View | ◎<br><small>非常に強力(Workers同期)</small> | ◎<br><small>ワークフロー特化</small> | -<br><small>該当なし</small> | △<br><small>プラグイン要</small> |
+| **AI/Agent** | 自律エージェント | ◎<br><small>3.5でDeveloper Platform提供</small> | ◯<br><small>Atlassian Intelligence</small> | ◎<br><small>クロスリンガル検索</small> | △<br><small>プラグイン</small> |
+| **非機能要件** | オフライン動作 | △<br><small>限定的</small> | △<br><small>限定的</small> | ×<br><small>オンライン必須</small> | ◎<br><small>完全対応</small> |
 
 ### **16.2 詳細比較**
 
@@ -347,10 +351,10 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Notion** | オールインワンワークスペース | ドキュメントとDBの融合、AIエージェント、UIの美しさ | 学習コスト、大規模時のパフォーマンス | 情報を一元管理し、柔軟なワークフローを構築したい場合 |
-| **Coda** | ドキュメント型アプリ構築ツール | Notion以上に強力な数式と自動化機能（Pack） | 日本語リソースが少ない、学習コストがさらに高い | ドキュメント内で複雑な業務アプリを構築したい場合 |
-| **Confluence** | エンタープライズ向けWiki | Jiraとの強力な連携、堅牢な権限管理 | 動作が重い、UIがやや古風 | エンジニアリング組織でJiraとセットで利用する場合 |
-| **Obsidian** | ローカル型ナレッジベース | オフライン動作、高速、データ所有権 | 同期が有料、モバイル版の使い勝手 | 個人の知識管理や、プライバシーを最優先する場合 |
+| **Notion** | オールインワンワークスペース | ドキュメントとDBの融合、強力なAI/Agent基盤（3.5で拡張）、洗練されたUI | 学習コスト、大規模時のパフォーマンス | 情報を一元管理し、自律型エージェントを含めた柔軟なワークフローを構築したい場合 |
+| **Jira** | プロジェクト/課題管理ツール | 複雑な開発ワークフローの管理、Atlassian製品との強力な連携 | ドキュメント作成の自由度は低め、設定が複雑 | エンジニアリング組織で厳格な課題管理やアジャイル開発を行う場合 |
+| **Felo** | AI検索・情報整理ツール | クロスリンガル検索とマインドマップ自動生成機能 | 汎用的なデータベース機能がない | 多言語の情報を素早く検索・整理し、ナレッジベース化したい場合 |
+| **Obsidian** | ローカル型ナレッジベース | オフライン動作、高速、データ所有権、柔軟な拡張機能 | 同期が有料、モバイル版の使い勝手 | 個人の知識管理や、プライバシーとローカル環境を最優先する場合 |
 
 ## **17. 総評**
 
