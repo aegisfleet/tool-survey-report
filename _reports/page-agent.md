@@ -5,8 +5,8 @@ tool_reading: ページエージェント
 category: ブラウザ操作エージェント
 developer: Alibaba
 official_site: https://alibaba.github.io/page-agent/
-date: '2026-03-11'
-last_updated: '2026-03-11'
+date: '2026-07-02'
+last_updated: '2026-07-02'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - Web開発者
     - SaaS開発者
-  latest_highlight: v1.5.5をリリース
+  latest_highlight: v1.10.0リリース（ライフサイクルの刷新やMCPサポート等）
   update_frequency: 高
 evaluation:
   score: 83
@@ -49,6 +49,7 @@ relationships:
     - Selenium
     - Autify
     - MagicPod
+    - Browser Harness
 ---
 
 # **PageAgent 調査レポート**
@@ -80,6 +81,8 @@ relationships:
 * **テキストベースのDOM操作 (Text-based DOM manipulation)**: スクリーンショットや視覚的認識（OCR）、マルチモーダルLLMを必要とせず、純粋なテキスト情報としてDOMを解析し高速かつ正確に操作します。
 * **任意のLLM連携 (Bring your own LLMs)**: カスタムのエンドポイントを使用して、好みのLLMを統合できます。
 * **セキュア＆コントロール可能 (Secure & Controllable)**: 操作許可リスト（Allowlist）やデータマスキング保護をサポートし、独自ルールのナレッジを注入できます。
+* **MCP対応 (Model Context Protocol)**: Claude DesktopやCopilotなどのMCPクライアントから、拡張機能を通じてブラウザ操作を直接制御可能です。
+* **中断可能なJavaScript実行**: `AbortSignal`に対応し、JavaScriptの実行を安全に中断・制御できます。
 
 ## **4. 開始手順・セットアップ**
 
@@ -187,20 +190,25 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-15**: `v1.10.0` をリリース（エージェント実行ライフサイクルの刷新、JavaScript実行の中断サポート、ダークモード検出の改善等）。
+* **2026-06-08**: `v1.9.0` をリリース（エラーハンドリングと中断処理の強化、Claude Opus 4.8サポート等）。
+* **2026-04-14**: `v1.8.0` をリリース（TypeScript 6へのアップグレード等）。
+* **2026-03-20**: `v1.6.0` をリリース（MCPのベータサポート追加、履歴ワークフローの導入等）。
 * **2026-03-10**: `v1.5.5` をリリース（パッケージの最新バージョンとして確認）。
 * **2026-03-09**: `v1.5.4` をリリース。
 
-(出典: [GitHub Packages](https://github.com/alibaba/page-agent) および package.json)
+(出典: [GitHub Releases](https://github.com/alibaba/page-agent/releases) 等)
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | PageAgent | browser-use | Playwright / Selenium |
+| 機能カテゴリ | 機能項目 | PageAgent | Browser Harness | Playwright / Selenium |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | デプロイ形態 | ◎<br><small>埋め込みコンポーネント</small> | ◯<br><small>外部ツール</small> | ◯<br><small>外部ツール</small> |
 | **スコープ** | 動作範囲 | ◯<br><small>現在のページ</small> | ◎<br><small>ブラウザ全体</small> | ◎<br><small>ブラウザ全体</small> |
-| **対象ユーザー** | ターゲット | ◎<br><small>Web開発者</small> | ◯<br><small>スクレイピング開発者</small> | ◯<br><small>QAエンジニア</small> |
+| **対象ユーザー** | ターゲット | ◎<br><small>Web開発者</small> | ◯<br><small>AIエージェント開発者等</small> | ◯<br><small>QAエンジニア等</small> |
+| **非機能要件** | AIコパイロット/エージェント対応 | ◎<br><small>自然言語での組み込みGUI操作</small> | ◎<br><small>外部からの自己修復型自動化</small> | ◯<br><small>Test Agentsによる生成・修復 (Playwright)</small> |
 | **非機能要件** | 視覚認識の要否 | ◎<br><small>不要（DOM解析のみ）</small> | △<br><small>要（マルチモーダルLLM）</small> | -<br><small>該当なし</small> |
 
 ### **16.2 詳細比較**
@@ -208,9 +216,9 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **PageAgent** | Webページ内に組み込むGUIエージェント | 導入が容易。バックエンド不要。テキストベースで高速。 | OSレベルやブラウザ全体の自動化には不向き。 | 自社のSaaS製品にAIコパイロットや自動入力機能を追加したい場合。 |
-| **browser-use** | 外部からブラウザを制御する自動化ライブラリ | ブラウザ全体を操作可能。マルチモーダルLLMに対応。 | サーバーサイド（Python等）の実行環境が必要。 | 任意のWebサイトのスクレイピングや、ブラウザを横断した作業の自動化。 |
+| **Browser Harness** | 外部からブラウザを制御する自動化ライブラリ (browser-use派生) | ブラウザ全体を操作可能。マルチモーダルLLMに対応。 | サーバーサイド（Python等）の実行環境が必要。 | 任意のWebサイトのスクレイピングや、ブラウザを横断した作業の自動化。 |
 
-※PageAgentは `browser-use` の優れたDOM処理コンポーネントを派生元として利用していますが、ユースケース（Webサイト側への組み込み vs 外部からの自動化）が明確に異なります。
+※PageAgentは `browser-use` (Browser Harnessの関連技術) の優れたDOM処理コンポーネントを派生元として利用していますが、ユースケース（Webサイト側への組み込み vs 外部からの自動化）が明確に異なります。
 
 ## **17. 総評**
 
