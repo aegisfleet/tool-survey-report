@@ -2,7 +2,7 @@
 title: Sarashina API 調査レポート
 tool_name: Sarashina API
 tool_reading: サラシナ エーピーアイ
-category: LLM API
+category: LLMプラットフォーム
 developer: ソフトバンク株式会社 / SB Intuitions株式会社
 official_site: https://www.softbank.jp/business/service/ai/sarashina-api/
 date: '2026-06-30'
