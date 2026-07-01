@@ -6,7 +6,7 @@ category: ドキュメント/ナレッジ
 developer: Fission-AI
 official_site: https://openspec.dev/
 date: '2026-03-11'
-last_updated: '2026-03-11'
+last_updated: '2026-07-01'
 tags:
   - AIコーディングアシスタント
   - オープンソース
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIエージェント利用者
-  latest_highlight: アーティファクト主導の新しいワークフローが利用可能に
+  latest_highlight: Stores（ベータ版）による仕様と変更のシンプルな管理モデルが導入
   update_frequency: 高
 evaluation:
   score: 80
@@ -46,6 +46,8 @@ relationships:
     - Claude Code
     - Cursor
     - Windsurf
+    - Spec Kit
+    - Kiro
 ---
 
 # **OpenSpec 調査レポート**
@@ -79,6 +81,7 @@ relationships:
 * **Persistent Context**: 仕様書（Specs）をコードリポジトリ内に配置し、AIや開発者がいつでも参照できる「生きたドキュメント」として機能させる。
 * **Structured Change Proposals**: 変更内容を説明するプロポーザル、技術設計決定、実装タスクに分割して整理。
 * **Slash Commands**: `/opsx:propose`や`/opsx:apply`などのスラッシュコマンドを使用して、直感的にワークフローを実行可能。
+* **Stores**: 仕様と変更のシンプルな管理・組織化モデル。（v1.5.0からベータ版として導入）
 
 ## **4. 開始手順・セットアップ**
 
@@ -144,7 +147,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: 外部APIを呼び出す仕組みではなく、ローカルのファイルシステムとAIアシスタントを連携させるツール。
-* **外部サービス連携**: Claude Code、Cursor、GitHub Copilot、Windsurf、Gemini CLIなど、20以上のAIコーディングアシスタントと統合可能。
+* **外部サービス連携**: Claude Code、Cursor、GitHub Copilot、Windsurf、Gemini CLIに加え、Kimi CLI、Mistral Vibe、Junie、Lingma IDE、ForgeCode、IBM Bobなど、20以上のAIコーディングアシスタントと統合可能。
 
 ### **10.2 技術スタックとの相性**
 
@@ -189,9 +192,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-28**: v1.5.0 リリース。仕様と変更をシンプルに整理する新しい「Stores」機能がベータ版として導入。
+* **2026-06-01**: v1.4.0 リリース。Kimi CLI および Mistral Vibe との新しいエージェント統合が追加。
+* **2026-04-11**: v1.3.0 リリース。JetBrains Junie、Lingma IDE、ForgeCode、IBM Bob といった新しいツールとの統合サポートが追加。
 * **2025-01**: アーティファクト主導の新しいワークフローが導入され、`/opsx:propose`や`/opsx:apply`などを使用して提案、設計、タスクの分解を段階的に行えるようになった。
 
-(出典: [公式サイト](https://openspec.dev/) )
+(出典: [製品アップデート情報 (GitHub Releases)](https://github.com/Fission-AI/OpenSpec/releases) )
 
 ## **16. 類似ツールとの比較**
 
@@ -201,7 +207,7 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 仕様書生成・管理 | ◎<br><small>Markdownで軽量に管理</small> | ◎<br><small>詳細で厳密な管理</small> | ◯<br><small>IDE統合型</small> |
 | **柔軟性** | ワークフローの軽量さ | ◎<br><small>反復的で自由度が高い</small> | △<br><small>フェーズゲートが厳格</small> | ◯<br><small>IDE内で完結</small> |
-| **環境** | ツール依存 | ◎<br><small>20以上のAIツールをサポート</small> | ◯<br><small>GitHub環境に最適化</small> | △<br><small>専用IDE・Claudeモデルに限定</small> |
+| **環境** | ツール依存 | ◎<br><small>20以上のAIツールをサポート</small> | ◯<br><small>GitHub環境に最適化</small> | △<br><small>専用IDE・Claude Opus 4.7等に限定</small> |
 | **導入** | セットアップの容易さ | ◎<br><small>npmで即座に導入可能</small> | △<br><small>Python等のセットアップが必要</small> | ◯<br><small>IDEのインストールが必要</small> |
 
 ### **16.2 詳細比較**
@@ -210,7 +216,7 @@ relationships:
 |---------|------|------|------|------------------|
 | **OpenSpec** | 軽量な仕様駆動型フレームワーク | 複数のAIツールで利用可能。Markdownベースで既存プロジェクトにも適用しやすい。 | 大規模な承認ワークフロー等の機能は現在不足している。 | 手軽にAI開発の要件ズレを防ぎたい場合や、特定のAIツールに縛られたくない場合。 |
 | **Spec Kit** | 厳密なフェーズゲートを持つツール | 詳細な計画立案と重厚なガバナンス管理が可能。 | 導入のハードルが高く、反復的な開発には重すぎる場合がある。 | 大規模プロジェクトで厳格な承認プロセスが必要な場合。 |
-| **Kiro** | クラウドIDE統合型ツール | IDEに統合されており強力。 | モデルがClaudeに制限され、特定のIDEにロックインされる。 | 同社のエコシステムを活用しており、IDE内で完結させたい場合。 |
+| **Kiro** | クラウドIDE統合型ツール | IDEに統合されており強力。Claude Opus 4.7等に対応。 | モデルがClaudeに制限され、特定のIDEにロックインされる。 | 同社のエコシステムを活用しており、IDE内で完結させたい場合。 |
 
 ## **17. 総評**
 

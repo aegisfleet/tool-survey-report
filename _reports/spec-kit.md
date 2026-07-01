@@ -45,6 +45,7 @@ relationships:
     - GitHub Copilot
     - Claude Code
     - Cursor
+    - OpenSpec
 ---
 
 # **Spec Kit 調査レポート**

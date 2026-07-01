@@ -49,6 +49,7 @@ relationships:
     - Windsurf
     - AWS Frontier Agents
     - cc-sdd
+    - OpenSpec
   parent: GitKraken
 ---
 
