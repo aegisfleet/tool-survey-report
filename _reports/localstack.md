@@ -53,6 +53,7 @@ relationships:
     - OpenTofu
     - fakecloud
     - Floci
+    - Moto
 ---
 
 # **LocalStack 調査レポート**
