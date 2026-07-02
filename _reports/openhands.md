@@ -52,6 +52,7 @@ relationships:
     - Cursor
     - GitHub Copilot
     - Manus
+    - Deep Agents
 ---
 
 # **OpenHands 調査レポート**

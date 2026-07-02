@@ -6,7 +6,7 @@ category: AIエージェント基盤
 developer: LangChain
 official_site: https://docs.langchain.com/oss/python/deepagents/overview
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-07-03'
 tags:
   - AI
   - LangChain
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIエンジニア
-  latest_highlight: LangChainエコシステムとの強力な統合による包括的なエージェント構築フレームワークの提供
+  latest_highlight: 2026年7月にv0.7.0a3プレリリースを公開し、カスタムミドルウェアやBedrock等の新機能を追加
   update_frequency: 高
 evaluation:
   score: 85
@@ -82,6 +82,7 @@ relationships:
 * **シェルの実行 (Shell access)**: `execute` ツールにより、サンドボックス化された環境でシェルコマンドを実行する。
 * **長期記憶 (Long-term memory)**: LangGraphのMemory Storeを活用し、複数の会話やスレッドをまたいで情報を保持する。
 * **Deep Agents CLI**: Web検索やサンドボックス、永続的なメモリ、Human-in-the-loop（人間の承認）などの機能を備えたターミナル用コーディングエージェント。
+* **カスタムミドルウェアとインフラ連携**: カスタムミドルウェアの上書き機能や、AWS Bedrockプロンプトキャッシング連携をサポート。
 
 ## **4. 開始手順・セットアップ**
 
@@ -145,7 +146,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: Python SDKとして機能し、他のアプリケーションから容易に呼び出せる。
-* **外部サービス連携**: LangSmithとの連携によるトレース・デバッグ・評価のサポート。MCP（Model Context Protocol）も `langchain-mcp-adapters` 経由でサポート。
+* **外部サービス連携**: LangSmithとの連携によるトレース・デバッグ・評価のサポート。MCP（Model Context Protocol）も `langchain-mcp-adapters` 経由でサポート。AWS Bedrock (プロンプトキャッシング連携) にも対応。
 
 ### **10.2 技術スタックとの相性**
 
@@ -189,10 +190,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-07-01**: v0.7.0a3 リリース。カスタムミドルウェアの上書き機能やsandbox実行の最適化を追加。
+* **2026-06-25**: v0.6.12 リリース。AWS Bedrockプロンプトキャッシング連携を追加。
 * **2026-03-11**: バージョン 0.4.10 リリース。
 * **2025-08-01**: 初回リリース以降、継続的に機能拡張を実施。
 
-(出典: [GitHub Releases](https://github.com/langchain-ai/deepagents/releases) など)
+(出典: [GitHub Releases](https://github.com/langchain-ai/deepagents/releases))
 
 ## **16. 類似ツールとの比較**
 
