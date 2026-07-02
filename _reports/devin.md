@@ -56,6 +56,7 @@ relationships:
     - AutoGPT
     - Agent Zero
     - Manus
+    - Deep Agents
 ---
 
 # **Devin 調査レポート**
