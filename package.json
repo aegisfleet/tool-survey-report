@@ -3,7 +3,7 @@
   "packageManager": "pnpm@9.15.9",
   "devDependencies": {
     "@biomejs/biome": "^2.5.0",
-    "js-yaml": "^5.1.0"
+    "js-yaml": "^5.0.0"
   },
   "scripts": {
     "dev": "bundle exec jekyll serve --incremental --port 4000 --host 127.0.0.1",
