@@ -6,7 +6,7 @@ category: CDN/セキュリティ
 developer: Adguard Software Ltd.
 official_site: https://adguard.com/
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-07-03'
 tags:
   - VPN
   - プライバシー保護
@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 一般ユーザー
     - 開発者
-  latest_highlight: 2026年3月にMeta Quest向けVR対応アドブロッカーをリリース
+  latest_highlight: 2026年6月にWindows版 v8.0 RCでスクリーンリーダー対応を追加
   update_frequency: 高
 evaluation:
   score: 92
@@ -111,8 +111,8 @@ relationships:
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
 | **無料版 (拡張機能/アプリの制限版)** | 無料 | ブラウザ内の広告ブロック（Android/iOSアプリではSafari等のブラウザ内のみ） |
-| **Personal (パーソナル)** | サブスクリプションまたは買い切り | 最大3台のデバイスで利用可能、全機能（システムレベルのブロック、アプリ内広告ブロック等）を利用可能 |
-| **Family (ファミリー)** | サブスクリプションまたは買い切り | 最大9台のデバイスで利用可能、全機能を利用可能 |
+| **Personal (パーソナル)** | $29.88/年 (または$79.99買い切り) | 最大3台のデバイスで利用可能、全機能（システムレベルのブロック、アプリ内広告ブロック等）を利用可能 |
+| **Family (ファミリー)** | $65.88/年 (または$169.99買い切り) | 最大9台のデバイスで利用可能、全機能を利用可能 |
 
 * **課金体系**: 1年、または買い切り（Lifetime）ライセンス（時期によりセール等で変動あり）。
 * **無料トライアル**: デスクトップ/モバイルアプリには14日間の無料トライアルが用意されています。また、公式サイトからの購入には返金保証があります。
@@ -182,13 +182,14 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-22**: AdGuard for Windows v8.0 RC リリース。スクリーンリーダーサポートの追加やバグ修正。
+* **2026-06-16**: AdGuard for Windows v7.22.9 リリース。クラッシュ問題のホットフィックス。
+* **2026-06-08**: AdGuard for Windows v7.22.8 リリース。安定性向上とマイナーバグ修正。
+* **2026-06-04**: AdGuard for Windows v8.0 beta 7 リリース。バグ修正とパフォーマンス最適化。
 * **2026-03-05**: AdGuard for Windows v7.22.5 リリース。クラッシュするバグを修正。
-* **2026-03-05**: Discordがグローバルな年齢確認の導入を延期したことに関するプライバシー分析記事を公開。
 * **2026-03-04**: Meta Questブラウザ向けにVR対応のAdGuard Browser Extensionをリリース。
 * **2026-02-26**: AdGuard for Windows v8.0 beta 4 リリース。ネットワークドライバのコントロールを改善。
-* **2026-02-26**: AdGuard for Windows v7.22.4 リリース。新しい実験的なネットワークドライバ「SockFilter」を導入。
 * **2026-02-20**: AdGuard for Android v4.12.3 リリース。
-* **2025-11-13**: AdGuard for Windows の10月に発生したインシデント（ページ読み込み遅延）のポストモーテムを公開。
 
 (出典: [AdGuard Blog](https://adguard.com/en/blog/index.html) および [GitHub Releases](https://github.com/AdguardTeam/AdGuardForWindows/releases))
 
@@ -196,7 +197,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (AdGuard) | uBlock Origin | Pi-hole |
+| 機能カテゴリ | 機能項目 | 本ツール (AdGuard) | uBlock Origin (v1.72) | Pi-hole (v6.4) |
 |:---:|:---:|:---:|:---:|:---:|
 | **基本機能** | 広告ブロック | ◎<br><small>システム全体で可能</small> | ◯<br><small>ブラウザ内のみ</small> | ◯<br><small>ネットワーク全体（DNSベース）</small> |
 | **カテゴリ特定** | アプリ内広告のブロック | ◎<br><small>対応（デスクトップ/モバイルアプリ）</small> | ×<br><small>非対応</small> | △<br><small>一部可能だが限界あり</small> |
