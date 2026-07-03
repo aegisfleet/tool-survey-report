@@ -6,7 +6,7 @@ category: 開発ライフサイクル管理
 developer: suzuki-shunsuke
 official_site: https://github.com/suzuki-shunsuke/pinact
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-07-04'
 tags:
   - CLI
   - GitHub Actions
@@ -22,7 +22,7 @@ quick_summary:
   target_users:
     - 開発者
     - DevSecOpsエンジニア
-  latest_highlight: v3.9.0でバージョンタグコメントのセパレーター設定をサポート
+  latest_highlight: v4.0.0でバージョンコメントが必須化され、オフライン検証（-no-api）などの新機能を追加
   update_frequency: 高
 evaluation:
   score: 83
@@ -33,7 +33,7 @@ evaluation:
     - point: 3
       reason: Renovateが対応できないPRマージ前のバージョン固定が可能
     - point: 3
-      reason: レビューコメントの自動作成やSARIF形式出力などCI/CDパイプラインとの親和性が高い
+      reason: SARIF形式出力などCI/CDパイプラインとの親和性が高い
     - point: 2
       reason: GitHub Enterprise Server (GHES)にも対応している
   minus_points: []
@@ -69,11 +69,11 @@ relationships:
 
 ## **3. 主要機能**
 
-* **バージョンの固定（Pinning）**: ワークフローファイル内のActionバージョンを完全なコミットSHAに置き換え、元のバージョン（例: `# v3.3.1`）をコメントとして付与する。
-* **バージョンの更新（Update）**: `-u` オプションを使用することで、固定されたActionのバージョンを最新に更新する。直近にリリースされたバージョンをスキップする `--min-age` オプションにも対応。
-* **検証（Validation）**: `--check` オプションで、Actionのバージョンが正しく固定されているかを検証する。CIでの利用に最適。
-* **レビューコメント作成**: `-review` オプションにより、PRに対してGitHub API経由で直接レビューコメントを作成する。
+* **バージョンの固定（Pinning）**: ワークフローファイル内のActionバージョンを完全なコミットSHAに置き換え、元のバージョン（例: `# v3.3.1`）をコメントとして付与する。v4.0.0より、バージョンコメントは必須となった。
+* **バージョンの更新（Update）**: `-u` オプションを使用することで、固定されたActionのバージョンを最新に更新する。直近にリリースされたバージョンをスキップする `--min-age` オプションにも対応し、設定ファイルからの柔軟なルール（`rules`）設定が可能。
+* **検証（Validation）**: `--check` オプション（`-fix=false`のエイリアス）で、Actionのバージョンが正しく固定されているかを検証する。`-no-api`によるオフライン検証もサポート。
 * **SARIFフォーマット出力**: 検証結果をSARIFフォーマットで出力でき、reviewdogやGitHub SARIF Code Scanningなどと連携可能。
+* **変更行のみの対象化**: `-diff-file` オプションを利用することで、PR等で変更された行のみを対象に検証・修正が可能。
 
 ## **4. 開始手順・セットアップ**
 
@@ -100,7 +100,7 @@ relationships:
 * コミットSHAによるActionのバージョン固定を完全に自動化でき、手動でのSHA確認・書き換えの手間が省ける。
 * Renovateがカバーできない「PRマージ前のバージョン固定」に対応しており、ghalintのようなリンターとの併用が可能。
 * GitHub Enterprise Server (GHES) や、Windows Credential Manager / macOS Keychainといったキーリングによるトークン管理に対応。
-* SARIF出力やPRへのレビューコメント自動作成など、開発フローに組み込みやすい機能が充実している。
+* SARIF出力をサポートしており、reviewdog等と組み合わせることでPRへのレビューコメント自動作成など、開発フローに組み込みやすい機能が充実している。
 
 ## **6. 弱み・注意点 (Cons)**
 
@@ -182,11 +182,12 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-09**: v4.1.0リリース。バックエンドの依存ライブラリ更新（ghtkn-go-sdk）など。
+* **2026-05-25**: v4.0.0リリース。メジャーアップデート。バージョンコメントの必須化、オフライン検証（`-no-api`）のサポート、変更行のみを対象とする `-diff-file` オプションの追加、グローバル設定ファイルのサポートなど。破壊的変更として `-review` オプションの削除（SARIF出力＋reviewdog連携に移行）。
+* **2026-05-13**: v3.10.0リリース。`--branch-to-tag` オプションにより、特定のブランチ（例: `main`）を安定版タグとして扱うピン留めをサポート。
 * **2026-02-03**: v3.9.0リリース。バージョンタグコメントのセパレーター設定（例: `# tag=`）をサポート。
-* **2025-09-08**: v3.8.0リリース。ghtknインテグレーションによるGitHub App User Access Tokenの作成をサポート。
-* **2025-06-25**: v3.7.0リリース。SARIFフォーマットでの出力をサポートし、reviewdogやCode Scanningとの連携が容易に。
 
-(出典: [Releases · suzuki-shunsuke/pinact](https://github.com/suzuki-shunsuke/pinact/releases) など)
+(出典: [Releases · suzuki-shunsuke/pinact](https://github.com/suzuki-shunsuke/pinact/releases))
 
 ## **16. 類似ツールとの比較**
 
