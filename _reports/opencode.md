@@ -6,14 +6,13 @@ category: コーディングエージェント
 developer: Anomaly
 official_site: https://opencode.ai/
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-07-03'
 tags:
   - AI
   - エージェント
   - オープンソース
   - コーディング支援
   - 自律型
-  - 開発者ツール
 description: ターミナル、IDE、デスクトップで動作するオープンソースのAIコーディングエージェント。プライバシー重視で、多様なLLMに対応。
 quick_summary:
   has_free_plan: true
@@ -23,7 +22,7 @@ quick_summary:
     - 開発者
     - エンジニアリングチーム
     - OSSコントリビューター
-  latest_highlight: 2026年1月にv1.1.13をリリース。デスクトップアプリのベータ版も提供中。
+  latest_highlight: 2026年7月にv1.17.13をリリースし、MCPサーバー連携やセッションスナップショット機能を強化。
   update_frequency: 高
 evaluation:
   score: 85
@@ -53,7 +52,6 @@ relationships:
     - Devin
     - Cline
     - GitHub Copilot
-    - Agent Trace
     - Playwright Test Agents
     - TAKT
 ---
@@ -117,6 +115,8 @@ relationships:
 * **OpenCode Zen**: コーディングエージェント向けに最適化・検証されたモデルを提供するゲートウェイサービス。
 * **クライアント/サーバーアーキテクチャ**: ローカルでサーバーを動かし、リモートから操作するといった柔軟な構成が可能。
 * **セッション共有**: セッションへのリンクを生成し、参照やデバッグのために共有可能。
+* **セッションスナップショットとリバート**: セッションの状態を保存し、以前のメッセージやファイル変更の状態にロールバック可能。
+* **MCP (Model Context Protocol) 連携**: 外部のMCPサーバーと接続し、リソースの読み取りやツール実行を統合可能。
 * **プライバシー保護**: コードやコンテキストデータを保存しない「プライバシーファースト」設計。
 
 ## **4. 開始手順・セットアップ**
@@ -329,12 +329,15 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-07-01**: v1.17.13 リリース。デスクトップアプリのUI改善やOpenAI互換モデルへの対応強化など。
+* **2026-06-30**: v1.17.12 リリース。MCP連携強化、Claude Sonnet 5の思考モード対応など。
+* **2026-06-25**: v1.17.11 リリース。セッションを以前のメッセージやファイル変更状態にロールバックできるスナップショット機能の追加など。
 * **2026-01-11**: v1.1.13 リリース。バグ修正と安定性向上。
 * **2025-12**: デスクトップアプリ（ベータ版）のリリース。
 * **2025-11**: OpenCode Zen（モデルゲートウェイサービス）のベータ公開。
 * **2025-10**: マルチセッション機能とLSP統合の強化。
 
-(出典: GitHub Releases, 公式ブログ)
+(出典: [GitHub Releases](https://github.com/anomalyco/opencode/releases))
 
 ## **16. 類似ツールとの比較**
 
@@ -351,6 +354,7 @@ relationships:
 | **基本機能** | 自律タスク実行 | ◎<br><small>TUI/GUIで完結</small> | ◎<br><small>Docker環境で実行</small> | △<br><small>支援寄り</small> | ◯<br><small>Agent機能あり</small> |
 | **環境** | 実行環境 | ◎<br><small>TUI, Desktop, IDE</small> | ◯<br><small>Web, Docker</small> | ◎<br><small>各種IDE</small> | ◯<br><small>専用エディタ</small> |
 | **自由度** | モデル選択 | ◎<br><small>75+モデル, ローカル</small> | ◎<br><small>多モデル対応</small> | △<br><small>基本固定</small> | △<br><small>制限あり</small> |
+| **拡張性** | MCP連携 | ◎<br><small>外部ツール統合</small> | ◎<br><small>MCP対応</small> | ×<br><small>非対応</small> | ◯<br><small>MCP対応</small> |
 | **コスト** | 無料利用 | ◎<br><small>OSS, 本体無料</small> | ◎<br><small>OSS</small> | ×<br><small>有料サブスク</small> | △<br><small>制限付き無料</small> |
 
 ### **16.2 詳細比較**
