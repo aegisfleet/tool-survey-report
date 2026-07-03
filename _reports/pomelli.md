@@ -6,7 +6,7 @@ category: デザインツール
 developer: Google Labs & DeepMind
 official_site: https://labs.google.com/pomelli/
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-07-04'
 tags:
   - AI
   - デザインツール
@@ -21,7 +21,7 @@ quick_summary:
     - マーケター
     - 中小企業
     - コンテンツクリエイター
-  latest_highlight: 2025年10月にパブリックベータ版として公開
+  latest_highlight: 2025年10月にGoogle LabsがAIマーケティングツールPomelliのパブリックベータ版を発表
   update_frequency: 高
 evaluation:
   score: 73
@@ -270,12 +270,12 @@ relationships:
   1. GitHubリポジトリの `CHANGELOG.md`
   2. GitHub Releases
   3. 公式ブログ / ニュース
-- 情報源のURLを記載
+- 情報源のURLを記載。**【重要】特定の古い日時の記事等に固定せず、常に最新情報が掲載・蓄積される公式の永続的なインデックスURL（製品アップデートカテゴリ、リリースノート一覧、コミュニティポータル等）を記載・更新すること。オープンソース（OSS）ツールを調査する場合において、GitHub等のリリースノートやリポジトリの内容を出典として参考にする際は、特定のリリースバージョン個別URL（例：`/releases/tag/v1.0.0`）に固定するのではなく、常に最新の更新履歴にアクセスできるリポジトリの永続リンク（例：`/releases` や `CHANGELOG.md` への直接リンク等）を出典URLとして設定すること。**
 -->
 
-* **2025-10-29**: 米国、カナダ、オーストラリア、ニュージーランドなどでパブリックベータ版として公開。
+* **2025-10-28**: 米国、カナダ、オーストラリア、ニュージーランドなどでパブリックベータ版として公開。
 
-(出典: [Search Engine Journal](https://www.searchenginejournal.com/google-labs-deepmind-launch-pomelli-ai-marketing-tool/559569/) )
+(出典: [製品アップデート情報](https://blog.google/innovation-and-ai/models-and-research/google-labs/) )
 
 ## **16. 類似ツールとの比較**
 
@@ -301,7 +301,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール | Canva | ChatGPT |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | アセット生成 | ◯<br><small>一貫したデザイン生成</small> | ◎<br><small>豊富なテンプレート</small> | ◯<br><small>DALL-Eによる画像生成</small> |
+| **基本機能** | アセット生成 | ◯<br><small>一貫したデザイン生成</small> | ◎<br><small>豊富なテンプレート・Simtheory/Orttoによる自動化</small> | ◯<br><small>DALL-Eによる画像生成</small> |
 | **カテゴリ特定** | ブランドDNA抽出 | ◎<br><small>URLからの自動抽出に特化</small> | ◯<br><small>ブランドキットの手動設定</small> | △<br><small>プロンプトで指定が必要</small> |
 | **エンタープライズ** | SSO | ◯<br><small>Googleアカウント連携</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> |
 | **非機能要件** | 日本語対応 | △<br><small>ベータ版のため制限あり</small> | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> |
@@ -316,8 +316,8 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **本ツール** | URLからブランドDNAを自動抽出しアセットを生成 | 初期設定の手間が不要、一貫性のある提案 | ベータ版で機能や地域に制限あり | 専任のデザイナーがおらず、素早くブランドの一貫性を持ったコンテンツを作りたい場合 |
-| **Canva** | 豊富なテンプレートを備えたデザインプラットフォーム | 圧倒的な素材数とデザインの自由度 | ブランドキットの初期設定が必要 | 本格的なデザイン作成や、多様なフォーマットのコンテンツを作成したい場合 |
-| **ChatGPT** | 汎用的なLLMによるテキスト・画像生成 | 柔軟な対話によるアイデア出しと生成 | ブランドの一貫性を保つには高度なプロンプトが必要 | ゼロからのテキスト作成や、特定の要件に基づいた画像生成を行いたい場合 |
+| **Canva** | 豊富なテンプレートを備えたデザインプラットフォーム | 圧倒的な素材数とデザインの自由度、Simtheory/Ortto統合による自動化 | ブランドキットの初期設定が必要 | 本格的なデザイン作成や、多様なフォーマットのコンテンツを作成・自動化したい場合 |
+| **ChatGPT** | 汎用的なLLMによるテキスト・画像生成 | 最新のGPT-5ファミリー(GPT-5.4 Thinkingなど)による柔軟な対話と生成 | ブランドの一貫性を保つには高度なプロンプトが必要 | ゼロからのテキスト作成や、特定の要件に基づいた画像生成を行いたい場合 |
 
 ## **17. 総評**
 
