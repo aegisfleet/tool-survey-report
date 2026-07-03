@@ -540,12 +540,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const categoryParam = urlParams.get('category');
   const searchParam = urlParams.get('q');
 
+  // URLパラメータがある場合にレポートセクションへスクロールする関数
+  function scrollToReports() {
+    const reportsSection = document.querySelector('.reports-section');
+    if (reportsSection) {
+      // requestAnimationFrame を使って DOM 更新後にスクロール
+      requestAnimationFrame(() => {
+        const offset = 80; // ヘッダー分のオフセット
+        const top = reportsSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    }
+  }
+
   if (searchParam) {
     // URLのクエリパラメータで検索
     if (heroSearchInput) heroSearchInput.value = searchParam;
     updateHeroSearchClear();
     updateHeroSearchChipStates();
     filterAndSort();
+    scrollToReports();
   } else if (tagParam || categoryParam) {
     // URLパラメータがある場合は優先
     if (tagParam) tagFilter.value = tagParam;
@@ -555,6 +569,7 @@ document.addEventListener('DOMContentLoaded', () => {
       categoryFilter.value = categoryParam.toLowerCase();
     }
     filterAndSort();
+    scrollToReports();
   } else {
     // URLパラメータがない場合はsessionStorageから復元を試みる
     const restored = restoreFilterState();
