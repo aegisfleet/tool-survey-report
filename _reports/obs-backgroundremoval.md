@@ -6,7 +6,7 @@ category: 動画/メディア
 developer: Roy Shilkrot
 official_site: https://royshil.github.io/obs-backgroundremoval/
 date: '2026-03-13'
-last_updated: '2026-03-13'
+last_updated: '2026-07-05'
 tags:
   - AI
   - オープンソース
@@ -20,7 +20,7 @@ quick_summary:
   target_users:
     - ストリーマー
     - 動画制作者
-  latest_highlight: OBS Background Removal 1.3.7 リリース (2026-02-25)
+  latest_highlight: OBS Background Removal 1.4.0 リリース (2026-04-07)
   update_frequency: 高
 evaluation:
   score: 85
@@ -34,7 +34,6 @@ evaluation:
   summary: グリーンスクリーンなしで背景を透過できる、OBS Studioの強力なプラグイン
 links:
   github: https://github.com/royshil/obs-backgroundremoval
-  deepwiki: https://deepwiki.com/royshil/obs-backgroundremoval
   documentation: https://royshil.github.io/obs-backgroundremoval/usage/
 relationships:
   parent: OBS Studio
@@ -70,8 +69,8 @@ relationships:
 * **背景透過 (Background Removal)**: ポートレートから背景をリアルタイムで削除する機能。人物だけでなく任意のオブジェクトの背景を削除するモデルも利用可能。
 * **被写界深度効果 (Depth of Field)**: 深度推定モデルを使用して、背景をぼかす効果を適用する機能。
 * **低照度エンハンスメント (Low-Light Enhancement)**: 暗い環境での映像を明るく補正する機能。
-* **複数モデルのサポート**: Mediapipe、Robust Video Matting (RVM)、RMBG、TCMonoDepthなど、複数のAIモデルを目的に応じて切り替え可能。
-* **ハードウェアアクセラレーション**: WindowsのWinML、macOSのCoreML、LinuxのCUDA/ROCm/MIGraphXに対応し、GPUを活用した高速な処理が可能。
+* **複数モデルのサポート**: Mediapipe、Robust Video Matting (RVM)、RMBG、TCMonoDepthなど、複数のAIモデルを目的に応じて切り替え可能。MediaPipe マルチクラス セルフィーセグメンテーションにも対応。
+* **ハードウェアアクセラレーション**: WindowsのWinML、macOSのCoreML、LinuxのCUDA/ROCm/MIGraphXに対応し、GPUを活用した高速な処理が可能。MIGraphXのサポートにより、AMD GPUでの推論パフォーマンスが向上。
 
 ## **4. 開始手順・セットアップ**
 
@@ -169,7 +168,10 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2026-02-25**: バージョン 1.3.7 リリース
+* **2026-04-07**: バージョン 1.4.0 リリース（SLSA準拠などのサプライチェーンセキュリティ強化、WindowsでのProgramDataインストールへの移行）
+* **2026-02-25**: バージョン 1.3.7 リリース（Windows向けの新インストーラ、ONNX Runtimeの静的リンク化）
+* **2026-01-25**: バージョン 1.3.6 リリース（MIGraphX実行プロバイダーの追加、MediaPipeマルチクラスセルフィーセグメンテーションモデルの追加）
+* **2025-11-23**: バージョン 1.3.5 リリース（コア部分の競合状態の修正など、安定性の向上）
 * **2024-05-18**: バージョン 1.1.13 リリース
 
 (出典: [GitHub Releases](https://github.com/royshil/obs-backgroundremoval/releases))
@@ -180,7 +182,7 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | 本ツール | NVIDIA Broadcast | XSplit VCam |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 背景透過 | ◯<br><small>モデル選択可</small> | ◎<br><small>RTX Tensorコア活用で高精度</small> | ◯<br><small>独自AI</small> |
+| **基本機能** | 背景透過 | ◎<br><small>多様なAIモデル(MediaPipe, RVM, RMBG等)から選択可</small> | ◎<br><small>最新のRTX Tensorコア活用で高精度</small> | ◯<br><small>独自AI(高速化対応済)</small> |
 | **動作環境** | ハードウェア | ◎<br><small>CPU/GPU問わず動作</small> | △<br><small>NVIDIA RTX GPU必須</small> | ◯<br><small>幅広い環境</small> |
 | **コスト** | 無料利用 | ◎<br><small>完全無料</small> | ◎<br><small>RTXユーザーは無料</small> | △<br><small>無料版は透かしあり</small> |
 
@@ -188,9 +190,9 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール** | OBSプラグイン | 完全無料、クロスプラットフォーム、OBSとの親和性が高い | 負荷が高い場合がある、OBS外では使えない(仮想カメラ経由のみ) | OBSをメインで利用しており、無料で環境を問わず透過したい場合 |
-| **NVIDIA Broadcast** | NVIDIA公式アプリ | RTX GPUの専用コアを使うため、非常に低負荷で高精度 | NVIDIA RTXグラフィックボードが必須 | RTXシリーズのGPUを搭載しているWindowsユーザー |
-| **XSplit VCam** | 商用の仮想カメラアプリ | UIがわかりやすく、独立したアプリとしてあらゆるソフトで使える | 有料（無料版はウォーターマークが入る） | ハードウェアを問わず、OBS以外のアプリでも簡単に使いたい場合 |
+| **本ツール** | OBSプラグイン | 完全無料、クロスプラットフォーム、OBSとの親和性が高い。多様なAIモデル対応。 | 負荷が高い場合がある、OBS外では使えない(仮想カメラ経由のみ) | OBSをメインで利用しており、無料で環境を問わず透過したい場合 |
+| **NVIDIA Broadcast** | NVIDIA公式アプリ(Version 1.4系) | RTX GPUの専用コア(Tensorコア)を使うため、非常に低負荷で高精度(視線補正等も対応) | NVIDIA RTXグラフィックボードが必須(GTX等は非対応) | RTXシリーズのGPUを搭載しているWindowsユーザー |
+| **XSplit VCam** | 商用の仮想カメラアプリ(V3/V4系) | UIが直感的で、独立したアプリとしてあらゆるWeb会議・配信ソフトで使える | 有料（無料版はウォーターマークが入る） | ハードウェアを問わず、OBS以外のアプリ(Zoom/Teams等)でも簡単に高精度の背景透過を使いたい場合 |
 
 ## **17. 総評**
 
