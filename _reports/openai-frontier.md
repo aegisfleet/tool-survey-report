@@ -2,7 +2,7 @@
 title: OpenAI Frontier 調査レポート
 tool_name: OpenAI Frontier
 tool_reading: オープンエーアイ フロンティア
-category: AIエージェント基盤
+category: LLMプラットフォーム
 developer: OpenAI
 official_site: https://openai.com/frontier
 date: '2026-02-07'

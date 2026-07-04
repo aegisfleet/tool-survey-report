@@ -2,7 +2,7 @@
 title: Agentic Workflows 調査レポート
 tool_name: Agentic Workflows
 tool_reading: エージェンティック ワークフローズ
-category: AIエージェント基盤
+category: ワークフロー自動化
 developer: GitHub Next
 official_site: https://githubnext.com/projects/agentic-workflows/
 date: '2026-01-27'

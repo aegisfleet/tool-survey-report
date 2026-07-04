@@ -2,7 +2,7 @@
 title: DeerFlow 調査レポート
 tool_name: DeerFlow
 tool_reading: ディアフロー
-category: AIエージェント基盤
+category: 汎用AIエージェント
 developer: Bytedance
 official_site: https://deerflow.tech/
 date: '2026-03-01'

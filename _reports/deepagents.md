@@ -2,7 +2,7 @@
 title: Deep Agents 調査レポート
 tool_name: Deep Agents
 tool_reading: ディープエージェント
-category: AIエージェント基盤
+category: AI開発ライブラリ
 developer: LangChain
 official_site: https://docs.langchain.com/oss/python/deepagents/overview
 date: '2026-03-12'
