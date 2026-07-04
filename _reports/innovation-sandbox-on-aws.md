@@ -2,14 +2,14 @@
 title: Innovation Sandbox on AWS 調査レポート
 tool_name: Innovation Sandbox on AWS
 tool_reading: イノベーション サンドボックス オン エーダブリューエス
-category: クラウド管理
+category: インフラ/サーバー管理
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/solutions/implementations/innovation-sandbox-on-aws/
 date: '2026-07-02'
 last_updated: '2026-07-02'
 tags:
   - AWS
-  - クラウド管理
+  - クラウド
   - コスト管理
   - セキュリティ
 description: 一時的なサンドボックス環境の管理を自動化し、クラウドイノベーションを加速するAWSソリューション

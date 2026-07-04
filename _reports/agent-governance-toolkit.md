@@ -2,7 +2,7 @@
 title: Agent Governance Toolkit 調査レポート
 tool_name: Agent Governance Toolkit
 tool_reading: エージェント ガバナンス ツールキット
-category: AIエージェント基盤
+category: セキュリティ
 developer: Microsoft
 official_site: https://github.com/microsoft/agent-governance-toolkit
 date: '2026-05-28'
