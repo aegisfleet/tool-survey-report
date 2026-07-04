@@ -6,7 +6,7 @@ category: CDN/セキュリティ
 developer: トレンドマイクロ株式会社
 official_site: https://www.trendmicro.com/ja_jp/forHome/products/sb-lite.html
 date: '2026-03-12'
-last_updated: '2026-03-12'
+last_updated: '2026-07-04'
 tags:
   - SaaS
   - セキュリティ
@@ -49,9 +49,6 @@ relationships:
 * **ツールの読み方**: サギバスター ライト
 * **開発元**: トレンドマイクロ株式会社
 * **公式サイト**: [https://www.trendmicro.com/ja_jp/forHome/products/sb-lite.html](https://www.trendmicro.com/ja_jp/forHome/products/sb-lite.html)
-* **関連リンク**:
-  * App Store: [https://apps.apple.com/jp/app/id6476140131](https://apps.apple.com/jp/app/id6476140131)
-  * Google Play: [https://play.google.com/store/apps/details?id=com.trendmicro.tmsb.lite](https://play.google.com/store/apps/details?id=com.trendmicro.tmsb.lite)
 * **カテゴリ**: CDN/セキュリティ
 * **概要**: 「詐欺バスター Lite」は、トレンドマイクロが提供するスマートフォン専用の無料セキュリティアプリである。警察庁推奨アプリとして認定されており、警察などの公的機関から提供されるデータや同社の知見を活用し、特殊詐欺や迷惑電話を検知して警告・ブロックする機能を備えている。
 
