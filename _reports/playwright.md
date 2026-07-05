@@ -60,10 +60,9 @@ relationships:
     - Selenium
     - Autify
     - MagicPod
+    - PyTest
     - Cucumber
     - Vitest
-    - Ranorex Studio
-    - axe DevTools
 ---
 
 # **Playwright 調査レポート**
