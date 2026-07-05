@@ -2,7 +2,7 @@
 title: Strands Agents 調査レポート
 tool_name: Strands Agents
 tool_reading: ストランズ エージェンツ
-category: AI開発ライブラリ
+category: マルチエージェント基盤
 developer: Amazon Web Services
 official_site: https://strandsagents.com/
 date: '2026-02-04'

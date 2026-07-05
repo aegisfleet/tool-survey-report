@@ -2,7 +2,7 @@
 title: Google Illuminate 調査レポート
 tool_name: Google Illuminate
 tool_reading: グーグル イルミネート
-category: AI開発ライブラリ
+category: ドキュメント/ナレッジ
 developer: Google
 official_site: https://illuminate.google.com/
 date: '2026-02-23'

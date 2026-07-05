@@ -2,7 +2,7 @@
 title: LangChain 調査レポート
 tool_name: LangChain
 tool_reading: ラングチェーン
-category: AI開発ライブラリ
+category: マルチエージェント基盤
 developer: LangChain, Inc.
 official_site: https://www.langchain.com/
 date: '2026-02-17'
@@ -13,8 +13,6 @@ tags:
   - エージェント
   - オープンソース
   - 大規模言語モデル
-  - 自律型
-  - 開発者ツール
 description: 大規模言語モデル（LLM）を活用したアプリケーション開発を、データ連携・エージェント構築・実行監視などの機能で支援するオープンソースフレームワーク。
 quick_summary:
   has_free_plan: true

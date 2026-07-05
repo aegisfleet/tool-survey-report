@@ -2,7 +2,7 @@
 title: Google Learning 調査レポート
 tool_name: Google Learning
 tool_reading: グーグル ラーニング
-category: AI開発ライブラリ
+category: ドキュメント/ナレッジ
 developer: Google
 official_site: https://learning.google.com/
 date: '2026-02-23'

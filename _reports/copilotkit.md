@@ -2,7 +2,7 @@
 title: CopilotKit 調査レポート
 tool_name: CopilotKit
 tool_reading: コパイロットキット
-category: AI開発ライブラリ
+category: マルチエージェント基盤
 developer: Tawkit, Inc.
 official_site: https://www.copilotkit.ai/
 date: '2026-06-06'

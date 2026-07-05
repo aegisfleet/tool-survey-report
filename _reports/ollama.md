@@ -2,7 +2,7 @@
 title: Ollama 調査レポート
 tool_name: Ollama
 tool_reading: オラマ
-category: LLMプラットフォーム
+category: ローカルAI実行環境
 developer: Ollama Inc.
 official_site: https://ollama.com/
 date: '2025-10-24'

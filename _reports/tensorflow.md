@@ -2,7 +2,7 @@
 title: TensorFlow 調査レポート
 tool_name: TensorFlow
 tool_reading: テンソルフロー
-category: AI開発ライブラリ
+category: 機械学習フレームワーク
 developer: Google
 official_site: https://www.tensorflow.org/
 date: '2026-02-08'
@@ -13,7 +13,6 @@ tags:
   - Python
   - オープンソース
   - ディープラーニング
-  - 機械学習
 description: Googleが開発した、機械学習モデルの構築・トレーニング・デプロイのための包括的なエンドツーエンドのオープンソースプラットフォーム。
 quick_summary:
   has_free_plan: true
