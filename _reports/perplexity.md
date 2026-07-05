@@ -6,7 +6,7 @@ category: AI検索/ブラウザ拡張
 developer: Perplexity AI, Inc.
 official_site: https://www.perplexity.ai/
 date: '2026-01-27'
-last_updated: '2026-03-13'
+last_updated: '2026-07-05'
 tags:
   - AI
   - 会話型AI
@@ -21,7 +21,7 @@ quick_summary:
     - 研究者
     - 開発者
     - 情報収集を行う全ての人
-  latest_highlight: 2026年2月にAgent APIをリリース。2025年後半にはPro SearchのGAや公式SDKを提供
+  latest_highlight: 2026年5月にAgent API向けにFinance Searchを提供開始し、4月にClaude Opus 4.7やGPT-5.5等のサードパーティモデルに対応
   update_frequency: 高
 evaluation:
   score: 81
@@ -32,7 +32,7 @@ evaluation:
     - point: 5
       reason: G2でのレビュー評価が4.6/5.0と非常に高く、ユーザーからの支持を得ている
     - point: 3
-      reason: ProプランでGPT-5やClaude 4.0など、最新の高性能なAIモデルを選択できる
+      reason: ProプランでGPT-5.5やClaude 4.7など、最新の高性能なAIモデルを選択できる
   minus_points:
     - point: -3
       reason: 大手メディアから著作権侵害で提訴されるなど、倫理的・法的な課題を抱えている
@@ -80,9 +80,10 @@ relationships:
 * **AIパワード検索**: 自然言語の質問に対し、Web上の情報をリアルタイムで検索・分析し、要約された回答を生成。
 * **出典の明記**: 回答の根拠となった情報源（Webサイト）へのリンクを明記し、情報の信頼性をユーザーが確認できる。
 * **Pro Search**: 複雑な質問をステップバイステップで推論し、より深く包括的な回答を生成する高度な検索モード。
-* **マルチモデル対応**: Proプランでは、GPT-5, Claude 4.0, Sonar（Perplexity独自モデル）など、複数の最先端モデルを切り替えて利用可能。
+* **マルチモデル対応**: Proプランでは、GPT-5.5, Claude 4.7, Sonar（Perplexity独自モデル）など、複数の最先端モデルを切り替えて利用可能。
 * **コレクション機能**: 調査結果をプロジェクトごとに整理・保存し、プロンプトのカスタマイズや他者との共有が可能。
 * **ファイル分析**: PDFやテキストファイルをアップロードし、その内容に基づいた質問応答や要約を行う。
+* **Finance Search**: 企業の財務データや市場データなどをリアルタイムで取得・統合分析できる金融特化の検索機能（Agent API向け）。
 
 ## **4. 開始手順・セットアップ**
 
@@ -140,6 +141,7 @@ relationships:
 * **外部サービス連携**:
   * **Chrome拡張機能**: ブラウザのツールバーから即座に検索を実行したり、閲覧中のページを要約したりできる。
   * **Arc Browser**: デフォルトの検索エンジンとして設定可能。
+  * **n8n連携**: ネイティブノードが提供されており、GUIから全API機能を利用可能。
 
 ### **10.2 技術スタックとの相性**
 
@@ -188,13 +190,15 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-05-XX**: Agent APIでFinance Searchツールの提供を開始。構造化された財務・市場データの取得に対応。
+* **2026-04-XX**: Agent APIがClaude Opus 4.7, GPT-5.5, Grok 4.20 Reasoning等のサードパーティモデルに対応。n8nとのネイティブ連携を開始。
+* **2026-03-XX**: GPT-5.4, NVIDIA Nemotron, Claude Sonnet 4.6などのモデルをAgent APIに追加。Gemini 2.5 Flash / Proなどを非推奨化。
 * **2026-02-XX**: Agent APIの提供を開始。
 * **2025-12-XX**: 古いモデル（`llama-3.1-sonar-small-128k-online`等）の廃止と新しいSonar / Sonar Proモデルへの移行を推進。
 * **2025-11-XX**: Pro Searchが一般提供（GA）され、より高度なリサーチやマルチモーダル機能に対応。
 * **2025-10-XX**: 開発者向けに公式のPerplexity SDKを提供開始。
-* **2025-09-XX**: File Attachments（ファイル添付機能）のサポートを開始。
 
-(出典: [Perplexity Changelog](https://docs.perplexity.ai/changelog), 公式ブログ)
+(出典: [Perplexity Changelog](https://docs.perplexity.ai/changelog))
 
 ## **16. 類似ツールとの比較**
 
@@ -203,8 +207,8 @@ relationships:
 | 機能カテゴリ | 機能項目 | 本ツール | ChatGPT | Genspark | Felo |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 検索精度・信頼性 | ◎<br><small>出典重視</small> | ◯<br><small>Webブラウジング</small> | ◯<br><small>エージェント</small> | ◎<br><small>多言語対応</small> |
-| **生成機能** | コンテンツ作成 | △<br><small>テキストのみ</small> | ◎<br><small>文章・画像</small> | ◎<br><small>Sparkpages</small> | ◎<br><small>スライド生成</small> |
-| **拡張性** | モデル選択 | ◎<br><small>複数モデル可</small> | ◯<br><small>GPTのみ</small> | -<br><small>自動選択</small> | ◯<br><small>複数選択可</small> |
+| **生成機能** | コンテンツ作成 | △<br><small>テキストのみ</small> | ◎<br><small>文章・画像</small> | ◎<br><small>Workspace 4.0</small> | ◎<br><small>スライド生成</small> |
+| **拡張性** | モデル選択 | ◎<br><small>複数モデル可</small> | ◯<br><small>GPT-5.5等</small> | -<br><small>自動選択</small> | ◯<br><small>複数選択可</small> |
 | **UI/UX** | シンプルさ | ◎<br><small>検索特化</small> | ◯<br><small>チャット形式</small> | △<br><small>多機能</small> | ◯<br><small>Canvas等</small> |
 
 ### **16.2 詳細比較**
