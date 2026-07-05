@@ -2,7 +2,7 @@
 title: Core AI Models 調査レポート
 tool_name: Core AI Models
 tool_reading: コア エーアイ モデルズ
-category: AI開発ライブラリ
+category: 機械学習フレームワーク
 developer: Apple
 official_site: https://github.com/apple/coreai-models
 date: '2026-06-14'

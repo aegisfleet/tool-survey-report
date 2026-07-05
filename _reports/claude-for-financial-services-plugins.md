@@ -2,7 +2,7 @@
 title: Claude for Financial Services Plugins 調査レポート
 tool_name: Claude for Financial Services Plugins
 tool_reading: クロード フォー ファイナンシャル サービス プラグイン
-category: AI開発ライブラリ
+category: AIモデル拡張/プラグイン
 developer: Anthropic
 official_site: https://github.com/anthropics/financial-services-plugins
 date: '2026-03-27'

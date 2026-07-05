@@ -2,7 +2,7 @@
 title: cc-sdd 調査レポート
 tool_name: cc-sdd
 tool_reading: シーシーエスディーディー
-category: AI開発ライブラリ
+category: 開発ユーティリティ
 developer: gotalab
 official_site: https://github.com/gotalab/cc-sdd
 date: '2026-03-09'
@@ -13,7 +13,6 @@ tags:
   - エージェント
   - オープンソース
   - 自動化
-  - 開発者ツール
 description: AIコーディングエージェントに仕様書駆動開発（SDD）のワークフローを導入するCLIツール。
 quick_summary:
   has_free_plan: true

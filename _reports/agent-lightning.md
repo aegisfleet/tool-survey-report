@@ -2,7 +2,7 @@
 title: Agent Lightning 調査レポート
 tool_name: Agent Lightning
 tool_reading: エージェント ライトニング
-category: AI開発ライブラリ
+category: マルチエージェント基盤
 developer: Microsoft (Research)
 official_site: https://microsoft.github.io/agent-lightning/
 date: '2026-02-23'
@@ -13,7 +13,6 @@ tags:
   - エージェント
   - オープンソース
   - 強化学習
-  - 最適化
 description: 強化学習やAPOを用いて、あらゆるAIエージェントフレームワークのエージェントを「コード変更なし」で最適化・学習させるためのトレーニングフレームワーク。
 quick_summary:
   has_free_plan: true
