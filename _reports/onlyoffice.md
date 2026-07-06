@@ -2,7 +2,7 @@
 title: ONLYOFFICE 調査レポート
 tool_name: ONLYOFFICE
 tool_reading: オンリーオフィス
-category: オフィススイート
+category: ビジネス/業務ツール
 developer: Ascensio System SIA
 official_site: https://www.onlyoffice.com/
 date: '2026-07-06'
@@ -46,8 +46,7 @@ relationships:
   children:
     - ''
   related_tools:
-    - Google Docs
-    - Microsoft 365
+    - Microsoft 365 Copilot
 ---
 
 # **ONLYOFFICE 調査レポート**
