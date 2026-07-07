@@ -6,7 +6,7 @@ category: コード品質/静的解析
 developer: SonarSource
 official_site: https://www.sonarsource.com/products/sonarqube/
 date: '2025-10-19'
-last_updated: '2026-03-14'
+last_updated: '2026-07-08'
 tags:
   - DevOps
   - SAST
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - 品質保証(QA)チーム
-  latest_highlight: 2026年2月にSonarQube Server 26.2をリリース
+  latest_highlight: 2026年5月以降、MCP Server、Remediation Agent、Agentic AnalysisなどのAI機能を追加
   update_frequency: 高
 evaluation:
   score: 90
@@ -89,6 +89,9 @@ relationships:
 * **品質ゲート (Quality Gates)**: コードがリリース可能かどうかを判定するための品質基準を定義・強制。
 * **IDE連携 (SonarQube for IDE)**: VS Code, IntelliJ IDEAなどのIDE内でリアルタイムに問題を検出・修正提案 (旧 SonarLint)。
 * **レポートとダッシュボード**: プロジェクトやポートフォリオ全体の品質とセキュリティの状態を視覚的に表示。
+* **Remediation Agent**: コードバックログにある問題をスケジュールに従って自動で修正するエージェント機能。
+* **Agentic Analysis**: AIエージェントによって生成されたコードに対してリアルタイムで検証を行い、品質とセキュリティを確保。
+* **MCP Server / SonarQube CLI**: Model Context Protocol (MCP) を通じて、AIワークフローに品質とセキュリティのコンテキストを直接統合。
 
 ## **4. 開始手順・セットアップ**
 
@@ -201,11 +204,15 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-06-03 (26.6)**: 複数のバグ修正とパフォーマンス改善を含む最新コミュニティビルドのリリース。
+* **2026-05-19 (26.5)**: AI関連機能（MCP Server、Remediation Agent、Agentic Analysis等）の追加を含むアップデート。
+* **2026-04-10 (26.4)**: 最新コミュニティビルドのリリース。
+* **2026-03-03 (26.3)**: 最新コミュニティビルドのリリース。
 * **2026-02-04 (26.2)**: 複数のバグ修正とパフォーマンス改善を含む最新コミュニティビルドのリリース。
 * **2026-01-06 (26.1)**: 最新のSonarQube Serverアップデートのリリース。
 * **2025-12-23 (25.12)**: 2025年最終アップデート。
 
-(出典: [GitHub Releases](https://github.com/SonarSource/sonarqube/releases) / [SonarQube Server Release Announcements](https://www.sonarsource.com/products/sonarqube/whats-new/))
+(出典: [製品アップデート情報](https://www.sonarsource.com/products/sonarqube/whats-new/) / [GitHub Releases](https://github.com/SonarSource/sonarqube/releases))
 
 ## **16. 類似ツールとの比較**
 
@@ -215,6 +222,7 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | SAST (静的解析) | ◎<br><small>30+言語対応</small> | ◎<br><small>高精度・広範囲</small> | ◎<br><small>包括的AppSec</small> | ◯<br><small>開発者向け</small> |
 | **カテゴリ特定** | コード品質 (Bug/Smell) | ◎<br><small>得意領域</small> | △<br><small>セキュリティ特化</small> | ◯<br><small>対応あり</small> | △<br><small>SCA中心</small> |
+| **AI機能** | AI修正/自動生成 | ◎<br><small>AI CodeFix, Remediation Agent</small> | ◯<br><small>AI連携を強化中</small> | ◯<br><small>Veracode Fix</small> | ◯<br><small>Snyk Codeの自動修正</small> |
 | **セキュリティ** | SCA (OSS管理) | ◯<br><small>機能強化中</small> | ◯<br><small>対応あり</small> | ◎<br><small>強力</small> | ◎<br><small>業界リーダー</small> |
 | **非機能要件** | 日本語対応 | △<br><small>コミュニティ頼み</small> | ◯<br><small>パートナー多し</small> | ◯<br><small>国内代理店あり</small> | ◯<br><small>日本語UIあり</small> |
 
@@ -222,7 +230,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **SonarQube** | コード品質とセキュリティの統合管理プラットフォーム | 圧倒的な言語サポート、強力なエコシステム、OSS版の存在 | オンプレミス版の運用コスト、高度な機能は有償 | 品質とセキュリティをバランス良く管理したい場合 |
+| **SonarQube** | コード品質とセキュリティの統合管理プラットフォーム | 圧倒的な言語サポート、強力なエコシステム、AI機能の拡充（Remediation Agent等） | オンプレミス版の運用コスト、高度な機能は有償 | 品質とセキュリティをバランス良く管理しつつ、AIによる自動化も取り入れたい場合 |
 | **Checkmarx** | SASTに特化したエンタープライズ向けセキュリティツール | 高度なセキュリティ脆弱性検出能力、コンプライアンスレポート | 高価、コード品質管理機能は限定的 | セキュリティ脆弱性スキャンを最優先する場合 |
 | **Veracode** | クラウドベースの包括的なAppSecプラットフォーム | SAST, DAST, SCAなどを統合的に提供 | SonarQubeより高価、オンプレミス環境での利用に制約 | クラウドネイティブな環境で包括的なセキュリティテストを求める場合 |
 | **Snyk** | 開発者中心のセキュリティプラットフォーム | オープンソースライブラリの脆弱性管理(SCA)に強み | SAST機能はSonarQubeに及ばない場合がある | OSSのセキュリティ管理を重視する場合 |
