@@ -2,7 +2,7 @@
 title: yt-dlp 調査レポート
 tool_name: yt-dlp
 tool_reading: ワイティー・ディーエルピー
-category: 開発ユーティリティ
+category: データ抽出/変換
 developer: yt-dlp community
 official_site: https://github.com/yt-dlp/yt-dlp
 date: '2026-06-11'

@@ -2,14 +2,15 @@
 title: 9router 調査レポート
 tool_name: 9router
 tool_reading: 不明
-category: 不明
+category: LLMプラットフォーム
 developer: decolua
 official_site: https://9router.com/
 date: '2026-07-07'
 last_updated: '2026-07-07'
 tags:
   - オープンソース
-  - AI API Proxy
+  - 大規模言語モデル
+  - API
   - 開発者ツール
 description: AIコーディングツールとLLMプロバイダの間に位置する自己ホスト型のAI APIプロキシ。トークン節約とマルチプロバイダルーティング機能を提供。
 quick_summary:

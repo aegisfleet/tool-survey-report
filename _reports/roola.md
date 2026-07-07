@@ -2,7 +2,7 @@
 title: Roola 調査レポート
 tool_name: Roola
 tool_reading: ルーラ
-category: 開発ユーティリティ
+category: データ抽出/変換
 developer: Yahiro
 official_site: https://yahiro.tech/roola
 date: '2026-06-05'

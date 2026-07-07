@@ -2,7 +2,7 @@
 title: winapp CLI 調査レポート
 tool_name: winapp CLI
 tool_reading: ウィンアップ シーエルアイ
-category: 開発ユーティリティ
+category: ターミナル/CLIツール
 developer: Microsoft
 official_site: https://github.com/microsoft/winappCli
 date: '2026-05-28'

@@ -2,7 +2,7 @@
 title: Presenton 調査レポート
 tool_name: Presenton
 tool_reading: プレゼントン
-category: デザインツール
+category: スライド/プレゼンテーション
 developer: Presenton Inc.
 official_site: https://presenton.ai/
 date: '2026-06-04'

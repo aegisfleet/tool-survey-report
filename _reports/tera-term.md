@@ -2,7 +2,7 @@
 title: Tera Term 調査レポート
 tool_name: Tera Term
 tool_reading: テラターム
-category: 開発ユーティリティ
+category: ターミナル/CLIツール
 developer: TeraTerm Project
 official_site: https://teratermproject.github.io/
 date: '2026-02-28'
