@@ -2,7 +2,7 @@
 title: Google 広告 調査レポート
 tool_name: Google 広告
 tool_reading: グーグルコウコク / グーグルアズ
-category: ビジネス/業務ツール
+category: CRM/マーケティング
 developer: Google
 official_site: https://business.google.com/jp/google-ads/
 date: '2026-04-04'

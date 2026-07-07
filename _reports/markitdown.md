@@ -2,7 +2,7 @@
 title: MarkItDown 調査レポート
 tool_name: MarkItDown
 tool_reading: マークイットダウン
-category: 開発ユーティリティ
+category: データ抽出/変換
 developer: Microsoft
 official_site: https://github.com/microsoft/markitdown
 date: '2026-04-11'

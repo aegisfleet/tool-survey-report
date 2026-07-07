@@ -2,7 +2,7 @@
 title: Docswell 調査レポート
 tool_name: Docswell
 tool_reading: ドクセル
-category: ドキュメント/ナレッジ
+category: スライド/プレゼンテーション
 developer: 株式会社アプルーシッド (Uplucid, Inc.)
 official_site: https://www.docswell.com/
 date: '2026-02-24'

@@ -2,7 +2,7 @@
 title: SLIDE.md 調査レポート
 tool_name: SLIDE.md
 tool_reading: スライド・エムディー
-category: デザインツール
+category: スライド/プレゼンテーション
 developer: sho-ai-magic
 official_site: https://sho-ai-magic.github.io/slide.md/
 date: '2026-06-24'

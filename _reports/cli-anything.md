@@ -2,7 +2,7 @@
 title: CLI-Anything 調査レポート
 tool_name: CLI-Anything
 tool_reading: シーエルアイエニシング
-category: 開発ユーティリティ
+category: ターミナル/CLIツール
 developer: HKUDS
 official_site: https://hkuds.github.io/CLI-Anything/
 date: '2026-05-15'
