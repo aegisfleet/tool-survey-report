@@ -6,8 +6,9 @@ category: モバイル開発
 developer: RevenueCat
 official_site: https://www.revenuecat.com/
 date: '2026-03-14'
-last_updated: '2026-03-14'
+last_updated: '2026-07-07'
 tags:
+  - AI
   - API
   - SaaS
   - クロスプラットフォーム
@@ -22,7 +23,7 @@ quick_summary:
     - モバイルアプリ開発者
     - スタートアップ
     - グロースチーム
-  latest_highlight: 2026年3月にサブスクリプション分析ダッシュボードのパフォーマンスを大幅改善
+  latest_highlight: 2026年7月に課金失敗時の自動メール設定機能を追加
   update_frequency: 高
 evaluation:
   score: 85
@@ -79,7 +80,8 @@ relationships:
 * **Customer Center**: ユーザーがアプリ内で自身のサブスクリプションを管理したり、サポートに問い合わせたりできるUIコンポーネント。
 * **データ連携 (Integrations)**: Adjust, AppsFlyer, Mixpanel, Firebase, Slackなど、50以上の外部ツールと連携し、課金イベントデータを送信可能。
 * **Experiments (A/Bテスト)**: 価格、トライアル期間、ペイウォールデザインなどのA/Bテストを簡単に実施し、収益への影響を測定。
-* **Web Billing**: モバイルアプリと同じバックエンドを利用して、Webサイト上でのサブスクリプション販売を実現。
+* **Web Billing**: モバイルアプリと同じバックエンドを利用して、Webサイト上でのサブスクリプション販売を実現。win-backキャンペーンなどの自動メール送信機能も提供。
+* **RevenueCat AI Toolkit**: AIエージェントを活用し、ダッシュボードの設定やアプリのコード実装を自動化・支援するツール。
 
 ## **4. 開始手順・セットアップ**
 
@@ -153,6 +155,7 @@ relationships:
 
 * **課金体系**: MTR（Monthly Tracked Revenue: 月間追跡収益）に基づく従量課金モデル。
 * **無料トライアル**: MTRが$2,500に達するまで期間無制限で全機能を利用可能。
+* **Daily Payouts (ベータ)**: キャッシュフロー改善のため、日次での支払いに対応するオプション。
 
 ## **8. 導入実績・事例**
 
@@ -225,6 +228,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-07-02**: 課金失敗時の自動メール送信（Billing lifecycle emails）を追加し、サブスクリプションの状態を正確に伝えることでサポート対応を削減。
+* **2026-07-01**: プライシングA/Bテスト機能（Experiments）を強化。
+* **2026-06-19**: 離脱したユーザーを再獲得するための自動メール送信機能（Win-back campaigns）をWeb向けに追加。
+* **2026-06-15**: Daily Payouts機能（ベータ版）を開始。
+* **2026-06-11**: AIを活用して提供された画像やデザインからペイウォールの生成やカスタマイズが可能に。
 * **2026-03-01**: サブスクリプション分析ダッシュボードのパフォーマンスを大幅に改善し、よりリアルタイムなデータ反映を実現。
 * **2026-02-15**: Customer Centerに新しいカスタマイズオプションを追加。ブランドカラーへの適合が容易に。
 * **2026-01-20**: Web BillingのAPIを拡張し、Stripe以外の決済プロバイダーとの連携の基礎を構築。
@@ -234,7 +242,7 @@ relationships:
 * **2025-12-04**: AIを使用してアプリのストア情報からペイウォールを自動生成する機能を追加。
 * **2025-11-07**: Webサイト上でペイウォールを構築・表示・テストできる「Paywalls on the web」をリリース。
 
-(出典: [RevenueCat Changelog](https://www.revenuecat.com/changelog/))
+(出典: [RevenueCat Changelog](https://www.revenuecat.com/changelog))
 
 ## **16. 類似ツールとの比較**
 
@@ -244,7 +252,8 @@ relationships:
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | クロスプラットフォーム | ◎<br><small>業界標準</small> | ◎<br><small>主要FW対応</small> | ◎<br><small>主要FW対応</small> | ◯<br><small>主要FW対応</small> |
 | **分析** | コホート分析/LTV | ◎<br><small>詳細かつ正確</small> | ◎<br><small>予測分析に強み</small> | ◎<br><small>標準的</small> | △<br><small>基本的</small> |
-| **マーケティング** | Paywalls (A/B) | ◎<br><small>ノーコード＆AI</small> | ◎<br><small>多機能</small> | ◎<br><small>デザイン自由度高</small> | △<br><small>簡易的</small> |
+| **マーケティング** | Paywalls (A/B) | ◎<br><small>ノーコード＆AI生成対応</small> | ◎<br><small>多機能</small> | ◎<br><small>デザイン自由度高</small> | △<br><small>簡易的</small> |
+| **エンゲージメント** | Win-back / メール | ◎<br><small>Web Billingで自動送信</small> | ◯<br><small>外部連携が主</small> | ◯<br><small>外部連携が主</small> | ×<br><small>非対応</small> |
 | **コスト** | 無料枠/手数料 | ◯<br><small>$2.5kまで無料/1%</small> | ◯<br><small>$2.5kまで無料/0.8%~</small> | ◯<br><small>$2.5kまで無料/1%</small> | ◎<br><small>OSS版あり/安価</small> |
 
 ### **16.2 詳細比較**
