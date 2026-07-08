@@ -2,7 +2,7 @@
 title: Microsoft Copilot Studio 調査レポート
 tool_name: Microsoft Copilot Studio
 tool_reading: マイクロソフト コパイロット スタジオ
-category: LLMプラットフォーム
+category: AIアプリ開発基盤
 developer: Microsoft Corporation
 official_site: https://adoption.microsoft.com/ja-jp/ai-agents/copilot-studio/
 date: '2026-06-04'

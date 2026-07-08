@@ -2,7 +2,7 @@
 title: Gemini Enterprise Agent Platform 調査レポート
 tool_name: Gemini Enterprise Agent Platform
 tool_reading: ジェミニ エンタープライズ エージェント プラットフォーム
-category: LLMプラットフォーム
+category: AIアプリ開発基盤
 developer: Google Cloud
 official_site: https://cloud.google.com/products/gemini-enterprise-agent-platform
 date: '2026-04-23'

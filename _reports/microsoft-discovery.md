@@ -2,7 +2,7 @@
 title: Microsoft Discovery 調査レポート
 tool_name: Microsoft Discovery
 tool_reading: マイクロソフト ディスカバリー
-category: LLMプラットフォーム
+category: AIアプリ開発基盤
 developer: Microsoft
 official_site: https://learn.microsoft.com/ja-jp/azure/microsoft-discovery/
 date: '2026-06-04'

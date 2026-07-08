@@ -2,7 +2,7 @@
 title: 9router 調査レポート
 tool_name: 9router
 tool_reading: 不明
-category: LLMプラットフォーム
+category: AIゲートウェイ
 developer: decolua
 official_site: https://9router.com/
 date: '2026-07-07'

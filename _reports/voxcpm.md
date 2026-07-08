@@ -2,7 +2,7 @@
 title: VoxCPM 調査レポート
 tool_name: VoxCPM
 tool_reading: ボックスシーピーエム
-category: AI画像/メディア生成
+category: AI音声/音楽生成
 developer: OpenBMB
 official_site: https://github.com/OpenBMB/VoxCPM
 date: '2026-04-10'
