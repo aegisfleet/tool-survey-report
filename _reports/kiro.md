@@ -46,7 +46,7 @@ relationships:
   related_tools:
     - Cursor
     - Amazon Q Developer
-    - Windsurf
+    - Devin Desktop
     - AWS Frontier Agents
     - cc-sdd
     - OpenSpec

@@ -50,7 +50,7 @@ relationships:
     - Cline
     - Cursor
     - GitHub Copilot
-    - Windsurf
+    - Devin Desktop
     - Claude Code
     - Visual Studio Code
     - Devin

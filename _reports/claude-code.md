@@ -49,7 +49,7 @@ relationships:
     - Spec Kit
     - GitHub Copilot
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - Cline
     - Devin
     - Grok CLI

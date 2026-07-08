@@ -49,7 +49,7 @@ relationships:
   related_tools:
     - Claude
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - Cline
     - Agent Skills
     - Mobile Next

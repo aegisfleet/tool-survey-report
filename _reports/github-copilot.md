@@ -49,7 +49,7 @@ relationships:
     - GitHub Copilot app
   related_tools:
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - Cline
     - Roo Code
     - CodeRabbit

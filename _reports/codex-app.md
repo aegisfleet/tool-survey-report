@@ -37,7 +37,7 @@ evaluation:
 relationships:
   related_tools:
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - GitHub Copilot
     - Cline
     - Codex cloud

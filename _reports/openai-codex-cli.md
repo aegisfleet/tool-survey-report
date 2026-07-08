@@ -49,7 +49,7 @@ relationships:
   related_tools:
     - Cline
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - Symphony
     - SkillsMP
     - Agentic Workflows

@@ -40,7 +40,7 @@ relationships:
   related_tools:
     - Cursor
     - Claude Code
-    - Windsurf
+    - Devin Desktop
     - VibeVoice
     - Notely Voice
 ---

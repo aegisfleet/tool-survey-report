@@ -45,7 +45,7 @@ relationships:
     - GitHub Copilot
     - Claude Code
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - Spec Kit
     - Kiro
 ---

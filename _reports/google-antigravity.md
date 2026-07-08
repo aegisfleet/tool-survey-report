@@ -49,7 +49,7 @@ relationships:
   related_tools:
     - Visual Studio Code
     - Cursor
-    - Windsurf
+    - Devin Desktop
   parent: Gemini
   children:
     - Antigravity CLI

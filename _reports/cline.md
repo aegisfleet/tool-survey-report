@@ -54,7 +54,7 @@ relationships:
     - Devin
     - Cursor
     - GitHub Copilot
-    - Windsurf
+    - Devin Desktop
     - Roo Code
     - Visual Studio Code
     - Model Context Protocol

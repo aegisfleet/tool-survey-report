@@ -48,7 +48,7 @@ relationships:
   related_tools:
     - GitHub Copilot CLI
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - Cline
 ---
 

@@ -51,7 +51,7 @@ relationships:
   related_tools:
     - GitHub Copilot
     - Cursor
-    - Windsurf
+    - Devin Desktop
     - OpenHands
     - AutoGPT
     - Agent Zero

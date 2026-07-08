@@ -49,7 +49,7 @@ relationships:
     - Cursor
     - GitHub Copilot
     - IntelliJ IDEA
-    - Windsurf
+    - Devin Desktop
     - Cline
     - Delphi
     - Eclipse IDE
