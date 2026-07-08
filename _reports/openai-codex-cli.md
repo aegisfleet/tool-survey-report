@@ -8,36 +8,36 @@ official_site: https://developers.openai.com/codex/cli
 date: '2026-03-19'
 last_updated: '2026-03-19'
 tags:
-- AI
-- CLI
-- エージェント
-- 自律型
-- 開発者ツール
+  - AI
+  - CLI
+  - エージェント
+  - 自律型
+  - 開発者ツール
 description: OpenAIのモデルを搭載し、ローカル環境でコードの読み取りや変更、コマンドの実行を自律的に行うオープンソースのコマンドラインAIエージェント
 quick_summary:
   has_free_plan: false
   is_oss: true
   starting_price: $20/月 (ChatGPT Plus等に内包)
   target_users:
-  - 開発者
-  - ソフトウェアエンジニア
+    - 開発者
+    - ソフトウェアエンジニア
   latest_highlight: GPT-5.4やGPT-5.3-Codexなどの最新推論モデルをターミナルで利用可能
   update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
-  - point: 5
-    reason: オープンソース(Rust実装)であり、高速かつ効率的に動作
-  - point: 4
-    reason: 最新のOpenAI推論モデル(o4, GPT-5.4等)をローカルCLIで直接利用可能
-  - point: 4
-    reason: MCP(Model Context Protocol)をサポートし、外部ツールとの連携が強力
-  - point: 3
-    reason: ローカルのコードレビューやWeb検索などの多様な機能を内蔵
+    - point: 5
+      reason: オープンソース(Rust実装)であり、高速かつ効率的に動作
+    - point: 4
+      reason: 最新のOpenAI推論モデル(o4, GPT-5.4等)をローカルCLIで直接利用可能
+    - point: 4
+      reason: MCP(Model Context Protocol)をサポートし、外部ツールとの連携が強力
+    - point: 3
+      reason: ローカルのコードレビューやWeb検索などの多様な機能を内蔵
   minus_points:
-  - point: -3
-    reason: 利用にはChatGPT Plusなどの有料プランまたはAPIキーが必要（単体無料ではない）
+    - point: -3
+      reason: 利用にはChatGPT Plusなどの有料プランまたはAPIキーが必要（単体無料ではない）
   summary: ターミナルから直接最新のOpenAIモデルにアクセスし、ローカル環境で強力な自律的開発支援を受けられる優秀なCLIツール
 links:
   github: https://github.com/openai/codex
@@ -47,13 +47,13 @@ links:
 relationships:
   parent: ChatGPT
   related_tools:
-  - Cline
-  - Cursor
-  - Devin Desktop
-  - Symphony
-  - SkillsMP
-  - Agentic Workflows
-  - Grok CLI
+    - Cline
+    - Cursor
+    - Devin Desktop
+    - Symphony
+    - SkillsMP
+    - Agentic Workflows
+    - Grok CLI
 ---
 
 # **OpenAI Codex CLI 調査レポート**

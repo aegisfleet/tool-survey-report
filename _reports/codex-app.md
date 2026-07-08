@@ -8,39 +8,39 @@ official_site: https://developers.openai.com/codex/app
 date: '2026-03-19'
 last_updated: '2026-03-19'
 tags:
-- AI
-- エージェント
-- 自動化
-- 開発者ツール
+  - AI
+  - エージェント
+  - 自動化
+  - 開発者ツール
 description: Codexスレッドを並行して実行するためのフォーカスされたデスクトップ環境で、ワークツリーサポート、自動化、Git機能が組み込まれています。
 quick_summary:
   has_free_plan: false
   is_oss: false
   starting_price: $20/月
   target_users:
-  - 開発者
-  - エンジニアチーム
+    - 開発者
+    - エンジニアチーム
   latest_highlight: デスクトップアプリの提供開始
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 複数エージェントによる並行作業を容易にするワークツリー機能
-  - point: 5
-    reason: 組み込みターミナルやGit統合によりアプリ内で作業を完結可能
-  - point: 5
-    reason: スケジュール実行可能な自動化機能(Automations)のサポート
+    - point: 5
+      reason: 複数エージェントによる並行作業を容易にするワークツリー機能
+    - point: 5
+      reason: 組み込みターミナルやGit統合によりアプリ内で作業を完結可能
+    - point: 5
+      reason: スケジュール実行可能な自動化機能(Automations)のサポート
   minus_points: []
   summary: エージェントを使った開発タスクの管理・並行処理に特化しており、効率的なマルチタスク開発を実現する強力なツールです。
 relationships:
   related_tools:
-  - Cursor
-  - Devin Desktop
-  - GitHub Copilot
-  - Cline
-  - Codex cloud
+    - Cursor
+    - Devin Desktop
+    - GitHub Copilot
+    - Cline
+    - Codex cloud
 ---
 
 # **Codex app 調査レポート**

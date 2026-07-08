@@ -8,56 +8,56 @@ official_site: https://cursor.com/
 date: '2025-10-19'
 last_updated: '2026-05-10'
 tags:
-- AI
-- IDE
-- エージェント
-- コーディング支援
-- 開発者ツール
+  - AI
+  - IDE
+  - エージェント
+  - コーディング支援
+  - 開発者ツール
 description: AIを第一に考えて作られたコードエディタ。VS Codeのフォークをベースに、コードベース全体を理解するAI機能が深く統合されている。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: $20/月
   target_users:
-  - 開発者
-  - AIエンジニア
+    - 開発者
+    - AIエンジニア
   latest_highlight: 2026年5月に「Security Reviewer」と「Vulnerability Scanner」のセキュリティ関連機能を追加
   update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
-  - point: 8
-    reason: VS Codeベースの優れたUXと、既存のキーバインドや拡張機能をそのまま利用できる点
-  - point: 7
-    reason: コードベース全体を理解し、ファイル横断でのコード生成・編集・リファクタリングが可能
-  - point: 5
-    reason: Multi-AgentやPlan Modeなど、単なる補完を超えた高度な自律エージェント機能
-  - point: 3
-    reason: CLI連携やデバッグモードなど、開発ワークフロー全体を支援する機能が継続的に追加されている
-  - point: 2
-    reason: 主要な最新LLMを選択して利用できる柔軟性
+    - point: 8
+      reason: VS Codeベースの優れたUXと、既存のキーバインドや拡張機能をそのまま利用できる点
+    - point: 7
+      reason: コードベース全体を理解し、ファイル横断でのコード生成・編集・リファクタリングが可能
+    - point: 5
+      reason: Multi-AgentやPlan Modeなど、単なる補完を超えた高度な自律エージェント機能
+    - point: 3
+      reason: CLI連携やデバッグモードなど、開発ワークフロー全体を支援する機能が継続的に追加されている
+    - point: 2
+      reason: 主要な最新LLMを選択して利用できる柔軟性
   minus_points:
-  - point: -3
-    reason: 競合のAIコーディング支援ツール（GitHub Copilot等）と比較して料金が高め
-  - point: -2
-    reason: AI機能の使用により、時折パフォーマンスが低下する場合があるとの報告
-  - point: -2
-    reason: 料金プランが細分化されており、最適なプランの選択がやや複雑
+    - point: -3
+      reason: 競合のAIコーディング支援ツール（GitHub Copilot等）と比較して料金が高め
+    - point: -2
+      reason: AI機能の使用により、時折パフォーマンスが低下する場合があるとの報告
+    - point: -2
+      reason: 料金プランが細分化されており、最適なプランの選択がやや複雑
   summary: VS Codeの操作性を維持しつつ強力なAI機能を統合した高機能エディタだが、価格体系とパフォーマンスが検討点となる。
 links:
   documentation: https://cursor.com/docs
 relationships:
   related_tools:
-  - Spec Kit
-  - GitHub Copilot
-  - Devin Desktop
-  - Cline
-  - Roo Code
-  - Visual Studio Code
-  - Devin
-  - Model Context Protocol
-  - Agent Trace
+    - Spec Kit
+    - GitHub Copilot
+    - Devin Desktop
+    - Cline
+    - Roo Code
+    - Visual Studio Code
+    - Devin
+    - Model Context Protocol
+    - Agent Trace
 ---
 
 # **Cursor 調査レポート**

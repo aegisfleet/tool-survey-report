@@ -8,34 +8,34 @@ official_site: https://github.com/gotalab/cc-sdd
 date: '2026-03-09'
 last_updated: '2026-06-23'
 tags:
-- AI
-- CLI
-- エージェント
-- オープンソース
-- 自動化
+  - AI
+  - CLI
+  - エージェント
+  - オープンソース
+  - 自動化
 description: AIコーディングエージェントに仕様書駆動開発（SDD）のワークフローを導入するCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - 開発チーム
+    - 開発者
+    - 開発チーム
   latest_highlight: 2026年4月にAgent Skillsモードの追加と自律的実装（/kiro-impl）をサポートするv3.0.0をリリース
   update_frequency: 中
 evaluation:
   score: 83
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 複数の主要なAIエディタ/CLI（Claude Code, Cursorなど計8種）をサポートしている
-  - point: 5
-    reason: 要件定義から実装タスクまでを構造化し、AIによる手戻りを防ぐ独自のアプローチ
-  - point: 3
-    reason: オープンソースであり無料で利用可能、導入も容易
+    - point: 5
+      reason: 複数の主要なAIエディタ/CLI（Claude Code, Cursorなど計8種）をサポートしている
+    - point: 5
+      reason: 要件定義から実装タスクまでを構造化し、AIによる手戻りを防ぐ独自のアプローチ
+    - point: 3
+      reason: オープンソースであり無料で利用可能、導入も容易
   minus_points:
-  - point: 0
-    reason: 特になし
+    - point: 0
+      reason: 特になし
   summary: 既存のAIコーディングツールに仕様書駆動プロセスを後付けできる、非常に実用的かつ画期的なオープンソースツール。
 links:
   github: https://github.com/gotalab/cc-sdd
@@ -43,11 +43,11 @@ links:
   deepwiki: https://deepwiki.com/gotalab/cc-sdd
 relationships:
   related_tools:
-  - Kiro
-  - Claude Code
-  - Cursor
-  - Devin Desktop
-  - GitHub Copilot
+    - Kiro
+    - Claude Code
+    - Cursor
+    - Devin Desktop
+    - GitHub Copilot
 ---
 
 # **cc-sdd 調査レポート**

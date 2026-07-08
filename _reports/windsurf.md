@@ -8,53 +8,53 @@ official_site: https://windsurf.com/
 date: '2025-10-21'
 last_updated: '2026-07-08'
 tags:
-- AI
-- エージェント
-- コーディング支援
-- 生成AI
-- 開発者ツール
+  - AI
+  - エージェント
+  - コーディング支援
+  - 生成AI
+  - 開発者ツール
 description: Windsurfは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: $20/月
   target_users:
-  - 開発者
-  - スタートアップ
-  - 大企業
+    - 開発者
+    - スタートアップ
+    - 大企業
   latest_highlight: 2026年7月にv3.4.27をリリース。2026年6月にWindsurfからDevin Desktopに名称変更。
   update_frequency: 高
 evaluation:
   score: 91
   base_score: 70
   plus_points:
-  - point: 8
-    reason: Cascadeエージェントやライブプレビューなど、競合より優れた独自機能が豊富
-  - point: 5
-    reason: 40以上のIDEに対応しており、既存の開発環境に導入しやすい
-  - point: 5
-    reason: SOC 2やFedRAMP Highなど高いセキュリティ基準を満たしている
-  - point: 5
-    reason: 新LLMの迅速な統合や独自機能開発など、アップデートが非常に活発
-  - point: 1
-    reason: Devin CloudやDevin Localエージェントによる柔軟で強力な環境連携の追加
+    - point: 8
+      reason: Cascadeエージェントやライブプレビューなど、競合より優れた独自機能が豊富
+    - point: 5
+      reason: 40以上のIDEに対応しており、既存の開発環境に導入しやすい
+    - point: 5
+      reason: SOC 2やFedRAMP Highなど高いセキュリティ基準を満たしている
+    - point: 5
+      reason: 新LLMの迅速な統合や独自機能開発など、アップデートが非常に活発
+    - point: 1
+      reason: Devin CloudやDevin Localエージェントによる柔軟で強力な環境連携の追加
   minus_points:
-  - point: -3
-    reason: G2レビューでドキュメントやコミュニティがまだ発展途上との指摘がある
+    - point: -3
+      reason: G2レビューでドキュメントやコミュニティがまだ発展途上との指摘がある
   summary: 豊富な独自機能と高いセキュリティを両立し、活発な開発が続く先進的なAIコードエディタ。
 links:
   documentation: https://docs.windsurf.com/
 relationships:
   related_tools:
-  - Kiro
-  - Visual Studio Code
-  - Cursor
-  - GitHub Copilot
-  - Cline
-  - Roo Code
-  - Claude Code
-  - Devin
-  - Aqua Voice
+    - Kiro
+    - Visual Studio Code
+    - Cursor
+    - GitHub Copilot
+    - Cline
+    - Roo Code
+    - Claude Code
+    - Devin
+    - Aqua Voice
 ---
 
 # **Windsurf 調査レポート**
