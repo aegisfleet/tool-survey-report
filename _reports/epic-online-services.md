@@ -1,55 +1,47 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Epic Online Services 調査レポート"
-tool_name: "Epic Online Services"
-tool_reading: "エピック・オンライン・サービス"
-category: "ゲームバックエンド"
-developer: "Epic Games"
-official_site: "https://onlineservices.epicgames.com/"
-date: "2026-07-08"
-last_updated: "2026-07-08"
+title: Epic Online Services 調査レポート
+tool_name: Epic Online Services
+tool_reading: エピック・オンライン・サービス
+category: ゲームバックエンド
+developer: Epic Games
+official_site: https://onlineservices.epicgames.com/
+date: '2026-07-08'
+last_updated: '2026-07-08'
 tags:
-  - "ゲーム開発"
-  - "マルチプレイヤー"
-  - "BaaS"
-  - "クロスプラットフォーム"
-description: "マルチプレイヤー、アカウント、データ、プレイヤー保護機能を提供する無料のモジュール式ゲームバックエンドサービス"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - ゲーム開発
+  - マルチプレイヤー
+  - BaaS
+  - クロスプラットフォーム
+description: マルチプレイヤー、アカウント、データ、プレイヤー保護機能を提供する無料のモジュール式ゲームバックエンドサービス
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ゲーム開発者"
-    - "インディースタジオ"
-    - "ゲームパブリッシャー"
-  latest_highlight: "2026年5月にWindows on Armのサポートを全サービス（Social Overlayを除く）に拡張"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ゲーム開発者
+    - インディースタジオ
+    - ゲームパブリッシャー
+  latest_highlight: 2026年5月にWindows on Armのサポートを全サービス（Social Overlayを除く）に拡張
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "ゲームに必要なバックエンド機能が無料で利用可能"
+      reason: ゲームに必要なバックエンド機能が無料で利用可能
     - point: 5
-      reason: "Fortniteで実証された高いスケーラビリティと信頼性"
+      reason: Fortniteで実証された高いスケーラビリティと信頼性
     - point: 5
-      reason: "どのエンジン、どのプラットフォームでも動作するクロスプラットフォーム対応"
+      reason: どのエンジン、どのプラットフォームでも動作するクロスプラットフォーム対応
   minus_points:
     - point: -5
-      reason: "Epic Gamesのインフラに依存するため、自社ホスティングのような完全なコントロールは難しい"
-  summary: "無料で高品質なゲームバックエンドを利用でき、クロスプラットフォームゲームの開発に最適な選択肢"
-
-# 【任意項目】該当するもののみ記載
+      reason: Epic Gamesのインフラに依存するため、自社ホスティングのような完全なコントロールは難しい
+  summary: 無料で高品質なゲームバックエンドを利用でき、クロスプラットフォームゲームの開発に最適な選択肢
 links:
-  documentation: "https://dev.epicgames.com/docs/epic-online-services"
+  documentation: https://dev.epicgames.com/docs/epic-online-services
 relationships:
   related_tools:
-    - "playfab"
+    - playfab
 ---
 
 # **Epic Online Services 調査レポート**
