@@ -13,7 +13,7 @@ tags:
   - コーディング支援
   - 生成AI
   - 開発者ツール
-description: Windsurfは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。
+description: Devin Desktopは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -57,7 +57,7 @@ relationships:
     - Aqua Voice
 ---
 
-# **Windsurf 調査レポート**
+# **Devin Desktop 調査レポート**
 
 ## **1. 基本情報**
 
@@ -95,7 +95,7 @@ relationships:
 * **ライブプレビュー**: IDE内でコードのWebプレビューを直接表示し、要素をクリックして修正を指示できる。
 * **リンターエラー自動修正**: 生成したコードがリンターチェックに失敗した場合、自動的にエラーを修正する。
 * **IDE連携**: VS CodeやJetBrains、Jupyter Notebookなど40以上の既存のIDEにプラグインとして統合可能。
-* **Windsurf Editor**: VS Codeをフォークして開発された、AI機能をネイティブに統合した独自のIDE。
+* **Devin Desktop Editor**: VS Codeをフォークして開発された、AI機能をネイティブに統合した独自のIDE。
 * **MCP (Model Context Protocol) サポート**: 外部ツールやサービスをAIのコンテキストとして統合するためのプロトコルに対応。
 
 ## **4. 開始手順・セットアップ**
@@ -181,7 +181,7 @@ relationships:
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
-* **UI/UX**: G2などのレビューサイトでセットアップの容易さが高く評価されている（95%）。特に独自のWindsurf Editorは、AIとの対話を前提としたシームレスな体験を提供し、直感的であると評されている。
+* **UI/UX**: G2などのレビューサイトでセットアップの容易さが高く評価されている（95%）。特に独自のDevin Desktop Editorは、AIとの対話を前提としたシームレスな体験を提供し、直感的であると評されている。
 * **学習コスト**: 既存のIDEにプラグインとして導入できるため、多くの開発者は慣れた環境のまま利用を開始できる。基本的なコード補完から、より高度なCascadeエージェントの活用まで、ユーザーの習熟度に応じて段階的に機能を試すことが可能であり、学習コストは低いと言える。
 
 ## **13. ベストプラクティス**
@@ -199,7 +199,7 @@ relationships:
 * **調査対象**: G2, 公式サイト掲載の顧客の声
 * **総合評価**: 4.1/5.0 (G2)
 * **ポジティブな評価**:
-  * 「Windsurfは非常に高速で、コードの提案はプロジェクトに非常に関連性が高いです。」 - Sujeet A, Senior Software Engineer (G2より引用)
+  * 「Devin Desktopは非常に高速で、コードの提案はプロジェクトに非常に関連性が高いです。」 - Sujeet A, Senior Software Engineer (G2より引用)
   * 「AIコード補完機能は非常に直感的で、コーディングプロセスを高速化するのに役立つ。」 (G2より引用)
   * セットアップの容易さが高く評価されている。
   * 「効率が60-70%向上した」との声もある。
@@ -220,7 +220,7 @@ relationships:
 * **2026-06-10**: v3.1.7リリース。Agent/Editorモードの切り替えをスムーズに。Devin Localへの名称変更など。
 * **2026-06-02**: v3.0.12リリース。Windsurfから**Devin Desktop**へ正式に名称変更。
 * **2026-05-06**: v2.2.17リリース。Devin ReviewとQuick Review機能を追加。
-* **2026-04-29**: v2.1.29リリース。Devin for TerminalとWindsurf内のDevin Localエージェントを追加。
+* **2026-04-29**: v2.1.29リリース。Devin for TerminalとDevin Desktop内のDevin Localエージェントを追加。
 * **2026-04-15**: v2.0.44リリース。**Windsurf 2.0**として、Devin CloudエージェントをIDEに統合し、Agent Command Centerを追加。
 * **2026-04-06**: v1.9600.38リリース。Adaptiveモデルルーターを導入し、タスクに最適なモデルを自動選択。
 * **2026-01-30**: v1.9544.24リリース。複数のモデルを比較できるArena Modeと、詳細な計画を作成するPlan Modeを導入。
