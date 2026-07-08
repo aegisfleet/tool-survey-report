@@ -1,5 +1,5 @@
 ---
-category: LLMプラットフォーム
+category: AIアプリ開発基盤
 date: '2026-01-29'
 description: Google Cloud上で生成AIモデルのプロトタイピング、カスタマイズ、本番環境への統合を迅速に行うための統合開発環境。
 developer: Google

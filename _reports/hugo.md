@@ -2,7 +2,7 @@
 title: Hugo 調査レポート
 tool_name: Hugo
 tool_reading: ヒューゴ
-category: Webフレームワーク
+category: CMS/静的サイト
 developer: The Hugo Authors
 official_site: https://gohugo.io/
 date: '2026-03-07'

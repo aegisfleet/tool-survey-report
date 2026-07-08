@@ -2,7 +2,7 @@
 title: Epic Online Services 調査レポート
 tool_name: Epic Online Services
 tool_reading: エピック・オンライン・サービス
-category: ゲームバックエンド
+category: クラウドサービス/PaaS
 developer: Epic Games
 official_site: https://onlineservices.epicgames.com/
 date: '2026-07-08'

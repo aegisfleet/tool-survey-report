@@ -2,7 +2,7 @@
 title: Portkey 調査レポート
 tool_name: Portkey
 tool_reading: ポートキー
-category: LLMプラットフォーム
+category: AIゲートウェイ
 developer: Portkey, Inc / Palo Alto Networks
 official_site: https://portkey.ai/
 date: '2026-06-22'

@@ -2,7 +2,7 @@
 title: Dify 調査レポート
 tool_name: Dify
 tool_reading: ディフィー
-category: LLMプラットフォーム
+category: AIアプリ開発基盤
 developer: LangGenius, Inc.
 official_site: https://dify.ai/
 date: '2026-02-11'

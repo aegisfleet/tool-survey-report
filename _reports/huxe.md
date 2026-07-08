@@ -2,7 +2,7 @@
 title: Huxe 調査レポート
 tool_name: Huxe
 tool_reading: ヒュクス / ハックス
-category: AI画像/メディア生成
+category: AI音声/音楽生成
 developer: Huxe AI, Inc.
 official_site: https://www.huxe.com/
 date: '2026-05-10'

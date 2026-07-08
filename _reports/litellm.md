@@ -2,7 +2,7 @@
 title: LiteLLM 調査レポート
 tool_name: LiteLLM
 tool_reading: ライトエルエルエム
-category: LLMプラットフォーム
+category: AIゲートウェイ
 developer: BerriAI
 official_site: https://www.litellm.ai/
 date: '2026-05-26'
