@@ -8,35 +8,35 @@ official_site: https://github.com/github/app
 date: '2026-05-15'
 last_updated: '2026-05-15'
 tags:
-  - AI
-  - エージェント
-  - コーディング支援
-  - 生成AI
-  - 開発者ツール
-  - デスクトップアプリ
+- AI
+- エージェント
+- コーディング支援
+- 生成AI
+- 開発者ツール
+- デスクトップアプリ
 description: GitHub Copilot appは、エージェント主導の開発（agent-driven development）のために設計された、デスクトップアプリケーションです。並行作業やGitHub統合をひとつの場所にまとめます。
 quick_summary:
   has_free_plan: false
   is_oss: false
   starting_price: Copilot Business/Enterprise または Pro+ サブスクリプションが必要
   target_users:
-    - 開発者
-    - DevOpsエンジニア
+  - 開発者
+  - DevOpsエンジニア
   latest_highlight: 2026年5月リリースの v0.2.4 にて、フォローアッププロンプトのキューイングやスキル連携が強化。
   update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 複数のAIエージェントを並行して実行でき、開発のボトルネックを解消する
-    - point: 4
-      reason: GitHubのIssueやPRとネイティブに連携し、ライフサイクル全体を管理可能
-    - point: 4
-      reason: ターミナルやIDEを切り替えるコンテキストスイッチを削減する
+  - point: 5
+    reason: 複数のAIエージェントを並行して実行でき、開発のボトルネックを解消する
+  - point: 4
+    reason: GitHubのIssueやPRとネイティブに連携し、ライフサイクル全体を管理可能
+  - point: 4
+    reason: ターミナルやIDEを切り替えるコンテキストスイッチを削減する
   minus_points:
-    - point: 0
-      reason: ''
+  - point: 0
+    reason: ''
   summary: 複数のエージェントを指揮し、コーディングからPR作成までを一元管理できる次世代の開発環境。
 links:
   github: https://github.com/github/app
@@ -46,10 +46,10 @@ relationships:
   parent: GitHub Copilot
   children: []
   related_tools:
-    - GitHub Copilot CLI
-    - Cursor
-    - Windsurf
-    - Cline
+  - GitHub Copilot CLI
+  - Cursor
+  - Devin Desktop
+  - Cline
 ---
 
 # **GitHub Copilot app 調査レポート**

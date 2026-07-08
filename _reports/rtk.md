@@ -44,7 +44,7 @@ relationships:
   related_tools:
     - claude-code
     - cursor
-    - windsurf
+    - Devin Desktop
     - cline
     - GitHub Copilot CLI
 ---
@@ -108,7 +108,7 @@ relationships:
   rtk init -g
   ```
 
-  ※他にもCursor(`--agent cursor`)、Windsurf(`--agent windsurf`)、Cline(`--agent cline`)などに対応したオプションがある。
+  ※他にもCursor(`--agent cursor`)、Devin Desktop (旧 Windsurf)(`--agent windsurf`)、Cline(`--agent cline`)などに対応したオプションがある。
 
 * **クイックスタート**:
   AIツールを再起動後、通常のコマンドを実行すると透過的にRTKが適用される。
@@ -153,7 +153,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: ツール自体はCLIだが、設定ファイルによるカスタマイズが可能。
-* **外部サービス連携**: 12種類の主要なAIコーディングエージェント（Claude Code, Cursor, Windsurf, Cline, Copilot CLI等）とシームレスに連携。
+* **外部サービス連携**: 12種類の主要なAIコーディングエージェント（Claude Code, Cursor, Devin Desktop, Cline, Copilot CLI等）とシームレスに連携。
 
 ### **10.2 技術スタックとの相性**
 
@@ -221,6 +221,6 @@ relationships:
 * **総合的な評価**:
   AIコーディングツールを利用する際の最大の課題の一つである「高額なAPIトークン利用コスト」を、透過的かつ劇的に削減してくれる画期的なツール。導入障壁が極めて低く、非常に実用的。
 * **推奨されるチームやプロジェクト**:
-  Claude Code、Cursor、WindsurfなどのAIコーディングアシスタントを日常的に活用しているすべての開発者・開発チーム。特に、API利用料が従量課金となっている場合に強い効果を発揮する。
+  Claude Code、Cursor、Devin DesktopなどのAIコーディングアシスタントを日常的に活用しているすべての開発者・開発チーム。特に、API利用料が従量課金となっている場合に強い効果を発揮する。
 * **選択時のポイント**:
   AIツールの利用コストに課題を感じている場合、他に有力な対抗馬がないため第一選択肢となる。環境構築の手間もほぼ無いため、導入しない手はないと言える。

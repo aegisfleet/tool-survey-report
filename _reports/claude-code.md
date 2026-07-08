@@ -8,33 +8,33 @@ official_site: https://claude.ai/code
 date: '2026-01-24'
 last_updated: '2026-04-01'
 tags:
-  - AI
-  - エージェント
-  - コーディング支援
-  - 自律型
-  - 開発者ツール
+- AI
+- エージェント
+- コーディング支援
+- 自律型
+- 開発者ツール
 description: Anthropicが提供する、ターミナルやIDEで動作する自律型コーディングエージェント。最新のClaude 4.5モデルを使用。
 quick_summary:
   has_free_plan: false
   is_oss: false
   starting_price: プランに含む
   target_users:
-    - 開発者
-    - DevOpsエンジニア
+  - 開発者
+  - DevOpsエンジニア
   latest_highlight: 2026年4月に各種不具合修正やheadless session向けのフック強化を含むv2.1.89をリリース
   update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
-    - point: 5
-      reason: Claude 4.5 Opus/Sonnetの強力な推論能力を活用
-    - point: 5
-      reason: Agentic searchによる深いコードベース理解
-    - point: 5
-      reason: ターミナル、IDE、Slack、Webと柔軟な環境対応
-    - point: 3
-      reason: MCPによる高い拡張性
+  - point: 5
+    reason: Claude 4.5 Opus/Sonnetの強力な推論能力を活用
+  - point: 5
+    reason: Agentic searchによる深いコードベース理解
+  - point: 5
+    reason: ターミナル、IDE、Slack、Webと柔軟な環境対応
+  - point: 3
+    reason: MCPによる高い拡張性
   minus_points: []
   summary: ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5の搭載により信頼性と解決力がさらに向上した。
 links:
@@ -44,20 +44,20 @@ links:
 relationships:
   parent: Claude
   children:
-    - Opcode
+  - Opcode
   related_tools:
-    - Spec Kit
-    - GitHub Copilot
-    - Cursor
-    - Windsurf
-    - Cline
-    - Devin
-    - Grok CLI
-    - Roola
-    - Agent Governance Toolkit
-    - Headroom
-    - Aqua Voice
-    - Agentic Workflows
+  - Spec Kit
+  - GitHub Copilot
+  - Cursor
+  - Devin Desktop
+  - Cline
+  - Devin
+  - Grok CLI
+  - Roola
+  - Agent Governance Toolkit
+  - Headroom
+  - Aqua Voice
+  - Agentic Workflows
 ---
 # **Claude Code 調査レポート**
 

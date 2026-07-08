@@ -8,41 +8,41 @@ official_site: https://aquavoice.com/
 date: '2026-03-01'
 last_updated: '2026-06-10'
 tags:
-  - エージェント
-  - コーディング支援
-  - 生産性向上
-  - 音声入力
+- エージェント
+- コーディング支援
+- 生産性向上
+- 音声入力
 description: 開発者やAIツールに特化し、画面のコンテキストを理解して高精度なテキスト変換を行う音声入力ツール
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: $8/月
   target_users:
-    - 開発者
-    - プロダクトマネージャー
+  - 開発者
+  - プロダクトマネージャー
   latest_highlight: 2026年6月にエンタープライズプランを追加し、iOSアプリもリリース
   update_frequency: 高
 evaluation:
   score: 79
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 開発用語やAI関連用語の認識精度が非常に高い（独自モデルAvalon）
-    - point: 3
-      reason: 画面上のコンテキスト（コードなど）を読み取り、出力内容を最適化可能
-    - point: 3
-      reason: あらゆるテキストボックスで直接利用できる汎用性の高さ
+  - point: 5
+    reason: 開発用語やAI関連用語の認識精度が非常に高い（独自モデルAvalon）
+  - point: 3
+    reason: 画面上のコンテキスト（コードなど）を読み取り、出力内容を最適化可能
+  - point: 3
+    reason: あらゆるテキストボックスで直接利用できる汎用性の高さ
   minus_points:
-    - point: -2
-      reason: 独自の高性能モデルAvalonの利用には有料プラン（Pro）が必要
+  - point: -2
+    reason: 独自の高性能モデルAvalonの利用には有料プラン（Pro）が必要
   summary: AIコーディング支援ツール（Cursor, Claude Codeなど）でのプロンプト入力や、日常の開発コミュニケーションにおいて圧倒的な生産性向上をもたらす音声入力ツール
 relationships:
   related_tools:
-    - Cursor
-    - Claude Code
-    - Windsurf
-    - VibeVoice
-    - Notely Voice
+  - Cursor
+  - Claude Code
+  - Devin Desktop
+  - VibeVoice
+  - Notely Voice
 ---
 
 # **Aqua Voice 調査レポート**

@@ -1,72 +1,74 @@
 ---
-title: Windsurf 調査レポート
-tool_name: Windsurf
-tool_reading: ウィンドサーフ
+title: Devin Desktop 調査レポート
+tool_name: Devin Desktop
+tool_reading: デヴィン デスクトップ / ウィンドサーフ
 category: AIエディタ/IDE
 developer: Cognition, Inc.
 official_site: https://windsurf.com/
 date: '2025-10-21'
-last_updated: '2026-03-15'
+last_updated: '2026-07-08'
 tags:
-  - AI
-  - エージェント
-  - コーディング支援
-  - 生成AI
-  - 開発者ツール
+- AI
+- エージェント
+- コーディング支援
+- 生成AI
+- 開発者ツール
 description: Windsurfは、開発者がフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: $15/月
+  starting_price: $20/月
   target_users:
-    - 開発者
-    - スタートアップ
-    - 大企業
-  latest_highlight: 2026年3月にv1.9577系をリリース、Jupyter NotebookやCascade機能のパフォーマンス向上など
+  - 開発者
+  - スタートアップ
+  - 大企業
+  latest_highlight: 2026年7月にv3.4.27をリリース。2026年6月にWindsurfからDevin Desktopに名称変更。
   update_frequency: 高
 evaluation:
-  score: 90
+  score: 91
   base_score: 70
   plus_points:
-    - point: 8
-      reason: Cascadeエージェントやライブプレビューなど、競合より優れた独自機能が豊富
-    - point: 5
-      reason: 40以上のIDEに対応しており、既存の開発環境に導入しやすい
-    - point: 5
-      reason: SOC 2やFedRAMP Highなど高いセキュリティ基準を満たしている
-    - point: 5
-      reason: 新LLMの迅速な統合や独自機能開発など、アップデートが非常に活発
+  - point: 8
+    reason: Cascadeエージェントやライブプレビューなど、競合より優れた独自機能が豊富
+  - point: 5
+    reason: 40以上のIDEに対応しており、既存の開発環境に導入しやすい
+  - point: 5
+    reason: SOC 2やFedRAMP Highなど高いセキュリティ基準を満たしている
+  - point: 5
+    reason: 新LLMの迅速な統合や独自機能開発など、アップデートが非常に活発
+  - point: 1
+    reason: Devin CloudやDevin Localエージェントによる柔軟で強力な環境連携の追加
   minus_points:
-    - point: -3
-      reason: G2レビューでドキュメントやコミュニティがまだ発展途上との指摘がある
+  - point: -3
+    reason: G2レビューでドキュメントやコミュニティがまだ発展途上との指摘がある
   summary: 豊富な独自機能と高いセキュリティを両立し、活発な開発が続く先進的なAIコードエディタ。
 links:
   documentation: https://docs.windsurf.com/
 relationships:
   related_tools:
-    - Kiro
-    - Visual Studio Code
-    - Cursor
-    - GitHub Copilot
-    - Cline
-    - Roo Code
-    - Claude Code
-    - Devin
-    - Aqua Voice
+  - Kiro
+  - Visual Studio Code
+  - Cursor
+  - GitHub Copilot
+  - Cline
+  - Roo Code
+  - Claude Code
+  - Devin
+  - Aqua Voice
 ---
 
 # **Windsurf 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: Windsurf
-* **ツールの読み方**: ウィンドサーフ
+* **ツール名**: Devin Desktop (旧 Windsurf)
+* **ツールの読み方**: デヴィン デスクトップ / ウィンドサーフ
 * **開発元**: Cognition, Inc.
 * **公式サイト**: [https://windsurf.com/](https://windsurf.com/)
 * **関連リンク**:
   * ドキュメント: [https://docs.windsurf.com/](https://docs.windsurf.com/)
 * **カテゴリ**: AIコードエディタ
-* **概要**: Windsurfは、開発者とそのチームがフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。独自のAIネイティブIDEのほか、既存のIDE（VS Code, JetBrainsなど40以上）と連携するプラグインも提供しています。Cognition, Inc.（Devinの開発元）によって開発・提供されています。
+* **概要**: Devin Desktop (旧 Windsurf) は、開発者とそのチームがフロー状態を維持できるように構築された、最も直感的なAIコーディング体験を提供するツールです。独自のAIネイティブIDEのほか、既存のIDE（VS Code, JetBrainsなど40以上）と連携するプラグインも提供しています。Cognition, Inc.（Devinの開発元）によって開発・提供されています。
 
 ## **2. 目的と主な利用シーン**
 
@@ -85,6 +87,9 @@ relationships:
 
 ## **3. 主要機能**
 
+* **自律エージェント機能 (Devin Cloud / Devin Local)**: クラウド上で自律的に動作するDevinや、ローカル環境で動作するDevin LocalエージェントをIDEから直接利用可能。
+* **Arena Mode**: 複数のAIモデルを並行して実行し、結果を比較して最適なものを選択できるモード。
+* **Plan Mode**: コーディングを開始する前に詳細な実装計画を作成し、エージェントと共有できる機能。
 * **Cascade**: コードベースを深く理解し、コンテキストに応じたコード生成や修正を行うAIエージェント。Memories機能によりプロジェクトの重要な情報を記憶する。
 * **AIコード補完 (Tab)**: 複数行にわたるコードの提案や、オープンソースコードでトレーニングされたモデルによる自動補完。
 * **ライブプレビュー**: IDE内でコードのWebプレビューを直接表示し、要素をクリックして修正を指示できる。
@@ -208,6 +213,17 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-07-07**: v3.4.27リリース。自律モードでのdiff表示の問題を修正。
+* **2026-07-04**: v3.4.22リリース。スペースでの新しいセッション、チャットからの画像コピー、エージェントモードのデフォルト化など。Devin Localでは編集の差分レビュー、/mcpコマンドなどが追加。
+* **2026-06-23**: v3.3.18 / v3.2.28リリース。ACU使用量の表示、MCPレジストリキャッシュの起動時ウォームアップなど。
+* **2026-06-16**: v3.2.16リリース。Devin Localプラグインシステムのプレビュー、サブエージェントの直接MCP呼び出しなど。
+* **2026-06-10**: v3.1.7リリース。Agent/Editorモードの切り替えをスムーズに。Devin Localへの名称変更など。
+* **2026-06-02**: v3.0.12リリース。Windsurfから**Devin Desktop**へ正式に名称変更。
+* **2026-05-06**: v2.2.17リリース。Devin ReviewとQuick Review機能を追加。
+* **2026-04-29**: v2.1.29リリース。Devin for TerminalとWindsurf内のDevin Localエージェントを追加。
+* **2026-04-15**: v2.0.44リリース。**Windsurf 2.0**として、Devin CloudエージェントをIDEに統合し、Agent Command Centerを追加。
+* **2026-04-06**: v1.9600.38リリース。Adaptiveモデルルーターを導入し、タスクに最適なモデルを自動選択。
+* **2026-01-30**: v1.9544.24リリース。複数のモデルを比較できるArena Modeと、詳細な計画を作成するPlan Modeを導入。
 * **2026-03-09**: v1.9577.24リリース。Jupyter Notebookのパフォーマンス向上、Cascade UIレンダリングの改善、モデル価格変更の通知機能などを追加。
 * **2026-02-12**: v1.9552.21リリース。Plan ModeからCode Modeへの自動切り替え機能、Linux ARM64クライアントの正式サポート、Devinサービスキー認証のサポートなどを追加。
 * **2026-02-04**: v1.9544.35リリース。Arena ModeのFast ArenaおよびHybrid Arenaで`GPT-5.3-Codex-Spark`モデルが利用可能に。
@@ -218,13 +234,13 @@ relationships:
 * **2025-10-29**: 高速なエージェントモデル`SWE-1.5`を導入。
 * **2025-10-16**: SWE-grepを活用した`Fast Context`サブエージェントを導入し、関連コードの検索速度が最大20倍向上。
 
-(出典: [Windsurf Blog](https://windsurf.com/blog), [Changelog](https://windsurf.com/changelog))
+(出典: [Windsurf Blog](https://windsurf.com/blog), [Changelog](https://docs.devin.ai/desktop/changelog))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Windsurf) | Cursor | GitHub Copilot | Devin |
+| 機能カテゴリ | 機能項目 | 本ツール (Devin Desktop) | Cursor | GitHub Copilot | Devin |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | コード補完 | ◎<br><small>Tab補完が高速</small> | ◎<br><small>文脈理解が深い</small> | ◎<br><small>安定性が高い</small> | △<br><small>自律実行がメイン</small> |
 | **カテゴリ特定** | エージェント機能 | ◎<br><small>Cascade</small> | ◎<br><small>Agent Mode</small> | △<br><small>Chatがメイン</small> | ◎<br><small>完全自律型</small> |
@@ -235,7 +251,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Windsurf** | AIネイティブIDEとプラグインの両方を提供。Cascadeエージェントが強力。 | 既存のIDE環境を維持できる柔軟性。ライブプレビュー機能。高いセキュリティ基準。 | コミュニティやドキュメントがまだ発展途上。 | 既存の環境を変えずに強力なAIエージェントを導入したい場合。セキュリティ要件が厳しい場合。 |
+| **Devin Desktop** | AIネイティブIDEとプラグインの両方を提供。Cascadeエージェントが強力。 | 既存のIDE環境を維持できる柔軟性。ライブプレビュー機能。高いセキュリティ基準。 | コミュニティやドキュメントがまだ発展途上。 | 既存の環境を変えずに強力なAIエージェントを導入したい場合。セキュリティ要件が厳しい場合。 |
 | **Cursor** | VS CodeフォークのAI専用エディタ。 | コードベース全体の深い理解。AIとのシームレスな統合体験。 | 専用エディタへの移行が必要。 | 完全にAI中心の開発体験を求め、エディタ移行も厭わない場合。 |
 | **GitHub Copilot** | 最も普及しているAIコーディング支援ツール。 | 圧倒的なユーザー数と安定性。GitHubとの深い連携。 | 自律的なエージェント機能や深いコード理解では競合に劣る場合がある。 | 安定性と信頼性を重視し、標準的な補完機能を求める場合。 |
 | **Devin** | 完全自律型AIソフトウェアエンジニア。 | タスクの計画から実行までを自律的に行う能力。 | コストが高く、複雑なタスクの成功率に課題がある。 | 開発タスクそのものをAIに委任したい場合（プロトタイピング等）。 |
@@ -243,14 +259,14 @@ relationships:
 ## **17. 総評**
 
 * **総合的な評価**:
-  * Windsurfは、AIによる強力なコード生成・支援機能と、開発者の既存のワークフローを尊重する柔軟性を両立させた、非常にバランスの取れたAIコーディング支援ツールである。特に、コードベース全体を理解する「Cascade」エージェントや、直感的な「ライブプレビュー」機能は、競合に対する明確な優位性と言える。Cognition社による開発体制となり、Devinとの連携や技術共有が進んでいる点も大きな強みである。SOC 2 Type IIやFedRAMP Highといった高いセキュリティ基準を満たしており、エンタープライズでの利用にも適している。
+  * Devin Desktop (旧 Windsurf) は、AIによる強力なコード生成・支援機能と、開発者の既存のワークフローを尊重する柔軟性を両立させた、非常にバランスの取れたAIコーディング支援ツールである。特に、コードベース全体を理解する「Cascade」エージェントや、直感的な「ライブプレビュー」機能は、競合に対する明確な優位性と言える。Cognition社による開発体制となり、Devinとの連携や技術共有が進んでいる点も大きな強みである。SOC 2 Type IIやFedRAMP Highといった高いセキュリティ基準を満たしており、エンタープライズでの利用にも適している。
 * **推奨されるチームやプロジェクト**:
   * 新規・既存を問わず、AIの力を活用して開発速度を向上させたいあらゆる開発チーム。
   * 特に、フロントエンド開発の比重が高いプロジェクトでは、ライブプレビュー機能が大きな効果を発揮する。
   * VS CodeやJetBrainsなど、既存の開発環境を変えずにAI支援を導入したいチーム。
   * 高いセキュリティやコンプライアンスが求められるエンタープライズ環境。
 * **選択時のポイント**:
-  * 既存IDEとの連携、高度なAIエージェント機能、セキュリティを重視するならWindsurfが最適。
+  * 既存IDEとの連携、高度なAIエージェント機能、セキュリティを重視するならDevin Desktopが最適。
   * AI中心の新しい開発体験を求めるならCursor。
   * 安定性と実績を重視し、主にコード補完機能を利用したいならGitHub Copilot。
   * タスクそのものを委任したいならDevin。

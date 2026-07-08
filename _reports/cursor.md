@@ -8,56 +8,56 @@ official_site: https://cursor.com/
 date: '2025-10-19'
 last_updated: '2026-05-10'
 tags:
-  - AI
-  - IDE
-  - エージェント
-  - コーディング支援
-  - 開発者ツール
+- AI
+- IDE
+- エージェント
+- コーディング支援
+- 開発者ツール
 description: AIを第一に考えて作られたコードエディタ。VS Codeのフォークをベースに、コードベース全体を理解するAI機能が深く統合されている。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: $20/月
   target_users:
-    - 開発者
-    - AIエンジニア
+  - 開発者
+  - AIエンジニア
   latest_highlight: 2026年5月に「Security Reviewer」と「Vulnerability Scanner」のセキュリティ関連機能を追加
   update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
-    - point: 8
-      reason: VS Codeベースの優れたUXと、既存のキーバインドや拡張機能をそのまま利用できる点
-    - point: 7
-      reason: コードベース全体を理解し、ファイル横断でのコード生成・編集・リファクタリングが可能
-    - point: 5
-      reason: Multi-AgentやPlan Modeなど、単なる補完を超えた高度な自律エージェント機能
-    - point: 3
-      reason: CLI連携やデバッグモードなど、開発ワークフロー全体を支援する機能が継続的に追加されている
-    - point: 2
-      reason: 主要な最新LLMを選択して利用できる柔軟性
+  - point: 8
+    reason: VS Codeベースの優れたUXと、既存のキーバインドや拡張機能をそのまま利用できる点
+  - point: 7
+    reason: コードベース全体を理解し、ファイル横断でのコード生成・編集・リファクタリングが可能
+  - point: 5
+    reason: Multi-AgentやPlan Modeなど、単なる補完を超えた高度な自律エージェント機能
+  - point: 3
+    reason: CLI連携やデバッグモードなど、開発ワークフロー全体を支援する機能が継続的に追加されている
+  - point: 2
+    reason: 主要な最新LLMを選択して利用できる柔軟性
   minus_points:
-    - point: -3
-      reason: 競合のAIコーディング支援ツール（GitHub Copilot等）と比較して料金が高め
-    - point: -2
-      reason: AI機能の使用により、時折パフォーマンスが低下する場合があるとの報告
-    - point: -2
-      reason: 料金プランが細分化されており、最適なプランの選択がやや複雑
+  - point: -3
+    reason: 競合のAIコーディング支援ツール（GitHub Copilot等）と比較して料金が高め
+  - point: -2
+    reason: AI機能の使用により、時折パフォーマンスが低下する場合があるとの報告
+  - point: -2
+    reason: 料金プランが細分化されており、最適なプランの選択がやや複雑
   summary: VS Codeの操作性を維持しつつ強力なAI機能を統合した高機能エディタだが、価格体系とパフォーマンスが検討点となる。
 links:
   documentation: https://cursor.com/docs
 relationships:
   related_tools:
-    - Spec Kit
-    - GitHub Copilot
-    - Windsurf
-    - Cline
-    - Roo Code
-    - Visual Studio Code
-    - Devin
-    - Model Context Protocol
-    - Agent Trace
+  - Spec Kit
+  - GitHub Copilot
+  - Devin Desktop
+  - Cline
+  - Roo Code
+  - Visual Studio Code
+  - Devin
+  - Model Context Protocol
+  - Agent Trace
 ---
 
 # **Cursor 調査レポート**
@@ -223,7 +223,7 @@ relationships:
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Cursor) | GitHub Copilot | Windsurf | VS Code |
+| 機能カテゴリ | 機能項目 | 本ツール (Cursor) | GitHub Copilot | Devin Desktop | VS Code |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | エディタ統合 | ◎<br><small>完全統合</small> | ◯<br><small>拡張機能</small> | ◎<br><small>完全統合</small> | -<br><small>ベース</small> |
 | **カテゴリ特定** | コードベース理解 | ◎<br><small>RAG+インデックス</small> | △<br><small>限定的</small> | ◎<br><small>Cascade</small> | ×<br><small>なし</small> |
@@ -236,7 +236,7 @@ relationships:
 |---------|------|------|------|------------------|
 | **Cursor** | VS CodeベースのAIネイティブエディタ。 | 深い文脈理解、Composerによる強力な編集機能、既存VS Code環境との互換性。 | ベースのVS Code更新に追従するラグがある。独自の拡張機能ストアはない（VS Code用を使う）。 | コードベース全体にまたがる複雑なタスクをAIに任せたい場合。 |
 | **GitHub Copilot** | 各種エディタの拡張機能として提供。 | 導入が手軽、多くのエディタに対応、比較的安価。GitHubプラットフォームとの連携。 | エディタのUIそのものを変更できないため、統合体験はCursorに劣る場合がある。 | 既存のエディタ環境を変えたくない場合。GitHub中心の開発フローの場合。 |
-| **Windsurf** | ライブプレビューとCascadeエージェントを特徴とするAIエディタ。 | 直感的なプレビュー機能、強力なエージェント機能。 | コミュニティやエコシステムがまだ発展途上。 | フロントエンド開発などで即時プレビューを重視する場合。 |
+| **Devin Desktop** | ライブプレビューとCascadeエージェントを特徴とするAIエディタ。 | 直感的なプレビュー機能、強力なエージェント機能。 | コミュニティやエコシステムがまだ発展途上。 | フロントエンド開発などで即時プレビューを重視する場合。 |
 | **VS Code** | 世界で最も使われているコードエディタ。Cursorのベース。 | 無料、軽量、圧倒的な拡張機能数。 | AI機能は拡張機能に依存し、標準では搭載されていない。 | AI機能を必要としない、または自分で拡張機能を選んで環境構築したい場合。 |
 
 ## **17. 総評**

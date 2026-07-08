@@ -8,53 +8,53 @@ official_site: https://github.com/features/copilot
 date: '2026-01-17'
 last_updated: '2026-05-21'
 tags:
-  - AI
-  - エージェント
-  - コーディング支援
-  - 生成AI
-  - 開発者ツール
+- AI
+- エージェント
+- コーディング支援
+- 生成AI
+- 開発者ツール
 description: GitHub Copilotは、GPT-5やClaude 4.5などの最新モデルを搭載し、IDEやCLIでコーディング全般を支援するAIペアプログラマーです。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: 無料
   target_users:
-    - 開発者
-    - スタートアップ
-    - 大企業
+  - 開発者
+  - スタートアップ
+  - 大企業
   latest_highlight: 2026年5月にCopilot on WebやVS Code等でのモデル自動選択・アップデート、Gemini 3.5 Flashサポート等を追加
   update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 無料プランがあり、個人開発者も手軽に利用開始できる
-    - point: 8
-      reason: GPT-5、Claude 4.5、Gemini 3.5 Flashなど、利用可能なAIモデルの選択肢が非常に豊富
-    - point: 6
-      reason: Copilot EditsやCLIエージェントなど、機能の進化が非常に速い
+  - point: 5
+    reason: 無料プランがあり、個人開発者も手軽に利用開始できる
+  - point: 8
+    reason: GPT-5、Claude 4.5、Gemini 3.5 Flashなど、利用可能なAIモデルの選択肢が非常に豊富
+  - point: 6
+    reason: Copilot EditsやCLIエージェントなど、機能の進化が非常に速い
   minus_points:
-    - point: -3
-      reason: 上位機能（Spark等）を含むPro+プランは月額$39と個人向けとしては高額
-    - point: -2
-      reason: 機能が多岐にわたるため、使いこなすまでの学習コストがやや高い
+  - point: -3
+    reason: 上位機能（Spark等）を含むPro+プランは月額$39と個人向けとしては高額
+  - point: -2
+    reason: 機能が多岐にわたるため、使いこなすまでの学習コストがやや高い
   summary: 無料プランからハイエンドなPro+まで幅広いニーズに対応し、常に最新モデルと機能を提供する業界標準ツール。
 links:
   documentation: https://docs.github.com/en/copilot
 relationships:
   parent: GitHub
   children:
-    - GitHub Copilot CLI
-    - GitHub Copilot app
+  - GitHub Copilot CLI
+  - GitHub Copilot app
   related_tools:
-    - Cursor
-    - Windsurf
-    - Cline
-    - Roo Code
-    - CodeRabbit
-    - Devin
-    - SHIFT DQS for リバースエンジニアリング
+  - Cursor
+  - Devin Desktop
+  - Cline
+  - Roo Code
+  - CodeRabbit
+  - Devin
+  - SHIFT DQS for リバースエンジニアリング
 ---
 
 # **GitHub Copilot 調査レポート**

@@ -8,32 +8,32 @@ official_site: https://openspec.dev/
 date: '2026-03-11'
 last_updated: '2026-07-01'
 tags:
-  - AIコーディングアシスタント
-  - オープンソース
-  - ドキュメンテーション
+- AIコーディングアシスタント
+- オープンソース
+- ドキュメンテーション
 description: AIコーディングアシスタントのための軽量な仕様駆動型フレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-    - 開発者
-    - AIエージェント利用者
+  - 開発者
+  - AIエージェント利用者
   latest_highlight: Stores（ベータ版）による仕様と変更のシンプルな管理モデルが導入
   update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 20以上の主要なAIコーディングアシスタントと統合できる高い汎用性
-    - point: 3
-      reason: 完全無料のオープンソースツール
-    - point: 4
-      reason: コードベースと仕様書のズレを防ぐSpec-Drivenなアプローチ
+  - point: 5
+    reason: 20以上の主要なAIコーディングアシスタントと統合できる高い汎用性
+  - point: 3
+    reason: 完全無料のオープンソースツール
+  - point: 4
+    reason: コードベースと仕様書のズレを防ぐSpec-Drivenなアプローチ
   minus_points:
-    - point: -2
-      reason: テキスト（Markdown）ベースのため、視覚的なプランニングツールを好むユーザーには不向きな場合がある
+  - point: -2
+    reason: テキスト（Markdown）ベースのため、視覚的なプランニングツールを好むユーザーには不向きな場合がある
   summary: AIコーディングアシスタントの文脈を保持し、仕様ドリブンな開発を強力に支援する軽量ツール
 links:
   github: https://github.com/Fission-AI/OpenSpec
@@ -42,12 +42,12 @@ links:
   documentation: https://github.com/Fission-AI/OpenSpec/blob/main/docs/getting-started.md
 relationships:
   related_tools:
-    - GitHub Copilot
-    - Claude Code
-    - Cursor
-    - Windsurf
-    - Spec Kit
-    - Kiro
+  - GitHub Copilot
+  - Claude Code
+  - Cursor
+  - Devin Desktop
+  - Spec Kit
+  - Kiro
 ---
 
 # **OpenSpec 調査レポート**

@@ -8,37 +8,37 @@ official_site: https://roocode.com/
 date: '2026-02-25'
 last_updated: '2026-06-07'
 tags:
-  - AI
-  - VS Code
-  - CLI
-  - エージェント
-  - オープンソース
+- AI
+- VS Code
+- CLI
+- エージェント
+- オープンソース
 description: VS Code拡張機能およびCLIとして動作する、オープンソースのAIソフトウェアエンジニアリングツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料 (BYOK)
   target_users:
-    - 開発者
-    - エンジニアリングチーム
-    - スタートアップ
+  - 開発者
+  - エンジニアリングチーム
+  - スタートアップ
   latest_highlight: 2026年5月にコミュニティ主導への移行を発表、GPT-5.5やClaude Opus 4.7など最新モデルへの対応を拡充（v3.53.0）
   update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 完全なモデル非依存（BYOK）で、最新モデル（GPT-5.5, Claude Opus 4.7等）を即座に利用可能
-    - point: 5
-      reason: 強力なコミュニティによるオープンソースプロジェクトとしての透明性と高いカスタマイズ性
-    - point: 4
-      reason: CLI対応やスラッシュコマンドなど、多様なワークフローに統合可能な柔軟性
-    - point: 3
-      reason: ロール別モード（Code, Architect, Debug）による深いコンテキスト理解と自律実行
+  - point: 5
+    reason: 完全なモデル非依存（BYOK）で、最新モデル（GPT-5.5, Claude Opus 4.7等）を即座に利用可能
+  - point: 5
+    reason: 強力なコミュニティによるオープンソースプロジェクトとしての透明性と高いカスタマイズ性
+  - point: 4
+    reason: CLI対応やスラッシュコマンドなど、多様なワークフローに統合可能な柔軟性
+  - point: 3
+    reason: ロール別モード（Code, Architect, Debug）による深いコンテキスト理解と自律実行
   minus_points:
-    - point: -1
-      reason: クラウドサービスのサンセットに伴い、機能の一部がローカル拡張機能やCLIに集約
+  - point: -1
+    reason: クラウドサービスのサンセットに伴い、機能の一部がローカル拡張機能やCLIに集約
   summary: 開発チームがRoomoteに移行しコミュニティ主導となったが、最先端モデルとCLIへの対応で強力なローカル環境アシスタントとして進化を続けている。
 links:
   github: https://github.com/RooCodeInc/Roo-Code
@@ -47,13 +47,13 @@ links:
   documentation: https://docs.roocode.com/
 relationships:
   related_tools:
-    - Cline
-    - Cursor
-    - GitHub Copilot
-    - Windsurf
-    - Claude Code
-    - Visual Studio Code
-    - Devin
+  - Cline
+  - Cursor
+  - GitHub Copilot
+  - Devin Desktop
+  - Claude Code
+  - Visual Studio Code
+  - Devin
 ---
 
 # **Roo Code 調査レポート**
