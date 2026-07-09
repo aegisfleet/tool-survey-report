@@ -47,6 +47,7 @@ relationships:
     - Opcode
   related_tools:
     - Spec Kit
+    - Paseo
     - GitHub Copilot
     - Cursor
     - Devin Desktop
