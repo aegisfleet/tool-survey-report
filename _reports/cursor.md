@@ -50,6 +50,7 @@ links:
 relationships:
   related_tools:
     - Spec Kit
+    - Paseo
     - GitHub Copilot
     - Devin Desktop
     - Cline

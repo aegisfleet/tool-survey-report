@@ -41,6 +41,7 @@ relationships:
   parent: ChatGPT
   related_tools:
     - Codex app
+    - Paseo
     - GitHub Copilot
     - Devin
 ---
