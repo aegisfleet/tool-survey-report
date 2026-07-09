@@ -94,20 +94,20 @@ Paseoはローカルファーストな設計思想に基づき、Dockerに類似
 
 ```mermaid
 graph TD
-    subgraph "Client Layer (UI)"
-        A[Mobile App / Expo]
-        B[Desktop App / Electron]
-        C[CLI / Terminal]
+    subgraph "クライアント層 (UI)"
+        A[モバイルアプリ / Expo]
+        B[デスクトップアプリ / Electron]
+        C[CLI / ターミナル]
     end
 
-    subgraph "Relay Server"
-        D[E2EE Relay]
+    subgraph "リレーサーバー"
+        D[E2EE暗号化リレー]
     end
 
-    subgraph "Local Host / VM (User Environment)"
-        E[Paseo Daemon / packages/server]
-        F[Agent Session A / Worktree A]
-        G[Agent Session B / Worktree B]
+    subgraph "ローカルホスト / VM (ユーザー環境)"
+        E[Paseoデーモン / packages/server]
+        F[エージェントセッションA / ワークツリーA]
+        G[エージェントセッションB / ワークツリーB]
     end
 
     A <--> D
