@@ -51,6 +51,7 @@ relationships:
     - GitHub Copilot
     - Cursor
     - Devin Desktop
+    - Claude Cowork
     - Cline
     - Devin
     - Grok CLI
