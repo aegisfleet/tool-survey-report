@@ -19,7 +19,7 @@ quick_summary:
   target_users:
     - 学生
     - プロフェッショナル
-  latest_highlight: "Android 17対応とF-droid向けビルドを追加 (v1.3.4)"
+  latest_highlight: Android 17対応とF-droid向けビルドを追加 (v1.3.4)
   update_frequency: 中
 evaluation:
   score: 75
