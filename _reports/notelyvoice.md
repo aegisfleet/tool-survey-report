@@ -4,7 +4,7 @@ tool_name: Notely Voice
 tool_reading: ノートリーボイス
 category: ドキュメント/ナレッジ
 developer: Notely Voice, Inc.
-official_site: https://notelyvoice.com/
+official_site: https://notelyvoice.ai/
 date: '2026-03-16'
 last_updated: '2026-07-10'
 tags:
@@ -45,7 +45,7 @@ relationships:
 * **ツール名**: Notely Voice
 * **ツールの読み方**: ノートリーボイス
 * **開発元**: Notely Voice, Inc.
-* **公式サイト**: [https://notelyvoice.com/](https://notelyvoice.com/)
+* **公式サイト**: [https://notelyvoice.ai/](https://notelyvoice.ai/)
 * **関連リンク**:
   * GitHub: [https://github.com/Notely-Voice/NotelyVoice](https://github.com/Notely-Voice/NotelyVoice)
 * **カテゴリ**: ドキュメント/ナレッジ
