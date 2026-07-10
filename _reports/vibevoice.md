@@ -47,6 +47,7 @@ relationships:
     - Aqua Voice
     - Irodori-TTS
     - VoxCPM
+    - Notely Voice
 ---
 
 # **VibeVoice 調査レポート**
