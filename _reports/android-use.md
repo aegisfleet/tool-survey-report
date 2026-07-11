@@ -2,11 +2,11 @@
 title: Android Use 調査レポート
 tool_name: Android Use
 tool_reading: アンドロイド ユース
-category: デスクトップ/GUIエージェント
+category: 自律型AIエージェント
 developer: Action State Labs
 official_site: https://github.com/actionstatelabs/android-action-kernel
 date: '2026-01-28'
-last_updated: '2026-03-17'
+last_updated: '2026-07-11'
 tags:
   - AI
   - エージェント
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - QAエンジニア
     - 業務自動化担当者
-  latest_highlight: 2025年12月に初期バージョンが公開
+  latest_highlight: 2026年1月にマルチLLM対応（Groq, Bedrock）とモジュラーアーキテクチャへの刷新を実施
   update_frequency: 高
 evaluation:
   score: 79
@@ -46,13 +46,12 @@ links:
   github: https://github.com/actionstatelabs/android-action-kernel
   deepwiki: https://deepwiki.com/actionstatelabs/android-action-kernel
 relationships:
+  parent: Android
   related_tools:
-    - Android
     - Appium
     - UiPath
     - Devin
     - Claude
-  parent: Android
 ---
 
 # **Android Use 調査レポート**
@@ -104,8 +103,42 @@ relationships:
 * **Reasoning (推論)**: LLM (GPT-4など) が目標達成のためのアクションを決定します。
 * **Action (実行)**: ADBコマンドを使用して、タップ、テキスト入力、スワイプなどの操作を実行します。
 * **Pythonカーネル**: 開発者が容易に拡張可能なシンプルなPythonライブラリとして提供されています。
+* **マルチLLMサポート**: OpenAIだけでなく、GroqやAWS Bedrockなど複数のLLMプロバイダーをサポートし、柔軟なモデル選択が可能です。
 
-## **4. 開始手順・セットアップ**
+
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: ローカル環境（またはクラウドAPI）で動作し、ADBを通じてデバイスと通信するクライアント・サーバーライクな構成です。
+* **主要コンポーネントとデータフロー**:
+  * **Perception Module**: ADBを通じてAndroidのAccessibility APIからUI構造（XML）を取得・パースし、不要な要素を除外（サニタイズ）します。
+  * **LLM Provider**: 取得したUI情報とユーザーの目的を基に、GPT-4、Groq、AWS Bedrock等のLLMが推論を行い、次に実行すべきアクション（タップ、スワイプ、入力等）を決定します。
+  * **Action Module**: 決定されたアクションをADBコマンド（`adb shell input ...`）に変換し、デバイス上で実行します。
+* **特筆すべき要素技術**:
+  * **Accessibility API**: 画像認識（Visionモデル）に頼らず、軽量なXMLデータを処理することで、大幅なコスト削減と高速化を実現。
+  * **ADB (Android Debug Bridge)**: コンピュータとAndroidデバイス間の通信とコマンド実行を担うコア技術。
+
+```mermaid
+graph TD
+    User([ユーザー]) --> |Goal（目標）| Agent[Android Use Kernel]
+    Agent --> |UI構造取得リクエスト| ADB[ADB]
+    ADB --> |Accessibility XML| Agent
+    Agent --> |UI情報 & Goal| LLM[LLM Provider<br/>OpenAI, Groq, Bedrock]
+    LLM --> |推論結果（Action）| Agent
+    Agent --> |ADB Commands| ADB
+    ADB --> |アクション実行| Device([Android デバイス])
+    Device --> |状態更新| ADB
+```
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -136,7 +169,7 @@ relationships:
   python main.py --goal "Chromeを開いて天気予報を検索する"
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -148,7 +181,7 @@ relationships:
 * **高速な応答**: データ処理が軽量なため、レイテンシが1秒未満と高速に動作します。
 * **モバイルネイティブ**: WebブラウザやデスクトップOSに限定されず、世界中のモバイルワーカーが利用するネイティブアプリを直接操作できます。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -161,7 +194,7 @@ relationships:
 * **アクセシビリティ依存**: アプリ側が適切なアクセシビリティ情報（Content Descriptionなど）を提供していない場合、正しく操作できない可能性があります。
 * **日本語対応**: ツール自体は英語ベースであり、日本語UIのアプリ操作における精度は検証が必要です。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -178,7 +211,7 @@ relationships:
 * **課金体系**: オープンソースのため無料ですが、LLM（OpenAI API）の利用料は別途発生します。
 * **無料トライアル**: オープンソースのため制限なく利用可能です。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -190,7 +223,7 @@ relationships:
 * **導入事例**: デモ動画では、運転手が撮影した請求書の写真をWhatsApp経由で受け取り、エージェントが自動で銀行アプリやファクタリングアプリに入力・申請するワークフローが紹介されています。
 * **対象業界**: 物流、フィールドサービス、ギグエコノミーなど。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -202,14 +235,14 @@ relationships:
 * **コミュニティ**: GitHub IssuesやX（旧Twitter）で開発者と直接やり取りが可能です。
 * **公式サポート**: オープンソースプロジェクトのため、公式の商用サポート窓口は提供されていません。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -219,11 +252,11 @@ relationships:
 
 * **API**: Pythonライブラリとして提供されており、独自のPythonスクリプトからインポートして利用可能です。
 * **外部サービス連携**:
-  * **OpenAI API**: 推論エンジンとしてGPT-4などを利用します。
+  * **LLMプロバイダー**: OpenAI APIに加え、Groq APIやAWS Bedrockを推論エンジンとして利用可能であり、柔軟なモデル選択が可能です。
   * **ADB (Android Debug Bridge)**: Android端末との通信に利用します。
   * **Android Apps**: Chrome, Gmail, WhatsAppなど、Android上で動作するあらゆるアプリと連携可能です。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -238,7 +271,7 @@ relationships:
 | **iOS** | × | 非対応。 | iOS向けの類似機能（WDAなど）は含まれていない。 |
 | **LangChain** | ◯ | Pythonベースのため、エージェントとして組み込み可能。 | カスタムツールの実装が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -251,7 +284,7 @@ relationships:
 * **データ管理**: データ処理はローカルPC上で行われるため、外部サーバー（LLMを除く）へのデータ送信は最小限です。
 * **準拠規格**: オープンソースプロジェクトのため、ISO27001等の認証は取得していません。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -261,7 +294,7 @@ relationships:
 * **UI/UX**: CLI（コマンドライン）ベースのツールであり、開発者向けのインターフェースです。
 * **学習コスト**: Pythonの基礎知識があれば導入は容易ですが、トラブルシューティングにはAndroid開発（ADBなど）の知識が役立ちます。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -276,7 +309,7 @@ relationships:
   * **座標依存の操作**: 画面サイズに依存する絶対座標での指定は避け、UI要素のテキストやIDに基づく操作を心がけるべきです。
   * **不安定な接続**: ADB接続が切断されると動作が停止するため、安定したUSBケーブルまたはWi-Fi環境を確保する必要があります。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -298,7 +331,7 @@ relationships:
 * **特徴的なユースケース**:
   * 物流ドライバー向けの業務アプリ操作の自動化。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -312,12 +345,18 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-01-29**: **Fix: Agent not typing in search boxes**
+  * 検索ボックスへの入力処理に関するバグ（Issue #7）を修正し、操作の安定性を向上。
+* **2026-01-26**: **Refactor codebase into modular architecture / Enhanced kernel with multi-LLM support**
+  * `kernel.py` をSOLID原則に基づくモジュラーアーキテクチャに刷新し、保守性と拡張性を大幅に向上。
+  * 従来のOpenAIに加え、GroqおよびAWS BedrockをサポートするマルチLLM対応を追加。
+  * 新たなアクションと機能強化により、全体的な堅牢性が向上。
 * **2025-12-13**: **Initial Release**
   * プロジェクトの初公開。Android Accessibility APIを利用したUI構造解析機能、GPT-4による推論ループ、基本的なアクション（タップ、入力、スワイプ）を実装。
 
-(出典: [GitHub Repository](https://github.com/actionstatelabs/android-action-kernel))
+(出典: [GitHub Releases](https://github.com/actionstatelabs/android-action-kernel/releases) / [Changelog](https://github.com/actionstatelabs/android-action-kernel/commits/main))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -325,16 +364,17 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | 本ツール (Android Use) | Appium | Claude | UiPath |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 自律操作 | ◎<br><small>完全自律型</small> | ×<br><small>シナリオ実行型</small> | ◎<br><small>完全自律型</small> | ◯<br><small>一部AI対応</small> |
 | **対象環境** | Androidネイティブ | ◎<br><small>特化している</small> | ◎<br><small>完全対応</small> | ×<br><small>デスクトップのみ</small> | △<br><small>可能だがPC経由</small> |
+| **マルチLLM** | 推論モデル | ◯<br><small>Groq, Bedrock対応</small> | △<br><small>設定が複雑</small> | ×<br><small>自社モデルのみ</small> | △<br><small>限定的</small> |
 | **コスト** | 実行コスト | ◎<br><small>非常に安価(非Vision)</small> | ◎<br><small>無料(OSS)</small> | △<br><small>高価(Vision)</small> | △<br><small>ライセンス料あり</small> |
 | **セットアップ** | 導入容易性 | △<br><small>ADB等が必要</small> | △<br><small>環境構築が複雑</small> | ◯<br><small>Docker等で容易</small> | △<br><small>大規模</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -348,7 +388,7 @@ relationships:
 | **Claude** | AnthropicのPC操作エージェント（Computer Use） | 汎用性が高く、画面上のあらゆるものを認識可能。 | コストが高い、モバイル非対応。 | デスクトップ作業の自動化を検討している場合。 |
 | **UiPath** | エンタープライズRPAプラットフォーム | 統合管理機能、サポート、信頼性が高い。 | コストが高い、モバイル操作はPC経由など構成が複雑。 | 全社的な業務自動化基盤として導入する場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
