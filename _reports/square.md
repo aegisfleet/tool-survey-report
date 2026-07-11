@@ -6,7 +6,7 @@ category: ビジネス/業務ツール
 developer: Block, Inc.
 official_site: https://squareup.com/
 date: '2026-04-07'
-last_updated: '2026-04-07'
+last_updated: '2026-07-11'
 tags:
   - POSシステム
   - 決済プラットフォーム
@@ -21,7 +21,7 @@ quick_summary:
     - 小売店・飲食店
     - 美容・サービス業
     - 中小規模事業者
-  latest_highlight: Square AIや次世代レジなどを追加したSpring 2025アップデートを実施
+  latest_highlight: 2026年7月のアップデートで在庫カウントのスマート化やフロアプランの保存機能を強化
   update_frequency: 高
 evaluation:
   score: 87
@@ -196,12 +196,16 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-07-02**: よりスマートな在庫カウント機能、フロアプランの保存、限定商品の提供数スケジューリング機能を追加。
+* **2026-06-18**: POS全体、価格設定、フルフィルメント機能のアップデート。
+* **2026-06-04**: 座席ごとのアレルゲン表示、小切手のドラッグ＆マージ、スマートルーター（プリンター）機能の追加など。
+* **2026-05-21**: POS全体でのダークモード対応、ドライブスルー機能の強化など。
 * **2026-03-27**: POSおよびKitchen Display System (KDS) 全体で、オープンオーダーに自動チケット番号が付与されるようになり、ドライブスルーやカウンターサービスのワークフローが改善された。
 * **2026-02-04**: 「Square Register (第2世代)」を発表。デュアルタッチスクリーンと高度なソフトウェアを備え、より高速なチェックアウトを実現。
 * **2025年 秋 (Vol. 2, 2025)**: Square AI (Beta) や Voice Ordering (Beta)、Grubhub統合、売上のBitcoin自動変換機能などを発表。
 * **2025年 春 (Spring 2025)**: ポケットサイズのPOS端末「Square Handheld」を発表し、在庫管理画面（Stock overview）の大幅なアップグレードや老化在庫レポート機能などを追加。
 
-(出典: [Square Feature Log](https://squareup.com/us/en/feature-log) / [Square Releases](https://squareup.com/us/en/releases) )
+(出典: [製品アップデート情報](https://squareup.com/us/en/release-notes))
 
 ## **16. 類似ツールとの比較**
 
