@@ -2,7 +2,7 @@
 title: Claude 調査レポート
 tool_name: Claude
 tool_reading: クロード
-category: AIチャット/アシスタント
+category: 基盤モデル/LLMチャット
 developer: Anthropic
 official_site: https://claude.ai/
 date: '2025-10-18'

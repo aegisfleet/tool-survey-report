@@ -2,7 +2,7 @@
 title: Dreambeans 調査レポート
 tool_name: Dreambeans
 tool_reading: ドリームビーンズ
-category: AIチャット/アシスタント
+category: パーソナルAIアシスタント
 developer: Google (Google Labs)
 official_site: https://labs.google/dreambeans
 date: '2026-06-05'

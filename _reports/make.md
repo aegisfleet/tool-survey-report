@@ -2,7 +2,7 @@
 title: Make 調査レポート
 tool_name: Make
 tool_reading: メイク
-category: ワークフロー自動化
+category: ワークフローエンジン
 developer: Celonis / Make
 official_site: https://www.make.com/
 date: '2026-02-22'
@@ -13,7 +13,6 @@ tags:
   - iPaaS
   - ノーコード
   - エージェント
-  - 自動化
 description: 直感的なビジュアル操作で複雑なワークフローと自律的なAIエージェントを構築できるプラットフォーム。高い柔軟性とコストパフォーマンスが特徴。
 quick_summary:
   has_free_plan: true

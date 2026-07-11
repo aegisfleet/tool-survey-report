@@ -2,7 +2,7 @@
 title: MediaCMS 調査レポート
 tool_name: MediaCMS
 tool_reading: メディアシーエムエス
-category: 動画/メディア
+category: 動画編集/配信
 developer: Markos Gogoulos / MediaCMS.io
 official_site: https://mediacms.io/
 date: '2026-02-02'

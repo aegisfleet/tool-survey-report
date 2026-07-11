@@ -2,7 +2,7 @@
 title: Z.ai (Zhipu AI) 調査レポート
 tool_name: Z.ai
 tool_reading: ジーエーアイ / ジープーエーアイ
-category: AIチャット/アシスタント
+category: 基盤モデル/LLMチャット
 developer: Zhipu AI (智譜AI)
 official_site: https://z.ai
 date: '2026-01-27'

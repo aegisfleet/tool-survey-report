@@ -2,7 +2,7 @@
 title: Pomelli 調査レポート
 tool_name: Pomelli
 tool_reading: ポメリ
-category: デザインツール
+category: UI/UX/作図
 developer: Google Labs & DeepMind
 official_site: https://labs.google.com/pomelli/
 date: '2026-03-12'

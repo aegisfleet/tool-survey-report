@@ -2,7 +2,7 @@
 title: Agent Lightning 調査レポート
 tool_name: Agent Lightning
 tool_reading: エージェント ライトニング
-category: マルチエージェント基盤
+category: エージェントプラットフォーム
 developer: Microsoft (Research)
 official_site: https://microsoft.github.io/agent-lightning/
 date: '2026-02-23'

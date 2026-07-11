@@ -2,7 +2,7 @@
 title: CrewAI 調査レポート
 tool_name: CrewAI
 tool_reading: クルーエーアイ
-category: マルチエージェント基盤
+category: AIエージェントフレームワーク
 developer: CrewAI Inc.
 official_site: https://crewai.com/
 date: '2026-04-14'

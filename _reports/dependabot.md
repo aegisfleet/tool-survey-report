@@ -2,7 +2,7 @@
 title: Dependabot 調査レポート
 tool_name: Dependabot
 tool_reading: ディペンダボット / デペンダボット
-category: 開発ライフサイクル管理
+category: 依存関係更新/管理
 developer: GitHub (Microsoft)
 official_site: https://github.com/dependabot
 date: '2026-05-24'
@@ -13,7 +13,6 @@ tags:
   - 開発者ツール
   - オープンソース
   - セキュリティ
-  - 自動化
 description: GitHubに統合された依存関係自動更新ツール。脆弱性修正とバージョンアップを自動化し、セキュアな開発を支援する。
 quick_summary:
   has_free_plan: true

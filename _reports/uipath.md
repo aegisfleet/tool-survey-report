@@ -2,7 +2,7 @@
 title: UiPath 調査レポート
 tool_name: UiPath
 tool_reading: ユーアイパス
-category: ワークフロー自動化
+category: ワークフローエンジン
 developer: UiPath Inc.
 official_site: https://www.uipath.com/ja/
 date: '2026-01-29'

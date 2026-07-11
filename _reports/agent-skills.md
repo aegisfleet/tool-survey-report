@@ -2,7 +2,7 @@
 title: Agent Skills 調査レポート
 tool_name: Agent Skills
 tool_reading: エージェント スキルズ
-category: コーディングエージェント
+category: 自律型コーディングエージェント
 developer: Anthropic / Agent Skills Project
 official_site: https://agentskills.io/home
 date: '2026-02-03'

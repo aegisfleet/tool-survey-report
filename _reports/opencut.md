@@ -2,7 +2,7 @@
 title: OpenCut 調査レポート
 tool_name: OpenCut
 tool_reading: オープンカット
-category: 動画/メディア
+category: 動画編集/配信
 developer: OpenCut-app (オープンソースコミュニティ)
 official_site: https://opencut.app/
 date: '2026-05-07'
@@ -13,7 +13,6 @@ tags:
   - Webアプリ
   - デスクトップアプリ
   - Rust
-  - Next.js
 description: プライバシー重視で機能制限のない、Web・デスクトップ・モバイル対応の無料・オープンソース動画編集ソフト
 quick_summary:
   has_free_plan: true

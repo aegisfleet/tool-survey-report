@@ -2,7 +2,7 @@
 title: Google Opal 調査レポート
 tool_name: Google Opal
 tool_reading: グーグル オパール
-category: ワークフロー自動化
+category: iPaaS/連携
 developer: Google
 official_site: https://developers.google.com/opal
 date: '2026-02-20'
@@ -13,7 +13,6 @@ tags:
   - エージェント
   - ノーコード
   - ワークフロー自動化
-  - 生成AI
 description: 自然言語の指示だけで、テキスト・画像・動画生成を組み合わせたAIミニアプリを構築・共有できるGoogle製のノーコードプラットフォーム
 quick_summary:
   has_free_plan: true

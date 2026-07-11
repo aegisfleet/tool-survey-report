@@ -2,7 +2,7 @@
 title: SkillsMP 調査レポート
 tool_name: SkillsMP
 tool_reading: スキルズエムピー / スキルズマーケットプレイス
-category: コーディングエージェント
+category: 自律型コーディングエージェント
 developer: SkillsMP
 official_site: https://skillsmp.com
 date: '2026-01-25'

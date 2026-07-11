@@ -2,7 +2,7 @@
 title: Brainbase 調査レポート
 tool_name: Brainbase
 tool_reading: ブレインベース
-category: ワークフロー自動化
+category: iPaaS/連携
 developer: Brainbase Labs Inc.
 official_site: https://usebrainbase.com
 date: '2026-01-29'

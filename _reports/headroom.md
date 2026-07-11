@@ -2,7 +2,7 @@
 title: Headroom 調査レポート
 tool_name: Headroom
 tool_reading: ヘッドルーム
-category: コーディングエージェント
+category: AIエディタ/IDE拡張
 developer: chopratejas
 official_site: https://github.com/chopratejas/headroom
 date: '2026-06-05'
@@ -13,7 +13,6 @@ tags:
   - エージェント
   - コーディング支援
   - 大規模言語モデル
-  - 開発者ツール
 description: AIエージェントが読み込むツール出力やログ、ファイルなどのコンテキストを大幅に圧縮するレイヤー
 quick_summary:
   has_free_plan: true

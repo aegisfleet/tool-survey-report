@@ -1,5 +1,5 @@
 ---
-category: マルチエージェント基盤
+category: AIエージェントフレームワーク
 date: '2026-03-28'
 description: AutoGenとSemantic Kernelの次世代となる、エージェントとワークフローを構築するためのオープンソースAIフレームワーク
 developer: Microsoft

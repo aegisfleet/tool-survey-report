@@ -2,7 +2,7 @@
 title: PraisonAI 調査レポート
 tool_name: PraisonAI
 tool_reading: プレイソンエーアイ
-category: マルチエージェント基盤
+category: AIエージェントフレームワーク
 developer: Mervin Praison
 official_site: https://docs.praison.ai/
 date: '2026-04-07'
@@ -13,7 +13,6 @@ tags:
   - エージェント
   - 自律型
   - ローコード
-  - SaaS
 description: 単一エージェントからマルチエージェントシステムまで手軽に構築・運用できるローコードAIエージェントフレームワーク
 quick_summary:
   has_free_plan: true

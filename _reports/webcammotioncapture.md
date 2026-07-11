@@ -2,7 +2,7 @@
 title: Webcam Motion Capture 調査レポート
 tool_name: Webcam Motion Capture
 tool_reading: ウェブカム
-category: 動画/メディア
+category: 3D/VTuber
 developer: ＫＷＣＬ株式会社
 official_site: https://webcammotioncapture.info/
 date: '2026-06-13'

@@ -2,7 +2,7 @@
 title: Qwen 調査レポート
 tool_name: Qwen
 tool_reading: クウェン
-category: AIチャット/アシスタント
+category: 基盤モデル/LLMチャット
 developer: Alibaba Cloud / Qwen team
 official_site: https://qwen.ai/
 date: '2026-04-25'

@@ -2,7 +2,7 @@
 title: LilysAI 調査レポート
 tool_name: LilysAI
 tool_reading: リリスAI
-category: AIチャット/アシスタント
+category: パーソナルAIアシスタント
 developer: TeamLilys
 official_site: https://lilys.ai/
 date: '2026-02-21'
@@ -13,8 +13,6 @@ tags:
   - マインドマップ
   - 動画要約
   - 生成AI
-  - 翻訳
-  - 要約
 description: YouTube動画やPDF、Web記事から構造化された要約ノートやマインドマップを自動生成するAIツール。
 quick_summary:
   has_free_plan: true

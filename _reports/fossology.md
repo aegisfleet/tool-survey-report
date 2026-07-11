@@ -2,7 +2,7 @@
 title: FOSSology 調査レポート
 tool_name: FOSSology
 tool_reading: フォソロジー
-category: DevSecOps/脆弱性管理
+category: SCA/OSS依存関係管理
 developer: The Linux Foundation
 official_site: https://www.fossology.org/
 date: '2026-06-22'

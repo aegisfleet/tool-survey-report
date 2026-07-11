@@ -2,7 +2,7 @@
 title: NewPipe 調査レポート
 tool_name: NewPipe
 tool_reading: ニューパイプ
-category: 動画/メディア
+category: メディアクライアント
 developer: Team NewPipe
 official_site: https://newpipe.net/
 date: '2026-06-28'

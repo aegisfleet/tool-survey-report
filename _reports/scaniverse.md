@@ -2,7 +2,7 @@
 title: Scaniverse 調査レポート
 tool_name: Scaniverse
 tool_reading: スキャニバース
-category: デザインツール
+category: グラフィック/アセット
 developer: Niantic Spatial, Inc.
 official_site: https://scaniverse.com
 date: '2026-05-17'

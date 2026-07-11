@@ -2,7 +2,7 @@
 title: yamory 調査レポート
 tool_name: yamory
 tool_reading: ヤモリー
-category: DevSecOps/脆弱性管理
+category: SCA/OSS依存関係管理
 developer: 株式会社アシュアード (Visionalグループ)
 official_site: https://yamory.io/
 date: '2026-06-02'

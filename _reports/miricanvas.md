@@ -2,7 +2,7 @@
 title: MiriCanvas 調査レポート
 tool_name: MiriCanvas
 tool_reading: ミリキャンバス
-category: デザインツール
+category: UI/UX/作図
 developer: MIRI D.I.H Co., Ltd.
 official_site: https://www.miricanvas.com/
 date: '2026-06-22'

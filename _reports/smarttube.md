@@ -2,7 +2,7 @@
 title: SmartTube 調査レポート
 tool_name: SmartTube
 tool_reading: スマートチューブ
-category: 動画/メディア
+category: メディアクライアント
 developer: yuliskov
 official_site: https://smarttubeapp.github.io/
 date: '2026-06-27'

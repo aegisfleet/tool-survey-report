@@ -2,7 +2,7 @@
 title: Google Workspace Studio 調査レポート
 tool_name: Google Workspace Studio
 tool_reading: グーグルワークスペーススタジオ
-category: ワークフロー自動化
+category: iPaaS/連携
 developer: Google
 official_site: https://studio.workspace.google.com/
 date: '2026-06-30'

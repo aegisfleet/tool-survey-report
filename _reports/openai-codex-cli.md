@@ -2,7 +2,7 @@
 title: OpenAI Codex CLI 調査レポート
 tool_name: OpenAI Codex CLI
 tool_reading: オープンエーアイ コーデックス シーエルアイ
-category: コーディングエージェント
+category: AIエディタ/IDE拡張
 developer: OpenAI
 official_site: https://developers.openai.com/codex/cli
 date: '2026-03-19'

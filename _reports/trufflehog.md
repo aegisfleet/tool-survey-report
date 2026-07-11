@@ -2,7 +2,7 @@
 title: TruffleHog 調査レポート
 tool_name: TruffleHog
 tool_reading: トリュフホッグ
-category: DevSecOps/脆弱性管理
+category: シークレットスキャン
 developer: Truffle Security Co.
 official_site: https://trufflesecurity.com/
 date: '2026-06-22'

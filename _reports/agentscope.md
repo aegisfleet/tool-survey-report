@@ -2,7 +2,7 @@
 title: AgentScope 調査レポート
 tool_name: AgentScope
 tool_reading: エージェントスコープ
-category: マルチエージェント基盤
+category: AIエージェントフレームワーク
 developer: Alibaba
 official_site: https://doc.agentscope.io/
 date: '2026-03-26'
@@ -13,8 +13,6 @@ tags:
   - エージェント
   - オープンソース
   - マルチエージェント
-  - 大規模言語モデル
-  - 開発者ツール
 description: モデルの推論能力とツール活用能力を最大限に引き出す、高拡張・本番環境向けマルチエージェントAIアプリケーション開発フレームワーク。
 quick_summary:
   has_free_plan: true

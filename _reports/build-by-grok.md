@@ -2,7 +2,7 @@
 title: Build by Grok 調査レポート
 tool_name: Build by Grok
 tool_reading: ビルド バイ グロック
-category: コーディングエージェント
+category: 自律型コーディングエージェント
 developer: Build by Grok
 official_site: https://buildbygrok.com/
 date: '2026-04-12'
