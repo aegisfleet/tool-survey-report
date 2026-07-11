@@ -2,7 +2,7 @@
 title: Blender 調査レポート
 tool_name: Blender
 tool_reading: ブレンダー
-category: デザインツール
+category: グラフィック/アセット
 developer: Blender Foundation
 official_site: https://www.blender.org/
 date: '2026-05-08'
@@ -13,7 +13,6 @@ tags:
   - CG
   - アニメーション
   - VFX
-  - 動画編集
 description: モデリング、アニメーション、レンダリング、VFXなど3D制作の全工程をサポートする無料かつオープンソースの統合型3DCGソフトウェア。
 quick_summary:
   has_free_plan: true

@@ -2,7 +2,7 @@
 title: Devin 調査レポート
 tool_name: Devin
 tool_reading: デビン
-category: コーディングエージェント
+category: AIエディタ/IDE拡張
 developer: Cognition Labs
 official_site: https://devin.ai/
 date: '2026-01-27'
@@ -13,7 +13,6 @@ tags:
   - コーディング支援
   - 自動化
   - 自律型
-  - 開発者ツール
 description: 世界初の完全自律型AIソフトウェアエンジニア。自然言語の指示に基づき、ソフトウェア開発の計画、コーディング、デバッグ、テスト、デプロイまでを一貫して自律的に実行します。
 quick_summary:
   has_free_plan: false

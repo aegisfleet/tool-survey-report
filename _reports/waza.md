@@ -2,7 +2,7 @@
 title: Waza 調査レポート
 tool_name: Waza
 tool_reading: ワザ
-category: マルチエージェント基盤
+category: エージェントプラットフォーム
 developer: Microsoft
 official_site: https://microsoft.github.io/waza/
 date: '2026-05-09'

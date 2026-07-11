@@ -2,7 +2,7 @@
 title: Open Agents 調査レポート
 tool_name: Open Agents
 tool_reading: オープンエージェンツ
-category: コーディングエージェント
+category: 自律型コーディングエージェント
 developer: Vercel Labs
 official_site: https://open-agents.dev/
 date: '2026-05-08'

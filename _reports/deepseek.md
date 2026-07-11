@@ -2,7 +2,7 @@
 title: DeepSeek 調査レポート
 tool_name: DeepSeek
 tool_reading: ディープシーク
-category: AIチャット/アシスタント
+category: 基盤モデル/LLMチャット
 developer: DeepSeek
 official_site: https://www.deepseek.com/
 date: '2025-10-23'

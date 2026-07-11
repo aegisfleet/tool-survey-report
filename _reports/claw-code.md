@@ -2,7 +2,7 @@
 title: Claw Code 調査レポート
 tool_name: Claw Code
 tool_reading: クローコード / クロー・コード
-category: コーディングエージェント
+category: AIエディタ/IDE拡張
 developer: instructkr
 official_site: https://github.com/instructkr/claw-code
 date: '2026-04-01'

@@ -2,7 +2,7 @@
 title: DaVinci Resolve 調査レポート
 tool_name: DaVinci Resolve
 tool_reading: ダビンチリゾルブ
-category: 動画/メディア
+category: 動画編集/配信
 developer: Blackmagic Design
 official_site: https://www.blackmagicdesign.com/products/davinciresolve
 date: '2025-11-06'
@@ -13,7 +13,6 @@ tags:
   - 画像編集
   - VFX
   - 音声編集
-  - ポストプロダクション
 description: 編集、カラーコレクション、VFX、モーショングラフィックス、オーディオポストプロダクションを統合したプロフェッショナル向けオールインワン動画編集ソフトウェア。
 quick_summary:
   has_free_plan: true

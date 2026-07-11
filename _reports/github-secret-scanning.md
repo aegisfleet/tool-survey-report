@@ -2,7 +2,7 @@
 title: GitHub Secret Scanning 調査レポート
 tool_name: GitHub Secret Scanning
 tool_reading: ギットハブ シークレット スキャニング
-category: DevSecOps/脆弱性管理
+category: シークレットスキャン
 developer: GitHub, Inc.
 official_site: https://github.com/features/security
 date: '2026-06-22'

@@ -2,7 +2,7 @@
 title: Zapier 調査レポート
 tool_name: Zapier
 tool_reading: ザピアー
-category: ワークフロー自動化
+category: ワークフローエンジン
 developer: Zapier Inc.
 official_site: https://zapier.com/
 date: '2026-02-14'
@@ -13,7 +13,6 @@ tags:
   - iPaaS
   - エージェント
   - ノーコード
-  - 自動化
 description: 8,500以上のアプリと連携し、AIワークフローやエージェントの構築を可能にする業界トップクラスの自動化プラットフォーム。ノーコードで直感的に操作できる点が特徴。
 quick_summary:
   has_free_plan: true

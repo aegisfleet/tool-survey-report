@@ -2,7 +2,7 @@
 title: Canva 調査レポート
 tool_name: Canva
 tool_reading: キャンバ
-category: デザインツール
+category: UI/UX/作図
 developer: Canva Pty Ltd.
 official_site: https://www.canva.com/
 date: '2026-02-23'

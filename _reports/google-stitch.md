@@ -2,7 +2,7 @@
 title: Google Stitch 調査レポート
 tool_name: Google Stitch
 tool_reading: グーグルステッチ
-category: デザインツール
+category: グラフィック/アセット
 developer: Google
 official_site: https://stitch.withgoogle.com/
 date: '2026-02-22'
@@ -13,7 +13,6 @@ tags:
   - UI/UXデザイン
   - デザインツール
   - ノーコード
-  - プロトタイピング
 description: テキストプロンプトや画像からUIデザインとフロントエンドコードを生成する、GoogleのAI搭載プロトタイピングツール。
 quick_summary:
   has_free_plan: true

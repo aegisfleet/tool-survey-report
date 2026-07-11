@@ -2,7 +2,7 @@
 title: ChatGPT 調査レポート
 tool_name: ChatGPT
 tool_reading: チャットジーピーティー
-category: AIチャット/アシスタント
+category: 基盤モデル/LLMチャット
 developer: OpenAI
 official_site: https://openai.com/chatgpt
 date: '2026-02-09'

@@ -2,7 +2,7 @@
 title: Agent i 調査レポート
 tool_name: Agent i
 tool_reading: エージェント アイ
-category: AIチャット/アシスタント
+category: パーソナルAIアシスタント
 developer: LINEヤフー株式会社
 official_site: https://events.yahoo.co.jp/agent-i/
 date: '2026-04-20'

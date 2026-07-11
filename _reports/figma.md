@@ -2,7 +2,7 @@
 title: Figma 調査レポート
 tool_name: Figma
 tool_reading: フィグマ
-category: デザインツール
+category: UI/UX/作図
 developer: Figma, Inc.
 official_site: https://www.figma.com/
 date: '2026-02-19'
@@ -13,7 +13,6 @@ tags:
   - コラボレーション
   - デザインツール
   - ノーコード
-  - プロトタイピング
 description: ブラウザベースでリアルタイムコラボレーションが可能なUI/UXデザインツールのデファクトスタンダード。
 quick_summary:
   has_free_plan: true

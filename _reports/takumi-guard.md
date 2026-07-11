@@ -2,7 +2,7 @@
 title: Takumi Guard 調査レポート
 tool_name: Takumi Guard
 tool_reading: タクミ ガード
-category: DevSecOps/脆弱性管理
+category: シークレットスキャン
 developer: GMO Flatt Security Inc.
 official_site: https://flatt.tech/takumi/features/guard
 date: '2026-05-15'

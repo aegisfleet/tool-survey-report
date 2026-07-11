@@ -2,7 +2,7 @@
 title: TAKT 調査レポート
 tool_name: TAKT
 tool_reading: タクト
-category: 開発ライフサイクル管理
+category: 依存関係更新/管理
 developer: nrslib
 official_site: https://github.com/nrslib/takt
 date: '2026-04-09'

@@ -2,7 +2,7 @@
 title: Sakana AI 調査レポート
 tool_name: Sakana AI
 tool_reading: サカナエーアイ
-category: マルチエージェント基盤
+category: エージェントプラットフォーム
 developer: Sakana AI 株式会社
 official_site: https://sakana.ai/
 date: '2026-06-23'

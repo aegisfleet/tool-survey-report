@@ -2,7 +2,7 @@
 title: OpenHands 調査レポート
 tool_name: OpenHands
 tool_reading: オープンハンズ
-category: コーディングエージェント
+category: AIエディタ/IDE拡張
 developer: All Hands AI
 official_site: https://openhands.dev/
 date: '2026-03-31'
@@ -13,7 +13,6 @@ tags:
   - オープンソース
   - コーディング支援
   - 自律型
-  - 開発者ツール
 description: ソフトウェア開発タスクを自律的に実行するオープンソースのAIエージェント。自然言語の指示でコード作成からデプロイまでを自動化します。
 quick_summary:
   has_free_plan: true

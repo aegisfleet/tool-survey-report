@@ -2,7 +2,7 @@
 title: Renovate 調査レポート
 tool_name: Renovate
 tool_reading: リノベート
-category: 開発ライフサイクル管理
+category: 依存関係更新/管理
 developer: Mend.io (旧 WhiteSource)
 official_site: https://github.com/renovatebot/renovate
 date: '2026-02-18'

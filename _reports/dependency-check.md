@@ -2,7 +2,7 @@
 title: Dependency-Check 調査レポート
 tool_name: Dependency-Check
 tool_reading: ディペンデンシーチェック
-category: DevSecOps/脆弱性管理
+category: SCA/OSS依存関係管理
 developer: OWASP
 official_site: https://owasp.org/www-project-dependency-check/
 date: '2026-06-22'

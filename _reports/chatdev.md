@@ -2,7 +2,7 @@
 title: ChatDev 調査レポート
 tool_name: ChatDev
 tool_reading: チャットデブ
-category: マルチエージェント基盤
+category: エージェントプラットフォーム
 developer: OpenBMB
 official_site: https://github.com/OpenBMB/ChatDev
 date: '2026-04-14'

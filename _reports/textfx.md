@@ -2,7 +2,7 @@
 title: TextFX 調査レポート
 tool_name: TextFX
 tool_reading: テキストエフエックス
-category: AIチャット/アシスタント
+category: パーソナルAIアシスタント
 developer: Google
 official_site: https://textfx.withgoogle.com/
 date: '2026-06-03'
@@ -13,7 +13,6 @@ tags:
   - クリエイティブ
   - 大規模言語モデル
   - 文章作成
-  - 生成AI
 description: GoogleとラッパーLupe Fiascoが共同開発した、ラッパーやライター向けの創造的執筆支援AIツール群。
 quick_summary:
   has_free_plan: true

@@ -2,7 +2,7 @@
 title: n8n 調査レポート
 tool_name: n8n
 tool_reading: エヌエイトエヌ
-category: ワークフロー自動化
+category: iPaaS/連携
 developer: n8n GmbH
 official_site: https://n8n.io/
 date: '2026-01-27'

@@ -2,7 +2,7 @@
 title: Gemini 調査レポート
 tool_name: Gemini
 tool_reading: ジェミニ
-category: AIチャット/アシスタント
+category: 基盤モデル/LLMチャット
 developer: Google
 official_site: https://gemini.google.com/
 date: '2025-10-19'

@@ -2,7 +2,7 @@
 title: VibeVoice 調査レポート
 tool_name: VibeVoice
 tool_reading: バイブボイス
-category: 動画/メディア
+category: 動画編集/配信
 developer: Microsoft
 official_site: https://microsoft.github.io/VibeVoice/
 date: '2026-04-26'

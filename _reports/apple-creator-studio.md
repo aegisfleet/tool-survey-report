@@ -2,7 +2,7 @@
 title: Apple Creator Studio 調査レポート
 tool_name: Apple Creator Studio
 tool_reading: アップル クリエイター スタジオ
-category: 動画/メディア
+category: 動画編集/配信
 developer: Apple
 official_site: https://www.apple.com/jp/final-cut-pro/
 date: '2026-05-17'

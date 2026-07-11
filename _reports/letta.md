@@ -2,7 +2,7 @@
 title: Letta 調査レポート
 tool_name: Letta
 tool_reading: レッタ
-category: マルチエージェント基盤
+category: AIエージェントフレームワーク
 developer: Letta AI
 official_site: https://docs.letta.com/
 date: '2026-03-21'
