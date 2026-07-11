@@ -23,7 +23,7 @@ quick_summary:
     - データアナリスト
     - 経営層
     - 開発者
-  latest_highlight: '2026年5月にAthenaデータソースのクロスアカウントアクセスや自然言語からのダッシュボード生成機能を追加'
+  latest_highlight: 2026年5月にAthenaデータソースのクロスアカウントアクセスや自然言語からのダッシュボード生成機能を追加
   update_frequency: 高
 evaluation:
   score: 78
