@@ -1,50 +1,50 @@
 ---
-title: "STORES 調査レポート"
-tool_name: "STORES"
-tool_reading: "ストアーズ"
-category: "ビジネス/業務ツール"
-developer: "STORES 株式会社"
-official_site: "https://stores.fun/"
-date: "2026-07-11"
-last_updated: "2026-07-11"
+title: STORES 調査レポート
+tool_name: STORES
+tool_reading: ストアーズ
+category: ビジネス/業務ツール
+developer: STORES 株式会社
+official_site: https://stores.fun/
+date: '2026-07-11'
+last_updated: '2026-07-11'
 tags:
-  - "POSシステム"
-  - "キャッシュレス決済"
-  - "ネットショップ"
-  - "予約システム"
-  - "モバイルオーダー"
-description: "ネットショップ開設からPOSレジ、キャッシュレス決済、予約システムまで、店舗運営を総合的に支援するプラットフォーム"
+  - POSシステム
+  - キャッシュレス決済
+  - ネットショップ
+  - 予約システム
+  - モバイルオーダー
+description: ネットショップ開設からPOSレジ、キャッシュレス決済、予約システムまで、店舗運営を総合的に支援するプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料（決済手数料等のみ）"
+  starting_price: 無料（決済手数料等のみ）
   target_users:
-    - "小売店・飲食店"
-    - "美容室・サロン"
-    - "中小・多店舗展開企業"
-  latest_highlight: "「海外販売連携」の提供開始と、新卒採用サイト公開や決済端末等の拡充"
-  update_frequency: "高"
+    - 小売店・飲食店
+    - 美容室・サロン
+    - 中小・多店舗展開企業
+  latest_highlight: 「海外販売連携」の提供開始と、新卒採用サイト公開や決済端末等の拡充
+  update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 5
-      reason: "初期費用・月額固定費0円から始められ、導入ハードルが低い"
+      reason: 初期費用・月額固定費0円から始められ、導入ハードルが低い
     - point: 5
-      reason: "ネットショップと実店舗（POSレジ・決済）の連携がシームレス"
+      reason: ネットショップと実店舗（POSレジ・決済）の連携がシームレス
     - point: 4
-      reason: "複数の店舗運営ツールを1つのアカウントで一元管理できる"
+      reason: 複数の店舗運営ツールを1つのアカウントで一元管理できる
     - point: 3
-      reason: "直感的で洗練されたUIにより、店舗スタッフも使いやすい"
+      reason: 直感的で洗練されたUIにより、店舗スタッフも使いやすい
   minus_points:
     - point: -2
-      reason: "高度な機能や多店舗向けには追加料金（スタンダードプランなど）が必要となる場合がある"
-  summary: "中小規模から多店舗展開まで、オンラインとオフラインの店舗運営を効率化する総合的かつ柔軟なプラットフォーム"
+      reason: 高度な機能や多店舗向けには追加料金（スタンダードプランなど）が必要となる場合がある
+  summary: 中小規模から多店舗展開まで、オンラインとオフラインの店舗運営を効率化する総合的かつ柔軟なプラットフォーム
 links:
-  documentation: "https://stores.fun/docs"
+  documentation: https://stores.fun/docs
 relationships:
   related_tools:
-    - "Square"
+    - Square
 ---
 
 # **STORES 調査レポート**
