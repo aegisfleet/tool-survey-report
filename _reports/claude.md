@@ -57,6 +57,7 @@ relationships:
     - Qwen
     - UI-TARS Desktop
     - Mobile Next
+    - Android Use
 ---
 
 # **Claude 調査レポート**

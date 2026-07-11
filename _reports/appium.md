@@ -51,6 +51,7 @@ relationships:
     - CodeceptJS
     - Selenium
     - Playwright
+    - Android Use
     - Cypress
     - MagicPod
     - Mobile Next

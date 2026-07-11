@@ -57,6 +57,7 @@ relationships:
     - Agent Zero
     - Manus
     - Deep Agents
+    - Android Use
 ---
 
 # **Devin 調査レポート**
