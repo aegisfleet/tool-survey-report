@@ -41,6 +41,9 @@ evaluation:
   summary: 中小規模のビジネスに最適な、直感的で拡張性の高い統合型POS・決済プラットフォーム
 links:
   documentation: https://developer.squareup.com/us/en
+relationships:
+  related_tools:
+    - Airレジ
 ---
 
 # **Square 調査レポート**
