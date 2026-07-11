@@ -43,8 +43,7 @@ links:
   documentation: https://developer.squareup.com/us/en
 relationships:
   related_tools:
-    - Shopify
-    - Stripe
+    - Airレジ
 ---
 
 # **Square 調査レポート**
