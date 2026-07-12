@@ -54,7 +54,7 @@ relationships:
     - Roo Code
     - CodeRabbit
     - Devin
-    - SHIFT DQS for リバースエンジニアリング
+    - GitLens
 ---
 
 # **GitHub Copilot 調査レポート**
