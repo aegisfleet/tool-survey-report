@@ -51,10 +51,8 @@ relationships:
     - IntelliJ IDEA
     - Devin Desktop
     - Cline
-    - Delphi
+    - GitLens
     - Eclipse IDE
-    - Android Studio
-    - GitKraken
 ---
 
 # **Visual Studio Code 調査レポート**
