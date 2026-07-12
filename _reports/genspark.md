@@ -2,7 +2,7 @@
 title: Genspark 調査レポート
 tool_name: Genspark
 tool_reading: ジェンスパーク
-category: ビジネス/業務ツール
+category: AI検索/ブラウザ拡張
 developer: GENSPARK INC
 official_site: https://www.genspark.ai/
 date: '2026-06-07'
