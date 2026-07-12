@@ -6,7 +6,7 @@ category: バージョン管理
 developer: GitKraken
 official_site: https://www.gitkraken.com/
 date: '2026-03-17'
-last_updated: '2026-03-17'
+last_updated: '2026-07-12'
 tags:
   - AI
   - Git
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - 開発チーム
     - エンジニアリングリーダー
-  latest_highlight: AIエージェント機能「GitKraken AI」やAIを活用した機能(Commit Composer等)の統合
+  latest_highlight: Agent Sessions Viewによる並列AIエージェントの一元管理と複数セッション対応ターミナル機能の統合
   update_frequency: 高
 evaluation:
   score: 85
@@ -41,7 +41,7 @@ evaluation:
       reason: 高度なコラボレーション機能やプライベートリポジトリの利用には有償プランが必要
   summary: 直感的なGUIと高度なAI機能で、初心者から熟練者までチーム全体のGit体験を劇的に向上させる強力なプラットフォーム。
 links:
-  documentation: https://help.gitkraken.com/
+  documentation: https://help.gitkraken.com/gitkraken-desktop/current/
 relationships:
   children:
     - GitLens
@@ -61,7 +61,7 @@ relationships:
 * **開発元**: GitKraken (Axosoft, LLC)
 * **公式サイト**: [https://www.gitkraken.com/](https://www.gitkraken.com/)
 * **関連リンク**:
-  * ドキュメント: [https://help.gitkraken.com/](https://help.gitkraken.com/)
+  * ドキュメント: [https://help.gitkraken.com/gitkraken-desktop/current/](https://help.gitkraken.com/gitkraken-desktop/current/)
   * GitLens: [https://www.gitkraken.com/gitlens](https://www.gitkraken.com/gitlens)
   * GitKraken CLI: [https://www.gitkraken.com/cli](https://www.gitkraken.com/cli)
 * **カテゴリ**: バージョン管理
@@ -82,6 +82,8 @@ relationships:
 * **Launchpad**: GitHub、GitLab、Jiraなどの課題管理やPRを1か所に集約し、優先順位付けや作業の開始をスムーズに行う機能です。
 * **Cloud Workspaces**: 複数のリポジトリをグループ化してチームメンバーと共有し、一括フェッチや一括プルなどの操作を可能にします。
 * **GitKraken AI**: AIを活用して、コミットメッセージの自動生成、コミットの要約、PRの説明作成などを支援します。
+* **Agent Sessions View**: 複数のAIエージェントのセッションとワークツリーを統合管理し、コード生成エージェントの状態確認から並行作業を容易にします。
+* **Terminal**: 複数セッションをサポートする組み込みターミナルにより、各ワークツリーで独立したコマンド実行が可能です。
 * **Merge Conflict Tool**: 強力な3ペインのビジュアルマージツールにより、コンフリクトの解消を安全かつ効率的に行えます。
 * **Cloud Patches**: WIP(作業中)のコード変更を、コミットやプッシュをせずにチームメンバーと共有し、早期フィードバックを得られる機能です（プレビュー機能）。
 * **GitKraken Insights**: チームの開発ベロシティ、コード品質、AIの影響などを計測・分析するDORAメトリクス対応の分析機能です。
@@ -104,7 +106,7 @@ relationships:
 * **圧倒的な可視化能力**: Commit GraphやインラインBlameなど、コードの履歴と文脈を視覚的に理解しやすくする機能が充実しています。
 * **クロスプラットフォーム対応**: Windows、Mac、Linuxに対応し、どの環境でも一貫した使いやすいUIを提供します。
 * **包括的な製品スイート**: GUI (Desktop)、IDE拡張 (GitLens)、ターミナル (CLI)、ブラウザ (GitKraken.dev) と、開発者が好むあらゆる環境で動作します。
-* **AIとエンジニアリングの統合**: GitKraken MCPを通じたAIアシスタントとの連携や、GitKraken Insightsによるチームの生産性分析が組み込まれています。
+* **AIとエンジニアリングの統合**: Agent Sessions ViewやGitKraken MCPによる複数のAIコーディングエージェントの一元管理、GitKraken Insightsによるチーム生産性の分析機能などを備えています。
 
 ## **6. 弱み・注意点 (Cons)**
 
@@ -191,33 +193,37 @@ relationships:
 * **特徴的なユースケース**:
   * 新規参画メンバーにGitKrakenを使わせることで、Gitの概念を視覚的に理解させ、オンボーディング期間を短縮する。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2025-03**: Spring Saleなどのキャンペーンを実施。
+* **2026-07-07**: (v12.3.0) ブラウザを通じたGitKrakenのアカウント・インテグレーション管理の一元化、複数WIPノードのコミットグラフ表示に対応。
+* **2026-06-02**: (v12.2.0) OpenCodeのライブステータス表示のサポート、新規エージェントセッションの即時作成ボタンの追加。
+* **2026-05-05**: (v12.1.0) Agent Sessionsビューにおける各種改善（アクションメニューの追加、ソートやフィルタリングなど）、ターミナルのリサイズ・最小化などの機能追加。
+* **2026-04-14**: (v12.0.0) 複数のAIエージェントセッションを統合管理する「Agent Sessions View」と、ワークツリーごとに独立したセッションを持てるようアップグレードされたターミナル機能が追加。
+* **2026-03**: Spring Saleなどのキャンペーンを実施。
 * **2024-継続**: GitKraken MCPサーバーの提供開始、AI機能（Commit Composer、AI Changelog等）の追加、Launchpadのチームビュー機能強化など、DevExプラットフォームとしての統合を推進。
 
-(出典: [GitKraken Release Notes](https://help.gitkraken.com/gitkraken-client/current/))
+(出典: [GitKraken Release Notes](https://help.gitkraken.com/gitkraken-desktop/current/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | GitKraken | GitHub Desktop |
-|:---:|:---|:---:|:---:|
-| **基本機能** | 履歴可視化 (Graph) | ◎<br><small>美しくインタラクティブ</small> | △<br><small>シンプルなリスト表示</small> |
-| **カテゴリ特定** | 複数リポジトリ管理 | ◎<br><small>Workspacesで一括管理</small> | △<br><small>切り替えのみ</small> |
-| **高度な操作** | コンフリクト解消 | ◎<br><small>内蔵の強力なマージツール</small> | △<br><small>外部エディタ依存</small> |
-| **チーム連携** | PR / Issue 統合 | ◎<br><small>Launchpad等で完全統合</small> | ◯<br><small>GitHubのみ統合</small> |
-| **AI連携** | コミット/PR生成 | ◎<br><small>GitKraken AI搭載</small> | ×<br><small>非対応</small> |
+| 機能カテゴリ | 機能項目 | GitKraken | GitHub | GitLab |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | 履歴可視化 (Graph) | ◎<br><small>美しくインタラクティブ</small> | △<br><small>シンプルなリスト表示</small> | △<br><small>ツリー表示と基本グラフ</small> |
+| **カテゴリ特定** | 複数リポジトリ管理 | ◎<br><small>Workspacesで一括管理</small> | △<br><small>リポジトリ毎管理</small> | ◯<br><small>グループ/サブグループ</small> |
+| **チーム連携** | PR / Issue 統合 | ◎<br><small>Launchpad等で完全統合</small> | ◎<br><small>Issues/PR完全に統合</small> | ◎<br><small>Issues/MR完全に統合</small> |
+| **AI連携** | エージェント/AI機能 | ◎<br><small>GitKraken AI, Agent Sessions View</small> | ◎<br><small>GitHub Copilot</small> | ◎<br><small>GitLab Duo</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **GitKraken** | 強力な可視化と包括的なチーム機能を備えたDevExプラットフォーム。 | 圧倒的な可視化、Launchpad/Workspacesによるチームコラボレーション、AI統合。 | プライベートリポジトリには有償プランが必要。多機能ゆえの学習コスト。 | チーム全体でGitワークフローを標準化し、生産性を最大化したい場合。 |
-| **GitHub Desktop** | GitHubが提供する無料の公式クライアント。 | 完全に無料で利用可能。GitHubとのシームレスな連携。初心者向けのシンプルなUI。 | 高度なGit操作（Interactive Rebase等）や複雑なコンフリクト解消には不向き。 | 個人のプロジェクトや、複雑なGit操作を必要としない初心者中心のチーム。 |
+| **GitKraken** | 強力な可視化と包括的なチーム機能を備えたDevExプラットフォーム。 | 圧倒的な可視化、Launchpad/Workspacesによるチームコラボレーション、Agent Sessions Viewによる複数AIエージェントの統合管理。 | プライベートリポジトリには有償プランが必要。多機能ゆえの学習コスト。 | チーム全体でGitワークフローを標準化し、複数のAIエージェントを効率的に管理して生産性を最大化したい場合。 |
+| **GitHub** | 世界最大のソースコードホスティング・開発プラットフォーム。 | GitHub ActionsによるCI/CDの統合、世界最大のコミュニティ、Copilotによる強力なAIコーディング支援。 | プロジェクト管理機能などがGitLabほどオールインワンではない場合がある。 | オープンソースでの協業や、GitHubエコシステム（Actions, Copilot）を最大限に活用したい場合。 |
+| **GitLab** | 開発ライフサイクル全体をカバーするオールインワンのDevSecOpsプラットフォーム。 | 強力なCI/CDパイプラインとセキュリティ機能（DevSecOps）の統合、オンプレミスでの運用に定評。 | 多機能ゆえにUIが複雑に感じられることがある。 | 単一のツールでDevSecOps全体を完結させたい場合や、セルフホストでの厳しいセキュリティ要件がある場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   * GitKrakenは、単なる「Gitクライアント」の枠を超え、チーム全体の開発体験（DevEx）を向上させる包括的なプラットフォームへと進化しています。Commit Graphの視覚的な美しさと使いやすさは業界トップクラスであり、LaunchpadやWorkspaces、さらにはGitKraken AIといった機能により、複雑な開発ワークフローを劇的に効率化します。
