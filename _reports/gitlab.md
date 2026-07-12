@@ -59,6 +59,7 @@ relationships:
     - Jujutsu
     - Nexus Repository
     - Kiwi TCMS
+    - GitKraken
 ---
 
 # **GitLab 調査レポート**

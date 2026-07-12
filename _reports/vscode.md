@@ -54,6 +54,7 @@ relationships:
     - Delphi
     - Eclipse IDE
     - Android Studio
+    - GitKraken
 ---
 
 # **Visual Studio Code 調査レポート**

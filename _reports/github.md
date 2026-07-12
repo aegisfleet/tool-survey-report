@@ -66,6 +66,7 @@ relationships:
     - Jujutsu
     - Linear
     - Kiwi TCMS
+    - GitKraken
 ---
 
 # **GitHub 調査レポート**

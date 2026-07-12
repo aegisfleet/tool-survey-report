@@ -42,6 +42,7 @@ relationships:
   parent: GitKraken
   related_tools:
     - GitHub Copilot
+    - Visual Studio Code
 ---
 
 # **GitLens 調査レポート**
