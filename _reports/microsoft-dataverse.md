@@ -2,7 +2,7 @@
 title: Microsoft Dataverse 調査レポート
 tool_name: Microsoft Dataverse
 tool_reading: マイクロソフト データバース
-category: ビジネス/業務ツール
+category: クラウドサービス/PaaS
 developer: Microsoft
 official_site: https://www.microsoft.com/ja-jp/power-platform/dataverse
 date: '2026-06-04'

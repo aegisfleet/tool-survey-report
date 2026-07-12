@@ -2,7 +2,7 @@
 title: GMOペイメントゲートウェイ 調査レポート
 tool_name: GMOペイメントゲートウェイ
 tool_reading: ジーエムオーペイメントゲートウェイ
-category: 決済代行
+category: 決済代行サービス
 developer: GMOペイメントゲートウェイ株式会社
 official_site: https://www.gmo-pg.com/
 date: '2026-07-11'

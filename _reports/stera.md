@@ -2,7 +2,7 @@
 title: stera 調査レポート
 tool_name: stera
 tool_reading: ステラ
-category: 決済サービス
+category: 決済代行サービス
 developer: SMBC GMO PAYMENT株式会社
 official_site: https://www.smbc-gp.co.jp/stera/
 date: '2026-07-11'
