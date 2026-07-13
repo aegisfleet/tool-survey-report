@@ -5,7 +5,7 @@ description = "A repository for tool survey reports"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "playwright==1.60.0",
+    "playwright==1.61.0",
     "pytest-playwright>=0.8.0",
     "pyyaml==6.0.3",
 ]
