@@ -2,7 +2,7 @@
 title: AnimeGen 調査レポート
 tool_name: AnimeGen
 tool_reading: アニメジェン
-category: 動画生成AI
+category: AI画像/メディア生成
 developer: 株式会社AIdeaLab
 official_site: https://animegen.jp/
 date: '2026-07-13'
@@ -12,6 +12,7 @@ tags:
   - 動画生成
   - オープンソース
   - アニメ制作
+  - 動画生成AI
 description: アニメ表現に特化した商用利用可能な動画生成AIモデル
 quick_summary:
   has_free_plan: true

@@ -2,7 +2,7 @@
 title: DeepWiki 調査レポート
 tool_name: DeepWiki
 tool_reading: ディープウィキ
-category: ドキュメント/ナレッジ
+category: ドキュメント生成
 developer: Cognition
 official_site: https://deepwiki.com/
 date: '2026-04-04'
@@ -10,7 +10,6 @@ last_updated: '2026-04-04'
 tags:
   - AI
   - 開発者ツール
-  - ドキュメント生成
 description: GitHubリポジトリのコードを解析し、AIと対話可能なドキュメント（Wiki）を自動生成するツール
 quick_summary:
   has_free_plan: true

@@ -2,7 +2,7 @@
 title: DeepWiki-Open 調査レポート
 tool_name: DeepWiki-Open
 tool_reading: ディープウィキ オープン
-category: ドキュメント/ナレッジ
+category: ドキュメント生成
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/deepwiki-open
 date: '2026-02-11'
@@ -11,7 +11,6 @@ tags:
   - AI
   - オープンソース
   - セルフホスト
-  - ドキュメント生成
   - 開発者ツール
 description: GitHub/GitLab/Bitbucketリポジトリ向けのOSSドキュメント自動生成ツール。
 quick_summary:

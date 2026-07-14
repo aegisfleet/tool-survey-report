@@ -2,14 +2,13 @@
 title: Grok-Wiki 調査レポート
 tool_name: Grok-Wiki
 tool_reading: グロックウィキ
-category: ドキュメント/ナレッジ
+category: ドキュメント生成
 developer: AsyncFuncAI
 official_site: https://grok-wiki.com/
 date: '2026-06-04'
 last_updated: '2026-06-04'
 tags:
   - AI
-  - ドキュメント生成
   - デスクトップアプリ
   - ローカル実行
   - 開発者ツール
