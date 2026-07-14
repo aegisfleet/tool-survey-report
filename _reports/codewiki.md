@@ -2,7 +2,7 @@
 title: Code Wiki 調査レポート
 tool_name: Code Wiki
 tool_reading: コードウィキ
-category: ドキュメント/ナレッジ
+category: ドキュメント生成
 developer: Google
 official_site: https://codewiki.google/
 date: '2026-05-17'

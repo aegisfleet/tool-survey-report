@@ -2,7 +2,7 @@
 title: OpenSpec 調査レポート
 tool_name: OpenSpec
 tool_reading: オープンスペック
-category: ドキュメント/ナレッジ
+category: ドキュメント生成
 developer: Fission-AI
 official_site: https://openspec.dev/
 date: '2026-03-11'
@@ -10,7 +10,6 @@ last_updated: '2026-07-01'
 tags:
   - AIコーディングアシスタント
   - オープンソース
-  - ドキュメンテーション
 description: AIコーディングアシスタントのための軽量な仕様駆動型フレームワーク
 quick_summary:
   has_free_plan: true
