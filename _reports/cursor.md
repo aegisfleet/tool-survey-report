@@ -59,6 +59,7 @@ relationships:
     - Devin
     - Model Context Protocol
     - Agent Trace
+    - Context7
 ---
 
 # **Cursor 調査レポート**
