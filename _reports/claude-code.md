@@ -60,6 +60,7 @@ relationships:
     - Headroom
     - Aqua Voice
     - Agentic Workflows
+    - Context7
 ---
 # **Claude Code 調査レポート**
 
