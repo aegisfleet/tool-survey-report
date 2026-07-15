@@ -48,6 +48,7 @@ relationships:
   children:
     - OpenAI Codex CLI
     - Codex cloud
+    - ChatGPT for Work
   related_tools:
     - Gemini
     - Claude
