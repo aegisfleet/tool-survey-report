@@ -226,7 +226,7 @@ graph TD
 
 | 機能カテゴリ | 機能項目 | 本ツール | Claude Code | Cursor | Codex cloud |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | マルチプラットフォーム | ◎<br><small>全OS・モバイル・Web</small> | ×<br><small>CLI・IDEのみ</small> | ◎<br><small>各種OS</small> | ×<br><small>IDE等が必要</small> |
+| **基本機能** | マルチプラットフォーム | ◎<br><small>全OS・モバイル・Web</small> | ×<br><small>CLI・IDEのみ</small> | ◎<br><small>各種OS</small> | ◯<br><small>Desktop/IDE/Cloud</small> |
 | **カテゴリ特定** | オーケストレーション | ◎<br><small>一元管理</small> | ×<br><small>単体</small> | ×<br><small>単体</small> | ×<br><small>単体</small> |
 | **エンタープライズ** | 日本語対応 | ◯<br><small>UI対応</small> | ◯<br><small>プロンプト等</small> | ◯<br><small>部分対応</small> | ◯<br><small>プロンプト等</small> |
 | **非機能要件** | オープンソース | ◎<br><small>完全OSS</small> | ×<br><small>クローズド</small> | ×<br><small>クローズド</small> | ×<br><small>クローズド</small> |
@@ -238,7 +238,7 @@ graph TD
 | **本ツール** | 一元管理・マルチ環境 | 複数プロバイダ統合、モバイルからの管理、E2EEリレー | 各AI自体の設定は必要 | 様々なAIエージェントを使い分けたい、外出先から作業したい場合 |
 | **Claude Code** | Anthropic専用 | 高い推論能力 | モデルが固定 | Anthropicモデルに特化して利用したい場合 |
 | **Cursor** | IDE統合 | エディタ連携が深い | モバイル非対応 | 単一のIDE内でコード補完・生成を完結させたい場合 |
-| **Codex cloud** | クラウド完結 | ローカルリソースを消費しない | クレジット消費が激しい | 長時間かかる重いタスクをバックグラウンドに丸投げしたい場合 |
+| **Codex cloud** | Desktop/Remote/Cloud対応 | ローカルリソースを消費しない | クレジット消費が激しい | 長時間かかる重いタスクをバックグラウンドに丸投げしたい場合 |
 
 ## **18. 総評**
 
