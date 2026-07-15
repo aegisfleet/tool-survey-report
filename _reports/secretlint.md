@@ -2,7 +2,7 @@
 title: Secretlint 調査レポート
 tool_name: Secretlint
 tool_reading: シークレットリント
-category: コード品質/静的解析
+category: シークレットスキャン
 developer: azu
 official_site: https://github.com/secretlint/secretlint
 date: '2026-04-22'
@@ -11,7 +11,7 @@ tags:
   - オープンソース
   - セキュリティ
   - CI/CD
-  - Lint
+  - シークレットスキャン
   - 開発者ツール
 description: 認証情報やシークレットの誤コミットを防ぐためのプラガブルなリンターツール
 quick_summary:

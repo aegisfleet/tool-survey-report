@@ -2,7 +2,7 @@
 title: Cline 調査レポート
 tool_name: Cline
 tool_reading: クライン
-category: AIコーディング支援
+category: 自律型コーディングエージェント
 developer: Cline Bot Inc.
 official_site: https://cline.bot/
 date: '2025-10-23'
@@ -10,9 +10,9 @@ last_updated: '2026-06-18'
 tags:
   - AI
   - エージェント
+  - 自律型
   - オープンソース
   - コーディング支援
-  - 開発者ツール
 description: VS CodeなどのIDE内で動作する協調型AIコーディングエージェント。ローカルのコードベース全体を直接理解し、人間と協力して計画を立て、変更を実行する。
 quick_summary:
   has_free_plan: true

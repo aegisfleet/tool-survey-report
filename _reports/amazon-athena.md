@@ -2,17 +2,17 @@
 title: Amazon Athena 調査レポート
 tool_name: Amazon Athena
 tool_reading: アマゾン アテナ
-category: クラウドサービス/PaaS
+category: データベース/データストレージ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/athena/
 date: '2026-03-27'
 last_updated: '2026-03-27'
 tags:
   - AWS
-  - SQL
+  - データ分析
   - サーバーレス
   - データレイク
-  - データ分析
+  - SQL
 description: Amazon S3内のデータを標準SQLで直接分析できるサーバーレスのインタラクティブクエリサービス
 quick_summary:
   has_free_plan: false

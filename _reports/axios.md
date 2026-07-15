@@ -2,7 +2,7 @@
 title: Axios 調査レポート
 tool_name: Axios
 tool_reading: アクシオス
-category: ドキュメント/ナレッジ
+category: 開発ユーティリティ
 developer: Matt Zabriskie
 official_site: https://axios-http.com/
 date: '2026-03-31'

@@ -2,14 +2,14 @@
 title: Microsoft Dataverse 調査レポート
 tool_name: Microsoft Dataverse
 tool_reading: マイクロソフト データバース
-category: クラウドサービス/PaaS
+category: データベース/データストレージ
 developer: Microsoft
 official_site: https://www.microsoft.com/ja-jp/power-platform/dataverse
 date: '2026-06-04'
 last_updated: '2026-06-04'
 tags:
-  - SaaS
   - データベース
+  - SaaS
   - ローコード
   - Microsoft
   - Power Platform

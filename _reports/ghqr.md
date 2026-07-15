@@ -2,7 +2,7 @@
 title: GitHub Quick Review 調査レポート
 tool_name: GitHub Quick Review
 tool_reading: ギットハブ クイック レビュー / ジーエイチキューアール
-category: セキュリティ
+category: DevSecOps/脆弱性管理
 developer: Microsoft
 official_site: https://github.com/microsoft/ghqr
 date: '2026-04-25'
@@ -11,7 +11,7 @@ tags:
   - GitHub
   - セキュリティ
   - OSS
-  - 開発ツール
+  - 開発者ツール
 description: GitHubエンタープライズ、組織、リポジトリのセキュリティとベストプラクティスを評価する強力なCLIツール。
 quick_summary:
   has_free_plan: true

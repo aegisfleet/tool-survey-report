@@ -2,7 +2,7 @@
 title: SonarQube Cloud 調査レポート
 tool_name: SonarQube Cloud
 tool_reading: ソナーキューブ クラウド / ソナークラウド
-category: コード品質/静的解析
+category: DevSecOps/脆弱性管理
 developer: SonarSource
 official_site: https://sonarcloud.io/
 date: '2026-02-18'
@@ -11,7 +11,6 @@ tags:
   - CI/CD
   - DevSecOps
   - SaaS
-  - コード品質
   - 静的解析
 description: 40以上の言語に対応したクラウドベースの静的コード解析プラットフォーム。GitHubなどのクラウドALMと連携し、プルリクエストごとにコード品質とセキュリティを自動チェックします。
 quick_summary:
