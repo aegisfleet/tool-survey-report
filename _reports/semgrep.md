@@ -2,7 +2,7 @@
 title: Semgrep 調査レポート
 tool_name: Semgrep
 tool_reading: セムグレップ
-category: コード品質/静的解析
+category: DevSecOps/脆弱性管理
 developer: Semgrep, Inc.
 official_site: https://semgrep.dev/
 date: '2026-06-08'

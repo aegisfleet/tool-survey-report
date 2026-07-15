@@ -2,15 +2,15 @@
 title: Amazon OpenSearch Service 調査レポート
 tool_name: Amazon OpenSearch Service
 tool_reading: アマゾン オープンサーチ サービス
-category: クラウドサービス/PaaS
+category: データベース/データストレージ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/opensearch-service/
 date: '2026-05-14'
 last_updated: '2026-05-14'
 tags:
+  - データベース
   - クラウド
   - ベクトルデータベース
-  - ログ分析
   - 検索エンジン
   - 生成AI
 description: AWSマネージドなOpenSearchサービス。ログ分析、リアルタイムアプリケーションモニタリング、ウェブサイト検索、生成AI向けのベクトルデータベースとして利用される。

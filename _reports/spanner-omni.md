@@ -2,15 +2,15 @@
 title: Spanner Omni 調査レポート
 tool_name: Spanner Omni
 tool_reading: スパナー オムニ
-category: クラウドサービス/PaaS
+category: データベース/データストレージ
 developer: Google Cloud
 official_site: https://cloud.google.com/products/spanner/omni
 date: '2026-04-23'
 last_updated: '2026-04-23'
 tags:
   - データベース
-  - マネージドサービス
   - クラウド
+  - マネージドサービス
 description: Google Cloud以外（オンプレミス、他社クラウド、ローカル環境）でも稼働可能な、自己管理型のダウンロード版Google Spannerデータベース。
 quick_summary:
   has_free_plan: true

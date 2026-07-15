@@ -2,16 +2,16 @@
 title: Roo Code 調査レポート
 tool_name: Roo Code
 tool_reading: ルーコード
-category: AIコーディング支援
+category: 自律型コーディングエージェント
 developer: Roo Code Inc.
 official_site: https://roocode.com/
 date: '2026-02-25'
 last_updated: '2026-06-07'
 tags:
   - AI
-  - VS Code
-  - CLI
   - エージェント
+  - 自律型
+  - VS Code
   - オープンソース
 description: VS Code拡張機能およびCLIとして動作する、オープンソースのAIソフトウェアエンジニアリングツール。
 quick_summary:

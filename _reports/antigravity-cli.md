@@ -2,15 +2,15 @@
 title: Antigravity CLI 調査レポート
 tool_name: Antigravity CLI
 tool_reading: アンチグラビティ シーエルアイ
-category: AIコーディング支援
+category: 自律型コーディングエージェント
 developer: Google
 official_site: https://antigravity.google/product/antigravity-cli
 date: '2026-05-20'
 last_updated: '2026-05-20'
 tags:
   - AI
-  - 開発者ツール
   - エージェント
+  - 自律型
   - コーディング支援
   - CLI
 description: キーボード中心の開発者やリモートSSHワークフロー向けの軽量なターミナル用AIエージェントプラットフォーム。

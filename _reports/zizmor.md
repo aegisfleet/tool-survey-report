@@ -2,7 +2,7 @@
 title: zizmor 調査レポート
 tool_name: zizmor
 tool_reading: ジズモア
-category: コード品質/静的解析
+category: DevSecOps/脆弱性管理
 developer: zizmorcore
 official_site: https://zizmor.sh/
 date: '2026-05-17'
