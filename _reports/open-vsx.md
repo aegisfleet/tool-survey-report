@@ -2,7 +2,7 @@
 title: Open VSX 調査レポート
 tool_name: Open VSX
 tool_reading: オープン ブイエスエックス
-category: 開発ユーティリティ
+category: IDE/エディタ
 developer: Eclipse Foundation
 official_site: https://open-vsx.org
 date: '2026-06-21'

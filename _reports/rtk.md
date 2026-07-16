@@ -2,7 +2,7 @@
 title: RTK 調査レポート
 tool_name: RTK
 tool_reading: アールティーケー
-category: 開発ユーティリティ
+category: AI開発ユーティリティ
 developer: Patrick Szymkowiak
 official_site: https://www.rtk-ai.app/
 date: '2026-05-05'

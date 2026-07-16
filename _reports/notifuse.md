@@ -2,14 +2,13 @@
 title: Notifuse 調査レポート
 tool_name: Notifuse
 tool_reading: ノティフューズ
-category: 開発ユーティリティ
+category: ビジネス/業務ツール
 developer: Notifuse
 official_site: https://www.notifuse.com/
 date: '2025-12-21'
 last_updated: '2026-03-30'
 tags:
   - API
-  - Go
   - オープンソース
   - 生成AI
   - 自動化
