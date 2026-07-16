@@ -1,53 +1,45 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ふりかえり.jp 調査レポート"
-tool_name: "ふりかえり.jp"
-tool_reading: "フリカエリドットジェイピー"
-category: "プロジェクト管理/生産性"
-developer: "びば / 森 一樹"
-official_site: "https://hurikaeri.jp/"
-date: "2026-07-16"
-last_updated: "2026-07-16"
+title: ふりかえり.jp 調査レポート
+tool_name: ふりかえり.jp
+tool_reading: フリカエリドットジェイピー
+category: プロジェクト管理/生産性
+developer: びば / 森 一樹
+official_site: https://hurikaeri.jp/
+date: '2026-07-16'
+last_updated: '2026-07-16'
 tags:
-  - "ナレッジベース"
-  - "生産性向上"
-description: "ふりかえりを学びたい人のための総合窓口。87種類以上のふりかえり手法のカタログやアジェンダ生成ツールを提供。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - ナレッジベース
+  - 生産性向上
+description: ふりかえりを学びたい人のための総合窓口。87種類以上のふりかえり手法のカタログやアジェンダ生成ツールを提供。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "プロジェクトマネージャー"
-    - "スクラムマスター"
-  latest_highlight: "「チェックイン」「ESVP」「満足ヒストグラム」など5手法をカタログに追加（07/16）"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - プロジェクトマネージャー
+    - スクラムマスター
+  latest_highlight: 「チェックイン」「ESVP」「満足ヒストグラム」など5手法をカタログに追加（07/16）
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "87種類以上のふりかえり手法がカタログ化されており、非常に網羅的"
+      reason: 87種類以上のふりかえり手法がカタログ化されており、非常に網羅的
     - point: 5
-      reason: "目的・人数・時間に応じたアジェンダの自動生成機能が実用的"
+      reason: 目的・人数・時間に応じたアジェンダの自動生成機能が実用的
     - point: 5
-      reason: "すべて無料で利用可能であり、日本語の情報として極めて価値が高い"
+      reason: すべて無料で利用可能であり、日本語の情報として極めて価値が高い
   minus_points: []
-  summary: "ふりかえりの導入からマンネリ打破まで、チームの課題解決に直結する実践的な知見が詰まったナレッジポータル。"
-
-# 【任意項目】該当するもののみ記載
+  summary: ふりかえりの導入からマンネリ打破まで、チームの課題解決に直結する実践的な知見が詰まったナレッジポータル。
 links:
-  github: ""
-  deepwiki: ""
-  codewiki: ""
-  documentation: ""
+  github: ''
+  deepwiki: ''
+  codewiki: ''
+  documentation: ''
 relationships:
-  parent: ""
+  parent: ''
   children: []
   related_tools: []
 ---
