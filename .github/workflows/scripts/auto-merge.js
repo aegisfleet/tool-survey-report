@@ -299,7 +299,17 @@ module.exports = async ({ github, context, core }) => {
   let files = [];
   let page = 1;
   while (true) {
-    const res = await github.rest.pulls.listFiles({ owner, repo, pull_number: prNumber, per_page: 100, page });
+    let res;
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        res = await github.rest.pulls.listFiles({ owner, repo, pull_number: prNumber, per_page: 100, page });
+        break;
+      } catch (err) {
+        if (attempt === 3) throw err;
+        core.info(`Error fetching files: ${err.message}. Retrying in ${attempt * 2} seconds...`);
+        await new Promise(r => setTimeout(r, attempt * 2000));
+      }
+    }
     files = files.concat(res.data.map(f => f.filename));
     if (res.data.length < 100) break;
     page += 1;
