@@ -1,57 +1,57 @@
 ---
-title: "Cypress 調査レポート"
-tool_name: "Cypress"
-tool_reading: "サイプレス"
-category: "テスト自動化SaaS"
-developer: "Cypress.io"
-official_site: "https://www.cypress.io/"
-date: "2026-01-28"
-last_updated: "2026-07-16"
+title: Cypress 調査レポート
+tool_name: Cypress
+tool_reading: サイプレス
+category: テスト自動化SaaS
+developer: Cypress.io
+official_site: https://www.cypress.io/
+date: '2026-01-28'
+last_updated: '2026-07-16'
 tags:
-  - "CI/CD"
-  - "E2Eテスト"
-  - "SaaS"
-  - "オープンソース"
-  - "テスト自動化"
-  - "開発者ツール"
-description: "モダンなWebアプリケーション開発に特化した、開発者体験に優れるエンドツーエンド（E2E）テスト自動化ツール。インタラクティブなGUIとAI機能によるテスト作成・デバッグが特徴。"
+  - CI/CD
+  - E2Eテスト
+  - SaaS
+  - オープンソース
+  - テスト自動化
+  - 開発者ツール
+description: モダンなWebアプリケーション開発に特化した、開発者体験に優れるエンドツーエンド（E2E）テスト自動化ツール。インタラクティブなGUIとAI機能によるテスト作成・デバッグが特徴。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$67/月"
+  starting_price: $67/月
   target_users:
-    - "フロントエンド開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年7月にメモリ管理機能やプロファイルディレクトリのクリーンアップを改善したv15.18.1をリリース"
-  update_frequency: "高"
+    - フロントエンド開発者
+    - QAエンジニア
+  latest_highlight: 2026年7月にメモリ管理機能やプロファイルディレクトリのクリーンアップを改善したv15.18.1をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "タイムトラベルデバッグ機能をはじめ、テスト作成とデバッグ効率を劇的に向上させる優れた開発者体験を提供している"
+      reason: タイムトラベルデバッグ機能をはじめ、テスト作成とデバッグ効率を劇的に向上させる優れた開発者体験を提供している
     - point: 5
-      reason: "AI機能を活用した自己修復テスト（cy.prompt）やGUIでのテスト生成（Cypress Studio）により、テスト保守コストを削減できる"
+      reason: AI機能を活用した自己修復テスト（cy.prompt）やGUIでのテスト生成（Cypress Studio）により、テスト保守コストを削減できる
     - point: 5
-      reason: "オープンソースのテストランナーと機能豊富な無料クラウドプランがあり、個人や小規模チームでも導入しやすい"
+      reason: オープンソースのテストランナーと機能豊富な無料クラウドプランがあり、個人や小規模チームでも導入しやすい
   minus_points:
     - point: -3
-      reason: "Safari (WebKit) をネイティブサポートしておらず（実験的サポートのみ）、厳密なクロスブラウザテストには制限がある"
-  summary: "開発者体験（DX）に特化し、AI機能で生産性をさらに高めたモダンなE2Eテストツール。Safari対応が必須でなければ最有力候補。"
+      reason: Safari (WebKit) をネイティブサポートしておらず（実験的サポートのみ）、厳密なクロスブラウザテストには制限がある
+  summary: 開発者体験（DX）に特化し、AI機能で生産性をさらに高めたモダンなE2Eテストツール。Safari対応が必須でなければ最有力候補。
 links:
-  github: "https://github.com/cypress-io/cypress"
-  deepwiki: "https://deepwiki.com/cypress-io/cypress"
-  codewiki: "https://codewiki.google/github.com/cypress-io/cypress"
-  documentation: "https://docs.cypress.io/"
+  github: https://github.com/cypress-io/cypress
+  deepwiki: https://deepwiki.com/cypress-io/cypress
+  codewiki: https://codewiki.google/github.com/cypress-io/cypress
+  documentation: https://docs.cypress.io/
 relationships:
   related_tools:
-    - "Playwright"
-    - "Selenium"
-    - "Autify"
-    - "MagicPod"
-    - "mabl"
-    - "Vitest"
-    - "Ranorex Studio"
+    - Playwright
+    - Selenium
+    - Autify
+    - MagicPod
+    - mabl
+    - Vitest
+    - Ranorex Studio
 ---
 
 # **Cypress 調査レポート**
