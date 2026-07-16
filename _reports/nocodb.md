@@ -2,15 +2,13 @@
 title: NocoDB 調査レポート
 tool_name: NocoDB
 tool_reading: ノコディービー
-category: 開発ユーティリティ
+category: データベース/データストレージ
 developer: NocoDB Inc.
 official_site: https://nocodb.com/
 date: '2026-01-29'
 last_updated: '2026-03-30'
 tags:
-  - Airtable代替
   - オープンソース
-  - データベース
   - ノーコード
   - ローコード
 description: 既存のSQLデータベースをスマートなスプレッドシートインターフェースに変換するオープンソースのノーコードプラットフォーム。

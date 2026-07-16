@@ -2,17 +2,14 @@
 title: WOVN.io 調査レポート
 tool_name: WOVN.io
 tool_reading: ウォーブン
-category: 開発ユーティリティ
+category: ビジネス/業務ツール
 developer: Wovn Technologies株式会社
 official_site: https://wovn.io/
 date: '2026-04-22'
 last_updated: '2026-04-22'
 tags:
-  - 多言語化
+  - SaaS
   - ローカリゼーション
-  - SEO対策
-  - Webサイト多言語化
-  - アプリ多言語化
 description: Webサイト・アプリをわずかなステップで多言語化し、翻訳から公開までを一元管理できるローカライゼーションプラットフォーム
 quick_summary:
   has_free_plan: false

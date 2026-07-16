@@ -2,17 +2,15 @@
 title: React Doctor 調査レポート
 tool_name: React Doctor
 tool_reading: リアクトドクター
-category: 開発ユーティリティ
+category: コード品質/静的解析
 developer: millionco
 official_site: https://react.doctor/
 date: '2026-05-14'
 last_updated: '2026-05-14'
 tags:
-  - React
-  - コードレビュー
-  - 静的解析
-  - Linter
+  - 開発者ツール
   - オープンソース
+  - 静的解析
 description: Reactコードベースの健全性をスコア化し、状態管理やパフォーマンスなどの問題を診断する静的解析ツール。
 quick_summary:
   has_free_plan: true
