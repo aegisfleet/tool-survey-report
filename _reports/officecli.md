@@ -35,7 +35,6 @@ evaluation:
   summary: AIエージェントがOfficeドキュメントを直接操作するための強力なツール。オープンソースでクロスプラットフォーム対応。
 links:
   github: https://github.com/iOfficeAI/OfficeCLI
-  deepwiki: ''
   codewiki: https://codewiki.google/github.com/iOfficeAI/OfficeCLI
   documentation: https://github.com/iOfficeAI/OfficeCLI/wiki
 relationships:
