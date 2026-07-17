@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - ソフトウェアエンジニア
-  latest_highlight: "2026年7月にGPT-5.6モデルへの対応およびDangerous-commandの検知機能強化を実施"
+  latest_highlight: 2026年7月にGPT-5.6モデルへの対応およびDangerous-commandの検知機能強化を実施
   update_frequency: 高
 evaluation:
   score: 83
