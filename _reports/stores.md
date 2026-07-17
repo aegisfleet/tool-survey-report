@@ -2,7 +2,7 @@
 title: STORES 調査レポート
 tool_name: STORES
 tool_reading: ストアーズ
-category: ビジネス/業務ツール
+category: POS/店舗・EC運営
 developer: STORES 株式会社
 official_site: https://stores.fun/
 date: '2026-07-11'

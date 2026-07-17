@@ -2,7 +2,7 @@
 title: GitHub Quick Review 調査レポート
 tool_name: GitHub Quick Review
 tool_reading: ギットハブ クイック レビュー / ジーエイチキューアール
-category: DevSecOps/脆弱性管理
+category: セキュリティ/脆弱性診断
 developer: Microsoft
 official_site: https://github.com/microsoft/ghqr
 date: '2026-04-25'

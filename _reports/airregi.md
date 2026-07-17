@@ -2,7 +2,7 @@
 title: Airレジ 調査レポート
 tool_name: Airレジ
 tool_reading: エアレジ
-category: ビジネス/業務ツール
+category: POS/店舗・EC運営
 developer: 株式会社リクルート
 official_site: https://airregi.jp/
 date: '2026-07-11'

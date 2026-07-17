@@ -2,7 +2,7 @@
 title: Opcode 調査レポート
 tool_name: Opcode
 tool_reading: オペコード
-category: 自律型コーディングエージェント
+category: エージェントエコシステム/基盤
 developer: winfunc (Asterisk)
 official_site: https://opcode.sh/
 date: '2026-02-07'

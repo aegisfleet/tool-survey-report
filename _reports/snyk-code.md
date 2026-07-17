@@ -2,7 +2,7 @@
 title: Snyk Code 調査レポート
 tool_name: Snyk Code
 tool_reading: スニーク コード
-category: DevSecOps/脆弱性管理
+category: セキュリティ/静的解析
 developer: Snyk Ltd.
 official_site: https://snyk.io/product/snyk-code/
 date: '2026-06-22'

@@ -2,7 +2,7 @@
 title: ZAP 調査レポート
 tool_name: ZAP
 tool_reading: ザップ
-category: DevSecOps/脆弱性管理
+category: セキュリティ/脆弱性診断
 developer: Checkmarx / ZAP Dev Team
 official_site: https://www.zaproxy.org/
 date: '2026-06-22'

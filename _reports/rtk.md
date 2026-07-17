@@ -2,7 +2,7 @@
 title: RTK 調査レポート
 tool_name: RTK
 tool_reading: アールティーケー
-category: AI開発ユーティリティ
+category: ターミナル/CLIツール
 developer: Patrick Szymkowiak
 official_site: https://www.rtk-ai.app/
 date: '2026-05-05'
@@ -42,10 +42,10 @@ links:
   codewiki: https://codewiki.google/github.com/rtk-ai/rtk
 relationships:
   related_tools:
-    - claude-code
-    - cursor
+    - Claude Code
+    - Cursor
     - Devin Desktop
-    - cline
+    - Cline
     - GitHub Copilot CLI
 ---
 

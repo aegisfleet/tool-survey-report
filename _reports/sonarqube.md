@@ -2,7 +2,7 @@
 title: SonarQube 調査レポート
 tool_name: SonarQube
 tool_reading: ソナーキューブ
-category: DevSecOps/脆弱性管理
+category: セキュリティ/静的解析
 developer: SonarSource
 official_site: https://www.sonarsource.com/products/sonarqube/
 date: '2025-10-19'

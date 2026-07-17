@@ -2,7 +2,7 @@
 title: CodeQL 調査レポート
 tool_name: CodeQL
 tool_reading: コードキューエル
-category: DevSecOps/脆弱性管理
+category: セキュリティ/静的解析
 developer: GitHub
 official_site: https://codeql.github.com/
 date: '2026-02-18'

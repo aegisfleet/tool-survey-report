@@ -2,16 +2,16 @@
 title: Open Agents 調査レポート
 tool_name: Open Agents
 tool_reading: オープンエージェンツ
-category: 自律型コーディングエージェント
+category: エージェントエコシステム/基盤
 developer: Vercel Labs
 official_site: https://open-agents.dev/
 date: '2026-05-08'
 last_updated: '2026-05-08'
 tags:
-  - AIエージェント
+  - エージェント
   - Vercel
   - オープンソース
-  - 開発ツール
+  - 開発者ツール
 description: Vercel上でクラウドベースのコーディングエージェントを構築・実行するためのオープンソースのリファレンスアプリケーション
 quick_summary:
   has_free_plan: true
