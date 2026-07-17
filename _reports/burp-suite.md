@@ -2,7 +2,7 @@
 title: Burp Suite 調査レポート
 tool_name: Burp Suite
 tool_reading: バープスイート
-category: DevSecOps/脆弱性管理
+category: セキュリティ/脆弱性診断
 developer: PortSwigger
 official_site: https://portswigger.net/burp
 date: '2026-04-20'

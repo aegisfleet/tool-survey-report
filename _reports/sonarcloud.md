@@ -2,7 +2,7 @@
 title: SonarQube Cloud 調査レポート
 tool_name: SonarQube Cloud
 tool_reading: ソナーキューブ クラウド / ソナークラウド
-category: DevSecOps/脆弱性管理
+category: セキュリティ/静的解析
 developer: SonarSource
 official_site: https://sonarcloud.io/
 date: '2026-02-18'

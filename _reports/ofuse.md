@@ -2,7 +2,7 @@
 title: OFUSE 調査レポート
 tool_name: OFUSE
 tool_reading: オフセ
-category: ビジネス/業務ツール
+category: POS/店舗・EC運営
 developer: 株式会社Sozi
 official_site: https://ofuse.me/
 date: '2026-04-07'

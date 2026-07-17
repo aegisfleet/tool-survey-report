@@ -2,7 +2,7 @@
 title: Square 調査レポート
 tool_name: Square
 tool_reading: スクエア
-category: ビジネス/業務ツール
+category: POS/店舗・EC運営
 developer: Block, Inc.
 official_site: https://squareup.com/
 date: '2026-04-07'
