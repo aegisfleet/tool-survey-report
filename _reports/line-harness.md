@@ -2,7 +2,7 @@
 title: LINE Harness 調査レポート
 tool_name: LINE Harness
 tool_reading: ラインハーネス
-category: CRM
+category: CRM/マーケティング
 developer: AIエージェント株式会社 / 野田修一 (Shudesu)
 official_site: https://shudesu.github.io/line-harness-oss/
 date: '2026-07-18'
