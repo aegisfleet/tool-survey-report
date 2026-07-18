@@ -1,56 +1,48 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "LINE Harness 調査レポート"
-tool_name: "LINE Harness"
-tool_reading: "ラインハーネス"
-category: "CRM"
-developer: "AIエージェント株式会社 / 野田修一 (Shudesu)"
-official_site: "https://shudesu.github.io/line-harness-oss/"
-date: "2026-07-18"
-last_updated: "2026-07-18"
+title: LINE Harness 調査レポート
+tool_name: LINE Harness
+tool_reading: ラインハーネス
+category: CRM
+developer: AIエージェント株式会社 / 野田修一 (Shudesu)
+official_site: https://shudesu.github.io/line-harness-oss/
+date: '2026-07-18'
+last_updated: '2026-07-18'
 tags:
-  - "LINE"
-  - "CRM"
-  - "オープンソース"
-  - "Cloudflare"
-description: "完全オープンソースで提供されるLINE公式アカウント用のCRMツール。Cloudflareの無料枠で稼働し、サーバー代0円で運用可能。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - LINE
+  - CRM
+  - オープンソース
+  - Cloudflare
+description: 完全オープンソースで提供されるLINE公式アカウント用のCRMツール。Cloudflareの無料枠で稼働し、サーバー代0円で運用可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "スタートアップ"
-    - "マーケター"
-  latest_highlight: "v0.14.1がリリースされ、アフィリエイト計測やマルチアカウント管理など豊富な機能を搭載。"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - スタートアップ
+    - マーケター
+  latest_highlight: v0.14.1がリリースされ、アフィリエイト計測やマルチアカウント管理など豊富な機能を搭載。
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 5
-      reason: "LINE公式アカウントのCRM機能を完全無料で提供"
+      reason: LINE公式アカウントのCRM機能を完全無料で提供
     - point: 5
-      reason: "Cloudflare Workers + D1を利用しサーバー代が0円"
+      reason: Cloudflare Workers + D1を利用しサーバー代が0円
     - point: 5
-      reason: "MCP Server同梱によりClaude CodeなどからのAI操作が可能"
+      reason: MCP Server同梱によりClaude CodeなどからのAI操作が可能
     - point: 5
-      reason: "ステップ配信やアフィリエイト機能など商用ツール並みの機能群"
+      reason: ステップ配信やアフィリエイト機能など商用ツール並みの機能群
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "ランニングコスト0円で高機能なLINE CRMを構築できる画期的なOSS。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: ランニングコスト0円で高機能なLINE CRMを構築できる画期的なOSS。
 links:
-  github: "https://github.com/Shudesu/line-harness-oss"
-  deepwiki: "https://deepwiki.com/Shudesu/line-harness-oss"
-  documentation: "https://harness-wiki.pages.dev/"
+  github: https://github.com/Shudesu/line-harness-oss
+  deepwiki: https://deepwiki.com/Shudesu/line-harness-oss
+  documentation: https://harness-wiki.pages.dev/
 ---
 
 # **LINE Harness 調査レポート**
