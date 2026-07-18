@@ -2,7 +2,7 @@
 title: Camera Camera Camera 調査レポート
 tool_name: Camera Camera Camera
 tool_reading: カメラ カメラ カメラ
-category: コミュニケーション
+category: 3D/VTuber
 developer: Trippy
 official_site: https://camera-camera-camera.com/
 date: '2026-07-18'

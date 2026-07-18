@@ -2,7 +2,7 @@
 title: Open Code Review 調査レポート
 tool_name: Open Code Review
 tool_reading: オープンコードレビュー
-category: AIコーディング支援
+category: AIコードレビュー
 developer: Alibaba Group
 official_site: https://alibaba.github.io/open-code-review/
 date: '2026-06-07'
