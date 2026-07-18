@@ -50,8 +50,8 @@ relationships:
     - Deep Agents
   related_tools:
     - PraisonAI
+    - Grok
     - Dify
-    - AutoGPT
     - GitHub Copilot SDK
     - Amazon Bedrock
     - Hugging Face
