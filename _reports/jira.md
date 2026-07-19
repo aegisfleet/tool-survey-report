@@ -6,7 +6,7 @@ category: プロジェクト管理/生産性
 developer: Atlassian
 official_site: https://www.atlassian.com/software/jira
 date: '2026-01-28'
-last_updated: '2026-03-20'
+last_updated: '2026-07-19'
 tags:
   - AI
   - SaaS
@@ -23,7 +23,7 @@ quick_summary:
     - ソフトウェア開発チーム
     - IT運用チーム
     - 大規模組織
-  latest_highlight: 2026年3月にRovo AIの大幅アップデートとGitHub Copilotとの深い連携機能を発表
+  latest_highlight: 2026年7月にプロジェクトの課題管理やデリバリーリスクをAIが自動分析・報告する「Jira Delivery Agent」を発表
   update_frequency: 高
 evaluation:
   score: 82
@@ -47,14 +47,11 @@ relationships:
   related_tools:
     - TestRail
     - Redmine
-    - Trac
     - Backlog
     - Linear
     - GitHub
     - GitLab
     - Notion
-    - Qase
-    - QualityForward
 ---
 
 # **Jira 調査レポート**
@@ -89,7 +86,39 @@ relationships:
 * **Atlassian Intelligence (Rovo)**: 生成AIを活用し、自然言語でのワークフロー構築、JQL検索、チケット要約、文章作成支援を提供する。
 * **カスタムワークフロー**: 組織のプロセスに合わせて、タスクの状態遷移を細かく定義できる。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: クラウドベースのSaaSアーキテクチャ（旧Server版は提供終了しData Center版へ移行中）。Atlassian Cloudインフラストラクチャ上で稼働するマルチテナントシステム。
+* **主要コンポーネントとデータフロー**:
+  * ブラウザからAtlassian Cloud上のアプリケーションサーバーにアクセス。
+  * チケットのデータはAWS上のデータベースに保存される。
+  * Rovo（Atlassian Intelligence）がLLMに接続し、チケットの要約や検索、ワークフロー構築をアシスト。
+  * ForgeアプリやConnectアプリは、Atlassianのプラットフォームインフラまたは外部のインフラ上で動作し、JiraのREST API/GraphQLと通信。
+
+```mermaid
+graph TD
+    User([ユーザー]) -->|Web/Mobile| CDN[Cloudflare CDN]
+    CDN --> LB[Load Balancer]
+
+    subgraph Atlassian_Cloud [Atlassian Cloud AWS]
+        LB --> AppServer[Jira Application Server]
+        AppServer --> DB[(Database)]
+        AppServer --> AttachmentStorage[(File Storage)]
+        AppServer --> Search[OpenSearch]
+
+        AppServer <--> AtlassianIntelligence[Atlassian Intelligence / Rovo]
+        AppServer <--> AutomationEngine[Automation for Jira]
+    end
+
+    AtlassianIntelligence -.-> LLM[OpenAI等のLLM]
+    AppServer <--> ThirdParty[GitHub/GitLab, Slack, etc.]
+```
+
+* **特筆すべき要素技術**:
+  * **OpenSearch**: Jira 11.2以降、デフォルトの検索エンジンとして採用され、従来のLuceneと比較してパフォーマンスと安定性が向上。
+  * **Atlassian Forge**: Atlassianのインフラ上でサーバーレス関数として動作するアプリ開発プラットフォーム。セキュアな拡張機能開発が可能。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * ブラウザ（クラウド版の場合）
@@ -107,21 +136,21 @@ relationships:
 * **クイックスタート**:
   * プロジェクトを作成し、「作成」ボタンから最初の課題（タスク）を追加する。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **圧倒的な柔軟性**: ワークフロー、フィールド、画面構成などをプロジェクトごとに細かくカスタマイズ可能。
 * **強力なエコシステム**: Atlassian Marketplaceには数千のアプリがあり、機能を自由に拡張できる。
 * **シームレスな連携**: GitHub, GitLab, Slack, Microsoft Teamsなど、開発者が利用する主要ツールと深く連携できる。
 * **スケーラビリティ**: 小規模チームから数万人規模のエンタープライズまで対応可能。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **学習コストが高い**: 機能が多岐にわたるため、管理者・ユーザー共に使いこなすまでのハードルが高い。
 * **複雑な設定**: 柔軟性が高い反面、ワークフローや権限設定が複雑になりがちで、専任の管理者が推奨される場合がある。
 * **動作の重さ**: 大規模なプロジェクトや多数のアドオンを導入している場合、UIの応答が遅くなることがある。
 * **日本語対応**: UIは日本語化されているが、一部の最新機能や高度な設定画面、ドキュメントは英語のままの場合がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 ※価格は2026年1月時点のクラウド版の目安（月額払い）。
 
@@ -135,21 +164,21 @@ relationships:
 * **課金体系**: ユーザー数に応じた従量課金（ユーザー数が増えると単価が下がるティア制）。
 * **無料トライアル**: StandardおよびPremiumプランで7日間の無料トライアルあり。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Spotify, Square, eBay, Cisco, Airbnb など、世界中の多くのテクノロジー企業。
 * **導入事例**: 大規模なアジャイル変革の基盤として採用されるケースや、スタートアップが開発フローを整備するために導入するケースが多数。
 * **対象業界**: ソフトウェア・IT業界が中心だが、近年はマーケティングや人事など非IT部門への導入も進んでいる。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントは非常に充実しているが、情報量が膨大。Atlassian Universityという学習コンテンツも提供。
 * **コミュニティ**: Atlassian Communityは非常に活発で、世界中のユーザーが質問やノウハウ共有を行っている。
 * **公式サポート**: プランに応じてメール・チャットサポートが提供される。Premium以上では24時間365日のサポートがある。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 強力なREST API (v3) を提供しており、外部ツールからのチケット作成や情報取得が容易。
 * **外部サービス連携**:
@@ -159,7 +188,7 @@ relationships:
   * **デザイン**: Figma
   * **その他**: Zendesk, Google Sheets
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -168,18 +197,18 @@ relationships:
 | **Python** | ◯ | `jira`ライブラリ(PyPI)が標準的に利用され、スクリプト作成が容易。 | 公式SDKではないため、最新APIへの追従にラグがある場合も。 |
 | **Next.js** | ◎ | REST API経由での統合が容易。カスタムダッシュボード作成などに適する。 | APIのレートリミットに注意が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: Atlassian Access（別売り）を利用することで、SAML SSOやSCIMプロビジョニングが可能。
 * **データ管理**: データレジデンシー（Standard以上）により、データの保存地域を選択可能。
 * **準拠規格**: SOC2 Type II, ISO/IEC 27001, GDPR, HIPAAなど、主要なセキュリティ基準に準拠。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: モダンなUIに刷新され続けているが、機能が多いため画面情報量は多い。「Global Preview Panel」などで画面遷移を減らす工夫が進められている。
 * **学習コスト**: 高い。特にJQL（Jira Query Language）や複雑なワークフロー設定を理解するには時間が必要。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **チーム管理対象プロジェクトの活用**: チームが自律的に設定を変更できる「チーム管理対象プロジェクト」を利用し、管理者への依存を減らす。
@@ -190,7 +219,7 @@ relationships:
   * **「解決状況(Resolution)」の未設定**: チケットを「完了」にしても解決状況が設定されていないと、レポート上で未解決扱いになる。
   * **何でもJiraに入れる**: データベース代わりや、単純なToDoリストとして使うには重すぎる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, ITreview (2025年-2026年のレビュー)
 * **総合評価**: 4.5/5.0 (Google検索経由で確認したG2評価)
@@ -205,28 +234,32 @@ relationships:
 * **特徴的なユースケース**:
   * 開発だけでなく、採用プロセスや法務のタスク管理にカスタマイズして利用している例も見られる。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-07-06**: **Jira Delivery Agent**: プロジェクトの課題管理やデリバリーリスクをAIが自動分析・報告する「Jira Delivery Agent」を発表。
+* **2026-07-06**: **Terminology Change**: アプリ内の「issue(課題)」という用語を「work(タスク等)」へ、「projects(プロジェクト)」を「spaces(スペース)」へと名称変更する方針を発表。
+* **2026-07-06**: **Rovo Dev in Jira**: チケットから直接コードを生成し、PRの作成までをセキュアなサンドボックス環境で行える「Rovo Dev in Jira」を発表。
 * **2026-03-15**: **Rovo AI Enhanced**: Rovo AIがプロジェクト全体のコンテキストを理解し、より高度な課題解決とレポート生成を自動化。
 * **2026-02-28**: **GitHub Copilot Integration**: JiraとGitHub Copilotのシームレスな連携により、IDE内から直接Jiraチケットの更新が可能に。
 * **2025-12-16**: **Rovo Workflow Builder (Beta)**: 自然言語でプロセスを説明するだけで、AI (Rovo) がワークフローを構築・修正する機能。
 * **2025-12-16**: **Dynamic & Public Forms**: 条件付きロジックを使用したダイナミックなフォーム作成機能と、外部ユーザーへの公開機能。
 
-(出典: [Atlassian Community](https://community.atlassian.com/))
+(出典: [What's new across Atlassian](https://confluence.atlassian.com/cloud/blog) など)
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Jira) | Redmine | Backlog |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | タスク・課題管理 | ◎<br><small>極めて多機能</small> | ◯<br><small>標準的</small> | ◯<br><small>使いやすい</small> |
-| **アジャイル** | スクラム/カンバン | ◎<br><small>標準で強力対応</small> | △<br><small>要プラグイン</small> | △<br><small>カンバンのみ</small> |
-| **開発連携** | Git統合 | ◎<br><small>GitHub/GitLab等と連携</small> | ◯<br><small>リポジトリブラウザ</small> | ◎<br><small>リポジトリ機能内蔵</small> |
-| **カスタマイズ** | ワークフロー | ◎<br><small>無限に設定可能</small> | ◯<br><small>設定可能</small> | △<br><small>制限あり</small> |
-| **非機能要件** | 日本語対応 | ◯<br><small>ほぼ対応だが一部英語</small> | △<br><small>ドキュメントは英語中心</small> | ◎<br><small>完全対応</small> |
+| 機能カテゴリ | 機能項目 | 本ツール (Jira) | Redmine | Backlog | Linear |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | タスク・課題管理 | ◎<br><small>極めて多機能</small> | ◯<br><small>標準的</small> | ◯<br><small>使いやすい</small> | ◎<br><small>爆速のUX</small> |
+| **アジャイル** | スクラム/カンバン | ◎<br><small>標準で強力対応</small> | △<br><small>要プラグイン</small> | △<br><small>カンバンのみ</small> | ◯<br><small>Cycles(スプリント)対応</small> |
+| **開発連携** | Git統合 | ◎<br><small>GitHub/GitLab等と連携</small> | ◯<br><small>リポジトリブラウザ</small> | ◎<br><small>リポジトリ機能内蔵</small> | ◎<br><small>深層統合</small> |
+| **カスタマイズ** | ワークフロー | ◎<br><small>無限に設定可能</small> | ◯<br><small>設定可能</small> | △<br><small>制限あり</small> | △<br><small>制限あり</small> |
+| **AI支援** | AI機能 | ◎<br><small>Rovo AI / Copilot連携</small> | ×<br><small>標準機能なし</small> | ◯<br><small>Backlog AI機能</small> | ◯<br><small>AI Triage / Copilot連携</small> |
+| **非機能要件** | 日本語対応 | ◯<br><small>ほぼ対応だが一部英語</small> | △<br><small>ドキュメントは英語中心</small> | ◎<br><small>完全対応</small> | ×<br><small>英語のみ</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -235,7 +268,7 @@ relationships:
 | **Backlog** | 国産オールインワン | 直感的なUI、日本語サポート、Wiki/Git内蔵 | カスタマイズ性が低い、大規模時のパフォーマンス | 開発者と非開発者が混在するチーム、使いやすさ重視 |
 | **Linear** | 高速・モダン | 圧倒的な動作速度、モダンなUI、開発者体験重視 | カスタマイズ性の低さ、機能が限定的 | スピードを重視するスタートアップ、中規模以下の開発チーム |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   ソフトウェア開発のプロジェクト管理において、Jiraは依然として**デファクトスタンダード**の地位にある。特にバージョン11やRovo (AI) の導入により、複雑さを軽減しつつ生産性を高める方向へ進化している。機能の深さと拡張性は他のツールの追随を許さないが、その代償として学習コストは依然として高い。
