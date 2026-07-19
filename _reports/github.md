@@ -60,13 +60,10 @@ relationships:
     - GitLab
     - Jira
     - CodeRabbit
-    - JFrog Artifactory
-    - Quality Tracker
-    - Findy Team+
     - Jujutsu
-    - Linear
-    - Kiwi TCMS
     - GitKraken
+    - Linear
+    - JFrog Artifactory
 ---
 
 # **GitHub 調査レポート**

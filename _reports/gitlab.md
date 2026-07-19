@@ -57,8 +57,6 @@ relationships:
     - Jira
     - Findy Team+
     - Jujutsu
-    - Nexus Repository
-    - Kiwi TCMS
     - GitKraken
 ---
 
