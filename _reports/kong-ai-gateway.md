@@ -2,7 +2,7 @@
 title: Kong AI Gateway 調査レポート
 tool_name: Kong AI Gateway
 tool_reading: コング エーアイ ゲートウェイ
-category: インフラ/サーバー管理
+category: AIゲートウェイ
 developer: Kong Inc.
 official_site: https://konghq.com/products/kong-ai-gateway
 date: '2026-06-22'
