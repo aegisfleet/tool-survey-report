@@ -2,7 +2,7 @@
 title: n8n 調査レポート
 tool_name: n8n
 tool_reading: エヌエイトエヌ
-category: iPaaS/連携
+category: ワークフローエンジン
 developer: n8n GmbH
 official_site: https://n8n.io/
 date: '2026-01-27'
@@ -10,7 +10,6 @@ last_updated: '2026-06-30'
 tags:
   - AI
   - オープンソース
-  - セルフホスト
   - ローコード
   - 自動化
 description: オープンソースを基盤とした柔軟性の高いAIネイティブのワークフロー自動化ツール。ビジュアルエディタとコード記述を組み合わせ、複雑なプロセスに対応可能。
@@ -52,6 +51,7 @@ relationships:
   related_tools:
     - Make
     - Zapier
+    - Jinba
     - Microsoft Power Automate
     - Workato
     - Google Opal
