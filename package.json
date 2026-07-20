@@ -2,7 +2,7 @@
   "private": true,
   "packageManager": "pnpm@9.15.9",
   "devDependencies": {
-    "@biomejs/biome": "^2.5.2",
+    "@biomejs/biome": "^2.5.3",
     "js-yaml": "^5.2.1"
   },
   "scripts": {
