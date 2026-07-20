@@ -10,7 +10,7 @@ last_updated: '2026-05-20'
 tags:
   - AI
   - SaaS
-  - iPaaS
+  - クラウド
   - エージェント
   - ノーコード
 description: 8,500以上のアプリと連携し、AIワークフローやエージェントの構築を可能にする業界トップクラスの自動化プラットフォーム。ノーコードで直感的に操作できる点が特徴。
@@ -50,6 +50,7 @@ relationships:
   related_tools:
     - Make
     - Microsoft Power Automate
+    - Jinba
     - n8n
     - Workato
     - Google Opal

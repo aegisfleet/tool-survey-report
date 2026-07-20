@@ -2,7 +2,7 @@
 title: Dify 調査レポート
 tool_name: Dify
 tool_reading: ディフィー
-category: AIアプリ開発基盤
+category: ワークフローエンジン
 developer: LangGenius, Inc.
 official_site: https://dify.ai/
 date: '2026-02-11'
@@ -12,7 +12,6 @@ tags:
   - エージェント
   - オープンソース
   - ローコード
-  - ワークフロー
 description: エージェントワークフロー開発のための本番環境対応プラットフォーム。AIワークフロー、RAGパイプライン、エージェント機能、モデル管理、オブザーバビリティ機能などを組み合わせ、プロトタイプから本番環境へ迅速に移行可能。
 quick_summary:
   has_free_plan: true
@@ -51,6 +50,7 @@ relationships:
   children: []
   related_tools:
     - LangChain
+    - Jinba
     - Amazon Bedrock
     - Google Opal
     - Brainbase
