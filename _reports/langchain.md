@@ -8,36 +8,36 @@ official_site: https://www.langchain.com/
 date: '2026-02-17'
 last_updated: '2026-05-22'
 tags:
-  - AI
-  - Python
-  - エージェント
-  - オープンソース
-  - 大規模言語モデル
+- AI
+- Python
+- エージェント
+- オープンソース
+- 大規模言語モデル
 description: 大規模言語モデル（LLM）を活用したアプリケーション開発を、データ連携・エージェント構築・実行監視などの機能で支援するオープンソースフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-    - AIエンジニア
-    - ソフトウェア開発者
+  - AIエンジニア
+  - ソフトウェア開発者
   latest_highlight: 2026年5月にLangChain 1.3がリリース、stream_events(version='v3')などのサポートを追加
   update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-    - point: 8
-      reason: 60以上のLLM、数百のツール・DBと連携可能な圧倒的なエコシステム
-    - point: 4
-      reason: v1.0リリースによりAPIの安定性が保証され、本番導入のリスクが低減
-    - point: 3
-      reason: LangGraphによる高度なエージェント制御とLangSmithによる可観測性が強力
+  - point: 8
+    reason: 60以上のLLM、数百のツール・DBと連携可能な圧倒的なエコシステム
+  - point: 4
+    reason: v1.0リリースによりAPIの安定性が保証され、本番導入のリスクが低減
+  - point: 3
+    reason: LangGraphによる高度なエージェント制御とLangSmithによる可観測性が強力
   minus_points:
-    - point: -3
-      reason: 独自の抽象化概念（Chain, LCEL等）が多く、学習コストが高い
-    - point: -2
-      reason: 機能追加が速すぎてドキュメントの構成が複雑化しており、情報の取捨選択が難しい
+  - point: -3
+    reason: 独自の抽象化概念（Chain, LCEL等）が多く、学習コストが高い
+  - point: -2
+    reason: 機能追加が速すぎてドキュメントの構成が複雑化しており、情報の取捨選択が難しい
   summary: エコシステムの広さとv1.0による安定性で業界標準の地位を確立。学習コストはあるが、本格的な開発には必須級。
 links:
   github: https://github.com/langchain-ai/langchain
@@ -47,17 +47,15 @@ links:
 relationships:
   parent: ''
   children:
-    - Deep Agents
+  - Deep Agents
   related_tools:
-    - PraisonAI
-    - Grok
-    - Dify
-    - GitHub Copilot SDK
-    - Amazon Bedrock
-    - Hugging Face
-    - OpenDataLoader
-    - Agent Governance Toolkit
-    - Agent Lightning
+  - PraisonAI
+  - Grok
+  - Dify
+  - GitHub Copilot SDK
+  - Amazon Bedrock
+  - Hugging Face
+  - Letta
 ---
 # **LangChain 調査レポート**
 
