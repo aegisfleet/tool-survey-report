@@ -227,6 +227,9 @@ relationships:
 | **フレームワーク** | Next.js対応 | ◎<br><small>公式・最新機能即応</small> | △<br><small>一部機能制限あり</small> | ◯<br><small>プラグインで対応</small> | ◯<br><small>アダプターで対応</small> |
 | **エッジ/CDN** | パフォーマンス | ◎<br><small>Fluid Compute</small> | ◎<br><small>世界最強クラスのCDN</small> | ◯<br><small>標準的</small> | ◯<br><small>CloudFront利用</small> |
 | **AI機能** | SDK/Gateway | ◎<br><small>AI SDK, v0など充実</small> | ◯<br><small>Workers AI</small> | △<br><small>AI機能はあるが限定的</small> | ◯<br><small>Bedrock連携</small> |
+| **環境** | セルフホスト対応 | ×<br><small>SaaSのみ</small> | ×<br><small>SaaSのみ</small> | ×<br><small>SaaSのみ</small> | ×<br><small>クラウドのみ</small> |
+
+*(注: セルフホスト可能でVercelライクなデプロイ環境を構築できるツールとして、**Openship** なども存在する。)*
 
 ### **16.2 詳細比較**
 
@@ -236,6 +239,7 @@ relationships:
 | **Cloudflare** | セキュリティとCDNの巨人 | エグレス料金無料(R2)、セキュリティ機能、Workers | Next.jsの全機能対応には遅れがある場合も | コストを抑えたい、セキュリティ重視、静的サイト中心の場合。 |
 | **Netlify** | Jamstackのパイオニア | 安定したエコシステム、予測しやすい料金 | Vercelに比べると新機能（特にAI）の投入が穏やか | 老舗の安心感、Next.js以外のSSGを使う場合。 |
 | **AWS Amplify** | AWSのフルスタックサービス | AWS全サービスとのネイティブ連携 | 設定が複雑になりがち、DXはVercelに劣る | 既にAWSインフラに深く依存しているシステムの場合。 |
+| **Openship** | オープンソースのデプロイメントツール | 自身のサーバーでVercelライクなDXを無料で実現、ロックインなし | 完全マネージド版が未提供、大規模実績が少ない | インフラ費用を抑えつつ自前環境でPaaSのような手軽さを求める場合。 |
 
 ## **17. 総評**
 
