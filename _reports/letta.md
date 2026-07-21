@@ -8,35 +8,35 @@ official_site: https://docs.letta.com/
 date: '2026-03-21'
 last_updated: '2026-07-21'
 tags:
-- AI
-- エージェント
-- オープンソース
-- 自律型
-- 開発者ツール
+  - AI
+  - エージェント
+  - オープンソース
+  - 自律型
+  - 開発者ツール
 description: ステートフルなAIエージェントを構築・管理・デプロイするためのオープンソースフレームワーク。MemGPTの後継として、永続的なメモリ管理とマルチエージェントシステムを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - AIエンジニア
-  - 研究者
+    - 開発者
+    - AIエンジニア
+    - 研究者
   latest_highlight: 2026年5月にv0.16.8、3月にv0.16.7をリリースしコンテキスト上限を128kに拡大
   update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 永続的なメモリ管理という独自の強み
-  - point: 5
-    reason: モデルに依存しない柔軟性（OpenAI, Anthropic, Gemini等）
-  - point: 5
-    reason: 活発なオープンソース開発と商用版の提供
+    - point: 5
+      reason: 永続的なメモリ管理という独自の強み
+    - point: 5
+      reason: モデルに依存しない柔軟性（OpenAI, Anthropic, Gemini等）
+    - point: 5
+      reason: 活発なオープンソース開発と商用版の提供
   minus_points:
-  - point: -2
-    reason: 概念が高度で学習コストがやや高い
+    - point: -2
+      reason: 概念が高度で学習コストがやや高い
   summary: 永続メモリを持つエージェント開発において、最も先進的かつ実用的なフレームワークの一つ。
 links:
   github: https://github.com/letta-ai/letta
@@ -45,8 +45,8 @@ links:
   documentation: https://docs.letta.com/
 relationships:
   related_tools:
-  - AutoGPT
-  - LangChain
+    - AutoGPT
+    - LangChain
 ---
 
 # **Letta 調査レポート**
