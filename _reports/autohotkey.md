@@ -2,7 +2,7 @@
 title: AutoHotkey 調査レポート
 tool_name: AutoHotkey
 tool_reading: オートホットキー
-category: ターミナル/CLIツール
+category: デスクトップ/環境操作
 developer: AutoHotkey Community (Chris Mallett, Steve Gray 等)
 official_site: https://www.autohotkey.com/
 date: '2026-03-27'

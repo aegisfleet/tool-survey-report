@@ -2,7 +2,7 @@
 title: Ranorex Studio 調査レポート
 tool_name: Ranorex Studio
 tool_reading: ラノレックス スタジオ
-category: E2E/ブラウザテスト
+category: E2Eテストフレームワーク
 developer: Ranorex GmbH (Idera, Inc.)
 official_site: https://www.ranorex.com/
 date: '2026-05-11'

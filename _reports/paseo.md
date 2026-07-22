@@ -2,7 +2,7 @@
 title: Paseo 調査レポート
 tool_name: Paseo
 tool_reading: パセオ
-category: 汎用AIエージェント
+category: 自律型AIエージェント
 developer: Paseo
 official_site: https://paseo.sh/
 date: '2026-07-09'

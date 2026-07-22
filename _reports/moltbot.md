@@ -2,7 +2,7 @@
 title: Moltbot 調査レポート
 tool_name: Moltbot
 tool_reading: モルトボット
-category: パーソナルAIアシスタント
+category: 汎用パーソナルアシスタント
 developer: Peter Steinberger & Community
 official_site: https://openclaw.ai/
 date: '2026-03-29'

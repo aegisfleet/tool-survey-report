@@ -2,7 +2,7 @@
 title: ONLYOFFICE 調査レポート
 tool_name: ONLYOFFICE
 tool_reading: オンリーオフィス
-category: ドキュメント/ナレッジ
+category: ドキュメント生成/管理
 developer: Ascensio System SIA
 official_site: https://www.onlyoffice.com/
 date: '2026-07-06'

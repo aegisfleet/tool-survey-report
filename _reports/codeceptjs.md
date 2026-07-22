@@ -2,7 +2,7 @@
 title: CodeceptJS 調査レポート
 tool_name: CodeceptJS
 tool_reading: コードセプトジェイエス
-category: E2E/ブラウザテスト
+category: AIテスト自動化
 developer: CodeceptJS Team
 official_site: https://codecept.io/
 date: '2026-05-09'

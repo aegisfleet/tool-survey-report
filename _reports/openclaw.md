@@ -2,7 +2,7 @@
 title: OpenClaw 調査レポート
 tool_name: OpenClaw
 tool_reading: オープンクロー
-category: パーソナルAIアシスタント
+category: 汎用パーソナルアシスタント
 developer: Peter Steinberger & community
 official_site: https://openclaw.ai/
 date: '2026-04-09'

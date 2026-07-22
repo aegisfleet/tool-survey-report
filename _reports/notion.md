@@ -2,7 +2,7 @@
 title: Notion 調査レポート
 tool_name: Notion
 tool_reading: ノーション
-category: ドキュメント/ナレッジ
+category: ナレッジベース/Wiki
 developer: Notion Labs, Inc.
 official_site: https://www.notion.com/
 date: '2026-03-11'

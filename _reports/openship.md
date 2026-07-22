@@ -2,14 +2,14 @@
 title: Openship 調査レポート
 tool_name: Openship
 tool_reading: オープンシップ
-category: デプロイメントツール
+category: クラウドサービス/PaaS
 developer: Oblien LLC.
 official_site: https://openship.io/
 date: '2026-07-21'
 last_updated: '2026-07-21'
 tags:
   - PaaS
-  - Self-hosted
+  - セルフホスト
   - オープンソース
   - Docker
 description: Vercelライクな操作性を持つセルフホスト可能なデプロイメントプラットフォーム

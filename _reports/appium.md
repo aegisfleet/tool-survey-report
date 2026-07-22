@@ -2,7 +2,7 @@
 title: Appium 調査レポート
 tool_name: Appium
 tool_reading: アピウム
-category: E2E/ブラウザテスト
+category: E2Eテストフレームワーク
 developer: OpenJS Foundation
 official_site: https://appium.io/
 date: '2025-10-26'

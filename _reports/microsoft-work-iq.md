@@ -2,7 +2,7 @@
 title: Microsoft Work IQ 調査レポート
 tool_name: Microsoft Work IQ
 tool_reading: マイクロソフト ワーク アイキュー
-category: プロジェクト管理/生産性
+category: コラボレーション/生産性
 developer: Microsoft
 official_site: https://github.com/microsoft/work-iq-mcp
 date: '2026-01-25'

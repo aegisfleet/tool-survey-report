@@ -2,7 +2,7 @@
 title: ふりかえり実践会 調査レポート
 tool_name: ふりかえり実践会
 tool_reading: フリカエリジッセンカイ
-category: プロジェクト管理/生産性
+category: コラボレーション/生産性
 developer: びば / 森 一樹
 official_site: https://hurikaeri.jp/
 date: '2026-07-16'

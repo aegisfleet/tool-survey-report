@@ -2,7 +2,7 @@
 title: Cucumber 調査レポート
 tool_name: Cucumber
 tool_reading: キューカンバー
-category: E2E/ブラウザテスト
+category: E2Eテストフレームワーク
 developer: The Cucumber Open Source Project
 official_site: https://cucumber.io/
 date: '2025-10-19'

@@ -2,7 +2,7 @@
 title: pinact 調査レポート
 tool_name: pinact
 tool_reading: ピンアクト
-category: CI/CD/自動化
+category: CI/CD周辺ツール
 developer: suzuki-shunsuke
 official_site: https://github.com/suzuki-shunsuke/pinact
 date: '2026-03-12'

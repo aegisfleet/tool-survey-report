@@ -2,7 +2,7 @@
 title: Gauge 調査レポート
 tool_name: Gauge
 tool_reading: ゲージ
-category: E2E/ブラウザテスト
+category: E2Eテストフレームワーク
 developer: ThoughtWorks (コミュニティ主導)
 official_site: https://gauge.org/
 date: '2025-12-06'

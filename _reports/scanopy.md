@@ -2,7 +2,7 @@
 title: Scanopy 調査レポート
 tool_name: Scanopy
 tool_reading: スキャノピー
-category: ドキュメント/ナレッジ
+category: ドキュメント生成/管理
 developer: Scanopy
 official_site: https://scanopy.net/
 date: '2026-03-29'

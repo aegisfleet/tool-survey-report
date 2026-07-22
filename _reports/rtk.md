@@ -2,7 +2,7 @@
 title: RTK 調査レポート
 tool_name: RTK
 tool_reading: アールティーケー
-category: ターミナル/CLIツール
+category: CLI拡張/プロキシ
 developer: Patrick Szymkowiak
 official_site: https://www.rtk-ai.app/
 date: '2026-05-05'

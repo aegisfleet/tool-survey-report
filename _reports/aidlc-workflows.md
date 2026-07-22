@@ -2,7 +2,7 @@
 title: AI-DLC Workflows 調査レポート
 tool_name: AI-DLC Workflows
 tool_reading: エーアイディーエルシー ワークフローズ
-category: CI/CD/自動化
+category: AI開発ワークフロー
 developer: AWS Labs
 official_site: https://github.com/awslabs/aidlc-workflows
 date: '2026-06-18'
