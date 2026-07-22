@@ -1,57 +1,54 @@
 ---
-title: "OpenTelemetry 調査レポート"
-tool_name: "OpenTelemetry"
-tool_reading: "オープンテレメトリー"
-category: "監視/可観測性"
-developer: "Cloud Native Computing Foundation (CNCF)"
-official_site: "https://opentelemetry.io/"
-date: "2026-07-22"
-last_updated: "2026-07-22"
+title: OpenTelemetry 調査レポート
+tool_name: OpenTelemetry
+tool_reading: オープンテレメトリー
+category: 監視/可観測性
+developer: Cloud Native Computing Foundation (CNCF)
+official_site: https://opentelemetry.io/
+date: '2026-07-22'
+last_updated: '2026-07-22'
 tags:
-  - "可観測性"
-  - "監視"
-  - "オープンソース"
-  - "CNCF"
-description: "クラウドネイティブソフトウェアのための標準的な可観測性（オブザーバビリティ）フレームワークおよびツールキット。"
-
+  - 可観測性
+  - 監視
+  - オープンソース
+  - CNCF
+description: クラウドネイティブソフトウェアのための標準的な可観測性（オブザーバビリティ）フレームワークおよびツールキット。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "SRE / 運用エンジニア"
-    - "インフラエンジニア"
-  latest_highlight: "OpenCensusの互換性要件を仕様から非推奨化（2026年6月）"
-  update_frequency: "高"
-
+    - 開発者
+    - SRE / 運用エンジニア
+    - インフラエンジニア
+  latest_highlight: OpenCensusの互換性要件を仕様から非推奨化（2026年6月）
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "ベンダーロックインを排除する業界標準の可観測性フレームワークであるため"
+      reason: ベンダーロックインを排除する業界標準の可観測性フレームワークであるため
     - point: 5
-      reason: "多言語対応のSDKと豊富なゼロコードインスツルメンテーションの提供"
+      reason: 多言語対応のSDKと豊富なゼロコードインスツルメンテーションの提供
     - point: 5
-      reason: "主要なベンダー（Jaeger, Prometheusなど）とエコシステム連携が強力"
+      reason: 主要なベンダー（Jaeger, Prometheusなど）とエコシステム連携が強力
     - point: 5
-      reason: "CNCFのGraduatedプロジェクトとしての高い信頼性と継続的な開発"
+      reason: CNCFのGraduatedプロジェクトとしての高い信頼性と継続的な開発
   minus_points:
     - point: 0
-      reason: "機能的なマイナス要因は特に見当たらない"
-  summary: "可観測性（オブザーバビリティ）において、特定のベンダーに依存しない業界標準として圧倒的な地位を確立している必須のフレームワーク。"
-
+      reason: 機能的なマイナス要因は特に見当たらない
+  summary: 可観測性（オブザーバビリティ）において、特定のベンダーに依存しない業界標準として圧倒的な地位を確立している必須のフレームワーク。
 links:
-  github: "https://github.com/open-telemetry"
-  documentation: "https://opentelemetry.io/docs/"
+  github: https://github.com/open-telemetry
+  documentation: https://opentelemetry.io/docs/
 relationships:
-  parent: ""
+  parent: ''
   children:
-    - ""
+    - ''
   related_tools:
-    - "prometheus"
-    - "splunk"
+    - prometheus
+    - splunk
 ---
 
 # **OpenTelemetry 調査レポート**
