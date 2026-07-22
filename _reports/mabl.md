@@ -6,7 +6,7 @@ category: テスト自動化SaaS
 developer: mabl Inc.
 official_site: https://www.mabl.com/ja/
 date: '2026-01-28'
-last_updated: '2026-03-22'
+last_updated: '2026-07-22'
 tags:
   - AI
   - E2Eテスト
@@ -22,7 +22,7 @@ quick_summary:
     - QAエンジニア
     - 開発者
     - 大企業
-  latest_highlight: 2026年1月にテスト作成を支援する「アプリケーションサマリー」機能を追加
+  latest_highlight: 2026年7月にmablエージェントの強化やPlaywrightロケーター対応などのアップデートを実施
   update_frequency: 高
 evaluation:
   score: 81
@@ -101,9 +101,11 @@ relationships:
 * **ローコードテスト作成**: mabl Trainer（ブラウザ拡張機能）を使用し、実際の画面操作を記録するだけでテストを作成できます。
 * **AI自動修復 (Auto-heal)**: アプリケーションのUI変更をAIが自動検知し、テストステップを自動的に修正してテストの失敗を防ぎます。
 * **統合テストプラットフォーム**: Web UI、モバイル（iOS/Android）、API、アクセシビリティ、パフォーマンステストを一つのツールで管理可能です。
+* **Playwrightロケーター対応**: 最新のアップデートによりPlaywrightロケーターを使用した要素検索がサポートされ、より柔軟で安定したテスト作成が可能です。
+* **mablエージェント**: AIエージェントと対話しながらのテスト作成・デバッグ機能が提供され、必要な情報の回答やフローの作成が効率化されています。
 * **クラウド実行環境**: インフラ管理不要で、並列実行可能なスケーラブルなテスト環境をクラウド上で提供します。
 * **生成AIアサーション**: 生成AIを活用して、画面上の要素や状態に対して自然言語で検証条件を指定できます。
-* **mabl Link**: セキュアなトンネル接続を利用して、ファイアウォール内の開発環境やローカル環境に対してテストを実行できます。
+* **mabl Link**: セキュアなトンネル接続を利用して、ファイアウォール内の開発環境やローカル環境に対してテストを実行できます（localhostサービスへの接続も対応）。
 * **インテリジェントレポート**: テスト結果の傾向分析、失敗原因の自動診断、パフォーマンスの推移などを可視化します。
 
 ## **4. 開始手順・セットアップ**
@@ -306,6 +308,11 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-07-22**: **mabl リンクで localhost のサービスに接続する**: ファイアウォール内の localhost サービスに対するテストの実行が可能に。
+* **2026-07-20**: **mablエージェントで再利用可能なフローを作成**: mablエージェントが再利用可能なフローの作成をサポート。
+* **2026-07-17**: **Playwrightロケーターで要素を検索**: Playwrightロケーターを利用した要素の検索に対応。
+* **2026-07-14**: **mablエージェントが入力を必要とするときに回答する**: mablエージェントに対する入力補完・回答機能が追加。
+* **2026-07-10**: **テスト失敗の自動分類**: テスト失敗の理由の自動分類およびカスタム理由の追加に対応。
 * **2026-01-27**: **アプリケーションサマリー**: より高度なテスト作成を支援するためのアプリケーション構造の要約機能を追加。
 * **2026-01-23**: **データテーブルの自然言語シナリオ選択**: 自然言語を使ってデータテーブルから特定のシナリオを選択・実行可能に。
 * **2026-01-15**: **テスト作成エージェントの改善**: AIモデルのプレビュー版など、テスト作成エージェント（Test Creation Agent）の機能を強化。
@@ -314,7 +321,7 @@ relationships:
 * **2026-01-09**: **ユーザーリストのエクスポート**: ユーザー管理画面からユーザーリストをCSVとしてエクスポートする機能を追加。
 * **2025-12-16**: **Xray連携強化**: Jiraのテスト管理プラグインXray向けの新しいmabl MCPツールをリリース。
 
-(出典: [mabl リリースノート](https://help.mabl.com/hc/ja/sections/16182508667540))
+(出典: [mabl 継続中リリースノート](https://help.mabl.com/hc/ja/sections/16182508667540-%E7%B6%99%E7%B6%9A%E4%B8%AD))
 
 ## **16. 類似ツールとの比較**
 
@@ -341,9 +348,11 @@ relationships:
 | 機能カテゴリ | 機能項目 | mabl | Autify | MagicPod | Selenium |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | ノーコード作成 | ◯<br><small>ローコード</small> | ◎<br><small>Nexusで直感的</small> | ◎<br><small>直感的</small> | ×<br><small>コード必須</small> |
-| **基本機能** | テスト設計・生成 | △<br><small>AIサポートのみ</small> | ◎<br><small>Genesisで自動化</small> | △<br><small>一部AI生成あり</small> | ×<br><small>なし</small> |
+| **基本機能** | テスト設計・生成 | △<br><small>AIエージェント強化中</small> | ◎<br><small>Genesisで自動化</small> | △<br><small>AIテスト生成あり</small> | ×<br><small>なし</small> |
 | **カテゴリ特定** | AI自動修復 | ◎<br><small>高精度</small> | ◎<br><small>高精度</small> | ◎<br><small>高精度</small> | ×<br><small>なし</small> |
+| **環境** | モバイル実機 | ◯<br><small>対応</small> | ◯<br><small>対応</small> | ◎<br><small>クラウド完備</small> | △<br><small>Appium必要</small> |
 | **統合環境** | Web+Mobile+API | ◎<br><small>完全統合</small> | △<br><small>API簡易</small> | △<br><small>API簡易</small> | ◯<br><small>要構成</small> |
+| **エンタープライズ** | マネージドQA・代行 | ×<br><small>非提供</small> | ◎<br><small>AI Coworker提供</small> | ×<br><small>非提供</small> | ×<br><small>非提供</small> |
 | **拡張性** | パフォーマンス | ◯<br><small>統合機能</small> | - | - | ◯<br><small>JMeter等連携</small> |
 | **非機能要件** | 日本語対応 | ◎<br><small>法人あり</small> | ◎<br><small>国産</small> | ◎<br><small>国産</small> | △<br><small>情報のみ</small> |
 
