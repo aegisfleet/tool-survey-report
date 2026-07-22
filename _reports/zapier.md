@@ -51,6 +51,7 @@ relationships:
     - Make
     - Microsoft Power Automate
     - Jinba
+    - MoneyPrinterV2
     - n8n
     - Workato
     - Google Opal
