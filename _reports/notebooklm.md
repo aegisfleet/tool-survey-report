@@ -2,7 +2,7 @@
 title: NotebookLM 調査レポート
 tool_name: NotebookLM
 tool_reading: ノートブックエルエム
-category: パーソナルAIアシスタント
+category: 特定用途AIアシスタント
 developer: Google
 official_site: https://notebooklm.google.com/
 date: '2026-01-28'

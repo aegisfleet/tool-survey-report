@@ -2,7 +2,7 @@
 title: TextFX 調査レポート
 tool_name: TextFX
 tool_reading: テキストエフエックス
-category: パーソナルAIアシスタント
+category: 特定用途AIアシスタント
 developer: Google
 official_site: https://textfx.withgoogle.com/
 date: '2026-06-03'

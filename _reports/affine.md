@@ -2,7 +2,7 @@
 title: AFFiNE 調査レポート
 tool_name: AFFiNE
 tool_reading: アファイン
-category: ドキュメント/ナレッジ
+category: ナレッジベース/Wiki
 developer: Toeverything
 official_site: https://affine.pro/
 date: '2026-05-07'

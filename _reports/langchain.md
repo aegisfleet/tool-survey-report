@@ -2,7 +2,7 @@
 title: LangChain 調査レポート
 tool_name: LangChain
 tool_reading: ラングチェーン
-category: AIエージェントフレームワーク
+category: エージェント開発基盤
 developer: LangChain, Inc.
 official_site: https://www.langchain.com/
 date: '2026-02-17'

@@ -2,7 +2,7 @@
 title: Jenkins 調査レポート
 tool_name: Jenkins
 tool_reading: ジェンキンス
-category: CI/CD/自動化
+category: CI/CDプラットフォーム
 developer: CloudBees, Inc. and the Jenkins community
 official_site: https://www.jenkins.io/
 date: '2026-01-27'

@@ -2,7 +2,7 @@
 title: Findy Library 調査レポート
 tool_name: Findy Library
 tool_reading: ファインディ ライブラリ
-category: ドキュメント/ナレッジ
+category: ナレッジベース/Wiki
 developer: ファインディ株式会社 (Findy Inc.)
 official_site: https://lib.findy.co.jp/
 date: '2026-07-21'

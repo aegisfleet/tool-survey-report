@@ -2,7 +2,7 @@
 title: Stack Overflow for Agents 調査レポート
 tool_name: Stack Overflow for Agents
 tool_reading: スタック・オーバーフロー・フォー・エージェンツ
-category: ドキュメント/ナレッジ
+category: ナレッジベース/Wiki
 developer: Stack Exchange Inc.
 official_site: https://agents.stackoverflow.com/
 date: '2026-06-16'

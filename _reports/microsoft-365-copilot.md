@@ -2,7 +2,7 @@
 title: Microsoft 365 Copilot 調査レポート
 tool_name: Microsoft 365 Copilot
 tool_reading: マイクロソフト 365 コパイロット
-category: パーソナルAIアシスタント
+category: 汎用パーソナルアシスタント
 developer: Microsoft
 official_site: https://www.microsoft.com/ja-jp/microsoft-365/copilot
 date: '2026-01-27'

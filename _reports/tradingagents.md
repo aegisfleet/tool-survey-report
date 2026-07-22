@@ -2,7 +2,7 @@
 title: TradingAgents 調査レポート
 tool_name: TradingAgents
 tool_reading: トレーディングエージェンツ
-category: AIエージェントフレームワーク
+category: マルチエージェントフレームワーク
 developer: TauricResearch
 official_site: https://github.com/TauricResearch/TradingAgents
 date: '2026-03-25'

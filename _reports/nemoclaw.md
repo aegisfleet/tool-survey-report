@@ -2,7 +2,7 @@
 title: NemoClaw 調査レポート
 tool_name: NemoClaw
 tool_reading: ニモクロー
-category: パーソナルAIアシスタント
+category: 汎用パーソナルアシスタント
 developer: NVIDIA
 official_site: https://www.nvidia.com/ja-jp/ai/nemoclaw/
 date: '2026-03-22'

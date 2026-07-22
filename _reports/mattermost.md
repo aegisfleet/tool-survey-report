@@ -2,7 +2,7 @@
 title: Mattermost 調査レポート
 tool_name: Mattermost
 tool_reading: マターモースト
-category: プロジェクト管理/生産性
+category: コラボレーション/生産性
 developer: Mattermost Inc.
 official_site: https://mattermost.com/
 date: '2026-05-07'

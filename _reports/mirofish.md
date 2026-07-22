@@ -2,7 +2,7 @@
 title: MiroFish 調査レポート
 tool_name: MiroFish
 tool_reading: ミロフィッシュ
-category: 汎用AIエージェント
+category: 業務/シミュレーションAI
 developer: 666ghj (Shanda Group / 盛大集团 支援)
 official_site: https://mirofish.ai/
 date: '2026-04-01'

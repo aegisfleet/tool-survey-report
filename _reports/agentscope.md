@@ -2,7 +2,7 @@
 title: AgentScope 調査レポート
 tool_name: AgentScope
 tool_reading: エージェントスコープ
-category: AIエージェントフレームワーク
+category: マルチエージェントフレームワーク
 developer: Alibaba
 official_site: https://doc.agentscope.io/
 date: '2026-03-26'

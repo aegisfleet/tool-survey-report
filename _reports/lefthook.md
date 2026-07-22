@@ -2,7 +2,7 @@
 title: Lefthook 調査レポート
 tool_name: Lefthook
 tool_reading: レフトフック
-category: CI/CD/自動化
+category: CI/CD周辺ツール
 developer: Evil Martians
 official_site: https://lefthook.dev/
 date: '2026-02-18'

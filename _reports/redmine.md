@@ -2,7 +2,7 @@
 title: Redmine 調査レポート
 tool_name: Redmine
 tool_reading: レッドマイン
-category: プロジェクト管理/生産性
+category: プロジェクト/タスク管理
 developer: Jean-Philippe Lang and community
 official_site: https://www.redmine.org/
 date: '2026-01-10'
