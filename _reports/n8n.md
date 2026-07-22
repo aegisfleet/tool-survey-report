@@ -52,6 +52,7 @@ relationships:
     - Make
     - Zapier
     - Jinba
+    - MoneyPrinterV2
     - Microsoft Power Automate
     - Workato
     - Google Opal
