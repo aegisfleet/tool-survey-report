@@ -1,45 +1,42 @@
 ---
-title: "SkyPhone 調査レポート"
-tool_name: "SkyPhone"
-tool_reading: "スカイフォン"
-category: "コラボレーション/生産性"
-developer: "株式会社クアッドシステム (QuadSystem Co., Ltd.)"
-official_site: "https://www.skyphone.jp/"
-date: "2026-07-23"
-last_updated: "2026-07-23"
+title: SkyPhone 調査レポート
+tool_name: SkyPhone
+tool_reading: スカイフォン
+category: コラボレーション/生産性
+developer: 株式会社クアッドシステム (QuadSystem Co., Ltd.)
+official_site: https://www.skyphone.jp/
+date: '2026-07-23'
+last_updated: '2026-07-23'
 tags:
-  - "SaaS"
-description: "ユーザー登録不要で高音質な無料通話・ビデオ通話ができるシンプルな通話アプリ"
-
+  - SaaS
+description: ユーザー登録不要で高音質な無料通話・ビデオ通話ができるシンプルな通話アプリ
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般ユーザー"
-    - "家族・友人"
-  latest_highlight: "2026年6月にiOS版バージョン1.11.2をリリース"
-  update_frequency: "高"
-
+    - 一般ユーザー
+    - 家族・友人
+  latest_highlight: 2026年6月にiOS版バージョン1.11.2をリリース
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ユーザー登録不要で即座に利用開始できる手軽さ"
+      reason: ユーザー登録不要で即座に利用開始できる手軽さ
     - point: 5
-      reason: "クリアな高音質での音声・ビデオ通話が無料"
+      reason: クリアな高音質での音声・ビデオ通話が無料
     - point: 3
-      reason: "あんしんモードやノイズキャンセルなどの機能"
+      reason: あんしんモードやノイズキャンセルなどの機能
     - point: 2
-      reason: "頻繁なアップデートとバグ修正"
+      reason: 頻繁なアップデートとバグ修正
   minus_points:
     - point: -3
-      reason: "通話特化のためSNS機能は最小限"
-  summary: "登録不要・高音質・無料で使える実用的な通話特化アプリ"
-
+      reason: 通話特化のためSNS機能は最小限
+  summary: 登録不要・高音質・無料で使える実用的な通話特化アプリ
 links:
-  documentation: "https://www.skyphone.jp/help/"
+  documentation: https://www.skyphone.jp/help/
 relationships:
   related_tools: []
 ---
