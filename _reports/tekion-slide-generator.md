@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "TEKION Slide Generator 調査レポート"
-tool_name: "TEKION Slide Generator"
-tool_reading: "テキオンスライドジェネレーター"
-category: "スライド/プレゼンテーション"
-developer: "TEKION Group"
-official_site: "https://github.com/rsensui2/tekion-slide-generator"
-date: "2026-07-23"
-last_updated: "2026-07-23"
+title: TEKION Slide Generator 調査レポート
+tool_name: TEKION Slide Generator
+tool_reading: テキオンスライドジェネレーター
+category: スライド/プレゼンテーション
+developer: TEKION Group
+official_site: https://github.com/rsensui2/tekion-slide-generator
+date: '2026-07-23'
+last_updated: '2026-07-23'
 tags:
-  - "オープンソース"
-  - "生成AI"
-  - "画像生成"
-description: "Markdownから高品質な16:9 2Kスライドを自動生成しPPTX/PDFに出力するツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - 生成AI
+  - 画像生成
+description: Markdownから高品質な16:9 2Kスライドを自動生成しPPTX/PDFに出力するツール
 quick_summary:
   has_free_plan: false
   is_oss: true
-  starting_price: "無料（オープンソース）"
+  starting_price: 無料（オープンソース）
   target_users:
-    - "開発者"
-    - "営業担当者"
-    - "登壇者"
-  latest_highlight: "OpenAI GPT-image-2対応やVisual/Balancedスタイル等を追加したv4をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - 営業担当者
+    - 登壇者
+  latest_highlight: OpenAI GPT-image-2対応やVisual/Balancedスタイル等を追加したv4をリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Markdownからの完全自動化と高品質な画像出力（2K・16:9対応）"
+      reason: Markdownからの完全自動化と高品質な画像出力（2K・16:9対応）
     - point: 4
-      reason: "OpenAI/Gemini対応やブランドデザイン・スタイルの柔軟な制御性"
+      reason: OpenAI/Gemini対応やブランドデザイン・スタイルの柔軟な制御性
     - point: 4
-      reason: "日本語の精度が非常に高く、ロゴ等のピクセル忠実度も徹底"
+      reason: 日本語の精度が非常に高く、ロゴ等のピクセル忠実度も徹底
     - point: 2
-      reason: "Claude Code Skillとして組み込み可能でCLIからシームレスに利用可能"
+      reason: Claude Code Skillとして組み込み可能でCLIからシームレスに利用可能
   minus_points:
-    - point: -0
-      reason: "現状特段の大きなデメリットはなし（利用にはAPIキーが必要）"
-  summary: "高品質かつ配付・提案用レベルのプレゼンスライドを高速で自動生成できる先進的オープンソースツール"
-
-# 【任意項目】該当するもののみ記載
+    - point: -0.0
+      reason: 現状特段の大きなデメリットはなし（利用にはAPIキーが必要）
+  summary: 高品質かつ配付・提案用レベルのプレゼンスライドを高速で自動生成できる先進的オープンソースツール
 links:
-  github: "https://github.com/rsensui2/tekion-slide-generator"
-  deepwiki: "https://deepwiki.com/rsensui2/tekion-slide-generator"
-  codewiki: "https://codewiki.google/github.com/rsensui2/tekion-slide-generator"
+  github: https://github.com/rsensui2/tekion-slide-generator
+  deepwiki: https://deepwiki.com/rsensui2/tekion-slide-generator
+  codewiki: https://codewiki.google/github.com/rsensui2/tekion-slide-generator
 relationships:
   related_tools:
-    - "Canva"
-    - "Gamma"
-    - "Gemini"
-    - "ChatGPT"
+    - Canva
+    - Gamma
+    - Gemini
+    - ChatGPT
 ---
 
 # **TEKION Slide Generator 調査レポート**
