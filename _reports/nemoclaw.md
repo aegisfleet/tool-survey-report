@@ -8,11 +8,11 @@ official_site: https://www.nvidia.com/ja-jp/ai/nemoclaw/
 date: '2026-03-22'
 last_updated: '2026-07-23'
 tags:
-- エージェント
-- オープンソース
-- ローカルAI
-- 自律型
-- 開発者ツール
+  - エージェント
+  - オープンソース
+  - ローカルAI
+  - 自律型
+  - 開発者ツール
 description: OpenClawにプライバシーおよびセキュリティ制御を追加し、より安全で常時稼働するAIアシスタントをデプロイするオープンソースのスタック。
 layout: report
 quick_summary:
@@ -20,23 +20,23 @@ quick_summary:
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - AIエンジニア
+    - 開発者
+    - AIエンジニア
   latest_highlight: 2026年7月22日にv0.0.92をリリース。OpenClawとNode.jsのランタイムアップデート、ヘッドレス展開の文書化などを追加
   update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
-  - point: 10
-    reason: NVIDIA OpenShellにより、ファイルシステムやネットワークに対するポリシーベースの強力なサンドボックス機能を提供
-  - point: 5
-    reason: 1つのコマンドでローカル推論モデル(Nemotron等)とともに常時稼働エージェントをデプロイ可能
-  - point: 5
-    reason: 既存のオープンソースエージェント(OpenClaw)にセキュリティ制御を統合する実用的なアプローチ
+    - point: 10
+      reason: NVIDIA OpenShellにより、ファイルシステムやネットワークに対するポリシーベースの強力なサンドボックス機能を提供
+    - point: 5
+      reason: 1つのコマンドでローカル推論モデル(Nemotron等)とともに常時稼働エージェントをデプロイ可能
+    - point: 5
+      reason: 既存のオープンソースエージェント(OpenClaw)にセキュリティ制御を統合する実用的なアプローチ
   minus_points:
-  - point: -3
-    reason: 現在は早期プレビュー（Alpha）段階であり、機能やAPIの変更が予想される
+    - point: -3
+      reason: 現在は早期プレビュー（Alpha）段階であり、機能やAPIの変更が予想される
   summary: OpenClawをより安全に運用するためのNVIDIA製のオープンソーススタック。エンタープライズレベルのセキュリティ制御とローカルAIモデルを簡単に統合できる強力な基盤。
 links:
   github: https://github.com/NVIDIA/NemoClaw
@@ -46,7 +46,7 @@ links:
 relationships:
   parent: OpenClaw
   related_tools:
-  - AutoGPT
+    - AutoGPT
 ---
 
 # **NemoClaw 調査レポート**

@@ -8,39 +8,39 @@ official_site: https://agpt.co/
 date: '2026-04-18'
 last_updated: '2026-04-18'
 tags:
-- AI
-- エージェント
-- オープンソース
-- 自動化
-- 自律型
+  - AI
+  - エージェント
+  - オープンソース
+  - 自動化
+  - 自律型
 description: 目標を設定するだけでタスクを自律的に実行するAIエージェント構築プラットフォーム。GUIベースのビルダーで、ノーコードでのエージェント開発も可能。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料（セルフホスト）
   target_users:
-  - 開発者
-  - AI研究者
-  - ビジネスユーザー
+    - 開発者
+    - AI研究者
+    - ビジネスユーザー
   latest_highlight: 2026年4月にv0.6.56をリリース。ファイルアップロードの不具合修正やUIの改善が行われた
   update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
-  - point: 8
-    reason: 自律型AIエージェントのコンセプトを広く普及させた先駆者であり、高い自律性を誇る
-  - point: 7
-    reason: GitHubでのスター数が18万を超え、非常に活発なオープンソースコミュニティと継続的な開発体制がある
-  - point: 5
-    reason: GUIベースのAgent Builderにより、ノーコード/ローコードでのエージェント構築が可能になり、利用のハードルが下がった
+    - point: 8
+      reason: 自律型AIエージェントのコンセプトを広く普及させた先駆者であり、高い自律性を誇る
+    - point: 7
+      reason: GitHubでのスター数が18万を超え、非常に活発なオープンソースコミュニティと継続的な開発体制がある
+    - point: 5
+      reason: GUIベースのAgent Builderにより、ノーコード/ローコードでのエージェント構築が可能になり、利用のハードルが下がった
   minus_points:
-  - point: -5
-    reason: タスクの複雑さやループによっては、意図せずLLMのAPIコストが高額になるリスクがある
-  - point: -4
-    reason: 自律性が高い反面、挙動の制御が難しく、期待通りの成果を得るには試行錯誤が必要
-  - point: -3
-    reason: 主力であるAutoGPT Platform部分が商用利用に制限のあるライセンス（Polyform Shield）を採用している
+    - point: -5
+      reason: タスクの複雑さやループによっては、意図せずLLMのAPIコストが高額になるリスクがある
+    - point: -4
+      reason: 自律性が高い反面、挙動の制御が難しく、期待通りの成果を得るには試行錯誤が必要
+    - point: -3
+      reason: 主力であるAutoGPT Platform部分が商用利用に制限のあるライセンス（Polyform Shield）を採用している
   summary: 自律型AIエージェントの先駆者だが、コストと制御の難しさが実用上の課題であり、ライセンスにも注意が必要。
 links:
   github: https://github.com/Significant-Gravitas/AutoGPT
@@ -50,13 +50,13 @@ relationships:
   parent: ''
   children: []
   related_tools:
-  - LangChain
-  - Devin
-  - OpenHands
-  - Agent Zero
-  - Letta
-  - AgentScope
-  - NemoClaw
+    - LangChain
+    - Devin
+    - OpenHands
+    - Agent Zero
+    - Letta
+    - AgentScope
+    - NemoClaw
 ---
 
 # **AutoGPT 調査レポート**
