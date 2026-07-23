@@ -1,53 +1,45 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "bee 調査レポート"
-tool_name: "bee"
-tool_reading: "ビー"
-category: "開発者ツール"
-developer: "株式会社ヌーラボ（非公式ボランティア）"
-official_site: "https://nulab.github.io/bee/"
-date: "2026-07-23"
-last_updated: "2026-07-23"
+title: bee 調査レポート
+tool_name: bee
+tool_reading: ビー
+category: 開発者ツール
+developer: 株式会社ヌーラボ（非公式ボランティア）
+official_site: https://nulab.github.io/bee/
+date: '2026-07-23'
+last_updated: '2026-07-23'
 tags:
-  - "CLI"
-  - "オープンソース"
-  - "タスク管理"
-  - "AIエージェント連携"
-  - "プロジェクト管理"
-description: "コマンドラインからBacklogを操作するための非公式CLIツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - CLI
+  - オープンソース
+  - タスク管理
+  - AIエージェント連携
+  - プロジェクト管理
+description: コマンドラインからBacklogを操作するための非公式CLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "エンジニア"
-  latest_highlight: "2026年4月に初の安定版であるv1.0.0がリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - エンジニア
+  latest_highlight: 2026年4月に初の安定版であるv1.0.0がリリース
+  update_frequency: 高
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "CLIからBacklogの各種リソースを操作でき、ターミナル作業の効率が大幅に向上する"
+      reason: CLIからBacklogの各種リソースを操作でき、ターミナル作業の効率が大幅に向上する
     - point: 5
-      reason: "Claude CodeなどのAIエージェント向けスキル連携やMCP対応などAI向けの機能が充実"
+      reason: Claude CodeなどのAIエージェント向けスキル連携やMCP対応などAI向けの機能が充実
   minus_points:
     - point: -2
-      reason: "株式会社ヌーラボの公式サポート製品ではなくボランティアベースの運用である点"
-  summary: "ターミナルからBacklogを操作できる強力なCLIツール。AI連携にも対応し開発者の生産性向上に貢献する。"
-
-# 【任意項目】該当するもののみ記載
+      reason: 株式会社ヌーラボの公式サポート製品ではなくボランティアベースの運用である点
+  summary: ターミナルからBacklogを操作できる強力なCLIツール。AI連携にも対応し開発者の生産性向上に貢献する。
 links:
-  github: "https://github.com/nulab/bee"
+  github: https://github.com/nulab/bee
 relationships:
   related_tools:
-    - "Backlog"
+    - Backlog
 ---
 
 # **bee 調査レポート**
