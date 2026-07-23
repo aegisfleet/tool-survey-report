@@ -2,17 +2,17 @@
 title: NemoClaw 調査レポート
 tool_name: NemoClaw
 tool_reading: ニモクロー
-category: 汎用パーソナルアシスタント
+category: 自律型AIエージェント
 developer: NVIDIA
 official_site: https://www.nvidia.com/ja-jp/ai/nemoclaw/
 date: '2026-03-22'
-last_updated: '2026-03-22'
+last_updated: '2026-07-23'
 tags:
-  - エージェント
-  - オープンソース
-  - ローカルAI
-  - 自律型
-  - 開発者ツール
+- エージェント
+- オープンソース
+- ローカルAI
+- 自律型
+- 開発者ツール
 description: OpenClawにプライバシーおよびセキュリティ制御を追加し、より安全で常時稼働するAIアシスタントをデプロイするオープンソースのスタック。
 layout: report
 quick_summary:
@@ -20,23 +20,23 @@ quick_summary:
   is_oss: true
   starting_price: 無料
   target_users:
-    - 開発者
-    - AIエンジニア
-  latest_highlight: 2026年3月16日に早期プレビュー版（Alphaソフトウェア）をリリース
+  - 開発者
+  - AIエンジニア
+  latest_highlight: 2026年7月22日にv0.0.92をリリース。OpenClawとNode.jsのランタイムアップデート、ヘッドレス展開の文書化などを追加
   update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
-    - point: 10
-      reason: NVIDIA OpenShellにより、ファイルシステムやネットワークに対するポリシーベースの強力なサンドボックス機能を提供
-    - point: 5
-      reason: 1つのコマンドでローカル推論モデル(Nemotron等)とともに常時稼働エージェントをデプロイ可能
-    - point: 5
-      reason: 既存のオープンソースエージェント(OpenClaw)にセキュリティ制御を統合する実用的なアプローチ
+  - point: 10
+    reason: NVIDIA OpenShellにより、ファイルシステムやネットワークに対するポリシーベースの強力なサンドボックス機能を提供
+  - point: 5
+    reason: 1つのコマンドでローカル推論モデル(Nemotron等)とともに常時稼働エージェントをデプロイ可能
+  - point: 5
+    reason: 既存のオープンソースエージェント(OpenClaw)にセキュリティ制御を統合する実用的なアプローチ
   minus_points:
-    - point: -3
-      reason: 現在は早期プレビュー（Alpha）段階であり、機能やAPIの変更が予想される
+  - point: -3
+    reason: 現在は早期プレビュー（Alpha）段階であり、機能やAPIの変更が予想される
   summary: OpenClawをより安全に運用するためのNVIDIA製のオープンソーススタック。エンタープライズレベルのセキュリティ制御とローカルAIモデルを簡単に統合できる強力な基盤。
 links:
   github: https://github.com/NVIDIA/NemoClaw
@@ -45,6 +45,8 @@ links:
   documentation: https://docs.nvidia.com/nemoclaw/latest/
 relationships:
   parent: OpenClaw
+  related_tools:
+  - AutoGPT
 ---
 
 # **NemoClaw 調査レポート**
@@ -200,18 +202,22 @@ relationships:
 * **特徴的なユースケース**:
   * プライバシーが重視されるデータを用いたAIコーディングや、企業内での安全なAIエージェントの実験環境として活用されています。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-07-22**: v0.0.92リリース。
+  * OpenClaw 2026.7.1およびNode.js 22.23.1へのアップデートによるセキュリティ強化とランタイムの改善。
+  * ライブE2Eテストの進行フェーズを通知・検証する機能が追加。
+  * ヘッドレス展開の公式ガイドが追加され、リモート展開が容易に。
 * **2026-03-16**: NemoClaw 早期プレビュー版 (Alpha) リリース。
   * OpenShell ランタイムの統合によるネットワーク/ファイルシステムのセキュリティ制御の導入。
   * `nemoclaw onboard` によるインタラクティブなセットアップ機能の提供。
   * NVIDIA Nemotron モデルのサポート。
 
-(出典: [GitHub Releases](https://github.com/NVIDIA/NemoClaw))
+(出典: [GitHub Releases](https://github.com/NVIDIA/NemoClaw/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | 本ツール | OpenClaw | AutoGPT |
 |:---:|:---|:---:|:---:|:---:|
@@ -220,7 +226,7 @@ relationships:
 | **制御性** | 宣言型ポリシー | ◎<br><small>YAMLによるNW/FS制御</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
 | **推論モデル** | ローカル推論の統合 | ◎<br><small>NVIDIA基盤の最適化</small> | ◯<br><small>API設定で可能</small> | ◯<br><small>各種API連携</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -228,7 +234,7 @@ relationships:
 | **OpenClaw** | チャット統合型パーソナルアシスタント | 多彩なチャットプラットフォーム連携と自由なシステム操作 | 単体でのセキュリティ制御機能は限定的 | 開発者が自身のローカルPC上で自由度の高い「第二の脳」を構築したい場合 |
 | **AutoGPT** | 自律型AIエージェントの代表格 | 複雑なタスクを自己分解して実行する能力 | 実行制御やセキュリティ面での厳密なガバナンスが難しい | オープンな環境でAIに自律的なリサーチやタスクを行わせる実験的用途 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   NemoClawは、自律型AIエージェントに欠けていた「安全性」と「管理性」をNVIDIA OpenShellランタイムを通じて提供する、非常に有望なオープンソーススタックです。OpenClawという優れたエージェントをベースにしつつ、エンタープライズでも受け入れ可能なセキュリティガードレールを追加するアプローチは高く評価できます。
