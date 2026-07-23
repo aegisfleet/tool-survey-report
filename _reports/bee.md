@@ -2,7 +2,7 @@
 title: bee 調査レポート
 tool_name: bee
 tool_reading: ビー
-category: 開発者ツール
+category: CLIツール群
 developer: 株式会社ヌーラボ（非公式ボランティア）
 official_site: https://nulab.github.io/bee/
 date: '2026-07-23'
