@@ -41,7 +41,6 @@ evaluation:
 links:
   github: https://github.com/rsensui2/tekion-slide-generator
   deepwiki: https://deepwiki.com/rsensui2/tekion-slide-generator
-  codewiki: https://codewiki.google/github.com/rsensui2/tekion-slide-generator
 relationships:
   related_tools:
     - Canva
@@ -61,7 +60,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/rsensui2/tekion-slide-generator](https://github.com/rsensui2/tekion-slide-generator)
   * DeepWiki: [https://deepwiki.com/rsensui2/tekion-slide-generator](https://deepwiki.com/rsensui2/tekion-slide-generator)
-  * CodeWiki: [https://codewiki.google/github.com/rsensui2/tekion-slide-generator](https://codewiki.google/github.com/rsensui2/tekion-slide-generator)
 * **カテゴリ**: スライド/プレゼンテーション
 * **概要**: Markdownを書くだけでOpenAI GPT-image-2やGemini 3.1 FlashなどのAIモデルを活用し、高品質な16:9 2Kスライドを自動で並列生成するツール。出力は画像だけでなくPPTXやPDF形式まで一気通貫で対応する。
 
