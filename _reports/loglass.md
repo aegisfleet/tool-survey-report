@@ -2,7 +2,7 @@
 title: Loglass 調査レポート
 tool_name: Loglass
 tool_reading: ログラス
-category: 経営管理
+category: ビジネス/業務ツール
 developer: 株式会社ログラス
 official_site: https://loglass.jp/
 date: '2026-07-23'
