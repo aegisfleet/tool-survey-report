@@ -8,34 +8,34 @@ official_site: https://www.sonatype.com/products/sonatype-nexus-repository
 date: '2026-03-22'
 last_updated: '2026-07-24'
 tags:
-- CI/CD
-- DevOps
-- オープンソース
-- 開発者ツール
+  - CI/CD
+  - DevOps
+  - オープンソース
+  - 開発者ツール
 description: Maven, npm, Dockerなど多様なフォーマットに対応した、世界で最も広く利用されているアーティファクトリポジトリマネージャー。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - DevOpsエンジニア
-  - エンタープライズ
+    - 開発者
+    - DevOpsエンジニア
+    - エンタープライズ
   latest_highlight: 2026年7月にバージョン3.94.0がリリース
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-  - point: 8
-    reason: 無料のOSS版でも機能制限が少なく、全主要フォーマットをサポートしている。
-  - point: 5
-    reason: Javaエコシステムにおけるデファクトスタンダードであり、長期的な安定性と信頼性が高い。
-  - point: 4
-    reason: PostgreSQL対応により、大規模環境でのパフォーマンスと運用性が大幅に向上した。
+    - point: 8
+      reason: 無料のOSS版でも機能制限が少なく、全主要フォーマットをサポートしている。
+    - point: 5
+      reason: Javaエコシステムにおけるデファクトスタンダードであり、長期的な安定性と信頼性が高い。
+    - point: 4
+      reason: PostgreSQL対応により、大規模環境でのパフォーマンスと運用性が大幅に向上した。
   minus_points:
-  - point: -2
-    reason: 高可用性（HA）構成や高度な機能はPro版（有償）に限定される。
+    - point: -2
+      reason: 高可用性（HA）構成や高度な機能はPro版（有償）に限定される。
   summary: OSS版の完成度が非常に高く、コストパフォーマンス最強のアーティファクト管理ツール。
 links:
   github: https://github.com/sonatype/nexus-public
@@ -45,9 +45,9 @@ relationships:
   parent: ''
   children: []
   related_tools:
-  - JFrog Artifactory
-  - GitLab
-  - Jenkins
+    - JFrog Artifactory
+    - GitLab
+    - Jenkins
 ---
 
 # **Nexus Repository 調査レポート**
