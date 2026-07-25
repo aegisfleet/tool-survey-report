@@ -46,7 +46,7 @@ relationships:
   related_tools:
     - beautifulsoup
     - scrapy
-    - playwright
+    - Playwright
 ---
 
 # **Scrapling 調査レポート**
