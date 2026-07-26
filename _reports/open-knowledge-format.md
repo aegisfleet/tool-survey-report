@@ -2,14 +2,15 @@
 title: Open Knowledge Format 調査レポート
 tool_name: Open Knowledge Format
 tool_reading: オープン・ナレッジ・フォーマット
-category: データフォーマット
+category: ナレッジベース/Wiki
 developer: Google Cloud
 official_site: https://github.com/GoogleCloudPlatform/knowledge-catalog/tree/main/okf
 date: '2026-07-25'
 last_updated: '2026-07-25'
 tags:
   - AI
-  - フォーマット
+  - ナレッジベース
+  - ドキュメント管理
   - オープンソース
 description: AIエージェントと人間が共に理解し活用できる知識表現のためのオープンな標準フォーマット
 quick_summary:
