@@ -54,6 +54,7 @@ relationships:
     - act
     - LocalStack
     - dockur/windows
+    - PyInstaller
     - picomatch
     - Ubuntu
 ---
