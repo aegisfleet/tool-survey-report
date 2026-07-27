@@ -47,11 +47,10 @@ relationships:
     - Devin
     - AutoGPT
     - Opcode
-    - Agent Zero
     - Cursor
     - GitHub Copilot
     - Manus
-    - Deep Agents
+    - TradingAgents
 ---
 
 # **OpenHands 調査レポート**
