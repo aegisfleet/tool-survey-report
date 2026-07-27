@@ -55,7 +55,7 @@ relationships:
     - GitHub Copilot SDK
     - Amazon Bedrock
     - Hugging Face
-    - Letta
+    - AgentScope
 ---
 # **LangChain 調査レポート**
 
