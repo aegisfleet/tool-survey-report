@@ -23,7 +23,7 @@ quick_summary:
     - データアナリスト
     - 経営層
     - マーケター
-  latest_highlight: '2026年6月にTableau 2026.2をリリース'
+  latest_highlight: 2026年6月にTableau 2026.2をリリース
   update_frequency: 高
 evaluation:
   score: 80
