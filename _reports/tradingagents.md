@@ -6,13 +6,12 @@ category: マルチエージェントフレームワーク
 developer: TauricResearch
 official_site: https://github.com/TauricResearch/TradingAgents
 date: '2026-03-25'
-last_updated: '2026-03-25'
+last_updated: '2026-07-28'
 tags:
   - AI
   - エージェント
   - オープンソース
   - 大規模言語モデル
-  - 金融
 description: 投資ファームの動態を模倣した、金融取引のためのマルチエージェントLLMフレームワーク
 quick_summary:
   has_free_plan: true
@@ -22,7 +21,7 @@ quick_summary:
     - AIリサーチャー
     - クオンツ開発者
     - 個人投資家
-  latest_highlight: 2026年3月にv0.2.2をリリース、GPT-5.4やClaude 4.6など複数モデルに対応
+  latest_highlight: 2026年7月にv0.3.1をリリース、Alpha Vantage等のフィルタリング修正や様々なLLMサポート拡張（Bedrock, Claude 5等）で安定性向上
   update_frequency: 高
 evaluation:
   score: 75
@@ -31,7 +30,7 @@ evaluation:
     - point: 5
       reason: 複数の役割（アナリスト、リサーチャー、トレーダー等）を組み合わせた高度なマルチエージェントシステム
     - point: 3
-      reason: GPT、Gemini、Claude、Ollamaなど多様なLLMプロバイダーに対応
+      reason: GPT、Gemini、Claude、Ollamaに加え、Bedrock、DeepSeek、Qwen、GLM、MiniMaxなど多様なLLMプロバイダーに対応
   minus_points:
     - point: -3
       reason: APIの利用コストやモデル性能にパフォーマンスが依存する
@@ -44,6 +43,7 @@ relationships:
   related_tools:
     - ChatGPT
     - Grok
+    - OpenHands
 ---
 
 # **TradingAgents 調査レポート**
@@ -74,7 +74,10 @@ relationships:
 * **リサーチャーチーム（議論システム）**: 強気（ブル）と弱気（ベア）のリサーチャーが、アナリストの洞察を基に構造化された議論を行い、利益とリスクを天秤にかける。
 * **トレーダーエージェント**: アナリストとリサーチャーのレポートを統合し、取引のタイミングや規模を決定する。
 * **リスク＆ポートフォリオマネジメント**: 市場のボラティリティや流動性を評価し、取引戦略を調整。最終的にポートフォリオマネージャーが取引提案を承認または拒否する。
-* **マルチプロバイダー対応**: OpenAI (GPT)、Google (Gemini)、Anthropic (Claude)、xAI (Grok)、Ollamaなど、複数のLLMをサポート。
+* **マルチプロバイダー対応**: OpenAI (GPT)、Google (Gemini)、Anthropic (Claude)、xAI (Grok)、Ollamaに加え、DeepSeek、Qwen、GLM、MiniMax、Amazon Bedrock等の複数のLLMをサポート。
+* **構造化出力 (Structured Outputs)**: Research Manager等の意思決定エージェントがPydanticベースの構造化出力に対応し、処理の安定性が向上。
+* **永続的決定ログ (Persistent Decision Log)**: 過去の分析結果と実現リターンをメモリログとして記録し、次回の分析（ポートフォリオマネージャー）に教訓を反映する機能。
+* **LangGraphチェックポイント再開**: クラッシュや中断時に、前回の成功したステップから処理を再開できる機能を搭載。
 * **インタラクティブCLI**: ターミナル上で対話的にティッカー、分析日、LLMプロバイダー等を選択し、エージェントの推論過程を可視化する。
 
 ## **4. 開始手順・セットアップ**
@@ -149,7 +152,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: 外部からPythonパッケージとしてインポートし（`from tradingagents.graph.trading_graph import TradingAgentsGraph`）、任意のシステムに組み込むことが可能。
-* **外部サービス連携**: OpenAI, Google Gemini, Anthropic Claude, xAI, OpenRouterなどの主要LLMプロバイダーと標準で連携。市場データ取得にAlpha Vantageと連携。
+* **外部サービス連携**: OpenAI, Google Gemini, Anthropic Claude, xAI, OpenRouter, DeepSeek, Qwen, GLM, MiniMax, Amazon Bedrockなどの主要LLMプロバイダーと標準で連携。市場データ取得にAlpha Vantageと連携。またFRED（マクロ指標）やPolymarket（予測市場）からのデータ取得にも対応。
 
 ### **10.2 技術スタックとの相性**
 
@@ -177,7 +180,7 @@ relationships:
 * **陥りやすい罠 (Antipatterns)**:
   * 生成AI特有のハルシネーション（幻覚）を考慮せず、エージェントの出力結果をそのまま自動取引の実行システムに直結させること（十分なバックテストとヒューマンインザループの仕組みが推奨される）。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHubスター数、X(Twitter)などのSNS。G2、Capterra、ITreview等のBtoB向けレビューサイトへの登録なし。
 * **総合評価**: GitHubで40.5kスターを獲得しており、開発者や研究者から非常に高い関心を集めている。
@@ -191,26 +194,31 @@ relationships:
 * **特徴的なユースケース**:
   * 学術研究において、LLMベースのエージェントが金融市場でどの程度推論能力を発揮できるかのベンチマークとして活用。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-07-05**: v0.3.1リリース。Alpha Vantageのルックアヘッドフィルタリング修正、グラフルーターのクラッシュ防止、最新のClaude 5（Sonnet 5 / Fable 5）およびAmazon Bedrockへの対応。
+* **2026-06-22**: v0.3.0リリース。CIゲート導入、FREDやPolymarketといったマクロ・予測市場データのサポート、NVIDIA NIMやGroqなどのOpenAI互換プロバイダーの追加。
+* **2026-05-11**: v0.2.5リリース。MiniMaxプロバイダーの追加、QwenとGLMのデュアルリージョンサポート、リモートOllamaのサポート等。
+* **2026-04-25**: v0.2.4リリース。Research Manager等の意思決定エージェントが構造化出力（Structured Outputs）に対応。LangGraphによるチェックポイント再開機能と、永続的決定ログ（Persistent Decision Log）の導入。
 * **2026-03-22**: v0.2.2リリース。GPT-5.4、Gemini 3.1、Claude 4.6モデルのサポート追加、5段階評価スケールの導入、OpenAI Responses API対応。
 * **2026-02-XX**: v0.2.0リリース。マルチプロバイダーLLMサポート（Grok 4.x等追加）とシステムアーキテクチャの改善。
 * **2026-01-XX**: Trading-R1 テクニカルレポートの公開。
 
-(出典: [GitHub Releases / README](https://github.com/TauricResearch/TradingAgents))
+(出典: [GitHub CHANGELOG](https://github.com/TauricResearch/TradingAgents/blob/main/CHANGELOG.md))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | TradingAgents | ChatGPT | OpenHands |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | 金融特化分析 | ◎<br><small>専門エージェントを内包</small> | △<br><small>プロンプト次第</small> | △<br><small>コーディングが主目的</small> |
+| **安定性** | 構造化出力・再開機能 | ◎<br><small>LangGraph/Pydantic連携</small> | ◯<br><small>一般のAPI機能</small> | ◯<br><small>サンドボックス内で実行</small> |
 | **カテゴリ特定** | マルチエージェント議論 | ◎<br><small>ブル/ベアの議論システム</small> | ×<br><small>単一エージェント</small> | ×<br><small>単一エージェント</small> |
-| **アーキテクチャ** | LLM切り替え | ◎<br><small>マルチプロバイダー対応</small> | ×<br><small>OpenAIのみ</small> | ◯<br><small>設定で変更可能</small> |
+| **アーキテクチャ** | LLM切り替え | ◎<br><small>マルチプロバイダー対応</small> | △<br><small>GPT-5.5/5.4のみ</small> | ◯<br><small>設定で変更可能</small> |
 | **非機能要件** | オープンソース | ◯<br><small>Apache-2.0</small> | ×<br><small>プロプライエタリ</small> | ◯<br><small>MIT/Apache</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -218,7 +226,7 @@ relationships:
 | **ChatGPT** | 汎用的な対話型AI | 圧倒的な知識量と手軽さ | 専門的な金融フレームワークの構築は手動で行う必要がある | 単一の銘柄について壁打ち感覚で情報を整理したい場合 |
 | **OpenHands** | ソフトウェア開発向けの自律型エージェント | コードの記述や環境構築を自律的に行う | 金融ドメインに特化した知識体系は持たない | トレーディングシステムのコード自体を自動生成させたい場合 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   TradingAgentsは、LangGraphを活用して現実の金融ファームの意思決定プロセスをコードで表現した、極めて野心的で先進的なオープンソースプロジェクトである。複数のLLMを適材適所で使い分け、アナリストとリサーチャーによる議論を経て最終的な判断を下すアプローチは、AIエージェントの応用事例として非常に優れている。
