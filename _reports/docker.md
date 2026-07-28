@@ -57,6 +57,7 @@ relationships:
     - PyInstaller
     - picomatch
     - Ubuntu
+    - Amazon Bedrock AgentCore Runtime
 ---
 
 # **Docker 調査レポート**

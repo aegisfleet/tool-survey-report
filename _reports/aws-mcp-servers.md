@@ -46,6 +46,7 @@ relationships:
   children: []
   related_tools:
     - Amazon Bedrock
+    - Amazon Bedrock AgentCore Runtime
     - AWS CloudFormation
     - AWS Blocks
 ---
