@@ -54,8 +54,8 @@ relationships:
     - Dify
     - GitHub Copilot SDK
     - Amazon Bedrock
+    - Amazon Bedrock AgentCore Runtime
     - Hugging Face
-    - AgentScope
 ---
 # **LangChain 調査レポート**
 
