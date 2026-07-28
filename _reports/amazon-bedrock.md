@@ -6,7 +6,7 @@ category: LLMプラットフォーム
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/bedrock/
 date: '2026-03-26'
-last_updated: '2026-03-26'
+last_updated: '2026-07-29'
 tags:
   - AI
   - API
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - AIエンジニア
     - エンタープライズ
-  latest_highlight: 2026年3月にNVIDIA Nemotron 3 SuperやNova Forge SDK、Claude 3.7 Sonnetなどの最新モデル・機能が追加
+  latest_highlight: 2026年7月にClaude Sonnet 5のサポートやAgentCoreの統合オブザーバビリティ機能を追加
   update_frequency: 高
 evaluation:
   score: 88
@@ -73,7 +73,6 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/bedrock/](https://aws.amazon.com/bedrock/)
 * **関連リンク**:
   * ドキュメント: [https://docs.aws.amazon.com/bedrock/](https://docs.aws.amazon.com/bedrock/)
-  * レビューサイト: [G2](https://www.g2.com/products/amazon-bedrock/reviews)
 * **カテゴリ**: LLMプラットフォーム
 * **概要**: Amazon Bedrockは、Anthropic, Meta, Mistral AI, Cohere, Amazonなどの主要な高性能基盤モデル（FM）を単一のAPIを介して提供するフルマネージドサービスです。サーバーレスな環境で、RAG（検索拡張生成）やエージェント機能などを活用し、セキュアな生成AIアプリケーションを迅速に構築・デプロイできます。
 
@@ -109,7 +108,27 @@ relationships:
 * **Batch Inference**: 大量のプロンプトを一括処理し、コスト効率よく推論を実行するバッチ機能。
 * **Provisioned Throughput**: 特定のモデルに対して一定のスループット（処理能力）を確保し、安定したパフォーマンスを実現する。
 
-## **4. 開始手順・セットアップ**
+
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること
+- 要素技術や内部で使われている仕組みを解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: クラウド完結型のフルマネージドSaaS
+* **主要コンポーネントとデータフロー**:
+  * アプリケーションや開発者は、AWS SDK（Boto3など）またはHTTP REST APIを通じてBedrockのエンドポイントにリクエストを送信する。
+  * 内部の基盤アーキテクチャの詳細は非公開だが、AWSのセキュアなインフラストラクチャ上で各AIベンダー（Anthropic、Metaなど）の基盤モデルがホストされ、API経由で推論が実行される。
+  * 生成AIアプリからの入力データや出力結果は、顧客のAWSアカウント内で暗号化して処理され、モデルの学習には使用されない構造となっている。
+* **特筆すべき要素技術**:
+  * フルマネージドなAPIサービスであり、サーバープロビジョニングやスケーリング等のインフラ管理はAWS側で自動的に行われる。
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -162,7 +181,7 @@ relationships:
   print(result["content"][0]["text"])
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -175,7 +194,7 @@ relationships:
 * **AWSエコシステムとの統合**: S3, Lambda, CloudWatch, IAMなどの既存AWSサービスとシームレスに連携でき、セキュリティ設定も一元管理可能。
 * **エンタープライズグレードのセキュリティ**: データは顧客のAWS環境内で保護され、モデルの学習には使用されないことが保証されている。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -187,7 +206,7 @@ relationships:
 * **料金体系の複雑さ**: モデルごとにトークン単価が異なり、さらにオンデマンドやプロビジョニングなどの課金形態があるため、コスト試算が難しい。
 * **日本語ドキュメントの質**: 基本的なドキュメントは日本語化されているが、最新機能やAPIの詳細な仕様については英語の参照が必要な場合が多い。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -205,7 +224,7 @@ relationships:
 * **課金体系**: モデルプロバイダー、モデルの種類、リージョンによって単価が異なる。画像生成モデルは枚数単位の場合がある。
 * **無料トライアル**: 特定のモデルについてAWS無料利用枠内での試用が可能な場合があるが、基本的には有料。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -219,7 +238,7 @@ relationships:
   * 住信 SBI ネット銀行は、Amazon Bedrock AgentCoreを中核としたAIエージェント機能を活用し、自然言語による対話を通じた銀行手続きを可能にするAI銀行サービス「NEOBANK ai」を構築。
 * **対象業界**: 自動車、金融、ヘルスケア、製造、航空、建設など、セキュリティと信頼性を重視する大手企業での採用が進んでいる。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -231,7 +250,7 @@ relationships:
 * **コミュニティ**: AWS re:PostやGitHub、Stack Overflowなどで活発な情報交換が行われている。
 * **公式サポート**: AWS Supportプラン（Developer, Business, Enterprise）契約により、日本語での24時間365日の技術サポートを利用可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
@@ -267,7 +286,7 @@ relationships:
 | **Java** | ◎ | AWS SDK for Java 2.xで対応。エンタープライズシステム向け。 | コード量がやや多くなる傾向。 |
 | **LangChain** | ◎ | Bedrock用のクラスが提供されており、モデルの切り替えが容易。 | ライブラリの更新が早いためバージョンの互換性に注意。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -280,7 +299,7 @@ relationships:
 * **データ管理**: データは転送中 (TLS) および保存中 (KMSキー) に暗号化される。顧客データはモデル学習に使用されない。VPCエンドポイントによりプライベート接続が可能。
 * **準拠規格**: ISO 27001, SOC 1/2/3, GDPR, HIPAA, FedRAMP Highなど、主要なグローバルコンプライアンス基準に準拠。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -290,7 +309,7 @@ relationships:
 * **UI/UX**: AWSマネジメントコンソールの一部として提供。プレイグラウンド機能（チャット、テキスト、画像）があり、コードを書く前にブラウザ上でモデルを試せるのが便利。
 * **学習コスト**: AWSの基礎知識（IAM, Regionなど）があれば導入は容易。Boto3などのSDKも標準的なため、学習コストは低い。ただし、RAGやAgentsなどの高度な機能は概念理解が必要。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -307,7 +326,7 @@ relationships:
   * **モデルアクセス未申請**: モデルを利用する前にコンソールでアクセス申請を行わないとAPIエラーになる（忘れがち）。
   * **無限ループ**: Agentsや自動化フローで、AIが自身の出力を再入力してループしないよう、停止条件やコスト監視を設定する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -330,7 +349,7 @@ relationships:
 * **特徴的なユースケース**:
   * 既存のAWS上のデータレイク（S3）と組み合わせた社内検索RAGシステムの構築が最も一般的。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -341,16 +360,21 @@ relationships:
   1. GitHubリポジトリの `CHANGELOG.md`
   2. GitHub Releases
   3. 公式ブログ / ニュース
-- 情報源のURLを記載
+- 情報源のURLを記載。**【重要】特定の古い日時の記事等に固定せず、常に最新情報が掲載・蓄積される公式の永続的なインデックスURL（製品アップデートカテゴリ、リリースノート一覧、コミュニティポータル等）を記載・更新すること。**
 -->
 
-* **2026-03-23**: `NVIDIA Nemotron 3 Super`モデルの提供開始および、`Nova Forge SDK`のサポートが追加。(出典: [AWS News Blog](https://aws.amazon.com/jp/blogs/news/aws-weekly-roundup-nvidia-nemotron-3-super-on-amazon-bedrock-nova-forge-sdk-amazon-corretto-26-and-more-march-23-2026/))
-* **2026-03-15**: `Claude 3.7 Sonnet`の提供開始。前モデルより高いコーディング能力と論理推論能力を持つ最新モデルがBedrockで利用可能になった。(出典: AWS News Blog)
-* **2026-02-27**: 住信 SBI ネット銀行における、`Amazon Bedrock AgentCore`を活用したAI銀行サービス「NEOBANK ai」の導入事例が公開。(出典: [AWS News Blog](https://aws.amazon.com/jp/blogs/news/sbi-sumishin-net-bank-aiagent-application-on-aws/))
-* **2026-02-10**: Bedrockの推論プロファイル機能の拡張により、ユーザーは複数のモデルにルーティングする高度な負荷分散と障害復旧の構成がより簡単に行えるようになった。(出典: AWS News Blog)
-* **2025-12-02**: オープンウェイトモデルの大幅な追加。Mistral AIの`Mistral Large 3`やGoogleの`Gemma 3`ファミリーなど、新たに18種類のフルマネージド・オープンウェイトモデルが追加され、利用可能なモデルの総数は約100種類となった。(出典: AWS News Blog)
+* **2026-07-23**: `Claude Sonnet 5` が AWS GovCloud (US) リージョンの Amazon Bedrock で利用可能になった。
+* **2026-07-23**: `Amazon Bedrock AgentCore` が traces と logs を単一の log group に統合する unified observability 機能を追加。
+* **2026-07-20**: `AWS Data Exports` が Amazon Bedrock 製品メタデータの標準化された提供を開始。
+* **2026-03-23**: `NVIDIA Nemotron 3 Super`モデルの提供開始および、`Nova Forge SDK`のサポートが追加。
+* **2026-03-15**: `Claude 3.7 Sonnet`の提供開始。前モデルより高いコーディング能力と論理推論能力を持つ最新モデルがBedrockで利用可能になった。
+* **2026-02-27**: 住信 SBI ネット銀行における、`Amazon Bedrock AgentCore`を活用したAI銀行サービス「NEOBANK ai」の導入事例が公開。
+* **2026-02-10**: Bedrockの推論プロファイル機能の拡張により、ユーザーは複数のモデルにルーティングする高度な負荷分散と障害復旧の構成がより簡単に行えるようになった。
+* **2025-12-02**: オープンウェイトモデルの大幅な追加。Mistral AIの`Mistral Large 3`やGoogleの`Gemma 3`ファミリーなど、新たに18種類のフルマネージド・オープンウェイトモデルが追加され、利用可能なモデルの総数は約100種類となった。
 
-## **16. 類似ツールとの比較**
+(出典: [AWS What's New: Machine Learning](https://aws.amazon.com/about-aws/whats-new/machine-learning/))
+
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -358,7 +382,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 <!--
 【記載ルール】
@@ -373,12 +397,12 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | Amazon Bedrock | Vertex AI Studio | OpenAI API | Azure OpenAI |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **モデル多様性** | マルチモデル | ◎<br><small>主要数社を網羅</small> | ◯<br><small>Gemini + OSS</small> | △<br><small>自社モデルのみ</small> | △<br><small>OpenAI + 一部OSS</small> |
+| **モデル多様性** | マルチモデル | ◎<br><small>主要数社を網羅 (Claude Sonnet 5等)</small> | ◯<br><small>Gemini + OSS</small> | △<br><small>自社モデルのみ</small> | △<br><small>OpenAI + 一部OSS</small> |
 | **統合環境** | クラウド連携 | ◎<br><small>AWS完全統合</small> | ◎<br><small>GCP完全統合</small> | △<br><small>API特化</small> | ◎<br><small>Azure完全統合</small> |
 | **機能** | エージェント | ◯<br><small>Agents機能あり</small> | ◯<br><small>Vertex Agents</small> | ◯<br><small>Assistants API</small> | ◯<br><small>Assistants API</small> |
 | **非機能要件** | 日本語対応 | ◯<br><small>ドキュメント・UI</small> | ◯<br><small>ドキュメント・UI</small> | △<br><small>英語中心</small> | ◯<br><small>ドキュメント・UI</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -392,7 +416,7 @@ relationships:
 | **OpenAI API** | GPTシリーズ直販API | 最新・最高性能のモデルへの最速アクセス、シンプルなAPI | インフラ機能（ログ、監視等）は自前で構築が必要 | 最新のAIモデル性能を最優先する場合。 |
 | **Azure OpenAI** | OpenAIモデルのAzure版 | OpenAIの性能とAzureのセキュリティ/SLAの両立 | モデル更新が本家より遅れる場合がある | エンタープライズ企業で、OpenAIモデルをセキュアに使いたい場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
