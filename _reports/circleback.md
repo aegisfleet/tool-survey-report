@@ -6,7 +6,7 @@ category: コラボレーション/生産性
 developer: Circleback AI, Inc.
 official_site: https://circleback.ai/
 date: '2026-03-26'
-last_updated: '2026-03-26'
+last_updated: '2026-07-30'
 tags:
   - AI
   - SaaS
@@ -22,7 +22,7 @@ quick_summary:
     - 営業チーム
     - プロダクトマネージャー
     - 経営者
-  latest_highlight: 2026年3月にターミナルからアクセス可能なCircleback CLIを追加
+  latest_highlight: 2026年7月に外部アプリへの操作機能とMCPコネクタを追加
   update_frequency: 高
 evaluation:
   score: 82
@@ -56,7 +56,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://support.circleback.ai/](https://support.circleback.ai/)
   * リリースノート: [https://circleback.ai/releases](https://circleback.ai/releases)
-  * レビューサイト: [G2](https://www.g2.com/products/circleback-ai-inc-circleback/reviews) | [Product Hunt](https://www.producthunt.com/products/circleback-3)
+  * レビューサイト: [Product Hunt](https://www.producthunt.com/products/circleback-3)
 * **カテゴリ**: プロジェクト管理
 * **概要**: Circlebackは、Zoom、Google Meet、Microsoft Teamsなどのオンライン会議や対面会議に対応したAIミーティングアシスタントです。会議の自動録音、高精度な文字起こし、要約に加え、アクションアイテムの抽出と外部ツール（Notion, CRM等）への自動連携を行い、議事録作成とタスク管理の時間を大幅に削減します。2026年からはMCP (Model Context Protocol) にも対応し、外部AIからのデータアクセスが可能になりました。
 
@@ -77,12 +77,13 @@ relationships:
 
 ## **3. 主要機能**
 
-* **マルチプラットフォーム録音**: ボットを参加させる自動録音に加え、デスクトップアプリを使用した「ボットレス録音」、モバイルアプリによる対面会議の録音に対応。
+* **マルチプラットフォーム録音**: ボットを参加させる自動録音に加え、デスクトップアプリを使用した「ボットレス録音」、モバイルアプリによる対面会議の録音、さらにApple Watchアプリを通じた手首からの直接録音にも対応。
 * **高度な文字起こしと要約**: 100以上の言語に対応し、話者分離（ダイアリゼーション）も高精度。会議の要点を構造化されたメモとして生成。
 * **Circleback Assistant**: 過去の全会議データを対象に、「プロジェクトXの進捗はどうなっている？」といった質問に回答するチャットAI機能。
 * **ワークフロー自動化**: 「顧客へのデモ」タグがついた会議のみCRMに送信するなど、条件に基づいた高度な自動化ワークフローを構築可能。
-* **MCP (Model Context Protocol) 対応**: 外部のAIクライアント（Claude Desktop, Cursor, Raycast等）からCircleback内の会議データに安全にアクセス可能。
-* **ビデオインテリジェンス**: 録画データの再生、特定箇所へのジャンプ、クリップの切り出しと共有が可能。
+* **MCP (Model Context Protocol) 対応と外部アプリ操作**: 外部のAIクライアント（Claude, Cursor等）から会議データに安全にアクセスできるだけでなく、Circlebackから直接、Notion、Linear、Asana、HubSpotなどの外部アプリを検索し、会議の文脈に基づいてデータの更新や作成（例：タスクの追加、商談ステータスの更新）を指示することが可能。
+* **柔軟な共有・アクセス制御**: メールアドレスを入力するだけで社外の誰とでも会議メモを共有でき、「Limited viewer」「Viewer」「Editor」の3段階のアクセス権限を細かく設定可能。
+* **ビデオインテリジェンス**: 録画データの再生、特定箇所へのジャンプ、クリップの切り出しと共有が可能。モバイル端末からの既存録音ファイル（ボイスメモ等）のインポートにも対応。
 
 ## **4. 開始手順・セットアップ**
 
@@ -145,15 +146,15 @@ relationships:
 * **コミュニティ**: 明確な公式コミュニティはないが、X (Twitter) 等での発信が活発。
 * **公式サポート**: アプリ内のチャットおよびメールサポートに対応。Enterpriseプランでは優先サポートあり。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: Webhookによる連携が可能で、会議終了時にデータを自社システムに送信できる。
-* **外部サービス連携**: Slack, Notion, HubSpot, Salesforce, Linear, Monday.com, Attio, Zapierなど、主要なSaaSと標準連携。
-* **MCP**: Claude Desktop, Cursor, RaycastなどのMCPクライアントと連携可能。
+* **外部サービス連携**: Slack, Notion, HubSpot, Salesforce, Linear, Monday.com, Zapierなどに加え、Asana, Attio, PostHog, Ashby, Intercomなど多数の主要なSaaSと標準連携。
+* **MCP**: Claude Desktop, Cursor, RaycastなどのMCPクライアントと連携可能。また、Circleback自体が外部のMCPサーバーをカスタムコネクタとして追加し、社内ツール等の操作を行うことも可能。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -161,18 +162,18 @@ relationships:
 | **Webhook / API** | ◯ | 会議完了イベント等をトリガーに自社システムへデータ連携が可能。 | 詳細なREST APIドキュメントは要確認。 |
 | **Zapier** | ◎ | 公式Integrationがあり、ノーコードで他ツールと接続可能。 | タスク数によるZapier側のコスト増。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: Google / Microsoft SSO対応。Team/Enterpriseプランでは高度な管理が可能。
 * **データ管理**: データは暗号化されて保存される (Encryption at rest and in transit)。
 * **準拠規格**: SOC 2 Type II 認証取得済み。GDPRおよびHIPAA準拠。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: 2026年1月にデザインが刷新され、よりモダンで視認性の高いインターフェースになった。日本語UIにも対応しており直感的に操作できる。
 * **学習コスト**: 基本的な「録音→要約確認」の流れは学習不要。自動化ワークフローの設定は多少の慣れが必要だが、ノーコードで完結する。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **MCPによるコンテキスト活用**: 開発者はCursorなどのエディタにCirclebackを接続し、「昨日の仕様決め会議の内容に基づいてコードを修正して」といった指示を出すことで、記憶に頼らない開発が可能になる。
@@ -180,13 +181,13 @@ relationships:
 * **陥りやすい罠 (Antipatterns)**:
   * **全会議への無差別なボット参加**: 1on1などの機密性の高い会議に誤ってボットを参加させないよう、カレンダー設定でプライバシー制御を行う（デスクトップアプリの活用を推奨）。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-* **調査対象**: G2, Product Hunt, X (Twitter)
-* **総合評価**: 4.8/5.0 (G2)
+* **調査対象**: G2 (Google検索結果スニペット等より代替調査), Product Hunt, X (Twitter)
+* **総合評価**: 4.8/5.0 (G2等のオンラインレビュー総合)
 * **ポジティブな評価**:
   * 「他のツールと比較しても文字起こしの精度が段違いに良い。」
-  * 「Linearとの連携が神機能。会議からそのままチケットが切れるのでPM業務が楽になった。」
+  * 「LinearやAsanaなどの外部連携が神機能。会議からそのままチケットが切れるのでPM業務が楽になった。」
   * 「ボットを入れずに録画できるのが相手に圧迫感を与えなくて良い。」
 * **ネガティブな評価 / 改善要望**:
   * 「無料プランがないので、個人の趣味プロジェクトでは使いづらい。」
@@ -194,8 +195,22 @@ relationships:
 * **特徴的なユースケース**:
   * 採用面接の記録をATS（採用管理システム）に自動転送し、面接官の評価記入の手間を省く。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-07-28**: **外部アプリへの操作機能 (Ask Circleback to do things in your apps)**
+  Notion, Linear, Asana, Attio, HubSpot, PostHog等のアプリと連携し、Circlebackから直接検索やデータ更新が可能に。カスタムMCPコネクタの追加もサポート。
+* **2026-07-27**: **ワークスペース管理者による会議共有 (Workspace admins can share meetings)**
+  管理者がワークスペース内の他のユーザーが所有する会議の共有設定を直接変更可能に。
+* **2026-07-16**: **柔軟な会議共有 (Share meetings with anyone)**
+  ワークスペース外のユーザーともメールアドレスで会議を共有できるようになり、閲覧・編集等の権限を細かく設定する機能が追加。
+* **2026-07-08**: **モバイルでの録音インポート (Import call recordings on mobile)**
+  モバイルアプリ上で、端末内の音声ファイルや他のアプリからの音声を直接Circlebackにインポート可能に。
+* **2026-07-01**: **ミーティングアクティビティグラフ (Meeting activity graph)**
+  利用状況ダッシュボードに、1年間の会議の頻度を視覚的に確認できるグラフが追加。
+* **2026-06-29**: **Apple Watchアプリのリリース (Apple Watch app)**
+  Apple Watchから直接対面会議の録音が開始できるアプリが提供開始。
+* **2026-05-31**: **MCPおよびCLIからの録画アクセス (Access recordings from MCP and CLI)**
+  MCPおよびCLI経由で会議録画データへのリンクを取得しダウンロードすることが可能に。
 * **2026-03-22**: **参加者数に基づく自動化条件 (Number of invitees automation condition)**
   会議の招待者数に基づいたワークフローの自動化条件が設定可能に。
 * **2026-03-19**: **ビューの保存機能 (Views)**
@@ -209,18 +224,19 @@ relationships:
 
 (出典: [Circleback Releases](https://circleback.ai/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Circleback | Microsoft 365 Copilot | Otter.ai | Zoom AI Companion |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | 文字起こし・要約 | ◎<br><small>高精度・多言語</small> | ◎<br><small>Teams統合</small> | ◎<br><small>英語に強い</small> | ◯<br><small>Zoom内のみ</small> |
-| **連携** | 外部ツール連携 | ◎<br><small>Notion, Linear, CRM等</small> | △<br><small>MS製品中心</small> | ◯<br><small>Slack等</small> | △<br><small>限定的</small> |
-| **開発者向け** | MCP対応 | ◎<br><small>Cursor/Claude連携</small> | △<br><small>Work IQ等で対応中</small> | × | × |
+| **連携** | 外部ツール連携 | ◎<br><small>Notion, Linear, Asana, CRM等幅広く対応</small> | △<br><small>MS製品中心</small> | ◯<br><small>Slack等</small> | △<br><small>限定的</small> |
+| **開発者向け** | MCP対応・外部操作 | ◎<br><small>MCP経由で外部アプリのデータ更新も可能</small> | △<br><small>Work IQ等で対応中</small> | × | × |
 | **柔軟性** | プラットフォーム | ◎<br><small>Zoom/Meet/Teams/対面</small> | △<br><small>Teams主体</small> | ◎<br><small>Web/Mobile</small> | △<br><small>Zoom主体</small> |
+| **デバイス** | Apple Watch対応 | ◎<br><small>専用アプリで直接録音可能</small> | ×<br><small>非対応</small> | - | - |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -229,7 +245,7 @@ relationships:
 | **Otter.ai** | 議事録特化の老舗 | リアルタイム文字起こし、英語認識精度、知名度。 | 構造化された要約やワークフロー自動化はCirclebackに劣る。 | 英語会議がメインで、リアルタイムでの文字起こし確認を重視する場合。 |
 | **Zoom AI Companion** | Zoom内蔵型 | Zoomユーザーなら追加コストなしで利用可能。 | Zoom以外の会議や対面会議には対応していない。 | 会議がZoomに限定されており、追加コストをかけずにAI要約を使いたい場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Circlebackは、単なる議事録ツールから「AIワークフローの中核」へと進化しています。特に2026年のMCP対応により、会議データを開発環境（Cursor）や汎用AI（Claude）から直接利用できるようになった点は、エンジニアやプロダクトマネージャーにとって画期的です。高精度な日本語対応と強力なSaaS連携も含め、現時点で最も「使える」会議アシスタントの一つと言えます。
