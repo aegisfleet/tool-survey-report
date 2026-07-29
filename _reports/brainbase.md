@@ -18,12 +18,12 @@ layout: report
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 ($0/月)"
+  starting_price: 無料 ($0/月)
   target_users:
     - エンタープライズ
     - 開発者
     - IT部門
-  latest_highlight: "2026年7月、Kimi K3モデルのサポートを追加"
+  latest_highlight: 2026年7月、Kimi K3モデルのサポートを追加
   update_frequency: 高
 evaluation:
   score: 85
