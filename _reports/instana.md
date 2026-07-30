@@ -47,6 +47,7 @@ links:
 relationships:
   related_tools:
     - Datadog
+    - PagerDuty
 ---
 
 # **IBM Instana 調査レポート**
