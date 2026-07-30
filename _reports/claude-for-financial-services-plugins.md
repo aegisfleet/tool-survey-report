@@ -4,9 +4,9 @@ tool_name: Claude for Financial Services Plugins
 tool_reading: クロード フォー ファイナンシャル サービス プラグイン
 category: AIモデル拡張/プラグイン
 developer: Anthropic
-official_site: https://github.com/anthropics/financial-services-plugins
+official_site: https://github.com/anthropics/financial-services
 date: '2026-03-27'
-last_updated: '2026-03-27'
+last_updated: '2026-07-31'
 tags:
   - AI
   - エージェント
@@ -22,7 +22,7 @@ quick_summary:
     - 金融専門職
     - アナリスト
     - 投資銀行家
-  latest_highlight: 金融サービス向けプラグインをオープンソースとして公開
+  latest_highlight: Sovereign Cloud (GCC-High等) への対応やBox連携の追加、リポジトリ再構成によるエージェントの追加など
   update_frequency: 高
 evaluation:
   score: 85
@@ -39,9 +39,9 @@ evaluation:
       reason: 利用には各データプロバイダー（MCPサーバー）の契約・APIキーが別途必要
   summary: 金融業務に特化した強力なAI拡張ツールだが、真価を発揮するには外部データソースの契約が前提となる。
 links:
-  github: https://github.com/anthropics/financial-services-plugins
-  deepwiki: https://deepwiki.com/anthropics/financial-services-plugins
-  codewiki: https://codewiki.google/github.com/anthropics/financial-services-plugins
+  github: https://github.com/anthropics/financial-services
+  deepwiki: https://deepwiki.com/anthropics/financial-services
+  codewiki: https://codewiki.google/github.com/anthropics/financial-services
 relationships:
   parent: Claude Cowork
   related_tools:
@@ -55,9 +55,9 @@ relationships:
 * **ツール名**: Claude for Financial Services Plugins
 * **ツールの読み方**: クロード フォー ファイナンシャル サービス プラグイン
 * **開発元**: Anthropic
-* **公式サイト**: [https://github.com/anthropics/financial-services-plugins](https://github.com/anthropics/financial-services-plugins)
+* **公式サイト**: [https://github.com/anthropics/financial-services](https://github.com/anthropics/financial-services)
 * **関連リンク**:
-  * GitHub: [https://github.com/anthropics/financial-services-plugins](https://github.com/anthropics/financial-services-plugins)
+  * GitHub: [https://github.com/anthropics/financial-services](https://github.com/anthropics/financial-services)
 * **カテゴリ**: AI開発ライブラリ
 * **概要**: Claude for Financial Services Pluginsは、Claude（Claude CoworkやClaude Code）を金融サービス専門のAIアシスタントに強化するためのオープンソースのプラグイン群である。投資銀行、株式調査、未公開株、ウェルスマネジメントといった金融特化のワークフローをサポートし、MCP経由で専門的なデータソースと連携して高度な分析やドキュメント作成を可能にする。
 
@@ -77,9 +77,29 @@ relationships:
 * **Equity Research（アドオン）**: 決算アップデートやカバレッジ開始レポートの執筆、投資テーマの維持、カタリスト追跡など株式調査特化の機能。
 * **Private Equity（アドオン）**: 案件のソーシング・スクリーニング、デューデリジェンスのチェックリスト実行、IC（投資委員会）メモの作成、ポートフォリオKPI監視機能。
 * **Wealth Management（アドオン）**: クライアントミーティングの準備、ファイナンシャルプラン構築、ポートフォリオのリバランス、タックスロス・ハーベスティングの機会特定機能。
+* **Fund Admin（アドオン）**: GL照合、ブレイクのトレース、未収/未払処理、分散コメント、NAVタイアウトなどのファンド管理機能。
+* **Operations（アドオン）**: KYCドキュメントの解析およびルールグリッド評価機能。
+* **Managed-agent Wrappers**: ピッチ作成、市場調査、収益レビューなどの特定のタスクを自律的に実行するための名前付きエージェント（Pitch Agent, Market Researcher, Earnings Reviewerなど）。
 * **Partner-Built Plugins**: LSEGやS&P Globalなどのデータパートナーが構築・維持する、自社データをClaudeワークフローに直接取り込むための専用プラグイン。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: クライアント・サーバー型（Claude環境とローカルファイルシステム、MCPを通じた外部API連携）。
+* **主要コンポーネントとデータフロー**:
+  * 全てMarkdownとJSONファイルで構成されており、自社の専門用語や取引プロセスなどのコンテキストを追加できる。
+  * `financial-analysis`プラグインをコアとして、データコネクタの基盤を整備する。
+* **特筆すべき要素技術**:
+  * **MCP (Model Context Protocol)**: データプロバイダーとの標準的な通信を実現し、リアルタイムでのデータ取得やファイル操作を行う。
+
+```mermaid
+graph TD
+    User[ユーザー] -->|スラッシュコマンド等| Claude[Claude Cowork / Claude Code]
+    Claude -->|MCPプロトコル| MCPServer[MCPサーバー]
+    MCPServer <--> DataProviders[Box, FactSet, S&P Global等の外部データプロバイダ]
+    Claude <-->|ファイルアクセス| LocalFiles[Markdown/JSON設定ファイル・出力先]
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Claude CoworkまたはClaude Codeの環境。
@@ -106,19 +126,19 @@ relationships:
 * **クイックスタート**:
   * インストール後、プラグインは自動的に有効になる。`/comps [company]`（比較分析）や `/earnings [company] [quarter]`（決算アップデート）などのスラッシュコマンドを使用して直ちに実行可能。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **強力なMCPデータ連携**: Daloopa、Morningstar、S&P Global、FactSetなど、金融専門家が日常的に使用する11のデータソースと標準で統合できる。
 * **エンドツーエンドのワークフロー**: 単なる一問一答ではなく、データ収集から分析、最終的な成果物（生きたExcelモデルやフォーマット済みのPowerPoint、Wordドキュメント）の生成までを一貫して行える。
 * **高いカスタマイズ性**: 全てMarkdownとJSONファイルで構成されており、コード不要で自社の専門用語、取引プロセス、指定のフォーマット基準などをClaudeに教え込むことができる。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **データソースの別途契約が必要**: プラグイン自体は無料のオープンソースだが、実用的な分析を行うためのMCPサーバー（FactSet、S&P Globalなど）の利用には各社との有料契約・APIキーが必須となる。
 * **出力結果の専門家によるレビューが必須**: 財務モデルや分析結果は投資助言を構成するものではないため、最終決定の前に必ず金融専門家による検証と確認が必要である。
 * **環境構築のハードル**: コマンドラインツール（Claude Code）や設定ファイル（`.mcp.json`）の編集が必要なため、非エンジニアには初期設定がやや難しく感じられる可能性がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -127,44 +147,44 @@ relationships:
 * **課金体系**: プラグイン自体は無料。ただし、Claude APIの利用料金や、各データプロバイダーのMCPサーバー接続にかかるサブスクリプション費用が別途必要。
 * **無料トライアル**: プラグイン自体の導入はいつでも無料で行える。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: 公開事例なし。ただし、金融特化の機能を求めている投資銀行やPEファンド等の専門機関がターゲットとなっている。
 * **導入事例**: LSEGやS&P Globalなどの大手データプロバイダーがパートナーとして専用プラグインを提供しており、金融業界における標準的なデータソースとしての利用が見込まれている。
 * **対象業界**: 投資銀行、株式リサーチ、未公開株（PE）、ウェルスマネジメント、その他金融サービス全般。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: GitHub上のREADME.mdファイルにて、概要、インストール方法、コマンドリスト、カスタマイズ方法などが提供されている。
 * **コミュニティ**: GitHubリポジトリのIssueやPull Requestを通じたオープンソースコミュニティでの議論・貢献が可能。
 * **公式サポート**: オープンソースプロジェクトのため、企業向けの専用SLAを伴う直接サポートは提供されていない。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: ClaudeのMCP（Model Context Protocol）に完全対応。
-* **外部サービス連携**: Daloopa, Morningstar, S&P Global, FactSet, Moody's, MT Newswires, Aiera, LSEG, PitchBook, Chronograph, Egnyte といった主要な金融データプラットフォーム・ドキュメント管理システムと連携可能。
+* **外部サービス連携**: Daloopa, Morningstar, S&P Global, FactSet, Moody's, MT Newswires, Aiera, LSEG, PitchBook, Chronograph, Egnyte, Box といった主要な金融データプラットフォーム・ドキュメント管理システムと連携可能。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
 | **Claude Code** | ◎ | 公式CLIツールであり、コマンド一つでプラグインのインストール・管理が可能 | 特になし |
 | **MCP (Model Context Protocol)** | ◎ | プラグインの根幹となる技術であり、各種データプロバイダーとの標準的な通信を実現 | 各プロバイダーへのアクセス権が必要 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: 各データプロバイダー（MCPサーバー）との通信において、該当プロバイダーが要求するAPIキーや認証メカニズム（OAuth等）を使用する。
 * **データ管理**: プラグイン自体はデータを持たず、Claude環境内で処理が完結する。データの保管場所等は利用するClaudeの環境や対象データプロバイダーのポリシーに依存する。
 * **準拠規格**: 公式サイトでは公開されていない。金融機関での利用にあたっては、自社のコンプライアンス基準に基づきClaude環境全体のセキュリティ評価を行う必要がある。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: Claude CoworkのUIやClaude CodeのCLIを通じて操作する。スラッシュコマンド（例: `/comps`）による直感的な指示が可能。
 * **学習コスト**: スラッシュコマンドの使い方自体は容易。しかし、自社のフォーマットや独自のワークフローに合わせてMarkdownやJSON（スキルやコマンドの定義）をカスタマイズするには、一定の学習とプロンプトエンジニアリングの知識が必要となる。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * 最初にコアとなる `financial-analysis` プラグインをインストールし、必要なデータコネクターの基盤を整える。
@@ -174,7 +194,7 @@ relationships:
   * 生成された財務モデル（Excel等）を、人間によるクロスチェックや数値の検証を行わずにそのまま実務に使用すること。
   * 全てのアドオンプラグインをむやみにインストールし、コンテキストが肥大化して本来の業務意図から外れた応答を招くこと。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHubリポジトリ
 * **総合評価**: 6.9k スター (GitHub)
@@ -188,15 +208,20 @@ relationships:
 * **特徴的なユースケース**:
   * 自社の過去のデューデリジェンスレポートを読み込ませ、特定業界の新しい案件に対する初期スクリーニングとICメモの草案作成を全自動化する。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-07-22**: Microsoft 365アドイン向けの読み取り専用データエクスポート機能とキャッシュクリアスクリプトの強化。
+* **2026-06-26**: `gateway_auth_source=entra` パラメータの追加とEntraアプリ登録ドキュメントの整備。
+* **2026-06-05**: Sovereign / National Cloud (GCC-High, DoD, 21Vianet) への対応とバリデーションの追加。
+* **2026-05-29**: MCPインテグレーションとして新たに Box を追加。
+* **2026-05-05**: リポジトリの再構成および名前付きエージェントの追加。
 * **2025-02-27 (推定)**: リポジトリが公開され、多数の初期コミットが行われた。コアプラグインや各種アドオン、パートナー提供プラグイン（LSEG, S&P Global）の基本構造が実装された。
 
-(出典: [GitHub Commits](https://github.com/anthropics/financial-services-plugins/commits/main/))
+(出典: [GitHub Commits](https://github.com/anthropics/financial-services/commits/main/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Claude for Financial Services Plugins | Bloomberg Terminal / FactSet等の専用端末 | 一般的な汎用AI（ChatGPT 等） |
 |:---:|:---|:---:|:---:|:---:|
@@ -205,7 +230,7 @@ relationships:
 | **エンタープライズ** | ワークフローカスタマイズ | ◎<br><small>Markdown/JSONで容易に定義可能</small> | △<br><small>システム側が提供する機能に依存</small> | ◯<br><small>カスタムプロンプト/GPTs等で対応</small> |
 | **非機能要件** | オープンソース・拡張性 | ◎<br><small>コード不要でプラグイン自体の改造が可能</small> | ×<br><small>プロプライエタリ</small> | △<br><small>プラットフォームの制約下でのみ拡張可</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -213,7 +238,7 @@ relationships:
 | **Bloomberg Terminal / FactSet等の専用端末** | 金融プロフェッショナル向けの事実上の標準プラットフォーム | 圧倒的なデータの網羅性とリアルタイム性、堅牢な機能 | 非常に高価、AIによる「ゼロからの資料作成」は一部限定的 | データへのアクセスや精緻な市場分析が最優先される場合 |
 | **一般的な汎用AI（ChatGPT 等）** | 汎用的な生成AIモデル | 幅広いタスクに対応、初期コストが低い | 金融特化の専門知識や、複雑な財務モデルの出力精度が劣る | 日常的なテキスト要約や一般的なコード生成など、金融特化以外のタスクも多くこなす場合 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Claude for Financial Services Pluginsは、生成AIの力を金融専門職の具体的なワークフローに直接落とし込む非常に強力なツールである。特に、手作業で行われていたExcelでの財務モデル構築（DCF、LBOなど）や、定型的なPowerPoint資料の作成を自動化し、そのまま実務で使える形式で出力できる点が最大の評価ポイントである。
