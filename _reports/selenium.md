@@ -51,7 +51,7 @@ relationships:
     - MagicPod
     - JUnit
     - PyTest
-    - Autify
+    - Gauge
 ---
 
 # **Selenium 調査レポート**

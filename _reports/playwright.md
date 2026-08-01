@@ -61,7 +61,7 @@ relationships:
     - MagicPod
     - PyTest
     - Cucumber
-    - Vitest
+    - Gauge
 ---
 
 # **Playwright 調査レポート**
