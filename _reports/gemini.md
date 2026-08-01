@@ -48,6 +48,7 @@ relationships:
     - Google Antigravity
     - NotebookLM
     - Code Wiki
+    - Gemini Skills
     - Google Jules
     - Google Stitch
   related_tools:
