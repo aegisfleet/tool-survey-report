@@ -54,7 +54,7 @@ relationships:
     - Hugging Face
     - Qwen-Image-Layered
     - Hunyuan 3D
-    - "Deep-Live-Cam"
+    - Deep-Live-Cam
 ---
 
 # **Stable Diffusion 調査レポート**

@@ -1,54 +1,51 @@
 ---
-title: "Deep-Live-Cam 調査レポート"
-tool_name: "Deep-Live-Cam"
-tool_reading: "ディープライブカム"
-category: "AI画像/メディア生成"
-developer: "hacksider"
-official_site: "https://deeplivecam.net/"
-date: "2026-03-28"
-last_updated: "2026-08-04"
+title: Deep-Live-Cam 調査レポート
+tool_name: Deep-Live-Cam
+tool_reading: ディープライブカム
+category: AI画像/メディア生成
+developer: hacksider
+official_site: https://deeplivecam.net/
+date: '2026-03-28'
+last_updated: '2026-08-04'
 tags:
-  - "生成AI"
-  - "オープンソース"
-  - "ディープフェイク"
-  - "リアルタイム"
-  - "画像生成"
-description: "たった1枚の画像からリアルタイムで顔を入れ替えることができるワンクリックビデオディープフェイクツール。"
-
+  - 生成AI
+  - オープンソース
+  - ディープフェイク
+  - リアルタイム
+  - 画像生成
+description: たった1枚の画像からリアルタイムで顔を入れ替えることができるワンクリックビデオディープフェイクツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "クリエイター"
-    - "Vtuber"
-    - "ストリーマー"
-  latest_highlight: "v2.7 UltimateでTensorRTによる高速化やテキストプロンプトでの編集(Flux Live)に対応"
-  update_frequency: "高"
-
+    - クリエイター
+    - Vtuber
+    - ストリーマー
+  latest_highlight: v2.7 UltimateでTensorRTによる高速化やテキストプロンプトでの編集(Flux Live)に対応
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、誰でも無料で利用可能"
+      reason: オープンソースであり、誰でも無料で利用可能
     - point: 5
-      reason: "1枚の画像だけでリアルタイムの顔入れ替えが可能という強力な機能"
+      reason: 1枚の画像だけでリアルタイムの顔入れ替えが可能という強力な機能
     - point: 5
-      reason: "80,000以上のGitHubスターを獲得し、コミュニティが非常に活発"
+      reason: 80,000以上のGitHubスターを獲得し、コミュニティが非常に活発
     - point: 3
-      reason: "日本語UIなど多言語対応が行われており、日本のユーザーも使いやすい"
+      reason: 日本語UIなど多言語対応が行われており、日本のユーザーも使いやすい
   minus_points:
     - point: -3
-      reason: "高度な機能や高速処理を利用するためにはGPU等の高スペックな環境が必要になる場合がある"
-  summary: "手軽に高品質なリアルタイムディープフェイクを作成できる強力なツールであり、UIの日本語化によりさらに利用しやすくなった"
-
+      reason: 高度な機能や高速処理を利用するためにはGPU等の高スペックな環境が必要になる場合がある
+  summary: 手軽に高品質なリアルタイムディープフェイクを作成できる強力なツールであり、UIの日本語化によりさらに利用しやすくなった
 links:
-  github: "https://github.com/hacksider/Deep-Live-Cam"
-  deepwiki: "https://deepwiki.com/hacksider/Deep-Live-Cam"
+  github: https://github.com/hacksider/Deep-Live-Cam
+  deepwiki: https://deepwiki.com/hacksider/Deep-Live-Cam
 relationships:
   related_tools:
-    - "Stable Diffusion"
+    - Stable Diffusion
 ---
 
 # **Deep-Live-Cam 調査レポート**
