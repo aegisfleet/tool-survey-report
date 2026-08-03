@@ -1,53 +1,45 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "GenOffice 調査レポート"
-tool_name: "GenOffice"
-tool_reading: "ゲンオフィス"
-category: "オフィススイート"
-developer: "Mainfunc, Inc (Genspark)"
-official_site: "https://www.genspark.ai/"
-date: "2026-08-03"
-last_updated: "2026-08-03"
+title: GenOffice 調査レポート
+tool_name: GenOffice
+tool_reading: ゲンオフィス
+category: オフィススイート
+developer: Mainfunc, Inc (Genspark)
+official_site: https://www.genspark.ai/
+date: '2026-08-03'
+last_updated: '2026-08-03'
 tags:
-  - "オープンソース"
-  - "デスクトップアプリ"
-  - "AI・機械学習"
-  - "ドキュメント管理"
-description: "AI編集を第一級のワークフローとして組み込んだ、macOSとWindows向けのAIネイティブな統合オフィススイート"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - デスクトップアプリ
+  - AI・機械学習
+  - ドキュメント管理
+description: AI編集を第一級のワークフローとして組み込んだ、macOSとWindows向けのAIネイティブな統合オフィススイート
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ナレッジワーカー"
-    - "ドキュメント作成者"
-    - "開発者"
-  latest_highlight: "macOS (Apple Silicon) および Windows (x64) 向けのインストーラー (v0.4.110) を提供"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - ナレッジワーカー
+    - ドキュメント作成者
+    - 開発者
+  latest_highlight: macOS (Apple Silicon) および Windows (x64) 向けのインストーラー (v0.4.110) を提供
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Word、Excel、PowerPointなどの標準フォーマット（.docx, .xlsx, .pptx）と高い互換性を持つ"
+      reason: Word、Excel、PowerPointなどの標準フォーマット（.docx, .xlsx, .pptx）と高い互換性を持つ
     - point: 5
-      reason: "AIによるブロック単位の編集機能やエージェント機能が統合されている"
+      reason: AIによるブロック単位の編集機能やエージェント機能が統合されている
     - point: 3
-      reason: "オープンソース（Apache 2.0）で開発されており、ローカル環境で動作する"
+      reason: オープンソース（Apache 2.0）で開発されており、ローカル環境で動作する
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "既存のOfficeファイルとの互換性を保ちながら、AI機能をネイティブに統合した次世代のオープンソース・オフィススイート"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: 既存のOfficeファイルとの互換性を保ちながら、AI機能をネイティブに統合した次世代のオープンソース・オフィススイート
 links:
-  github: "https://github.com/genspark-ai/genoffice"
-  deepwiki: "https://deepwiki.com/genspark-ai/genoffice"
+  github: https://github.com/genspark-ai/genoffice
+  deepwiki: https://deepwiki.com/genspark-ai/genoffice
 ---
 
 # **GenOffice 調査レポート**
