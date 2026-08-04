@@ -44,7 +44,7 @@ links:
   documentation: https://opentelemetry.io/docs/
 relationships:
   related_tools:
-    - "Splunk"
+    - Splunk
 ---
 
 # **OpenTelemetry 調査レポート**
