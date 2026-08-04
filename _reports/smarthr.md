@@ -49,10 +49,10 @@ links:
   documentation: https://support.smarthr.jp/ja/
 relationships:
   related_tools:
-    - COMPANY
-    - KING OF TIME
-    - ジョブカン勤怠管理
-    - マネーフォワード クラウド勤怠
+    - "COMPANY"
+    - "KING OF TIME"
+    - "ジョブカン勤怠管理"
+    - "マネーフォワード クラウド勤怠"
 ---
 
 # **SmartHR 調査レポート**
