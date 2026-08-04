@@ -2,7 +2,7 @@
 title: OpenTelemetry 調査レポート
 tool_name: OpenTelemetry
 tool_reading: オープンテレメトリー
-category: 監視/可観測性
+category: オブザーバビリティ/APM
 developer: Cloud Native Computing Foundation (CNCF)
 official_site: https://opentelemetry.io/
 date: '2026-07-22'
@@ -43,12 +43,8 @@ links:
   github: https://github.com/open-telemetry
   documentation: https://opentelemetry.io/docs/
 relationships:
-  parent: ''
-  children:
-    - ''
   related_tools:
-    - prometheus
-    - splunk
+    - Splunk
 ---
 
 # **OpenTelemetry 調査レポート**

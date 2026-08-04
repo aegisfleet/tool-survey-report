@@ -2,7 +2,7 @@
 title: New Relic 調査レポート
 tool_name: New Relic
 tool_reading: ニューレリック
-category: 監視/可観測性
+category: オブザーバビリティ/APM
 developer: New Relic, Inc.
 official_site: https://newrelic.com/
 date: '2026-04-05'
@@ -10,9 +10,9 @@ last_updated: '2026-04-05'
 tags:
   - APM
   - SaaS
-  - 監視/可観測性
   - ログ管理
   - 監視
+  - AIOps
 description: New Relicは、インフラ、アプリケーション、ログ、ユーザー体験を統合的に監視・分析できるフルスタックオブザーバビリティプラットフォームです。
 quick_summary:
   has_free_plan: true

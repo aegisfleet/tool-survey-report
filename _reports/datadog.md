@@ -2,17 +2,14 @@
 title: Datadog 調査レポート
 tool_name: Datadog
 tool_reading: データドッグ
-category: 監視/可観測性
+category: オブザーバビリティ/APM
 developer: Datadog, Inc.
 official_site: https://www.datadoghq.com/
 date: '2025-10-25'
 last_updated: '2026-04-23'
 tags:
-  - AI
   - APM
-  - DevOps
   - SaaS
-  - 監視/可観測性
   - セキュリティ
   - ログ管理
   - 監視
