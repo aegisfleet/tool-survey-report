@@ -231,8 +231,9 @@ relationships:
 | 機能カテゴリ | 機能項目 | Ollama | LM Studio | Jan | LocalAI |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | GUI操作 | ×<br><small>CLIのみ</small> | ◎<br><small>洗練されたUI</small> | ◎<br><small>ChatGPT風UI</small> | ×<br><small>基本はAPI</small> |
+| **拡張機能** | エージェント機能 | △<br><small>外部連携前提</small> | ◎<br><small>Bionic内蔵</small> | △<br><small>拡張機能依存</small> | ×<br><small>非対応</small> |
 | **導入** | セットアップ容易性 | ◎<br><small>ワンコマンド</small> | ◎<br><small>インストーラー</small> | ◎<br><small>インストーラー</small> | △<br><small>Docker等が必要</small> |
-| **開発** | API互換性 | ◎<br><small>OpenAI互換</small> | ◯<br><small>OpenAI互換</small> | ◯<br><small>ローカルサーバー</small> | ◎<br><small>完全互換目指す</small> |
+| **開発** | API互換性 | ◎<br><small>OpenAI互換</small> | ◎<br><small>OpenAI互換</small> | ◯<br><small>ローカルサーバー</small> | ◎<br><small>完全互換目指す</small> |
 | **ライセンス** | オープンソース | ◎<br><small>MIT</small> | ×<br><small>プロプライエタリ</small> | ◎<br><small>AGPL v3</small> | ◎<br><small>MIT</small> |
 
 ### **16.2 詳細比較**
@@ -240,7 +241,7 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Ollama** | CLI中心の軽量フレームワーク | セットアップが最速、API連携が強力、リソース消費が少ない。 | 公式GUIがない。 | 開発者、スクリプトへの組み込み、サーバー利用。 |
-| **LM Studio** | 高機能なGUIアプリ | 直感的なGUI、詳細なモデル設定、Windows/Macで使いやすい。 | クローズドソース、商用利用規定あり。 | 非開発者、GUIで手軽にチャットや検証をしたい場合。 |
+| **LM Studio** | 高機能なGUIと自律型エージェント | 直感的なGUIに加え、Bionicエージェントを内蔵し、自律的なタスク実行も可能。 | クローズドソース、商用利用規定あり。 | 非開発者、GUIで手軽にチャットや自律型エージェントの支援を求める場合。 |
 | **Jan** | オープンソースGUIアプリ | 完全OSS、拡張機能、プライバシー重視のデスクトップ体験。 | 動作の安定性やパフォーマンスがOllama/LM Studioに劣る場合がある。 | OSSかつGUI環境を求める場合。 |
 | **LocalAI** | API互換性特化 | OpenAI APIの完全な代替を目指し、音声や画像生成も統合。 | セットアップがやや複雑、コンテナ運用が前提。 | 本番環境へのデプロイ、マルチモーダルAPIサーバー構築。 |
 
