@@ -6,12 +6,13 @@ category: ローカルAI実行環境
 developer: Element Labs, Inc.
 official_site: https://lmstudio.ai/
 date: '2026-01-29'
-last_updated: '2026-03-28'
+last_updated: '2026-08-05'
 tags:
   - AI
   - ローカルAI
   - 大規模言語モデル
   - 開発者ツール
+  - エージェント
 description: オープンソースの大規模言語モデル（LLM）をローカルPCやサーバー上で、オフラインで実行するためのデスクトップアプリケーションおよびCLIツール。
 quick_summary:
   has_free_plan: true
@@ -21,7 +22,7 @@ quick_summary:
     - 開発者
     - 研究者
     - AI学習者
-  latest_highlight: 2026年2月に「LM Link」をリリースし、Tailscaleと提携してリモートインスタンスへの接続に対応
+  latest_highlight: 2026年7月に自律型AIエージェント「Bionic」を含むメジャーアップデート1.0.0をリリース
   update_frequency: 高
 evaluation:
   score: 92
@@ -63,7 +64,7 @@ relationships:
   * 公式ブログ: [https://lmstudio.ai/blog](https://lmstudio.ai/blog)
   * Discord: [https://discord.gg/lmstudio](https://discord.gg/lmstudio)
 * **カテゴリ**: LLMプラットフォーム
-* **概要**: オープンソースの大規模言語モデル（LLM）をユーザーのローカルマシンやサーバー上で、プライベートかつオフラインで実行するためのプラットフォーム。直感的なGUIに加え、v0.4.0からはCLIのみで動作するヘッドレスモードも搭載し、開発からデプロイまで幅広く対応する。
+* **概要**: オープンソースの大規模言語モデル（LLM）をユーザーのローカルマシンやサーバー上で、プライベートかつオフラインで実行するためのプラットフォーム。直感的なGUIに加え、v0.4.0からはCLIのみで動作するヘッドレスモードも搭載。さらに、2026年7月のメジャーアップデートで自律型AIエージェント「Bionic」が統合され、開発からデプロイまで幅広く対応する。
 
 ## **2. 目的と主な利用シーン**
 
@@ -86,6 +87,7 @@ relationships:
 * **ステートフルチャットAPI**: `/v1/chat` エンドポイントにより、会話履歴を保持したままAPI経由で対話が可能。
 * **RAGとドキュメント対話**: ローカルのファイル（PDF, テキストなど）を読み込ませて対話が可能。
 * **開発者ツール**: チャットのエクスポート、分割画面（Split View）、開発者モードなどの支援機能が充実。
+* **自律型AIエージェント「Bionic」**: ローカルのコードベースやファイルを読み込み、ワークスペース上で自律的にタスクを実行できるエージェント機能（v1.0.0で追加）。
 
 ## **4. 開始手順・セットアップ**
 
@@ -166,6 +168,8 @@ relationships:
 
 * **API**: OpenAI互換のREST APIを提供。`/v1/chat/completions`, `/v1/embeddings` など標準的なエンドポイントに加え、ステートフルな `/v1/chat` も利用可能。
 * **外部サービス連携**:
+  * **MCP (Model Context Protocol) サーバー連携**: LM Studio内でMCPサーバーをインストール・接続し、ローカルモデルを用いて外部ツールやデータソースと連携可能。
+  * **LM Link**: 別端末にあるLM Studioインスタンスへセキュアにリモート接続し、ローカルにあるかのようにモデルを呼び出し・操作が可能。
   * **Cursor / VS Code**: ローカルAPIサーバーを指定することで、コーディングアシスタントのバックエンドとして利用可能。
   * **LangChain / LlamaIndex**: OpenAIクラスを用いてシームレスに接続可能。
   * **Continue**: IDE拡張機能との連携が容易。
@@ -218,13 +222,16 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-07-30 (Bionic v1.0.4)**: Bionicエージェント向けに、推論レベルのサブメニューやUI改善、コーディングプロジェクトにおけるファイル検索の高速化などを提供。
+* **2026-07-22 (v0.4.20)**: エンタープライズ向けの内部ネットワークモデルエンドポイント機能のサポート追加や、LM Link経由で別端末のモデルをBionicエージェントから利用する機能を追加。
+* **2026-07-16 (Bionic v1.0.0)**: 自律型AIエージェント「LM Studio Bionic」の初期リリース。
 * **2026-03-26 (v0.4.8)**: OpenAI互換の /v1/chat/completions API において `reasoning_effort` および `reasoning_tokens` のサポートを追加。
 * **2026-02-27 (v0.4.6)**: 「LM Link」をリリース。Tailscaleと提携し、リモートのLM Studioインスタンスへエンドツーエンド暗号化で接続してローカル同様に利用できる機能を実装。
 * **2026-02-06 (v0.4.2)**: MLXエンジン1.0.0を用いたParallel Requests（連続バッチング）に対応。
 * **2026-01-30 (v0.4.1)**: Anthropic互換のAPIエンドポイント `/v1/messages` を追加し、Claude Codeとの連携が可能に。
 * **2026-01-28 (v0.4.0)**: 次世代メジャーアップデート。GUIなしで動作する`llmster`デーモン、並列リクエスト処理、ステートフルREST API、UI刷新などを実装。
 
-(出典: [LM Studio Blog](https://lmstudio.ai/blog) / [Changelog](https://lmstudio.ai/changelog))
+(出典: [LM Studio Changelog](https://lmstudio.ai/changelog))
 
 ## **16. 類似ツールとの比較**
 
@@ -233,6 +240,7 @@ relationships:
 | 機能カテゴリ | 機能項目 | LM Studio | Ollama | GPT4All | Jan |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | GUI操作 | ◎<br><small>洗練されたUI</small> | ×<br><small>CLI/APIのみ</small> | ◯<br><small>シンプル</small> | ◎<br><small>OSSで拡張性高</small> |
+| **拡張機能** | エージェント機能 | ◎<br><small>Bionic内蔵</small> | △<br><small>外部連携前提</small> | ×<br><small>非対応</small> | △<br><small>拡張機能依存</small> |
 | **デプロイ** | ヘッドレス運用 | ◎<br><small>v0.4.0で対応</small> | ◎<br><small>標準機能</small> | △<br><small>Serverモードあり</small> | △<br><small>基本はDesktop</small> |
 | **API** | OpenAI互換 | ◎<br><small>互換性高い</small> | ◎<br><small>標準対応</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> |
 | **ライセンス** | オープンソース | ×<br><small>プロプライエタリ</small> | ◯<br><small>MIT License</small> | ◯<br><small>Apache 2.0</small> | ◯<br><small>AGPL v3</small> |
@@ -241,7 +249,7 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **LM Studio** | 高機能なGUIと強力なバックエンド | 直感的な操作と高度な設定（並列処理など）の両立。企業利用も視野に入れた機能。 | OSSではない。 | GUIでの快適な操作と、サーバー運用の両方を同一エコシステムで行いたい場合。 |
+| **LM Studio** | 高機能なGUIと自律型エージェント | 直感的なGUIに加え、Bionicエージェントを内蔵し、自律的なタスク実行も可能。 | OSSではない。 | GUIでの快適な操作と、自律型エージェントによる開発支援を求める場合。 |
 | **Ollama** | シンプルなCLIツール | セットアップが極めて簡単。Modelfileによるカスタマイズが強力。 | 純正GUIがない（サードパーティ製が必要）。 | ターミナル操作に慣れており、スクリプトやアプリへの組み込みを最優先する場合。 |
 | **GPT4All** | CPU推論に強い | GPUがない環境でも比較的高速に動作する。 | 機能面では他ツールよりシンプル。 | 一般的なスペックのPCで手軽に試したい場合。 |
 | **Jan** | 拡張性の高いOSS GUI | 完全にオープンソース。ローカルAIのカスタマイズ性が高い。 | LM Studioに比べると動作の安定性や機能実装速度で劣る場合がある。 | 完全なOSS環境にこだわりたい場合。 |
