@@ -2,7 +2,7 @@
 title: Splunk AppDynamics 調査レポート
 tool_name: Splunk AppDynamics
 tool_reading: スプランク アップダイナミクス
-category: 監視/可観測性
+category: オブザーバビリティ/APM
 developer: Splunk (a Cisco company)
 official_site: https://www.splunk.com/en_us/products/appdynamics.html
 date: '2026-05-08'
@@ -10,7 +10,7 @@ last_updated: '2026-05-08'
 tags:
   - SaaS
   - エンタープライズ
-  - 監視/可観測性
+  - 監視
   - オンプレミス
   - APM
 description: ビジネスパフォーマンスとアプリケーションの健全性を紐づけて可視化することに強みを持つ、エンタープライズ向けのAPM/オブザーバビリティプラットフォーム

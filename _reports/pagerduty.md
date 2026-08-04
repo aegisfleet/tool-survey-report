@@ -2,7 +2,7 @@
 title: PagerDuty 調査レポート
 tool_name: PagerDuty
 tool_reading: ペイジャーデューティ
-category: 監視/可観測性
+category: ログ/インシデント管理
 developer: PagerDuty株式会社
 official_site: https://www.pagerduty.co.jp/
 date: '2026-07-30'

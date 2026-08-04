@@ -2,15 +2,15 @@
 title: IBM Instana 調査レポート
 tool_name: IBM Instana
 tool_reading: インスタナ
-category: 監視/可観測性
+category: オブザーバビリティ/APM
 developer: IBM
 official_site: https://www.ibm.com/jp-ja/products/instana
 date: '2026-04-16'
 last_updated: '2026-04-16'
 tags:
   - APM
-  - 監視/可観測性
-  - クラウド監視
+  - 監視
+  - クラウド
   - AIOps
   - エンタープライズ
 description: エージェント型AIを搭載し、アプリケーションからインフラストラクチャまでフルスタックの自動オブザーバビリティを提供するプラットフォーム

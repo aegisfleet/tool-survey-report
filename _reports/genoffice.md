@@ -2,7 +2,7 @@
 title: GenOffice 調査レポート
 tool_name: GenOffice
 tool_reading: ゲンオフィス
-category: オフィススイート
+category: ドキュメント生成/管理
 developer: Mainfunc, Inc (Genspark)
 official_site: https://www.genspark.ai/
 date: '2026-08-03'
@@ -10,8 +10,9 @@ last_updated: '2026-08-03'
 tags:
   - オープンソース
   - デスクトップアプリ
-  - AI・機械学習
+  - AI
   - ドキュメント管理
+  - オフィススイート
 description: AI編集を第一級のワークフローとして組み込んだ、macOSとWindows向けのAIネイティブな統合オフィススイート
 quick_summary:
   has_free_plan: true

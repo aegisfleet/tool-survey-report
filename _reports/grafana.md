@@ -2,15 +2,14 @@
 title: Grafana 調査レポート
 tool_name: Grafana
 tool_reading: グラファナ
-category: 監視/可観測性
+category: オブザーバビリティ/APM
 developer: Grafana Labs
 official_site: https://grafana.com/
 date: '2026-03-01'
 last_updated: '2026-06-12'
 tags:
-  - SaaS
-  - 監視/可観測性
   - オープンソース
+  - SaaS
   - ダッシュボード
   - 可視化
   - 監視
