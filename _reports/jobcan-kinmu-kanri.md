@@ -43,10 +43,10 @@ links:
   documentation: https://jobcan.zendesk.com/hc/ja
 relationships:
   related_tools:
-    - "COMPANY"
-    - "KING OF TIME"
-    - "マネーフォワード クラウド勤怠"
-    - "SmartHR"
+    - COMPANY
+    - KING OF TIME
+    - マネーフォワード クラウド勤怠
+    - SmartHR
 ---
 
 # **ジョブカン勤怠管理 調査レポート**

@@ -43,10 +43,10 @@ links:
   documentation: https://biz.moneyforward.com/support/attendance/
 relationships:
   related_tools:
-    - "COMPANY"
-    - "SmartHR"
-    - "KING OF TIME"
-    - "ジョブカン勤怠管理"
+    - COMPANY
+    - SmartHR
+    - KING OF TIME
+    - ジョブカン勤怠管理
 ---
 
 # **マネーフォワード クラウド勤怠 調査レポート**

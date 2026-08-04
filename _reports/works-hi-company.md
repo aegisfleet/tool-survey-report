@@ -39,10 +39,10 @@ evaluation:
 links: null
 relationships:
   related_tools:
-    - "SmartHR"
-    - "KING OF TIME"
-    - "ジョブカン勤怠管理"
-    - "マネーフォワード クラウド勤怠"
+    - SmartHR
+    - KING OF TIME
+    - ジョブカン勤怠管理
+    - マネーフォワード クラウド勤怠
 ---
 
 # **COMPANY 調査レポート**
