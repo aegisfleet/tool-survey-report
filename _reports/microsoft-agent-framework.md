@@ -13,7 +13,6 @@ tags:
   - オープンソース
   - ワークフロー
 description: AutoGenとSemantic Kernelの次世代となる、エージェントとワークフローを構築するためのオープンソースAIフレームワーク
-
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -23,7 +22,6 @@ quick_summary:
     - エンタープライズ
   latest_highlight: GitHub Copilot AgentとDeclarative Workflows等の安定版1.0をリリース
   update_frequency: 高
-
 evaluation:
   score: 83
   base_score: 70
@@ -36,7 +34,6 @@ evaluation:
       reason: 主要なオーケストレーションやGitHub Copilot連携が安定版1.0に到達
   minus_points: []
   summary: 次世代のマルチエージェントオーケストレーションとエンタープライズ向け機能を兼ね備えた強力なフレームワーク
-
 links:
   codewiki: https://codewiki.google/github.com/microsoft/agent-framework
   deepwiki: https://deepwiki.com/microsoft/agent-framework
