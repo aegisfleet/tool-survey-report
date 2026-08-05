@@ -364,12 +364,12 @@ Difyはクラウド版とセルフホスティング可能なオープンソー�
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | Dify | LangChain | Amazon Bedrock | Google Opal |
+| 機能カテゴリ | 機能項目 | Dify | LangChain | Microsoft Agent Framework | Google Opal |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | UI構築 | ◎<br><small>ノーコード</small> | △<br><small>コード必須</small> | ◯<br><small>Agents機能</small> | ◎<br><small>自然言語構築</small> |
-| **カテゴリ特定** | RAG精度 | ◎<br><small>高度な設定可</small> | ◎<br><small>非常に柔軟</small> | ◯<br><small>KB機能</small> | ◯<br><small>Gemini統合</small> |
-| **エンタープライズ** | SSO/認証 | ◯<br><small>Entプラン</small> | ◯<br><small>LangSmith</small> | ◎<br><small>AWS IAM</small> | ◯<br><small>Google認証</small> |
-| **非機能要件** | 日本語対応 | ◯<br><small>UI/Doc対応</small> | △<br><small>英語中心</small> | ◯<br><small>AWS標準</small> | △<br><small>プロンプト次第</small> |
+| **基本機能** | UI構築 | ◎<br><small>ノーコード</small> | △<br><small>コード必須</small> | △<br><small>コードベース中心</small> | ◎<br><small>自然言語構築</small> |
+| **カテゴリ特定** | RAG精度 | ◎<br><small>高度な設定可</small> | ◎<br><small>非常に柔軟</small> | ◯<br><small>Agent Skillsに対応</small> | ◯<br><small>Gemini統合</small> |
+| **エンタープライズ** | SSO/認証 | ◯<br><small>Entプラン</small> | ◯<br><small>LangSmith</small> | ◎<br><small>Ent向けの堅牢な状態管理</small> | ◯<br><small>Google認証</small> |
+| **非機能要件** | 日本語対応 | ◯<br><small>UI/Doc対応</small> | △<br><small>英語中心</small> | △<br><small>ドキュメントは主に英語</small> | △<br><small>プロンプト次第</small> |
 
 ### **16.2 詳細比較**
 
@@ -382,7 +382,7 @@ Difyはクラウド版とセルフホスティング可能なオープンソー�
 |---------|------|------|------|------------------|
 | **Dify** | 統合開発・運用プラットフォーム | ノーコード/ローコードと本番運用機能の両立、高いコストパフォーマンス | 多機能ゆえの学習コスト | 迅速なプロトタイピングから本格的なサービス開発まで幅広く対応したい場合 |
 | **LangChain** | Python/JSライブラリ | 最高の柔軟性と拡張性、豊富なエコシステム | コードベースでの開発が必須、学習コストが高い | 既存システムへの深い組み込みや、独自の複雑なロジックを実装したい場合 |
-| **Amazon Bedrock** | フルマネージドサービス | AWSエコシステムとの親和性、インフラ管理不要 | 特定のクラウドにロックインされる、カスタマイズ性に制限 | 主にAWS基盤でAIアプリケーションを構築したい場合 |
+| **Microsoft Agent Framework** | Semantic KernelとAutoGenを統合した基盤 | C#とPythonの強力なサポート、宣言型ワークフロー(1.0) | コードベースの細かな制御が必要で学習コスト高め | エンタープライズ向けの堅牢なエージェントシステムをC#/Pythonで構築する場合 |
 | **Google Opal** | 実験的ノーコードツール | 自然言語のみでアプリを作れる、完全無料 | 実験的サービスでSLAなし、外部連携が限定的 | アイデアを即座に形にしたい個人や、Googleエコシステム内でのプロトタイピング |
 
 ## **17. 総評**
