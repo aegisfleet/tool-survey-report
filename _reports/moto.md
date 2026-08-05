@@ -6,7 +6,7 @@ category: テスト用インフラ
 developer: Steve Pulec (Community)
 official_site: https://docs.getmoto.org/
 date: '2026-07-02'
-last_updated: '2026-07-02'
+last_updated: '2026-08-06'
 tags:
   - Python
   - AWS
@@ -46,6 +46,8 @@ relationships:
   children: []
   related_tools:
     - LocalStack
+    - Floci
+    - fakecloud
 ---
 
 # **Moto 調査レポート**

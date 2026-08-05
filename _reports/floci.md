@@ -6,7 +6,7 @@ category: テスト用インフラ
 developer: Floci コミュニティ
 official_site: https://floci.io/
 date: '2026-05-13'
-last_updated: '2026-05-13'
+last_updated: '2026-08-06'
 tags:
   - AWS
   - テスト自動化
@@ -54,6 +54,7 @@ relationships:
   related_tools:
     - LocalStack
     - fakecloud
+    - Moto
 ---
 
 # **Floci 調査レポート**
