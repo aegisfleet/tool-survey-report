@@ -355,12 +355,12 @@ LangChainフレームワーク自体はOSS（MITライセンス）で無料。�
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | 本ツール (LangChain) | LlamaIndex | Semantic Kernel | Haystack |
+| 機能カテゴリ | 機能項目 | 本ツール (LangChain) | LlamaIndex | Semantic Kernel | Microsoft Agent Framework |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | LLM連携数 | ◎<br><small>60以上</small> | ◯<br><small>主要モデル対応</small> | ◯<br><small>Azure寄り</small> | △<br><small>少なめ</small> |
-| **カテゴリ特定** | RAG精度 | ◯<br><small>十分強力</small> | ◎<br><small>データ処理に特化</small> | ◯<br><small>標準的</small> | ◯<br><small>検索パイプライン</small> |
-| **エージェント** | 制御性 | ◎<br><small>LangGraphが強力</small> | △<br><small>発展途上</small> | ◯<br><small>Planner機能あり</small> | △<br><small>基本的</small> |
-| **非機能要件** | 言語対応 | ◎<br><small>Python/JS</small> | ◯<br><small>Python/TS</small> | ◎<br><small>C#/Py/Java</small> | △<br><small>Pythonのみ</small> |
+| **基本機能** | LLM連携数 | ◎<br><small>60以上</small> | ◯<br><small>主要モデル対応</small> | ◯<br><small>Azure寄り</small> | ◯<br><small>Copilot統合など拡充</small> |
+| **カテゴリ特定** | RAG精度 | ◯<br><small>十分強力</small> | ◎<br><small>データ処理に特化</small> | ◯<br><small>標準的</small> | ◯<br><small>Agent Skillsに対応</small> |
+| **エージェント** | 制御性 | ◎<br><small>LangGraphが強力</small> | △<br><small>発展途上</small> | ◯<br><small>Planner機能あり</small> | ◎<br><small>宣言型やHarness搭載(1.0)</small> |
+| **非機能要件** | 言語対応 | ◎<br><small>Python/JS</small> | ◯<br><small>Python/TS</small> | ◎<br><small>C#/Py/Java</small> | ◯<br><small>C#/Pyに特化</small> |
 
 ### **16.2 詳細比較**
 
@@ -374,7 +374,7 @@ LangChainフレームワーク自体はOSS（MITライセンス）で無料。�
 | **LangChain** | 汎用LLMフレームワークのデファクト。 | エコシステムの広さ、LangGraphによる複雑な制御、LangSmithによる運用監視。 | 学習コストが高い。機能過多になりがち。 | 汎用的なアプリ開発、複雑な自律エージェント開発の場合。 |
 | **LlamaIndex** | RAG（検索拡張生成）特化型。 | データの取り込み・インデックス化・検索の最適化が非常に強力。 | 汎用的なエージェント機能やツール連携はLangChainほどではない。 | ドキュメント検索やQ&Aシステムが主目的の場合。 |
 | **Semantic Kernel** | Microsoft製の軽量SDK。 | Azure OpenAIやMicrosoft 365との親和性。.NET(C#)環境での利用。 | コミュニティやプラグインの数はLangChainより少ない。 | 開発環境がC#/.NETの場合や、Azure中心のシステムの場合。 |
-| **Haystack** | 検索パイプライン構築に強み。 | Elasticsearch等の検索エンジンとの連携が深く、エンタープライズ検索に向く。 | 汎用的なLLMアプリ開発にはやや不向き。 | 大規模な検索システムの構築を行う場合。 |
+| **Microsoft Agent Framework** | Semantic KernelとAutoGenを統合した次世代基盤。 | C#とPythonの強力なサポート、宣言型ワークフロー、GitHub Copilot連携(1.0)。 | JavaScript/TypeScriptのエコシステムは発展途上。 | エンタープライズ向けの堅牢なエージェントシステムをC#/Pythonで構築する場合。 |
 
 ## **17. 総評**
 
