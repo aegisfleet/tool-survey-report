@@ -1,19 +1,19 @@
 ---
-title: "Apache Superset 調査レポート"
-tool_name: "Apache Superset"
-tool_reading: "アパッチ スーパーセット"
-category: "BI/データ可視化"
-developer: "Apache Software Foundation"
-official_site: "https://superset.apache.org/"
+title: Apache Superset 調査レポート
+tool_name: Apache Superset
+tool_reading: アパッチ スーパーセット
+category: BI/データ可視化
+developer: Apache Software Foundation
+official_site: https://superset.apache.org/
 date: '2026-03-29'
 last_updated: '2026-08-06'
 tags:
-  - "オープンソース"
-  - "BIツール"
-  - "データ分析"
-  - "ダッシュボード"
-  - "開発者ツール"
-description: "SQLに対応した高速・軽量なオープンソースのデータ可視化・探索プラットフォーム"
+  - オープンソース
+  - BIツール
+  - データ分析
+  - ダッシュボード
+  - 開発者ツール
+description: SQLに対応した高速・軽量なオープンソースのデータ可視化・探索プラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -22,8 +22,8 @@ quick_summary:
     - データアナリスト
     - データエンジニア
     - ビジネスユーザー
-  latest_highlight: "2026年5月にメジャーバージョン 6.1.0 をリリース（グローバルタスクフレームワークの追加など）"
-  update_frequency: "高"
+  latest_highlight: 2026年5月にメジャーバージョン 6.1.0 をリリース（グローバルタスクフレームワークの追加など）
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
@@ -44,7 +44,7 @@ links:
   deepwiki: https://deepwiki.com/apache/superset
 relationships:
   related_tools:
-    - "Snowflake"
+    - Snowflake
 ---
 
 # **Apache Superset 調査レポート**
