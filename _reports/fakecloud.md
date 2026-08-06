@@ -6,7 +6,7 @@ category: テスト用インフラ
 developer: faisca
 official_site: https://fakecloud.dev/
 date: '2026-04-16'
-last_updated: '2026-08-06'
+last_updated: '2026-04-16'
 tags:
   - オープンソース
   - クラウド
