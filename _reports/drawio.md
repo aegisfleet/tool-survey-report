@@ -48,6 +48,7 @@ links:
 relationships:
   related_tools:
     - Miro
+    - Scanopy
 ---
 
 # **draw.io (diagrams.net) 調査レポート**
