@@ -208,7 +208,7 @@ body:not(.keyboard-navigation) {
   visibility: hidden;
   transform: translateY(20px);
   transition: all 0.3s ease;
-  z-index: 1000;
+  z-index: 99999 !important;
 
   &:hover {
     background-color: darken($primary-color, 10%);

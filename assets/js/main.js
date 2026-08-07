@@ -1082,13 +1082,8 @@ function generateTableOfContents() {
       }
     }
 
-    // フローティング目次を report-page-layout または body に追加
-    const pageLayout = document.querySelector('.report-page-layout');
-    if (pageLayout) {
-      pageLayout.appendChild(floatingWrapper);
-    } else {
-      document.body.appendChild(floatingWrapper);
-    }
+    // フローティング目次を body 直下に追加 (Stacking Contextを最上位に維持)
+    document.body.appendChild(floatingWrapper);
   }
 }
 
