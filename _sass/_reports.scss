@@ -1503,6 +1503,14 @@ h3:hover .heading-anchor {
 }
 
 // 1200px未満の画面サイズ (FAB & ドロワー)
+// トップに戻るボタン(.back-to-top)と目次ボタン(FAB)の重なり防止スタック
+@media (max-width: 1199.98px) {
+  .back-to-top {
+    bottom: 76px !important;
+    right: 20px !important;
+  }
+}
+
 .floating-toc-mobile {
   display: block;
 
