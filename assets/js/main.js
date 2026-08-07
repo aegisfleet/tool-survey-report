@@ -1056,13 +1056,15 @@ function generateTableOfContents() {
         }
       });
 
-      // インライン目次または一定位置（300px）をスクロールしたらフローティング目次を表示
+      // モバイル用FAB等の表示タイミング制御（一定位置スクロールで表示）
       const inlineToc = document.querySelector('.table-of-contents');
       const triggerThreshold = inlineToc ? (inlineToc.offsetTop + inlineToc.offsetHeight) : 300;
       if (scrollTop > triggerThreshold) {
         floatingWrapper.classList.add('is-visible');
+        mobileToc.classList.add('is-visible');
       } else {
         floatingWrapper.classList.remove('is-visible');
+        mobileToc.classList.remove('is-visible');
       }
     });
 
@@ -1082,8 +1084,14 @@ function generateTableOfContents() {
       }
     }
 
-    // フローティング目次を body 直下に追加 (Stacking Contextを最上位に維持)
-    document.body.appendChild(floatingWrapper);
+    // デスクトップ用目次は .report-page-layout 内に配置（2カラム Sticky レイアウト用）
+    const reportLayout = document.querySelector('.report-page-layout');
+    if (reportLayout) {
+      reportLayout.appendChild(desktopToc);
+      document.body.appendChild(mobileToc);
+    } else {
+      document.body.appendChild(floatingWrapper);
+    }
   }
 }
 

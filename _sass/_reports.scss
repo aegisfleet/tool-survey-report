@@ -1344,12 +1344,15 @@ h3:hover .heading-anchor {
 // --------------------------------------------------
 // レポートページ 2カラムレイアウト (ワイド表示対応)
 // --------------------------------------------------
+// --------------------------------------------------
+// レポートページ 2カラムレイアウト (ワイド表示対応)
+// --------------------------------------------------
 .report-page-layout {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 2.5rem;
-  max-width: 1440px;
+  gap: 2rem;
+  max-width: 1380px;
   margin: map-get($spacers, 4) auto;
   padding: 0 1.5rem;
 
@@ -1381,6 +1384,11 @@ h3:hover .heading-anchor {
     opacity: 1;
     pointer-events: auto;
   }
+
+  @media (min-width: 1200px) {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 // PC用 デスクトップサイドバー目次 (1200px以上)
@@ -1389,13 +1397,13 @@ h3:hover .heading-anchor {
 
   @media (min-width: 1200px) {
     display: block;
-    position: fixed;
+    position: sticky;
     top: 90px;
-    right: max(20px, calc((100vw - 1050px) / 2 - 300px));
-    width: 270px;
-    max-height: calc(100vh - 120px);
+    width: 280px;
+    flex-shrink: 0;
+    max-height: calc(100vh - 110px);
     overflow-y: auto;
-    z-index: 9990;
+    z-index: 100;
     background: var(--color-bg-content);
     border: 1px solid var(--color-border);
     border-radius: 12px;
@@ -1404,6 +1412,8 @@ h3:hover .heading-anchor {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     transition: all 0.3s ease;
+    opacity: 1;
+    pointer-events: auto;
 
     .floating-toc-header {
       display: flex;
