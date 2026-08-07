@@ -270,7 +270,7 @@
     }
   }
 
-  ul {
+  ul:not(.toc-list):not(.floating-toc-list):not(.drawer-toc-list) {
     list-style: none;
 
     li::before {
@@ -1302,6 +1302,11 @@ h3:hover .heading-anchor {
       margin-bottom: 0.4rem;
       line-height: 1.4;
 
+      &::before {
+        content: none;
+        display: none;
+      }
+
       &.toc-level-h3 {
         padding-left: 1.2rem;
         font-size: 0.92rem;
@@ -1456,6 +1461,11 @@ h3:hover .heading-anchor {
         margin-bottom: 0.3rem;
         line-height: 1.35;
 
+        &::before {
+          content: none;
+          display: none;
+        }
+
         &.toc-level-h3 {
           padding-left: 0.9rem;
           font-size: 0.85rem;
@@ -1507,6 +1517,8 @@ h3:hover .heading-anchor {
 
 .floating-toc-mobile {
   display: block;
+  position: relative;
+  z-index: 99998;
 
   @media (min-width: 1200px) {
     display: none;
@@ -1620,6 +1632,11 @@ h3:hover .heading-anchor {
       .drawer-toc-item {
         margin-bottom: 0.5rem;
         line-height: 1.4;
+
+        &::before {
+          content: none;
+          display: none;
+        }
 
         &.toc-level-h3 {
           padding-left: 1.2rem;
