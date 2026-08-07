@@ -150,7 +150,11 @@ layout: default
             autocomplete="off" aria-label="レポートを検索">
           <span id="hero-search-count-badge" class="hero-search-count-badge" style="display: none;" role="button" tabindex="0" aria-label="検索結果へスクロール"></span>
           <button type="button" class="hero-search-clear" id="hero-search-clear" aria-label="検索をクリア">×</button>
-          <kbd class="hero-search-shortcut" aria-hidden="true">/</kbd>
+          <div class="hero-search-shortcuts" aria-hidden="true">
+            <kbd class="hero-search-shortcut">⌘K</kbd>
+            <span class="hero-search-shortcut-sep">or</span>
+            <kbd class="hero-search-shortcut">/</kbd>
+          </div>
         </div>
         <div class="hero-search-hints">
           <span class="hero-search-hints-label">人気のキーワード:</span>
@@ -170,7 +174,13 @@ layout: default
           <h2>最新のレポート</h2>
           <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
         </div>
-        <div class="reports-controls">
+        <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+          <span>絞り込み・検索条件</span>
+        </button>
+        <div class="reports-controls" id="reports-controls">
           <div class="filter-container">
             <select id="tag-filter" class="tag-filter">
               <option value="">すべてのタグ</option>
@@ -371,6 +381,15 @@ layout: default
 
       <div class="no-results" id="no-results" style="display: none;">
         <p>検索条件に一致するレポートが見つかりませんでした。</p>
+        <button type="button" id="no-results-reset" class="no-results-reset-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
+            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+            <path d="M21 3v5h-5" />
+            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+            <path d="M3 21v-5h5" />
+          </svg>
+          すべての条件をクリア
+        </button>
       </div>
     </section>
 

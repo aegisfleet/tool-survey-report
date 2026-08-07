@@ -223,3 +223,16 @@
     display: flex;
     flex-direction: column;
 }
+
+// Accessibility Focus Ring Styles
+:focus-visible {
+    outline: 2px solid var(--color-primary) !important;
+    outline-offset: 2px !important;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible) {
+    outline: none;
+}

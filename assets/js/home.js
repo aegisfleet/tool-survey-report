@@ -342,48 +342,91 @@ document.addEventListener('DOMContentLoaded', () => {
     // フィルタ状態を保存
     if (shouldSave) {
       saveFilterState();
-    }
-
-    // URLを更新（カテゴリフィルタの状態を反映）
-    if (shouldSave) {
-      updateURL(selectedCategory);
+      updateURL();
     }
   };
   window.filterAndSort = filterAndSort;
 
-  // URLを更新する関数（カテゴリフィルタの状態を反映）
+  // URLを更新する関数（全検索・フィルタ状態を反映）
   const siteName = homeContainer?.dataset.siteTitle || document.title;
-  function updateURL(category) {
+  function updateURL() {
     const url = new URL(window.location);
+    const searchTerm = (heroSearchInput?.value || '').trim();
+    const tag = tagFilter?.value || '';
+    const category = categoryFilter?.value || '';
+    const sort = sortSelect?.value || 'date-desc';
+
+    if (searchTerm) {
+      url.searchParams.set('q', searchTerm);
+    } else {
+      url.searchParams.delete('q');
+    }
+
+    if (tag) {
+      url.searchParams.set('tag', tag);
+    } else {
+      url.searchParams.delete('tag');
+    }
 
     if (category) {
-      // カテゴリ名を元の表記で取得（セレクトボックスのオプションテキストから）
-      const categoryOption = categoryFilter.querySelector(`option[value="${category}"]`);
-      // 絵文字が含まれている可能性があるので除去するか、元の値を使うロジックが必要だが
-      // ここでは simple に category value (slug) を使うわけにいかないので、
-      // option text から絵文字を除去して取得する
+      const categoryOption = categoryFilter?.querySelector(`option[value="${category}"]`);
       let originalCategoryName = category;
       if (categoryOption) {
         originalCategoryName = stripEmoji(categoryOption.textContent);
       }
-
       url.searchParams.set('category', originalCategoryName);
-
-      // ページタイトルを更新
       document.title = `${originalCategoryName} | ${siteName}`;
     } else {
       url.searchParams.delete('category');
-
-      // ページタイトルをサイト名に戻す
       document.title = siteName;
     }
 
-    // タグパラメータは削除（カテゴリと併用しない設計）
-    url.searchParams.delete('tag');
+    if (sort && sort !== 'date-desc') {
+      url.searchParams.set('sort', sort);
+    } else {
+      url.searchParams.delete('sort');
+    }
 
-    // URLを更新（ブラウザ履歴にはreplaceで上書き）
     history.replaceState(null, '', url.toString());
   }
+
+  // URLからフィルタ・検索状態を復元する関数
+  function restoreFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('q');
+    const tagParam = urlParams.get('tag');
+    const categoryParam = urlParams.get('category');
+    const sortParam = urlParams.get('sort');
+
+    let isParamSet = false;
+
+    if (searchParam !== null) {
+      if (heroSearchInput) heroSearchInput.value = searchParam;
+      isParamSet = true;
+    }
+    if (tagParam !== null && tagFilter) {
+      tagFilter.value = tagParam;
+      isParamSet = true;
+    }
+    if (categoryParam !== null && categoryFilter) {
+      categoryFilter.value = categoryParam.toLowerCase();
+      isParamSet = true;
+    }
+    if (sortParam !== null && sortSelect) {
+      sortSelect.value = sortParam;
+      isParamSet = true;
+    }
+
+    return isParamSet;
+  }
+
+  // popstate イベントの登録（ブラウザの「戻る/進む」に対応）
+  window.addEventListener('popstate', () => {
+    restoreFromURL();
+    updateHeroSearchClear();
+    updateHeroSearchChipStates();
+    filterAndSort(false, true);
+  });
 
   // ============================================
   // Hero Search: sync & shortcuts
@@ -412,23 +455,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Update search state and trigger filter
-  function handleSearchChange() {
+  // Update search state and trigger filter with debounce
+  let searchDebounceTimer = null;
+  function handleSearchChange(immediate = false) {
     updateHeroSearchClear();
     updateHeroSearchChipStates();
-    filterAndSort();
+    clearTimeout(searchDebounceTimer);
+    if (immediate) {
+      filterAndSort();
+    } else {
+      searchDebounceTimer = setTimeout(() => {
+        filterAndSort();
+      }, 250);
+    }
   }
 
   // Hero search input events
   if (heroSearchInput) {
-    heroSearchInput.addEventListener('input', handleSearchChange);
+    heroSearchInput.addEventListener('input', () => handleSearchChange(false));
   }
 
   // Hero search clear
   if (heroSearchClear) {
     heroSearchClear.addEventListener('click', () => {
       if (heroSearchInput) heroSearchInput.value = '';
-      handleSearchChange();
+      handleSearchChange(true);
       heroSearchInput?.focus();
     });
   }
@@ -457,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
           heroSearchInput.value = term;
         }
       }
-      handleSearchChange();
+      handleSearchChange(true);
       // Scroll to reports section for immediate results visibility
       const reportsSection = document.querySelector('.reports-section');
       if (reportsSection) {
@@ -466,13 +517,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Keyboard shortcut: "/" to focus hero search
+  // Keyboard shortcut: "/" or "Cmd+K" / "Ctrl+K" to focus hero search
   document.addEventListener('keydown', (e) => {
-    // Don't trigger if user is already typing in an input/textarea
+    // Don't trigger if user is already typing in an input/textarea/select
     const activeEl = document.activeElement;
     if (
       activeEl &&
-      (activeEl.tagName === 'INPUT' || activeEl.tagName === 'TEXTAREA' || activeEl.tagName === 'SELECT')
+      (activeEl.tagName === 'INPUT' ||
+        activeEl.tagName === 'TEXTAREA' ||
+        activeEl.tagName === 'SELECT' ||
+        activeEl.isContentEditable)
     ) {
       // If Escape is pressed inside hero search, blur it
       if (e.key === 'Escape' && activeEl === heroSearchInput) {
@@ -481,14 +535,16 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (e.key === '/' && heroSearchInput) {
+    const isKbdShortcut =
+      e.key === '/' || ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K'));
+
+    if (isKbdShortcut && heroSearchInput) {
       e.preventDefault();
       heroSearchInput.focus();
       heroSearchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   });
 
-  // Event listeners
   // Event listeners
   tagFilter.addEventListener('change', () => {
     filterAndSort();
@@ -525,6 +581,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // No Results Reset Button
+  const noResultsReset = document.getElementById('no-results-reset');
+  if (noResultsReset) {
+    noResultsReset.addEventListener('click', () => {
+      if (heroSearchInput) heroSearchInput.value = '';
+      if (tagFilter) tagFilter.value = '';
+      if (categoryFilter) categoryFilter.value = '';
+      if (sortSelect) sortSelect.value = 'date-desc';
+
+      updateHeroSearchClear();
+      updateHeroSearchChipStates();
+      filterAndSort();
+    });
+  }
+
+  // Mobile Filter Toggle Button
+  const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+  const reportsControls = document.getElementById('reports-controls');
+  if (mobileFilterToggle && reportsControls) {
+    mobileFilterToggle.addEventListener('click', () => {
+      const isExpanded = mobileFilterToggle.getAttribute('aria-expanded') === 'true';
+      mobileFilterToggle.setAttribute('aria-expanded', !isExpanded);
+      reportsControls.classList.toggle('active');
+    });
+  }
+
   // もっと見るボタンのクリックイベント
   const loadMoreBtn = document.getElementById('load-more-btn');
   if (loadMoreBtn) {
@@ -534,17 +616,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle URL parameters for tag/category filtering
-  const urlParams = new URLSearchParams(window.location.search);
-  const tagParam = urlParams.get('tag');
-  const categoryParam = urlParams.get('category');
-  const searchParam = urlParams.get('q');
-
   // URLパラメータがある場合にレポートセクションへスクロールする関数
   function scrollToReports() {
     const reportsSection = document.querySelector('.reports-section');
     if (reportsSection) {
-      // requestAnimationFrame を使って DOM 更新後にスクロール
       requestAnimationFrame(() => {
         const offset = 80; // ヘッダー分のオフセット
         const top = reportsSection.getBoundingClientRect().top + window.scrollY - offset;
@@ -553,22 +628,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (searchParam) {
-    // URLのクエリパラメータで検索
-    if (heroSearchInput) heroSearchInput.value = searchParam;
+  // Handle URL parameters or SessionStorage
+  const hasURLParams = restoreFromURL();
+  if (hasURLParams) {
     updateHeroSearchClear();
     updateHeroSearchChipStates();
-    filterAndSort();
-    scrollToReports();
-  } else if (tagParam || categoryParam) {
-    // URLパラメータがある場合は優先
-    if (tagParam) tagFilter.value = tagParam;
-    if (categoryParam) {
-      // URLパラメータは元のカテゴリ名でエンコードされているので、
-      // ドロップダウン値（小文字）に変換して設定
-      categoryFilter.value = categoryParam.toLowerCase();
-    }
-    filterAndSort();
+    filterAndSort(false);
     scrollToReports();
   } else {
     // URLパラメータがない場合はsessionStorageから復元を試みる

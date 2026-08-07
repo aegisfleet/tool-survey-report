@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
+
 <article class="report-article" itemscope itemtype="http://schema.org/Article">
   <header class="report-header">
     <div class="report-breadcrumb">
@@ -31,6 +33,14 @@ layout: default
         </time>
       </div>
       {%- endif -%}
+
+      <div class="report-reading-time" id="report-reading-time" style="display: none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span class="reading-time-text"></span>
+      </div>
 
       {%- if page.developer -%}
       <div class="report-developer">

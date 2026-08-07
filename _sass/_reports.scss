@@ -1177,3 +1177,161 @@
     color: $secondary-color;
   }
 }
+
+// スクロールプログレスバー
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #ff7733, #ffaa00);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+// 読了時間バッジ
+.report-reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: map-get($spacers, 2);
+  font-size: $font-size-sm;
+  color: var(--color-text-muted);
+  background: rgba(255, 119, 51, 0.08);
+  padding: 2px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 119, 51, 0.2);
+
+  svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    color: var(--color-primary);
+  }
+}
+
+// 見出しアンカーリンク
+.heading-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+  color: var(--color-text-muted);
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+    opacity: 1;
+  }
+}
+
+h2:hover .heading-anchor,
+h3:hover .heading-anchor {
+  opacity: 0.7;
+}
+
+// 目次 (TOC) スタイル
+.table-of-contents {
+  background: var(--color-bg-content);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+
+  .toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+
+    .toc-title {
+      margin: 0 !important;
+      font-size: 1.1rem !important;
+      font-weight: 700;
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      border: none !important;
+      padding: 0 !important;
+    }
+
+    .toc-toggle-btn {
+      background: none;
+      border: none;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      padding: 4px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.2s, transform 0.2s;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+        color: var(--color-primary);
+      }
+
+      &[aria-expanded="false"] .toc-toggle-icon {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  .toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+
+    &.collapsed {
+      max-height: 0;
+      opacity: 0;
+      margin: 0;
+    }
+
+    .toc-item {
+      margin-bottom: 0.4rem;
+      line-height: 1.4;
+
+      &.toc-level-h3 {
+        padding-left: 1.2rem;
+        font-size: 0.92rem;
+      }
+
+      &.toc-level-h4 {
+        padding-left: 2.2rem;
+        font-size: 0.85rem;
+      }
+
+      a {
+        color: var(--color-text-muted);
+        text-decoration: none;
+        transition: color 0.2s, padding-left 0.2s;
+        display: inline-block;
+        border-left: 2px solid transparent;
+        padding-left: 6px;
+
+        &:hover {
+          color: var(--color-primary);
+        }
+
+        &.active {
+          color: var(--color-primary);
+          font-weight: bold;
+          border-left-color: var(--color-primary);
+          background: rgba(255, 119, 51, 0.06);
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+  }
+}

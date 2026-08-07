@@ -441,7 +441,97 @@ function initReportEnhancements() {
 
   // Initialize table of contents if needed
   applyEmojisToHeadings();
+  addAnchorLinksToHeadings();
   generateTableOfContents();
+  initReadingTime();
+  initScrollProgressBar();
+}
+
+/**
+ * 読了目安時間の自動計算とメタデータへの挿入
+ */
+function initReadingTime() {
+  const reportContent = document.querySelector('.report-content');
+  const container = document.getElementById('report-reading-time');
+  if (!reportContent || !container) return;
+
+  const text = reportContent.textContent || '';
+  const charCount = text.replace(/\s+/g, '').length;
+  // 日本語約500文字/分で算定（最低1分）
+  const minutes = Math.max(1, Math.ceil(charCount / 500));
+
+  const textEl = container.querySelector('.reading-time-text');
+  if (textEl) {
+    textEl.textContent = `読了目安: 約${minutes}分 (${charCount.toLocaleString()}文字)`;
+    container.style.display = 'inline-flex';
+  }
+}
+
+/**
+ * ページ最上部のスクロールプログレスバーの初期化
+ */
+function initScrollProgressBar() {
+  const progressBar = document.getElementById('scroll-progress-bar');
+  if (!progressBar) return;
+
+  ScrollManager.register((scrollTop) => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) {
+      progressBar.style.width = '0%';
+      return;
+    }
+    const scrollPercent = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+    progressBar.style.width = `${scrollPercent}%`;
+  });
+}
+
+/**
+ * H2 / H3 見出しにホバー表示のパーマリンクアンカーを追加
+ */
+function addAnchorLinksToHeadings() {
+  const reportContent = document.querySelector('.report-content');
+  if (!reportContent) return;
+
+  const headings = reportContent.querySelectorAll('h2, h3');
+  headings.forEach((heading, index) => {
+    if (!heading.id) {
+      heading.id = `heading-${index}`;
+    }
+
+    if (heading.querySelector('.heading-anchor')) return;
+
+    const anchor = document.createElement('a');
+    anchor.className = 'heading-anchor';
+    anchor.href = `#${heading.id}`;
+    anchor.setAttribute('aria-label', `${heading.textContent} へのパーマリンク`);
+    anchor.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+      </svg>
+    `;
+
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = new URL(window.location.href);
+      url.hash = heading.id;
+      history.pushState(null, null, url.toString());
+
+      const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+      const targetPosition = heading.offsetTop - headerHeight - 20;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url.toString()).then(() => {
+          if (typeof announcePageChanges === 'function') {
+            announcePageChanges();
+          }
+        });
+      }
+    });
+
+    heading.appendChild(anchor);
+  });
 }
 
 /**
@@ -687,41 +777,51 @@ function generateTableOfContents() {
   const headings = reportContent ? reportContent.querySelectorAll('h2, h3, h4') : [];
 
   if (headings.length > 3) {
-    const toc = document.createElement('div');
+    const toc = document.createElement('nav');
     toc.className = 'table-of-contents';
-    toc.innerHTML = '<h3>目次</h3>';
+    toc.setAttribute('aria-label', '目次');
 
-    const tocList = document.createElement('ul');
-    tocList.style.cssText = `
-      background: var(--color-bg-content);
-      padding: 1rem 2.5rem;
-      border-radius: 0.375rem;
-      border-left: 4px solid #ff7733;
-      margin: 2rem 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    const tocHeader = document.createElement('div');
+    tocHeader.className = 'toc-header';
+    tocHeader.innerHTML = `
+      <h3 class="toc-title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: text-bottom;">
+          <line x1="8" y1="6" x2="21" y2="6"></line>
+          <line x1="8" y1="12" x2="21" y2="12"></line>
+          <line x1="8" y1="18" x2="21" y2="18"></line>
+          <line x1="3" y1="6" x2="3.01" y2="6"></line>
+          <line x1="3" y1="12" x2="3.01" y2="12"></line>
+          <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        </svg>
+        目次
+      </h3>
+      <button type="button" class="toc-toggle-btn" aria-expanded="true" aria-label="目次を折りたたむ">
+        <svg class="toc-toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
     `;
 
+    const tocList = document.createElement('ul');
+    tocList.className = 'toc-list';
+
     headings.forEach((heading, index) => {
-      const id = `heading-${index}`;
-      heading.id = id;
+      if (!heading.id) {
+        heading.id = `heading-${index}`;
+      }
+      const id = heading.id;
 
       const listItem = document.createElement('li');
-      listItem.style.marginBottom = '0.5rem';
-
-      // 階層（H2, H3, H4）に応じたインデントの設定
-      const tagName = heading.tagName.toLowerCase();
-      if (tagName === 'h3') {
-        listItem.style.marginLeft = '1.5rem';
-      } else if (tagName === 'h4') {
-        listItem.style.marginLeft = '3rem';
-      }
+      listItem.className = `toc-item toc-level-${heading.tagName.toLowerCase()}`;
 
       const link = document.createElement('a');
       link.href = `#${id}`;
-      link.textContent = heading.textContent;
-      link.style.textDecoration = 'none';
+      // 不要なアンカーテキスト等を除外してテキストを綺麗に
+      const clone = heading.cloneNode(true);
+      const anchorEl = clone.querySelector('.heading-anchor');
+      if (anchorEl) anchorEl.remove();
+      link.textContent = clone.textContent.trim();
 
-      // スムーズスクロールとヘッダー高さを考慮した位置調整
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const targetElement = document.getElementById(id);
@@ -734,7 +834,6 @@ function generateTableOfContents() {
             behavior: 'smooth',
           });
 
-          // URLを更新（履歴に追加）
           history.pushState(null, null, `#${id}`);
         }
       });
@@ -743,20 +842,51 @@ function generateTableOfContents() {
       tocList.appendChild(listItem);
     });
 
+    toc.appendChild(tocHeader);
     toc.appendChild(tocList);
+
+    // トグルボタン処理
+    const toggleBtn = tocHeader.querySelector('.toc-toggle-btn');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+        toggleBtn.setAttribute('aria-expanded', !isExpanded);
+        toggleBtn.setAttribute('aria-label', isExpanded ? '目次を展開する' : '目次を折りたたむ');
+        tocList.classList.toggle('collapsed', isExpanded);
+      });
+    }
+
+    // ScrollSpy 機能の登録
+    const tocLinks = tocList.querySelectorAll('a');
+    ScrollManager.register((scrollTop) => {
+      const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+      let currentId = '';
+
+      headings.forEach((heading) => {
+        const top = heading.offsetTop - headerHeight - 40;
+        if (scrollTop >= top) {
+          currentId = heading.id;
+        }
+      });
+
+      tocLinks.forEach((link) => {
+        if (currentId && link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
 
     // 目次の挿入位置を一貫させる - 最初のh2見出しの直前に挿入
     const firstH2 = reportContent.querySelector('h2');
     if (firstH2) {
-      // 最初のh2見出しの直前に目次を挿入
       firstH2.parentElement.insertBefore(toc, firstH2);
     } else {
-      // h2見出しがない場合は、最初のh1見出しの後に挿入
       const firstH1 = reportContent.querySelector('h1');
       if (firstH1?.nextSibling) {
         firstH1.parentElement.insertBefore(toc, firstH1.nextSibling);
       } else {
-        // h1もない場合は、コンテンツの最初に挿入
         reportContent.insertBefore(toc, reportContent.firstChild);
       }
     }
