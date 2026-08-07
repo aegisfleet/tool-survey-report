@@ -6,7 +6,7 @@ category: データベース/データストレージ
 developer: NocoDB Inc.
 official_site: https://nocodb.com/
 date: '2026-01-29'
-last_updated: '2026-03-30'
+last_updated: '2026-08-07'
 tags:
   - オープンソース
   - ノーコード
@@ -20,7 +20,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - SMB
-  latest_highlight: 2026年1月にv0.301.0でダークモード追加、3月にv0.301.5（バグ修正）をリリース
+  latest_highlight: 2026年8月にv2026.08.0でInterfaces機能をリリース
   update_frequency: 高
 evaluation:
   score: 85
@@ -39,6 +39,7 @@ evaluation:
 links:
   github: https://github.com/nocodb/nocodb
   deepwiki: https://deepwiki.com/nocodb/nocodb
+  codewiki: https://codewiki.google/github.com/nocodb/nocodb
   documentation: https://docs.nocodb.com/
 relationships:
   parent: null
@@ -60,6 +61,8 @@ relationships:
 * **公式サイト**: [https://nocodb.com/](https://nocodb.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/nocodb/nocodb](https://github.com/nocodb/nocodb)
+  * DeepWiki: [https://deepwiki.com/nocodb/nocodb](https://deepwiki.com/nocodb/nocodb)
+  * CodeWiki: [https://codewiki.google/github.com/nocodb/nocodb](https://codewiki.google/github.com/nocodb/nocodb)
   * ドキュメント: [https://docs.nocodb.com/](https://docs.nocodb.com/)
   * レビューサイト: [G2](https://www.g2.com/products/nocodb/reviews)
 * **カテゴリ**: 開発ユーティリティ
@@ -86,13 +89,25 @@ relationships:
 
 * **スプレッドシートインターフェース**: ExcelやAirtableのように、直感的にデータの閲覧・編集・検索・フィルタリングが可能。
 * **多彩なビュー**: グリッドビューに加え、ギャラリービュー、カンバンビュー、カレンダービュー、フォームビューを提供。
+* **Interfaces**: ベースデータに影響を与えずに、特定のユーザー向けにカスタマイズされたアプリ画面（ダッシュボードや入力フォームなど）を構築できる機能。
 * **API自動生成**: 接続したデータベースのテーブルに対して、REST APIとGraphQL APIを自動的に生成。Swaggerドキュメントも自動生成される。
-* **外部データベース接続**: "Bring Your Own Database" (BYODB) のコンセプトにより、既存のMySQL, PostgreSQL, SQL Server, MariaDB, SQLiteに接続可能。
+* **外部データベース接続**: "Bring Your Own Database" (BYODB) のコンセプトにより、既存のMySQL, PostgreSQL, SQL Server, MariaDB, SQLiteに加え、Oracle Databaseに接続可能。
 * **ロールベースアクセス制御 (RBAC)**: ユーザーごとに閲覧・編集・管理の権限を詳細に設定可能。
-* **自動化と連携**: Webhookを利用して、データ変更時に外部ツール（Slack, Discord, Microsoft Teamsなど）やiPaaS（Make, n8n, Zapier）と連携可能。
+* **自動化と同期**: Webhookを利用した外部連携に加え、Google CalendarやOutlookのイベントを同期する「Calendar Sync」機能をサポート。
 * **監査ログ (Audit Logs)**: 誰がいつ何を変更したかを記録・追跡（エンタープライズ向け）。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: ローカルファーストのクライアント・サーバー構成（セルフホスト可能）、またはクラウド完結型SaaS（NocoDB Cloud）。
+* **主要コンポーネントとデータフロー**:
+  * クライアント（ブラウザ）から、Node.jsで構築されたバックエンドAPIにリクエストを送信。
+  * NocoDB自体が持つメタデータ管理用データベース（内部DB）と、ユーザーが接続する既存のSQLデータベース（外部DB）とが分離されているアーキテクチャ。
+  * 既存データベースのスキーマ情報を読み取り、UIとAPIを動的に生成する。
+* **特筆すべき要素技術**:
+  * "Bring Your Own Database" (BYODB)アプローチ。ユーザーの既存データベース（MySQL, PostgreSQL, SQL Server, Oracle等）に直接接続し、データはそこに留まるため、データの隔離・主権が担保される。
+  * バックエンドはNode.js、フロントエンドはVue.js/Nuxtで構築。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Dockerが動作する環境（推奨）
@@ -113,20 +128,20 @@ relationships:
   * カラムを追加・編集し、データを入力。
   * ビュー（カンバンやフォームなど）を追加してデータを可視化。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **データ主権とセキュリティ**: オープンソースであり、自社サーバーにデータを保持できるため、セキュリティポリシーの厳しい企業でも導入しやすい。
 * **既存DBの活用**: データを移行することなく、既存の運用中のデータベースに接続してUIを提供できる点が、他のNoCodeツールとの大きな違い。
 * **コストパフォーマンス**: セルフホスト版は行数制限などがなく（ハードウェア依存）、AirtableなどのSaaSに比べて大規模データでも低コストで運用可能。
 * **開発者フレンドリー**: APIファーストで設計されており、生成されたAPIを使って独自のフロントエンドを開発することも容易。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **高度なロジックの実装**: 複雑なビジネスロジックやバリデーションをGUIだけで実装するには限界があり、Webhookや外部ツールとの連携が必要になる場合がある。
 * **マネージドサービスの制限**: クラウド版（NocoDB Cloud）の無料プランや下位プランには、行数やAPIコールの制限がある。
 * **日本語ドキュメント**: 公式ドキュメントは英語が中心であり、日本語の情報量はまだ発展途上。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 ### クラウド版 (NocoDB Cloud)
 
@@ -145,7 +160,7 @@ relationships:
 * **Community Edition**: 無料。基本機能はほぼすべて利用可能。SSOや監査ログなどのエンタープライズ機能は含まれない。
 * **Enterprise Edition**: 有料。高度なセキュリティ機能やサポートが必要な場合に選択。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Walmart, American Express, Bosch, McAfee, Toyotaなど、フォーチュン500企業を含む多くの企業で採用されている。
 * **導入事例**:
@@ -153,20 +168,20 @@ relationships:
   * 通信会社での顧客対応履歴の管理と分析。
 * **対象業界**: 業界問わず、IT、製造、小売、サービス業などで幅広く利用。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントが充実しており、インストールガイド、APIリファレンス、チュートリアルが提供されている。
 * **コミュニティ**: GitHub, Discord, Redditに活発なコミュニティがあり、ユーザー間での質疑応答や開発者との交流が行われている。
 * **公式サポート**: Businessプラン以上で優先サポートが提供される。EnterpriseプランではSLA付きのサポートが可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: REST APIおよびGraphQL APIを標準提供。Swagger UIでテスト可能。
 * **外部サービス連携**: Webhookを通じて、Slack, Discord, MS Teams, Google Chat, WhatsApp, Twilio, Email(SMTP)などへの通知連携が可能。AWS S3, Google Cloud Storageなどのストレージ連携もサポート。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -175,18 +190,18 @@ relationships:
 | **PostgreSQL** | ◎ | 最も推奨されるデータベースの一つ。JSONB型などの高度な機能もサポート。 | 特になし。 |
 | **MySQL** | ◯ | 広く利用されており問題なく動作する。 | 一部の高度なデータ型の扱いに制限がある場合がある。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: メール/パスワード認証に加え、Businessプラン以上でSAML, OIDCによるSSOに対応。Google, GitHubログインも設定可能。
 * **データ管理**: セルフホスト版では自社サーバー内にデータを完全に閉じ込めることができ、データ主権を確保できる。
 * **準拠規格**: SOC 2 Type 2, GDPRに準拠（クラウド版およびエンタープライズ版）。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: モダンでクリーンなインターフェース。Airtableユーザーなら違和感なく移行できる。スプレッドシートのような操作感で学習コストは低い。
 * **学習コスト**: データベースの基本的な概念（テーブル、カラム、リレーション）を知っていればすぐに使いこなせる。SQLを書く必要はない。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **「まずはNocoDBで」**: 新規プロジェクトの立ち上げ時、バックエンド開発を行わずにNocoDBでデータ構造と管理画面を作り、API経由でフロントエンド開発を先行させる。
@@ -195,7 +210,7 @@ relationships:
   * **データベース設計の軽視**: ノーコードで簡単に作れる反面、リレーションやデータ型を適切に設計しないと、後でデータの整合性が取れなくなる。
   * **過度なカスタマイズ**: NocoDBの標準機能で対応できない複雑なUI要件を無理に実現しようとせず、その場合はAPIを利用して別途フロントエンドを開発する方が効率的。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, GitHub Issues
 * **総合評価**: 4.5/5.0 (G2)
@@ -211,8 +226,11 @@ relationships:
   * 社内ハッカソンでの高速プロトタイピングツールとしての利用。
   * 非営利団体での寄付者管理データベースとしての利用（コスト削減のため）。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-08-05**: **v2026.08.0リリース**: ベースデータに影響を与えずにカスタムアプリを構築できる「Interfaces」機能を追加。
+* **2026-07-14**: **v2026.07.0リリース**: Google CalendarやOutlookとの同期を可能にする「Calendar Sync」機能、および画像へのアノテーション機能を追加。
+* **2026-06-29**: **v2026.06.2リリース**: Oracle Databaseへの接続をエンタープライズ向けにサポート開始。
 * **2026-03-18**: **v0.301.5リリース**: バグ修正リリース。
 * **2026-01-13**: **v0.301.0リリース**: ダークモードの追加、カスタムWebhookペイロード対応、およびGroupbyアグリゲーション機能を追加。
 * **2025-11-20**: **Teams機能リリース**: ユーザーをチームにグループ化し、一括でロールを割り当てる機能を追加。
@@ -221,27 +239,28 @@ relationships:
 
 (出典: [NocoDB Changelog](https://nocodb.com/docs/changelog/), [GitHub Releases](https://github.com/nocodb/nocodb/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | NocoDB | Airtable | Baserow | Seatable |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **基本機能** | UI/操作性 | ◯<br><small>標準的</small> | ◎<br><small>非常に洗練</small> | ◯<br><small>標準的</small> | ◯<br><small>標準的</small> |
-| **データ管理** | 外部DB接続 | ◎<br><small>強力(BYODB)</small> | △<br><small>限定的</small> | △<br><small>基本なし</small> | △<br><small>インポート中心</small> |
+| **基本機能** | カスタムアプリ | ◎<br><small>Interfaces機能で柔軟</small> | ◎<br><small>Interfacesで高度</small> | ◯<br><small>Application Builder</small> | ◯<br><small>アプリ構築機能あり</small> |
+| **データ管理** | 外部DB接続 | ◎<br><small>強力(BYODB、Oracle対応)</small> | △<br><small>限定的</small> | △<br><small>基本なし</small> | △<br><small>インポート中心</small> |
 | **API** | 自動生成 | ◎<br><small>REST/GraphQL</small> | ◯<br><small>RESTのみ</small> | ◯<br><small>RESTのみ</small> | ◯<br><small>RESTのみ</small> |
 | **運用** | セルフホスト | ◎<br><small>簡単・無料</small> | ×<br><small>不可</small> | ◯<br><small>可能</small> | ◯<br><small>可能</small> |
 | **コスト** | 大規模データ | ◎<br><small>安価</small> | ×<br><small>高額</small> | ◯<br><small>安価</small> | ◯<br><small>安価</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **NocoDB** | 既存DB接続特化型OSS | 既存のSQL DBをそのまま使える、API自動生成 | 高度な自動化機能はAirtableに劣る | 既にデータがSQL DBにある場合。コストを抑えて大規模データを扱いたい場合。 |
+| **NocoDB** | 既存DB接続特化型OSS | 既存のSQL DB(Oracle含む)をそのまま使える、API自動生成、Interfacesによるアプリ構築 | 高度な自動化機能はAirtableに劣る | 既にデータがSQL DBにある場合。コストを抑えて大規模データを扱いたい場合。 |
 | **Airtable** | NoCode DBのパイオニア | 圧倒的なUX、豊富な連携アプリ、自動化機能 | 行数制限が厳しく、スケールすると非常に高額 | ゼロからデータを構築する場合。予算があり、UXと連携を最重視する場合。 |
 | **Baserow** | AirtableクローンOSS | Python/Django製で拡張しやすい、純粋なAirtable代替 | 外部DB接続機能はNocoDBほど強力ではない | Pythonエコシステムを好む場合。AirtableライクなOSSを求める場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   NocoDBは、**「既存のデータベース資産を活かす」**という点において、他のNoCode/LowCodeツールとは一線を画す強力なソリューションです。Airtableの使いやすさと、SQLデータベースの堅牢性・拡張性を兼ね備えており、特に開発者やエンジニアリングチームにとって強力な武器となります。
