@@ -45,6 +45,7 @@ links:
 relationships:
   related_tools:
     - Cloudflare
+    - Squid
 ---
 
 # **Nginx 調査レポート**
