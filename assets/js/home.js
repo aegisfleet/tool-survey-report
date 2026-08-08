@@ -535,8 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const isKbdShortcut =
-      e.key === '/' || ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K'));
+    const isKbdShortcut = e.key === '/' || ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K'));
 
     if (isKbdShortcut && heroSearchInput) {
       e.preventDefault();

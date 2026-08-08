@@ -902,25 +902,27 @@ function generateTableOfContents() {
     floatingWrapper.appendChild(mobileToc);
 
     // スムーズスクロール共通ハンドラ
-    const createScrollHandler = (targetId, closeMobileDrawer = false) => (e) => {
-      e.preventDefault();
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
-        const targetPosition = targetElement.offsetTop - headerHeight - 20;
+    const createScrollHandler =
+      (targetId, closeMobileDrawer = false) =>
+      (e) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+          const targetPosition = targetElement.offsetTop - headerHeight - 20;
 
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth',
-        });
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
 
-        history.pushState(null, null, `#${targetId}`);
+          history.pushState(null, null, `#${targetId}`);
 
-        if (closeMobileDrawer) {
-          closeDrawer();
+          if (closeMobileDrawer) {
+            closeDrawer();
+          }
         }
-      }
-    };
+      };
 
     // --------------------------------------------------
     // 3. 見出し要素のループ処理とリスト構築
@@ -1058,7 +1060,7 @@ function generateTableOfContents() {
 
       // モバイル用FAB等の表示タイミング制御（一定位置スクロールで表示）
       const inlineToc = document.querySelector('.table-of-contents');
-      const triggerThreshold = inlineToc ? (inlineToc.offsetTop + inlineToc.offsetHeight) : 300;
+      const triggerThreshold = inlineToc ? inlineToc.offsetTop + inlineToc.offsetHeight : 300;
       if (scrollTop > triggerThreshold) {
         floatingWrapper.classList.add('is-visible');
         mobileToc.classList.add('is-visible');
