@@ -2,7 +2,7 @@
 title: Axios 調査レポート
 tool_name: Axios
 tool_reading: アクシオス
-category: API/仕様管理
+category: Webフレームワーク
 developer: Matt Zabriskie
 official_site: https://axios-http.com/
 date: '2026-03-31'
@@ -11,6 +11,7 @@ tags:
   - JavaScript
   - オープンソース
   - 開発者ツール
+  - API
 description: ブラウザおよびNode.js向けの、Promiseベースの強力なHTTPクライアントライブラリ。
 quick_summary:
   has_free_plan: true
