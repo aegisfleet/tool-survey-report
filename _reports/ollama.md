@@ -6,13 +6,14 @@ category: ローカルAI実行環境
 developer: Ollama Inc.
 official_site: https://ollama.com/
 date: '2025-10-24'
-last_updated: '2026-03-31'
+last_updated: '2026-08-09'
 tags:
   - AI
   - オープンソース
   - ローカルAI
   - 大規模言語モデル
   - 開発者ツール
+  - エージェント
 description: オープンソースの大規模言語モデル（LLM）をローカル環境で簡単に実行するためのフレームワーク
 quick_summary:
   has_free_plan: true
@@ -22,7 +23,7 @@ quick_summary:
     - 開発者
     - AI/MLエンジニア
     - 研究者
-  latest_highlight: 2026年3月にv0.19.0をリリースし、Apple Silicon向けMLXサポートを強化
+  latest_highlight: 2026年8月にv0.32.6をリリースし、エージェント機能（ollama launch）の強化とApple Silicon向けMLXの大幅な高速化を実現
   update_frequency: 高
 evaluation:
   score: 83
@@ -83,14 +84,14 @@ relationships:
 
 ## **3. 主要機能**
 
-* **モデルライブラリ**: Llama 3, Gemma 2, Mistral, Qwenなど、主要なオープンソースLLMを網羅的にサポート。
+* **モデルライブラリ**: Llama 3, Gemma 4, Qwen 3, Mistralなど、主要なオープンソースLLMを網羅的にサポート。
 * **ワンコマンド実行**: `ollama run <model_name>` のような単純なコマンドでモデルのダウンロードと実行が可能。
+* **エージェント・ツール連携 (ollama launch)**: `ollama launch`コマンドにより、Claude Code、Codex App、Hermes Desktopなど多数のツールや自律型エージェントをローカルで即座に起動・連携可能。
 * **OpenAI互換API**: OpenAIのAPIと互換性のあるエンドポイントをローカルに提供し、既存ツールやライブラリの多くをそのまま利用できる。
-* **公式ライブラリ**: PythonおよびJavaScript/TypeScriptの公式ライブラリを提供し、アプリケーションへの組み込みを簡素化。
 * **マルチモーダル対応**: テキストだけでなく、画像入力にも対応したモデル（例: LLaVA, Llama 3.2 Vision）を利用可能。
 * **ツール呼び出し (Function Calling)**: モデルが外部ツールやAPIと連携し、より複雑なタスクを実行する機能。
 * **構造化出力**: JSONスキーマを指定することで、モデルの出力を特定の形式に制約する機能。
-* **GPUサポート**: NVIDIA (CUDA), AMD (ROCm), Apple Metal (Mシリーズチップ) に対応し、高速な推論を実現。
+* **高速な推論とMTP対応**: NVIDIA (CUDA), AMD (ROCm), Apple Metal (Mシリーズチップ) に対応。さらにGemma 4等の一部モデルではMTP (Multi-token Processing) を用いた投機的デコードにより、推論速度を大幅に向上。
 
 ## **4. 開始手順・セットアップ**
 
@@ -161,7 +162,7 @@ relationships:
 ### **10.1 API・外部サービス連携**
 
 * **API**: OpenAI互換のREST APIをローカルに提供。これにより、APIを介したあらゆるツールやアプリケーションとの連携が可能。
-* **外部サービス連携**: LangChain, LlamaIndexなどの主要なAI開発フレームワークや、Open WebUI, Bionic, enchantedなど多数のGUIクライアントとシームレスに連携できる。
+* **外部サービス連携**: LangChain, LlamaIndexなどの主要なAI開発フレームワークや、Open WebUI, Bionic, enchantedなど多数のGUIクライアントとシームレスに連携できる。また、`ollama launch` コマンドにより Claude Code, Codex App, Oh My Pi などの主要エージェント・コーディングツールと直接連携・統合が可能となっている。
 
 ### **10.2 技術スタックとの相性**
 
@@ -210,6 +211,11 @@ relationships:
 
 ## **15. 直近半年のアップデート情報**
 
+* **2026-08-04**: v0.32.6をリリース。Apple GPU上でのQwen3.5のMTP（Multi-token prediction）推論をサポートし、さらに高速化。
+* **2026-07-11**: v0.32.0をリリース。新しい対話型エージェント体験である `ollama launch` が強化され、ChatGPT, Claude Code などの連携が可能に。
+* **2026-06-30**: v0.31.1をリリース。Gemma 4向けのMTPサポートによりApple Siliconでの推論速度が大幅向上。
+* **2026-05-14**: v0.24.0をリリース。Codex Appのローカル実行をサポート。
+* **2026-05-13**: v0.30.0をリリース。llama.cppエンジンを統合し、Hugging FaceのGGUFモデルのサポートなど互換性を向上。
 * **2026-03-27**: v0.19.0をリリース。Apple Silicon上のMLXを利用した高速化をプレビュー版として提供。
 * **2026-03-18**: v0.18.2をリリース。OpenClaw連携やClaude Codeのローカル実行速度を改善。
 * **2026-03-17**: v0.18.1をリリース。Web検索・取得機能を含むOpenClawプラグインを追加。
@@ -217,33 +223,29 @@ relationships:
 * **2026-01-20**: 実験的な画像生成機能をmacOS向けにリリース。
 * **2026-01-16**: Anthropic API互換性をサポートし、Claude Codeなどが利用可能に。
 * **2026-01-15**: OpenAI Codex CLIとの連携をサポート。
-* **2025-10-29**: OpenAIとの提携による`gpt-oss-safeguard`モデルを追加。
-* **2025-09-24**: Web検索APIを追加。
-* **2025-09-19**: Ollama Cloudのプレビュー版を発表。
-* **2024-09-25**: Llama 3.2およびLlama 3.2 Visionモデルをサポート。
 
-(出典: [Ollama Blog](https://ollama.com/blog))
+(出典: [Ollama Releases](https://github.com/ollama/ollama/releases))
 
 ## **16. 類似ツールとの比較**
 
 ### **16.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Ollama | LM Studio | Jan | LocalAI |
+| 機能カテゴリ | 機能項目 | Ollama | LM Studio | Foundry Local | Thunderbolt |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | GUI操作 | ×<br><small>CLIのみ</small> | ◎<br><small>洗練されたUI</small> | ◎<br><small>ChatGPT風UI</small> | ×<br><small>基本はAPI</small> |
-| **拡張機能** | エージェント機能 | △<br><small>外部連携前提</small> | ◎<br><small>Bionic内蔵</small> | △<br><small>拡張機能依存</small> | ×<br><small>非対応</small> |
-| **導入** | セットアップ容易性 | ◎<br><small>ワンコマンド</small> | ◎<br><small>インストーラー</small> | ◎<br><small>インストーラー</small> | △<br><small>Docker等が必要</small> |
-| **開発** | API互換性 | ◎<br><small>OpenAI互換</small> | ◎<br><small>OpenAI互換</small> | ◯<br><small>ローカルサーバー</small> | ◎<br><small>完全互換目指す</small> |
-| **ライセンス** | オープンソース | ◎<br><small>MIT</small> | ×<br><small>プロプライエタリ</small> | ◎<br><small>AGPL v3</small> | ◎<br><small>MIT</small> |
+| **基本機能** | GUI操作 | ×<br><small>CLIのみ</small> | ◎<br><small>洗練されたUI</small> | ×<br><small>API・CLI中心</small> | ◎<br><small>使いやすいUI</small> |
+| **拡張機能** | エージェント機能 | ◯<br><small>launchコマンド連携</small> | ◎<br><small>Bionic内蔵</small> | ×<br><small>非対応</small> | △<br><small>アドオンが必要</small> |
+| **導入** | セットアップ容易性 | ◎<br><small>ワンコマンド</small> | ◎<br><small>インストーラー</small> | ◯<br><small>SDK・ツール経由</small> | ◎<br><small>インストーラー</small> |
+| **開発** | API互換性 | ◎<br><small>OpenAI互換</small> | ◎<br><small>OpenAI互換</small> | ◎<br><small>OpenAI互換</small> | ◯<br><small>ローカルサーバー</small> |
+| **ライセンス** | オープンソース | ◎<br><small>MIT</small> | ×<br><small>プロプライエタリ</small> | ×<br><small>プロプライエタリ</small> | ◎<br><small>オープンソース</small> |
 
 ### **16.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Ollama** | CLI中心の軽量フレームワーク | セットアップが最速、API連携が強力、リソース消費が少ない。 | 公式GUIがない。 | 開発者、スクリプトへの組み込み、サーバー利用。 |
+| **Ollama** | CLI中心の軽量フレームワーク | セットアップが最速、API連携が強力、launchによるエージェント連携が容易。 | 公式GUIがない。 | 開発者、スクリプトやエージェントへの組み込み、APIサーバー利用。 |
 | **LM Studio** | 高機能なGUIと自律型エージェント | 直感的なGUIに加え、Bionicエージェントを内蔵し、自律的なタスク実行も可能。 | クローズドソース、商用利用規定あり。 | 非開発者、GUIで手軽にチャットや自律型エージェントの支援を求める場合。 |
-| **Jan** | オープンソースGUIアプリ | 完全OSS、拡張機能、プライバシー重視のデスクトップ体験。 | 動作の安定性やパフォーマンスがOllama/LM Studioに劣る場合がある。 | OSSかつGUI環境を求める場合。 |
-| **LocalAI** | API互換性特化 | OpenAI APIの完全な代替を目指し、音声や画像生成も統合。 | セットアップがやや複雑、コンテナ運用が前提。 | 本番環境へのデプロイ、マルチモーダルAPIサーバー構築。 |
+| **Foundry Local** | MicrosoftのオンデバイスAI推論ソリューション | Azureとの連携や、C#/RustなどのSDKを利用したエンタープライズ統合に優れる。 | オープンソースではなく、Microsoftエコシステムへの依存度が高い。 | 企業内でMicrosoft/Azureエコシステムを中心にローカルAIを導入・管理する場合。 |
+| **Thunderbolt** | 自由度の高いオープンソースAIクライアント | ベンダーロックインなしでモデルを選択でき、クロスプラットフォーム対応。 | 機能やエコシステム連携においてOllamaやLM Studioにやや劣る場合がある。 | OSSのUIクライアントとして、モデルを柔軟に選択・検証したい場合。 |
 
 ## **17. 総評**
 
