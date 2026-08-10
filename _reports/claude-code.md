@@ -1,56 +1,56 @@
 ---
-title: "Claude Code 調査レポート"
-tool_name: "Claude Code"
-tool_reading: "クロード コード"
-category: "自律型コーディングエージェント"
-developer: "Anthropic"
-official_site: "https://claude.ai/code"
-date: "2026-01-24"
-last_updated: "2026-08-10"
+title: Claude Code 調査レポート
+tool_name: Claude Code
+tool_reading: クロード コード
+category: 自律型コーディングエージェント
+developer: Anthropic
+official_site: https://claude.ai/code
+date: '2026-01-24'
+last_updated: '2026-08-10'
 tags:
-  - "AI"
-  - "エージェント"
-  - "コーディング支援"
-  - "自律型"
-  - "開発者ツール"
-description: "Anthropicが提供する、ターミナルやIDEで動作する自律型コーディングエージェント。最新のClaude 4.5モデルやOpus 5を使用。"
+  - AI
+  - エージェント
+  - コーディング支援
+  - 自律型
+  - 開発者ツール
+description: Anthropicが提供する、ターミナルやIDEで動作する自律型コーディングエージェント。最新のClaude 4.5モデルやOpus 5を使用。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "プランに含む"
+  starting_price: プランに含む
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-  latest_highlight: "2026年8月に各種不具合修正や自己ホストランナー(self-hosted-runner)、Opus 5サポートを含むv2.1.226へアップデート"
-  update_frequency: "高"
+    - 開発者
+    - DevOpsエンジニア
+  latest_highlight: 2026年8月に各種不具合修正や自己ホストランナー(self-hosted-runner)、Opus 5サポートを含むv2.1.226へアップデート
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Claude 4.5 Opus/SonnetおよびClaude Opus 5の強力な推論能力を活用"
+      reason: Claude 4.5 Opus/SonnetおよびClaude Opus 5の強力な推論能力を活用
     - point: 5
-      reason: "Agentic searchによる深いコードベース理解"
+      reason: Agentic searchによる深いコードベース理解
     - point: 5
-      reason: "ターミナル、IDE、Slack、Webと柔軟な環境対応"
+      reason: ターミナル、IDE、Slack、Webと柔軟な環境対応
     - point: 5
-      reason: "MCPによる高い拡張性と自己ホストランナーサポート"
+      reason: MCPによる高い拡張性と自己ホストランナーサポート
   minus_points: []
-  summary: "ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5やOpus 5の搭載により信頼性と解決力がさらに向上した。"
+  summary: ターミナルやIDEで自律的にタスクをこなす強力なエージェント。Claude 4.5やOpus 5の搭載により信頼性と解決力がさらに向上した。
 links:
-  github: "https://github.com/anthropics/claude-code"
-  deepwiki: "https://deepwiki.com/anthropics/claude-code"
-  documentation: "https://docs.claude.com/en/docs/claude-code"
+  github: https://github.com/anthropics/claude-code
+  deepwiki: https://deepwiki.com/anthropics/claude-code
+  documentation: https://docs.claude.com/en/docs/claude-code
 relationships:
-  parent: "Claude"
+  parent: Claude
   children:
-    - "Opcode"
+    - Opcode
   related_tools:
-    - "Cursor"
-    - "GitHub Copilot CLI"
-    - "Devin Desktop"
-    - "Devin"
-    - "Cline"
+    - Cursor
+    - GitHub Copilot CLI
+    - Devin Desktop
+    - Devin
+    - Cline
 ---
 
 # **Claude Code 調査レポート**
