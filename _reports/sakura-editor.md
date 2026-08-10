@@ -2,7 +2,7 @@
 title: サクラエディタ 調査レポート
 tool_name: サクラエディタ
 tool_reading: サクラエディタ
-category: テキストエディタ
+category: IDE/エディタ
 developer: Sakura Editor Project
 official_site: https://sakura-editor.github.io/
 date: '2026-08-10'
@@ -11,6 +11,8 @@ tags:
   - テキストエディタ
   - オープンソース
   - Windows
+  - IDE
+  - 開発者ツール
 description: Windows向けの多機能で軽量なオープンソースの日本語テキストエディタ
 quick_summary:
   has_free_plan: true
