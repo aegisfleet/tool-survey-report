@@ -2,7 +2,7 @@
 title: Open CoDesign 調査レポート
 tool_name: Open CoDesign
 tool_reading: オープン コーデザイン
-category: AIコーディング支援
+category: UI/UX/作図
 developer: OpenCoworkAI
 official_site: https://opencoworkai.github.io/open-codesign/
 date: '2026-05-07'
@@ -12,7 +12,6 @@ tags:
   - オープンソース
   - ローカルAI
   - 開発者ツール
-  - コーディング支援
 description: プロンプトからUIプロトタイプ、スライド、マーケティング素材などをローカルで生成できるオープンソースのデスクトップAIデザインツール。
 quick_summary:
   has_free_plan: true

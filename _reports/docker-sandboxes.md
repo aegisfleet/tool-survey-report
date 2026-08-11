@@ -2,7 +2,7 @@
 title: Docker Sandboxes 調査レポート
 tool_name: Docker Sandboxes
 tool_reading: ドッカーサンドボックス
-category: AIコーディング支援
+category: エージェント開発基盤
 developer: Docker Inc.
 official_site: https://www.docker.com/products/docker-sandboxes/
 date: '2026-08-11'
