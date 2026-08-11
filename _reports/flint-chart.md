@@ -2,7 +2,7 @@
 title: Flint 調査レポート
 tool_name: Flint
 tool_reading: フリント
-category: データビジュアライゼーション
+category: BI/データ可視化
 developer: Microsoft Research
 official_site: https://microsoft.github.io/flint-chart/
 date: '2026-08-10'
