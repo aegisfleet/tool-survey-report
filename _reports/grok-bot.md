@@ -2,14 +2,14 @@
 title: Grok Bot 調査レポート
 tool_name: Grok Bot
 tool_reading: グロック ボット
-category: AIエージェント
+category: 自律型AIエージェント
 developer: X.AI LLC
 official_site: https://x.ai/bot
 date: '2026-08-12'
 last_updated: '2026-08-12'
 tags:
-  - AIエージェント
-  - 業務自動化
+  - エージェント
+  - 自動化
   - RPA
 description: 自らのコンピュータを持ち、ユーザーと同じようにツールやアプリを操作して24時間自律的に作業を完了させるAIチームメイト
 quick_summary:

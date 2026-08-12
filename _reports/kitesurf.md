@@ -2,16 +2,16 @@
 title: Kitesurf 調査レポート
 tool_name: Kitesurf
 tool_reading: カイトサーフ
-category: ブラウザ
+category: ブラウザ操作エージェント
 developer: Cloudflare
 official_site: https://kitesurf.cloudflare.app/
 date: '2026-08-11'
 last_updated: '2026-08-11'
 tags:
-  - AIエージェント
+  - エージェント
   - WebAssembly
   - Cloudflare Workers
-  - ブラウザ
+  - 自律型
 description: Cloudflare Workers上のV8アイソレートで動作するAIエージェント向けのステートレスなブラウザエンジン
 quick_summary:
   has_free_plan: true
