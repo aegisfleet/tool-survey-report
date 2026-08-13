@@ -6,7 +6,7 @@ category: ワークフローエンジン
 developer: UiPath Inc.
 official_site: https://www.uipath.com/ja/
 date: '2026-01-29'
-last_updated: '2026-04-02'
+last_updated: '2026-08-13'
 tags:
   - AI
   - RPA
@@ -22,7 +22,7 @@ quick_summary:
     - 大企業
     - IT部門
     - 業務改善担当者
-  latest_highlight: 2025年12月、次世代AI機能「Autopilot」を強化
+  latest_highlight: 2025年11月リリースの2025.10アップデートにて、UiPath MaestroによるエージェントオーケストレーションやAgent Builder、次世代ドキュメント処理「IXP」などを追加
   update_frequency: 高
 evaluation:
   score: 85
@@ -98,10 +98,12 @@ relationships:
 * **UiPath Studio**: ローコード/プロコード対応の統合開発環境。直感的なビジュアルデザイナーと高度なコーディング機能を両立。
 * **UiPath Robots**: 人の操作をトリガーに実行する「Attendedロボット」と、サーバー上で無人で実行される「Unattendedロボット」がある。
 * **UiPath Orchestrator**: 全てのロボットとプロセスを集中管理・監視・スケジューリングするWebベースのコンソール。
+* **UiPath Maestro**: 複雑なプロセスや複数エージェントを統合管理・オーケストレーションする次世代基盤。Case ManagementやProcess Appsを提供する。
 * **UiPath AI Center**: 機械学習モデルをRPAワークフローに組み込むための基盤。ドキュメント理解、画像認識、言語分析などが可能。
-* **Autopilot**: 生成AIを活用したAIエージェント機能。自然言語での指示から自動化プロセスを生成したり、開発者を支援したりする。
+* **Autopilot**: 生成AIを活用したAIエージェント・アシスタント機能。自然言語での指示から自動化プロセスを生成するほか、Studioの「Agent Builder」によるエージェント開発支援、テスト生成などを担う。
 * **Process Mining / Task Mining**: PC上の操作ログや業務システムのログを分析し、自動化に適したプロセスを発見・可視化する。
-* **Document Understanding**: AI-OCR技術を用いて、請求書や領収書などの非構造化ドキュメントからデータを高精度に抽出する。
+* **UiPath Test Cloud**: 継続的なパフォーマンステスト、Autopilotを活用したテスト生成、自己修復(Self-healing)機能などを備えたエージェンティックテスト機能を提供するテスト基盤。
+* **UiPath IXP (Intelligent Xtraction & Processing)**: Document Understandingから進化した次世代インテリジェントドキュメント処理。Autopilotによるスキーマ自動生成やAgentic Validation機能により、高度な非構造化データの抽出と検証を行う。
 
 ## **4. 開始手順・セットアップ**
 
@@ -238,8 +240,8 @@ relationships:
 -->
 
 * **認証**: SSO (SAML 2.0, Azure AD, Okta), 2段階認証に対応。
-* **データ管理**: 保管時および転送時のデータを暗号化 (AES-256, TLS 1.2)。テナントごとのデータ分離。
-* **準拠規格**: SOC 2 Type 2, ISO 27001, ISO 9001, GDPR, HIPAA, FedRAMPなどの認証・準拠に対応。
+* **データ管理**: 保管時および転送時のデータを暗号化 (AES-256, TLS 1.2)。テナントごとのデータ分離。LLM利用時にはAI Trust Layerを通じた「PII in-flight masking（PIIデータのリアルタイム秘匿化）」により、機密データの外部流出を防止する。
+* **準拠規格**: SOC 2 Type 2, ISO 27001, ISO 9001, GDPR, HIPAA, FedRAMPのほか、世界初のAIマネジメントシステム規格である **ISO/IEC 42001:2023** 認証を取得している。
 
 ## **12. 操作性 (UI/UX) と学習コスト**
 
@@ -308,10 +310,11 @@ relationships:
 * **2026-02-20**: Orchestratorの管理画面UIが刷新され、大規模デプロイ時のパフォーマンスと監視機能が向上。
 * **2026-01-15**: Document Understandingの対応言語と帳票フォーマットが拡充され、認識精度が向上。
 * **2025-12-05**: 次世代AI機能「Autopilot」の機能を拡張。テストケースの自動生成や、より複雑な指示への対応が可能に。
+* **2025-11-19**: UiPath 2025.10リリース「Orchestrating the agentic enterprise」。MaestroによるCase ManagementやProcess Apps、StudioでのAgent Builder追加、次世代ドキュメント処理「IXP」、Test Cloudのパフォーマンステスト機能追加など、エージェンティックオートメーションを包括的に強化。
 * **2025-10-31**: 統合監査ログ機能を強化。セキュリティイベントやユーザー操作のトレーサビリティが向上。
 * **2025-09-15**: 新しいライセンスモデル「Unified Pricing」の適用範囲を拡大し、柔軟なコスト管理が可能に。
 
-(出典: [UiPath リリースノート](https://docs.uipath.com/ja/overview/other/latest/release-notes/release-notes))
+(出典: [UiPath ブログ - 製品・最新情報](https://www.uipath.com/ja/blog/product-and-updates))
 
 ## **16. 類似ツールとの比較**
 
@@ -325,10 +328,10 @@ relationships:
 
 | 機能カテゴリ | 機能項目 | UiPath | Microsoft Power Automate | Workato | Zapier |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **自動化方式** | デスクトップUI操作 | ◎<br><small>非常に強力</small> | ◯<br><small>PADで対応</small> | ×<br><small>API中心</small> | ×<br><small>API中心</small> |
-| **連携** | API連携 | ◯<br><small>Integration Service</small> | ◯<br><small>コネクタ多数</small> | ◎<br><small>iPaaSとして強力</small> | ◎<br><small>5000+アプリ</small> |
-| **AI機能** | ドキュメント理解 | ◎<br><small>Document Understanding</small> | ◯<br><small>AI Builder</small> | △<br><small>拡張機能等</small> | △<br><small>限定的</small> |
-| **管理** | ガバナンス・統制 | ◎<br><small>Orchestrator</small> | ◯<br><small>管理センター</small> | ◎<br><small>エンタープライズ向け</small> | △<br><small>個人・チーム向け</small> |
+| **自動化方式** | デスクトップUI操作 | ◎<br><small>非常に強力(ScreenPlay等)</small> | ◯<br><small>PADで対応</small> | ×<br><small>API中心</small> | ×<br><small>API中心</small> |
+| **連携** | API連携 | ◯<br><small>Integration Service</small> | ◯<br><small>コネクタ多数</small> | ◎<br><small>iPaaSとして強力</small> | ◎<br><small>8500+アプリ</small> |
+| **AI機能** | ドキュメント理解・エージェント連携 | ◎<br><small>IXP, Agent Builder搭載</small> | ◯<br><small>AI Builder, Copilot Studio</small> | ◯<br><small>Agent Studio等</small> | ◯<br><small>Zapier Agents</small> |
+| **管理** | ガバナンス・オーケストレーション | ◎<br><small>Orchestrator, Maestro</small> | ◯<br><small>管理センター</small> | ◎<br><small>エンタープライズ向け</small> | △<br><small>個人・チーム向け</small> |
 | **導入** | 手軽さ・コスト | △<br><small>環境構築・高コスト</small> | ◎<br><small>M365に含まれる場合あり</small> | ◯<br><small>クラウド完結</small> | ◎<br><small>即座に開始可能</small> |
 
 ### **16.2 詳細比較**
