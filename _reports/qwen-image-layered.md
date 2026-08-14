@@ -20,7 +20,7 @@ quick_summary:
     - 開発者
     - AI研究者
     - デザイナー
-  latest_highlight: "マルチGPU推論パイプラインの追加や、vLLM-Omniのサポート文書を追加"
+  latest_highlight: マルチGPU推論パイプラインの追加や、vLLM-Omniのサポート文書を追加
   update_frequency: 中
 evaluation:
   score: 82
