@@ -54,8 +54,8 @@ relationships:
     - Pomelli
     - Miro
     - Gamma
-    - Felo
     - Speaker Deck
+    - Qwen-Image-Layered
 ---
 
 # **Canva 調査レポート**
