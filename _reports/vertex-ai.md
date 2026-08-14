@@ -6,7 +6,7 @@ category: LLMプラットフォーム
 developer: Google
 official_site: https://cloud.google.com/vertex-ai
 date: '2026-04-02'
-last_updated: '2026-04-02'
+last_updated: '2026-08-14'
 tags:
   - AI
   - 生成AI
@@ -22,7 +22,7 @@ quick_summary:
     - MLエンジニア
     - データサイエンティスト
     - アプリケーション開発者
-  latest_highlight: 2026年1月にGemini 3 Pro/Flashが一般提供開始
+  latest_highlight: Colab EnterpriseでData Science AgentがGA化、およびGPU向けのSecure Bootをサポート
   update_frequency: 高
 evaluation:
   score: 90
@@ -82,7 +82,8 @@ relationships:
 
 * **Vertex AI Studio**: 生成AIモデル（Gemini, Imagenなど）のプロトタイピング、カスタマイズを行うためのGUIツール。
 * **Model Garden**: Google製（Gemini, PaLM）、OSS（Llama, Mistral）、パートナー製（Claude）など、150以上の基盤モデルを検索・利用できるハブ。
-* **Vertex AI Agent Builder**: RAG（検索拡張生成）やツール利用を組み込んだ、高度な会話型AIエージェントをローコード/ノーコードで構築。
+* **Vertex AI Agent Engine (旧 Agent Builder)**: RAG（検索拡張生成）やツール利用を組み込んだ、高度な会話型AIエージェントをローコード/ノーコードで構築。Serverless modeによりデータベースのプロビジョニングなしでRAGリソースを管理可能。さらに、RAG Cross Corpus Retrievalにより複数のコーパスから同時にコンテキストを検索・回答生成が可能。
+* **Data Science Agent**: Colab Enterpriseに統合されたエージェント機能。探索的データ分析、機械学習タスク、インサイトの提供を自動化する。
 * **AutoML**: コードを書かずに、画像、表形式データ、テキスト、動画データの高品質なモデルをトレーニング。
 * **Custom Training**: TensorFlow, PyTorch, Scikit-learnなどのフレームワークを使用した、完全なカスタマイズ可能なモデルトレーニング環境。
 * **Vertex AI Pipelines**: Kubeflow PipelinesまたはTensorFlow Extended (TFX) をベースにした、ポータブルでスケーラブルなMLワークフローのオーケストレーション。
@@ -90,7 +91,66 @@ relationships:
 * **Prediction**: 学習済みモデルをHTTPエンドポイントとしてデプロイし、オンライン予測やバッチ予測を提供。
 * **Experiments**: モデルのパラメータやメトリクスを追跡し、実験結果を比較・可視化。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: クラウド完結型のフルマネージドSaaSプラットフォーム
+* **主要コンポーネントとデータフロー**:
+  * データパイプラインからモデルの学習、評価、デプロイメントに至るまで、すべてのプロセスがGoogle Cloudのインフラ上でシームレスに連携して動作する。
+
+```mermaid
+flowchart TD
+    %% ノード定義
+    subgraph Data_Storage ["データストレージ"]
+        GCS["Cloud Storage"]
+        BQ["BigQuery"]
+    end
+
+    subgraph Development_Environment ["開発・実験環境"]
+        Colab["Colab Enterprise<br/>(JupyterLab / Data Science Agent)"]
+        Studio["Vertex AI Studio<br/>(プロンプト・生成AIテスト)"]
+    end
+
+    subgraph Model_Training_Hub ["モデル学習・管理ハブ"]
+        AutoML["AutoML<br/>(ノーコード学習)"]
+        CustomTraining["Custom Training<br/>(カスタム学習 / TPU・GPU)"]
+        ModelGarden["Model Garden<br/>(Gemini, Claude, OSS等)"]
+        ModelRegistry["Vertex AI Model Registry<br/>(モデルバージョン管理)"]
+    end
+
+    subgraph MLOps_Deployment ["MLOps・デプロイメント"]
+        Pipelines["Vertex AI Pipelines<br/>(ワークフロー自動化)"]
+        Prediction["Online / Batch Prediction<br/>(エンドポイント・推論)"]
+        VectorSearch["Vector Search<br/>(ベクトル・ハイブリッド検索)"]
+        AgentEngine["Agent Engine<br/>(RAG・エージェント構築)"]
+    end
+
+    %% データフロー
+    GCS --> Colab
+    BQ --> Colab
+    GCS --> AutoML
+    BQ --> AutoML
+    GCS --> CustomTraining
+
+    Colab --> Pipelines
+    Studio --> ModelGarden
+
+    AutoML --> ModelRegistry
+    CustomTraining --> ModelRegistry
+    ModelGarden --> ModelRegistry
+
+    Pipelines --> CustomTraining
+    ModelRegistry --> Prediction
+    ModelRegistry --> AgentEngine
+    VectorSearch -.-> AgentEngine
+    Prediction --> App["フロントエンド/アプリケーション"]
+    AgentEngine --> App
+```
+
+* **特筆すべき要素技術**:
+  * **TPU / GPU 最適化**: Google独自のAIチップ（TPU）や最新GPU（A100, H100等）を活用し、コンピュートリソースを効率的にスケール。
+  * **Kubeflow Pipelines**: `Vertex AI Pipelines` のバックエンド技術として使用され、複雑なMLワークフローをコンテナ化してオーケストレーションする。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Google Cloudアカウントおよびプロジェクトの作成
@@ -118,21 +178,21 @@ relationships:
     print(response.text)
     ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **GoogleのAI技術への即時アクセス**: Google DeepMindが開発する最新のGeminiモデルや、高性能なTPUインフラをいち早く利用できる。
 * **統合されたプラットフォーム**: 生成AIと従来の予測系AI（Predictive AI）が単一のプラットフォームに統合されており、データの共有や運用の統一が容易。
 * **強力なデータ連携**: BigQuery内のデータに対して直接MLモデルを実行したり（BigQuery ML）、データセットをシームレスにVertex AIに取り込んだりできる。
 * **エンドツーエンドのMLOps**: 実験管理からパイプライン、モデルレジストリ、モニタリングまで、MLライフサイクル全体をカバーするツール群が標準で揃っている。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **学習コスト**: 機能が非常に豊富かつ専門的であるため、初心者が全体像を理解し使いこなすには時間がかかる。
 * **複雑な料金体系**: コンピュートリソース、ストレージ、APIコール数など、課金要素が多岐にわたり、正確なコスト見積もりが難しい場合がある。
 * **リージョン制限**: 一部の最新モデルや機能（特にTPUやプレビュー機能）は、利用可能なリージョンが限定されている場合がある。
 * **日本語対応**: UIや公式ドキュメントは日本語化されているが、新機能や一部の専門的な技術情報の日本語版提供が遅れる場合がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -146,7 +206,7 @@ relationships:
   * **Vector Search**: インデックスサイズとクエリ処理能力に応じた課金。
 * **無料トライアル**: 新規Google Cloudユーザーに$300分の無料クレジット付与（90日間）。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Fox Sports, GE Appliances, Wendy's, メルカリ, 楽天グループ
 * **導入事例**:
@@ -155,20 +215,20 @@ relationships:
   * **メルカリ**: 出品時の商品説明文の自動生成や、不正検知システムにVertex AIを活用。
 * **対象業界**: 小売、金融、メディア、製造、ヘルスケアなど、全産業で広く導入が進んでいる。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: [公式ドキュメント](https://cloud.google.com/vertex-ai/docs)は非常に包括的で、チュートリアル、APIリファレンス、ベストプラクティスガイドが充実している。
 * **コミュニティ**: Google Cloud Community、Stack Overflow、GitHubなどで活発な情報交換が行われている。
 * **公式サポート**: Google Cloudの標準サポートプラン（Basic, Standard, Enhanced, Premium）に準じて提供され、メール、チャット、電話（プランによる）による対応が可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: RESTおよびgRPC APIを提供。Python、Java、Node.js、Goなどのクライアントライブラリが利用可能。
 * **外部サービス連携**: LangChain、LlamaIndexなどの一般的なLLMフレームワークとネイティブに統合されており、Google Workspace（Docs、Gmail等）との連携も強固。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -177,18 +237,18 @@ relationships:
 | **PyTorch** | ◯ | 予め構築されたコンテナが用意されており、問題なく利用可能。 | TensorFlowほど最適化が進んでいない場合がある。 |
 | **Kubeflow** | ◎ | Vertex AI PipelinesはKubeflow Pipelinesと互換性があり、移行が容易。 | 特になし。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: IAM（Identity and Access Management）によるきめ細かなアクセス制御、VPC Service Controlsによる強力な境界防御。
 * **データ管理**: 顧客データはGoogleのモデル学習には使用されない（明示的に許可しない限り）。CMEK（顧客管理暗号鍵）に対応。
 * **準拠規格**: ISO 27001、SOC 1/2/3、HIPAA、GDPR、FedRAMPなど主要な国際基準に準拠。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: Google Cloud Consoleの一部として提供され、統一感のあるデザイン。StudioやNotebooksは直感的だが、MLOps系の設定画面は専門用語が多く、慣れが必要。
 * **学習コスト**: コンセプトが多岐にわたるため、初学者が全体を把握するには時間がかかる。「Generative AI on Vertex AI」などの公式学習パス（コース）が提供されている。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **プロトタイプから本番へ**: Vertex AI Studioでプロンプトを試行し、良い結果が得られたら「コードを取得」機能でSDKコードを生成し、アプリに組み込む。
@@ -197,7 +257,7 @@ relationships:
   * **コスト管理不足**: 開発用のエンドポイントやNotebookインスタンスを立ち上げたまま放置し、課金が発生し続ける（自動停止設定を活用すべき）。
   * **モデルの塩漬け**: デプロイ後のモデル監視（Model Monitoring）を怠り、データドリフトによる精度低下に気づかない。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra
 * **総合評価**: 4.4/5.0 (G2)
@@ -212,8 +272,13 @@ relationships:
 * **特徴的なユースケース**:
   * 小売業における需要予測パイプラインの自動化や、顧客対応用ボットとしてGeminiモデルを組み合わせた高度なRAGシステム構築などに役立てられている。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-07-12**: Agent Platform Workbench インスタンスで GPU 向け Secure Boot が利用可能になった。
+* **2026-05-26**: Data Science Agent が一般提供開始 (GA)。Colab Enterprise ノートブック内で探索的データ分析や機械学習タスクを自動化可能に。
+* **2026-04-17**: RAG Cross Corpus Retrieval がパブリックプレビューで利用可能になり、複数のRAGコーパスから同時にコンテキストを検索し回答を生成可能に。
+* **2026-04-03**: Gemma 4 26B A4B IT が Model Garden に追加され、Vertex AI RAG Engine Serverless mode もパブリックプレビューとしてリリース。
+* **2026-04-02**: 最もコスト効率の高い Veo on Vertex AI モデルである Veo 3.1 Lite がパブリックプレビューで利用可能に。
 * **2026-01-20**: **Gemini 3 Pro/Flash** が一般提供開始（GA）。推論能力と処理速度が大幅に向上。
 * **2026-01-13**: **Veo 3.1**（動画生成モデル）のアップデート。参照画像からの動画生成に対応。
 * **2025-12-10**: **TPU v7** 搭載のトレーニングジョブがプレビュー公開。
@@ -223,27 +288,27 @@ relationships:
 
 (出典: [Vertex AI Release Notes](https://cloud.google.com/vertex-ai/docs/release-notes))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Vertex AI | Amazon SageMaker | Azure AI Studio | OpenAI API |
+| 機能カテゴリ | 機能項目 | Vertex AI | Amazon Bedrock | Azure AI Studio | OpenAI API |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **生成AI** | 基盤モデル | ◎<br><small>Gemini/PaLM</small> | ◯<br><small>Bedrock連携</small> | ◎<br><small>OpenAI連携</small> | ◎<br><small>GPTモデル群</small> |
-| **開発環境** | Notebooks | ◎<br><small>Colab Enterprise</small> | ◎<br><small>Studio Lab</small> | ◯<br><small>ML Studio</small> | ×<br><small>非対応</small> |
-| **MLOps** | パイプライン | ◎<br><small>Kubeflowベース</small> | ◎<br><small>独自のパイプライン</small> | ◯<br><small>Azure DevOps連携</small> | ×<br><small>非対応</small> |
-| **データ連携** | DWH統合 | ◎<br><small>BigQuery ML</small> | ◯<br><small>Redshift ML</small> | ◯<br><small>Synapse ML</small> | △<br><small>外部連携必須</small> |
+| **生成AI** | 基盤モデル | ◎<br><small>Gemini 3等統合</small> | ◎<br><small>Claude 5等連携</small> | ◎<br><small>GPT-4o等統合</small> | ◎<br><small>最新GPTモデル群</small> |
+| **開発環境** | Notebooks | ◎<br><small>Colab Enterprise</small> | ◯<br><small>SageMaker連携</small> | ◯<br><small>Azure ML連携</small> | ×<br><small>非対応</small> |
+| **MLOps** | パイプライン | ◎<br><small>Kubeflowベース</small> | ◯<br><small>SageMaker連携</small> | ◯<br><small>Azure DevOps連携</small> | ×<br><small>非対応</small> |
+| **データ連携** | DWH統合 | ◎<br><small>BigQuery ML</small> | ◯<br><small>Redshift等連携</small> | ◯<br><small>Fabric連携</small> | △<br><small>外部連携必須</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Vertex AI** | GoogleのAI技術とBigQueryとの統合が特徴。 | 生成AI（Gemini）と従来のML開発が単一プラットフォームで完結する。データ分析との距離が近い。 | AWS/Azureに比べるとエンタープライズ市場シェアは低い。 | Google Cloudを利用している、またはGeminiモデルを最大限活用したい場合。 |
-| **Amazon SageMaker** | AWSエコシステムにおけるML開発の標準。 | 圧倒的な機能数とカスタマイズ性。AWS上のデータとの連携。 | 機能が多すぎて複雑化している。生成AI利用にはBedrockとの使い分けが必要。 | AWSをメインクラウドとしており、高度なMLワークフローを構築したい場合。 |
-| **Azure AI Studio** | OpenAIとの強力なパートナーシップ。 | GPT-4などのOpenAIモデルをAzureのセキュリティ下で使える。Office連携。 | Azure以外の環境への展開が難しい場合がある。 | OpenAIのモデルをエンタープライズ環境で利用したい、Microsoft製品中心の組織。 |
-| **OpenAI API** | GPTモデルなどを提供するAPIサービス。 | 最高性能のLLM（GPT-4o等）をシンプルなAPIで利用できる。 | MLOpsパイプラインや独自モデルのフルカスタマイズには向かない。 | バックエンドに組み込む単純なLLM推論APIだけが必要な場合。 |
+| **Vertex AI** | GoogleのAI技術とBigQueryとの統合が特徴。Gemini Enterprise Agent Platformへ移行しつつある。 | 生成AI（Gemini 3）と従来のML開発が単一プラットフォームで完結する。データ分析との距離が近い。 | エンタープライズ向けの機能が増え、全体像の把握がより複雑化している。 | Google Cloudを利用している、またはGeminiのマルチモーダル機能を最大限活用したい場合。 |
+| **Amazon Bedrock** | AWSの生成AIマネージドサービス。 | 様々なプロバイダーの最先端モデル（Claude 5等）をAPI経由で統一的に利用可能。 | プラットフォーム独自の高度なMLOps機能はSageMakerとの連携が必須。 | AWSエコシステムに依存しており、Claudeなどのサードパーティモデルを活用したい場合。 |
+| **Azure AI Studio** | MicrosoftのAI開発環境。OpenAIとの強力なパートナーシップ。 | GPT-4oなどのOpenAIモデルをAzureのエンタープライズセキュリティ下で使える。 | OpenAI以外のサードパーティモデルの最適化においては一歩譲る。 | OpenAIのモデルをエンタープライズ環境で利用したい、Microsoft製品中心の組織。 |
+| **OpenAI API** | OpenAIが直接提供するAPIサービス。 | 最高峰のLLMを最もシンプルかつ最速でアプリケーションに組み込める。 | 高度なMLOpsパイプラインや独自モデルのフルカスタマイズには向かない。 | バックエンドに組み込む単純なLLM推論APIだけが必要な場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Vertex AIは、Googleが長年培ってきたAI/MLの知見（TensorFlow, TPU, DeepMindのモデルなど）を凝縮した、極めて完成度の高いプラットフォームである。特に近年は「生成AIファースト」を掲げ、Geminiモデルを中心としたエコシステム整備が急速に進んでいる。データ（BigQuery）とAI（Vertex AI）のシームレスな統合は他社にはない大きな強みであり、データドリブンなAI開発を目指す組織にとって理想的な環境と言える。
