@@ -11,13 +11,30 @@ layout: default
       <div class="hero-text">
         {{ content }}
       </div>
+      <div class="hero-shortcuts" aria-label="クイックアクセス">
+        <a href="#hero-search" class="hero-shortcut-btn hero-shortcut-search" id="hero-shortcut-search">
+          <svg class="hero-shortcut-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <span>検索</span>
+        </a>
+        <a href="#daily-trends" class="hero-shortcut-btn hero-shortcut-trends">
+          <span class="hero-shortcut-emoji">📈</span>
+          <span>最新トレンド</span>
+        </a>
+        <a href="#reports-section" class="hero-shortcut-btn hero-shortcut-reports">
+          <span class="hero-shortcut-emoji">📑</span>
+          <span>最新レポート</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <main class="home-content">
 
     <!-- トレンドレポート -->
-    <section class="daily-trends" style="margin-bottom: 2.5rem;">
+    <section class="daily-trends" id="daily-trends" style="margin-bottom: 2.5rem;">
       <div class="trends-header"
         style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
         <div>
@@ -127,7 +144,7 @@ layout: default
       </div>
     </section>
 
-    <section class="hero-search" aria-labelledby="hero-search-title">
+    <section class="hero-search" id="hero-search" aria-labelledby="hero-search-title">
       <div class="hero-search-inner">
         <div class="hero-search-heading">
           <h2 id="hero-search-title">
@@ -168,7 +185,7 @@ layout: default
       </div>
     </section>
 
-    <section class="reports-section">
+    <section class="reports-section" id="reports-section">
       <div class="reports-header">
         <div class="reports-title-container">
           <h2>最新のレポート</h2>

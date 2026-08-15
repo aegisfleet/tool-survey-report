@@ -356,11 +356,10 @@ function initSmoothScrolling() {
           block: 'start',
         });
 
-        // Update focus for accessibility
-        targetElement.focus();
+        // Update focus for accessibility without jumping the scroll position
         if (document.activeElement !== targetElement) {
           targetElement.setAttribute('tabindex', '-1');
-          targetElement.focus();
+          targetElement.focus({ preventScroll: true });
         }
       }
     });

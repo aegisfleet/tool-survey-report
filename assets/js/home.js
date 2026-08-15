@@ -517,6 +517,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Hero shortcut search click
+  const heroShortcutSearch = document.getElementById('hero-shortcut-search');
+  if (heroShortcutSearch && heroSearchInput) {
+    heroShortcutSearch.addEventListener('click', (e) => {
+      e.preventDefault();
+      const heroSearchSection = document.getElementById('hero-search');
+      if (heroSearchSection) {
+        heroSearchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      setTimeout(() => {
+        heroSearchInput.focus();
+      }, 350);
+    });
+  }
+
   // Keyboard shortcut: "/" or "Cmd+K" / "Ctrl+K" to focus hero search
   document.addEventListener('keydown', (e) => {
     // Don't trigger if user is already typing in an input/textarea/select

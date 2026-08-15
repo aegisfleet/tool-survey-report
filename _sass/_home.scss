@@ -111,6 +111,109 @@
                 border-bottom: 2px dashed rgba($primary-color, 0.5);
             }
         }
+
+        .hero-shortcuts {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.625rem;
+            margin-top: map-get($spacers, 4);
+
+            @include media-breakpoint-down(md) {
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: map-get($spacers, 3);
+            }
+        }
+
+        .hero-shortcut-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.95rem;
+            font-size: 0.9rem;
+            font-weight: $font-weight-bold;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-content);
+            color: var(--color-text);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+
+            @include media-breakpoint-down(sm) {
+                padding: 0.45rem 0.8rem;
+                font-size: 0.85rem;
+            }
+
+            .hero-shortcut-icon {
+                flex-shrink: 0;
+                transition: transform 0.2s ease;
+            }
+
+            .hero-shortcut-emoji {
+                font-size: 1rem;
+                line-height: 1;
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                border-color: var(--color-primary);
+                color: var(--color-primary);
+                text-decoration: none;
+
+                .hero-shortcut-icon {
+                    transform: scale(1.1);
+                }
+            }
+
+            &:active {
+                transform: translateY(0);
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            }
+
+            &.hero-shortcut-search {
+                border-color: rgba($primary-color, 0.35);
+                background: rgba($primary-color, 0.08);
+                color: $primary-color;
+
+                .hero-shortcut-icon {
+                    stroke: $primary-color;
+                }
+
+                &:hover {
+                    background: $primary-color;
+                    color: #ffffff;
+                    border-color: $primary-color;
+                    box-shadow: 0 4px 14px rgba($primary-color, 0.35);
+
+                    .hero-shortcut-icon {
+                        stroke: #ffffff;
+                    }
+                }
+            }
+
+            &.hero-shortcut-trends:hover {
+                background: rgba($primary-color, 0.06);
+            }
+
+            &.hero-shortcut-reports:hover {
+                background: rgba($primary-color, 0.06);
+            }
+        }
+    }
+}
+
+// Smooth scrolling and offset margins for home sections
+.daily-trends,
+.hero-search,
+.reports-section {
+    scroll-margin-top: 80px;
+
+    @include media-breakpoint-down(sm) {
+        scroll-margin-top: 65px;
     }
 }
 
