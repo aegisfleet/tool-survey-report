@@ -2,7 +2,7 @@
 title: monday.com 調査レポート
 tool_name: monday.com
 tool_reading: マンデードットコム
-category: プロジェクト管理
+category: プロジェクト/タスク管理
 developer: monday.com Ltd.
 official_site: https://monday.com/
 date: '2026-08-15'
