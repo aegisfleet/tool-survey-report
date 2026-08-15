@@ -1,46 +1,46 @@
 ---
-title: "Asana 調査レポート"
-tool_name: "Asana"
-tool_reading: "アサナ"
-category: "プロジェクト管理"
-developer: "Asana, Inc."
-official_site: "https://asana.com/"
-date: "2026-08-15"
-last_updated: "2026-08-15"
+title: Asana 調査レポート
+tool_name: Asana
+tool_reading: アサナ
+category: プロジェクト管理
+developer: Asana, Inc.
+official_site: https://asana.com/
+date: '2026-08-15'
+last_updated: '2026-08-15'
 tags:
-  - "プロジェクト管理"
-  - "タスク管理"
-  - "AI"
-  - "SaaS"
-description: "AIを搭載した高機能なプロジェクト管理・ワークマネジメントプラットフォーム"
+  - プロジェクト管理
+  - タスク管理
+  - AI
+  - SaaS
+description: AIを搭載した高機能なプロジェクト管理・ワークマネジメントプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$10.99/月"
+  starting_price: $10.99/月
   target_users:
-    - "プロジェクトマネージャー"
-    - "マーケティングチーム"
-    - "IT・オペレーション部門"
-  latest_highlight: "AI Teammates、AI Studioなどの機能を拡充"
-  update_frequency: "高"
+    - プロジェクトマネージャー
+    - マーケティングチーム
+    - IT・オペレーション部門
+  latest_highlight: AI Teammates、AI Studioなどの機能を拡充
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 8
-      reason: "高度なAI機能（AI Teammates, AI Studio）による業務自動化が強力"
+      reason: 高度なAI機能（AI Teammates, AI Studio）による業務自動化が強力
     - point: 6
-      reason: "エンタープライズ向けの強力なガバナンスとセキュリティ機能"
+      reason: エンタープライズ向けの強力なガバナンスとセキュリティ機能
     - point: 5
-      reason: "UI/UXが優れており、多様なビュー（リスト、ボード、タイムライン等）を提供"
+      reason: UI/UXが優れており、多様なビュー（リスト、ボード、タイムライン等）を提供
   minus_points:
     - point: -4
-      reason: "高機能なため、使いこなすまでの学習コストがやや高い"
-  summary: "AIを活用した次世代のワークマネジメントツールとして、特に中規模〜大規模な組織に最適"
+      reason: 高機能なため、使いこなすまでの学習コストがやや高い
+  summary: AIを活用した次世代のワークマネジメントツールとして、特に中規模〜大規模な組織に最適
 links:
-  documentation: "https://help.asana.com/"
+  documentation: https://help.asana.com/
 relationships:
-  related_tools:
+  related_tools: null
 ---
 
 # **Asana 調査レポート**
