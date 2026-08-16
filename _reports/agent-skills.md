@@ -44,6 +44,7 @@ relationships:
     - Claude
     - Android Skills
     - Waza
+    - Agent Plugins
 ---
 
 # **Agent Skills 調査レポート**
