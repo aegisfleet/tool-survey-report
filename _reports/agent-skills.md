@@ -6,7 +6,7 @@ category: エージェントエコシステム/基盤
 developer: Anthropic / Agent Skills Project
 official_site: https://agentskills.io/home
 date: '2026-02-03'
-last_updated: '2026-04-16'
+last_updated: '2026-08-16'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
     - AIエンジニア
     - エージェント開発者
     - 企業のDX推進担当者
-  latest_highlight: 2026年4月にWorkshop.aiやnanobotなどのエージェントツールでの採用が拡大
+  latest_highlight: 2026年8月にOpenClawやHermes Agentなどのエージェントツールでの採用が拡大
   update_frequency: 中
 evaluation:
   score: 80
@@ -315,6 +315,13 @@ Agent Skills 自体はオープンな仕様であり、利用や作成は無料�
 - 情報源のURLを記載
 -->
 
+* **2026-08-09**: OpenClaw および Hermes Agent がクライアントショーケースに追加。
+* **2026-08-04**: ChatGPT および Codex クライアントのブランディングを更新。フロントマターにおける `metadata` の仕様を明確化。
+* **2026-07-10**: Pulumi Neo がクライアントショーケースに追加。
+* **2026-07-09**: ZeroClaw がクライアントショーケースに追加。
+* **2026-06-30**: Deep Code がクライアントショーケースに追加。
+* **2026-05-20**: bub, Superconductor がクライアントショーケースに追加。
+* **2026-05-19**: Vita, Tabnine がクライアントショーケースに追加。
 * **2026-04-14**: Workshop.aiやnanobotがAgent Skillsをサポートするクライアントショーケースに追加。
 * **2026-04-10**: Google AI Edge Galleryがクライアントショーケースに追加。
 * **2026-02-03**: (継続中) コミュニティによる仕様の改善とリファレンス実装の更新。
