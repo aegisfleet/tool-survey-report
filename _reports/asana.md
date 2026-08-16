@@ -2,14 +2,13 @@
 title: Asana 調査レポート
 tool_name: Asana
 tool_reading: アサナ
-category: プロジェクト管理
+category: プロジェクト/タスク管理
 developer: Asana, Inc.
 official_site: https://asana.com/
 date: '2026-08-15'
 last_updated: '2026-08-15'
 tags:
-  - プロジェクト管理
-  - タスク管理
+  - プロジェクト/タスク管理
   - AI
   - SaaS
 description: AIを搭載した高機能なプロジェクト管理・ワークマネジメントプラットフォーム
