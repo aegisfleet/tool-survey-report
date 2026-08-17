@@ -2,7 +2,7 @@
 title: カウシェ (KAUCHE) 調査レポート
 tool_name: カウシェ
 tool_reading: カウシェ
-category: お買い物アプリ
+category: POS/店舗・EC運営
 developer: 株式会社カウシェ
 official_site: https://kauche.com/
 date: '2026-08-15'
@@ -12,6 +12,7 @@ tags:
   - EC
   - モバイルアプリ
   - ゲーミフィケーション
+  - お買い物アプリ
 description: 「誰かと一緒に」を楽しむ、ゲーム要素（カウシェファーム）やシェア機能を備えた新感覚のお買い物アプリ。
 quick_summary:
   has_free_plan: true
