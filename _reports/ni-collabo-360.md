@@ -2,7 +2,7 @@
 title: NI Collabo 360 調査レポート
 tool_name: NI Collabo 360
 tool_reading: エヌアイコラボサンロクマル
-category: グループウェア
+category: コラボレーション/生産性
 developer: 株式会社NIコンサルティング
 official_site: https://www.ni-ware.com/
 date: '2026-08-18'

@@ -2,7 +2,7 @@
 title: Codex Pet Share 調査レポート
 tool_name: Codex Pet Share
 tool_reading: コーデックス ペット シェア
-category: 開発ツール
+category: エージェントエコシステム/基盤
 developer: portons
 official_site: https://codex-pets.net/
 date: '2026-08-17'
