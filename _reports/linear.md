@@ -6,7 +6,7 @@ category: プロジェクト/タスク管理
 developer: Linear Orbit, Inc.
 official_site: https://linear.app/
 date: '2026-01-31'
-last_updated: '2026-04-05'
+last_updated: '2026-08-18'
 tags:
   - SaaS
   - 開発者ツール
@@ -22,10 +22,10 @@ quick_summary:
     - ソフトウェア開発チーム
     - スタートアップ
     - プロダクトマネージャー
-  latest_highlight: UIの刷新やAIコーディングツールとの連携を強化
+  latest_highlight: Coding sessions、Loops、Guided Reviews、MCP対応などのAI連携・自動化機能を多数追加
   update_frequency: 高
 evaluation:
-  score: 85
+  score: 88
   base_score: 70
   plus_points:
     - point: 5
@@ -34,6 +34,8 @@ evaluation:
       reason: 開発者のワークフロー（GitHub/GitLab連携）に深く統合されている
     - point: 5
       reason: 美しく直感的なUI/UXで、学習コストが低い
+    - point: 3
+      reason: Coding sessionsやLoopsなどAIを活用した強力な開発アシスト機能
   minus_points:
     - point: -3
       reason: UIおよび公式ドキュメントが日本語未対応
@@ -78,6 +80,9 @@ relationships:
 * **Roadmaps & Initiatives**: 四半期や年単位の大きな目標（Initiatives）と、それに紐づくプロジェクトの進捗をガントチャート風に可視化。
 * **Sync & Offline Mode**: 独自の同期エンジンにより、オフラインでも操作可能で、オンライン復帰時に即座に同期される。
 * **Linear Insights**: チームのベロシティやCycle Timeなどのメトリクスを自動的に可視化し、分析レポートを作成する。
+* **Linear Diffs**: Pull RequestのコードレビューをLinear上で高速に行う機能。Guided reviewsなどAI支援も提供。
+* **Coding sessions**: 課題をAIに割り当て、コードの修正とPR作成を自律的に行わせる機能。
+* **Loops**: チームの定期的なタスクやイベント駆動型の処理をAIエージェントに自動化させる機能。
 * **AI Features**:
   * **Linear Asks**: Slackやメールからのリクエストを自動的にIssue化し、重複検知などを行う。
   * **Triage Intelligence**: AIがIssueの内容を分析し、適切なチームや担当者を提案する。
@@ -101,20 +106,20 @@ relationships:
   * `C`キーを押して新しいIssueを作成。
   * `Cmd+K` (macOS) / `Ctrl+K` (Windows) でコマンドメニューを開き、あらゆる操作を実行。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **圧倒的なスピード**: ページ遷移やデータ保存がほぼ瞬時に行われ、待ち時間を感じさせない。
 * **キーボードファースト**: ほぼ全ての操作にショートカットキーが割り当てられており、マウスを使わずに操作可能。
 * **開発者体験 (DX) への配慮**: GitのコミットやPRとIssueが自動でリンクし、PRのマージでIssueを自動クローズするなどの連携が強力かつ設定が容易。
 * **洗練されたデザイン**: ミニマルで美しいUIは、使うこと自体を楽しくさせると評価が高い。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **カスタマイズ性の制限**: Jiraのようにワークフローを複雑に分岐させたり、画面構成を大幅に変えたりすることはできない。「Linearの流儀」に合わせる必要がある。
 * **日本語未対応**: 2026年1月現在、UIは英語のみ。日本語の入力・表示は問題ないが、メニューなどは全て英語。
 * **エンタープライズ機能**: 大規模組織向けの権限管理や監査ログなどはEnterpriseプランが必要で、Jiraほど細かくはない。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 ※価格は2026年1月時点の月額払い（目安）。年払いによる割引あり。
 
@@ -122,37 +127,37 @@ relationships:
 |---------|------|---------|
 | **Free** | 無料 | 無制限メンバー、2チームまで、250 Issuesまで。 |
 | **Basic** | $10/月 | 5チームまで、Issue数無制限、ファイルアップロード無制限、Adminロール。 |
-| **Business** | $16/月 | チーム数無制限、Private Teams、Linear Insights、Linear Asks、SLA、SSO(Google)。 |
+| **Business** | $16/月 | チーム数無制限、Private Teams、Linear Insights、Linear Asks、Loops、Code Intelligence、Coding sessions、SLA、SSO(Google)。 |
 | **Enterprise** | 要問い合わせ | SAML/SCIM、高度なセキュリティ、専任サポート、データレジデンシー。 |
 
 * **課金体系**: ユーザー数単位のサブスクリプション。
 * **無料トライアル**: Freeプランで多くの機能を試せる。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Vercel, Retool, Descript, The Browser Company (Arc), Ramp, Substack など、急成長中のテック企業やスタートアップで採用率が高い。
 * **導入事例**: アジャイル開発の高速化、GitHub連携によるエンジニアの負担軽減、透明性の高いロードマップ共有などに活用されている。
 * **対象業界**: 主にソフトウェア、インターネットサービス、SaaS業界。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: [Linear Docs](https://linear.app/docs) は非常に整理されており、読みやすい（英語）。
 * **コミュニティ**: Linear Community (Slack) があり、ユーザー同士の情報交換や機能リクエストが行われている。
 * **公式サポート**: アプリ内の「Contact Support」やメールでのサポートを提供。レスポンスは比較的早いと評判。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
-* **API**: GraphQL APIを提供しており、柔軟なデータ取得や操作が可能。Webhooksも完備。
+* **API**: GraphQL APIを提供しており、柔軟なデータ取得や操作が可能。Webhooksも完備。Vercel EveやMCPとの統合もサポート。
 * **外部サービス連携**:
-  * **開発**: GitHub, GitLab, Sentry
+  * **開発**: GitHub, GitLab, Sentry, GitHub Enterprise Cloud
   * **コミュニケーション**: Slack, Discord, Microsoft Teams
   * **デザイン**: Figma
   * **サポート**: Zendesk, Intercom, Front
   * **その他**: Google Sheets, Zapier, Notion
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -161,18 +166,18 @@ relationships:
 | **Sentry** | ◎ | エラーログから直接Issueを作成できる。 | 特になし |
 | **Slack** | ◎ | SlackからIssue作成、通知の受け取り、スレッド同期が可能。 | 通知量が多くなりがちなので設定が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: Google SSO (Business以上), SAML SSO (Enterprise)。
 * **データ管理**: データは暗号化されて保存。Enterpriseプランではデータレジデンシー（保存リージョンの選択）が可能か要確認（EUリージョン等の対応が進んでいる）。
 * **準拠規格**: SOC 2 Type II, GDPR, HIPAA (Enterpriseのみ対応) に準拠。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: 非常にモダンで応答性が高い。「Command Menu (Cmd+K)」ですべての操作にアクセスできるため、慣れると爆速で操作できる。
 * **学習コスト**: シンプルな構造のため、基本的な使い方はすぐに習得できる。ショートカットキーを覚えることで生産性がさらに向上する。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **Cyclesの活用**: 開発リズムを作るためにCycle（スプリント）を導入し、未完了タスクの持ち越しルール（Auto-close/Move）を設定する。
@@ -182,7 +187,7 @@ relationships:
   * **ステータスの増やしすぎ**: シンプルさが売りなので、Jiraのように過剰に細かいステータスやワークフローを作ろうとすると使いにくくなる。
   * **ロードマップの軽視**: 日々のIssue消化に追われ、Roadmap機能を使わないと、長期的なゴールが見えなくなる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2 (Google検索スニペットより), X (Twitter)
 * **総合評価**: 4.5/5.0 (G2)
@@ -197,8 +202,16 @@ relationships:
 * **特徴的なユースケース**:
   * スピードとキーボード操作を重視するエンジニアリングチームでのアジャイル開発の中核としての利用。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-08-13**: **Team initiatives / Enterprise-managed authorization for MCP**: イニシアチブのリーダーチーム設定機能と、MCPにおけるエンタープライズSSOのサポート。
+* **2026-07-30**: **Coding sessions on mobile / Guided Reviews GA**: モバイルアプリでのCoding sessions対応と、Guided Reviewsの一般提供開始。
+* **2026-07-23**: **Agent assisted editing**: ドキュメントのテキスト変更におけるエージェントによる編集サポート機能。
+* **2026-07-20**: **Introducing Loops**: スケジュールやイベント駆動で実行されるAI自律処理機能「Loops」の提供開始。
+* **2026-06-18**: **Agent assisted project updates / Vercel Eve**: AIによるプロジェクトアップデートのドラフト作成機能とVercel Eveによるカスタムエージェント作成サポート。
+* **2026-06-11**: **Coding sessions**: Linear内でAIが自律的にコードを書き換える「Coding sessions」の追加。
+* **2026-05-27**: **Linear Diffs**: Linear上でPull Requestのコードレビューを爆速で行える「Linear Diffs」の提供開始。
+* **2026-05-21**: **Project Slack channels / Linear Asks Agent**: 自動Slackチャンネル作成機能とSlackから直接Issueを作成できるLinear Asks機能の追加。
 * **2026-04-01**: **UI Refresh**: プロダクト全体のUIを刷新し、より直感的で高速な操作を実現。
 * **2026-03-25**: **AI Coding Tools Deeplink**: AIコーディングツール向けの追加ランチャー（Deeplink）を提供開始。
 * **2026-03-15**: **Send comment on Enter preference**: Enterキーでのコメント送信設定を追加。
@@ -206,30 +219,30 @@ relationships:
 * **2026-01-22**: **Linear Agent for Slack**: SlackでのAIエージェント機能を全プランに開放。自然言語でのIssue作成などが可能に。
 * **2025-12-17**: **Team Owners Role**: チーム単位での権限管理を強化する「Team Owner」ロールを追加。
 
-(出典: [Linear Changelog](https://linear.app/changelog))
+(出典: [製品アップデート情報](https://linear.app/changelog))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | 本ツール (Linear) | Jira | Asana | GitHub Projects |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 動作速度 | ◎<br><small>爆速</small> | △<br><small>重め</small> | ◯<br><small>標準</small> | ◯<br><small>標準</small> |
+| **基本機能** | 動作速度 | ◎<br><small>爆速 / AI強化</small> | △<br><small>重め</small> | ◯<br><small>標準</small> | ◯<br><small>標準</small> |
 | **開発連携** | Git統合 | ◎<br><small>深層統合</small> | ◎<br><small>強力</small> | △<br><small>連携可</small> | ◎<br><small>内蔵</small> |
 | **カスタマイズ** | ワークフロー | △<br><small>制限あり</small> | ◎<br><small>無限</small> | ◯<br><small>柔軟</small> | ◯<br><small>柔軟</small> |
 | **UX** | キーボード操作 | ◎<br><small>完全対応</small> | △<br><small>一部</small> | ◯<br><small>一部</small> | ◯<br><small>一部</small> |
 | **非機能要件** | 日本語対応 | ×<br><small>英語のみ</small> | ◯<br><small>対応</small> | ◎<br><small>対応</small> | ◯<br><small>対応</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール (Linear)** | 開発者特化の高速PMツール | 圧倒的なスピード、UX、GitHub連携、シンプルさ | 日本語未対応、複雑なワークフロー不可 | スピード重視のスタートアップ、エンジニア主体のチーム |
-| **Jira** | 業界標準の多機能ツール | 機能の網羅性、エコシステム、エンタープライズ対応 | 複雑さ、重さ、学習コスト | 大規模組織、厳密なプロセス管理が必要な場合 |
-| **Asana** | 汎用的なワークマネジメント | 直感的なUI、非エンジニアへの親和性、多機能 | コード連携の深さは専用ツールに劣る | マーケティングや営業など全社で統一したい場合 |
-| **GitHub Projects** | コードリポジトリ一体型 | 追加コスト不要、コードとの距離がゼロ | PM機能の深さ（レポート等）は専用ツールに劣る | GitHubのみで完結させたい小〜中規模チーム |
+| **本ツール (Linear)** | 開発者特化の高速PMツール | 圧倒的なスピード、UX、GitHub連携、シンプルさ（DiffsやCoding sessions等のAI機能も拡充） | 日本語未対応、複雑なワークフロー不可 | スピード重視のスタートアップ、エンジニア主体のチーム |
+| **Jira** | 業界標準の多機能ツール | 機能の網羅性、エコシステム、エンタープライズ対応（Jira Delivery Agent等のAI分析機能も追加） | 複雑さ、重さ、学習コスト | 大規模組織、厳密なプロセス管理が必要な場合 |
+| **Asana** | 汎用的なワークマネジメント | 直感的なUI、非エンジニアへの親和性、多機能（AI Teammatesによる業務自動化が強力） | コード連携の深さは専用ツールに劣る | マーケティングや営業など全社で統一したい場合 |
+| **GitHub Projects** | コードリポジトリ一体型 | 追加コスト不要、コードとの距離がゼロ（Copilot等のAI機能統合が強力） | PM機能の深さ（レポート等）は専用ツールに劣る | GitHubのみで完結させたい小〜中規模チーム |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Linearは「プロジェクト管理ツールは使いにくい」という常識を覆した革新的なツールである。機能の多さよりも「速さ」と「使い心地」を優先し、結果として開発チームの生産性を最大化することに成功している。日本語非対応やカスタマイズ性の低さはあるものの、それを補って余りある体験価値を提供している。
