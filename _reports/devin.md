@@ -57,7 +57,6 @@ relationships:
     - Manus
     - Deep Agents
     - Android Use
-    - Accomplish
 ---
 
 # **Devin 調査レポート**

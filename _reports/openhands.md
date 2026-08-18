@@ -51,7 +51,6 @@ relationships:
     - GitHub Copilot
     - Manus
     - TradingAgents
-    - Accomplish
 ---
 
 # **OpenHands 調査レポート**

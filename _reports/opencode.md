@@ -47,7 +47,6 @@ relationships:
   parent: ''
   children: []
   related_tools:
-    - Accomplish
     - OpenHands
     - Devin
     - Cline
