@@ -2,15 +2,15 @@
 title: Codex Pet Share 調査レポート
 tool_name: Codex Pet Share
 tool_reading: コーデックス ペット シェア
-category: 開発ツール
+category: CLIツール群
 developer: portons
 official_site: https://codex-pets.net/
 date: '2026-08-17'
 last_updated: '2026-08-17'
 tags:
   - オープンソース
+  - 開発者ツール
   - コミュニティ
-  - UI/UX
 description: Codex向けのピクセルペットを共有・閲覧・取得できるセルフホスト可能なWebアプリケーションプラットフォーム
 quick_summary:
   has_free_plan: true
