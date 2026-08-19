@@ -2,17 +2,17 @@
 title: NI Collabo 360 調査レポート
 tool_name: NI Collabo 360
 tool_reading: エヌアイコラボサンロクマル
-category: グループウェア
+category: コラボレーション/生産性
 developer: 株式会社NIコンサルティング
 official_site: https://www.ni-ware.com/
 date: '2026-08-18'
 last_updated: '2026-08-18'
 tags:
+  - SaaS
+  - クラウド
   - グループウェア
   - ワークフロー
-  - 経費精算
-  - テレワーク支援
-  - クラウド
+  - 勤怠管理
 description: スケジュール、文書管理、社内SNSからワークフロー、経費精算まで36の機能を統合した低価格・高機能な経営改善型グループウェア
 quick_summary:
   has_free_plan: false
