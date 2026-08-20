@@ -1,44 +1,36 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "ゲオあれこれレンタル 調査レポート"
-tool_name: "ゲオあれこれレンタル"
-tool_reading: "ゲオアレコレレンタル"
-category: "レンタルサービス"
-developer: "株式会社ゲオ"
-official_site: "https://geo-arekore.jp/"
-date: "2026-08-20"
-last_updated: "2026-08-20"
+title: ゲオあれこれレンタル 調査レポート
+tool_name: ゲオあれこれレンタル
+tool_reading: ゲオアレコレレンタル
+category: レンタルサービス
+developer: 株式会社ゲオ
+official_site: https://geo-arekore.jp/
+date: '2026-08-20'
+last_updated: '2026-08-20'
 tags:
-  - "レンタル"
-  - "サブスクリプション"
-  - "家電レンタル"
-description: "カメラや家電製品、スマホなどを短期または月額で手軽にレンタルできるサービス"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - レンタル
+  - サブスクリプション
+  - 家電レンタル
+description: カメラや家電製品、スマホなどを短期または月額で手軽にレンタルできるサービス
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "商品により異なる"
+  starting_price: 商品により異なる
   target_users:
-    - "個人ユーザー"
-    - "購入前にお試ししたい人"
-  latest_highlight: "カメラや家電製品、スマホなどを手軽にレンタル可能"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 個人ユーザー
+    - 購入前にお試ししたい人
+  latest_highlight: カメラや家電製品、スマホなどを手軽にレンタル可能
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "そのまま購入できる点や返却のしやすさが便利"
+      reason: そのまま購入できる点や返却のしやすさが便利
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "必要なときに必要なものを手軽にレンタルでき、購入前のお試しにも最適"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: 必要なときに必要なものを手軽にレンタルでき、購入前のお試しにも最適
 ---
 
 # **ゲオあれこれレンタル 調査レポート**
