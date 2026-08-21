@@ -21,7 +21,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - 個人開発者
-  latest_highlight: "2026年8月にビルド時間が40%削減され、2026年7月にAIモデル(Anthropic/OpenAI)向けのOIDC認証サポートとRender MCPサーバーのOAuthサポートが追加されました。"
+  latest_highlight: 2026年8月にビルド時間が40%削減され、2026年7月にAIモデル(Anthropic/OpenAI)向けのOIDC認証サポートとRender MCPサーバーのOAuthサポートが追加されました。
   update_frequency: 高
 evaluation:
   score: 85
