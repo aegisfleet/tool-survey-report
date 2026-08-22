@@ -226,7 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (e.key === '/' && heroSearchInput) {
+    const isKbdShortcut = e.key === '/' || ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K'));
+
+    if (isKbdShortcut && heroSearchInput) {
       e.preventDefault();
       heroSearchInput.focus();
       heroSearchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
