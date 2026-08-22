@@ -2,7 +2,7 @@
 title: Awesome Gemma 調査レポート
 tool_name: Awesome Gemma
 tool_reading: オーサム ジェンマ
-category: キュレーションリスト
+category: ナレッジベース/Wiki
 developer: Google DeepMind
 official_site: https://github.com/google-gemma/awesome-gemma
 date: '2026-08-21'
@@ -11,7 +11,7 @@ tags:
   - Gemma
   - オープンソース
   - LLM
-  - リソース集
+  - Wiki
 description: Google DeepMindのオープンモデルGemmaファミリに関する軽量かつ最先端のリソースをまとめた公式キュレーションリスト
 quick_summary:
   has_free_plan: true
