@@ -6,7 +6,7 @@ category: モバイル開発
 developer: Google
 official_site: https://developer.android.com/studio
 date: '2025-11-28'
-last_updated: '2026-04-07'
+last_updated: '2026-08-22'
 tags:
   - AI
   - エージェント
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - Android開発者
     - モバイルアプリ開発者
-  latest_highlight: 2026年4月に次期版「Panda」の安定版リリースに向けたアップデートが進行中。AIエージェント機能（UI生成、デバイス操作）がさらに強化。
+  latest_highlight: 2026年8月にQuail 3（2026.1.3 Patch 1）がリリース。Planning Modeの改善、MCP Marketplace、Merge Conflicts actionが追加。
   update_frequency: 高
 evaluation:
   score: 96
@@ -35,6 +35,8 @@ evaluation:
       reason: ローカルLLM対応やMCPサポートなど、オープンなエコシステムとの連携強化
     - point: 3
       reason: エミュレータ操作やスクリーンショットテストなど、実機検証のAI自動化が進んでいる
+    - point: 4
+      reason: Planning ModeやMCP Marketplaceにより、複雑なタスクや外部ツール連携のUXが向上している
   minus_points:
     - point: -5
       reason: 動作に高いシステム要件（特にメモリ）を必要とし、依然として重い
@@ -86,6 +88,9 @@ relationships:
 * **デバイス操作ツール**: AIエージェントがエミュレータや実機にアプリをデプロイし、スクリーンショット撮影やLogcat確認を行いながら自律的に修正を確認。
 * **自動Logcatリトレース**: R8で難読化されたスタックトレースを、AGP 9.0との連携により自動で元のソースコードにマッピング。
 * **Compose Preview**: リアルタイムプレビューに加え、AIによるレンダリングエラーの自動修正提案機能。
+* **Planning Mode**: `/plan`コマンドによるマルチステージ推論で、複雑なタスクの実行前に計画を立ててレビュー・修正できる。
+* **MCP Marketplace**: Settings画面（Settings > Tools > AI > MCP Servers）からModel Context Protocol (MCP) サーバーを簡単に検索・インストールできる。
+* **Merge Conflicts action**: Commitツールウィンドウの「Merge Conflicts with Agent」ボタンから、エージェントにマージコンフリクトを自動解決させることができる。
 
 ## **4. 開始手順・セットアップ**
 
@@ -141,17 +146,17 @@ relationships:
 * **コミュニティ**: Stack OverflowのAndroidタグ、Google Developer Groups (GDG)、Reddit (r/androiddev) が活発。
 * **公式サポート**: Issue Trackerでのバグ報告が可能だが、個別サポートはない。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: IntelliJ Platform Plugin SDKを利用したプラグイン開発が可能。
 * **外部サービス連携**:
   * **Firebase**: アプリ分析、データベース、認証などのバックエンド機能とシームレスに連携。
   * **GitHub / GitLab**: バージョン管理システムとの統合。
-  * **MCP (Model Context Protocol)**: Figmaなどの外部ツールと接続し、AIエージェントがデザインリソースなどを直接参照可能になった。
+  * **MCP (Model Context Protocol)**: Figmaなどの外部ツールと接続し、AIエージェントがデザインリソースなどを直接参照可能になった。「Settings > Tools > AI > MCP Servers」からMCPサーバーを簡単に検索・追加できるMarketplace機能も提供されている。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -160,28 +165,29 @@ relationships:
 | **Flutter** | ◯ | 公式プラグインによりサポートされるが、Flutter専用機能はVS Codeの方が軽快な場合も。 | IDE自体が重いため、Flutter開発ではVS Codeを選ぶ人も多い。 |
 | **C++ (NDK)** | △ | サポートはあるが、設定が複雑になりがち。 | ゲーム開発以外ではあまり推奨されない。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: Googleアカウントによる認証（Gemini利用時）。
 * **データ管理**: AI利用時のデータ送信については、GoogleのAIデータポリシーに準拠。ローカルLLMを使用することで、コードを外部に送信せずにAI機能を利用するオプションも提供。
 * **準拠規格**: 開発ツールとしての特定の認証はないが、Googleのセキュリティ基準で開発されている。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: IntelliJベースの多機能なUI。新UI（New UI）の採用により視認性が向上したが、依然として情報量は多い。
 * **学習コスト**: AIによる解説機能や「Geminiに聞く」機能により、エラー解決やAPI学習のハードルは下がっているが、ツール自体の習熟には時間がかかる。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **AIペアプログラミング**: Gemini Agent Modeを活用し、UI作成の初動をAIに任せて人間は微調整に集中する。
   * **ローカルLLMの活用**: 機密性の高いプロジェクトでは、Ollama等と連携してローカルでAI補完を行う。
   * **エミュレータ自動テスト**: AIによるデバイス操作機能を使い、基本的な動作確認を自動化する。
+  * **エージェントのPlanning Mode活用**: 複雑なタスクの実行前には `/plan` コマンドを使用し、エージェントの計画を事前にレビュー・修正することで手戻りを防ぐ。
 * **陥りやすい罠 (Antipatterns)**:
   * **低スペックマシンでの利用**: メモリ不足は生産性を著しく下げるため、最低16GB、できれば32GB以上のメモリを確保する。
   * **AIへの過度な依存**: AIが生成したコード（特に複雑なライフサイクル管理など）は必ず人間がレビューを行う。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Reddit, 開発者ブログ (2026年4月時点)
 * **総合評価**: 4.6/5.0 (推定)
@@ -196,8 +202,10 @@ relationships:
 * **特徴的なユースケース**:
   * デザインモック（Figma）をAIに読み込ませ、そのまま実装コードを生成させるフローが定着しつつある。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-08**: **Android Studio Quail 3 | 2026.1.3 Patch 1**
+  * Planning Modeの改善、MCP Marketplaceの追加、Merge Conflicts actionが追加。
 * **2026-04-01**: **Panda Feature Update**
   * AIエージェントの精度向上およびComposeプレビューの最適化。
 * **2026-01-30**: **Otter 3 Feature Drop (2025.2.3)**
@@ -209,9 +217,9 @@ relationships:
 
 (出典: [Android Studio release notes](https://developer.android.com/studio/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Android Studio | Visual Studio Code | Cursor |
 |:---:|:---|:---:|:---:|:---:|
@@ -221,15 +229,15 @@ relationships:
 | **非機能要件** | コスト | ◎<br><small>完全無料</small> | ◎<br><small>無料 (AIは有料)</small> | △<br><small>AI機能は有料</small> |
 | **環境** | 動作の軽快さ | △<br><small>重い</small> | ◎<br><small>軽い</small> | ◯<br><small>比較的軽い</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
 | **Android Studio** | **【公式・AI統合】**<br>Google公式のAndroid専用IDE。 | ・Android固有のAI機能（UI生成、実機操作）<br>・最新APIへの即応<br>・完全無料 | ・動作が重い<br>・Android以外には不向き | **Androidネイティブ開発の第一選択肢**。特にUI構築や実機テストをAIで効率化したい場合。 |
-| **Visual Studio Code** | **【汎用・軽量】**<br>拡張機能ベースの軽量エディタ。 | ・圧倒的な軽快さ<br>・Flutter開発での人気<br>・多言語対応 | ・Androidネイティブ機能（プロファイラ等）が弱い<br>・AI機能はCopilot依存でAndroid特化ではない | **Flutter開発**や、低スペックPCでの開発。Androidネイティブ機能に深く触れない場合。 |
-| **Cursor** | **【AI特化】**<br>AIファーストのコードエディタ。 | ・コードベース全体の変更が得意<br>・高度なリファクタリング<br>・VS Code互換 | ・Android固有のプレビューやビルド機能は別途必要<br>・有料プラン推奨 | **AIによるコード記述・修正を最優先する場合**。ただしビルドやデバッグには別途Android Studioが必要になることが多い。 |
+| **Visual Studio Code** | **【汎用・軽量】**<br>拡張機能ベースの軽量エディタ。<br>v1.134にてAgent機能が強化された。 | ・圧倒的な軽快さ<br>・Flutter開発での人気<br>・多言語対応 | ・Androidネイティブ機能（プロファイラ等）が弱い<br>・AI機能はCopilot依存でAndroid特化ではない | **Flutter開発**や、低スペックPCでの開発。Androidネイティブ機能に深く触れない場合。 |
+| **Cursor** | **【AI特化】**<br>AIファーストのコードエディタ。<br>Cloud Agentsによる高速化やエージェント機能の改善が続いている。 | ・コードベース全体の変更が得意<br>・高度なリファクタリング<br>・VS Code互換 | ・Android固有のプレビューやビルド機能は別途必要<br>・有料プラン推奨 | **AIによるコード記述・修正を最優先する場合**。ただしビルドやデバッグには別途Android Studioが必要になることが多い。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   * Android Studioは、単なる開発環境から「AIを搭載した開発パートナー」へと進化を遂げた。特に「Otter」リリース以降のAgent ModeやMCP対応により、デザインから実装、テストまでのワークフローが劇的に効率化されている。Android開発においては、他の汎用エディタ（Cursor等）と比較しても、プラットフォーム固有のAI機能（プレビュー連携、デバイス操作）の強みが勝るため、依然として必須かつベストなツールである。
