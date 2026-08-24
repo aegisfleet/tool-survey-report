@@ -6,7 +6,7 @@ category: 構成管理
 developer: Red Hat
 official_site: https://www.ansible.com/
 date: '2025-10-27'
-last_updated: '2026-04-08'
+last_updated: "2026-08-25"
 tags:
   - CI/CD
   - DevOps
@@ -24,7 +24,7 @@ quick_summary:
     - インフラエンジニア
     - DevOpsエンジニア
     - SRE
-  latest_highlight: 2025年11月にansible-core 2.20がリリース
+  latest_highlight: "2026年8月にansible-core 2.21.3等のマイナーアップデートをリリース"
   update_frequency: 高
 evaluation:
   score: 85
@@ -93,7 +93,42 @@ relationships:
 * **Automation Controller (旧Ansible Tower)**: 有償版で提供されるWeb UI。RBAC、ジョブスケジューリング、ワークフロー管理、REST APIなどを提供。
 * **Event-Driven Ansible**: 監視ツールなどからのイベントをトリガーに、自動的に修復や対応アクションを実行する機能。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: エージェントレスのプッシュ型クライアント・サーバーモデル。
+* **主要コンポーネントとデータフロー**:
+  * **Control Node (コントロールノード)**: Ansibleがインストールされ、Playbookを実行する起点となるマシン。
+  * **Managed Node (マネージドノード)**: 操作対象となるサーバーやネットワーク機器。
+  * コントロールノードからマネージドノードに対して、主にSSH（Linux/Unix系）やWinRM（Windows系）を用いて接続し、必要なPythonモジュール（またはPowerShellモジュール）を転送して実行、完了後に結果を回収してモジュールを削除する。
+* **特筆すべき要素技術**:
+  * **エージェントレス**: 管理対象ノード側に専用のデーモンプロセスを常駐させる必要がない。
+  * **Python/PowerShell**: 転送されたモジュールは対象ノード上のPython環境（Windowsの場合はPowerShell）で実行される。
+
+```mermaid
+flowchart LR
+    subgraph Control_Node[Control Node]
+        A[Ansible Engine]
+        B[Inventory]
+        C[Playbooks/Roles]
+        A --- B
+        A --- C
+    end
+
+    subgraph Managed_Nodes[Managed Nodes]
+        D[Linux Server]
+        E[Network Device]
+        F[Windows Server]
+    end
+
+    A -- "SSH / Python" --> D
+    A -- "SSH / CLI" --> E
+    A -- "WinRM / PowerShell" --> F
+
+    style Control_Node fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style Managed_Nodes fill:#e6f7ff,stroke:#0066cc,stroke-width:2px
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * **Control Node (実行環境)**: Linux, macOS, WSL等のPythonが動作する環境 (Windowsネイティブは非推奨)。Python 3.10以上推奨。
@@ -140,21 +175,21 @@ relationships:
      ansible-playbook -i hosts.ini site.yml
      ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **エージェントレス**: 管理対象ノードに専用エージェントをインストールする必要がなく、SSHやWinRMなどの標準プロトコルで通信するため、導入障壁が非常に低い。
 * **シンプルで可読性が高い**: YAML形式で記述するため、プログラマーでなくても読み書きしやすく、ドキュメントとしても機能する。
 * **強力なコミュニティとエコシステム**: Red Hatの支援と巨大なオープンソースコミュニティにより、ほぼ全ての主要なプラットフォームやサービスに対応したモジュールが存在する。
 * **冪等性 (Idempotency)**: 多くのモジュールが冪等性を担保するように作られており、何度実行してもシステムがあるべき状態に収束するため、安心して実行できる。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **実行速度**: 大規模な環境（数千ノード以上）では、SSH接続のオーバーヘッドによりエージェント型ツール（Chef, Puppet等）に比べて実行速度が遅くなる傾向がある。
 * **状態管理を行わない**: Terraformのようにインフラ全体の「状態 (State)」を保持・管理するわけではないため、リソースの削除や依存関係の解決には注意が必要。
 * **Windows操作の複雑さ**: Windowsも管理可能だが、WinRMの設定やPowerShellの知識が必要となり、Linux管理に比べると若干ハードルが高い。
 * **GUIは有償**: エンタープライズ向けのGUI管理ツール (Automation Controller) は有償製品 (Red Hat Ansible Automation Platform) に含まれており、OSS版では利用できない（代替OSSとしてAWXがあるがサポートなし）。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 Ansibleはオープンソースソフトウェア (OSS) ですが、エンタープライズ向けの有償製品も提供されています。
 
@@ -166,7 +201,7 @@ Ansibleはオープンソースソフトウェア (OSS) ですが、エンター
 * **課金体系**: 有償版は管理対象ノード数に基づく年間サブスクリプション方式。
 * **無料トライアル**: Red Hat Ansible Automation Platformには60日間の無料トライアルあり。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Microsoft, NASA, Hootsuite, Splunk, NEC, SoftBankなど、世界中のあらゆる規模・業種の企業で採用されています。
 * **導入事例**:
@@ -174,20 +209,20 @@ Ansibleはオープンソースソフトウェア (OSS) ですが、エンター
   * **Hootsuite**: サーバーのプロビジョニングとアプリケーションデプロイを自動化し、リリースの信頼性を向上。
 * **対象業界**: 通信、金融、製造、Webサービスなど全業界。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: [Ansible Documentation](https://docs.ansible.com/) は非常に包括的で、チュートリアル、モジュールリファレンス、ベストプラクティスが網羅されています。
 * **コミュニティ**: Ansible Forum, GitHub Issues, Reddit (r/ansible) などで活発な議論が行われています。日本国内でもAnsibleユーザー会などが活動しています。
 * **公式サポート**: Red Hat Ansible Automation Platform契約者には、Red Hatによるエンタープライズレベルのサポートが提供されます。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 有償版のAutomation ControllerはREST APIを提供しており、外部システムからジョブの実行やステータス確認が可能です。
 * **外部サービス連携**: AWS, Azure, GCP, VMware, OpenStack, Cisco, Juniper, F5, Palo Alto Networks, ServiceNow, Slack, Datadogなど、数多くのプラットフォームやツールと標準で連携可能です。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 Ansibleは構成管理ツールであるため、デプロイ対象や実行環境としての相性を記載します。
 
@@ -198,18 +233,18 @@ Ansibleは構成管理ツールであるため、デプロイ対象や実行環�
 | **Windows** | ◯ | WinRM経由でPowerShellを実行可能。 | 初期設定がLinuxより複雑。 |
 | **Docker / Kubernetes** | △ | コンテナのビルドやK8sリソース管理も可能だが、専用ツールの方が適している場合が多い。 | DockerfileやHelm/Kustomizeの方が一般的。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: SSH鍵認証やKerberos認証など、標準的でセキュアなプロトコルを使用します。Automation ControllerではLDAP, SAML, OIDC連携が可能です。
 * **データ管理**: Ansible Vaultにより、パスワードや秘密鍵をリポジトリ内で暗号化して管理できます。
 * **準拠規格**: Red Hat Ansible Automation Platformは、FIPS 140-2などのセキュリティ基準に対応しています。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: OSS版はCLIベースであり、テキストエディタとターミナルで操作します。シンプルですが、視覚的な管理機能はありません。有償版やAWXを使うとWeb GUIが利用できます。
 * **学習コスト**: YAMLの構文が平易であるため、学習コストは低めです。プログラミング経験がなくても、インフラの知識があれば比較的すぐに使い始めることができます。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **ディレクトリ構成の標準化**: 公式推奨のディレクトリ構成に従い、Rolesを活用して再利用性を高める。
@@ -220,7 +255,7 @@ Ansibleは構成管理ツールであるため、デプロイ対象や実行環�
   * **シェルモジュールの多用**: `shell`や`command`モジュールばかり使うと冪等性が損なわれるため、可能な限り専用モジュールを使用する。
   * **機密情報の平文保存**: パスワードなどを平文で書かず、必ずAnsible Vaultや外部のシークレット管理ツールを使用する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra
 * **総合評価**: 4.6/5.0 (G2)
@@ -235,37 +270,39 @@ Ansibleは構成管理ツールであるため、デプロイ対象や実行環�
 * **特徴的なユースケース**:
   * 毎月のセキュリティパッチ適用作業の全自動化や、新規サーバー構築時のベースライン設定の適用。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-08-10 (ansible-core 2.21.3 / 2.20.8 / 2.19.12 / 2.18.19)**: 各サポート対象バージョンに対するセキュリティおよびバグ修正を含むマイナーアップデート。
+* **2026-08-03 (ansible-core 2.21.3rc1)**: 次期マイナーリリース候補版。
 * **2026-04-06 (ansible-core 2.21.0b1)**: 次期メジャーリリース ansible-core 2.21 のベータ版がリリース。
-* **2026-03-23 (ansible-core 2.20.4, 2.19.8, 2.18.15, 2.16.18)**: 各サポート対象バージョンに対するバグフィックスとセキュリティ修正を含むマイナーアップデート。
-* **2025-12-09 (ansible-core 2.20.1)**: セキュリティ修正とバグフィックスが含まれるマイナーアップデート。
 * **2025-11-15 (AAP 2.6)**: Red Hat Ansible Automation Platform 2.6 リリース。イベント駆動型自動化（Event-Driven Ansible）機能の強化。
 
-(出典: [Ansible Core Release Notes](https://docs.ansible.com/ansible/latest/reference_appendices/release_and_maintenance.html), [Red Hat Blog](https://www.redhat.com/en/blog))
+(出典: [Ansible GitHub Releases](https://github.com/ansible/ansible/releases), [Red Hat Blog](https://www.redhat.com/en/blog))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Ansible | Terraform | Chef/Puppet |
-|:---:|:---|:---:|:---:|:---:|
-| **アーキテクチャ** | エージェントレス | ◎<br><small>SSH/WinRMで接続</small> | -<br><small>該当なし</small> | ×<br><small>各ノードに導入必要</small> |
-| **構成記述** | 言語 | YAML<br><small>学習コスト低</small> | HCL<br><small>独自の宣言型</small> | Ruby/DSL<br><small>プログラミング知識要</small> |
-| **利用シーン** | OS内部設定 | ◎<br><small>パッケージ/サービス/設定ファイル</small> | △<br><small>UserData等で補完</small> | ◎<br><small>詳細な構成維持</small> |
-| **利用シーン** | クラウドプロビジョニング | ◯<br><small>APIを叩くモジュール群</small> | ◎<br><small>インフラ構築のデファクト</small> | ◯<br><small>プラグインで対応</small> |
-| **状態管理** | Stateファイル | ×<br><small>状態は持たず、都度確認</small> | ◎<br><small>リソースライフサイクル管理</small> | ×<br><small>都度適用</small> |
-| **学習コスト** | 難易度 | 低<br><small>YAMLが読めれば概ね使える</small> | 中<br><small>HCLとStateの概念理解</small> | 高<br><small>RubyベースのDSL</small> |
+| 機能カテゴリ | 機能項目 | Ansible | Terraform | OpenTofu | Pulumi | Chef/Puppet |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **アーキテクチャ** | エージェントレス | ◎<br><small>SSH/WinRMで接続</small> | -<br><small>該当なし</small> | -<br><small>該当なし</small> | -<br><small>該当なし</small> | ×<br><small>各ノードに導入必要</small> |
+| **構成記述** | 言語 | YAML<br><small>学習コスト低</small> | HCL<br><small>独自の宣言型</small> | HCL<br><small>完全互換</small> | TS/Python等<br><small>汎用言語</small> | Ruby/DSL<br><small>プログラミング知識要</small> |
+| **利用シーン** | OS内部設定 | ◎<br><small>パッケージ/サービス/設定ファイル</small> | △<br><small>UserData等で補完</small> | △<br><small>UserData等で補完</small> | △<br><small>UserData等で補完</small> | ◎<br><small>詳細な構成維持</small> |
+| **利用シーン** | クラウドプロビジョニング | ◯<br><small>APIを叩くモジュール群</small> | ◎<br><small>インフラ構築のデファクト</small> | ◎<br><small>Terraform互換/OSS</small> | ◎<br><small>高い表現力とテスト容易性</small> | ◯<br><small>プラグインで対応</small> |
+| **状態管理** | Stateファイル | ×<br><small>状態は持たず、都度確認</small> | ◎<br><small>リソースライフサイクル管理</small> | ◎<br><small>暗号化等機能追加中</small> | ◎<br><small>Pulumi Cloud推奨</small> | ×<br><small>都度適用</small> |
+| **学習コスト** | 難易度 | 低<br><small>YAMLが読めれば概ね使える</small> | 中<br><small>HCLとStateの概念理解</small> | 中<br><small>Terraformと同等</small> | 中<br><small>プログラミング知識が必要</small> | 高<br><small>RubyベースのDSL</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Ansible** | 手続き型に近い宣言的記述、エージェントレス。 | 導入が容易、学習コストが低い、OS設定やアプリデプロイに強い。 | 状態管理がないためリソース削除等が苦手。大規模環境での速度。 | 既存サーバーの設定管理、アプリデプロイ、ネットワーク機器管理。 |
-| **Terraform** | 宣言的、リソースの状態を管理。 | クラウドインフラのプロビジョニングとライフサイクル管理に最適。 | OS内部の設定は苦手（UserData等で補完）。学習コストがやや高い。 | クラウドインフラ（VPC, EC2, RDS等）の構築・管理。 |
-| **Chef / Puppet** | エージェント型、マニフェスト管理。 | 大規模環境での構成維持能力が高い。複雑な依存関係の解決。 | エージェント導入の手間、学習コストが高い（Ruby等の知識が必要）。 | 数千台規模のサーバー構成を厳密に管理・維持する必要がある場合。 |
+| **Terraform** | IaCのデファクトスタンダード。HCL採用。 | 圧倒的な実績とエコシステム。クラウドインフラ管理に最適。 | BUSLライセンス。OS内部の設定は苦手。 | エンタープライズでの標準化、クラウドインフラ構築・管理。 |
+| **OpenTofu** | TerraformのOSSフォーク。完全互換。 | ライセンスフリー（MPL 2.0）。コミュニティ主導の迅速な機能追加。 | 実績が発展途上。商用サポートの限定性。 | ライセンス料やベンダーロックインを回避したい場合。OSSを重視する組織。 |
+| **Pulumi** | 汎用言語で記述するモダンIaC。AI搭載。 | 高い表現力、テスト容易性、開発者との親和性が高い。 | HCLに比べるとコミュニティが小さく、インフラ独自概念の学習が必要。 | アプリ開発者がインフラも担当する場合。複雑なロジックが必要な場合。 |
+| **Chef / Puppet** | エージェント型、マニフェスト管理。 | 大規模環境での構成維持能力が高い。複雑な依存関係の解決。 | エージェント導入の手間、学習コストが高い。 | 数千台規模のサーバー構成を厳密に管理・維持する必要がある場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Ansibleは、そのシンプルさとエージェントレスという特性から、構成管理ツールの決定版としての地位を確立しています。インフラ構築からアプリケーションデプロイ、運用自動化まで幅広く活用でき、学習コストも低いため、多くのチームにとって最初の選択肢となるツールです。
