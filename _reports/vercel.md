@@ -6,7 +6,7 @@ category: OS/プラットフォーム
 developer: Vercel Inc.
 official_site: https://vercel.com
 date: '2025-10-22'
-last_updated: '2026-04-07'
+last_updated: '2026-08-24'
 tags:
   - AI
   - CI/CD
@@ -22,7 +22,7 @@ quick_summary:
     - フロントエンド開発者
     - スタートアップ
     - AIエンジニア
-  latest_highlight: 2026年4月にAI GatewayにZDR（Zero Data Retention）とプロンプトトレーニングオプトアウト機能を追加
+  latest_highlight: 2026年8月にVercel Sandboxのグローバル展開とDeployment Storageの新しい課金体系を発表
   update_frequency: 高
 evaluation:
   score: 88
@@ -44,8 +44,6 @@ relationships:
   related_tools:
     - Cloudflare
     - Render
-    - Vercel Agent Skills
-    - Hono
 ---
 
 # **Vercel 調査レポート**
@@ -88,7 +86,41 @@ relationships:
 * **Observability**: Web Vitalsの計測、ログのリアルタイム監視、OpenTelemetry対応など、アプリケーションの健全性を可視化します。
 * **Vercel Toolbar**: 画面上にオーバーレイ表示されるツールバーで、コメント機能やアクセシビリティチェック、機能フラグの切り替えが可能。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: フロントエンドをホストするエッジネットワーク（CDN）と、サーバーレス関数・エッジ関数を実行するコンピュート基盤を組み合わせた「Frontend Cloud」アーキテクチャ。
+* **主要コンポーネントとデータフロー**:
+  * **Git Integration**: GitHub等へのプッシュをフックし、自動ビルドとデプロイメントパイプラインをトリガー。
+  * **Edge Network**: ビルドされた静的アセット（HTML, CSS, JS, 画像など）をグローバルに分散されたエッジロケーションにキャッシュし、ユーザーへ最速で配信。
+  * **Fluid Compute**: 動的なリクエストやAPIコールは、サーバーレス関数（Node.js, Python等）またはエッジ関数（軽量・低遅延）で処理。トラフィックに応じて自動スケール。
+  * **AI SDK / AI Gateway**: LLMとの通信を抽象化・キャッシュし、ストリーミングレスポンスを容易に実装できる基盤を提供。
+* **特筆すべき要素技術**:
+  * **Zero Config**: Next.js等の主要フレームワークを自動認識し、ビルド設定やルーティングを自動最適化。
+  * **ISR (Incremental Static Regeneration)**: 静的サイトジェネレーションの高速性と、動的サイトの鮮度を両立するNext.jsのコア機能をネイティブサポート。
+
+```mermaid
+graph TD
+    subgraph 開発環境
+        Dev[開発者] -->|Git Push| Repo(GitHub / GitLab)
+    end
+
+    subgraph Vercel
+        Repo -->|Webhook| CI[Build Pipeline]
+        CI -->|アセット配置| EdgeCDN[Edge Network<br/>静的アセットキャッシュ]
+        CI -->|関数デプロイ| Compute[Fluid Compute<br/>Serverless / Edge Functions]
+    end
+
+    subgraph 外部連携
+        Compute <--> API(外部API / データベース)
+        Compute <--> AIGW[AI Gateway]
+        AIGW <--> LLM(OpenAI / Anthropic 等)
+    end
+
+    User[ユーザー] -->|リクエスト| EdgeCDN
+    User -->|動的処理| Compute
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Node.js環境
@@ -115,20 +147,20 @@ relationships:
   # 質問に答えるだけでデプロイ完了
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **圧倒的な開発者体験 (DX)**: 設定ファイルなし（Zero Config）で動作する手軽さと、GitHub連携によるシームレスなワークフローは業界標準となっています。
 * **Next.jsとの完全な統合**: Next.jsの新機能（Server Components, Server Actionsなど）がいち早く、かつ最適化された状態でサポートされます。
 * **AI開発のエコシステム**: AI SDKによるLLM連携の容易さや、v0によるUI生成など、モダンなAIアプリ開発に必要なツールが揃っています。
 * **グローバルパフォーマンス**: 自動的に最適化される画像配信や、エッジネットワークによるキャッシュ戦略により、高いパフォーマンスを実現します。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **従量課金の複雑さ**: Functionの実行時間、データ転送量、Edge Request数など課金項目が多岐にわたり、トラフィック急増時のコスト見積もりが難しい場合があります。
 * **プラットフォーム依存**: Vercel固有の機能（Edge Config, Vercel KVなど）に深く依存すると、他社サービスへの移行（ベンダーロックイン解除）が難しくなる可能性があります。
 * **日本語サポート**: ドキュメントやダッシュボードは基本的に英語です。日本のコミュニティは活発ですが、公式サポートとのやり取りは英語が基本となります。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---|---|---|
@@ -136,29 +168,29 @@ relationships:
 | **Pro** | $20/ユーザー/月 | チーム向け。商用利用可。$20分の利用クレジット込。高速ビルド、プレビュー制限解除。 |
 | **Enterprise** | カスタム | 大規模組織向け。SSO、SLA (99.99%)、専任サポート、高度なセキュリティ (WAFルールセット等)。 |
 
-* **課金体系**: Proプラン以上は基本料金に加え、リソース使用量（Function CPU時間、帯域、リクエスト数など）に応じた従量課金。
+* **課金体系**: Proプラン以上は基本料金に加え、リソース使用量（Function CPU時間、帯域、リクエスト数など）に応じた従量課金。新たにDeployment Storageが導入され、ProおよびEnterpriseチームの新規ストレージは月額 $0.10/GB で課金されます。
 * **無料トライアル**: Proプランの14日間トライアルあり。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: The Washington Post, Uber, Notion, Loom, Under Armour, Nintendo (一部キャンペーンサイト等)
 * **導入事例**: 大規模メディアサイトの高速配信、SaaSアプリケーションのフロントエンドホスティング、AIスタートアップのサービス基盤など。
 * **対象業界**: テック企業、メディア、Eコマース、スタートアップ全般。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 非常に高品質で詳細。Next.jsのドキュメントと合わせて、フロントエンド開発の教科書的な存在です。
 * **コミュニティ**: GitHub DiscussionsやDiscordが非常に活発。テンプレートも豊富に公開されています。
 * **公式サポート**: Proプランではメールサポート。EnterpriseではSlack連携や専任のカスタマーサクセスマネージャーがつきます。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: プロジェクト管理、デプロイ、DNS設定などほぼ全ての操作が可能なREST APIを提供。
 * **外部サービス連携**: Contentful, Sanity (CMS), Supabase, PlanetScale (DB), Datadog (監視) など、Marketplaceからワンクリックで連携可能。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -167,18 +199,18 @@ relationships:
 | **Svelte / Nuxt** | ◯ | 公式フレームワークプリセットがあり、スムーズに動作。 | Next.jsほど深い最適化（PPRなど）は一部制限がある場合も。 |
 | **Python / Go** | △ | Serverless Functionsとして動作するが、メインはNode.js。 | 重い処理や長時間実行には向かない。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: GitHub/GitLab/BitbucketアカウントによるOAuth。EnterpriseではSAML SSO、Okta連携などが可能。
 * **データ管理**: データは転送中および保存時に暗号化。バックエンドはAWSやAzureを利用。
 * **準拠規格**: SOC 2 Type 2, ISO 27001, PCI DSS, HIPAA, GDPR, EU-U.S. Data Privacy Framework (DPF)。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: 黒と白を基調とした洗練されたデザイン（Vercel Design）。直感的で使いやすく、多くの開発者向けツールのUI手本となっています。
 * **学習コスト**: Git操作ができればデプロイまでは一瞬です。高度な機能（Middleware, Edge Functions）を使いこなすにはWeb標準やNext.jsの知識が必要です。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法**:
   * **Vercel Toolbarの活用**: 開発中のフィードバックやアクセシビリティチェックをブラウザ上で完結させる。
@@ -188,7 +220,7 @@ relationships:
   * **Serverless Functionsのタイムアウト**: デフォルトの実行時間制限（プランによる）を超えないように、重い処理は非同期キュー（Inngest等）に逃がす。
   * **`_middleware` の乱用**: すべてのリクエストで実行されるため、安易に重い処理を書くとレイテンシ悪化とコスト増につながる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: Google検索結果（技術ブログ・SNS等からの引用）
 * **総合評価**: 調査対象外
@@ -202,8 +234,15 @@ relationships:
 * **特徴的なユースケース**:
   * AIスタートアップが、バックエンドを持たずにNext.js + Vercel AI SDKだけでチャットアプリを構築・運用している事例。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-08-24**: **Vercel Sandbox Global Availability**: Vercel Sandboxがiad1, sfo1, cle1, cdg1の各リージョンでグローバルに利用可能に。
+* **2026-08-21**: **Deployment Storage**: ロールバック用のDeployment Storageについて、Pro/Enterprise向けに月額 $0.10/GB の課金体系を発表。
+* **2026-08-21**: **Vercel CLI Updates**: DNSレコード、ドメイン更新、プロジェクト設定の管理をターミナルから行えるコマンド拡充。
+* **2026-08-21**: **GPT-5.6 Sol Pricing**: GPT-5.6 Solの価格が引き下げられ、AI Gateway経由の利用がさらに安価に。
+* **2026-08-21**: **DeepSeek V4 Flash Vision on AI Gateway**: AI Gatewayを通じてDeepSeek V4 Flashの画像入力が可能に。
+* **2026-08-21**: **Connect v0 apps**: v0で構築したアプリやエージェントが、SlackやGoogleなど100以上の外部サービスと安全に連携可能に。
+* **2026-08-21**: **Always-on tracing**: 本番環境およびプレビュー環境のトラフィックからのトレース常時収集が可能になり、デバッグ体験が向上。
 * **2026-04-06**: **Zero Data Retention on AI Gateway**: AI GatewayにチームレベルでのZero Data Retentionとプロンプトトレーニングオプトアウト機能が追加。
 * **2026-04-06**: **Vercel CLI scope**: CLIコマンド(`vc project ls`等)がローカルディレクトリのスコープに自動適用されるように。
 * **2026-04-06**: **Marketplace databases**: ダッシュボードから直接Postgres等のデータベースへSQLクエリの実行とデータ管理が可能に。
@@ -217,31 +256,28 @@ relationships:
 
 (出典: [Vercel Changelog](https://vercel.com/changelog))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Vercel | Cloudflare Pages | Netlify | AWS Amplify |
+| 機能カテゴリ | 機能項目 | Vercel | Cloudflare | Render | Openship |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | Gitデプロイ | ◎<br><small>超高速・ゼロコンフィグ</small> | ◯<br><small>高速だがビルド環境による</small> | ◎<br><small>老舗の安定感</small> | ◯<br><small>AWS連携前提</small> |
-| **フレームワーク** | Next.js対応 | ◎<br><small>公式・最新機能即応</small> | △<br><small>一部機能制限あり</small> | ◯<br><small>プラグインで対応</small> | ◯<br><small>アダプターで対応</small> |
-| **エッジ/CDN** | パフォーマンス | ◎<br><small>Fluid Compute</small> | ◎<br><small>世界最強クラスのCDN</small> | ◯<br><small>標準的</small> | ◯<br><small>CloudFront利用</small> |
-| **AI機能** | SDK/Gateway | ◎<br><small>AI SDK, v0など充実</small> | ◯<br><small>Workers AI</small> | △<br><small>AI機能はあるが限定的</small> | ◯<br><small>Bedrock連携</small> |
-| **環境** | セルフホスト対応 | ×<br><small>SaaSのみ</small> | ×<br><small>SaaSのみ</small> | ×<br><small>SaaSのみ</small> | ×<br><small>クラウドのみ</small> |
+| **基本機能** | Gitデプロイ | ◎<br><small>超高速・ゼロコンフィグ</small> | ◯<br><small>Pagesで対応</small> | ◯<br><small>バックエンドも統合デプロイ</small> | ◎<br><small>セルフホストで実現</small> |
+| **フレームワーク** | Next.js対応 | ◎<br><small>公式・最新機能即応</small> | △<br><small>一部機能制限あり</small> | ◯<br><small>Node.js環境として動作</small> | ◯<br><small>標準的な対応</small> |
+| **エッジ/CDN** | パフォーマンス | ◎<br><small>Fluid Compute</small> | ◎<br><small>世界最強クラスのCDN</small> | ◯<br><small>標準的</small> | △<br><small>自前構築のネットワークに依存</small> |
+| **AI機能** | SDK/Gateway | ◎<br><small>AI SDK, v0など充実</small> | ◯<br><small>Workers AI</small> | ×<br><small>特化機能なし</small> | ×<br><small>特化機能なし</small> |
+| **環境** | セルフホスト対応 | ×<br><small>SaaSのみ</small> | ×<br><small>SaaSのみ</small> | ×<br><small>SaaS/PaaSのみ</small> | ◎<br><small>完全オープンソース</small> |
 
-*(注: セルフホスト可能でVercelライクなデプロイ環境を構築できるツールとして、**Openship** なども存在する。)*
-
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
 | **Vercel** | Next.js特化のFrontend Cloud | 圧倒的なDX、AI機能の統合、Next.js最適化 | コスト管理の複雑さ、AWS等への依存 | Next.js採用時、開発スピードとDXを最優先する場合。 |
-| **Cloudflare** | セキュリティとCDNの巨人 | エグレス料金無料(R2)、セキュリティ機能、Workers | Next.jsの全機能対応には遅れがある場合も | コストを抑えたい、セキュリティ重視、静的サイト中心の場合。 |
-| **Netlify** | Jamstackのパイオニア | 安定したエコシステム、予測しやすい料金 | Vercelに比べると新機能（特にAI）の投入が穏やか | 老舗の安心感、Next.js以外のSSGを使う場合。 |
-| **AWS Amplify** | AWSのフルスタックサービス | AWS全サービスとのネイティブ連携 | 設定が複雑になりがち、DXはVercelに劣る | 既にAWSインフラに深く依存しているシステムの場合。 |
+| **Cloudflare** | セキュリティとCDNの巨人 | エグレス料金無料(R2)、高度なセキュリティ機能、Workers | Next.jsの全機能対応には遅れがある場合も | コストを抑えたい、セキュリティ重視、静的サイトやエッジ処理中心の場合。 |
+| **Render** | シンプルな統合PaaS | フロントからDBまで単一プラットフォームで管理、予測しやすい料金 | AI特化の機能やNext.jsの高度なエッジ機能は持たない | データベースを含むフルスタックアプリを簡単にデプロイしたい場合。 |
 | **Openship** | オープンソースのデプロイメントツール | 自身のサーバーでVercelライクなDXを無料で実現、ロックインなし | 完全マネージド版が未提供、大規模実績が少ない | インフラ費用を抑えつつ自前環境でPaaSのような手軽さを求める場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Vercelは、モダンなWebフロントエンド開発、特にNext.jsエコシステムにおいて、文句なしのリーダー的存在です。「Frontend Cloud」というカテゴリを確立し、単なるホスティングを超えて、AI統合（AI SDK/Gateway）やUI生成（v0）まで踏み込んだ開発プラットフォームへと進化しています。2026年時点でも、そのイノベーションの速度は衰えておらず、開発者が「作りたいもの」に集中するための最高の環境を提供し続けています。
