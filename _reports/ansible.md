@@ -6,7 +6,7 @@ category: 構成管理
 developer: Red Hat
 official_site: https://www.ansible.com/
 date: '2025-10-27'
-last_updated: "2026-08-25"
+last_updated: '2026-08-25'
 tags:
   - CI/CD
   - DevOps
@@ -24,7 +24,7 @@ quick_summary:
     - インフラエンジニア
     - DevOpsエンジニア
     - SRE
-  latest_highlight: "2026年8月にansible-core 2.21.3等のマイナーアップデートをリリース"
+  latest_highlight: 2026年8月にansible-core 2.21.3等のマイナーアップデートをリリース
   update_frequency: 高
 evaluation:
   score: 85
