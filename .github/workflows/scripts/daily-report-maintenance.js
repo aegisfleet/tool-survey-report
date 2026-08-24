@@ -11,23 +11,6 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Loads the report template content.
- * @param {string} templatePath
- * @param {{warning: Function, info: Function}} core
- * @return {string}
- */
-function loadTemplate(templatePath, core) {
-  try {
-    const content = fs.readFileSync(templatePath, 'utf8');
-    core.info(`Template loaded: ${templatePath} (${content.length} bytes)`);
-    return content;
-  } catch (error) {
-    core.warning(`Failed to load template: ${error.message}`);
-    return '';
-  }
-}
-
-/**
  * Reads and parses all report files in the reports directory.
  * @param {string} reportsDir
  * @param {{info: Function}} core
@@ -142,72 +125,51 @@ function getOldestReports(reports, reportCountEnv, core) {
     .slice(0, reportCount);
 }
 
-/**
- * Constructs the prompt for the Jules API.
- * @param {string} toolName
- * @param {string} reportPath
- * @param {string} todayJST
- * @param {string} templateContent
- * @return {string}
- */
-function buildJulesPrompt(toolName, reportPath, todayJST, templateContent) {
+function buildJulesPrompt(toolName, reportPath, todayJST) {
   const promptLines = [
     `AGENTS.mdの「レポート作成・更新の手順」に従い、${toolName}(${reportPath})の調査レポートを更新せよ。`,
     '',
-    '## 自律性に関する基本原則（重要：自律確定と質問・確認の完全禁止）',
-    '- **完全自律完結と確定（Finalize）の義務（最重要）**: 本タスクはGitHub Actions上で実行される完全自動バッチ処理であり、対話相手となるユーザー（人間）は存在しない。すべての更新と検証が完了した後は、「確定してよいか？」「他に見直したい点はあるか？」（例: "Would you like me to finalize...", "Is there anything else to check?", "確認してください" 等）といった確認・質問・提案を絶対に投げかけてはならない。検証が完了した時点で、自律的にすべての変更を確定（Finalize）し、完了サマリーを報告してタスクを終了（Complete/Terminate）せよ。',
+    '## 自律性に関する基本原則（重要：自律確定と質問・確認の完全禁止 / MANDATORY AUTONOMOUS FINALIZATION）',
+    '- **完全自律完結と確定（Finalize）の義務（最重要）**: 本タスクはGitHub Actions上で実行される完全自動バッチ処理であり、対話相手となるユーザー（人間）は存在しない。すべての更新と検証（コードレビューで `#Correct#` を得た後を含む）が完了した後は、「確定してよいか？」「他に見直したい点はあるか？」（例: "Should I proceed with final submission?", "Is there anything else to check?", "確認してください" 等）といった確認・質問・提案を**絶対に**出力してはならない。検証が完了した時点で、自律的にすべての変更を確定（Finalize）し、完了サマリーを報告してタスクを終了（Complete/Terminate）せよ。',
+    '- **CRITICAL: NEVER ASK ANY QUESTIONS OR CONFIRMATIONS**: You are running in a non-interactive, automated headless workflow. There is NO human user to answer questions. Do NOT end your response with a question (e.g., do NOT ask "Should I proceed...", "Is there anything else...", "Would you like me to..."). Any question will cause the automated batch to freeze and fail. Output declarative completion statements only and immediately proceed to final submission / PR creation.',
     '- **ユーザーへの質問・確認・アドバイス要求の完全禁止**: どのような状況（調査中・エラー発生時・作業完了時すべて）であっても、ユーザーに質問を投げかけたり、確認を求めたりして処理を中断・停止させてはならない。ユーザーからの返答は一切得られない。曖昧な仕様やツールのエラーに直面した場合は、手元のデータや文脈から自律的かつ合理的に判断し、あなたの判断だけで処理を完遂すること。',
-    '- **多角的な調査と代替手段の模索**: ツールの最新情報調査にあたっては、公式サイトだけでなく、公式ブログ、GitHubリポジトリ（`CHANGELOG.md` / `Releases`）、WordPress等のプラグイン公式ページ（更新履歴）、プレスリリースなど多角的な情報源を自律的に検索・探索せよ。リンクチェック等で403や404エラーに直面した場合も、自律的にGoogle検索（`google_search`）等を活用して必要なエビデンスを収集せよ。',
-    '- **自己レビューと自律的検証**: 更新したレポートがテンプレートの全セクション（「4. 動作原理・システム構成」を含む全18セクション）、形式、フロントマターの規約に厳密に従っているか自己レビューせよ。不備に気づいた場合は自律的に修正し、検証スクリプトがパスするまで修正を繰り返せ。',
+    '',
+    '## 自立判断・解決のガイドライン（迷いやすい点の明確な方針）',
+    '- **新テンプレートへの移行（全18セクション構成）**: `templates/template.md` を読み込んで参照せよ。旧形式で「4. 動作原理・システム構成」が欠落しているレポートの場合は、躊躇なくSection 4（Mermaid図付き）を追加し、後続セクション番号を5〜18へ正しく振り直して更新せよ。',
+    '- **類似ツール比較（Section 17）のツール選定**: 比較表や詳細比較に記載する競合ツールは、原則として `_reports/` ディレクトリ内にレポートが存在するツールを優先して選定・差し替えよ。これはサイト全体の双方向整合性を保つための正規の手順であり、人間の承認を求めずに確定してよい。',
+    '- **多角的な調査**: ツールの最新情報調査にあたっては、公式サイト、公式ブログ、GitHubリポジトリ（`CHANGELOG.md` / `Releases`）、プラグイン公式ページ（更新履歴）、プレスリリースなどを自律的に検索・探索せよ。',
+    '- **コードレビュー後の即時確定**: 内部コードレビューで `#Correct#` を得た時点で、あなたの修正内容は完全に正当化されている。人間に確認せず直ちにPR作成（Final submission）に進め。',
     '',
     '## 作業内容',
     '',
     '### ステップ1: レポートの作成・更新',
     `- 対象: ${reportPath}`,
     `- 本日の日付: ${todayJST}`,
-    '- task-report-create-or-update.mdの指示に従い、レポート情報を最新化する',
+    '- `templates/template.md` および `task-report-create-or-update.md` の指示に従い、レポート情報を最新化する',
     '- **【最優先】直近のアップデート情報（最新の変更内容）の徹底調査と反映**: 公式ブログ、GitHub（Releases/CHANGELOG）、プラグインストア等の変更履歴から直近のアップデートをくまなく調査し、最新情報を起点として主要機能、動作原理・システム構成、料金プラン、競合比較、フロントマターなどの関係箇所を連動して更新せよ',
-    '- **重要**: 競合ツールのバージョンアップや新しい競合ツールの登場についても調査し、必要に応じて `_reports/` ディレクトリ内の該当ツールのレポートも参照して、星取表（機能比較表）の競合ツール情報を確実に最新化せよ',
-    '- **重要**: 以下のテンプレートのセクション構成（全18セクション）・順序・形式に厳密に準拠せよ',
+    '- **重要**: 競合ツールのバージョンアップについても調査し、必要に応じて `_reports/` ディレクトリ内の該当ツールのレポートも参照して、星取表（機能比較表）の競合ツール情報を確実に最新化せよ',
+    '- **重要**: `templates/template.md` のセクション構成（全18セクション）・順序・形式に厳密に準拠せよ',
     '',
     '### ステップ2: 関連レポートの整理',
-    '- task-organizing-category-tags.mdに従い、カテゴリ・タグ・関連付けを整理する',
+    '- `task-organizing-category-tags.md` に従い、カテゴリ・タグ・関連付けを整理する',
     `- ${toolName}と同カテゴリまたはrelated_toolsに含まれるレポートとの双方向整合性を確保せよ`,
     '',
     '### ステップ3: リンク・構文チェック',
     `- 作業完了後、\`PYTHONPATH=. uv run scripts/check_links.py ${reportPath}\` または \`pnpm run verify-report ${reportPath}\` を実行してリンク切れおよびMermaid構文エラーがないことを確認せよ`,
     '- 404エラー（リンク切れ）が検出された場合は、正しいURLに修正するか、リンクを削除する',
-    '- 403エラー（アクセス拒否）の場合はGoogle検索で追加検証を行う：',
-    '  - `site:g2.com "ツール名"` 等で検索し、ページの実在性を確認せよ',
-    '  - 検索結果にツールのレビューページが表示されれば正しいURLに修正せよ',
-    '  - 存在しない場合はレビューサイトへのリンク項目を削除し、「13. ユーザーの声」においてはGoogle検索結果からの引用で代替せよ',
+    '- 403エラー（アクセス拒否）の場合はGoogle検索で追加検証を行え',
     '',
     '### ステップ4: 自律確定と終了（Finalize & Complete）',
-    '- 検証が完了した時点で、ユーザーへの確認を求めずに変更を直ちに確定（Finalize）する',
-    '- 完了した変更内容の概要を簡潔にまとめて出力し、セッションを正常終了せよ',
+    '- 検証およびコードレビュー（#Correct#）が完了した時点で、ユーザーへの確認を一切求めずに変更を直ちに確定（Finalize）する',
+    '- 完了した変更内容の概要を簡潔な宣言文（Declarative statements）として出力し、セッションを正常終了せよ',
     '',
-    '### 注意事項',
-    '- 各ステップを必ずこの順序で実行する',
-    '- 関連レポートへの変更は最小限に留める',
-    '- レポートの構成はテンプレートに厳密に従う（セクションの追加・削除・順序変更は禁止）',
-    '- 各セクションの記載形式（表形式、箇条書き等）もテンプレートに従う',
-    '- 最後に「確定してよいか」「他に見直したい点はあるか」等の質問・確認を出力して停止することを固く禁ずる',
+    '---',
+    '',
+    '## 【最重要】最終出力と自動完了に関する厳格な指示（FINAL MANDATE）',
+    '1. レポートの更新、検証、コードレビュー（#Correct#）が完了したら、**一切の質問を行わずに直ちに最終提出（PR作成/Final submission）を実行せよ**。',
+    '2. **DO NOT ASK FOR PERMISSION OR CONFIRMATION**: Do NOT output sentences like "Should I proceed with final submission?", "Is there anything else I need to double-check?", "Would you like me to finalize?", etc.',
+    '3. 最後の出力は「更新を完了し、検証およびレビューをパスしたため、すべての変更を確定して終了します」という旨の簡潔な完了報告（宣言文）のみとし、疑問符（?）で終わる文章を出力してはならない。'
   ];
-
-  if (templateContent) {
-    promptLines.push(
-      '',
-      '---',
-      '',
-      '## レポートテンプレート（厳守）',
-      '',
-      '以下のテンプレートに厳密に従ってレポートを作成・更新してください:',
-      '',
-      '```markdown',
-      templateContent,
-      '```'
-    );
-  }
 
   return promptLines.join('\n');
 }
@@ -289,10 +251,6 @@ module.exports = async function({ github, context, core }) {
     process.exit(1);
   }
 
-  // Load Template content
-  const templatePath = 'templates/template.md';
-  const templateContent = loadTemplate(templatePath, core);
-
   // Retrieve and parse all available reports
   const reportsDir = '_reports';
   const reportsWithDates = getReportsWithDates(reportsDir, core);
@@ -331,7 +289,7 @@ module.exports = async function({ github, context, core }) {
 
     core.info(`\n--- Processing: ${toolName} (${currentReport.filename}) ---`);
 
-    const prompt = buildJulesPrompt(toolName, currentReport.path, todayJST, templateContent);
+    const prompt = buildJulesPrompt(toolName, currentReport.path, todayJST);
 
     const requestBody = {
       prompt: prompt,
