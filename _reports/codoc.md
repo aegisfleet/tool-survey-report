@@ -203,6 +203,7 @@ relationships:
 | **基本機能** | ペイウォール機能 | ◎<br><small>自社サイトに導入可能</small> | ×<br><small>非対応</small> | ◯<br><small>プラグインで対応可能</small> |
 | **基本機能** | サブスクリプション | ◯<br><small>対応</small> | ◯<br><small>メンバーシップ機能あり</small> | ◯<br><small>プラグイン等で対応可能</small> |
 | **拡張機能** | 投げ銭 (チップ) | ◯<br><small>サポート機能あり</small> | ◎<br><small>1文字2円のファンレター</small> | △<br><small>プラグインが必要</small> |
+| **拡張機能** | 音声配信 (ラジオ) | ×<br><small>非対応</small> | ◯<br><small>ラジオ配信機能あり</small> | △<br><small>プラグインが必要</small> |
 | **費用面** | クリエイター還元率 | ◯<br><small>85% (手数料15%)</small> | ◎<br><small>90% (手数料10%)</small> | ◎<br><small>独自決済連携で変動</small> |
 | **非機能要件** | 既存サイト連携 | ◎<br><small>タグを貼るだけで可能</small> | △<br><small>リンク設置のみ</small> | ◎<br><small>CMSそのものとして機能</small> |
 
