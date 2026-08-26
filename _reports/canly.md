@@ -2,12 +2,13 @@
 title: カンリー (Canly) 調査レポート
 tool_name: カンリー
 tool_reading: カンリー
-category: 店舗集客・MEO対策
+category: CRM/マーケティング
 developer: 株式会社カンリー
 official_site: https://jp.can-ly.com/
 date: '2026-08-25'
 last_updated: '2026-08-25'
 tags:
+  - SaaS
   - MEO
   - 店舗集客
   - クチコミ管理
