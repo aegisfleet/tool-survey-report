@@ -57,6 +57,7 @@ relationships:
     - Letta
     - AgentScope
     - NemoClaw
+    - OpenClaw
 ---
 
 # **AutoGPT 調査レポート**

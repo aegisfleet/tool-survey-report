@@ -51,6 +51,7 @@ relationships:
     - Devin Desktop
     - Devin
     - Cline
+    - OpenClaw
 ---
 
 # **Claude Code 調査レポート**
