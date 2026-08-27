@@ -2,7 +2,7 @@
 title: レンティオ 調査レポート
 tool_name: レンティオ
 tool_reading: レンティオ
-category: レンタルサービス
+category: ビジネス/業務ツール
 developer: レンティオ株式会社
 official_site: https://www.rentio.jp/
 date: '2026-08-20'
