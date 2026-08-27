@@ -2,7 +2,7 @@
 title: ゲオあれこれレンタル 調査レポート
 tool_name: ゲオあれこれレンタル
 tool_reading: ゲオアレコレレンタル
-category: レンタルサービス
+category: ビジネス/業務ツール
 developer: 株式会社ゲオ
 official_site: https://geo-arekore.jp/
 date: '2026-08-20'

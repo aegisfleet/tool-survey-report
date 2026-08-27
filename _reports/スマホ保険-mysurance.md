@@ -2,7 +2,7 @@
 title: スマホ保険 調査レポート
 tool_name: スマホ保険
 tool_reading: スマホホケン
-category: スマホ保険
+category: ビジネス/業務ツール
 developer: Mysurance株式会社（SOMPOグループ）
 official_site: https://www.mysurance.co.jp/service/sumaho-hoken/
 date: '2026-08-27'
