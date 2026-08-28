@@ -6,7 +6,7 @@ category: テスト生成/品質QA
 developer: Qase Inc.
 official_site: https://qase.io/
 date: '2026-02-01'
-last_updated: '2026-04-09'
+last_updated: '2026-08-29'
 tags:
   - AI
   - テスト管理
@@ -17,12 +17,12 @@ description: AIを活用したモダンなテスト管理プラットフォー�
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: $24/月
+  starting_price: $35/月
   target_users:
     - QAエンジニア
     - 開発者
     - QAマネージャー
-  latest_highlight: AI機能（AIDEN）の強化と新アーキテクチャの導入
+  latest_highlight: MCP 2.0のリリースとAndroid対応AIテスト生成（2026年7月）
   update_frequency: 高
 evaluation:
   score: 85
@@ -81,14 +81,53 @@ relationships:
 
 ## **3. 主要機能**
 
-* **AI機能 (AIDEN)**: テストケースの自動生成、手動テストから自動テストコードへの変換、テスト結果の分析などをAIが支援。
-* **テストリポジトリ管理**: 階層構造によるテストケースの整理、共有ステップ（Shared Steps）による手順の再利用。
-* **テスト実行 (Test Runs)**: テスト計画に基づいた実行管理、ウィザード形式でのテスト実施。
-* **自動テスト連携**: 35種類以上のフレームワークに対応し、API経由でテスト結果をリアルタイムに反映。
-* **ダッシュボードとレポート**: プロジェクトの品質状況を可視化するカスタマイズ可能なダッシュボード。
-* **外部連携**: Jira, GitHub, Slack, Microsoft Teamsなどとのシームレスな統合。
+* **AI機能 (Qase AI)**: 以前のAIDENからリブランディングされたAI機能。自然言語からのテストケース自動生成（Test Designer）、手動テストから自動テストコードへの一括変換、およびAgentic Modeによる自律的なテスト作成と実行を支援。
+* **テストリポジトリ管理**: 階層構造によるテストケースの整理、共有ステップ（Global Shared Steps対応）によるプロジェクトを跨いだ手順の再利用。
+* **テスト実行 (Test Runs)**: テスト計画に基づいた実行管理、ウィザード形式でのテスト実施、スケジュールされたテスト実行機能。
+* **自動テスト連携**: 35種類以上のフレームワーク（Playwright, Cypressなど）に対応し、API経由でテスト結果をリアルタイムに反映。
+* **要件トレーサビリティマトリックス (RTM)**: Jira、GitHub、GitLab、Notion、Confluenceなどの外部要件とテストをリンクし、カバレッジを可視化。
+* **ダッシュボードとレポート**: QQL (Qase Query Language) や自然言語による高度なフィルタリングを備え、プロジェクトの品質状況を可視化。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+Qaseは、手動テストと自動テストを統合するクラウド完結型（SaaS）のモダンなテスト管理プラットフォームです。エンタープライズ向けには、セキュリティを強化した専用クラスター（Dedicated cluster）での提供や、ローカルネットワーク内のテスト対象に安全にアクセスするための仕組みが用意されています。
+
+```mermaid
+graph TD
+    User([QA Engineer / Developer]) -->|Web UI / API| QaseCore[Qase Platform]
+
+    subgraph Qase Ecosystem
+        QaseCore -->|Manage| TestRepo[(Test Repository)]
+        QaseCore <-->|AI Tasks| QaseAI[Qase AI / formerly AIDEN]
+        QaseCore <-->|Execute| TestCloud[Qase Test Cloud]
+    end
+
+    subgraph Private / Local Network
+        QaseTunnel[Qase Tunnel] -.->|Secure access| LocalApp[Local App / Internal API]
+    end
+
+    TestCloud -->|Test requests| QaseTunnel
+
+    subgraph External Tools
+        CI_CD[CI/CD Pipelines<br/>GitHub Actions, GitLab CI] -->|Test Results| QaseCore
+        Requirements[Notion, Confluence, Jira] <-->|Traceability / Defects| QaseCore
+        Chat[Slack, Teams, Discord, Mattermost] <--|Notifications| QaseCore
+        AIAgent[External AI Agents<br/>Claude, etc.] <--> MCPServer[Qase MCP Server]
+    end
+
+    MCPServer <-->|API| QaseCore
+```
+
+* **アーキテクチャ**: クラウド完結型SaaS（EnterpriseプランではDedicated clusterも選択可能）。
+* **主要コンポーネントとデータフロー**:
+  * **Qase Platform**: テストケース、実行履歴、欠陥情報などを一元管理するコアシステム。
+  * **Qase AI**: テストケースの生成や自動コードの変換を行うAIエンジン。コンテキスト情報（マークダウンやスクリーンショット）を読み込み、安全に処理を行います。
+  * **Qase MCP Server**: Qaseのデータを外部のAIエージェント（Claude Desktopなど）に接続するためのModel Context Protocolサーバー。
+* **特筆すべき要素技術**:
+  * **Qase Tunnel**: ローカル開発環境や社内ネットワークにあるアプリケーションに対して、Qase Test Cloudから安全にテストを実行するためのセキュアトンネルツール。
+  * **QQL (Qase Query Language)**: テスト資産を柔軟に検索・フィルタリングするための専用クエリ言語。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * インターネット接続（SaaS版の場合）
@@ -101,31 +140,32 @@ relationships:
   3. テストスイートとテストケースを作成。
   4. 「Test Run」を作成し、テストを実行して結果を記録。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **モダンで高速なUI**: 従来のテスト管理ツールと比較してUIが洗練されており、動作が非常に軽快。
-* **All-in-One**: 手動テスト管理、自動テストレポート、欠陥管理が一つのプラットフォームで完結する。
-* **AI活用**: 「AIDEN」により、テストケース作成時間の短縮や品質向上が期待できる。
-* **強力な統合**: Jiraアプリとの双方向連携など、開発ワークフローに深く統合できる。
+* **AIネイティブなテスト体験**: 「Qase AI」による自然言語からの自動テスト生成、Agentic Modeによるテストオーケストレーションにより、テスト作成時間を大幅に削減。
+* **エンタープライズ規模の管理機能**: 複数ワークスペースを跨ぐSSO/SCIM、Global Shared Stepsによる共通テスト手順の組織横断的な管理など、スケーラビリティに優れる。
+* **強力な統合とトレーサビリティ**: Jira、Notion、Confluence等との双方向連携により、要件からテスト結果までの完全なトレーサビリティ(RTM)を確保。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **日本語UI未対応**: 現時点でインターフェースは英語のみ（日本語データの入力は問題なし）。
 * **歴史が浅い**: 老舗ツール（TestRail等）に比べると歴史が浅く、一部のニッチなエンタープライズ機能が不足している可能性がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
+
+※2026年6月のアップデートにより、料金体系が大幅にシンプル化されました。
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Free** | 無料 | 3ユーザーまで、500MBストレージ、30日間の履歴保存 |
-| **Startup** | $24/ユーザー/月 (年払) | 20ユーザーまで、100GBストレージ、90日間の履歴保存、API制限緩和 |
-| **Business** | $30/ユーザー/月 (年払) | 100ユーザーまで、無制限ストレージ、1年間の履歴保存、SSO、RBAC |
-| **Enterprise** | 要問い合わせ | 無制限ユーザー、無制限履歴、専用環境、SLA、プレミアムサポート |
+| **Free** | 無料 | 4ユーザーまで、500MBストレージ、30日間の履歴保存、月5,000件のAPIリクエスト |
+| **Teams** | $35/ユーザー/月 (年払) | 5ユーザー以上、無制限ストレージ、2年間の履歴保存、月2,000 AIクレジット、SSO対応 |
+| **Enterprise** | 要問い合わせ | 無制限ユーザー、無制限履歴、月4,000 AIクレジット、マルチワークスペースSSO/SCIM、SLA |
 
-* **課金体系**: ユーザー単位（Read-onlyユーザーは割引あり）
-* **無料トライアル**: Businessプランの14日間トライアルあり（クレカ不要）
+* **課金体系**: ユーザー単位（テストの作成・実行を行うユーザー）。レポートの閲覧とコメントのみが必要なステークホルダー向けには、**月額$10のCollaboratorシート**（アドオン）が用意されている。
+* **無料トライアル**: Teamsプランの14日間トライアルあり（クレジットカード不要）。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Wolt, Asana, SeatGeek, Bitly, Rakuten, SUSE
 * **導入事例**:
@@ -133,50 +173,51 @@ relationships:
   * **SUSE**: スプレッドシート管理から脱却し、データドリブンな品質管理を実現。
 * **対象業界**: Webサービス、SaaS、Eコマース、スタートアップからエンタープライズまで幅広い。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントが充実しており、APIリファレンスも完備（英語）。
 * **コミュニティ**: ブログやWebinarでの情報発信が活発。
 * **公式サポート**: メールおよびチャットサポート。Enterpriseプランでは専任CSMがつく。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
-* **API**: REST APIが提供されており、テストケースの操作や結果の送信が可能。
+* **API**: REST APIが提供されており、テストケースの操作や結果の送信、In-Progressステータスの取得などが可能。
 * **外部サービス連携**:
-  * **Issue Tracker**: Jira, Linear, Azure DevOps, GitHub Issues, Asana, Trello
+  * **Issue Tracker / Requirements**: Jira, Linear, Azure DevOps, GitHub Issues, GitLab, Notion, Confluence Cloud, Asana, Trello
   * **CI/CD**: GitHub Actions, GitLab CI, Jenkins, CircleCI
-  * **Communication**: Slack, Microsoft Teams
+  * **Communication**: Slack, Microsoft Teams, Discord, Mattermost
+  * **AI Agents**: MCP Server経由で各種ローカルAIエージェントと接続
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Javascript/Typescript (Playwright, Cypress)** | ◎ | 公式レポーターが充実しており導入が容易 | 特になし |
-| **Java (JUnit, TestNG)** | ◯ | 主要フレームワークに対応 | 設定が多少必要な場合がある |
-| **Python (Pytest)** | ◎ | Pytestプラグインが提供されている | 特になし |
+| **Javascript/Typescript (Playwright, Cypress)** | ◎ | 公式レポーターが充実。Qase AIからの直接コードエクスポート対応。 | 特になし |
+| **Java (JUnit, TestNG)** | ◯ | 主要フレームワークに対応。レポート処理の高速化が図られている。 | 設定が多少必要な場合がある |
+| **Python (Pytest)** | ◎ | Pytestプラグイン提供。マルチプロジェクト・モノレポ対応機能あり。 | 特になし |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-* **認証**: SSO (SAML 2.0), Google/GitHub認証, 2段階認証 (2FA)
-* **データ管理**: AWSインフラを利用。
-* **準拠規格**: SOC 2 Type II, ISO 27001, GDPR準拠
+* **認証**: SSO (SAML 2.0), SCIMプロビジョニング, Google/GitHub認証, 2段階認証 (2FA), マルチワークスペースSSO対応
+* **データ管理**: AWSインフラを利用。EnterpriseプランではDedicated clusterも選択可能。
+* **準拠規格**: SOC 2 Type II, ISO 27001, GDPR準拠。必要に応じてデータ保持期間の延長アドオン（5年または10年）あり。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: モダンなSPA（Single Page Application）で構成されており、直感的かつ高速。ドラッグ＆ドロップでの整理などが容易。
 * **学習コスト**: UIがシンプルであるため、他のテスト管理ツールの経験があれば学習コストは低い。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
-* **効果的な活用法**:
-  * **Jira連携の活用**: Jiraの課題とQaseのテストケースをリンクさせ、仕様変更時のテスト漏れを防ぐ。
-  * **自動テストの集約**: CI/CDパイプラインにQaseレポーターを組み込み、手動・自動の結果を一箇所で確認できるようにする。
-* **陥りやすい罠**:
-  * **テストケースの粒度**: テストケースを細かくしすぎると管理工数が増えるため、Shared Stepsを活用して共通化する。
+* **効果的な活用法 (Modern Practices)**:
+  * **AI Test Designerの活用**: NotionやConfluenceなどの要件ドキュメントからQase AIを利用してテストケースを一括生成し、手動作成の時間を短縮する。
+  * **Global Shared Stepsの構築**: 複数プロジェクトで共通するテストステップ（ログインフローなど）はGlobal Shared Stepsとしてワークスペースレベルで管理し、保守性を向上させる。
+* **陥りやすい罠 (Antipatterns)**:
+  * **不要なクエリのパブリック保存**: QQLのクエリをすべてパブリックに保存するとダッシュボードが雑然とするため、個人的な調査用クエリは「Private Queries」として保存する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2 (Google検索結果スニペットより引用), Capterra, 公式サイト事例
 * **総合評価**: 4.5/5.0 (G2, 検索結果スニペットより)
@@ -190,37 +231,39 @@ relationships:
 * **特徴的なユースケース**:
   * モダンなUIで手動テストと自動テストを統合的に管理する目的で活用
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2026-04**: Q1 2026 Product Updates (新機能追加や改善)
-* **2026-03**: February 2026 Product Updates (機能強化とパフォーマンス改善)
-* **2026-01-12**: Q4 2025 Product Updates - パフォーマンス向上と新機能追加
-* **2025-12-17**: Database Profiler - テスト中のデータベースクエリをキャプチャ・分析する機能
-* **2025-12-04**: Shared Logic Architecture - 共有ステップ等のロジック刷新による高速化
+* **2026-07-21**: MCP 2.0のリリース。AIエージェントによるテストデータへのアクセス改善、ダッシュボードのクローン機能、パスワード保護付きの共有ダッシュボード機能の追加。
+* **2026-06-09**: AI機能のリブランディング。旧称「AIDEN」を「Qase AI」へ名称変更。
+* **2026-05-26**: Qase Tunnelのリリース。ローカルやプライベートネットワーク内のアプリケーションに対してQase Test Cloudからセキュアにテストを実行可能に。Discord、Mattermostのネイティブ連携追加。
+* **2026-04-02**: マルチワークスペース対応のSSO/SCIMプロビジョニング機能追加。Confluence CloudやNotionとの双方向連携の実装。AIによる「Agentic Mode」のテスト生成機能の強化。
+* **2026-03-03**: テストケースのフォルダ階層管理の改善と、Donut Chartを利用したダッシュボードビューの追加。
+* **2026-01-12**: AIを用いた手動テストから自動テストコードへの一括変換機能（Bulk Conversion）の提供開始。Qase MCP Serverの初版リリース。
+* **2025-12-17**: Database Profiler - テスト中のデータベースクエリをキャプチャ・分析する機能の追加。
 
-(出典: [公式ブログ](https://qase.io/blog/) など)
+(出典: [公式ブログ](https://www.qase.io/blog/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Qase | TestRail | Xray (Jira App) |
+| 機能カテゴリ | 機能項目 | Qase | TestRail | QualityForward |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | テスト管理 | ◎ | ◯ | ◯ |
-| **先進機能** | AI支援 | ◎ | △ | △ |
-| **統合** | Jira連携 | ◎ | ◯ | ◎ (Native) |
-| **コスト** | 開始価格 | ◎<br><small>無料プラン有</small> | △<br><small>やや高価</small> | ◯<br><small>Jiraユーザー数依存</small> |
-| **UX** | 動作速度 | ◎ | △ | ◯ |
+| **基本機能** | テスト管理 | ◎<br><small>モダンなUIと高速な動作</small> | ◯<br><small>実績豊富だがUIはレガシー</small> | ◯<br><small>Excelライクな操作性</small> |
+| **先進機能** | AI支援 | ◎<br><small>Qase AIによる強力なテスト生成と自動化</small> | △<br><small>一部機能に限定的</small> | △<br><small>限定的</small> |
+| **統合** | Jira連携 | ◎<br><small>双方向連携と要件トレーサビリティ</small> | ◯<br><small>標準的な連携</small> | ◯<br><small>標準的な連携</small> |
+| **非機能要件**| 日本語対応 | △<br><small>UIは英語のみ（日本語入力は可）</small> | ◎<br><small>日本語UI・サポート完備</small> | ◎<br><small>日本のツール</small> |
+| **コスト** | 開始価格 | ◎<br><small>無料プラン（4名まで）あり</small> | △<br><small>やや高価</small> | ◯<br><small>標準的な価格</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Qase** | モダンで高速、AI搭載 | UI/UX、AI機能、無料プラン | 日本語UIなし | スタートアップから中規模、モダンな開発体制 |
-| **TestRail** | 老舗の標準ツール | 豊富な機能、実績、日本語対応 | UIが古い、動作が重い場合がある | 伝統的なQAプロセス、大規模組織 |
-| **Xray** | Jiraプラグイン | Jira内で完結する | Jiraがないと使えない、Jiraの動作に影響 | Jiraをヘビーユースしているチーム |
+| **Qase** | モダンで高速、AIネイティブ | 優れたUI/UX、AIによる大幅な省力化、無料プラン | UIが英語のみ | モダンな開発体制、自動化やAI活用を積極的に進めたいチーム |
+| **TestRail** | 老舗の標準ツール | 豊富な機能、確かな実績、日本語対応 | UIがレガシー、動作が重い場合がある | 伝統的なQAプロセスを重視する組織、大規模エンタープライズ |
+| **QualityForward** | 日本発のテスト管理ツール | Excelに似た直感的な操作、充実した日本語サポート | エコシステムの連携先がQaseに比べると少なめ | テストの日本語サポートを重視するチーム、Excelからの移行を検討するチーム |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Qaseは、従来の「重くて使いにくい」テスト管理ツールのイメージを払拭する、モダンで高速なプラットフォームです。AI機能の積極的な取り込みや、DevOpsツールチェーンとのスムーズな連携は、現代のアジャイル開発チームにとって大きなメリットとなります。
