@@ -54,7 +54,7 @@ relationships:
     - Agent Skills
     - Mobile Next
     - UI-TARS Desktop
-    - Agent Plugins
+    - Model Hardware Standard
 ---
 
 # **Model Context Protocol (MCP) 調査レポート**
