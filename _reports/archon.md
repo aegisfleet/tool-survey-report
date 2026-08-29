@@ -1,49 +1,49 @@
 ---
-title: "Archon 調査レポート"
-tool_name: "Archon"
-tool_reading: "アルコン"
-category: "自律型AIエージェント"
-developer: "Coleam00 (オープンソース)"
-official_site: "https://archon.diy"
-date: "2026-04-10"
-last_updated: "2026-08-30"
+title: Archon 調査レポート
+tool_name: Archon
+tool_reading: アルコン
+category: 自律型AIエージェント
+developer: Coleam00 (オープンソース)
+official_site: https://archon.diy
+date: '2026-04-10'
+last_updated: '2026-08-30'
 tags:
-  - "オープンソース"
-  - "エージェント"
-  - "ワークフロー"
-  - "自動化"
-description: "AIコーディングエージェントのためのワークフローエンジン。開発プロセスをYAMLで定義し、決定論的かつ再現可能なAIコーディングを実現する。"
+  - オープンソース
+  - エージェント
+  - ワークフロー
+  - 自動化
+description: AIコーディングエージェントのためのワークフローエンジン。開発プロセスをYAMLで定義し、決定論的かつ再現可能なAIコーディングを実現する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "開発チーム"
-  latest_highlight: "Archon CLI v0.9.0 リリース（2026年8月）"
-  update_frequency: "高"
+    - 開発者
+    - 開発チーム
+  latest_highlight: Archon CLI v0.9.0 リリース（2026年8月）
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "YAMLで柔軟なAIワークフローを定義可能であり、決定論的な結果を得られる"
+      reason: YAMLで柔軟なAIワークフローを定義可能であり、決定論的な結果を得られる
     - point: 5
-      reason: "分離されたGitワークツリーにより並列でのタスク実行が可能"
+      reason: 分離されたGitワークツリーにより並列でのタスク実行が可能
     - point: 5
-      reason: "オープンソースでありコミュニティ駆動の開発が行われている"
+      reason: オープンソースでありコミュニティ駆動の開発が行われている
   minus_points:
     - point: -5
-      reason: "日本語ドキュメントやUIが未整備"
-  summary: "AIコーディングの不確実性を排除し、再現性のある開発プロセスを構築できる強力なツール。UIの日本語化には課題が残る。"
+      reason: 日本語ドキュメントやUIが未整備
+  summary: AIコーディングの不確実性を排除し、再現性のある開発プロセスを構築できる強力なツール。UIの日本語化には課題が残る。
 links:
-  github: "https://github.com/coleam00/Archon"
-  deepwiki: "https://deepwiki.com/coleam00/Archon"
+  github: https://github.com/coleam00/Archon
+  deepwiki: https://deepwiki.com/coleam00/Archon
 relationships:
   related_tools:
-    - "Roo Code"
-    - "Cline"
-    - "AutoGPT"
+    - Roo Code
+    - Cline
+    - AutoGPT
 ---
 
 # **Archon 調査レポート**
