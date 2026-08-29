@@ -2,7 +2,7 @@
 title: KINTO 調査レポート
 tool_name: KINTO
 tool_reading: キント
-category: ビジネス/業務ツール
+category: ライフスタイル/生活サービス
 developer: 株式会社KINTO
 official_site: https://kinto-jp.com/
 date: '2026-08-12'

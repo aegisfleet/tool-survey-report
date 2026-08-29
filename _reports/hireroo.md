@@ -2,12 +2,13 @@
 title: HireRoo 調査レポート
 tool_name: HireRoo
 tool_reading: ハイヤールー
-category: 組織開発プラットフォーム
+category: 勤怠管理/人事労務
 developer: 株式会社ハイヤールー
 official_site: https://hireroo.io/
 date: '2026-08-28'
 last_updated: '2026-08-28'
 tags:
+  - 人事労務
   - HRTech
   - コーディング試験
   - AI協働力

@@ -2,7 +2,7 @@
 title: イオンのお葬式 調査レポート
 tool_name: イオンのお葬式
 tool_reading: イオンノオソウシキ
-category: ビジネス/業務ツール
+category: ライフスタイル/生活サービス
 developer: イオンライフ株式会社
 official_site: https://www.aeonlife.jp/
 date: '2026-08-19'
