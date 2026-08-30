@@ -47,7 +47,7 @@ relationships:
     - TestLink
     - Jira
     - Kiwi TCMS
-    - Qangaroo
+    - Quality Tracker
 ---
 
 
