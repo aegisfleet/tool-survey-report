@@ -2,7 +2,7 @@
 title: Grok Bot 調査レポート
 tool_name: Grok Bot
 tool_reading: グロック ボット
-category: 自律型AIエージェント
+category: デスクトップ/GUIエージェント
 developer: X.AI LLC
 official_site: https://x.ai/bot
 date: '2026-08-12'
