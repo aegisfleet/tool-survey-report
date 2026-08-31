@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - Suno
     - Waves Place
+    - VoxCPM
 ---
 
 # **ElevenLabs 調査レポート**

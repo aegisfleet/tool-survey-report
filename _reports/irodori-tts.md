@@ -42,7 +42,8 @@ links:
   deepwiki: https://deepwiki.com/Aratako/Irodori-TTS
   documentation: https://huggingface.co/Aratako/Irodori-TTS-500M-v3
 relationships:
-  related_tools: []
+  related_tools:
+    - VoxCPM
 ---
 
 # **Irodori-TTS 調査レポート**
