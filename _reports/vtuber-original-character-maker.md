@@ -1,46 +1,43 @@
 ---
-title: "VTuber Original Character Maker 調査レポート"
-tool_name: "VTuber Original Character Maker"
-tool_reading: "ブイチューバー・オリジナル・キャラクター・メーカー"
-category: "3D/VTuber"
-developer: "佐藤 大"
-official_site: "https://vtuber-ocm.com/"
-date: "2026-08-31"
-last_updated: "2026-08-31"
+title: VTuber Original Character Maker 調査レポート
+tool_name: VTuber Original Character Maker
+tool_reading: ブイチューバー・オリジナル・キャラクター・メーカー
+category: 3D/VTuber
+developer: 佐藤 大
+official_site: https://vtuber-ocm.com/
+date: '2026-08-31'
+last_updated: '2026-08-31'
 tags:
-  - "VTuber"
-  - "AI"
-  - "3Dモデリング"
-  - "ローカル処理"
-description: "画像1枚から3Dキャラクターを自動生成し、Webカメラ不要でマイク音声から表情や口パクをPC内で処理して配信できるデスクトップアプリ。"
-
+  - VTuber
+  - AI
+  - 3Dモデリング
+  - ローカル処理
+description: 画像1枚から3Dキャラクターを自動生成し、Webカメラ不要でマイク音声から表情や口パクをPC内で処理して配信できるデスクトップアプリ。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "VTuber"
-    - "配信者"
-  latest_highlight: "アプリ本体のダウンロードと基本機能の利用は無料で提供"
-  update_frequency: "不定期"
-
+    - VTuber
+    - 配信者
+  latest_highlight: アプリ本体のダウンロードと基本機能の利用は無料で提供
+  update_frequency: 不定期
 evaluation:
   score: 78
   base_score: 70
   plus_points:
     - point: 5
-      reason: "画像1枚から3Dモデルを自動生成できる手軽さ"
+      reason: 画像1枚から3Dモデルを自動生成できる手軽さ
     - point: 3
-      reason: "マイクのみで口パクや表情切り替えができ、機材投資が不要"
+      reason: マイクのみで口パクや表情切り替えができ、機材投資が不要
   minus_points: []
-  summary: "3Dアバターでの配信を手軽に始められる画期的なツールだが、高度なカスタマイズには向かない。"
-
+  summary: 3Dアバターでの配信を手軽に始められる画期的なツールだが、高度なカスタマイズには向かない。
 links:
-  documentation: "https://vtuber-ocm.com/guide/"
+  documentation: https://vtuber-ocm.com/guide/
 relationships:
   related_tools:
-    - "Webcam Motion Capture"
-    - "OBS Studio"
+    - Webcam Motion Capture
+    - OBS Studio
 ---
 
 # **VTuber Original Character Maker 調査レポート**
