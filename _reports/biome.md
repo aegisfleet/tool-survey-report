@@ -44,6 +44,7 @@ links:
 relationships:
   related_tools:
     - ESLint
+    - Knip
 ---
 
 # **Biome 調査レポート**
