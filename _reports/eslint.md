@@ -49,6 +49,7 @@ relationships:
   related_tools:
     - Biome
     - SonarQube
+    - Knip
 ---
 
 # **ESLint 調査レポート**

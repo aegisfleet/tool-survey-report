@@ -2,16 +2,16 @@
 title: Open Generative AI 調査レポート
 tool_name: Open Generative AI
 tool_reading: オープン ジェネレーティブ エーアイ
-category: AI画像/メディア生成
+category: AI画像生成
 developer: Anil-matcha
 official_site: https://dev.muapi.ai/open-generative-ai
 date: '2026-05-17'
 last_updated: '2026-05-17'
 tags:
-  - AI画像生成
-  - AI動画生成
   - オープンソース
   - セルフホスト
+  - 画像生成
+  - 動画生成
 description: コンテンツフィルターなしで200以上の最新モデルを利用できる、オープンソースのAI画像・動画生成プラットフォーム
 quick_summary:
   has_free_plan: true

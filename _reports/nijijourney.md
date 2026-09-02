@@ -2,7 +2,7 @@
 title: Niji Journey 調査レポート
 tool_name: Niji Journey
 tool_reading: ニジジャーニー
-category: AI画像/メディア生成
+category: AI画像生成
 developer: Spellbrush & Midjourney
 official_site: https://nijijourney.com/
 date: '2026-01-27'
@@ -11,6 +11,7 @@ tags:
   - AI
   - SaaS
   - 生成AI
+  - 画像生成
 description: MidjourneyとSpellbrushが共同開発した、アニメ・マンガ・ゲームスタイルに特化した画像生成AIツール。
 quick_summary:
   has_free_plan: false
