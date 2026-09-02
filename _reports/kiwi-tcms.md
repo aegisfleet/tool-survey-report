@@ -50,7 +50,7 @@ relationships:
     - Redmine
     - GitHub
     - GitLab
-    - Selenium
+    - Testcase Management
 ---
 # **Kiwi TCMS 調査レポート**
 
