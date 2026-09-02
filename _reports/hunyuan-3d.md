@@ -2,15 +2,15 @@
 title: Hunyuan 3D 調査レポート
 tool_name: Hunyuan 3D
 tool_reading: フュンユエン スリーディー
-category: AI画像/メディア生成
+category: 3D/VTuber
 developer: Tencent
 official_site: https://hunyuan.tencent.com/hunyuan-3d
 date: '2026-02-05'
 last_updated: '2026-04-27'
 tags:
-  - AI
   - オープンソース
   - 生成AI
+  - 3D
 description: テキストや画像から高品質な3Dモデルを生成するTencent社のオープンソースAIモデル。
 quick_summary:
   has_free_plan: true

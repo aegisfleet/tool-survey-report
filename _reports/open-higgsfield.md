@@ -2,7 +2,7 @@
 title: OpenHiggsfield AI 調査レポート
 tool_name: OpenHiggsfield AI
 tool_reading: オープンヒッグスフィールド エーアイ
-category: AI画像/メディア生成
+category: AI動画生成
 developer: Wide-Trace
 official_site: https://openhiggsfield.ai
 date: '2026-08-31'
