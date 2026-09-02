@@ -2,7 +2,7 @@
 title: Deep-Live-Cam 調査レポート
 tool_name: Deep-Live-Cam
 tool_reading: ディープライブカム
-category: AI画像/メディア生成
+category: AI動画生成
 developer: hacksider
 official_site: https://deeplivecam.net/
 date: '2026-03-28'
@@ -12,7 +12,7 @@ tags:
   - オープンソース
   - ディープフェイク
   - リアルタイム
-  - 画像生成
+  - 動画生成
 description: たった1枚の画像からリアルタイムで顔を入れ替えることができるワンクリックビデオディープフェイクツール。
 quick_summary:
   has_free_plan: true
