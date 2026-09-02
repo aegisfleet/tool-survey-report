@@ -1,56 +1,52 @@
 ---
-title: "agent-qa 調査レポート"
-tool_name: "agent-qa"
-tool_reading: "エージェントキューエー"
-category: "AIテスト自動化"
-developer: "Vostride AI"
-official_site: "https://vostride.com/docs/agent-qa"
-date: "2026-09-02"
-last_updated: "2026-09-02"
+title: agent-qa 調査レポート
+tool_name: agent-qa
+tool_reading: エージェントキューエー
+category: AIテスト自動化
+developer: Vostride AI
+official_site: https://vostride.com/docs/agent-qa
+date: '2026-09-02'
+last_updated: '2026-09-02'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "テスト自動化"
-  - "開発者ツール"
-description: "自然言語でWeb・モバイルアプリのテストを記述し、実行のたびに自己修復・学習するオープンソースのAIエージェント型QAテストツール。"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - テスト自動化
+  - 開発者ツール
+description: 自然言語でWeb・モバイルアプリのテストを記述し、実行のたびに自己修復・学習するオープンソースのAIエージェント型QAテストツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "QAエンジニア"
-  latest_highlight: "2026年8月にdemo-projectのフック実行等の修正を含む更新を実施"
-  update_frequency: "高"
-
+    - 開発者
+    - QAエンジニア
+  latest_highlight: 2026年8月にdemo-projectのフック実行等の修正を含む更新を実施
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 5
-      reason: "自然言語でのテスト記述が可能で、メンテナンス性が高い"
+      reason: 自然言語でのテスト記述が可能で、メンテナンス性が高い
     - point: 5
-      reason: "自己修復・学習機能により、UI変更によるテストの壊れにくさを実現"
+      reason: 自己修復・学習機能により、UI変更によるテストの壊れにくさを実現
     - point: 5
-      reason: "Dockerサンドボックスによるフック実行や任意のLLM利用が可能など拡張性が高い"
+      reason: Dockerサンドボックスによるフック実行や任意のLLM利用が可能など拡張性が高い
     - point: 3
-      reason: "完全にオープンソース（ソース利用可能）で利用できる"
+      reason: 完全にオープンソース（ソース利用可能）で利用できる
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "自然言語で記述でき、自己修復機能やテスト実行メモリを持つなど非常に先進的で拡張性の高いテスト自動化ツール"
-
+      reason: 特になし
+  summary: 自然言語で記述でき、自己修復機能やテスト実行メモリを持つなど非常に先進的で拡張性の高いテスト自動化ツール
 links:
-  github: "https://github.com/vostride/agent-qa"
-  documentation: "https://vostride.com/docs/agent-qa"
-
+  github: https://github.com/vostride/agent-qa
+  documentation: https://vostride.com/docs/agent-qa
 relationships:
   related_tools:
-    - "Playwright"
-    - "Selenium"
-    - "mabl"
+    - Playwright
+    - Selenium
+    - mabl
 ---
 
 # **agent-qa 調査レポート**
