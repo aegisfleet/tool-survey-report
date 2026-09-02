@@ -38,12 +38,7 @@ evaluation:
   summary: 独自の「ホロスーツ」や「カメラカット自動生成」により、顔出し不要で手軽に高品質な通話・配信が楽しめるアプリ
 links:
   documentation: https://help.popopo.com/hc/ja-jp
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **POPOPO 調査レポート**
 
 ## **1. 基本情報**

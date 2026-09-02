@@ -46,14 +46,11 @@ links:
   codewiki: https://codewiki.google/github.com/Stability-AI/generative-models
   documentation: https://platform.stability.ai/docs
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Niji Journey
     - Qwen-Image-Layered
     - AnimeGen
 ---
-
 # **Stable Diffusion 調査レポート**
 
 ## **1. 基本情報**

@@ -37,12 +37,7 @@ links:
   github: https://github.com/microsoft/markitdown
   deepwiki: https://deepwiki.com/microsoft/markitdown
   codewiki: https://codewiki.google/github.com/microsoft/markitdown
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **MarkItDown 調査レポート**
 
 ## **1. 基本情報**

@@ -41,13 +41,7 @@ links:
   documentation: https://learn.microsoft.com/en-us/microsoft-scout/use-microsoft-scout
 relationships:
   parent: Microsoft 365 Copilot
-  children:
-    - Explore
-    - Task
-    - Code review
-    - Research
 ---
-
 # **Microsoft Scout 調査レポート**
 
 ## **1. 基本情報**

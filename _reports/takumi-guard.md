@@ -41,10 +41,7 @@ evaluation:
 links:
   github: https://github.com/flatt-security/setup-takumi-guard-npm
   deepwiki: https://deepwiki.com/flatt-security/setup-takumi-guard-npm
-relationships:
-  related_tools: null
 ---
-
 # **Takumi Guard 調査レポート**
 
 ## **1. 基本情報**

@@ -40,10 +40,7 @@ evaluation:
 links:
   github: https://github.com/TeraTermProject/teraterm
   deepwiki: https://deepwiki.com/TeraTermProject/teraterm
-relationships:
-  related_tools: []
 ---
-
 # **Tera Term 調査レポート**
 
 ## **1. 基本情報**

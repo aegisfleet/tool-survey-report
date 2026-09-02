@@ -53,10 +53,7 @@ relationships:
     - Cline
     - Roo Code
     - Claude Code
-    - Devin
-    - Aqua Voice
 ---
-
 # **Devin Desktop 調査レポート**
 
 ## **1. 基本情報**

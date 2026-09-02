@@ -33,12 +33,7 @@ evaluation:
       reason: すべて無料で利用可能であり、日本語の情報として極めて価値が高い
   minus_points: []
   summary: ふりかえりの導入からマンネリ打破まで、チームの課題解決に直結する実践的な知見が詰まったナレッジポータル。
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **ふりかえり実践会 調査レポート**
 
 ## **1. 基本情報**

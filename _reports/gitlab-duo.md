@@ -42,13 +42,11 @@ links:
   documentation: https://docs.gitlab.com/ee/user/gitlab_duo/
 relationships:
   parent: GitLab
-  children: []
   related_tools:
     - GitHub Copilot
     - Amazon Q Developer
     - Qodo
 ---
-
 # **GitLab Duo 調査レポート**
 
 ## **1. 基本情報**

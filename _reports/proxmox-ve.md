@@ -44,8 +44,6 @@ links:
   github: https://git.proxmox.com/
   documentation: https://pve.proxmox.com/pve-docs/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Docker
     - Kubernetes
@@ -53,7 +51,6 @@ relationships:
     - Ubuntu
     - Scanopy
 ---
-
 # **Proxmox VE 調査レポート**
 
 ## **1. 基本情報**

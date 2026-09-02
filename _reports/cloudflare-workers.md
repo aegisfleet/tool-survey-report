@@ -42,12 +42,10 @@ links:
   documentation: https://developers.cloudflare.com/workers/
 relationships:
   parent: Cloudflare
-  children: []
   related_tools:
     - Vercel
     - Hono
 ---
-
 # **Cloudflare Workers 調査レポート**
 
 ## **1. 基本情報**

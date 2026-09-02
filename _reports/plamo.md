@@ -38,14 +38,11 @@ evaluation:
 links:
   documentation: https://plamo.preferredai.jp/api
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - ChatGPT
     - Claude
     - Gemini
 ---
-
 # **PLaMo 調査レポート**
 
 ## **1. 基本情報**

@@ -44,12 +44,10 @@ links:
   documentation: https://context7.com/docs
 relationships:
   parent: Model Context Protocol
-  children: []
   related_tools:
     - Cursor
     - Claude Code
 ---
-
 # **Context7 調査レポート**
 
 ## **1. 基本情報**

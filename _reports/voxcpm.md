@@ -46,13 +46,11 @@ links:
   codewiki: https://codewiki.google/github.com/OpenBMB/VoxCPM
   documentation: https://voxcpm.readthedocs.io/en/latest/
 relationships:
-  children: []
   related_tools:
     - VibeVoice
     - Irodori-TTS
     - ElevenLabs
 ---
-
 # **VoxCPM 調査レポート**
 
 ## **1. 基本情報**

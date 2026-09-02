@@ -42,11 +42,9 @@ evaluation:
 links:
   documentation: https://docs.aws.amazon.com/guardduty/
 relationships:
-  parent: null
   related_tools:
     - AWS Security Hub
 ---
-
 # **Amazon GuardDuty 調査レポート**
 
 ## **1. 基本情報**

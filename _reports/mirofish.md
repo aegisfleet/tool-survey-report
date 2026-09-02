@@ -42,14 +42,11 @@ links:
   github: https://github.com/666ghj/MiroFish
   deepwiki: https://deepwiki.com/666ghj/MiroFish
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - AutoGPT
     - OpenHands
     - CrewAI
 ---
-
 # **MiroFish 調査レポート**
 
 ## **1. 基本情報**

@@ -45,14 +45,11 @@ links:
   codewiki: https://codewiki.google/github.com/jekyll/jekyll
   documentation: https://jekyllrb.com/docs/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Hugo
     - Astro
     - WordPress
 ---
-
 # **Jekyll 調査レポート**
 
 ## **1. 基本情報**

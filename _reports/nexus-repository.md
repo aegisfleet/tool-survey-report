@@ -42,14 +42,11 @@ links:
   deepwiki: https://deepwiki.com/sonatype/nexus-public
   documentation: https://help.sonatype.com/repomanager3
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - JFrog Artifactory
     - GitLab
     - Jenkins
 ---
-
 # **Nexus Repository 調査レポート**
 
 ## **1. 基本情報**

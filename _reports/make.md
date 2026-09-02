@@ -43,8 +43,6 @@ evaluation:
 links:
   documentation: https://help.make.com/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Zapier
     - n8n
@@ -54,7 +52,6 @@ relationships:
     - MoneyPrinterV2
     - Google Workspace Studio
 ---
-
 # **Make 調査レポート**
 
 ## **1. 基本情報**

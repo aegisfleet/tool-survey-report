@@ -44,14 +44,10 @@ links:
   codewiki: https://codewiki.google/github.com/nesquena/hermes-webui
   documentation: https://github.com/nesquena/hermes-webui#readme-ov-file
 relationships:
-  parent: hermes-agent
-  children: []
   related_tools:
-    - openclaw
-    - claude-code
-    - opencode
+    - OpenClaw
+    - OpenCode
 ---
-
 # **Hermes WebUI 調査レポート**
 
 ## **1. 基本情報**

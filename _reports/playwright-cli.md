@@ -44,14 +44,12 @@ links:
   documentation: https://github.com/microsoft/playwright-cli#readme
 relationships:
   parent: Playwright
-  children: []
   related_tools:
     - Selenium
     - Claude
     - GitHub Copilot
     - GitHub Copilot CLI
 ---
-
 # **Playwright CLI 調査レポート**
 
 ## **1. 基本情報**

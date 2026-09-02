@@ -42,7 +42,6 @@ links:
   documentation: https://docs.gitlab.com/ee/ci/
 relationships:
   parent: GitLab
-  children: []
   related_tools:
     - GitHub Actions
     - Jenkins
@@ -50,7 +49,6 @@ relationships:
     - Trivy
     - Agentic Workflows
 ---
-
 # **GitLab CI/CD 調査レポート**
 
 ## **1. 基本情報**

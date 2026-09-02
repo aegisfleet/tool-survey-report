@@ -47,8 +47,6 @@ links:
   deepwiki: https://deepwiki.com/Significant-Gravitas/AutoGPT
   documentation: https://docs.agpt.co/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - LangChain
     - Devin
@@ -57,9 +55,7 @@ relationships:
     - Letta
     - AgentScope
     - NemoClaw
-    - OpenClaw
 ---
-
 # **AutoGPT 調査レポート**
 
 ## **1. 基本情報**

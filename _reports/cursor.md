@@ -56,12 +56,7 @@ relationships:
     - Cline
     - Roo Code
     - Visual Studio Code
-    - Devin
-    - Model Context Protocol
-    - Agent Trace
-    - Context7
 ---
-
 # **Cursor 調査レポート**
 
 ## **1. 基本情報**

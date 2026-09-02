@@ -39,15 +39,7 @@ evaluation:
   summary: 世界トップレベルのフロンティアモデルと同等の推論性能を持つマルチエージェントシステムにより、専門的なタスクを高精度かつ自律的に解決可能な強力なAIサービス。
 links:
   documentation: https://sakana.ai/fugu/
-relationships:
-  parent: ''
-  children:
-    - Sakana Fugu
-    - Sakana Marlin
-    - Sakana Chat
-  related_tools: []
 ---
-
 # **Sakana AI 調査レポート**
 
 ## **1. 基本情報**

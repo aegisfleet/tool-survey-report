@@ -47,8 +47,6 @@ evaluation:
 links:
   documentation: https://help.figma.com/hc/ja
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Google Stitch
     - Miro
@@ -57,9 +55,7 @@ relationships:
     - GIMP
     - OpenPencil
     - いいフォント
-    - Open CoDesign
 ---
-
 # **Figma 調査レポート**
 
 ## **1. 基本情報**

@@ -44,8 +44,6 @@ links:
   codewiki: https://codewiki.google/github.com/bytedance/UI-TARS-desktop
   documentation: https://github.com/bytedance/UI-TARS-desktop/tree/main/docs
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Claude
     - OpenHands
@@ -54,7 +52,6 @@ relationships:
     - Model Context Protocol
     - Ferret-UI
 ---
-
 # **UI-TARS Desktop 調査レポート**
 
 ## **1. 基本情報**

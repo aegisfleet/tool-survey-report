@@ -47,7 +47,6 @@ links:
   deepwiki: https://deepwiki.com/JetBrains/intellij-community
   documentation: https://www.jetbrains.com/help/idea/
 relationships:
-  parent: ''
   children:
     - Android Studio
     - Kotlin Multiplatform
@@ -59,7 +58,6 @@ relationships:
     - Flutter
     - Delphi
 ---
-
 # **IntelliJ IDEA 調査レポート**
 
 ## **1. 基本情報**

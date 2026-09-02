@@ -42,13 +42,7 @@ evaluation:
 links:
   github: https://github.com/MoonshotAI
   documentation: https://platform.kimi.ai/docs/overview
-relationships:
-  related_tools:
-    - OpenAI API
-    - Anthropic API
-    - Gemini API
 ---
-
 # **Kimi API Platform 調査レポート**
 
 ## **1. 基本情報**

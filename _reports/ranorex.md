@@ -40,14 +40,11 @@ evaluation:
 links:
   documentation: https://support.ranorex.com/hc/en-us
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Playwright
     - Selenium
     - Cypress
 ---
-
 # **Ranorex Studio 調査レポート**
 
 ## **1. 基本情報**

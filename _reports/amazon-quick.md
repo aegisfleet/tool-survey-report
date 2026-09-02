@@ -41,11 +41,9 @@ evaluation:
 links:
   documentation: https://docs.aws.amazon.com/quicksuite/latest/userguide/
 relationships:
-  parent: AWS
   related_tools:
     - Amazon QuickSight
 ---
-
 # **Amazon Quick 調査レポート**
 
 ## **1. 基本情報**

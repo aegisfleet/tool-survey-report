@@ -44,12 +44,10 @@ links:
   deepwiki: https://deepwiki.com/winfunc/opcode
 relationships:
   parent: Claude Code
-  children: []
   related_tools:
     - OpenHands
     - Devin
 ---
-
 # **Opcode 調査レポート**
 
 ## **1. 基本情報**

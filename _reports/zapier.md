@@ -45,8 +45,6 @@ evaluation:
 links:
   documentation: https://help.zapier.com/hc/en-us
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Make
     - Microsoft Power Automate
@@ -55,10 +53,7 @@ relationships:
     - n8n
     - Workato
     - Google Opal
-    - UiPath
-    - NocoDB
 ---
-
 # **Zapier 調査レポート**
 
 ## **1. 基本情報**

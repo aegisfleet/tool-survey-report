@@ -39,10 +39,7 @@ links:
   github: https://github.com/xai-org/x-algorithm
   deepwiki: https://deepwiki.com/xai-org/x-algorithm
   codewiki: https://codewiki.google/github.com/xai-org/x-algorithm
-relationships:
-  related_tools: []
 ---
-
 # **x-algorithm 調査レポート**
 
 ## **1. 基本情報**

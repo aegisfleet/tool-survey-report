@@ -37,12 +37,7 @@ links:
   github: https://github.com/iOfficeAI/OfficeCLI
   codewiki: https://codewiki.google/github.com/iOfficeAI/OfficeCLI
   documentation: https://github.com/iOfficeAI/OfficeCLI/wiki
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **OfficeCLI 調査レポート**
 
 ## **1. 基本情報**

@@ -46,13 +46,10 @@ links:
   deepwiki: https://deepwiki.com/jj-vcs/jj
   documentation: https://docs.jj-vcs.dev/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - GitHub
     - GitLab
 ---
-
 # **Jujutsu (jj) 調査レポート**
 
 ## **1. 基本情報**

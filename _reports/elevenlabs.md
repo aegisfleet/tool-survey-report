@@ -43,14 +43,11 @@ links:
   github: https://github.com/elevenlabs
   documentation: https://elevenlabs.io/docs/overview/intro
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Suno
     - Waves Place
     - VoxCPM
 ---
-
 # **ElevenLabs 調査レポート**
 
 ## **1. 基本情報**

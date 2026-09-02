@@ -40,10 +40,7 @@ evaluation:
 links:
   github: https://github.com/yt-dlp/yt-dlp
   deepwiki: https://deepwiki.com/yt-dlp/yt-dlp
-relationships:
-  related_tools: null
 ---
-
 # **yt-dlp 調査レポート**
 
 ## **1. 基本情報**

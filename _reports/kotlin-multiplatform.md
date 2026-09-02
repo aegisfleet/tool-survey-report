@@ -50,12 +50,10 @@ links:
   documentation: https://kotlinlang.org/docs/multiplatform.html
 relationships:
   parent: IntelliJ IDEA
-  children: []
   related_tools:
     - Flutter
     - Android Studio
 ---
-
 # **Kotlin Multiplatform 調査レポート**
 
 ## **1. 基本情報**

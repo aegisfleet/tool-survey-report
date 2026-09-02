@@ -40,8 +40,6 @@ evaluation:
   summary: 完全無料かつ高機能な編集ソフトとしての地位を維持しつつ、ExEdit2により性能面でも現代化を果たした
 links: {}
 relationships:
-  parent: null
-  children: []
   related_tools:
     - DaVinci Resolve
     - Apple Creator Studio
@@ -49,7 +47,6 @@ relationships:
     - OpenCut
     - Blender
 ---
-
 # **AviUtl 調査レポート**
 
 ## **1. 基本情報**

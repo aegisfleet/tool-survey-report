@@ -44,14 +44,12 @@ links:
   documentation: https://gh.io/github-app-docs
 relationships:
   parent: GitHub Copilot
-  children: []
   related_tools:
     - GitHub Copilot CLI
     - Cursor
     - Devin Desktop
     - Cline
 ---
-
 # **GitHub Copilot app 調査レポート**
 
 ## **1. 基本情報**

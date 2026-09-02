@@ -46,8 +46,6 @@ links:
   deepwiki: https://deepwiki.com/n8n-io/n8n
   documentation: https://docs.n8n.io/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Make
     - Zapier
@@ -56,10 +54,7 @@ relationships:
     - Microsoft Power Automate
     - Workato
     - Google Opal
-    - NocoDB
-    - MoneyPrinterV2
 ---
-
 # **n8n 調査レポート**
 
 ## **1. 基本情報**

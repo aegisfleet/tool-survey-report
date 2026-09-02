@@ -43,7 +43,6 @@ links:
   codewiki: https://codewiki.google/github.com/facebook/react
   documentation: https://react.dev/reference/react
 relationships:
-  parent: ''
   children:
     - Remotion
   related_tools:
@@ -54,7 +53,6 @@ relationships:
     - Vercel Agent Skills
     - Axios
 ---
-
 # **React 調査レポート**
 
 ## **1. 基本情報**

@@ -47,8 +47,6 @@ evaluation:
 links:
   documentation: https://www.blackmagicdesign.com/products/davinciresolve/training
 relationships:
-  parent: null
-  children: []
   related_tools:
     - AviUtl
     - Apple Creator Studio
@@ -56,7 +54,6 @@ relationships:
     - OpenCut
     - Blender
 ---
-
 # **DaVinci Resolve 調査レポート**
 
 ## **1. 基本情報**

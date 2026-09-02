@@ -49,14 +49,11 @@ links:
   codewiki: https://codewiki.google/github.com/floci-io/floci
   documentation: https://floci.io/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - LocalStack
     - fakecloud
     - Moto
 ---
-
 # **Floci 調査レポート**
 
 ## **1. 基本情報**

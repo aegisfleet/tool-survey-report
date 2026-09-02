@@ -44,13 +44,10 @@ links:
   github: https://github.com/GitGuardian
   documentation: https://docs.gitguardian.com/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Gitleaks
     - Trivy
 ---
-
 # **GitGuardian 調査レポート**
 
 ## **1. 基本情報**

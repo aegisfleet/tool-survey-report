@@ -41,7 +41,6 @@ evaluation:
 links:
   documentation: https://docs.anthropic.com/
 relationships:
-  parent: null
   children:
     - Claude Code
     - Claude Cowork
@@ -54,12 +53,7 @@ relationships:
     - Model Context Protocol
     - MCP Apps
     - Agent Skills
-    - Qwen
-    - UI-TARS Desktop
-    - Mobile Next
-    - Android Use
 ---
-
 # **Claude 調査レポート**
 
 ## **1. 基本情報**

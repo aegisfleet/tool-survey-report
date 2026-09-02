@@ -43,14 +43,11 @@ evaluation:
 links:
   documentation: https://help.speakerdeck.com/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Docswell
     - Gamma
     - Canva
 ---
-
 # **Speaker Deck 調査レポート**
 
 ## **1. 基本情報**

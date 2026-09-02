@@ -51,9 +51,7 @@ relationships:
     - GitHub
     - GitLab
     - Selenium
-    - TestLink
 ---
-
 # **Kiwi TCMS 調査レポート**
 
 ## **1. 基本情報**

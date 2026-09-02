@@ -45,7 +45,6 @@ links:
   documentation: https://developer.android.com/studio/docs
 relationships:
   parent: IntelliJ IDEA
-  children: []
   related_tools:
     - Eclipse IDE
     - Flutter
@@ -54,7 +53,6 @@ relationships:
     - Mobile Next
     - Delphi
 ---
-
 # **Android Studio 調査レポート**
 
 ## **1. 基本情報**

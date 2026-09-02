@@ -46,15 +46,12 @@ links:
   codewiki: https://codewiki.google/github.com/containers/podman
   documentation: https://docs.podman.io/en/latest/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Docker
     - Kubernetes
     - Ansible
     - Wine
 ---
-
 # **Podman 調査レポート**
 
 ## **1. 基本情報**

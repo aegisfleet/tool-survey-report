@@ -244,8 +244,8 @@
   - 噂やリーク情報は記載しない
   - ロードマップに記載がある場合はその旨を明記する
 
-**リンク切れおよびMermaid構文の確認:**
-- **必須**: `pnpm install --frozen-lockfile` を実行した後、`pnpm run verify-report [ファイルパス]` （または `python3 scripts/run_checks.py [ファイルパス]`）を実行し、**リンク切れ（404エラー）およびMarkdown内のMermaid構文エラー**がないことを確認する
+**リンク切れ、Mermaid構文、およびリレーションシップ（relationships）の確認:**
+- **必須**: `pnpm install --frozen-lockfile` を実行した後、`pnpm run verify-report [ファイルパス]` （または `python3 scripts/run_checks.py [ファイルパス]`）を実行し、**リンク切れ（404エラー）、Markdown内のMermaid構文エラー、およびリレーションシップ整合性（上限超過・未存在のtool_name参照等）**がないことを確認する
 - 記載する全URLについて、ブラウザ等でアクセスし、ページが存在することを確認する
 - 「Page Not Found (404)」となるリンクは記載しない
 
@@ -443,7 +443,7 @@ relationships:
 - [ ] 料金プランが表形式で記載されている
 - [ ] 類似ツール比較が「機能比較表（星取表）」と「詳細比較」で構成されている
 - [ ] セキュリティ情報が「不明」のみで済まされていない
-- [ ] リンク切れおよびMermaid構文エラーがない（`pnpm run verify-report` で両方同時に自動検証。事前に `pnpm install --frozen-lockfile` を実行すること）
+- [ ] リンク切れ、Mermaid構文エラー、およびリレーションシップ（relationships）エラーがない（`pnpm run verify-report` で同時に自動検証。事前に `pnpm install --frozen-lockfile` を実行すること）
 - [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの記載を確認済み（`pnpm run update-wiki [ファイルパス]` を実行して確認すること）
 
 ### 品質チェック
@@ -493,7 +493,7 @@ relationships:
 
 ### ステップ3: 整合性・品質チェック
 - 更新した内容が、他の競合ツールのレポートと矛盾していないか確認する（双方向性の維持）。
-- `pnpm run verify-report` を実行し、追加したリンクが切れていないか、またMermaidの構文が壊れていないか確認する。
+- `pnpm run verify-report` を実行し、追加したリンクが切れていないか、Mermaidの構文が壊れていないか、およびリレーションシップ（relationships）の上限や参照先ツール名が正しいか確認する。
 
 ---
 

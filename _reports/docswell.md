@@ -42,12 +42,9 @@ evaluation:
 links:
   documentation: https://support.uplucid.com/docs/docswell/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Speaker Deck
 ---
-
 # **Docswell 調査レポート**
 
 ## **1. 基本情報**

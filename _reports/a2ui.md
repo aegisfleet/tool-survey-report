@@ -41,10 +41,7 @@ links:
   github: https://github.com/google/A2UI
   deepwiki: https://deepwiki.com/google/A2UI
   codewiki: https://codewiki.google/github.com/google/A2UI
-relationships:
-  related_tools: []
 ---
-
 # **A2UI 調査レポート**
 
 ## **1. 基本情報**

@@ -42,14 +42,12 @@ links:
   documentation: https://modelcontextprotocol.io/docs/extensions/apps
 relationships:
   parent: Model Context Protocol
-  children: []
   related_tools:
     - Claude
     - Visual Studio Code
     - Claude Code
     - Agent Skills
 ---
-
 # **MCP Apps 調査レポート**
 
 ## **1. 基本情報**

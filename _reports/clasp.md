@@ -41,10 +41,7 @@ links:
   codewiki: https://codewiki.google/github.com/google/clasp
   deepwiki: https://deepwiki.com/google/clasp
   documentation: https://github.com/google/clasp/tree/master/docs
-relationships:
-  parent: null
 ---
-
 # **clasp 調査レポート**
 
 ## **1. 基本情報**

@@ -42,12 +42,9 @@ links:
   deepwiki: https://deepwiki.com/open-pencil/open-pencil
   codewiki: https://codewiki.google/github.com/open-pencil/open-pencil
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Figma
 ---
-
 # **OpenPencil 調査レポート**
 
 ## **1. 基本情報**

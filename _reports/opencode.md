@@ -44,8 +44,6 @@ links:
   codewiki: https://codewiki.google/github.com/anomalyco/opencode
   documentation: https://opencode.ai/docs
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - OpenHands
     - Devin
@@ -54,7 +52,6 @@ relationships:
     - Playwright Test Agents
     - TAKT
 ---
-
 # **OpenCode 調査レポート**
 
 ## **1. 基本情報**

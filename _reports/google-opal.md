@@ -41,15 +41,12 @@ evaluation:
 links:
   documentation: https://developers.google.com/opal
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Zapier
     - n8n
     - Microsoft Power Automate
     - Dify
 ---
-
 # **Google Opal 調査レポート**
 
 ## **1. 基本情報**

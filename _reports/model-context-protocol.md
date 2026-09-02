@@ -40,7 +40,6 @@ links:
   github: https://github.com/modelcontextprotocol
   documentation: https://modelcontextprotocol.io/docs
 relationships:
-  parent: ''
   children:
     - AWS MCP Servers
     - Context7
@@ -54,9 +53,7 @@ relationships:
     - Agent Skills
     - Mobile Next
     - UI-TARS Desktop
-    - Model Hardware Standard
 ---
-
 # **Model Context Protocol (MCP) 調査レポート**
 
 ## **1. 基本情報**

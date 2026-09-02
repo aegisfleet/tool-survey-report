@@ -37,10 +37,7 @@ evaluation:
       reason: iOSでは発信時のブロック（自動的な切電）や一部機能に制限がある
   summary: 無料で導入できる警察庁推奨の特殊詐欺対策アプリとして、モバイルユーザーに強力な保護を提供する
 links: null
-relationships:
-  related_tools: null
 ---
-
 # **詐欺バスター Lite 調査レポート**
 
 ## **1. 基本情報**

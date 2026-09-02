@@ -42,10 +42,7 @@ links:
   github: https://github.com/evilmartians/lefthook
   deepwiki: https://deepwiki.com/evilmartians/lefthook
   documentation: https://lefthook.dev/
-relationships:
-  related_tools: []
 ---
-
 # **Lefthook 調査レポート**
 
 ## **1. 基本情報**

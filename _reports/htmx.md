@@ -44,9 +44,7 @@ links:
 relationships:
   related_tools:
     - React
-    - Vue.js
 ---
-
 # **htmx 調査レポート**
 
 ## **1. 基本情報**

@@ -43,14 +43,12 @@ links:
   documentation: https://awslabs.github.io/mcp/
 relationships:
   parent: Model Context Protocol
-  children: []
   related_tools:
     - Amazon Bedrock
     - Amazon Bedrock AgentCore Runtime
     - AWS CloudFormation
     - AWS Blocks
 ---
-
 # **AWS MCP Servers 調査レポート**
 
 ## **1. 基本情報**

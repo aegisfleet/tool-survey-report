@@ -45,8 +45,6 @@ evaluation:
 links:
   documentation: https://docs.workato.com/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Make
     - Zapier
@@ -54,7 +52,6 @@ relationships:
     - Microsoft Power Automate
     - UiPath
 ---
-
 # **Workato 調査レポート**
 
 ## **1. 基本情報**

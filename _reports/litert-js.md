@@ -45,12 +45,9 @@ links:
   codewiki: https://codewiki.google/github.com/google-ai-edge/LiteRT
   documentation: https://developers.google.com/edge/litert/web/get_started
 relationships:
-  parent: LiteRT
-  children: []
   related_tools:
     - TensorFlow
 ---
-
 # **LiteRT.js 調査レポート**
 
 ## **1. 基本情報**

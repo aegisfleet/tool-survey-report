@@ -41,9 +41,7 @@ links:
 relationships:
   related_tools:
     - npm
-    - cargo
 ---
-
 # **uv 調査レポート**
 
 ## **1. 基本情報**

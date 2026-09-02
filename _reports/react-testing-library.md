@@ -44,14 +44,11 @@ links:
   deepwiki: https://deepwiki.com/testing-library/react-testing-library
   documentation: https://testing-library.com/docs/react-testing-library/intro/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - React
     - Playwright
     - Selenium
 ---
-
 # **React Testing Library 調査レポート**
 
 ## **1. 基本情報**

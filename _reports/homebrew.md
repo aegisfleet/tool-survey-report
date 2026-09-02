@@ -42,14 +42,11 @@ links:
   deepwiki: https://deepwiki.com/Homebrew/brew
   documentation: https://docs.brew.sh/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - npm
     - pnpm
     - Yarn
 ---
-
 # **Homebrew 調査レポート**
 
 ## **1. 基本情報**

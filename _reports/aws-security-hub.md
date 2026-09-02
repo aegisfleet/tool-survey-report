@@ -41,13 +41,10 @@ evaluation:
 links:
   documentation: https://docs.aws.amazon.com/securityhub/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Amazon GuardDuty
     - Google AI Threat Defense
 ---
-
 # **AWS Security Hub 調査レポート**
 
 ## **1. 基本情報**

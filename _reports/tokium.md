@@ -45,12 +45,7 @@ evaluation:
   summary: 「入力レス」と「完全ペーパーレス」を徹底的に追求したサービスであり、アナログ業務からの脱却に最適。
 links:
   documentation: https://support.keihi.com/
-relationships:
-  parent: null
-  children: []
-  related_tools: []
 ---
-
 # **TOKIUM 調査レポート**
 
 ## **1. 基本情報**

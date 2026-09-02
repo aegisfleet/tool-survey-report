@@ -40,11 +40,7 @@ links:
   github: https://github.com/GoogleCloudPlatform/knowledge-catalog
   deepwiki: https://deepwiki.com/GoogleCloudPlatform/knowledge-catalog
   documentation: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
-relationships:
-  children: []
-  related_tools: []
 ---
-
 # **Open Knowledge Format 調査レポート**
 
 ## **1. 基本情報**

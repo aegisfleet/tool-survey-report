@@ -46,13 +46,10 @@ links:
   codewiki: https://codewiki.google/github.com/agentscope-ai/agentscope
   documentation: https://doc.agentscope.io/tutorial/index.html
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - LangChain
     - AutoGPT
 ---
-
 # **AgentScope 調査レポート**
 
 ## **1. 基本情報**

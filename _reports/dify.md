@@ -46,8 +46,6 @@ links:
   deepwiki: https://deepwiki.com/langgenius/dify
   documentation: https://docs.dify.ai/v/ja/getting-started/intro-to-dify
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - LangChain
     - Jinba
@@ -57,7 +55,6 @@ relationships:
     - ChatDev
     - Oracle AI Database Private Agent Factory
 ---
-
 # **Dify 調査レポート**
 
 ## **1. 基本情報**

@@ -38,14 +38,7 @@ evaluation:
     - point: -3
       reason: 料金プランが非公開であり、要問い合わせ。
   summary: 日本企業の経営管理に最適化されており、AIを活用した高度な分析と大幅な業務効率化を実現する強力なツール。
-relationships:
-  parent: ''
-  children:
-    - ''
-  related_tools:
-    - ''
 ---
-
 # **Loglass 調査レポート**
 
 ## **1. 基本情報**

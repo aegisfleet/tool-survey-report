@@ -42,8 +42,6 @@ evaluation:
 links:
   documentation: https://docs.perplexity.ai/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - ChatGPT
     - Genspark
@@ -51,7 +49,6 @@ relationships:
     - NotebookLM
     - Google Disco
 ---
-
 # **Perplexity 調査レポート**
 
 ## **1. 基本情報**

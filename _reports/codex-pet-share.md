@@ -36,10 +36,7 @@ evaluation:
 links:
   github: https://github.com/portons/codex-pet-share
   codewiki: https://codewiki.google/github.com/portons/codex-pet-share
-relationships:
-  related_tools: []
 ---
-
 # **Codex Pet Share 調査レポート**
 
 ## **1. 基本情報**

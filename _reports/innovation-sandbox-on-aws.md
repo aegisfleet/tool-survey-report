@@ -41,10 +41,7 @@ links:
   github: https://github.com/aws-solutions/innovation-sandbox-on-aws
   deepwiki: https://deepwiki.com/aws-solutions/innovation-sandbox-on-aws
   documentation: https://docs.aws.amazon.com/solutions/latest/innovation-sandbox-on-aws/solution-overview.html
-relationships:
-  related_tools: []
 ---
-
 # **Innovation Sandbox on AWS 調査レポート**
 
 ## **1. 基本情報**

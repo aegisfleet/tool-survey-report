@@ -43,9 +43,8 @@ links:
   documentation: https://help.miricanvas.com/hc/ja
 relationships:
   related_tools:
-    - canva
+    - Canva
 ---
-
 # **MiriCanvas 調査レポート**
 
 ## **1. 基本情報**

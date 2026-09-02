@@ -46,13 +46,11 @@ links:
   documentation: https://nektosact.com/introduction.html
 relationships:
   parent: GitHub Actions
-  children: []
   related_tools:
     - Docker
     - GitLab CI/CD
     - Jenkins
 ---
-
 # **act (nektos/act) 調査レポート**
 
 ## **1. 基本情報**

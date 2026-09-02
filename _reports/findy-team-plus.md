@@ -40,14 +40,11 @@ evaluation:
 links:
   documentation: https://findy-team.io/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - GitHub
     - Jira
     - GitLab
 ---
-
 # **Findy Team+ 調査レポート**
 
 ## **1. 基本情報**

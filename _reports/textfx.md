@@ -43,10 +43,7 @@ evaluation:
 links:
   github: https://github.com/google/generative-ai-docs/tree/main/demos/palm/web/textfx
   documentation: https://developers.googleblog.com/how-its-made-textfx-is-a-suite-of-ai-tools-made-in-collaboration-with-lupe-fiasco/
-relationships:
-  related_tools: []
 ---
-
 # **TextFX 調査レポート**
 
 ## **1. 基本情報**

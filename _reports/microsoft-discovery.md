@@ -43,10 +43,7 @@ evaluation:
 links:
   github: https://github.com/microsoft/discovery
   deepwiki: https://deepwiki.com/microsoft/discovery
-relationships:
-  related_tools: []
 ---
-
 # **Microsoft Discovery 調査レポート**
 
 ## **1. 基本情報**

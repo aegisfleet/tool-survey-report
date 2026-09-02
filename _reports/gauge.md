@@ -44,15 +44,12 @@ links:
   deepwiki: https://deepwiki.com/getgauge/gauge
   documentation: https://docs.gauge.org/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Cucumber
     - Robot Framework
     - Playwright
     - Selenium
 ---
-
 # **Gauge 調査レポート**
 
 ## **1. 基本情報**

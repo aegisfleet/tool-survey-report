@@ -34,12 +34,9 @@ evaluation:
 links:
   documentation: https://nakusanai.jp/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - ワスレナイ
 ---
-
 # **ナクサナイ 調査レポート**
 
 ## **1. 基本情報**

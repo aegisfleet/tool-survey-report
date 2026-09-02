@@ -39,12 +39,9 @@ evaluation:
 links:
   documentation: https://suzuri.jp/developer/documentation/v1
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - STORES
 ---
-
 # **SUZURI 調査レポート**
 
 ## **1. 基本情報**

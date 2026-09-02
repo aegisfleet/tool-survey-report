@@ -46,7 +46,6 @@ links:
   documentation: https://playwright.dev/docs/test-agents
 relationships:
   parent: Playwright
-  children: []
   related_tools:
     - Visual Studio Code
     - Claude Code
@@ -56,7 +55,6 @@ relationships:
     - mabl
     - Selenium
 ---
-
 # **Playwright Test Agents 調査レポート**
 
 ## **1. 基本情報**

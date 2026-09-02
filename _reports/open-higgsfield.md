@@ -39,12 +39,7 @@ evaluation:
 links:
   github: https://github.com/Wide-Trace/open-higgsfield
   deepwiki: https://deepwiki.com/Wide-Trace/open-higgsfield
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **OpenHiggsfield AI 調査レポート**
 
 ## **1. 基本情報**

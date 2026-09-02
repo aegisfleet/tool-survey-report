@@ -39,10 +39,7 @@ evaluation:
   summary: プロフェッショナルなWebセキュリティ診断において不可欠なツールだが、無料版には一部機能制限がある
 links:
   documentation: https://portswigger.net/burp/documentation
-relationships:
-  related_tools: []
 ---
-
 # **Burp Suite 調査レポート**
 
 ## **1. 基本情報**

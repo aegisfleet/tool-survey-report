@@ -41,8 +41,6 @@ links:
   deepwiki: https://deepwiki.com/microsoft/agent-lightning
   documentation: https://microsoft.github.io/agent-lightning/stable/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - LangChain
     - Agent Governance Toolkit

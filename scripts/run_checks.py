@@ -15,6 +15,11 @@ def main():
     print(f"\nRunning Mermaid syntax checker: {' '.join(cmd2)}")
     res2 = subprocess.run(cmd2, env=dict(os.environ, PYTHONPATH="."))
     
+    # 3. Run relationships checker
+    cmd3 = [sys.executable, "scripts/check_relationships.py"] + args
+    print(f"\nRunning relationships checker: {' '.join(cmd3)}")
+    res3 = subprocess.run(cmd3, env=dict(os.environ, PYTHONPATH="."))
+    
     # Return error if any of the checks failed
     if res1.returncode != 0:
         print("\nLink check failed.")
@@ -22,6 +27,9 @@ def main():
     elif res2.returncode != 0:
         print("\nMermaid syntax check failed.")
         sys.exit(res2.returncode)
+    elif res3.returncode != 0:
+        print("\nRelationships check failed.")
+        sys.exit(res3.returncode)
         
     print("\nAll checks passed successfully.")
     sys.exit(0)

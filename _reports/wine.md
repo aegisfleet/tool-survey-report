@@ -40,15 +40,12 @@ links:
   github: https://gitlab.winehq.org/wine/wine
   documentation: https://wiki.winehq.org/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Docker
     - Podman
     - Ubuntu
     - WSL
 ---
-
 # **Wine (WineHQ) 調査レポート**
 
 ## **1. 基本情報**

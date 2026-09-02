@@ -44,11 +44,8 @@ links:
   codewiki: https://codewiki.google/github.com/D4Vinci/Scrapling
 relationships:
   related_tools:
-    - beautifulsoup
-    - scrapy
     - Playwright
 ---
-
 # **Scrapling 調査レポート**
 
 ## **1. 基本情報**

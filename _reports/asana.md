@@ -38,10 +38,7 @@ evaluation:
   summary: AIを活用した次世代のワークマネジメントツールとして、特に中規模〜大規模な組織に最適
 links:
   documentation: https://help.asana.com/
-relationships:
-  related_tools: null
 ---
-
 # **Asana 調査レポート**
 
 ## **1. 基本情報**

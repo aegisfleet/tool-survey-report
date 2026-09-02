@@ -40,10 +40,7 @@ evaluation:
 links:
   github: https://github.com/gitleaks/gitleaks
   deepwiki: https://deepwiki.com/gitleaks/gitleaks
-relationships:
-  related_tools: []
 ---
-
 # **Gitleaks 調査レポート**
 
 ## **1. 基本情報**

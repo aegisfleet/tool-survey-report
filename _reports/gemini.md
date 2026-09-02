@@ -50,7 +50,6 @@ relationships:
     - Code Wiki
     - Gemini Skills
     - Google Jules
-    - Google Stitch
   related_tools:
     - ChatGPT
     - Claude
@@ -60,7 +59,6 @@ relationships:
     - Vertex AI
     - Microsoft 365 Copilot
 ---
-
 # **Gemini 調査レポート**
 
 ## **1. 基本情報**

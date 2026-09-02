@@ -42,14 +42,11 @@ evaluation:
 links:
   documentation: https://developers.google.com/workspace/add-ons/studio
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Microsoft Power Automate
     - Zapier
     - Make
 ---
-
 # **Google Workspace Studio 調査レポート**
 
 ## **1. 基本情報**

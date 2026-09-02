@@ -39,13 +39,11 @@ evaluation:
 links:
   documentation: https://learning.google.com/
 relationships:
-  parent: ''
   children:
     - NotebookLM
   related_tools:
     - Google Cloud
 ---
-
 # **Google Learning 調査レポート**
 
 ## **1. 基本情報**

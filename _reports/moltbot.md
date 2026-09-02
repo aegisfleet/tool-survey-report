@@ -45,12 +45,10 @@ links:
   documentation: https://docs.openclaw.ai/
 relationships:
   parent: OpenClaw
-  children: []
   related_tools:
     - OpenHands
     - AutoGPT
 ---
-
 # **Moltbot 調査レポート**
 
 ## **1. 基本情報**

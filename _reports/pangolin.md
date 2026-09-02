@@ -44,10 +44,7 @@ links:
 relationships:
   related_tools:
     - Cloudflare
-    - Tailscale
-    - OpenVPN
 ---
-
 # **Pangolin 調査レポート**
 
 ## **1. 基本情報**

@@ -44,7 +44,6 @@ links:
   documentation: https://notebooklm.google.com/
 relationships:
   parent: Gemini
-  children: []
   related_tools:
     - Google Learning
     - Google Illuminate
@@ -52,7 +51,6 @@ relationships:
     - LilysAI
     - Huxe
 ---
-
 # **NotebookLM 調査レポート**
 
 ## **1. 基本情報**

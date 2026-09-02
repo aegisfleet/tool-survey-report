@@ -40,12 +40,7 @@ evaluation:
 links:
   github: https://github.com/AdguardTeam
   documentation: https://adguard.com/kb/
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **AdGuard 調査レポート**
 
 ## **1. 基本情報**

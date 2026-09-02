@@ -37,11 +37,9 @@ links:
   documentation: https://blog.google/innovation-and-ai/models-and-research/google-labs/dreambeans/
 relationships:
   parent: Gemini
-  children: []
   related_tools:
     - Gemini
 ---
-
 # **Dreambeans 調査レポート**
 
 ## **1. 基本情報**

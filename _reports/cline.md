@@ -58,9 +58,7 @@ relationships:
     - Roo Code
     - Visual Studio Code
     - Model Context Protocol
-    - Agent Trace
 ---
-
 # **Cline 調査レポート**
 
 ## **1. 基本情報**

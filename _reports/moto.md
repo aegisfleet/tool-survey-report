@@ -43,13 +43,11 @@ links:
   deepwiki: https://deepwiki.com/getmoto/moto
   codewiki: https://codewiki.google/github.com/getmoto/moto
 relationships:
-  children: []
   related_tools:
     - LocalStack
     - Floci
     - fakecloud
 ---
-
 # **Moto 調査レポート**
 
 ## **1. 基本情報**

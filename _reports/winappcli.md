@@ -43,12 +43,7 @@ links:
   deepwiki: https://deepwiki.com/microsoft/winappCli
   codewiki: https://codewiki.google/github.com/microsoft/winappCli
   documentation: https://github.com/microsoft/winappCli/blob/main/docs/usage.md
-relationships:
-  parent: Microsoft
-  children: []
-  related_tools: []
 ---
-
 # **winapp CLI 調査レポート**
 
 ## **1. 基本情報**

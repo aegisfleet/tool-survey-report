@@ -41,13 +41,10 @@ links:
   deepwiki: https://deepwiki.com/axios/axios
   codewiki: https://codewiki.google/github.com/axios/axios
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Node.js
     - React
 ---
-
 # **Axios 調査レポート**
 
 ## **1. 基本情報**

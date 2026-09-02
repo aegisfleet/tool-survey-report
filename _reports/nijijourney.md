@@ -40,12 +40,9 @@ evaluation:
 links:
   documentation: https://nijijourney.com/help-center
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Stable Diffusion
 ---
-
 # **Niji Journey 調査レポート**
 
 ## **1. 基本情報**

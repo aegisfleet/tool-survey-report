@@ -43,7 +43,6 @@ evaluation:
 links:
   documentation: https://docs.splunk.com/Documentation/Splunk
 relationships:
-  parent: null
   children:
     - Splunk AppDynamics
   related_tools:
@@ -53,7 +52,6 @@ relationships:
     - Amazon OpenSearch Service
     - Grafana
 ---
-
 # **Splunk 調査レポート**
 
 ## **1. 基本情報**

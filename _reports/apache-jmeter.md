@@ -48,12 +48,9 @@ links:
   deepwiki: https://deepwiki.com/apache/jmeter
   documentation: https://jmeter.apache.org/usermanual/index.html
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Karate
 ---
-
 # **Apache JMeter 調査レポート**
 
 ## **1. 基本情報**

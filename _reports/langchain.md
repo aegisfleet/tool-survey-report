@@ -45,7 +45,6 @@ links:
   deepwiki: https://deepwiki.com/langchain-ai/langchain
   documentation: https://docs.langchain.com/
 relationships:
-  parent: ''
   children:
     - Deep Agents
   related_tools:

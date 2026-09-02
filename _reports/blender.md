@@ -44,14 +44,11 @@ links:
   github: https://projects.blender.org/blender/blender
   documentation: https://docs.blender.org/manual/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - DaVinci Resolve
     - AviUtl
     - Affinity
 ---
-
 # **Blender 調査レポート**
 
 ## **1. 基本情報**

@@ -46,13 +46,11 @@ links:
   documentation: https://stitch.withgoogle.com/
 relationships:
   parent: Gemini
-  children: []
   related_tools:
     - Figma
     - Gemini
     - design.md
 ---
-
 # **Google Stitch 調査レポート**
 
 ## **1. 基本情報**

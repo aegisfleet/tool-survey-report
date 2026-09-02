@@ -36,13 +36,10 @@ evaluation:
 links:
   documentation: https://labs.google.com/pomelli/about
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Canva
     - ChatGPT
 ---
-
 # **Pomelli 調査レポート**
 
 ## **1. 基本情報**

@@ -42,12 +42,7 @@ evaluation:
 links:
   github: https://github.com/Kong/kong
   documentation: https://developer.konghq.com/ai-gateway/
-relationships:
-  parent: Kong Gateway
-  children: []
-  related_tools: []
 ---
-
 # **Kong AI Gateway 調査レポート**
 
 ## **1. 基本情報**

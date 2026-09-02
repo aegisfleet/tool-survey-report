@@ -55,10 +55,7 @@ relationships:
     - AutoGPT
     - Agent Zero
     - Manus
-    - Deep Agents
-    - Android Use
 ---
-
 # **Devin 調査レポート**
 
 ## **1. 基本情報**

@@ -47,14 +47,11 @@ evaluation:
 links:
   documentation: https://help.miro.com/hc/en-us
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Figma
     - Canva
     - draw.io (diagrams.net)
 ---
-
 # **Miro 調査レポート**
 
 ## **1. 基本情報**

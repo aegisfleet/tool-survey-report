@@ -45,8 +45,6 @@ links:
   codewiki: https://codewiki.google/github.com/appium/appium
   documentation: https://appium.io/docs/en/latest/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - CodeceptJS
     - Selenium
@@ -55,9 +53,7 @@ relationships:
     - Cypress
     - MagicPod
     - Mobile Next
-    - Cucumber
 ---
-
 # **Appium 調査レポート**
 
 ## **1. 基本情報**

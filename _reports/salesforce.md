@@ -43,14 +43,12 @@ evaluation:
 links:
   documentation: https://help.salesforce.com/s/
 relationships:
-  parent: ''
   children:
     - Tableau
   related_tools:
     - AGENTIC STAR
     - Google 広告
 ---
-
 # **Salesforce 調査レポート**
 
 ## **1. 基本情報**

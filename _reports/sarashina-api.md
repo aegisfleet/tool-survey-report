@@ -40,13 +40,7 @@ evaluation:
   summary: 日本語処理に強みを持つセキュアな国産AI基盤として、データ主権を重視する企業や官公庁に最適なソリューション
 links:
   documentation: https://www.softbank.jp/business/service/ai/sarashina-api/
-relationships:
-  related_tools:
-    - openai-api
-    - amazon-bedrock
-    - vertex-ai
 ---
-
 # **Sarashina API 調査レポート**
 
 ## **1. 基本情報**

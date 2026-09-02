@@ -39,12 +39,9 @@ evaluation:
 links:
   documentation: https://illuminate.google.com/home
 relationships:
-  parent: null
-  children: []
   related_tools:
     - NotebookLM
 ---
-
 # **Google Illuminate 調査レポート**
 
 ## **1. 基本情報**

@@ -40,10 +40,7 @@ evaluation:
   summary: 格安SIMユーザーにとってコストパフォーマンスが高く、スマホ完結の利便性が際立つ保険サービス
 links:
   documentation: https://faq.mysurance.co.jp/?utm_source=ohp&utm_medium=header
-relationships:
-  related_tools: []
 ---
-
 # **スマホ保険 調査レポート**
 
 ## **1. 基本情報**

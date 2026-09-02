@@ -42,12 +42,9 @@ evaluation:
 links:
   documentation: https://www.revenuecat.com/docs/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Flutter
 ---
-
 # **RevenueCat 調査レポート**
 
 ## **1. 基本情報**

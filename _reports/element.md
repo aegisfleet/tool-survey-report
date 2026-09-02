@@ -42,12 +42,7 @@ evaluation:
 links:
   github: https://github.com/element-hq/element-web
   deepwiki: https://deepwiki.com/element-hq/element-web
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **Element 調査レポート**
 
 ## **1. 基本情報**

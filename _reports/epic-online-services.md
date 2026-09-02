@@ -39,11 +39,7 @@ evaluation:
   summary: 無料で高品質なゲームバックエンドを利用でき、クロスプラットフォームゲームの開発に最適な選択肢
 links:
   documentation: https://dev.epicgames.com/docs/epic-online-services
-relationships:
-  related_tools:
-    - playfab
 ---
-
 # **Epic Online Services 調査レポート**
 
 ## **1. 基本情報**

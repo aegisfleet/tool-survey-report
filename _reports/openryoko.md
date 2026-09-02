@@ -41,9 +41,7 @@ relationships:
   related_tools:
     - GitHub Copilot
     - Cursor
-    - Windsurf
 ---
-
 # **OpenRyoko 調査レポート**
 
 ## **1. 基本情報**

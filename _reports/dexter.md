@@ -35,12 +35,9 @@ links:
   github: https://github.com/virattt/dexter
   deepwiki: https://deepwiki.com/virattt/dexter
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Claude Code
 ---
-
 # **Dexter 調査レポート**
 
 ## **1. 基本情報**

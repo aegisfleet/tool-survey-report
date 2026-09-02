@@ -43,12 +43,7 @@ links:
   github: https://github.com/google/magika
   codewiki: https://codewiki.google/github.com/google/magika
   deepwiki: https://deepwiki.com/google/magika
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **Magika 調査レポート**
 
 ## **1. 基本情報**

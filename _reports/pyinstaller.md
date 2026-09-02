@@ -46,12 +46,9 @@ links:
   deepwiki: https://deepwiki.com/pyinstaller/pyinstaller
   documentation: https://pyinstaller.org/en/stable/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Docker
 ---
-
 # **PyInstaller 調査レポート**
 
 ## **1. 基本情報**

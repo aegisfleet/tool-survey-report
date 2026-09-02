@@ -39,10 +39,7 @@ evaluation:
   summary: 日常的な買い物にゲーム性を持たせ、ユーザーには「楽しさとお得さ」を、事業者には「リスクの低い集客チャネル」を提供するユニークなECプラットフォーム。
 links:
   documentation: https://faq.kauche.com/
-relationships:
-  related_tools: []
 ---
-
 # **カウシェ 調査レポート**
 
 ## **1. 基本情報**

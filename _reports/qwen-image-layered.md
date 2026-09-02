@@ -45,13 +45,10 @@ links:
   deepwiki: https://deepwiki.com/QwenLM/Qwen-Image-Layered
   documentation: https://huggingface.co/Qwen/Qwen-Image-Layered
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Stable Diffusion
     - Canva
 ---
-
 # **Qwen-Image-Layered 調査レポート**
 
 ## **1. 基本情報**

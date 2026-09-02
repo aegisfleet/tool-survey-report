@@ -46,8 +46,6 @@ links:
   deepwiki: https://deepwiki.com/docker/cli
   documentation: https://docs.docker.com/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Podman
     - Kubernetes
@@ -56,10 +54,7 @@ relationships:
     - dockur/windows
     - PyInstaller
     - picomatch
-    - Ubuntu
-    - Amazon Bedrock AgentCore Runtime
 ---
-
 # **Docker 調査レポート**
 
 ## **1. 基本情報**

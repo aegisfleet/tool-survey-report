@@ -41,15 +41,12 @@ links:
   github: https://github.com/QwenLM/Qwen3.6
   deepwiki: https://deepwiki.com/QwenLM/Qwen3.6
 relationships:
-  parent: null
-  children: []
   related_tools:
     - ChatGPT
     - Claude
     - Gemini
     - Qwen-Image-Layered
 ---
-
 # **Qwen 調査レポート**
 
 ## **1. 基本情報**

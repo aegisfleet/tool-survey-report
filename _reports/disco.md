@@ -39,14 +39,11 @@ evaluation:
   summary: ブラウザとAIエージェントを融合させた野心的な実験作。GenTabsの概念は革新的だが、現在はアクセス制限がある。
 links: null
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Perplexity
     - Felo
     - Genspark
 ---
-
 # **Google Disco 調査レポート**
 
 ## **1. 基本情報**

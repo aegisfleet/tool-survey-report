@@ -42,7 +42,6 @@ links:
   documentation: https://docs.github.com/copilot/concepts/agents/about-copilot-cli
 relationships:
   parent: GitHub Copilot
-  children: []
   related_tools:
     - Playwright CLI
     - Claude Code
@@ -51,7 +50,6 @@ relationships:
     - TAKT
     - Headroom
 ---
-
 # **GitHub Copilot CLI 調査レポート**
 
 ## **1. 基本情報**

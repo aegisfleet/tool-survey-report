@@ -39,11 +39,9 @@ links:
   deepwiki: https://deepwiki.com/obsproject/obs-studio
   documentation: https://github.com/obsproject/obs-studio/wiki
 relationships:
-  related_tools: []
   children:
     - OBS Background Removal
 ---
-
 # **OBS Studio 調査レポート**
 
 ## **1. 基本情報**

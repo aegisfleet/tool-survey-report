@@ -37,10 +37,7 @@ links:
   documentation: https://royshil.github.io/obs-backgroundremoval/usage/
 relationships:
   parent: OBS Studio
-  children: []
-  related_tools: []
 ---
-
 # **OBS Background Removal 調査レポート**
 
 ## **1. 基本情報**

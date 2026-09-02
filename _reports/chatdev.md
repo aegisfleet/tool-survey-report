@@ -43,12 +43,10 @@ links:
   deepwiki: https://deepwiki.com/OpenBMB/ChatDev
 relationships:
   related_tools:
-    - crewai
-    - metagpt
+    - CrewAI
     - Dify
-    - autogpt
+    - AutoGPT
 ---
-
 # **ChatDev 調査レポート**
 
 ## **1. 基本情報**

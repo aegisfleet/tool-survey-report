@@ -343,22 +343,10 @@ EOF
    python3 -c "import yaml, glob; [yaml.safe_load(open(f).read().split('---')[1]) for f in glob.glob('_reports/*.md')]; print('YAML OK')"
    ```
 
-3. **リレーション整合性チェック（必須）**: カテゴリ変更を行った場合、以下を実行して `relationships` が壊れていないことを確認する
+3. **リレーション整合性・上限チェック（必須）**: 変更後、以下を実行して `relationships` の件数上限（related_tools 7件/children 5件/parent 1件）や存在しない tool_name の参照エラーが0件であることを確認する
 
    ```bash
-   # 存在しない tool_name の検出（壊れたリレーションが0件であること）
-   grep "^tool_name:" _reports/*.md | sed 's/.*tool_name: ["'\'']*//;s/["'\'']*$//' | sort | uniq > /tmp/managed_tools.txt
-   python3 -c "
-   import yaml, glob
-   m = set(open('/tmp/managed_tools.txt').read().splitlines())
-   errors = []
-   for f in glob.glob('_reports/*.md'):
-       v = yaml.safe_load(open(f).read().split('---')[1]).get('relationships', {}) or {}
-       for t in v.get('children',[]) + v.get('related_tools',[]) + ([v['parent']] if 'parent' in v else []):
-           if t not in m:
-               errors.append(f'{f}: \"{t}\" not found')
-   print('\n'.join(errors) if errors else 'Relationships OK')
-   "
+   python3 scripts/check_relationships.py _reports
    ```
 
 4. **関連付け整合性**: 参照先存在・双方向関係・循環参照を確認

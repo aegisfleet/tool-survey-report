@@ -41,8 +41,6 @@ evaluation:
 links:
   documentation: https://felo.ai/blog
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Perplexity
     - Genspark
@@ -50,7 +48,6 @@ relationships:
     - Notion
     - Canva
 ---
-
 # **Felo 調査レポート**
 
 ## **1. 基本情報**

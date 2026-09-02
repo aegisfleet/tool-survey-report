@@ -38,11 +38,7 @@ evaluation:
   summary: 現場主導での業務自動化を極めて容易にする、サポート体制が手厚いRPAツール
 links:
   documentation: https://www.keyence.co.jp/landing/req/software/lp_rpa-survey_01138455.jsp
-relationships:
-  related_tools:
-    - Robo-Pat
 ---
-
 # **AI/ナビ搭載 業務自動化RPA RKシリーズ 調査レポート**
 
 ## **1. 基本情報**

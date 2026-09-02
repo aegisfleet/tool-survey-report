@@ -43,8 +43,6 @@ evaluation:
 links:
   documentation: https://learn.microsoft.com/ja-jp/power-automate/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - UiPath
     - Zapier
@@ -53,9 +51,7 @@ relationships:
     - Workato
     - Microsoft 365 Copilot
     - AutoHotkey
-    - Google Opal
 ---
-
 # **Microsoft Power Automate 調査レポート**
 
 ## **1. 基本情報**

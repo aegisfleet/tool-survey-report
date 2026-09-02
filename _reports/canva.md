@@ -45,7 +45,6 @@ evaluation:
 links:
   documentation: https://www.canva.com/design-school/
 relationships:
-  parent: null
   children:
     - Affinity
   related_tools:
@@ -57,7 +56,6 @@ relationships:
     - Speaker Deck
     - Qwen-Image-Layered
 ---
-
 # **Canva 調査レポート**
 
 ## **1. 基本情報**

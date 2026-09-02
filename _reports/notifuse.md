@@ -44,12 +44,7 @@ links:
   github: https://github.com/notifuse/notifuse
   deepwiki: https://deepwiki.com/notifuse/notifuse
   documentation: https://docs.notifuse.com/
-relationships:
-  parent: null
-  children: null
-  related_tools: null
 ---
-
 # **Notifuse 調査レポート**
 
 ## **1. 基本情報**

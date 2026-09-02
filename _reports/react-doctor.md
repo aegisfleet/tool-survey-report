@@ -41,10 +41,8 @@ links:
   documentation: https://github.com/millionco/react-doctor
 relationships:
   related_tools:
-    - eslint
-    - oxlint
+    - ESLint
 ---
-
 # **React Doctor 調査レポート**
 
 ## **1. 基本情報**

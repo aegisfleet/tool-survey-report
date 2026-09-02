@@ -47,13 +47,10 @@ links:
   deepwiki: https://deepwiki.com/webpro-nl/knip
   documentation: https://knip.dev/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - ESLint
     - Biome
 ---
-
 # **Knip 調査レポート**
 
 ## **1. 基本情報**

@@ -39,12 +39,7 @@ evaluation:
 links:
   github: https://github.com/chainguard-dev
   documentation: https://edu.chainguard.dev/
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **Chainguard 調査レポート**
 
 ## **1. 基本情報**

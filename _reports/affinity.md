@@ -42,14 +42,12 @@ links:
   documentation: https://affinity.serif.com/learn/
 relationships:
   parent: Canva
-  children: []
   related_tools:
     - Apple Creator Studio
     - Figma
     - GIMP
     - Blender
 ---
-
 # **Affinity 調査レポート**
 
 ## **1. 基本情報**

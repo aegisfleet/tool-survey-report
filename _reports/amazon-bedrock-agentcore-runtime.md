@@ -46,13 +46,11 @@ links:
   documentation: https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agents-tools-runtime.html
 relationships:
   parent: Amazon Bedrock
-  children: []
   related_tools:
     - LangChain
     - Docker
     - AWS MCP Servers
 ---
-
 # **Amazon Bedrock AgentCore Runtime 調査レポート**
 
 ## **1. 基本情報**

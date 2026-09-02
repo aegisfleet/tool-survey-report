@@ -38,10 +38,7 @@ evaluation:
 links:
   github: https://github.com/firebase/firebase-tools
   deepwiki: https://deepwiki.com/firebase/firebase-tools
-relationships:
-  parent: Firebase
 ---
-
 # **Firebase CLI 調査レポート**
 
 ## **1. 基本情報**

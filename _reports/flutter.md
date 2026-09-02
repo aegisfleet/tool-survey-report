@@ -50,8 +50,6 @@ links:
   deepwiki: https://deepwiki.com/flutter/flutter
   documentation: https://docs.flutter.dev/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - React
     - Kotlin Multiplatform
@@ -61,7 +59,6 @@ relationships:
     - Mobile Next
     - Fluorite Game Engine
 ---
-
 # **Flutter 調査レポート**
 
 ## **1. 基本情報**

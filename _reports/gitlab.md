@@ -46,7 +46,6 @@ links:
   deepwiki: https://deepwiki.com/gitlabhq/gitlabhq
   documentation: https://docs.gitlab.com/
 relationships:
-  parent: ''
   children:
     - GitLab Duo
     - GitLab CI/CD
@@ -59,7 +58,6 @@ relationships:
     - Jujutsu
     - GitKraken
 ---
-
 # **GitLab 調査レポート**
 
 ## **1. 基本情報**

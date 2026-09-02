@@ -43,13 +43,10 @@ links:
   deepwiki: https://deepwiki.com/dequelabs/axe-core
   documentation: https://docs.deque.com/devtools-for-web/4/en/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Playwright
     - Selenium
 ---
-
 # **axe DevTools 調査レポート**
 
 ## **1. 基本情報**

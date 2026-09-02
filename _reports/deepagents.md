@@ -44,12 +44,10 @@ links:
   codewiki: https://codewiki.google/github.com/langchain-ai/deepagents
 relationships:
   parent: LangChain
-  children: []
   related_tools:
     - OpenHands
     - Devin
 ---
-
 # **Deep Agents 調査レポート**
 
 ## **1. 基本情報**

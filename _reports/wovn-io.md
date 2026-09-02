@@ -38,11 +38,7 @@ evaluation:
 links:
   documentation: https://mx.wovn.io/resource/faq
   review_g2: https://www.g2.com/products/wovn/reviews
-relationships:
-  related_tools:
-    - DeepL
 ---
-
 # **WOVN.io 調査レポート**
 
 ## **1. 基本情報**

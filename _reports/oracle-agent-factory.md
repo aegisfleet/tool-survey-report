@@ -41,13 +41,10 @@ evaluation:
 links:
   documentation: https://docs.oracle.com/en/database/oracle/agent-factory/26.4/paias/index.html
 relationships:
-  parent: Oracle Database
-  children: []
   related_tools:
     - Dify
     - LangChain
 ---
-
 # **Oracle AI Database Private Agent Factory 調査レポート**
 
 ## **1. 基本情報**

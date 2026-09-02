@@ -42,15 +42,12 @@ links:
   deepwiki: https://deepwiki.com/GNOME/gimp
   documentation: https://www.gimp.org/docs/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Affinity
     - Canva
     - Figma
     - Apple Creator Studio
 ---
-
 # **GIMP 調査レポート**
 
 ## **1. 基本情報**

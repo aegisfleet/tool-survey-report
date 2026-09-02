@@ -35,10 +35,7 @@ evaluation:
   summary: 無料で幅広いプラットフォームの動画ダウンロードが可能な手軽なオンラインツール
 links:
   documentation: https://greenvideo.cc/tutorial
-relationships:
-  related_tools: []
 ---
-
 # **GreenVideo 調査レポート**
 
 ## **1. 基本情報**

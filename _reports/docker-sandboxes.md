@@ -39,13 +39,11 @@ links:
   documentation: https://docs.docker.com/ai/sandboxes/
 relationships:
   parent: Docker
-  children: []
   related_tools:
     - Claude Code
     - GitHub Copilot
     - Cursor
 ---
-
 # **Docker Sandboxes 調査レポート**
 
 ## **1. 基本情報**

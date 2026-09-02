@@ -39,8 +39,6 @@ links:
   github: https://github.com/mobile-next
   documentation: https://github.com/mobile-next/mobile-mcp/wiki
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Claude
     - Cursor
@@ -50,7 +48,6 @@ relationships:
     - Flutter
     - Model Context Protocol
 ---
-
 # **Mobile Next 調査レポート**
 
 ## **1. 基本情報**

@@ -33,12 +33,9 @@ evaluation:
   minus_points: []
   summary: Google Labsの強力なAIモデルを活用し、音楽制作の可能性を広げるプラットフォーム。
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Suno
 ---
-
 # **ProducerAI 調査レポート**
 
 ## **1. 基本情報**

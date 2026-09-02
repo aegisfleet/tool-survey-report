@@ -41,12 +41,9 @@ evaluation:
 links:
   documentation: https://help.lilys.ai/en/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - NotebookLM
 ---
-
 # **LilysAI 調査レポート**
 
 ## **1. 基本情報**

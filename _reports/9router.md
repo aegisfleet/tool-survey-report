@@ -38,12 +38,7 @@ evaluation:
 links:
   github: https://github.com/decolua/9router
   deepwiki: https://deepwiki.com/decolua/9router
-relationships:
-  parent: ''
-  children: []
-  related_tools: []
 ---
-
 # **9router 調査レポート**
 
 ## **1. 基本情報**

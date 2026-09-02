@@ -45,13 +45,10 @@ links:
   deepwiki: https://deepwiki.com/strands-agents/sdk-python
   documentation: https://strandsagents.com/docs/user-guide/quickstart/overview/
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - LangChain
     - Amazon Bedrock
 ---
-
 # **Strands Agents 調査レポート**
 
 ## **1. 基本情報**

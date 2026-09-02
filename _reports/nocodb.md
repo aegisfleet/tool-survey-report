@@ -42,15 +42,12 @@ links:
   codewiki: https://codewiki.google/github.com/nocodb/nocodb
   documentation: https://docs.nocodb.com/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Make
     - n8n
     - Zapier
     - Notion
 ---
-
 # **NocoDB 調査レポート**
 
 ## **1. 基本情報**

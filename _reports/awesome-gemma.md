@@ -41,10 +41,7 @@ links:
   github: https://github.com/google-gemma/awesome-gemma
   deepwiki: https://deepwiki.com/google-gemma/awesome-gemma
   documentation: https://deepmind.google/technologies/gemma/
-relationships:
-  parent: Gemma
 ---
-
 # **Awesome Gemma 調査レポート**
 
 ## **1. 基本情報**

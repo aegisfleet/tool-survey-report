@@ -44,14 +44,12 @@ links:
   documentation: https://githubnext.github.io/gh-aw/
 relationships:
   parent: GitHub Actions
-  children: []
   related_tools:
     - Claude Code
     - OpenAI Codex CLI
     - GitHub Copilot
     - GitLab CI/CD
 ---
-
 # **Agentic Workflows 調査レポート**
 
 ## **1. 基本情報**

@@ -44,15 +44,12 @@ links:
   github: https://github.com/jfrog
   documentation: https://jfrog.com/help/r/artifactory
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Nexus Repository
     - GitLab
     - GitHub
     - Docker
 ---
-
 # **JFrog Artifactory 調査レポート**
 
 ## **1. 基本情報**

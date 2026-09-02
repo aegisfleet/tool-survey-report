@@ -42,14 +42,11 @@ evaluation:
   summary: セキュリティとサポートを重視する国内大企業に適しているが、料金の透明性と実績には課題が残る。
 links: {}
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Microsoft 365 Copilot
     - Salesforce
     - Devin
 ---
-
 # **AGENTIC STAR 調査レポート**
 
 ## **1. 基本情報**

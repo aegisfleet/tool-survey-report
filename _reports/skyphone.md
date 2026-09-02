@@ -37,10 +37,7 @@ evaluation:
   summary: 登録不要・高音質・無料で使える実用的な通話特化アプリ
 links:
   documentation: https://www.skyphone.jp/help/
-relationships:
-  related_tools: []
 ---
-
 # **SkyPhone 調査レポート**
 
 ## **1. 基本情報**

@@ -43,14 +43,11 @@ evaluation:
 links:
   documentation: https://www.genspark.ai/
 relationships:
-  parent: null
-  children: null
   related_tools:
     - Perplexity
     - Felo
     - Google Disco
 ---
-
 # **Genspark 調査レポート**
 
 ## **1. 基本情報**

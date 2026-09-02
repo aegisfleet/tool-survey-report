@@ -39,10 +39,7 @@ evaluation:
 links:
   github: https://github.com/sherlock-project/sherlock
   deepwiki: https://deepwiki.com/sherlock-project/sherlock
-relationships:
-  related_tools: []
 ---
-
 # **Sherlock 調査レポート**
 
 ## **1. 基本情報**

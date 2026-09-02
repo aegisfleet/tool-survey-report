@@ -42,10 +42,7 @@ evaluation:
   summary: エンタープライズ向けのゼロトラストセキュリティ基盤として、業界標準とも言える強力なプラットフォーム。
 links:
   documentation: https://help.zscaler.com/
-relationships:
-  related_tools: []
 ---
-
 # **Zscaler 調査レポート**
 
 ## **1. 基本情報**

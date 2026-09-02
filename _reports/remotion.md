@@ -46,12 +46,10 @@ links:
   documentation: https://www.remotion.dev/docs/
 relationships:
   parent: React
-  children: []
   related_tools:
     - DaVinci Resolve
     - AviUtl
 ---
-
 # **Remotion 調査レポート**
 
 ## **1. 基本情報**

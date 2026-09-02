@@ -41,11 +41,7 @@ links:
   documentation: https://docs.docker.com/ai/gordon/
 relationships:
   parent: Docker
-  related_tools:
-    - Docker Desktop
-    - Docker Scout
 ---
-
 # **Docker Gordon 調査レポート**
 
 ## **1. 基本情報**

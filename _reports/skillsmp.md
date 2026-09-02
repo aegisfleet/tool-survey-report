@@ -38,13 +38,10 @@ evaluation:
       reason: スキル数が膨大なため、目的のものを探すのに工夫が必要な場合がある
   summary: AIエージェントの機能を拡張するための必須ハブ。圧倒的な数のスキルと強力な検索・API機能が魅力。
 relationships:
-  parent: ''
-  children: []
   related_tools:
     - Claude Code
     - OpenAI Codex CLI
 ---
-
 # **SkillsMP 調査レポート**
 
 ## **1. 基本情報**

@@ -48,10 +48,7 @@ links:
   deepwiki: https://deepwiki.com/louis-e/arnis
   codewiki: https://codewiki.google/github.com/louis-e/arnis
   documentation: https://github.com/louis-e/arnis#readme
-relationships:
-  related_tools: []
 ---
-
 # **Arnis 調査レポート**
 
 ## **1. 基本情報**

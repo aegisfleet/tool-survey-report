@@ -44,8 +44,6 @@ evaluation:
 links:
   documentation: https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/what-is.html
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Kiro
     - AWS Frontier Agents
@@ -54,9 +52,7 @@ relationships:
     - Cursor
     - AWS CloudFormation
     - GitHub Copilot CLI
-    - AWS DevOps Agent
 ---
-
 # **Amazon Q Developer 調査レポート**
 
 ## **1. 基本情報**

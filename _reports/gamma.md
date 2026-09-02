@@ -47,14 +47,11 @@ evaluation:
 links:
   documentation: https://help.gamma.app/
 relationships:
-  parent: null
-  children: []
   related_tools:
     - Canva
     - Microsoft 365 Copilot
     - Speaker Deck
 ---
-
 # **Gamma 調査レポート**
 
 ## **1. 基本情報**
