@@ -83,7 +83,10 @@ class BrowserTestRunner:
             # This catches the initial request before Playwright spins up the network stack
             self.validate_url(self.args.url)
             self.page.goto(self.args.url)
-            self.page.wait_for_load_state('networkidle')
+            try:
+                self.page.wait_for_load_state('networkidle', timeout=5000)
+            except Exception:
+                pass
 
             wait_for_selector = getattr(self.args, 'wait_for_selector', None)
             if wait_for_selector:
@@ -192,11 +195,13 @@ class BrowserTestRunner:
             raise BrowserTestError("--selector and --input-text are required for input action")
 
         try:
+            self.page.locator(self.args.selector).scroll_into_view_if_needed()
             self.page.fill(self.args.selector, self.args.input_text)
             print(f"Filled '{self.args.input_text}' into {self.args.selector}")
+            self.page.wait_for_timeout(400)
             
             if self.args.output:
-                self.page.screenshot(path=self.args.output)
+                self.page.screenshot(path=self.args.output, full_page=self.args.full_page)
                 print(f"Post-input screenshot saved to {self.args.output}")
         except Exception as e:
             raise BrowserTestError(f"Error inputting text: {e}")
