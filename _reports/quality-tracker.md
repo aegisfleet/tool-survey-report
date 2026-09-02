@@ -47,13 +47,13 @@ links:
   documentation: https://service.valtes.co.jp/qualitytracker/#faq
 relationships:
   related_tools:
-    - CAT
     - QualityForward
     - Qase
     - Redmine
     - Backlog
     - TestRail
     - Jira
+    - Testcase Management
 ---
 
 # **Quality Tracker 調査レポート**

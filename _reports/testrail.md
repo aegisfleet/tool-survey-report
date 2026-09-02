@@ -41,13 +41,13 @@ links:
   documentation: https://support.testrail.com/hc/en-us/
 relationships:
   related_tools:
-    - CAT
     - QualityForward
     - Qase
     - TestLink
     - Jira
     - Kiwi TCMS
     - Quality Tracker
+    - Testcase Management
 ---
 
 
