@@ -54,7 +54,7 @@ relationships:
     - Roo Code
     - CodeRabbit
     - Devin
-    - GitLens
+    - Build by Grok
 ---
 
 # **GitHub Copilot 調査レポート**
