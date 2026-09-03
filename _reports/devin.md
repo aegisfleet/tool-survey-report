@@ -53,8 +53,8 @@ relationships:
     - Devin Desktop
     - OpenHands
     - AutoGPT
-    - Agent Zero
     - Manus
+    - Build by Grok
 ---
 # **Devin 調査レポート**
 
