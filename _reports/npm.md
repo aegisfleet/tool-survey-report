@@ -49,6 +49,7 @@ relationships:
     - Bun
     - pnpm
     - Homebrew
+    - nvm
     - Yarn
 ---
 

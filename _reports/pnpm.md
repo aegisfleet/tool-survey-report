@@ -45,6 +45,7 @@ relationships:
   related_tools:
     - npm
     - Bun
+    - nvm
     - Yarn
 ---
 
