@@ -1,7 +1,7 @@
 ---
 title: nvm 調査レポート
 tool_name: nvm
-tool_reading: "エヌブイエム"
+tool_reading: エヌブイエム
 category: パッケージ管理
 developer: OpenJS Foundation
 official_site: https://github.com/nvm-sh/nvm
@@ -21,26 +21,24 @@ relationships:
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "フロントエンドエンジニア"
-  latest_highlight: "v0.40.7がリリースされ、npmレジストリ関連の修正が行われた"
-  update_frequency: "中"
-
+    - 開発者
+    - フロントエンドエンジニア
+  latest_highlight: v0.40.7がリリースされ、npmレジストリ関連の修正が行われた
+  update_frequency: 中
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "POSIX準拠で多くのシェルをサポートし、長年の実績がある"
+      reason: POSIX準拠で多くのシェルをサポートし、長年の実績がある
     - point: 5
-      reason: ".nvmrcを用いた自動バージョン切り替えが便利"
+      reason: .nvmrcを用いた自動バージョン切り替えが便利
   minus_points:
     - point: 0
-      reason: "Windowsネイティブ非対応だが代替手段が存在する"
-  summary: "Node.jsのバージョン管理においてデファクトスタンダードとして君臨する堅牢なツール"
-
+      reason: Windowsネイティブ非対応だが代替手段が存在する
+  summary: Node.jsのバージョン管理においてデファクトスタンダードとして君臨する堅牢なツール
 ---
 
 # **nvm 調査レポート**
