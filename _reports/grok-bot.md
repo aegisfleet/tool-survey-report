@@ -1,4 +1,7 @@
 ---
+relationships:
+  related_tools:
+    - OpenMausBot
 title: Grok Bot 調査レポート
 tool_name: Grok Bot
 tool_reading: グロック ボット
