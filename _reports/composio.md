@@ -2,7 +2,7 @@
 title: Composio 調査レポート
 tool_name: Composio
 tool_reading: コンポジジオ / コンポジオ
-category: AIエージェント開発支援
+category: エージェント開発基盤
 developer: ComposioHQ
 official_site: https://composio.dev/
 date: '2026-09-07'
