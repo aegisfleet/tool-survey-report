@@ -2,7 +2,7 @@
 title: Microsoft Agent Framework 調査レポート
 tool_name: Microsoft Agent Framework
 tool_reading: マイクロソフト エージェント フレームワーク
-category: エージェント開発基盤
+category: マルチエージェントフレームワーク
 developer: Microsoft
 official_site: https://learn.microsoft.com/en-us/agent-framework/
 date: '2026-03-28'
