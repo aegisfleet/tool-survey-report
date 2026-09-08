@@ -8,16 +8,16 @@ official_site: https://securityresearch.google/magika/
 date: '2026-04-14'
 last_updated: '2026-09-08'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "ファイル解析"
-  - "セキュリティ"
-  - "Python"
-  - "Rust"
+  - AI
+  - オープンソース
+  - ファイル解析
+  - セキュリティ
+  - Python
+  - Rust
 relationships:
   related_tools:
-    - "OSV-Scanner"
-    - "Trivy"
+    - OSV-Scanner
+    - Trivy
 description: AIを活用した高速かつ高精度なファイルタイプ判定ツール
 quick_summary:
   has_free_plan: true
