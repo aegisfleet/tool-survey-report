@@ -43,3 +43,4 @@ verification/
 screenshot*.png
 verification.png
 verify_*.png
+.venv

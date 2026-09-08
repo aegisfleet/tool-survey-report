@@ -8,51 +8,52 @@ official_site: https://www.blackmagicdesign.com/products/davinciresolve
 date: '2025-11-06'
 last_updated: '2026-05-26'
 tags:
-  - AI
-  - 動画編集
-  - 画像編集
-  - VFX
-  - 音声編集
+- AI
+- 動画編集
+- 画像編集
+- VFX
+- 音声編集
 description: 編集、カラーコレクション、VFX、モーショングラフィックス、オーディオポストプロダクションを統合したプロフェッショナル向けオールインワン動画編集ソフトウェア。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: 無料
   target_users:
-    - 映像クリエイター
-    - カラリスト
-    - YouTuber
+  - 映像クリエイター
+  - カラリスト
+  - YouTuber
   latest_highlight: 2026年5月にv21 Public Beta 3をリリース。IntelliSearchなどの新AIツールやPhotoページの追加、MultiMasterコラボレーションの改善等を含む。
   update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
-    - point: 10
-      reason: 編集、カラー、VFX、音声を統合したオールインワン設計と、業界最高峰のカラーグレーディング機能
-    - point: 8
-      reason: プロの現場でも使用可能な機能の大部分を無料で提供しており、コストパフォーマンスが極めて高い
-    - point: 5
-      reason: 競合がサブスクリプション主体の中、永続ライセンスの買い切りモデルを提供している点
-    - point: 5
-      reason: AI IntelliScriptやAI Animated Subtitlesなど、AI機能の拡充により作業効率が飛躍的に向上
+  - point: 10
+    reason: 編集、カラー、VFX、音声を統合したオールインワン設計と、業界最高峰のカラーグレーディング機能
+  - point: 8
+    reason: プロの現場でも使用可能な機能の大部分を無料で提供しており、コストパフォーマンスが極めて高い
+  - point: 5
+    reason: 競合がサブスクリプション主体の中、永続ライセンスの買い切りモデルを提供している点
+  - point: 5
+    reason: AI IntelliScriptやAI Animated Subtitlesなど、AI機能の拡充により作業効率が飛躍的に向上
   minus_points:
-    - point: -5
-      reason: 多機能かつ専門的であるため、初心者が習熟するには高い学習コストを要する
-    - point: -3
-      reason: 高解像度編集やVFX処理には、高性能なPCスペックが要求される
-    - point: -2
-      reason: 日本語の公式ドキュメントやチュートリアルは存在するが、高度な内容に関しては情報が英語中心となる
+  - point: -5
+    reason: 多機能かつ専門的であるため、初心者が習熟するには高い学習コストを要する
+  - point: -3
+    reason: 高解像度編集やVFX処理には、高性能なPCスペックが要求される
+  - point: -2
+    reason: 日本語の公式ドキュメントやチュートリアルは存在するが、高度な内容に関しては情報が英語中心となる
   summary: プロ品質の映像制作をワンストップで実現する、コストパフォーマンス最強の統合型ソフトウェア
 links:
   documentation: https://www.blackmagicdesign.com/products/davinciresolve/training
 relationships:
   related_tools:
-    - AviUtl
-    - Apple Creator Studio
-    - Remotion
-    - OpenCut
-    - Blender
+  - AviUtl
+  - Apple Creator Studio
+  - Remotion
+  - OpenCut
+  - Blender
+  - MediaCMS
 ---
 # **DaVinci Resolve 調査レポート**
 
