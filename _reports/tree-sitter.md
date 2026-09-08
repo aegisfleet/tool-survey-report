@@ -1,34 +1,31 @@
 ---
-title: "Tree-sitter 調査レポート"
-tool_name: "Tree-sitter"
-tool_reading: "不明"
-category: "IDE/エディタ"
-developer: "不明"
-official_site: "https://tree-sitter.github.io/tree-sitter/"
-date: "2026-09-08"
-last_updated: "2026-09-08"
+title: Tree-sitter 調査レポート
+tool_name: Tree-sitter
+tool_reading: 不明
+category: IDE/エディタ
+developer: 不明
+official_site: https://tree-sitter.github.io/tree-sitter/
+date: '2026-09-08'
+last_updated: '2026-09-08'
 tags:
-  - "parser"
-description: "An incremental parsing system for programming tools"
-
+  - parser
+description: An incremental parsing system for programming tools
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "不明"
-  latest_highlight: "不明"
-  update_frequency: "不明"
-
+    - 不明
+  latest_highlight: 不明
+  update_frequency: 不明
 evaluation:
   score: 70
   base_score: 70
   plus_points: []
   minus_points: []
-  summary: "An incremental parsing system for programming tools"
-
+  summary: An incremental parsing system for programming tools
 links:
-  github: "https://github.com/tree-sitter/tree-sitter"
+  github: https://github.com/tree-sitter/tree-sitter
 ---
 
 # **Tree-sitter 調査レポート**
