@@ -2,14 +2,14 @@
 title: Repomix 調査レポート
 tool_name: Repomix
 tool_reading: レポミックス
-category: 開発者ツール
+category: CLIツール群
 developer: Kazuki Yamada
 official_site: https://repomix.com/
 date: '2026-09-08'
 last_updated: '2026-09-08'
 tags:
   - AI連携
-  - LLM
+  - 大規模言語モデル
   - コード解析
   - オープンソース
   - CLI
