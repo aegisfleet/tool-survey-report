@@ -1,42 +1,39 @@
 ---
-title: "Tree-sitter 調査レポート"
-tool_name: "Tree-sitter"
-tool_reading: "ツリーシッター"
-category: "IDE/エディタ"
-developer: "Tree-sitter Contributors"
-official_site: "https://tree-sitter.github.io/tree-sitter/"
-date: "2026-09-08"
-last_updated: "2026-09-08"
+title: Tree-sitter 調査レポート
+tool_name: Tree-sitter
+tool_reading: ツリーシッター
+category: IDE/エディタ
+developer: Tree-sitter Contributors
+official_site: https://tree-sitter.github.io/tree-sitter/
+date: '2026-09-08'
+last_updated: '2026-09-08'
 tags:
-  - "parser"
-  - "c"
-  - "rust"
-description: "プログラミングツールのための高速でインクリメンタルな構文解析システム"
-
+  - parser
+  - c
+  - rust
+description: プログラミングツールのための高速でインクリメンタルな構文解析システム
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "エディタ開発者"
-    - "静的解析ツール開発者"
-  latest_highlight: "2026年8月にv0.27の開発に向けたnightly版がリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - エディタ開発者
+    - 静的解析ツール開発者
+  latest_highlight: 2026年8月にv0.27の開発に向けたnightly版がリリース
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: "高速でインクリメンタルな構文解析が可能であり、多くのエディタで標準採用されている"
+      reason: 高速でインクリメンタルな構文解析が可能であり、多くのエディタで標準採用されている
     - point: 5
-      reason: "C言語で書かれており、依存関係がなく様々な環境に組み込みやすい"
+      reason: C言語で書かれており、依存関係がなく様々な環境に組み込みやすい
   minus_points: []
-  summary: "多くのモダンなエディタやツールで採用されている、強力で標準的な構文解析ライブラリ"
-
+  summary: 多くのモダンなエディタやツールで採用されている、強力で標準的な構文解析ライブラリ
 links:
-  github: "https://github.com/tree-sitter/tree-sitter"
+  github: https://github.com/tree-sitter/tree-sitter
 ---
 
 # **Tree-sitter 調査レポート**
