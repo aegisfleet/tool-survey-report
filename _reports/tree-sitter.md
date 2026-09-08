@@ -1,31 +1,42 @@
 ---
-title: Tree-sitter 調査レポート
-tool_name: Tree-sitter
-tool_reading: 不明
-category: IDE/エディタ
-developer: 不明
-official_site: https://tree-sitter.github.io/tree-sitter/
-date: '2026-09-08'
-last_updated: '2026-09-08'
+title: "Tree-sitter 調査レポート"
+tool_name: "Tree-sitter"
+tool_reading: "ツリーシッター"
+category: "IDE/エディタ"
+developer: "Tree-sitter Contributors"
+official_site: "https://tree-sitter.github.io/tree-sitter/"
+date: "2026-09-08"
+last_updated: "2026-09-08"
 tags:
-  - parser
-description: An incremental parsing system for programming tools
+  - "parser"
+  - "c"
+  - "rust"
+description: "プログラミングツールのための高速でインクリメンタルな構文解析システム"
+
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: 無料
+  starting_price: "無料"
   target_users:
-    - 不明
-  latest_highlight: 不明
-  update_frequency: 不明
+    - "開発者"
+    - "エディタ開発者"
+    - "静的解析ツール開発者"
+  latest_highlight: "2026年8月にv0.27の開発に向けたnightly版がリリース"
+  update_frequency: "高"
+
 evaluation:
-  score: 70
+  score: 85
   base_score: 70
-  plus_points: []
+  plus_points:
+    - point: 10
+      reason: "高速でインクリメンタルな構文解析が可能であり、多くのエディタで標準採用されている"
+    - point: 5
+      reason: "C言語で書かれており、依存関係がなく様々な環境に組み込みやすい"
   minus_points: []
-  summary: An incremental parsing system for programming tools
+  summary: "多くのモダンなエディタやツールで採用されている、強力で標準的な構文解析ライブラリ"
+
 links:
-  github: https://github.com/tree-sitter/tree-sitter
+  github: "https://github.com/tree-sitter/tree-sitter"
 ---
 
 # **Tree-sitter 調査レポート**
@@ -33,145 +44,183 @@ links:
 ## **1. 基本情報**
 
 * **ツール名**: Tree-sitter
-* **ツールの読み方**: 不明
-* **開発元**: 不明
+* **ツールの読み方**: ツリーシッター
+* **開発元**: Tree-sitter Contributors
 * **公式サイト**: [https://tree-sitter.github.io/tree-sitter/](https://tree-sitter.github.io/tree-sitter/)
 * **関連リンク**:
   * GitHub: [https://github.com/tree-sitter/tree-sitter](https://github.com/tree-sitter/tree-sitter)
 * **カテゴリ**: IDE/エディタ
-* **概要**: Tree-sitter is a parser generator tool and an incremental parsing library. It can build a concrete syntax tree for a source file and efficiently update the syntax tree as the source file is edited.
+* **概要**: Tree-sitterは、プログラミングツールのためのパーサージェネレーターツールおよびインクリメンタル構文解析ライブラリである。ソースファイルの具象構文木（CST）を構築し、ファイルが編集されるたびに高速に構文木を更新することができる。
 
 ## **2. 目的と主な利用シーン**
 
-* **解決する課題**: parsing
-* **想定利用者**: 不明
+* **解決する課題**: テキストエディタやIDEにおけるリアルタイムな構文ハイライト、コードナビゲーション、静的解析のための高速な構文解析。
+* **想定利用者**: エディタ開発者、静的解析ツール開発者、プログラミング言語のツールの開発者
 * **利用シーン**:
-  * parse on every keystroke in a text editor
+  * テキストエディタでのキーストロークごとの高速な構文ハイライト
+  * コードフォーマッターやリンターにおけるASTの構築
+  * コードナビゲーション（シンボルの定義へのジャンプなど）のための解析
 
 ## **3. 主要機能**
 
-* **General**: General enough to parse any programming language
-* **Fast**: Fast enough to parse on every keystroke in a text editor
-* **Robust**: Robust enough to provide useful results even in the presence of syntax errors
-* **Dependency-free**: Dependency-free so that the runtime library (which is written in pure C) can be embedded in any application
+* **インクリメンタル構文解析**: ファイルの編集箇所のみを再解析し、キーストロークごとに構文木を高速に更新する。
+* **汎用性**: C、Rust、Python、JavaScriptなど、あらゆるプログラミング言語をパース可能。
+* **堅牢なエラーリカバリ**: 構文エラーが存在する場合でも、可能な限り有用な構文木を構築し続ける。
+* **依存関係のないCライブラリ**: ランタイムライブラリは純粋なC言語で書かれており、任意のアプリケーションに容易に組み込むことができる。
+* **S式ベースのクエリ言語**: パースされた構文木から特定のパターンを検索するための強力なクエリ言語をサポート。
 
 ## **4. 動作原理・システム構成**
 
-* **アーキテクチャ**: 不明
+* **アーキテクチャ**: ローカル動作のCライブラリ
 * **主要コンポーネントとデータフロー**:
-  * build a concrete syntax tree for a source file and efficiently update the syntax tree as the source file is edited
+  * パーサージェネレータ（CLI）が、文法定義（JavaScript）からC言語のパーサーコードを生成する。
+  * ランタイムライブラリがソースコードを読み込み、具象構文木（CST）を生成する。ファイル編集時は、変更差分のみを計算してCSTを更新する。
+* **構成図**:
+
+```mermaid
+graph TD
+    A[文法定義 JavaScript] -->|CLIでコンパイル| B[生成されたCパーサー]
+    C[ソースコード] --> D[Tree-sitter ランタイム C言語]
+    B --> D
+    D --> E[具象構文木 CST]
+    F[エディタでの編集] -->|変更部分のみ再解析| D
+    E --> G[シンタックスハイライト / コードナビゲーション]
+```
+
 * **特筆すべき要素技術**:
-  * pure C runtime
+  * **GLR構文解析 (Generalized LR parsing)**: 曖昧な文法を扱うことができる拡張されたLR構文解析アルゴリズムを使用。
+  * **純粋なCライブラリ**: 依存関係がないため、Wasmへのコンパイルや他言語からのFFIによる呼び出しが容易。
 
 ## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * 不明
+  * Node.js（文法を生成する場合）
+  * Cコンパイラ
 * **インストール/導入**:
 
   ```bash
-  # 不明
+  # CLIツールのインストール
+  npm install -g tree-sitter-cli
   ```
 
 * **初期設定**:
-  * 不明
+  * `tree-sitter init` コマンドで新しいパーサープロジェクトを初期化する。
 * **クイックスタート**:
-  * 不明
+  * `grammar.js` に文法を定義し、`tree-sitter generate` でCコードを生成、`tree-sitter test` でテストを実行する。
 
 ## **6. 特徴・強み (Pros)**
 
-* Fast enough to parse on every keystroke in a text editor
-* Dependency-free (pure C)
+* **圧倒的なパフォーマンス**: キーストロークごとに解析を行ってもエディタの動作を妨げない速度。
+* **広範な言語サポート**: すでに多くのプログラミング言語向けのパーサーがコミュニティによって開発・維持されている。
+* **多様なバインディング**: Rust, Python, Go, JavaScript, Wasmなど、多数の言語バインディングが存在する。
 
 ## **7. 弱み・注意点 (Cons)**
 
-* 不明
+* **文法の作成コスト**: 新しい言語のパーサーをゼロから作成する場合、構文解析の知識とGLRの特性を理解する必要がある。
+* **コンパイル依存**: パーサー自体がCのコードとして生成されるため、利用する環境に応じてコンパイル環境（ネイティブまたはWasm）が必要。
 
 ## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **不明** | 不明 | 不明 |
+| **オープンソース** | 無料 | MITライセンスで提供され、すべての機能を無料で利用可能。 |
 
-* **課金体系**: 不明
-* **無料トライアル**: 不明
+* **課金体系**: 完全無料
+* **無料トライアル**: なし
 
 ## **9. 導入実績・事例**
 
-* **導入企業**: 不明
-* **導入事例**: 不明
-* **対象業界**: 不明
+* **導入企業**: GitHub, Neovim, Zed, Emacsなど。
+* **導入事例**:
+  * GitHubでは、コードのシンタックスハイライトやコードナビゲーションにTree-sitterを利用している。
+  * NeovimやHelix, Zedといったモダンなテキストエディタで、標準の構文解析エンジンとして組み込まれている。
+* **対象業界**: ソフトウェア開発、ツール開発
 
 ## **10. サポート体制**
 
 * **ドキュメント**: [公式ドキュメント](https://tree-sitter.github.io/tree-sitter/)
-* **コミュニティ**: 不明
-* **公式サポート**: 不明
+* **コミュニティ**: GitHubリポジトリのDiscussionsやIssue
+* **公式サポート**: オープンソースコミュニティによるサポート
 
 ## **11. エコシステムと連携**
 
 ### **11.1 API・外部サービス連携**
 
-* **API**: 不明
-* **外部サービス連携**: 不明
+* **API**: C APIをベースに、RustやPythonなどの各言語向けAPIが提供されている。
+* **外部サービス連携**: 各種テキストエディタ（Neovim, Emacs, VSCode拡張など）との連携。
 
 ### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Rust** | ◎ | language is Rust | 不明 |
+| **C / C++** | ◎ | ランタイムがCで書かれているためネイティブに組み込み可能。 | 特になし |
+| **Rust** | ◎ | 公式のRustバインディングがあり、エコシステムと親和性が高い。 | 特になし |
+| **WebAssembly** | ◯ | CからWasmにコンパイルしてブラウザ内で利用可能。 | ビルドパイプラインの設定が必要。 |
 
 ## **12. セキュリティとコンプライアンス**
 
-* **認証**: 不明
-* **データ管理**: 不明
-* **準拠規格**: 不明
+* **認証**: 該当なし（ローカルライブラリのため）
+* **データ管理**: アプリケーション内で完結し、外部にデータを送信しない。
+* **準拠規格**: 公式サイトで公開されていない。
 
 ## **13. 操作性 (UI/UX) と学習コスト**
 
-* **UI/UX**: 不明
-* **学習コスト**: 不明
+* **UI/UX**: CLIツールとして提供される。エディタに組み込まれた場合はユーザーに見えないバックエンドとして動作する。
+* **学習コスト**: 既存の言語パーサーを利用するだけなら容易だが、独自の文法を定義する場合はASTやパーサージェネレータの知識が必要となり学習コストは高い。
 
 ## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * 不明
+  * Tree-sitterのクエリ言語を活用して、リファクタリングやコードフォーマットのルールを定義する。
 * **陥りやすい罠 (Antipatterns)**:
-  * 不明
+  * 複雑すぎる文法ルールを定義してしまい、生成されるCコードが肥大化したりパフォーマンスが低下したりすること。
 
 ## **15. ユーザーの声（レビュー分析）**
 
-* **調査対象**: GitHub
-* **総合評価**: 26885 stars
+* **調査対象**: GitHub (26,800+ stars)
+* **総合評価**: 非常に高く、デファクトスタンダードの地位を確立しつつある。
 * **ポジティブな評価**:
-  * 不明
+  * エディタのシンタックスハイライトが劇的に改善した。
+  * 依存関係がなく、どの言語からも簡単に呼び出せるのが素晴らしい。
 * **ネガティブな評価 / 改善要望**:
-  * 不明
+  * 文法の作成デバッグが難しい場合がある。
 * **特徴的なユースケース**:
-  * 不明
+  * 静的解析ツールやリンターでのASTの取得。
 
 ## **16. 直近半年のアップデート情報**
 
-* 不明
+* **2026-09-08**: nightly (開発版アップデート)
+* **2026-08-30**: v0.27.0 - v0.27の開発に向けた対応やCLIのドキュメント更新などを実施。
+* **2026-08-23**: v0.26.13 - クエリ内で `MISSING` ノードを正しく識別する修正など、クエリ関連のバグ修正を実施。
+* **2026-08-08**: v0.26.12 - 大文字・小文字を区別しないパターンの自己展開や、クエリのゼロマッチ量指定子の境界に関する修正を実施。
+* **2026-07-12**: v0.26.11 - wasmtimeのZigマニフェストのWindowsハッシュの修正や、CLI・生成機能のバグ修正を実施。
 
-(出典: 不明)
+(出典: [製品アップデート情報](https://github.com/tree-sitter/tree-sitter/releases))
 
 ## **17. 類似ツールとの比較**
 
 ### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Tree-sitter |
-|:---:|:---|:---:|
-| **基本機能** | incremental parsing | ◎ |
+| 機能カテゴリ | 機能項目 | Tree-sitter | ESLint | Biome |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | インクリメンタル構文解析 | ◎ | - | ◯ |
+| **汎用性** | 対応言語数 | ◎<br><small>コミュニティにより多数</small> | ◎<br><small>多数のJS系パーサに対応</small> | △<br><small>JS/TS周りに特化</small> |
+| **パフォーマンス** | キーストロークごとの解析 | ◎<br><small>エディタ向けに最適化</small> | △<br><small>JS実装のためオーバーヘッドあり</small> | ◎<br><small>高速なRust実装</small> |
+| **非機能要件** | 依存関係 | ◎<br><small>純粋なC言語</small> | ◯<br><small>Node.js環境</small> | ◯<br><small>Rust製バイナリ</small> |
 
 ### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Tree-sitter** | incremental parsing | fast | 不明 | 不明 |
+| **Tree-sitter** | インクリメンタルパーサー | 高速、多言語バインディング | 独自文法作成の学習コスト | エディタ連携や高速なAST解析が必要な場合 |
+| **ESLint** | JS/TSのデファクトリンター | プラグインエコシステムが非常に豊富 | パフォーマンス面で課題あり | 既存のJS/TS資産を活用したい場合 |
+| **Biome** | Webフロントエンド向けツール | 高速なフォーマッタ・リンタ | 汎用パーサーではない | JS/TSプロジェクトの品質管理を行う場合 |
 
 ## **18. 総評**
 
-* **総合的な評価**: An incremental parsing system for programming tools
-* **推奨されるチームやプロジェクト**: 不明
-* **選択時のポイント**: 不明
+* **総合的な評価**:
+  * Tree-sitterは、現代のテキストエディタやIDEにおいて、正確かつ高速な構文解析を実現するためのデファクトスタンダードとなっている強力なツールである。
+* **推奨されるチームやプロジェクト**:
+  * コードエディタ、フォーマッタ、リンターなどのプログラミングツールを開発するチーム。
+* **選択時のポイント**:
+  * 実行速度やインクリメンタルな解析が重要視されるユースケースにおいて、他のツールを凌駕する性能を発揮する。
