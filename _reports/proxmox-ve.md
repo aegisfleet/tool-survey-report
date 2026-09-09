@@ -6,7 +6,7 @@ category: インフラ/サーバー管理
 developer: Proxmox Server Solutions GmbH
 official_site: https://www.proxmox.com/en/products/proxmox-virtual-environment/overview
 date: '2026-04-15'
-last_updated: "2026-09-10"
+last_updated: '2026-09-10'
 tags:
   - オープンソース
   - 仮想化
@@ -22,7 +22,7 @@ quick_summary:
     - インフラエンジニア
     - システム管理者
     - ホームラボ愛好家
-  latest_highlight: "2026年5月に最新バージョン9.2、8月には初のarm64向けリリースを発表"
+  latest_highlight: 2026年5月に最新バージョン9.2、8月には初のarm64向けリリースを発表
   update_frequency: 中
 evaluation:
   score: 88
