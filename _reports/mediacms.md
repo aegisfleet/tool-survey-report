@@ -44,7 +44,7 @@ links:
   documentation: https://github.com/mediacms-io/mediacms/blob/main/docs/admins_docs.md
 relationships:
   related_tools:
-    - "WordPress"
+    - WordPress
 ---
 
 # **MediaCMS 調査レポート**
