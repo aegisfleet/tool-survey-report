@@ -1,46 +1,46 @@
 ---
-title: "AGENTS.md 調査レポート"
-tool_name: "AGENTS.md"
-tool_reading: "エージェンツ ドット エムディー"
-category: "ドキュメント生成/管理"
-developer: "LF Projects, LLC"
-official_site: "https://agents.md/"
-date: "2026-02-03"
-last_updated: "2026-09-11"
+title: AGENTS.md 調査レポート
+tool_name: AGENTS.md
+tool_reading: エージェンツ ドット エムディー
+category: ドキュメント生成/管理
+developer: LF Projects, LLC
+official_site: https://agents.md/
+date: '2026-02-03'
+last_updated: '2026-09-11'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "ドキュメント"
-  - "自動化"
-description: "AIコーディングエージェントのための専用READMEフォーマット。プロジェクトのコンテキストや指示を記述し、エージェントの自律的な作業を支援する。"
+  - AI
+  - エージェント
+  - オープンソース
+  - ドキュメント
+  - 自動化
+description: AIコーディングエージェントのための専用READMEフォーマット。プロジェクトのコンテキストや指示を記述し、エージェントの自律的な作業を支援する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-  latest_highlight: "2026年9月にTechnical Charterが追加されるなどLF Projects下での運用が進行"
-  update_frequency: "中"
+    - 開発者
+    - AIエンジニア
+  latest_highlight: 2026年9月にTechnical Charterが追加されるなどLF Projects下での運用が進行
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "シンプルで標準的なMarkdown形式のため、導入コストが非常に低い"
+      reason: シンプルで標準的なMarkdown形式のため、導入コストが非常に低い
     - point: 3
-      reason: "オープンソースであり、特定のベンダーにロックインされない"
+      reason: オープンソースであり、特定のベンダーにロックインされない
     - point: 2
-      reason: "数多くのAIエージェントツールでサポートが進んでいる"
+      reason: 数多くのAIエージェントツールでサポートが進んでいる
   minus_points: []
-  summary: "AIエージェントとの協調作業における事実上の標準となる可能性を持つ、シンプルかつ強力なコンテキスト共有フォーマット。"
+  summary: AIエージェントとの協調作業における事実上の標準となる可能性を持つ、シンプルかつ強力なコンテキスト共有フォーマット。
 links:
-  github: "https://github.com/agentsmd/agents.md"
-  documentation: "https://agents.md/"
+  github: https://github.com/agentsmd/agents.md
+  documentation: https://agents.md/
 relationships:
   related_tools:
-    - "Cline"
+    - Cline
 ---
 
 # **AGENTS.md 調査レポート**
