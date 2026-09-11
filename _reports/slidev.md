@@ -2,7 +2,7 @@
 title: Slidev 調査レポート
 tool_name: Slidev
 tool_reading: スライデブ
-category: プレゼンテーションツール
+category: スライド/プレゼンテーション
 developer: Anthony Fu
 official_site: https://sli.dev/
 date: '2026-09-10'
