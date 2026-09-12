@@ -6,11 +6,10 @@ category: OS/プラットフォーム
 developer: Google
 official_site: https://aluminium-os.com/
 date: '2026-02-03'
-last_updated: '2026-04-17'
+last_updated: '2026-09-13'
 tags:
   - AI
-  - OS
-description: Googleが開発中の次世代オペレーティングシステム。ChromeOSとAndroidを統合し、AIを中心としたシームレスなデスクトップ体験を提供することを目指している。
+description: Googleが開発中の次世代オペレーティングシステム。ChromeOSとAndroidを統合し、Snapdragon X等のARMアーキテクチャにも対応。「Googlebook」としての展開が予定されている。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -19,7 +18,7 @@ quick_summary:
     - 一般ユーザー
     - 開発者
     - Androidユーザー
-  latest_highlight: 2026年1月にAndroid 16ベースのデスクトップインターフェースがリーク
+  latest_highlight: 2026年9月15日に「Googlebook」として正式発表予定
   update_frequency: 高
 evaluation:
   score: 85
@@ -52,7 +51,7 @@ relationships:
 * **開発元**: Google
 * **公式サイト**: [https://aluminium-os.com/](https://aluminium-os.com/) (非公式情報ハブ)
 * **カテゴリ**: OS/プラットフォーム
-* **概要**: Googleが開発を進めているとされる次世代オペレーティングシステムです。AndroidとChromeOSを統合し、AIをコアに据えることで、モバイルとデスクトップの境界を取り払った新しいコンピューティング体験を提供することを目指しています。
+* **概要**: Googleが開発を進めている次世代オペレーティングシステムです（正式名称は「Googlebook」発表時に公開予定）。AndroidとChromeOSを統合し、AIをコアに据えることで、モバイルとデスクトップの境界を取り払った新しいコンピューティング体験を提供することを目指しています。Snapdragon XなどのARMベースのプロセッサへの対応も進められています。
 
 ## **2. 目的と主な利用シーン**
 
@@ -79,11 +78,34 @@ relationships:
 
 * **Android & ChromeOS Unified**: AndroidのアプリエコシステムとChromeOSのWeb技術およびセキュリティを統合したプラットフォーム。
 * **Desktop Interface**: Android 16をベースとした、ウィンドウ管理やタスクバーを備えた完全なデスクトップUI。
-* **AI Integration**: GeminiなどのAIモデルがシステムレベルで統合され、コンテキストに応じたアシストを提供。
+* **AI Integration**: GeminiなどのAIモデルがシステムレベルで統合され、コンテキストに応じたアシストを提供。キーボードに専用のGeminiキーが搭載される事例も報告されている。
 * **Cross-Device Continuity**: スマートフォン、タブレット、PC間でアプリの状態やデータをリアルタイムに同期。
 * **Chrome Extensions Support**: デスクトップ版Chromeと同様に拡張機能を利用可能。
+* **ARM Architecture Support**: Snapdragon Xなど、ARMアーキテクチャのプロセッサにネイティブ対応。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: モバイルとデスクトップの境界を取り払う、AndroidとChromeOSの融合アーキテクチャ。
+* **主要コンポーネントとデータフロー**:
+  * 基盤としてAndroidのエコシステムを採用しつつ、ChromeOSのWeb技術とセキュリティモデルを統合。
+  * デスクトップ向けのUI（タスクバー、ウィンドウ管理）はAndroidベースで再構築。
+* **特筆すべき要素技術**:
+  * OSレベルでの深いAI統合（Gemini等）。
+  * スマートフォンとPC間でのシームレスな状態同期。
+
+```mermaid
+graph TD
+    A[ユーザー] --> B(AluminiumOS デスクトップUI)
+    B --> C{システム層}
+    C --> D[Android アプリ実行環境]
+    C --> E[ChromeOS Web技術基盤]
+    C --> F[AIエージェント層 Gemini等]
+    D --> G[(ローカル/クラウド ストレージ)]
+    E --> G
+    F --> G
+```
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -100,7 +122,7 @@ relationships:
 * **初期設定**:
   * Googleアカウントでログインし、スマートフォンとペアリングすることで環境が同期される。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -112,7 +134,7 @@ relationships:
 * **AIネイティブ**: 最初からAIを前提に設計されており、従来のアドオン型のアシスタントとは一線を画す統合度。
 * **Googleエコシステムとの連携**: Gmail, Drive, CalendarなどのGoogleサービスと深く連携し、生産性を最大化。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -124,7 +146,7 @@ relationships:
 * **ハードウェア要件**: AI機能や高度なグラフィックスを動作させるために、比較的高スペックなハードウェアが必要になる可能性。
 * **情報が限定的**: 現在はリーク情報やプレビュー段階の情報が主であり、仕様が変更される可能性がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -140,7 +162,7 @@ relationships:
 * **課金体系**: OSは無料だが、追加のAI機能（Gemini Advanced等）はサブスクリプションになる可能性あり。
 * **無料トライアル**: 無し (無料OSのため)
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -151,7 +173,7 @@ relationships:
 * **導入企業**: 未リリース。
 * **導入事例**: Google内部でのテスト運用や、一部のパートナー企業へのプレビュー提供が行われているとの噂あり。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -163,14 +185,14 @@ relationships:
 * **コミュニティ**: `aluminium-os.com` などのファンサイトや、RedditのAndroid/ChromeOSコミュニティで活発に議論されている。
 * **公式サポート**: 正式リリース後にGoogleによるサポートが提供される見込み。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -181,7 +203,7 @@ relationships:
 * **API**: Android APIおよびChromeOSのAPIが利用可能になると予想される。
 * **外部サービス連携**: Google Workspace, Androidエコシステム全般。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -195,7 +217,7 @@ relationships:
 | **Flutter** | ◎ | Google推奨のマルチプラットフォームFW。 | 特になし。 |
 | **Web Technologies (PWA)** | ◎ | Chromeベースの実行環境を持つため相性良し。 | ネイティブ機能へのアクセスに制限がある場合も。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -208,7 +230,7 @@ relationships:
 * **データ管理**: Android/ChromeOSのサンドボックスモデルを継承し、アプリ間のデータ分離を徹底。
 * **準拠規格**: 未公開だが、Googleの標準的なセキュリティ基準に準拠すると推測される。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -218,7 +240,7 @@ relationships:
 * **UI/UX**: WindowsやmacOSに近いタスクバーやウィンドウ操作を取り入れつつ、Androidの流儀をミックスした新しいUI。
 * **学習コスト**: Androidユーザーであれば馴染み深いが、デスクトップ操作との融合部分で慣れが必要。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -231,7 +253,7 @@ relationships:
 * **陥りやすい罠 (Antipatterns)**:
   * モバイル専用の固定レイアウトでアプリを作ると、デスクトップの大画面で使いにくくなる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -254,7 +276,7 @@ relationships:
 * **特徴的なユースケース**:
   * 未リリースだが、マルチデバイス連携での利用が想定されている。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -268,12 +290,24 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-08-20**: **Googlebook Event Confirmed**
+  * 2026年9月15日にニューヨークでGooglebookのメディアイベントが開催されることが発表され、Aluminium OSの正式名称も公開される予定。
+* **2026-08-05**: **Lenovo Googlebook 15 Leak**
+  * Lenovoの最初のAluminium OS搭載ノートPC「Googlebook 15」の情報がリーク。Windowsキーの代わりに専用のGeminiキーが搭載されることが判明。
+* **2026-05-26**: **Snapdragon X Support Confirmed**
+  * QualcommのSnapdragon XプロセッサがGooglebook（Aluminium OS）をサポートすることが確認され、Windows以外のOSへの初展開となる。
+* **2026-05-19**: **Community Event Listing**
+  * 開発者コミュニティイベントで「Googlebook & Aluminium OS」としてアジェンダに掲載。
+* **2026-05-12**: **Googlebook & ARM Leak**
+  * 新しいラップトップカテゴリ「Googlebook」として展開されることが発表。また、ARM64ベースのデバイス動作のスクリーンショットがリーク。
+* **2026-03-04**: **Release Timeline Hinted**
+  * MWC 2026にて、Android Ecosystemのプレジデントが2026年内のリリースを示唆。
 * **2026-01-28**: **Bug Report Leak**
   * バグレポートの動画からAndroid 16ベースのデスクトップインターフェースがリーク。Chrome拡張機能のサポートやAI統合が確認された。
 
-(出典: [aluminium-os.com](https://aluminium-os.com/latest/))
+(出典: [製品アップデート情報](https://aluminium-os.com/latest/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -281,7 +315,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | 本ツール | Windows 11 | macOS | ChromeOS |
 |:---:|:---|:---:|:---:|:---:|:---:|
@@ -290,7 +324,7 @@ relationships:
 | **AI** | OS統合 | ◎<br><small>Native</small> | ◯<br><small>Copilot</small> | ◯<br><small>Apple Intelligence</small> | ◯<br><small>Gemini</small> |
 | **エコシステム** | アプリ数 | ◎<br><small>Play Store</small> | ◎<br><small>Legacy Support</small> | ◯<br><small>App Store</small> | ◯<br><small>Play Store/Web</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -303,7 +337,7 @@ relationships:
 | **Windows 11** | 最も普及しているOS | 圧倒的なソフトウェア互換性とゲーム性能。 | レガシー資産による重さ、モバイル連携の弱さ。 | 汎用的なPC作業、ゲーミング、特定の業務アプリが必要な場合。 |
 | **macOS** | Appleのエコシステム | iPhoneとの強力な連携、クリエイティブ用途。 | ハードウェアが高価、カスタマイズ性の低さ。 | iPhone/iPadユーザー、クリエイター。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
