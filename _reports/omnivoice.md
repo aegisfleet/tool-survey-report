@@ -2,7 +2,7 @@
 title: OmniVoice 調査レポート
 tool_name: OmniVoice
 tool_reading: オムニボイス
-category: AI音声/音楽生成
+category: AI音声生成
 developer: Han Zhu, Lingxuan Ye, Wei Kang, Zengwei Yao, Liyong Guo, Fangjun Kuang, Zhifeng Han, Weiji Zhuang, Long Lin, Daniel Povey (k2-fsa)
 official_site: https://zhu-han.github.io/omnivoice
 date: '2026-09-09'

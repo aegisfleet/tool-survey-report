@@ -2,7 +2,7 @@
 title: Suno 調査レポート
 tool_name: Suno
 tool_reading: スノ
-category: AI音声/音楽生成
+category: AI音楽生成
 developer: Suno, Inc.
 official_site: https://suno.com/
 date: '2026-02-07'
