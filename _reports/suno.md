@@ -43,6 +43,7 @@ relationships:
   related_tools:
     - ElevenLabs
     - ProducerAI
+    - YuE
 ---
 # **Suno 調査レポート**
 
@@ -330,13 +331,13 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | 本ツール (Suno) | Udio | ElevenLabs | Beatoven.ai |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | ボーカル生成 | ◎<br><small>高品質・自然</small> | ◎<br><small>高品質</small> | ◯<br><small>音楽生成機能あり</small> | ×<br><small>BGM特化</small> |
-| **生成品質** | 楽曲の多様性 | ◎<br><small>全ジャンル対応</small> | ◎<br><small>実験的・多様</small> | ◯<br><small>効果音含む</small> | ◯<br><small>ムード別BGM</small> |
-| **操作性** | UI/UX | ◎<br><small>非常に直感的</small> | ◯<br><small>やや複雑</small> | ◎<br><small>洗練されている</small> | ◯<br><small>動画同期機能あり</small> |
-| **権利関係** | 商用利用 | ◯<br><small>有料プランのみ</small> | ◯<br><small>有料プランのみ</small> | ◯<br><small>プランによる</small> | ◎<br><small>ロイヤリティフリー</small> |
-| **非機能要件** | 日本語対応 | ◯<br><small>歌詞生成対応</small> | △<br><small>一部対応</small> | ◎<br><small>音声合成は完璧</small> | - |
+| 機能カテゴリ | 機能項目 | 本ツール (Suno) | Udio | ElevenLabs | Beatoven.ai | YuE |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **基本機能** | ボーカル生成 | ◎<br><small>高品質・自然</small> | ◎<br><small>高品質</small> | ◯<br><small>音楽生成機能あり</small> | ×<br><small>BGM特化</small> | ◎<br><small>商用SaaSに匹敵</small> |
+| **生成品質** | 楽曲の多様性 | ◎<br><small>全ジャンル対応</small> | ◎<br><small>実験的・多様</small> | ◯<br><small>効果音含む</small> | ◯<br><small>ムード別BGM</small> | ◎<br><small>全ジャンル対応</small> |
+| **操作性** | UI/UX | ◎<br><small>非常に直感的</small> | ◯<br><small>やや複雑</small> | ◎<br><small>洗練されている</small> | ◯<br><small>動画同期機能あり</small> | △<br><small>開発者向け</small> |
+| **権利関係** | 商用利用 | ◯<br><small>有料プランのみ</small> | ◯<br><small>有料プランのみ</small> | ◯<br><small>プランによる</small> | ◎<br><small>ロイヤリティフリー</small> | △<br><small>モデル非商用</small> |
+| **非機能要件** | 日本語対応 | ◯<br><small>歌詞生成対応</small> | △<br><small>一部対応</small> | ◎<br><small>音声合成は完璧</small> | - | ◯<br><small>歌詞生成対応</small> |
 
 ### **16.2 詳細比較**
 
@@ -351,6 +352,7 @@ relationships:
 | **Udio** | 高品質音楽生成AI | 生成される楽曲の音楽的な複雑さと多様性 | UIがやや玄人向けで学習コストがある | より実験的で複雑な楽曲構成を求める場合。 |
 | **ElevenLabs** | 総合音声AI | 音声合成の品質が最高峰、効果音も生成可 | 音楽生成はまだ発展途上 | ナレーションやセリフを含む総合的な音声コンテンツ制作。 |
 | **Beatoven.ai** | BGM生成AI | 動画の長さに合わせた尺調整が容易 | ボーカル生成はできない | YouTube動画やPodcastのBGMを効率的に作りたい場合。 |
+| **YuE** | OSS音楽生成基盤 | 中間楽譜の編集による高い制御性、OSSであること | 高スペックGPU必須、モデルが非商用ライセンス | 研究開発、ローカルで細かく楽曲をコントロール・アレンジしたい場合。 |
 
 ## **17. 総評**
 
