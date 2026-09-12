@@ -2,7 +2,7 @@
 title: Irodori-TTS 調査レポート
 tool_name: Irodori-TTS
 tool_reading: イロドリ ティーティーエス
-category: AI音声/音楽生成
+category: AI音声生成
 developer: Aratako
 official_site: https://github.com/Aratako/Irodori-TTS
 date: '2026-03-20'

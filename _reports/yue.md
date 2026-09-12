@@ -2,7 +2,7 @@
 title: YuE 調査レポート
 tool_name: YuE
 tool_reading: ユエ
-category: AI音声/音楽生成
+category: AI音楽生成
 developer: HKUST, M·A·P, Tokenwave.AI, NYU, Stanford, MBZUAI, NOIZ, ACE Studio
 official_site: https://map-yue2.github.io/
 date: '2026-09-12'

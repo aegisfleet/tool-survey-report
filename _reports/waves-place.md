@@ -2,7 +2,7 @@
 title: Waves Place 調査レポート
 tool_name: Waves Place
 tool_reading: ウェイブス プレース
-category: AI音声/音楽生成
+category: AI音声生成
 developer: カシオ計算機株式会社 (Casio Computer Co., Ltd.)
 official_site: https://wavesplace.casio.com/
 date: '2026-03-15'
