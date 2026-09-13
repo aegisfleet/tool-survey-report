@@ -42,6 +42,9 @@ links:
   github: https://github.com/CopilotKit/CopilotKit
   deepwiki: https://deepwiki.com/CopilotKit/CopilotKit
   documentation: https://docs.copilotkit.ai/
+relationships:
+  related_tools:
+    - A2UI
 ---
 
 # **CopilotKit 調査レポート**

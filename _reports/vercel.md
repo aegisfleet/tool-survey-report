@@ -44,6 +44,7 @@ relationships:
   related_tools:
     - Cloudflare
     - Render
+    - A2UI
 ---
 
 # **Vercel 調査レポート**
