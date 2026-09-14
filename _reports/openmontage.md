@@ -2,17 +2,17 @@
 title: OpenMontage 調査レポート
 tool_name: OpenMontage
 tool_reading: オープンモンタージュ
-category: AIビデオ生成
+category: AI動画生成
 developer: calesthio
 official_site: https://www.openmontage.video/
 date: '2026-09-14'
 last_updated: '2026-09-14'
 tags:
+  - AI
+  - 動画生成
   - オープンソース
   - 自律型AIエージェント
-  - 動画制作
   - ローカル実行
-  - LLM
 description: AIエージェントを動画制作スタジオに変える、オープンソースの自律型動画制作システム
 quick_summary:
   has_free_plan: true
