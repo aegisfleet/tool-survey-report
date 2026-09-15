@@ -6,7 +6,7 @@ category: 構成管理
 developer: Amazon Web Services
 official_site: https://aws.amazon.com/cloudformation/
 date: '2025-10-27'
-last_updated: "2026-09-16"
+last_updated: '2026-09-16'
 tags:
   - DevOps
   - IaC
