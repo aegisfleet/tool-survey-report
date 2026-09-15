@@ -6,7 +6,7 @@ category: CLIツール群
 developer: Amazon Web Services
 official_site: https://aws.amazon.com/jp/cli/
 date: '2026-04-18'
-last_updated: '2026-04-18'
+last_updated: '2026-09-16'
 tags:
   - AWS
   - クラウド
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - システム管理者
-  latest_highlight: AWS Interconnectなど新サービス対応やパフォーマンス向上
+  latest_highlight: 2026年9月にv2.36系がリリースされ、AWSサービスの各種APIアップデートに追従
   update_frequency: 高
 evaluation:
   score: 93
@@ -83,7 +83,39 @@ relationships:
 * **JSON/YAML出力**: 実行結果のフォーマットをJSON、YAML、テキスト、テーブル形式で出力可能。
 * **高レベルS3コマンド**: `aws s3 sync` などの複雑な操作を簡素化するコマンド群。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: ローカルファーストのクライアント・サーバー構成（クライアントとしてのCLIがAWSクラウドAPIと通信）。
+* **主要コンポーネントとデータフロー**:
+  * ユーザーがターミナルで `aws` コマンドを実行すると、CLIはローカルの認証情報（`~/.aws/credentials` やSSOトークン）を読み込みます。
+  * 内部でBoto3 (AWS SDK for Python) のコアライブラリ（botocore）を利用し、要求をHTTP/HTTPSリクエストに変換します。
+  * AWSのエンドポイントに対してリクエストを送信し、AWSリソースの作成・変更・取得などの処理を行います。
+  * レスポンス（通常はJSON）を受け取り、指定されたフォーマット（JSON、YAML、Table、Text）でターミナルに出力します。
+* **特筆すべき要素技術**:
+  * **JMESPath**: クライアント側でJSONレスポンスをフィルタリング・抽出するためのクエリ言語（`--query` オプションで使用）。
+  * **IAM統合**: AWSのIdentity and Access Management (IAM) と深く統合されており、STSを利用した一時的な認証情報の取得（AssumeRole）や、AWS SSO (IAM Identity Center) を用いたフェデレーション認証をサポート。
+
+```mermaid
+graph TD
+    User([ユーザー]) --> |"awsコマンド実行"| CLI["AWS CLI (ローカル)"]
+    CLI --> |"設定/認証情報の読み込み"| Config[("~/.aws/config<br>~/.aws/credentials")]
+    CLI --> |"HTTP/HTTPS リクエスト (REST/Query API)"| AWSEndpoint("AWS エンドポイント")
+    AWSEndpoint --> |"API呼び出し"| AWSServices[("AWS 各種サービス<br>(EC2, S3, IAM, etc.)")]
+    AWSEndpoint -.-> |"レスポンス (JSON)"| CLI
+    CLI -.-> |"整形された出力<br>(JSON, YAML, Text, Table)"| User
+
+    subgraph Local Environment
+        CLI
+        Config
+    end
+
+    subgraph AWS Cloud
+        AWSEndpoint
+        AWSServices
+    end
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * AWSアカウント
@@ -107,20 +139,20 @@ relationships:
   aws s3 ls
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **高い網羅性**: AWSの新サービスや機能がリリースされると、迅速にCLIにも対応が追加されます。
 * **スクリプト親和性**: JSON出力と `jq` や内蔵の `--query`（JMESPath）を組み合わせることで、複雑な自動化スクリプトを容易に作成できます。
 * **認証の柔軟性**: 環境変数、設定ファイル、EC2インスタンスメタデータ（IAMロール）、AWS SSOなど、多様な認証方式をサポート。
 * **マルチプラットフォーム**: Windows, macOS, Linuxのすべてで一貫したエクスペリエンスを提供。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **学習曲線**: AWSの各サービスの概念とAPIモデルを理解している必要があるため、AWS初心者にはコマンドの組み立てが難しく感じられる場合があります。
 * **出力形式の理解**: 複雑なJSON応答を解析するために、JMESPath（`--query`オプション）の構文を学ぶ必要があります。
 * **v1とv2の非互換性**: AWS CLI v1とv2では一部動作が異なるため、移行時には注意が必要です。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -129,26 +161,26 @@ relationships:
 * **課金体系**: ツールは無料。呼び出したAWSサービスの料金規定に従う。
 * **無料トライアル**: AWS自体の無料枠（Free Tier）を利用可能。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: AWSを利用している世界中の数百万の企業や開発者。
 * **導入事例**: AWSインフラストラクチャのIaC（Infrastructure as Code）化、CI/CDパイプライン（GitHub Actions, GitLab CIなど）におけるAWSリソース操作など、広範に利用されています。
 * **対象業界**: クラウドインフラを利用するすべての業界（IT、金融、ヘルスケア、スタートアップなど）。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: [AWS CLI User Guide](https://docs.aws.amazon.com/cli/latest/userguide/) および [Command Reference](https://awscli.amazonaws.com/v2/documentation/api/latest/index.html) が非常に充実しています。
 * **コミュニティ**: [GitHub Repository](https://github.com/aws/aws-cli) でのIssue報告、Stack Overflow (`aws-cli`タグ)、AWS re:Postなどの活発なコミュニティ。
 * **公式サポート**: AWSのサポートプランに加入している場合、AWSサポートから公式なサポートを受けることができます。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 本ツール自体がAWSの各種APIをラップするインターフェースです。
 * **外部サービス連携**: 各種CI/CDツール（Jenkins, GitHub Actions, GitLab CI/CD, CircleCIなど）とシームレスに連携。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -157,18 +189,18 @@ relationships:
 | **CI/CDツール (GitHub Actions等)** | ◎ | 公式アクションやコンテナイメージが提供されており、組み込みが容易。 | 認証情報の安全な管理（OIDC連携など）を適切に行う必要がある。 |
 | **Docker** | ◎ | 公式のDockerイメージ（`amazon/aws-cli`）が提供されている。 | コンテナサイズや不要な依存関係の整理が必要な場合がある。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: IAMユーザー認証、AWS SSO (IAM Identity Center)、一時的認証情報 (STS)、EC2/ECS IAMロールなど、AWSの強力なセキュリティモデルを完全にサポート。
 * **データ管理**: CLI自体はクライアント側ツールであり、データはユーザー環境とAWS間で直接通信されます。
 * **準拠規格**: AWS CLIはAWSのサービスと通信するため、AWS自体の各種コンプライアンス（SOC、ISO、HIPAA、GDPR等）の枠組みの中で利用されます。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: v2から導入された自動プロンプト（`--cli-auto-prompt`）により、対話型でのコマンド入力が可能になり、UXが大幅に向上しました。
 * **学習コスト**: AWSの基本概念を理解していれば、`aws [service] help` コマンドを活用することで容易に学習できますが、複雑なJMESPathクエリの習得には少し時間がかかります。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **AWS SSOの利用**: 長期的なアクセスキー（IAMユーザー）の代わりに、AWS IAM Identity Center (SSO) と連携して短期クレデンシャルを利用する。
@@ -178,7 +210,7 @@ relationships:
   * **アクセスキーのハードコード**: スクリプト内にアクセスキーをハードコードすることは重大なセキュリティリスク。環境変数やIAMロールを使用するべき。
   * **ページネーションの無視**: 一部のコマンドは結果をページネーション（分割）して返すため、すべての結果を取得していないのに処理を進めてしまう。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHub, 開発者ブログ, Stack Overflow
 * **総合評価**: クラウドCLIのデファクトスタンダードとして圧倒的な支持。（公式GitHubリポジトリのStar数：16k以上）
@@ -193,36 +225,37 @@ relationships:
 * **特徴的なユースケース**:
   * ローカルのDockerコンテナ内からホストのIAMロールを借用して安全にAWSリソースにアクセスする構成。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-09-14**: `AWS CLI 2.36.45` リリース - STSの最大セッショントークンサイズの増加（4,096バイト）や、Billing、Image Builder、Glue、CodeDeployなどの各種AWSサービスの最新APIアップデートに追従。
+* **2026-09-11**: `AWS CLI 2.36.44` リリース - Lightsailディストリビューションのプライベートオリジンアクセス対応や、Batchの一括ジョブAPI追加、S3 Object Lockドキュメントの更新などに追従。
+* **2026-09-10**: `AWS CLI 2.36.43` リリース - CRT転送に対するレスポンスチェックサム検証とリクエストチェックサム計算オプションの設定に関するバグ修正。
+* **頻繁な更新**: ほぼ毎日のように、AWSのAPI変更に追従するためのマイナーリリース（例：2.36.xシリーズ）が行われています。
 * **2024-11-26**: `AWS CLI 2.0.0dev preview release` - AWS CLI v2の最初の開発者プレビューがリリースされ、リソース値の自動補完や自動プロンプト（ウィザード）、SSO連携の強化などが発表されました。（※過去の大きなマイルストーンとして記載）
-* **2024-03-XX**: 各種新サービス（Clean Rooms, Ground Station, Interconnect等）への対応を順次追加。
-* **2024-02-XX**: セキュリティアップデート（OpenSSLバンドルの更新）およびPython 3.14への対応準備。
-* **頻繁な更新**: ほぼ毎日のように、AWSのAPI変更に追従するためのマイナーリリース（例：2.34.xシリーズ）が行われています。
 
-(出典: [GitHub Releases](https://github.com/aws/aws-cli/releases))
+(出典: [GitHub Releases (aws/aws-cli)](https://github.com/aws/aws-cli/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | AWS CLI | AWS CloudShell | Terraform/CloudFormation | AWS Tools for PowerShell |
+| 機能カテゴリ | 機能項目 | AWS CLI | AWS CloudFormation | Terraform | AWS MCP Servers |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | AWS操作網羅性 | ◎<br><small>ほぼ全API対応</small> | ◎<br><small>CLI組み込み済み</small> | ◯<br><small>IaC特化</small> | ◎<br><small>PowerShell向け</small> |
-| **環境** | ローカル実行 | ◎<br><small>全OS対応</small> | ×<br><small>ブラウザ上のみ</small> | ◎<br><small>全OS対応</small> | ◯<br><small>Windows親和性高</small> |
-| **非機能要件** | 状態管理 (State) | ×<br><small>コマンド実行のみ</small> | ×<br><small>コマンド実行のみ</small> | ◎<br><small>状態を管理し差分適用</small> | ×<br><small>コマンド実行のみ</small> |
-| **自動化** | スクリプト親和性 | ◎<br><small>シェルスクリプト最適</small> | ◯<br><small>一時環境</small> | ◎<br><small>宣言的IaC</small> | ◎<br><small>PSスクリプト</small> |
+| **基本機能** | AWS操作網羅性 | ◎<br><small>ほぼ全API対応</small> | ◯<br><small>宣言的にリソース管理</small> | ◯<br><small>公式プロバイダーで網羅</small> | ◯<br><small>BedrockやCFnなどの特定操作</small> |
+| **環境** | ローカル実行 | ◎<br><small>全OS対応</small> | ◯<br><small>AWS CLI経由などで実行</small> | ◎<br><small>全OS対応</small> | ◎<br><small>MCP対応クライアントで実行</small> |
+| **運用・管理** | 状態管理 (State) | ×<br><small>コマンド実行のみ</small> | ◎<br><small>AWS側でフルマネージド</small> | ◎<br><small>Stateファイルで差分管理</small> | ×<br><small>コマンド実行/情報取得のみ</small> |
+| **インターフェース** | 自然言語操作 | ×<br><small>コマンドとオプションが必要</small> | ×<br><small>YAML/JSONの記述が必要</small> | ×<br><small>HCLの記述が必要</small> | ◎<br><small>AI経由で直感的に操作可能</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **AWS CLI** | 公式の汎用コマンドラインツール | 汎用性が高く、軽量。シェルスクリプトと相性が良い。 | 状態管理ができない（冪等性の担保は自己責任）。 | 単発の作業自動化、CI/CDパイプライン、ファイル同期（S3）。 |
-| **AWS CloudShell** | ブラウザベースのコンソール環境 | 環境構築不要、認証済み状態で即座にCLIを利用可能。 | セッションが一時的であり、ローカルスクリプトの本格的な開発には不向き。 | 手軽に少しだけAWSリソースを確認・操作したい場合。 |
-| **AWS CloudFormation / Terraform** | 宣言的なInfrastructure as Code | インフラの状態管理（State）ができ、冪等性が担保される。 | 単発の簡単な操作（例: EC2の再起動）には大げさ。 | 複雑なインフラのプロビジョニングや構成管理を行う場合。 |
-| **AWS Tools for PowerShell** | PowerShell用のモジュール | Windows環境やPowerShellのオブジェクト指向パイプラインと高い親和性。 | Linux/macOSユーザーにはBash/CLIほど馴染みがない。 | Windows管理者やPowerShellを標準として使用しているチーム。 |
+| **AWS CLI** | 公式の汎用コマンドラインツール | 汎用性が高く、軽量。シェルスクリプトと相性が良い。新機能への追従が最速。 | 状態管理ができない（冪等性の担保は自己責任）。 | 単発の作業自動化、CI/CDパイプラインへの組み込み、S3のファイル同期。 |
+| **AWS CloudFormation** | AWSネイティブなIaCサービス | AWS環境における高い安全性と信頼性。マネージドな状態管理。 | AWSへのベンダーロックイン。学習コストが高い。 | AWSに特化したインフラを宣言的に構築し、統一管理したい場合。 |
+| **Terraform** | マルチクラウド対応のIaCツール | 圧倒的なプロバイダー数。マルチクラウド構成を一元管理できる。 | Stateファイルの厳格な管理が必要。ライセンス制約の懸念。 | 複数のクラウドを併用している組織や、ベンダーロックインを避けたい場合。 |
+| **AWS MCP Servers** | AIアシスタント向けの公式連携サーバー群 | AIから自然言語でドキュメント検索やAWSリソース操作が可能になる。 | セットアップがやや煩雑。対応している操作はまだ限定的。 | Claude DesktopやCursorなどのAIアシスタントを用いてAWS開発を行う場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   AWS CLIは、AWSを利用するすべての開発者およびシステム管理者にとって、必須のツールです。v2へのアップデートにより、対話型プロンプトやSSO統合が改善され、使い勝手がさらに向上しました。オープンソースとして頻繁に更新されており、AWSの最新機能に即座に対応できる点が強みです。
