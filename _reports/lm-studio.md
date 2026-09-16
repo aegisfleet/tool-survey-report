@@ -13,7 +13,7 @@ tags:
   - 大規模言語モデル
   - 開発者ツール
   - エージェント
-description: "オープンソースのLLMをローカル環境で実行するアプリ。Bionicエージェントによる自律タスク実行や、クラウド・リモートモデルのシームレスな利用も可能。"
+description: オープンソースのLLMをローカル環境で実行するアプリ。Bionicエージェントによる自律タスク実行や、クラウド・リモートモデルのシームレスな利用も可能。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - 研究者
     - AI学習者
-  latest_highlight: "2026年9月に自律型AIエージェント「Bionic」v1.1.3をリリースし、パフォーマンス向上とLinux向け音声認識に対応"
+  latest_highlight: 2026年9月に自律型AIエージェント「Bionic」v1.1.3をリリースし、パフォーマンス向上とLinux向け音声認識に対応
   update_frequency: 高
 evaluation:
   score: 92
