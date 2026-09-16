@@ -49,6 +49,7 @@ links:
   documentation: https://docs.deno.com/
 relationships:
   related_tools:
+    - HSP3
     - Node.js
     - Bun
     - Hono

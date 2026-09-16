@@ -46,6 +46,7 @@ relationships:
   children:
     - npm
   related_tools:
+    - HSP3
     - Deno
     - Bun
     - Hono
