@@ -46,10 +46,10 @@ links:
   documentation: https://hsp.tv/make/hsp3.html
 relationships:
   related_tools:
-    - "Node.js"
-    - "Bun"
-    - "Deno"
-    - "Wine"
+    - Node.js
+    - Bun
+    - Deno
+    - Wine
 ---
 # **HSP3 調査レポート**
 

@@ -46,7 +46,7 @@ links:
   documentation: https://bun.com/docs
 relationships:
   related_tools:
-    - "HSP3"
+    - HSP3
     - Node.js
     - Deno
     - Hono
