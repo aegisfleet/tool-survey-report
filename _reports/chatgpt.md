@@ -56,7 +56,7 @@ relationships:
     - DeepSeek
     - Amazon Bedrock
     - Microsoft 365 Copilot
-    - Qwen
+    - Agent i
 ---
 
 # **ChatGPT 調査レポート**
