@@ -20,7 +20,7 @@ quick_summary:
   target_users:
     - 開発者
     - AIエンジニア
-  latest_highlight: '2026年8月にサーバー実装パッケージの大型アップデートを実施し、機能拡張が進行中'
+  latest_highlight: 2026年8月にサーバー実装パッケージの大型アップデートを実施し、機能拡張が進行中
   update_frequency: 高
 evaluation:
   score: 95
