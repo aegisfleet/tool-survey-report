@@ -1,50 +1,50 @@
 ---
-title: "Agent i 調査レポート"
-tool_name: "Agent i"
-tool_reading: "エージェント アイ"
-category: "汎用パーソナルアシスタント"
-developer: "LINEヤフー株式会社"
-official_site: "https://events.yahoo.co.jp/agent-i/"
-date: "2026-04-20"
-last_updated: "2026-09-18"
+title: Agent i 調査レポート
+tool_name: Agent i
+tool_reading: エージェント アイ
+category: 汎用パーソナルアシスタント
+developer: LINEヤフー株式会社
+official_site: https://events.yahoo.co.jp/agent-i/
+date: '2026-04-20'
+last_updated: '2026-09-18'
 tags:
-  - "AI"
-  - "生成AI"
-  - "会話型AI"
-  - "SaaS"
-  - "エージェント"
-description: "「LINE」と「Yahoo! JAPAN」からワンタップで利用できる、日常生活に寄り添うAIエージェント"
+  - AI
+  - 生成AI
+  - 会話型AI
+  - SaaS
+  - エージェント
+description: 「LINE」と「Yahoo! JAPAN」からワンタップで利用できる、日常生活に寄り添うAIエージェント
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "一般ユーザー"
-    - "Yahoo! JAPANユーザー"
-    - "LINEユーザー"
-  latest_highlight: "2026年6月〜8月のアップデートによりタスク代行機能およびAgent i Bizが提供開始"
-  update_frequency: "高"
+    - 一般ユーザー
+    - Yahoo! JAPANユーザー
+    - LINEユーザー
+  latest_highlight: 2026年6月〜8月のアップデートによりタスク代行機能およびAgent i Bizが提供開始
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "LINEとYahoo! JAPANの強力なプラットフォーム連携"
+      reason: LINEとYahoo! JAPANの強力なプラットフォーム連携
     - point: 5
-      reason: "日常生活に特化した領域エージェントの提供"
+      reason: 日常生活に特化した領域エージェントの提供
     - point: 2
-      reason: "タスク代行・メモリ機能の実装によるUX向上"
+      reason: タスク代行・メモリ機能の実装によるUX向上
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "LINEとYahoo! JAPANの日常的なサービス連携により、生活支援ツールとして高い利便性を持つ"
+      reason: 特になし
+  summary: LINEとYahoo! JAPANの日常的なサービス連携により、生活支援ツールとして高い利便性を持つ
 links:
-  documentation: "https://search.yahoo.co.jp/guidelines/generativeaiguideline"
+  documentation: https://search.yahoo.co.jp/guidelines/generativeaiguideline
 relationships:
   related_tools:
-    - "ChatGPT"
-    - "Microsoft 365 Copilot"
-    - "Gemini"
+    - ChatGPT
+    - Microsoft 365 Copilot
+    - Gemini
 ---
 
 # **Agent i 調査レポート**

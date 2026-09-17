@@ -57,7 +57,7 @@ relationships:
     - DeepSeek
     - Qwen
     - Vertex AI
-    - "Agent i"
+    - Agent i
 ---
 # **Gemini 調査レポート**
 
