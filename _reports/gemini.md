@@ -57,7 +57,7 @@ relationships:
     - DeepSeek
     - Qwen
     - Vertex AI
-    - Microsoft 365 Copilot
+    - "Agent i"
 ---
 # **Gemini 調査レポート**
 

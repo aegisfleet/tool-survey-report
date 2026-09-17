@@ -54,7 +54,7 @@ relationships:
     - GitHub Copilot
     - Microsoft Power Automate
     - Circleback
-    - Gamma
+    - "Agent i"
 ---
 
 # **Microsoft 365 Copilot 調査レポート**
