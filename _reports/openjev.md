@@ -2,17 +2,17 @@
 title: OpenJev 調査レポート
 tool_name: OpenJev
 tool_reading: オープンジェブ / オープンジェヴ
-category: AI開発者ツール
+category: エージェント開発基盤
 developer: TheoLeeCJ
 official_site: https://openjev.com/
 date: '2026-09-18'
 last_updated: '2026-09-18'
 tags:
   - AI
-  - 評価
   - オープンソース
-  - LLM
-  - ブラウザ
+  - 大規模言語モデル
+  - エージェント
+  - 開発者ツール
 description: ブラウザ上でローカルモデルを動かし、TypeSafeのJevのようなセマンティック判定を行う実験的プロジェクト
 quick_summary:
   has_free_plan: true
