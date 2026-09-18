@@ -46,6 +46,7 @@ links:
   documentation: https://docs.datadoghq.com/
 relationships:
   related_tools:
+    - Amazon GuardDuty
     - Kibana
     - Splunk
     - Splunk AppDynamics
