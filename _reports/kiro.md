@@ -50,6 +50,7 @@ relationships:
     - AWS Frontier Agents
     - cc-sdd
     - OpenSpec
+    - AWS DevOps Agent
   parent: GitKraken
 ---
 
