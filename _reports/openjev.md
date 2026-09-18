@@ -37,7 +37,7 @@ evaluation:
   summary: エージェントの判定を高速化するための非常に興味深い実験的OSS
 links:
   github: https://github.com/TheoLeeCJ/openjev
-  deepwiki: "https://deepwiki.com/TheoLeeCJ/openjev"
+  deepwiki: https://deepwiki.com/TheoLeeCJ/openjev
   documentation: https://github.com/TheoLeeCJ/openjev/blob/master/README.md
 ---
 
