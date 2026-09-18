@@ -5,8 +5,8 @@ tool_reading: アマゾン ガードデューティ
 category: CDN/セキュリティ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/guardduty/
-date: '2026-02-04'
-last_updated: '2026-04-20'
+date: '2026-09-19'
+last_updated: '2026-09-19'
 tags:
   - AWS
   - セキュリティ
@@ -21,7 +21,7 @@ quick_summary:
     - セキュリティ担当者
     - DevOpsエンジニア
     - AWS管理者
-  latest_highlight: Aurora Limitless Databaseへの対応とRDS保護の強化
+  latest_highlight: AIによる脅威の自動調査・要約機能や、Amazon Bedrock向けのAI Protectionなどが追加
   update_frequency: 高
 evaluation:
   score: 92
@@ -44,6 +44,8 @@ links:
 relationships:
   related_tools:
     - AWS Security Hub
+    - Microsoft Defender for Cloud
+    - Datadog
 ---
 # **Amazon GuardDuty 調査レポート**
 
@@ -97,7 +99,65 @@ relationships:
 * **Lambda Protection**: Lambda関数のネットワークアクティビティを監視し、不正な暗号資産マイニングやC&Cサーバーへの通信などを検知します。
 * **統合された脅威インテリジェンス**: AWS独自の脅威情報に加え、CrowdStrikeやProofpointなどのパートナーからの情報フィードを活用し、既知の悪意あるIPアドレスやドメインとの通信を検出します。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: クラウド完結型のフルマネージドSaaSアーキテクチャ（AWSネイティブ統合）。エージェントレスで動作する機能（ログ分析）と、エージェントベースで動作する機能（Runtime Monitoringなど）を組み合わせて提供。
+* **主要コンポーネントとデータフロー**:
+  * CloudTrailデータイベントや管理イベント、VPCフローログ、DNSログなどの基盤ログがバックグラウンドでGuardDutyの分析エンジンに自動でルーティングされます。ユーザー側の環境に負荷をかけることなく継続的に分析が行われます。
+  * 脅威が検知された場合、「Findings（検出結果）」として生成され、AWS Security Hub、Amazon EventBridge、Amazon Detectiveへと自動連携させることが可能です。
+
+```mermaid
+flowchart TD
+    subgraph log_source [ログソース・保護対象]
+        A[AWS CloudTrail]
+        B[VPC Flow Logs]
+        C[DNS Logs]
+        D[EKS / ECS / EC2]
+        E[Amazon S3]
+        F[RDS / Lambda]
+    end
+
+    subgraph guardduty [Amazon GuardDuty]
+        G[ログ・データ収集]
+        H[AI/ML 分析エンジン]
+        I[脅威インテリジェンス照合]
+        G --> H
+        G --> I
+        H --> J[脅威・異常の検知]
+        I --> J
+    end
+
+    A -.-> G
+    B -.-> G
+    C -.-> G
+    D -.-> G
+    E -.-> G
+    F -.-> G
+
+    subgraph external_action [外部連携・対応]
+        J --> K[Amazon EventBridge]
+        J --> L[AWS Security Hub]
+        J --> M[Amazon Detective]
+        K --> N[SNS 通知 / Slack]
+        K --> O[Lambda による自動修復]
+    end
+```
+
+* **特筆すべき要素技術**:
+  * 機械学習と異常検知（AI/ML）による行動プロファイリング。
+  * AWS公式およびサードパーティ（CrowdStrike、Proofpointなど）が提供する脅威インテリジェンスフィード。
+  * EBSボリュームのマルウェアスキャン機能や、コンテナ/OSレベルの詳細なファイルアクセス・プロセス実行を可視化するRuntime Monitoring技術。
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -125,7 +185,7 @@ relationships:
 * **マルチアカウント管理**:
   * AWS Organizationsと連携し、委任管理者アカウントを設定することで、組織内の全アカウントのGuardDutyを一括管理・有効化できる。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -138,7 +198,7 @@ relationships:
 * **AWSネイティブ統合**: Security Hub、Detective、EventBridgeなど他のAWSサービスとシームレスに連携し、検知から調査、対応までの自動化フローを組みやすい。
 * **コスト効率**: 高価なサードパーティ製IDS/IPSアプライアンスを購入・運用する必要がなく、使用量に応じた従量課金で利用できる。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -151,7 +211,7 @@ relationships:
 * **検知のタイムラグ**: リアルタイムに近いが、ログの収集・分析プロセスにより、事象発生から検知・通知までに数分〜十数分のラグが発生する場合がある。
 * **カスタマイズの限界**: 検知ロジックはAWSが管理しており、ユーザーが独自の検知ルールを細かく作成・調整することは難しい。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -175,7 +235,7 @@ relationships:
 
 ※ Malware Protection for S3は2025年2月に大幅値下げ（$0.60→$0.09/GB）が実施されました。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -189,7 +249,7 @@ relationships:
   * **金融機関**: PCI DSS等のコンプライアンス要件を満たすための侵入検知システムとして全アカウントで標準採用。
 * **対象業界**: スタートアップからエンタープライズまで、AWSを利用するほぼ全ての組織で「ベースラインのセキュリティ対策」として導入されています。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -201,14 +261,14 @@ relationships:
 * **コミュニティ**: AWS re:Post, JAWS-UG（日本のユーザーグループ）などで活発な情報共有が行われています。
 * **公式サポート**: AWS Support（Business / Enterprise Support）により、技術的な問い合わせやトラブルシューティングが可能です。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -222,7 +282,7 @@ relationships:
   * **SIEM/SOAR**: Splunk, Datadog, Sumo Logic, New Relic
   * **通知/チャット**: Slack, Microsoft Teams, PagerDuty, SNS
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -237,7 +297,7 @@ relationships:
 | **Python (Boto3)** | ◎ | SDKが完備されており、Findingsの自動処理を実装容易 | APIレート制限の考慮 |
 | **Kubernetes (EKS)** | ◎ | EKS Audit LogsやRuntime Monitoringで深く統合 | アドオンのインストールが必要な場合あり |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -250,7 +310,7 @@ relationships:
 * **データ管理**: ログデータは顧客のAWSアカウント内で分析され、GuardDutyサービス側には保存されません。分析プロセスはAWSのセキュアな環境で行われます。
 * **準拠規格**: PCI DSS, HIPAA, SOC 1/2/3, ISO 27001, FedRAMPなど、主要なグローバルコンプライアンス基準に準拠しています。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -260,7 +320,7 @@ relationships:
 * **UI/UX**: 検知結果は重要度（High, Medium, Low）ごとに色分けされ、直感的にリスクを把握できます。各Findingには「何が起きたか」「どのリソースが対象か」が明確に示されます。
 * **学習コスト**: 有効化自体は非常に簡単ですが、検知された内容（Finding）の意味を理解し、適切に対処（調査・封じ込め）を行うためには、一定のセキュリティ知識とAWSの知識が必要です。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -276,7 +336,7 @@ relationships:
   * **有効化して放置**: 通知設定を行わず、マネジメントコンソールも見ないため、侵害に気づかない。
   * **コスト懸念による部分導入**: ログ量の多いアカウントだけ無効化するなどして、セキュリティホールを作る。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -299,30 +359,19 @@ relationships:
 * **特徴的なユースケース**:
   * セキュリティ部門がないスタートアップが、とりあえずのセキュリティ対策として導入し、Slack通知で運用するケース。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-<!--
-【ガイドライン】
-- 日付の降順（新しいものが上）
-- 3-10項目をリストアップ
-- 各項目に日付と概要を含める
-- **情報源の優先順位**:
-  1. GitHubリポジトリの `CHANGELOG.md`
-  2. GitHub Releases
-  3. 公式ブログ / ニュース
-- 情報源のURLを記載
--->
+* **2024-04-12**: **AI-powered investigations (Amazon Detective 連携)**
+  * セキュリティの検出結果を自動的に分析し、関連するアクティビティを相関させてリスク評価、信頼度スコアリング、MITREテクニックの分類、 actionable next steps を含む構造化されたサマリーを生成する「AI主導の調査」機能が追加されました。
+* **2024-04-12**: **GuardDuty AI Protectionの一般提供**
+  * 生成AIアプリを保護するための「GuardDuty AI Protection」が公開され、Amazon Bedrockのガードレール情報やモデルの詳細なスキャン結果を提供するようになりました。
+* **2024-03-29**: **Runtime Monitoring での新しい脅威検出**
+  * Runtime Monitoring において、EC2インスタンスやコンテナ上のセキュリティ上重要なシステムファイルが変更されたことを検出する3つの新しい finding types（Persistence, PrivilegeEscalation, DefenseEvasion）が追加され、ファイル改ざんによる不正侵害の検知が強化されました。
+* **2024-03**: **Malware Protection for AWS Backup**
+  * Amazon EC2、Amazon EBSに加えて、S3のバックアップデータ（Point-In-Time Recovery Points等）に対するマルウェアスキャンのサポートが追加され、復旧時の脅威混入リスクを低減します。
 
-* **2025-12-05**: **GuardDuty Extended Threat Detection (EC2/ECS)**
-  * Amazon EC2インスタンスの攻撃シーケンスカバレッジと脅威分析を向上させるためのRuntime Monitoring機能が拡張されました。
-* **2025-11-12**: **Malware Protection for AWS Backupの追加**
-  * Amazon EC2、Amazon EBS、およびAmazon S3バックアップに対するマルウェア検出機能が提供され、復旧時のビジネス中断を最小限に抑える機能が追加されました。
-* **2025-09-24**: **カスタムエンティティリストの一般提供**
-  * GuardDutyのカスタム脅威検出機能が強化され、独自のドメインベースの脅威インテリジェンス（エンティティリスト）を統合できるようになりました。
-
-(出典: [AWS What's New](https://aws.amazon.com/new/))
-
-## **16. 類似ツールとの比較**
+(出典: [AWS What's New](https://aws.amazon.com/new/) / [AWS CLI Changelog](https://raw.githubusercontent.com/aws/aws-cli/develop/CHANGELOG.rst))
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -330,7 +379,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 <!--
 【記載ルール】
@@ -344,14 +393,14 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | Amazon GuardDuty | Prisma Cloud | CrowdStrike Falcon | Azure Defender |
+| 機能カテゴリ | 機能項目 | Amazon GuardDuty | Microsoft Defender for Cloud | AWS Security Hub | Datadog |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 導入容易性 | ◎<br><small>ワンクリック</small> | △<br><small>設定が必要</small> | △<br><small>エージェント導入</small> | ◎<br><small>Azureなら容易</small> |
-| **監視範囲** | クラウドログ分析 | ◎<br><small>AWSログ全般</small> | ◎<br><small>マルチクラウド</small> | △<br><small>EPP中心</small> | ◎<br><small>Azureログ全般</small> |
-| **保護機能** | 脅威遮断 | ×<br><small>検知のみ</small> | ◯<br><small>ポリシーで遮断可</small> | ◎<br><small>強力なEPP/EDR</small> | ◯<br><small>一部遮断可</small> |
-| **コスト** | 運用コスト | ◯<br><small>従量課金</small> | △<br><small>高機能・高価格</small> | △<br><small>ライセンス費</small> | ◯<br><small>従量課金</small> |
+| **基本機能** | 導入容易性 | ◎<br><small>ワンクリック</small> | ◯<br><small>Azureでは容易</small> | ◎<br><small>AWSネイティブ</small> | △<br><small>Agent導入等が必要</small> |
+| **監視範囲** | クラウドログ分析 | ◎<br><small>AWSログ全般</small> | ◎<br><small>マルチクラウド</small> | ◯<br><small>体制一元化</small> | ◎<br><small>インフラ・APM統合</small> |
+| **保護機能** | 脅威検知・AI分析 | ◎<br><small>AI Protection等搭載</small> | ◎<br><small>Agentic AI (Copilot連携)</small> | △<br><small>集約・可視化中心</small> | ◎<br><small>Bits AI等搭載</small> |
+| **コスト** | 運用コスト | ◯<br><small>従量課金</small> | ◯<br><small>Foundationalは無料</small> | ◯<br><small>リソース課金</small> | △<br><small>細分化・高価格化しがち</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -361,11 +410,11 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Amazon GuardDuty** | AWS純正の脅威検知 | 導入が圧倒的に簡単で、AWS環境への負荷がない。コストパフォーマンスが良い。 | 攻撃を止める機能はない。詳細なフォレンジックには別途Detective等が必要。 | **AWSを利用する全てのアカウント**。まずはこれを入れ、必要に応じて他を追加する。 |
-| **Prisma Cloud** | マルチクラウド対応CNAPP | AWS, Azure, GCPを統一ポリシーで管理でき、設定診断からランタイム保護まで包括的。 | 機能が多岐にわたるため学習コストが高く、導入・ライセンス費用も高額になりがち。 | **マルチクラウド環境**で、統一された高度なセキュリティガバナンスが必要な場合。 |
-| **CrowdStrike Falcon** | EDR/EPPのリーダー | エンドポイント（EC2等）の保護において最強クラスの防御・検知能力を持つ。 | エージェント導入が必要で、管理コストがかかる。クラウドAPI側の監視は別途必要。 | **エンドポイント保護**（マルウェア対策、EDR）を強化したい場合。GuardDutyと併用推奨。 |
-| **Azure Defender** | Azure純正セキュリティ | Azure環境においてGuardDutyと同様の統合性と導入容易性を提供する。 | AWS環境の保護も可能だが、AWSネイティブ機能に比べると設定が複雑になる場合がある。 | **Azureがメイン**の環境で、マルチクラウドとしてAWSも管理したい場合。 |
+| **Microsoft Defender for Cloud** | マルチクラウド対応CNAPP | Azure, AWS, GCPを統一ポリシーで管理でき、Microsoftエコシステムとの強力な連携とAI機能(Copilot)が強み。 | 複数のポータルをまたがる設定が必要で、ライセンス体系も複雑になる場合がある。 | **Azureがメイン**の環境や、マルチクラウド環境で統一された高度なセキュリティガバナンスが必要な場合。 |
+| **AWS Security Hub** | AWS環境の統合セキュリティ | 脆弱性管理、CSPM、GuardDutyなどのセキュリティアラートを単一コンソールに集約・可視化できる。 | 単体で脅威を検知するより、他の検知ツール（GuardDuty等）からの情報に依存する部分が大きい。 | **AWS環境全体のコンプライアンス管理**や、アラート・脆弱性状況を一元管理して自動修復を行いたい場合（GuardDutyと併用推奨）。 |
+| **Datadog** | 統合オブザーバビリティ・APM | インフラ、APM、ログ、セキュリティ( Bits AI )を単一で提供し、既存環境への導入が容易。 | 多機能な反面、料金体系が製品ごとに細分化されており、大規模なログ収集だとコスト見積もりが複雑。 | **運用・パフォーマンス監視とセキュリティ監視を統合**して、DevOps・SREチーム全体で横断的に利用したい場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
