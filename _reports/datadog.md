@@ -46,13 +46,13 @@ links:
   documentation: https://docs.datadoghq.com/
 relationships:
   related_tools:
-    - Amazon GuardDuty
     - Kibana
     - Splunk
     - Splunk AppDynamics
     - New Relic
     - Grafana
     - Amazon OpenSearch Service
+    - AWS DevOps Agent
 ---
 
 # **Datadog 調査レポート**

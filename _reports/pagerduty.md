@@ -41,6 +41,7 @@ relationships:
   related_tools:
     - Datadog
     - New Relic
+    - AWS DevOps Agent
 ---
 
 # **PagerDuty 調査レポート**
