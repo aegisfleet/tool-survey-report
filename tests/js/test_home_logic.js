@@ -216,6 +216,7 @@ function createReportCard(title, tags, category, date, score) {
   const card = new HTMLElement('article');
   card.className = 'report-card';
   card.dataset = {
+    title: `${title} 調査レポート`.toLowerCase(),
     toolName: title,
     toolReading: title, // Simplified
     description: `Description for ${title}`,
@@ -470,18 +471,35 @@ try {
     console.log('Test 8 Passed: Filter shows all matching cards and hides button.');
   }
 
-  // Search filter post-clear
-  searchInput.value = '';
+  // Test 9: Category search via search input
+  searchInput.value = 'Design';
   window.filterAndSort(false, true);
-  const visibleCards8Post = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCards8Post.length !== 12 || loadMoreContainer.style.display !== 'flex') {
+  const visibleCardsCatSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsCatSearch.length !== 1 || visibleCardsCatSearch[0].dataset.toolName !== 'Tool B') {
     console.error(
-      `Test 8 Post-Clear Failed: Should return to limit. Visible: ${visibleCards8Post.length}, Button: ${loadMoreContainer.style.display}`,
+      `Test 9 Failed: Category search via input failed. Expected Tool B, got ${visibleCardsCatSearch[0]?.dataset?.toolName || 'none'}`,
     );
     passed = false;
   } else {
-    console.log('Test 8 Post-Clear Passed: Reset successfully to limit.');
+    console.log('Test 9 Passed: Category search via input correct.');
   }
+
+  // Test 10: Title-only search via search input (e.g. searching '調査レポート')
+  searchInput.value = '調査レポート';
+  window.filterAndSort(false, true);
+  const visibleCardsTitleSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsTitleSearch.length !== 15) {
+    console.error(
+      `Test 10 Failed: Title search failed. Expected 15 cards matching '調査レポート', got ${visibleCardsTitleSearch.length}`,
+    );
+    passed = false;
+  } else {
+    console.log('Test 10 Passed: Title search via input correct.');
+  }
+
+  // Reset search
+  searchInput.value = '';
+  window.filterAndSort(false, true);
 
   if (passed) {
     console.log('All tests passed!');

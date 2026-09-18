@@ -9,6 +9,7 @@ date: '2026-02-03'
 last_updated: '2026-09-17'
 tags:
   - AI
+  - MCP
   - オープンソース
   - 開発者ツール
   - API

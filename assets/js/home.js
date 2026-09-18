@@ -198,6 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchesFields = (term, allowPartialTags = true) => {
         const hTerm = toHiragana(term.toLowerCase());
         const nameMatch = card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm);
+        const titleMatch = card.dataset.title && toHiragana(card.dataset.title.toLowerCase()).includes(hTerm);
+        const categoryMatch = card.dataset.category && toHiragana(card.dataset.category.toLowerCase()).includes(hTerm);
         const readingMatch =
           card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm);
         const descMatch =
@@ -213,7 +215,16 @@ document.addEventListener('DOMContentLoaded', () => {
           return allowPartialTags ? hTag.includes(hTerm) : hTag === hTerm;
         });
 
-        return nameMatch || readingMatch || descMatch || highlightMatch || devMatch || tagsMatch;
+        return (
+          nameMatch ||
+          titleMatch ||
+          categoryMatch ||
+          readingMatch ||
+          descMatch ||
+          highlightMatch ||
+          devMatch ||
+          tagsMatch
+        );
       };
 
       const matchesSearch =
