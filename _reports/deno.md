@@ -53,6 +53,7 @@ relationships:
     - Node.js
     - Bun
     - Hono
+    - Cloudflare Workers
 ---
 
 # **Deno 調査レポート**
