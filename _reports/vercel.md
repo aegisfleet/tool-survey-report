@@ -45,6 +45,7 @@ relationships:
     - Cloudflare
     - Render
     - A2UI
+    - Cloudflare Workers
 ---
 
 # **Vercel 調査レポート**
