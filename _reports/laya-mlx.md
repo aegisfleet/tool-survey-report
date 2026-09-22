@@ -2,7 +2,7 @@
 title: Laya-MLX 調査レポート
 tool_name: Laya-MLX
 tool_reading: ラヤエムエルエックス
-category: AIランタイム
+category: ローカルAI実行環境
 developer: mizorewww (GitHub User) / Convai Innovations
 official_site: https://github.com/mizorewww/laya-mlx
 date: '2026-09-22'
