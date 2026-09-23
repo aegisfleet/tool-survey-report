@@ -6,7 +6,7 @@ category: クラウドサービス/PaaS
 developer: Google
 official_site: https://developers.google.com/maps
 date: '2026-02-04'
-last_updated: '2026-04-24'
+last_updated: '2026-09-24'
 tags:
   - API
   - クラウド
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - 企業
     - 物流・交通事業者
-  latest_highlight: Places APIへのGeminiベースの要約機能追加や、Photorealistic 3D Tilesの一般提供開始
+  latest_highlight: 2026年9月にGoogle Earthで新しいサイト分析・地形分析ツールが追加され、Gemini連携も強化
   update_frequency: 高
 evaluation:
   score: 85
@@ -92,6 +92,7 @@ Google Maps Platformの機能は主に以下のカテゴリに分類されます
   * **Directions API**: 複数の交通手段（車、徒歩、自転車、交通機関）でのルート検索。
   * **Distance Matrix API**: 複数の出発地と目的地間の距離と所要時間を計算。
   * **Roads API**: GPS座標を道路網に合わせて補正（スナップ）。
+  * **Grounding with Google Maps**: Gemini等LLMへの最新マップデータおよびルート情報のグラウンディング。
 * **Places (場所)**:
   * **Places API**: 施設情報の検索、詳細取得、写真取得。
   * **Geocoding API**: 住所と緯度経度の相互変換。
@@ -101,6 +102,8 @@ Google Maps Platformの機能は主に以下のカテゴリに分類されます
   * **Air Quality API**: 大気質指数の取得。
   * **Pollen API**: 花粉飛散情報の取得。
   * **Solar API**: 建物の屋根の日射量データなどの提供（太陽光パネル設置検討など）。
+* **Google Earth (データ分析)**:
+  * サイト分析や時間経過による地形変化の検出、データの分類（classification）機能の提供。
 
 ## **4. 動作原理・システム構成**
 
@@ -217,6 +220,7 @@ graph TD
 
 * **Google Cloud**: コンソールが統合されており、BigQueryやCloud Functionsと組み合わせたデータ分析やバックエンド処理が容易。
 * **Firebase**: モバイルアプリ開発において、Firebaseと組み合わせて位置情報機能を実装するケースが多い。
+* **生成AI / LLM**: Gemini Enterprise Agent Platform等において、Grounding with Google Mapsを利用した回答の精度向上が可能。
 
 ### **11.2 技術スタックとの相性**
 
@@ -260,11 +264,14 @@ graph TD
 
 ## **16. 直近半年のアップデート情報**
 
+* **2026-09-22**: Google Earthに新しいサイト分析ツールと地形分析機能が追加され、時間経過による地形変化の検出などが可能に。
+* **2026-09-17**: Google Earthにおいて分類（classification）機能が導入。
+* **2026-08-20**: Gemini Enterprise Agent Platformにおいて、Grounding with Google Maps機能と新しいルーティング機能が追加。
 * **2024-05-14**: Places API に生成AI（Gemini）を活用した場所の要約（AI summaries）機能が追加され、施設のハイライトやレビューの要約が提供されるようになった。
 * **2024-04-09**: Photorealistic 3D Tiles が一般公開され、世界中の主要都市の高精細な3DモデルをWebやモバイルアプリに組み込めるようになった。
 * **2023-11-15**: Environment APIs（Solar API, Air Quality API, Pollen API）が一般提供開始され、日射量や大気質、花粉飛散量のデータにアクセス可能になった。
 
-(出典: [Google Maps Platform 製品アップデート](https://cloud.google.com/blog/products/maps-platform))
+(出典: [Google Maps Platform 製品アップデート](https://mapsplatform.google.com/resources/blog/))
 
 ## **17. 類似ツールとの比較**
 
@@ -275,6 +282,7 @@ graph TD
 | **地図表示** | デザイン・カスタマイズ | ◯<br><small>標準的</small> | ◎<br><small>非常に柔軟</small> | ◎<br><small>完全自由</small> |
 | **データ** | 精度・網羅性 | ◎<br><small>世界最高水準</small> | ◯<br><small>OSMベース+独自</small> | △<br><small>地域差あり</small> |
 | **3D/没入** | 3D表示・SV | ◎<br><small>Photorealistic 3D / SV</small> | ◯<br><small>3D地形など</small> | △<br><small>ライブラリ依存</small> |
+| **AI/エージェント** | 生成AI・LLM連携 | ◎<br><small>Gemini連携/Grounding</small> | -<br><small>不明</small> | -<br><small>不明</small> |
 | **コスト** | 無料枠・単価 | ◯<br><small>$200分無料</small> | ◎<br><small>無料枠大/単価安め</small> | ◎<br><small>データ無料/ホスト代のみ</small> |
 | **開発** | ドキュメント・SDK | ◎<br><small>非常に充実</small> | ◎<br><small>充実</small> | ◯<br><small>コミュニティ依存</small> |
 
@@ -282,7 +290,7 @@ graph TD
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
-| **Google Maps Platform** | 圧倒的なデータ量と信頼性。 | ストリートビュー、正確なPOIデータ、グローバルなカバレッジ。 | スケール時のコストが高め。デザインのカスタマイズに一部制限あり。 | 正確な場所の特定、リッチな周辺情報、信頼性を最優先する場合。 |
+| **Google Maps Platform** | 圧倒的なデータ量と信頼性。 | ストリートビュー、正確なPOIデータ、グローバルなカバレッジ、Gemini等の生成AIとの統合 (Grounding)。 | スケール時のコストが高め。デザインのカスタマイズに一部制限あり。 | 正確な場所の特定、リッチな周辺情報、信頼性を最優先する場合。 |
 | **Mapbox** | 高度なデザインカスタマイズとパフォーマンス。 | 地図のデザインを細部まで自由に変更可能。WebGLによる高速描画。 | GoogleほどのPOIデータ量（店舗情報など）はない場合がある。 | 地図のデザインをブランドに合わせたい、コストを抑えたい場合。 |
 | **OpenStreetMap** | オープンデータの地図。 | ライセンス費用がかからない（自前ホスティングなら）。コミュニティによる更新。 | データの品質にバラつきがある。サーバー構築・運用の手間がかかる。 | 完全無料・オープンソースにこだわる場合、閉域網での利用など。 |
 
