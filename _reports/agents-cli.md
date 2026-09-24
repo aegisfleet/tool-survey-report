@@ -6,7 +6,7 @@ category: CLI拡張/プロキシ
 developer: Google
 official_site: https://google.github.io/agents-cli/
 date: '2026-04-25'
-last_updated: '2026-04-25'
+last_updated: '2026-09-24'
 tags:
   - AI
   - エージェント
@@ -20,7 +20,7 @@ quick_summary:
   starting_price: 無料
   target_users:
     - 開発者
-  latest_highlight: コーディングエージェントにAgent RuntimeやCloud Runへのデプロイ機能を付与
+  latest_highlight: v1.7.0でLive（音声）エージェントとA2Aモードに完全対応（2026年9月）
   update_frequency: 中
 evaluation:
   score: 80
@@ -71,7 +71,30 @@ relationships:
 * **Google Cloudへのデプロイ**: `agents-cli deploy` を使ってCloud RunやGKE、Agent Runtimeへのデプロイを自動化します。
 * **インフラストラクチャ・プロビジョニング**: CI/CDインフラやデータストアインフラ（RAG用）のセットアップを自動化するコマンドを提供します。
 
-## **4. 開始手順・セットアップ**
+
+
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: ローカル開発ツール（CLI）からクラウド完結型SaaS（Google Cloudリソース）へのデプロイを橋渡しする構成
+* **主要コンポーネントとデータフロー**:
+  * 開発者はコーディングエージェント（Gemini CLI等）にプロンプトを入力し、agents-cliのスキル（JSON Schema定義など）を利用してローカルでエージェントプロジェクトを生成（Scaffold）。
+  * 評価時（Eval）にはローカルでSSEやWebSocket（Live API）経由でエージェントと通信し、結果を検証。
+  * デプロイ時（Deploy）には、生成されたコンテナをCloud RunやGKEにプロビジョニングし、Agent Runtime等と連携させる。
+* **特筆すべき要素技術**:
+  * **ADK (Agent Development Kit)**: バックエンドの主要SDKで、Python/Goに対応しストリーミングやA2A通信を処理。
+  * **WebSocket / SSE**: Live音声エージェント等とのリアルタイム通信に利用。
+
+```mermaid
+flowchart LR
+    A[AIコーディングアシスタント] -->|スキル利用| B(agents-cli)
+    B -->|Scaffold| C[ローカルエージェントプロジェクト]
+    B -->|Eval/Run| C
+    B -->|Deploy| D[Google Cloud]
+    D --> E[Cloud Run / GKE]
+    D --> F[Agent Runtime / Platform]
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Python 3.11以上
@@ -92,19 +115,19 @@ relationships:
 * **クイックスタート**:
   Gemini CLIやClaude Codeなどのコーディングエージェントを起動し、「agents-cliを使って、冗長なテキストを短く技術的な内容に圧縮するエージェントを構築して」のように指示します。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * AIコーディングエージェントそのものを置き換えるのではなく、既存のアシスタント（Gemini CLI, Claude Codeなど）を強化してGoogle Cloudエコシステムに特化させられる点。
 * Google Cloudが提供するAgent RuntimeやADK（Agent Development Kit）の利用を極めて簡略化し、インフラ学習コストを下げられます。
 * コマンド自体もスタンドアロンで使用可能であり、コーディングエージェントがなくても利用できる柔軟性。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * Python、uv、Node.jsなど複数のツール依存があり、環境構築に多少の手間がかかる可能性があります。
 * 基本的にGoogle Cloud（Gemini Enterprise Agent Platform等）へデプロイするためのツールであるため、AWSやAzureへのデプロイ用途には向きません。
 * ドキュメントは英語が主体であり、日本語対応は十分ではありません。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -112,41 +135,41 @@ relationships:
 
 * **課金体系**: クラウドインフラ利用およびLLM APIコールの従量課金
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入事例**: 公開事例なし。ただし、Google CloudやGeminiを活用したエンタープライズエージェント構築分野での利用が想定されています。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: [公式ドキュメント](https://google.github.io/agents-cli/)
 * **コミュニティ**: GitHub Issuesを活用したバグ報告や機能要望のコミュニティ
 * **公式サポート**: GitHub Issues経由での対応や、フィードバック用メールアドレス（<agents-cli@google.com>）が用意されています。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 内部的にはGoogle Cloud APIs（Cloud Run, GKE, Cloud Trace等）およびGemini APIを利用します。
 * **外部サービス連携**: Gemini CLI, Claude Code, Codex などの主要AIコーディングアシスタントとシームレスに連携。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
 | **Python** | ◎ | ベースとなるADKの主要言語。公式に完全にサポートされている | 特になし |
 | **Google Cloud (Cloud Run / GKE)** | ◎ | 公式デプロイメントターゲット | 他のクラウド（AWS/Azure）へのデプロイは非推奨 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **データ管理**: インフラはユーザー自身のGoogle Cloudプロジェクト内にデプロイされ、リソースの管理責任はユーザーに帰属します。
 * **準拠規格**: （CLIツール自体の直接的な規格というより、デプロイ先のGoogle Cloudのコンプライアンス基準に依存します）
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: 一般的なコマンドラインインターフェースとして動作し、コーディングエージェントからの直接利用を想定しているため、人間が複雑な引数を覚える負担は大きく軽減されます。
 * **学習コスト**: ADKやGoogle Cloudの仕様を学ぶ必要がなく、プロンプトで指示するだけで開発が進められるため、クラウド構築の学習コストは低く抑えられます。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * 既存のプロジェクトに対して `agents-cli scaffold enhance` コマンドを実行し、CI/CDやデプロイ機能、RAG構成を後から安全に追加する。
@@ -154,7 +177,7 @@ relationships:
 * **陥りやすい罠 (Antipatterns)**:
   * エージェントデプロイ時に必要なGoogle Cloudの権限やプロジェクト設定が不足していると、CLIやコーディングアシスタント側でエラーとなり解決が難航することがあります。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHub
 * **総合評価**: GitHubスター数 900以上 (2026年時点)
@@ -164,31 +187,43 @@ relationships:
 * **ネガティブな評価 / 改善要望**:
   * 初期リリース段階（プレビュー）のため、機能やサポート面での発展途上な部分がある。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* （公式GitHub ReleasesやCHANGELOGに基づく最新情報が随時更新されます。プロジェクト自体が新しいツールのため、リリースノート等はリポジトリ上で確認してください。）
+* **2026-09-22**: Release v1.7.0
+  * Live（音声）エージェントが `run` および `eval` で動作可能に（`--mode adk_live`）。
+  * ローカルサーバーに対するA2Aモード（`--mode a2a`）のサポートを追加。
+  * `agents-cli deploy` におけるCloud Run Ingress設定（`--ingress`）などのオプション強化、シンボリックリンクの修正等。
+* **2026-09-16**: Release v1.6.1
+  * ADK Go が誰でも利用可能に（Preview）。Pythonと同等のツールチェーンを提供。
+  * `google-adk` のバージョンを2.9.0未満に固定。
+  * scaffold コマンドのデフォルトモデルを `gemini-3.8-flash` に変更。
+* **2026-09-01**: Release v1.5.0
+  * カスタムコマンドとアドオンテンプレートによる拡張システム（LangChainテンプレート対応）を追加。
+  * インフラ設定の確認用 `agents-cli infra show` や、更新専用の `--update-only` 等を `deploy` に追加。
 
-(出典: [GitHubリポジトリ](https://github.com/google/agents-cli))
+(出典: [製品アップデート情報 - GitHub Releases](https://github.com/google/agents-cli/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | agents-cli | Copilot CLI | AWS Copilot |
+| 機能カテゴリ | 機能項目 | agents-cli | cli-anything | GitHub Copilot CLI |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | クラウドデプロイ自動化 | ◎<br><small>Google Cloudのエージェント専用</small> | ×<br><small>非対応</small> | ◎<br><small>AWSコンテナ向け</small> |
+| **基本機能** | クラウドデプロイ自動化 | ◎<br><small>Google Cloudのエージェント専用</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
 | **カテゴリ特定** | AIアシスタントへのスキル提供 | ◎<br><small>専用スキル追加に対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
 | **カテゴリ特定** | エージェント評価(Eval)の統合 | ◯<br><small>コマンドで実行可</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
-| **非機能要件** | 日本語対応 | △<br><small>ドキュメントは英語主体</small> | ◯<br><small>一部日本語対応</small> | ◯<br><small>公式ドキュメントが豊富</small> |
+| **汎用性** | 任意のCLIタスク実行 | △<br><small>エージェント開発に特化</small> | ◎<br><small>自然言語で汎用コマンド実行</small> | ◯<br><small>主にコマンド生成と説明</small> |
+| **非機能要件** | 日本語対応 | △<br><small>ドキュメントは英語主体</small> | ◎<br><small>日本語プロンプト対応</small> | ◯<br><small>一部日本語対応</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **agents-cli** | AIアシスタントにGCPの知識を付与するCLI | 既存のコーディングAIを拡張しGCP特化にできる | 対象がGoogle CloudベースのADKエージェントに限定される | GCPで本格的なエージェントを構築したい場合 |
-| **AWS Copilot CLI** | AWSコンテナアプリ用デプロイCLI | ECSやApp Runnerへのデプロイが非常に簡単 | AIエージェント開発特化の機能はない | AWS上で通常のコンテナアプリを動かす場合 |
+| **agents-cli** | AIアシスタントにGCPの知識を付与するCLI | 既存のコーディングAIを拡張しGCP特化にできる | 対象がGoogle CloudベースのADKエージェントに限定される | GCPで本格的なエージェントを構築・デプロイしたい場合 |
+| **cli-anything** | 自然言語でCLI操作を行う汎用ツール | 任意のコマンドを自然言語から生成・実行できる | デプロイやインフラ管理に特化した機能はない | 日常的なコマンドライン作業をAI化したい場合 |
+| **GitHub Copilot CLI** | Copilotのターミナル向け機能 | Gitコマンドやシェルコマンドの提案・説明に優れる | エージェントプロジェクトのScaffoldやデプロイは対象外 | ターミナルでの開発作業をCopilotで支援したい場合 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   agents-cliは、LLMを用いたエージェント開発において、インフラやデプロイ周りの煩雑な作業を普段使いのAIコーディングアシスタントに丸投げできるようにする非常に優れたユーティリティです。
