@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - IDプロバイダー
     - 企業
-  latest_highlight: 'OpenID Federation 1.1 の最終仕様が承認されました'
+  latest_highlight: OpenID Federation 1.1 の最終仕様が承認されました
   update_frequency: 中
 evaluation:
   score: 95
