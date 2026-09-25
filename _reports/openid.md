@@ -6,7 +6,7 @@ category: CDN/セキュリティ
 developer: OpenID Foundation
 official_site: https://openid.net/
 date: '2026-02-04'
-last_updated: '2026-04-25'
+last_updated: '2026-09-26'
 tags:
   - ID管理
   - SSO
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - IDプロバイダー
     - 企業
-  latest_highlight: 2026年1月にOpenID Federation 1.0の最終投票、AuthZEN APIの承認など
+  latest_highlight: 'OpenID Federation 1.1 の最終仕様が承認されました'
   update_frequency: 中
 evaluation:
   score: 95
@@ -100,7 +100,40 @@ relationships:
 * **PKCE (Proof Key for Code Exchange)**: スマートフォンアプリやSPA（Single Page Application）での認可コード横取り攻撃を防ぐセキュリティ機能。
 * **Claims (クレーム)**: ユーザー属性情報（`sub`, `iss`, `aud`, `exp` など）を表現する標準的なJSONデータ構造。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: クライアント・サーバー型（分散型アーキテクチャ）
+* **主要コンポーネントとデータフロー**:
+  * クライアント（アプリケーション）、Authorization Server（IDプロバイダー）、およびエンドユーザー間で連携する。
+
+```mermaid
+sequenceDiagram
+    participant User as エンドユーザー
+    participant Client as クライアント
+    participant AS as IDプロバイダー
+
+    User->>Client: 1. ログインリクエスト
+    Client->>AS: 2. 認証リクエスト
+    AS->>User: 3. 認証・同意の要求
+    User->>AS: 4. 認証情報の入力・同意
+    AS->>Client: 5. 認可コード
+    Client->>AS: 6. トークンリクエスト (認可コード)
+    AS->>Client: 7. IDトークン & アクセストークン発行
+```
+
+* **特筆すべき要素技術**:
+  * **JWT (JSON Web Token)**: IDトークンのフォーマット。署名による改ざん防止機能を持つ。
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -136,7 +169,7 @@ relationships:
   // ...
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -149,7 +182,7 @@ relationships:
 * **セキュリティと柔軟性**: IDトークンの署名・暗号化により高いセキュリティを確保しつつ、必要最小限の情報連携が可能。
 * **拡張性**: FAPI（金融グレード）、Identity Assurance（eKYC）、Federationなど、多様なユースケースに対応する拡張仕様が豊富。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -161,7 +194,7 @@ relationships:
 * **仕様の多さ**: Core仕様以外にも多数の拡張仕様があり、全体像を把握するのが難しい場合がある。
 * **設定ミスによるリスク**: `state`パラメータの検証漏れや、トークン署名の検証不備など、実装者が責任を持つべきセキュリティチェックポイントが多い。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -178,7 +211,7 @@ relationships:
 * **課金体系**: 規格利用は無料。OpenID Connectを実装した商用IDaaS（Auth0, Oktaなど）を利用する場合は、そのサービスの利用料がかかる。
 * **無料トライアル**: なし（規格のため）。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -193,7 +226,7 @@ relationships:
   * **携帯キャリア**: Mobile Connectなど、キャリアIDを用いた認証サービス。
 * **対象業界**: Webサービス全般、金融、医療、政府機関、通信。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -205,7 +238,7 @@ relationships:
 * **コミュニティ**: OpenID Foundationのワーキンググループ、Stack Overflow、各言語のライブラリコミュニティが活発。
 * **公式サポート**: 規格団体としてのサポートはあるが、実装に関するサポートは各ライブラリやIDaaSベンダーが提供する。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
@@ -238,7 +271,7 @@ relationships:
 | **Python (Django/Flask)** | ◎ | `authlib`などのライブラリで容易に実装可能 | 特になし |
 | **Go** | ◯ | `go-oidc`など標準的なライブラリが存在 | 低レイヤーの理解が必要な場合も |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -251,7 +284,7 @@ relationships:
 * **データ管理**: ユーザー属性（PII）を扱うため、GDPRなどのプライバシー規制への配慮が必要（`sub`の使い分けなど）。
 * **準拠規格**: FAPI (Financial-grade API) は、金融業界の高いセキュリティ要件を満たすためのOIDCプロファイルとして策定されている。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -261,7 +294,7 @@ relationships:
 * **UI/UX**: エンドユーザーは、使い慣れたIDプロバイダーの画面で承認するだけでログインでき、負担が少ない。
 * **学習コスト**: 概念（Issuer, Client, Token, Scope, Claims）の理解には時間がかかる。初心者は認定ライブラリやIDaaSを使うことでコストを下げられる。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -278,7 +311,7 @@ relationships:
   * **署名検証のスキップ**: IDトークンの署名検証を行わないと、なりすましのリスクがある。
   * **HTTPでの運用**: 本番環境では必ずHTTPSを使用し、通信経路を暗号化する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -301,7 +334,7 @@ relationships:
 * **特徴的なユースケース**:
   * 自社ID基盤を構築し、グループ会社やパートナー企業にIDを提供する（IDプロバイダーとしての利用）。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -315,6 +348,8 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-05-06**: **OpenID Federation 1.1 Final Specifications Approved**: OpenID Federation 1.1 の最終仕様が会員の投票により承認され、知的財産の保護が提供されるようになった。([詳細](https://openid.net/openid-federation-1-1-final-specifications-approved/))
+* **2026-04-27**: ****Save the Date** OpenID Foundation Global Conference 2027**: 2027年2月に第1回となるGlobal Conferenceを開催することが発表された。([詳細](https://openid.net/conference/))
 * **2026-04-24**: **GDC Conference 参加登録開始**: OpenID Foundationメンバー向けにGDC Conferenceの参加登録が開始された。([詳細](https://openid.net/calling-all-members-register-for-the-gdc-conference-now/))
 * **2026-04-24**: **OpenID Connect ASC 1.0 投票通知**: OpenID Connect Advanced Syntax for Claims (ASC) 1.0のProposed Implementer’s Draftに関する承認投票が開始された。([詳細](https://openid.net/notice-of-vote-to-approve-the-proposed-implementers-draft-of-openid-connect-advanced-syntax-for-claims-asc-1-0/))
 * **2026-04-15**: **OpenID Federation 1.1 最終仕様 投票通知**: OpenID Federation 1.1のFinal Specificationsに関する承認投票が開始された。([詳細](https://openid.net/notice-of-vote-to-approve-proposed-openid-federation-1-1-final-specifications/))
@@ -323,7 +358,7 @@ relationships:
 
 (出典: [OpenID Foundation News](https://openid.net/news/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -345,7 +380,7 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | OpenID Connect (OIDC) | OAuth 2.0 | SAML 2.0 |
+| 機能カテゴリ | 機能項目 | OpenID Connect (OIDC) | OAuth | SAML 2.0 |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | ユーザー認証 | ◎<br><small>標準機能</small> | △<br><small>本来は認可のみ</small> | ◎<br><small>標準機能</small> |
 | **データ形式** | フォーマット | ◎<br><small>JSON / JWT</small> | ◯<br><small>JSON</small> | △<br><small>XML</small> |
@@ -362,10 +397,10 @@ relationships:
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **OpenID Connect** | 認証の現代標準 | JSONベースで軽量、モバイルやAPIとの親和性が高い。 | OAuth 2.0の知識が必要。 | 新規開発のWeb/モバイルアプリ、ソーシャルログイン。 |
-| **OAuth 2.0** | 認可のフレームワーク | APIアクセス権限の委譲に特化している。 | 認証手順は標準化されていない。 | 純粋なAPI連携（認証情報が不要な場合）。 |
+| **OAuth** | 認可のフレームワーク | APIアクセス権限の委譲に特化している。 | 認証手順は標準化されていない。 | 純粋なAPI連携（認証情報が不要な場合）。 |
 | **SAML 2.0** | レガシーなエンタープライズSSO | 多くの社内システムや古いクラウドサービスでサポートされている。 | XMLが重厚で、モダンな開発環境では扱いづらい。 | 既存の企業内システムとの統合、Active Directory連携。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
