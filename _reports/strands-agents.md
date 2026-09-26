@@ -6,7 +6,7 @@ category: エージェント開発基盤
 developer: Amazon Web Services
 official_site: https://strandsagents.com/
 date: '2026-02-04'
-last_updated: '2026-04-25'
+last_updated: '2026-09-26'
 tags:
   - AWS
   - MCP
@@ -23,7 +23,7 @@ quick_summary:
     - AWSユーザー
     - ソフトウェア開発者
     - Web開発者
-  latest_highlight: 2026年4月にTypeScript SDK（@strands-agents/sdk）やSteering middleware機能などが強化
+  latest_highlight: Python v1.57.1およびTypeScript v1.19.0のリリース。snapshot captureやa2a_clientの追加、Strands harness統合を実施
   update_frequency: 高
 evaluation:
   score: 78
@@ -43,11 +43,13 @@ links:
   github: https://github.com/strands-agents/sdk-python
   codewiki: https://codewiki.google/github.com/strands-agents/sdk-python
   deepwiki: https://deepwiki.com/strands-agents/sdk-python
-  documentation: https://strandsagents.com/docs/user-guide/quickstart/overview/
+  documentation: https://strandsagents.com/docs/user-guide/sdk/quickstart/overview/
 relationships:
   related_tools:
     - LangChain
     - Amazon Bedrock
+    - Microsoft Agent Framework
+    - Dify
 ---
 # **Strands Agents 調査レポート**
 
@@ -60,7 +62,7 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/strands-agents/sdk-python](https://github.com/strands-agents/sdk-python)
   * CodeWiki: [https://codewiki.google/github.com/strands-agents/sdk-python](https://codewiki.google/github.com/strands-agents/sdk-python)
-  * ドキュメント: [https://strandsagents.com/docs/user-guide/quickstart/overview/](https://strandsagents.com/docs/user-guide/quickstart/overview/)
+  * ドキュメント: [https://strandsagents.com/docs/user-guide/sdk/quickstart/overview/](https://strandsagents.com/docs/user-guide/sdk/quickstart/overview/)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: Strands Agentsは、AWSが主導して開発しているオープンソースのAIエージェント構築フレームワークです。「Model-driven approach（モデル駆動型アプローチ）」を掲げ、数行のコードで、単純なチャットボットから複雑なマルチエージェントシステムまでを構築できることを目指しています。Amazon Bedrockをはじめとする主要なLLMプロバイダーとネイティブに統合されています。
 
@@ -84,7 +86,24 @@ relationships:
 * **Steering Middleware**: ツール呼び出し前やモデル応答後にフックして入出力を検証・修正できるミドルウェア機能を備え、100%のタスク正確性を目指す。
 * **AWS Integration**: AgentCore, Lambda, EC2, EKSなど、AWSの各種コンピューティングサービスへのデプロイが容易。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: クライアント環境（Python / TypeScript）で動作するアプリケーション組み込み型のSDK/フレームワークです。
+* **主要コンポーネントとデータフロー**:
+  * アプリケーションが `Agent` や `Harness` を初期化し、目標を与えます。
+  * フレームワークがコンテキスト管理、LLMプロバイダー（Amazon Bedrock, Anthropic, OpenAI, Gemini等）との通信を行います。
+  * エージェントは必要に応じてツールやMCP（Model Context Protocol）サーバーを呼び出してタスクを実行します。
+
+```mermaid
+graph TD
+    User([ユーザー/アプリケーション]) -->|リクエスト| Agent[Strands Harness / Agent]
+    Agent <-->|プロンプト & 応答| LLM((LLM Providers<br>Bedrock, OpenAI, Anthropic, Gemini))
+    Agent -->|ツール実行| Tools[Tools / Local Functions]
+    Agent -->|状態・履歴保存| Memory[(Memory/Session)]
+    Agent <-->|外部連携| MCP[MCP Servers]
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Python 3.10以上
@@ -117,20 +136,20 @@ relationships:
   print(response)
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **AWSネイティブな統合**: Amazon BedrockやAWS LambdaなどのAWSサービスとシームレスに連携でき、IAMロールによる権限管理やOpenTelemetryによる可観測性が容易に実現できる。
 * **シンプルかつ軽量**: 最小限の依存関係と直感的なAPI設計により、学習コストが低く、既存のPythonプロジェクトへの組み込みが容易。
 * **MCPの標準サポート**: ツール接続の標準規格であるMCPに対応しているため、自前でツール連携コードを書くことなく、豊富なコミュニティ資産を活用できる。
 * **型安全性の重視**: Pydanticを中心とした設計により、入出力のバリデーションやIDEの補完が効きやすく、堅牢なコードが書ける。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **エコシステムの規模**: LangChainなどの先行フレームワークに比べると、サードパーティ製のプラグインやインテグレーションの数はまだ少ない。
 * **実験的機能の存在**: 双方向ストリーミングなどの一部機能はExperimental（実験的）なステータスであり、APIが変更される可能性がある。
 * **ドキュメントの充実度**: 基本的なドキュメントは揃っているが、複雑なユースケースやトラブルシューティングに関する情報は、競合ツールほど豊富ではない場合がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 Strands Agents自体はApache License 2.0のオープンソースソフトウェアであり、無料で利用可能です。
 
@@ -141,7 +160,7 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
 * **課金体系**: フレームワーク利用は無料。LLMプロバイダー（Amazon Bedrock, OpenAIなど）のAPI利用料や、AWSインフラ利用料が別途発生する。
 * **無料トライアル**: なし（OSSのため即時利用可）。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Smartsheet, Landchecker, Swisscom, Zafran Security, Eightcap, TeamForm, Jit, Terra Security など。
 * **導入事例**:
@@ -150,13 +169,13 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
   * **Landchecker**: 物件情報ツール開発において、AgentCore RuntimeやBedrock Guardrailsとの統合を活用し、開発を効率化。
 * **対象業界**: 金融、不動産、通信、セキュリティ、SaaSベンダーなど多岐にわたる。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントサイト（strandsagents.com）にて、ユーザーガイド、APIリファレンス、サンプルコードが提供されている。
 * **コミュニティ**: GitHub上のDiscussionsやIssuesを通じて開発者と交流が可能。
 * **公式サポート**: AWSによる公式な商用サポートの有無は明記されていないが、OSSとしてのメンテナンスはAWSのチームが行っている。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 ### **10.1 API・外部サービス連携**
 
@@ -174,18 +193,18 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
 | **AWS Lambda** | ◎ | 軽量であるためコールドスタートの影響を受けにくく、相性が良い。 | タイムアウト設定に注意が必要。 |
 | **Docker/K8s** | ◎ | コンテナ化してEKSやECSにデプロイするためのガイドが充実している。 | 特になし。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: AWS IAMを利用した堅牢な認証・認可が可能（Bedrock利用時）。
 * **データ管理**: PII（個人特定情報）のRedaction（秘匿化）機能を備えており、機密情報の漏洩リスクを低減できる。
 * **準拠規格**: Bedrock Guardrailsとの統合により、企業のコンプライアンスポリシーに基づいた入出力制御が可能。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: CLIツールや「Agent Builder」を提供しており、開発者体験（DX）は高い。コードベースもシンプルで読みやすい。
 * **学習コスト**: Pythonと基本的なLLMの知識があれば、数時間で基本的なエージェントを作成できる。LangChainのような独自の抽象化概念が少なく、学習コストは比較的低い。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **MCPの活用**: 自前でツールを作る前に、既存のMCPサーバーが利用できないか検討する。
@@ -195,7 +214,7 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
   * **過剰なツール付与**: エージェントに一度に大量のツールを与えすぎると、推論精度が低下したり、コンテキスト長を圧迫したりする。
   * **AWS認証のハードコード**: アクセスキーなどをコードに直接記述せず、環境変数やIAMロールを使用する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: 公式サイトの事例、GitHub
 * **総合評価**: 高い評価を得ている（GitHubスター数 5k超）。
@@ -209,35 +228,39 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
   * セキュリティオペレーションセンター（SOC）における自動調査・対応エージェント。
   * 脆弱性の自動修正と設定検証を行うセキュリティ修復エージェント。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-09-25**: Python v1.57.1 リリース。snapshot captureやa2a_clientツールの追加などを実施。
+* **2026-09-22**: TypeScript v1.19.0 リリース。Strands harnessの統合やopus 5のデフォルト対応などを追加。
+* **2026-08-07**: Python v1.51.0 リリース。HitL classifierオプションの追加や、GeminiでのTool Choiceサポートなどを実施。
 * **2026-04-XX**: TypeScript SDK (`@strands-agents/sdk`) が正式公開され、Node.js環境での利用が容易に。
 * **2026-03-XX**: Steering Middleware（エージェントループのミドルウェア）が導入され、ツール呼び出し前後の検証や修正が可能に。
 * **2026-01-29 (v1.24.0)**: 最新リリース。機能改善とバグ修正。
 * **2026-01-XX**: 実験的な双方向ストリーミング機能の追加（Nova Sonic, Gemini Live, OpenAI Realtime対応）。
 
-(出典: [GitHub Releases](https://github.com/strands-agents/sdk-python/releases))
+(出典: [GitHub Releases](https://github.com/strands-agents/harness-sdk/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Strands) | LangChain | AutoGen | Haystack |
+| 機能カテゴリ | 機能項目 | 本ツール (Strands) | LangChain | Microsoft Agent Framework | Dify |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | マルチエージェント | ◎<br><small>多様なパターン対応</small> | ◯<br><small>LangGraphが必要</small> | ◎<br><small>会話型が得意</small> | △<br><small>基本機能のみ</small> |
+| **基本機能** | マルチエージェント | ◎<br><small>多様なパターン対応</small> | ◯<br><small>LangGraphが必要</small> | ◎<br><small>強力なオーケストレーション(1.0)</small> | ◯<br><small>ビジュアルワークフロー</small> |
 | **AWS連携** | Bedrock統合 | ◎<br><small>ネイティブ・最高</small> | ◯<br><small>対応済み</small> | ◯<br><small>対応済み</small> | ◯<br><small>対応済み</small> |
-| **ツール連携** | MCP対応 | ◎<br><small>標準サポート</small> | ◯<br><small>アダプタ等で対応</small> | △<br><small>拡張が必要</small> | △<br><small>拡張が必要</small> |
-| **非機能要件** | 学習コスト | ◎<br><small>低い・シンプル</small> | △<br><small>高い・複雑</small> | ◯<br><small>中程度</small> | ◯<br><small>中程度</small> |
+| **ツール連携** | MCP対応 | ◎<br><small>標準サポート</small> | ◯<br><small>アダプタ等で対応</small> | ◎<br><small>サポート強化済み</small> | ◯<br><small>拡張により対応</small> |
+| **非機能要件** | 学習コスト | ◎<br><small>低い・シンプル</small> | △<br><small>高い・複雑</small> | ◯<br><small>中程度</small> | ◎<br><small>ノーコードで低い</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Strands Agents** | AWS発の軽量エージェントFW | AWSサービスとの親和性、MCP標準対応、シンプルさ。 | エコシステムの規模はLangChainに劣る。 | AWS環境での運用が前提の場合や、シンプルで堅牢なエージェントを作りたい場合。 |
 | **LangChain** | 業界標準の多機能FW | 圧倒的なエコシステムと機能の網羅性。 | 学習コストが高く、過剰に複雑になりがち。 | 特定のプロバイダーに依存せず、最大級のエコシステムを活用したい場合。 |
-| **AutoGen** | マルチエージェント特化 | 複数のエージェント同士の会話によるタスク解決。 | 単体エージェントの構築にはややオーバースペック。 | 複雑な協調動作が必要なマルチエージェントシステムの場合。 |
+| **Microsoft Agent Framework** | Microsoftのエージェント基盤 | 強力なワークフロー制御、Copilot連携、エンタープライズ機能。 | 単純な構築にはオーバースペック。 | Microsoft環境や堅牢なエンタープライズシステム構築を指向する場合。 |
+| **Dify** | 統合開発・運用プラットフォーム | ノーコード/ローコードでの開発、直感的なUI。 | 細かなコードレベルの制御に制限。 | ノーコードで素早く開発・運用したい場合や非エンジニアが参加する場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Strands Agentsは、後発ながらも「Model-driven」と「AWS Native」という明確な強みを持ったフレームワークです。特にMCPへの標準対応やPydanticの活用など、現代的なエージェント開発のベストプラクティスが取り入れられており、品質の高いアプリケーションを効率的に構築できます。
