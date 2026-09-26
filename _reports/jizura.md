@@ -1,58 +1,50 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "JIZURA 調査レポート"
-tool_name: "JIZURA"
-tool_reading: "ジズラ"
-category: "映像制作ツール"
-developer: "852wa"
-official_site: "https://852wa.github.io/JIZURA/"
-date: "2026-09-26"
-last_updated: "2026-09-26"
+title: JIZURA 調査レポート
+tool_name: JIZURA
+tool_reading: ジズラ
+category: 映像制作ツール
+developer: 852wa
+official_site: https://852wa.github.io/JIZURA/
+date: '2026-09-26'
+last_updated: '2026-09-26'
 tags:
-  - "オープンソース"
-  - "動画編集"
-  - "After Effects"
-  - "文字PV"
-description: "歌詞から文字PV（リリックモーション）を自動で組み立て、ブラウザ上でMP4に書き出すことができるオープンソースの映像制作ツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - 動画編集
+  - After Effects
+  - 文字PV
+description: 歌詞から文字PV（リリックモーション）を自動で組み立て、ブラウザ上でMP4に書き出すことができるオープンソースの映像制作ツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "動画制作者"
-    - "個人クリエイター"
-    - "After Effectsユーザー"
-  latest_highlight: "v0.9.0でAE版パネルに文字PV系・キネティック・ホラーの部品を追加"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 動画制作者
+    - 個人クリエイター
+    - After Effectsユーザー
+  latest_highlight: v0.9.0でAE版パネルに文字PV系・キネティック・ホラーの部品を追加
+  update_frequency: 中
 evaluation:
   score: 87
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ブラウザ上で完結しサーバー通信が不要なため、手軽かつセキュアに利用できる"
+      reason: ブラウザ上で完結しサーバー通信が不要なため、手軽かつセキュアに利用できる
     - point: 5
-      reason: "860の表現部品と27のスタイルを組み合わせた無限に近いバリエーション"
+      reason: 860の表現部品と27のスタイルを組み合わせた無限に近いバリエーション
     - point: 5
-      reason: "After Effects用の連携機能（スクリプト/CEP）が強力"
+      reason: After Effects用の連携機能（スクリプト/CEP）が強力
     - point: 2
-      reason: "オープンソース（MITライセンス）で商用利用も自由"
+      reason: オープンソース（MITライセンス）で商用利用も自由
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "初心者でも簡単に文字PVを作成でき、プロはAE連携で高度な編集が可能な、非常に優れたリリックモーションエンジン"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: 初心者でも簡単に文字PVを作成でき、プロはAE連携で高度な編集が可能な、非常に優れたリリックモーションエンジン
 links:
-  github: "https://github.com/852wa/JIZURA"
-  deepwiki: "https://deepwiki.com/852wa/JIZURA"
+  github: https://github.com/852wa/JIZURA
+  deepwiki: https://deepwiki.com/852wa/JIZURA
 relationships:
   related_tools:
-    - "AviUtl"
+    - AviUtl
 ---
 
 # **JIZURA 調査レポート**
