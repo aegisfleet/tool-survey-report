@@ -2,7 +2,7 @@
 title: JIZURA 調査レポート
 tool_name: JIZURA
 tool_reading: ジズラ
-category: 映像制作ツール
+category: 動画編集/配信
 developer: 852wa
 official_site: https://852wa.github.io/JIZURA/
 date: '2026-09-26'
