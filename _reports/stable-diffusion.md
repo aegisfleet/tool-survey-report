@@ -48,6 +48,7 @@ links:
 relationships:
   related_tools:
     - Niji Journey
+    - Hugging Face
     - Qwen-Image-Layered
     - AnimeGen
 ---
