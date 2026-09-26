@@ -38,6 +38,15 @@ __pycache__/
 /*.py
 /*.sh
 
+# Markdown files at repository root (prevent adding new markdown files to root)
+/*.md
+!/README.md
+!/AGENTS.md
+!/SECURITY.md
+!/index.md
+!/task-organizing-category-tags.md
+!/task-report-create-or-update.md
+
 # Verification artifacts
 verification/
 screenshot*.png
