@@ -1,53 +1,45 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "HyperFrames 調査レポート"
-tool_name: "HyperFrames"
-tool_reading: "ハイパーフレームズ"
-category: "AI動画生成"
-developer: "HeyGen"
-official_site: "https://hyperframes.heygen.com/"
-date: "2026-09-26"
-last_updated: "2026-09-26"
+title: HyperFrames 調査レポート
+tool_name: HyperFrames
+tool_reading: ハイパーフレームズ
+category: AI動画生成
+developer: HeyGen
+official_site: https://hyperframes.heygen.com/
+date: '2026-09-26'
+last_updated: '2026-09-26'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-description: "AIエージェントがコードを書いて動画を構成するためのオープンソースフレームワーク"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI
+  - オープンソース
+  - エージェント
+  - 開発者ツール
+description: AIエージェントがコードを書いて動画を構成するためのオープンソースフレームワーク
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント"
-  latest_highlight: "v0.8.50でCanvasサポートの修正とStudio UIの改善を実施"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - AIエージェント
+  latest_highlight: v0.8.50でCanvasサポートの修正とStudio UIの改善を実施
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースであり、AIエージェントからの操作に最適化されている"
+      reason: オープンソースであり、AIエージェントからの操作に最適化されている
     - point: 5
-      reason: "HTML/CSSといった標準的なWeb技術を用いて動画生成が可能"
+      reason: HTML/CSSといった標準的なWeb技術を用いて動画生成が可能
   minus_points:
     - point: 0
-      reason: ""
-  summary: "AIエージェントを活用した動画の自動生成・編集において強力な選択肢となるOSSフレームワーク。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: AIエージェントを活用した動画の自動生成・編集において強力な選択肢となるOSSフレームワーク。
 links:
-  github: "https://github.com/heygen-com/hyperframes"
-  deepwiki: "https://deepwiki.com/heygen-com/hyperframes"
+  github: https://github.com/heygen-com/hyperframes
+  deepwiki: https://deepwiki.com/heygen-com/hyperframes
 relationships:
   related_tools:
-    - "Remotion"
+    - Remotion
 ---
 
 # **HyperFrames 調査レポート**
