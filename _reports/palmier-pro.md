@@ -2,12 +2,13 @@
 title: Palmier Pro 調査レポート
 tool_name: Palmier Pro
 tool_reading: パルミエ プロ
-category: 動画編集/配信
+category: 動画編集
 developer: Palmier, Inc.
 official_site: https://www.palmier.io/
 date: '2026-06-21'
 last_updated: '2026-06-21'
 tags:
+  - 動画編集
   - AI
   - オープンソース
   - 生成AI

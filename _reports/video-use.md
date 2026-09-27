@@ -2,7 +2,7 @@
 title: video-use 調査レポート
 tool_name: video-use
 tool_reading: ビデオユース
-category: 動画編集/配信
+category: 動画編集
 developer: Browser Use
 official_site: https://github.com/browser-use/video-use
 date: '2026-09-26'
