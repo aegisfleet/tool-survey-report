@@ -44,6 +44,7 @@ links:
 relationships:
   related_tools:
     - VoxCPM
+    - VibeVoice
 ---
 
 # **Irodori-TTS 調査レポート**

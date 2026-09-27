@@ -47,6 +47,7 @@ relationships:
     - Suno
     - Waves Place
     - VoxCPM
+    - VibeVoice
 ---
 # **ElevenLabs 調査レポート**
 
