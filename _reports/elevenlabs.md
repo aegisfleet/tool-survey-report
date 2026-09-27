@@ -8,46 +8,46 @@ official_site: https://elevenlabs.io/
 date: '2026-01-27'
 last_updated: '2026-06-22'
 tags:
-- AI
-- 生成AI
-- 音声生成
-- 音楽生成
+  - AI
+  - 生成AI
+  - 音声生成
+  - 音楽生成
 description: 最先端のAI技術で、感情豊かな音声合成、音楽制作、動画生成までを可能にする総合メディアプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: $5/月
   target_users:
-  - 動画クリエイター
-  - ゲーム開発者
-  - マーケティング担当者
+    - 動画クリエイター
+    - ゲーム開発者
+    - マーケティング担当者
   latest_highlight: 2026年6月にポーランド政府が投資し、公共サービス向け音声AIを拡大
   update_frequency: 高
 evaluation:
   score: 87
   base_score: 70
   plus_points:
-  - point: 10
-    reason: 音声合成の品質と感情表現が業界最高水準
-  - point: 5
-    reason: 音声だけでなく音楽・動画生成にも対応し、プラットフォームとして進化している
-  - point: 3
-    reason: APIや開発者向け機能が充実しており、組み込みやすい
-  - point: 2
-    reason: Conversational AIの価格改定により導入障壁が低下
+    - point: 10
+      reason: 音声合成の品質と感情表現が業界最高水準
+    - point: 5
+      reason: 音声だけでなく音楽・動画生成にも対応し、プラットフォームとして進化している
+    - point: 3
+      reason: APIや開発者向け機能が充実しており、組み込みやすい
+    - point: 2
+      reason: Conversational AIの価格改定により導入障壁が低下
   minus_points:
-  - point: -3
-    reason: クレジットベースの料金体系が複雑で、コスト管理が難しい場合がある
+    - point: -3
+      reason: クレジットベースの料金体系が複雑で、コスト管理が難しい場合がある
   summary: 業界最高峰の音声合成技術を核に、音楽・動画までカバーする万能AIメディア生成ツール。価格改定でさらに使いやすくなった。
 links:
   github: https://github.com/elevenlabs
   documentation: https://elevenlabs.io/docs/overview/intro
 relationships:
   related_tools:
-  - Suno
-  - Waves Place
-  - VoxCPM
-  - VibeVoice
+    - Suno
+    - Waves Place
+    - VoxCPM
+    - VibeVoice
 ---
 # **ElevenLabs 調査レポート**
 

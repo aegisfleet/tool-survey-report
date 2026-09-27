@@ -8,33 +8,33 @@ official_site: https://microsoft.github.io/VibeVoice/
 date: '2026-09-27'
 last_updated: '2026-09-27'
 tags:
-- AI
-- 生成AI
-- オープンソース
-- 開発者ツール
+  - AI
+  - 生成AI
+  - オープンソース
+  - 開発者ツール
 description: 長時間かつリアルタイムの音声認識・合成に対応する、Microsoftによるオープンソースの高性能音声AIモデルファミリ
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - 研究者
+    - 開発者
+    - 研究者
   latest_highlight: 2026年9月にVibeVoice-ASR-Streamingをリリース
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 最大60〜90分の長尺音声処理に対応する高い技術力
-  - point: 5
-    reason: ASR・TTSの両面で多言語や複数話者などに対応し柔軟性が高い
-  - point: 5
-    reason: オープンソースであり、Hugging FaceやTransformersライブラリと親和性が高い
+    - point: 5
+      reason: 最大60〜90分の長尺音声処理に対応する高い技術力
+    - point: 5
+      reason: ASR・TTSの両面で多言語や複数話者などに対応し柔軟性が高い
+    - point: 5
+      reason: オープンソースであり、Hugging FaceやTransformersライブラリと親和性が高い
   minus_points:
-  - point: 0
-    reason: 特になし
+    - point: 0
+      reason: 特になし
   summary: 長時間の音声処理や高度な認識・合成を求める研究開発に最適な最先端AIモデル
 links:
   github: https://github.com/microsoft/VibeVoice
@@ -42,11 +42,11 @@ links:
   codewiki: https://codewiki.google/github.com/microsoft/VibeVoice
 relationships:
   related_tools:
-  - ElevenLabs
-  - Aqua Voice
-  - Irodori-TTS
-  - VoxCPM
-  - Notely Voice
+    - ElevenLabs
+    - Aqua Voice
+    - Irodori-TTS
+    - VoxCPM
+    - Notely Voice
 ---
 
 # **VibeVoice 調査レポート**

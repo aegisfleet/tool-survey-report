@@ -8,34 +8,34 @@ official_site: https://github.com/Aratako/Irodori-TTS
 date: '2026-03-20'
 last_updated: '2026-07-19'
 tags:
-- AI
-- 音声合成
-- オープンソース
-- TTS
+  - AI
+  - 音声合成
+  - オープンソース
+  - TTS
 description: 絵文字によるスタイル制御が可能な、Flow Matchingベースの日本語テキスト音声合成（TTS）モデル
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - 研究者
-  - クリエイター
+    - 開発者
+    - 研究者
+    - クリエイター
   latest_highlight: Irodori-TTS-500M-v3モデルおよびVoiceDesignモデルの公開
   update_frequency: 低
 evaluation:
   score: 82
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 独自の絵文字によるスタイル・効果音制御機能
-  - point: 5
-    reason: オープンソースとして無料で利用可能
-  - point: 5
-    reason: ローカル環境での実行・学習が可能
+    - point: 5
+      reason: 独自の絵文字によるスタイル・効果音制御機能
+    - point: 5
+      reason: オープンソースとして無料で利用可能
+    - point: 5
+      reason: ローカル環境での実行・学習が可能
   minus_points:
-  - point: -3
-    reason: 現状は日本語入力のみの対応
+    - point: -3
+      reason: 現状は日本語入力のみの対応
   summary: 絵文字を用いた直感的なスタイル制御と高品質な日本語音声合成が強みのオープンソースTTS
 links:
   github: https://github.com/Aratako/Irodori-TTS
@@ -43,8 +43,8 @@ links:
   documentation: https://huggingface.co/Aratako/Irodori-TTS-500M-v3
 relationships:
   related_tools:
-  - VoxCPM
-  - VibeVoice
+    - VoxCPM
+    - VibeVoice
 ---
 
 # **Irodori-TTS 調査レポート**
