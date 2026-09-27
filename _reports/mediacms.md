@@ -2,7 +2,7 @@
 title: MediaCMS 調査レポート
 tool_name: MediaCMS
 tool_reading: メディアシーエムエス
-category: 動画編集/配信
+category: ライブ配信
 developer: Markos Gogoulos / MediaCMS.io
 official_site: https://mediacms.io/
 date: '2026-02-02'
@@ -12,7 +12,7 @@ tags:
   - CMS
   - Django
   - React
-  - 動画配信
+  - ライブ配信
 description: YouTubeライクな動画共有サイトを構築できる、モダンなオープンソースCMS。DjangoとReactを採用し、セルフホストでメディア資産を管理可能。
 quick_summary:
   has_free_plan: true

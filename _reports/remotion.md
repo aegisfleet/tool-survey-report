@@ -2,12 +2,13 @@
 title: Remotion 調査レポート
 tool_name: Remotion
 tool_reading: リモーション
-category: 動画編集/配信
+category: 動画編集
 developer: Remotion AG
 official_site: https://www.remotion.dev/
 date: '2026-02-23'
 last_updated: '2026-06-02'
 tags:
+  - 動画編集
   - React
   - TypeScript
   - プログラマブルビデオ
