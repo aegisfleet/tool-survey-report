@@ -49,13 +49,12 @@ links:
   documentation: https://cursor.com/docs
 relationships:
   related_tools:
-    - Spec Kit
-    - Paseo
     - GitHub Copilot
     - Devin Desktop
     - Cline
     - Roo Code
     - Visual Studio Code
+    - IntelliJ IDEA
 ---
 # **Cursor 調査レポート**
 
