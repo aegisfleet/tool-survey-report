@@ -22,7 +22,7 @@ quick_summary:
     - ビジネスアナリスト
     - 営業・マーケティング
     - CIO/ITリーダー
-  latest_highlight: "2026年9月にエンタープライズ向けの双方向APIコネクタが大幅拡充"
+  latest_highlight: 2026年9月にエンタープライズ向けの双方向APIコネクタが大幅拡充
   update_frequency: 高
 evaluation:
   score: 83
