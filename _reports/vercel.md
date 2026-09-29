@@ -46,6 +46,7 @@ relationships:
     - Render
     - A2UI
     - Cloudflare Workers
+    - Hono
 ---
 
 # **Vercel 調査レポート**
