@@ -6,7 +6,7 @@ category: エージェント開発基盤
 developer: Amazon Web Services
 official_site: https://strandsagents.com/
 date: '2026-02-04'
-last_updated: '2026-09-26'
+last_updated: '2026-09-29'
 tags:
   - AWS
   - MCP
@@ -23,7 +23,7 @@ quick_summary:
     - AWSユーザー
     - ソフトウェア開発者
     - Web開発者
-  latest_highlight: Python v1.57.1およびTypeScript v1.19.0のリリース。snapshot captureやa2a_clientの追加、Strands harness統合を実施
+  latest_highlight: Strands harness（完全に組み立てられた最先端のエージェントハーネス）がリリースされ、AWS、Anthropic、OpenAI、Googleなど主要なLLMに対応し、コスト効率が向上
   update_frequency: 高
 evaluation:
   score: 78
@@ -232,6 +232,7 @@ Strands Agents自体はApache License 2.0のオープンソースソフトウェ
 
 * **2026-09-25**: Python v1.57.1 リリース。snapshot captureやa2a_clientツールの追加などを実施。
 * **2026-09-22**: TypeScript v1.19.0 リリース。Strands harnessの統合やopus 5のデフォルト対応などを追加。
+* **2026-09-21**: Strands harness リリース。完全に組み立てられた最先端のエージェントハーネスで、ローカルやクラウド上で簡単に実行・デプロイ可能。他のエージェントハーネスと同等以上の精度を維持しながら、トークンコストを28%削減。
 * **2026-08-07**: Python v1.51.0 リリース。HitL classifierオプションの追加や、GeminiでのTool Choiceサポートなどを実施。
 * **2026-04-XX**: TypeScript SDK (`@strands-agents/sdk`) が正式公開され、Node.js環境での利用が容易に。
 * **2026-03-XX**: Steering Middleware（エージェントループのミドルウェア）が導入され、ツール呼び出し前後の検証や修正が可能に。
