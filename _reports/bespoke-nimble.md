@@ -1,50 +1,50 @@
 ---
-title: "Bespoke Nimble 調査レポート"
-tool_name: "Bespoke Nimble"
-tool_reading: "ビスポーク・ニンブル"
-category: "AIモデル拡張/プラグイン"
-developer: "Bespoke Labs"
-official_site: "https://github.com/bespokelabsai/nimble"
-date: "2026-09-30"
-last_updated: "2026-09-30"
+title: Bespoke Nimble 調査レポート
+tool_name: Bespoke Nimble
+tool_reading: ビスポーク・ニンブル
+category: AIモデル拡張/プラグイン
+developer: Bespoke Labs
+official_site: https://github.com/bespokelabsai/nimble
+date: '2026-09-30'
+last_updated: '2026-09-30'
 tags:
-  - "オープンソース"
-  - "大規模言語モデル"
-  - "AI"
-  - "自動化"
-  - "開発者ツール"
-description: "テキストとスキーマから型付きの決定・データを高速に出力する、Qwen3.5-9BベースのSystem Oneモデル（LoRAアダプタ）。"
+  - オープンソース
+  - 大規模言語モデル
+  - AI
+  - 自動化
+  - 開発者ツール
+description: テキストとスキーマから型付きの決定・データを高速に出力する、Qwen3.5-9BベースのSystem Oneモデル（LoRAアダプタ）。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIシステムビルダー"
-  latest_highlight: "2026年9月にコンテキスト長8,192トークン、最大255の選択肢に対応した最新チェックポイントを公開"
-  update_frequency: "高"
+    - 開発者
+    - AIシステムビルダー
+  latest_highlight: 2026年9月にコンテキスト長8,192トークン、最大255の選択肢に対応した最新チェックポイントを公開
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "高速な推論と、型安全なデータ構造（選択肢・真偽値・スコア）をプロンプトから直接出力可能"
+      reason: 高速な推論と、型安全なデータ構造（選択肢・真偽値・スコア）をプロンプトから直接出力可能
     - point: 5
-      reason: "Jev 1.13.0に近い高い正答率をローカル環境や自社ホスティングで実現可能"
+      reason: Jev 1.13.0に近い高い正答率をローカル環境や自社ホスティングで実現可能
     - point: 3
-      reason: "対照的データキュレーション（Contrastive data curation）手法による学習データセットと構築レシピも公開"
+      reason: 対照的データキュレーション（Contrastive data curation）手法による学習データセットと構築レシピも公開
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "AIのシステム組み込みにおいて、TypeSafe AIのJevに匹敵する「System One」アプローチをオープンソース環境で実現できる強力なモデル。"
+      reason: 特になし
+  summary: AIのシステム組み込みにおいて、TypeSafe AIのJevに匹敵する「System One」アプローチをオープンソース環境で実現できる強力なモデル。
 links:
-  github: "https://github.com/bespokelabsai/nimble"
-  deepwiki: "https://deepwiki.com/bespokelabsai/nimble"
-  codewiki: "https://codewiki.google/github.com/bespokelabsai/nimble"
+  github: https://github.com/bespokelabsai/nimble
+  deepwiki: https://deepwiki.com/bespokelabsai/nimble
+  codewiki: https://codewiki.google/github.com/bespokelabsai/nimble
 relationships:
-  parent: "Qwen"
+  parent: Qwen
   related_tools:
-    - "TypeSafe AI"
+    - TypeSafe AI
 ---
 
 # **Bespoke Nimble 調査レポート**
