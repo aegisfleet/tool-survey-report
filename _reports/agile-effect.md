@@ -2,7 +2,7 @@
 title: agile effect 調査レポート
 tool_name: agile effect
 tool_reading: アジャイルエフェクト
-category: プロジェクト管理
+category: プロジェクト/タスク管理
 developer: レバテック株式会社
 official_site: https://lp.agile-effect.com/
 date: '2026-09-30'
