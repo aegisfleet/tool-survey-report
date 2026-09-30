@@ -1,50 +1,50 @@
 ---
-title: "T3 Code 調査レポート"
-tool_name: "T3 Code"
-tool_reading: "ティースリー コード"
-category: "AIエディタ/IDE"
-developer: "T3 Tools Inc"
-official_site: "https://t3.codes/"
-date: "2026-10-01"
-last_updated: "2026-10-01"
+title: T3 Code 調査レポート
+tool_name: T3 Code
+tool_reading: ティースリー コード
+category: AIエディタ/IDE
+developer: T3 Tools Inc
+official_site: https://t3.codes/
+date: '2026-10-01'
+last_updated: '2026-10-01'
 tags:
-  - "オープンソース"
-  - "デスクトップアプリ"
-  - "モバイルアプリ"
-  - "自律型コーディングエージェント"
-description: "複数のコーディングエージェント（Claude Code, Codex, Cursorなど）を統合管理・操作できるオープンソースのコントロールプレーン。"
+  - オープンソース
+  - デスクトップアプリ
+  - モバイルアプリ
+  - 自律型コーディングエージェント
+description: 複数のコーディングエージェント（Claude Code, Codex, Cursorなど）を統合管理・操作できるオープンソースのコントロールプレーン。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-  latest_highlight: "モバイルアプリ（iOS/Android）およびデスクトップアプリの提供開始"
-  update_frequency: "高"
+    - 開発者
+  latest_highlight: モバイルアプリ（iOS/Android）およびデスクトップアプリの提供開始
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "複数のAIモデル・エージェントを一つの画面で統合的に利用可能"
+      reason: 複数のAIモデル・エージェントを一つの画面で統合的に利用可能
     - point: 5
-      reason: "モバイルからのリモート開発に対応している革新的なUX"
+      reason: モバイルからのリモート開発に対応している革新的なUX
     - point: 5
-      reason: "完全オープンソースでフォークやカスタマイズが容易"
+      reason: 完全オープンソースでフォークやカスタマイズが容易
   minus_points:
     - point: -3
-      reason: "初期のアルファ版であり、バグや動作の不安定さが報告されている"
-  summary: "既存のAPIキーやサブスクリプションをそのまま活用し、最高のUXでコーディングエージェントを利用できる革新的なプラットフォーム"
+      reason: 初期のアルファ版であり、バグや動作の不安定さが報告されている
+  summary: 既存のAPIキーやサブスクリプションをそのまま活用し、最高のUXでコーディングエージェントを利用できる革新的なプラットフォーム
 links:
-  github: "https://github.com/pingdotgg/t3code"
+  github: https://github.com/pingdotgg/t3code
 relationships:
   related_tools:
-    - "Claude Code"
-    - "Cursor"
-    - "OpenCode"
-    - "Grok"
-    - "Google Antigravity"
-    - "Codex cloud"
+    - Claude Code
+    - Cursor
+    - OpenCode
+    - Grok
+    - Google Antigravity
+    - Codex cloud
 ---
 
 # **T3 Code 調査レポート**
