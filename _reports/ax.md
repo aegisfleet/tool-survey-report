@@ -2,7 +2,7 @@
 title: AX 調査レポート
 tool_name: AX
 tool_reading: エーエックス
-category: エージェント開発基盤
+category: エージェント実行環境/ランタイム
 developer: Google
 official_site: https://agentexecutor.io/
 date: '2026-09-22'

@@ -2,7 +2,7 @@
 title: OpenJev 調査レポート
 tool_name: OpenJev
 tool_reading: オープンジェブ / オープンジェヴ
-category: エージェント開発基盤
+category: エージェントプラットフォーム
 developer: TheoLeeCJ
 official_site: https://openjev.com/
 date: '2026-09-18'

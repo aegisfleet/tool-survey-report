@@ -2,7 +2,7 @@
 title: Model Hardware Standard 調査レポート
 tool_name: Model Hardware Standard
 tool_reading: モデルハードウェアスタンダード
-category: エージェント開発基盤
+category: エージェントエコシステム/基盤
 developer: Anthropic, HHMI Janelia Research Campus
 official_site: https://www.modelhardwarestandard.com/
 date: '2026-08-29'

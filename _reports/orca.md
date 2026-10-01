@@ -2,7 +2,7 @@
 title: Orca 調査レポート
 tool_name: Orca
 tool_reading: オルカ
-category: エージェント開発基盤
+category: エージェント実行環境/ランタイム
 developer: stably.ai
 official_site: https://www.onorca.dev/
 date: '2026-10-01'
