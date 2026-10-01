@@ -2,7 +2,7 @@
 title: A2UI 調査レポート
 tool_name: A2UI
 tool_reading: エーツーユーアイ
-category: エージェント開発基盤
+category: エージェントエコシステム/基盤
 developer: Google
 official_site: https://a2ui.org/
 date: '2026-04-18'
@@ -10,9 +10,9 @@ last_updated: '2026-09-14'
 tags:
   - UI
   - AI
-  - Agent
+  - エージェント
   - Protocol
-  - Open Source
+  - オープンソース
 description: AIエージェントがセキュアかつネイティブにUIを生成・操作できるようにする宣言型UIプロトコル。
 quick_summary:
   has_free_plan: true

@@ -2,7 +2,7 @@
 title: TypeSafe AI 調査レポート
 tool_name: TypeSafe AI
 tool_reading: タイプセーフ・エーアイ
-category: エージェント開発基盤
+category: エージェントプラットフォーム
 developer: TypeSafe
 official_site: https://typesafe.ai/
 date: '2026-09-18'

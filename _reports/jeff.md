@@ -2,7 +2,7 @@
 title: Jeff 調査レポート
 tool_name: Jeff
 tool_reading: ジェフ
-category: AI・機械学習
+category: 基盤モデル/LLMチャット
 developer: firelex
 official_site: https://github.com/firelex/jeff
 date: '2026-09-30'
