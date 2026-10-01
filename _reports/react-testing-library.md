@@ -2,7 +2,7 @@
 title: React Testing Library 調査レポート
 tool_name: React Testing Library
 tool_reading: リアクトテスティングライブラリ
-category: "テストフレームワーク/ライブラリ"
+category: テストフレームワーク/ライブラリ
 developer: Testing Library
 official_site: https://testing-library.com/docs/react-testing-library/intro/
 date: '2026-02-06'
@@ -20,7 +20,7 @@ quick_summary:
   target_users:
     - フロントエンドエンジニア
     - React開発者
-  latest_highlight: '2026年8月にv16.3.3をリリース'
+  latest_highlight: 2026年8月にv16.3.3をリリース
   update_frequency: 高
 evaluation:
   score: 95
