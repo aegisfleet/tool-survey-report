@@ -2,7 +2,7 @@
 title: zeta(ゼタ) 調査レポート
 tool_name: zeta
 tool_reading: ゼタ
-category: エンターテインメント
+category: 特定用途AIアシスタント
 developer: Scatter Lab, Inc. (株式会社スキャッターラボ)
 official_site: https://zeta-ai.io/
 date: '2026-10-02'
@@ -10,7 +10,6 @@ last_updated: '2026-10-02'
 tags:
   - AIチャット
   - キャラクターAI
-  - エンターテインメント
   - モバイルアプリ
   - ロールプレイ
 description: キャラクターや推しと自由にロールプレイチャットが楽しめるAIエンターテインメントプラットフォーム
