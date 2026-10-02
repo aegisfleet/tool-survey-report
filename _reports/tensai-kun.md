@@ -2,11 +2,11 @@
 title: 天才くん 調査レポート
 tool_name: 天才くん
 tool_reading: テンサイクン
-category: AIアプリ開発基盤
+category: 自律型AIエージェント
 developer: 株式会社SHIFT
 official_site: https://tensaikun.jp/
 date: '2026-02-06'
-last_updated: '2026-05-01'
+last_updated: '2026-10-02'
 tags:
   - エージェント
   - 生成AI

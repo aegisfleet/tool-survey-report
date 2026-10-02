@@ -51,13 +51,13 @@ relationships:
     - Gemini Skills
     - Google Jules
   related_tools:
+    - 天才くん
     - ChatGPT
     - Claude
     - Grok
     - DeepSeek
     - Qwen
     - Vertex AI
-    - Agent i
 ---
 # **Gemini 調査レポート**
 
