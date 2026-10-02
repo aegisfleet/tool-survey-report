@@ -50,13 +50,13 @@ relationships:
     - Codex cloud
     - ChatGPT for Work
   related_tools:
+    - 天才くん
     - Gemini
     - Claude
     - Grok
     - DeepSeek
     - Amazon Bedrock
     - Microsoft 365 Copilot
-    - Agent i
 ---
 
 # **ChatGPT 調査レポート**
