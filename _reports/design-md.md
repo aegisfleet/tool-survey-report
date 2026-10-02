@@ -6,35 +6,35 @@ category: UI/UX/作図
 developer: Google Labs
 official_site: https://github.com/google-labs-code/design.md
 date: '2026-05-02'
-last_updated: '2026-05-02'
+last_updated: '2026-10-03'
 tags:
-  - オープンソース
-  - コーディング支援
-  - AI
-  - エージェント
-  - 開発者ツール
+- オープンソース
+- コーディング支援
+- AI
+- エージェント
+- 開発者ツール
 description: AIエージェントにデザインシステムを永続的かつ構造的に理解させるためのフォーマット仕様です。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-    - 開発者
-    - デザイナー
-    - AIエージェント
-  latest_highlight: CLIによるlint、diff、exportに対応
+  - 開発者
+  - デザイナー
+  - AIエージェント
+  latest_highlight: CSS Variables出力、Tailwind v4サポート、ネストされたトークンの対応など大幅アップデート (v0.4.0)
   update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-    - point: 5
-      reason: AIエージェントに特化した独自のアプローチを提供
-    - point: 5
-      reason: W3C Design Token Format互換の拡張性
+  - point: 5
+    reason: AIエージェントに特化した独自のアプローチを提供
+  - point: 5
+    reason: W3C Design Token Format互換の拡張性
   minus_points:
-    - point: 0
-      reason: 特になし
+  - point: 0
+    reason: 特になし
   summary: AI時代のコーディングエージェントに不可欠なデザインシステム共有フォーマットとして高い可能性を秘めている
 links:
   github: https://github.com/google-labs-code/design.md
@@ -72,9 +72,33 @@ relationships:
 * **CLIツール提供**: `@google/design.md`パッケージとしてCLIを提供し、lint、diff、exportなどの操作が可能です。
 * **Linting機能**: トークン参照の解決エラー、WCAGコントラスト要件違反、セクション順序の違反などを自動検出します。
 * **Diff機能**: 2つの`design.md`ファイル間でのトークンレベルの変更やリグレッションを検出します。
-* **Export機能**: 定義されたトークンをTailwindのテーマ設定やDTCG（W3C Design Token Format）など他の形式へエクスポートできます。
+* **Export機能**: 定義されたトークンをTailwind v3/v4、DTCG（W3C Design Token Format）、およびCSS Custom Properties（CSS Variables）形式にエクスポートできます。
+* **ネストされたトークンとコンポーネントDiff**: ドット区切りのパス表記を用いた任意の深さのネストトークンをサポートし、コンポーネントレベルの変更やリグレッションをDiffコマンドで検出可能です。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: ローカル環境で実行されるCLIツールおよびパーサー
+* **主要コンポーネントとデータフロー**:
+  * `DESIGN.md` ファイル内のYAMLフロントマターを読み込み、内部のスキーマに対して検証（Linting）を行います。
+  * 検証を通過したデザイントークンは、指定されたフォーマット（Tailwind CSS v3/v4, DTCG形式, CSS Custom Properties）に変換され出力されます。
+* **特筆すべき要素技術**:
+  * **ハイブリッドフォーマット**: フロントマターに構造化データ（YAML）を持たせ、本文（Markdown）に設計意図を持たせることで、機械（AI）と人間の双方にとって読みやすい構成を実現しています。
+  * **ASTパーサー**: 内部的にMarkdownおよびYAMLをパースし、トークンの参照関係（ネストされたトークンを含む）や循環参照、WCAGコントラスト比などの静的解析を実行します。
+
+```mermaid
+flowchart TD
+    A[DESIGN.md<br/>Markdown+YAML] --> B[CLI / Parser<br/>@google/design.md]
+    B --> C{Validation / Linter}
+
+    C -- エラー・警告 --> D[ターミナル / JSON出力]
+    C -- 成功 --> E[Export Formats]
+
+    E --> F[Tailwind CSS<br/>v3/v4対応]
+    E --> G[W3C DTCG<br/>tokens.json]
+    E --> H[CSS Vars<br/>:root]
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Node.js環境（CLIツール利用時）
@@ -95,19 +119,19 @@ relationships:
   npx @google/design.md lint DESIGN.md
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * AIエージェントが理解しやすい構造化されたデータ（YAML）と、人間が理解しやすい文脈（Markdown）を両立させている点
-* TailwindやW3C Design Token Formatなど、既存のエコシステムとの相互運用性が考慮されている点
+* Tailwind CSS (v3/v4)やW3C Design Token Format、CSS変数など、既存エコシステムとの強力な相互運用性
 * CLIツールにより、CI/CDパイプラインに組み込んでデザインシステムの品質（コントラスト比など）を自動検証できる点
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * 現在はアルファ版（version: alpha）であり、仕様やCLIツールが今後変更される可能性がある点
 * AIエージェント側がこのフォーマットを明示的にサポート・理解するようプロンプト等で誘導する必要がある点
 * 日本語のドキュメントやサポートが現状では限られている点
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -116,46 +140,47 @@ relationships:
 * **課金体系**: 完全無料（オープンソース）
 * **無料トライアル**: 該当なし
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Google社内のプロジェクトや、オープンソースコミュニティでの試験的な導入が進められています。
 * **導入事例**: AIを用いたコード生成ツール（Google Stitch等）でのデザインプロンプト入力の標準化として活用されています。
 * **対象業界**: ソフトウェア開発、特にAI駆動開発を推進している企業
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: GitHubリポジトリ内の `docs/spec.md` に詳細な仕様が公開されています。
 * **コミュニティ**: GitHub IssuesやDiscussionsを通じてコミュニティのフィードバックを受け付けています。
 * **公式サポート**: オープンソースプロジェクトのため、公式なSLAを伴うサポートはありません。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: Node.jsライブラリとしてProgrammatic API（`import { lint } from '@google/design.md/linter';`）が提供されています。
 * **外部サービス連携**: Tailwind CSS（エクスポート対応）、W3C Design Tokens Community Group (DTCG) フォーマット対応
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Tailwind CSS** | ◎ | CLIからTailwindテーマとして直接エクスポート可能 | 特になし |
+| **Tailwind CSS** | ◎ | CLIからTailwind v3/v4テーマとして直接エクスポート可能 | 特になし |
 | **Node.js / npm** | ◎ | CLIツールやAPIがnpmパッケージとして提供されている | 特になし |
+| **標準Web技術(CSS)** | ◎ | `--format css-vars`により、プレーンなCSS変数としてネイティブに出力可能 | 特になし |
 | **AIコーディングエージェント** | ◯ | 本ツールの主要なターゲット | エージェントによっては明示的にファイルを読み込ませる指示が必要 |
 | **Figma / 既存デザインツール** | △ | DTCG経由での連携が想定されるが、直接的なプラグイン等は現状未提供 | 既存ツールからのエクスポートパイプラインの構築が必要 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: オープンソースのフォーマット及びCLIツールであるため、独自の認証機能は持ちません。
 * **データ管理**: データはローカルの `DESIGN.md` ファイルとして管理されます。
 * **準拠規格**: アクセシビリティの観点で、CLIツールのlint機能がWCAG AA基準のコントラスト比チェック（4.5:1）をサポートしています。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: CLIツールとして提供されており、JSON形式での出力にも対応しているため、他のスクリプトとの連携が容易です。
 * **学習コスト**: YAMLとMarkdownの基礎知識があれば記述は容易です。独自のトークンスキーマ（colors, typography, spacing等）のルールを覚える必要がありますが、仕様はシンプルです。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * プロジェクトのルートに `DESIGN.md` を配置し、AIエージェントへのシステムプロンプト内で「デザインの実装時は必ずDESIGN.mdの仕様に従うこと」と指示する。
@@ -164,7 +189,7 @@ relationships:
   * YAMLフロントマターで定義したトークン名と、Markdownの本文で説明しているトークン名に乖離が生じること。（Lintツールを活用して防ぐ）
   * AIエージェントにファイルを渡すだけで自動的に理解されると思い込むこと。（仕様を適切にパースできるエージェントであるか確認が必要）
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: GitHubのスター数やX(Twitter)の技術者の反応
 * **総合評価**: GitHubで10.9k以上のスターを獲得しており、非常に高い注目を集めています。
@@ -176,15 +201,18 @@ relationships:
 * **特徴的なユースケース**:
   * LLMにフロントエンドコンポーネントを生成させる際の「幻覚（Hallucination）」を防ぎ、ブランドガイドラインに沿ったUIを安定して出力させるためのガードレールとしての活用。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2026-04-21**: `v0.1.0` リリース (初期リリース版パッケージング)
+* **2026-07-27**: `v0.4.0` リリース。CSSカスタムプロパティ（CSS Variables）エクスポートの追加、`omitted` フロントマターによる特定カテゴリのリンター警告の抑止、タイポグラフィのサブプロパティチェックの強化など。（出典: [GitHub Releases](https://github.com/google-labs-code/design.md/releases)）
+* **2026-06-15**: `v0.3.0` リリース。ドット区切りのパス表記によるネストされたトークンのサポート、未定義トップレベルキーの警告追加、各種クラッシュバグの修正など。（出典: [GitHub Releases](https://github.com/google-labs-code/design.md/releases)）
+* **2026-05-26**: `v0.2.0` リリース。Tailwind CSS v4エクスポート（`--format css-tailwind`）への対応、CSS Color Moduleへの対応、Windows環境向けの`designmd`コマンドエイリアス追加など。（出典: [GitHub Releases](https://github.com/google-labs-code/design.md/releases)）
+* **2026-04-21**: `v0.1.0` リリース。初期リリース版パッケージング、エージェントファーストなCLIおよびリンターの提供。（出典: [GitHub Releases](https://github.com/google-labs-code/design.md/releases)）
 
 (出典: [GitHub Releases](https://github.com/google-labs-code/design.md/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | design.md | Tailwind CSS | W3C DTCG | Figma |
 |:---:|:---|:---:|:---:|:---:|:---:|
@@ -193,15 +221,16 @@ relationships:
 | **エンタープライズ** | 静的解析・Linting | ◯<br><small>専用CLIあり</small> | △<br><small>プラグインが必要</small> | ◯<br><small>サードパーティツール</small> | ◯<br><small>プラグインで対応</small> |
 | **非機能要件** | エクスポート機能 | ◯<br><small>Tailwind/DTCGへ出力</small> | -<br><small>-</small> | -<br><small>-</small> | ◯<br><small>プラグイン経由</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **design.md** | AIと人間の双方に向けたハイブリッドなデザイン仕様フォーマット。 | AIが文脈を理解しやすい。CI連携が容易。 | アルファ版であるため仕様変更の可能性がある。 | AIを活用したコード生成を多用するプロジェクト。 |
 | **Tailwind CSS** | ユーティリティファーストのCSSフレームワーク。 | デファクトスタンダードでありエコシステムが巨大。 | 設定ファイル（tailwind.config.js）だけでは設計の「意図」を伝えにくい。 | 従来型のWeb開発や、すでにTailwindを採用している場合。 |
 | **W3C DTCG** | デザイントークンの標準フォーマット。 | ツール間の互換性が高い。 | JSON形式のため人間が直接読み書きするには不向き。 | 大規模組織で複数のデザインツールやプラットフォームを跨ぐ場合。 |
+| **Figma** | 業界標準のデザインプラットフォーム。 | 直感的なGUIと強力なコラボレーション機能。 | コードベース（特にAIによる自動生成）との直接的な統合には工夫が必要。 | デザイナー中心のワークフローを構築する場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   design.mdは、急速に普及するAIコーディングアシスタントに対して、プロジェクトのデザインシステムを正確に伝達するという新たな課題に対するGoogleからの強力な提案です。機械可読なYAMLと人間可読なMarkdownを組み合わせた手法は非常に理にかなっています。
