@@ -8,33 +8,33 @@ official_site: https://github.com/google-labs-code/design.md
 date: '2026-05-02'
 last_updated: '2026-10-03'
 tags:
-- オープンソース
-- コーディング支援
-- AI
-- エージェント
-- 開発者ツール
+  - オープンソース
+  - コーディング支援
+  - AI
+  - エージェント
+  - 開発者ツール
 description: AIエージェントにデザインシステムを永続的かつ構造的に理解させるためのフォーマット仕様です。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - デザイナー
-  - AIエージェント
+    - 開発者
+    - デザイナー
+    - AIエージェント
   latest_highlight: CSS Variables出力、Tailwind v4サポート、ネストされたトークンの対応など大幅アップデート (v0.4.0)
   update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-  - point: 5
-    reason: AIエージェントに特化した独自のアプローチを提供
-  - point: 5
-    reason: W3C Design Token Format互換の拡張性
+    - point: 5
+      reason: AIエージェントに特化した独自のアプローチを提供
+    - point: 5
+      reason: W3C Design Token Format互換の拡張性
   minus_points:
-  - point: 0
-    reason: 特になし
+    - point: 0
+      reason: 特になし
   summary: AI時代のコーディングエージェントに不可欠なデザインシステム共有フォーマットとして高い可能性を秘めている
 links:
   github: https://github.com/google-labs-code/design.md
