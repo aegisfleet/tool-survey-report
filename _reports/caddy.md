@@ -1,57 +1,49 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Caddy 調査レポート"
-tool_name: "Caddy"
-tool_reading: "キャディ"
-category: "インフラ/サーバー管理"
-developer: "ZeroSSL / オープンソースコミュニティ"
-official_site: "https://caddyserver.com/"
-date: "2026-10-02"
-last_updated: "2026-10-02"
+title: Caddy 調査レポート
+tool_name: Caddy
+tool_reading: キャディ
+category: インフラ/サーバー管理
+developer: ZeroSSL / オープンソースコミュニティ
+official_site: https://caddyserver.com/
+date: '2026-10-02'
+last_updated: '2026-10-02'
 tags:
-  - "サーバー"
-  - "インフラ"
-  - "オープンソース"
-  - "セキュリティ"
-description: "HTTPSをデフォルトで自動設定し、設定が簡単なGo言語製のモダンなWebサーバーおよびリバースプロキシ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - サーバー
+  - インフラ
+  - オープンソース
+  - セキュリティ
+description: HTTPSをデフォルトで自動設定し、設定が簡単なGo言語製のモダンなWebサーバーおよびリバースプロキシ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "インフラエンジニア"
-    - "スタートアップ"
-  latest_highlight: "2026年10月にv2.11.6をリリースし、url_patternマッチャーやSlowloris攻撃の緩和などを追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - インフラエンジニア
+    - スタートアップ
+  latest_highlight: 2026年10月にv2.11.6をリリースし、url_patternマッチャーやSlowloris攻撃の緩和などを追加
+  update_frequency: 高
 evaluation:
   score: 93
   base_score: 70
   plus_points:
     - point: 10
-      reason: "TLS（HTTPS）証明書の取得・更新が完全に自動化されている"
+      reason: TLS（HTTPS）証明書の取得・更新が完全に自動化されている
     - point: 8
-      reason: "Caddyfileにより、他のサーバーよりも極めて短く直感的な設定が可能"
+      reason: Caddyfileにより、他のサーバーよりも極めて短く直感的な設定が可能
     - point: 5
-      reason: "Go言語製のため、メモリ安全でシングルバイナリとして簡単にデプロイ可能"
+      reason: Go言語製のため、メモリ安全でシングルバイナリとして簡単にデプロイ可能
   minus_points:
     - point: -2
-      reason: "Apacheの.htaccessのようなディレクトリ単位の動的設定は非対応"
-  summary: "HTTPS自動化の先駆者であり、設定が容易で安全なモダンなWebサーバー環境を手軽に構築できる"
-
-# 【任意項目】該当するもののみ記載
+      reason: Apacheの.htaccessのようなディレクトリ単位の動的設定は非対応
+  summary: HTTPS自動化の先駆者であり、設定が容易で安全なモダンなWebサーバー環境を手軽に構築できる
 links:
-  github: "https://github.com/caddyserver/caddy"
-  documentation: "https://caddyserver.com/docs/"
+  github: https://github.com/caddyserver/caddy
+  documentation: https://caddyserver.com/docs/
 relationships:
   related_tools:
-    - "Nginx"
-    - "Cloudflare"
+    - Nginx
+    - Cloudflare
 ---
 
 # **Caddy 調査レポート**

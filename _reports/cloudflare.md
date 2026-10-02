@@ -48,7 +48,7 @@ relationships:
   related_tools:
     - Vercel
     - Google Cloud
-    - "Caddy"
+    - Caddy
 ---
 
 # **Cloudflare 調査レポート**
