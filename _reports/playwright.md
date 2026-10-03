@@ -61,7 +61,7 @@ relationships:
     - MagicPod
     - PyTest
     - Cucumber
-    - Gauge
+    - Scrapling
 ---
 
 # **Playwright 調査レポート**
