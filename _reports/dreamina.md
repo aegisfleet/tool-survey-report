@@ -1,50 +1,42 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Dreamina 調査レポート"
-tool_name: "Dreamina"
-tool_reading: "ドリーミナ"
-category: "画像・動画生成AI"
-developer: "CapCut"
-official_site: "https://dreamina.capcut.com/"
-date: "2026-10-04"
-last_updated: "2026-10-04"
+title: Dreamina 調査レポート
+tool_name: Dreamina
+tool_reading: ドリーミナ
+category: 画像・動画生成AI
+developer: CapCut
+official_site: https://dreamina.capcut.com/
+date: '2026-10-04'
+last_updated: '2026-10-04'
 tags:
-  - "AI生成"
-  - "画像生成"
-  - "動画生成"
-  - "AIアバター"
-description: "テキストや画像から高品質な画像、動画、AIアバターを生成できるオールインワンAIプラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - AI生成
+  - 画像生成
+  - 動画生成
+  - AIアバター
+description: テキストや画像から高品質な画像、動画、AIアバターを生成できるオールインワンAIプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$1.50/月"
+  starting_price: $1.50/月
   target_users:
-    - "クリエイター"
-    - "マーケター"
-    - "一般ユーザー"
-  latest_highlight: "動画生成モデル「Seedance 2.5」および画像生成モデル「Seedream 5.0 Pro」を提供"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クリエイター
+    - マーケター
+    - 一般ユーザー
+  latest_highlight: 動画生成モデル「Seedance 2.5」および画像生成モデル「Seedream 5.0 Pro」を提供
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "画像生成と動画生成を1つのプラットフォームでシームレスに提供"
+      reason: 画像生成と動画生成を1つのプラットフォームでシームレスに提供
     - point: 5
-      reason: "高度なプロンプト制御と一貫性を保った動画生成（Seedance 2.5）"
+      reason: 高度なプロンプト制御と一貫性を保った動画生成（Seedance 2.5）
     - point: 5
-      reason: "無料プランの提供（毎日の無料クレジット）"
+      reason: 無料プランの提供（毎日の無料クレジット）
   minus_points:
     - point: 0
-      reason: "特筆すべき大きな減点なし"
-  summary: "高品質な画像と動画を統合環境で生成できる強力なAIクリエイティブプラットフォーム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特筆すべき大きな減点なし
+  summary: 高品質な画像と動画を統合環境で生成できる強力なAIクリエイティブプラットフォーム
 relationships:
   children: []
 ---
