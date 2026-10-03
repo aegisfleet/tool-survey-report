@@ -2,7 +2,7 @@
 title: posterly 調査レポート
 tool_name: posterly
 tool_reading: ポスタリー
-category: SNS管理
+category: CRM/マーケティング
 developer: Alex Thorp
 official_site: https://www.poster.ly/
 date: '2026-10-03'
