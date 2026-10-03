@@ -2,7 +2,7 @@
 title: RevPDF 調査レポート
 tool_name: RevPDF
 tool_reading: レブピーディーエフ
-category: PDFエディタ
+category: ドキュメント生成/管理
 developer: Pawandeep Singh
 official_site: https://revpdf.com/
 date: '2026-10-03'
