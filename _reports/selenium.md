@@ -51,7 +51,7 @@ relationships:
     - MagicPod
     - JUnit
     - PyTest
-    - Gauge
+    - Vitest
 ---
 
 # **Selenium 調査レポート**

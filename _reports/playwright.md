@@ -60,7 +60,7 @@ relationships:
     - Autify
     - MagicPod
     - PyTest
-    - Cucumber
+    - Vitest
     - Scrapling
 ---
 
