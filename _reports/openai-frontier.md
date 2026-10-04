@@ -8,46 +8,46 @@ official_site: https://openai.com/frontier
 date: '2026-02-07'
 last_updated: '2026-10-05'
 tags:
-- AI
-- エージェント
-- 大規模言語モデル
-- 自律型
-- 生成AI
+  - AI
+  - エージェント
+  - 大規模言語モデル
+  - 自律型
+  - 生成AI
 description: GPT-5.2と次世代推論モデルを基盤とした、科学的発見や複雑なエンジニアリングタスクを解決するための自律型AIエージェントプラットフォーム。
 quick_summary:
   has_free_plan: false
   is_oss: false
   starting_price: 従量課金 (Enterprise/Team)
   target_users:
-  - 研究者
-  - ソフトウェアエンジニア
-  - データサイエンティスト
+    - 研究者
+    - ソフトウェアエンジニア
+    - データサイエンティスト
   latest_highlight: 2026年10月に推論能力と外部連携が大幅に強化されたアップデートをリリース。
   update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
-  - point: 10
-    reason: GPT-5.2ベースの圧倒的な推論能力により、未解決の科学的問題や複雑なコードベースの理解が可能
-  - point: 7
-    reason: マルチエージェント協調により、調査・計画・実行・検証のサイクルを自律的に回せる
-  - point: 5
-    reason: 外部ツール（ブラウザ、Python環境、社内DB）とのシームレスな統合
+    - point: 10
+      reason: GPT-5.2ベースの圧倒的な推論能力により、未解決の科学的問題や複雑なコードベースの理解が可能
+    - point: 7
+      reason: マルチエージェント協調により、調査・計画・実行・検証のサイクルを自律的に回せる
+    - point: 5
+      reason: 外部ツール（ブラウザ、Python環境、社内DB）とのシームレスな統合
   minus_points:
-  - point: -5
-    reason: 利用コストが非常に高く、個人開発者や小規模チームには敷居が高い
-  - point: -3
-    reason: 推論に時間がかかるため、リアルタイム性が求められるタスクには不向き
+    - point: -5
+      reason: 利用コストが非常に高く、個人開発者や小規模チームには敷居が高い
+    - point: -3
+      reason: 推論に時間がかかるため、リアルタイム性が求められるタスクには不向き
   summary: 人類の知的生産活動を「アシスト」から「自律実行」へと引き上げる、次世代のAGIへ向けたマイルストーン的プラットフォーム。
 links:
   documentation: https://platform.openai.com/docs/frontier
 relationships:
   related_tools:
-  - AWS Frontier Agents
-  - ChatGPT
-  - Devin
-  - GitHub Copilot
+    - AWS Frontier Agents
+    - ChatGPT
+    - Devin
+    - GitHub Copilot
 ---
 # **OpenAI Frontier 調査レポート**
 
