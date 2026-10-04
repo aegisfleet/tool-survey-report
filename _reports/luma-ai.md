@@ -49,6 +49,7 @@ relationships:
     - Hunyuan 3D
     - AnimeGen
     - Open Generative AI
+    - LongCat-Video
 ---
 
 # **Luma AI 調査レポート**
@@ -378,11 +379,11 @@ graph TD
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | 本ツール (Luma) | Runway Gen-3 Alpha | Sora (OpenAI) | Hunyuan 3D |
+| 機能カテゴリ | 機能項目 | 本ツール (Luma) | Runway Gen-3 Alpha | Sora (OpenAI) | LongCat-Video |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 動画品質 | ◎<br><small>物理法則に忠実</small> | ◎<br><small>高品質な映像生成</small> | ◎<br><small>圧倒的なリアリティ</small> | ◎<br><small>高解像度・詳細・PBR対応</small> |
-| **編集機能** | インペイント/編集 | ◎<br><small>指示による編集</small> | ◎<br><small>多機能エディタ</small> | ◯<br><small>将来実装予定</small> | ◯<br><small>画像から3D</small> |
-| **開発** | API提供 | ◎<br><small>SDK完備</small> | ◯<br><small>APIあり</small> | △<br><small>未公開/限定</small> | ◎<br><small>API/OSS</small> |
+| **基本機能** | 動画品質 | ◎<br><small>物理法則に忠実</small> | ◎<br><small>高品質な映像生成</small> | ◎<br><small>圧倒的なリアリティ</small> | ◎<br><small>長尺動画にも対応する高品質</small> |
+| **編集機能** | インペイント/編集 | ◎<br><small>指示による編集</small> | ◎<br><small>多機能エディタ</small> | ◯<br><small>将来実装予定</small> | -<br><small>主に生成特化</small> |
+| **開発** | API/CLI提供 | ◎<br><small>SDK完備</small> | ◯<br><small>APIあり</small> | △<br><small>未公開/限定</small> | ◎<br><small>OSS利用可</small> |
 | **環境** | ローカル実行 | ×<br><small>クラウドのみ</small> | ×<br><small>クラウドのみ</small> | ×<br><small>クラウドのみ</small> | ◎<br><small>OSSで可能</small> |
 
 ### **17.2 詳細比較**
@@ -397,7 +398,7 @@ graph TD
 | **本ツール** | 高品質な動画生成とAPI | 自然言語での編集とAPIの充実度 | 料金体系の複雑さ | 開発者がアプリに動画生成を組み込む場合 |
 | **Runway Gen-3 Alpha** | 動画編集プラットフォーム | 編集機能の豊富さとコントロール性 | コストが比較的高め | 映像制作のプロが細かくコントロールして動画を作りたい場合 |
 | **Sora (OpenAI)** | 物理法則を理解した次世代モデル | 圧倒的な物理シミュレーションと一貫性 | 一般公開が限定的 | 予算があり最高品質の実写寄り動画を生成したい場合 |
-| **Hunyuan 3D** | OSSの高品質3Dモデル | ローカルでのカスタマイズ性とPBR対応 | 高スペックPCが必要 | 自社サーバーで高品質な3Dアセットを生成したい場合 |
+| **LongCat-Video** | OSSの長尺動画・Avatar生成モデル | ローカル実行可能で長尺や音声駆動に対応 | 高スペックなGPU環境が必要 | 自社環境でセキュアかつ制限なく長尺動画を生成したい場合 |
 
 ## **18. 総評**
 
