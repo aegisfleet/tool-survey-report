@@ -2,7 +2,7 @@
 title: SlothMon 調査レポート
 tool_name: SlothMon
 tool_reading: スロースモン
-category: ユーティリティ
+category: デスクトップ/環境操作
 developer: 空河豚
 official_site: https://kuuhugu.github.io/SlothMon/
 date: '2026-10-03'

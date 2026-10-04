@@ -2,7 +2,7 @@
 title: GitHub Copilot SDK 調査レポート
 tool_name: GitHub Copilot SDK
 tool_reading: ギットハブ コパイロット エスディーケー
-category: エージェントプラットフォーム
+category: エージェント開発プラットフォーム
 developer: GitHub (Microsoft)
 official_site: https://github.com/github/copilot-sdk
 date: '2026-03-02'

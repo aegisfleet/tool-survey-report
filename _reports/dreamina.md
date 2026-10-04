@@ -2,7 +2,7 @@
 title: Dreamina 調査レポート
 tool_name: Dreamina
 tool_reading: ドリーミナ
-category: AI動画生成
+category: AI動画生成プラットフォーム
 developer: CapCut
 official_site: https://dreamina.capcut.com/
 date: '2026-10-04'

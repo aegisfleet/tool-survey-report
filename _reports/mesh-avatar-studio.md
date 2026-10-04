@@ -2,19 +2,19 @@
 title: Mesh Avatar Studio 調査レポート
 tool_name: Mesh Avatar Studio
 tool_reading: メッシュ アバター スタジオ
-category: アバター作成
+category: 3D/VTuber
 developer: shinshin86
 official_site: https://github.com/shinshin86/mesh-avatar-studio
 date: '2026-10-04'
 last_updated: '2026-10-04'
 tags:
-  - 2d-animation
-  - avatar
-  - claude-code
-  - codex
-  - mesh-deformation
-  - vtuber
-  - webgl
+  - 2Dアニメーション
+  - アバター
+  - VTuber
+  - WebGL
+  - メッシュ変形
+  - Claude Code
+  - Codex
 description: 1枚のイラストから、まばたき・口パク・首振りなどが可能な2Dメッシュアバターを作成するツール
 quick_summary:
   has_free_plan: true
