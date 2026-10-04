@@ -38,6 +38,9 @@ evaluation:
 links:
   github: https://github.com/browser-use/video-use
   deepwiki: https://deepwiki.com/browser-use/video-use
+relationships:
+  related_tools:
+    - LongCat-Video
 ---
 
 # **video-use 調査レポート**
@@ -208,12 +211,12 @@ links:
 
 ### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | AutoPod | Descript | Adobe Premiere Pro |
+| 機能カテゴリ | 機能項目 | 本ツール | AutoPod | Descript | LongCat-Video |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 自動カット | ◎<br><small>無音やフィラーをAIが自動カット</small> | ◯<br><small>マルチカメラの自動スイッチに特化</small> | ◎<br><small>テキストベースのカット</small> | △<br><small>文字起こしベースのカットはあるが手動</small> |
-| **テロップ** | 自動字幕 | ◯<br><small>カスタマイズ可能な字幕を自動焼き付け</small> | ×<br><small>非対応</small> | ◎<br><small>高機能なキャプション生成</small> | ◯<br><small>音声のテキスト化から生成可能</small> |
-| **高度な編集** | アニメーション追加 | ◎<br><small>コード生成によりアニメーションを自動挿入</small> | ×<br><small>非対応</small> | △<br><small>プリセットのテンプレートのみ</small> | ◎<br><small>手動で無限に作成可能</small> |
-| **非機能要件** | オープンソース | ◎<br><small>完全オープンソース</small> | ×<br><small>商用プラグイン</small> | ×<br><small>商用SaaS</small> | ×<br><small>商用ソフトウェア</small> |
+| **基本機能** | 自動カット/編集 | ◎<br><small>無音やフィラーをAIが自動カット</small> | ◯<br><small>マルチカメラの自動スイッチに特化</small> | ◎<br><small>テキストベースのカット</small> | -<br><small>動画生成が主体</small> |
+| **テロップ** | 自動字幕/音声生成 | ◯<br><small>カスタマイズ可能な字幕を自動焼き付け</small> | ×<br><small>非対応</small> | ◎<br><small>高機能なキャプション生成</small> | ◎<br><small>音声駆動のAvatar動画生成に対応</small> |
+| **高度な編集** | アニメーション追加 | ◎<br><small>コード生成によりアニメーションを自動挿入</small> | ×<br><small>非対応</small> | △<br><small>プリセットのテンプレートのみ</small> | ◎<br><small>単一モデルで長尺アニメ生成可</small> |
+| **非機能要件** | オープンソース | ◎<br><small>完全オープンソース</small> | ×<br><small>商用プラグイン</small> | ×<br><small>商用SaaS</small> | ◎<br><small>完全オープンソース</small> |
 
 ### **17.2 詳細比較**
 
@@ -222,7 +225,7 @@ links:
 | **本ツール** | AIエージェントと対話して編集するOSSツール | 自然言語によるフルオートメーション。OSSで無料・カスタマイズ可能 | 環境構築が必要。GUIなし。API利用料がかかる。 | 開発者や、CLIベースで編集ワークフローを自動化したいチーム。 |
 | **AutoPod** | Premiere Pro用の自動ポッドキャスト編集プラグイン | マルチカメラポッドキャストの自動カットに特化 | Premiere Proが必須。サブスクリプション制。 | すでにPremiere Proを使用しており、ポッドキャストなど複数カメラの編集を自動化したい場合。 |
 | **Descript** | テキストエディタ感覚で動画編集ができるSaaS | 直感的なGUIで、テキストを編集するだけで動画がカットされる | クラウドベースのため大容量ファイルのアップロードが必要。 | 非エンジニアのクリエイターやマーケターが、サクッと動画を編集したい場合。 |
-| **Adobe Premiere Pro** | 業界標準のプロ向け動画編集ソフト | 圧倒的な機能数と表現の自由度 | 操作が複雑で学習コストが高い。定型作業でも手動操作が多い。 | 高度なVFXや、ピクセル単位での細かい調整が必要な本格的な映像制作。 |
+| **LongCat-Video** | OSSの動画生成基盤モデル | 高品質な長尺動画や音声駆動動画の生成がローカルで可能 | 編集機能よりも生成機能に特化。高スペックGPUが必要 | 既存動画の編集ではなく、ゼロから高品質な動画を自動生成したい場合 |
 
 ## **18. 総評**
 
