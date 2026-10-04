@@ -2,16 +2,16 @@
 title: Dreamina 調査レポート
 tool_name: Dreamina
 tool_reading: ドリーミナ
-category: 画像・動画生成AI
+category: AI動画生成
 developer: CapCut
 official_site: https://dreamina.capcut.com/
 date: '2026-10-04'
 last_updated: '2026-10-04'
 tags:
-  - AI生成
-  - 画像生成
-  - 動画生成
-  - AIアバター
+  - AI動画生成
+  - AI画像生成
+  - 生成AI
+  - SaaS
 description: テキストや画像から高品質な画像、動画、AIアバターを生成できるオールインワンAIプラットフォーム
 quick_summary:
   has_free_plan: true
@@ -38,6 +38,10 @@ evaluation:
       reason: 特筆すべき大きな減点なし
   summary: 高品質な画像と動画を統合環境で生成できる強力なAIクリエイティブプラットフォーム
 relationships:
+  related_tools:
+    - Luma AI
+    - Stable Diffusion
+    - Open Generative AI
   children: []
 ---
 
@@ -76,6 +80,22 @@ relationships:
 * **アーキテクチャ**: クラウド完結型SaaS
 * **主要コンポーネントとデータフロー**:
   * ユーザーはブラウザ経由でテキストや画像を入力し、クラウド上のAIモデル（Seedance 2.5, Seedream 5.0 Pro, Nano Banana Proなど）が処理を実行。生成されたコンテンツはクラウド上に一時保存され、ユーザーに返される。
+
+```mermaid
+graph TD
+    A[ユーザー] -->|テキスト/画像/音声入力| B(Dreamina クラウドプラットフォーム)
+    B --> C{AIモデルルーティング}
+    C -->|画像生成| D[Seedream 5.0 Pro / Nano Banana Pro]
+    C -->|動画生成| E[Seedance 2.5 / Veo 3.1 / Sora 2]
+    C -->|アバター生成| F[AI Avatar Engine]
+    D --> G[生成された画像]
+    E --> H[生成された動画]
+    F --> I[AIトーキングアバター]
+    G --> J[ユーザーへ返却 / 一時保存]
+    H --> J
+    I --> J
+```
+
 * **特筆すべき要素技術**:
   * 複数の特化型最新AIモデル（画像用、動画用、デジタルヒューマン用）の統合。カメラワークや被写体の一貫性を制御する高度なプロンプト解釈技術。
 
@@ -175,6 +195,7 @@ relationships:
 
 ## **16. 直近半年のアップデート情報**
 
+* **2024-10-01**: (推定) 動画生成モデル「Veo 3.1」「Sora 2」への対応情報や、画像モデル「Nano Banana Pro」「Seedream 5.0 Lite」の拡充。
 * **2024-02-01**: (推定) Seedance 2.5（動画生成モデル）および Seedream 5.0 Pro（画像生成モデル）の提供開始。
 * **2024-01-15**: (推定) AIアバター生成機能およびマーケティングスタジオの強化。
 * **2023-11-01**: (推定) Seedance 2.0の提供開始および機能改善。
@@ -185,22 +206,22 @@ relationships:
 
 ### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | ツールA | ツールB | ツールC |
+| 機能カテゴリ | 機能項目 | 本ツール (Dreamina) | Luma AI | Stable Diffusion | Open Generative AI |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 画像生成 | ◎<br><small>Seedream搭載</small> | ◯<br><small>標準的</small> | ◯<br><small>標準的</small> | ◯<br><small>標準的</small> |
-| **基本機能** | 動画生成 | ◎<br><small>Seedance搭載</small> | ×<br><small>非対応</small> | ◯<br><small>標準的</small> | ×<br><small>非対応</small> |
+| **基本機能** | 画像生成 | ◎<br><small>Seedream等搭載</small> | ◯<br><small>動画生成がメイン</small> | ◎<br><small>高品質な画像生成</small> | ◯<br><small>OSSモデル</small> |
+| **基本機能** | 動画生成 | ◎<br><small>Seedance等搭載</small> | ◎<br><small>Dream Machine</small> | △<br><small>拡張機能が必要</small> | △<br><small>画像中心</small> |
 | **カテゴリ特定** | AIアバター | ◯<br><small>機能あり</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
-| **エンタープライズ** | SSO | △<br><small>Googleログイン等</small> | △<br><small>不明</small> | △<br><small>不明</small> | △<br><small>不明</small> |
-| **非機能要件** | 日本語対応 | ◯<br><small>UI/プロンプト対応</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> | ◯<br><small>対応</small> |
+| **エンタープライズ** | SSO/API | △<br><small>Googleログイン等</small> | ◎<br><small>SDK・API提供</small> | ◯<br><small>API提供あり</small> | ◯<br><small>API提供あり</small> |
+| **非機能要件** | 日本語対応 | ◯<br><small>UI/プロンプト対応</small> | △<br><small>英語中心</small> | △<br><small>プロンプトは英語中心</small> | △<br><small>英語中心</small> |
 
 ### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール** | 画像・動画・アバターの統合 | 1つのサイトで全て完結 | 専用ツールに比べ特定の詳細機能で劣る可能性 | 複数のメディア形式を横断的に制作したい場合 |
-| **ツールA** | 画像生成特化 | アート性の高い圧倒的な画質 | DiscordのUIが独特、動画生成は不可 | 最高品質の静止画のみを求める場合 |
-| **ツールB** | 動画生成特化 | 高度な動画生成と編集 | 画像生成はおまけ程度 | 高度な動画生成と編集を求める場合 |
-| **ツールC** | アバター特化 | リアルなアバター生成 | 動画・画像生成機能が限定的 | アバター動画を専門に作成したい場合 |
+| **本ツール** | 画像・動画・アバターの統合 | 1つのサイトで全て完結 | クラウド専用でAPI非公開 | 複数のメディア形式を横断的に制作したい場合 |
+| **Luma AI** | 高品質な動画生成とAPI | 自然言語での編集とAPIの充実度 | 料金体系の複雑さ | 開発者がアプリに動画生成を組み込む場合 |
+| **Stable Diffusion** | オープンな画像生成AI | ローカル実行可能で圧倒的なカスタマイズ性 | 環境構築のハードルが高い | 自社環境で画像生成を行いたい、または詳細な制御を行いたい場合 |
+| **Open Generative AI** | OSSの生成AI基盤 | オープンソースで多様なモデルを利用可能 | 商用SaaSほどの統合UIがない | OSSを活用して独自のAI基盤を構築したい場合 |
 
 ## **18. 総評**
 
