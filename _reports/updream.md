@@ -2,7 +2,7 @@
 title: updream 調査レポート
 tool_name: updream
 tool_reading: アップドリーム
-category: AI動画生成
+category: AI動画生成プラットフォーム
 developer: Bilibili (哔哩哔哩)
 official_site: https://www.updream.cn/
 date: '2026-09-16'

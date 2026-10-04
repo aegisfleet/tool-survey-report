@@ -2,12 +2,13 @@
 title: LongCat-Video 調査レポート
 tool_name: LongCat-Video
 tool_reading: ロングキャットビデオ
-category: 動画生成
+category: AI動画生成
 developer: Meituan LongCat Team
 official_site: https://github.com/meituan-longcat/LongCat-Video
 date: '2026-10-04'
 last_updated: '2026-10-04'
 tags:
+  - AI
   - 動画生成
   - オープンソース
   - AIモデル
