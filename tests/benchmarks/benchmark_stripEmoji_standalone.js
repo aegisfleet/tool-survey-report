@@ -2,10 +2,10 @@ const iterations = 1000000;
 const text = '🤖 🧪 🔧 Tool Name';
 
 function stripEmojiBaseline(text) {
-  return text.replace(/^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
+  return text.replace(/^[\p{Extended_Pictographic}\uFE00-\uFE0F\u200D\u200C\s]+/u, '').trim();
 }
 
-const STRIP_EMOJI_RE = /^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u;
+const STRIP_EMOJI_RE = /^[\p{Extended_Pictographic}\uFE00-\uFE0F\u200D\u200C\s]+/u;
 function stripEmojiOptimized(text) {
   return text.replace(STRIP_EMOJI_RE, '').trim();
 }

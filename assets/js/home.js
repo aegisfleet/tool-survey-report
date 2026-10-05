@@ -8,12 +8,13 @@
 const FILTER_STATE_KEY = 'homeFilterState';
 
 // Optimization: Regex constants pulled out of loops/repeated functions
-const STRIP_EMOJI_RE = /^[\p{Emoji}\uFE00-\uFE0F\u200D\u200C\s]+/u;
+const STRIP_EMOJI_RE = /^[\p{Extended_Pictographic}\uFE00-\uFE0F\u200D\u200C\s]+/u;
 const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
 
 // カテゴリに対応する絵文字を取得するヘルパー関数
 function getEmojiForCategory(category) {
   if (!category || !window.CATEGORY_EMOJIS) return '🔹';
+  if (window.CATEGORY_EMOJIS[category]) return window.CATEGORY_EMOJIS[category];
   const cleanCat = stripEmoji(category);
   return window.CATEGORY_EMOJIS[cleanCat] || '🔹';
 }

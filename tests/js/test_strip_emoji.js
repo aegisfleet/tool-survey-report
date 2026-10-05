@@ -44,6 +44,9 @@ const testCases = [
   { input: '👨‍👩‍👧‍👦 Family', expected: 'Family', desc: 'Complex ZWJ emoji at start' },
   { input: '  Title  ', expected: 'Title', desc: 'Leading and trailing spaces (trim test)' },
   { input: '🔹 Blue diamond', expected: 'Blue diamond', desc: 'Special mark at start' },
+  { input: '🎭 3D/VTuber', expected: '3D/VTuber', desc: 'Emoji followed by category starting with number' },
+  { input: '3D/VTuber', expected: '3D/VTuber', desc: 'Category starting with number without emoji' },
+  { input: '3D Modeling Tool', expected: '3D Modeling Tool', desc: 'Title starting with number' },
 ];
 
 console.log('Running stripEmoji tests...');

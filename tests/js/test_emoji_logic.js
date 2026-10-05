@@ -65,7 +65,7 @@ class HTMLElement {
 
 // Setup minimal global environment
 global.window = {
-  CATEGORY_EMOJIS: { 自律型AIエージェント: '🤖' },
+  CATEGORY_EMOJIS: { 自律型AIエージェント: '🤖', '3D/VTuber': '🎭' },
   location: { search: '' },
   addEventListener: (event, cb) => {
     if (event === 'load') setTimeout(cb, 0);
@@ -120,6 +120,21 @@ card2.appendChild(title2);
 card2.appendChild(cat2);
 cards.push(card2);
 
+const card3 = new HTMLElement('div');
+card3.className = 'report-card';
+card3.dataset = { tags: 'tag3' };
+const title3 = new HTMLElement('h3');
+title3.className = 'report-title';
+const link3 = new HTMLElement('a');
+link3.textContent = 'OpenLive3D';
+title3.appendChild(link3);
+const cat3 = new HTMLElement('span');
+cat3.className = 'meta-item category';
+cat3.textContent = '🎭 3D/VTuber';
+card3.appendChild(title3);
+card3.appendChild(cat3);
+cards.push(card3);
+
 // Mock document
 global.document = {
   getElementById: () => new HTMLElement('div'),
@@ -167,6 +182,14 @@ try {
       console.log('Test 2 Passed: Emoji not duplicated');
     } else {
       console.error(`Test 2 Failed: Expected "🤖 Emoji Title", got "${link2.textContent}"`);
+      passed = false;
+    }
+
+    // Check Card 3: Should have 🎭 added for 3D/VTuber category (number in category name)
+    if (link3.textContent === '🎭 OpenLive3D') {
+      console.log('Test 3 Passed: Emoji added to title with 3D/VTuber category');
+    } else {
+      console.error(`Test 3 Failed: Expected "🎭 OpenLive3D", got "${link3.textContent}"`);
       passed = false;
     }
 
