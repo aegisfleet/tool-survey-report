@@ -2,7 +2,7 @@
 title: Hermes WebUI 調査レポート
 tool_name: Hermes WebUI
 tool_reading: ヘルメスウェブユーアイ
-category: 自律型AIエージェント
+category: エージェントエコシステム/基盤
 developer: オープンソース (コミュニティ / Nous Research関連)
 official_site: https://get-hermes.ai/
 date: '2026-06-03'
