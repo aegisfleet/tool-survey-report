@@ -2,7 +2,7 @@
 title: ArtCraft 調査レポート
 tool_name: ArtCraft
 tool_reading: アートクラフト
-category: AI開発・生成ツール
+category: AI動画生成
 developer: ArtCraft
 official_site: https://getartcraft.com/
 date: '2026-10-05'
