@@ -177,7 +177,7 @@ links:
 
 ## **15. 直近半年のアップデート情報**
 
-* **2024-05**: (リリースと推測される時期) GitHub Actionとして npm用 (`flatt-security/setup-takumi-guard-npm`) および PyPI用 (`flatt-security/setup-takumi-guard-pypi`) が公開された。OIDC連携によるシークレットレスな構成をサポート。
+* **2026-04-08**: GitHub Actionとして npm用 (`flatt-security/setup-takumi-guard-npm`) および PyPI用 (`flatt-security/setup-takumi-guard-pypi`) が公開された。OIDC連携によるシークレットレスな構成をサポート。
 
 (出典: [GitHubリポジトリ](https://github.com/flatt-security/setup-takumi-guard-npm) など)
 

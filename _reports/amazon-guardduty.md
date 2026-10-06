@@ -361,10 +361,10 @@ flowchart TD
 
 ## **16. 直近半年のアップデート情報**
 
-* **2024-04-12**: **AI-powered investigations (Amazon Detective 連携)**
-  * セキュリティの検出結果を自動的に分析し、関連するアクティビティを相関させてリスク評価、信頼度スコアリング、MITREテクニックの分類、 actionable next steps を含む構造化されたサマリーを生成する「AI主導の調査」機能が追加されました。
-* **2024-04-12**: **GuardDuty AI Protectionの一般提供**
+* **2026-07-14**: **GuardDuty AI Protectionの一般提供**
   * 生成AIアプリを保護するための「GuardDuty AI Protection」が公開され、Amazon Bedrockのガードレール情報やモデルの詳細なスキャン結果を提供するようになりました。
+* **2026-06-23**: **AI-powered investigations (Amazon Detective 連携)**
+  * セキュリティの検出結果を自動的に分析し、関連するアクティビティを相関させてリスク評価、信頼度スコアリング、MITREテクニックの分類、 actionable next steps を含む構造化されたサマリーを生成する「AI主導の調査」機能が追加されました。
 * **2024-03-29**: **Runtime Monitoring での新しい脅威検出**
   * Runtime Monitoring において、EC2インスタンスやコンテナ上のセキュリティ上重要なシステムファイルが変更されたことを検出する3つの新しい finding types（Persistence, PrivilegeEscalation, DefenseEvasion）が追加され、ファイル改ざんによる不正侵害の検知が強化されました。
 * **2024-03**: **Malware Protection for AWS Backup**

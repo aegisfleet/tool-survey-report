@@ -234,11 +234,11 @@ flowchart TD
 
 * 公式ドキュメントによると、Firebase CLIは継続的にアップデートが行われています。最新のリリース情報はGitHubリポジトリの [Releases](https://github.com/firebase/firebase-tools/releases) または `CHANGELOG.md` で確認できます。
 
-* **2024-09-14 (v15.30.1)**: IAMおよびCloud Resource ManagerのセキュリティAPIが無効なプロジェクトにおいて、迅速なエラーと修復手順を提供するよう改善。宣言型セキュリティ関連のサービスアカウントのクリーンアップ問題を修正。
-* **2024-09-09 (v15.30.0)**: SQL Connectローカルツールキット(v3.4.19)への更新、PostgreSQLエミュレータのバグ修正。GraphQLクエリ用の `dataconnect_execute_in_emulator` コマンドを追加。MCPツールの連携用プロキシサーバー設定を追加。
-* **2024-09-02 (v15.29.0)**: デバッグログの出力先をカスタマイズできる `FIREBASE_DEBUG_PATH` 環境変数をサポート。MCPツールのリスト出力に `humanReadableDescription` を追加。
-* **2024-08-28 (v15.28.2)**: サービスアカウント作成における404エラーの競合状態を防ぐため、シークレットへのアクセス権付与をリリースフェーズに遅延させるよう修正。App Hostingのポーリングタイムアウトを60分に延長。
-* **2024-08-19 (v15.28.0)**: Deploy MCPツールにおける認証エラーを修正し、`login` MCPツールに `reauth` オプションを追加。非推奨の拡張機能に対する移行追跡ツールを追加。
+* **2026-09-14 (v15.30.1)**: IAMおよびCloud Resource ManagerのセキュリティAPIが無効なプロジェクトにおいて、迅速なエラーと修復手順を提供するよう改善。宣言型セキュリティ関連のサービスアカウントのクリーンアップ問題を修正。
+* **2026-09-09 (v15.30.0)**: SQL Connectローカルツールキット(v3.4.19)への更新、PostgreSQLエミュレータのバグ修正。GraphQLクエリ用の `dataconnect_execute_in_emulator` コマンドを追加。MCPツールの連携用プロキシサーバー設定を追加。
+* **2026-09-02 (v15.29.0)**: デバッグログの出力先をカスタマイズできる `FIREBASE_DEBUG_PATH` 環境変数をサポート。MCPツールのリスト出力に `humanReadableDescription` を追加。
+* **2026-08-28 (v15.28.2)**: サービスアカウント作成における404エラーの競合状態を防ぐため、シークレットへのアクセス権付与をリリースフェーズに遅延させるよう修正。App Hostingのポーリングタイムアウトを60分に延長。
+* **2026-08-19 (v15.28.0)**: Deploy MCPツールにおける認証エラーを修正し、`login` MCPツールに `reauth` オプションを追加。非推奨の拡張機能に対する移行追跡ツールを追加。
 
 (出典: [Firebase CLI Releases](https://github.com/firebase/firebase-tools/releases) )
 
