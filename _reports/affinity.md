@@ -6,47 +6,48 @@ category: グラフィック/アセット
 developer: Serif (Canva)
 official_site: https://affinity.serif.com/
 date: '2026-02-08'
-last_updated: '2026-05-05'
+last_updated: "2026-10-06"
 tags:
-  - AI
-  - DTP
-  - SaaS
-  - デザインツール
-  - 画像編集
-description: 写真編集、ベクターデザイン、DTP機能をシームレスに統合したプロフェッショナル向けクリエイティブソフトウェア。2025年よりCanvaの「Imagination Era」構想の下、完全無料で提供されている。
+- DTP
+- グラフィックデザイン
+- AI
+- デザインツール
+- 画像編集
+description: 写真編集、ベクターデザイン、DTP機能をシームレスに統合したプロフェッショナル向けクリエイティブソフトウェア。2025年よりCanvaの「Imagination
+  Era」構想の下、完全無料で提供されている。
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: 無料
   target_users:
-    - デザイナー
-    - クリエイター
-    - マーケター
+  - デザイナー
+  - クリエイター
+  - マーケター
   latest_highlight: 2025年10月にV3をリリースし、全機能を完全無料化
   update_frequency: 中
 evaluation:
   score: 88
   base_score: 70
   plus_points:
-    - point: 10
-      reason: プロ向けの高機能ツールが完全無料で利用可能となり、コストパフォーマンスが極めて高い
-    - point: 5
-      reason: StudioLink機能により、写真・ベクター・DTPの作業をアプリ切り替えなしで完結できる
-    - point: 5
-      reason: Canvaとの連携強化により、AI機能やアセット共有がスムーズになった
+  - point: 10
+    reason: プロ向けの高機能ツールが完全無料で利用可能となり、コストパフォーマンスが極めて高い
+  - point: 5
+    reason: StudioLink機能により、写真・ベクター・DTPの作業をアプリ切り替えなしで完結できる
+  - point: 5
+    reason: Canvaとの連携強化により、AI機能やアセット共有がスムーズになった
   minus_points:
-    - point: -2
-      reason: 高度な生成AI機能の利用にはCanva Pro契約が必要
+  - point: -2
+    reason: 高度な生成AI機能の利用にはCanva Pro契約が必要
   summary: 完全無料化によりデザイン制作の民主化を加速させる強力なツール。プロ品質の機能とCanvaのAIエコシステムが融合している。
 links:
   documentation: https://affinity.serif.com/learn/
 relationships:
   parent: Canva
   related_tools:
-    - Apple Creator Studio
-    - Figma
-    - GIMP
-    - Blender
+  - Apple Creator Studio
+  - Figma
+  - GIMP
+  - Blender
 ---
 # **Affinity 調査レポート**
 
@@ -100,7 +101,59 @@ relationships:
 * **Canva連携**: Canvaのアセットライブラリへの直接アクセスや、Affinityで作成したデザインのCanvaへの書き出し・共有。
 * **クロスプラットフォーム**: macOS, Windows, iPadOSですべてのファイル形式と機能が完全に互換性を持ち、デバイスを選ばずに作業が可能。
 
-## **4. 開始手順・セットアップ**
+
+
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: ローカルファーストのクライアントアプリケーション構成（Canvaのクラウドアセットと連携可能）
+* **主要コンポーネントとデータフロー**:
+  * 全てのアプリ（Photo, Designer, Publisher）は共有のコアエンジン上に構築されており、StudioLink機能を通じてファイル形式を変換することなく相互に機能を呼び出せる。ファイルはローカルに保存されるが、Canvaアカウント経由でクラウド上のアセットにもアクセスできる。
+* **構成図**:
+
+```mermaid
+graph TD
+    User([ユーザー]) -->|操作| AffinityPublisher(Affinity Publisher)
+    User -->|操作| AffinityDesigner(Affinity Designer)
+    User -->|操作| AffinityPhoto(Affinity Photo)
+
+    subgraph Affinity Core Engine [Affinity コアエンジン]
+        SharedMemory[共有メモリ/ファイルフォーマット]
+    end
+
+    AffinityPublisher <-->|StudioLink連携| SharedMemory
+    AffinityDesigner <-->|StudioLink連携| SharedMemory
+    AffinityPhoto <-->|StudioLink連携| SharedMemory
+
+    subgraph Local Storage [ローカルストレージ]
+        LocalFiles[(ローカルファイル .afdesign, .afphoto, .afpub)]
+    end
+
+    SharedMemory <--> LocalFiles
+
+    subgraph Canva Cloud [Canva クラウド]
+        CanvaAssets[(Canva アセット/ブランドキット)]
+        AIStudio[AI Studio / Canva AI]
+    end
+
+    AffinityPublisher -.->|アカウント連携| CanvaAssets
+    AffinityDesigner -.->|アカウント連携| CanvaAssets
+    AffinityPhoto -.->|アカウント連携| CanvaAssets
+    AffinityPhoto -.->|AI機能呼び出し| AIStudio
+```
+
+* **特筆すべき要素技術**:
+  * **StudioLink**: 複数のアプリケーションを単一のワークスペースとして統合する技術。
+  * **OSネイティブ最適化**: Metal (macOS/iPadOS) や Direct3D (Windows) などのOSネイティブのグラフィックAPIを活用したハードウェアアクセラレーション。
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -124,7 +177,7 @@ relationships:
 * **クイックスタート**:
   * 「新規ドキュメント」を作成し、プリセットから用途（印刷、Webなど）を選択してキャンバスを開く。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -137,7 +190,7 @@ relationships:
 * **軽量・高速**: レガシーコードを持たない最新の設計により、起動が速く、大容量ファイルの操作も軽快。
 * **買い切り時代の名残**: オフラインでの動作を基本としており、インターネット接続が不安定な環境でも安定して作業できる。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -150,7 +203,7 @@ relationships:
 * **プラグインエコシステム**: Photoshopのような豊富なサードパーティ製プラグインやスクリプトのエコシステムは発展途上。
 * **業界標準との差異**: 入稿データとしてPDF/X形式などが広くサポートされているが、依然として「AIデータ入稿」を指定する印刷会社には対応が必要。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -168,7 +221,7 @@ relationships:
 * **課金体系**: ソフトウェア自体は無料。AI機能とクラウドサービス利用に対してCanvaのサブスクリプション課金が発生。
 * **無料トライアル**: Canva Pro機能に対して30日間の無料トライアルあり。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -180,7 +233,7 @@ relationships:
 * **導入事例**: イギリスの出版社やデザインエージェンシーでの全面導入事例があり、Adobeからの切り替えでコスト削減に成功している。
 * **対象業界**: 出版、広告制作、Webデザイン、写真スタジオ、教育（美術・デザイン学部）。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -192,7 +245,7 @@ relationships:
 * **コミュニティ**: 公式フォーラムが非常に活発で、開発者も頻繁に回答している。
 * **公式サポート**: メールサポートおよびCanvaのサポート窓口を利用可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
@@ -226,7 +279,7 @@ relationships:
 | **Adobe CC** | △ | PSD/AI/IDMLの読み込みは可能だが、完全な互換性ではない。 | 独自機能（スマートオブジェクト等）の一部がラスタライズされる可能性あり。 |
 | **Figma** | ◯ | SVG/PDF経由での連携が可能。UIデザイン素材の作成に適する。 | テキストレイアウトの再現性に注意が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -239,7 +292,7 @@ relationships:
 * **データ管理**: ローカル保存が基本だが、クラウド機能利用時はCanvaのセキュリティ基準（暗号化保存）に準拠。
 * **準拠規格**: 親会社であるCanvaはISO 27001, SOC 2 Type IIを取得済み。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -249,7 +302,7 @@ relationships:
 * **UI/UX**: ツールバーやパネルの配置は業界標準（Adobe製品など）に準拠しており、既存ユーザーが移行しやすい設計。ダークモード/ライトモード対応。
 * **学習コスト**: Adobe製品経験者であれば数日で基本操作を習得可能。初心者向けには「学習ポータル」がアプリ内に統合されている。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -263,7 +316,7 @@ relationships:
 * **陥りやすい罠 (Antipatterns)**:
   * **過度なPSD互換期待**: テキストレイヤーや特殊な効果を含むPSDファイルを完全に編集可能な状態で開けるとは限らないため、入稿前の確認を怠らないこと。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -286,7 +339,7 @@ relationships:
 * **特徴的なユースケース**:
   * Canvaで大枠のデザインを作り、細部の調整やベクター編集をAffinityで行うハイブリッドな使い方が増えている。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -312,7 +365,7 @@ relationships:
 
 (出典: [Affinity 公式サイト](https://affinity.serif.com/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -320,7 +373,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 <!--
 【記載ルール】
@@ -334,15 +387,15 @@ relationships:
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | Affinity | Adobe CC | GIMP/Inkscape | Figma |
+| 機能カテゴリ | 機能項目 | Affinity | Apple Creator Studio | GIMP | Blender |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 統合環境 | ◎<br><small>StudioLink</small> | ◯<br><small>アプリ連携</small> | ×<br><small>個別アプリ</small> | △<br><small>プラグイン</small> |
-| **編集機能** | ベクター/ラスター | ◎<br><small>両対応</small> | ◎<br><small>Illustrator/PS</small> | ◯<br><small>各専用ツール</small> | △<br><small>ベクター主体</small> |
-| **コスト** | 導入費用 | ◎<br><small>無料</small> | △<br><small>高額サブスク</small> | ◎<br><small>無料(OSS)</small> | ◯<br><small>無料枠あり</small> |
-| **AI** | 生成AI | ◯<br><small>Canva連携</small> | ◎<br><small>Firefly</small> | ×<br><small>なし</small> | △<br><small>プラグイン</small> |
-| **プラットフォーム** | iPad対応 | ◎<br><small>フル機能</small> | ◯<br><small>専用アプリ</small> | ×<br><small>非対応</small> | ◯<br><small>ビューア主体</small> |
+| **基本機能** | 統合環境 | ◎<br><small>StudioLink</small> | ◯<br><small>アプリ間連携</small> | ×<br><small>個別アプリ</small> | ◎<br><small>3Dパイプライン統合</small> |
+| **編集機能** | ベクター/ラスター | ◎<br><small>両対応</small> | ◎<br><small>プロ品質</small> | ◯<br><small>高機能な画像編集</small> | ◯<br><small>3Dモデリング等</small> |
+| **コスト** | 導入費用 | ◎<br><small>無料</small> | ◯<br><small>安価なセット</small> | ◎<br><small>完全無料(OSS)</small> | ◎<br><small>完全無料(OSS)</small> |
+| **AI** | 生成AI | ◯<br><small>Canva連携</small> | -<br><small>不明</small> | △<br><small>プラグインで対応</small> | -<br><small>なし</small> |
+| **プラットフォーム** | iPad対応 | ◎<br><small>フル機能</small> | ◎<br><small>完全対応</small> | ×<br><small>非対応</small> | ×<br><small>非対応</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -351,12 +404,12 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Affinity** | コストパフォーマンス最強の統合ツール。 | 完全無料、高速動作、買い切りライクなUX。 | AI機能がAdobeに劣る。印刷業界の標準ではない。 | コストを抑えたいプロ、個人、教育機関。Canvaユーザー。 |
-| **Adobe CC** | 業界デファクトスタンダード。 | 圧倒的な機能数、AI (Firefly)、業界互換性。 | 高額なランニングコスト。動作が重い。 | 印刷所への入稿が必要なプロ、最新AI機能をフル活用したい場合。 |
-| **GIMP/Inkscape** | オープンソースの定番ツール。 | 無料、コミュニティベース、カスタマイズ性。 | UIが独特、CMYKサポートが限定的。 | Linux環境、OSSにこだわるユーザー。 |
-| **Figma** | Web/UIデザイン特化。 | リアルタイム共同編集、プロトタイピング。 | 写真編集やDTP機能は弱い。 | Web/アプリのUIデザイン、チーム開発。 |
+| **Affinity** | コストパフォーマンス最強の統合ツール。 | 完全無料、高速動作、買い切りライクなUX。 | 高度なAI機能にはCanva Pro契約が必要。 | コストを抑えたいプロ、個人、教育機関。Canvaユーザー。 |
+| **Apple Creator Studio** | Apple製プロアプリのオールインワン・サブスク。 | コストパフォーマンス、iPad/Mac連携、Pixelmator Pro iPad版。 | Appleデバイス必須、Windows非対応。 | Mac/iPadユーザーで、動画・音楽・画像を幅広く制作する場合。 |
+| **GIMP** | 無料・高機能なOSS画像編集ツール。 | 非破壊編集対応(v3.0)、完全無料、Linux対応。 | AI機能は限定的、学習コストが高い。 | 予算ゼロで高度な編集をしたい場合。Linuxユーザー。 |
+| **Blender** | 無料の統合型3DCGソフト。 | 完全無料、開発が活発、チュートリアルが豊富。 | 独自UIによる学習コスト。 | コストを抑えて3D制作を始めたい場合。フリーランスやインディースタジオ。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
