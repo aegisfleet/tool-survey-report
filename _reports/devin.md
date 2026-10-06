@@ -52,9 +52,9 @@ relationships:
     - Cursor
     - Devin Desktop
     - OpenHands
-    - AutoGPT
     - Manus
     - Build by Grok
+    - DeepSeek Harness
 ---
 # **Devin 調査レポート**
 

@@ -52,7 +52,7 @@ relationships:
     - Manus
     - GitHub Copilot
     - DeerFlow
-    - Agent Trace
+    - DeepSeek Harness
 ---
 
 # **Google Jules 調査レポート**

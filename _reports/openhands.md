@@ -50,7 +50,7 @@ relationships:
     - Cursor
     - GitHub Copilot
     - Manus
-    - TradingAgents
+    - DeepSeek Harness
 ---
 
 # **OpenHands 調査レポート**

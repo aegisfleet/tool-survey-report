@@ -48,6 +48,7 @@ relationships:
     - Devin
     - OpenHands
     - AutoGPT
+    - DeepSeek Harness
 ---
 
 # **Agent Zero 調査レポート**
