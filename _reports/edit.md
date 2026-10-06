@@ -8,30 +8,30 @@ official_site: https://github.com/microsoft/edit
 date: '2026-10-07'
 last_updated: '2026-10-07'
 tags:
-- 開発者ツール
-- オープンソース
-- エディタ
+  - 開発者ツール
+  - オープンソース
+  - エディタ
 description: MS-DOS Editorへのオマージュを込めた、モダンなインターフェースを持つシンプルなテキストエディタ
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - 開発者
-  - ターミナルユーザー
+    - 開発者
+    - ターミナルユーザー
   latest_highlight: 2026年4月にシンタックスハイライト対応のv2.0.0をリリース
   update_frequency: 中
 evaluation:
   score: 75
   base_score: 70
   plus_points:
-  - point: 3
-    reason: 懐かしさとモダンな操作性の融合
-  - point: 4
-    reason: ターミナル環境での軽量かつ使いやすい編集機能
+    - point: 3
+      reason: 懐かしさとモダンな操作性の融合
+    - point: 4
+      reason: ターミナル環境での軽量かつ使いやすい編集機能
   minus_points:
-  - point: -2
-    reason: 他の多機能エディタに比べると機能が限定的
+    - point: -2
+      reason: 他の多機能エディタに比べると機能が限定的
   summary: ターミナル上でシンプルかつ手軽にテキストを編集したい用途に最適なモダンエディタ
 links:
   github: https://github.com/microsoft/edit
@@ -40,8 +40,8 @@ links:
   documentation: https://github.com/microsoft/edit/blob/main/README.md
 relationships:
   related_tools:
-  - Visual Studio Code
-  - Kiro
+    - Visual Studio Code
+    - Kiro
 ---
 # **Edit 調査レポート**
 
