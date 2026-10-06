@@ -52,9 +52,8 @@ relationships:
     - Devin Desktop
     - Cline
     - GitLens
-    - Eclipse IDE
+    - Edit
 ---
-
 # **Visual Studio Code 調査レポート**
 
 ## **1. 基本情報**

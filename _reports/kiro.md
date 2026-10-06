@@ -50,10 +50,9 @@ relationships:
     - AWS Frontier Agents
     - cc-sdd
     - OpenSpec
-    - AWS DevOps Agent
+    - Edit
   parent: GitKraken
 ---
-
 # **Kiro 調査レポート**
 
 ## **1. 基本情報**
