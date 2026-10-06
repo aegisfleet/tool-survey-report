@@ -2,15 +2,15 @@
 title: Agent Reach 調査レポート
 tool_name: Agent Reach
 tool_reading: エージェントリーチ
-category: AI開発ツール
+category: エージェント開発プラットフォーム
 developer: Panniantong
 official_site: https://github.com/Panniantong/Agent-Reach
 date: '2026-10-06'
 last_updated: '2026-10-06'
 tags:
-  - AI Agent
+  - AIエージェント
   - CLI
-  - Web Scraper
+  - Webスクレイピング
   - オープンソース
 description: AI Agentにインターネット上の様々なプラットフォームへのアクセス能力を付与するCLIツール
 quick_summary:

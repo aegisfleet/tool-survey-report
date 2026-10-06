@@ -2,7 +2,7 @@
 title: Codex cloud 調査レポート
 tool_name: Codex cloud
 tool_reading: コーデックス・クラウド
-category: エージェントエコシステム/基盤
+category: エージェントプラットフォーム
 developer: OpenAI
 official_site: https://developers.openai.com/codex/cloud
 date: '2026-03-19'

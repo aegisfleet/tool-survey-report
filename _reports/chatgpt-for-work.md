@@ -2,7 +2,7 @@
 title: ChatGPT for Work 調査レポート
 tool_name: ChatGPT for Work
 tool_reading: チャットジーピーティー フォー ワーク
-category: 基盤モデル/LLMチャット
+category: 特定用途AIアシスタント
 developer: OpenAI
 official_site: https://openai.com/chatgpt/enterprise
 date: '2026-07-15'
