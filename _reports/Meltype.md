@@ -2,7 +2,7 @@
 title: Meltype 調査レポート
 tool_name: Meltype
 tool_reading: メルタイプ
-category: 日本語入力 (IME)
+category: デスクトップ/環境操作
 developer: 雪代 / Yukishiro
 official_site: https://github.com/yksr-melt/Meltype
 date: '2026-10-06'
