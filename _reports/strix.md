@@ -1,54 +1,46 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Strix 調査レポート"
-tool_name: "Strix"
-tool_reading: "ストリクス"
-category: "AIペネトレーションテスト"
-developer: "Strix"
-official_site: "https://strix.ai/"
-date: "2026-10-06"
-last_updated: "2026-10-06"
+title: Strix 調査レポート
+tool_name: Strix
+tool_reading: ストリクス
+category: AIペネトレーションテスト
+developer: Strix
+official_site: https://strix.ai/
+date: '2026-10-06'
+last_updated: '2026-10-06'
 tags:
-  - "セキュリティ"
-  - "オープンソース"
-  - "ペネトレーションテスト"
-  - "AIエージェント"
-  - "DevSecOps"
-description: "自律型のAIペネトレーションテストツール。コード、API、ウェブアプリの脆弱性を動的に検証し、修正用のPRを自動生成する。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - セキュリティ
+  - オープンソース
+  - ペネトレーションテスト
+  - AIエージェント
+  - DevSecOps
+description: 自律型のAIペネトレーションテストツール。コード、API、ウェブアプリの脆弱性を動的に検証し、修正用のPRを自動生成する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "$29/月"
+  starting_price: $29/月
   target_users:
-    - "開発者"
-    - "セキュリティチーム"
-  latest_highlight: "2026年に自律型AIペネトレーションテスト機能と修正PR自動生成機能を提供開始"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - セキュリティチーム
+  latest_highlight: 2026年に自律型AIペネトレーションテスト機能と修正PR自動生成機能を提供開始
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "オープンソースとして無料でローカル実行が可能"
+      reason: オープンソースとして無料でローカル実行が可能
     - point: 5
-      reason: "PoC付きの脆弱性検証と修正PRの自動生成機能により修正が容易"
+      reason: PoC付きの脆弱性検証と修正PRの自動生成機能により修正が容易
     - point: 5
-      reason: "CI/CDや各種コーディングエージェント（Claude Code, Cursor等）との強力な連携"
+      reason: CI/CDや各種コーディングエージェント（Claude Code, Cursor等）との強力な連携
   minus_points:
     - point: 0
-      reason: ""
-  summary: "AIエージェントを活用した実践的なペネトレーションテストを自動化し、DevSecOpsの実現を強力にサポートするツール。"
-
-# 【任意項目】該当するもののみ記載
+      reason: ''
+  summary: AIエージェントを活用した実践的なペネトレーションテストを自動化し、DevSecOpsの実現を強力にサポートするツール。
 links:
-  github: "https://github.com/usestrix/strix"
-  codewiki: "https://codewiki.google/github.com/usestrix/strix"
-  documentation: "https://docs.strix.ai"
+  github: https://github.com/usestrix/strix
+  codewiki: https://codewiki.google/github.com/usestrix/strix
+  documentation: https://docs.strix.ai
 ---
 
 # **Strix 調査レポート**
