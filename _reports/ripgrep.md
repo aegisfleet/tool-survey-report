@@ -1,50 +1,47 @@
 ---
-title: "ripgrep 調査レポート"
-tool_name: "ripgrep"
-tool_reading: "リップグレップ"
-category: "CLIツール群"
-developer: "Andrew Gallant (BurntSushi)"
-official_site: "https://github.com/BurntSushi/ripgrep"
-date: "2026-10-06"
-last_updated: "2026-10-06"
+title: ripgrep 調査レポート
+tool_name: ripgrep
+tool_reading: リップグレップ
+category: CLIツール群
+developer: Andrew Gallant (BurntSushi)
+official_site: https://github.com/BurntSushi/ripgrep
+date: '2026-10-06'
+last_updated: '2026-10-06'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "検索"
-  - "Rust"
-  - "CLI"
-description: "正規表現を用いてディレクトリ内を再帰的に高速検索するCLIツール"
-
+  - オープンソース
+  - 開発者ツール
+  - 検索
+  - Rust
+  - CLI
+description: 正規表現を用いてディレクトリ内を再帰的に高速検索するCLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "システム管理者"
-    - "データアナリスト"
-  latest_highlight: "バージョン15.2.0リリース（gitignoreマッチングのバグ修正とパフォーマンス向上）"
-  update_frequency: "中"
-
+    - 開発者
+    - システム管理者
+    - データアナリスト
+  latest_highlight: バージョン15.2.0リリース（gitignoreマッチングのバグ修正とパフォーマンス向上）
+  update_frequency: 中
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Rustによる極めて高速な検索パフォーマンス"
+      reason: Rustによる極めて高速な検索パフォーマンス
     - point: 5
-      reason: "デフォルトで.gitignoreを尊重する利便性"
+      reason: デフォルトで.gitignoreを尊重する利便性
     - point: 5
-      reason: "Windows、macOS、Linuxのクロスプラットフォーム対応"
+      reason: Windows、macOS、Linuxのクロスプラットフォーム対応
     - point: 5
-      reason: "Unicode/UTF-8の優れたサポート"
+      reason: Unicode/UTF-8の優れたサポート
   minus_points:
     - point: 0
-      reason: "特になし（CLIツールとしての完成度が非常に高い）"
-  summary: "高速な検索と開発者に寄り添ったデフォルトの挙動を備える、現代の標準的な検索CLIツール"
-
+      reason: 特になし（CLIツールとしての完成度が非常に高い）
+  summary: 高速な検索と開発者に寄り添ったデフォルトの挙動を備える、現代の標準的な検索CLIツール
 links:
-  github: "https://github.com/BurntSushi/ripgrep"
+  github: https://github.com/BurntSushi/ripgrep
 ---
 
 # **ripgrep 調査レポート**
