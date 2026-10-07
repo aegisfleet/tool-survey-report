@@ -8,11 +8,11 @@ official_site: https://pytorch.org/
 date: '2026-04-09'
 last_updated: '2026-08-27'
 tags:
+  - AI
   - オープンソース
-  - 機械学習
-  - ディープラーニング
+  - 大規模言語モデル
   - Python
-  - C++
+  - 開発者ツール
 description: 強力なGPUアクセラレーションをサポートし、動的計算グラフを備えたオープンソースの機械学習・ディープラーニングフレームワーク
 quick_summary:
   has_free_plan: true

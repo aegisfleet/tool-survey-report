@@ -6,13 +6,13 @@ category: 機械学習フレームワーク
 developer: Google
 official_site: https://www.tensorflow.org/
 date: '2026-02-08'
-last_updated: '2026-05-06'
+last_updated: '2026-10-07'
 tags:
   - AI
-  - MLOps
-  - Python
   - オープンソース
-  - ディープラーニング
+  - 大規模言語モデル
+  - クラウド
+  - Python
 description: Googleが開発した、機械学習モデルの構築・トレーニング・デプロイのための包括的なエンドツーエンドのオープンソースプラットフォーム。
 quick_summary:
   has_free_plan: true
@@ -22,7 +22,7 @@ quick_summary:
     - 機械学習エンジニア
     - データサイエンティスト
     - AI研究者
-  latest_highlight: 2026年3月にTensorFlow 2.21.0をリリース
+  latest_highlight: 2026年9月にTensorFlow 2.22.0-rc0をリリース。QUI4やFP16サポートの強化などを実施
   update_frequency: 高
 evaluation:
   score: 85
@@ -106,7 +106,39 @@ relationships:
 * **TensorBoard**: 学習プロセスの可視化ツール。損失や精度のグラフ化、モデルグラフの表示などが可能です。
 * **分散学習**: 複数のGPUやTPUを使用した大規模な分散トレーニングをサポートしています。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: TensorFlowは、データフローグラフ（計算グラフ）を使用して演算を表現するアーキテクチャを採用しています。これにより、モデルの定義と実行が分離され、様々なプラットフォーム（CPU、GPU、TPU、モバイル機器等）へ最適化して展開することが可能です。
+* **主要コンポーネントとデータフロー**:
+  * Pythonフロントエンド（Keras API等）でモデルを構築・定義します。
+  * 実行方式には、即座に評価を行う「Eager Execution」と、最適化されたグラフを構築して高速実行する「Graph Execution (tf.function)」の2つがあります。
+  * 実行エンジンがグラフを解釈し、利用可能なハードウェアバックエンド（CPU, CUDA, XLA等）に演算（オペレーション）をディスパッチします。
+* **特筆すべき要素技術**:
+  * **XLA (Accelerated Linear Algebra)**: 計算グラフを最適化し、ターゲットハードウェア向けのマシンコードを生成するドメイン特化型コンパイラ。
+  * **TensorFlow Serving**: 学習済みモデルを高性能な推論APIとして本番環境に公開する機能。
+
+```mermaid
+flowchart TD
+    A[Python Frontend / Keras API] --> B{Eager Execution / Graph Execution}
+    B --> C[TensorFlow Core Execution Engine]
+    C --> D[XLA Compiler]
+    C --> E[Hardware Backends]
+    D --> E
+    E --> F[CPU]
+    E --> G[CUDA / NVIDIA GPU]
+    E --> H[TPU]
+```
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -148,7 +180,7 @@ relationships:
   print(predictions)
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -161,7 +193,7 @@ relationships:
 * **多言語・多プラットフォーム対応**: Pythonだけでなく、C++, Java, JavaScript, Swiftなど多様な言語バインディングがあり、iOS, Android, Web, IoTなどあらゆる場所で動作します。
 * **巨大なコミュニティ**: 長い歴史とGoogleの支援により、ドキュメント、チュートリアル、サードパーティ製ツールが豊富に存在します。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -174,7 +206,7 @@ relationships:
 * **APIの複雑さ**: 歴史的経緯から同じ機能のAPIが複数存在することがあり、混乱を招くことがあります（v2.0以降で改善傾向）。
 * **日本語対応**: 公式ドキュメントやチュートリアルは大部分が英語です。日本語のドキュメントも存在しますが、最新情報への追従が遅れることがあります。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -193,7 +225,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 * **課金体系**: 主にコンピューティングリソース（vCPU/時間、GPU/時間）に基づきます。
 * **無料トライアル**: Google Cloudの新規ユーザーは、Vertex AIなどで利用できる無料クレジット（例: $300）が付与されます。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -205,7 +237,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 * **導入事例**: Google検索や翻訳、Uberの配車最適化、Airbnbの検索ランキングなど、各社の中核サービスで利用されています。
 * **対象業界**: IT、金融、医療、製造、小売など、業界を問わず幅広く活用されています。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -217,14 +249,14 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 * **コミュニティ**: Stack Overflow、GitHub Issues、TensorFlow Forumなどで活発な議論や質疑応答が行われています。
 * **公式サポート**: Google Cloudの顧客向けにエンタープライズレベルの有償サポートが提供されています。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -235,7 +267,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 * **API**: Python, C++, Java, JavaScript, Go, Swiftなど、多言語で利用可能なAPIを提供しています。
 * **外部サービス連携**: Google Cloud (Vertex AI, BigQuery), AWS (SageMaker), Microsoft Azureなどの主要クラウドと緊密に連携。DockerやKubernetesとの親和性も高いです。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -250,7 +282,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 | **Android / iOS (LiteRT)** | ◎ | モバイル向けに最適化されており、軽量かつ高速。 | モデルの変換（Quantizationなど）が必要な場合がある。 |
 | **Docker / Kubernetes** | ◎ | コンテナ化してデプロイするのが一般的で、相性が良い。 | GPUパススルーの設定などが環境依存する場合がある。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -263,7 +295,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 * **データ管理**: TensorFlow Privacyライブラリにより、差分プライバシーを用いたモデル学習が可能です。データの保存場所や暗号化は利用するインフラ（例: Google Cloud）のセキュリティ基準に準拠します。
 * **準拠規格**: Google Cloud上で利用する場合、SOC, ISO/IEC 27001/27017/27018, PCI DSSなど、多くの国際的なコンプライアンス認証に準拠します。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -273,7 +305,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 * **UI/UX**: ライブラリ自体はコードベースですが、TensorBoardという強力なGUIツールが標準で付属しており、学習状況の直感的な把握が可能です。
 * **学習コスト**: Keras APIの登場で初学者にも扱いやすくなりましたが、TFXなどエコシステム全体を使いこなすには、機械学習の専門知識が必要となり、学習コストはやや高めです。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -289,7 +321,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
   * **Eager Executionの無効化**: デバッグ目的以外でEager Executionを無効化すると、パフォーマンスが低下する場合がある（現在はデフォルトで有効）。
   * **Pythonループの多用**: テンソル演算ではなくPythonのループを使用すると、著しくパフォーマンスが低下する。`tf.function` を活用すべき。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -313,7 +345,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
   * 大規模な画像データセットを持つ医療機関での診断支援モデル開発。
   * IoTデバイスに搭載し、エッジ側でリアルタイム異常検知を行う製造業での活用。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -327,6 +359,8 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 - 情報源のURLを記載
 -->
 
+* **2026-09-24**: **TensorFlow 2.22.0-rc0**
+  * DequantizeオペレータでのQUI4サポート追加、Transposeオペレータの8Dテンソル対応などtf.liteの機能強化。TensorBoardのデフォルト依存を削除。
 * **2026-03-06**: **TensorFlow 2.21.0**
   * Python 3.9のサポートを削除。TensorBoardへの依存を削除。tf.liteの機能強化（int8、int16x8サポートなど）。
 * **2025-08-13**: **TensorFlow 2.20.0**
@@ -336,7 +370,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 
 (出典: [The TensorFlow Blog](https://blog.tensorflow.org/) / [GitHub Releases](https://github.com/tensorflow/tensorflow/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -344,7 +378,7 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 <!--
 【記載ルール】
@@ -358,14 +392,14 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 - 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
 -->
 
-| 機能カテゴリ | 機能項目 | 本ツール (TensorFlow) | PyTorch | JAX | Hugging Face |
+| 機能カテゴリ | 機能項目 | 本ツール (TensorFlow) | PyTorch | Core AI Models | Hugging Face |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | モデル構築の柔軟性 | ◯<br><small>Kerasで容易だがGraphは複雑</small> | ◎<br><small>Pythonicで直感的</small> | ◎<br><small>関数型で柔軟</small> | ◯<br><small>Transformers経由で容易</small> |
-| **デプロイ** | 本番環境対応 (Serving) | ◎<br><small>TF Servingが強力</small> | ◯<br><small>TorchServeがあるがTFより後発</small> | △<br><small>エコシステムが発展途上</small> | ◎<br><small>Inference Endpointsあり</small> |
-| **モバイル** | モバイル/エッジ対応 | ◎<br><small>LiteRT (TFLite) が標準的</small> | ◯<br><small>PyTorch Mobileあり</small> | △<br><small>TFLiteへの変換が必要</small> | △<br><small>モバイル向けモデルはあるが専用機能は薄い</small> |
-| **エコシステム** | 学習済みモデル数 | ◯<br><small>TF Hubに多数</small> | ◯<br><small>Torch Hubに多数</small> | △<br><small>比較的少ない</small> | ◎<br><small>圧倒的な数を誇る</small> |
+| **基本機能** | モデル構築の柔軟性 | ◯<br><small>Kerasで容易だがGraphは複雑</small> | ◎<br><small>Pythonicで直感的</small> | △<br><small>モデル変換・統合が中心</small> | ◯<br><small>Transformers経由で容易</small> |
+| **デプロイ** | 本番環境対応 (Serving) | ◎<br><small>TF Servingが強力</small> | ◯<br><small>TorchServeがあるがTFより後発</small> | ◯<br><small>Appleデバイス上での推論に特化</small> | ◎<br><small>Inference Endpointsあり</small> |
+| **モバイル** | モバイル/エッジ対応 | ◎<br><small>LiteRT (TFLite) が標準的</small> | ◯<br><small>PyTorch Mobileあり</small> | ◎<br><small>iOS/macOSネイティブ</small> | △<br><small>モバイル向けモデルはあるが専用機能は薄い</small> |
+| **エコシステム** | 学習済みモデル数 | ◯<br><small>TF Hubに多数</small> | ◯<br><small>Torch Hubに多数</small> | △<br><small>限定的</small> | ◎<br><small>圧倒的な数を誇る</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -376,10 +410,10 @@ TensorFlow自体はオープンソース（Apache 2.0 License）であり、無�
 |---------|------|------|------|------------------|
 | **本ツール** | 本番運用に強いエンドツーエンドプラットフォーム | デプロイ機能（Serving, Lite）、スケーラビリティ、産業界での実績 | 学習コストが高い、APIが複雑になりがち | 大規模な本番環境へのモデルデプロイ、モバイルアプリへの組み込みを前提とする場合。 |
 | **PyTorch** | 研究者中心に人気の高いPythonicなフレームワーク | 直感的でデバッグしやすい、最新論文の実装が早い | 本番デプロイのエコシステムはTFよりやや弱い（改善中） | 研究開発、プロトタイピング、最新のSOTAモデルの実験を行う場合。 |
-| **JAX** | 高性能な科学技術計算とMLのためのライブラリ | TPUでの高速化、自動微分、関数型プログラミング | エコシステムが未成熟、学習コストが高い | 最先端の研究、TPUの性能を極限まで引き出したい場合。 |
+| **Core AI Models** | Appleデバイス向けのAIモデル統合・変換ツール | オンデバイス実行に最適化、Swift/Core MLネイティブ対応 | 対応環境がAppleプラットフォームに限定的 | Appleプラットフォーム向けアプリにAIを組み込む場合。 |
 | **Hugging Face** | モデル共有のためのプラットフォーム | 圧倒的なモデル数、Transformersライブラリの利便性 | 基盤フレームワーク（TF/PyTorch）の知識が必要な場合がある | 特定のモデルを一から作るのではなく、公開モデルを活用・微調整したい場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
