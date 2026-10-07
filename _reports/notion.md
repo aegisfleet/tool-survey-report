@@ -51,6 +51,7 @@ relationships:
     - Jira
     - Code Wiki
     - NocoDB
+    - "AFFiNE"
 ---
 
 # **Notion 調査レポート**
