@@ -8,8 +8,9 @@ official_site: https://github.com/apple/coreai-models
 date: '2026-06-14'
 last_updated: '2026-06-18'
 tags:
+  - AI
   - オープンソース
-  - Swift
+  - モバイル開発
   - Python
 description: オンデバイスAI構築のためのモデルエクスポートレシピ、Pythonプリミティブ、およびSwiftランタイムユーティリティ
 quick_summary:
@@ -208,4 +209,3 @@ relationships:
 * **推奨されるチームやプロジェクト**:
   * 最新のiOSやmacOS上で高度なAI機能を提供するアプリケーションを開発しているチーム。
 * **選択時のポイント**:
-  * 環境要件（macOS/iOS 27.0+）を満たせるかどうか、クロスプラットフォーム展開が不要かどうかを確認した上で導入を決定するべきです。
