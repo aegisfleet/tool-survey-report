@@ -2,7 +2,7 @@
 title: Shizuku 調査レポート
 tool_name: Shizuku
 tool_reading: シズク
-category: 開発者ツール
+category: モバイル開発
 developer: RikkaApps
 official_site: https://shizuku.rikka.app/
 date: '2026-10-06'
