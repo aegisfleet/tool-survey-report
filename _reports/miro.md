@@ -51,6 +51,7 @@ relationships:
     - Figma
     - Canva
     - draw.io (diagrams.net)
+    - AFFiNE
 ---
 # **Miro 調査レポート**
 
