@@ -2,7 +2,7 @@
 title: Strix 調査レポート
 tool_name: Strix
 tool_reading: ストリクス
-category: AIペネトレーションテスト
+category: セキュリティ/脆弱性診断
 developer: Strix
 official_site: https://strix.ai/
 date: '2026-10-06'

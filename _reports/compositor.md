@@ -2,7 +2,7 @@
 title: Compositor 調査レポート
 tool_name: Compositor
 tool_reading: コンポジター
-category: 画像編集ツール
+category: グラフィック/アセット
 developer: Robbie Tilton
 official_site: https://robbietilton.com/compositor
 date: '2026-10-07'
