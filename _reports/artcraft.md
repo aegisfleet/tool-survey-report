@@ -38,6 +38,9 @@ evaluation:
   summary: AI生成におけるプロンプト頼りの制御から脱却し、アーティスト自身が意図した構図や演出を作り込める強力なオープンソースツール
 links:
   github: https://github.com/storytold/artcraft
+relationships:
+  related_tools:
+    - Craft Apps
 ---
 
 # **ArtCraft 調査レポート**
