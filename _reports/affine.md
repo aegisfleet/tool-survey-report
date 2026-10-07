@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - チーム
-  latest_highlight: "2026年8月にAI BYOK（Bring Your Own Key）機能や最新AIモデル（GPT-5.6等）のサポートを追加"
+  latest_highlight: 2026年8月にAI BYOK（Bring Your Own Key）機能や最新AIモデル（GPT-5.6等）のサポートを追加
   update_frequency: 高
 evaluation:
   score: 87
