@@ -2,47 +2,46 @@
 title: Craft Apps 調査レポート
 tool_name: Craft Apps
 tool_reading: クラフト・アプス
-category: グラフィック/アセット
+category: 画像編集
 developer: ArtCraft
 official_site: https://getartcraft.com/apps
 date: '2026-10-07'
 last_updated: '2026-10-07'
 tags:
-  - オープンソース
-  - デスクトップアプリ
-  - Rust
-  - 画像編集
-  - 動画編集
+- オープンソース
+- デスクトップアプリ
+- Rust
+- 動画編集
 description: 画像編集から動画編集、DTPまでを網羅する、Rustでゼロから構築された7つのオープンソース・クリエイティブアプリケーション群
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-    - デザイナー
-    - 映像制作者
-    - アーティスト
+  - デザイナー
+  - 映像制作者
+  - アーティスト
   latest_highlight: 画像、ベクター、動画、写真、PDF、VFX、DTPの7つのアプリケーションを公開
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 主要なクリエイティブツールをオープンソースで網羅的に提供している
-    - point: 5
-      reason: Pure Rustで開発されており、ネイティブアプリとして高速に動作する
-    - point: 5
-      reason: AIエージェントによる自動化（MCPサーバー等）に対応している
+  - point: 5
+    reason: 主要なクリエイティブツールをオープンソースで網羅的に提供している
+  - point: 5
+    reason: Pure Rustで開発されており、ネイティブアプリとして高速に動作する
+  - point: 5
+    reason: AIエージェントによる自動化（MCPサーバー等）に対応している
   minus_points:
-    - point: 0
-      reason: 特になし
+  - point: 0
+    reason: 特になし
   summary: 既存のプロ向けクリエイティブツールを代替し得る、高速でエージェントフレンドリーなオープンソースの次世代スイート
 links:
   github: https://github.com/storytold
 relationships:
   related_tools:
-    - ArtCraft
+  - ArtCraft
 ---
 
 # **Craft Apps 調査レポート**
