@@ -47,6 +47,7 @@ relationships:
     - GIMP
     - Affinity
     - AviUtl
+    - OpenCut
 ---
 
 # **Apple Creator Studio 調査レポート**
