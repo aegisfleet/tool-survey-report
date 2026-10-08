@@ -2,7 +2,7 @@
 title: GIMP 調査レポート
 tool_name: GIMP
 tool_reading: ギンプ
-category: グラフィック/アセット
+category: 画像編集
 developer: The GIMP Team
 official_site: https://www.gimp.org/
 date: '2026-05-20'
@@ -11,7 +11,6 @@ tags:
   - オープンソース
   - グラフィックデザイン
   - デザインツール
-  - 写真編集
 description: 写真レタッチ、画像合成、画像オーサリングに対応する、高機能な無料のオープンソース画像編集ソフトウェア。
 quick_summary:
   has_free_plan: true

@@ -2,13 +2,12 @@
 title: Compositor 調査レポート
 tool_name: Compositor
 tool_reading: コンポジター
-category: グラフィック/アセット
+category: 画像編集
 developer: Robbie Tilton
 official_site: https://robbietilton.com/compositor
 date: '2026-10-07'
 last_updated: '2026-10-07'
 tags:
-  - 画像編集
   - オープンソース
   - Mac
 description: Mac向けの無料でオープンソースのフル機能画像編集ツール。

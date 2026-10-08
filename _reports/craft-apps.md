@@ -2,7 +2,7 @@
 title: Craft Apps 調査レポート
 tool_name: Craft Apps
 tool_reading: クラフト・アプス
-category: グラフィック/アセット
+category: 画像編集
 developer: ArtCraft
 official_site: https://getartcraft.com/apps
 date: '2026-10-07'
@@ -11,7 +11,6 @@ tags:
   - オープンソース
   - デスクトップアプリ
   - Rust
-  - 画像編集
   - 動画編集
 description: 画像編集から動画編集、DTPまでを網羅する、Rustでゼロから構築された7つのオープンソース・クリエイティブアプリケーション群
 quick_summary:

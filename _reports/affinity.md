@@ -2,7 +2,7 @@
 title: Affinity 調査レポート
 tool_name: Affinity
 tool_reading: アフィニティ
-category: グラフィック/アセット
+category: 画像編集
 developer: Serif (Canva)
 official_site: https://affinity.serif.com/
 date: '2026-02-08'
@@ -12,7 +12,6 @@ tags:
   - グラフィックデザイン
   - AI
   - デザインツール
-  - 画像編集
 description: 写真編集、ベクターデザイン、DTP機能をシームレスに統合したプロフェッショナル向けクリエイティブソフトウェア。2025年よりCanvaの「Imagination Era」構想の下、完全無料で提供されている。
 quick_summary:
   has_free_plan: true
