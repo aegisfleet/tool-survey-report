@@ -8,32 +8,32 @@ official_site: https://robbietilton.com/compositor
 date: '2026-10-07'
 last_updated: '2026-10-07'
 tags:
-- オープンソース
-- Mac
+  - オープンソース
+  - Mac
 description: Mac向けの無料でオープンソースのフル機能画像編集ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
-  - デザイナー
-  - クリエイター
-  - 開発者
+    - デザイナー
+    - クリエイター
+    - 開発者
   latest_highlight: Mac向けに提供される無料のPhotoshop代替オープンソースツール
   update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
-  - point: 5
-    reason: 無料でフル機能の画像編集が可能
-  - point: 5
-    reason: オープンソースであり、自由にカスタマイズ可能
-  - point: 3
-    reason: Photoshopのショートカットや機能に強くインスパイアされ、移行が容易
+    - point: 5
+      reason: 無料でフル機能の画像編集が可能
+    - point: 5
+      reason: オープンソースであり、自由にカスタマイズ可能
+    - point: 3
+      reason: Photoshopのショートカットや機能に強くインスパイアされ、移行が容易
   minus_points:
-  - point: -3
-    reason: Mac専用（Apple silicon搭載のmacOS以降が必要）
+    - point: -3
+      reason: Mac専用（Apple silicon搭載のmacOS以降が必要）
   summary: Macユーザーにとって非常に強力な無料・オープンソースの画像編集ツール。
 links:
   github: https://github.com/robbietilton/Compositor
