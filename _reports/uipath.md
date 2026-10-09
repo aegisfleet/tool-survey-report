@@ -42,13 +42,13 @@ links:
   documentation: https://docs.uipath.com/ja/
 relationships:
   related_tools:
+    - AI/ナビ搭載 業務自動化RPA RKシリーズ
     - Microsoft Power Automate
     - Workato
     - Zapier
     - LITRON CORE
     - Android Use
     - Robot Framework
-    - AutoHotkey
 ---
 
 # **UiPath 調査レポート**
