@@ -42,6 +42,7 @@ relationships:
   related_tools:
     - Trivy
     - OSV-Scanner
+    - OSS Scanner
 ---
 
 # **Tsunami Security Scanner 調査レポート**

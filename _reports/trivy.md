@@ -48,6 +48,7 @@ relationships:
     - Dependency-Check
     - Socket
     - FOSSA
+    - OSS Scanner
 ---
 
 # **Trivy 調査レポート**

@@ -41,6 +41,7 @@ links:
 relationships:
   related_tools:
     - Trivy
+    - OSS Scanner
 ---
 
 # **OSV-Scanner 調査レポート**
