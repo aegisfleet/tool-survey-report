@@ -44,6 +44,7 @@ relationships:
   related_tools:
     - Claude Code
     - Figma
+    - OpenPencil
 ---
 
 # **Open CoDesign 調査レポート**

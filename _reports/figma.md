@@ -54,7 +54,6 @@ relationships:
     - Affinity
     - GIMP
     - OpenPencil
-    - いいフォント
 ---
 # **Figma 調査レポート**
 
