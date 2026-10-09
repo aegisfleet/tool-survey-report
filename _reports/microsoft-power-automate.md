@@ -44,7 +44,7 @@ links:
   documentation: https://learn.microsoft.com/ja-jp/power-automate/
 relationships:
   related_tools:
-    - "AI/ナビ搭載 業務自動化RPA RKシリーズ"
+    - AI/ナビ搭載 業務自動化RPA RKシリーズ
     - UiPath
     - Zapier
     - Make

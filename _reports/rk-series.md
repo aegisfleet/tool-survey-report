@@ -6,7 +6,7 @@ category: ワークフローエンジン
 developer: 株式会社キーエンス
 official_site: https://www.keyence.co.jp/ss/products/software/rk/007/2023_01.jsp
 date: '2026-05-07'
-last_updated: "2026-10-09"
+last_updated: '2026-10-09'
 tags:
   - RPA
   - 業務自動化
@@ -40,8 +40,8 @@ links:
   documentation: https://www.keyence.co.jp/landing/req/software/lp_rpa-survey_01138455.jsp
 relationships:
   related_tools:
-    - "Microsoft Power Automate"
-    - "UiPath"
+    - Microsoft Power Automate
+    - UiPath
 ---
 # **AI/ナビ搭載 業務自動化RPA RKシリーズ 調査レポート**
 
