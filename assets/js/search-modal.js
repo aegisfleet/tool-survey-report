@@ -65,9 +65,7 @@
     if (validTokens.length === 0) return escaped;
 
     try {
-      const pattern = validTokens
-        .map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-        .join('|');
+      const pattern = validTokens.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
       const regex = new RegExp(`(${pattern})`, 'gi');
       return escaped.replace(regex, '<mark>$1</mark>');
     } catch {
@@ -86,11 +84,11 @@
   // DOM Elements
   let container;
   let backdrop;
-  let dialog;
+  let _dialog;
   let input;
   let clearBtn;
   let closeBtn;
-  let bodyEl;
+  let _bodyEl;
   let loadingEl;
   let initialEl;
   let resultsList;
@@ -103,11 +101,11 @@
     if (!container) return false;
 
     backdrop = document.getElementById('search-modal-backdrop');
-    dialog = container.querySelector('.search-modal-dialog');
+    _dialog = container.querySelector('.search-modal-dialog');
     input = document.getElementById('search-modal-input');
     clearBtn = document.getElementById('search-modal-clear');
     closeBtn = document.getElementById('search-modal-close');
-    bodyEl = document.getElementById('search-modal-body');
+    _bodyEl = document.getElementById('search-modal-body');
     loadingEl = document.getElementById('search-modal-loading');
     initialEl = document.getElementById('search-modal-initial');
     resultsList = document.getElementById('search-modal-results');
@@ -141,9 +139,7 @@
       reportsData = (Array.isArray(data) ? data : []).map((item) => {
         const normName = normalizeText(item.tool_name);
         const normCat = normalizeText(item.category);
-        const normTags = Array.isArray(item.tags)
-          ? item.tags.map((t) => normalizeText(t)).join(' ')
-          : '';
+        const normTags = Array.isArray(item.tags) ? item.tags.map((t) => normalizeText(t)).join(' ') : '';
         const normDesc = normalizeText(item.description);
         const normSlug = normalizeText(item.slug);
 
@@ -315,9 +311,7 @@
         : '';
 
       const scoreHtml =
-        typeof tool.score === 'number'
-          ? `<span class="search-modal-item-score">★ ${tool.score}</span>`
-          : '';
+        typeof tool.score === 'number' ? `<span class="search-modal-item-score">★ ${tool.score}</span>` : '';
 
       li.innerHTML = `
         <span class="search-modal-item-emoji">${emoji}</span>
@@ -499,7 +493,7 @@
     if (quickTagsContainer) {
       quickTagsContainer.addEventListener('click', (e) => {
         const chip = e.target.closest('.search-modal-tag-chip');
-        if (chip && chip.dataset.term && input) {
+        if (chip?.dataset.term && input) {
           input.value = chip.dataset.term;
           input.focus();
           executeSearch(chip.dataset.term);
@@ -518,10 +512,10 @@
 
         if (e.key === 'Tab' && container) {
           const focusable = container.querySelectorAll(
-            'input, button:not([style*="display: none"]), [tabindex]:not([tabindex="-1"])'
+            'input, button:not([style*="display: none"]), [tabindex]:not([tabindex="-1"])',
           );
           const visible = Array.from(focusable).filter(
-            (el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el === input
+            (el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el === input,
           );
           if (visible.length > 0) {
             const first = visible[0];
