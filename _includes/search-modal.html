@@ -1,0 +1,86 @@
+<div class="search-modal-container" id="search-modal-container" aria-hidden="true" style="display: none;">
+  <div class="search-modal-backdrop" id="search-modal-backdrop"></div>
+  <div class="search-modal-dialog" role="dialog" aria-modal="true" aria-label="ツール検索">
+    <div class="search-modal-header">
+      <div class="search-modal-input-wrapper">
+        <svg class="search-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="search"
+          id="search-modal-input"
+          class="search-modal-input"
+          placeholder="ツール名、キーワード、タグで検索..."
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          aria-autocomplete="list"
+          aria-controls="search-modal-results"
+        >
+        <button type="button" class="search-modal-clear" id="search-modal-clear" aria-label="入力をクリア" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <button type="button" class="search-modal-close-btn" id="search-modal-close" aria-label="検索を閉じる">
+        <kbd>Esc</kbd>
+      </button>
+    </div>
+
+    <div class="search-modal-body" id="search-modal-body">
+      <!-- 読み込み中 -->
+      <div class="search-modal-loading" id="search-modal-loading" style="display: none;">
+        <div class="search-modal-spinner" aria-hidden="true"></div>
+        <span>検索インデックスを読み込み中...</span>
+      </div>
+
+      <!-- 初期状態（人気タグ・クイック提案） -->
+      <div class="search-modal-initial" id="search-modal-initial">
+        <p class="search-modal-section-title">人気のキーワード</p>
+        <div class="search-modal-quick-tags" id="search-modal-quick-tags">
+          <button type="button" class="search-modal-tag-chip" data-term="AIエージェント">🤖 AIエージェント</button>
+          <button type="button" class="search-modal-tag-chip" data-term="Claude">🧠 Claude</button>
+          <button type="button" class="search-modal-tag-chip" data-term="CLI">⚡ CLI</button>
+          <button type="button" class="search-modal-tag-chip" data-term="自動化">⚙️ 自動化</button>
+          <button type="button" class="search-modal-tag-chip" data-term="テスト">🧪 テスト</button>
+          <button type="button" class="search-modal-tag-chip" data-term="セキュリティ">🛡️ セキュリティ</button>
+          <button type="button" class="search-modal-tag-chip" data-term="GitHub">🐙 GitHub</button>
+          <button type="button" class="search-modal-tag-chip" data-term="Docker">🐳 Docker</button>
+          <button type="button" class="search-modal-tag-chip" data-term="Python">🐍 Python</button>
+          <button type="button" class="search-modal-tag-chip" data-term="IDE">💻 IDE/エディタ</button>
+          <button type="button" class="search-modal-tag-chip" data-term="LLM">🌐 LLM</button>
+          <button type="button" class="search-modal-tag-chip" data-term="オープンソース">📦 オープンソース</button>
+        </div>
+
+        <div class="search-modal-hints">
+          <p class="search-modal-hints-title">💡 検索のヒント</p>
+          <ul class="search-modal-hints-list">
+            <li>ツール名（例: <code>Cursor</code>, <code>Claude Code</code>, <code>Jules</code>）で瞬時にヒット</li>
+            <li>「ひらがな・カタカナ」両対応、タグやカテゴリ、説明文からも横断検索できます</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 検索結果リスト -->
+      <ul class="search-modal-results" id="search-modal-results" role="listbox" style="display: none;"></ul>
+
+      <!-- 該当なし -->
+      <div class="search-modal-empty" id="search-modal-empty" style="display: none;">
+        <p class="search-modal-empty-title">見つかりませんでした</p>
+        <p class="search-modal-empty-desc">別のキーワードや英語表記、タグ名でお試しください。</p>
+      </div>
+    </div>
+
+    <div class="search-modal-footer">
+      <div class="search-modal-shortcuts">
+        <span class="shortcut-item"><kbd>↑</kbd><kbd>↓</kbd> 移動</span>
+        <span class="shortcut-item"><kbd>↵</kbd> 選択</span>
+        <span class="shortcut-item"><kbd>esc</kbd> 閉じる</span>
+      </div>
+      <div class="search-modal-count" id="search-modal-count"></div>
+    </div>
+  </div>
+</div>

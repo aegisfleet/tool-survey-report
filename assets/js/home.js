@@ -544,30 +544,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard shortcut: "/" or "Cmd+K" / "Ctrl+K" to focus hero search
+  // Keyboard shortcut: Escape blurs heroSearchInput; global search modal handles "/" and "Cmd+K"
   document.addEventListener('keydown', (e) => {
-    // Don't trigger if user is already typing in an input/textarea/select
     const activeEl = document.activeElement;
-    if (
-      activeEl &&
-      (activeEl.tagName === 'INPUT' ||
-        activeEl.tagName === 'TEXTAREA' ||
-        activeEl.tagName === 'SELECT' ||
-        activeEl.isContentEditable)
-    ) {
-      // If Escape is pressed inside hero search, blur it
-      if (e.key === 'Escape' && activeEl === heroSearchInput) {
-        heroSearchInput.blur();
-      }
-      return;
-    }
-
-    const isKbdShortcut = e.key === '/' || ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K'));
-
-    if (isKbdShortcut && heroSearchInput) {
-      e.preventDefault();
-      heroSearchInput.focus();
-      heroSearchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (activeEl === heroSearchInput && e.key === 'Escape') {
+      heroSearchInput.blur();
     }
   });
 

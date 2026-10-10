@@ -17,34 +17,36 @@
   @include make-container;
   @include make-container-max-widths;
   @include flex-between;
-  padding-top: map-get($spacers, 3);
-  padding-bottom: map-get($spacers, 3);
-  flex-wrap: wrap;
+  align-items: center;
+  padding-top: map-get($spacers, 2);
+  padding-bottom: map-get($spacers, 2);
+  flex-wrap: nowrap; // Prevent wrapping on all viewports
   gap: map-get($spacers, 3);
   position: relative;
+  min-height: 56px;
 
   @include media-breakpoint-down(lg) {
     flex-direction: row;
-    align-items: flex-start; // 上揃えに変更してsite-descriptionの配置を改善
+    align-items: center;
     justify-content: space-between;
-    gap: map-get($spacers, 3);
-    min-height: 60px; // 最小高さを設定してナビゲーションボタンのスペースを確保
+    gap: map-get($spacers, 2);
+    min-height: 52px;
   }
 
   @include media-breakpoint-down(sm) {
     padding-top: map-get($spacers, 2);
     padding-bottom: map-get($spacers, 2);
-    min-height: 50px;
+    min-height: 48px;
   }
 }
 
 .site-branding {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  min-width: 0; // Allow flex item to shrink below content size
 
   @include media-breakpoint-down(lg) {
     text-align: left;
-    flex: 1;
-    margin-right: map-get($spacers, 6); // ナビゲーションボタンとの間隔を確保
+    margin-right: map-get($spacers, 2);
   }
 }
 
@@ -52,7 +54,9 @@
   margin: 0;
   font-size: 1.75rem;
   font-weight: $font-weight-bold;
-  white-space: nowrap; // Prevent wrapping
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   a {
     color: var(--color-text);
@@ -76,7 +80,7 @@
 
   @include media-breakpoint-down(md) {
     // clamp(min, preferred, max) - scales with viewport width
-    font-size: clamp(1rem, 4.5vw, 1.5rem);
+    font-size: clamp(1.05rem, 4.2vw, 1.4rem);
   }
 }
 
@@ -84,16 +88,14 @@
   margin: map-get($spacers, 1) 0 0;
   font-size: $font-size-sm;
   color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @include media-breakpoint-down(lg) {
-    margin-top: map-get($spacers, 2);
-    padding-right: map-get($spacers, 2); // Minimal padding
-    line-height: $line-height-sm;
-  }
-
-  @include media-breakpoint-down(sm) {
+    margin-top: 2px;
     font-size: $font-size-xs;
-    padding-right: map-get($spacers, 1); // Minimal padding
+    line-height: $line-height-sm;
   }
 }
 

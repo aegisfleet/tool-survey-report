@@ -14,6 +14,8 @@
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', storedTheme || systemTheme);
     })();
+    window.__SITE_BASEURL__ = '{{ site.baseurl | default: "" }}';
+    window.CATEGORY_EMOJIS = JSON.parse('{{ site.data.categories | jsonify }}');
   </script>
 
   <!-- SEO Meta Tags -->
@@ -88,8 +90,11 @@
 
   {% include footer.html %}
 
+  {% include search-modal.html %}
+
   <!-- JavaScript -->
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/search-modal.js' | relative_url }}"></script>
 </body>
 
 </html>
