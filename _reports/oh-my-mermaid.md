@@ -2,7 +2,7 @@
 title: Oh-my-mermaid 調査レポート
 tool_name: oh-my-mermaid
 tool_reading: オーマイマーメイド
-category: 開発者ツール
+category: ドキュメント生成/管理
 developer: oh-my-mermaid コミュニティ
 official_site: https://github.com/oh-my-mermaid/oh-my-mermaid
 date: '2026-10-10'

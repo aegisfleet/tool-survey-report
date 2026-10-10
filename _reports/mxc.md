@@ -2,7 +2,7 @@
 title: MXC 調査レポート
 tool_name: MXC
 tool_reading: エムエックスシー
-category: 開発者ツール
+category: エージェント実行環境/ランタイム
 developer: Microsoft
 official_site: https://github.com/microsoft/mxc
 date: '2026-10-10'
