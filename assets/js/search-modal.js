@@ -74,9 +74,7 @@
     if (validTokens.length === 0) return escaped;
 
     try {
-      const pattern = validTokens
-        .map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
-        .join('|');
+      const pattern = validTokens.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
       const regex = new RegExp(`(${pattern})`, 'gi');
       return escaped.replace(regex, '<mark>$1</mark>');
     } catch {
@@ -146,9 +144,7 @@
       reportsData = (Array.isArray(data) ? data : []).map((item) => {
         const normName = normalizeText(item.tool_name);
         const normCat = normalizeText(item.category);
-        const normTags = Array.isArray(item.tags)
-          ? item.tags.map((t) => normalizeText(t)).join(' ')
-          : '';
+        const normTags = Array.isArray(item.tags) ? item.tags.map((t) => normalizeText(t)).join(' ') : '';
         const normDesc = normalizeText(item.description);
         const normSlug = normalizeText(item.slug);
 
@@ -348,9 +344,7 @@
         : '';
 
       const scoreHtml =
-        typeof tool.score === 'number'
-          ? `<span class="search-modal-item-score">★ ${tool.score}</span>`
-          : '';
+        typeof tool.score === 'number' ? `<span class="search-modal-item-score">★ ${tool.score}</span>` : '';
 
       li.innerHTML = `
         <span class="search-modal-item-emoji">${emoji}</span>
@@ -551,10 +545,10 @@
 
         if (e.key === 'Tab' && container) {
           const focusable = container.querySelectorAll(
-            'input, button:not([style*="display: none"]), [tabindex]:not([tabindex="-1"])'
+            'input, button:not([style*="display: none"]), [tabindex]:not([tabindex="-1"])',
           );
           const visible = Array.from(focusable).filter(
-            (el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el === input
+            (el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el === input,
           );
           if (visible.length > 0) {
             const first = visible[0];

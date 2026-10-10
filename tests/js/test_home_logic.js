@@ -248,7 +248,14 @@ function createReportCard(title, tags, category, date, score, links = '') {
   return card;
 }
 
-const card1 = createReportCard('ToolA', ['tag1', 'tag2'], 'Development', '2023-01-01', '80', 'https://github.com/microsoft/WSL');
+const card1 = createReportCard(
+  'ToolA',
+  ['tag1', 'tag2'],
+  'Development',
+  '2023-01-01',
+  '80',
+  'https://github.com/microsoft/WSL',
+);
 const card2 = createReportCard('Tool B', ['tag2', 'tag3'], 'Design', '2023-02-01', '90');
 const card3 = createReportCard('Tool C', ['tag1'], 'Development', '2023-03-01', '70');
 
@@ -503,9 +510,7 @@ try {
   window.filterAndSort(false, true);
   const visibleCardsUrlSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCardsUrlSearch.length !== 1 || visibleCardsUrlSearch[0].dataset.toolName !== 'ToolA') {
-    console.error(
-      `Test 11 Failed: URL search failed. Expected 1 card (ToolA), got ${visibleCardsUrlSearch.length}`,
-    );
+    console.error(`Test 11 Failed: URL search failed. Expected 1 card (ToolA), got ${visibleCardsUrlSearch.length}`);
     passed = false;
   } else {
     console.log('Test 11 Passed: URL search via input correct.');

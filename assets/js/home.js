@@ -217,7 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Link matching: match URL, scheme-stripped URL, or repository paths
-        const cleanTerm = term.toLowerCase().replace(/^https?:\/\//, '').replace(/\/+$/, '');
+        const cleanTerm = term
+          .toLowerCase()
+          .replace(/^https?:\/\//, '')
+          .replace(/\/+$/, '');
         const linksMatch =
           Boolean(card.dataset.links) &&
           (card.dataset.links.includes(term.toLowerCase()) ||
