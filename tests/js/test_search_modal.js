@@ -21,10 +21,14 @@ class MockElement {
     this.listeners = {};
     this._innerHTML = '';
   }
-  setAttribute(k, v) { this.attributes[k] = v; }
-  getAttribute(k) { return this.attributes[k]; }
+  setAttribute(k, v) {
+    this.attributes[k] = v;
+  }
+  getAttribute(k) {
+    return this.attributes[k];
+  }
   get innerHTML() {
-    return this._innerHTML || this.children.map(c => c.innerHTML).join('');
+    return this._innerHTML || this.children.map((c) => c.innerHTML).join('');
   }
   set innerHTML(val) {
     this._innerHTML = val;
@@ -33,9 +37,15 @@ class MockElement {
   addEventListener(ev, cb) {
     this.listeners[ev] = cb;
   }
-  querySelector() { return null; }
-  querySelectorAll() { return []; }
-  appendChild(child) { this.children.push(child); }
+  querySelector() {
+    return null;
+  }
+  querySelectorAll() {
+    return [];
+  }
+  appendChild(child) {
+    this.children.push(child);
+  }
   focus() {}
 }
 
@@ -58,18 +68,30 @@ global.document = {
   createDocumentFragment: () => new MockElement('fragment'),
   getElementById: (id) => {
     switch (id) {
-      case 'search-modal-container': return container;
-      case 'search-modal-backdrop': return new MockElement('div');
-      case 'search-modal-input': return input;
-      case 'search-modal-clear': return clearBtn;
-      case 'search-modal-close': return new MockElement('button');
-      case 'search-modal-loading': return loadingEl;
-      case 'search-modal-initial': return initialEl;
-      case 'search-modal-results': return resultsList;
-      case 'search-modal-empty': return emptyEl;
-      case 'search-modal-count': return countEl;
-      case 'global-search-trigger': return new MockElement('button');
-      default: return null;
+      case 'search-modal-container':
+        return container;
+      case 'search-modal-backdrop':
+        return new MockElement('div');
+      case 'search-modal-input':
+        return input;
+      case 'search-modal-clear':
+        return clearBtn;
+      case 'search-modal-close':
+        return new MockElement('button');
+      case 'search-modal-loading':
+        return loadingEl;
+      case 'search-modal-initial':
+        return initialEl;
+      case 'search-modal-results':
+        return resultsList;
+      case 'search-modal-empty':
+        return emptyEl;
+      case 'search-modal-count':
+        return countEl;
+      case 'global-search-trigger':
+        return new MockElement('button');
+      default:
+        return null;
     }
   },
   addEventListener: () => {},
@@ -104,7 +126,7 @@ const mockData = [
     },
     slug: 'docker',
     score: 90,
-  }
+  },
 ];
 
 global.fetch = async () => ({
@@ -121,7 +143,7 @@ vm.runInContext(scriptContent, context);
 // Test load & search
 async function testSearchModal() {
   console.log('Testing search-modal.js...');
-  
+
   // Trigger DOMContentLoaded
   // Search modal sets up listeners, let's test executeSearch by feeding input
   // Since search-modal is IIFE, let's test if search works via input input event
