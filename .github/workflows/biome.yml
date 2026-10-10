@@ -4,6 +4,12 @@ permissions:
   contents: read
 
 on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '_reports/**'
+      - '*.md'
+      - 'LICENSE'
   pull_request:
     paths-ignore:
       - '_reports/**'
