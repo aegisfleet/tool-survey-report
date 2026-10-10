@@ -70,6 +70,7 @@
     "includes": [
       "**/assets/js/**/*.js",
       "**/tests/**/*.js",
+      "!**/.venv",
       "!**/node_modules",
       "!**/_site",
       "!**/vendor",
