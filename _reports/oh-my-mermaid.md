@@ -1,61 +1,53 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Oh-my-mermaid 調査レポート"
-tool_name: "oh-my-mermaid"
-tool_reading: "オーマイマーメイド"
-category: "開発者ツール"
-developer: "oh-my-mermaid コミュニティ"
-official_site: "https://github.com/oh-my-mermaid/oh-my-mermaid"
-date: "2026-10-10"
-last_updated: "2026-10-10"
+title: Oh-my-mermaid 調査レポート
+tool_name: oh-my-mermaid
+tool_reading: オーマイマーメイド
+category: 開発者ツール
+developer: oh-my-mermaid コミュニティ
+official_site: https://github.com/oh-my-mermaid/oh-my-mermaid
+date: '2026-10-10'
+last_updated: '2026-10-10'
 tags:
-  - "オープンソース"
-  - "コードベース可視化"
-  - "CLI"
-  - "アーキテクチャ図"
-  - "AI"
-description: "AIエージェントを活用し、コードベースを分析して人間が理解しやすいアーキテクチャドキュメントと図を自動生成するツール"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - コードベース可視化
+  - CLI
+  - アーキテクチャ図
+  - AI
+description: AIエージェントを活用し、コードベースを分析して人間が理解しやすいアーキテクチャドキュメントと図を自動生成するツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "ソフトウェアエンジニア"
-    - "アーキテクト"
-  latest_highlight: "Windowsでのバイナリ検出対応および多言語READMEの追加"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 開発者
+    - ソフトウェアエンジニア
+    - アーキテクト
+  latest_highlight: Windowsでのバイナリ検出対応および多言語READMEの追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "コードベースからアーキテクチャ図とドキュメントを自動生成する機能が強力"
+      reason: コードベースからアーキテクチャ図とドキュメントを自動生成する機能が強力
     - point: 3
-      reason: "Claude CodeをはじめとするAIコーディングツールとシームレスに統合可能"
+      reason: Claude CodeをはじめとするAIコーディングツールとシームレスに統合可能
     - point: 3
-      reason: "インタラクティブなビューアを提供し、大規模なコードベースの把握が容易"
+      reason: インタラクティブなビューアを提供し、大規模なコードベースの把握が容易
     - point: 2
-      reason: "オープンソースとして無償で利用可能"
+      reason: オープンソースとして無償で利用可能
   minus_points:
     - point: 0
-      reason: "特筆すべき重大な減点項目はなし"
-  summary: "AI時代の新たなコードリーディング体験を提供する強力な可視化ツール"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特筆すべき重大な減点項目はなし
+  summary: AI時代の新たなコードリーディング体験を提供する強力な可視化ツール
 links:
-  github: "https://github.com/oh-my-mermaid/oh-my-mermaid"
-  deepwiki: "https://deepwiki.com/oh-my-mermaid/oh-my-mermaid"
-  codewiki: "https://codewiki.google/github.com/oh-my-mermaid/oh-my-mermaid"
+  github: https://github.com/oh-my-mermaid/oh-my-mermaid
+  deepwiki: https://deepwiki.com/oh-my-mermaid/oh-my-mermaid
+  codewiki: https://codewiki.google/github.com/oh-my-mermaid/oh-my-mermaid
 relationships:
   related_tools:
-    - "Claude Code"
-    - "Repomix"
+    - Claude Code
+    - Repomix
 ---
 
 # **Oh-my-mermaid 調査レポート**
