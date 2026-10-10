@@ -5,10 +5,11 @@
 エージェントは複数の作業指示を扱う。
 基本行動はこのファイルに定義されるが、特定のタスクを行う場合は以下の指示書を参照する。
 
-## タスク指示書一覧
+## タスク指示書・ガイド一覧
 
 - レポートの作成/更新: [task-report-create-or-update.md](./task-report-create-or-update.md)
 - カテゴリ/タグ/関連付けの整理: [task-organizing-category-tags.md](./task-organizing-category-tags.md)
+- AIエージェント・LLM向け機能（llms.txt / JSONインデックス）の運用ガイド: [docs/llm-endpoints-guide.md](./docs/llm-endpoints-guide.md)
 
 ## レポート作成・更新の手順
 

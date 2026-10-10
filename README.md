@@ -23,6 +23,7 @@ AIエージェントを用いてツールの情報を収集して公開するサ
 - **🔧 SEO最適化**: メタタグ、OGP、構造化データ対応
 - **♿ アクセシビリティ**: WCAG準拠のアクセシブルなデザイン
 - **🤖 自動レポート更新**: Jules APIを使用した1日1回の自動レポート更新
+- **🧠 AIエージェント・LLM対応**: `llms.txt` / `llms-full.txt`、軽量インデックスJSON、Raw Markdown連携によるAIからの情報収集・参照支援（詳細は [docs/llm-endpoints-guide.md](docs/llm-endpoints-guide.md)）
 
 ## プロジェクト構成
 

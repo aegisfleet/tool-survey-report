@@ -1,0 +1,29 @@
+---
+layout: null
+permalink: /llms-full.txt
+---
+# {{ site.title }} - 全ツール調査レポート一覧
+
+> AIエージェント、コーディング支援、クラウド、テスト自動化、セキュリティ等の開発ツールの詳細調査レポート一覧。
+
+本ファイルは、サイト内に収録されている全ツールの網羅的なインデックスです。カテゴリごとに分類されており、各ツールの詳細レポートURL、概要、評価スコア、料金情報を提供しています。
+
+## 目次
+{% assign grouped_categories = site.reports | group_by: "category" | sort: "name" %}
+{% for cat in grouped_categories %}
+{% if cat.name and cat.name != "" %}
+- [{{ cat.name }}](#{{ cat.name | slugify }})
+{% endif %}
+{% endfor %}
+
+{% for cat in grouped_categories %}
+{% if cat.name and cat.name != "" %}
+## {{ cat.name }}
+
+{% assign sorted_items = cat.items | sort: "tool_name" %}
+{% for item in sorted_items %}
+- [{{ item.tool_name | default: item.title }}]({{ item.url | absolute_url }}): {{ item.description | strip_newlines | replace: "	", " " }} (開発元: {{ item.developer | default: "不明" }}, スコア: {{ item.evaluation.score | default: "-" }}点{% if item.quick_summary.has_free_plan %}, 無料プランあり{% endif %}{% if item.quick_summary.starting_price %}, 価格: {{ item.quick_summary.starting_price }}{% endif %})
+{% endfor %}
+
+{% endif %}
+{% endfor %}

@@ -1,0 +1,28 @@
+---
+layout: null
+permalink: /reports-summary.json
+---
+[
+  {%- assign sorted_reports = site.reports | sort: "tool_name" -%}
+  {%- for report in sorted_reports -%}
+  {
+    "tool_name": {{ report.tool_name | default: report.title | jsonify }},
+    "slug": {{ report.slug | jsonify }},
+    "url": {{ report.url | absolute_url | jsonify }},
+    "raw_markdown_url": {{ 'https://raw.githubusercontent.com/aegisfleet/tool-survey-report/main/' | append: report.path | jsonify }},
+    "category": {{ report.category | jsonify }},
+    "tags": {{ report.tags | jsonify }},
+    "description": {{ report.description | jsonify }},
+    "developer": {{ report.developer | jsonify }},
+    "official_site": {{ report.official_site | jsonify }},
+    "score": {{ report.evaluation.score | default: null | jsonify }},
+    "pricing": {
+      "has_free_plan": {{ report.quick_summary.has_free_plan | jsonify }},
+      "is_oss": {{ report.quick_summary.is_oss | jsonify }},
+      "starting_price": {{ report.quick_summary.starting_price | jsonify }}
+    },
+    "related_tools": {{ report.relationships.related_tools | jsonify }},
+    "last_updated": {{ report.last_updated | jsonify }}
+  }{%- unless forloop.last -%},{%- endunless -%}
+  {%- endfor -%}
+]

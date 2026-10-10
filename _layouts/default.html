@@ -70,6 +70,13 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3122674942116250"
     crossorigin="anonymous"></script>
 
+  <!-- AI Agent & LLM Discovery -->
+  <link rel="help" href="{{ '/llms.txt' | relative_url }}" title="LLM Context">
+  <link rel="alternate" type="application/json" href="{{ '/reports-summary.json' | relative_url }}" title="Reports Index JSON">
+  {%- if page.path and page.path contains '_reports/' -%}
+  <link rel="alternate" type="text/markdown" href="https://raw.githubusercontent.com/aegisfleet/tool-survey-report/main/{{ page.path }}" title="Raw Markdown">
+  {%- endif -%}
+
 </head>
 
 <body>

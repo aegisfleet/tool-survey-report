@@ -138,6 +138,10 @@
   &.hero-link-codewiki {
     background: $gradient-secondary;
   }
+
+  &.hero-link-markdown {
+    background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+  }
 }
 
 .report-tags {
