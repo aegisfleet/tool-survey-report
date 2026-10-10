@@ -27,6 +27,15 @@
     return toHiragana(String(text).toLowerCase().trim());
   }
 
+  function normalizeUrl(url) {
+    if (!url) return '';
+    return String(url)
+      .toLowerCase()
+      .trim()
+      .replace(/^https?:\/\//, '')
+      .replace(/\/+$/, '');
+  }
+
   function getCategoryEmoji(category) {
     if (!category) return '🔹';
     const emojis = window.CATEGORY_EMOJIS || {};
@@ -86,11 +95,9 @@
   // DOM Elements
   let container;
   let backdrop;
-  let dialog;
   let input;
   let clearBtn;
   let closeBtn;
-  let bodyEl;
   let loadingEl;
   let initialEl;
   let resultsList;
@@ -103,11 +110,9 @@
     if (!container) return false;
 
     backdrop = document.getElementById('search-modal-backdrop');
-    dialog = container.querySelector('.search-modal-dialog');
     input = document.getElementById('search-modal-input');
     clearBtn = document.getElementById('search-modal-clear');
     closeBtn = document.getElementById('search-modal-close');
-    bodyEl = document.getElementById('search-modal-body');
     loadingEl = document.getElementById('search-modal-loading');
     initialEl = document.getElementById('search-modal-initial');
     resultsList = document.getElementById('search-modal-results');
@@ -147,6 +152,16 @@
         const normDesc = normalizeText(item.description);
         const normSlug = normalizeText(item.slug);
 
+        const linkList = [];
+        if (item.official_site) linkList.push(item.official_site);
+        if (item.links && typeof item.links === 'object') {
+          Object.values(item.links).forEach((v) => {
+            if (typeof v === 'string') linkList.push(v);
+          });
+        }
+        const normLinks = linkList.map((u) => normalizeUrl(u)).filter(Boolean);
+        const normGithub = item.links?.github ? normalizeUrl(item.links.github) : '';
+
         return {
           ...item,
           _normName: normName,
@@ -154,6 +169,8 @@
           _normTags: normTags,
           _normDesc: normDesc,
           _normSlug: normSlug,
+          _normLinks: normLinks,
+          _normGithub: normGithub,
           _scoreNum: typeof item.score === 'number' ? item.score : 0,
         };
       });
@@ -246,6 +263,22 @@
         // Match on description
         if (item._normDesc.includes(token)) {
           relevance += 10;
+          tokenMatch = true;
+        }
+
+        // Match on GitHub URL / Links
+        const normToken = normalizeUrl(token);
+        if (
+          item._normGithub &&
+          (item._normGithub === normToken || (normToken.length > 3 && item._normGithub.endsWith(`/${normToken}`)))
+        ) {
+          relevance += 250;
+          tokenMatch = true;
+        } else if (item._normLinks?.some((l) => l === normToken)) {
+          relevance += 200;
+          tokenMatch = true;
+        } else if (normToken.length >= 3 && item._normLinks?.some((l) => l.includes(normToken))) {
+          relevance += 70;
           tokenMatch = true;
         }
 
@@ -499,7 +532,7 @@
     if (quickTagsContainer) {
       quickTagsContainer.addEventListener('click', (e) => {
         const chip = e.target.closest('.search-modal-tag-chip');
-        if (chip && chip.dataset.term && input) {
+        if (chip?.dataset.term && input) {
           input.value = chip.dataset.term;
           input.focus();
           executeSearch(chip.dataset.term);

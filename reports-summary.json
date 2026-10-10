@@ -15,6 +15,7 @@ permalink: /reports-summary.json
     "description": {{ report.description | jsonify }},
     "developer": {{ report.developer | jsonify }},
     "official_site": {{ report.official_site | jsonify }},
+    "links": {{ report.links | jsonify }},
     "score": {{ report.evaluation.score | default: null | jsonify }},
     "pricing": {
       "has_free_plan": {{ report.quick_summary.has_free_plan | jsonify }},

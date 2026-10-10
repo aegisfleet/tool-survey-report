@@ -212,7 +212,7 @@ noResults.attributes.id = 'no-results';
 noResults.style.display = 'none';
 
 // Create a report card
-function createReportCard(title, tags, category, date, score) {
+function createReportCard(title, tags, category, date, score, links = '') {
   const card = new HTMLElement('article');
   card.className = 'report-card';
   card.dataset = {
@@ -223,6 +223,7 @@ function createReportCard(title, tags, category, date, score) {
     latestHighlight: '',
     developer: 'Developer',
     tags: tags.join(','),
+    links: links.toLowerCase(),
     date: date,
     category: category,
     score: score || '0',
@@ -247,7 +248,7 @@ function createReportCard(title, tags, category, date, score) {
   return card;
 }
 
-const card1 = createReportCard('ToolA', ['tag1', 'tag2'], 'Development', '2023-01-01', '80');
+const card1 = createReportCard('ToolA', ['tag1', 'tag2'], 'Development', '2023-01-01', '80', 'https://github.com/microsoft/WSL');
 const card2 = createReportCard('Tool B', ['tag2', 'tag3'], 'Design', '2023-02-01', '90');
 const card3 = createReportCard('Tool C', ['tag1'], 'Development', '2023-03-01', '70');
 
@@ -495,6 +496,19 @@ try {
     passed = false;
   } else {
     console.log('Test 10 Passed: Title search via input correct.');
+  }
+
+  // Test 11: GitHub URL search via input
+  searchInput.value = 'https://github.com/microsoft/WSL';
+  window.filterAndSort(false, true);
+  const visibleCardsUrlSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsUrlSearch.length !== 1 || visibleCardsUrlSearch[0].dataset.toolName !== 'ToolA') {
+    console.error(
+      `Test 11 Failed: URL search failed. Expected 1 card (ToolA), got ${visibleCardsUrlSearch.length}`,
+    );
+    passed = false;
+  } else {
+    console.log('Test 11 Passed: URL search via input correct.');
   }
 
   // Reset search

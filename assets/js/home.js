@@ -216,6 +216,13 @@ document.addEventListener('DOMContentLoaded', () => {
           return allowPartialTags ? hTag.includes(hTerm) : hTag === hTerm;
         });
 
+        // Link matching: match URL, scheme-stripped URL, or repository paths
+        const cleanTerm = term.toLowerCase().replace(/^https?:\/\//, '').replace(/\/+$/, '');
+        const linksMatch =
+          Boolean(card.dataset.links) &&
+          (card.dataset.links.includes(term.toLowerCase()) ||
+            (cleanTerm.length >= 3 && card.dataset.links.includes(cleanTerm)));
+
         return (
           nameMatch ||
           titleMatch ||
@@ -224,7 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
           descMatch ||
           highlightMatch ||
           devMatch ||
-          tagsMatch
+          tagsMatch ||
+          linksMatch
         );
       };
 
