@@ -6,7 +6,7 @@ category: AI音声生成
 developer: OpenBMB
 official_site: https://github.com/OpenBMB/VoxCPM
 date: '2026-04-10'
-last_updated: '2026-08-31'
+last_updated: '2026-10-11'
 tags:
   - オープンソース
   - 生成AI
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - AIリサーチャー
     - コンテンツクリエイター
-  latest_highlight: 2026年4月にVoxCPM2（2Bパラメータ、30言語対応）をリリース
+  latest_highlight: 2026年5月にv2.0.3をリリース。ファインチューニング用データのバリデーション機能追加や、LoRA読み込みの修正などを実施
   update_frequency: 中
 evaluation:
   score: 85
@@ -220,7 +220,8 @@ flowchart LR
 
 ## **16. 直近半年のアップデート情報**
 
-* **2026-04-08**: VoxCPM2をリリース。パラメータ数が2Bとなり、30言語に対応、Voice Designや48kHz出力機能が追加されました。
+* **2026-05-11**: v2.0.3をリリース。ファインチューニング用データマニフェストのバリデーション機能(`voxcpm validate`)追加やLoRA読み込み機能の修正等を実施。
+* **2026-04-08**: VoxCPM2をリリース。パラメータ数が2Bとなり、30言語に対応、Voice Designや48kHz出力機能が追加されました。(同日にv2.0.1およびv2.0.2のバグ修正版もリリース)
 * **2025-12**: VoxCPM1.5をリリース。SFTとLoRAファインチューニングをサポートしました。
 * **2025-09**: VoxCPM-0.5Bモデルとテクニカルレポートを公開しました。
 
