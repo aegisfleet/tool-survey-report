@@ -1,64 +1,61 @@
 ---
-title: "ChatGPT 調査レポート"
-tool_name: "ChatGPT"
-tool_reading: "チャットジーピーティー"
-category: "基盤モデル/LLMチャット"
-developer: "OpenAI"
-official_site: "https://openai.com/chatgpt"
-date: "2026-02-09"
-last_updated: "2026-10-11"
+title: ChatGPT 調査レポート
+tool_name: ChatGPT
+tool_reading: チャットジーピーティー
+category: 基盤モデル/LLMチャット
+developer: OpenAI
+official_site: https://openai.com/chatgpt
+date: '2026-02-09'
+last_updated: '2026-10-11'
 tags:
-  - "AI"
-  - "会話型AI"
-  - "大規模言語モデル"
-  - "生成AI"
-  - "開発者ツール"
-description: "OpenAIによって開発された、自然言語処理と生成に優れた能力を持つ最先端の会話型AIモデル。"
-
+  - AI
+  - 会話型AI
+  - 大規模言語モデル
+  - 生成AI
+  - 開発者ツール
+description: OpenAIによって開発された、自然言語処理と生成に優れた能力を持つ最先端の会話型AIモデル。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$20/月"
+  starting_price: $20/月
   target_users:
-    - "開発者"
-    - "コンテンツ制作者"
-    - "一般ユーザー"
-  latest_highlight: "2026年10月のSearch機能正式リリースおよびCanvas機能拡充アップデート"
-  update_frequency: "高"
-
+    - 開発者
+    - コンテンツ制作者
+    - 一般ユーザー
+  latest_highlight: 2026年10月のSearch機能正式リリースおよびCanvas機能拡充アップデート
+  update_frequency: 高
 evaluation:
   score: 89
   base_score: 70
   plus_points:
     - point: 9
-      reason: "推論特化のGPT-5.4 ThinkingやGPT-5.5 Instantなどの最新GPT-5ファミリーにより、業界最高水準の性能と汎用性を実現"
+      reason: 推論特化のGPT-5.4 ThinkingやGPT-5.5 Instantなどの最新GPT-5ファミリーにより、業界最高水準の性能と汎用性を実現
     - point: 5
-      reason: "Canvas機能やSearch機能など、単なるチャットを超えた新しいUI/UXの提供"
+      reason: Canvas機能やSearch機能など、単なるチャットを超えた新しいUI/UXの提供
     - point: 5
-      reason: "GPTsエコシステム、Excel/Google Sheetsネイティブ連携など、カスタマイズ性と拡張性が極めて高い"
+      reason: GPTsエコシステム、Excel/Google Sheetsネイティブ連携など、カスタマイズ性と拡張性が極めて高い
   minus_points:
     - point: -3
-      reason: "依然としてハルシネーションのリスクがあり、特に専門的な内容ではファクトチェックが不可欠"
+      reason: 依然としてハルシネーションのリスクがあり、特に専門的な内容ではファクトチェックが不可欠
     - point: -2
-      reason: "高度な機能（GPT-5.4 Proモード等）は高額なプランに限定される場合がある"
+      reason: 高度な機能（GPT-5.4 Proモード等）は高額なプランに限定される場合がある
     - point: -1
-      reason: "モデル名やプラン体系の変更が頻繁であり、ユーザーの学習コストがやや高い"
-  summary: "最新のGPT-5ファミリー（GPT-5.5 Instant, GPT-5.4 Thinking）の導入やExcel/Sheetsとの統合により、機能性・推論能力・エコシステムの全てで市場を牽引し続けている。"
-
+      reason: モデル名やプラン体系の変更が頻繁であり、ユーザーの学習コストがやや高い
+  summary: 最新のGPT-5ファミリー（GPT-5.5 Instant, GPT-5.4 Thinking）の導入やExcel/Sheetsとの統合により、機能性・推論能力・エコシステムの全てで市場を牽引し続けている。
 links:
-  documentation: "https://help.openai.com/en/"
+  documentation: https://help.openai.com/en/
 relationships:
   children:
-    - "OpenAI Codex CLI"
-    - "ChatGPT for Work"
+    - OpenAI Codex CLI
+    - ChatGPT for Work
   related_tools:
-    - "天才くん"
-    - "Gemini"
-    - "Claude"
-    - "Grok"
-    - "DeepSeek"
-    - "Amazon Bedrock"
-    - "Microsoft 365 Copilot"
+    - 天才くん
+    - Gemini
+    - Claude
+    - Grok
+    - DeepSeek
+    - Amazon Bedrock
+    - Microsoft 365 Copilot
 ---
 
 # **ChatGPT 調査レポート**
