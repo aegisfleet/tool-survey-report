@@ -2,7 +2,7 @@
 title: LuppetX 調査レポート
 tool_name: LuppetX
 tool_reading: ラペットエックス / ラペット
-category: 3D/VTuber
+category: VTuber/アバター配信
 developer: 株式会社ラペットテクノロジーズ
 official_site: https://luppet.jp/
 date: '2026-10-11'

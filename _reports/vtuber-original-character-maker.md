@@ -2,7 +2,7 @@
 title: VTuber Original Character Maker 調査レポート
 tool_name: VTuber Original Character Maker
 tool_reading: ブイチューバー・オリジナル・キャラクター・メーカー
-category: 3D/VTuber
+category: VTuber/アバター配信
 developer: 佐藤 大
 official_site: https://vtuber-ocm.com/
 date: '2026-08-31'

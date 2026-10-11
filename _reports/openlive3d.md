@@ -2,7 +2,7 @@
 title: OpenLive3D 調査レポート
 tool_name: OpenLive3D
 tool_reading: オープンライブスリーディー
-category: 3D/VTuber
+category: VTuber/アバター配信
 developer: OpenLive3D
 official_site: https://openlive3d.com/
 date: '2026-06-13'

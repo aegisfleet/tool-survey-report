@@ -2,7 +2,7 @@
 title: Google AI Threat Defense 調査レポート
 tool_name: Google AI Threat Defense
 tool_reading: グーグル エーアイ スレット ディフェンス
-category: セキュリティ
+category: セキュリティ/脅威インテリジェンス
 developer: Google Cloud
 official_site: https://cloud.google.com/security/ai-threat-defense
 date: '2026-05-29'
