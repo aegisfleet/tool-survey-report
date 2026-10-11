@@ -2,7 +2,7 @@
 title: image-blaster 調査レポート
 tool_name: image-blaster
 tool_reading: イメージブラスター
-category: 3D/VTuber
+category: 3Dモデル生成
 developer: Neilson K-S
 official_site: https://github.com/neilsonnn/image-blaster
 date: '2026-10-04'

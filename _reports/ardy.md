@@ -2,7 +2,7 @@
 title: ARDY 調査レポート
 tool_name: ARDY
 tool_reading: アーディ
-category: 3D/VTuber
+category: 3Dモデル生成
 developer: NVIDIA
 official_site: https://github.com/nv-tlabs/ardy
 date: '2026-10-04'

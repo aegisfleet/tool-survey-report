@@ -2,7 +2,7 @@
 title: Better Auth 調査レポート
 tool_name: Better Auth
 tool_reading: ベターオース
-category: セキュリティ
+category: 認証/ID管理
 developer: Better Auth Inc.
 official_site: https://better-auth.com/
 date: '2026-07-08'

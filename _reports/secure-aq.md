@@ -2,7 +2,7 @@
 title: SECURE AQ 調査レポート
 tool_name: SECURE AQ
 tool_reading: セキュア エーキュー
-category: セキュリティ
+category: セキュリティ/脆弱性診断
 developer: 株式会社SHIFT
 official_site: https://service.shiftinc.jp/service_cat/security/
 date: '2026-10-09'
@@ -13,7 +13,6 @@ tags:
   - ペネトレーションテスト
   - SOC
   - コンサルティング
-  - SaaS
 description: SHIFTが提供する、脆弱性診断からセキュリティ監視、コンサルティングまでを網羅する総合セキュリティサービスブランド
 quick_summary:
   has_free_plan: false

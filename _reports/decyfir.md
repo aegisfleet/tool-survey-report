@@ -2,7 +2,7 @@
 title: DeCYFIR 調査レポート
 tool_name: DeCYFIR
 tool_reading: デサイファー
-category: セキュリティ
+category: セキュリティ/脅威インテリジェンス
 developer: CYFIRMA
 official_site: https://www.cyfirma.com/jp/decyfir/
 date: '2026-10-09'

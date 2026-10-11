@@ -2,7 +2,7 @@
 title: OpenID 調査レポート
 tool_name: OpenID
 tool_reading: オープンアイディー
-category: CDN/セキュリティ
+category: 認証/ID管理
 developer: OpenID Foundation
 official_site: https://openid.net/
 date: '2026-02-04'
