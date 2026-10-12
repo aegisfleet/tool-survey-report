@@ -2,7 +2,7 @@
 title: OSS Scanner 調査レポート
 tool_name: OSS Scanner
 tool_reading: オーエスエス スキャナー
-category: セキュリティ/脆弱性診断
+category: SCA/OSS依存関係管理
 developer: Anthropic
 official_site: https://red.anthropic.com/oss-scanner/
 date: '2026-10-09'
@@ -11,6 +11,7 @@ tags:
   - オープンソース
   - 生成AI
   - セキュリティ
+  - SCA
   - 脆弱性診断
   - 大規模言語モデル
 description: Anthropicが提供する、Claudeモデルを活用してオープンソースリポジトリのセキュリティ脆弱性を自動スキャンするオプトイン型のサービス。

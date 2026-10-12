@@ -2,12 +2,13 @@
 title: OSV-Scanner 調査レポート
 tool_name: OSV-Scanner
 tool_reading: オーエスブイスキャナー
-category: セキュリティ/脆弱性診断
+category: SCA/OSS依存関係管理
 developer: Google / OpenSSF
 official_site: https://google.github.io/osv-scanner/
 date: '2026-04-25'
 last_updated: '2026-06-08'
 tags:
+  - SCA
   - 脆弱性スキャナー
   - オープンソース
   - セキュリティ
