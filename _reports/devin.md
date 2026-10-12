@@ -53,7 +53,7 @@ relationships:
     - Devin Desktop
     - OpenHands
     - Manus
-    - Build by Grok
+    - Open Agents
     - DeepSeek Harness
 ---
 # **Devin 調査レポート**

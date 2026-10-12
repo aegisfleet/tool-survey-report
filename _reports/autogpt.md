@@ -54,7 +54,7 @@ relationships:
     - Agent Zero
     - Letta
     - AgentScope
-    - NemoClaw
+    - Open Agents
 ---
 # **AutoGPT 調査レポート**
 
