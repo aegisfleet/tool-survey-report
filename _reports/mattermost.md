@@ -43,8 +43,8 @@ links:
   documentation: https://docs.mattermost.com/
 relationships:
   related_tools:
-    - "Element"
-    - "Signal"
+    - Element
+    - Signal
 ---
 
 # **Mattermost 調査レポート**
