@@ -45,6 +45,9 @@ evaluation:
   summary: 「入力レス」と「完全ペーパーレス」を徹底的に追求したサービスであり、アナログ業務からの脱却に最適。
 links:
   documentation: https://support.keihi.com/
+relationships:
+  related_tools:
+    - Moneytree
 ---
 # **TOKIUM 調査レポート**
 

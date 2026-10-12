@@ -33,7 +33,9 @@ evaluation:
     - point: 0
       reason: 特になし
   summary: 確定申告の知識がない個人事業主やフリーランスにとって、非常に使いやすいスマホ特化の会計アプリ
-relationships: {}
+relationships:
+  related_tools:
+    - Moneytree
 ---
 
 # **タックスナップ 調査レポート**
