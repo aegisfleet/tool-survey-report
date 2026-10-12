@@ -46,7 +46,7 @@ relationships:
   related_tools:
     - Devin
     - AutoGPT
-    - Opcode
+    - Open Agents
     - Cursor
     - GitHub Copilot
     - Manus
