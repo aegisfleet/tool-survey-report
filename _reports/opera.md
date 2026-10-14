@@ -2,7 +2,7 @@
 title: Opera 調査レポート
 tool_name: Opera
 tool_reading: オペラ
-category: ウェブブラウザ
+category: AI検索/ブラウザ拡張
 developer: Opera Norway AS
 official_site: https://www.opera.com/
 date: '2026-10-10'
