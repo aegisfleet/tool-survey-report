@@ -52,9 +52,9 @@ relationships:
     - Grok
     - Dify
     - GitHub Copilot SDK
-    - Amazon Bedrock
     - Amazon Bedrock AgentCore Runtime
     - Hugging Face
+    - Waza
 ---
 # **LangChain 調査レポート**
 
