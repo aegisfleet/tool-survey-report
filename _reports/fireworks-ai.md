@@ -2,7 +2,7 @@
 title: Fireworks AI 調査レポート
 tool_name: Fireworks AI
 tool_reading: ファイヤーワークス エーアイ
-category: AIモデル開発・推論プラットフォーム
+category: LLMプラットフォーム
 developer: Fireworks AI, Inc.
 official_site: https://fireworks.ai/
 date: '2026-10-16'
