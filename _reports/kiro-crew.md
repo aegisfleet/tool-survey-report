@@ -2,14 +2,15 @@
 title: Kiro Crew 調査レポート
 tool_name: Kiro Crew
 tool_reading: キロクルー
-category: AIエージェント
+category: 自律型AIエージェント
 developer: Kiro
 official_site: https://kiro.dev/crew/
 date: '2026-10-16'
 last_updated: '2026-10-16'
 tags:
   - オープンソース
-  - 自律型エージェント
+  - エージェント
+  - 自律型
   - CI/CD
 description: セッションをまたいで動作し、学習と自動化を行う永続的なオープンソースAI開発ワークスペース
 quick_summary:
