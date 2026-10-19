@@ -2,7 +2,7 @@
 title: Amazon OpenSearch Service 調査レポート
 tool_name: Amazon OpenSearch Service
 tool_reading: アマゾン オープンサーチ サービス
-category: "データベース/データストレージ"
+category: データベース/データストレージ
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/opensearch-service/
 date: '2026-05-14'
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - データエンジニア
     - SRE
-  latest_highlight: "2026年10月にGraviton4ベースの新しいインスタンスをサポート開始"
+  latest_highlight: 2026年10月にGraviton4ベースの新しいインスタンスをサポート開始
   update_frequency: 高
 evaluation:
   score: 85
