@@ -2,13 +2,13 @@
 title: ARTEMIS 調査レポート
 tool_name: ARTEMIS
 tool_reading: アルテミス
-category: テスト・自動化
+category: AIテスト自動化
 developer: Google
 official_site: https://github.com/google/artemis
 date: '2026-10-19'
 last_updated: '2026-10-19'
 tags:
-  - テスト・自動化
+  - AIテスト自動化
   - 開発ツール
   - モバイル
   - AIエージェント
