@@ -2,7 +2,7 @@
 title: AGENTIC STAR 調査レポート
 tool_name: AGENTIC STAR
 tool_reading: エージェンティック・スター
-category: MCPサーバー/基盤
+category: 自律型AIエージェント
 developer: SoftBank
 official_site: https://www.softbank.jp/biz/services/ai/agentic-star/
 date: '2025-12-13'
