@@ -1,42 +1,42 @@
 ---
-title: "Cursor Plugins 調査レポート"
-tool_name: "Cursor Plugins"
-tool_reading: "カーソルプラグイン"
-category: "開発者ツール"
-developer: "Cursor"
-official_site: "https://github.com/cursor/plugins"
-date: "2026-10-21"
-last_updated: "2026-10-21"
+title: Cursor Plugins 調査レポート
+tool_name: Cursor Plugins
+tool_reading: カーソルプラグイン
+category: 開発者ツール
+developer: Cursor
+official_site: https://github.com/cursor/plugins
+date: '2026-10-21'
+last_updated: '2026-10-21'
 tags:
-  - "オープンソース"
-  - "エージェント"
-  - "IDE連携"
-description: "Cursorの公式プラグインおよびMCPサーバーを提供するリポジトリ。"
+  - オープンソース
+  - エージェント
+  - IDE連携
+description: Cursorの公式プラグインおよびMCPサーバーを提供するリポジトリ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "Cursorユーザー"
-  latest_highlight: "2026年10月にX連携機能（Spaces、Communities、Lists）の強化とJobberプラグインが追加された。"
-  update_frequency: "高"
+    - 開発者
+    - Cursorユーザー
+  latest_highlight: 2026年10月にX連携機能（Spaces、Communities、Lists）の強化とJobberプラグインが追加された。
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "多数の開発ツールやSaaSとの強力な連携が可能"
+      reason: 多数の開発ツールやSaaSとの強力な連携が可能
     - point: 5
-      reason: "オープンソースでありコミュニティの貢献も活発"
+      reason: オープンソースでありコミュニティの貢献も活発
     - point: 5
-      reason: "MCPを介したエージェントの拡張性を大きく向上させる"
+      reason: MCPを介したエージェントの拡張性を大きく向上させる
   minus_points: []
-  summary: "CursorユーザーのAIエージェントの能力を大幅に引き上げる公式プラグイン群。"
+  summary: CursorユーザーのAIエージェントの能力を大幅に引き上げる公式プラグイン群。
 links:
-  github: "https://github.com/cursor/plugins"
+  github: https://github.com/cursor/plugins
 relationships:
-  parent: "Cursor"
+  parent: Cursor
   children: []
   related_tools: []
 ---
