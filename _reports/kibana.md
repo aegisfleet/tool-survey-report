@@ -6,7 +6,7 @@ category: ログ/インシデント管理
 developer: Elastic
 official_site: https://www.elastic.co/jp/kibana
 date: '2026-02-12'
-last_updated: '2026-05-15'
+last_updated: '2026-10-21'
 tags:
   - AI
   - ELK Stack
@@ -22,7 +22,7 @@ quick_summary:
     - DevOpsエンジニア
     - セキュリティアナリスト
     - データサイエンティスト
-  latest_highlight: 2026年5月、バージョン9.4リリース。機能強化や安定性向上。
+  latest_highlight: 2026年10月、バージョン9.5.5リリース。安定性や機能強化等。
   update_frequency: 高
 evaluation:
   score: 82
@@ -92,7 +92,55 @@ relationships:
 * **Machine Learning**: 異常検知、予測分析などの機械学習ジョブを作成・管理・可視化する機能（有償機能）。
 * **Elastic Security (SIEM)**: セキュリティイベントの収集、検知ルールの管理、ケース管理、タイムライン分析などを統合したセキュリティ運用基盤。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: Kibanaはクライアント・サーバーモデルを採用したWebアプリケーションであり、バックエンドのElasticsearchと密接に連携する可視化フロントエンドとして機能します。Node.jsで構築されたサーバーとReactベースのクライアントで構成されています。
+* **主要コンポーネントとデータフロー**:
+  * データの取り込みはLogstashやBeats（Elastic Agent）が行い、Elasticsearchにインデックス化されます。
+  * ユーザーがKibanaのダッシュボードを操作すると、Kibanaサーバーを介してElasticsearchに対してクエリ（REST APIまたはES|QL）が発行されます。
+  * Elasticsearchが高速に検索・集計した結果を受け取り、Kibanaがブラウザ上でリッチなグラフや表として描画します。
+  * Kibana自身の構成情報（ダッシュボード、Lens、保存済み検索など）もElasticsearch内の特殊なインデックス（`.kibana`）に保存されます。
+
+```mermaid
+flowchart TD
+    subgraph DataSources["データソース"]
+        AppLogs["アプリケーションログ"]
+        Metrics["インフラメトリクス"]
+        Security["セキュリティイベント"]
+    end
+
+    subgraph DataIngestion["データ収集・転送"]
+        Logstash["Logstash"]
+        Beats["Beats / Elastic Agent"]
+    end
+
+    subgraph ElasticBackend["バックエンド"]
+        Elasticsearch[("Elasticsearch
+(検索・分析・保存)")]
+    end
+
+    subgraph KibanaFrontend["Kibana"]
+        KibanaServer["Kibana Server (Node.js)"]
+        KibanaUI["Kibana UI (React)"]
+    end
+
+    AppLogs --> Logstash
+    Metrics --> Beats
+    Security --> Beats
+    Logstash --> Elasticsearch
+    Beats --> Elasticsearch
+
+    KibanaUI -- "REST API / ES|QL (HTTPS)" --> KibanaServer
+    KibanaServer -- "Elasticsearch API" --> Elasticsearch
+
+    User["ユーザー (ブラウザ)"] -- "ダッシュボード操作" --> KibanaUI
+```
+
+* **特筆すべき要素技術**:
+  * **ES|QL (Elasticsearch Query Language)**: パイプライン処理をサポートした新しいクエリ言語で、Kibana上でデータのフィルタリングや加工をより強力に行えます。
+  * **Elastic AI Assistant**: Kibana内に統合された生成AIが、プロンプトベースでのクエリ作成支援やログの解釈を行います。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Elasticsearchが稼働していること（バージョンの一致が必要）
@@ -112,20 +160,20 @@ relationships:
 * **クイックスタート**:
   * 「Add Data」チュートリアルに従い、サンプルデータ（eCommerce, Flight data等）をインポートしてダッシュボードを確認。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **Elasticsearchとの親和性**: Elasticsearchの強力な検索能力（全文検索、集計）を最大限に引き出すことができる唯一無二のUI。
 * **AI機能の統合**: AI Assistantにより、複雑なクエリ（ES|QLやKQL）を覚えなくても自然言語で分析が可能になり、学習コストが下がっている。
 * **オールインワンのプラットフォーム**: ログ、メトリクス、APM、セキュリティ（SIEM/Endpoint Security）を単一のUIで管理でき、ツール間のコンテキストスイッチを減らせる。
 * **柔軟な可視化**: Lensによるドラッグ＆ドロップの簡単な作成から、Canvasによる高度なデザインまで、幅広いニーズに対応。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **ライセンスの変更**: 以前のApache 2.0からElastic License v2 / SSPLに変更されたため、AWSなどのクラウドプロバイダーがマネージドサービスとして提供することに制約がある（AWS OpenSearch Serviceへの分岐の原因）。
 * **リソース消費**: 大量のデータを扱う場合、Kibana自体やバックエンドのElasticsearchに十分なメモリとCPUリソースが必要。
 * **学習コスト**: 機能が非常に多岐にわたるため、全ての機能を使いこなすには時間がかかる。特に古い集計ベースの可視化設定は複雑な場合がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（SaaS）のプランに基づく。
 
@@ -141,7 +189,7 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
   * Elastic Cloud: リソース使用量（RAM, Storage, Data Transfer）に応じた従量課金。
 * **無料トライアル**: Elastic Cloudで14日間の無料トライアルが可能。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Netflix, Uber, LinkedIn, Cisco, SoftBankなど、世界中のデータ駆動型企業で採用。
 * **導入事例**:
@@ -149,22 +197,22 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
   * **Uber**: 日次数ペタバイトのログ分析基盤として利用。
 * **対象業界**: 全業界。特にWebサービス、金融、通信、製造（IoT）での利用が多い。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントは非常に充実しており、バージョンごとに詳細に管理されている。
 * **コミュニティ**: Elastic Discuss ForumやSlackコミュニティが活発。日本語のトピックもある。
 * **公式サポート**: 有償サブスクリプション契約者向けにSLA付きのサポートを提供。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 保存されたオブジェクト（ダッシュボード等）の管理、アラートの操作、ロール管理などを行えるREST APIを提供。
 * **外部サービス連携**:
   * **アラート通知**: Slack, Microsoft Teams, PagerDuty, ServiceNow, Jira, Email, Webhook。
   * **認証**: LDAP, Active Directory, SAML, OpenID Connect, Kerberos。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -173,18 +221,18 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
 | **Kubernetes** | ◯ | Elastic Cloud on Kubernetes (ECK) Operatorにより容易にデプロイ可能。 | リソース設計が重要。 |
 | **OpenTelemetry** | ◯ | APMデータの取り込みに対応。 | Elastic Agentとの使い分けの検討が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: RBAC（ロールベースアクセス制御）、スペース機能によるマルチテナンシー、SSO（SAML, OIDC）に対応。
 * **データ管理**: フィールドレベルおよびドキュメントレベルのセキュリティ設定が可能。
 * **準拠規格**: SOC 2 Type 2, ISO 27001, HIPAA, FedRAMP, GDPRなどに対応（Elastic Cloud）。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: モダンで統一感のあるUI。ダークモード対応。近年は「Lens」の導入により、可視化作成の直感性が大幅に向上した。
 * **学習コスト**: 基本的な検索やダッシュボード閲覧は容易だが、KQL/ES|QLクエリの習得や、複雑な集計（Aggregation）の理解には学習が必要。AI Assistantがこれを補助する。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **ECS (Elastic Common Schema) の採用**: ログフォーマットをECSに統一することで、相関分析やSIEMルールの適用が容易になる。
@@ -194,7 +242,7 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
   * **ワイルドカード検索の多用**: パフォーマンス低下の原因となるため、先頭一致のワイルドカード（`*error`）などは避ける。
   * **ダッシュボードの過密化**: 1つのダッシュボードに大量のパネルを配置すると、読み込みが遅くなる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra
 * **総合評価**: 4.1/5.0 (G2)
@@ -209,28 +257,32 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
 * **特徴的なユースケース**:
   * 大規模なeコマースサイトでのリアルタイム売上監視と、ブラックフライデーなどの高負荷時のシステム監視を同一画面で行う。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2026-05-12**: **Kibana 9.4.1 リリース**。安定性やバグ修正。(出典: GitHub Releases)
-* **2026-05-05**: **Kibana 9.4.0 リリース**。最新の機能追加と改善。(出典: GitHub Releases)
-* **2026-04-30**: **Kibana 9.3.4 リリース**。安定性の向上。(出典: GitHub Releases)
-* **2026-04-08**: **Kibana 9.2.8 リリース**。マイナーアップデートおよびバグ修正。(出典: GitHub Releases)
-* **2026-02-03**: **Kibana 9.3.0 リリース**。セキュリティパッチおよびAI Assistantのコンテキスト理解能力が向上。(出典: Elastic Release Notes)
+* **2026-10-06**: **Kibana 9.5.5 リリース**。マイナーアップデートおよびバグ修正。
+* **2026-10-06**: **Kibana 9.4.8 リリース**。安定性の向上。
+* **2026-09-15**: **Kibana 9.5.4 リリース**。安定性や機能強化。
+* **2026-09-03**: **Kibana 9.5.3 リリース**。機能追加およびバグ修正。
+* **2026-05-12**: **Kibana 9.4.1 リリース**。安定性やバグ修正。
+* **2026-05-05**: **Kibana 9.4.0 リリース**。最新の機能追加と改善。
+* **2026-04-30**: **Kibana 9.3.4 リリース**。安定性の向上。
+* **2026-04-08**: **Kibana 9.2.8 リリース**。マイナーアップデートおよびバグ修正。
+* **2026-02-03**: **Kibana 9.3.0 リリース**。セキュリティパッチおよびAI Assistantのコンテキスト理解能力が向上。
 
 (出典: [GitHub Releases](https://github.com/elastic/kibana/releases), [Elastic Release Notes](https://www.elastic.co/guide/en/kibana/current/release-notes.html))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Kibana | Grafana | Splunk | Datadog |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | ログ検索・分析 | ◎<br><small>全文検索最強</small> | ◯<br><small>Lokiと連携</small> | ◎<br><small>SPLが強力</small> | ◯<br><small>SaaS型</small> |
-| **可視化** | ダッシュボード | ◎<br><small>Lensが優秀</small> | ◎<br><small>多様なパネル</small> | ◯<br><small>機能十分</small> | ◎<br><small>UXが良い</small> |
-| **分析** | AI/機械学習 | ◎<br><small>AI Assistant</small> | ◯<br><small>Grafana Assistant</small> | ◯<br><small>AI機能あり</small> | ◎<br><small>Watchdog</small> |
-| **コスト** | 無料利用 | ◯<br><small>Basic無料</small> | ◎<br><small>OSS無料</small> | △<br><small>制限あり</small> | △<br><small>無料枠小</small> |
+| **基本機能** | ログ検索・分析 | ◎<br><small>全文検索最強</small> | ◯<br><small>Loki等と連携</small> | ◎<br><small>SPLが強力</small> | ◎<br><small>Flex Logsで高速・低コスト</small> |
+| **可視化** | ダッシュボード | ◎<br><small>Lensが優秀</small> | ◎<br><small>Git Sync対応(v13.0~)</small> | ◯<br><small>ダッシュボードスタジオ</small> | ◎<br><small>リアルタイム編集・共有</small> |
+| **分析** | AI/機械学習 | ◎<br><small>Elastic AI Assistant</small> | ◯<br><small>Grafana Assistant (v13.0~)</small> | ◯<br><small>Splunk AI Assistant</small> | ◎<br><small>LLM Obs / Bits AI</small> |
+| **コスト** | 無料利用 | ◯<br><small>Basic無料</small> | ◎<br><small>OSS/Cloud Free</small> | ◯<br><small>500MB/日無料</small> | ◯<br><small>機能制限ありの無料枠</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
@@ -239,7 +291,7 @@ Elastic Stackのライセンス体系（Self-managed）およびElastic Cloud（
 | **Splunk** | 統合データプラットフォーム | 非構造化データの取り込みと、SPLによる柔軟な分析・加工が強力。SIEMの実績豊富。 | コストが高い。プロプライエタリな製品であるため、カスタマイズに限界がある場合がある。 | 予算があり、高度なセキュリティ監視や複雑なログ分析が必要な場合。 |
 | **Datadog** | 統合SaaS | 導入が非常に簡単で、インフラからアプリまで全レイヤーを即座に可視化できる。 | コストが積み上げ式で高くなりやすい。 | 運用工数をかけずにフルスタックの監視環境を手に入れたい場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Kibanaは、Elasticsearchという強力な検索エンジンのポテンシャルを解放するための必須ツールである。単なる可視化ツールにとどまらず、ログ探索、機械学習による異常検知、SIEMとしてのセキュリティ監視、そしてAIアシスタントによる分析支援までを備えた統合プラットフォームへと進化している。特にログ分析においては、その検索速度と柔軟性において業界のベンチマークであり続けている。
