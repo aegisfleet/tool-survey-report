@@ -351,6 +351,20 @@
   }
 }
 
+.search-modal-item-reading {
+  font-size: 0.825rem;
+  font-weight: normal;
+  color: var(--color-text-muted);
+  margin-left: 0.35rem;
+
+  mark {
+    background: transparent;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
 .search-modal-item-category {
   font-size: 0.78rem;
   padding: 0.2rem 0.55rem;

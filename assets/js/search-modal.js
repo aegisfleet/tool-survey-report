@@ -8,11 +8,20 @@
   // Regex helpers
   const STRIP_EMOJI_RE = /^[\p{Extended_Pictographic}\uFE00-\uFE0F\u200D\u200C\s]+/u;
   const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
+  const HIRAGANA_KATAKANA_RE = /[\u3041-\u3096]/g;
 
   function toHiragana(str) {
     if (!str) return '';
     return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
       const chr = match.charCodeAt(0) - 0x60;
+      return String.fromCharCode(chr);
+    });
+  }
+
+  function toKatakana(str) {
+    if (!str) return '';
+    return str.replace(HIRAGANA_KATAKANA_RE, (match) => {
+      const chr = match.charCodeAt(0) + 0x60;
       return String.fromCharCode(chr);
     });
   }
@@ -69,9 +78,23 @@
     const escaped = escapeHtml(text);
     if (!queryTokens || queryTokens.length === 0) return escaped;
 
-    // Build regex of escaped tokens
-    const validTokens = queryTokens.filter((t) => t.length > 0);
+    // Collect query token variants (original, hiragana, katakana)
+    const tokenSet = new Set();
+    queryTokens.forEach((t) => {
+      const trimmed = t.trim();
+      if (!trimmed) return;
+      tokenSet.add(trimmed);
+      const hira = toHiragana(trimmed);
+      if (hira) tokenSet.add(hira);
+      const kata = toKatakana(trimmed);
+      if (kata) tokenSet.add(kata);
+    });
+
+    const validTokens = Array.from(tokenSet).filter((t) => t.length > 0);
     if (validTokens.length === 0) return escaped;
+
+    // Sort descending by length so longer sequences match first
+    validTokens.sort((a, b) => b.length - a.length);
 
     try {
       const pattern = validTokens.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
@@ -143,10 +166,12 @@
       // Pre-compute normalized search indices for maximum performance
       reportsData = (Array.isArray(data) ? data : []).map((item) => {
         const normName = normalizeText(item.tool_name);
+        const normReading = normalizeText(item.tool_reading);
         const normCat = normalizeText(item.category);
         const normTags = Array.isArray(item.tags) ? item.tags.map((t) => normalizeText(t)).join(' ') : '';
         const normDesc = normalizeText(item.description);
         const normSlug = normalizeText(item.slug);
+        const normDev = normalizeText(item.developer);
 
         const linkList = [];
         if (item.official_site) linkList.push(item.official_site);
@@ -161,10 +186,12 @@
         return {
           ...item,
           _normName: normName,
+          _normReading: normReading,
           _normCat: normCat,
           _normTags: normTags,
           _normDesc: normDesc,
           _normSlug: normSlug,
+          _normDev: normDev,
           _normLinks: normLinks,
           _normGithub: normGithub,
           _scoreNum: typeof item.score === 'number' ? item.score : 0,
@@ -238,6 +265,20 @@
           tokenMatch = true;
         }
 
+        // Match on tool reading (phonetic Katakana / Hiragana reading)
+        if (item._normReading) {
+          if (item._normReading === token) {
+            relevance += 200;
+            tokenMatch = true;
+          } else if (item._normReading.startsWith(token)) {
+            relevance += 120;
+            tokenMatch = true;
+          } else if (item._normReading.includes(token)) {
+            relevance += 80;
+            tokenMatch = true;
+          }
+        }
+
         // Match on slug
         if (item._normSlug.includes(token)) {
           relevance += 60;
@@ -252,6 +293,12 @@
 
         // Match on category
         if (item._normCat.includes(token)) {
+          relevance += 30;
+          tokenMatch = true;
+        }
+
+        // Match on developer
+        if (item._normDev?.includes(token)) {
           relevance += 30;
           tokenMatch = true;
         }
@@ -336,6 +383,12 @@
       const highlightedName = highlightMatches(tool.tool_name, queryTokens);
       const highlightedDesc = highlightMatches(tool.description, queryTokens);
 
+      const hasDistinctReading =
+        tool.tool_reading?.trim() && normalizeText(tool.tool_reading) !== normalizeText(tool.tool_name);
+      const readingHtml = hasDistinctReading
+        ? `<span class="search-modal-item-reading">(${highlightMatches(tool.tool_reading, queryTokens)})</span>`
+        : '';
+
       const tagsHtml = Array.isArray(tool.tags)
         ? tool.tags
             .slice(0, 3)
@@ -350,7 +403,7 @@
         <span class="search-modal-item-emoji">${emoji}</span>
         <div class="search-modal-item-content">
           <div class="search-modal-item-header">
-            <h4 class="search-modal-item-title">${highlightedName}</h4>
+            <h4 class="search-modal-item-title">${highlightedName}${readingHtml}</h4>
             <span class="search-modal-item-category">${escapeHtml(tool.category || '')}</span>
             ${scoreHtml}
           </div>

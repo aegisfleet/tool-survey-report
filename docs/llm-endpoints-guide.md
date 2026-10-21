@@ -57,6 +57,7 @@
     ```json
     {
       "tool_name": "Cursor",
+      "tool_reading": "カーソル",
       "slug": "cursor",
       "url": "https://aegisfleet.github.io/tool-survey-report/reports/cursor/",
       "raw_markdown_url": "https://raw.githubusercontent.com/aegisfleet/tool-survey-report/main/_reports/cursor.md",
