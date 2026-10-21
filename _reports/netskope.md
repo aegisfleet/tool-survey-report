@@ -1,59 +1,51 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Netskope 調査レポート"
-tool_name: "Netskope"
-tool_reading: "ネットスコープ"
-category: "セキュリティ"
-developer: "Netskope, Inc."
-official_site: "https://www.netskope.com/"
-date: "2026-10-21"
-last_updated: "2026-10-21"
+title: Netskope 調査レポート
+tool_name: Netskope
+tool_reading: ネットスコープ
+category: セキュリティ
+developer: Netskope, Inc.
+official_site: https://www.netskope.com/
+date: '2026-10-21'
+last_updated: '2026-10-21'
 tags:
-  - "SASE"
-  - "SSE"
-  - "CASB"
-  - "ZTNA"
-  - "クラウドセキュリティ"
-  - "ゼロトラスト"
-description: "クラウド、データ、AIを保護・高速化する統合SASE（Secure Access Service Edge）およびSSE（Security Service Edge）プラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - SASE
+  - SSE
+  - CASB
+  - ZTNA
+  - クラウドセキュリティ
+  - ゼロトラスト
+description: クラウド、データ、AIを保護・高速化する統合SASE（Secure Access Service Edge）およびSSE（Security Service Edge）プラットフォーム
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "要問い合わせ"
+  starting_price: 要問い合わせ
   target_users:
-    - "大企業"
-    - "中堅企業"
-    - "セキュリティ管理者"
-  latest_highlight: "AIセキュリティ機能の強化およびNasdaqへのIPO（2025年）"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - 大企業
+    - 中堅企業
+    - セキュリティ管理者
+  latest_highlight: AIセキュリティ機能の強化およびNasdaqへのIPO（2025年）
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "SASE/SSE市場におけるリーダー的ポジション（Gartner等での高評価）"
+      reason: SASE/SSE市場におけるリーダー的ポジション（Gartner等での高評価）
     - point: 5
-      reason: "包括的なセキュリティ機能（CASB, ZTNA, SWG, DLP）を単一プラットフォームで提供"
+      reason: 包括的なセキュリティ機能（CASB, ZTNA, SWG, DLP）を単一プラットフォームで提供
     - point: 5
-      reason: "NewEdgeネットワークによる低遅延・高性能な通信"
+      reason: NewEdgeネットワークによる低遅延・高性能な通信
     - point: 3
-      reason: "AIを利用したデータ保護およびAIアプリ自体へのセキュリティ対応機能が先進的"
+      reason: AIを利用したデータ保護およびAIアプリ自体へのセキュリティ対応機能が先進的
   minus_points:
     - point: -3
-      reason: "エンタープライズ向けに特化しており、導入・運用に高い専門性とコストが伴う"
-  summary: "世界最大規模のプライベートセキュリティクラウド（NewEdge）に裏打ちされた、業界トップクラスのSASE/SSEソリューション"
-
-# 【任意項目】該当するもののみ記載
+      reason: エンタープライズ向けに特化しており、導入・運用に高い専門性とコストが伴う
+  summary: 世界最大規模のプライベートセキュリティクラウド（NewEdge）に裏打ちされた、業界トップクラスのSASE/SSEソリューション
 links:
-  documentation: "https://docs.netskope.com/"
+  documentation: https://docs.netskope.com/
 relationships:
   related_tools:
-    - "Zscaler"
+    - Zscaler
 ---
 
 # **Netskope 調査レポート**
