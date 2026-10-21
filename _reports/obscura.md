@@ -2,7 +2,7 @@
 title: Obscura 調査レポート
 tool_name: Obscura
 tool_reading: オブスキュラ
-category: ヘッドレスブラウザ
+category: ブラウザ操作エージェント
 developer: Obscura
 official_site: https://www.obscura.sh/
 date: '2026-10-20'
