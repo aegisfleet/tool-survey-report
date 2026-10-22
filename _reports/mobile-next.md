@@ -43,10 +43,10 @@ relationships:
     - Claude
     - Cursor
     - GitHub Copilot
-    - Appium
     - Android Studio
     - Flutter
     - Model Context Protocol
+    - scrcpy
 ---
 # **Mobile Next 調査レポート**
 

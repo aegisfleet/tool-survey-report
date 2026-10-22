@@ -33,6 +33,9 @@ evaluation:
     - point: -2
       reason: 現在はWindows版のみの提供でMac非対応
   summary: アプリ不要で手軽にスマホをサブディスプレイ化できる利便性の高いツール
+relationships:
+  related_tools:
+    - scrcpy
 ---
 
 # **SlothMon 調査レポート**
