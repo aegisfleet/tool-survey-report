@@ -8,38 +8,42 @@ official_site: https://www.opera.com/
 date: '2026-10-10'
 last_updated: '2026-10-10'
 tags:
-  - ブラウザ
-  - VPN
-  - AI
-  - 広告ブロッカー
+- ブラウザ
+- VPN
+- AI
+- 広告ブロッカー
 description: 無料のVPN、広告ブロッカー、AIアシスタントを標準搭載した多機能ウェブブラウザ
 quick_summary:
   has_free_plan: true
   is_oss: false
   starting_price: 無料
   target_users:
-    - 一般ユーザー
-    - ゲーマー
-    - プロフェッショナル
+  - 一般ユーザー
+  - ゲーマー
+  - プロフェッショナル
   latest_highlight: 2026年10月にOpera 137 Stableをリリース
   update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
-    - point: 5
-      reason: 無料のVPNと広告ブロッカーを標準搭載しプライバシー保護に優れる
-    - point: 5
-      reason: Aria、ChatGPT、GeminiなどのAIツールをブラウザに統合
-    - point: 3
-      reason: Tab IslandsやWorkspacesなどの高度なタブ・タスク管理機能
+  - point: 5
+    reason: 無料のVPNと広告ブロッカーを標準搭載しプライバシー保護に優れる
+  - point: 5
+    reason: Aria、ChatGPT、GeminiなどのAIツールをブラウザに統合
+  - point: 3
+    reason: Tab IslandsやWorkspacesなどの高度なタブ・タスク管理機能
   minus_points:
-    - point: -2
-      reason: 豊富な機能により設定が複雑に感じる場合がある
+  - point: -2
+    reason: 豊富な機能により設定が複雑に感じる場合がある
   summary: 多くの組み込み機能とAIサポートにより、生産性とプライバシーを両立した快適なブラウジングを提供する
 links:
   github: https://github.com/operasoftware
+relationships:
+  related_tools:
+  - Tor
 ---
+
 
 # **Opera 調査レポート**
 
