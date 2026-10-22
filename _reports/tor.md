@@ -39,6 +39,8 @@ evaluation:
 links:
   github: https://github.com/torproject/tor
 relationships:
+  children:
+    - Whonix
   related_tools:
     - Opera
 ---
