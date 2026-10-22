@@ -51,9 +51,9 @@ relationships:
     - Kubernetes
     - act
     - LocalStack
+    - Plugin Installation Manager Tool
     - dockur/windows
     - PyInstaller
-    - picomatch
 ---
 # **Docker 調査レポート**
 
