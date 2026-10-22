@@ -1,51 +1,43 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Whonix 調査レポート"
-tool_name: "Whonix"
-tool_reading: "フーニックス"
-category: "OS/プラットフォーム"
-developer: "ENCRYPTED SUPPORT LLC"
-official_site: "https://www.whonix.org/"
-date: "2026-10-22"
-last_updated: "2026-10-22"
+title: Whonix 調査レポート
+tool_name: Whonix
+tool_reading: フーニックス
+category: OS/プラットフォーム
+developer: ENCRYPTED SUPPORT LLC
+official_site: https://www.whonix.org/
+date: '2026-10-22'
+last_updated: '2026-10-22'
 tags:
-  - "オープンソース"
-  - "セキュリティ"
-  - "プライバシー"
-  - "Linux"
-  - "匿名性"
-description: "Torネットワークを利用してすべての通信を匿名化する、プライバシー保護に特化したセキュリティ強化OS"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - セキュリティ
+  - プライバシー
+  - Linux
+  - 匿名性
+description: Torネットワークを利用してすべての通信を匿名化する、プライバシー保護に特化したセキュリティ強化OS
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "プライバシーを重視するユーザー"
-    - "ジャーナリスト"
-    - "セキュリティ研究者"
-  latest_highlight: "2026年7月にWhonix 18.2.1.9をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - プライバシーを重視するユーザー
+    - ジャーナリスト
+    - セキュリティ研究者
+  latest_highlight: 2026年7月にWhonix 18.2.1.9をリリース
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 10
-      reason: "アーキテクチャ設計による強力なIPアドレス保護とフィンガープリント対策"
+      reason: アーキテクチャ設計による強力なIPアドレス保護とフィンガープリント対策
     - point: 5
-      reason: "無料のオープンソースでありながら豊富なプライバシー機能を標準搭載"
+      reason: 無料のオープンソースでありながら豊富なプライバシー機能を標準搭載
   minus_points:
     - point: -4
-      reason: "Torネットワークによる通信速度の低下"
-  summary: "Torネットワークを前提とした最高レベルの匿名性を実現するOSだが、用途や通信速度には制約がある"
-
-# 【任意項目】該当するもののみ記載
+      reason: Torネットワークによる通信速度の低下
+  summary: Torネットワークを前提とした最高レベルの匿名性を実現するOSだが、用途や通信速度には制約がある
 relationships:
-  parent: "Tor"
+  parent: Tor
 ---
 
 # **Whonix 調査レポート**
