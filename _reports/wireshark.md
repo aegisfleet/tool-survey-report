@@ -1,49 +1,46 @@
 ---
-title: "Wireshark 調査レポート"
-tool_name: "Wireshark"
-tool_reading: "ワイヤーシャーク"
-category: "ネットワークアナライザ"
-developer: "Wireshark Foundation"
-official_site: "https://www.wireshark.org/"
-date: "2026-10-22"
-last_updated: "2026-10-22"
+title: Wireshark 調査レポート
+tool_name: Wireshark
+tool_reading: ワイヤーシャーク
+category: ネットワークアナライザ
+developer: Wireshark Foundation
+official_site: https://www.wireshark.org/
+date: '2026-10-22'
+last_updated: '2026-10-22'
 tags:
-  - "オープンソース"
-  - "ネットワーク分析"
-  - "セキュリティ"
-description: "世界をリードするオープンソースのネットワークプロトコルアナライザ"
-
+  - オープンソース
+  - ネットワーク分析
+  - セキュリティ
+description: 世界をリードするオープンソースのネットワークプロトコルアナライザ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ネットワークエンジニア"
-    - "セキュリティアナリスト"
-    - "開発者"
-  latest_highlight: "Wireshark 4.6がリリースされました（2025年10月）"
-  update_frequency: "高"
-
+    - ネットワークエンジニア
+    - セキュリティアナリスト
+    - 開発者
+  latest_highlight: Wireshark 4.6がリリースされました（2025年10月）
+  update_frequency: 高
 evaluation:
   score: 95
   base_score: 70
   plus_points:
     - point: 10
-      reason: "オープンソースで完全に無料で利用できる"
+      reason: オープンソースで完全に無料で利用できる
     - point: 10
-      reason: "対応プロトコルの多さと詳細なパケット解析機能"
+      reason: 対応プロトコルの多さと詳細なパケット解析機能
     - point: 5
-      reason: "コミュニティが活発で定期的にアップデートされる"
+      reason: コミュニティが活発で定期的にアップデートされる
   minus_points:
     - point: 0
-      reason: "特筆すべき大きな欠点なし"
-  summary: "ネットワークエンジニアやセキュリティ担当者にとって必須のツール"
-
+      reason: 特筆すべき大きな欠点なし
+  summary: ネットワークエンジニアやセキュリティ担当者にとって必須のツール
 links:
-  github: "https://gitlab.com/wireshark/wireshark"
-  deepwiki: "https://deepwiki.com/wireshark/wireshark"
-  codewiki: "https://codewiki.google/github.com/wireshark/wireshark"
-  documentation: "https://www.wireshark.org/docs/"
+  github: https://gitlab.com/wireshark/wireshark
+  deepwiki: https://deepwiki.com/wireshark/wireshark
+  codewiki: https://codewiki.google/github.com/wireshark/wireshark
+  documentation: https://www.wireshark.org/docs/
 relationships:
   related_tools: []
 ---
