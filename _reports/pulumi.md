@@ -6,7 +6,7 @@ category: 構成管理
 developer: Pulumi Corp.
 official_site: https://www.pulumi.com/
 date: '2025-10-27'
-last_updated: '2026-05-16'
+last_updated: '2026-10-23'
 tags:
   - AI
   - DevOps
@@ -23,7 +23,7 @@ quick_summary:
     - DevOpsエンジニア
     - 開発者
     - プラットフォームエンジニア
-  latest_highlight: 2026年5月 `pulumi cloud api`コマンドなど多数の機能強化を含むv3.235.0がリリース
+  latest_highlight: 2026年10月 `pulumi cloud api` コマンドなど多数の機能強化を含むv3.271.0がリリース
   update_frequency: 高
 evaluation:
   score: 83
@@ -90,7 +90,28 @@ relationships:
 * **シークレット管理 (Pulumi ESC)**: 複数のクラウドやVaultにまたがるシークレットと構成を一元管理する。
 * **テストフレームワーク**: 各言語の標準的なテストツール（例: pytest, Jest）を使用してインフラコードの単体テストや統合テストを作成可能。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: クライアント・サーバー構成（CLIツールとPulumi Cloud等による状態管理）
+* **主要コンポーネントとデータフロー**:
+  * ユーザーはCLI（`pulumi up`等）を実行し、コードを実行してインフラの目標状態を計算します。
+  * Language Hostsが各プログラミング言語のプログラムを実行し、リソースの登録要求をPulumi Engineに送信します。
+  * Pulumi Engineは現在の状態（State）と目標状態を比較し、必要な変更（Create/Update/Delete）の計画（Plan）を作成します。
+  * Provider Pluginsが各クラウドのAPIを呼び出して実際のインフラストラクチャを構成し、その結果を状態管理バックエンド（Pulumi Cloud等）に保存します。
+* **特筆すべき要素技術**:
+  * **gRPC通信**: CLI、Language Hosts、およびProvider Plugins間はgRPCで通信するため、様々な言語やプロバイダーをプラグインとして拡張可能です。
+
+```mermaid
+graph TD
+    A[ユーザー / CLI] -->|pulumi up| B(Pulumi Engine)
+    B <-->|gRPC| C[Language Host TS/Python/Go等]
+    C -->|プログラム実行・リソース登録| B
+    B <-->|状態管理| D[(State Backend Pulumi Cloud/S3等)]
+    B <-->|gRPC| E[Provider Plugins AWS/Azure/GCP等]
+    E <-->|APIコール| F[クラウドプロバイダー]
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * OS: macOS, Linux, Windows
@@ -127,20 +148,20 @@ relationships:
   pulumi up
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **汎用プログラミング言語の活用**: HCLのようなDSLを新たに学習する必要がなく、IDEの補完機能や型チェック、デバッガなどの恩恵を受けられる。
 * **高い表現力と再利用性**: ループ、条件分岐、関数、クラスなどを利用して、DRY原則に則った効率的で再利用性の高いインフラコードを記述できる。
 * **テストの容易さ**: 使い慣れたテストフレームワークを使ってインフラコードの品質を担保でき、ソフトウェア開発と同様のベストプラクティスを適用できる。
 * **AIによる生産性向上**: Pulumi Copilotがコード生成やデバッグを支援し、インフラ管理の生産性を大幅に向上させる。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **コミュニティ規模**: 最大の競合であるTerraformと比較して、ユーザーコミュニティやサードパーティ製のモジュールはまだ少ない。
 * **学習コスト**: プログラミング言語は使えるものの、IaCの概念やPulumiのアーキテクチャを理解するための学習コストは別途必要。
 * **日本語対応**: UIやドキュメントは基本的に英語であり、日本語の情報は限定的。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---|---|---|
@@ -152,26 +173,26 @@ relationships:
 * **課金体系**: リソース数に応じた従量課金。各プランに無料枠が含まれる。
 * **無料トライアル**: Enterpriseプランの14日間無料トライアルあり。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Snowflake, Mercedes-Benz, Atlassian, BMW, Unity, Dockerなど、グローバルで3,700社以上で利用。
 * **導入事例**: Atlassianでは、開発者がインフラを簡単に利用できるようにし、メンテナンスにかかる時間を50%削減。Snowflakeは、複数クラウドにまたがるKubernetesへの移行を3ヶ月で実現。
 * **対象業界**: テクノロジー、自動車、金融、ゲームなど幅広い業界で採用。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式サイトに詳細なドキュメント、チュートリアル、APIリファレンスが整備されている。
 * **コミュニティ**: 1万人以上が参加する活発なSlackコミュニティが存在し、ユーザー同士での情報交換が可能。
 * **公式サポート**: Enterprise以上のプランで、ビジネス時間内または24時間365日のサポートが利用可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: REST APIが提供されており、Pulumi Cloudの各種操作（スタック管理、デプロイ情報取得など）を自動化できる。
 * **外部サービス連携**: AWS Code Services, Azure DevOps, CircleCI, GitHub Actions, GitLab CIなど、主要なCI/CDツールとシームレスに連携可能。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -182,18 +203,18 @@ relationships:
 | **Java** | △ | JVMエコシステムの資産を活用できるが、IaCとしての採用例は他の言語に比べて少なめ。 | 起動時間やメモリ消費が気になる場合がある。 |
 | **YAML** | △ | シンプルな宣言的記述が可能だが、Pulumiの強みであるプログラミング言語の機能を使えない。 | 複雑なロジックには向かない。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: SAML/SSO、OIDCによるセキュアな認証に対応 (Enterprise以上)。
 * **データ管理**: Pulumi CloudはSOC 2 Type II認証を取得済み。シークレットはデフォルトで暗号化して管理される。
 * **準拠規格**: RBAC（ロールベースアクセス制御）や監査ログ機能を提供し、企業のコンプライアンス要件に対応。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: Pulumi CloudのWeb UIは、リソースの可視化やデプロイ履歴の確認がしやすい。CLIの出力もカラーで見やすく、進捗状況が把握しやすい。
 * **学習コスト**: サポートされているプログラミング言語に習熟している開発者にとっては、DSLを学ぶよりも学習コストは低い。ただし、IaCの基本概念（State, Stack, Resource Graphなど）の理解は必要。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **StackReferencesの活用**: ネットワーク層とアプリ層など、インフラを複数のプロジェクト/スタックに分割し、StackReferenceを使って疎結合に連携する。
@@ -203,7 +224,7 @@ relationships:
   * **Stateファイルのコミット**: ローカルバックエンドを使用する場合、`.pulumi` ディレクトリやStateファイルをGitリポジトリにコミットしない（シークレット漏洩のリスク）。
   * **巨大な単一スタック**: すべてのリソースを1つのスタックに詰め込むと、デプロイ時間が長くなり、依存関係が複雑化する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, Reddit
 * **総合評価**: 4.5/5.0 (G2), 4.7/5.0 (Capterra) ※2026年1月時点
@@ -218,29 +239,30 @@ relationships:
 * **特徴的なユースケース**:
   * アプリケーションコードと同じリポジトリでインフラコードを管理し、開発者がフルサイクルで開発を担当するケース。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2026-05-08**: v3.237.0リリース。`pulumi cloud api`に対する`lang`および`os`クエリパラメータの自動入力機能や、テンプレートからPulumiパッケージをブートストラップする`pulumi package new`を追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases/tag/v3.237.0))
-* **2026-05-06**: v3.236.0リリース。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases/tag/v3.236.0))
-* **2026-05-05**: v3.235.0リリース。ログの復号化用`pulumi logs decrypt`の追加、`hcl`コンバータのバンドル、および任意のPulumi Cloud APIを呼び出せる`pulumi cloud api`コマンド群を追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases/tag/v3.235.0))
-* **2026-01-08**: Pulumi Copilotの発表。自然言語でインフラを生成・管理できるAIアシスタント。 (出典: [Pulumi Blog](https://www.pulumi.com/blog/))
-* **2025-12-15**: Pulumi ESC (Environments, Secrets, and Configuration) のGA。環境変数やシークレットの一元管理機能。 (出典: [Pulumi Blog](https://www.pulumi.com/blog/))
-* **2025-11-20**: Pulumi DeploymentsのGA。Gitベースのワークフローでインフラを継続的にデプロイする機能。 (出典: [Pulumi Blog](https://www.pulumi.com/blog/))
+* **2026-10-21**: v3.271.0リリース。`ReadResourceResponse`に`id`フィールドを追加し、Automation APIに`state`および`env`コマンドを追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases))
+* **2026-10-16**: v3.270.0リリース。`env edit`などのコマンドで環境設定の競合を修正。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases))
+* **2026-10-07**: v3.268.0リリース。Automation APIへの`version`、`whoami`、`install`コマンドの追加、および`Invoke`時のOutputValuesのネゴシエーションを実装。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases))
+* **2026-05-08**: v3.237.0リリース。`pulumi cloud api`に対する`lang`および`os`クエリパラメータの自動入力機能や、テンプレートからPulumiパッケージをブートストラップする`pulumi package new`を追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases))
+* **2026-05-06**: v3.236.0リリース。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases))
+* **2026-05-05**: v3.235.0リリース。ログの復号化用`pulumi logs decrypt`の追加、`hcl`コンバータのバンドル、および任意のPulumi Cloud APIを呼び出せる`pulumi cloud api`コマンド群を追加。 (出典: [GitHub Releases](https://github.com/pulumi/pulumi/releases))
 
 (出典: [Pulumi Blog](https://www.pulumi.com/blog/) / [GitHub Releases](https://github.com/pulumi/pulumi/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | Pulumi | Terraform | AWS CloudFormation | OpenTofu |
 |:---:|:---|:---:|:---:|:---:|:---:|
 | **言語** | 記述方式 | ◎<br><small>汎用言語(TS, Python等)</small> | ◯<br><small>独自DSL(HCL)</small> | △<br><small>YAML/JSON</small> | ◯<br><small>独自DSL(HCL)</small> |
-| **状態管理** | State | ◯<br><small>Pulumi Cloud推奨</small> | ◯<br><small>ローカル/S3/HCP</small> | -<br><small>AWS管理</small> | ◯<br><small>ローカル/S3</small> |
-| **対応範囲** | マルチクラウド | ◎<br><small>170+プロバイダー</small> | ◎<br><small>数千プロバイダー</small> | ×<br><small>AWSのみ</small> | ◎<br><small>数千プロバイダー</small> |
+| **ライセンス** | OSS | ◎<br><small>Apache 2.0</small> | △<br><small>BUSL</small> | -<br><small>プロプライエタリ</small> | ◎<br><small>MPL 2.0</small> |
+| **状態管理** | State | ◯<br><small>Pulumi Cloud推奨</small> | ◯<br><small>ローカル/S3/HCP</small> | -<br><small>AWS管理</small> | ◎<br><small>クライアント暗号化対応</small> |
+| **対応範囲** | マルチクラウド | ◎<br><small>170+プロバイダー</small> | ◎<br><small>3000+プロバイダー</small> | ×<br><small>AWSのみ</small> | ◎<br><small>互換性あり/数千プロバイダー</small> |
 | **テスト** | 単体テスト | ◎<br><small>標準テストツール利用可</small> | △<br><small>独自テスト機能</small> | ×<br><small>困難</small> | △<br><small>独自テスト機能</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
@@ -249,7 +271,7 @@ relationships:
 | **AWS CloudFormation** | AWSネイティブのIaC。YAML/JSONで記述。 | AWSの最新機能へ即時対応、追加コスト不要。 | AWSにロックインされる、記述が冗長になりがち。 | インフラがAWSに限定されており、ネイティブツールで完結させたい場合。 |
 | **OpenTofu** | Terraformのオープンソースフォーク。 | 完全オープンソース、Terraformからの移行が容易。 | エコシステムや開発速度はTerraformに劣る可能性。 | Terraformのライセンス変更を懸念し、オープンソースの代替を求める場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Pulumiは、ソフトウェアエンジニアリングの手法をインフラ管理に適用することを可能にする、非常に強力でモダンなIaCプラットフォームである。汎用プログラミング言語による記述、AIアシスタントの搭載、そして優れたテスト容易性は、Terraformに対する明確な優位性となっている。開発者体験を最優先し、アプリケーションとインフラの境界をなくしたいチームにとって、最適な選択肢の一つと言える。
