@@ -39,7 +39,11 @@ evaluation:
   summary: 多くの組み込み機能とAIサポートにより、生産性とプライバシーを両立した快適なブラウジングを提供する
 links:
   github: https://github.com/operasoftware
+relationships:
+  related_tools:
+    - Tor
 ---
+
 
 # **Opera 調査レポート**
 
