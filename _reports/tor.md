@@ -1,54 +1,46 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Tor 調査レポート"
-tool_name: "Tor"
-tool_reading: "トーア / トア"
-category: "OS/プラットフォーム"
-developer: "The Tor Project"
-official_site: "https://www.torproject.org/"
-date: "2026-10-22"
-last_updated: "2026-10-22"
+title: Tor 調査レポート
+tool_name: Tor
+tool_reading: トーア / トア
+category: OS/プラットフォーム
+developer: The Tor Project
+official_site: https://www.torproject.org/
+date: '2026-10-22'
+last_updated: '2026-10-22'
 tags:
-  - "オープンソース"
-  - "プライバシー"
-  - "ブラウザ"
-description: "インターネット上でのプライバシーと匿名性を保護する分散型ネットワークおよびブラウザ"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - プライバシー
+  - ブラウザ
+description: インターネット上でのプライバシーと匿名性を保護する分散型ネットワークおよびブラウザ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "プライバシーを重視するユーザー"
-    - "ジャーナリスト"
-    - "開発者"
-  latest_highlight: "2026年10月にTor Browser 15.0.26をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - プライバシーを重視するユーザー
+    - ジャーナリスト
+    - 開発者
+  latest_highlight: 2026年10月にTor Browser 15.0.26をリリース
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 10
-      reason: "高度な匿名性とトラッキング保護機能を提供"
+      reason: 高度な匿名性とトラッキング保護機能を提供
     - point: 5
-      reason: "完全無料のオープンソースプロジェクトとして非営利組織により維持されている"
+      reason: 完全無料のオープンソースプロジェクトとして非営利組織により維持されている
   minus_points:
     - point: -3
-      reason: "通信の仕組み上、一般的なブラウザと比較して通信速度が低下しやすい"
+      reason: 通信の仕組み上、一般的なブラウザと比較して通信速度が低下しやすい
     - point: -2
-      reason: "一部のWebサイトでアクセス制限やCAPTCHAが頻発する"
-  summary: "プライバシーと匿名性保護において業界標準となるツールだが、利便性や通信速度には一定の妥協が必要"
-
-# 【任意項目】該当するもののみ記載
+      reason: 一部のWebサイトでアクセス制限やCAPTCHAが頻発する
+  summary: プライバシーと匿名性保護において業界標準となるツールだが、利便性や通信速度には一定の妥協が必要
 links:
-  github: "https://github.com/torproject/tor"
+  github: https://github.com/torproject/tor
 relationships:
   related_tools:
-    - "Opera"
+    - Opera
 ---
 
 # **Tor 調査レポート**
