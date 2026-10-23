@@ -6,11 +6,12 @@ category: 言語ランタイム/実行環境
 developer: WineHQ
 official_site: https://www.winehq.org/
 date: '2026-02-13'
-last_updated: '2026-05-16'
+last_updated: '2026-10-24'
 tags:
   - オープンソース
   - 開発者ツール
   - Linux
+  - 開発環境
 description: LinuxやmacOSなどのPOSIX準拠OS上でWindowsアプリケーションをネイティブに実行するための互換レイヤー
 quick_summary:
   has_free_plan: true
@@ -20,7 +21,7 @@ quick_summary:
     - Linuxユーザー
     - macOSユーザー
     - システム管理者
-  latest_highlight: 2026年5月に開発版 Wine 11.8 リリース。VBScript互換性の向上
+  latest_highlight: 2026年10月に開発版 Wine 11.20 リリース。
   update_frequency: 高
 evaluation:
   score: 85
@@ -56,7 +57,7 @@ relationships:
 * **公式サイト**: [https://www.winehq.org/](https://www.winehq.org/)
 * **関連リンク**:
   * Gitリポジトリ: [GitLab](https://gitlab.winehq.org/wine/wine)
-  * ドキュメント: [WineHQ Wiki](https://wiki.winehq.org/)
+  * ドキュメント: [WineHQ Wiki](https://gitlab.winehq.org/wine/wine/-/wikis/home)
   * アプリケーションデータベース: [Wine AppDB](https://appdb.winehq.org/)
 * **カテゴリ**: 言語ランタイム/実行環境
 * **概要**: Wine (Wine Is Not an Emulator) は、Linux、macOS、BSDなどのPOSIX準拠オペレーティングシステム上でWindowsアプリケーションを実行可能にする互換レイヤーです。エミュレータとは異なり、Windows API呼び出しをPOSIX呼び出しに即座に変換するため、パフォーマンスの低下を最小限に抑えてネイティブに近い速度で動作します。
@@ -80,7 +81,44 @@ relationships:
 * **デスクトップ統合**: クリップボードの共有、システムトレイへのアイコン表示、デスクトップショートカットの作成など、ホストOSとのシームレスな統合。
 * **設定ツール (winecfg)**: ドライブ割り当て、オーディオ設定、Windowsバージョンの偽装（Windows 10/11として振る舞うなど）をGUIで設定可能。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: POSIX準拠OS上の互換レイヤーアーキテクチャ
+* **主要コンポーネントとデータフロー**:
+  * **Windowsアプリケーション**: ネイティブのWindows実行ファイル (.exe / .dll)
+  * **Wine Server**: プロセス間通信(IPC)や同期、名前付きパイプ、レジストリなどを管理するデーモンプロセス
+  * **Wine DLLs**: Windows API (kernel32, user32, gdi32など) を実装し、呼び出しをホストOS（Linux/macOS）のPOSIX APIやグラフィックスAPI（X11/Wayland/Vulkan等）に変換する共有ライブラリ
+* **特筆すべき要素技術**:
+  * **API変換 (Translation)**: エミュレータ（CPU命令の変換）ではなく、Windows APIをPOSIX APIへと動的にマッピング・変換するため、ネイティブに近い速度で実行可能
+  * **Wow64 (Windows 32-bit on Windows 64-bit)**: 新しいWow64アーキテクチャにより、32bitアプリケーションのAPI呼び出しをWineの64bitライブラリ上で変換・処理可能になり、ホスト環境における32bitライブラリへの依存が解消された
+  * **DXVK / VKD3D**: Direct3Dの呼び出しをVulkanに変換することで、3Dグラフィックスを高速に処理する（モダンなゲーム実行に不可欠）
+
+```mermaid
+flowchart TD
+    subgraph HostOS["Host OS (Linux/macOS)"]
+        subgraph WineEnv["Wine 環境"]
+            WinApp["Windows アプリケーション (.exe)"]
+
+            subgraph WineLibraries["Wine DLLs (互換レイヤー)"]
+                Kernel32["kernel32.dll"]
+                User32["user32.dll"]
+                Gdi32["gdi32.dll / d3d11.dll"]
+            end
+
+            WineServer["Wine Server (wineserver)"]
+        end
+
+        POSIX["POSIX API (glibc 等)"]
+        Graphics["Graphics API (Vulkan/X11/Wayland)"]
+    end
+
+    WinApp -->|API呼び出し| WineLibraries
+    WineLibraries <-->|IPC・同期処理| WineServer
+    WineLibraries -->|システムコール変換| POSIX
+    WineLibraries -->|描画命令変換| Graphics
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Linuxディストリビューション（Ubuntu, Fedora, Arch Linuxなど）またはmacOS。
@@ -107,20 +145,20 @@ relationships:
     wine setup.exe
     ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **完全無料・OSS**: ライセンス費用がかからず、誰でも自由に利用・改変が可能。Windows OSのライセンスも不要です。
 * **軽量・高速**: 仮想マシン(VM)と異なり、OS全体をエミュレートせずAPI変換のみを行うため、メモリ消費が少なく動作が非常に軽快です。
 * **高い互換性**: 30年以上の開発実績があり、数万のアプリケーションが動作します（AppDBで互換性情報を確認可能）。
 * **スクリプト制御**: コマンドラインから操作できるため、自動テストやバッチ処理への組み込みが容易です。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **完全な互換性ではない**: すべてのWindowsアプリが動くわけではありません。特に最新のDRMや強力なアンチチートツールを含むゲームは動かないことが多いです。
 * **設定の複雑さ**: アプリによっては、特定のDLLを追加したり、レジストリを修正したりする「微調整」が必要になることがあります（Winetricksなどの補助ツールで緩和可能）。
 * **日本語環境**: デフォルトでは日本語フォントが豆腐（□□）になることがあり、フォント設定やロケール設定などの調整が必要な場合があります。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -129,7 +167,7 @@ relationships:
 * **課金体系**: 完全無料（寄付歓迎）。
 * **商用版**: CodeWeavers社による「CrossOver」があり、こちらは有料でサポートが付き、設定が簡素化されています。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Valve (Steam Deck), Google (ChromeOS), CodeWeaversなど。
 * **導入事例**:
@@ -137,15 +175,15 @@ relationships:
   * **Google**: ChromeOS上でWindowsアプリを動かす機能にWineの技術が活用されています。
 * **対象業界**: ゲーム業界、教育機関、組み込みシステム、一般企業のLinuxワークステーション。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: WineHQ Wikiに膨大なドキュメントがあり、設定方法やトラブルシューティング、開発者向け情報が詳細に記載されています。
 * **コミュニティ**: メーリングリスト、IRC、フォーラムが非常に活発。AppDBにはユーザーによるアプリごとの動作報告（Platinum, Gold, Silverなどのランク付け）が蓄積されています。
 * **公式サポート**: Wine自体には企業による公式サポートはありませんが、商用版のCrossOverを購入することでCodeWeavers社のサポートを受けられます。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: Winelibを使用することで、Windows用ソースコードをLinuxネイティブアプリとしてコンパイル可能です。
 * **外部サービス連携**:
@@ -153,7 +191,7 @@ relationships:
   * **Lutris**: ゲーム管理プラットフォーム。Wineのバージョン管理や設定スクリプトをコミュニティベースで共有・自動化。
   * **Bottles**: コンテナライクにWine環境（プレフィックス）を管理するGUIツール。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -161,19 +199,19 @@ relationships:
 | **Python** | ◯ | Windows版PythonをWine上で動かすことで、Windows専用ライブラリ（pywin32等）のテストが可能 | ネイティブLinux版Pythonがあるならそちらを使うべき |
 | **Bash** | ◎ | コマンドライン引数としてWindowsパスを渡すなど、シェルスクリプトとの親和性が高い | パス形式の違い（`C:\` vs `/`）に注意が必要 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: 特になし。ローカルで動作するツールです。
 * **データ管理**: データはすべてローカル（デフォルトでは `~/.wine`）に保存されます。クラウドへの送信はありません。
 * **準拠規格**: オープンソースライセンス（LGPL）に準拠。
 * **注意点**: Wine上で実行されるWindowsウイルスやマルウェアは、Linuxのファイルシステムにアクセスできる可能性があるため、セキュリティリスクはゼロではありません。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: 基本的にはコマンドラインツールですが、`winecfg` などのGUI設定ツールはWindows 98/2000風のクラシックな見た目です。現代的なUI/UXを求める場合は、Bottlesなどのラッパーツールの利用が推奨されます。
 * **学習コスト**: インストールして動くだけなら簡単ですが、動かないアプリを動かすためのトラブルシューティングには、DLLの知識やログの解読など、高いスキルが必要です。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **Wine Prefixの分離**: アプリケーションごとに異なるWine Prefix（仮想Cドライブ環境）を作成し、環境汚染を防ぐ（`WINEPREFIX`環境変数の活用）。
@@ -183,7 +221,7 @@ relationships:
   * **Rootでの実行**: `sudo wine ...` のように管理者権限でWineを実行することは、セキュリティリスクが高く、ファイル権限の問題を引き起こすため厳禁です。
   * **システムディレクトリへのDLLコピー**: `/usr/lib` などにWindowsのDLLを直接コピーすると、システム全体が不安定になる可能性があります。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: オープンソースコミュニティ、Reddit、Linuxフォーラム
 * **総合評価**: 4.5/5.0 (Linuxユーザーにとって不可欠なツールとして)
@@ -196,10 +234,14 @@ relationships:
   * 「アップデートで動いていたアプリが動かなくなるリグレッション（退行）がたまにある。」
   * 「最新のアンチチート対応ゲームがまだ動かないものが多い。」
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 Wineは2週間ごとに開発版がリリースされ、年1回（通常1月）安定版がリリースされます。
 
+* **2026-10-16**: **Wine 11.20 (開発版)**。各種バグ修正など。
+* **2026-10-02**: **Wine 11.19 (開発版)**。各種バグ修正など。
+* **2026-09-18**: **Wine 11.18 (開発版)**。各種バグ修正など。
+* **2026-09-04**: **Wine 11.17 (開発版)**。各種バグ修正など。
 * **2026-05-02**: **Wine 11.8 (開発版)**。VBScript互換性の向上とバグ修正。
 * **2026-04-17**: **Wine 11.7 (開発版)**。VBScript修正、DirectSound 7.1チャンネルサポートなど。
 * **2026-02-06**: **Wine 11.2 (開発版)**。各種バグ修正とDirect3Dの改善。
@@ -209,29 +251,31 @@ Wineは2週間ごとに開発版がリリースされ、年1回（通常1月）�
   * **Waylandドライバのデフォルト化**: X11依存からの脱却が大きく前進し、Wayland環境でのネイティブ動作が向上。
   * **WoW64新アーキテクチャの完成**: 32bitライブラリなしで32bit Windowsアプリを実行する機能が完全に安定化。
 
-(出典: [WineHQ News](https://www.winehq.org/news/) / [GitLab Tags](https://gitlab.winehq.org/wine/wine/-/tags))
+(出典: [WineHQ News](https://gitlab.winehq.org/wine/wine/-/releases) / [GitLab Tags](https://gitlab.winehq.org/wine/wine/-/tags))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール | CrossOver | VirtualBox | WSL 2 |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | アプリ実行 | ◎<br><small>ネイティブ速度</small> | ◎<br><small>ネイティブ速度</small> | ◯<br><small>OSごと実行</small> | △<br><small>逆方向(Win→Linux)</small> |
-| **互換性** | 動作率 | ◯<br><small>数万アプリ</small> | ◎<br><small>主要アプリ保証</small> | ◎<br><small>100% (本物)</small> | - |
-| **使いやすさ** | 設定難易度 | △<br><small>知識が必要</small> | ◯<br><small>GUIで簡単</small> | ◯<br><small>OSインストール要</small> | ◯<br><small>CUI中心</small> |
-| **コスト** | ライセンス | ◎<br><small>無料</small> | △<br><small>有料</small> | △<br><small>Winライセンス要</small> | ◎<br><small>無料(Win必要)</small> |
+| 機能カテゴリ | 機能項目 | 本ツール | Docker (dockur/windows) | Podman | WSL 2 | Ubuntu |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **基本機能** | アプリ実行 | ◎<br><small>ネイティブ速度</small> | ◯<br><small>KVM依存のVM</small> | △<br><small>Linux環境内のみ</small> | △<br><small>逆方向(Win→Linux)</small> | - |
+| **互換性** | 動作率 | ◯<br><small>数万アプリ</small> | ◎<br><small>100% (本物)</small> | - | - | - |
+| **使いやすさ** | 設定難易度 | △<br><small>知識が必要</small> | ◯<br><small>自動構築で容易</small> | ◯<br><small>コンテナの知識</small> | ◯<br><small>CUI中心</small> | ◯<br><small>容易</small> |
+| **コスト** | ライセンス | ◎<br><small>無料</small> | ◯<br><small>評価版等は無料</small> | ◎<br><small>無料</small> | ◎<br><small>無料(Win必要)</small> | ◎<br><small>無料</small> |
+| **OS統合** | ホストOS統合 | ◯<br><small>ファイルやクリップボード等</small> | △<br><small>RDP/VNC経由</small> | △<br><small>隔離された環境</small> | ◎<br><small>Win上でLinuxをシームレス実行</small> | ◎<br><small>ネイティブ</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **本ツール** | OSSの互換レイヤー | 無料、軽量、高パフォーマンス | 設定が難しい、動かないアプリもある | Linux/Macで無料でWindowsアプリを動かしたい場合 |
-| **CrossOver** | Wineの商用版 | 設定が簡単、公式サポートあり | 有料 | 企業利用や、設定の手間を省きたい場合 |
-| **VirtualBox** | 仮想マシン | 互換性100% (本物のWindowsが動く) | 重い、Windowsライセンスが必要 | 完璧な互換性が必要な場合や、重い処理でない場合 |
-| **WSL 2** | Windows上のLinux | LinuxアプリをWindowsで動かす | Windowsとの親和性が高い | 逆方向（WindowsでLinuxを使う）のニーズ |
+| **Docker** | コンテナ実行基盤 | dockur/windowsなどで使い捨てWindows環境が簡単に作れる | KVM環境がないと重い、ホスト連携が苦手 | CI/CDで一時的なWindows環境が必要な場合 |
+| **Podman** | デーモンレスのコンテナエンジン | セキュリティ重視、K8s連携が強力 | Dockerほどのエコシステムではない | セキュリティやK8s運用を前提にコンテナを使いたい場合 |
+| **WSL 2** | Windows上のLinux | Windows上でLinux環境をネイティブライクに実行可能 | 仮想環境特有のメモリ管理の癖がある | WindowsをメインOSとしつつLinuxツールを使いたい場合 |
+| **Ubuntu** | デファクトLinuxOS | 情報が豊富で、WineのベースOSとしても最適 | Snap強制など独自仕様がある | Wineを動作させるための堅牢なホストOSが必要な場合 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   * Wineは、LinuxやmacOSユーザーにとって「Windowsの呪縛」から解放されるための最も重要なツールの一つです。30年以上の歴史に裏打ちされた互換性は驚異的であり、パフォーマンスもネイティブに匹敵します。設定の学習コストは高いですが、それを補って余りある自由と価値を提供します。
