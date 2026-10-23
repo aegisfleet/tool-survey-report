@@ -2,7 +2,7 @@
 title: llms.txt 調査レポート
 tool_name: llms.txt
 tool_reading: エルエルエムエス・テキスト
-category: ドキュメント生成/管理
+category: AI開発ワークフロー
 developer: AnswerDotAI (Jeremy Howard)
 official_site: https://llmstxt.org/
 date: '2026-10-10'

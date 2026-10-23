@@ -2,7 +2,7 @@
 title: Docker Gordon 調査レポート
 tool_name: Gordon
 tool_reading: ゴードン
-category: 自律型コーディングエージェント
+category: エージェント実行環境/ランタイム
 developer: Docker Inc.
 official_site: https://www.docker.com/products/gordon/
 date: '2026-05-29'

@@ -2,7 +2,7 @@
 title: Typeless 調査レポート
 tool_name: Typeless
 tool_reading: タイプレス
-category: AIアシスタント
+category: AI検索/ブラウザ拡張
 developer: Simply CA LLC
 official_site: https://www.typeless.com/
 date: '2026-10-23'

@@ -2,7 +2,7 @@
 title: Wireshark 調査レポート
 tool_name: Wireshark
 tool_reading: ワイヤーシャーク
-category: ネットワークアナライザ
+category: セキュリティ
 developer: Wireshark Foundation
 official_site: https://www.wireshark.org/
 date: '2026-10-22'

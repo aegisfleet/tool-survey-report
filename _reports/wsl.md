@@ -2,7 +2,7 @@
 title: Windows Subsystem for Linux (WSL) 調査レポート
 tool_name: WSL
 tool_reading: ダブルエスエル / ウィンドウズ サブシステム フォー リナックス
-category: OS/プラットフォーム
+category: デスクトップ/環境操作
 developer: Microsoft
 official_site: https://learn.microsoft.com/windows/wsl/
 date: '2026-04-10'
