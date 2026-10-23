@@ -2,7 +2,7 @@
 title: Cursor Plugins 調査レポート
 tool_name: Cursor Plugins
 tool_reading: カーソルプラグイン
-category: 開発者ツール
+category: AIエディタ/IDE拡張
 developer: Cursor
 official_site: https://github.com/cursor/plugins
 date: '2026-10-21'

@@ -2,7 +2,7 @@
 title: Onion Search Engine 調査レポート
 tool_name: Onion Search Engine
 tool_reading: オニオン・サーチ・エンジン
-category: 検索エンジン
+category: AI検索/ブラウザ拡張
 developer: Onion search engine
 official_site: https://onionsearchengine.com/
 date: '2026-10-22'

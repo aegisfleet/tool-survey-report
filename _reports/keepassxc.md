@@ -2,7 +2,7 @@
 title: KeePassXC 調査レポート
 tool_name: KeePassXC
 tool_reading: キーパスエックスシー
-category: パスワード管理
+category: セキュリティ
 developer: KeePassXC Team
 official_site: https://keepassxc.org/
 date: '2026-10-22'

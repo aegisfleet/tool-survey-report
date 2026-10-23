@@ -2,7 +2,7 @@
 title: Cypress 調査レポート
 tool_name: Cypress
 tool_reading: サイプレス
-category: テスト自動化SaaS
+category: E2Eテストフレームワーク
 developer: Cypress.io
 official_site: https://www.cypress.io/
 date: '2026-01-28'

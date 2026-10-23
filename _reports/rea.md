@@ -2,7 +2,7 @@
 title: REA 調査レポート
 tool_name: REA
 tool_reading: レア
-category: 開発者ツール
+category: エージェント開発プラットフォーム
 developer: morluto
 official_site: https://rea.tools/
 date: '2026-10-21'

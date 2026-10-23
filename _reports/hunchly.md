@@ -2,7 +2,7 @@
 title: Hunchly 調査レポート
 tool_name: Hunchly
 tool_reading: ハンチリー
-category: OSINT・調査支援
+category: AI検索/ブラウザ拡張
 developer: Maltego Technologies
 official_site: https://hunch.ly/
 date: '2026-10-22'

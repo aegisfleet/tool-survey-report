@@ -2,7 +2,7 @@
 title: Snyk Open Source 調査レポート
 tool_name: Snyk Open Source
 tool_reading: スニーク オープンソース
-category: SCA/OSS依存関係管理
+category: セキュリティ/脆弱性診断
 developer: Snyk Ltd.
 official_site: https://snyk.io/product/open-source-security-management/
 date: '2026-06-22'

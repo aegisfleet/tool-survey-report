@@ -2,7 +2,7 @@
 title: Cline 調査レポート
 tool_name: Cline
 tool_reading: クライン
-category: 自律型コーディングエージェント
+category: AIエディタ/IDE拡張
 developer: Cline Bot Inc.
 official_site: https://cline.bot/
 date: '2025-10-23'
