@@ -1,50 +1,42 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "TapNow 調査レポート"
-tool_name: "TapNow"
-tool_reading: "タップナウ"
-category: "AI動画生成プラットフォーム"
-developer: "Tamar AI Inc."
-official_site: "https://www.tapnow.ai/"
-date: "2026-10-23"
-last_updated: "2026-10-23"
+title: TapNow 調査レポート
+tool_name: TapNow
+tool_reading: タップナウ
+category: AI動画生成プラットフォーム
+developer: Tamar AI Inc.
+official_site: https://www.tapnow.ai/
+date: '2026-10-23'
+last_updated: '2026-10-23'
 tags:
-  - "生成AI"
-  - "AI動画生成"
-  - "SaaS"
-description: "テキスト、画像、音声、動画のAIモデルを統合して作品を制作できるAIネイティブなクリエイティブOS"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - 生成AI
+  - AI動画生成
+  - SaaS
+description: テキスト、画像、音声、動画のAIモデルを統合して作品を制作できるAIネイティブなクリエイティブOS
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "クリエイター"
-    - "映像制作チーム"
-  latest_highlight: "2026年9月にオリジナルAIネイティブ作品の配信プラットフォーム「Glanze」を発表"
-  update_frequency: "中"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - クリエイター
+    - 映像制作チーム
+  latest_highlight: 2026年9月にオリジナルAIネイティブ作品の配信プラットフォーム「Glanze」を発表
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "複数のAIモデル（テキスト・画像・音声・動画）を1つの環境で統合的に扱える"
+      reason: 複数のAIモデル（テキスト・画像・音声・動画）を1つの環境で統合的に扱える
     - point: 5
-      reason: "制作だけでなく、Glanzeを通じた配信までをサポートする独自のエコシステム"
+      reason: 制作だけでなく、Glanzeを通じた配信までをサポートする独自のエコシステム
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "単なる生成ツールにとどまらず、映像制作から配信までのプロセスを統合したクリエイティブ環境を提供する"
-
-# 【任意項目】該当するもののみ記載
+      reason: 特になし
+  summary: 単なる生成ツールにとどまらず、映像制作から配信までのプロセスを統合したクリエイティブ環境を提供する
 relationships:
   related_tools:
-    - "Luma AI"
-    - "Dreamina"
+    - Luma AI
+    - Dreamina
 ---
 
 # **TapNow 調査レポート**
