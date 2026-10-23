@@ -1,45 +1,43 @@
 ---
-title: "Typeless 調査レポート"
-tool_name: "Typeless"
-tool_reading: "タイプレス"
-category: "AIアシスタント"
-developer: "Simply CA LLC"
-official_site: "https://www.typeless.com/"
-date: "2026-10-23"
-last_updated: "2026-10-23"
+title: Typeless 調査レポート
+tool_name: Typeless
+tool_reading: タイプレス
+category: AIアシスタント
+developer: Simply CA LLC
+official_site: https://www.typeless.com/
+date: '2026-10-23'
+last_updated: '2026-10-23'
 tags:
-  - "音声入力"
-  - "AI"
-  - "文字起こし"
-description: "音声を高精度かつ自然な文章に変換するAI音声入力アプリ"
-
+  - 音声入力
+  - AI
+  - 文字起こし
+description: 音声を高精度かつ自然な文章に変換するAI音声入力アプリ
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$12/月"
+  starting_price: $12/月
   target_users:
-    - "開発者"
-    - "ライター"
-    - "ビジネスパーソン"
-  latest_highlight: "Mac版（Beta）およびWindows版（Beta）の提供開始"
-  update_frequency: "中"
-
+    - 開発者
+    - ライター
+    - ビジネスパーソン
+  latest_highlight: Mac版（Beta）およびWindows版（Beta）の提供開始
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 6
-      reason: "言い淀みや繰り返しを自動除去し、自然な文章にフォーマットする強力なAI機能"
+      reason: 言い淀みや繰り返しを自動除去し、自然な文章にフォーマットする強力なAI機能
     - point: 4
-      reason: "マルチプラットフォーム対応（Mac, Windows, Linux, iOS, Android）"
+      reason: マルチプラットフォーム対応（Mac, Windows, Linux, iOS, Android）
     - point: 5
-      reason: "100以上の言語をサポートし、翻訳も可能"
+      reason: 100以上の言語をサポートし、翻訳も可能
   minus_points:
     - point: -3
-      reason: "有料プランがやや高価（$12/月〜）"
+      reason: 有料プランがやや高価（$12/月〜）
     - point: -2
-      reason: "AIによる意図しない要約や変換が起こる可能性がある"
-  summary: "タイピングの手間を大幅に削減できる強力な音声入力ツールだが、コストとAIの挙動には注意が必要"
+      reason: AIによる意図しない要約や変換が起こる可能性がある
+  summary: タイピングの手間を大幅に削減できる強力な音声入力ツールだが、コストとAIの挙動には注意が必要
 ---
 
 # **Typeless 調査レポート**
