@@ -2,15 +2,13 @@
 title: Nginx 調査レポート
 tool_name: Nginx
 tool_reading: エンジンエックス
-category: インフラ/サーバー管理
+category: Webサーバー/プロキシ
 developer: F5, Inc.
 official_site: https://nginx.org/
 date: '2026-07-13'
 last_updated: '2026-07-13'
 tags:
-  - インフラ
   - オープンソース
-  - サーバー
 description: 高性能なWebサーバー、リバースプロキシ、ロードバランサーとして機能するオープンソースソフトウェア
 quick_summary:
   has_free_plan: true

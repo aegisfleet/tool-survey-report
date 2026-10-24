@@ -2,17 +2,15 @@
 title: Kubernetes 調査レポート
 tool_name: Kubernetes
 tool_reading: クバネティス / クーべネティス
-category: インフラ/サーバー管理
+category: コンテナ/仮想化
 developer: Cloud Native Computing Foundation (CNCF)
 official_site: https://kubernetes.io
 date: '2026-02-17'
 last_updated: '2026-05-22'
 tags:
   - DevOps
-  - オーケストレーション
   - オープンソース
   - クラウド
-  - クラウドネイティブ
   - コンテナ
 description: コンテナ化されたアプリケーションのデプロイ、スケーリング、管理を自動化するオープンソースのコンテナオーケストレーションシステム。
 quick_summary:

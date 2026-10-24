@@ -2,14 +2,13 @@
 title: Karpenter 調査レポート
 tool_name: Karpenter
 tool_reading: カーペンター
-category: インフラ/サーバー管理
+category: コンテナ/仮想化
 developer: AWS (Cloud Native Computing Foundation)
 official_site: https://karpenter.sh/
 date: '2025-11-18'
 last_updated: '2026-06-15'
 tags:
   - DevOps
-  - Kubernetes
   - オープンソース
   - クラウド
   - 構成管理

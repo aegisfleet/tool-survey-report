@@ -2,16 +2,13 @@
 title: Caddy 調査レポート
 tool_name: Caddy
 tool_reading: キャディ
-category: インフラ/サーバー管理
+category: Webサーバー/プロキシ
 developer: ZeroSSL / オープンソースコミュニティ
 official_site: https://caddyserver.com/
 date: '2026-10-02'
 last_updated: '2026-10-02'
 tags:
-  - サーバー
-  - インフラ
   - オープンソース
-  - セキュリティ
 description: HTTPSをデフォルトで自動設定し、設定が簡単なGo言語製のモダンなWebサーバーおよびリバースプロキシ
 quick_summary:
   has_free_plan: true
