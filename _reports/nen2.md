@@ -1,40 +1,40 @@
 ---
-title: "nen2 調査レポート"
-tool_name: "nen2"
-tool_reading: "ネンツー"
-category: "CMS/静的サイト"
-developer: "髙橋理洋"
-official_site: "https://nen2.com/"
-date: "2026-10-24"
-last_updated: "2026-10-24"
+title: nen2 調査レポート
+tool_name: nen2
+tool_reading: ネンツー
+category: CMS/静的サイト
+developer: 髙橋理洋
+official_site: https://nen2.com/
+date: '2026-10-24'
+last_updated: '2026-10-24'
 tags:
-  - "ノーコード"
-  - "無料ツール"
-  - "SaaS"
-  - "AI"
-description: "AIを活用して無料で簡単に店舗のホームページを作成できるサービス"
+  - ノーコード
+  - 無料ツール
+  - SaaS
+  - AI
+description: AIを活用して無料で簡単に店舗のホームページを作成できるサービス
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "店舗経営者"
-    - "個人事業主"
-    - "スモールビジネス"
-  latest_highlight: "現在8,982店舗が登録中"
-  update_frequency: "中"
+    - 店舗経営者
+    - 個人事業主
+    - スモールビジネス
+  latest_highlight: 現在8,982店舗が登録中
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "完全無料で店舗のホームページを作成できる"
+      reason: 完全無料で店舗のホームページを作成できる
     - point: 5
-      reason: "AIを活用した簡単な作成プロセス"
+      reason: AIを活用した簡単な作成プロセス
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "無料で簡単に店舗ホームページを作成したい方に最適なツール。"
+      reason: 特になし
+  summary: 無料で簡単に店舗ホームページを作成したい方に最適なツール。
 ---
 
 # **nen2 調査レポート**
