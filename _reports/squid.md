@@ -2,15 +2,13 @@
 title: Squid 調査レポート
 tool_name: Squid
 tool_reading: スクイッド
-category: インフラ/サーバー管理
+category: Webサーバー/プロキシ
 developer: Squid Project
 official_site: https://www.squid-cache.org/
 date: '2026-03-30'
 last_updated: '2026-08-08'
 tags:
-  - インフラ
   - オープンソース
-  - プロキシ
 description: 高機能なキャッシングプロキシサーバーおよびWebアクセラレーター
 quick_summary:
   has_free_plan: true

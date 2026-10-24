@@ -2,17 +2,14 @@
 title: Proxmox VE 調査レポート
 tool_name: Proxmox VE
 tool_reading: プロックスモックス ヴイイー
-category: インフラ/サーバー管理
+category: コンテナ/仮想化
 developer: Proxmox Server Solutions GmbH
 official_site: https://www.proxmox.com/en/products/proxmox-virtual-environment/overview
 date: '2026-04-15'
 last_updated: '2026-09-10'
 tags:
   - オープンソース
-  - 仮想化
   - コンテナ
-  - KVM
-  - LXC
 description: KVM仮想マシンとLXCコンテナを統合管理できる、オープンソースのエンタープライズ向けサーバー仮想化プラットフォーム
 quick_summary:
   has_free_plan: true
