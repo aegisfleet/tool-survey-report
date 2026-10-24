@@ -37,6 +37,10 @@ evaluation:
     - point: -2
       reason: 料金が個別見積もり中心であり、導入ハードルがやや高い場合がある
   summary: 国内随一の決済手段数と強固なセキュリティを誇る、大規模なビジネス展開に最適な決済プラットフォーム
+relationships:
+  related_tools:
+    - Stripe
+    - SB Payment Service
 ---
 
 # **GMOペイメントゲートウェイ 調査レポート**

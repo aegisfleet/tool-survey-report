@@ -39,6 +39,10 @@ evaluation:
   summary: 多種多様な決済手段と無償の高度セキュリティを提供する強力な決済基盤だが、導入コストの把握には問い合わせが必要
 links:
   documentation: https://developer.sbpayment.jp/
+relationships:
+  related_tools:
+    - Stripe
+    - GMOペイメントゲートウェイ
 ---
 
 # **SB Payment Service 調査レポート**
