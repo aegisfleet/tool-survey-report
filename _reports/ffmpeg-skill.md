@@ -2,15 +2,15 @@
 title: ffmpeg-skill 調査レポート
 tool_name: ffmpeg-skill
 tool_reading: エフエフエムペグスキル
-category: 開発者ツール
+category: MCPサーバー/基盤
 developer: kajisho5
 official_site: https://github.com/kajisho5/ffmpeg-skill
 date: '2026-10-25'
 last_updated: '2026-10-25'
 tags:
   - 動画編集
-  - 音声編集
-  - AIエージェント
+  - 開発者ツール
+  - エージェント
   - MCP
   - オープンソース
 description: Claude Code、Cursor等のAIエージェントにローカル動画・音声編集機能を提供するAgent SkillおよびMCPサーバー
