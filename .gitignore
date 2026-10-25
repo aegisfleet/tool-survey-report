@@ -38,6 +38,9 @@ __pycache__/
 /*.py
 /*.sh
 
+# Diff files at repository root
+/*.diff
+
 # Markdown files at repository root (prevent adding new markdown files to root)
 /*.md
 !/README.md
