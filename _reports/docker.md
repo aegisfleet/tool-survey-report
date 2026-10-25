@@ -6,7 +6,7 @@ category: ビルドツール/ランタイム
 developer: Docker, Inc.
 official_site: https://www.docker.com/
 date: '2026-02-14'
-last_updated: "2026-10-25"
+last_updated: '2026-10-25'
 tags:
   - AI
   - DevOps
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - データサイエンティスト
-  latest_highlight: "2026年10月にDocker Engine v29.9.2およびv29.9.1をリリースし、複数の重大なセキュリティ脆弱性を修正"
+  latest_highlight: 2026年10月にDocker Engine v29.9.2およびv29.9.1をリリースし、複数の重大なセキュリティ脆弱性を修正
   update_frequency: 高
 evaluation:
   score: 92
