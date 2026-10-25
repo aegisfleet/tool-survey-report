@@ -6,7 +6,7 @@ category: ビルドツール/ランタイム
 developer: Docker, Inc.
 official_site: https://www.docker.com/
 date: '2026-02-14'
-last_updated: '2026-05-17'
+last_updated: "2026-10-25"
 tags:
   - AI
   - DevOps
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - DevOpsエンジニア
     - データサイエンティスト
-  latest_highlight: 2026年1月にDocker Desktop 4.50をリリースし、AI開発向けのローカルモデル実行基盤を強化
+  latest_highlight: "2026年10月にDocker Engine v29.9.2およびv29.9.1をリリースし、複数の重大なセキュリティ脆弱性を修正"
   update_frequency: 高
 evaluation:
   score: 92
@@ -51,8 +51,6 @@ relationships:
     - Kubernetes
     - act
     - LocalStack
-    - Plugin Installation Manager Tool
-    - dockur/windows
     - PyInstaller
 ---
 # **Docker 調査レポート**
@@ -93,7 +91,31 @@ relationships:
 * **Docker Scout**: コンテナイメージの脆弱性をスキャンし、ソフトウェアサプライチェーンのセキュリティを向上させる機能。
 * **Docker AI**: ローカルでの大規模言語モデル（LLM）の実行支援や、自然言語によるDockerfile生成などを提供する機能群。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: クライアント・サーバー型（デーモン型）アーキテクチャ。
+* **主要コンポーネントとデータフロー**:
+  * **Docker Client**: ユーザーが操作するCLIツール。コマンドを受け取り、REST APIを通じてDocker Daemonに送信する。
+  * **Docker Daemon (dockerd)**: ホストOS上でバックグラウンド実行されるサービス。イメージのビルド、コンテナの実行、ネットワークやボリュームの管理を行う。
+  * **containerd**: 業界標準のコンテナランタイム。Docker Daemonから命令を受け取り、コンテナのライフサイクル（開始、停止など）を直接管理する。
+  * **Registry**: Docker Hubなどのイメージ保管場所。Daemonが必要に応じてイメージをプル（ダウンロード）またはプッシュ（アップロード）する。
+* **特筆すべき要素技術**:
+  * Linuxカーネルの **Namespaces**（プロセス、ネットワークなどの隔離）と **Cgroups**（リソース制限）を活用し、軽量な隔離環境を実現している。
+
+```mermaid
+graph LR
+    Client[Docker Client<br/>CLI / UI] -- REST API --> Daemon
+    subgraph Docker Host
+        Daemon[Docker Daemon<br/>dockerd] -- gRPC --> containerd[containerd]
+        containerd -- spawn --> Container1[Container]
+        containerd -- spawn --> Container2[Container]
+        Daemon -. manage .-> Volumes[(Volumes)]
+        Daemon -. manage .-> Networks((Networks))
+    end
+    Daemon -- Pull/Push --> Registry[Docker Registry<br/>Docker Hub]
+```
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * Windows 10/11 (WSL2推奨), macOS, またはLinux。
@@ -121,21 +143,21 @@ relationships:
   docker run -d -p 80:80 nginx
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **圧倒的なエコシステム**: デファクトスタンダードとして、Docker Hubには膨大なイメージが存在し、Kubernetesや各種クラウドサービスとの連携も強力です。
 * **高いポータビリティ**: 一度イメージを作成すれば、ノートPCからクラウドサーバーまで、Docker環境ならどこでも同じように動作します。
 * **開発効率の向上**: Docker Composeにより、DBやキャッシュサーバーを含む複雑なアプリケーション環境をコマンド一つで立ち上げられます。
 * **AI開発への対応**: GenAI Stackなどの提供により、ローカルでのLLM活用やRAGアプリケーション開発が容易になっています。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **Docker Desktopのパフォーマンス**: 特にファイルI/Oが遅くなることがあり、大規模なプロジェクトでは生産性に影響を与える場合があります（VirtioFS等で改善傾向）。
 * **学習コスト**: 基本操作は容易ですが、ネットワーク、ストレージ、セキュリティを本番環境で適切に運用するには専門知識が必要です。
 * **永続データの管理**: コンテナは基本的にステートレスなため、データベースなどの永続データはボリューム機能を使った適切な設計が不可欠です。
 * **ライセンス変更**: 大規模企業（従業員数250名以上または年間売上高1,000万ドル以上）でのDocker Desktop利用は有償サブスクリプションが必須です。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
@@ -147,7 +169,7 @@ relationships:
 * **課金体系**: ユーザー単位の月額または年額課金。
 * **無料トライアル**: Docker Build CloudとTestcontainers Cloudに無料トライアルが提供されています。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Netflix, PayPal, Spotify, Adobe, Uberなど、世界中の先進的なテクノロジー企業で採用されています。日本国内でもメルカリ、サイバーエージェント、Yahoo! JAPANなど多くの企業が活用しています。
 * **導入事例**:
@@ -155,20 +177,20 @@ relationships:
   * **Uber**: 大規模なインフラ基盤としてDockerを活用し、サービスの安定性とスケーラビリティを確保。
 * **対象業界**: IT、金融、製造、エンターテイメント、ヘルスケアなど、業界を問わず広く導入されています。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントが非常に充実しており、チュートリアルからリファレンス、ベストプラクティスまで網羅されています。
 * **コミュニティ**: Docker Community Forum, Stack Overflow, GitHubなどで活発なコミュニティが形成されており、多くの知見が得られます。
 * **公式サポート**: Pro/Team/BusinessプランではEメールサポートが提供されます。BusinessプランではSLA付きの優先サポートも利用可能です。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 強力なREST APIを提供しており、外部ツールやスクリプトからDockerデーモンを制御できます。
 * **外部サービス連携**: ほぼ全てのCI/CDツール（GitHub Actions, Jenkins, CircleCI）、オーケストレーションツール（Kubernetes, ECS）、監視ツール（Datadog, Prometheus）とシームレスに連携可能です。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -177,18 +199,18 @@ relationships:
 | **Go** | ◎ | マルチステージビルドを活用し、超軽量な実行イメージを作成可能。 | 特になし。 |
 | **Java (Spring Boot)** | ◯ | 起動時間が課題だったが、GraalVM等との組み合わせで改善。 | メモリ設定（JVMヒープとコンテナ制限）に注意が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: Docker Hubは多要素認証（MFA）に対応。BusinessプランではSAML 2.0によるSSOが可能です。
 * **データ管理**: Docker Scoutによるイメージの脆弱性スキャン、SBOM（ソフトウェア部品表）の生成・管理が可能です。
 * **準拠規格**: Docker BusinessはSOC 2 Type 2認証を取得しており、GDPRなどの主要なコンプライアンス要件に対応しています。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**: CLIは直感的で強力ですが、Docker DesktopのGUIを利用することで、コンテナのログ確認、Exec接続、リソース使用状況のモニタリングなどが視覚的に行えます。
 * **学習コスト**: 基本的なコマンド（run, build, push）の習得は容易ですが、Dockerfileの最適化やネットワーク設計、Kubernetesへの展開を見据えた設計には学習が必要です。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **マルチステージビルド**: ビルド環境と実行環境を分け、イメージサイズを最小化する。
@@ -199,7 +221,7 @@ relationships:
   * **機密情報の混入**: Dockerfileやイメージ内にAPIキーやパスワードをハードコードする（Secret機能を使用すべき）。
   * **rootユーザーでの実行**: セキュリティリスクを避けるため、可能な限り非特権ユーザーでコンテナを実行する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: G2, Capterra, ITreview, 技術ブログ (2025-2026年)
 * **総合評価**: 4.6/5.0 (Google検索結果から確認されたG2のスコア) - 開発者にとってなくてはならないツールとして不動の地位を築いています。
@@ -214,36 +236,39 @@ relationships:
 * **特徴的なユースケース**:
   * 生成AIを活用した社内チャットボットの開発において、OllamaやLocalAIをDockerコンテナとして配布し、社内ネットワーク内で完結する安全なAI環境を構築。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-10-20**: **Docker Engine v29.9.2 リリース**。Goランタイムのアップデートにより、eMudhra証明書関連のセキュリティ脆弱性 (CVE-2026-111943) を修正。
+* **2026-10-14**: **Docker Engine v29.9.1 リリース**。containerd v2.4.2へのアップデートにより、転送サービスやレイヤー取得時のセキュリティ脆弱性を複数修正。
+* **2026-10-08**: **Docker Engine v29.9.0 リリース**。HTTP/2関連の複数のDoS脆弱性を修正。containerdイメージストアでのlazy-pull機能（デフォルト有効化）などを追加。
+* **2026-09-24**: **Docker Engine v29.8.0 リリース**。`docker create`/`run`に`--umask`フラグを追加。AppArmorプロファイルやSELinuxポリシーによる`AF_VSOCK`ソケット経由でのホストVM通信の制限など、セキュリティを強化。
 * **2026-01-20**: **Docker Desktop 4.50 リリース**。AIモデルのローカル実行パフォーマンスが向上し、Apple Silicon (M3/M4) への最適化が進んだ。
 * **2025-12-15**: **Docker Scout Policy GA**。組織全体でイメージのセキュリティポリシー（例：Criticalな脆弱性がある場合はデプロイ禁止）を強制できる機能が正式版に。
 * **2025-11-11**: **Docker Engine v29.0.0 リリース**。containerdイメージストアがデフォルト化され、スナップショットの管理効率が向上。
 * **2025-10-05**: **Docker Build Cloud 強化**。Apple Silicon (ARM64) ビルドのクラウドオフロード機能が強化され、Intel Macユーザーのビルド時間を大幅短縮。
 
-(出典: [Docker Blog](https://www.docker.com/blog/))
+(出典: [Docker GitHub Releases](https://github.com/moby/moby/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Docker | Podman | Rancher Desktop | containerd |
-|:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | コンテナ実行 | ◎<br><small>デファクト</small> | ◎<br><small>互換性高</small> | ◯<br><small>k8s内包</small> | ◯<br><small>低レイヤー</small> |
-| **アーキテクチャ** | デーモンレス | ×<br><small>デーモン必須</small> | ◎<br><small>デーモンレス</small> | ×<br><small>dockerd選択可</small> | ×<br><small>デーモン</small> |
-| **UX** | GUIツール | ◎<br><small>洗練されている</small> | ◯<br><small>Podman Desktop</small> | ◯<br><small>シンプル</small> | ×<br><small>なし</small> |
-| **拡張機能** | AI/セキュリティ | ◎<br><small>AI/Scout</small> | △<br><small>基本機能のみ</small> | △<br><small>Wasm対応等</small> | ×<br><small>なし</small> |
+| 機能カテゴリ | 機能項目 | Docker | Podman | Kubernetes |
+|:---:|:---|:---:|:---:|:---:|
+| **基本機能** | コンテナ実行 | ◎<br><small>デファクト</small> | ◎<br><small>互換性高</small> | ◎<br><small>コンテナオーケストレーションの標準</small> |
+| **アーキテクチャ** | デーモンレス | ×<br><small>デーモン必須</small> | ◎<br><small>デーモンレス</small> | ×<br><small>各種デーモンプロセスで動作</small> |
+| **オーケストレーション** | K8s連携 (Pod) | △<br><small>Compose経由</small> | ◎<br><small>Podネイティブ</small> | ◎<br><small>ネイティブ</small> |
+| **拡張機能** | AI/セキュリティ | ◎<br><small>AI/Scout</small> | △<br><small>基本機能のみ</small> | ◯<br><small>エコシステム経由で対応</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Docker** | 圧倒的なシェアとエコシステムを持つ標準ツール。 | 情報量、ツール連携、Docker Desktopの使いやすさ。AI対応。 | デスクトップ版の有償化、デーモン起因のセキュリティリスク。 | 一般的な開発、チーム開発、最新のAI機能を利用したい場合。 |
 | **Podman** | Red Hat主導のデーモンレスコンテナエンジン。 | ルートレス実行による高セキュリティ、Kubernetesとの親和性。 | Docker Desktopほどの統合環境ではない（Podman Desktopはあるが）。 | セキュリティ重視、RHEL環境、Docker Desktopのライセンス回避。 |
-| **Rancher Desktop** | Kubernetes管理に主眼を置いたデスクトップツール。 | Kubernetesのバージョン切り替えが容易。完全OSS。 | Dockerほどの多機能さ（AI連携など）はない。 | Kubernetesを中心とした開発、完全無料のGUIツールが必要な場合。 |
-| **containerd** | CNCF卒業プロジェクトのコンテナランタイム。 | 軽量、安定、K8s標準。Dockerの内部でも使われている。 | 人間が直接操作するためのツールではない。 | K8sノードの運用、組み込み機器など、最小限のランタイムが必要な場合。 |
+| **Kubernetes** | デファクトスタンダードのOSS | 移植性が高く、あらゆる環境で動作。機能が豊富で拡張性が高い。 | 学習コストと運用負荷が高い。Docker単体よりも複雑。 | 大規模なプロダクション環境でのコンテナのオーケストレーションが必要な場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Dockerは、コンテナ技術の代名詞として依然として圧倒的な存在感を放っています。特に最近は「Docker AI」や「Docker Scout」といった付加価値機能の強化により、単なるコンテナランタイムから「インテリジェントな開発プラットフォーム」へと進化を遂げています。ライセンスの有料化による一部ユーザーの離脱はありましたが、それを補って余りある生産性向上のメリットを提供しています。
