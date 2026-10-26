@@ -51,6 +51,7 @@ relationships:
     - Hugging Face
     - Qwen-Image-Layered
     - AnimeGen
+    - MangaAgentsStudio-A
 ---
 # **Stable Diffusion 調査レポート**
 
