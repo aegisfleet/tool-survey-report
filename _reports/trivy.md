@@ -6,7 +6,7 @@ category: SCA/OSS依存関係管理
 developer: Aqua Security
 official_site: https://trivy.dev/
 date: '2026-04-05'
-last_updated: '2026-08-21'
+last_updated: '2026-10-26'
 tags:
   - SCA
   - オープンソース
@@ -21,7 +21,7 @@ quick_summary:
   target_users:
     - 開発者
     - DevSecOpsエンジニア
-  latest_highlight: 2026年8月にv0.74.0がリリースされ、RapidFort curated image scannerなどが追加された。
+  latest_highlight: 2026年10月にv0.76.1がリリースされ、eMudhra CAインシデントへの対応等が行われた。
   update_frequency: 高
 evaluation:
   score: 85
@@ -182,11 +182,12 @@ relationships:
 
 ## **16. 直近半年のアップデート情報**
 
+* **2026-10-21**: v0.76.1 がリリース。eMudhra CAの証明書に関するセキュリティ対応などが行われました。
+* **2026-10-14**: v0.76.0 がリリース。
 * **2026-08-14**: v0.74.0 がリリース。RapidFort curated image scanner の追加や、JARライセンスURLのSPDX ID解決サポート、OpenTofu 言語ブロックのサポートなどが追加されました。
 * **2026-08-03**: v0.73.0 がリリース。Bounded read helper の追加、Jenkinsプラグインマニフェストライセンスの読み取り対応、OpenVEXディスカバリーの機能強化が行われました。
 * **2026-06-30**: v0.72.0 がリリース。複数の機能改善とバグ修正が含まれています。
 * **2026-04-16**: v0.70.0 がリリース。GoバイナリのELFシンボルテーブルからのバージョン検出機能や、Python PEP 751 (pylock.toml) パーサーなどが追加されました。
-* **2026-03-XX**: 公式のGitHub Action (`aquasecurity/trivy-action`) がサプライチェーン攻撃を受け、マルウェア（クレデンシャルスティーラー）が混入するインシデントがCrowdStrike等により報告されました。Aqua Security側はマルウェアを削除し、対応を完了しています。
 
 (出典: [Trivy Releases](https://github.com/aquasecurity/trivy/releases) / [CrowdStrike Blog](https://www.crowdstrike.com/en-us/blog/from-scanner-to-stealer-inside-the-trivy-action-supply-chain-compromise/))
 
