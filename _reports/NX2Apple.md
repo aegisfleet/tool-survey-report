@@ -1,54 +1,45 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "NX2Apple 調査レポート"
-tool_name: "NX2Apple"
-tool_reading: "エヌエックスツーアップル"  # カタカナ。複数ある場合は「 A / B 」のように併記
-category: "ゲーム互換レイヤー"
-developer: "コミュニティ"
-official_site: "https://github.com/LNPANDY/NX2Apple"
-date: "2026-10-27"
-last_updated: "2026-10-27"
+title: NX2Apple 調査レポート
+tool_name: NX2Apple
+tool_reading: エヌエックスツーアップル
+category: ゲーム互換レイヤー
+developer: コミュニティ
+official_site: https://github.com/LNPANDY/NX2Apple
+date: '2026-10-27'
+last_updated: '2026-10-27'
 tags:
-  - "オープンソース"
-  - "iOS"
-  - "macOS"
-  - "開発者ツール"
-description: "Nintendo SwitchのゲームをiPhoneやiPad上でネイティブ実行するためのパッケージ（IPA/APP）を構築するツール。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - iOS
+  - macOS
+  - 開発者ツール
+description: Nintendo SwitchのゲームをiPhoneやiPad上でネイティブ実行するためのパッケージ（IPA/APP）を構築するツール。
 quick_summary:
-  has_free_plan: true  # 無料プランの有無
-  is_oss: true  # OSS（オープンソース）かどうか
-  starting_price: "無料"  # 最低価格（無料の場合は「無料」）
-  target_users:  # 想定ユーザー（1-3項目）
-    - "開発者"
-    - "ゲーマー"
-  latest_highlight: "v0.4.7にて75タイトルのゲームプロファイルに対応"  # 直近1ヶ月の注目アップデート
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  has_free_plan: true
+  is_oss: true
+  starting_price: 無料
+  target_users:
+    - 開発者
+    - ゲーマー
+  latest_highlight: v0.4.7にて75タイトルのゲームプロファイルに対応
+  update_frequency: 高
 evaluation:
-  score: 85  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 85
+  base_score: 70
+  plus_points:
     - point: 5
-      reason: "エミュレーションではなくネイティブ実行による高パフォーマンス"
+      reason: エミュレーションではなくネイティブ実行による高パフォーマンス
     - point: 5
-      reason: "GUIアプリ提供による導入ハードルの低さ"
+      reason: GUIアプリ提供による導入ハードルの低さ
     - point: 5
-      reason: "独自のRomFSアーカイブ形式により数万ファイルのゲームもiPhoneにインストール可能"
-  minus_points:  # 減点項目（各項目: 点数と理由）
-    - point: -0
-      reason: ""
-  summary: "エミュレータとは異なるアプローチでiOS上でのSwitchゲーム動作を実現する画期的なツール"  # 評価の要約（1文）
-
-# 【任意項目】該当するもののみ記載
+      reason: 独自のRomFSアーカイブ形式により数万ファイルのゲームもiPhoneにインストール可能
+  minus_points:
+    - point: -0.0
+      reason: ''
+  summary: エミュレータとは異なるアプローチでiOS上でのSwitchゲーム動作を実現する画期的なツール
 links:
-  github: "https://github.com/LNPANDY/NX2Apple"
-  documentation: "https://github.com/LNPANDY/NX2Apple#readme"
+  github: https://github.com/LNPANDY/NX2Apple
+  documentation: https://github.com/LNPANDY/NX2Apple#readme
 relationships:
-
   children: []
   related_tools: []
 ---
