@@ -56,7 +56,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/alibaba/open-code-review](https://github.com/alibaba/open-code-review)
   * DeepWiki: [https://deepwiki.com/alibaba/open-code-review](https://deepwiki.com/alibaba/open-code-review)
-  * CodeWiki: [https://codewiki.google/github.com/alibaba/open-code-review](https://codewiki.google/github.com/alibaba/open-code-review)
 * **カテゴリ**: AIコーディング支援
 * **概要**: Open Code Reviewは、Alibaba Group内で実証された技術をオープンソース化したAIコードレビューツールである。決定論的なエンジニアリングルールとLLM（大規模言語モデル）の動的決定を組み合わせることで、レビュー精度の向上と安定化を実現している。
 

@@ -39,7 +39,6 @@ evaluation:
 links:
   github: https://gitlab.com/wireshark/wireshark
   deepwiki: https://deepwiki.com/wireshark/wireshark
-  codewiki: https://codewiki.google/github.com/wireshark/wireshark
   documentation: https://www.wireshark.org/docs/
 relationships:
   related_tools: []

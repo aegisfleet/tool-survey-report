@@ -43,7 +43,6 @@ evaluation:
 links:
   github: https://github.com/oh-my-mermaid/oh-my-mermaid
   deepwiki: https://deepwiki.com/oh-my-mermaid/oh-my-mermaid
-  codewiki: https://codewiki.google/github.com/oh-my-mermaid/oh-my-mermaid
 relationships:
   related_tools:
     - Claude Code
@@ -61,7 +60,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/oh-my-mermaid/oh-my-mermaid](https://github.com/oh-my-mermaid/oh-my-mermaid)
   * DeepWiki: [https://deepwiki.com/oh-my-mermaid/oh-my-mermaid](https://deepwiki.com/oh-my-mermaid/oh-my-mermaid)
-  * CodeWiki: [https://codewiki.google/github.com/oh-my-mermaid/oh-my-mermaid](https://codewiki.google/github.com/oh-my-mermaid/oh-my-mermaid)
 * **カテゴリ**: 開発者ツール
 * **概要**: AIエージェントを活用し、コードベースを分析して人間が理解しやすいアーキテクチャドキュメントと図を自動生成するツール。
 

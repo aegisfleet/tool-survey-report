@@ -90,11 +90,36 @@ atexit.register(_cleanup_global_context)
 def find_links_in_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
-    # Regex for markdown links: [text](url)
+
+    links = []
+
+    # 1. Frontmatter URLs (official_site, links: github, codewiki, deepwiki, documentation, etc.)
+    body_content = content
+    fm_match = re.search(r"^---\s*\n(.*?)\n---", content, re.DOTALL)
+    if fm_match:
+        fm_text = fm_match.group(1)
+        fm_urls = re.findall(r':\s*["\']?(https?://[^\s"\'>\r\n]+)["\']?', fm_text)
+        links.extend(fm_urls)
+        body_content = content[fm_match.end():]
+
+    # Remove code blocks from body to avoid matching dummy / example URLs in code blocks
+    body_without_code = re.sub(r'```[\s\S]*?```', '', body_content)
+    body_without_code = re.sub(r'`[^`\n]+`', '', body_without_code)
+
+    # 2. Markdown links: [text](url)
     # Refined to avoid potential ReDoS from nested backtracking
-    # Refined to avoid potential ReDoS from nested backtracking
-    links = re.findall(r'\[[^\]]+\]\((https?://[^\s\)]+)\)', content)
-    return links
+    md_links = re.findall(r'\[[^\]]+\]\((https?://[^\s\)]+)\)', body_without_code)
+    links.extend(md_links)
+
+    # Preserve order and deduplicate
+    seen = set()
+    unique_links = []
+    for link in links:
+        if link not in seen:
+            seen.add(link)
+            unique_links.append(link)
+
+    return unique_links
 
 
 def check_link_with_playwright(url, browser_context=None, page=None):
@@ -143,9 +168,13 @@ def _check_link_logic(page, url):
             
             if is_codewiki:
                 # CodeWiki specific check
+                # CodeWiki 404 pages have title "Code Wiki" (not "owner/repo | Code Wiki")
+                # and body contains "this page doesn’t exist", "this page doesn't exist", or 404 indicators
                 if "not found | code wiki" in title_text or title_text == "code wiki":
-                   if "this page doesn’t exist" in body_text:
+                    if "this page doesn’t exist" in body_text or "this page doesn't exist" in body_text or "404" in body_text or "not found" in body_text:
                         has_404_keywords = True
+                elif "this page doesn’t exist" in body_text or "this page doesn't exist" in body_text:
+                    has_404_keywords = True
             elif is_github:
                 # GitHub specific check
                 if "page not found" in title_text and "github" in title_text:
@@ -215,7 +244,13 @@ def check_link_with_urllib(url):
 
 def check_link(url, use_browser=False, browser_context=None, page=None):
     """Check a single link."""
-    if use_browser and HAS_PLAYWRIGHT:
+    is_codewiki = "codewiki.google" in url
+    # Directly block placeholder or root CodeWiki URL
+    if is_codewiki and (url == "https://codewiki.google/" or url == "https://codewiki.google"):
+        return 404, "Placeholder or root CodeWiki URL"
+
+    # Automatically escalate to browser check for CodeWiki if Playwright is available
+    if (use_browser or is_codewiki) and HAS_PLAYWRIGHT:
         return check_link_with_playwright(url, browser_context=browser_context, page=page)
     else:
         return check_link_with_urllib(url)
@@ -302,8 +337,16 @@ def _process_files(files_to_check, use_browser, browser_context, broken_links, w
                     status, reason = checked_url_cache[url]
                     print(f"  Checking {url}... (cached) {status} {reason}")
                 else:
-                    if not use_browser and "codewiki.google" in url:
-                        print(f"  Checking {url}... (Warning: CodeWiki requires --browser for accurate checking)", end='', flush=True)
+                    is_codewiki = "codewiki.google" in url
+                    if not use_browser and is_codewiki:
+                        if HAS_PLAYWRIGHT:
+                            print(f"  Checking {url}... (auto-escalated to browser for CodeWiki)", end='', flush=True)
+                            if not page:
+                                context = browser_context or _get_global_context()
+                                if context:
+                                    page = context.new_page()
+                        else:
+                            print(f"  Checking {url}... (Warning: CodeWiki requires Playwright for accurate checking)", end='', flush=True)
                     else:
                         print(f"  Checking {url}...", end='', flush=True)
                     status, reason = check_link(url, use_browser=use_browser, browser_context=browser_context, page=page)

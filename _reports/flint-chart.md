@@ -42,7 +42,6 @@ evaluation:
 links:
   github: https://github.com/microsoft/flint-chart
   deepwiki: https://deepwiki.com/microsoft/flint-chart
-  codewiki: https://codewiki.google/github.com/microsoft/flint-chart
   documentation: https://microsoft.github.io/flint-chart/
 relationships:
   related_tools:

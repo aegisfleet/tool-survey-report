@@ -41,7 +41,6 @@ evaluation:
 links:
   github: https://github.com/google-gemini/gemini-api-cli
   deepwiki: https://deepwiki.com/google-gemini/gemini-api-cli
-  codewiki: https://codewiki.google/github.com/google-gemini/gemini-api-cli
   documentation: https://ai.google.dev/gemini-api/docs
 relationships:
   parent: Gemini
@@ -60,7 +59,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/google-gemini/gemini-api-cli](https://github.com/google-gemini/gemini-api-cli)
   * DeepWiki: [https://deepwiki.com/google-gemini/gemini-api-cli](https://deepwiki.com/google-gemini/gemini-api-cli)
-  * CodeWiki: [https://codewiki.google/github.com/google-gemini/gemini-api-cli](https://codewiki.google/github.com/google-gemini/gemini-api-cli)
   * ドキュメント: [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
 * **カテゴリ**: AI開発ツール
 * **概要**: コーディングエージェントやアシスタントツールによるヘッドレス利用を想定して構築されたGemini APIのコマンドラインインターフェース（CLI）。シェルスクリプトやCIジョブからも同一のインターフェースで利用可能。

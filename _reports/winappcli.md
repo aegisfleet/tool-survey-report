@@ -41,7 +41,6 @@ evaluation:
 links:
   github: https://github.com/microsoft/winappCli
   deepwiki: https://deepwiki.com/microsoft/winappCli
-  codewiki: https://codewiki.google/github.com/microsoft/winappCli
   documentation: https://github.com/microsoft/winappCli/blob/main/docs/usage.md
 ---
 # **winapp CLI 調査レポート**
@@ -54,7 +53,6 @@ links:
 * **公式サイト**: [https://github.com/microsoft/winappCli](https://github.com/microsoft/winappCli)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/winappCli](https://github.com/microsoft/winappCli)
-  * CodeWiki: [https://codewiki.google/github.com/microsoft/winappCli](https://codewiki.google/github.com/microsoft/winappCli)
   * ドキュメント: [https://github.com/microsoft/winappCli/blob/main/docs/usage.md](https://github.com/microsoft/winappCli/blob/main/docs/usage.md)
 * **カテゴリ**: 開発ユーティリティ
 * **概要**: winapp CLIは、Windows SDKの管理、パッケージ化、アプリアイデンティティやマニフェスト、証明書の生成などを単一のコマンドラインインターフェースで提供するツールです。クロスプラットフォーム開発とWindowsネイティブ機能のギャップを埋めることを目的としています。

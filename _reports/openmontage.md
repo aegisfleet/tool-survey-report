@@ -43,7 +43,6 @@ evaluation:
 links:
   github: https://github.com/calesthio/OpenMontage
   deepwiki: https://deepwiki.com/calesthio/OpenMontage
-  codewiki: https://codewiki.google/github.com/calesthio/OpenMontage
 ---
 
 # **OpenMontage 調査レポート**
@@ -57,7 +56,6 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/calesthio/OpenMontage](https://github.com/calesthio/OpenMontage)
   * DeepWiki: [https://deepwiki.com/calesthio/OpenMontage](https://deepwiki.com/calesthio/OpenMontage)
-  * CodeWiki: [https://codewiki.google/github.com/calesthio/OpenMontage](https://codewiki.google/github.com/calesthio/OpenMontage)
 * **カテゴリ**: AIビデオ生成
 * **概要**: AIコーディングアシスタント（Claude Code, Cursor, Copilot等）を、リサーチから脚本作成、素材生成、編集、最終レンダリングまでを自律的に行う完全な動画制作スタジオに変えるオープンソースシステム。プロンプトを入力するだけで、AIエージェントが複数のツールやAPIを駆使して映像作品を完成させる。
 

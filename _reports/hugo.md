@@ -41,7 +41,6 @@ evaluation:
 links:
   github: https://github.com/gohugoio/hugo
   deepwiki: https://deepwiki.com/gohugoio/hugo
-  codewiki: https://codewiki.google/github.com/gohugoio/hugo
   documentation: https://gohugo.io/documentation/
 relationships:
   related_tools:
@@ -60,7 +59,6 @@ relationships:
 * **公式サイト**: [https://gohugo.io/](https://gohugo.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
-  * CodeWiki: [https://codewiki.google/github.com/gohugoio/hugo](https://codewiki.google/github.com/gohugoio/hugo)
   * ドキュメント: [https://gohugo.io/documentation/](https://gohugo.io/documentation/)
   * レビューサイト: G2, Capterra等に個別ページは存在するものの、レビュー数は限定的
 * **カテゴリ**: Webフレームワーク

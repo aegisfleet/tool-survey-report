@@ -45,7 +45,6 @@ relationships:
     - Stable Diffusion
 links:
   github: https://github.com/potechitakusan/MangaAgentsStudio-A
-  codewiki: https://codewiki.google/github.com/potechitakusan/MangaAgentsStudio-A
 ---
 
 # **MangaAgentsStudio-A 調査レポート**
@@ -58,7 +57,6 @@ links:
 * **公式サイト**: [https://github.com/potechitakusan/MangaAgentsStudio-A](https://github.com/potechitakusan/MangaAgentsStudio-A)
 * **関連リンク**:
   * GitHub: [https://github.com/potechitakusan/MangaAgentsStudio-A](https://github.com/potechitakusan/MangaAgentsStudio-A)
-  * CodeWiki: [https://codewiki.google/github.com/potechitakusan/MangaAgentsStudio-A](https://codewiki.google/github.com/potechitakusan/MangaAgentsStudio-A)
 * **カテゴリ**: AI画像生成
 * **概要**: AIエージェント（Codex、Claude Codeなど）と対話しながら、漫画の企画、ネーム作成、作画、フキダシ組版を行うための制作キット。
 

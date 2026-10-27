@@ -39,7 +39,6 @@ evaluation:
 links:
   github: https://github.com/nocodb/nocodb
   deepwiki: https://deepwiki.com/nocodb/nocodb
-  codewiki: https://codewiki.google/github.com/nocodb/nocodb
   documentation: https://docs.nocodb.com/
 relationships:
   related_tools:
@@ -59,7 +58,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/nocodb/nocodb](https://github.com/nocodb/nocodb)
   * DeepWiki: [https://deepwiki.com/nocodb/nocodb](https://deepwiki.com/nocodb/nocodb)
-  * CodeWiki: [https://codewiki.google/github.com/nocodb/nocodb](https://codewiki.google/github.com/nocodb/nocodb)
   * ドキュメント: [https://docs.nocodb.com/](https://docs.nocodb.com/)
   * レビューサイト: [G2](https://www.g2.com/products/nocodb/reviews)
 * **カテゴリ**: 開発ユーティリティ

@@ -40,7 +40,6 @@ evaluation:
 links:
   github: https://github.com/bespokelabsai/nimble
   deepwiki: https://deepwiki.com/bespokelabsai/nimble
-  codewiki: https://codewiki.google/github.com/bespokelabsai/nimble
 relationships:
   parent: Qwen
   related_tools:

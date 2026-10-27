@@ -39,7 +39,6 @@ evaluation:
 links:
   github: https://github.com/morluto/rea
   deepwiki: https://deepwiki.com/morluto/rea
-  codewiki: https://codewiki.google/github.com/morluto/rea
   documentation: https://rea.tools/guides/
 relationships:
   related_tools:
@@ -59,7 +58,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/morluto/rea](https://github.com/morluto/rea)
   * DeepWiki: [https://deepwiki.com/morluto/rea](https://deepwiki.com/morluto/rea)
-  * CodeWiki: [https://codewiki.google/github.com/morluto/rea](https://codewiki.google/github.com/morluto/rea)
   * ドキュメント: [https://rea.tools/guides/](https://rea.tools/guides/)
 * **カテゴリ**: 開発者ツール
 * **概要**: REAは、ソフトウェアがどのように機能するかを調査・理解するためのリバースエンジニアリングツールです。AIコーディングエージェントに解析ツールと権限を与えることで、ネイティブアプリ、JavaScript/Electron、ブラウザアプリなどの動作原理を解明し、再構築や修正をサポートします。

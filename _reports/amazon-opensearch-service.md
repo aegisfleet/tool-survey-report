@@ -44,7 +44,6 @@ evaluation:
   summary: AWS環境での検索・分析基盤として最適であり、生成AI活用におけるベクトルDBとしても強力な選択肢。
 links:
   github: https://github.com/opensearch-project/OpenSearch
-  codewiki: https://codewiki.google/github.com/opensearch-project/OpenSearch
   deepwiki: https://deepwiki.com/opensearch-project/OpenSearch
   documentation: https://docs.aws.amazon.com/opensearch-service/
 relationships:
@@ -64,7 +63,6 @@ relationships:
 * **公式サイト**: [https://aws.amazon.com/jp/opensearch-service/](https://aws.amazon.com/jp/opensearch-service/)
 * **関連リンク**:
   * GitHub: [https://github.com/opensearch-project/OpenSearch](https://github.com/opensearch-project/OpenSearch)
-  * CodeWiki: [https://codewiki.google/github.com/opensearch-project/OpenSearch](https://codewiki.google/github.com/opensearch-project/OpenSearch)
   * DeepWiki: [https://deepwiki.com/opensearch-project/OpenSearch](https://deepwiki.com/opensearch-project/OpenSearch)
   * ドキュメント: [https://docs.aws.amazon.com/opensearch-service/](https://docs.aws.amazon.com/opensearch-service/)
 * **カテゴリ**: インフラ/クラウド / ベクトルデータベース

@@ -43,7 +43,6 @@ evaluation:
 links:
   github: https://github.com/sakura-editor/sakura
   deepwiki: https://deepwiki.com/sakura-editor/sakura
-  codewiki: https://codewiki.google/github.com/sakura-editor/sakura
 ---
 
 # **サクラエディタ 調査レポート**
@@ -57,7 +56,6 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/sakura-editor/sakura](https://github.com/sakura-editor/sakura)
   * DeepWiki: [https://deepwiki.com/sakura-editor/sakura](https://deepwiki.com/sakura-editor/sakura)
-  * CodeWiki: [https://codewiki.google/github.com/sakura-editor/sakura](https://codewiki.google/github.com/sakura-editor/sakura)
   * ドキュメント: [https://sakura-editor.github.io/help/](https://sakura-editor.github.io/help/)
 * **カテゴリ**: テキストエディタ
 * **概要**: サクラエディタは、Windows環境向けに開発された、無償で利用できるオープンソースの多機能日本語テキストエディタである。軽量でありながら、プログラミングやテキスト処理に役立つGrep、アウトライン解析、マクロなどの高度な機能を備えている。

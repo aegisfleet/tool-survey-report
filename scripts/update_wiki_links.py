@@ -50,7 +50,7 @@ def check_codewiki_exists(page, owner, repo):
         if response and response.status == 200:
             body_text = page.inner_text('body').lower()
             title_text = page.title().lower()
-            if '404' in body_text or 'not found' in body_text or "not found | code wiki" in title_text:
+            if '404' in body_text or 'not found' in body_text or "not found | code wiki" in title_text or "this page doesn’t exist" in body_text or "this page doesn't exist" in body_text or (title_text == "code wiki" and "not found" in body_text):
                 return False
             return True
         return False

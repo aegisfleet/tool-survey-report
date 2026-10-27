@@ -43,8 +43,8 @@ evaluation:
 # 【任意項目】該当するもののみ記載
 links:
   github: "GitHubリポジトリURL（オープンソースの場合）"
-  deepwiki: "DeepWiki URL（オープンソースの場合・存在すれば）"
-  codewiki: "CodeWiki URL（オープンソースの場合）"
+  deepwiki: "DeepWiki URL（オープンソースの場合・存在確認できた場合のみ）"
+  codewiki: "CodeWiki URL（オープンソースの場合・存在確認できた場合のみ。推測での記載厳禁）"
   documentation: "ドキュメントサイトURL（公式サイトと異なる場合）"
 relationships:
   parent: "親ツールのツール名"
@@ -70,8 +70,8 @@ relationships:
 * **公式サイト**: [URL](URL)
 * **関連リンク**:
   * GitHub: [リポジトリURL](URL) （オープンソースの場合）
-  * DeepWiki: [URL](URL) （オープンソースの場合・存在すれば）
-  * CodeWiki: [URL](URL) （オープンソースの場合）
+  * DeepWiki: [URL](URL) （オープンソースの場合・存在確認できた場合のみ）
+  * CodeWiki: [URL](URL) （オープンソースの場合・存在確認できた場合のみ。推測での記載厳禁）
   * ドキュメント: [URL](URL) （公式サイトと異なる場合）
   * レビューサイト: [G2](URL) | [Capterra](URL) | [ITreview](URL) （該当するもののみ）
 * **カテゴリ**: (例: プロジェクト管理, BIツール, コミュニケーション, 開発者ツール)

@@ -37,7 +37,6 @@ evaluation:
 links:
   github: https://github.com/zizmorcore/zizmor
   deepwiki: https://deepwiki.com/zizmorcore/zizmor
-  codewiki: https://codewiki.google/github.com/zizmorcore/zizmor
   documentation: https://docs.zizmor.sh/
 relationships:
   related_tools:
@@ -55,7 +54,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/zizmorcore/zizmor](https://github.com/zizmorcore/zizmor)
   * DeepWiki: [https://deepwiki.com/zizmorcore/zizmor](https://deepwiki.com/zizmorcore/zizmor)
-  * CodeWiki: [https://codewiki.google/github.com/zizmorcore/zizmor](https://codewiki.google/github.com/zizmorcore/zizmor)
   * ドキュメント: [https://docs.zizmor.sh/](https://docs.zizmor.sh/)
 * **カテゴリ**: セキュリティ
 * **概要**: GitHub ActionsワークフローやCI/CDセットアップによく見られるセキュリティ上の問題を検出する静的解析ツール。テンプレートインジェクションや過剰な権限設定、ハードコードされた認証情報などのリスクを高速に特定する。

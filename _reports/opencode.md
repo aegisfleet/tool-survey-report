@@ -41,7 +41,6 @@ evaluation:
 links:
   github: https://github.com/anomalyco/opencode
   deepwiki: https://deepwiki.com/anomalyco/opencode
-  codewiki: https://codewiki.google/github.com/anomalyco/opencode
   documentation: https://opencode.ai/docs
 relationships:
   related_tools:
@@ -69,7 +68,6 @@ relationships:
 * **関連リンク**:
   * GitHub: [https://github.com/anomalyco/opencode](https://github.com/anomalyco/opencode)
   * DeepWiki: [https://deepwiki.com/anomalyco/opencode](https://deepwiki.com/anomalyco/opencode)
-  * CodeWiki: [https://codewiki.google/github.com/anomalyco/opencode](https://codewiki.google/github.com/anomalyco/opencode)
   * ドキュメント: [https://opencode.ai/docs](https://opencode.ai/docs)
 * **カテゴリ**: 自律型AIエージェント
 * **概要**: OpenCodeは、ターミナル、IDE、またはデスクトップアプリとして動作するオープンソースのAIコーディングエージェントです。75以上のLLMプロバイダーに対応し、LSP（Language Server Protocol）の統合やマルチセッション機能を備え、プライバシーを重視した設計が特徴です。

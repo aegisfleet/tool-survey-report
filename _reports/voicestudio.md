@@ -41,7 +41,6 @@ evaluation:
 links:
   github: https://github.com/debpalash/VoiceStudio
   deepwiki: https://deepwiki.com/debpalash/VoiceStudio
-  codewiki: https://codewiki.google/github.com/debpalash/VoiceStudio
 relationships:
   related_tools:
     - OmniVoice

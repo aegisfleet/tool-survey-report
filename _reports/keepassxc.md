@@ -41,7 +41,5 @@ evaluation:
   summary: クラウドに依存せず、最高レベルのセキュリティと自己管理を求めるユーザーに最適なパスワードマネージャー
 links:
   github: https://github.com/keepassxreboot/keepassxc
-  deepwiki: ''
-  codewiki: ''
   documentation: https://keepassxc.org/docs/
 ---

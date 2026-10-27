@@ -40,7 +40,6 @@ evaluation:
 links:
   github: https://github.com/KlingTeam/LivePortrait
   deepwiki: https://deepwiki.com/KlingTeam/LivePortrait
-  codewiki: https://codewiki.google/github.com/KlingTeam/LivePortrait
 ---
 
 # **LivePortrait 調査レポート**
@@ -54,7 +53,6 @@ links:
 * **関連リンク**:
   * GitHub: [https://github.com/KlingTeam/LivePortrait](https://github.com/KlingTeam/LivePortrait)
   * DeepWiki: [https://deepwiki.com/KlingTeam/LivePortrait](https://deepwiki.com/KlingTeam/LivePortrait)
-  * CodeWiki: [https://codewiki.google/github.com/KlingTeam/LivePortrait](https://codewiki.google/github.com/KlingTeam/LivePortrait)
 * **カテゴリ**: AI動画生成
 * **概要**: LivePortraitは、静止画と駆動用動画（または画像）を組み合わせて、高品質かつ高効率なポートレートアニメーションを生成するオープンソースのAIツールである。人間のほか猫や犬にも対応し、細かな表情やポーズの制御（スティッチングやリターゲティング）が可能である。
 

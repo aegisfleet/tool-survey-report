@@ -62,9 +62,11 @@
   - DeepWikiおよびCodeWikiの有無を確認（オープンソースの場合）
     - GitHubリポジトリが `https://github.com/{owner}/{repo}` の場合、DeepWikiのURLは `https://deepwiki.com/{owner}/{repo}` となる
     - 上記URLにアクセスしてページが存在するか確認する（または `site:deepwiki.com "{owner}/{repo}"` で検索）
-    - CodeWikiはオープンソースの場合、URL `https://codewiki.google/github.com/{owner}/{repo}` を記載する
-    - **効率化**: `pnpm install --frozen-lockfile` を実行して依存関係を最新化した後、`pnpm run update-wiki [ファイルパス]` （または `python3 scripts/update_wiki_links.py [ファイルパス]`）を実行することで、指定したレポートのGitHubリンクをチェックし、DeepWiki・CodeWikiリンクを自動で更新・追記できる。
-    - 存在する場合は `links.deepwiki` に、CodeWikiは `links.codewiki` に記載する
+    - CodeWikiはオープンソースの場合でも、リポジトリによっては生成されていないため、**推測で機械的にURLを記載してはならない**。
+      - 必ず `https://codewiki.google/github.com/{owner}/{repo}` にアクセスし、404（"This page doesn't exist"）が表示されず正常なWikiページが存在することを確認した場合のみ記載する。
+      - 存在が確認できない場合（404の場合）は、フロントマターの `links.codewiki` および本文のCodeWikiリンク行を記載しない（削除する）。
+    - **効率化**: `pnpm install --frozen-lockfile` を実行して依存関係を最新化した後、`pnpm run update-wiki [ファイルパス]` （または `python3 scripts/update_wiki_links.py [ファイルパス]`）を実行することで、指定したレポートのGitHubリンクをチェックし、実在するDeepWiki・CodeWikiリンクのみを自動で更新・追記できる。
+    - 実在が確認できた場合のみ、DeepWikiは `links.deepwiki` に、CodeWikiは `links.codewiki` に記載する
   - 公式ドキュメントサイトのURLを収集（公式サイトと異なる場合）
   - 主要レビューサイト（G2, Capterra, ITreview等）のツールページURLを収集
 
@@ -455,7 +457,7 @@ relationships:
 - [ ] セキュリティ情報が「不明」のみで済まされていない
 - [ ] 直近半年のアップデート情報の年（西暦）が正確であり、レポート作成日・更新日（date / last_updated）に対して直近6ヶ月以内の整合性が保たれていることを確認済み（省略表記による年の誤記や過去年バイアスがないこと）
 - [ ] リンク切れ、Mermaid構文エラー、およびリレーションシップ（relationships）エラーがない（`pnpm run verify-report` で同時に自動検証。事前に `pnpm install --frozen-lockfile` を実行すること）
-- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの記載を確認済み（`pnpm run update-wiki [ファイルパス]` を実行して確認すること）
+- [ ] オープンソースの場合、DeepWiki・CodeWikiリンクの実在を確認済み（推測での記載は厳禁。未生成・404の場合はリンクを記載しないこと。`pnpm run update-wiki [ファイルパス]` または `pnpm run verify-report` で確認すること）
 
 ### 品質チェック
 

@@ -37,6 +37,21 @@ class TestLinkCaching(unittest.TestCase):
         self.assertIn('https://example.org', calls)
         self.assertEqual(calls.count('https://example.com'), 1)
 
+class TestCheckLinkDispatch(unittest.TestCase):
+
+    @patch('scripts.check_links.check_link_with_playwright')
+    def test_codewiki_auto_escalation(self, mock_playwright):
+        mock_playwright.return_value = (200, "OK")
+        with patch('scripts.check_links.HAS_PLAYWRIGHT', True):
+            status, reason = check_links.check_link("https://codewiki.google/github.com/foo/bar", use_browser=False)
+            self.assertEqual(status, 200)
+            mock_playwright.assert_called_once()
+
+    def test_codewiki_placeholder_blocked(self):
+        status, reason = check_links.check_link("https://codewiki.google/", use_browser=False)
+        self.assertEqual(status, 404)
+        self.assertIn("Placeholder", reason)
+
 class TestFindLinksInFile(unittest.TestCase):
 
     @patch("builtins.open", new_callable=mock_open, read_data="")
@@ -87,6 +102,21 @@ class TestFindLinksInFile(unittest.TestCase):
         """Test find_links_in_file with parentheses in URL (known failure)."""
         links = find_links_in_file("dummy.md")
         self.assertEqual(links, ["http://example.com/foo(bar)"])
+
+    @patch("builtins.open", new_callable=mock_open, read_data="---\nofficial_site: https://example.com\nlinks:\n  github: \"https://github.com/foo/bar\"\n  codewiki: https://codewiki.google/github.com/foo/bar\n---\n\n# Header\n[Body Link](https://body.com)")
+    def test_frontmatter_urls_extracted(self, mock_file):
+        """Test find_links_in_file extracts URLs from frontmatter as well as body."""
+        links = find_links_in_file("dummy.md")
+        self.assertIn("https://example.com", links)
+        self.assertIn("https://github.com/foo/bar", links)
+        self.assertIn("https://codewiki.google/github.com/foo/bar", links)
+        self.assertIn("https://body.com", links)
+
+    @patch("builtins.open", new_callable=mock_open, read_data="[Valid Link](https://valid.com)\n```\n- [Example](https://ignore.com)\n```\n`https://inline-ignore.com`")
+    def test_ignore_code_blocks(self, mock_file):
+        """Test find_links_in_file ignores links inside code blocks."""
+        links = find_links_in_file("dummy.md")
+        self.assertEqual(links, ["https://valid.com"])
 
 if __name__ == "__main__":
     unittest.main()

@@ -35,7 +35,6 @@ evaluation:
   summary: 開発者が簡単に自身のCodexにペットを導入・共有できる、完成度の高いコミュニティプラットフォーム
 links:
   github: https://github.com/portons/codex-pet-share
-  codewiki: https://codewiki.google/github.com/portons/codex-pet-share
 ---
 # **Codex Pet Share 調査レポート**
 
@@ -47,7 +46,6 @@ links:
 * **公式サイト**: [https://codex-pets.net/](https://codex-pets.net/)
 * **関連リンク**:
   * GitHub: [https://github.com/portons/codex-pet-share](https://github.com/portons/codex-pet-share)
-  * CodeWiki: [https://codewiki.google/github.com/portons/codex-pet-share](https://codewiki.google/github.com/portons/codex-pet-share)
 * **カテゴリ**: 開発ツール
 * **概要**: Codex Pet Shareは、アニメーション付きのピクセルペットを共有するためのセルフホスト可能なWebアプリケーションです。スプライトシートのアップロード、コミュニティギャラリーの閲覧、マルチプレイヤーのプレイルーム機能、そして1行のCLIコマンドでペットをターミナルに直接プルする機能を提供します。
 

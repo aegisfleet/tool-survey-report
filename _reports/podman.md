@@ -43,7 +43,6 @@ evaluation:
 links:
   github: https://github.com/containers/podman
   deepwiki: https://deepwiki.com/containers/podman
-  codewiki: https://codewiki.google/github.com/containers/podman
   documentation: https://docs.podman.io/en/latest/
 relationships:
   related_tools:
@@ -62,7 +61,6 @@ relationships:
 * **公式サイト**: [https://podman.io/](https://podman.io/)
 * **関連リンク**:
   * GitHub: [https://github.com/containers/podman](https://github.com/containers/podman)
-  * CodeWiki: [https://codewiki.google/github.com/containers/podman](https://codewiki.google/github.com/containers/podman)
   * ドキュメント: [https://docs.podman.io/en/latest/](https://docs.podman.io/en/latest/)
 * **カテゴリ**: ビルドツール/ランタイム
 * **概要**: Podman (Pod Manager) は、OCI(Open Container Initiative)準拠のコンテナエンジンです。Dockerの代替として設計され、デーモンレスアーキテクチャとルートレスコンテナ実行を特徴とし、セキュリティとKubernetesとの親和性に優れています。

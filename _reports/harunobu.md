@@ -38,7 +38,6 @@ evaluation:
 links:
   github: https://github.com/digital-go-jp/machine_readability_rule
   deepwiki: https://deepwiki.com/digital-go-jp/machine_readability_rule
-  codewiki: https://codewiki.google/github.com/digital-go-jp/machine_readability_rule
   documentation: https://github.com/digital-go-jp/machine_readability_rule/tree/main/docs
 relationships: null
 ---
@@ -54,7 +53,6 @@ relationships: null
 * **関連リンク**:
   * GitHub: [https://github.com/digital-go-jp/machine_readability_rule](https://github.com/digital-go-jp/machine_readability_rule)
   * DeepWiki: [https://deepwiki.com/digital-go-jp/machine_readability_rule](https://deepwiki.com/digital-go-jp/machine_readability_rule)
-  * CodeWiki: [https://codewiki.google/github.com/digital-go-jp/machine_readability_rule](https://codewiki.google/github.com/digital-go-jp/machine_readability_rule)
   * ドキュメント: [https://github.com/digital-go-jp/machine_readability_rule/tree/main/docs](https://github.com/digital-go-jp/machine_readability_rule/tree/main/docs)
 * **カテゴリ**: データ品質チェック
 * **概要**: 行政データにおける機械可読性に関するルールに基づき、ExcelやCSVファイルがルールに適合しているかを自動判定し、100点満点で採点するオープンソースのツール。
