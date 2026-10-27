@@ -1,49 +1,41 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Entire 調査レポート"
-tool_name: "Entire"
-tool_reading: "エンタイア"  # カタカナ。複数ある場合は「 A / B 」のように併記
-category: "バージョン管理"
-developer: "Entire Inc."
-official_site: "https://entire.com"
-date: "2026-10-28"
-last_updated: "2026-10-28"
+title: Entire 調査レポート
+tool_name: Entire
+tool_reading: エンタイア
+category: バージョン管理
+developer: Entire Inc.
+official_site: https://entire.com
+date: '2026-10-28'
+last_updated: '2026-10-28'
 tags:
-  - "開発者ツール"
-  - "CI/CD"
-  - "エージェント"
-description: "エージェントと人間のコラボレーションのための次世代Gitホストおよび開発プラットフォーム"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - 開発者ツール
+  - CI/CD
+  - エージェント
+description: エージェントと人間のコラボレーションのための次世代Gitホストおよび開発プラットフォーム
 quick_summary:
-  has_free_plan: false  # 無料プランの有無（公開されていないため不明）
+  has_free_plan: false
   is_oss: false
-  starting_price: "不明"  # 最低価格（無料の場合は「無料」）
-  target_users:  # 想定ユーザー（1-3項目）
-    - "開発者"
-    - "AIエージェント"
-    - "ソフトウェア開発チーム"
-  latest_highlight: "エージェントとのコラボレーションに特化したGitホストのローンチ（2026年10月）"  # 直近1ヶ月の注目アップデート
-  update_frequency: "高"  # 更新頻度（高/中/低/不定期）
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+  starting_price: 不明
+  target_users:
+    - 開発者
+    - AIエージェント
+    - ソフトウェア開発チーム
+  latest_highlight: エージェントとのコラボレーションに特化したGitホストのローンチ（2026年10月）
+  update_frequency: 高
 evaluation:
-  score: 85  # 最終スコア（0-100点）
-  base_score: 70  # 基準点（固定）
-  plus_points:  # 加点項目（各項目: 点数と理由）
+  score: 85
+  base_score: 70
+  plus_points:
     - point: 5
-      reason: "エージェント・人間間のコラボレーションに特化した革新的なプラットフォーム"
+      reason: エージェント・人間間のコラボレーションに特化した革新的なプラットフォーム
     - point: 5
-      reason: "既存のGitHub等と比較して圧倒的に高速なGitホスティング（最大89倍）"
+      reason: 既存のGitHub等と比較して圧倒的に高速なGitホスティング（最大89倍）
     - point: 5
-      reason: "コミットだけでなく、エージェントのセッション履歴や推論過程まで記録する「Continuous Memory」機能"
-  minus_points:  # 減点項目（各項目: 点数と理由）
+      reason: コミットだけでなく、エージェントのセッション履歴や推論過程まで記録する「Continuous Memory」機能
+  minus_points:
     - point: 0
-      reason: "料金や導入に関する詳細情報が公開されていない（要問合せ）"
-  summary: "AI時代に特化した画期的なGitプラットフォームで、将来性に大いに期待できるが詳細はまだ非公開の部分が多い。"  # 評価の要約（1文）
-
-# 【任意項目】該当するもののみ記載
+      reason: 料金や導入に関する詳細情報が公開されていない（要問合せ）
+  summary: AI時代に特化した画期的なGitプラットフォームで、将来性に大いに期待できるが詳細はまだ非公開の部分が多い。
 ---
 
 # **Entire 調査レポート**
