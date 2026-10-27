@@ -6,7 +6,7 @@ category: モバイル開発
 developer: Google
 official_site: https://flutter.dev/
 date: '2026-02-15'
-last_updated: '2026-05-19'
+last_updated: '2026-10-27'
 tags:
   - Dart
   - オープンソース
@@ -22,7 +22,7 @@ quick_summary:
     - 開発者
     - スタートアップ
     - デザイナー
-  latest_highlight: 2026年2月のFlutter 3.41リリースで新しい学習パスウェイと公式用語集を追加
+  latest_highlight: 2026年8月のFlutter 3.47でmaterial_uiとcupertino_uiが独立パッケージ化され、デスクトップでもImpellerがデフォルトに
   update_frequency: 高
 evaluation:
   score: 88
@@ -112,12 +112,73 @@ relationships:
 * **クロスプラットフォーム開発**: ひとつのDartコードベースで、iOS、Android、Web、Windows、macOS、Linux向けのアプリケーションをビルド可能。
 * **高速な開発サイクル (ホットリロード)**: コードの変更を保存すると、通常1秒未満でアプリのUIに即座に反映。UIの試行錯誤やバグ修正を高速に行える。
 * **Impellerレンダリングエンジン**: 従来のSkiaに代わり、Flutter専用に設計された次世代レンダリングエンジン「Impeller」を搭載。シェーダーの事前コンパイルにより、iOSおよびAndroidでの描画パフォーマンスが飛躍的に向上し、カクつき（Jank）を排除。
-* **豊富なウィジェット**: マテリアルデザイン（Material 3対応）やクパチーノ（iOS風）のUIコンポーネントが豊富に用意されており、それらを組み合わせて自由にUIを構築できる。
+* **豊富なウィジェットと独立したUIパッケージ**: 自由にUIを構築できるウィジェットが用意されており、Flutter 3.47からは`material_ui`と`cupertino_ui`が独立したパッケージとして提供され、SDKの更新を待たずに最新のコンポーネントを利用できるようになった。
+* **Widget Previews**: プレビュー機能により、アプリ全体をビルド・起動することなく、個別のUIコンポーネントを即座にレンダリングし、状態やテーマを変更しながらイテレーションを回すことができる。
 * **ネイティブパフォーマンス**: Dartコードは各プラットフォームのネイティブコード（ARM/Intelマシンコード）に直接コンパイルされるため、ネイティブアプリに匹敵する高速なパフォーマンスを実現。
 * **AI支援開発 (Gemini統合)**: CLIツールやIDE拡張機能を通じて、AIによるコード生成、エラー修正、ドキュメント参照がシームレスに行える。
 * **パッケージエコシステム (pub.dev)**: 豊富なオープンソースライブラリやツールが公開されており、機能の追加や外部サービスとの連携を容易に行える。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**:
+  Flutterは、UIを宣言的に記述するフレームワーク層（Dart）、グラフィックスやテキストの描画を担うエンジン層（C++）、そして各OS（iOS, Android, Windows, macOS, Linux, Web）とのブリッジを担うエンベッダー層の3層構造で動作する、ローカル実行型のアプリケーションフレームワークです。
+
+* **主要コンポーネントと動作フロー**:
+  1. **Framework (Dart)**: 開発者が記述するUI（Widget）やアニメーション、ジェスチャー処理を担います。
+  2. **Engine (C++)**: Impeller（またはSkia）レンダリングエンジンを使用し、UIをピクセルに変換して画面に描画します。また、Dartランタイム（ガベージコレクション等）を含みます。
+  3. **Embedder (OS固有)**: 各プラットフォーム固有のウィンドウ作成、イベントループ、入力処理を行い、FlutterエンジンとOSを接続します。
+
+  ```mermaid
+  graph TD
+      subgraph アプリケーション層
+          DartApp[Dartコード / UI・ロジック]
+      end
+
+      subgraph Flutterフレームワーク
+          Widget[Widgetツリー]
+          Rendering[レンダリングツリー]
+          Animation[アニメーション/ジェスチャー]
+      end
+
+      subgraph Flutterエンジン
+          Impeller[Impellerレンダリングエンジン]
+          DartRuntime[Dartランタイム / JIT・AOT]
+          Text[テキスト描画]
+      end
+
+      subgraph OSエンベッダー
+          iOS[iOS Embedder]
+          Android[Android Embedder]
+          Desktop[Desktop Embedder / Win, Mac, Lin]
+          Web[Web Embedder / Wasm, CanvasKit]
+      end
+
+      DartApp --> Widget
+      Widget --> Rendering
+      Rendering --> Animation
+      Animation --> Impeller
+      DartApp --> DartRuntime
+      Impeller --> iOS
+      Impeller --> Android
+      Impeller --> Desktop
+      Impeller --> Web
+  ```
+
+* **特筆すべき要素技術**:
+  * **AOTコンパイル**: リリースビルド時には、Dartコードが対象プラットフォームのネイティブARM/Intelマシンコードに事前（Ahead-of-Time）コンパイルされるため、高速な起動と実行パフォーマンスを実現します。
+  * **Impeller**: 従来のSkiaに代わり、Flutter専用に開発されたレンダリングエンジン。iOS/Androidに加え、Flutter 3.47からはデスクトップ（macOS, Windows, Linux）でもデフォルトとなり、シェーダーの事前コンパイルによるJank（カクつき）フリーの描画を提供します。
+  * **Wasm（WebAssembly）**: Web向けビルドでは、ガベージコレクションをサポートしたWasm（WasmGC）へのコンパイルに対応しており、Webブラウザ上でのネイティブライクなパフォーマンスを実現します。
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -152,7 +213,7 @@ relationships:
   flutter run
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -160,12 +221,12 @@ relationships:
 - 競合との差別化ポイントを明確に
 -->
 
-* **圧倒的な開発効率**: 単一コードでのマルチプラットフォーム対応により、開発リソース、コスト、時間を大幅に削減できる。ホットリロード機能が開発体験を劇的に向上させる。
-* **Jankフリーな滑らかなUI**: Impellerエンジンの完全導入（iOS/Android安定版）により、以前の課題であった初回描画時のカクつきが解消され、ネイティブ同様の滑らかさを実現。
-* **一貫性とカスタマイズ性の高いUI/UX**: OSやデバイスによるUIの差異がなく、ブランドイメージを統一した美しいUIを忠実に再現できる。
+* **圧倒的な開発効率**: 単一コードでのマルチプラットフォーム対応により、開発リソース、コスト、時間を大幅に削減できる。ホットリロードやWidget Previews機能が開発体験を劇的に向上させる。
+* **Jankフリーな滑らかなUI**: Impellerエンジンの導入により、以前の課題であった初回描画時のカクつきが解消された。iOS/Androidに加え、デスクトップ（macOS, Windows, Linux）でもImpellerがデフォルトとなり、すべてのプラットフォームでネイティブ同様の滑らかさを実現している。
+* **一貫性とカスタマイズ性の高いUI/UX**: OSやデバイスによるUIの差異がなく、ブランドイメージを統一した美しいUIを忠実に再現できる。また、UIデザインシステム（Material/Cupertino）が独立したことでより柔軟なアップデートが可能になった。
 * **強力なエコシステムと将来性**: 開発元であるGoogleによる強力なサポートと継続的なアップデートに加え、世界中の開発者による巨大で活発なコミュニティが存在する。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -178,7 +239,7 @@ relationships:
 * **UIの非ネイティブ性**: 独自のレンダリングエンジンは一貫性をもたらす一方、OSの標準UIと完全に一致しないため、特にiOSユーザーには僅かな操作感の違い（Uncanny Valley）が感じられることがある。
 * **Dart言語の学習コスト**: プログラミング言語としてDartを採用しているため、他の言語に慣れている開発者にとっては新たな学習が必要となる。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -194,7 +255,7 @@ relationships:
 * **課金体系**: なし
 * **無料トライアル**: なし
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -206,7 +267,7 @@ relationships:
 * **導入事例**: Google Payでは支払い機能のUIに、BMWは次世代の車載OSのUIにFlutterを採用するなど、ミッションクリティカルなプロダクトでも利用されている。
 * **対象業界**: IT、自動車、金融、Eコマース、エンターテイメントなど、業界を問わず採用が進んでいる。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -218,14 +279,14 @@ relationships:
 * **コミュニティ**: GitHub, Stack Overflow, Reddit, Discordなどで巨大かつ活発なコミュニティが形成されており、問題解決のための情報を得やすい。
 * **公式サポート**: 法人向けの有償サポートは提供されていないが、Googleが開発を主導しており、GitHubのIssueトラッカーを通じてバグ報告や機能要望が可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -236,7 +297,7 @@ relationships:
 * **API**: Platform Channelsを通じて、各プラットフォームのネイティブAPI（Java/Kotlin, Objective-C/Swift）を呼び出すことが可能。
 * **外部サービス連携**: パッケージ管理システム「pub.dev」には、Firebase, Google Maps, AWS, Stripe, 各種SNS認証など、数多くの外部サービスと連携するためのライブラリが公開されている。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -252,7 +313,7 @@ relationships:
 | **Visual Studio Code** | ◎ | 拡張機能が公式提供されており、軽量で高速な開発が可能。 | 特になし。Android Studioより推奨されるケースも多い。 |
 | **Cursor / AI Tools** | ◎ | Widgetツリー構造がAI生成と相性が良く、高い生産性を発揮。 | 生成されたコードのパフォーマンス最適化は人間が判断する必要がある。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -265,7 +326,7 @@ relationships:
 * **データ管理**: データの保存場所や暗号化は、アプリケーションの実装に依存する。フレームワークとして特定のデータ管理機能は持たない。
 * **準拠規格**: Flutter自体は特定のセキュリティ認証（ISO27001, SOC2など）の対象ではない。GoogleによるOSS脆弱性スキャンや、コミュニティによる継続的なコードレビューにより、フレームワーク自体の安全性は高く維持されている。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -275,7 +336,7 @@ relationships:
 * **UI/UX**: ホットリロード機能により、UIの変更をリアルタイムで確認しながら開発できるため、生産性が非常に高い。すべてがウィジェットであるという宣言的なUI構築方法は、直感的でわかりやすいと評価されている。
 * **学習コスト**: Dart言語の習得が必要だが、Java, C#, TypeScriptといった静的型付けオブジェクト指向言語の経験があれば、比較的容易に学習できる。公式ドキュメントや学習リソースが豊富なため、初学者でも学びやすい。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -292,7 +353,7 @@ relationships:
   * **過剰な状態管理**: 単純なUIステートに複雑な状態管理ライブラリを導入し、ボイラープレートを増やしてしまう。
   * **BuildContextの誤用**: 非同期処理後にマウントされていない`BuildContext`を参照し、クラッシュを引き起こす（`use_build_context_synchronously`リントルールを守る）。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -316,7 +377,7 @@ relationships:
   * キオスク端末や組み込み機器のUI開発での採用が増加している。
   * スタートアップの初期プロダクトとして選定される率が非常に高い。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -330,6 +391,13 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-08-12**: **Flutter 3.47**
+  * `material_ui`と`cupertino_ui`がコアSDKから独立したパッケージとして1.0リリースを迎え、より柔軟で高頻度なアップデートが可能になった。
+  * ImpellerレンダリングエンジンがmacOS、Windows、Linuxのデスクトッププラットフォームでもデフォルトになり、より滑らかな描画パフォーマンスを実現。
+  * アプリ全体をビルドせずにUIコンポーネントを検証できる「Widget Previews」機能が安定版（Stable）となった。
+  * GenUIエコシステムの強化として、`genui`パッケージの更新と新しい`a2ui_core`パッケージが追加された。
+* **2026-05-20**: **Flutter 3.44**
+  * （Google I/O 2026にあわせたリリース）
 * **2026-02-11**: **Flutter 3.41 ("Year of the Fire Horse")**
   * 公式用語集（glossary）と新しい学習パスウェイの追加。
 * **2025-11-12**: **Flutter 3.38**
@@ -343,9 +411,9 @@ relationships:
   * Gemini Code Assist, GeminiCLI、Dart/Flutter MCP Serverを利用したAI活用ガイドを追加。
   * Flutter Widget Previewerガイドの追加、Androidでの画面共有時に機密コンテンツを保護する機能。
 
-(出典: [Flutter Release Notes](https://docs.flutter.dev/release/whats-new), [Foresight Mobile Blog](https://foresightmobile.com/blog/why-flutter-will-outperform-the-competition-in-2026))
+(出典: [Flutter Release Notes (Stable)](https://docs.flutter.dev/release/release-notes), [Flutter Blog](https://flutter.dev/blog))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -353,7 +421,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 <!--
 【記載ルール】
@@ -370,11 +438,11 @@ relationships:
 | 機能カテゴリ | 機能項目 | 本ツール (Flutter) | React Native | Kotlin Multiplatform |
 |:---:|:---|:---:|:---:|:---:|
 | **基本機能** | クロスプラットフォーム | ◎<br><small>全OS対応・高一致性</small> | ◎<br><small>全OS対応</small> | ◯<br><small>ロジック共有中心</small> |
-| **UI/UX** | 描画エンジン | ◎<br><small>独自(Impeller)で安定</small> | △<br><small>OS依存</small> | ◎<br><small>完全ネイティブ</small> |
-| **パフォーマンス** | 実行速度 | ◯<br><small>ネイティブ並</small> | ◯<br><small>新アーキで改善</small> | ◎<br><small>ネイティブそのもの</small> |
-| **開発体験** | ホットリロード | ◎<br><small>爆速・状態保持</small> | ◯<br><small>Fast Refresh</small> | △<br><small>コンパイル必要</small> |
+| **UI/UX** | 描画エンジン | ◎<br><small>全OSでImpeller化</small> | △<br><small>OS依存</small> | ◎<br><small>完全ネイティブ</small> |
+| **パフォーマンス** | 実行速度 | ◯<br><small>ネイティブ並/Wasm対応</small> | ◯<br><small>新アーキで改善</small> | ◎<br><small>ネイティブそのもの</small> |
+| **開発体験** | ホットリロード | ◎<br><small>爆速・Widget Previews</small> | ◯<br><small>Fast Refresh</small> | △<br><small>コンパイル必要</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -383,11 +451,11 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Flutter** | Dartと独自エンジンによるUI構築。Write Once, Run Anywhereの理想に最も近い。 | 開発速度、UIの一貫性、Impellerによる描画性能、充実したドキュメント。 | アプリサイズ、プラットフォーム固有UIの再現に手間がかかる場合がある。 | **開発速度とUIの統一性**を最優先する場合。MVPから中規模以上のアプリまで幅広く推奨。 |
-| **React Native** | ReactとJavaScript/TSを使用し、ネイティブコンポーネントを操作する。 | Web開発の知識（React）を直接活かせる。OTAアップデートが可能。 | OSアップデート時の追従コスト、複雑なUIでのパフォーマンス調整。 | **Web（React）チームの資産**を活かしたい場合。OS標準のUIコンポーネントを使いたい場合。 |
-| **Kotlin Multiplatform** | ビジネスロジックをKotlinで共有し、UIは各OSネイティブ（SwiftUI/Compose）で記述。 | 最高のネイティブパフォーマンスと最新OS機能への即応性。既存アプリへの部分導入が容易。 | UIコードの共有率が低い（Compose Multiplatformで改善中だがまだ発展途上）。 | **品質とパフォーマンス**を妥協せず、長期的にメンテナンスする大規模アプリ。 |
+| **Flutter** | Dartと独自エンジンによるUI構築。Write Once, Run Anywhereの理想に最も近い。 | 開発速度、UIの一貫性、全プラットフォームでのImpeller描画性能、Widget Previewsによる高速UI検証。 | アプリサイズ、プラットフォーム固有UIの再現に手間がかかる場合がある。 | **開発速度とUIの統一性**を最優先する場合。MVPから中規模以上のアプリまで幅広く推奨。 |
+| **React Native** | ReactとJavaScript/TSを使用し、ネイティブコンポーネントを操作する（React 19等最新React機能も利用可）。 | Webフロントエンドの知識（React）を直接活かせる。OTAアップデートが可能。 | OSアップデート時の追従コスト、複雑なUIでのパフォーマンス調整。 | **Web（React）チームの資産**を活かしたい場合。OS標準のUIコンポーネントを使いたい場合。 |
+| **Kotlin Multiplatform** | ビジネスロジックをKotlinで共有し、UIは各OSネイティブ（SwiftUI/Compose Multiplatform）で記述。 | 最高のネイティブパフォーマンスと最新OS機能への即応性。既存アプリへの部分導入が容易。 | UIコードの共有率がFlutterに比べて低く、Compose Multiplatform（iOS対応等）はまだ発展途上。 | **品質とパフォーマンス**を妥協せず、長期的にメンテナンスする大規模アプリ。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
