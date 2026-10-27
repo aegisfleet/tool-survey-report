@@ -2,7 +2,7 @@
 title: ffmpeg-skill 調査レポート
 tool_name: ffmpeg-skill
 tool_reading: エフエフエムペグスキル
-category: MCPサーバー/基盤
+category: MCPサーバー
 developer: kajisho5
 official_site: https://github.com/kajisho5/ffmpeg-skill
 date: '2026-10-25'

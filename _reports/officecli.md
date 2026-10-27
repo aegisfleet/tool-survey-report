@@ -2,7 +2,7 @@
 title: OfficeCLI 調査レポート
 tool_name: OfficeCLI
 tool_reading: オフィスクライ
-category: MCPサーバー/基盤
+category: MCPサーバー
 developer: iOfficeAI
 official_site: https://officecli.ai
 date: '2026-06-20'
