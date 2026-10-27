@@ -1,52 +1,52 @@
 ---
-title: "Gemini API CLI 調査レポート"
-tool_name: "Gemini API CLI"
-tool_reading: "ジェミニ エーピーアイ シーエルアイ"
-category: "AI開発ツール"
-developer: "Google"
-official_site: "https://github.com/google-gemini/gemini-api-cli"
-date: "2026-10-27"
-last_updated: "2026-10-27"
+title: Gemini API CLI 調査レポート
+tool_name: Gemini API CLI
+tool_reading: ジェミニ エーピーアイ シーエルアイ
+category: AI開発ツール
+developer: Google
+official_site: https://github.com/google-gemini/gemini-api-cli
+date: '2026-10-27'
+last_updated: '2026-10-27'
 tags:
-  - "CLI"
-  - "生成AI"
-  - "開発者ツール"
-  - "オープンソース"
-description: "AIエージェントやシェルスクリプトからGemini APIを直接利用できる公式CLIツール"
+  - CLI
+  - 生成AI
+  - 開発者ツール
+  - オープンソース
+description: AIエージェントやシェルスクリプトからGemini APIを直接利用できる公式CLIツール
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント利用者"
-  latest_highlight: "2026年10月にv0.4.4がリリースされ、関数実行結果のサブコンテンツ拡張などが追加"
-  update_frequency: "高"
+    - 開発者
+    - AIエージェント利用者
+  latest_highlight: 2026年10月にv0.4.4がリリースされ、関数実行結果のサブコンテンツ拡張などが追加
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "AIエージェント(Claude Code等)のコマンドラインから直接Geminiの各種機能が利用できる"
+      reason: AIエージェント(Claude Code等)のコマンドラインから直接Geminiの各種機能が利用できる
     - point: 4
-      reason: "画像・音声生成、ファイル解析、エージェント実行まで幅広いAPI機能に対応"
+      reason: 画像・音声生成、ファイル解析、エージェント実行まで幅広いAPI機能に対応
     - point: 3
-      reason: "dry-runやjson出力対応など、自動化・機械処理向けの機能が充実"
+      reason: dry-runやjson出力対応など、自動化・機械処理向けの機能が充実
     - point: 3
-      reason: "単一バイナリ(Go言語)で提供され環境構築が容易"
+      reason: 単一バイナリ(Go言語)で提供され環境構築が容易
   minus_points:
     - point: 0
-      reason: "特になし"
-  summary: "CLIからGemini APIのフル機能を利用でき、特に他のAIエージェントとの連携・能力拡張に強力なツール"
+      reason: 特になし
+  summary: CLIからGemini APIのフル機能を利用でき、特に他のAIエージェントとの連携・能力拡張に強力なツール
 links:
-  github: "https://github.com/google-gemini/gemini-api-cli"
-  deepwiki: "https://deepwiki.com/google-gemini/gemini-api-cli"
-  codewiki: "https://codewiki.google/github.com/google-gemini/gemini-api-cli"
-  documentation: "https://ai.google.dev/gemini-api/docs"
+  github: https://github.com/google-gemini/gemini-api-cli
+  deepwiki: https://deepwiki.com/google-gemini/gemini-api-cli
+  codewiki: https://codewiki.google/github.com/google-gemini/gemini-api-cli
+  documentation: https://ai.google.dev/gemini-api/docs
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "Gemini Skills"
+    - Gemini Skills
 ---
 
 # **Gemini API CLI 調査レポート**
