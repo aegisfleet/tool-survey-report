@@ -2,7 +2,7 @@
 title: Audio Studio MCP 調査レポート
 tool_name: Audio Studio MCP
 tool_reading: オーディオ スタジオ エムシーピー
-category: MCPサーバー/基盤
+category: MCPサーバー
 developer: KanaWorks_AI
 official_site: https://kanaworksai-hue.github.io/audio-studio-mcp/
 date: '2026-10-20'

@@ -2,7 +2,7 @@
 title: Chrome DevTools for agents 調査レポート
 tool_name: Chrome DevTools for agents
 tool_reading: クローム デブツールズ フォー エージェンツ
-category: MCPサーバー/基盤
+category: MCPサーバー
 developer: Google LLC
 official_site: https://github.com/ChromeDevTools/chrome-devtools-mcp
 date: '2026-03-12'

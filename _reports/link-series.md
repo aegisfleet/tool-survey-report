@@ -2,7 +2,7 @@
 title: LINKシリーズ 調査レポート
 tool_name: LINKシリーズ
 tool_reading: リンクシリーズ
-category: 基幹システム
+category: ビジネス/業務ツール
 developer: miryo.AI Inc.
 official_site: https://miryo.ai/package/link
 date: '2026-10-26'
@@ -12,6 +12,7 @@ tags:
   - パッケージソフト
   - AI
   - 製造業
+  - 基幹システム
 description: 業界標準業務をパッケージ化し、独自要件をAIによる開発で実装することで費用と期間を大幅に削減した基幹システム。
 quick_summary:
   has_free_plan: false

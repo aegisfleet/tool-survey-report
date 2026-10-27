@@ -2,7 +2,7 @@
 title: NX2Apple 調査レポート
 tool_name: NX2Apple
 tool_reading: エヌエックスツーアップル
-category: ゲーム互換レイヤー
+category: ビルドツール/ランタイム
 developer: コミュニティ
 official_site: https://github.com/LNPANDY/NX2Apple
 date: '2026-10-27'
@@ -12,6 +12,7 @@ tags:
   - iOS
   - macOS
   - 開発者ツール
+  - ゲーム互換レイヤー
 description: Nintendo SwitchのゲームをiPhoneやiPad上でネイティブ実行するためのパッケージ（IPA/APP）を構築するツール。
 quick_summary:
   has_free_plan: true
