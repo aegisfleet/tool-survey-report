@@ -2,7 +2,7 @@
 title: Gemini API CLI 調査レポート
 tool_name: Gemini API CLI
 tool_reading: ジェミニ エーピーアイ シーエルアイ
-category: CLIツール群
+category: AIアプリ開発基盤
 developer: Google
 official_site: https://github.com/google-gemini/gemini-api-cli
 date: '2026-10-27'

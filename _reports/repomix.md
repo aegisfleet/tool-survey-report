@@ -2,7 +2,7 @@
 title: Repomix 調査レポート
 tool_name: Repomix
 tool_reading: レポミックス
-category: CLIツール群
+category: AI開発ワークフロー
 developer: Kazuki Yamada
 official_site: https://repomix.com/
 date: '2026-09-08'

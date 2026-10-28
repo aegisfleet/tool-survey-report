@@ -2,7 +2,7 @@
 title: Codex Pet Share 調査レポート
 tool_name: Codex Pet Share
 tool_reading: コーデックス ペット シェア
-category: CLIツール群
+category: ナレッジベース/Wiki
 developer: portons
 official_site: https://codex-pets.net/
 date: '2026-08-17'
