@@ -2,7 +2,7 @@
 title: GitHub CLI 調査レポート
 tool_name: GitHub CLI
 tool_reading: ギットハブシーエルアイ / gh
-category: CLIツール群
+category: バージョン管理
 developer: GitHub, Inc.
 official_site: https://cli.github.com/
 date: '2026-10-20'

@@ -2,7 +2,7 @@
 title: ripgrep 調査レポート
 tool_name: ripgrep
 tool_reading: リップグレップ
-category: CLIツール群
+category: データ抽出/変換
 developer: Andrew Gallant (BurntSushi)
 official_site: https://github.com/BurntSushi/ripgrep
 date: '2026-10-06'

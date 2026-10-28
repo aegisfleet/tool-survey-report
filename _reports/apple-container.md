@@ -2,7 +2,7 @@
 title: Apple Container 調査レポート
 tool_name: Apple Container
 tool_reading: アップルコンテナ / コンテナ
-category: CLIツール群
+category: コンテナ/仮想化
 developer: Apple
 official_site: https://github.com/apple/container
 date: '2026-06-14'
