@@ -277,7 +277,7 @@ graph TD
 
 | 機能カテゴリ | 機能項目 | Grok (xAI) | ChatGPT | Claude | Gemini |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **基本機能** | 推論能力 | ◎<br><small>Grok 4.5</small> | ◎<br><small>GPT-5.4/5.5</small> | ◎<br><small>Claude 4.8</small> | ◎<br><small>Gemini 3.5</small> |
+| **基本機能** | 推論能力 | ◎<br><small>Grok 4.5</small> | ◎<br><small>GPT-5.4/5.5</small> | ◎<br><small>Claude 4.8</small> | ◎<br><small>Gemini 4 Argon</small> |
 | **リアルタイム性** | X検索 | ◎<br><small>ネイティブ統合</small> | △<br><small>Bing経由</small> | ×<br><small>非対応</small> | △<br><small>Google検索</small> |
 | **ユーモア** | Fun Mode | ◎<br><small>独自機能</small> | △<br><small>プロンプトで可</small> | ×<br><small>安全性重視</small> | △<br><small>プロンプトで可</small> |
 | **開発** | API互換性 | ◯<br><small>OpenAI互換</small> | ◎<br><small>標準</small> | △<br><small>独自API</small> | △<br><small>独自API</small> |

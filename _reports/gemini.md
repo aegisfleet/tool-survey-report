@@ -6,13 +6,14 @@ category: 基盤モデル/LLMチャット
 developer: Google
 official_site: https://gemini.google.com/
 date: '2025-10-19'
-last_updated: '2026-05-20'
+last_updated: '2026-10-28'
 tags:
   - AI
   - 会話型AI
   - 大規模言語モデル
   - 生成AI
-  - 自律型エージェント
+  - 自律型
+  - エージェント
 description: Googleによって開発された、テキスト、画像、音声、動画などを統合的に扱うマルチモーダルな生成AIモデルファミリー。
 quick_summary:
   has_free_plan: true
@@ -22,7 +23,7 @@ quick_summary:
     - 一般ユーザー
     - 開発者
     - 研究者
-  latest_highlight: Google I/O 2026にて次世代モデルGemini 3.5 Flashや自律型エージェントGemini Sparkを発表
+  latest_highlight: Gemini 4 Argonの一般提供(GA)開始およびGemini 3.8ファミリー等のリリース
   update_frequency: 高
 evaluation:
   score: 92
@@ -76,7 +77,7 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://ai.google.dev/gemini-api/docs/quickstart](https://ai.google.dev/gemini-api/docs/quickstart)
 * **カテゴリ**: 生成AI
-* **概要**: Googleが開発した、テキスト、画像、音声、動画などをネイティブに理解し、生成することができるマルチモーダルAIモデルファミリー。最新のGemini 3.5 Flashをはじめとする多様なモデルを展開し、幅広いユースケースに対応する。
+* **概要**: Googleが開発した、テキスト、画像、音声、動画などをネイティブに理解し、生成することができるマルチモーダルAIモデルファミリー。最新のGemini 4 ArgonやGemini 3.8 Flashをはじめとする多様なモデルを展開し、幅広いユースケースに対応する。
 
 ## **2. 目的と主な利用シーン**
 
@@ -107,14 +108,59 @@ relationships:
 * **高度な推論能力**: 複雑な問題に対して、思考のステップを経てより正確な回答を導き出す「思考チェーン(Reasoning)」能力。
 * **長文コンテキスト処理**: 最大100万トークンという非常に長いコンテキストウィンドウを持ち、大量のドキュメント（最大1,500ページ）やコード（3万行）を一度に処理可能。
 * **多様なモデルファミリー**:
-  * **Gemini 3.5 Flash**: 速度・効率・エージェントタスクに特化した新しいフロンティアモデルファミリー。
+  * **Gemini 3.8 Flash**: 速度・効率・エージェントタスクに特化したフロンティアモデルファミリー。
   * **Gemini Spark**: ユーザーがオフラインでもクラウド上で24時間自律動作するパーソナルAIエージェント。
   * **Gemini Omni Flash**: テキスト、画像、動画からシネマ品質のビデオを生成・理解するマルチモーダル世界モデル。
-  * **Gemini 3.1 Pro Preview**: コーディングや複雑なタスクに最適な高性能モデル（現在移行期）。
+  * **Gemini 4 Argon**: コーディングやエージェントタスク、数学・科学などの複雑なタスクに特化した最高性能モデル（現在移行期）。
 * **APIと開発者ツール**: Google AI StudioやGemini API (Google AI aPaaS) を通じて、開発者が自身のアプリケーションにGeminiを統合可能。
 * **Agent Mode (Preview)**: 開発者向け機能(Gemini Code Assist)の一部として提供。対話を通じて、複数ステップにわたる複雑なタスクや目標の達成を支援する。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+<!--
+【ガイドライン】
+- ツールの動作原理、システム構成（アーキテクチャ）、データの流れ、通信フローなどを記述
+- クライアント・サーバー型、ローカルファースト、クラウド完結など、ツールのアーキテクチャ特性を明記
+- 可能であればMermaidによる構成図やフロー図を含めること（Mermaid内のノードや説明テキストは原則日本語表記で作成する）
+- 要素技術や内部で使われている仕組み（例：Docker、Git worktree、WebSockets、E2EEなど）を解説
+- SaaS等の場合はわかる範囲で記述し、公開されていない場合は「非公開」とし、分かる範囲の処理フロー等を記載
+-->
+
+* **アーキテクチャ**: クラウド完結型SaaS（Googleの堅牢なインフラストラクチャ上で動作）。
+* **主要コンポーネントとデータフロー**:
+  * **ユーザーインターフェース**: Webブラウザやモバイルアプリからプロンプト（テキスト、画像、音声など）を入力。
+  * **APIゲートウェイ**: リクエストを受け付け、認証やルーティングを行う。
+  * **Geminiモデル群**: 入力されたマルチモーダルデータを処理し、推論を実行する。用途に応じて、Argon、Flash、Flash-Lite、Nanoなどのモデルが使い分けられる。
+  * **バックエンドシステム**: 検索インデックス（Google検索へのグラウンディング）、ファイルストレージ、Workspace連携などの外部リソースと通信する。
+* **特筆すべき要素技術**:
+  * **ネイティブマルチモーダル**: テキスト、画像、音声を別々に処理するのではなく、最初から統合的に学習・処理する独自のアーキテクチャ。
+  * **巨大なコンテキストウィンドウ**: 最大100万〜200万トークンの長文コンテキストを一度に処理可能な技術（Ring Attention等）。
+  * **Live API**: WebSocketを用いた双方向ストリーミング通信により、低遅延な音声対話を実現。
+
+```mermaid
+graph TD
+    A[ユーザー] -->|テキスト/画像/音声/動画| B(APIゲートウェイ)
+    B --> C{Geminiモデルルーター}
+    C -->|高負荷/複雑な推論| D[Gemini 4 Argon]
+    C -->|高速/エージェントタスク| E[Gemini 3.8 Flash]
+    C -->|高スループット| F[Gemini 3.8 Flash-Lite]
+    C -->|オンデバイス| G[Gemini Nano]
+
+    D & E & F -.-> H[(Google検索インデックス)]
+    D & E & F -.-> I[Google Workspace連携]
+    D & E & F -.-> J[ファイルストレージ]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#ddf,stroke:#333,stroke-width:2px
+    style D fill:#ffd,stroke:#333,stroke-width:2px
+    style E fill:#ffd,stroke:#333,stroke-width:2px
+    style F fill:#ffd,stroke:#333,stroke-width:2px
+    style G fill:#ffd,stroke:#333,stroke-width:2px
+```
+
+
+## **5. 開始手順・セットアップ**
 
 <!--
 【ガイドライン】
@@ -147,7 +193,7 @@ relationships:
   print(response.text)
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 <!--
 【ガイドライン】
@@ -160,7 +206,7 @@ relationships:
 * **Googleエコシステムとの強力な連携**: Google検索、Workspace、Android、Google TVなど、Googleのサービスと深く統合されており、利便性が高い。
 * **柔軟なモデル選択**: タスクの要件（性能、速度、コスト）に応じて最適なモデルを選択できる。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 <!--
 【ガイドライン】
@@ -173,7 +219,7 @@ relationships:
 * **日本語のニュアンス**: 日本語の複雑なニュアンスや文化的背景を完全には理解できない場合がある。
 * **コスト**: 高性能なモデル（特に3 Pro）をAPI経由で大量に使用する場合、コストが高額になる可能性がある。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 <!--
 【ガイドライン】
@@ -184,16 +230,16 @@ relationships:
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Gemini** | 無料 | Web版Gemini。最新のGemini 3.5 Flashへのアクセス。 |
-| **Gemini Advanced** | $20/月 | 高性能なGemini 3.5 Flashや自律型エージェントGemini Spark等へのアクセス。Google One AI Premiumプランの一部として提供。 |
-| **Gemini API** | 従量課金 | モデルと入出力トークン数に応じた課金（例: Gemini 3.5 Flashは無料枠あり）。 |
+| **Gemini** | 無料 | Web版Gemini。最新のGemini 3.8 Flash等へのアクセス。 |
+| **Gemini Advanced** | $20/月 | 高性能なGemini 4 ArgonやGemini 3.8 Flash、自律型エージェントGemini Spark等へのアクセス。Google One AI Premiumプランの一部として提供。 |
+| **Gemini API** | 従量課金 | モデルと入出力トークン数に応じた課金（例: Gemini 3.8 Flash等は無料枠あり）。 |
 
 * **課金体系**:
   * **Web版**: サブスクリプション（月額）
   * **API**: トークン単位の従量課金制
 * **無料トライアル**: Gemini AI Proに2ヶ月の無料トライアルが提供される場合がある。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 <!--
 【ガイドライン】
@@ -207,7 +253,7 @@ relationships:
   * **Uber**: カスタマーサポートの自動化や社内業務効率化に活用。
 * **対象業界**: テクノロジー、ソフトウェア開発、メディア、教育、金融など、幅広い業界で活用が進んでいる。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 <!--
 【ガイドライン】
@@ -219,14 +265,14 @@ relationships:
 * **コミュニティ**: Google Developer Communityや、Stack Overflow、GitHubなどで開発者コミュニティが活発。
 * **公式サポート**: Google Cloudのサポートプランを通じて、技術的なサポートを受けることが可能。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
 <!--
 【ガイドライン】
 - API、外部連携、技術スタックとの相性を包括的に記述
 -->
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 <!--
 【ガイドライン】
@@ -240,7 +286,7 @@ relationships:
   * **Google TV**: 自然言語でのコンテンツ検索や情報表示。
   * **その他**: ZapierやMakeなどの自動化ツールを介して、数千のサードパーティアプリと連携可能。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 <!--
 【ガイドライン】
@@ -255,7 +301,7 @@ relationships:
 | **Android (Kotlin)** | ◎ | Gemini NanoによるオンデバイスAI機能が利用可能。 | 端末のスペック要件がある。 |
 | **LangChain** | ◎ | 公式インテグレーションにより、RAGやエージェント開発がスムーズ。 | ライブラリの更新頻度が高い。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 <!--
 【ガイドライン】
@@ -268,7 +314,7 @@ relationships:
 * **データ管理**: Googleの堅牢なインフラ上でデータを管理。プライバシーポリシーに基づき、ユーザーデータは厳格に保護される（API利用時のデータは学習に使われない設定が可能）。
 * **準拠規格**: Google Cloudのインフラは、ISO 27001, SOC 2/3, GDPRなど、多くの国際的なセキュリティ・プライバシー基準に準拠。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 <!--
 【ガイドライン】
@@ -282,7 +328,7 @@ relationships:
   * 一般ユーザーにとっては、学習コストは非常に低い。
   * 開発者にとっては、REST APIの基本的な知識があれば、比較的容易に利用を開始できる。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 <!--
 【ガイドライン】
@@ -297,7 +343,7 @@ relationships:
   * **過度な分割**: 巨大なコンテキストを扱えるにもかかわらず、不必要にデータを細切れにして入力し、文脈を失わせる。
   * **プロンプトの曖昧さ**: 指示が曖昧だと、意図しない回答が返ってくる可能性があるため、具体的かつ明確な指示を心がける。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 <!--
 【ガイドライン】
@@ -321,7 +367,7 @@ relationships:
   * 動画をアップロードして、内容の要約や特定シーンの解説をさせる。
   * UIデザインのラフスケッチを読み込ませて、HTML/CSSコードを生成させる。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
 <!--
 【ガイドライン】
@@ -335,6 +381,14 @@ relationships:
 - 情報源のURLを記載
 -->
 
+* **2026-10-27**: Gemini API CLI (gemini-api) beta のリリース。AIコーディングエージェントやCIパイプライン向けのステートレスなコマンドラインクライアント。
+* **2026-10-26**: Generate Content API storage がデフォルトで有効化。
+* **2026-10-13**: Gemini 4 Argon が一般提供 (GA) 開始。複雑なコーディングやエージェント、数学、科学のタスク向けに構築された最高性能モデル。
+* **2026-10-08**: Gemini 3.7 Flash / 3.5 Flash が非推奨化され、Gemini 3.8 Flash / 3.6 Flash へそれぞれ移行。
+* **2026-10-06**: 画像生成・編集モデル Gemini Nano Banana 2.1 が一般提供 (GA) 開始。
+* **2026-09-22**: Gemini 3.8 Flash TTS および Gemini 3.8 Flash-Lite TTS が一般提供 (GA) 開始。
+* **2026-09-15**: 音声対話向けモデル Gemini 3.8 Live および Gemini 3.8 Live Extended Thinking が一般提供 (GA) 開始。
+* **2026-09-02**: Gemini 3.8 Flash が一般提供 (GA) 開始。長期間のソフトウェアエンジニアリングや自律型エージェント向けに設計されたモデル。
 * **2026-05-19**: Google I/O 2026にて、速度とエージェント機能に特化した次世代モデル「Gemini 3.5 Flash」、24時間自律動作するパーソナルエージェント「Gemini Spark」、マルチモーダル動画生成モデル「Gemini Omni Flash」を発表。
 * **2026-05-19**: Google AI Studioにおいて、KotlinとJetpack Composeを用いたAndroidアプリの「Vibe Coding」機能、Google Antigravityへの1クリックエクスポート機能、Workspace APIとの連携機能を発表。
 * **2026-05-19**: 新モデル「Gemini 3.1 Pro Preview」、「Gemini 3.1 Flash-Lite」や「Gemini 2.5 Flash」などを提供開始し、一部の旧モデル(Gemini 3 Pro Preview, Gemini 2.0 Flash)を非推奨化。
@@ -342,9 +396,9 @@ relationships:
 * **2026-01-16**: iOS 18において、Siriの一部機能にGeminiを利用するパートナーシップが正式に有効化されたと報じられる。
 * **2026-01-06**: CES 2026にて、Google TVにGeminiを統合し、自然言語での検索や情報表示機能を提供することを発表。
 
-(出典: [Google AI Blog](https://blog.google/technology/ai/), [Google AI Studio Changelog](https://ai.google.dev/gemini-api/docs/changelog), [Gemini Apps Updates](https://gemini.google.com/updates))
+(出典: [Google AI Blog](https://blog.google/technology/ai/), [Google AI for Developers Release notes](https://ai.google.dev/gemini-api/docs/changelog), [Gemini Apps Updates](https://gemini.google.com/updates))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
 <!--
 【ガイドライン】
@@ -352,7 +406,7 @@ relationships:
 - **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
 -->
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
 | 機能カテゴリ | 機能項目 | 本ツール (Gemini) | ChatGPT | Claude | Grok |
 |:---:|:---|:---:|:---:|:---:|:---:|
@@ -361,7 +415,7 @@ relationships:
 | **エコシステム** | オフィス連携 | ◎<br><small>Workspace</small> | ◎<br><small>MS 365</small> | △<br><small>外部連携</small> | - |
 | **検索** | リアルタイム | ◎<br><small>Google検索</small> | ◎<br><small>Search</small> | △<br><small>外部連携</small> | ◎<br><small>X検索</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 <!--
 【ガイドライン】
@@ -370,12 +424,12 @@ relationships:
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール (Gemini)** | Google製。超高速なGemini 3.5 Flashや自律型エージェントGemini Sparkなど、速度とエージェント性能を大幅に強化。 | Googleエコシステムとの深い連携、業界トップクラスの長文処理能力、動画のネイティブ理解。 | 複雑なプラン体系と頻繁なモデル名の変更による学習コスト。 | Googleサービス中心の業務、大規模ドキュメントや動画の分析が必要な場合。 |
+| **本ツール (Gemini)** | Google製。超高速なGemini 4 Argonや自律型エージェントGemini Sparkなど、速度とエージェント性能を大幅に強化。 | Googleエコシステムとの深い連携、業界トップクラスの長文処理能力、動画のネイティブ理解。 | 複雑なプラン体系と頻繁なモデル名の変更による学習コスト。 | Googleサービス中心の業務、大規模ドキュメントや動画の分析が必要な場合。 |
 | **ChatGPT** | OpenAI製。最も普及している会話型AI。強力なエコシステムを持つ。 | 自然な対話能力、高度な推論能力(o1)、画像生成(DALL-E)、豊富なサードパーティ連携。 | コンテキストウィンドウがGeminiほど大きくない。 | 汎用的な対話AIやコンテンツ生成、高度な推論を主目的とする場合。 |
 | **Claude** | Anthropic製。安全性と倫理性を重視。エージェント機能とコーディングに強み。 | 自然な日本語生成、エージェント的なタスク実行能力(Computer Use)、高い安全性。 | Web検索機能がネイティブではない。マルチモーダル（特に動画）は限定的。 | コーディング、長文読解、複雑な指示に従わせたい場合。 |
 | **Grok** | xAI製。X (旧Twitter) との連携によるリアルタイム性が特徴。 | 最新情報へのリアルタイムアクセス、フィルタリングの少ない率直な回答、Fun Mode。 | エコシステムが発展途上。情報源がXに偏る可能性。 | 最新の話題やトレンドに関する情報を重視する場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 <!--
 【ガイドライン】
