@@ -41,9 +41,9 @@ links:
   github: https://github.com/gitleaks/gitleaks
 relationships:
   related_tools:
-    - "GitGuardian"
-    - "Secretlint"
-    - "TruffleHog"
+    - GitGuardian
+    - Secretlint
+    - TruffleHog
 ---
 # **Gitleaks 調査レポート**
 
