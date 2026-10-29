@@ -2,7 +2,7 @@
 title: Rocq 調査レポート
 tool_name: Rocq
 tool_reading: ロック
-category: 定理証明ツール
+category: コード品質/静的解析
 developer: Inria / Rocq Team
 official_site: https://rocq-prover.org/
 date: '2026-10-24'
