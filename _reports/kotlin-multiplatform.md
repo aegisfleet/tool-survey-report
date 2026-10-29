@@ -6,7 +6,7 @@ category: モバイル開発
 developer: JetBrains
 official_site: https://kotlinlang.org/multiplatform/
 date: '2026-02-15'
-last_updated: '2026-05-20'
+last_updated: '2026-10-30'
 tags:
   - Compose Multiplatform
   - Kotlin
@@ -22,7 +22,7 @@ quick_summary:
     - モバイルアプリ開発者
     - Android/iOSエンジニア
     - 大規模開発チーム
-  latest_highlight: 最新のKotlin 2.3.0およびCompose Multiplatform 1.11.0により、iOSパフォーマンスとビルド速度がさらに進化
+  latest_highlight: 最新のKotlin 2.4.21およびCompose Multiplatform 1.13.0-beta01により、パフォーマンスと機能がさらに進化
   update_frequency: 高
 evaluation:
   score: 85
@@ -46,7 +46,6 @@ evaluation:
   summary: ロジック共有とネイティブ品質を両立させる最有力候補。Composeの成熟によりUI共有の選択肢も加わり、死角がなくなった。
 links:
   github: https://github.com/JetBrains/kotlin
-  deepwiki: https://deepwiki.com/JetBrains/kotlin
   documentation: https://kotlinlang.org/docs/multiplatform.html
 relationships:
   parent: IntelliJ IDEA
@@ -93,7 +92,31 @@ relationships:
 * **Swift Interop**: SwiftコードからKotlinコードを直接呼び出すことができ、Objective-Cブリッジを経由するものの、近年はよりSwiftライクなAPI生成が可能になっています（SKIEなどのツールも存在）。
 * **Kotlin/Wasm**: WebAssemblyへのコンパイルをサポートし、Webブラウザでの実行パフォーマンスを向上させています。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+* **アーキテクチャ**: 各プラットフォームに最適なバイナリ（JVM、ネイティブ、JavaScript/Wasm）へコンパイルする共通コード・プラットフォーム固有コードの階層型アーキテクチャ。
+* **主要コンポーネントとデータフロー**:
+  * 開発者は「共通コード（Common Main）」でビジネスロジック、データモデル、ネットワーク層をKotlinで実装。
+  * 「Expect / Actual」機構により、共通コードからプラットフォーム固有のAPIの利用を要求（expect）し、各プラットフォーム側のコード（Android Main, iOS Main）でその実体（actual）を提供する。
+  * コンパイラが、ターゲットに応じた専用のバックエンド（Kotlin/JVM, Kotlin/Native, Kotlin/JS, Kotlin/Wasm）を用いて最終成果物を生成する。
+
+```mermaid
+graph TD
+    A[共通コード: CommonMain<br>ビジネスロジック/データ/通信] -->|Kotlin/JVM| B[Android プラットフォーム<br>Kotlin/Java]
+    A -->|Kotlin/Native| C[iOS プラットフォーム<br>Swift/Objective-C]
+    A -->|Kotlin/JS or Wasm| D[Web プラットフォーム<br>JavaScript/WebAssembly]
+
+    subgraph "Expect / Actual 機構"
+        E[Expect: 共通APIの宣言] -.-> F[Actual: Android固有実装]
+        E -.-> G[Actual: iOS固有実装]
+    end
+```
+
+* **特筆すべき要素技術**:
+  * **Kotlin/Native**: LLVMベースのバックエンドにより、仮想マシンなしで動作するネイティブバイナリを生成する。
+  * **Objective-C ブリッジ**: iOS向けに生成されたフレームワークはObjective-C互換のヘッダを持ち、Swiftから呼び出すことが可能。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
   * macOS (iOS開発を行う場合必須)、Windows、またはLinux
@@ -116,7 +139,7 @@ relationships:
   * ウィザードで生成されたプロジェクトを開き、共通コード (`shared/src/commonMain/kotlin`) にロジックを記述。
   * Androidターゲットを選択してRun、iOSターゲットを選択してRunでそれぞれのシミュレータで動作確認。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
 * **ネイティブパフォーマンス**: JVM、JavaScript、Nativeバイナリなど、各プラットフォームに最適な形式にコンパイルされるため、パフォーマンスの劣化がほとんどありません。
 * **柔軟な共有戦略**: 「ロジックのみ共有」「UIも共有（Compose）」「特定機能のみ共有」など、プロジェクトの要件に合わせて共有範囲を柔軟に選択できます。
@@ -124,14 +147,14 @@ relationships:
 * **強力なツールチェーン**: 開発元がIDEベンダーのJetBrainsであるため、IntelliJ IDEAやAndroid Studioでの開発体験（コード補完、リファクタリング、デバッグ）が非常に優れています。
 * **Googleによる公式サポート**: Android開発の公式言語であるKotlinをベースにしており、GoogleもKMPライブラリ（Jetpackなど）の提供を積極的に行っています。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
 * **環境構築の複雑さ**: Gradleの設定が複雑になりがちで、特にiOS向けのビルド設定（Xcodeとの連携）には慣れが必要です。
 * **iOS開発の知識が必要**: 完全にiOSの知識なしで開発することは難しく、特にネイティブUIを採用する場合やビルドエラーの解決にはXcodeやSwift/Objective-Cの知識が求められます。
 * **ライブラリのエコシステム**: 純粋なKotlinライブラリ（KMP対応ライブラリ）は増えていますが、Java専用ライブラリやSwift専用ライブラリをそのまま共通コードで使うことはできません。
 * **Compose Multiplatform for iOSの成熟度**: 安定版となりましたが、プラットフォーム固有のUI挙動（スクロール感性やアクセシビリティなど）の完全な再現にはまだ課題が残る場合があります。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 Kotlin Multiplatformはオープンソースプロジェクトであり、基本的に無料で利用できます。
 
@@ -142,7 +165,7 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
 * **課金体系**: なし
 * **無料トライアル**: なし
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
 * **導入企業**: Netflix, VMware, McDonald's, Google (Google Workspace), X (旧Twitter), 9GAG, Baiduなど。
 * **導入事例**:
@@ -151,20 +174,20 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
   * **Google Workspace**: Google Docs, Sheets, SlidesのiOS/Androidアプリでロジック共有を推進。
 * **対象業界**: 業界を問わず、特にiOS/Android両方のアプリを提供するサービスで広く採用されています。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
 * **ドキュメント**: 公式ドキュメントは非常に充実しており、チュートリアル、サンプルコード、APIリファレンスが整備されています。
 * **コミュニティ**: Kotlin Slack (2025年時点で5万人以上)、Stack Overflow、Redditなどで活発な議論が行われています。
 * **公式サポート**: JetBrainsによる開発とサポートに加え、GoogleもAndroid開発者向けにKMPのサポートを強化しています。商用サポートとしてはJetBrainsのパートナーネットワークが存在します。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
 * **API**: 各プラットフォームのネイティブAPIに直接アクセス可能です（iOSのUIKit/SwiftUI, AndroidのAndroid SDKなど）。
 * **外部サービス連携**: Ktor（通信）、SQLDelight/Room（データベース）、Koin（DI）などのKMP対応ライブラリを使用することで、バックエンドAPIやデータベースとの連携が容易です。FirebaseのKMP SDKも提供されています。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
@@ -173,20 +196,20 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
 | **Compose Multiplatform** | ◎ | UIコードまで共有可能になり、開発効率が最大化。 | iOSの完全なネイティブUI再現には調整が必要。 |
 | **SwiftUI** | ◯ | iOSネイティブUIとしてKMPと組み合わせるのが一般的。 | ビューモデル層での接続にボイラープレートが必要な場合がある。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
 * **認証**: KMP自体は認証機能を提供しませんが、Firebase Authや独自のOAuth実装などを共通コードまたはプラットフォーム固有コードで実装可能です。
 * **データ管理**: SQLDelightやRoomなどを使用してローカルデータベースを暗号化（SQLCipherなどと連携）して利用することが一般的です。
 * **準拠規格**: オープンソースソフトウェアとして開発されており、特定の認証規格の対象ではありませんが、金融機関や医療系アプリでの採用実績もあり、適切な実装により高いセキュリティ要件を満たすことができます。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
 * **UI/UX**:
   * **ネイティブUI採用時**: プラットフォーム標準のUIをそのまま利用するため、最高のユーザー体験を提供できます。
   * **Compose Multiplatform採用時**: 宣言的UIで効率的に開発できます。マテリアルデザインがベースですが、iOS風のカスタマイズも可能です。
 * **学習コスト**: Android開発者（Kotlin経験者）にとっては参入障壁が低いです。iOS開発者にとってはKotlin言語とGradleの学習が必要です。初学者の場合、両方のプラットフォームの知識が必要になるため、Flutterなどに比べると学習コストはやや高めです。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
   * **ライブラリの選定**: 通信はKtor、DIはKoin、DBはSQLDelight/Roomなど、KMP対応が成熟したライブラリを中心に構成する。
@@ -197,7 +220,7 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
   * **シングルトンの乱用**: ネイティブ側のライフサイクルを無視したシングルトンやGlobalScopeの使用はメモリリークの原因となる。
   * **同期処理の強制**: ネットワーク処理などをメインスレッドでブロックしてしまう（KMPでは特にスレッド管理に注意が必要）。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
 * **調査対象**: Reddit, 各種テックブログ (2025-2026年の情報), G2等の主要レビューサイトには該当製品としての登録なし
 * **総合評価**: 4.7/5.0 (推定: 開発者コミュニティでの高い評価に基づく)
@@ -213,47 +236,45 @@ Kotlin Multiplatformはオープンソースプロジェクトであり、基本
   * 大規模なスーパーアプリの一部機能だけをKMPで切り出してモジュール化する事例。
   * サーバーサイドエンジニアがモバイルアプリのロジック部分を担当し、モバイルエンジニアがUIに集中する分業スタイル。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-10-23**: **Compose Multiplatform 1.13.0-beta01 リリース**
+  * Webやデスクトップ向けのパフォーマンス・UI関連の改良を多数導入。
+* **2026-10-08**: **Kotlin 2.4.21 リリース**
+  * インクリメンタルビルドおよびコンパイラの安定性向上が含まれる。
+* **2026-08-25**: **Compose Multiplatform 1.12.0 リリース**
+  * テキスト入力機能や描画パフォーマンスの安定化を中心にアップデート。
 * **2026-05-15**: **Compose Multiplatform 1.11.0 リリース**
   * iOSでのレンダリング処理のスレッドオフロード（別スレッド描画）がデフォルトとなり、UIパフォーマンスが劇的に向上。
   * iOSでの実験的なネイティブテキスト入力サポートおよびWebでのスクロールパフォーマンスを大幅改善。
-* **2026-03-19**: **Compose Multiplatform 1.10.3 リリース**
-  * 非Androidプラットフォーム向けの Navigation 3 と、共通コード内での統一された `@Preview` アノテーションをサポート。
 * **2026-01-13**: **Compose Multiplatform 1.10.0 リリース**
   * `@Preview` アノテーションの共通コード化や Navigation 3 をサポート。Compose Hot Reload が安定版として同梱。
 * **2025-12-16**: **Kotlin 2.3.0 リリース**
   * K2コンパイラの高速化、インクリメンタルビルド強化。Kotlin/Nativeリリースビルドで最大40%のパフォーマンス向上。
   * Swiftへの直接エクスポート機能（Swift Export）の進展と、KMPツールの安定化。
-* **2025-11-XX**: **Kotlin 2.1.20 リリース**
-  * K2コンパイラのさらなる最適化とビルド速度向上。
-  * Swiftへのエクスポート機能の改善（ジェネリクス対応の強化）。
-* **2025-10-XX**: **Compose Multiplatform 1.8.0**
-  * iOSにおけるスクロールパフォーマンスの大幅改善。
-  * リソース管理（画像・フォント）のAPIが統一化され、より使いやすく。
 
 (出典: [JetBrains Blog](https://blog.jetbrains.com/kotlin/), [Kotlin Releases](https://github.com/JetBrains/kotlin/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (KMP) | Flutter | React Native |
+| 機能カテゴリ | 機能項目 | 本ツール (KMP) | Flutter | React |
 |:---:|:---|:---:|:---:|:---:|
-| **基本機能** | クロスプラットフォーム | ◯<br><small>ロジック共有中心</small> | ◎<br><small>全OS対応</small> | ◎<br><small>全OS対応</small> |
-| **UI/UX** | 描画エンジン | ◯<br><small>Compose or Native</small> | ◎<br><small>独自(Impeller)</small> | △<br><small>OS依存</small> |
-| **パフォーマンス** | 実行速度 | ◎<br><small>ネイティブそのもの</small> | ◯<br><small>ネイティブ並</small> | ◯<br><small>新アーキで改善</small> |
-| **開発体験** | ホットリロード | △<br><small>Composeのみ可</small> | ◎<br><small>爆速・状態保持</small> | ◯<br><small>Fast Refresh</small> |
+| **基本機能** | クロスプラットフォーム | ◯<br><small>ロジック共有中心</small> | ◎<br><small>全OS対応</small> | ◎<br><small>コンポーネント</small> |
+| **最適化/UI** | 描画エンジン等 | ◯<br><small>Compose or Native</small> | ◎<br><small>独自(Impeller)</small> | ◎<br><small>Compiler</small> |
+| **サーバー側** | RSC / SSR | △<br><small>限定的</small> | △<br><small>限定的</small> | ◎<br><small>標準機能化</small> |
+| **エコシステム** | ライブラリ数 | ◯<br><small>Kotlin資産活用</small> | ◎<br><small>豊富</small> | ◎<br><small>圧倒的</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
 | **Kotlin Multiplatform (本ツール)** | ロジック共有重視、UIは選択可能（ネイティブ/Compose）。 | ネイティブパフォーマンス、インクリメンタル導入、既存資産の活用。 | 設定が複雑、iOS/Android両方の知識が必要。 | ロジックが複雑でUIはネイティブ品質を求められる場合。既存アプリへの導入。 |
 | **Flutter** | 独自レンダリングエンジンでUIも完全に共有。Dart言語。 | 開発スピードが非常に速い、UIの一貫性、ホットリロード。 | アプリサイズが大きい、ネイティブ機能連携の手間。 | 新規アプリ開発、UI統一を重視、早期リリース優先の場合。 |
-| **React Native** | JS/TypeScriptで開発。ネイティブコンポーネントを操作。 | Web開発者が参入しやすい、巨大なエコシステム、OTAアップデート。 | パフォーマンス調整が難しい場合がある、ブリッジのオーバーヘッド。 | JS/TSチームがいる、Webとモバイルでコード共有したい場合。 |
+| **React** | 世界で最も使われているUIライブラリ。RSCによるフルスタック化。 | 圧倒的なエコシステム、CompilerによるDX向上、求人の多さ。 | 概念が複雑化（RSCなど）。 | 迷ったらこれ。大規模開発、就職・採用重視の場合。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
   Kotlin Multiplatformは、クロスプラットフォーム開発の「銀の弾丸」ではないものの、「ロジックの共有」と「ネイティブの品質」を両立させるための最も現実的で強力なソリューションです。特に2025年のCompose Multiplatform for iOSの安定化により、UI共有の選択肢も実用的になり、その価値はさらに高まっています。
