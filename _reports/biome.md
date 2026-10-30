@@ -6,36 +6,42 @@ category: コード品質/静的解析
 developer: Biome Developers
 official_site: https://biomejs.dev/
 date: '2026-02-17'
-last_updated: '2026-05-21'
+last_updated: '2026-10-30'
 tags:
   - オープンソース
   - 開発者ツール
   - コード品質
+  - 静的解析
+  - JavaScript
+  - TypeScript
   - Rust
-description: Prettier互換のフォーマッターと高機能なリンターを統合した、Rust製の高速なWeb開発向けツールチェーン。
+description: Prettier互換のフォーマッターと500以上のルールを備えたリンターを統合した、Rust製の高速なWeb開発向けツールチェーン。
 quick_summary:
   has_free_plan: true
   is_oss: true
   starting_price: 無料
   target_users:
     - 開発者
-    - Webプロジェクト
-  latest_highlight: 2026年5月にv2.4.15をリリース。各種リンタールールの追加とバグ修正が継続的に行われている。
+    - Webフロントエンド開発チーム
+    - 大規模モノレポプロジェクト
+  latest_highlight: 2026年10月にv2.6をリリース。Markdown/SCSS/YAMLのサポート、JavaScriptプラグイン（Boa基盤）、Tailwind v4対応クラスソート、salsaによる型推論エンジン刷新を導入。
   update_frequency: 高
 evaluation:
-  score: 85
+  score: 88
   base_score: 70
   plus_points:
     - point: 10
-      reason: Rust製による圧倒的なパフォーマンス（Prettierの約25倍〜35倍）。
-    - point: 5
-      reason: フォーマッターとリンターが統合されており、セットアップが容易。
+      reason: Rust製による圧倒的なパフォーマンス（Prettier/ESLintの25〜35倍以上）。
+    - point: 4
+      reason: フォーマッター、リンター、import整理、ファイル監視が単一バイナリに統合され設定が極めて平易。
     - point: 3
-      reason: Prettierと97%の互換性があり、移行がスムーズ。
+      reason: 500以上のリンタールールを内蔵し、Markdown/SCSS/YAMLやTailwind v4など対応領域が急速に拡大。
+    - point: 3
+      reason: GritQLやBoaベースのJavaScriptプラグイン、salsaを用いた型推論など先進的な拡張アーキテクチャ。
   minus_points:
-    - point: -3
-      reason: ESLintに比べるとプラグインエコシステムがまだ発展途上。
-  summary: パフォーマンスとDX（開発者体験）を最優先するプロジェクトに最適。ESLint/Prettierからの置き換え候補として有力。
+    - point: -2
+      reason: ESLintの長年蓄積されたサードパーティエコシステムや特殊な独自プラグインの完全網羅には依然移行検証が必要。
+  summary: 爆速の実行速度と設定の平易さを両立し、Webプロジェクトの標準ツールチェーンとしてPrettier/ESLintを代替する最有力OSS。
 links:
   github: https://github.com/biomejs/biome
   deepwiki: https://deepwiki.com/biomejs/biome
@@ -57,37 +63,105 @@ relationships:
 * **公式サイト**: [https://biomejs.dev/](https://biomejs.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/biomejs/biome](https://github.com/biomejs/biome)
+  * DeepWiki: [https://deepwiki.com/biomejs/biome](https://deepwiki.com/biomejs/biome)
   * CodeWiki: [https://codewiki.google/github.com/biomejs/biome](https://codewiki.google/github.com/biomejs/biome)
   * ドキュメント: [https://biomejs.dev/guides/getting-started/](https://biomejs.dev/guides/getting-started/)
-* **カテゴリ**: リンター/フォーマッタ
-* **概要**: Biomeは、Webプロジェクトの健全性を維持するための高速なツールチェーンです。Rustで構築されており、JavaScript, TypeScript, JSX, JSON, CSS, GraphQLのフォーマッターとリンターを単一のツールとして提供します。PrettierやESLintの代替として設計されており、圧倒的なパフォーマンスと設定の簡素さを特徴としています。
+* **カテゴリ**: コード品質/静的解析
+* **概要**: Biomeは、Webプロジェクトの健全性を維持するための高速なオールインワン・ツールチェーンです。Rustで構築されており、JavaScript、TypeScript、JSX、JSON、CSS、GraphQLに加え、Markdown、SCSS、YAMLのフォーマッターとリンターを単一のバイナリで提供します。PrettierやESLintの代替として設計されており、圧倒的な処理速度、シンプルなゼロコンフィグ志向、そして高度な静的解析を特徴としています。
 
 ## **2. 目的と主な利用シーン**
 
-* **解決する課題**: 既存のJS製ツール（Prettier, ESLint）のパフォーマンス問題（遅さ）や、複雑な設定管理の負担を軽減すること。CI/CDパイプラインの高速化。
-* **想定利用者**: Webフロントエンド開発者、バックエンド開発者（Node.js）、フルスタックエンジニア。
+* **解決する課題**: 従来のJavaScript製ツール（ESLint、Prettier等）におけるパフォーマンスのボトルネック、複雑化する依存パッケージや設定ファイルの保守コスト、ツール間競合の解消。CI/CDパイプラインの実行時間短縮。
+* **想定利用者**: Webフロントエンドエンジニア、Node.js/Bunバックエンド開発者、大規模モノレポを管理するプラットフォームエンジニア。
 * **利用シーン**:
-  * 大規模なコードベースの高速なフォーマットとリント
-  * CI/CDパイプラインでのコード品質チェックの高速化
-  * 新規プロジェクトでの迅速なツールチェーンのセットアップ（設定ファイルがシンプル）
-  * VS Codeなどのエディタでのリアルタイムなコード修正
+  * 大規模コードベースにおける高速な一括コードフォーマットおよび静的解析
+  * CI/CDパイプラインでのコード品質チェック時間（実行待ち時間）の極小化
+  * 新規Webプロジェクトにおける最小限の設定（`biome.json`）による素早い開発環境立ち上げ
+  * VS CodeやZed、Neovimなどのエディタにおけるリアルタイムの診断と保存時フォーマット・インポート整理
+  * Tailwind CSS（v4対応）を含むスタイルクラスの自動整列と重複・アンチパターンの検知
 
 ## **3. 主要機能**
 
-* **高速フォーマッター**: Prettierと97%の互換性を持ちながら、約35倍の速度で動作するフォーマッター。不完全なコード（シンタックスエラーがある状態）でもフォーマット可能。
-* **高性能リンター**: 190以上のルールを内蔵し、ESLintやTypeScript ESLintからのルールも多数ポートされている。エラーメッセージが詳細で、修正方法も提示される。
-* **import文の整理 (Organize Imports)**: import文のソートや不要なimportの削除を高速に行う機能。
-* **CLI & LSP統合**: CLIだけでなく、LSP（Language Server Protocol）をネイティブサポートしており、VS Codeなどのエディタで快適に動作する。
-* **統合コマンド**: `biome check` コマンド一つで、フォーマット、リント、import整理を一括で実行できる。
+* **超高速フォーマッター**: Prettierと約97%の高い互換性を維持しながら、25〜35倍以上の速度で動作。不完全なコード（構文エラーを含む状態）でも可能な限りフォーマットを復元。Markdown、SCSS、YAMLにも対応。
+* **高精度リンター（500以上のルール内蔵）**: 推奨ルールセットに加え、ESLintやTypeScript-ESLint、React、Next.js、Vue、Playwright、Tailwind CSS向けのルールを網羅。詳細な診断情報と安全な自動修正コードを提示。
+* **salsaベースの型推論エンジン**: `tsc` を背後で呼び出すことなく、Rustネイティブの増分計算フレームワーク（salsa）によって型情報を推論し、`noFloatingPromises` などの型認識ルールを高速に実行。
+* **プラグインシステム（GritQL & JavaScriptプラグイン）**: 宣言的構文検索言語「GritQL」およびRust製JSエンジン「Boa」上で動作するJavaScriptプラグインをサポートし、独自のCST走査や自動修正ルールの作成が可能。
+* **import文の自動整理 (Organize Imports)**: インポート文のソート、未使用importの除去、type-only importの分離などを高速に自動実行。
+* **設定検証・診断コマンド (`biome inspect`)**: 解決された設定値、マッチする overrides、診断元の設定ファイルを可視化し、複雑なモノレポ設定のデバッグを容易化。
+* **リアルタイムファイル監視（Watch Mode）**: `biome check --watch` や `biome lint --watch` により、ファイル変更を検知して差分のみを即座に再検証。
+* **エディタ・LSP統合**: CLIだけでなく、Language Server Protocol（LSP）をネイティブサポートし、主要エディタとの親和性が高い。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+Biomeは、Rust言語で記述された単一のネイティブバイナリとして動作するローカルファーストのツールチェーンです。ファイルI/Oから構文解析、型推論、コード整形、差分出力までの全工程を最適化されたパイプラインで並行処理します。
+
+```mermaid
+flowchart TD
+    subgraph Client ["開発環境 / CI環境"]
+        CLI["Biome CLI\n(biome check / ci)"]
+        LSPClient["エディタ / IDE\n(VS Code, Zed, Neovim)"]
+        SourceFiles["ソースコード群\n(JS/TS, CSS/SCSS, MD, YAML)"]
+    end
+
+    subgraph CoreEngine ["Biome コアエンジン (Rust製シングルバイナリ)"]
+        Parser["高速構文解析器\n(CST生成 / エラー回復機能)"]
+        
+        subgraph Analysis ["静的解析 & 型推論レイヤー"]
+            SalsaEngine["salsa 増分計算エンジン\n(型推論・プロジェクト依存関係グラフ)"]
+            RuleEngine["リンターコア\n(500以上の内蔵ルール評価)"]
+            PluginHost["プラグイン実行サンドボックス\n(GritQL クエリ / Boa JSランタイム)"]
+        end
+
+        subgraph Transformation ["コード変換 & 整形レイヤー"]
+            Formatter["フォーマッター\n(中間表現 IR ベースの整形)"]
+            FixEngine["コード自動修正\n(Safe / Unsafe Fix 生成)"]
+            ImportOrganizer["import文 整理モジュール"]
+        end
+    end
+
+    subgraph Result ["出力 & 反映"]
+        TerminalOut["端末レポート / CIステータス"]
+        FileWrite["ファイル書き込み (差分適用)"]
+        LSPDiag["リアルタイム波線表示 / クイック修正"]
+    end
+
+    SourceFiles --> Parser
+    CLI --> Parser
+    LSPClient <--> Parser
+
+    Parser --> SalsaEngine
+    Parser --> RuleEngine
+    Parser --> Formatter
+    SalsaEngine --> RuleEngine
+    PluginHost --> RuleEngine
+
+    RuleEngine --> FixEngine
+    RuleEngine --> ImportOrganizer
+    Formatter --> FixEngine
+
+    FixEngine --> TerminalOut
+    FixEngine --> FileWrite
+    FixEngine --> LSPDiag
+```
+
+* **アーキテクチャ特性**:
+  * **Concrete Syntax Tree (CST)**: 抽象構文木（AST）とは異なり、空白文字やコメント、セミコロンの位置情報を完全に保持するCSTを構築。構文エラーを含む壊れたコードでも途中で中断せず解析を続行可能。
+  * **マルチスレッド並行処理**: Rayon等の並行ライブラリを活用し、マルチコアCPUの能力を限界まで引き出して数千〜数万ファイルを並行解析。
+  * **salsa増分計算エンジン**: rust-analyzer等でも採用実績のある増分計算基盤を型推論に導入。ファイルの変更差分のみを再計算することで、エディタ上でもメモリ消費を抑えた即時フィードバックを実現。
+  * **軽量サンドボックス実行 (Boa)**: JavaScriptプラグインはRustネイティブのJavaScript実装「Boa」上で動作し、ホスト環境から分離された安全かつ軽量な実行を保証。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Node.js環境（npm, yarn, pnpm, bunなど）
-  * またはRust環境（cargo）
+  * Node.js / pnpm / yarn / bun のいずれかのパッケージマネージャー、またはRust（cargo）環境、あるいは独立バイナリの直接ダウンロード（HomebrewやTermux等も利用可能）。
+  * アカウント登録や外部認証は一切不要。
+
 * **インストール/導入**:
 
   ```bash
+  # pnpmの場合（推奨: --save-exact によるバージョン固定）
+  pnpm add --save-dev --save-exact @biomejs/biome
+
   # npmの場合
   npm install --save-dev --save-exact @biomejs/biome
   ```
@@ -95,148 +169,176 @@ relationships:
 * **初期設定**:
 
   ```bash
-  # 設定ファイル（biome.json）の生成
-  npx @biomejs/biome init
+  # 設定ファイル（biome.json）の自動生成（Gitリポジトリを自動認識）
+  pnpm dlx @biomejs/biome init
   ```
+
+  生成された `biome.json` はデフォルトで推奨ルールが有効化されています。
 
 * **クイックスタート**:
 
   ```bash
-  # フォーマット、リント、import整理を一括実行
-  npx @biomejs/biome check --write ./src
+  # フォーマット、リント、import整理を一括チェック
+  pnpm dlx @biomejs/biome check ./src
+
+  # チェックと同時に安全な自動修正をファイルへ適用
+  pnpm dlx @biomejs/biome check --write ./src
+
+  # 設定やルールの適用状況をデバッグ表示
+  pnpm dlx @biomejs/biome inspect config
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
-* **圧倒的な速度**: Rust製であるため、従来のJS製ツールと比較して桁違いに高速。大規模プロジェクトでのCI時間を大幅に短縮できる。
-* **オールインワン**: フォーマッターとリンターが統合されており、ツールの依存関係や設定がシンプルになる。
-* **Prettier互換**: Prettierとの互換性が高く、移行コストが低い。
-* **詳細なエラーメッセージ**: エラーの原因と修正方法が具体的に示され、開発者体験（DX）が良い。
+* **圧倒的な処理速度**: Rustによるネイティブ実装とマルチスレッド並行処理により、PrettierやESLintと比較して20〜30倍以上高速に処理。数万行規模のモノレポでも数秒以内でチェックが完了。
+* **真のオールインワン**: フォーマッター、リンター、import文整理、ファイル監視が単一ツールに集約されており、複数のツール間での依存衝突や設定の食い違い（PrettierとESLintの整形ルール衝突等）から完全に解放される。
+* **充実した多言語サポート**: JavaScript/TypeScript/JSXのみならず、CSS、SCSS、GraphQL、JSON、さらにMarkdownやYAMLの解析・フォーマットに対応。
+* **500以上のルールと高度な型推論**: ESLintの主要ルールを広範にカバー。さらにsalsa基盤の型推論により、重厚な型定義生成を伴わずに型認識リントを高速実行可能。
+* **親切かつ美麗な診断メッセージ**: エラー箇所を行番号・コードスニペット・修正候補付きで明瞭にハイライトし、開発者体験（DX）を飛躍的に向上。
+* **ゼロコンフィグに近い手軽さ**: デフォルトの `biome.json` のままで実用的なルールセットが整い、細かなプラグイン導入作業が不要。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
-* **エコシステムの成熟度**: ESLintと比較すると、プラグインやカスタムルールのエコシステムはまだ発展途上。特定のフレームワーク特有のルールが不足している場合がある。
-* **型チェック機能なし**: TypeScriptの型チェック機能は持っていないため、別途 `tsc` などが必要。
-* **新しいツール**: 歴史が浅いため、枯れていない部分やドキュメントが不足している部分がある可能性。
+* **完全な型チェッカーの代替ではない**: 型推論ルールを内蔵しているものの、TypeScriptコンパイラ（`tsc`）そのものを完全に置き換えるものではないため、CIパイプラインでは `tsc --noEmit` との併用が引き続き推奨される。
+* **サードパーティエコシステムの成熟度**: 独自のJavaScriptプラグイン機能（Boa基盤）やGritQLによるカスタムルール作成が可能になったものの、10年以上の歴史を持つESLintのプラグイン資産（特殊な独自フレームワーク用ルールなど）の完全な移行には個別確認が必要。
+* **ドキュメントの日本語対応**: 公式ドキュメントの主要ページは日本語化が進められているが、最新機能や一部の詳細リファレンスは英語が中心。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---|---|---|
-| **OSS** | 無料 | すべての機能を無料で利用可能（MIT / Apache 2.0 ライセンス）。 |
+| **OSS Community** | 無料 | すべてのCLI機能、フォーマッター、リンター、LSP、プラグイン機能を無制限で利用可能（MIT / Apache 2.0 デュアルライセンス）。 |
+| **Sponsorship** | 任意寄付 | GitHub Sponsors / Open Collective を通じたプロジェクト支援。ロゴ掲載やDiscord専用チャンネルなどの特典。 |
+| **Enterprise Support** | 個別見積もり | 大規模企業向けの導入支援、優先的な機能開発・Issue対応、SLA付き商用サポート。 |
 
-* **課金体系**: 完全無料のオープンソースソフトウェア。
-* **企業向けサポート**: GitHub SponsorsやOpen Collectiveを通じたスポンサーシップ、およびEnterprise Supportプログラムがある。
+* **課金体系**: 完全無料のオープンソースソフトウェア。利用量やシート数に応じた課金は一切なし。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
-* **導入企業**: AWS, Google, Microsoft, Discord, Vercel, Shopifyなど、世界的なテック企業で採用されている。
-* **導入事例**: 大規模なモノレポでのCI時間短縮や、開発環境のレスポンス向上を目的に導入が進んでいる。
-* **対象業界**: Web開発を行うあらゆる業界。
+* **導入企業**: AWS, Google, Microsoft, Discord, Vercel, Shopify, Cloudflare, Sentry など世界有数のテック企業で採用・コントリビューションが進む。
+* **導入事例**:
+  * **大規模モノレポのCI短縮**: 従来数分かかっていたリント＆フォーマットのCI実行時間を十数秒に短縮し、開発サイクルとインフラコストを劇的に改善。
+  * **Vercelとの連携**: Vercelによる型推論エンジンの開発スポンサーシップを通じて、Next.jsエコシステムとの親和性が強化。
+* **対象業界**: Webサービス、SaaS、メディア、ゲーム開発など、フロントエンドまたはNode.js基盤を持つすべての業界。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
-* **ドキュメント**: 公式サイトに詳細なドキュメントがある（英語、日本語翻訳もあり）。
-* **コミュニティ**: DiscordサーバーやGitHub Discussionsが活発。
-* **公式サポート**: Enterprise向けの商用サポートプログラムが存在する。
+* **ドキュメント**: 公式ドキュメント（[biomejs.dev](https://biomejs.dev/)）にスタートガイド、各ルールの詳細解説、移行ガイド、設定リファレンスが完備（多言語展開中）。
+* **コミュニティ**: DiscordサーバーおよびGitHub Discussionsが非常に活発で、開発者やコアメンテナーからの迅速なフィードバックが得られる。
+* **公式サポート**: 大規模エンタープライズ向けに商用サポート窓口が提供されている。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
-* **API**: LSPを提供しており、VS Code, IntelliJ, Neovimなどの主要エディタと連携可能。
-* **外部サービス連携**: GitHub ActionsなどのCIツールと容易に連携可能。
+* **API & LSP**: Language Server Protocol（LSP）標準に完全準拠し、VS Code、Zed、Neovim、WebStorm、Sublime Textなどのエディタ拡張からシームレスに利用可能。
+* **CI/CD連携**: GitHub Actions（公式Action `biomejs/setup-biome` あり）、GitLab CI、CircleCIなどでの高速チェックに対応。
+* **プラットフォーム対応**: Linux（x64/arm64）、macOS（Intel/Apple Silicon）、Windowsに加え、Termux（Android arm64/x64）向けのバイナリパッケージも提供。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **JavaScript / TypeScript** | ◎ | ファーストクラスサポート。非常に高速。 | 特になし |
-| **React / JSX** | ◎ | React向けの推奨ルールセットがあり、相性が良い。 | 特になし |
-| **Vue / Svelte / Astro** | ◯ | v2.3以降で実験的サポートが追加され、v2.4でHTMLフォーマッタが刷新されるなど強化中。 | まだ発展途上の部分もあるため、検証が必要。 |
-| **CSS / GraphQL** | ◯ | サポートされているが、JS/TSほど成熟していない可能性。 | 特になし |
+| **TypeScript / JavaScript** | ◎ | ファーストクラスサポート。salsaによる型推論も統合され高速に動作。 | 特になし |
+| **React / Next.js** | ◎ | JSX/TSXのネイティブパース、React Hook規則やNext.js特化ドメインルールを完備。 | 特になし |
+| **Tailwind CSS (v4含む)** | ◎ | クラス名の自動ソート（`useTailwindSortedClasses`）や無効クラス検知を標準提供。 | 特になし |
+| **Vue / Svelte / Astro** | ◯ | テンプレート構文やSFC内のスクリプト/スタイル解析に対応。ルール拡充中。 | 一部の特殊ディレクティブで例外設定が必要な場合あり |
+| **Markdown / SCSS / YAML** | ◎ | v2.6でフルパーサーとフォーマッターが追加され、設定ファイルや文書も一元管理可能。 | 非常に複雑なSCSSマクロ構文は順次テスト拡充中 |
+| **CSS / GraphQL** | ◯ | 標準構文およびCSS Modulesに対応。Stylelintからの移行コマンドあり。 | 特になし |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-* **認証**: ツール自体に認証機能はない（ローカル/CIツール）。
-* **データ管理**: コードはローカルまたはCI環境で処理され、外部サーバーに送信されることはない。
-* **準拠規格**: MITおよびApache 2.0ライセンスで提供され、商用利用も安心。
+* **ローカル完結型処理**: 解析およびフォーマット処理はすべてローカル環境またはCIランナー上で完結し、ソースコードやテレメトリが外部サーバーへ送信されることはない。
+* **Boaサンドボックス実行**: 実行されるJavaScriptプラグインは分離されたBoaランタイム上で動作し、任意のシステムコールや不正なネットワークアクセスを遮断。
+* **サプライチェーンの安全性**: 単一バイナリによる配布で膨大なnpm依存関係を持たないため、依存パッケージ経由のサプライチェーン攻撃リスクを大幅に低減。
+* **ライセンス**: MIT License および Apache-2.0 のデュアルライセンスで提供され、商用プロジェクトでも安心して利用可能。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
-* **UI/UX**: CLIは直感的で、エラーメッセージも親切。設定ファイルもJSON形式でシンプル。
-* **学習コスト**: PrettierやESLintの経験があれば、ほぼ学習コストなしで移行できる。設定項目も整理されている。
+* **UI/UX**: ターミナル出力はカラーハイライトと正確な指摘箇所、修正コードの差分プレビューが表示され直感的。`biome inspect` コマンドにより「なぜこのルールが適用されたか」の設定追跡が極めて容易。
+* **移行ツール（CLI Migration）**:
+  * `biome migrate prettier`: `.prettierrc` から `biome.json` への設定移行。
+  * `biome migrate eslint`: `.eslintrc` からのルール移行。
+  * `biome migrate stylelint`: Stylelint設定からのルール移行。
+* **学習コスト**: PrettierやESLintの概念をそのまま引き継いでいるため、Web開発経験者であれば学習コストはほぼゼロで即日導入可能。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * ESLintとPrettierを完全に置き換えて、`biome check` コマンドに一本化する。
-  * CIパイプラインに `biome ci` を組み込み、高速なチェックを実現する。
-  * エディタの「保存時にフォーマット」機能にBiomeを設定する。
+  * **`biome check --write` の一括運用**: フォーマット、リント、import整理を個別コマンドに分けず、統合コマンドで実行する。
+  * **CIでの `biome ci` 活用**: CI環境では変更を許容しない `--error-on-warnings` や `biome ci` コマンドを用いて、パイプラインの高速ガードレールとして運用する。
+  * **Tailwindクラスソートの標準化**: `useTailwindSortedClasses` を有効化し、チーム全体のクラス記述順を自動統一する。
+  * **`tsc --noEmit` との分業**: Biomeでフォーマット・リント・型推論リントを高速実行し、最終的な厳密型検査のみ `tsc` に任せる。
 * **陥りやすい罠 (Antipatterns)**:
-  * ESLintとBiomeを併用する場合、ルールが競合しないように注意が必要（基本的には移行が推奨される）。
-  * 型チェック機能はないため、`tsc --noEmit` をCIから削除しないこと。
+  * **Prettier/ESLintとの重複実行**: 既存のフォーマッターとBiomeを同時に保存時実行すると、競合によりコードが意図せず書き換わるため、Biomeへ一本化するか拡張機能を無効化する。
+  * **設定ファイルの過度な複雑化**: Biomeはゼロコンフィグ志向であるため、最初からすべてのルールを個別上書きせず、`recommended` プリセットをベースに必要最小限の調整にとどめる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-* **調査対象**: GitHub, Reddit, X (Twitter)
-* **総合評価**: 非常に高い。特に速度に対する評価が圧倒的。
+* **調査対象**: GitHub Releases, Reddit, X (Twitter), 技術ブログコミュニティ
+* **総合評価**: 4.8 / 5.0 相当（パフォーマンスと設定の平易さに関して熱狂的な支持を獲得）
 * **ポジティブな評価**:
-  * 「Prettierより25倍速いというのは伊達じゃない。CIが爆速になった。」
-  * 「ESLintの設定地獄から解放された。設定がシンプルで素晴らしい。」
-  * 「エラーメッセージが分かりやすく、どこを直せばいいかすぐわかる。」
+  * 「大規模モノレポでCIが10分から30秒になり、開発効率が劇的に上がった。」
+  * 「ESLintのプラグイン地獄や依存関係のバージョン競合に悩まされることが完全になくなった。」
+  * 「MarkdownやYAMLまでBiome一つで整形できるようになり、複数ツールの管理コストが激減した。」
+  * 「エラー表示がどのツールよりも分かりやすく、修正の提案が親切。」
 * **ネガティブな評価 / 改善要望**:
-  * 「まだESLintの全プラグインを代替できていない。特定のルールが足りない。」
-  * 「VueやSvelteのサポートがまだ完全ではない（改善中）。」
-  * 「新しいツールなので、長期的なメンテナンスが続くか不安（ただしスポンサーは増えている）。」
+  * 「社内独自の極めてマニアックなESLintプラグインを移行するのに工夫が必要だった。」
+  * 「Vue/Svelteなどのマルチフレームワーク環境では、まだ一部のニッチな構文でルールがスキップされることがある。」
+* **特徴的なユースケース**:
+  * 新規プロジェクトでのデフォルトツールチェーンとしての採用に加え、巨大なレガシーコードベースにおけるCIコスト削減目的での先行導入が進んでいる。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
+* **2026-10-21 (v2.6.2)**: パッチリリース。MarkdownおよびSCSSパーサーの安定性向上、Tailwindクラスソートルールの境界条件における修正。
+* **2026-10-15 (v2.6.0)**: マイナーリリース。
+  * **新言語の追加**: Markdown（CommonMark / GFM完全準拠）、SCSS（公式テストスイート90%以上互換）、YAMLのフルパーサー＆フォーマッターを導入。
+  * **JavaScriptプラグイン (Developer Preview)**: Rust製JSランタイム「Boa」上で動作するカスタムリンタールール作成機能を公開。
+  * **Tailwind CSS 統合の強化**: Tailwind v4対応のクラス自動ソート（`useTailwindSortedClasses`）およびアンチパターン検知ルールの追加。
+  * **`biome inspect` コマンド**: 解決された設定値や適用overridesを可視化する設定診断コマンドを提供。
+  * **salsaによる型推論エンジン刷新**: 増分計算フレームワークsalsaを採用し、型推論リントの効率と拡張性を大幅強化。
+  * **Stylelint移行**: `biome migrate stylelint` コマンドの追加、59件のnurseryルールの安定版昇格。
+  * **Termux対応**: Android arm64/x64 CLIパッケージの公式提供。
+* **2026-06-25 (v2.5.0)**: マイナーリリース。
+  * **リンタールール数が500件を突破**: 70以上のルールが安定版に昇格（Vue対応、型認識ルール、ファイル間リント等）。
+  * **プラグインによるコード自動修正 (GritQL)**: プラグインで作成した独自ルールに対する safe/unsafe 自動修正（`--write`）のサポート。
+  * **`delimiterSpacing` オプション**: ディスレクシア支援などを目的とした、区切り文字まわりのスペース挿入フォーマッターオプション。
+  * **ウォッチモードのCLI統合**: `biome lint --watch` や `biome format --watch` を追加。
 * **2026-05-09 (v2.4.15)**: パッチリリース。`useTestHooksInOrder`, `useVueNextTickPromise`, `noVueVOnNumberValues` などのルールの追加。
 * **2026-05-01 (v2.4.14)**: パッチリリース。`useTestHooksOnTop` などのルールの追加や `noMisleadingReturnType` のバグ修正。
-* **2026-04-23 (v2.4.13)**: パッチリリース。`noUnnecessaryTemplateExpression` ルールの追加や `noMisleadingReturnType` のバグ修正。
-* **2026-04-14 (v2.4.12)**: パッチリリース。`noIdenticalTestTitle`, `noComponentHookFactories` ルールの追加や `useForOf` の診断メッセージ改善。
-* **2026-04-09 (v2.4.11)**: パッチリリース。`useConsistentTestIt`, `useExplicitReturnType` などのルールの追加。
-* **2026-03-30 (v2.4.10)**: パッチリリース。`noImpliedEval` ルールの追加や `noUnusedVariables`, `noNegationElse` のバグ修正。
-* **2026-03-25 (v2.4.9)**: パッチリリース。CSSルール `noDuplicateSelectors` の追加など。
-
-* **2026-02-16 (v2.4.2)**: パッチリリース。バグ修正。
-* **2026-02-12 (v2.4.0)**: マイナーリリース。Playwright向けの新しいリンタールール (`noConditionalExpect`, `noPlaywrightElementHandle` 等) の追加。`useImportType` の改善など。
-* **2026-01-29 (v2.3.15)**: パッチリリース。`noNestedPromises` ルールなどの追加。
-* **2026-01-24 (v2.3.14)**: パッチリリース。バグ修正。
-* **2026-01-13 (v2.3.11)**: パッチリリース。Vue関連のルール (`useVueValidTemplateRoot` 等) の追加。
-* **2026-01-07 (v2.3.9)**: パッチリリース。`noScriptUrl`, `useAwaitThenable` 等のルール追加。
-* **2025-11-25 (v2.3.0)**: マイナーリリース。`baseUrl` のサポート、`init` コマンドの強化、CSS Modules / Tailwind CSS 対応の強化など。
 
 (出典: [GitHub Releases](https://github.com/biomejs/biome/releases), [CHANGELOG.md](https://github.com/biomejs/biome/blob/main/CHANGELOG.md))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | 本ツール (Biome) | Prettier | ESLint |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | フォーマット | ◎<br><small>超高速</small> | ◯<br><small>標準的</small> | △<br><small>可能だが遅い</small> |
-| **基本機能** | リント | ◯<br><small>主要ルール網羅</small> | × | ◎<br><small>最大のエコシステム</small> |
-| **パフォーマンス** | 実行速度 | ◎<br><small>Rust製</small> | △<br><small>JS製</small> | △<br><small>JS製</small> |
-| **言語対応** | CSS/HTML等 | ◯<br><small>対応</small> | ◎<br><small>広範に対応</small> | △<br><small>プラグインで対応</small> |
+| 機能カテゴリ | 機能項目 | 本ツール (Biome) | Prettier | ESLint | oxlint |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **基本機能** | フォーマット | ◎<br><small>超高速・多言語対応</small> | ◎<br><small>業界標準・広範</small> | △<br><small>非推奨化・遅い</small> | -<br><small>非対応</small> |
+| **基本機能** | リンティング | ◎<br><small>500+ルール内蔵</small> | ×<br><small>非対応</small> | ◎<br><small>最大のエコシステム</small> | ◯<br><small>高速リント特化</small> |
+| **パフォーマンス** | 実行速度 | ◎<br><small>Rust製・並行処理</small> | △<br><small>JS製・並列度低</small> | △<br><small>JS製・大規模で低速</small> | ◎<br><small>Rust製・高速</small> |
+| **言語・形式** | 対応範囲 | ◎<br><small>JS/TS/CSS/SCSS/MD/YAML</small> | ◎<br><small>極めて多種多様</small> | ◯<br><small>プラグインで拡張</small> | △<br><small>JS/TS中心</small> |
+| **型認識解析** | ネイティブ型推論 | ◯<br><small>salsa内蔵（tsc不要）</small> | ×<br><small>非対応</small> | ◎<br><small>typescript-eslint（tsc依存）</small> | △<br><small>一部サポート中</small> |
+| **プラグイン拡張** | カスタムルール | ◯<br><small>GritQL / Boa JS</small> | ◯<br><small>プラグイン可能</small> | ◎<br><small>極めて膨大な資産</small> | △<br><small>開発中</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Biome** | 高速なオールインワンツールチェーン | 圧倒的な速度、設定の簡素さ、フォーマッターとリンターの統合 | エコシステムの規模がESLintに劣る | パフォーマンスを重視し、標準的なルールセットで十分な場合 |
-| **Prettier** | 業界標準のコードフォーマッター | 圧倒的な普及率、膨大な言語サポート、エディタ統合の豊富さ | リント機能はない、大規模プロジェクトでは遅くなる場合がある | 既に導入済みで不満がない場合、Biome未対応言語を使う場合 |
-| **ESLint** | 最も強力なJavaScriptリンター | 巨大なプラグインエコシステム、カスタマイズ性の高さ | 設定が複雑になりがち、フォーマット機能はPrettierに譲る傾向、速度 | 独自の厳格なルールや特定のフレームワーク専用ルールが必須な場合 |
+| **Biome** | フォーマッターとリンターを統合したRust製オールインワンツールチェーン | 圧倒的な実行速度、Prettierとの高互換性、Markdown/SCSS/YAML対応、設定の簡潔さ | ESLintの歴史的なサードパーティプラグイン群の完全再現には移行検証が必要 | CI時間短縮やDX向上を重視するWebプロジェクト、ESLint/Prettierの設定地獄から脱却したい場合 |
+| **Prettier** | Web開発におけるデファクトスタンダードのコードフォーマッター | 圧倒的な普及率、エディタ統合の成熟度、HTML/GraphQL等の安定した整形 | リント機能は持たない、大規模コードベースでの実行速度が課題 | 既にPrettierで安定稼働しており不満がないプロジェクト、Biome未対応の特殊テンプレート言語を扱う場合 |
+| **ESLint** | JavaScriptエコシステムで最も普及している静的解析ツール | 巨大なプラグインエコシステム、あらゆるカスタム要件に対応できる柔軟性 | 設定（Flat Config含む）が複雑になりがち、フォーマット機能は切り離し推奨、大規模での処理速度 | フレームワーク独自の厳格な特殊ルールや、自社開発の高度なESLint独自ルールに依存している場合 |
+| **oxlint** | Rust製の超高速JavaScript/TypeScriptリンター | ゼロコンフィグで動作し、ESLintより50〜100倍高速に動作 | フォーマッターは含まれず（Oxc別ツール）、ルールカバレッジは拡大途上 | 既存のPrettierやESLint構成を維持したまま、CIのリント速度のみを即座に引き上げたい場合 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
-  Biomeは、Web開発におけるフォーマットとリントの体験を根本から変えるポテンシャルを持ったツールです。Rustによる圧倒的なパフォーマンスと、ゼロコンフィグを目指す簡便さは、開発者のストレスを大幅に軽減します。ESLintのすべてのルールをカバーしているわけではありませんが、主要なルールは網羅されており、多くのプロジェクトにとって現実的な代替手段となります。
+  Biomeは、Web開発におけるコード整形と静的解析のあり方を根本から再定義する強力な次世代ツールチェーンです。Rustによる圧倒的なパフォーマンスと、フォーマッター・リンター・import整理の一体化により、ツールの設定負荷とCI待ち時間を同時に解消します。さらにv2.6におけるMarkdown/SCSS/YAMLサポート、JavaScriptプラグイン基盤（Boa）、salsa増分型推論の導入によって、単なる「Prettier/ESLintの高速な代替」を超えた、Web開発環境の中核基盤としての地位を確立しています。
 * **推奨されるチームやプロジェクト**:
-  * CI/CDの実行時間を短縮したいプロジェクト
-  * 新規に立ち上げるWebプロジェクト
-  * ESLint/Prettierの設定管理に疲弊しているチーム
-  * 大規模なモノレポ構成のプロジェクト
+  * CI/CDパイプラインの実行時間とインフラコストを削減したい開発チーム
+  * 大規模なモノレポ（Turborepo, Nx等）を運用するプロジェクト
+  * 新規に立ち上げるNext.js、React、Vue、Node.jsプロジェクト
+  * ESLintとPrettierの設定衝突や依存関係の保守負担に悩まされているチーム
 * **選択時のポイント**:
-  まずは既存のプロジェクトで試験的に導入し、必要なルールが不足していないかを確認することをお勧めします。Prettierとの互換性が高いため、フォーマッターとしての置き換えは容易です。リンターとしても十分機能しますが、特定のプラグインに強く依存している場合は、ESLintとの併用や段階的な移行を検討してください。
+  既存プロジェクトに導入する場合は、`biome migrate prettier` や `biome migrate eslint` を活用して設定の互換性を確認し、まずはフォーマッターおよび基本リントから段階的に移行することをお勧めします。非常に特殊なESLint独自プラグインに依存している場合を除き、ほとんどの近代的なWebフロントエンド・フルスタックプロジェクトにおいて最良の選択肢となります。
