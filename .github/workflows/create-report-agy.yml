@@ -21,10 +21,12 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Configure Git and GitHub CLI
         run: |
           set -euo pipefail
+          git config --local --unset-all http.https://github.com/.extraheader 2>/dev/null || true
           GH_USER=$(gh api user --jq .login)
           GH_EMAIL=$(gh api user --jq '.email // "\(.id)+\(.login)@users.noreply.github.com"')
           git config user.name "$GH_USER"
@@ -88,8 +90,11 @@ jobs:
 
           git add _reports/ _data/categories.yml
 
-          # ステージングされたレポートファイルからtool_nameを抽出
-          NEW_REPORT=$(git diff --cached --name-only | grep -E '^_reports/.*\.md$' | head -n 1)
+          # 新規追加されたレポートファイルを優先的に取得（既存レポートの更新差分に惑わされないようにする）
+          NEW_REPORT=$(git diff --cached --name-only --diff-filter=A | grep -E '^_reports/.*\.md$' | head -n 1)
+          if [ -z "$NEW_REPORT" ]; then
+            NEW_REPORT=$(git diff --cached --name-only | grep -E '^_reports/.*\.md$' | head -n 1)
+          fi
           TOOL_NAME=""
           if [ -n "$NEW_REPORT" ] && [ -f "$NEW_REPORT" ]; then
             TOOL_NAME=$(grep -E '^tool_name:' "$NEW_REPORT" | head -n 1 | sed -E 's/^tool_name:[[:space:]]*["'\'']?([^"'\'']+)["'\'']?/\1/' || echo "")
