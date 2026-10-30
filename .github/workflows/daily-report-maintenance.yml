@@ -1,4 +1,4 @@
-name: Daily Report Maintenance with Jules
+name: Daily Report Maintenance with Antigravity CLI
 
 on:
   schedule:
@@ -21,20 +21,19 @@ permissions:
 
 jobs:
   update-report-and-organize:
-    name: Update report and organize category/tags using Jules API
-    runs-on: ubuntu-latest
-    
+    name: Update report and organize category/tags using Antigravity CLI
+    runs-on: [self-hosted, e2-micro, agy]
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        
-      - name: Find oldest report and call Jules API
-        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
-        env:
-          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
-          REPORT_COUNT: ${{ github.event.inputs.report_count || '1' }}
-          TARGET_REPORT: ${{ github.event.inputs.target_report }}
         with:
-          script: |
-            const script = require('./.github/workflows/scripts/daily-report-maintenance.js');
-            await script({ github, context, core });
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Run Daily Report Maintenance
+        env:
+          REPORT_COUNT: ${{ github.event.inputs.report_count || '1' }}
+          TARGET_REPORT: ${{ github.event.inputs.target_report || '' }}
+        run: |
+          .github/workflows/scripts/daily-report-maintenance.sh
