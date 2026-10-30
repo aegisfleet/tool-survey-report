@@ -36,4 +36,4 @@ jobs:
           REPORT_COUNT: ${{ github.event.inputs.report_count || '1' }}
           TARGET_REPORT: ${{ github.event.inputs.target_report || '' }}
         run: |
-          .github/workflows/scripts/daily-report-maintenance.sh
+          bash .github/workflows/scripts/daily-report-maintenance.sh

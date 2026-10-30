@@ -27,4 +27,4 @@ jobs:
         env:
           TARGET_URL: ${{ github.event.inputs.target_url }}
         run: |
-          .github/workflows/scripts/create-report.sh
+          bash .github/workflows/scripts/create-report.sh
