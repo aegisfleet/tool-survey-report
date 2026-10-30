@@ -43,6 +43,7 @@ relationships:
     - AWS CLI
     - Vercel
     - Cloudflare Workers
+    - Google Cloud CLI
 ---
 # **Firebase CLI 調査レポート**
 
