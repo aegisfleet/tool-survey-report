@@ -7,6 +7,7 @@ set -euo pipefail
 
 # Directory constants
 readonly REPORTS_DIR="_reports"
+readonly TRENDING_DIR="_trending"
 readonly CATEGORIES_FILE="_data/categories.yml"
 
 # Antigravity CLI default parameters
@@ -116,13 +117,13 @@ commit_and_create_pr() {
   local -r pr_body="$4"
 
   # Check for changes in allowed paths
-  if [[ -z "$(git status --porcelain "${REPORTS_DIR}" "${CATEGORIES_FILE}")" ]]; then
-    log_warn "No report or category changes detected to commit."
+  if [[ -z "$(git status --porcelain "${REPORTS_DIR}" "${CATEGORIES_FILE}" "${TRENDING_DIR}" 2>/dev/null)" ]]; then
+    log_warn "No report, trending, or category changes detected to commit."
     return 1
   fi
 
-  log_info "Staging report and category changes..."
-  git add "${REPORTS_DIR}"/ "${CATEGORIES_FILE}"
+  log_info "Staging report, trending, and category changes..."
+  git add "${REPORTS_DIR}"/ "${CATEGORIES_FILE}" "${TRENDING_DIR}"/ 2>/dev/null || true
 
   log_info "Committing: ${commit_msg}"
   git commit -m "${commit_msg}"
