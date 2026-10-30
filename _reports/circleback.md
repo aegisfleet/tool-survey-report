@@ -43,6 +43,7 @@ links:
 relationships:
   related_tools:
     - Microsoft 365 Copilot
+    - Granola
 ---
 
 # **Circleback 調査レポート**
