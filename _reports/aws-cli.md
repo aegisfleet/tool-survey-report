@@ -48,6 +48,7 @@ relationships:
     - AWS DevOps Agent
     - AWS MCP Servers
     - AWS Security Hub
+    - Google Cloud CLI
 ---
 
 # **AWS CLI 調査レポート**
