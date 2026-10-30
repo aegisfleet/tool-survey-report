@@ -1,4 +1,14 @@
 version: 2
+
+# pyproject.toml で uv のデフォルト index に指定している flatt を
+# Dependabot にも登録する。これがないと Dependabot の egress allowlist 外となり、
+# proxy が 403 を返して uv の更新ジョブが失敗する（匿名アクセスでも登録が必要）。
+registries:
+  flatt:
+    type: python-index
+    url: "https://pypi.flatt.tech/simple/"
+    replaces-base: true
+
 updates:
   # GitHub Actionsの依存関係を監視
   - package-ecosystem: "github-actions"
@@ -39,6 +49,8 @@ updates:
   # Python (uv) の依存関係を監視
   - package-ecosystem: "uv"
     directory: "/"
+    registries:
+      - flatt
     schedule:
       interval: "weekly"
       day: "monday"
