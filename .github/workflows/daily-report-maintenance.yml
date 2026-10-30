@@ -1,4 +1,4 @@
-name: Daily Report Maintenance with Antigravity CLI
+name: Daily Report Maintenance
 
 on:
   schedule:
@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   update-report-and-organize:
-    name: Update report and organize category/tags using Antigravity CLI
+    name: Update report and organize category/tags
     runs-on: [self-hosted, e2-micro, agy]
 
     steps:

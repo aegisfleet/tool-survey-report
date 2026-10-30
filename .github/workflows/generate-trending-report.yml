@@ -1,4 +1,4 @@
-name: Generate Daily Trending Topics Report with Antigravity CLI
+name: Generate Daily Trending Topics Report
 
 on:
   schedule:
@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   generate-trending:
-    name: Generate Daily Trending Topics using Antigravity CLI
+    name: Generate Daily Trending Topics
     runs-on: [self-hosted, e2-micro, agy]
 
     steps:

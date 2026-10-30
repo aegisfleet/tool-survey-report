@@ -1,4 +1,4 @@
-name: Create Survey Report with Antigravity CLI
+name: Create Survey Report
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   create-report:
-    name: Create report using Antigravity CLI (agy)
+    name: Create report
     runs-on: [self-hosted, e2-micro, agy]
 
     steps:

@@ -1,4 +1,4 @@
-name: Daily Category Organize with Antigravity CLI
+name: Daily Category Organize
 
 on:
   schedule:
@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   organize-categories:
-    name: Organize categories/tags using Antigravity CLI
+    name: Organize categories/tags
     runs-on: [self-hosted, e2-micro, agy]
 
     steps:
