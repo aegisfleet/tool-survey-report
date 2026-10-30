@@ -98,8 +98,7 @@ get_oldest_reports() {
   grep -H -m 1 "^last_updated:" "${REPORTS_DIR}"/*.md \
     | sed -E "s/^([^:]+):last_updated:[[:space:]]*['\"]?([^'\"]+)['\"]?/\2 \1/" \
     | sort \
-    | head -n "${count}" \
-    | awk '{print $2}'
+    | awk -v n="${count}" 'NR <= n {print $2}'
 }
 
 #######################################
@@ -245,9 +244,9 @@ main() {
 
   for report in "${target_reports[@]}"; do
     if process_single_report "${report}" "${today_jst}"; then
-      ((success_count++))
+      success_count=$((success_count + 1))
     else
-      ((fail_count++))
+      fail_count=$((fail_count + 1))
     fi
   done
 
