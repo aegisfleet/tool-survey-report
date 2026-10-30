@@ -1,5 +1,8 @@
 name: Daily Category Organize
 
+env:
+  TZ: Asia/Tokyo
+
 on:
   schedule:
     # 日本時間の12時 (UTC: 3) に実行

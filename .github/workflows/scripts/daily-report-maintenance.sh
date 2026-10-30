@@ -162,7 +162,7 @@ process_single_report() {
   local -r today_jst="$2"
   local -r tool_name="$(extract_tool_name "${report_path}")"
   local -r tool_slug="$(basename "${report_path}" .md)"
-  local -r branch_name="update-report-${tool_slug}-$(date +%Y%m%d-%H%M%S)"
+  local -r branch_name="update-report-${tool_slug}-$(TZ='Asia/Tokyo' date +%Y%m%d-%H%M%S)"
 
   log_info "=== Processing: ${tool_name} (${report_path}) ==="
 

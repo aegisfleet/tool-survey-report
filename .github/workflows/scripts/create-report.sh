@@ -21,11 +21,14 @@ source "${SCRIPT_DIR}/agy-common.sh"
 #######################################
 build_create_prompt() {
   local -r target_url="$1"
+  local -r today_jst="$2"
 
   cat <<EOF
 # 新規調査レポート作成指令
 
 対象URL: ${target_url}
+
+本日の日付（日本時間）: ${today_jst}
 
 上記URL（公式サイトまたはGitHubリポジトリ）のツールについて、包括的な調査を行い新規調査レポートを作成せよ。
 
@@ -43,6 +46,7 @@ build_create_prompt() {
 
 ## 完了条件
 - \`_reports/\` 配下に新規レポートファイルが生成されていること。
+- フロントマターの \`date\` および \`last_updated\` は本日の日付（日本時間）\`${today_jst}\` に設定されていること。
 - \`_data/categories.yml\` の整合性が保たれていること。
 - レポート作成後、ユーザーへの質問や確認（「提出してよいですか？」など）は一切行わず、自律的に作業を確定・完了させること。
 EOF
@@ -61,14 +65,16 @@ main() {
 
   log_info "Starting survey report creation for: ${target_url}"
 
+  local -r today_jst="$(TZ='Asia/Tokyo' date +'%Y-%m-%d')"
+
   setup_git_and_gh
 
-  local -r branch_name="create-report-$(date +%Y%m%d-%H%M%S)"
+  local -r branch_name="create-report-${today_jst}-$(TZ='Asia/Tokyo' date +%H%M%S)"
   log_info "Creating and checking out branch: ${branch_name}"
   git checkout -b "${branch_name}"
 
   local prompt
-  prompt="$(build_create_prompt "${target_url}")"
+  prompt="$(build_create_prompt "${target_url}" "${today_jst}")"
 
   if ! run_agy "${prompt}"; then
     log_error "Antigravity CLI execution failed."

@@ -1,5 +1,8 @@
 name: Generate Daily Trending Topics Report
 
+env:
+  TZ: Asia/Tokyo
+
 on:
   schedule:
     # 毎日 日本時間 6:00 (UTC 21:00)

@@ -5,8 +5,8 @@ tool_reading: グラノーラ
 category: コラボレーション/生産性
 developer: Granola Labs Ltd.
 official_site: https://www.granola.ai/
-date: '2026-10-30'
-last_updated: '2026-10-30'
+date: '2026-10-31'
+last_updated: '2026-10-31'
 tags:
   - AI
   - SaaS

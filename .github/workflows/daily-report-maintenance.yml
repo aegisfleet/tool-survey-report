@@ -1,5 +1,8 @@
 name: Daily Report Maintenance
 
+env:
+  TZ: Asia/Tokyo
+
 on:
   schedule:
     # 日本時間の6時を起点に8時間毎 (UTC: 21, 5, 13)

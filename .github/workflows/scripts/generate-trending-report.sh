@@ -119,7 +119,7 @@ main() {
 
   setup_git_and_gh
 
-  local -r branch_name="generate-trending-${today_jst}-$(date +%H%M%S)"
+  local -r branch_name="generate-trending-${today_jst}-$(TZ='Asia/Tokyo' date +%H%M%S)"
   log_info "Creating and checking out branch: ${branch_name}"
   git checkout -b "${branch_name}"
 
