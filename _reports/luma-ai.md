@@ -50,6 +50,7 @@ relationships:
     - AnimeGen
     - Open Generative AI
     - LongCat-Video
+    - AIVideoFree
 ---
 
 # **Luma AI 調査レポート**

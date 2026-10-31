@@ -42,6 +42,7 @@ relationships:
     - Luma AI
     - Stable Diffusion
     - Open Generative AI
+    - AIVideoFree
   children: []
 ---
 
