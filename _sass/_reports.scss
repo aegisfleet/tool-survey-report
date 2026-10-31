@@ -650,12 +650,18 @@
   --pele-line: var(--color-border);
   --pele-border: var(--color-border);
   --pele-surface: var(--color-bg-main);
+  --pele-surface-alt: var(--color-light-gray);
   --pele-accent: var(--color-link);
 
   width: 100%;
   max-width: 100%;
   min-width: 0;
   margin: map-get($spacers, 4) 0;
+
+  .pele-cluster-label {
+    fill: var(--color-text);
+    font-weight: 600;
+  }
 
   @include media-breakpoint-down(sm) {
     margin: map-get($spacers, 3) 0;
