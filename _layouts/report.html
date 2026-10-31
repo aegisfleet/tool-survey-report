@@ -517,44 +517,8 @@ layout: default
     document.body.appendChild(backdrop);
   }
 
-  // アスペクト比に基づくフィットサイズの算出・適用
-  const updateFullscreenSize = (container) => {
-    const svg = container.querySelector('svg');
-    if (!svg) return;
-
-    let aspect = 1;
-    const vb = svg.viewBox && svg.viewBox.baseVal;
-    if (vb && vb.width > 0 && vb.height > 0) {
-      aspect = vb.width / vb.height;
-    } else {
-      const bbox = svg.getBoundingClientRect();
-      if (bbox.width > 0 && bbox.height > 0) {
-        aspect = bbox.width / bbox.height;
-      }
-    }
-
-    const isMobile = window.innerWidth <= 576;
-    const padX = isMobile ? 16 : 64;
-    const padY = isMobile ? 24 : 64;
-    const maxW = Math.max(100, window.innerWidth - padX);
-    const maxH = Math.max(100, window.innerHeight - padY);
-
-    let targetW, targetH;
-    if (maxW / maxH > aspect) {
-      targetH = maxH;
-      targetW = Math.round(targetH * aspect);
-    } else {
-      targetW = maxW;
-      targetH = Math.round(targetW / aspect);
-    }
-
-    container.style.width = targetW + 'px';
-    container.style.height = targetH + 'px';
-  };
-
   const openFullscreen = (container, btn) => {
     container.classList.add('is-fullscreen');
-    updateFullscreenSize(container);
     btn.innerHTML = iconMinimize;
     btn.title = '全画面を閉じる (Esc)';
     btn.setAttribute('aria-label', '全画面を閉じる (Esc)');
@@ -566,8 +530,6 @@ layout: default
     const active = document.querySelector('.mermaid-diagram.is-fullscreen');
     if (!active) return;
     active.classList.remove('is-fullscreen');
-    active.style.width = '';
-    active.style.height = '';
     const btn = active.querySelector('.pele-zoom-fullscreen');
     if (btn) {
       btn.innerHTML = iconMaximize;
@@ -580,14 +542,6 @@ layout: default
 
   // 背景クリックで全画面を閉じる
   backdrop.addEventListener('click', closeFullscreen);
-
-  // ウィンドウリサイズ時に全画面サイズを自動調整
-  window.addEventListener('resize', () => {
-    const active = document.querySelector('.mermaid-diagram.is-fullscreen');
-    if (active) {
-      updateFullscreenSize(active);
-    }
-  });
 
   // ESCキーで全画面表示を閉じる
   document.addEventListener('keydown', (e) => {
