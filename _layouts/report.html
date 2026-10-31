@@ -485,6 +485,177 @@ layout: default
       }
     });
 
+    const getSvg = () => container.querySelector('svg');
+    let baseVb = null;
+    let curVb = null;
+
+    const initVb = (force = false) => {
+      const svg = getSvg();
+      if (!svg) return;
+      const raw = svg.getAttribute('viewBox');
+      if (raw) {
+        const parts = raw.split(/\s+/).map(Number);
+        if (parts.length === 4 && parts[2] > 0 && parts[3] > 0) {
+          if (!baseVb || force) {
+            baseVb = { x: parts[0], y: parts[1], width: parts[2], height: parts[3] };
+            curVb = { ...baseVb };
+          }
+        }
+      }
+    };
+    initVb();
+
+    const zoomAt = (factor, clientX, clientY) => {
+      const svg = getSvg();
+      if (!svg) return;
+      if (!curVb) initVb();
+      if (!curVb) return;
+
+      const rect = svg.getBoundingClientRect();
+      const rx = clientX !== undefined ? (clientX - rect.left) / rect.width : 0.5;
+      const ry = clientY !== undefined ? (clientY - rect.top) / rect.height : 0.5;
+
+      const newW = curVb.width * factor;
+      const newH = curVb.height * factor;
+
+      if (baseVb) {
+        const scale = baseVb.width / newW;
+        if (scale < 0.2 || scale > 20) return;
+      }
+
+      curVb.x += (curVb.width - newW) * rx;
+      curVb.y += (curVb.height - newH) * ry;
+      curVb.width = newW;
+      curVb.height = newH;
+      svg.setAttribute('viewBox', curVb.x + ' ' + curVb.y + ' ' + curVb.width + ' ' + curVb.height);
+
+      // ズーム状態に応じてUIコントロールを更新
+      if (btnOut) {
+        const isZoomed = Math.abs(curVb.width - baseVb.width) > 1;
+        btnOut.disabled = !isZoomed;
+        btnOut.style.opacity = isZoomed ? '' : '0.35';
+        btnOut.style.cursor = isZoomed ? 'pointer' : 'default';
+      }
+      if (btnReset) {
+        const isZoomed = Math.abs(curVb.width - baseVb.width) > 1;
+        btnReset.style.display = isZoomed ? 'grid' : 'none';
+      }
+    };
+
+    const resetZoom = () => {
+      const svg = getSvg();
+      if (!svg) return;
+      initVb();
+      if (!baseVb) return;
+      curVb = { ...baseVb };
+      svg.setAttribute('viewBox', curVb.x + ' ' + curVb.y + ' ' + curVb.width + ' ' + curVb.height);
+
+      if (btnOut) {
+        btnOut.disabled = true;
+        btnOut.style.opacity = '0.35';
+        btnOut.style.cursor = 'default';
+      }
+      if (btnReset) {
+        btnReset.style.display = 'none';
+      }
+    };
+    container._resetZoom = resetZoom;
+    container._initVb = initVb;
+
+    // 拡大・縮小ボタンのステップ倍率（約1.15倍の滑らかなズーム）
+    const btnIn = container.querySelector('.pele-zoom-in');
+    const btnOut = container.querySelector('.pele-zoom-out');
+    const btnReset = container.querySelector('.pele-zoom-reset');
+
+    if (btnIn) {
+      btnIn.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        zoomAt(1 / 1.15);
+      }, true);
+    }
+
+    if (btnOut) {
+      btnOut.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        zoomAt(1.15);
+      }, true);
+    }
+
+    if (btnReset) {
+      btnReset.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        resetZoom();
+      }, true);
+    }
+
+    // マウスカーソル位置を中心とした滑らかなホイールズーム
+    container.addEventListener('wheel', (e) => {
+      const isFs = container.classList.contains('is-fullscreen');
+      if (isFs || e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        const factor = e.deltaY < 0 ? 0.94 : 1.06;
+        zoomAt(factor, e.clientX, e.clientY);
+      }
+    }, { passive: false });
+
+    // ドラッグによる自由なパン移動（パン中はテキスト選択を抑止しつつ、通常時はコピペ可能）
+    let isDragging = false;
+    let hasMoved = false;
+    let startX = 0, startY = 0;
+    let startVbX = 0, startVbY = 0;
+
+    container.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.pele-zoom')) return;
+      if (e.button !== 0) return;
+      if (!curVb) return;
+      isDragging = true;
+      hasMoved = false;
+      startX = e.clientX;
+      startY = e.clientY;
+      startVbX = curVb.x;
+      startVbY = curVb.y;
+    });
+
+    container.addEventListener('pointermove', (e) => {
+      if (!isDragging || !curVb) return;
+      const dx = e.clientX - startX;
+      const dy = e.clientY - startY;
+
+      // 3px以上移動したらパン操作を開始し、テキスト選択を抑止
+      if (!hasMoved && Math.hypot(dx, dy) > 3) {
+        hasMoved = true;
+        try { container.setPointerCapture?.(e.pointerId); } catch {}
+        container.style.cursor = 'grabbing';
+        container.style.userSelect = 'none';
+        window.getSelection?.()?.removeAllRanges();
+      }
+
+      if (hasMoved) {
+        const svg = getSvg();
+        if (!svg) return;
+        const rect = svg.getBoundingClientRect();
+        const scaleX = curVb.width / rect.width;
+        const scaleY = curVb.height / rect.height;
+        curVb.x = startVbX - dx * scaleX;
+        curVb.y = startVbY - dy * scaleY;
+        svg.setAttribute('viewBox', curVb.x + ' ' + curVb.y + ' ' + curVb.width + ' ' + curVb.height);
+      }
+    });
+
+    const stopDrag = (e) => {
+      if (isDragging) {
+        isDragging = false;
+        if (hasMoved) {
+          hasMoved = false;
+          try { container.releasePointerCapture?.(e.pointerId); } catch {}
+          container.style.cursor = '';
+          container.style.userSelect = '';
+        }
+      }
+    };
+    container.addEventListener('pointerup', stopDrag);
+    container.addEventListener('pointercancel', stopDrag);
+
     // 全画面表示ボタンを追加
     const zoomControls = container.querySelector('.pele-zoom');
     if (zoomControls) {
@@ -519,6 +690,9 @@ layout: default
 
   const openFullscreen = (container, btn) => {
     container.classList.add('is-fullscreen');
+    if (typeof container._initVb === 'function') {
+      setTimeout(() => container._initVb(true), 50);
+    }
     btn.innerHTML = iconMinimize;
     btn.title = '全画面を閉じる (Esc)';
     btn.setAttribute('aria-label', '全画面を閉じる (Esc)');
@@ -530,6 +704,7 @@ layout: default
     const active = document.querySelector('.mermaid-diagram.is-fullscreen');
     if (!active) return;
     active.classList.remove('is-fullscreen');
+    if (typeof active._resetZoom === 'function') active._resetZoom();
     const btn = active.querySelector('.pele-zoom-fullscreen');
     if (btn) {
       btn.innerHTML = iconMaximize;

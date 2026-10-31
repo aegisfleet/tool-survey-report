@@ -657,6 +657,8 @@
   max-width: 100%;
   min-width: 0;
   margin: map-get($spacers, 4) 0;
+  user-select: none;
+  -webkit-user-select: none;
 
   .pele-cluster-label {
     fill: var(--color-text);
