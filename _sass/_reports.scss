@@ -663,9 +663,91 @@
     font-weight: 600;
   }
 
+  .pele-zoom-fullscreen {
+    appearance: none;
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: calc(var(--pele-radius, 4px) - 1px);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--color-bg-main);
+    }
+  }
+
+  // Fullscreen overlay mode
+  &.is-fullscreen {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    max-width: calc(100vw - 32px) !important;
+    max-height: calc(100vh - 32px) !important;
+    z-index: 100050 !important; // Above floating action buttons (100000) and headers
+    background: var(--color-bg-content) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--pele-radius, 8px) !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+
+    svg {
+      max-width: 100% !important;
+      display: block;
+    }
+
+    .pele-zoom {
+      top: map-get($spacers, 2);
+      right: map-get($spacers, 2);
+      z-index: 100060;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     margin: map-get($spacers, 3) 0;
+
+    &.is-fullscreen {
+      max-width: calc(100vw - 16px) !important;
+      max-height: calc(100vh - 16px) !important;
+
+      .pele-zoom {
+        top: 6px;
+        right: 6px;
+      }
+    }
   }
+}
+
+// Fullscreen background backdrop
+.mermaid-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 100040;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// Prevent body scroll when diagram is in fullscreen overlay
+body.mermaid-fullscreen-active {
+  overflow: hidden !important;
 }
 
 // Report footer

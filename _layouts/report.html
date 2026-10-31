@@ -460,6 +460,9 @@ layout: default
 <script type="module">
   import { mount } from 'https://cdn.jsdelivr.net/npm/pele@1.12.0/dist/pele.js';
 
+  const iconMaximize = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>';
+  const iconMinimize = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>';
+
   // kramdown が生成する pre code.language-mermaid を Pele の描画コンテナに置換
   document.querySelectorAll('pre code.language-mermaid').forEach((codeBlock) => {
     const pre = codeBlock.parentElement;
@@ -481,5 +484,115 @@ layout: default
         }
       }
     });
+
+    // 全画面表示ボタンを追加
+    const zoomControls = container.querySelector('.pele-zoom');
+    if (zoomControls) {
+      const fsButton = document.createElement('button');
+      fsButton.type = 'button';
+      fsButton.className = 'pele-zoom-fullscreen';
+      fsButton.title = '全画面表示';
+      fsButton.setAttribute('aria-label', '全画面表示');
+      fsButton.innerHTML = iconMaximize;
+
+      const toggleFullscreen = () => {
+        const isFs = container.classList.contains('is-fullscreen');
+        if (!isFs) {
+          openFullscreen(container, fsButton);
+        } else {
+          closeFullscreen();
+        }
+      };
+
+      fsButton.addEventListener('click', toggleFullscreen);
+      zoomControls.appendChild(fsButton);
+    }
+  });
+
+  // 全画面表示用背景（Backdrop）
+  let backdrop = document.querySelector('.mermaid-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'mermaid-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  // アスペクト比に基づくフィットサイズの算出・適用
+  const updateFullscreenSize = (container) => {
+    const svg = container.querySelector('svg');
+    if (!svg) return;
+
+    let aspect = 1;
+    const vb = svg.viewBox && svg.viewBox.baseVal;
+    if (vb && vb.width > 0 && vb.height > 0) {
+      aspect = vb.width / vb.height;
+    } else {
+      const bbox = svg.getBoundingClientRect();
+      if (bbox.width > 0 && bbox.height > 0) {
+        aspect = bbox.width / bbox.height;
+      }
+    }
+
+    const isMobile = window.innerWidth <= 576;
+    const padX = isMobile ? 16 : 64;
+    const padY = isMobile ? 24 : 64;
+    const maxW = Math.max(100, window.innerWidth - padX);
+    const maxH = Math.max(100, window.innerHeight - padY);
+
+    let targetW, targetH;
+    if (maxW / maxH > aspect) {
+      targetH = maxH;
+      targetW = Math.round(targetH * aspect);
+    } else {
+      targetW = maxW;
+      targetH = Math.round(targetW / aspect);
+    }
+
+    container.style.width = targetW + 'px';
+    container.style.height = targetH + 'px';
+  };
+
+  const openFullscreen = (container, btn) => {
+    container.classList.add('is-fullscreen');
+    updateFullscreenSize(container);
+    btn.innerHTML = iconMinimize;
+    btn.title = '全画面を閉じる (Esc)';
+    btn.setAttribute('aria-label', '全画面を閉じる (Esc)');
+    backdrop.classList.add('is-active');
+    document.body.classList.add('mermaid-fullscreen-active');
+  };
+
+  const closeFullscreen = () => {
+    const active = document.querySelector('.mermaid-diagram.is-fullscreen');
+    if (!active) return;
+    active.classList.remove('is-fullscreen');
+    active.style.width = '';
+    active.style.height = '';
+    const btn = active.querySelector('.pele-zoom-fullscreen');
+    if (btn) {
+      btn.innerHTML = iconMaximize;
+      btn.title = '全画面表示';
+      btn.setAttribute('aria-label', '全画面表示');
+    }
+    backdrop.classList.remove('is-active');
+    document.body.classList.remove('mermaid-fullscreen-active');
+  };
+
+  // 背景クリックで全画面を閉じる
+  backdrop.addEventListener('click', closeFullscreen);
+
+  // ウィンドウリサイズ時に全画面サイズを自動調整
+  window.addEventListener('resize', () => {
+    const active = document.querySelector('.mermaid-diagram.is-fullscreen');
+    if (active) {
+      updateFullscreenSize(active);
+    }
+  });
+
+  // ESCキーで全画面表示を閉じる
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeFullscreen();
+    }
   });
 </script>
