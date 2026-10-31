@@ -43,6 +43,7 @@ links:
 relationships:
   children:
     - AWS MCP Servers
+    - Chrome DevTools for agents
     - Context7
     - MCP Apps
     - Microsoft Work IQ

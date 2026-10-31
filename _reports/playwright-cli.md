@@ -49,6 +49,7 @@ relationships:
     - Claude
     - GitHub Copilot
     - GitHub Copilot CLI
+    - Chrome DevTools for agents
 ---
 # **Playwright CLI 調査レポート**
 
