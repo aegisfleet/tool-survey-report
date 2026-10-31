@@ -7,7 +7,7 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const { execSync, execFileSync } = require('child_process');
 
-const ALLOWED_AUTHORS = ['google-labs-jules', 'google-labs-jules[bot]', 'aegisfleet'];
+const ALLOWED_AUTHORS = ['aegisfleet'];
 
 const prSrcPath = process.env.PR_SRC_PATH || '';
 const getPath = (file) => prSrcPath ? `${prSrcPath}/${file}` : file;

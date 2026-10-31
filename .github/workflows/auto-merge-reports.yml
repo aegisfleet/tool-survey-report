@@ -15,10 +15,7 @@ jobs:
   auto-merge:
     name: Auto merge reports only PRs by authorized authors
     runs-on: ubuntu-latest
-    if: >-
-      github.event.pull_request.user.login == 'google-labs-jules' ||
-      github.event.pull_request.user.login == 'google-labs-jules[bot]' ||
-      github.event.pull_request.user.login == 'aegisfleet'
+    if: github.event.pull_request.user.login == 'aegisfleet'
 
     steps:
       - name: Checkout Base (Main)
