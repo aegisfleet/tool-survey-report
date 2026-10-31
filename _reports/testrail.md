@@ -104,14 +104,14 @@ relationships:
 graph TD
     User[ユーザー<br>QA/開発者] -->|Web UI / API| TestRail[TestRail サーバー]
 
-    subgraph 自動化・CI/CD
+    subgraph "自動化・CI/CD"
         AutoTests[自動テスト<br>Selenium/Playwright等] -->|REST API| TestRail
         Jenkins[Jenkins/GitHub Actions等] -->|REST API| TestRail
     end
 
     TestRail -->|データ保存| DB[(データベース)]
 
-    subgraph 外部連携
+    subgraph "外部連携"
         TestRail <-->|双方向API連携| Jira[Jira<br>課題管理]
         TestRail -->|通知連携| Slack[Slack/Teams]
     end

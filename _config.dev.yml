@@ -7,9 +7,12 @@
 # bundle exec jekyll serve --config _config.yml,_config.dev.yml
 
 exclude:
-  # _reports 配下の大半のファイルを除外（i で始まる一部のファイルのみビルド）
-  - "_reports/[a-h]*"
-  - "_reports/[j-z]*"
+  # テスト対象（a2ui, granola, oauth, testrail, wovn-io等）のみをビルド
+  - "_reports/[b-f]*"
+  - "_reports/[h-n]*"
+  - "_reports/[p-s]*"
+  - "_reports/[u-v]*"
+  - "_reports/[x-z]*"
   - "_reports/0*"
   - "_reports/1*"
   - "_reports/2*"
