@@ -44,6 +44,7 @@ relationships:
     - Stable Diffusion
     - Luma AI
     - updream
+    - AIVideoFree
 ---
 
 # **Seavid AI 調査レポート**
