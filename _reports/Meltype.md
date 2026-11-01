@@ -42,7 +42,9 @@ evaluation:
 links:
   github: https://github.com/yksr-melt/Meltype
   documentation: https://github.com/yksr-melt/Meltype/blob/main/docs/USAGE.md
-relationships: null
+relationships:
+  related_tools:
+    - OpenHinoVoice
 ---
 
 # **Meltype 調査レポート**

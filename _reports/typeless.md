@@ -38,6 +38,10 @@ evaluation:
     - point: -2
       reason: AIによる意図しない要約や変換が起こる可能性がある
   summary: タイピングの手間を大幅に削減できる強力な音声入力ツールだが、コストとAIの挙動には注意が必要
+relationships:
+  related_tools:
+    - OpenHinoVoice
+    - Aqua Voice
 ---
 
 # **Typeless 調査レポート**

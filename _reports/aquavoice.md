@@ -43,6 +43,7 @@ relationships:
     - Devin Desktop
     - VibeVoice
     - Notely Voice
+    - OpenHinoVoice
 ---
 
 # **Aqua Voice 調査レポート**
