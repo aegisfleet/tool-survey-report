@@ -40,6 +40,9 @@ evaluation:
   summary: AI時代のエンジニア評価に特化した独自のポジションを確立しており、開発組織の生産性向上と採用マッチングに大きく貢献するツール
 links:
   documentation: https://support.hireroo.io/
+relationships:
+  related_tools:
+    - Mercor
 ---
 
 # **HireRoo 調査レポート**
