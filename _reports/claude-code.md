@@ -52,6 +52,7 @@ relationships:
     - Devin
     - Cline
     - OpenClaw
+    - Grok Build
 ---
 
 # **Claude Code 調査レポート**
