@@ -1516,6 +1516,29 @@ h3:hover .heading-anchor {
   }
 }
 
+.floating-toc-desktop,
+.floating-toc-drawer {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-dark) var(--color-bg-content);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--color-bg-content);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-border-dark);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--color-text-muted);
+    }
+  }
+}
+
 // PC用 デスクトップサイドバー目次 (1200px以上)
 .floating-toc-desktop {
   display: none;
