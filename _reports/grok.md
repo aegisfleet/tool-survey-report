@@ -43,6 +43,9 @@ evaluation:
 links:
   documentation: https://docs.x.ai/
 relationships:
+  children:
+    - Grok Build
+    - Grok CLI
   related_tools:
     - ChatGPT
     - Gemini
