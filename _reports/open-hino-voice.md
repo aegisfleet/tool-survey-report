@@ -135,7 +135,7 @@ flowchart TD
   end
 
   subgraph LocalASR["ローカル推論層 (speech.cpp)"]
-    Audio -->|PCMチャンク (パイプ通信)| SpeechExe["speech.exe\n(CREATE_NO_WINDOW)"]
+    Audio -->|"PCMチャンク (パイプ通信)"| SpeechExe["speech.exe\n(CREATE_NO_WINDOW)"]
     SpeechExe -->|推論実行| Model["Haas-ja-v1.0 (GGUF)\nローカルモデル約0.35GB"]
     SpeechExe -->|認識生テキスト| ASR["asr.rs"]
   end

@@ -83,6 +83,25 @@ class TestMermaidStaticValidation(unittest.TestCase):
         self.assertEqual(len(errors), 1)
         self.assertIn("(", errors[0]["error"])
 
+    def test_flags_ascii_parentheses_in_unquoted_edge_label(self):
+        code = "\n".join([
+            "flowchart TD",
+            "  A -->|PCMチャンク (パイプ通信)| B",
+        ])
+
+        errors = self._validate(code)
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("(", errors[0]["error"])
+
+    def test_allows_quoted_punctuation_in_edge_label(self):
+        code = "\n".join([
+            "flowchart TD",
+            '  A -->|"PCMチャンク (パイプ通信)"| B',
+        ])
+
+        self.assertEqual(self._validate(code), [])
+
 
 if __name__ == '__main__':
     unittest.main()
