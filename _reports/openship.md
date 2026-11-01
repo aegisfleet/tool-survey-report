@@ -2,7 +2,7 @@
 title: Openship 調査レポート
 tool_name: Openship
 tool_reading: オープンシップ
-category: クラウドサービス/PaaS
+category: PaaS
 developer: Oblien LLC.
 official_site: https://openship.io/
 date: '2026-07-21'
