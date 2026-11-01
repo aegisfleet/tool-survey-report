@@ -50,7 +50,6 @@ relationships:
     - ChatGPT
     - Gemini
     - Claude
-    - LangChain
     - TradingAgents
     - Rakuten AI
     - Build by Grok

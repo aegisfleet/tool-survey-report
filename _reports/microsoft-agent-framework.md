@@ -42,6 +42,7 @@ relationships:
   related_tools:
     - A2A Protocol
     - Agent Governance Toolkit
+    - LangChain
 ---
 
 # **Microsoft Agent Framework 調査レポート**
