@@ -1,54 +1,51 @@
 ---
-title: "OpenHinoVoice 調査レポート"
-tool_name: "OpenHinoVoice"
-tool_reading: "オープンヒノボイス"
-category: "デスクトップ/環境操作"
-developer: "iiinno (個人開発)"
-official_site: "https://github.com/iiinno/OpenHinoVoice"
-date: "2026-11-01"
-last_updated: "2026-11-01"
+title: OpenHinoVoice 調査レポート
+tool_name: OpenHinoVoice
+tool_reading: オープンヒノボイス
+category: デスクトップ/環境操作
+developer: iiinno (個人開発)
+official_site: https://github.com/iiinno/OpenHinoVoice
+date: '2026-11-01'
+last_updated: '2026-11-01'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "音声入力"
-  - "デスクトップアプリ"
-  - "Windows"
-  - "ローカルAI"
-description: "Windows向けのオープンソース音声入力アプリ。音声認識をローカル完結させ、外部LLMによる文章整形や直接貼り付けに対応。"
-
+  - オープンソース
+  - AI
+  - 音声入力
+  - デスクトップアプリ
+  - Windows
+  - ローカルAI
+description: Windows向けのオープンソース音声入力アプリ。音声認識をローカル完結させ、外部LLMによる文章整形や直接貼り付けに対応。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Windowsユーザー"
-    - "ライター / 開発者"
-    - "音声入力を業務活用したいビジネスパーソン"
-  latest_highlight: "2026年11月に用語辞書・復旧短期履歴・WAV認識などの機能強化がマージ"
-  update_frequency: "高"
-
+    - Windowsユーザー
+    - ライター / 開発者
+    - 音声入力を業務活用したいビジネスパーソン
+  latest_highlight: 2026年11月に用語辞書・復旧短期履歴・WAV認識などの機能強化がマージ
+  update_frequency: 高
 evaluation:
   score: 77
   base_score: 70
   plus_points:
     - point: 4
-      reason: "音声データが外部に送信されないローカル完結の高速認識（speech.cpp + Haas-ja-v1.0）"
+      reason: 音声データが外部に送信されないローカル完結の高速認識（speech.cpp + Haas-ja-v1.0）
     - point: 3
-      reason: "クリップボード一時退避・復元による安全な貼り付けとEnterキー非送信による誤爆防止設計"
+      reason: クリップボード一時退避・復元による安全な貼り付けとEnterキー非送信による誤爆防止設計
     - point: 2
-      reason: "ChatGPT OAuth、OpenCode Go、OpenAI互換APIなど柔軟な整形バックエンド選択と用語辞書対応"
+      reason: ChatGPT OAuth、OpenCode Go、OpenAI互換APIなど柔軟な整形バックエンド選択と用語辞書対応
   minus_points:
     - point: -2
-      reason: "Windows専用かつ未署名バイナリのため初期導入時の警告対応が必要"
-  summary: "ローカル音声認識による高いプライバシー保護と、柔軟なLLM文章整形・安全性に配慮した貼り付けを両立した実用的Windows音声入力ツール"
-
+      reason: Windows専用かつ未署名バイナリのため初期導入時の警告対応が必要
+  summary: ローカル音声認識による高いプライバシー保護と、柔軟なLLM文章整形・安全性に配慮した貼り付けを両立した実用的Windows音声入力ツール
 links:
-  github: "https://github.com/iiinno/OpenHinoVoice"
+  github: https://github.com/iiinno/OpenHinoVoice
 relationships:
   related_tools:
-    - "Aqua Voice"
-    - "Typeless"
-    - "Meltype"
+    - Aqua Voice
+    - Typeless
+    - Meltype
 ---
 
 # **OpenHinoVoice 調査レポート**
