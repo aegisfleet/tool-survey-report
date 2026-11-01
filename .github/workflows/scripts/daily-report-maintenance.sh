@@ -134,9 +134,11 @@ AGENTS.mdの「レポート作成・更新の手順」に従い、${tool_name}�
 - **CodeWiki / DeepWikiリンクの厳格な実在確認**:
   推測によるURL記載は厳禁とする。OSSリポジトリの場合は \`pnpm run update-wiki ${report_path}\` を実行して実在するWikiリンクのみを反映すること。実在が確認できない場合は記載しない（または削除する）。
 - **動作原理・システム構成（Mermaid図）**:
-  Section 4（Mermaid構成図/フロー図）がない場合は日本語表記の図を追加し、全18セクション構成に準拠せよ。
+  Section 4（Mermaid構成図/フロー図）がない場合は日本語表記の図を追加し、全18セクション構成に準拠せよ。Mermaidの \`subgraph\` 表示名に \`・\` や全角記号、\`(\` \`)\` などを含める場合は、必ず \`subgraph ID["表示名"]\` のように引用符で囲むこと。
 - **代表的な利用フロー（スイムレーン）**:
   Section 2 に「2.1 代表的な利用フロー」が未記載の場合は、アクター別スイムレーン（\`swimlane-beta TB\`、図内は日本語表記）を追加せよ。新機能の追加や実行フローの変更がある場合は、既存の利用フロー図も最新化すること。
+- **Mermaid静的検証**:
+  更新後に \`uv run python3 scripts/check_mermaid.py --static ${report_path}\` を実行し、Mermaidの構文エラーがないことを確認すること。
 - **ブラウザ検証（Playwright）のスキップ**:
   本環境（e2-micro）のリソース制約を考慮し、Playwrightなどのブラウザを起動する検証（\`--browser\`）は実行しないこと。
 
@@ -147,6 +149,7 @@ AGENTS.mdの「レポート作成・更新の手順」に従い、${tool_name}�
 
 ## 完了条件
 - ${report_path} の情報が最新化され、frontmatter の \`last_updated\` が更新されていること。
+- \`uv run python3 scripts/check_mermaid.py --static ${report_path}\` が成功していること。
 - 作業完了後、ユーザーへの質問や確認は一切行わず、自律的に作業を確定・完了させること。
 EOF
 }

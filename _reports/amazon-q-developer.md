@@ -110,14 +110,14 @@ graph TD
         Auth["認証・認可基盤<br>(AWS Builder ID / IAM Identity Center)"]
         QGateway["Amazon Q Developer サービスゲートウェイ<br>(コンテキスト解析・プロンプトオーケストレーション)"]
         
-        subgraph 推論・エージェント層
+        subgraph "推論・エージェント層"
             LLM["基盤モデル群 (Amazon Bedrock)<br>(Anthropic Claude / Amazon Titan等)"]
             AgentEngine["自律エージェントエンジン<br>(コード生成・テスト自動作成・脆弱性診断)"]
             TransformEngine["コード変換エンジン<br>(マネージド隔離コンテナ / AST解析・ビルド)"]
             VizEngine["ビジュアライゼーションエンジン<br>(ヘルスダッシュボード・時系列チャート生成)"]
         end
 
-        subgraph AWS運用・リソース層
+        subgraph "AWS運用・リソース層"
             AWSAPIs["AWS API群<br>(CloudWatch, EC2, S3, Cost Explorer等)"]
             Telemetry["テレメトリ・監査ログ<br>(CloudWatch Metrics / CloudTrail)"]
         end

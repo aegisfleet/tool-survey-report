@@ -91,7 +91,7 @@ relationships:
 
 ```mermaid
 swimlane-beta TB
-  subgraph 開発者・運用者
+  subgraph "開発者・運用者"
     A[マニフェスト定義・GitOpsコミット]
     F[デプロイ結果と稼働ステータス確認]
   end

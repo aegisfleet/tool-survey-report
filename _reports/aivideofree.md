@@ -88,16 +88,16 @@ relationships:
 
 ```mermaid
 swimlane-beta TB
-  subgraph ユーザー
+  subgraph "ユーザー"
     A[プロンプト入力または画像アップロード]
     D[生成完了プレビューの確認]
     E[透かしなしMP4動画をダウンロード]
   end
-  subgraph AIVideoFree プラットフォーム
+  subgraph "AIVideoFree プラットフォーム"
     B[モデル選択・クレジット見積もり・入力検証]
     C[推論ジョブ発行とキュー制御]
   end
-  subgraph 外部AI推論基盤
+  subgraph "外部AI推論基盤"
     F[モデル実行（Veo / Kling / Seedance等）]
     G[レンダリング・エンコーディング処理]
   end
@@ -128,18 +128,18 @@ swimlane-beta TB
 
 ```mermaid
 flowchart TD
-    subgraph クライアント層
+    subgraph "クライアント層"
         Browser["Webブラウザ (Nuxt / Vue)"]
     end
 
-    subgraph AIVideoFree オーケストレーション層
+    subgraph "AIVideoFree オーケストレーション層"
         Gateway["APIゲートウェイ / JWT認証"]
         Wallet["統一クレジット・課金管理"]
         Moderation["多層コンテンツ安全フィルタ"]
         JobQueue["分散ジョブスケジューラ"]
     end
 
-    subgraph AI推論エンジン層
+    subgraph "AI推論エンジン層"
         VeoAPI["Google Veo API"]
         KlingAPI["Kling AI (3.0 / 4.0 / O3)"]
         SeedanceAPI["ByteDance Seedance (2.5 / Fast)"]
@@ -148,7 +148,7 @@ flowchart TD
         ImageModels["GPT Image / Seedream / Nano Banana"]
     end
 
-    subgraph ストレージ・配信層
+    subgraph "ストレージ・配信層"
         Storage["クラウドオブジェクトストレージ"]
         CDN["グローバルCDN配信"]
     end

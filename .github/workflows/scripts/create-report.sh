@@ -43,12 +43,16 @@ build_create_prompt() {
    - 読者の理解を深めるため、日本語のMermaid図（フロー図や構成図）を可能な限り作成すること。
 6. **代表的な利用フロー**:
    - Section 2 に「2.1 代表的な利用フロー」を設け、ユーザー・ツール・外部サービスなどのアクター別スイムレーンを \`swimlane-beta TB\` で作成すること（図内は日本語表記）。
-7. **ブラウザ検証（Playwright）のスキップ**:
+   - Mermaidの \`subgraph\` 表示名に \`・\` や全角記号、\`(\` \`)\` などを含める場合は、必ず \`subgraph ID["表示名"]\` のように引用符で囲むこと。
+7. **Mermaid静的検証**:
+   - 作成後に \`uv run python3 scripts/check_mermaid.py --static _reports/{tool-slug}.md\` を実行し、Mermaidの構文エラーがないことを確認すること。
+8. **ブラウザ検証（Playwright）のスキップ**:
    - 本環境（e2-micro）のリソース制約を考慮し、Playwrightなどのブラウザを起動する検証（\`--browser\`）は実行しないこと。
 
 ## 完了条件
 - \`_reports/\` 配下に新規レポートファイルが生成されていること。
 - フロントマターの \`date\` および \`last_updated\` は本日の日付（日本時間）\`${today_jst}\` に設定されていること。
+- \`uv run python3 scripts/check_mermaid.py --static _reports/{tool-slug}.md\` が成功していること。
 - \`_data/categories.yml\` の整合性が保たれていること。
 - レポート作成後、ユーザーへの質問や確認（「提出してよいですか？」など）は一切行わず、自律的に作業を確定・完了させること。
 EOF
