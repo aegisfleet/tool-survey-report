@@ -51,6 +51,7 @@ relationships:
     - Hugging Face
     - Model Context Protocol
     - Ferret-UI
+    - agent-desktop
 ---
 # **UI-TARS Desktop 調査レポート**
 
