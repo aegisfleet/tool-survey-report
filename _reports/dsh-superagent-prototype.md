@@ -1,60 +1,57 @@
 ---
-title: "dsh-superagent-prototype 調査レポート"
-tool_name: "dsh-superagent-prototype"
-tool_reading: "ディーエスエイチ・スーパーエージェント・プロトタイプ"
-category: "自律型コーディングエージェント"
-developer: "DeepSeek-AI"
-official_site: "https://www.deepseek.com/en/harness/"
-date: "2026-11-02"
-last_updated: "2026-11-02"
+title: dsh-superagent-prototype 調査レポート
+tool_name: dsh-superagent-prototype
+tool_reading: ディーエスエイチ・スーパーエージェント・プロトタイプ
+category: 自律型コーディングエージェント
+developer: DeepSeek-AI
+official_site: https://www.deepseek.com/en/harness/
+date: '2026-11-02'
+last_updated: '2026-11-02'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "開発者ツール"
-  - "コーディング支援"
-  - "DeepSeek"
-  - "GitHub"
-description: "「人間の認知負荷を最小化する」思想を掲げ、GitHubリポジトリに常駐して並行作業を自律実行するRouter-Worker型コーディングエージェントの研究プロトタイプ"
-
+  - オープンソース
+  - AI
+  - エージェント
+  - 自律型
+  - 開発者ツール
+  - コーディング支援
+  - DeepSeek
+  - GitHub
+description: 「人間の認知負荷を最小化する」思想を掲げ、GitHubリポジトリに常駐して並行作業を自律実行するRouter-Worker型コーディングエージェントの研究プロトタイプ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェアエンジニア"
-    - "リポジトリメンテナー"
-    - "AIエージェント研究者"
-  latest_highlight: "2026年10月末に研究プロトタイプおよび設計論文をオープンソース公開"
-  update_frequency: "中"
-
+    - ソフトウェアエンジニア
+    - リポジトリメンテナー
+    - AIエージェント研究者
+  latest_highlight: 2026年10月末に研究プロトタイプおよび設計論文をオープンソース公開
+  update_frequency: 中
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 5
-      reason: "人間の注意コストを最小化する明確な設計思想とRouter-Workerによる並行処理"
+      reason: 人間の注意コストを最小化する明確な設計思想とRouter-Workerによる並行処理
     - point: 4
-      reason: "体系的な設計ドキュメントとSETUP.mdによる対話型セットアップの優れた体験"
+      reason: 体系的な設計ドキュメントとSETUP.mdによる対話型セットアップの優れた体験
     - point: 4
-      reason: "Gate/Policy/Mandateによる厳格な認可とtmuxを活用した非同期実行管理"
+      reason: Gate/Policy/Mandateによる厳格な認可とtmuxを活用した非同期実行管理
   minus_points:
     - point: -2
-      reason: "研究プロトタイプであり公式製品としてのサポートや後方互換性保証がない"
-  summary: "人間の注意力を奪わないことを最優先に設計された、DeepSeekによる革新的な自律型コーディングエージェントのプロトタイプ"
-
+      reason: 研究プロトタイプであり公式製品としてのサポートや後方互換性保証がない
+  summary: 人間の注意力を奪わないことを最優先に設計された、DeepSeekによる革新的な自律型コーディングエージェントのプロトタイプ
 links:
-  github: "https://github.com/deepseek-ai/dsh-superagent-prototype"
-  documentation: "https://github.com/deepseek-ai/dsh-superagent-prototype/tree/main/docs"
+  github: https://github.com/deepseek-ai/dsh-superagent-prototype
+  documentation: https://github.com/deepseek-ai/dsh-superagent-prototype/tree/main/docs
 relationships:
-  parent: "DeepSeek Harness"
+  parent: DeepSeek Harness
   related_tools:
-    - "Devin"
-    - "Claude Code"
-    - "OpenHands"
-    - "Google Jules"
-    - "Symphony"
+    - Devin
+    - Claude Code
+    - OpenHands
+    - Google Jules
+    - Symphony
 ---
 
 # **dsh-superagent-prototype 調査レポート**
