@@ -44,6 +44,8 @@ links:
   documentation: https://deepseek-harness.github.io/deepseek-harness/
 relationships:
   parent: DeepSeek
+  children:
+    - dsh-superagent-prototype
   related_tools:
     - OpenHands
     - Devin
