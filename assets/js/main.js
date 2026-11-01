@@ -1037,6 +1037,7 @@ function generateTableOfContents() {
       ...desktopList.querySelectorAll('a'),
       ...mobileList.querySelectorAll('a'),
     ];
+    let activeHeadingId = '';
 
     ScrollManager.register((scrollTop) => {
       const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
@@ -1056,6 +1057,26 @@ function generateTableOfContents() {
           link.classList.remove('active');
         }
       });
+
+      if (currentId && currentId !== activeHeadingId) {
+        activeHeadingId = currentId;
+        const activeLink = desktopList.querySelector('a.active');
+        if (activeLink && !desktopList.classList.contains('collapsed') && desktopToc.getClientRects().length) {
+          const tocBounds = desktopToc.getBoundingClientRect();
+          const linkBounds = activeLink.getBoundingClientRect();
+          let scrollTop = desktopToc.scrollTop;
+
+          if (linkBounds.bottom > tocBounds.bottom) {
+            scrollTop += linkBounds.bottom - tocBounds.bottom;
+          } else if (linkBounds.top < tocBounds.top) {
+            scrollTop -= tocBounds.top - linkBounds.top;
+          }
+
+          if (scrollTop !== desktopToc.scrollTop) {
+            desktopToc.scrollTo({ top: scrollTop, behavior: 'smooth' });
+          }
+        }
+      }
 
       // モバイル用FAB等の表示タイミング制御（一定位置スクロールで表示）
       const inlineToc = document.querySelector('.table-of-contents');
