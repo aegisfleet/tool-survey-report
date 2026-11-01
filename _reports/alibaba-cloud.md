@@ -2,7 +2,7 @@
 title: Alibaba Cloud 調査レポート
 tool_name: Alibaba Cloud
 tool_reading: アリババ クラウド
-category: クラウドサービス/PaaS
+category: クラウドサービス
 developer: Alibaba Group
 official_site: https://www.alibabacloud.com/
 date: '2026-10-23'

@@ -2,7 +2,7 @@
 title: Google Cloud CLI 調査レポート
 tool_name: Google Cloud CLI
 tool_reading: グーグル クラウド シーエルアイ
-category: クラウドサービス/PaaS
+category: クラウドサービス
 developer: Google
 official_site: https://cloud.google.com/cli
 date: '2026-10-30'
