@@ -1,61 +1,61 @@
 ---
-title: "Grok Build 調査レポート"
-tool_name: "Grok Build"
-tool_reading: "グロック ビルド"
-category: "自律型コーディングエージェント"
-developer: "xAI"
-official_site: "https://x.ai/build"
-date: "2026-11-01"
-last_updated: "2026-11-01"
+title: Grok Build 調査レポート
+tool_name: Grok Build
+tool_reading: グロック ビルド
+category: 自律型コーディングエージェント
+developer: xAI
+official_site: https://x.ai/build
+date: '2026-11-01'
+last_updated: '2026-11-01'
 tags:
-  - "AI"
-  - "自律型"
-  - "コーディング支援"
-  - "オープンソース"
-  - "開発者ツール"
-  - "大規模言語モデル"
-  - "エージェント"
-description: "xAIが開発するオープンソースのターミナル完結型自律コーディングエージェント。Grok 4.7を中核に、フルスクリーンTUI、計画立案モード、並列サブエージェント、MCP連携をサポート。"
+  - AI
+  - 自律型
+  - コーディング支援
+  - オープンソース
+  - 開発者ツール
+  - 大規模言語モデル
+  - エージェント
+description: xAIが開発するオープンソースのターミナル完結型自律コーディングエージェント。Grok 4.7を中核に、フルスクリーンTUI、計画立案モード、並列サブエージェント、MCP連携をサポート。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（従量課金または月額$8〜）"
+  starting_price: 無料（従量課金または月額$8〜）
   target_users:
-    - "ソフトウェア開発者"
-    - "DevOps/SREエンジニア"
-    - "オープンソース開発者"
-  latest_highlight: "2026年10月にv1.0.70へ更新、Grok 4.7の500kコンテキスト統合とダッシュボード・MCPエラー処理を強化"
-  update_frequency: "高"
+    - ソフトウェア開発者
+    - DevOps/SREエンジニア
+    - オープンソース開発者
+  latest_highlight: 2026年10月にv1.0.70へ更新、Grok 4.7の500kコンテキスト統合とダッシュボード・MCPエラー処理を強化
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Grok 4.7による超高速な推論レスポンスと500kトークンの巨大コンテキスト"
+      reason: Grok 4.7による超高速な推論レスポンスと500kトークンの巨大コンテキスト
     - point: 5
-      reason: "クライアントハーネスがApache 2.0でオープンソース公開され透明性が高い"
+      reason: クライアントハーネスがApache 2.0でオープンソース公開され透明性が高い
     - point: 4
-      reason: "Plan Modeや差分プレビューによる安全な変更適用設計"
+      reason: Plan Modeや差分プレビューによる安全な変更適用設計
     - point: 4
-      reason: "MCP（Model Context Protocol）およびAGENTS.md等の標準規格への柔軟な対応"
+      reason: MCP（Model Context Protocol）およびAGENTS.md等の標準規格への柔軟な対応
   minus_points:
     - point: -2
-      reason: "大規模モノレポにおけるサブエージェント展開時の高メモリ消費とトークン浪費リスク"
-  summary: "超高速なGrok 4.7推論と洗練されたTUI・Plan Modeを備え、CLIで安全かつ迅速に大規模開発を進められるオープンソースの自律型コーディングエージェント。"
+      reason: 大規模モノレポにおけるサブエージェント展開時の高メモリ消費とトークン浪費リスク
+  summary: 超高速なGrok 4.7推論と洗練されたTUI・Plan Modeを備え、CLIで安全かつ迅速に大規模開発を進められるオープンソースの自律型コーディングエージェント。
 links:
-  github: "https://github.com/xai-org/grok-build"
-  deepwiki: "https://deepwiki.com/xai-org/grok-build"
-  documentation: "https://docs.x.ai"
+  github: https://github.com/xai-org/grok-build
+  deepwiki: https://deepwiki.com/xai-org/grok-build
+  documentation: https://docs.x.ai
 relationships:
-  parent: "Grok"
+  parent: Grok
   children: []
   related_tools:
-    - "Claude Code"
-    - "Cursor"
-    - "Cline"
-    - "GitHub Copilot CLI"
-    - "Grok CLI"
-    - "Build by Grok"
+    - Claude Code
+    - Cursor
+    - Cline
+    - GitHub Copilot CLI
+    - Grok CLI
+    - Build by Grok
 ---
 
 # **Grok Build 調査レポート**
