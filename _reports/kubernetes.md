@@ -87,7 +87,7 @@ relationships:
   * **大規模Webサービスの基盤**: HPA（Horizontal Pod Autoscaler）やIn-place Pod Resizeによる動的スケーリングと高可用性の確保
   * **AI/ML・データ基盤**: Dynamic Resource Allocation (DRA) を活用したGPU/アクセラレータの柔軟なスケジューリングとバッチ推論・学習ジョブの効率的実行
 
-### **2.1 代表的な利用フロー (スイムレーン)**
+### **2.1 代表的な利用フロー**
 
 ```mermaid
 swimlane-beta TB

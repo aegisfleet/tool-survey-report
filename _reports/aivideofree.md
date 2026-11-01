@@ -84,7 +84,7 @@ relationships:
   * **SNSバイラル動画・エンタメコンテンツ制作**: 「AI Hug Video（AIハグ動画）」や「AI Kissing Video（AIキス動画）」などの特化機能を用い、2枚の写真から感情的なインタラクション動画を作成。
   * **既存映像のアセット補正・再編集**: 動画顔入れ替え（Video Face Swap）、動画ウォーターマーク除去（Video Watermark Remover）、動画高画質化（AI Video Enhancer）を組み合わせた既存フッテージの最適化。
 
-### **2.1 代表的な利用フロー (スイムレーン)**
+### **2.1 代表的な利用フロー**
 
 ```mermaid
 swimlane-beta TB
