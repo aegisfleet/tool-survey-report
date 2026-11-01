@@ -41,6 +41,8 @@ links:
   documentation: https://learn.microsoft.com/en-us/microsoft-scout/use-microsoft-scout
 relationships:
   parent: Microsoft 365 Copilot
+  related_tools:
+    - agent-desktop
 ---
 # **Microsoft Scout 調査レポート**
 

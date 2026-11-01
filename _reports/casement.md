@@ -36,6 +36,9 @@ evaluation:
     - point: 0
       reason: 特になし
   summary: セキュアかつ直感的にデスクトップアプリをモバイルデバイス等に持ち出せる画期的なツール
+relationships:
+  related_tools:
+    - agent-desktop
 ---
 
 # **Casement 調査レポート**

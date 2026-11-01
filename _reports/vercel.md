@@ -47,6 +47,7 @@ relationships:
     - A2UI
     - Cloudflare Workers
     - Hono
+    - agent-desktop
 ---
 
 # **Vercel 調査レポート**
