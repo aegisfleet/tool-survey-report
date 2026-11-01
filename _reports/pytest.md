@@ -49,6 +49,7 @@ relationships:
     - Selenium
     - Playwright
     - Robot Framework
+    - Allure Report
 ---
 
 # **PyTest 調査レポート**
