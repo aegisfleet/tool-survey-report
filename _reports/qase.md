@@ -111,7 +111,7 @@ graph TD
     subgraph External Tools
         CI_CD[CI/CD Pipelines<br/>GitHub Actions, GitLab CI] -->|Test Results| QaseCore
         Requirements[Notion, Confluence, Jira] <-->|Traceability / Defects| QaseCore
-        Chat[Slack, Teams, Discord, Mattermost] <--|Notifications| QaseCore
+        QaseCore -->|Notifications| Chat[Slack, Teams, Discord, Mattermost]
         AIAgent[External AI Agents<br/>Claude, etc.] <--> MCPServer[Qase MCP Server]
     end
 

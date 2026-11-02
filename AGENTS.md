@@ -19,7 +19,7 @@
 
 1. [task-report-create-or-update.md](./task-report-create-or-update.md) を参照する
 2. 新規の場合は `templates/template.md` のテンプレートを基に作成、既存の場合は情報を最新化する
-3. 調査完了後のチェックリストを確認し、全項目をクリアする。CodeWikiやDeepWikiなどの外部Wikiリンクは、推測でURLを記述してはならない（未インデックスのリポジトリはSoft 404となるため）。必ず実在確認を行い、存在しない場合はリンクを記載しないこと。レポートの検証（`scripts/run_checks.py`）を行う際は、CodeWikiなどの動的サイトのリンク切れを正確に検知するため、可能な限り `--browser` フラグを使用すること。ブラウザを起動できない環境では、少なくとも `uv run python3 scripts/check_mermaid.py --static <ファイル>` を実行し、Mermaidの構文エラー（特に `subgraph` のID・表示名に含まれる未引用の記号）がないことを確認すること。
+3. 調査完了後のチェックリストを確認し、全項目をクリアする。CodeWikiやDeepWikiなどの外部Wikiリンクは、推測でURLを記述してはならない（未インデックスのリポジトリはSoft 404となるため）。必ず実在確認を行い、存在しない場合はリンクを記載しないこと。レポートの検証（`scripts/run_checks.py`）を行う際は、CodeWikiなどの動的サイトのリンク切れを正確に検知するため、可能な限り `--browser` フラグを使用すること。ブラウザを起動できない環境では、少なくとも `uv run python3 scripts/check_mermaid.py --static <ファイル>` を実行し、Mermaidの構文エラー（特に `subgraph` のID・表示名に含まれる未引用の記号）がないことを確認すること。なお `check_mermaid.py` のブラウザ検証は `mermaid.parse()` による構文解析のみのため、「パースは成功するがレンダリングに失敗する」不具合（例: 逆向き矢印の直後にインラインラベルを付ける `A <--|ラベル| B` 記法）を検出できない。Mermaidの逆向き矢印にインラインラベルを付けず、逆向きの関係は始点・終点を入れ替えた順方向エッジ（`B -->|ラベル| A`）で記述すること。
 
 ### ステップ2: 関連レポートの整理
 
