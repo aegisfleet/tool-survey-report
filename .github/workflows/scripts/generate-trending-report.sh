@@ -8,7 +8,8 @@
 set -euo pipefail
 
 # Load common library
-readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly SCRIPT_DIR
 # shellcheck source=.github/workflows/scripts/agy-common.sh
 source "${SCRIPT_DIR}/agy-common.sh"
 
