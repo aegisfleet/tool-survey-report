@@ -47,6 +47,7 @@ relationships:
     - SonarQube
     - Trivy
     - Socket
+    - CodeQL
 ---
 
 # **Semgrep 調査レポート**

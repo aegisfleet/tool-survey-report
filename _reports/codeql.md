@@ -6,49 +6,52 @@ category: セキュリティ/静的解析
 developer: GitHub
 official_site: https://codeql.github.com/
 date: '2026-02-18'
-last_updated: '2026-05-23'
+last_updated: '2026-11-02'
 tags:
   - DevSecOps
   - GitHub
   - セキュリティ
   - 静的解析
-description: コードをデータとして扱い、脆弱性を検出するGitHubの高度な静的解析エンジン
+  - SAST
+  - CI/CD
+  - オープンソース
+description: コードをリレーショナルデータベースとして扱い、宣言型クエリ言語で脆弱性を高精度に検出するGitHubのセマンティック静的解析エンジン
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: 無料 (OSS) / $30/user/月 (Enterprise)
+  starting_price: 無料 (OSS) / $30/コミッター/月 (Code Security)
   target_users:
     - セキュリティエンジニア
     - 開発者
     - OSSメンテナ
-  latest_highlight: 2026年5月のアップデート(v2.25.4)でSwift 6.3.1対応やVercel serverless functionsサポートを追加
+  latest_highlight: 2026年10月のv2.27.3でJSON形式データ拡張対応、Linux arm64ネイティブ対応やKotlin 2.4/Go 1.27モデルを拡充
   update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 10
-      reason: GitHubネイティブで統合がスムーズ
+      reason: GitHubネイティブ統合とCopilot Autofix連携による卓越したDevSecOps体験
     - point: 5
-      reason: クエリ言語(QL)による柔軟で強力なカスタム解析が可能
+      reason: クエリ言語(QL)とデータ拡張による柔軟で高精度なディープテイント解析
     - point: 5
-      reason: OSSに対しては完全に無料で利用可能
+      reason: オープンソースリポジトリに対して完全無料で高度な解析機能を提供
   minus_points:
     - point: -3
-      reason: 独自のクエリ言語(QL)の学習コストが高い
+      reason: 独自のクエリ言語(QL)の習得ハードルが高くカスタムルール作成に専門知識が必要
     - point: -2
-      reason: 対応言語数がSonarQubeなどに比べると少なめ
-  summary: GitHub利用者にとって最強のセキュリティツールだが、使いこなすには学習が必要
+      reason: 深いセマンティック解析とビルド監視を伴うためスキャン実行時間が長くなりやすい
+  summary: GitHub利用者にとって最高峰の静的セキュリティ解析基盤だが、QLの習得と解析所要時間に留意が必要
 links:
   github: https://github.com/github/codeql
-  codewiki: https://codewiki.google/github.com/github/codeql
-  deepwiki: https://deepwiki.com/github/codeql
   documentation: https://codeql.github.com/docs/
 relationships:
   parent: GitHub
   related_tools:
     - SonarQube
     - Dependabot
+    - Snyk Code
+    - Semgrep
 ---
 
 # **CodeQL 調査レポート**
@@ -61,46 +64,125 @@ relationships:
 * **公式サイト**: [https://codeql.github.com/](https://codeql.github.com/)
 * **関連リンク**:
   * GitHub: [https://github.com/github/codeql](https://github.com/github/codeql)
-  * CodeWiki: [https://codewiki.google/github.com/github/codeql](https://codewiki.google/github.com/github/codeql) （クエリとライブラリのリポジトリ）
   * ドキュメント: [https://codeql.github.com/docs/](https://codeql.github.com/docs/)
-* **カテゴリ**: CDN/セキュリティ
-* **概要**: GitHubが開発・提供するセマンティックコード解析エンジン。コードをデータベース化し、SQLのようなクエリ言語「QL」を使って検索することで、脆弱性やバグを特定する。GitHub Advanced Securityの中核技術として利用されている。
+* **カテゴリ**: セキュリティ/静的解析
+* **概要**: GitHubが開発・提供するセマンティックコード解析エンジン。ソースコードを抽象構文木や制御フロー、データフローのリレーショナルデータベースとして抽出し、オブジェクト指向論理型クエリ言語「QL」で検索することで、複雑な脆弱性やバグを高精度に特定する。GitHub Advanced Security（GHAS）のコードスキャン中核技術として利用されている。
 
 ## **2. 目的と主な利用シーン**
 
 * **解決する課題**:
-  * 従来の静的解析ツールでは検出が難しい、複雑なデータフローに起因する脆弱性の発見
-  * 組織固有のセキュリティポリシーやコーディング規約への準拠チェック
+  * 従来の正規表現・構文パターンマッチング型SASTでは検知が困難な、クロスファイル・ディープデータフロー起因の脆弱性（SQLインジェクション、SSRF、デシリアライゼーション等）の確実な発見
+  * 新たに報告された脆弱性パターン（CVE）が組織内の他リポジトリに存在しないかを横断調査するバリアント分析の自動化
+  * 組織固有のセキュリティポリシーやコーディング基準に合わせた柔軟なカスタムルールの実装
 * **想定利用者**:
-  * セキュリティエンジニア
-  * 大規模プロジェクトの開発チーム
+  * セキュリティエンジニア / AppSecチーム
+  * 開発者 / フルスタックエンジニア
   * オープンソースソフトウェアのメンテナ
 * **利用シーン**:
-  * CI/CDパイプライン（GitHub Actions）でのプルリクエストごとの自動セキュリティスキャン
-  * 過去の脆弱性（CVE）と同じパターンを持つコードのバリアント分析（Variant Analysis）
-  * 特定のAPIの誤用や危険なデータフローの検出
+  * GitHub ActionsパイプラインでのPull Request作成・更新時における自動スキャンとマージ前ブロック
+  * セキュリティ研究者によるゼロデイ脆弱性の探索およびバリアント分析（Variant Analysis）
+  * GitHub Copilot Autofixと連携した、検知された脆弱性に対するAI自動修正コードの即時適用
+
+### **2.1 代表的な利用フロー**
+
+```mermaid
+swimlane-beta TB
+  subgraph Developer["開発者・セキュリティ担当"]
+    A[機能開発・コードコミット]
+    G[指摘箇所の確認・Autofix適用]
+  end
+  subgraph GitHubEnv["GitHub・CIワークフロー"]
+    B[PR作成・Actionジョブ起動]
+    E[SARIFアップロード・セキュリティ統合]
+  end
+  subgraph CodeQLEngine["CodeQL 解析エンジン"]
+    C[言語抽出・CodeQL DB構築]
+    D[QLクエリスイート実行・データフロー解析]
+  end
+  subgraph SecurityHub["セキュリティ管理 (PR・タブ)"]
+    F[PRインライン注記・アラート発行]
+  end
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+```
+
+* **代表的な流れ**: 開発者がコードをコミットしてPull Requestを作成すると、GitHub Actions上でCodeQLワークフローが自動トリガーされる。CodeQLエンジンがビルドをトレースしてコードをリレーショナルデータベース化し、標準または拡張QLクエリスイートを実行してデータフロー解析を行う。解析結果はSARIF形式で出力されてGitHubにアップロードされ、PRの差分行へのインライン警告表示やCopilot Autofixの自動修正提案として開発者に還元される。
 
 ## **3. 主要機能**
 
-* **セマンティックコード解析**: コードを単なるテキストではなく、意味を持つデータ（データベース）として扱い、深い解析を行う。
-* **QL言語によるクエリ**: オブジェクト指向かつ論理型のクエリ言語「QL」を使用して、独自の解析ルールを作成可能。
-* **バリアント分析**: 一つの脆弱性パターンから、類似した脆弱性をコードベース全体から一網打尽に検出する。
-* **テイントトラッキング**: ユーザー入力などの信頼できないデータが、危険なシンク（SQL実行箇所など）に到達するまでのフローを追跡する。
-* **GitHub Advanced Security統合**: GitHub ActionsやPull Request画面と深く統合されており、開発ワークフロー内で自然に利用できる。
-* **クラウドネイティブ対応**: JavaScript/TypeScript環境でのVercel serverless functionsなど、最新のデプロイ環境の解析をサポート。
-* **CodeQL CLI**: ローカル環境やGitHub以外のCIシステムでも解析を実行できるコマンドラインツール。
+* **セマンティックコード解析**: コードを単なるテキストやASTだけでなく、制御フロー（CFG）、呼び出しグラフ、型情報、データフローを含むリレーショナルデータベースとして表現・解析。
+* **宣言型論理クエリ言語「QL」**: Datalogをベースにしたオブジェクト指向論理プログラミング言語。述語論理を用いて複雑なセキュリティ脆弱性の条件をシンプルかつ厳密にモデル化可能。
+* **ディープテイントトラッキング**: ユーザー入力やリクエストパラメータなどの未信頼なデータソース（Source）から、危険な実行関数（Sink）に至るまでの汚染経路を、サニタイザやバリデータの影響を考慮しながら追跡。
+* **モデル拡張（Data Extensions / Models-as-Data）**: サードパーティ製ライブラリのソース・シンク・サマリー情報を、YAMLやJSON形式（v2.27.3以降）で外部定義して解析エンジンに注入可能。
+* **GitHub Advanced Security & Copilot Autofix連携**: GitHubのセキュリティタブおよびPull Requestの差分上に直接アラートを表示し、CopilotのLLMを活用して修正コミット案をワンクリックで生成・適用。
+* **クロスプラットフォームCLIとLinux arm64ネイティブ対応**: Windows, macOS, Linuxに加え、2026年9月（v2.27.0）よりLinux arm64環境へ正式対応。ローカル開発環境や外部CI（GitLab CI, Jenkins）でも同一の解析を実行可能。
+* **GitHub Actionsワークフロー自体の解析**: `actions/unpinned-tag` や環境変数インジェクション、キャッシュポイズニング検知など、CI/CDパイプライン自体のサプライチェーンリスク検証を標準サポート。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+CodeQLは、ソースコードのビルドプロセスから構造情報を抽出し、専用データベースを構築した上で論理クエリを実行する「DB指向のセマンティック解析パイプライン」を採用している。
+
+```mermaid
+flowchart TD
+  subgraph SourceLayer["ソースコード・ビルド層"]
+    SourceFiles["ソースコード群\n(コンパイル言語 & スクリプト言語)"]
+    Compiler["コンパイラ・ビルドツール\n(Java, C/C++, C#, Go, Swift)"]
+    Extractor["CodeQL Extractor\n(ビルド監視・AST直接抽出)"]
+    SourceFiles --> Compiler
+    Compiler --> Extractor
+    SourceFiles --> Extractor
+  end
+
+  subgraph DBLayer["CodeQL データベース層"]
+    DBBuild["データベース生成\n(codeql database create)"]
+    RelationalDB["CodeQL データベース\n- 抽象構文木 (AST)\n- 制御フローグラフ (CFG)\n- データフロー・型リレーション"]
+    Extractor --> DBBuild
+    DBBuild --> RelationalDB
+  end
+
+  subgraph AnalysisLayer["クエリ実行・推論エンジン"]
+    QLQuery["QLクエリスイート\n(Default / Security Extended)"]
+    DataExt["モデル拡張 (Data Extensions)\n(JSON / YAML / Models-as-Data)"]
+    QLEngine["CodeQL クエリエンジン\n(論理型推論・テイント解析)"]
+    RelationalDB --> QLEngine
+    QLQuery --> QLEngine
+    DataExt --> QLEngine
+  end
+
+  subgraph OutputLayer["結果出力・修復連携層"]
+    SARIFReport["SARIF 形式レポート\n(静的解析結果フォーマット)"]
+    GitHubPR["GitHub Pull Request\n(インライン注記・マージブロック)"]
+    SecurityTab["GitHub Security タブ\n(アラート管理・脆弱性追跡)"]
+    CopilotFix["GitHub Copilot Autofix\n(AIによる脆弱性自動修正提案)"]
+    QLEngine --> SARIFReport
+    SARIFReport --> GitHubPR
+    SARIFReport --> SecurityTab
+    SARIFReport --> CopilotFix
+  end
+```
+
+* **アーキテクチャ**:
+  * **抽出フェーズ（Extraction）**: コンパイル言語（Java, C/C++, C#, Go, Swift）ではコンパイラのプロセス呼び出しをフック・監視して正確なASTや型シグネチャを抽出する。インタプリタ言語（JavaScript/TypeScript, Python, Ruby）では直接構文解析を行う。
+  * **データベース生成（Database Creation）**: 抽出したトークン、構文関係、制御フロー、データフローを独自リレーショナルデータベースとしてパッケージ化。
+  * **クエリ評価フェーズ（Query Execution）**: CodeQLエンジンがQLクエリパック（標準OWASP/CWEスイートやカスタムパック）を評価。Datalog由来の最適化された推論アルゴリズムにより、大規模コードベースでも効率的にテイント伝播経路を導出する。
+  * **結果エクスポート（Reporting）**: OASIS標準規格であるSARIF（Static Analysis Results Interchange Format）形式に出力し、GitHub Code Scanningや各種開発ツールに受け渡す。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * GitHubアカウント（GitHub Actions利用の場合）
-  * GitHub Advanced Securityライセンス（プライベートリポジトリの場合）
-  * CodeQL CLIを利用する場合は、対応OS（Linux, macOS, Windows）
+  * GitHubアカウント
+  * パブリックリポジトリ（無料）、またはGitHub Code Security / GHASライセンスが有効なプライベートリポジトリ
+  * ローカルCLI利用時は対応OS（Linux x86_64/arm64, macOS, Windows）
 * **インストール/導入**:
-  GitHub Actionsで利用する場合、ワークフローファイルに以下を追加するだけです。
+  * **GitHub Actionsワークフロー例**:
+    リポジトリの `.github/workflows/codeql.yml` に以下を定義する。
 
   ```yaml
-  name: "CodeQL"
+  name: "CodeQL Analysis"
   on:
     push:
       branches: [ "main" ]
@@ -120,7 +202,7 @@ relationships:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: javascript-typescript # 解析対象言語を指定
+          languages: javascript-typescript, python
       - name: Autobuild
         uses: github/codeql-action/autobuild@v3
       - name: Perform CodeQL Analysis
@@ -128,141 +210,181 @@ relationships:
   ```
 
 * **初期設定**:
-  * `codeql-action/init` アクションで解析対象の言語を指定する。
+  * **Default Setup（推奨）**: GitHubリポジトリの「Settings」→「Code security and analysis」→「Code scanning」で「Set up: Default」を選択すれば、ワークフローYAMLを手動作成することなく自動構成・実行される。
+  * **Advanced Setup**: カスタムクエリの指定やビルドコマンドのカスタマイズが必要な場合はワークフローYAMLを直接編集する。
 * **クイックスタート**:
-  * パブリックリポジトリであれば、GitHubのリポジトリ設定「Security」タブから「Code scanning」を有効にするだけで、デフォルトのワークフローが提案され、すぐに開始できる。
+  * パブリックリポジトリであれば設定画面から1クリックで有効化可能。最初のPR作成時に自動でスキャンが実行され、脆弱性検出時にはインラインアノテーションが表示される。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
-* **圧倒的な検出精度と柔軟性**: 単純なパターンマッチングではなく、データフロー解析を行うため、誤検知（False Positive）を減らしつつ、深い脆弱性を検出できる。
-* **GitHubエコシステムとの統合**: 開発者が普段使うGitHubのUI上で結果を確認・修正できるため、DevSecOpsの実現に最適。
-* **拡張性**: 公開されている数千のクエリに加え、自組織専用のカスタムクエリを作成して運用できる。
+* **圧倒的な検出精度と低誤検知率**: 単純なテキスト正規表現や単純構文木マッチングではなく、高度なパス依存・インタープロシージャル（関数間）データフロー解析を行うため、実害のないノイズアラート（False Positive）が非常に少ない。
+* **GitHubエコシステムとの完全な融合**: GitHub Actions、Pull Request画面、Securityタブ、GitHub Copilot Autofixとシームレスに結合しており、開発者が慣れ親しんだ開発サイクルを一切妨げずにDevSecOpsを実現できる。
+* **クエリの表現力と拡張性**: 独自のQL言語により、自社固有のフレームワークや社内APIのセキュリティ仕様に合わせたクエリを柔軟に作成可能。さらにJSON/YAML形式のModels-as-Data拡張により、最小限の記述でカスタムライブラリのモデリングを追加できる。
+* **オープンソースに対する完全無償提供**: パブリックリポジトリであれば、すべての高度なセマンティック解析機能とGitHub統合を完全に無料で無制限に利用可能。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
-* **学習コストが高い**: 独自のクエリ言語「QL」を習得する必要があり、カスタムクエリを作成するハードルが高い。
-* **解析時間**: 深い解析を行うため、単純なリンターと比較するとスキャンに時間がかかる場合がある（特にビルドが必要な言語）。
-* **対応言語の制限**: 主要な言語（C/C++, C#, Go, Java, Kotlin, JS/TS, Python, Ruby, Rust, Swift）には対応しているが、SonarQubeなどが対応しているマイナー言語には未対応な場合がある。
+* **QL言語の学習コスト**: 独自の宣言型論理プログラミング言語であるため、カスタムクエリを新規作成・デバッグするには一定の専門知識（述語論理、関係代数、コンパイラ理論）が必要。
+* **解析時間とマシンリソースの消費**: 厳密なビルドトラッキングと全探索的なデータフロー解析を実行するため、単純なリンターや高速な軽量SAST（Semgrepなど）に比べてスキャン時間が長くなりやすい。
+* **言語サポートの範囲**: 主要な11言語（C/C++, C#, Go, Java, Kotlin, JavaScript, TypeScript, Python, Ruby, Swift, Rust）をカバーしているが、SonarQubeなどがサポートするCOBOL, ABAP, Apex, PHPなどのレガシー/特定エンタープライズ言語には未対応。
+* **英語中心のドキュメント**: GitHubの基本UIは日本語対応しているものの、CodeQLの詳細なクエリリファレンス、CLIドキュメント、エラーメッセージ、コミュニティ議論は英語が主流である点に注意が必要。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
-CodeQL自体は、GitHub Advanced Security (GHAS) の一部として提供されます。
+CodeQLの解析機能は、パブリックリポジトリでは無料、プライベートリポジトリでは「GitHub Code Security」または「GitHub Advanced Security (GHAS)」のライセンスアドオンとして提供される。
 
-| プラン名 | 料金 | 主な特徴 |
-|---------|------|---------|
-| **Public Repositories** | 無料 | パブリックリポジトリでは全機能を無料で利用可能。OSS開発者向け。 |
-| **GitHub Advanced Security** | $49/月/ユーザー (概算) | Enterpriseプランのアドオンとして提供。CodeQLに加え、Secret Scanningなども含まれる。正確な価格は営業担当への問い合わせが必要だが、一般的に高価。 |
+| プラン名 | 料金 | 主な特徴・含まれる機能 |
+|---|---|---|
+| **Public Repositories** | 無料 | パブリックリポジトリ向け。CodeQL解析、セキュリティタブ統合、標準クエリスイートを全機能無料で利用可能。 |
+| **GitHub Code Security** | $30 / コミッター / 月 | プライベートリポジトリ向け。CodeQLコードスキャン、Copilot Autofix、依存関係レビュー、Dependabot有料機能を含む。 |
+| **GitHub Secret Protection** | $19 / コミッター / 月 | プライベートリポジトリ向け。シークレットスキャン、プッシュプロテクション、有効性検証（個別契約用）。 |
+| **GitHub Advanced Security (フル)** | $49 / コミッター / 月 | Code Security ($30) と Secret Protection ($19) をセットにした完全版。Enterprise/Teamのアドオンとして提供。 |
 
-* **課金体系**: アクティブコミッター数に基づくライセンス課金（Enterpriseの場合）。
-* **無料トライアル**: GitHub Enterpriseのトライアルに含まれる場合がある。
+* **課金体系**: 過去90日以内にセキュリティ機能が有効なプライベートリポジトリにコミットをプッシュした「ユニーク・アクティブコミッター数」に基づく課金。同一組織内であれば複数リポジトリにコミットしても1名として重複排除される。Botアカウントは除外。
+* **無料トライアル**: GitHub Enterpriseトライアル環境において、GHASの全機能を一定期間検証可能（営業担当窓口または管理ポータルから申請）。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
-* **導入企業**: Microsoft, Google, NASA, Uber など多数のテック企業。
+* **導入企業**: Microsoft, Google, Uber, NASA, Lyft, Adobe など世界中の主要テック企業やグローバル組織。
 * **導入事例**:
-  * **Microsoft**: WindowsやOfficeなどの巨大なコードベースの脆弱性検出にCodeQLを活用。
-  * **Uber**: モバイルアプリやバックエンドサービスのセキュリティ確保に利用。
-* **対象業界**: ソフトウェア開発、金融、政府機関など、高いセキュリティレベルが求められる業界。
+  * **Microsoft**: Windows, Azure, Officeなどの超大規模コードベースにおいて、1つの脆弱性が発見された際に同一パターンを持つ潜在的脆弱性をCodeQLのバリアント分析で網羅的に一網打尽に検出し、プロアクティブな修正を実施。
+  * **Uber**: 数千のマイクロサービスを抱える環境でCodeQLをCIに組み込み、開発速度を落とさずにクリティカルなインジェクション脆弱性を未然に排除。
+* **対象業界**: ソフトウェア・SaaS開発、金融機関、自動車・組込システム、防衛・宇宙航空、政府・公共機関など、厳格なセキュリティ保証とサプライチェーン保護が求められるあらゆる分野。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
-* **ドキュメント**: 公式ドキュメントは非常に充実しており、QL言語のチュートリアルや各言語向けのガイドも豊富。
-* **コミュニティ**: GitHub DiscussionsやIssuesで活発にやり取りが行われている。多くのセキュリティ研究者がクエリを寄稿している。
-* **公式サポート**: Enterprise契約の場合はGitHubの公式サポート（Premium Support）が利用可能。
+* **ドキュメント**: 公式ドキュメント（[codeql.github.com/docs](https://codeql.github.com/docs/)）に詳細なチュートリアル、QL言語仕様、各言語向けモデリングガイド、SARIF連携マニュアルが完備。
+* **コミュニティ**: GitHubリポジトリ（`github/codeql`）のDiscussionsおよびIssuesで活発なディスカッションが行われており、セキュリティ研究者やGitHubエンジニアから直接フィードバックが得られる。
+* **公式サポート**: GitHub Enterprise契約組織には、24時間365日のEnterprise Premium Supportおよびセキュリティスペシャリストによるアドバイザリー支援が提供される。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
-* **API**: GitHub APIを通じて、スキャン結果（アラート）の取得や管理が可能。
+* **API**: GitHub REST APIおよびGraphQL APIにより、Code Scanningのアラート一覧取得、ステータス変更（解決・除外）、SARIFファイルの直接アップロードを完全自動化可能。
 * **外部サービス連携**:
-  * **VS Code**: 公式拡張機能「CodeQL for VS Code」があり、ローカルでクエリの作成や実行、デバッグが可能。
-  * **CIツール**: Jenkins, GitLab CIなど、GitHub Actions以外のCIでもCodeQL CLIを使って連携可能。
+  * **VS Code**: 公式拡張機能「CodeQL for VS Code」により、ローカル環境でCodeQLデータベースの生成、クエリの編集・実行、ASTビューア、パス可視化をインタラクティブに実行可能。
+  * **CI/CDツール**: CodeQL CLIを使用することで、GitLab CI, Jenkins, Azure DevOps, Bitbucket Pipelinesなどの外部CI基盤でも解析を実行し、結果をGitHubまたは自社ダッシュボードに送信可能。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **GitHub Actions** | ◎ | 純正アクションで設定不要に近い | 特になし |
-| **Java / Kotlin** | ◯ | ビルドプロセスにフックして解析可能 | ビルド時間が延びる可能性あり |
-| **JavaScript / TypeScript** | ◎ | ビルド不要で解析可能。Vercel serverless functionsにも対応。 | 大規模なモノレポでは解析時間が長くなる傾向 |
-| **PHP** | × | 公式サポートなし | コミュニティベースの対応はあるかもしれないが非推奨 |
+| **GitHub Actions** | ◎ | 純正Action（`codeql-action`）により数行の設定またはDefault Setupで即時稼働 | 特になし |
+| **JavaScript / TypeScript** | ◎ | ビルド不要で解析可能。Fastify, Next.js, Vercel Functions等のモデリングが充実 | 大規模モノレポでは解析ステップのメモリ設定に注意 |
+| **Python** | ◎ | インタプリタ言語のためビルド不要。Django, Flask, FastAPI等のデータフローを完全捕捉 | 動的メタプログラミングを多用したコードは追跡が限定される場合あり |
+| **Java / Kotlin** | ◎ | Kotlin 2.4 / K2コンパイラ対応。Spring Framework等の主要Webスタックを高精度解析 | ビルド監視を伴うためコンパイル時間分のオーバーヘッドが発生 |
+| **Go** | ◎ | Go 1.27標準ライブラリモデル完備。Autobuildが強力で導入が容易 | 特になし |
+| **C / C++** | ◯ | 複雑なポインタ操作やメモリ破損のディープテイント解析が可能 | 正確なビルドコマンド指定が必須。解析時間は長め |
+| **C# (.NET)** | ◎ | ASP.NET CoreやLINQのクエリ精度が高く、誤検知対策が進展 | ビルド環境（SDKバージョン）の一致が必要 |
+| **Swift** | ◯ | Swift 6.3対応。iOS/macOSネイティブアプリのセキュリティ診断に対応 | macOS 27/Xcode 27でのビルド制約に注意 |
+| **Rust** | ◯ | 実験的サポートから着実にクエリ拡充。暗号化検証などが進化中 | C/C++に比べるとまだクエリ数が発展途上 |
+| **PHP** | × | 公式サポート対象外 | 他のSASTツール（SonarQubeやPsalm、PHPStan）を併用推奨 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-* **認証**: GitHubの認証基盤を利用。EnterpriseではSAML SSOなどに対応。
-* **データ管理**: 解析データはGitHubのインフラ上で安全に管理される（クラウド版）。Self-hosted Runnerを使えば、ソースコードをGitHub側に送信せずに解析することも構成によっては可能。
-* **準拠規格**: OWASP Top 10, CWE Top 25, SANS Top 25 などの主要なセキュリティ基準に対応したクエリセット（Query Suite）が提供されている。
+* **認証**: GitHubの認証基盤に完全準拠。SAML SSO, SCIM, FIDO2/WebAuthn 2要素認証をサポート。
+* **データ管理**: クラウド解析では暗号化通信（TLS 1.3）およびGitHubインフラ内で安全に処理。機密性の高いソースコードを社外に出せない場合は、Self-hosted Runnerを利用して社内ネットワーク内でCodeQL解析を完結させ、SARIFメタデータのみを連携可能。
+* **準拠規格**: OWASP Top 10, CWE Top 25, SANS Top 25, CERT, DISA-STIGなどの業界セキュリティ標準にマッピングされた「Security Extended」クエリスイートを提供。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
-* **UI/UX**: GitHubの「Security」タブに統合されており、Pull RequestのFiles Changedタブで該当行にアラートが表示されるため、開発者体験（DX）は非常に良い。
-* **学習コスト**: デフォルトのクエリセットを使う分には学習コストはほぼゼロ。しかし、カスタムクエリを書く場合は「QL」言語の習得が必要で、これは難易度が高い（SQLや論理プログラミングの知識が役立つ）。
+* **UI/UX**: GitHubのPull Request差分行に直接アノテーションが表示され、脆弱性の危険度・データフロー経路（SourceからSinkまでのステップ）・推奨される修正方針が一目で理解できる。Copilot Autofixにより、修正差分プレビューを確認してそのままコミットできるなど、業界最高水準の開発者体験（DX）を誇る。
+* **学習コスト**: 標準の「Default Setup」で運用する限り、開発チーム側の学習コストは実質ゼロ。ただし、社内フレームワーク用のカスタムQLクエリや高度なデータ拡張モデルを自作する場合は、QL言語および静的解析理論の習得に数週間程度の学習を要する。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * **Default Setup**: 可能であればGitHubの「Default Setup」機能を使い、設定ファイルなしで自動構成する。
-  * **Pull Requestでのブロック**: 重大な脆弱性（Critical/High）が検出された場合、マージをブロックするルールを設定する。
-  * **カスタムクエリの共有**: 組織内で有用なカスタムクエリを作成し、Query Packとして共有・再利用する。
+  * **Default Setupから開始**: まずはGitHub標準のDefault Setupで運用を開始し、開発者の負担を最小限に抑えながらカバレッジを確保する。
+  * **PRマージブロックの段階的適用**: 最初からすべてのアラートでCIを落とすのではなく、まずは「Critical / High」の脆弱性のみを必須チェック（Required Status Check）に設定する。
+  * **Copilot Autofixの積極活用**: 検知された脆弱性に対して提示されるAI修正案を活用し、修正にかかるトリアージ時間を大幅に短縮する。
+  * **Models-as-Dataによる社内ライブラリ拡張**: 社内共通ライブラリの入出力データフローをJSON/YAMLでモデリングし、解析精度を組織全体で向上させる。
 * **陥りやすい罠 (Antipatterns)**:
-  * **全ルールを有効化**: 最初から全てのクエリ（Security Extendedなど）を有効にすると、アラートが多すぎて開発者が疲弊する。まずは「Default」スイートから始める。
-  * **ビルド設定の無視**: コンパイル言語（Java, C++など）の場合、正確なビルドコマンドをCodeQLに伝えないと、解析精度が落ちる（または解析できない）。
+  * **初日からの全クエリスイート有効化**: 「Security Extended」や実験的クエリを最初から全有効化すると、大量のアラートでトリアージが麻痺（アラート疲れ）する。
+  * **コンパイル言語のビルド設定無視**: コンパイル言語（C/C++, Java等）でAutobuildが失敗しているのに警告を無視すると、コードがDB化されず解析カバレッジが著しく低下する。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-* **調査対象**: Reddit (r/devops, r/cybersecurity), Tech Blogs
-* **総合評価**: 非常に高い。特にGitHubを利用している組織にとってはデファクトスタンダード。
+* **調査対象**: G2, Reddit (r/netsec, r/devops), Gartner Peer Insights, Tech Blogs
+* **総合評価**: 4.3 / 5.0 (G2)
 * **ポジティブな評価**:
-  * 「GitHub Actionsとの統合が完璧で、開発フローを阻害しない。」
-  * 「バリアント分析が強力で、1つのバグから類似のバグを何個も見つけられた。」
-  * 「誤検知が他のSASTツールに比べて少ない。」
+  * 「GitHub Actionsとの完全な統合とPR画面でのインライン表示により、開発者が作業フローから離れずにセキュリティ修正できる。」
+  * 「バリアント分析が極めて強力。ゼロデイ脆弱性が公表された際、社内の全リポジトリから類似コードを数分で洗い出せた。」
+  * 「単純な構文マッチングツールに比べてテイント解析が賢く、実害のない誤検知に悩まされる回数が圧倒的に減った。」
 * **ネガティブな評価 / 改善要望**:
-  * 「QL言語が難しすぎる。簡単なカスタムルールを作るだけでも一苦労。」
-  * 「スキャン時間が長い。大きなプルリクエストだと完了まで数十分かかることがある。」
-  * 「GitHub Enterpriseのライセンス費用が高い。」
+  * 「QL言語が極めて難解。独自のカスタムルールを書くためのドキュメントやサンプルがもっと充実してほしい。」
+  * 「大規模なリポジトリではビルドとデータフロー解析に時間がかかり、PRのCI完了待ち時間が増加する。」
+  * 「プライベートリポジトリにおけるGHASのライセンス費用が比較的高価で、小規模チームには敷居が高い。」
+* **特徴的なユースケース**:
+  * 社内のセキュリティ研究チームがCVEの詳細を分析した上でカスタムQLクエリを即日作成し、GitHubのマルチリポジトリバリアント分析（MRVA）を実行して社内数千リポジトリの潜在リスクを数時間で特定・一括トリアージする高度な活用。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2026-05-21 (v2.25.5)**: C/C++の解析改善（`fscanf`など）。
-* **2026-05-05 (v2.25.4)**: Swift 6.3.1対応、JavaScript/TypeScriptでVercel serverless functions（`@vercel/node`）のサポートを追加。
-* **2026-04-30 (v2.25.3)**: C#での`useless-tostring-call`クエリの精度向上。
-* **2026-03-19 (v2.25.0)**: C#での新しいリモートソースモデリング追加（`System.Net.WebSockets::ReceiveAsync`）。Swift 6.2.4対応。
-* **2026-03-05 (v2.24.3)**: Java 26のサポート追加。
-* **2026-02-05 (v2.24.1)**: Kotlin 2.3.0への対応、PythonでのLLMプロンプトインジェクション検知クエリ（実験的）の追加。
-* **2026-01-26 (v2.24.0)**: JavaScript/TypeScriptで巨大ファイル（行長200文字超）を最小化ファイルとみなしてスキップする改善、Swift 6.2.3対応。
-* **2026-01-09 (v2.23.9)**: 各種言語のバグ修正と安定性向上。
+* **2026-10-20 (v2.27.3)**:
+  * データ拡張（Data extensions / Models-as-data）で従来のYAML形式に加えJSON形式（コメント記述対応）のネイティブサポートを追加。
+  * macOS 27 / Xcode 27におけるコンパイル言語のautobuild / manual buildサポート制限（Appleのmulti-archバイナリ廃止への追従）。
+  * GitHub Actionsデータベースのダウングレードに関する不具合修正。
+* **2026-10-07 (v2.27.2)**:
+  * CLIの標準エラー出力における警告・エラー表示を明示化（`ERROR:` / `WARNING:` プレフィックスを付与）。
+  * `codeql query compile` に `--dil-constants` フラグを追加。YAMLデータ拡張における32bit整数範囲外の厳格検証。
+* **2026-09-22 (v2.27.1)**:
+  * Kotlin 2.4.20 サポート追加および Kotlin K2 コンパイラでの抽出精度向上。
+  * Go 1.27 標準ライブラリ向けデータフローモデルの拡充。
+  * C/C++ テイントフローおよびフローサマリーモデルを追加。
+  * C# LINQ / ASP.NET Core の誤検知抑制、GitHub Actionsセキュリティクエリ（`actions/unpinned-tag`）での `actions.lock` 連携。
+* **2026-09-09 (v2.27.0)**:
+  * Linux arm64 (`linux-arm64`) ネイティブ対応の正式サポート開始（プラットフォーム別CLIおよびバンドルの提供）。
+  * Java 9 および 10 サポートの非推奨化（2027年1月削除予定）。
+  * 汎用マルチプラットフォーム zip 配布の非推奨化とプラットフォーム個別アーカイブへの完全移行。
+* **2026-08-19 (v2.26.3)**:
+  * GitHub Actions ワークフローに対するセキュリティ検証（環境変数インジェクション、キャッシュポイズニング検知等）の解析精度向上。
+  * JavaScript / TypeScript / Vue のソースモデリング対応、`@fastify/rate-limit` レート制限モデリング追加。
+* **2026-07-23 (v2.26.2)**:
+  * アラートメッセージ内のレガシー記法（`[["text" | "url"]]`）の廃止（`$@` プレースホルダーへの完全移行）。
+  * Swift 6.3 の完全解析サポート追加。
+* **2026-07-15 (v2.26.1)**:
+  * Rust 暗号化チェック（`rust/hard-coded-cryptographic-value`）における算術・ビット演算のバリア扱いによる誤検知削減。
+  * C/C++ models-as-data における変数の source/sink 利用サポート廃止。
+* **2026-07-08 (v2.26.0)**:
+  * CLIパフォーマンス改善（Gitリポジトリ操作の冗長コマンド最小化）。
+  * Go（`go/unhandled-writable-file-close`）および Python（`py/modification-of-locals`）の誤検知抑制。
+* **2026-05-21 (v2.25.5)**:
+  * C/C++ の解析改善（`fscanf` 等のモデル拡充）。
+* **2026-05-05 (v2.25.4)**:
+  * Swift 6.3.1 対応、JavaScript/TypeScript での Vercel serverless functions（`@vercel/node`）サポート追加。
 
-(出典: [CodeQL Changelog](https://codeql.github.com/docs/codeql-overview/codeql-changelog/))
+(出典: [CodeQL Releases](https://github.com/github/codeql/releases) / [CodeQL Changelog](https://codeql.github.com/docs/codeql-overview/codeql-changelog/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | CodeQL | SonarQube | Snyk Code |
-|:---:|:---|:---:|:---:|:---:|
-| **基本機能** | 静的解析 (SAST) | ◎<br><small>深いセマンティック解析</small> | ◯<br><small>広範なルールベース</small> | ◯<br><small>高速なAI解析</small> |
-| **言語サポート** | 対応言語数 | ◯<br><small>主要10言語+</small> | ◎<br><small>30言語以上</small> | ◯<br><small>主要言語</small> |
-| **カスタマイズ** | クエリ柔軟性 | ◎<br><small>QL言語で自在に記述可</small> | △<br><small>XPath等で限定的</small> | △<br><small>限定的</small> |
-| **統合** | GitHub連携 | ◎<br><small>ネイティブ統合</small> | ◯<br><small>PR装飾など対応</small> | ◯<br><small>PRチェック対応</small> |
-| **品質** | コード品質指標 | △<br><small>セキュリティ特化</small> | ◎<br><small>複雑度、重複など網羅</small> | △<br><small>セキュリティ特化</small> |
+| 機能カテゴリ | 機能項目 | CodeQL | SonarQube | Snyk Code | Semgrep |
+|:---:|:---|:---:|:---:|:---:|:---:|
+| **解析深度** | ディープテイント解析 | ◎<br><small>DB化による高精度追跡</small> | ◯<br><small>標準的なデータフロー</small> | ◯<br><small>AI統合型解析</small> | △<br><small>Pro版でクロスファイル対応</small> |
+| **カスタマイズ** | クエリ表現力 | ◎<br><small>論理型QL言語で自在に記述</small> | △<br><small>XPathやカスタムJavaプラグイン</small> | △<br><small>設定中心・限定的</small> | ◎<br><small>YAML構文パターンで直感的</small> |
+| **プラットフォーム** | GitHub統合 | ◎<br><small>純正・Copilot Autofix直結</small> | ◯<br><small>PRデコレーション対応</small> | ◯<br><small>PRチェック連携</small> | ◯<br><small>PRコメント連携</small> |
+| **言語網羅性** | 対応言語数 | ◯<br><small>主要11言語</small> | ◎<br><small>30言語以上を網羅</small> | ◯<br><small>主要Web/モバイル言語</small> | ◯<br><small>30言語以上の構文対応</small> |
+| **解析速度** | CIスキャン所要時間 | △<br><small>ビルド監視・重厚な解析</small> | ◯<br><small>差分解析で比較的高速</small> | ◎<br><small>AIエンジンによる超高速解析</small> | ◎<br><small>構文木ベースで極めて高速</small> |
+| **コスト** | OSS向け無償利用 | ◎<br><small>パブリックリポジトリ完全無料</small> | ◎<br><small>Community版OSS無料</small> | ◯<br><small>月間スキャン上限あり無料</small> | ◎<br><small>OSS版無料</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **CodeQL** | GitHub純正の深層解析エンジン | データフロー解析による高い精度、脆弱性の深掘り、GitHub統合 | 解析速度が遅め、言語サポートが主要言語に限られる | GitHubをメインで使用しており、セキュリティを最優先したい場合 |
-| **SonarQube** | 汎用的なコード品質プラットフォーム | 圧倒的な対応言語数、セキュリティだけでなく「保守性」も可視化できる | 深い脆弱性（テイント解析）の精度はCodeQLに譲る場合がある | コード品質全体（複雑度、重複など）を管理したい場合、オンプレミス運用が必須の場合 |
-| **Snyk Code** | 高速なAIベースのSAST | 非常に高速なスキャン、IDEでの使い勝手が良い | CodeQLほど詳細なカスタムクエリは書けない | 開発者のIDEでリアルタイムに修正させたい場合、スピード重視の場合 |
+| **CodeQL** | GitHub純正のセマンティックコード解析エンジン | 深いデータフロー・テイント解析の精度、GitHub & Copilot Autofixネイティブ統合、QLによる極めて柔軟なバリアント分析 | QLの学習コストが高い、コンパイル言語のビルド追跡に伴うスキャン時間の長さ | GitHubをメイン基盤としており、重大な脆弱性の徹底検出を最優先したい開発・セキュリティ組織 |
+| **SonarQube** | 業界標準のコード品質＆セキュリティ管理プラットフォーム | 30以上の広範な言語サポート、セキュリティだけでなく技術的負債やコードの保守性指標を網羅可視化 | 深い脆弱性（複雑なテイントパス）の検出精度はCodeQLに譲る場合がある、オンプレサーバー運用負荷 | 単一ツールでコード品質・規約遵守・セキュリティを全社一元管理したい場合、GitLab/Bitbucket環境 |
+| **Snyk Code** | AIを活用した超高速な開発者フレンドリーSAST | クラウドAIによるミリ秒単位の高速スキャン、IDEプラグインの優れた修正体験、Snykエコシステム（SCA/コンテナ）統合 | 独自ルールの作成自由度が低い、大規模組織でのライセンスコストが高価 | 開発者のIDE上でリアルタイムに修正させたい現場、CIの実行速度を最優先したいアジャイル開発 |
+| **Semgrep** | パターンマッチングと軽量テイント解析を融合したSAST | YAMLでソースコードそのままのパターンでカスタムルールを即座に作成可能、超高速スキャン | 無料版ではファイル間データフロー解析が限定的（Proエンジンが必要） | 軽量かつ高速に自社固有の禁止APIやコーディング規約をルール化してガードレールを敷きたい場合 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
-  セキュリティ専門家からも高く評価される、現時点で**最高峰のSASTツールの一つ**です。特にGitHub Advanced Securityを利用できる環境であれば、導入しない手はありません。
+  * CodeQLは、コードをリレーショナルデータベースとして捉え、論理型クエリ言語で脆弱性を追跡する「現時点で最も先進的かつ深層まで到達できるSASTエンジン」である。GitHub Advanced SecurityおよびGitHub Copilot Autofixとのシームレスな統合により、脆弱性の検出からAIによる自動修正提案・適用までを開発者のPRフロー内でワンストップに完結できる卓越した開発者体験を提供する。
 * **推奨されるチームやプロジェクト**:
-  * GitHubで開発を行っている全てのチーム
-  * セキュリティ要件が厳しいエンタープライズ開発
-  * オープンソースプロジェクト（無料で利用できるため）
+  * GitHubをプライマリリポジトリとして開発を推進しているすべてのエンタープライズ・Web開発チーム。
+  * 外部からの攻撃リスクが高い公開Webアプリケーションや、複雑なビジネスロジックを抱える金融・インフラ系システム。
+  * オープンソースソフトウェアのメンテナ（完全無料で最高水準のセキュリティスキャンを導入可能）。
 * **選択時のポイント**:
-  * **GitHubを使っているか**: GitHub利用者ならCodeQLが第一候補。GitLabやBitbucketならSonarQubeやSnykが有力候補。
-  * **何を重視するか**: 「深い脆弱性の発見」ならCodeQL。「コードの綺麗さ（保守性）」ならSonarQube。「スキャン速度」ならSnyk。
+  * **リポジトリ基盤**: GitHub中心であればCodeQL（GHAS / Code Security）が第一候補。GitLabやオンプレミス中心、または30言語以上のレガシー資産混在環境であればSonarQubeが適する。
+  * **解析速度とルールの手軽さ**: PRの待ち時間を数秒〜数十秒に抑え、手軽にカスタムルールを書きたい場合はSemgrepが有力。一方で、「多少のCI時間をかけてでもSQLインジェクションやSSRFなどの致命的なクロスファイル脆弱性を徹底的に根絶したい」場合はCodeQLが最適解となる。
