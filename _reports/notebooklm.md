@@ -49,7 +49,6 @@ relationships:
     - Google Illuminate
     - Perplexity
     - LilysAI
-    - Huxe
 ---
 # **NotebookLM 調査レポート**
 

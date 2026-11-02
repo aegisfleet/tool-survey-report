@@ -41,7 +41,6 @@ links:
   deepwiki: https://deepwiki.com/bytedance/deer-flow
 relationships:
   related_tools:
-    - Google Jules
     - Devin
     - OpenHands
 ---

@@ -6,7 +6,7 @@ AIエージェントを用いてツールの情報を収集して公開するサ
 
 ## 概要
 
-このサイトは、**GoogleのJulesエージェント**が実施したツール調査レポートを効率的に公開・共有するためのプラットフォームです。各ツールの機能、特徴、使用方法を詳細に調査し、その結果をMarkdown形式のレポートとして作成・公開しています。これらのレポートは、ツールの内容把握と目的に応じた最適なツールの比較検討に役立てることを目的としています。Jekyll静的サイトジェネレーターを使用して自動的にWebサイトとして公開されます。
+このサイトは、AIエージェントを活用して作成したツール調査レポートを効率的に公開・共有するためのプラットフォームです。各ツールの機能、特徴、使用方法をMarkdown形式のレポートとして公開し、内容把握や目的に応じた比較検討に役立てることを目的としています。Jekyll静的サイトジェネレーターを使用して自動的にWebサイトとして公開されます。
 
 **🌐 サイトURL**: <https://aegisfleet.github.io/tool-survey-report/>
 
@@ -22,7 +22,7 @@ AIエージェントを用いてツールの情報を収集して公開するサ
 - **⚡ 高速表示**: Jekyll静的サイトによる高速ページ読み込み
 - **🔧 SEO最適化**: メタタグ、OGP、構造化データ対応
 - **♿ アクセシビリティ**: WCAG準拠のアクセシブルなデザイン
-- **🤖 自動レポート更新**: Jules APIを使用した1日1回の自動レポート更新
+- **🤖 自動レポート更新**: GitHub Actionsによる定期的なレポート更新・整理
 - **🧠 AIエージェント・LLM対応**: `llms.txt` / `llms-full.txt`、軽量インデックスJSON、Raw Markdown連携によるAIからの情報収集・参照支援（詳細は [docs/llm-endpoints-guide.md](docs/llm-endpoints-guide.md)）
 
 ## プロジェクト構成
@@ -211,23 +211,20 @@ layout: report
 ```mermaid
 sequenceDiagram
     participant GA as GitHub Actions
-    participant JA as Jules API
-    participant J as Jules
+    participant AI as AIエージェント
     participant GR as GitHub Repository
     participant GP as GitHub Pages
 
-    GA->>JA: 1. Jules APIを呼び出し
-    JA->>J: 2. タスクを実行
-    J->>J: 3. レポート作成
-    J->>GR: 4. プルリクエストを自動作成
-    GR->>GA: 5. プルリクエスト作成をトリガー
-    GA->>GR: 6. プルリクエストを自動マージ
-    GR->>GP: 7. サイト再ビルド・更新
+    GA->>AI: 1. レポートの更新・整理を依頼
+    AI->>GR: 2. 変更を含むプルリクエストを作成
+    GR->>GA: 3. プルリクエスト作成をトリガー
+    GA->>GR: 4. 条件を満たした変更をマージ
+    GR->>GP: 5. サイトを再ビルド・更新
 ```
 
-1. **GitHub Actions**からJules APIを呼び出し、Julesでタスクを実行
-2. **Jules**が自動でGitHubにプルリクエストを作成
-3. **GitHub Actions**でJulesが作ったプルリクエストを自動マージ
+1. **GitHub Actions**が定期的にAIエージェントを実行し、レポートを更新
+2. **AIエージェント**が変更を含むプルリクエストを作成
+3. **GitHub Actions**が検証後、条件を満たしたプルリクエストを自動マージ
 4. マージ後、GitHub Pagesが自動的にサイトを更新
 
 ### AIエージェント改善プロセス
@@ -306,7 +303,7 @@ AIエージェントは以下のように継続的に学習・改善します。
 ### 管理者
 
 - **作成者**: ポち ([@aegisfleet](https://x.com/aegisfleet))
-- **レポート作成**: GoogleのJulesエージェント
+- **レポート作成**: AIエージェント
 
 ## ライセンス
 

@@ -42,7 +42,6 @@ relationships:
   related_tools:
     - Cursor
     - Cline
-    - Google Jules
     - OpenCode
 ---
 

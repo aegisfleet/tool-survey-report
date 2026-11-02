@@ -50,7 +50,6 @@ relationships:
     - NotebookLM
     - Code Wiki
     - Gemini Skills
-    - Google Jules
   related_tools:
     - 天才くん
     - ChatGPT

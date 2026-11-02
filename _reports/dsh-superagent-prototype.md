@@ -50,7 +50,6 @@ relationships:
     - Devin
     - Claude Code
     - OpenHands
-    - Google Jules
     - Symphony
 ---
 

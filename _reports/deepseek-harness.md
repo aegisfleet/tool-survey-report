@@ -49,7 +49,6 @@ relationships:
   related_tools:
     - OpenHands
     - Devin
-    - Google Jules
     - Agent Zero
 ---
 
