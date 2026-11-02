@@ -75,9 +75,20 @@ def validate_static_mermaid_blocks(filepath, blocks):
     errors = []
     subgraph_pattern = re.compile(r'^\s*subgraph\s+(.+?)\s*$')
     edge_label_pattern = re.compile(r'\|([^|]+)\|')
+    reverse_edge_label_pattern = re.compile(r'(?:<--|<-\.|<==)\s*\|')
 
     for block in blocks:
         for offset, line in enumerate(block["code"].splitlines(), start=1):
+            if reverse_edge_label_pattern.search(line):
+                errors.append({
+                    "line": block["line"] + offset,
+                    "error": (
+                        "Inline labels immediately after reverse arrows can break "
+                        "Mermaid rendering. Reverse the edge direction and use a "
+                        "forward arrow instead."
+                    )
+                })
+
             match = subgraph_pattern.match(line)
             if match:
                 label = match.group(1)

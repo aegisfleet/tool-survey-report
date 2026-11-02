@@ -126,6 +126,17 @@ class TestMermaidStaticValidation(unittest.TestCase):
 
         self.assertEqual(self._validate(code), [])
 
+    def test_flags_inline_label_after_reverse_arrow(self):
+        code = "\n".join([
+            "flowchart TD",
+            "  A <--|応答| B",
+        ])
+
+        errors = self._validate(code)
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("reverse arrows", errors[0]["error"])
+
 
 if __name__ == '__main__':
     unittest.main()
