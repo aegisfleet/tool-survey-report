@@ -44,6 +44,7 @@ relationships:
     - Vercel
     - Cloudflare Workers
     - Google Cloud CLI
+    - Supabase
 ---
 # **Firebase CLI 調査レポート**
 
