@@ -52,39 +52,49 @@ def find_mermaid_blocks(filepath):
             
     return blocks
 
+def _find_invalid_mermaid_chars(text):
+    """Return characters that break Mermaid's lexer in unquoted labels/IDs."""
+    # Mermaid accepts many ASCII punctuation characters in unquoted titles,
+    # but some punctuation and non-ASCII symbols break the lexer.
+    invalid_ascii_chars = set(',()[]{}<>|@=~"')
+    return sorted({
+        char for char in text
+        if char in invalid_ascii_chars
+        or (ord(char) > 127 and unicodedata.category(char)[0] in ('P', 'S'))
+    })
+
+
 def validate_static_mermaid_blocks(filepath, blocks):
     """Validate Mermaid blocks without a browser.
 
-    Catches subgraph labels that Mermaid's lexer cannot parse unless quoted,
-    such as Japanese punctuation inside an unquoted title (e.g. ストレージ・配信層).
+    Catches subgraph labels and IDs that Mermaid's lexer cannot parse unless
+    quoted, such as Japanese punctuation inside an unquoted title
+    (e.g. ストレージ・配信層) or inside a subgraph ID
+    (e.g. subgraph 拡張・出力["表示名"]).
     """
     errors = []
     subgraph_pattern = re.compile(r'^\s*subgraph\s+(.+?)\s*$')
     edge_label_pattern = re.compile(r'\|([^|]+)\|')
-    # Characters that break Mermaid's lexer in unquoted subgraph labels.
-    invalid_ascii_chars = set(',()[]{}<>|@=~"')
 
     for block in blocks:
         for offset, line in enumerate(block["code"].splitlines(), start=1):
             match = subgraph_pattern.match(line)
             if match:
                 label = match.group(1)
-                if not label.startswith('"') and '[' not in label:
-                    # Mermaid accepts many ASCII punctuation characters in
-                    # unquoted titles, but some punctuation and non-ASCII
-                    # symbols break the lexer.
-                    invalid_chars = sorted({
-                        char for char in label
-                        if char in invalid_ascii_chars
-                        or (ord(char) > 127 and unicodedata.category(char)[0] in ('P', 'S'))
-                    })
+                # For `subgraph ID["表示名"]` the token before `[` is the ID,
+                # which also has to be a lexer-safe identifier. Checking only
+                # the display name misses invalid IDs such as `拡張・出力`.
+                subgraph_id = label.split('[', 1)[0].strip()
+                if not subgraph_id.startswith(('"', "'")):
+                    invalid_chars = _find_invalid_mermaid_chars(subgraph_id)
                     if invalid_chars:
                         errors.append({
                             "line": block["line"] + offset,
                             "error": (
-                                "Unquoted subgraph label contains punctuation that Mermaid "
+                                "Unquoted subgraph ID contains punctuation that Mermaid "
                                 f"cannot parse: {''.join(invalid_chars)}. "
-                                'Quote it as subgraph ID["表示名"] or subgraph "表示名".'
+                                'Use an ASCII identifier and quote the display name, '
+                                'e.g. subgraph Output["表示名"].'
                             )
                         })
 
@@ -95,11 +105,7 @@ def validate_static_mermaid_blocks(filepath, blocks):
                 edge_label = edge_match.group(1).strip()
                 if edge_label.startswith(('"', "'")) and edge_label.endswith(('"', "'")):
                     continue
-                invalid_edge_chars = sorted({
-                    char for char in edge_label
-                    if char in invalid_ascii_chars
-                    or (ord(char) > 127 and unicodedata.category(char)[0] in ('P', 'S'))
-                })
+                invalid_edge_chars = _find_invalid_mermaid_chars(edge_label)
                 if invalid_edge_chars:
                     errors.append({
                         "line": block["line"] + offset,

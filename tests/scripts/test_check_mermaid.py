@@ -47,6 +47,30 @@ class TestMermaidStaticValidation(unittest.TestCase):
 
         self.assertEqual(self._validate(code), [])
 
+    def test_flags_japanese_punctuation_in_subgraph_id_with_bracket_label(self):
+        code = "\n".join([
+            "flowchart TD",
+            '  subgraph 拡張・出力["プラグイン・エンコーダー"]',
+            "    A --> B",
+            "  end",
+        ])
+
+        errors = self._validate(code)
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("・", errors[0]["error"])
+        self.assertIn("subgraph ID", errors[0]["error"])
+
+    def test_allows_ascii_subgraph_id_with_japanese_bracket_label(self):
+        code = "\n".join([
+            "flowchart TD",
+            '  subgraph Output_Layer["プラグイン・エンコーダー"]',
+            "    A --> B",
+            "  end",
+        ])
+
+        self.assertEqual(self._validate(code), [])
+
     def test_allows_japanese_letters_without_punctuation(self):
         code = "\n".join([
             "flowchart TD",
