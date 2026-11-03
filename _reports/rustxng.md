@@ -1,55 +1,51 @@
 ---
-title: "RustXNG 調査レポート"
-tool_name: "RustXNG"
-tool_reading: "ラストエックスエヌジー"
-category: "AI検索/ブラウザ拡張"
-developer: "sahenjp / RustXNG Community"
-official_site: "https://github.com/sahenjp/RustXNG"
-date: "2026-11-03"
-last_updated: "2026-11-03"
+title: RustXNG 調査レポート
+tool_name: RustXNG
+tool_reading: ラストエックスエヌジー
+category: AI検索/ブラウザ拡張
+developer: sahenjp / RustXNG Community
+official_site: https://github.com/sahenjp/RustXNG
+date: '2026-11-03'
+last_updated: '2026-11-03'
 tags:
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-  - "検索エンジン"
-  - "プライバシー保護"
-  - "MCP"
-description: "SearXNGをRustでフルリライトした、ローカルAIエージェント向けのセルフホスト型メタ検索・グラウンディング基盤"
-
+  - オープンソース
+  - エージェント
+  - 開発者ツール
+  - 検索エンジン
+  - プライバシー保護
+  - MCP
+description: SearXNGをRustでフルリライトした、ローカルAIエージェント向けのセルフホスト型メタ検索・グラウンディング基盤
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "ローカルLLM/RAG構築者"
-    - "プライバシー重視の開発者"
-  latest_highlight: "2026年11月にv0.27.1リリース、MCPサーバー整備とプロバイダー利用規約対応・セキュリティ強化"
-  update_frequency: "高"
-
+    - AIエージェント開発者
+    - ローカルLLM/RAG構築者
+    - プライバシー重視の開発者
+  latest_highlight: 2026年11月にv0.27.1リリース、MCPサーバー整備とプロバイダー利用規約対応・セキュリティ強化
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "SearXNG互換のメタ検索をRust製シングルバイナリで超高速・省メモリに実現"
+      reason: SearXNG互換のメタ検索をRust製シングルバイナリで超高速・省メモリに実現
     - point: 5
-      reason: "スニペット＋本文取得（raw_content）やMCPサーバー標準搭載などAIエージェント特化設計"
+      reason: スニペット＋本文取得（raw_content）やMCPサーバー標準搭載などAIエージェント特化設計
     - point: 5
-      reason: "商用検索APIに依存せずAPIキー不要でセルフホスト運用が可能"
+      reason: 商用検索APIに依存せずAPIキー不要でセルフホスト運用が可能
   minus_points:
     - point: -2
-      reason: "外部検索プロバイダーの利用規約やスクレイピング制限に応じた適切なエンジン選定・管理が必要"
-  summary: "Rustによる圧倒的な速度と省リソース性能を備え、AIエージェント向けMCPや本文抽出に特化したローカルメタ検索エンジン"
-
+      reason: 外部検索プロバイダーの利用規約やスクレイピング制限に応じた適切なエンジン選定・管理が必要
+  summary: Rustによる圧倒的な速度と省リソース性能を備え、AIエージェント向けMCPや本文抽出に特化したローカルメタ検索エンジン
 links:
-  github: "https://github.com/sahenjp/RustXNG"
-  documentation: "https://github.com/sahenjp/RustXNG/blob/main/docs/AI-INFRA.md"
-
+  github: https://github.com/sahenjp/RustXNG
+  documentation: https://github.com/sahenjp/RustXNG/blob/main/docs/AI-INFRA.md
 relationships:
   related_tools:
-    - "Perplexity"
-    - "Model Context Protocol"
+    - Perplexity
+    - Model Context Protocol
 ---
 
 # **RustXNG 調査レポート**
