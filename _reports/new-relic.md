@@ -48,6 +48,7 @@ relationships:
     - Splunk AppDynamics
     - Grafana
     - Splunk
+    - Sentry
 ---
 
 # **New Relic 調査レポート**
