@@ -454,7 +454,11 @@ function initReadingTime() {
   const container = document.getElementById('report-reading-time');
   if (!reportContent || !container) return;
 
-  const text = reportContent.textContent || '';
+  const contentWithoutCode = reportContent.cloneNode(true);
+  contentWithoutCode.querySelectorAll('pre').forEach((codeBlock) => {
+    codeBlock.remove();
+  });
+  const text = contentWithoutCode.textContent || '';
   const charCount = text.replace(/\s+/g, '').length;
   // 日本語約500文字/分で算定（最低1分）
   const minutes = Math.max(1, Math.ceil(charCount / 500));
