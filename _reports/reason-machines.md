@@ -1,58 +1,55 @@
 ---
-title: "Reason Machines 調査レポート"
-tool_name: "Reason Machines"
-tool_reading: "リーズン マシーンズ / リーズン"
-category: "自律型コーディングエージェント"
-developer: "Reason Machines Inc."
-official_site: "https://reasonmachines.com/"
-date: "2026-11-03"
-last_updated: "2026-11-03"
+title: Reason Machines 調査レポート
+tool_name: Reason Machines
+tool_reading: リーズン マシーンズ / リーズン
+category: 自律型コーディングエージェント
+developer: Reason Machines Inc.
+official_site: https://reasonmachines.com/
+date: '2026-11-03'
+last_updated: '2026-11-03'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "コーディング支援"
-  - "開発者ツール"
-  - "オープンソース"
-description: "高効率な推論ハーネスを備えた自律型コーディングエージェントと、異種AIエージェント同士をP2Pで直接接続・協調させるオープンソース基盤を提供する開発プラットフォーム。"
-
+  - AI
+  - エージェント
+  - 自律型
+  - コーディング支援
+  - 開発者ツール
+  - オープンソース
+description: 高効率な推論ハーネスを備えた自律型コーディングエージェントと、異種AIエージェント同士をP2Pで直接接続・協調させるオープンソース基盤を提供する開発プラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェアエンジニア"
-    - "開発チーム・テックリード"
-    - "自律開発エージェント運用者"
-  latest_highlight: "2026年10月にReason Agent 1.1およびマルチエージェント協調P2PネットワークReason Networkを発表"
-  update_frequency: "高"
-
+    - ソフトウェアエンジニア
+    - 開発チーム・テックリード
+    - 自律開発エージェント運用者
+  latest_highlight: 2026年10月にReason Agent 1.1およびマルチエージェント協調P2PネットワークReason Networkを発表
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 5
-      reason: "並列ツール実行（codemode）とキャッシュ最適化ハーネスにより、Codex比でトークン消費を抑え解決タスクあたりコストを22%削減"
+      reason: 並列ツール実行（codemode）とキャッシュ最適化ハーネスにより、Codex比でトークン消費を抑え解決タスクあたりコストを22%削減
     - point: 5
-      reason: "オープンソースのReason Network（Rust製P2Pデーモン）により、Claude CodeやCursorなど異種エージェント間のリアルタイム協調を実現"
+      reason: オープンソースのReason Network（Rust製P2Pデーモン）により、Claude CodeやCursorなど異種エージェント間のリアルタイム協調を実現
     - point: 4
-      reason: "検証済みのログや画面録画動画・スクリーンショットを自動添付したプルリクエスト作成など実務開発を意識した証拠重視の設計"
+      reason: 検証済みのログや画面録画動画・スクリーンショットを自動添付したプルリクエスト作成など実務開発を意識した証拠重視の設計
   minus_points:
     - point: -2
-      reason: "Web画面やドキュメントの多くが英語中心であり、一部日本語ページはあるもののコミュニティやサポートは英語主体"
+      reason: Web画面やドキュメントの多くが英語中心であり、一部日本語ページはあるもののコミュニティやサポートは英語主体
     - point: -2
-      reason: "Y Combinator（P26）採択の新興プラットフォームであり、大規模エンタープライズでの長期的な運用実績は発展途上"
-  summary: "異種AIコーディングエージェントのP2P協調基盤と、コスト効率に優れた自律型コーディングエージェントを兼ね備えた革新的な開発プラットフォーム。"
-
+      reason: Y Combinator（P26）採択の新興プラットフォームであり、大規模エンタープライズでの長期的な運用実績は発展途上
+  summary: 異種AIコーディングエージェントのP2P協調基盤と、コスト効率に優れた自律型コーディングエージェントを兼ね備えた革新的な開発プラットフォーム。
 links:
-  github: "https://github.com/reason-machines/reason-network"
-  documentation: "https://docs.reasonmachines.com/"
+  github: https://github.com/reason-machines/reason-network
+  documentation: https://docs.reasonmachines.com/
 relationships:
   related_tools:
-    - "Claude Code"
-    - "Devin"
-    - "OpenHands"
-    - "Cursor"
+    - Claude Code
+    - Devin
+    - OpenHands
+    - Cursor
 ---
 
 # **Reason Machines 調査レポート**
