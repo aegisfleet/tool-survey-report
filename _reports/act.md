@@ -50,6 +50,7 @@ relationships:
     - Docker
     - GitLab CI/CD
     - Jenkins
+    - Lefthook
 ---
 # **act (nektos/act) 調査レポート**
 
