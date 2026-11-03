@@ -49,6 +49,7 @@ relationships:
   parent: Android
   related_tools:
     - Appium
+    - Phone Harness
     - UiPath
     - Devin
     - Claude

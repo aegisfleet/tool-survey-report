@@ -43,6 +43,7 @@ links:
 relationships:
   related_tools:
     - OpenHands
+    - Phone Harness
 ---
 
 # **Hermes Agent 調査レポート**
