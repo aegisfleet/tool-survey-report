@@ -627,6 +627,11 @@ function addCopyButtonsToCodeBlocks() {
         setTimeout(() => {
           button.textContent = 'コピー';
         }, 2000);
+      }).catch(() => {
+        button.textContent = 'コピーに失敗しました';
+        setTimeout(() => {
+          button.textContent = 'コピー';
+        }, 2000);
       });
     });
 
@@ -1277,7 +1282,7 @@ function scrollToTop() {
     header.style.transition = 'none';
 
     // レイアウト再計算を強制
-    void header.offsetHeight;
+    header.getBoundingClientRect();
   }
 
   if (prefersReducedMotion) {
@@ -1416,9 +1421,9 @@ function initThemeToggle() {
     const root = document.documentElement;
 
     if (theme === 'dark') {
-      root.setAttribute('data-theme', 'dark');
+      root.dataset.theme = 'dark';
     } else {
-      root.setAttribute('data-theme', 'light');
+      root.dataset.theme = 'light';
     }
 
     // スクリーンリーダー向けにテーマ変更をアナウンス（初期化時は行わない）
