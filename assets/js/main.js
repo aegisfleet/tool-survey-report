@@ -622,17 +622,20 @@ function addCopyButtonsToCodeBlocks() {
     });
 
     button.addEventListener('click', () => {
-      navigator.clipboard.writeText(codeBlock.textContent).then(() => {
-        button.textContent = 'コピー済み!';
-        setTimeout(() => {
-          button.textContent = 'コピー';
-        }, 2000);
-      }).catch(() => {
-        button.textContent = 'コピーに失敗しました';
-        setTimeout(() => {
-          button.textContent = 'コピー';
-        }, 2000);
-      });
+      navigator.clipboard
+        .writeText(codeBlock.textContent)
+        .then(() => {
+          button.textContent = 'コピー済み!';
+          setTimeout(() => {
+            button.textContent = 'コピー';
+          }, 2000);
+        })
+        .catch(() => {
+          button.textContent = 'コピーに失敗しました';
+          setTimeout(() => {
+            button.textContent = 'コピー';
+          }, 2000);
+        });
     });
 
     pre.appendChild(button);
