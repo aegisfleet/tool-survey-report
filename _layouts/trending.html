@@ -61,3 +61,28 @@ layout: default
   </footer>
 </article>
 </div>
+
+<script type="module">
+  import { mount } from 'https://cdn.jsdelivr.net/npm/pele@1.12.0/dist/pele.js';
+
+  document.querySelectorAll('pre code.language-mermaid').forEach((codeBlock) => {
+    const pre = codeBlock.parentElement;
+    if (!pre) return;
+
+    const container = document.createElement('div');
+    container.className = 'mermaid-diagram';
+    pre.replaceWith(container);
+
+    mount(container, codeBlock.textContent, {
+      zoom: {
+        always: true,
+        controls: true,
+        labels: {
+          zoomIn: '拡大',
+          zoomOut: '縮小',
+          reset: 'リセット'
+        }
+      }
+    });
+  });
+</script>
