@@ -50,6 +50,7 @@ relationships:
     - Splunk
     - Splunk AppDynamics
     - New Relic
+    - Sentry
     - Grafana
     - Amazon OpenSearch Service
     - AWS DevOps Agent
