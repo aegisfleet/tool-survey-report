@@ -48,6 +48,7 @@ relationships:
     - Felo
     - NotebookLM
     - Google Disco
+    - RustXNG
 ---
 # **Perplexity 調査レポート**
 
