@@ -41,6 +41,9 @@ links:
   github: https://github.com/better-auth/better-auth
   deepwiki: https://deepwiki.com/better-auth/better-auth
   documentation: https://better-auth.com/docs
+relationships:
+  related_tools:
+    - Clerk
 ---
 # **Better Auth 調査レポート**
 
