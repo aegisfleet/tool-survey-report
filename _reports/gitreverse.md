@@ -1,56 +1,53 @@
 ---
-title: "GitReverse 調査レポート"
-tool_name: "GitReverse"
-tool_reading: "ギットリバース"
-category: "AI開発ワークフロー"
-developer: "GitMVP LTD"
-official_site: "https://gitreverse.com/"
-date: "2026-11-05"
-last_updated: "2026-11-05"
+title: GitReverse 調査レポート
+tool_name: GitReverse
+tool_reading: ギットリバース
+category: AI開発ワークフロー
+developer: GitMVP LTD
+official_site: https://gitreverse.com/
+date: '2026-11-05'
+last_updated: '2026-11-05'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "開発者ツール"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "コーディング支援"
-description: "GitHubリポジトリやWebサイトを解析し、CursorやClaude CodeなどのAIツールで再構築するための自然言語プロンプトを逆生成するツール。"
-
+  - オープンソース
+  - AI
+  - 開発者ツール
+  - 生成AI
+  - 大規模言語モデル
+  - コーディング支援
+description: GitHubリポジトリやWebサイトを解析し、CursorやClaude CodeなどのAIツールで再構築するための自然言語プロンプトを逆生成するツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェアエンジニア"
-    - "バイブコーダー"
-    - "プロダクトデザイナー"
-  latest_highlight: "2026年10月にMITライセンスへのOSS移行とスポンサーシップ機能・検索性能の強化を実施"
-  update_frequency: "高"
-
+    - ソフトウェアエンジニア
+    - バイブコーダー
+    - プロダクトデザイナー
+  latest_highlight: 2026年10月にMITライセンスへのOSS移行とスポンサーシップ機能・検索性能の強化を実施
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 5
-      reason: "URLのgithub.comをgitreverse.comに変えるだけでプロンプト化できる極めて優れたUX"
+      reason: URLのgithub.comをgitreverse.comに変えるだけでプロンプト化できる極めて優れたUX
     - point: 4
-      reason: "Next.js 16/React 19/Tailwind CSS 4を採用したMITライセンスのオープンソース設計"
+      reason: Next.js 16/React 19/Tailwind CSS 4を採用したMITライセンスのオープンソース設計
     - point: 3
-      reason: "リポジトリだけでなくWebサイトのUIやデザインシステムからのプロンプト逆生成にも対応"
+      reason: リポジトリだけでなくWebサイトのUIやデザインシステムからのプロンプト逆生成にも対応
     - point: 2
-      reason: "複数LLMプロバイダー（xAI Grok-3, OpenRouter, Azure OpenAI, Google AI Studio等）の動的フォールバック対応"
+      reason: 複数LLMプロバイダー（xAI Grok-3, OpenRouter, Azure OpenAI, Google AI Studio等）の動的フォールバック対応
   minus_points:
     - point: -3
-      reason: "大規模リポジトリではルート階層とREADMEが主対象のため詳細なビジネスロジックの再現に限界がある"
-  summary: "GitHubリポジトリやWebサイトからAIエージェント向け再構築プロンプトを即座に生成する画期的なツールであり、vibe coding時代の学習・プロトタイピングを大幅に加速する。"
-
+      reason: 大規模リポジトリではルート階層とREADMEが主対象のため詳細なビジネスロジックの再現に限界がある
+  summary: GitHubリポジトリやWebサイトからAIエージェント向け再構築プロンプトを即座に生成する画期的なツールであり、vibe coding時代の学習・プロトタイピングを大幅に加速する。
 links:
-  github: "https://github.com/filiksyos/gitreverse"
+  github: https://github.com/filiksyos/gitreverse
 relationships:
   related_tools:
-    - "Repomix"
-    - "Cursor"
-    - "Claude Code"
+    - Repomix
+    - Cursor
+    - Claude Code
 ---
 
 # **GitReverse 調査レポート**
