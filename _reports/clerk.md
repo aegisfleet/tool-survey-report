@@ -1,58 +1,54 @@
 ---
-title: "Clerk 調査レポート"
-tool_name: "Clerk"
-tool_reading: "クラーク"
-category: "認証/ID管理"
-developer: "Clerk, Inc."
-official_site: "https://clerk.com/"
-date: "2026-11-05"
-last_updated: "2026-11-05"
+title: Clerk 調査レポート
+tool_name: Clerk
+tool_reading: クラーク
+category: 認証/ID管理
+developer: Clerk, Inc.
+official_site: https://clerk.com/
+date: '2026-11-05'
+last_updated: '2026-11-05'
 tags:
-  - "認証"
-  - "開発者ツール"
-  - "SaaS"
-  - "セキュリティ"
-  - "API"
-  - "TypeScript"
-  - "エージェント"
-description: "Next.jsやReact等のモダンWeb環境に特化した認証・ユーザー管理基盤。洗練されたUIコンポーネントと組織管理、AIエージェント認証を提供。"
-
+  - 認証
+  - 開発者ツール
+  - SaaS
+  - セキュリティ
+  - API
+  - TypeScript
+  - エージェント
+description: Next.jsやReact等のモダンWeb環境に特化した認証・ユーザー管理基盤。洗練されたUIコンポーネントと組織管理、AIエージェント認証を提供。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (月間50,000リテンションユーザーまで)"
+  starting_price: 無料 (月間50,000リテンションユーザーまで)
   target_users:
-    - "フロントエンド/Fullstack開発者"
-    - "スタートアップ"
-    - "B2B/B2C SaaS事業者"
-  latest_highlight: "2026年10月にAIエージェント向け認証基盤「Agent Auth」およびClerk MCP Serverを発表"
-  update_frequency: "高"
-
+    - フロントエンド/Fullstack開発者
+    - スタートアップ
+    - B2B/B2C SaaS事業者
+  latest_highlight: 2026年10月にAIエージェント向け認証基盤「Agent Auth」およびClerk MCP Serverを発表
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 6
-      reason: "Next.jsやReactに特化した高品質なドロップインUIコンポーネントにより、認証画面を数分で実装可能"
+      reason: Next.jsやReactに特化した高品質なドロップインUIコンポーネントにより、認証画面を数分で実装可能
     - point: 4
-      reason: "50,000 MRU（月間リテンションユーザー）までの寛容な無料枠および「初回日無料（First Day Free）」の良心的な課金モデル"
+      reason: 50,000 MRU（月間リテンションユーザー）までの寛容な無料枠および「初回日無料（First Day Free）」の良心的な課金モデル
     - point: 4
-      reason: "Core 3刷新による状態管理フックの改善、MCPサーバー提供、AIエージェント認証（Agent Auth）への迅速な対応"
+      reason: Core 3刷新による状態管理フックの改善、MCPサーバー提供、AIエージェント認証（Agent Auth）への迅速な対応
   minus_points:
     - point: 0
-      reason: "特筆すべき構造的欠点はないが、自社DBとのデータ同期（Webhook）設計が必要"
-  summary: "フロントエンド親和性と開発スピードにおいて圧倒的な優位性を誇り、AI時代にも適応する最先端の認証プラットフォーム"
-
+      reason: 特筆すべき構造的欠点はないが、自社DBとのデータ同期（Webhook）設計が必要
+  summary: フロントエンド親和性と開発スピードにおいて圧倒的な優位性を誇り、AI時代にも適応する最先端の認証プラットフォーム
 links:
-  github: "https://github.com/clerk/javascript"
-  documentation: "https://clerk.com/docs"
-
+  github: https://github.com/clerk/javascript
+  documentation: https://clerk.com/docs
 relationships:
   related_tools:
-    - "Better Auth"
-    - "Supabase"
-    - "OAuth"
-    - "OpenID"
+    - Better Auth
+    - Supabase
+    - OAuth
+    - OpenID
 ---
 
 # **Clerk 調査レポート**
