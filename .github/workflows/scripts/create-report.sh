@@ -50,6 +50,9 @@ build_create_prompt() {
    - 作成後に \`uv run python3 scripts/check_mermaid.py --static _reports/{tool-slug}.md\` を実行し、Mermaidの構文エラーがないことを確認すること。
 8. **ブラウザ検証（Playwright）のスキップ**:
    - 本環境（e2-micro）のリソース制約を考慮し、Playwrightなどのブラウザを起動する検証（\`--browser\`）は実行しないこと。
+9. **シークレット・認証情報の記載禁止**:
+   - APIキー、シークレットキー、アクセストークン、パスワード等の認証情報は、テスト用・サンプル用・公式ドキュメント掲載のものであっても、実在する形式の文字列を絶対に記載しないこと（過去に Stripe テスト用シークレットキーの形式の文字列が含まれ、GitHub Push Protection に push を拒否された事例がある）。
+   - コード例で認証情報に言及する場合は、必ず \`<YOUR_API_KEY>\` や \`<STRIPE_SECRET_KEY>\` のようなプレースホルダー、または \`process.env.STRIPE_SECRET_KEY\` のような環境変数参照で記載すること。\`sk_test_...\` / \`sk_live_...\` のような実形式を模した文字列も記載禁止とする。
 
 ## 完了条件
 - \`_reports/\` 配下に新規レポートファイルが生成されていること。

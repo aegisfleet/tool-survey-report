@@ -101,6 +101,52 @@ run_agy() {
 }
 
 #######################################
+# Scans staged files for secret-like strings that GitHub Push
+# Protection would reject (Stripe / GitHub / AWS / Google / Slack /
+# OpenAI-style keys and private key headers). This is a simple
+# pre-push guard; it does not replace GitHub's own scanning.
+# Outputs:
+#   Writes only the offending file name and pattern label to stderr
+#   (never the matched string itself)
+# Returns:
+#   0 when clean, 1 when a secret-like string is found
+#######################################
+scan_staged_for_secrets() {
+  local -r patterns=(
+    "Stripe API key|(sk|rk)_(live|test)_[0-9A-Za-z]{16,}"
+    "Stripe webhook secret|whsec_[0-9A-Za-z]{32,}"
+    "GitHub token|(ghp|gho|ghu|ghs|ghr)_[0-9A-Za-z]{36,}|github_pat_[0-9A-Za-z_]{22,}"
+    "AWS access key ID|AKIA[0-9A-Z]{16}"
+    "Google API key|AIza[0-9A-Za-z_-]{35}"
+    "Slack token|xox[baprs]-[0-9A-Za-z-]{10,}"
+    "OpenAI-style API key|sk-(proj-|ant-)?[0-9A-Za-z_-]{20,}"
+    "Private key header|-----BEGIN [A-Z ]*PRIVATE KEY-----"
+  )
+
+  local found=0
+  local entry label regex file
+  while IFS= read -r file; do
+    [[ -n "${file}" && -f "${file}" ]] || continue
+    for entry in "${patterns[@]}"; do
+      label="${entry%%|*}"
+      regex="${entry#*|}"
+      if grep -E -q -e "${regex}" -- "${file}"; then
+        log_error "Secret-like string detected (${label}) in staged file: ${file}"
+        found=1
+      fi
+    done
+  done < <(git diff --cached --name-only --diff-filter=ACM)
+
+  if [[ "${found}" -ne 0 ]]; then
+    log_error "Aborting: replace secret-like strings with placeholders (e.g. <YOUR_API_KEY>) before pushing."
+    return 1
+  fi
+
+  log_info "Pre-push secret scan passed (no secret-like strings in staged files)."
+  return 0
+}
+
+#######################################
 # Commits changes in _reports/ and categories.yml, pushes to remote, and creates a PR.
 # Arguments:
 #   branch_name: Head branch name
@@ -125,18 +171,34 @@ commit_and_create_pr() {
   log_info "Staging report, trending, and category changes..."
   git add "${REPORTS_DIR}"/ "${CATEGORIES_FILE}" "${TRENDING_DIR}"/ 2>/dev/null || true
 
+  # Pre-push guard: never push secret-like strings (Push Protection
+  # would reject them, and a rejected push must not look successful).
+  if ! scan_staged_for_secrets; then
+    log_error "Secret scan failed; aborting before commit and push."
+    return 1
+  fi
+
   log_info "Committing: ${commit_msg}"
-  git commit -m "${commit_msg}"
+  if ! git commit -m "${commit_msg}"; then
+    log_error "git commit failed."
+    return 1
+  fi
 
   log_info "Pushing branch ${branch_name} to origin..."
-  git push origin "${branch_name}"
+  if ! git push origin "${branch_name}"; then
+    log_error "git push failed for branch ${branch_name}."
+    return 1
+  fi
 
   log_info "Creating Pull Request: ${pr_title}"
-  gh pr create \
+  if ! gh pr create \
     --base main \
     --head "${branch_name}" \
     --title "${pr_title}" \
-    --body "${pr_body}"
+    --body "${pr_body}"; then
+    log_error "Failed to create Pull Request for branch ${branch_name}."
+    return 1
+  fi
 
   log_info "Pull Request created successfully."
   return 0
