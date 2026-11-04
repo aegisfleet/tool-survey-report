@@ -48,6 +48,7 @@ relationships:
     - ChatGPT
     - Cursor
     - Claude Code
+    - GitReverse
 ---
 
 # **Repomix 調査レポート**
