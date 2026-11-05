@@ -43,6 +43,8 @@ links:
 relationships:
   children:
     - OpenID
+  related_tools:
+    - マイナポータルAPI
 ---
 
 # **OAuth 調査レポート**
