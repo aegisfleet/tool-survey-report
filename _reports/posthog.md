@@ -1,60 +1,57 @@
 ---
-title: "PostHog 調査レポート"
-tool_name: "PostHog"
-tool_reading: "ポストホグ"
-category: "データ分析"
-developer: "PostHog, Inc."
-official_site: "https://posthog.com/"
-date: "2026-11-06"
-last_updated: "2026-11-06"
+title: PostHog 調査レポート
+tool_name: PostHog
+tool_reading: ポストホグ
+category: データ分析
+developer: PostHog, Inc.
+official_site: https://posthog.com/
+date: '2026-11-06'
+last_updated: '2026-11-06'
 tags:
-  - "オープンソース"
-  - "SaaS"
-  - "開発者ツール"
-  - "データ分析"
-  - "データ可視化"
-  - "データウェアハウス"
-description: "プロダクト分析、セッションリプレイ、フィーチャーフラグ、A/Bテスト、エラー追跡、LLMオブザーバビリティを統合し、開発者主導のプロダクト改善を実現するオープンソースProduct OS。"
-
+  - オープンソース
+  - SaaS
+  - 開発者ツール
+  - データ分析
+  - データ可視化
+  - データウェアハウス
+description: プロダクト分析、セッションリプレイ、フィーチャーフラグ、A/Bテスト、エラー追跡、LLMオブザーバビリティを統合し、開発者主導のプロダクト改善を実現するオープンソースProduct OS。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェア開発者"
-    - "プロダクトマネージャー"
-    - "スタートアップ創業者"
-  latest_highlight: "サーバーSDKのトレースコンテキスト伝播拡充と単一タグWeb SDK初期化 (2026年11月)"
-  update_frequency: "高"
-
+    - ソフトウェア開発者
+    - プロダクトマネージャー
+    - スタートアップ創業者
+  latest_highlight: サーバーSDKのトレースコンテキスト伝播拡充と単一タグWeb SDK初期化 (2026年11月)
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "プロダクト分析・セッションリプレイ・フラグ・エラー・LLM監視まで1つに網羅する圧倒的な統合度"
+      reason: プロダクト分析・セッションリプレイ・フラグ・エラー・LLM監視まで1つに網羅する圧倒的な統合度
     - point: 5
-      reason: "月間100万イベント・5,000セッション記録・シート無制限という極めて寛大な無料枠"
+      reason: 月間100万イベント・5,000セッション記録・シート無制限という極めて寛大な無料枠
     - point: 4
-      reason: "オープンソースであり、SDK・HogQL・MCPサーバー連携による高度な拡張性"
+      reason: オープンソースであり、SDK・HogQL・MCPサーバー連携による高度な拡張性
     - point: 3
-      reason: "SOC 2 Type II認証取得、GDPR対応、EU/USリージョン選択などの堅牢なセキュリティ体制"
+      reason: SOC 2 Type II認証取得、GDPR対応、EU/USリージョン選択などの堅牢なセキュリティ体制
   minus_points:
     - point: -3
-      reason: "UIおよび公式ドキュメントが英語のみで日本語ローカライズが未対応"
+      reason: UIおよび公式ドキュメントが英語のみで日本語ローカライズが未対応
     - point: -2
-      reason: "非エンジニアやビジネス職にとってクエリや操作の学習コストがやや高め"
-  summary: "プロダクトグロースとデバッグに必要な機能を1つに集約した強力なオープンソース基盤。無料枠が非常に寛大だが英語UIと学習コストへの配慮が必要。"
-
+      reason: 非エンジニアやビジネス職にとってクエリや操作の学習コストがやや高め
+  summary: プロダクトグロースとデバッグに必要な機能を1つに集約した強力なオープンソース基盤。無料枠が非常に寛大だが英語UIと学習コストへの配慮が必要。
 links:
-  github: "https://github.com/PostHog/posthog"
-  deepwiki: "https://deepwiki.com/PostHog/posthog"
-  documentation: "https://posthog.com/docs"
+  github: https://github.com/PostHog/posthog
+  deepwiki: https://deepwiki.com/PostHog/posthog
+  documentation: https://posthog.com/docs
 relationships:
   related_tools:
-    - "Sentry"
-    - "Datadog"
-    - "Grafana"
+    - Sentry
+    - Datadog
+    - Grafana
 ---
 
 # **PostHog 調査レポート**
