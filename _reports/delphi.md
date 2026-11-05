@@ -6,7 +6,7 @@ category: IDE/エディタ
 developer: Embarcadero
 official_site: https://www.embarcadero.com/jp/products/delphi
 date: '2025-01-21'
-last_updated: '2026-05-26'
+last_updated: '2026-11-05'
 tags:
   - AI
   - IDE
@@ -24,27 +24,27 @@ quick_summary:
   target_users:
     - 業務アプリ開発者
     - Windowsアプリ開発者
-    - モバイルアプリ開発者
-  latest_highlight: 2026年3月にRAD Studio 13.1 Florence Update 1がリリースされ、Windows on Arm (Arm64EC) や新しいFireMonkey Style Designerに対応。5月には新しい開発ワークフローも発表された。
+    - モバイル/組込みアプリ開発者
+  latest_highlight: 2026年9月にRAD Studio 13.2 Florenceがリリース。Linux Intel 64-bitコンパイラのLLVM 20全面刷新、マルチコア並列コード生成、IDEへのNavigator標準統合などを追加。
   update_frequency: 中
 evaluation:
-  score: 85
+  score: 86
   base_score: 70
   plus_points:
     - point: 8
       reason: ドラッグ＆ドロップによる圧倒的なGUI開発生産性（RAD）
     - point: 5
-      reason: 単一コードベースから全主要プラットフォームへのネイティブコンパイルが可能
+      reason: 単一コードベースから全主要プラットフォームへのネイティブコンパイルおよび並列ビルド対応
     - point: 4
-      reason: 過去の資産（VCLコード）との互換性が高く、長期間の保守に強い
-    - point: 3
-      reason: AIによるコーディング支援（RAD AI Companion）の強化
+      reason: 過去の資産（VCLコード）との高い後方互換性と長期保守性
+    - point: 4
+      reason: AIコーディング支援（RAD AI Companion / SmartCore AI / MCP連携）とNavigator統合によるIDE生産性向上
   minus_points:
     - point: -3
       reason: Professional版以上のライセンス費用が比較的高額
     - point: -2
       reason: Object Pascal言語の習得者が他のメジャー言語に比べて少ない
-  summary: GUIアプリ開発の生産性は依然として最高水準であり、特にWindows業務アプリやマルチデバイス開発において強力な選択肢。AI機能の統合により開発効率がさらに向上。
+  summary: ビジュアルRADによる卓越した開発生産性に加え、LLVM 20によるLinux最適化、並列コンパイル、Navigator統合、AI支援の深化により現代的な開発環境として進化。
 links:
   documentation: http://docwiki.embarcadero.com/
 relationships:
@@ -60,206 +60,324 @@ relationships:
 
 * **ツール名**: Delphi
 * **ツールの読み方**: デルファイ
-* **開発元**: Embarcadero (エンバカデロ)
+* **開発元**: Embarcadero Technologies (エンバカデロ・テクノロジーズ)
 * **公式サイト**: [https://www.embarcadero.com/jp/products/delphi](https://www.embarcadero.com/jp/products/delphi)
 * **関連リンク**:
   * ドキュメント: [http://docwiki.embarcadero.com/](http://docwiki.embarcadero.com/)
   * ストア: [https://www.embarcadero.com/jp/app-development-tools-store/delphi](https://www.embarcadero.com/jp/app-development-tools-store/delphi)
+  * レビューサイト: [G2](https://www.g2.com/products/embarcadero-delphi/reviews) | [Capterra](https://www.capterra.com/p/169308/Delphi/)
 * **カテゴリ**: IDE/エディタ
-* **概要**: Object Pascal言語を使用する統合開発環境（IDE）です。「RAD (Rapid Application Development)」の先駆けとして知られ、コンポーネントをドラッグ＆ドロップで配置するだけでGUIアプリケーションを構築できる生産性の高さが特徴です。現在は単一のコードベースからWindows, macOS, iOS, Android, Linux向けのネイティブアプリケーションを生成できるクロスプラットフォーム開発ツールとして進化しており、最新版ではAIによる開発支援機能も統合されています。
+* **概要**: Object Pascal言語を使用する統合開発環境（IDE）です。「RAD (Rapid Application Development)」の先駆けとして知られ、コンポーネントをドラッグ＆ドロップで配置するだけでGUIアプリケーションを構築できる生産性の高さが特徴です。現在は単一のコードベースからWindows (x86/x64/Arm64EC), macOS, iOS, Android, Linux向けのネイティブアプリケーションを生成できるクロスプラットフォーム開発環境として進化しており、最新バージョン（13.2 Florence）ではLLVM 20ベースのコンパイラ最適化、マルチコア並列コード生成、IDEへのNavigator統合、SmartCore AIやMCPConnectによるAI連携機能が強化されています。
 
 ## **2. 目的と主な利用シーン**
 
 * **解決する課題**:
-  * Windowsデスクトップアプリ開発におけるUI構築の手間を削減。
-  * 複数のOS（デスクトップ・モバイル）に対応したアプリを少ないリソースで開発・保守。
-  * データベース接続を含む業務アプリケーションの迅速な構築。
+  * Windowsデスクトップアプリ開発におけるUI構築やイベント配線にかかる工数の削減。
+  * 複数OS（デスクトップ・モバイル・サーバー）に対応したアプリを少ないエンジニアリソースで開発・保守。
+  * データベース接続を含む基幹・業務アプリケーションの迅速かつ安定した長期運用。
 * **想定利用者**:
-  * 業務システム開発を行うSIerや社内SE。
-  * パッケージソフト開発ベンダー（ISV）。
-  * 個人開発者（デスクトップ/モバイルアプリ）。
+  * 業務システムや社内基幹システムを開発するSIer・社内SE。
+  * パッケージソフトウェアベンダー（ISV）および受託開発企業。
+  * 現場端末・産業機器・POSシステム向けネイティブアプリ開発者。
 * **利用シーン**:
-  * **Windows業務アプリケーション**: VCLフレームワークを使用した、高速かつリッチなUIを持つデスクトップアプリ開発。
-  * **マルチデバイスアプリ**: FireMonkey (FMX) フレームワークを使用した、iOS/Android/macOS/Windows対応アプリの同時開発。
-  * **組み込みデータベース連携**: InterBaseなどを活用した、オフライン動作可能なスタンドアロンアプリ。
+  * **Windows業務アプリケーション**: VCLフレームワークを活用し、高速かつOS標準に忠実なリッチデスクトップアプリを構築。
+  * **マルチデバイスアプリ**: FireMonkey (FMX) フレームワークにより、単一UI設計からiOS/Android/macOS/Windows対応アプリを同時展開。
+  * **高負荷バックエンド/REST API**: Linux Intel 64-bitネイティブバイナリ（LLVM 20最適化）としてRAD ServerやWebStencilsを活用したWebサービスを実行。
+  * **組み込みデータベース連携**: InterBaseやSQLiteを内包し、オフライン環境でも動作するスタンドアロン・エッジ端末アプリ。
+
+### **2.1 代表的な利用フロー**
+
+```mermaid
+swimlane-beta TB
+  subgraph User["開発者"]
+    A[フォームデザイナでUIコンポーネント配置]
+    D[AI支援・Navigatorミニマップでコード実装]
+    G[統合デバッガで動作検証・プロファイリング]
+  end
+  subgraph IDE["RAD Studio IDE"]
+    B[双方向プロパティ・イベントバインド]
+    C[RAD AI Companion・シンボル補完支援]
+    F[DelphiLSP解析・ブレークポイント制御]
+  end
+  subgraph Toolchain["Delphiコンパイラ・ツールチェーン"]
+    E[並列コード生成・LLVM 20最適化コンパイル]
+  end
+  subgraph Target["ターゲット実行環境"]
+    H[Windows / macOS / Linux / iOS / Android ネイティブ実行]
+  end
+  A --> B
+  B --> C
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  E --> H
+```
+
+* **代表的な流れ**: 開発者がビジュアルデザイナ上でコンポーネントを配置すると、IDEがフォーム定義とコードを双方向同期します。RAD AI CompanionやNavigatorミニマップを活用してビジネスロジックを実装し、マルチコア並列コンパイラ（LinuxはLLVM 20バックエンド）によって高速にネイティブバイナリへビルドされ、即座にターゲットOS上で実行・デバッグ検証を行えます。
 
 ## **3. 主要機能**
 
-* **VCL (Visual Component Library)**: Windows専用の強力なUIフレームワーク。OSネイティブのAPIをラップし、豊富なコンポーネント群によりWindowsアプリ開発を効率化します。
-* **FireMonkey (FMX)**: クロスプラットフォーム対応のUIフレームワーク。GPUアクセラレーションを活用したベクターベースのUIを提供し、デバイスごとの差異を吸収します。
-* **RAD AI Companion**: AIを活用したコーディング支援機能。自然言語によるコード生成やリファクタリング、ドキュメント生成を支援します。
-* **FireDAC**: 高速で統一的なデータアクセスライブラリ。Oracle, SQL Server, MySQL, PostgreSQL, SQLiteなど多様なデータベースにネイティブ接続可能です。
-* **RAD Server**: Delphi/C++Builderで作成したロジックをREST APIとして公開するためのバックエンド基盤（MEAP）。
-* **WebStencils**: サーバーサイドのデータ処理とHTMLテンプレートを統合し、Web開発を支援する新機能。HTMX等との連携も強化されています。
-* **Android 15 (API Level 35) 対応**: 最新のAndroid APIに対応し、Google Playストアの要件を満たすアプリ開発が可能です。
-* **ライブプレビュー**: 設計時にUIの見た目をリアルタイムで確認しながら開発が可能。
-* **Windows on Arm (Arm64EC) 対応**: Windows Armデバイス向けに、Intelエミュレーションなしで動作するネイティブArmバイナリを生成可能です。
-* **Bookmarks アドオン統合**: コードの特定行にジャンプできる強力なブックマーク機能（旧サードパーティ製）がIDE標準として統合されています。
-* **FireMonkey Style Designer**: FireMonkey向けのUIスタイル（色、背景、フォント等）を直感的に作成・管理できる新しいデザインツールです。
-* **SmartCore AI Component Pack**: OpenAI, Claude, Gemini, Ollamaなど様々なLLMを統合できるコンポーネント群で、AI機能を容易に組み込めます。
+* **Delphi LLVM 20 Linux 64-bitコンパイラ**: Linux Intel 64-bit向けツールチェーンをLLVM 20へ全面刷新。モダンリンカーと強化されたDWARFデバッグ情報を提供し、ランタイム性能を2〜4倍（特定処理で最大7倍）向上させます。
+* **マルチコア並列コード生成 (Parallel Code Generation)**: Linux Intel 64-bitおよびWindows Arm64ECコンパイラにおいて複数CPUコアを活用した並列生成に対応し、大規模プロジェクトのビルド時間を最大14倍短縮します。
+* **NavigatorのIDE標準統合**: 人気の生産性プラグインNavigatorが標準機能として組み込まれ、コード構造のミニマップ表示（アクティブライン、Error Insight、ブレークポイント可視化）とGotoダイアログによる高速シンボルジャンプを提供します。
+* **OpenTools APIフォーマッター拡張**: `IOTACodeFormatterServices` および `IOTACodeFormatter` インターフェースが新設され、サードパーティ製コードフォーマッターをIDEへシームレスに組み込めます。
+* **Windows on Arm (Arm64EC) ランタイム最適化**: Arm64ECネイティブバイナリ生成に対応し、FastMM4ベースのメモリマネージャーを標準採用。近代化されたランタイムパッケージ（BPL）の動的ロードに対応しています。
+* **VCL (Visual Component Library)**: WindowsネイティブAPIを直接ラップした成熟のUIフレームワーク。Windows 11スタイルや新しいナビゲーションコントロールをサポートし、極めてレスポンシブなGUIを構築可能です。
+* **FireMonkey (FMX) & Style Designer**: GPUアクセラレーションによるベクターベースのクロスプラットフォームUIフレームワーク。進化したStyle Designerにより、各OSに合わせたスタイル（色、フォント、背景）を視覚的に管理できます。
+* **SmartCore AI & MCPConnect**: OpenAI, Claude, Gemini, Ollamaなどを手軽にアプリへ統合できるコンポーネント群に加え、Model Context Protocol (MCP) を経由したAIエコシステム連携が強化されています。
+* **RAD AI Companion**: 自然言語によるコード補完、リファクタリング、ドキュメント生成を支援するIDE統合型AIアシスタント。
+* **FireDAC**: Oracle, SQL Server, MySQL, PostgreSQL, SQLite, InterBaseなど多種多様なデータベースへ高速ネイティブ接続を提供する統一データアクセスライブラリ。
+* **WebStencils & RAD Server**: サーバーサイドデータ処理とHTMLテンプレートを統合し、HTMX等と連携したモダンWebアプリやRESTful APIバックエンド（MEAP）を迅速に構築可能。
 
-## **4. 開始手順・セットアップ**
+## **4. 動作原理・システム構成**
+
+Delphiは、開発環境自体からランタイムに至るまで、仮想マシンやインタープリタを介さず「CPUネイティブコードの直接生成」を核としたローカルファーストのクライアント・アーキテクチャを採用しています。
+
+```mermaid
+flowchart TD
+  subgraph DevEnv["開発環境 (RAD Studio 64bit IDE)"]
+    FormDesigner["ビジュアルフォームデザイナ (WYSIWYG)"]
+    CodeEditor["コードエディタ (DelphiLSP / Navigatorミニマップ)"]
+    AICompanion["RAD AI Companion / SmartCore AI"]
+  end
+
+  subgraph CompilerLayer["コンパイラ・ツールチェーン層"]
+    FrontEnd["Object Pascal フロントエンド構文解析"]
+    ParallelGen["マルチコア並列コードジェネレータ"]
+    LLVM20["LLVM 20 バックエンド (Linux 64bit)"]
+    NativeGen["ネイティブコードジェネレータ (Win / Mac / モバイル)"]
+    FastMM["FastMM4 メモリマネージャー (Arm64EC / Win)"]
+  end
+
+  subgraph FrameworkLayer["フレームワーク・ライブラリ層"]
+    VCL["VCL (WindowsネイティブUI)"]
+    FMX["FireMonkey (GPUベクターUI / マルチプラットフォーム)"]
+    FireDAC["FireDAC (統一DBアクセス)"]
+    WebStencils["WebStencils / RAD Server"]
+  end
+
+  subgraph OutputTargets["ターゲット実行環境 (ネイティブバイナリ)"]
+    WinPlatform["Windows (x86 / x64 / Arm64EC)"]
+    LinuxPlatform["Linux (Intel 64bit / LLVM 20最適化)"]
+    ApplePlatform["macOS / iOS (Apple Silicon / Intel)"]
+    AndroidPlatform["Android (最新API Level対応)"]
+  end
+
+  FormDesigner --> FrontEnd
+  CodeEditor --> FrontEnd
+  AICompanion -.->|"コーディング支援 / MCP連携"| CodeEditor
+
+  FrontEnd --> ParallelGen
+  ParallelGen --> LLVM20
+  ParallelGen --> NativeGen
+
+  LLVM20 --> FrameworkLayer
+  NativeGen --> FrameworkLayer
+  FastMM -.-> FrameworkLayer
+
+  VCL --> WinPlatform
+  FMX --> WinPlatform
+  FMX --> ApplePlatform
+  FMX --> AndroidPlatform
+  FMX --> LinuxPlatform
+  WebStencils --> LinuxPlatform
+  WebStencils --> WinPlatform
+  FireDAC --> OutputTargets
+```
+
+* **アーキテクチャ特性**:
+  * **ローカル完結型ネイティブ開発**: 開発環境はWindows上で動作する64ビットIDE。コード編集からコンパイル、デバッグまでローカルマシン上で自己完結し、外部クラウドへの接続なしでも全機能を利用可能です（AI機能利用時のみ外部LLM APIと通信）。
+  * **双方向コードジェネレーション**: フォームデザイナでコンポーネントを配置・設定すると、プロパティ情報はフォームファイル（`.dfm` または `.fmx`）に保存され、宣言部とイベントハンドラ雛形がPascalソースコード（`.pas`）へ自動生成・双方向バインドされます。
+* **主要コンポーネントとデータフロー**:
+  * **DelphiLSP (Language Server Protocol)**: バックグラウンドで構文解析とシンボル解決を常時実行し、Navigatorミニマップやコード補完、LSIFによる超高速定義ジャンプを実現。
+  * **ハイブリッドコンパイラパイプライン**: フロントエンドでObject Pascalの構文・型チェックを行った後、ターゲットプラットフォームに応じてネイティブバックエンドまたはLLVM 20最適化バックエンドを選択。マルチコア並列コード生成によりCPUスレッド数に応じた高速コンパイルを行います。
+* **特筆すべき要素技術**:
+  * **LLVM 20統合**: Linux Intel 64-bitコンパイラにおいて最新のLLVM中間表現（IR）生成と最適化パスを導入し、サーバー向け高スループット処理に最適化。
+  * **Arm64EC (Emulation Compatible)**: Windows on Arm環境において、x64エミュレーションコードとArm64ネイティブコードの同一プロセス内相互運用を可能にし、既存プラグインを活かしつつArmネイティブの速度を享受。
+  * **FastMM4高効率メモリアロケータ**: マルチスレッド環境におけるメモリアロケーション競合を抑える実証済みのメモリアロケータをWindows Arm64EC向けにも標準適用。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Windows 10/11 (開発環境として必須)
-  * Embarcaderoアカウント (EDNアカウント)
+  * **OS**: Windows 10 (64-bit) または Windows 11 (64-bit)
+  * **推奨スペック**: 4コア以上のCPU、8GB以上のRAM（16GB以上推奨）、SSD空き容量20GB〜60GB（選択プラットフォームによる）
+  * **アカウント**: Embarcaderoアカウント (EDNアカウント)
 * **インストール/導入**:
-  公式サイトからWebインストーラ(GetIt)またはISOイメージをダウンロードして実行します。
+  公式サイトからWebインストーラ（GetItインストーラ）またはISOイメージをダウンロードして実行します。
 
   ```bash
-  # コマンドラインでのインストールではなく、GUIインストーラを使用します
-  setup.exe
+  # GUIインストーラを実行し、必要なプラットフォームを選択
+  radstudio_setup.exe
   ```
 
 * **初期設定**:
-  * ライセンスキーの入力（またはCommunity Editionのライセンス取得）。
-  * 必要なプラットフォーム（Android SDK/NDK等）の選択と追加インストール。
+  1. インストール時に保有ライセンスキー（またはCommunity Editionの無償ライセンスキー）を入力してアクティベーション。
+  2. ターゲットプラットフォーム（Windows, Linux, macOS/iOS, Android SDK/NDK）を選択して追加コンポーネントをダウンロード。
+  3. IDE初回起動時にUIテーマ（ダーク/ライト）およびCode Insight（DelphiLSP）の動作モードを選択。
 * **クイックスタート**:
-  1. IDEを起動し、「ファイル > 新規作成 > Windows VCL アプリケーション」を選択。
-  2. フォーム上にツールパレットから「TButton」をドラッグ＆ドロップ。
-  3. ボタンをダブルクリックし、`ShowMessage('Hello World');` と記述。
-  4. F9キーを押して実行。
+  1. IDEを起動し、「ファイル > 新規作成 > Windows VCL アプリケーション - Delphi」を選択。
+  2. 画面右のツールパレットから「TButton」および「TEdit」をフォーム上へドラッグ＆ドロップ。
+  3. 配置したボタンをダブルクリックし、イベントハンドラ内に以下を記述：
+     ```pascal
+     procedure TForm1.Button1Click(Sender: TObject);
+     begin
+       ShowMessage('Hello, ' + Edit1.Text + '! RAD Studio 13.2 へようこそ。');
+     end;
+     ```
+  4. F9キー（または緑の実行ボタン）を押下すると、即座にコンパイルされネイティブデスクトップアプリが起動します。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
-* **圧倒的な生産性 (RAD)**: フォームデザイナー上でボタンやグリッドなどのコンポーネントを配置し、イベントハンドラを書くだけでアプリが動くため、プロトタイピングから本開発までが非常に高速です。
-* **ネイティブコンパイル**: 仮想マシンを介さずCPUネイティブコードを直接生成するため、実行速度が速く、リバースエンジニアリングも比較的困難です。
-* **AIによる開発支援**: RAD AI Companionにより、定型的なコード作成や複雑なロジックの生成が効率化され、モダンな開発体験を提供します。
-* **高い互換性**: 過去のバージョンのコードも高い確率で動作するため、長期間運用される業務システムの保守に適しています。
-* **単一コードベース**: ひとつのソースコードから複数のプラットフォーム向けにコンパイルでき、OSごとの個別実装コストを大幅に削減できます。
+* **圧倒的なGUI開発生産性 (RAD)**: フォームデザイナ、オブジェクトインスペクタ、ツールパレットの連携により、業務画面のUIレイアウトからデータベース連結までを数クリックで構築可能。プロトタイピングから実運用まで最速のスピードを誇ります。
+* **並列コンパイルとLLVM 20による卓越したビルド・実行性能**: マルチコア並列コード生成により大規模コードベースの再ビルド時間を最大14倍短縮。Linux 64-bitではLLVM 20最適化により高負荷サーバー処理で2〜4倍の性能向上を実現しています。
+* **単一コードベースからの真のネイティブコンパイル**: 仮想マシンやWebラッパーを介さず、Windows (x86/x64/Arm64EC), Linux, macOS, iOS, Android向けのCPUネイティブ機械語バイナリを出力。高速な起動と低メモリ消費を両立します。
+* **脅威的な後方互換性と長期運用性**: 10年〜20年前に書かれたVCLコードやビジネスロジックが、最新のDelphiでも軽微な修正で動作。企業の基幹システムや長寿命パッケージソフトの保守において無類の信頼性を誇ります。
+* **最新機能を取り込んだモダンな開発体験**: 人気ツールNavigatorのIDE標準統合（ミニマップ、Goto機能）、SmartCore AIおよびMCPConnectによるLLM連携、三項演算子など、近代的なIDE・言語拡張が継続的に投入されています。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
-* **言語の特殊性**: Object Pascalは可読性が高く優れた言語ですが、JavaやC#、Python、JavaScriptに比べると開発者人口が少なく、新規採用が難しい場合があります。
-* **ライセンスコスト**: Community Editionは無料ですが、商用利用（売上制限あり）やエンタープライズ機能を利用する場合のProfessional/Enterprise版は比較的高価です。
-* **バイナリサイズ**: ランタイムライブラリを静的リンクするため、"Hello World"程度のアプリでも実行ファイルサイズが数MB〜と大きくなる傾向があります。
+* **Object Pascal言語の人材確保の難しさ**: 言語としての構文は平易で可読性が高いものの、Java, C#, Python, TypeScript等のC系構文言語に比べて国内エンジニア市場の人口が少なく、新規採用時の学習期間を考慮する必要があります。
+* **高額なライセンス費用**: 個人・小規模向けの無料Community Editionが存在するものの、年間売上$5,000を超える商用利用や、Linux/クライアントサーバーDB接続を必要とする場合はProfessional版（約$1,599〜）やEnterprise版（約$3,999〜）の高額な初期費用および年間保守サブスクリプションが発生します。
+* **実行ファイルサイズと静的リンク**: ランタイムライブラリを単一の実行可能バイナリに静的リンクする設計のため、シンプルなアプリでも配布サイズが数MB〜十数MB程度になります（ただしDLL地獄を回避できるメリットと表裏一体）。
+* **日本語技術リソースとコミュニティの偏り**: IDE本体やDocWikiの日本語対応は維持されているものの、直近の最新機能（13.2の新機能やLLVM 20コンパイラオプション等）に関する最新Tipsやサードパーティ製コンポーネントのドキュメントは英語圏のフォーラムが先行します。
 
-## **7. 料金プラン**
+## **8. 料金プラン**
 
-| プラン名 | 料金 | 主な特徴 |
-|---------|------|---------|
-| **Community Edition** | 無料 | 売上$5,000未満の個人・小規模組織向け。機能はProfessional相当。商用利用制限あり。 |
-| **Professional** | 約$1,599 | Windows, macOS, iOS, Android開発、ローカルDB接続。 |
-| **Enterprise** | 約$3,999 | クライアント/サーバーDB接続、多層アプリ、Linux対応、RAD Server。 |
-| **Architect** | 約$5,999 | Enterpriseの全機能に加え、Aqua Data Studioなどの追加ツールが含まれる。 |
+| プラン名 | 料金 (税別概算) | プラットフォーム | 主な機能・対象 |
+|---|---|---|---|
+| **Community Edition** | 無料 | Win / Mac / iOS / Android | 売上$5,000未満の個人・小規模組織・学習者向け。Professional相当の機能を無償利用可能（商用利用制限あり）。 |
+| **Professional** | 約 $1,599 (初年度保守込) | Win / Mac / iOS / Android | 個人開発者・中小企業向け。ローカルDB接続、VCL/FMXコンポーネント、Navigator統合IDE。 |
+| **Enterprise** | 約 $3,999 (初年度保守込) | Win / Mac / iOS / Android / Linux | SIer・中堅〜大企業向け。クライアント/サーバーDBリモート接続（FireDAC全対応）、Linuxネイティブコンパイル（LLVM 20）、RAD Serverライセンス同梱。 |
+| **Architect** | 約 $5,999 (初年度保守込) | 全プラットフォーム | エンタープライズ大規模基幹向け。Enterprise全機能に加え、Aqua Data StudioなどのDB管理ツール、Sencha Ext JSライセンス、テスト自動化ツールを同梱。 |
 
-* **課金体系**: 永続ライセンス＋初年度保守サブスクリプション（必須）。2年目以降は保守更新が必要。
-* **無料トライアル**: 全機能を試せる無料トライアル版あり（30日間）。
+* **課金体系**: 永続ライセンス（Perpetual）＋年次アップデートサブスクリプション（保守更新）。2年目以降は年間更新費用を支払うことで新バージョンやサポートを継続利用可能。
+* **無料トライアル**: 全エディションの機能を網羅した30日間の無料評価版が公式サイトから入手可能。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
-* **導入企業**: 全世界の製造業、金融、医療、流通など幅広い業界で採用されています（具体的企業名は公式サイトの事例参照）。日本国内でも多くの業務システムやパッケージソフトで使用されています。
-* **導入事例**:
-  * **POSレジシステム**: 高速なレスポンスと周辺機器制御が必要な店舗システム。
-  * **医療用画像ビューア**: 高度なグラフィックス処理と安定性が求められる医療現場。
-  * **工場の生産管理システム**: 長期間の安定稼働とWindows PCでの制御が必要な現場端末。
-* **対象業界**: 業務系システム開発全般、組み込み制御連携アプリ、教育機関。
+* **導入企業**: 全世界の製造業、医療機器メーカー、金融機関、物流・流通、小売りチェーン、官公庁などで幅広く採用。
+* **代表的な導入事例**:
+  * **POSレジ・店舗端末システム**: レスポンス速度と周辺ハードウェア（バーコードリーダー、レシートプリンタ、釣銭機）のダイレクト制御が求められる大手量販店レジ。
+  * **医療用画像診断・PACSビューア**: 大容量DICOM画像のリアルタイムレンダリングと、高信頼性・無停止運用が要求される医療現場端末。
+  * **工場生産ライン制御・SCADA**: PLCやシリアル通信機器と直結し、ミリ秒単位の応答と24時間365日の連続稼働が求められる製造現場の監視制御PC。
+  * **金融機関・保険会社の窓口端末**: 勘定系データベースと暗号化通信で連動し、長期間安定運用される大量トランザクション処理システム。
+* **対象業界**: 組み込み機器制御、FA/製造、医療、流通小売、金融・証券、長期保守が必要な企業基幹システム。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
-* **ドキュメント**: **DocWiki**という公式ドキュメントサイトがあり、詳細なクラスライブラリのリファレンスが提供されています。
-* **コミュニティ**: エンバカデロ・コミュニティサイトや、長年の歴史を持つユーザーグループが存在します。
-* **公式サポート**: アップデートサブスクリプション加入者向けのテクニカルサポートが提供されています。
+* **ドキュメント**: 公式ドキュメントサイト [DocWiki](http://docwiki.embarcadero.com/) にて、言語仕様、クラスライブラリリファレンス、新機能チュートリアルが網羅的に公開（日本語版ポータルも提供）。
+* **コミュニティ**: 公式フォーラム（Embarcadero Community）、世界的な開発者ポータル（DelphiPraxis）、日本の技術コミュニティ（Qiita, Zenn, エンバカデロ日本公式セミナー）において活発なQ&Aや技術共有が実施されています。
+* **公式サポート**: アップデートサブスクリプション加入者向けに、Webチケット制の技術サポート窓口、修正パッチ（Hotfix）の先行提供、専任サポートエンジニアによる障害対応が提供されています。
 
-## **10. エコシステムと連携**
+## **11. エコシステムと連携**
 
-### **10.1 API・外部サービス連携**
+### **11.1 API・外部サービス連携**
 
-* **API**: REST Clientライブラリを標準搭載しており、各種RESTful APIへの接続が容易です。
-* **外部サービス連携**: AWS, Azureなどのクラウドサービス接続用コンポーネントや、Office連携コンポーネントが提供されています。
+* **REST / Cloud API**: 標準コンポーネント群（`TRESTClient`, `TRESTRequest`, `TRESTResponse`）により、外部RESTful Webサービスとの接続やJSONデータの双方向シリアライズをノンコード/ローコードで構成可能。
+* **AI・LLM連携 (SmartCore AI / MCPConnect)**: OpenAI, Anthropic Claude, Google Gemini, ローカルLLM (Ollama) とのAPI通信コンポーネントを標準装備。さらにModel Context Protocol (MCP) を介したツール連携にも対応。
+* **クラウド・Office連携**: AWS SDKコンポーネント、Azure接続ライブラリ、Microsoft Office COM/OLEオートメーションコンポーネントを標準搭載。
 
-### **10.2 技術スタックとの相性**
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Windows API** | ◎ | VCLがWinAPIを強力にラップしており、OS機能をフルに活用可能。 | Windows固有機能への依存度が高まると移植性が下がる。 |
-| **RDBMS (SQL)** | ◎ | FireDACによる抽象化で、コード変更なしにDB切り替えが可能。 | DB固有のSQL方言を使う場合は注意が必要。 |
-| **Python** | ◯ | 「Python4Delphi」や「DelphiFMX4Python」により相互連携が可能。 | ライブラリのセットアップが必要。 |
-| **Webフロントエンド** | △ | WebStencilsやUniGUI等で対応可能だが、SPA開発の主流（React等）とは異なる。 | モダンWeb開発のエコシステムとは分離されている。 |
+| **Windows API / Win32 / Win64** | ◎ | VCLがWinAPIを直接ラップしており、Windows新機能（Win11スタイル等）やハードウェア制御をオーバーヘッドなしで利用可能。 | Windows固有機能に密結合するとマルチプラットフォーム移植性が低下。 |
+| **RDBMS (Oracle, SQL Server, MySQL, Postgres)** | ◎ | FireDACによる強力なデータアクセス抽象化により、接続ドライバの変更だけで複数DBに対応可能。配列バインドによる超高速一括更新に対応。 | 独自SQL方言やストアドプロシージャを多用する場合は移植時の調整が必要。 |
+| **Linux (Server/Cloud)** | ◎ | LLVM 20ベースの最適化コンパイラにより、高パフォーマンスなバックエンドデーモンやマイクロサービスを単一バイナリでデプロイ可能。 | GUIアプリとしてのLinux対応（FMX Linux）はサードパーティ提供またはアドオン扱い。 |
+| **Python** | ◯ | 「Python4Delphi (P4D)」および「DelphiFMX4Python」により、Delphi製GUIとPythonの機械学習/データ解析ライブラリを相互連携可能。 | 実行環境へのPythonランタイムのセットアップ・依存関係管理が必要。 |
+| **モダンWebフロントエンド (React / Vue)** | △ | WebStencilsやRAD ServerをRESTバックエンドとして利用可能だが、SPAフロントエンドのコードベースとは完全に分離した設計が必要。 | Node.jsエコシステムと直接のビルドパイプライン共有は行えない。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-* **認証**: OAuth2コンポーネント等を利用した認証フローの実装が可能。
-* **データ管理**: FireDACによる暗号化通信や、InterBaseの強力な暗号化機能（TDE）を利用可能。
-* **準拠規格**: 開発環境としての特定の認証取得情報は見当たりませんが、生成されるアプリは各OSのセキュリティ要件（コード署名、サンドボックス等）に準拠可能です。
+* **認証**: OAuth2, OpenID Connect, JWT (JSON Web Token) のクライアント実装コンポーネントを標準搭載し、Entra IDやGoogleアカウント連携に対応。
+* **データ保護・暗号化**: FireDACにおける通信路暗号化（SSL/TLS）、InterBase連携時の透過的データ暗号化 (TDE / AES-256)、パスワードハッシュや公開鍵暗号ライブラリを標準サポート。
+* **OSセキュリティ準拠**: コードサイニング署名ツール連携、ASLR (Address Space Layout Randomization)、DEP (Data Execution Prevention) フラグのコンパイラ標準有効化、Apple App StoreやGoogle Playストアのサンドボックス要件・最新API Levelへの適合。
 
-## **12. 操作性 (UI/UX) と学習コスト**
+## **13. 操作性 (UI/UX) と学習コスト**
 
-* **UI/UX**: フォームデザイナーは「見たままが得られる（WYSIWYG）」の完成度が高く、直感的に画面を設計できます。コンポーネントのプロパティ設定だけで多くの挙動を制御できます。
-* **学習コスト**: Object Pascal言語は英語に近く読みやすい構文のため、初学者でも理解しやすい言語です。ただし、近年主流のC系構文（JS, C#, Java）に慣れた開発者には若干の慣れが必要です。
+* **UI/UX**: ビジュアルフォームデザイナによるWYSIWYG設計は直感的で、ドラッグ＆ドロップでコンポーネントを配置し、オブジェクトインスペクタでプロパティを設定するだけで動く画面が完成します。13.2で統合されたNavigatorミニマップとGotoナビゲーションにより、数千行を超えるユニットファイルでも迷わず目的のコードへ到達できます。
+* **学習コスト**: Object Pascal言語は英語の平文に近い文法構造を持ち、型安全でポインタの扱いも抽象化されているため、文法自体の習得難易度は低めです。ただし、VCLおよびFMXの豊富なコンポーネントクラス階層や、FireDACのメモリキャッシュ構造を把握して自在に使いこなすには数週間の実践学習が必要です。
 
-## **13. ベストプラクティス**
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * 画面ロジックとビジネスロジックの分離（MVVMパターンの適用など）を意識し、保守性を高める。
-  * RAD AI Companionを活用して、ボイラープレートコードの記述を自動化し、本質的なロジックに集中する。
-  * バージョン管理システム（Git）と連携し、チーム開発フローを確立する。
+  * **UIとビジネスロジックの分離**: フォーム（View）内に直接ロジックを書かず、データモジュールやViewModelクラス（MVVMパターン）にロジックを委譲してユニットテスト可能性を高める。
+  * **マルチコア並列コンパイルの最大活用**: 13.2で導入された並列コード生成を有効化し、ビルド待ち時間を最小化して開発サイクルを短縮する。
+  * **NavigatorとLSPの併用**: ミニマップのError Insightやブレークポイント表示を活用し、エディタ内で素早く視認・ナビゲーションを行う。
+  * **SmartCore AIによるボイラープレート自動化**: DTOの定義やSQLマッピングコードの記述にRAD AI Companionを活用し、実装ミスを防止。
 * **陥りやすい罠 (Antipatterns)**:
-  * イベントハンドラ（ボタンクリック時など）に全てのビジネスロジックを書いてしまう（「神フォーム」化）。
-  * 循環参照（uses句）を無計画に増やし、コンパイル依存関係を複雑にしてしまう。
+  * **神フォーム (God Form) の生成**: ボタンのクリックイベントにDB接続から計算ロジック、画面遷移まで全てをベタ書きし、将来的な改修やマルチデバイス移植が困難になる。
+  * **uses句の循環参照**: ユニット同士が無計画に参照し合い、コンパイルエラーや初期化順序の不具合を引き起こす（Interface部のusesを最小限にし、Implementation部で参照する）。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-* **調査対象**: 一般的な開発者コミュニティや技術ブログなどの定評に基づく。
-* **総合評価**: 長年のユーザーからの信頼は厚く、特にWindowsアプリ開発における「最速のツール」としての評価は揺るぎません。AI機能の追加も概ね好意的に受け止められています。
+* **調査対象**: G2.com (評価 4.2/5.0, 100件以上), Capterra (評価 4.3/5.0), Reddit (r/delphi), エンバカデロユーザーフォーラム。
+* **総合評価**: デスクトップアプリケーション、特にWindows環境における開発速度とコンパイル速度、資産の長期間互換性に関しては世界最高峰の評価を維持しています。バージョン13.2でのLLVM 20刷新や並列ビルド、Navigator統合も大好評です。
 * **ポジティブな評価**:
-  * 「とにかくコンパイルが速い。思考を中断されずに開発できる。」
-  * 「20年前のソースコードが最新のDelphiでもほとんど修正なしで動くのは驚異的。」
-  * 「AIコンパニオンのおかげで、定型的なコード記述の手間が減った。」
+  * 「20年以上前に開発した業務システムが、最新のRAD Studioでもほぼ手を加えずにWindows 11ネイティブアプリとしてリビルドできた。」
+  * 「マルチコア並列コード生成により、数万行規模のプロジェクトのリビルドが瞬時に終わる。開発リズムが途切れない。」
+  * 「Navigatorが標準搭載されたことで、サードパーティ製ツールの追加設定なしにミニマップナビゲーションが使えて快適。」
 * **ネガティブな評価 / 改善要望**:
-  * 「IDEの挙動がたまに不安定になることがある。」
-  * 「ライセンス価格が高く、フリーランスには維持費が負担。」
-  * 「AI機能はまだ発展途上で、時折不正確な提案をすることがある。」
+  * 「Enterprise版やArchitect版のライセンス価格が非常に高く、零細企業や個人受託者には金銭的ハードルが高い。」
+  * 「新規プロジェクトで採用しようとしても、Pascalを書ける若手エンジニアの採用・調達が極めて困難。」
+  * 「IDEが長時間使用で重くなることがあり、メモリ消費やLSPの再起動が必要になる場面がまだ残っている。」
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-* **2026-05-20**: **A New RAD Studio Workflow Is Coming**
-  * 新しい開発ワークフローが発表されました。
+* **2026-09-17**: **RAD Studio 13.2 Florence リリース**
+  * **Delphi LLVM 20 Compiler for Linux (Intel 64-bit)**: Linux 64-bitコンパイラおよびツールチェーンをLLVM 20へ全面刷新。モダンリンカーと強化されたデバッグ情報を搭載し、ランタイム実行速度を2〜4倍（最大7倍）高速化。
+  * **マルチコア並列コード生成 (Parallel Code Generation)**: Linux Intel 64-bitおよびWindows Arm64ECコンパイラにおいて並列コード生成をサポートし、ビルド時間を最大14倍短縮。
+  * **NavigatorのIDE標準統合**: エディタミニマップ（アクティブライン、Error Insight、ブレークポイント注釈）および高速シンボルジャンプ（Gotoダイアログ）をIDE標準機能として統合。
+  * **OpenTools APIフォーマッター拡張**: サードパーティ製コードフォーマッターを統合するための `IOTACodeFormatterServices` / `IOTACodeFormatter` インターフェースを提供。
+  * **Windows Arm64EC 最適化**: FastMM4ベースのDelphiメモリマネージャーを標準採用し、近代化ランタイムパッケージ（BPL）に対応。
+  * **UIコントロール & AI強化**: 新しいVCLナビゲーションコントロール、FireMonkey Style Designerの機能拡充、SmartCore AIおよびMCPConnectによるAI連携機能の拡充。
+* **2026-05-20**: **RAD Studio Community Edition Florence 提供開始 & 新開発ワークフロー発表**
+  * Florence世代に対応した無料のCommunity Editionが公開され、最新機能を学習者や小規模開発者へ開放。
+  * 将来的なツールチェーン近代化に向けた新しいRAD Studioワークフロー構想を発表。
 * **2026-03-20**: **RAD Studio 13.1 Florence Update 1 リリース**
-  * Delphi Arm64EC (Windows on Arm) ネイティブコンパイラ。
-  * 新しいFireMonkey Style Designer。
-  * iOS 26、Android API-Level 36.1サポート。
-  * IDEへのBookmarksアドオン統合。
-  * Windows 11固有のVCLスタイル追加。
-  * DelphiLSPのLSIF対応によるコードナビゲーションの高速化。
-* **2025-10-13**: **RAD Studio 13 Florence リリース**
-  * SmartCore AIコンポーネントパックとRAD AI Companionの搭載。
-  * C++Builderの最新C++23サポートと64ビット版IDE。
-  * WebBroker/WebStencilsのセッション管理など大幅な機能強化。
-  * Android 15 (API Level 35) への対応。
-  * Windows 11 UIスタイルの完全対応強化。
-* **2025-11-XX**: **Delphi 13 プレビュー/Update**
-  * (以前の情報のアップデートとして記載) Android 16 (Baklava) への早期対応サポート等が発表。
+  * Windows on Arm (Arm64EC) Delphiネイティブコンパイラの基礎対応。
+  * 直感的なUIスタイル管理を可能にする新しいFireMonkey Style Designerの導入。
+  * BookmarksアドオンのIDE標準統合。
+  * iOS 26およびAndroid API-Level 36.1サポート、DelphiLSPのLSIF対応によるコードナビゲーション高速化。
+* **2025-10-13**: **RAD Studio 13 Florence 初回リリース**
+  * Windows 64-bit対応の完全64ビットIDEの提供開始。
+  * SmartCore AIコンポーネントパックおよびRAD AI Companionの初搭載。
+  * Object Pascal言語拡張（三項演算子 / `if` 式構文の導入）。
+  * WebBroker/WebStencilsのセッション管理などWeb開発機能の刷新。
 
 (出典: [Embarcadero Blogs - RAD Studio](https://blogs.embarcadero.com/category/rad-studio/))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-### **16.1 機能比較表 (星取表)**
+### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 機能項目 | Delphi | Visual Studio (C#) | IntelliJ IDEA (Java/Kotlin) | VS Code |
+| 機能カテゴリ | 機能項目 | Delphi | Visual Studio (C# / .NET) | IntelliJ IDEA (Kotlin / Java) | Visual Studio Code |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **GUI開発** | デザイナー | ◎<br><small>VCL/FMX</small> | ◎<br><small>WinForms/WPF</small> | △<br><small>Swing/FX (別途必要)</small> | ×<br><small>なし</small> |
-| **マルチPF** | クロスコンパイル | ◎<br><small>Windows Arm64含む全主要PFへNative生成</small> | ◯<br><small>MAUI等</small> | ◯<br><small>JVM/KMP</small> | △<br><small>拡張機能依存</small> |
-| **AI支援** | コード生成 | ◯<br><small>RAD AI Companion</small> | ◎<br><small>GitHub Copilot</small> | ◎<br><small>AI Assistant</small> | ◎<br><small>Copilot/Cursor等</small> |
-| **DB接続** | 接続性 | ◎<br><small>FireDAC (標準搭載)</small> | ◯<br><small>ADO.NET / EF</small> | ◯<br><small>JDBC / JPA</small> | △<br><small>拡張機能依存</small> |
-| **コスト** | 初期費用 | △<br><small>Pro以上は高額</small> | ◯<br><small>Communityあり</small> | ◯<br><small>Communityあり</small> | ◎<br><small>無料</small> |
+| **GUIビジュアル開発** | フォームデザイナ | ◎<br><small>VCL / FMX (双方向RAD)</small> | ◎<br><small>WinForms / WPF / MAUI</small> | △<br><small>Swing/FX (別途プラグイン)</small> | ×<br><small>標準機能なし</small> |
+| **ネイティブ性能** | ネイティブ機械語出力 | ◎<br><small>LLVM 20 / 並列生成</small> | ◯<br><small>.NET Native / AOT</small> | △<br><small>JVM主体 (GraalVM)</small> | ×<br><small>JS/TSランタイム依存</small> |
+| **マルチプラットフォーム** | 単一コードベース展開 | ◎<br><small>Win, Mac, Linux, iOS, Android</small> | ◯<br><small>.NET MAUI (Linux公式外)</small> | ◯<br><small>Compose Multiplatform / KMP</small> | △<br><small>Electron/拡張機能依存</small> |
+| **DBデータアクセス** | 統合データアクセス | ◎<br><small>FireDAC (多種DB高速直結)</small> | ◯<br><small>ADO.NET / Entity Framework</small> | ◯<br><small>JDBC / Database Tools</small> | △<br><small>拡張機能依存</small> |
+| **IDEナビゲーション** | ミニマップ・シンボル | ◎<br><small>標準統合Navigator / LSP</small> | ◯<br><small>スクロールバーマップ</small> | ◎<br><small>Search Everywhere / 構造</small> | ◯<br><small>ミニマップ標準搭載</small> |
+| **AIコーディング支援** | AIモデル統合 | ◯<br><small>RAD AI / SmartCore / MCP</small> | ◎<br><small>GitHub Copilot緊密連携</small> | ◎<br><small>JetBrains AI Assistant</small> | ◎<br><small>Copilot / Cursor / 各種拡張</small> |
+| **導入コスト** | ライセンス価格 | △<br><small>商用Pro版以上は高額</small> | ◯<br><small>Community版 / Pro版</small> | ◯<br><small>Community版 / サブスク</small> | ◎<br><small>完全無料 (OSS)</small> |
 
-### **16.2 詳細比較**
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
-|---------|------|------|------|------------------|
-| **Delphi** | RADツールの元祖。ネイティブコード生成。 | GUI開発の圧倒的な速さとWindows on Armも含むクロスプラットフォーム対応。SmartCore AIによるAI統合。 | 言語人口の少なさ、ライセンスコスト。 | Windows業務アプリや、単一コードでのマルチデバイス展開を最優先する場合。 |
-| **Visual Studio** | Microsoft標準のIDE。.NET開発のデファクト。 | Windows親和性、C#のエコシステム、Azure連携。 | クロスプラットフォーム(MAUI)は発展途上な面も。 | .NET/C#エコシステムを中心とする場合。 |
-| **IntelliJ IDEA** | Java/Kotlin開発の最高峰IDE。 | 強力なリファクタリング、Android開発との親和性。 | GUIデザイナーはDelphiほど直感的ではない。 | JavaバックエンドやAndroidネイティブ開発を行う場合。 |
+|---|---|---|---|---|
+| **Delphi** | RADツールの元祖。完全ネイティブコンパイルによる超高速起動とUI設計。 | ドラッグ＆ドロップによる圧倒的GUI生産性、LLVM 20最適化、マルチコア並列ビルド、20年超の長期互換性。 | Pascal人材の少なさ、商用ライセンス費用。 | Windows高機能デスクトップ業務アプリ、産業機器制御、単一コードでのマルチデバイス展開。 |
+| **Visual Studio** | Microsoft標準の総合開発環境。.NETエコシステムの中心。 | Windows環境での最高水準の親和性、C#の巨大なエコシステムと豊富なライブラリ、Azure連携。 | クロスプラットフォーム（MAUI）のLinux未対応、巨大なIDEフットプリント。 | C# / .NETを中心としたエンタープライズ業務システムやWindows専用アプリ。 |
+| **IntelliJ IDEA** | JetBrains社が誇るJVM言語向けの最高峰IDE。 | 強力な静的解析、リファクタリング支援、Kotlin Multiplatformとの親和性。 | ビジュアルGUIデザイナは弱く、コード中心のUI構築が前提。 | Java/KotlinによるWebバックエンド、Androidネイティブアプリ、KMPマルチプラットフォーム開発。 |
+| **Visual Studio Code** | 軽量かつ拡張性に優れたデファクトスタンダードのエディタ。 | 圧倒的な軽快さ、膨大な拡張機能エコシステム、無料利用可能、多言語サポート。 | 統合RADデザイナやネイティブGUIビルド環境を自前で構築する必要がある。 | Webフロントエンド、スクリプト開発、マイクロサービス開発、軽量なコード編集。 |
 
-## **17. 総評**
+## **18. 総評**
 
 * **総合的な評価**:
-  Delphiは「GUIアプリケーションを素早く作る」という一点において、依然として他の追随を許さない強力なツールです。特にWindowsデスクトップアプリの需要がある現場や、少人数でiOS/Android両対応のネイティブアプリを開発したいチームにとって、その生産性は大きな武器となります。さらに、RAD AI Companionの導入により、現代的なAI開発支援の恩恵も受けられるようになりました。
+  Delphiは、「視覚的で直感的なGUIアプリケーションを最も短時間で完成させる」というRADの本質的価値において、今なお他の追随を許さないトップクラスの統合開発環境です。2026年9月リリースのRAD Studio 13.2 Florenceにより、Linux Intel 64-bitコンパイラがLLVM 20へ刷新されて大幅なパフォーマンス向上を果たし、マルチコア並列コード生成によるビルド高速化、IDEへのNavigator標準統合、SmartCore AIやMCPConnectによる最新AIエコシステムの取り込みなど、近年の開発者が求めるモダンな開発体験が着実に実装されています。
 * **推奨されるチームやプロジェクト**:
-  * 既存のDelphi資産を持つ企業のモダナイゼーション案件。
-  * データベースと連携する業務アプリケーションを短期間で構築する必要があるプロジェクト。
-  * ハードウェア制御などを伴う現場向け端末アプリ開発。
+  * **既存Delphi資産のモダナイゼーション**: 過去数十年分のVCLコード資産を保持しながら、Windows 11対応やクラウド連携、Arm64EC対応へと進化させたいプロジェクト。
+  * **ハードウェア連携・FA/医療系アプリ**: シリアル通信、PLC、医療画像デバイスなどを低レイテンシかつ高安定性で直接制御する必要がある現場システム。
+  * **少人数でのクロスプラットフォーム開発**: 単一の専任チームでWindows, macOS, iOS, Android向けネイティブアプリを同時に開発・保守したいチーム。
 * **選択時のポイント**:
-  Object Pascalという言語を採用することによる「人材確保」の面と、高額なライセンスコストを許容できるかがカギとなります。しかし、それらを補って余りある開発スピードと、OSアップデートに追従し続ける安心感（エンバカデロのサポート）は、長期的なビジネスアプリケーションにとって魅力的な選択肢です。
+  Object Pascalというプログラミング言語の採用に伴う人材採用のハードルと、商用エディションの高額なライセンス費用が主な検討事項となります。しかし、それらを補って余りある圧倒的な画面開発スピード、単一コードベースによるマルチデバイス展開力、そして長期にわたる高い後方互換性は、長期運用を前提とするビジネスアプリケーションにおいて極めて強力な競争優位性を提供します。
