@@ -53,6 +53,7 @@ relationships:
     - Cline
     - GitLens
     - Edit
+    - Delphi
 ---
 # **Visual Studio Code 調査レポート**
 
