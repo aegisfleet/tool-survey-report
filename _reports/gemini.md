@@ -50,7 +50,7 @@ relationships:
     - NotebookLM
     - Code Wiki
     - Gemini Skills
-    - Gemini Computer Use
+    - Computer use（Gemini）
   related_tools:
     - 天才くん
     - ChatGPT

@@ -1,6 +1,6 @@
 ---
-title: Gemini Computer Use 調査レポート
-tool_name: Gemini Computer Use
+title: Computer use（Gemini） 調査レポート
+tool_name: Computer use（Gemini）
 tool_reading: ジェミニ コンピューター ユース
 category: デスクトップ/GUIエージェント
 developer: Google
@@ -16,7 +16,7 @@ tags:
   - 自動化
   - 自律型
   - API
-description: Geminiモデルが画面スクリーンショットを視覚的に理解し、ブラウザ・デスクトップ・モバイル環境でマウスクリックやキー入力などのGUI操作を自律実行する開発基盤。
+description: Geminiの組み込みcomputer useツールが画面スクリーンショットを視覚的に理解し、ブラウザ・デスクトップ・モバイル環境でマウスクリックやキー入力などのGUI操作を自律実行する開発基盤。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -52,11 +52,12 @@ relationships:
     - UI-TARS Desktop
 ---
 
-# **Gemini Computer Use 調査レポート**
+# **Computer use（Gemini） 調査レポート**
 
 ## **1. 基本情報**
 
-* **ツール名**: Gemini Computer Use（Google AI Studio Computer Use）
+* **ツール名**: Computer use（Gemini）（通称: Gemini Computer Use / Google AI Studio Computer Use）
+* **名称について**: Googleの公式表記は「Computer use」（Gemini APIの組み込みツール）。「Gemini Computer Use」は通称であり、単体モデル「Gemini 2.5 Computer Use」は2026-07-28に提供終了した。
 * **ツールの読み方**: ジェミニ コンピューター ユース
 * **開発元**: Google
 * **公式サイト**: [https://aistudio.google.com/docs/computer-use](https://aistudio.google.com/docs/computer-use)
@@ -65,7 +66,7 @@ relationships:
   * ドキュメント: [Gemini API Computer Use Documentation](https://ai.google.dev/gemini-api/docs/computer-use)
   * レビューサイト: G2, Capterra, ITreviewに単体での登録なし（Google AI Studio / Vertex AI の一部として評価）
 * **カテゴリ**: デスクトップ/GUIエージェント
-* **概要**: Gemini Computer Use は、Gemini 3.8 Flash や Gemini 4 などのマルチモーダルAIモデルを活用し、画面のスクリーンショットを直接視覚的に認識してマウスクリック、ドラッグ＆ドロップ、キーボード入力、スクロールなどのGUI操作を自律的に実行するための開発者向けツールセットおよびAPI機能である。Webブラウザ、Androidモバイル端末、主要デスクトップOS（macOS、Windows、Linux）に対応し、DOM構造や内部コードに依存せず、人間と同様に画面を見て操作するエージェントアプリケーションの構築を可能にする。
+* **概要**: Computer use（Gemini）は、Gemini 3.8 Flash や Gemini 4 などのマルチモーダルAIモデルを活用し、画面のスクリーンショットを直接視覚的に認識してマウスクリック、ドラッグ＆ドロップ、キーボード入力、スクロールなどのGUI操作を自律的に実行するための開発者向けツールセットおよびAPI機能である。Webブラウザ、Androidモバイル端末、主要デスクトップOS（macOS、Windows、Linux）に対応し、DOM構造や内部コードに依存せず、人間と同様に画面を見て操作するエージェントアプリケーションの構築を可能にする。
 
 ## **2. 目的と主な利用シーン**
 
@@ -120,7 +121,7 @@ swimlane-beta TB
 
 ## **4. 動作原理・システム構成**
 
-Gemini Computer Use は、「モデル自身が直接OSを遠隔操作する」のではなく、**「クライアント・サーバー型の協調ループ（Observe-Think-Act Loop）」**を基本アーキテクチャとしている。
+Computer use（Gemini）は、「モデル自身が直接OSを遠隔操作する」のではなく、**「クライアント・サーバー型の協調ループ（Observe-Think-Act Loop）」**を基本アーキテクチャとしている。
 
 ```mermaid
 flowchart TD
@@ -250,7 +251,7 @@ flowchart TD
 
 ## **8. 料金プラン**
 
-Gemini Computer Use は専用の固定月額費用ではなく、Google AI Studio および Gemini API の標準的なトークン従量課金体系（および一部の無料利用枠）に基づいて提供される。
+Computer use（Gemini）は専用の固定月額費用ではなく、Google AI Studio および Gemini API の標準的なトークン従量課金体系（および一部の無料利用枠）に基づいて提供される。
 
 | プラン / 利用枠 | 料金 | 主な特徴・制限 | 対象ユーザー |
 |:---|:---|:---|:---|
@@ -265,7 +266,7 @@ Gemini Computer Use は専用の固定月額費用ではなく、Google AI Studi
 ## **9. 導入実績・事例**
 
 * **導入企業**:
-  * **Browserbase**: クラウドヘッドレスブラウザ環境を提供するインフラ企業において、Gemini Computer Use と連携したブラウザ自動化サンドボックスソリューションを展開。
+  * **Browserbase**: クラウドヘッドレスブラウザ環境を提供するインフラ企業において、Computer use（Gemini）と連携したブラウザ自動化サンドボックスソリューションを展開。
   * **大手BPO・ITサービス事業者**: 複数社において、レガシーERPからのデータ抽出業務や手動入力プロセスの自律エージェント化PoCで採用。
   * **QA/テスト自動化ベンダー**: 頻繁にUI改修が入るWebアプリケーションの回帰テストにおいて、セレクタ定義が不要なビジュアルテスト基盤として試験導入。
 * **導入事例**:
@@ -348,7 +349,8 @@ Gemini Computer Use は専用の固定月額費用ではなく、Google AI Studi
 
 ## **16. 直近半年のアップデート情報**
 
-* **2026-10-30**: Googleが Gemini Computer Use ツールの一般提供（GA）を正式発表。Interactions API および GenerateContent API の双方でフルサポートされ、Gemini 4 Argon や Gemini 3.8 Flash における推論精度向上、安全ポリシー設定（決済・データ削除時の確認制御）、プロンプトインジェクション検知機能が正式導入。
+* **2026-10-30**: Googleが Computer use（Gemini）の一般提供（GA）を正式発表。Interactions API および GenerateContent API の双方でフルサポートされ、Gemini 4 Argon や Gemini 3.8 Flash における推論精度向上、安全ポリシー設定（決済・データ削除時の確認制御）、プロンプトインジェクション検知機能が正式導入。
+* **2026-07-28**: 単体モデル「Gemini 2.5 Computer Use」（`gemini-2.5-computer-use-preview-10-2025`）の提供を終了。以降は Gemini 3 系モデルに内蔵された computer use ツールへ移行する形で提供。
 * **2026-06-15**: コアモデル（Gemini 3.5 Flash 等）へのネイティブ統合とレイテンシ改善を実施。推論意図（Intent）の自動出力機能が追加され、エージェントの思考プロセスの透明性が向上。
 * **2025-10-15**: Google AI Studio および Gemini API 向けに「Gemini 2.5 Computer Use」プレビュー版が発表され、WebブラウザおよびAndroid環境での画面操作プロトタイピング環境の提供が開始。
 
@@ -358,7 +360,7 @@ Gemini Computer Use は専用の固定月額費用ではなく、Google AI Studi
 
 ### **17.1 機能比較表 (星取表)**
 
-| 機能カテゴリ | 評価項目 | Gemini Computer Use | Anthropic Computer Use | OpenAI Operator | UI-TARS |
+| 機能カテゴリ | 評価項目 | Computer use（Gemini） | Anthropic Computer Use | OpenAI Operator | UI-TARS |
 |:---|:---|:---:|:---:|:---:|:---:|
 | **対応環境** | ブラウザ操作 | ◎<br><small>Playwright等と統合</small> | ◎<br><small>Docker/X11連携</small> | ◎<br><small>ブラウザ専用Agent</small> | ◎<br><small>Web/ブラウザ対応</small> |
 | **対応環境** | デスクトップOS操作 | ◯<br><small>macOS/Win/Linux</small> | ◎<br><small>Linux X11ベースで先行</small> | △<br><small>限定的または非対応</small> | ◯<br><small>OSレベル操作対応</small> |
@@ -372,7 +374,7 @@ Gemini Computer Use は専用の固定月額費用ではなく、Google AI Studi
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |:---|:---|:---|:---|:---|
-| **Gemini Computer Use** | Googleのマルチモーダル基盤と連携したGUI操作ツール | モバイル（Android）を含む幅広い環境対応、推論速度、正規化座標による扱いやすさ | クライアント側ランタイムの自前構築が必要 | AndroidアプリやWeb、複数環境を横断して高速かつ安価にエージェントを自作したい場合 |
+| **Computer use（Gemini）** | Googleのマルチモーダル基盤と連携したGUI操作ツール | モバイル（Android）を含む幅広い環境対応、推論速度、正規化座標による扱いやすさ | クライアント側ランタイムの自前構築が必要 | AndroidアプリやWeb、複数環境を横断して高速かつ安価にエージェントを自作したい場合 |
 | **Anthropic Computer Use** | Claude 3.5/3.7 Sonnet による高度なデスクトップ操作先行機能 | コーディング能力と複雑なUI推論精度の高さ、先行する豊富なコミュニティ知見 | トークンコストが比較的高めで、レイテンシがやや大きい | 複雑なプログラミング作業や精密なデスクトップワークスペース操作を行わせたい場合 |
 | **OpenAI Operator** | 一般ユーザー向けにパッケージ化されたWeb自律ブラウジング機能 | 特別な開発不要で使える完成されたUX、高度なタスク実行力 | 開発者が低レイヤーのGUI操作APIとして組み込む自由度が低い | 開発工数をかけずに完成品のWebリサーチ・代理購買エージェントを利用したい場合 |
 | **UI-TARS** | ByteDanceが開発したGUIエージェント特化のオープンソースVLM | オンプレミスやローカル環境で自前ホスティング可能、ライセンスフリー | 強力なGPUインフラの維持管理コスト、推論レイテンシのチューニング難易度 | 機密データ保護のためモデルを完全オンプレミスでホスト・運用する必要がある場合 |
@@ -380,10 +382,10 @@ Gemini Computer Use は専用の固定月額費用ではなく、Google AI Studi
 ## **18. 総評**
 
 * **総合的な評価**:
-  * Gemini Computer Use は、GUI操作の標準化と推論プロセスの透明性を両立させた極めて完成度の高いエージェント基盤機能である。1000x1000の正規化座標系や Intent の分離出力、オプトインのプロンプトインジェクション検知など、開発者が本番システムに組み込む上で直面する課題（解像度差の吸収、監査ログの取得、セキュリティリスク）に対する現実的な解決策が最初から組み込まれている。Gemini 3.8 Flash の高速性・コスト効率とも相まって、GUIエージェントの実用化を一気に加速させるツールといえる。
+  * Computer use（Gemini）は、GUI操作の標準化と推論プロセスの透明性を両立させた極めて完成度の高いエージェント基盤機能である。1000x1000の正規化座標系や Intent の分離出力、オプトインのプロンプトインジェクション検知など、開発者が本番システムに組み込む上で直面する課題（解像度差の吸収、監査ログの取得、セキュリティリスク）に対する現実的な解決策が最初から組み込まれている。Gemini 3.8 Flash の高速性・コスト効率とも相まって、GUIエージェントの実用化を一気に加速させるツールといえる。
 * **推奨されるチームやプロジェクト**:
   * Webブラウザ、Androidモバイルアプリ、デスクトップアプリを横断して自律型操作エージェントを構築したいプロダクト開発チーム。
   * 従来のRPAツールの保守性に課題を抱えており、ビジュアル認識を活用した壊れにくい自動化基盤へ移行したいエンタープライズのDX推進部門。
   * E2Eテストや回帰テストの工数を削減し、人間目線の探索的テストを自動化したいQAエンジニアチーム。
 * **選択時のポイント**:
-  * すでに完成された一般ユーザー向けブラウジングツールを求めている場合は OpenAI Operator 等が適しているが、自社のシステムやモバイルアプリ、特定業務フローに合わせて自由にドライバを制御し、高い拡張性とコスト効率を追求したい場合は、Gemini Computer Use が最も有力な選択肢となる。
+  * すでに完成された一般ユーザー向けブラウジングツールを求めている場合は OpenAI Operator 等が適しているが、自社のシステムやモバイルアプリ、特定業務フローに合わせて自由にドライバを制御し、高い拡張性とコスト効率を追求したい場合は、Computer use（Gemini）が最も有力な選択肢となる。
