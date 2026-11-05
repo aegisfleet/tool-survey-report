@@ -1,58 +1,55 @@
 ---
-title: "Gemini Computer Use 調査レポート"
-tool_name: "Gemini Computer Use"
-tool_reading: "ジェミニ コンピューター ユース"
-category: "デスクトップ/GUIエージェント"
-developer: "Google"
-official_site: "https://aistudio.google.com/docs/computer-use"
-date: "2026-11-05"
-last_updated: "2026-11-05"
+title: Gemini Computer Use 調査レポート
+tool_name: Gemini Computer Use
+tool_reading: ジェミニ コンピューター ユース
+category: デスクトップ/GUIエージェント
+developer: Google
+official_site: https://aistudio.google.com/docs/computer-use
+date: '2026-11-05'
+last_updated: '2026-11-05'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "大規模言語モデル"
-  - "自動化"
-  - "自律型"
-  - "API"
-description: "Geminiモデルが画面スクリーンショットを視覚的に理解し、ブラウザ・デスクトップ・モバイル環境でマウスクリックやキー入力などのGUI操作を自律実行する開発基盤。"
-
+  - AI
+  - 生成AI
+  - エージェント
+  - 開発者ツール
+  - 大規模言語モデル
+  - 自動化
+  - 自律型
+  - API
+description: Geminiモデルが画面スクリーンショットを視覚的に理解し、ブラウザ・デスクトップ・モバイル環境でマウスクリックやキー入力などのGUI操作を自律実行する開発基盤。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料（従量課金制）"
+  starting_price: 無料（従量課金制）
   target_users:
-    - "自律型エージェント開発者"
-    - "RPA・テスト自動化エンジニア"
-    - "エンタープライズシステム開発者"
-  latest_highlight: "2026年10月に一般提供(GA)開始、Interactions API対応および安全ポリシー制御機能を追加"
-  update_frequency: "高"
-
+    - 自律型エージェント開発者
+    - RPA・テスト自動化エンジニア
+    - エンタープライズシステム開発者
+  latest_highlight: 2026年10月に一般提供(GA)開始、Interactions API対応および安全ポリシー制御機能を追加
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "ブラウザ、Androidモバイル、デスクトップ（macOS/Windows/Linux）を横断する包括的なGUI操作に対応"
+      reason: ブラウザ、Androidモバイル、デスクトップ（macOS/Windows/Linux）を横断する包括的なGUI操作に対応
     - point: 5
-      reason: "1000x1000の正規化座標系と推論意図（Intent）の自動出力により高い制御精度とデバッグ性を実現"
+      reason: 1000x1000の正規化座標系と推論意図（Intent）の自動出力により高い制御精度とデバッグ性を実現
     - point: 5
-      reason: "Google AI Studioによる容易なプロトタイピングと公式Python/TypeScript SDKによる柔軟な統合性"
+      reason: Google AI Studioによる容易なプロトタイピングと公式Python/TypeScript SDKによる柔軟な統合性
   minus_points:
     - point: 0
-      reason: "大きな減点要素は見当たらない（反復ループに伴うトークン消費管理には留意が必要）"
-  summary: "視覚的GUI操作の標準化と推論意図の可視化により、安全かつ柔軟なマルチプラットフォーム自律エージェントの構築を強力に支援する。"
-
+      reason: 大きな減点要素は見当たらない（反復ループに伴うトークン消費管理には留意が必要）
+  summary: 視覚的GUI操作の標準化と推論意図の可視化により、安全かつ柔軟なマルチプラットフォーム自律エージェントの構築を強力に支援する。
 links:
-  documentation: "https://ai.google.dev/gemini-api/docs/computer-use"
-  github: "https://github.com/google-gemini/computer-use-preview"
+  documentation: https://ai.google.dev/gemini-api/docs/computer-use
+  github: https://github.com/google-gemini/computer-use-preview
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "Browserbase"
-    - "Microsoft Scout"
-    - "UI-TARS Desktop"
+    - Browserbase
+    - Microsoft Scout
+    - UI-TARS Desktop
 ---
 
 # **Gemini Computer Use 調査レポート**
