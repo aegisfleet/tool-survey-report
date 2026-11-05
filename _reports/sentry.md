@@ -50,6 +50,7 @@ relationships:
     - New Relic
     - Grafana
     - PagerDuty
+    - PostHog
 ---
 
 # **Sentry 調査レポート**
