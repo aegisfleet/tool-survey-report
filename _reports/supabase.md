@@ -48,6 +48,7 @@ relationships:
     - Firebase CLI
     - NocoDB
     - Cloudflare Workers
+    - Pinecone
 ---
 
 # **Supabase 調査レポート**
