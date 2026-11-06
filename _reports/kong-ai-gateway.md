@@ -42,6 +42,10 @@ evaluation:
 links:
   github: https://github.com/Kong/kong
   documentation: https://developer.konghq.com/ai-gateway/
+relationships:
+  related_tools:
+    - LiteLLM
+    - Portkey
 ---
 # **Kong AI Gateway 調査レポート**
 
