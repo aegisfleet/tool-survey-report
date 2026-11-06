@@ -42,6 +42,7 @@ links:
 relationships:
   related_tools:
     - Renovate
+    - actionlint
 ---
 
 # **pinact 調査レポート**
