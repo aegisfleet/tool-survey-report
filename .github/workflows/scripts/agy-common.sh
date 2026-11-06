@@ -147,6 +147,83 @@ scan_staged_for_secrets() {
 }
 
 #######################################
+# Escapes unescaped Liquid syntax ({{ ... }} and {% ... %}) in the
+# Markdown body (after YAML frontmatter) of staged .md files under
+# _reports/ and _trending/ by wrapping them in {% raw %}...{% endraw %}.
+# Re-stages any modified files and fails if unescaped Liquid delimiters
+# still remain.
+# Returns:
+#   0 when clean/fixed, 1 if unfixable Liquid delimiters remain
+#######################################
+sanitize_staged_liquid_syntax() {
+  local -a md_files=()
+  local file
+  while IFS= read -r file; do
+    if [[ "${file}" == *.md && -f "${file}" ]]; then
+      md_files+=("${file}")
+    fi
+  done < <(git diff --cached --name-only --diff-filter=ACM)
+
+  if [[ ${#md_files[@]} -eq 0 ]]; then
+    return 0
+  fi
+
+  if ! python3 - "${md_files[@]}" <<'PYEOF'
+import re
+import sys
+
+raw_block_re = re.compile(r"(\{%-?\s*raw\s*-?%\}.*?\{%-?\s*endraw\s*-?%\})", re.DOTALL)
+liquid_expr_re = re.compile(r"(\$\{\{[^{}\n]*\}\}|\{\{[^{}\n]*\}\}|\{%[^%\n]*%\})")
+fm_end_re = re.compile(r"\r?\n---\r?\n")
+
+unfixed = False
+for path in sys.argv[1:]:
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    if content.startswith("---\n") or content.startswith("---\r\n"):
+        start_len = 5 if content.startswith("---\r\n") else 4
+        m = fm_end_re.search(content, start_len)
+        if not m:
+            continue
+        head = content[: m.end()]
+        body = content[m.end() :]
+    else:
+        head = ""
+        body = content
+
+    parts = raw_block_re.split(body)
+    changed = False
+    for i in range(0, len(parts), 2):
+        new_part, count = liquid_expr_re.subn(r"{% raw %}\1{% endraw %}", parts[i])
+        if count > 0:
+            parts[i] = new_part
+            changed = True
+
+    new_body = "".join(parts)
+    if changed:
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(head + new_body)
+        print(f"[INFO] Auto-escaped unescaped Liquid syntax in {path}")
+
+    cleaned = raw_block_re.sub("", new_body)
+    if "{{" in cleaned or "{%" in cleaned:
+        print(f"[ERROR] Unescaped Liquid syntax remains in {path}", file=sys.stderr)
+        unfixed = True
+
+sys.exit(1 if unfixed else 0)
+PYEOF
+  then
+    log_error "Unescaped Liquid syntax detected in staged Markdown files."
+    return 1
+  fi
+
+  git add "${md_files[@]}"
+  log_info "Pre-push Liquid syntax check passed."
+  return 0
+}
+
+#######################################
 # Commits changes in _reports/ and categories.yml, pushes to remote, and creates a PR.
 # Arguments:
 #   branch_name: Head branch name
@@ -170,6 +247,12 @@ commit_and_create_pr() {
 
   log_info "Staging report, trending, and category changes..."
   git add "${REPORTS_DIR}"/ "${CATEGORIES_FILE}" "${TRENDING_DIR}"/ 2>/dev/null || true
+
+  # Pre-push guard: ensure Liquid syntax in Markdown body is wrapped in {% raw %}...{% endraw %}.
+  if ! sanitize_staged_liquid_syntax; then
+    log_error "Liquid syntax check failed; aborting before commit and push."
+    return 1
+  fi
 
   # Pre-push guard: never push secret-like strings (Push Protection
   # would reject them, and a rejected push must not look successful).

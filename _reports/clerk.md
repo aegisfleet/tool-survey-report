@@ -252,7 +252,7 @@ graph TD
     const { userId } = await auth();
 
     return (
-      <main style={{ padding: "2rem" }}>
+      <main style={% raw %}{{ padding: "2rem" }}{% endraw %}>
         <h1>Clerk 認証デモ</h1>
 
         {/* 未ログイン時にサインイン/サインアップボタンを表示 */}
@@ -261,13 +261,13 @@ graph TD
             <button>ログイン</button>
           </SignInButton>
           <SignUpButton mode="modal">
-            <button style={{ marginLeft: "1rem" }}>アカウント登録</button>
+            <button style={% raw %}{{ marginLeft: "1rem" }}{% endraw %}>アカウント登録</button>
           </SignUpButton>
         </Show>
 
         {/* ログイン時にユーザーボタンとIDを表示 */}
         <Show when="signedIn">
-          <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+          <div style={% raw %}{{ display: "flex", alignItems: "center", gap: "1rem" }}{% endraw %}>
             <UserButton />
             <p>ようこそ！ユーザーID: {userId}</p>
           </div>
