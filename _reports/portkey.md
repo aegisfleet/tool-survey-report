@@ -50,6 +50,7 @@ relationships:
   related_tools:
     - LiteLLM
     - Cloudflare
+    - Kong AI Gateway
 ---
 
 # **Portkey 調査レポート**
