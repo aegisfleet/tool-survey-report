@@ -118,7 +118,7 @@ swimlane-beta TB
 * **主要コンポーネントとデータフロー**:
   * **YAML Lexer & Parser**: `.github/workflows/*.yml` を字句解析し、YAMLノードツリー（AST）を構築。YAMLアンカー（`&anchor`）やエイリアス（`*anchor`）の解決・検証も行う。
   * **Workflow Semantics Analyzer**: GitHub Actionsの公式スキーマに基づき、ジョブ依存関係（`needs:`）、マトリックス定義、ステップ構造、権限設定（`permissions:`）などを検証。
-  * **Expression Engine**: `${{ ... }}` 内の式構文木をパースし、コンテキスト（`github`、`env`、`steps`、`secrets`等）の型チェックや組み込み関数（`contains()`, `case()` 等）のシグネチャを検証。
+  * **Expression Engine**: `{% raw %}${{ ... }}{% endraw %}` 内の式構文木をパースし、コンテキスト（`github`、`env`、`steps`、`secrets`等）の型チェックや組み込み関数（`contains()`, `case()` 等）のシグネチャを検証。
   * **Rule Set & Metadata Registry**: 100以上の人気アクション定義、IANAタイムゾーンDB、Webhookイベント種別、GitHubホステッドランナーラベルなどの内包データと照合。
   * **External Linter Bridge**: `run:` ブロック内のスクリプトを抽出し、ローカルの `shellcheck` や `pyflakes` プロセスへSTDIN経由で並行パイプ渡しして結果を統合。
 
