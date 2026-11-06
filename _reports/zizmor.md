@@ -41,6 +41,7 @@ links:
 relationships:
   related_tools:
     - Trivy
+    - actionlint
 ---
 
 # **zizmor 調査レポート**

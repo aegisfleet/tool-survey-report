@@ -48,6 +48,7 @@ relationships:
   parent: GitHub Actions
   related_tools:
     - Docker
+    - actionlint
     - GitLab CI/CD
     - Jenkins
     - Lefthook

@@ -48,6 +48,7 @@ relationships:
   parent: GitHub
   children:
     - act
+    - actionlint
     - Agentic Workflows
   related_tools:
     - Jenkins
