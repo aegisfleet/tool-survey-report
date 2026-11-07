@@ -55,6 +55,7 @@ relationships:
     - Roo Code
     - Visual Studio Code
     - IntelliJ IDEA
+    - Kiro
 ---
 # **Cursor 調査レポート**
 
