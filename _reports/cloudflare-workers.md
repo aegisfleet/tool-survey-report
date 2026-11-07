@@ -46,6 +46,7 @@ relationships:
     - Vercel
     - Hono
     - Deno
+    - Upstash
 ---
 # **Cloudflare Workers 調査レポート**
 

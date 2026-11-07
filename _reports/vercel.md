@@ -48,6 +48,7 @@ relationships:
     - Cloudflare Workers
     - Hono
     - agent-desktop
+    - Upstash
 ---
 
 # **Vercel 調査レポート**

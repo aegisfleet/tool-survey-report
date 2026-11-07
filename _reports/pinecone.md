@@ -50,6 +50,7 @@ relationships:
     - LangChain
     - Supabase
     - Amazon OpenSearch Service
+    - Upstash
 ---
 
 # **Pinecone 調査レポート**
