@@ -45,11 +45,11 @@ links:
 relationships:
   children:
     - GitLens
-    - Kiro
   related_tools:
     - Visual Studio Code
     - GitHub
     - GitLab
+    - Kiro
 ---
 
 # **GitKraken 調査レポート**
