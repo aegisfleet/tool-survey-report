@@ -49,6 +49,7 @@ relationships:
     - Supabase
     - OAuth
     - OpenID
+    - Resend
 ---
 
 # **Clerk 調査レポート**
