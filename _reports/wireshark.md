@@ -41,7 +41,8 @@ links:
   deepwiki: https://deepwiki.com/wireshark/wireshark
   documentation: https://www.wireshark.org/docs/
 relationships:
-  related_tools: []
+  related_tools:
+    - Mimikatz
 ---
 
 # **Wireshark 調査レポート**
