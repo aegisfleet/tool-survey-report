@@ -65,15 +65,70 @@ layout: default
 <script type="module">
   import { mount } from 'https://cdn.jsdelivr.net/npm/pele@1.12.0/dist/pele.js';
 
+  const iconMaximize = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>';
+  const iconMinimize = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path></svg>';
+
   document.querySelectorAll('pre code.language-mermaid').forEach((codeBlock) => {
     const pre = codeBlock.parentElement;
     if (!pre) return;
 
+    const source = codeBlock.textContent;
     const container = document.createElement('div');
     container.className = 'mermaid-diagram';
     pre.replaceWith(container);
 
-    mount(container, codeBlock.textContent, {
+    let baseVb = null;
+    let curVb = null;
+    let zoomControls = null;
+    let btnIn = null;
+    let btnOut = null;
+    let btnReset = null;
+
+    const getSvg = () => container.querySelector(':scope > svg') || container.querySelector('svg');
+
+    const updateControls = () => {
+      const svg = getSvg();
+      const isZoomed = baseVb && curVb ? Math.abs(curVb.width - baseVb.width) > 1 : false;
+      const isPanned = baseVb && curVb ? Math.abs(curVb.x - baseVb.x) > 1 || Math.abs(curVb.y - baseVb.y) > 1 : false;
+      const isModified = isZoomed || isPanned;
+
+      if (btnOut) {
+        btnOut.disabled = !isZoomed;
+        btnOut.style.opacity = isZoomed ? '' : '0.35';
+        btnOut.style.cursor = isZoomed ? 'pointer' : 'default';
+      }
+      if (btnReset) {
+        btnReset.style.display = isModified ? 'grid' : 'none';
+      }
+      if (svg) {
+        svg.style.touchAction = isModified || container.classList.contains('is-fullscreen') ? 'none' : 'pan-y';
+      }
+    };
+
+    const applyVb = () => {
+      const svg = getSvg();
+      if (!svg || !curVb) return;
+      svg.setAttribute('viewBox', `${curVb.x} ${curVb.y} ${curVb.width} ${curVb.height}`);
+      updateControls();
+    };
+
+    const initVb = (force = false) => {
+      const svg = getSvg();
+      if (!svg) return;
+      const raw = svg.getAttribute('viewBox');
+      if (raw) {
+        const parts = raw.split(/\s+/).map(Number);
+        if (parts.length === 4 && parts[2] > 0 && parts[3] > 0) {
+          if (!baseVb || force) {
+            baseVb = { x: parts[0], y: parts[1], width: parts[2], height: parts[3] };
+            curVb = { ...baseVb };
+          }
+        }
+      }
+      updateControls();
+    };
+
+    const instance = mount(container, source, {
       zoom: {
         always: true,
         controls: true,
@@ -82,7 +137,311 @@ layout: default
           zoomOut: '縮小',
           reset: 'リセット'
         }
+      },
+      onRender: () => {
+        if (zoomControls && zoomControls.parentNode !== container) {
+          container.appendChild(zoomControls);
+        }
+        initVb();
       }
     });
+
+    zoomControls = container.querySelector('.pele-zoom');
+    if (instance && instance.zoom) {
+      instance.zoom.destroy();
+      instance.zoom.resized = () => {};
+      instance.zoom.refresh = () => {};
+    }
+    if (getComputedStyle(container).position === 'static') {
+      container.style.position = 'relative';
+    }
+    if (zoomControls) {
+      container.appendChild(zoomControls);
+      btnIn = zoomControls.querySelector('.pele-zoom-in');
+      btnOut = zoomControls.querySelector('.pele-zoom-out');
+      btnReset = zoomControls.querySelector('.pele-zoom-reset');
+    }
+
+    initVb();
+
+    const zoomAt = (factor, clientX, clientY) => {
+      const svg = getSvg();
+      if (!svg) return;
+      if (!curVb) initVb();
+      if (!curVb) return;
+
+      const rect = svg.getBoundingClientRect();
+      const rx = clientX !== undefined && rect.width > 0 ? (clientX - rect.left) / rect.width : 0.5;
+      const ry = clientY !== undefined && rect.height > 0 ? (clientY - rect.top) / rect.height : 0.5;
+
+      const newW = curVb.width * factor;
+      const newH = curVb.height * factor;
+
+      if (baseVb) {
+        const scale = baseVb.width / newW;
+        if (scale < 0.2 || scale > 20) return;
+      }
+
+      curVb.x += (curVb.width - newW) * rx;
+      curVb.y += (curVb.height - newH) * ry;
+      curVb.width = newW;
+      curVb.height = newH;
+      applyVb();
+    };
+
+    const resetZoom = () => {
+      const svg = getSvg();
+      if (!svg) return;
+      initVb();
+      if (!baseVb) return;
+      curVb = { ...baseVb };
+      applyVb();
+    };
+    container._resetZoom = resetZoom;
+    container._initVb = initVb;
+
+    if (btnIn) {
+      btnIn.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        zoomAt(1 / 1.15);
+      }, true);
+    }
+
+    if (btnOut) {
+      btnOut.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        zoomAt(1.15);
+      }, true);
+    }
+
+    if (btnReset) {
+      btnReset.addEventListener('click', (e) => {
+        e.stopImmediatePropagation();
+        resetZoom();
+      }, true);
+    }
+
+    container.addEventListener('wheel', (e) => {
+      const isFs = container.classList.contains('is-fullscreen');
+      if (isFs || e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        const factor = e.deltaY < 0 ? 0.94 : 1.06;
+        zoomAt(factor, e.clientX, e.clientY);
+      }
+    }, { passive: false });
+
+    container.addEventListener('touchmove', (e) => {
+      if (e.touches.length >= 2) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    container.addEventListener('gesturestart', (e) => {
+      e.preventDefault();
+    }, { passive: false });
+
+    container.addEventListener('gesturechange', (e) => {
+      e.preventDefault();
+    }, { passive: false });
+
+    const activePointers = new Map();
+    let isDragging = false;
+    let hasMoved = false;
+    let startX = 0, startY = 0;
+    let startVbX = 0, startVbY = 0;
+    let lastPinchDist = 0;
+    let lastPinchCenter = null;
+
+    container.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.pele-zoom')) return;
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      if (!curVb) initVb();
+      if (!curVb) return;
+
+      activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      if (activePointers.size === 1) {
+        isDragging = true;
+        hasMoved = false;
+        startX = e.clientX;
+        startY = e.clientY;
+        startVbX = curVb.x;
+        startVbY = curVb.y;
+      } else if (activePointers.size === 2) {
+        isDragging = false;
+        const [p1, p2] = [...activePointers.values()];
+        lastPinchDist = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+        lastPinchCenter = { x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2 };
+        const svg = getSvg();
+        if (svg) svg.style.touchAction = 'none';
+        try { container.setPointerCapture?.(e.pointerId); } catch {}
+      }
+    });
+
+    container.addEventListener('pointermove', (e) => {
+      if (!activePointers.has(e.pointerId) || !curVb) return;
+      activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      if (activePointers.size === 2) {
+        const svg = getSvg();
+        if (!svg) return;
+        const [p1, p2] = [...activePointers.values()];
+        const newDist = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+        const newCenter = { x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2 };
+
+        if (lastPinchDist > 0 && newDist > 0 && lastPinchCenter) {
+          const rect = svg.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            const factor = lastPinchDist / newDist;
+            let newW = curVb.width * factor;
+            let newH = curVb.height * factor;
+
+            if (baseVb) {
+              const scale = baseVb.width / newW;
+              if (scale < 0.2) {
+                newW = baseVb.width / 0.2;
+                newH = baseVb.height / 0.2;
+              } else if (scale > 20) {
+                newW = baseVb.width / 20;
+                newH = baseVb.height / 20;
+              }
+            }
+
+            const rx0 = (lastPinchCenter.x - rect.left) / rect.width;
+            const ry0 = (lastPinchCenter.y - rect.top) / rect.height;
+            const rx1 = (newCenter.x - rect.left) / rect.width;
+            const ry1 = (newCenter.y - rect.top) / rect.height;
+
+            curVb.x = curVb.x + curVb.width * rx0 - newW * rx1;
+            curVb.y = curVb.y + curVb.height * ry0 - newH * ry1;
+            curVb.width = newW;
+            curVb.height = newH;
+            applyVb();
+          }
+        }
+
+        lastPinchDist = newDist;
+        lastPinchCenter = newCenter;
+        return;
+      }
+
+      if (activePointers.size === 1 && isDragging) {
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+
+        if (!hasMoved && Math.hypot(dx, dy) > 3) {
+          hasMoved = true;
+          try { container.setPointerCapture?.(e.pointerId); } catch {}
+          container.style.cursor = 'grabbing';
+          container.style.userSelect = 'none';
+          window.getSelection?.()?.removeAllRanges();
+        }
+
+        if (hasMoved) {
+          const svg = getSvg();
+          if (!svg) return;
+          const rect = svg.getBoundingClientRect();
+          if (rect.width > 0 && rect.height > 0) {
+            const scaleX = curVb.width / rect.width;
+            const scaleY = curVb.height / rect.height;
+            curVb.x = startVbX - dx * scaleX;
+            curVb.y = startVbY - dy * scaleY;
+            applyVb();
+          }
+        }
+      }
+    });
+
+    const stopDrag = (e) => {
+      if (!activePointers.has(e.pointerId)) return;
+      activePointers.delete(e.pointerId);
+      try { container.releasePointerCapture?.(e.pointerId); } catch {}
+
+      if (activePointers.size === 1 && curVb) {
+        const [, remainingPt] = [...activePointers.entries()][0];
+        startX = remainingPt.x;
+        startY = remainingPt.y;
+        startVbX = curVb.x;
+        startVbY = curVb.y;
+        isDragging = true;
+        hasMoved = true;
+        lastPinchDist = 0;
+        lastPinchCenter = null;
+      } else if (activePointers.size === 0) {
+        isDragging = false;
+        lastPinchDist = 0;
+        lastPinchCenter = null;
+        if (hasMoved) {
+          hasMoved = false;
+          container.style.cursor = '';
+          container.style.userSelect = '';
+        }
+      }
+    };
+    container.addEventListener('pointerup', stopDrag);
+    container.addEventListener('pointercancel', stopDrag);
+
+    if (zoomControls) {
+      const fsButton = document.createElement('button');
+      fsButton.type = 'button';
+      fsButton.className = 'pele-zoom-fullscreen';
+      fsButton.title = '全画面表示';
+      fsButton.setAttribute('aria-label', '全画面表示');
+      fsButton.innerHTML = iconMaximize;
+
+      const toggleFullscreen = () => {
+        const isFs = container.classList.contains('is-fullscreen');
+        if (!isFs) {
+          openFullscreen(container, fsButton);
+        } else {
+          closeFullscreen();
+        }
+      };
+
+      fsButton.addEventListener('click', toggleFullscreen);
+      zoomControls.appendChild(fsButton);
+    }
+  });
+
+  let backdrop = document.querySelector('.mermaid-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'mermaid-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  const openFullscreen = (container, btn) => {
+    container.classList.add('is-fullscreen');
+    if (typeof container._initVb === 'function') {
+      setTimeout(() => container._initVb(true), 50);
+    }
+    btn.innerHTML = iconMinimize;
+    btn.title = '全画面を閉じる (Esc)';
+    btn.setAttribute('aria-label', '全画面を閉じる (Esc)');
+    backdrop.classList.add('is-active');
+    document.body.classList.add('mermaid-fullscreen-active');
+  };
+
+  const closeFullscreen = () => {
+    const active = document.querySelector('.mermaid-diagram.is-fullscreen');
+    if (!active) return;
+    active.classList.remove('is-fullscreen');
+    if (typeof active._resetZoom === 'function') active._resetZoom();
+    const btn = active.querySelector('.pele-zoom-fullscreen');
+    if (btn) {
+      btn.innerHTML = iconMaximize;
+      btn.title = '全画面表示';
+      btn.setAttribute('aria-label', '全画面表示');
+    }
+    backdrop.classList.remove('is-active');
+    document.body.classList.remove('mermaid-fullscreen-active');
+  };
+
+  backdrop.addEventListener('click', closeFullscreen);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeFullscreen();
+    }
   });
 </script>
