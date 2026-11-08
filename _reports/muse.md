@@ -40,7 +40,8 @@ evaluation:
 links:
   documentation: https://introducing.muse.ai
 relationships:
-  children: []
+  children:
+    - Muse Code
   related_tools:
     - ChatGPT
     - Claude
