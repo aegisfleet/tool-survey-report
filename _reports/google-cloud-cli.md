@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - AWS CLI
     - Firebase CLI
+    - Google Colab CLI
     - Google Workspace CLI (gws)
 ---
 
