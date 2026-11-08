@@ -1,53 +1,53 @@
 ---
-title: "Resend 調査レポート"
-tool_name: "Resend"
-tool_reading: "リセンド"
-category: "メール配信基盤"
-developer: "Resend Inc."
-official_site: "https://resend.com/"
-date: "2026-11-09"
-last_updated: "2026-11-09"
+title: Resend 調査レポート
+tool_name: Resend
+tool_reading: リセンド
+category: メール配信基盤
+developer: Resend Inc.
+official_site: https://resend.com/
+date: '2026-11-09'
+last_updated: '2026-11-09'
 tags:
-  - "開発者ツール"
-  - "SaaS"
-  - "API"
-  - "自動化"
-  - "エージェント"
-  - "TypeScript"
-description: "モダンWeb開発者やAIエージェント向けに最適化されたメール配信基盤。React Emailによるコンポーネント指向テンプレート、次世代MTA「Resend Forge」、受信トレイ管理・MCP連携を提供。"
+  - 開発者ツール
+  - SaaS
+  - API
+  - 自動化
+  - エージェント
+  - TypeScript
+description: モダンWeb開発者やAIエージェント向けに最適化されたメール配信基盤。React Emailによるコンポーネント指向テンプレート、次世代MTA「Resend Forge」、受信トレイ管理・MCP連携を提供。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (月間3,000通まで)"
+  starting_price: 無料 (月間3,000通まで)
   target_users:
-    - "フロントエンド/フルスタック開発者"
-    - "スタートアップ/SaaS開発企業"
-    - "AIエージェント/自動化エンジニア"
-  latest_highlight: "2026年10月・11月に自社開発MTA「Resend Forge」やAI対応受信トレイ「Inboxes」、Remote MCPサーバー対応を発表"
-  update_frequency: "高"
+    - フロントエンド/フルスタック開発者
+    - スタートアップ/SaaS開発企業
+    - AIエージェント/自動化エンジニア
+  latest_highlight: 2026年10月・11月に自社開発MTA「Resend Forge」やAI対応受信トレイ「Inboxes」、Remote MCPサーバー対応を発表
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "React Emailとのネイティブ統合によるコンポーネント指向でのメールデザインと圧倒的な開発者体験（DX）"
+      reason: React Emailとのネイティブ統合によるコンポーネント指向でのメールデザインと圧倒的な開発者体験（DX）
     - point: 4
-      reason: "月3,000通の充実した無料枠と、Proプラン（$20/月・50,000通）による透明性の高い従量課金モデル"
+      reason: 月3,000通の充実した無料枠と、Proプラン（$20/月・50,000通）による透明性の高い従量課金モデル
     - point: 4
-      reason: "自前MTA「Resend Forge」による高速配送・高到達率と、AIエージェント向け「Inboxes」やRemote MCPサーバーの迅速な実装"
+      reason: 自前MTA「Resend Forge」による高速配送・高到達率と、AIエージェント向け「Inboxes」やRemote MCPサーバーの迅速な実装
     - point: 2
-      reason: "直感的で美麗な管理画面UIと、Webhooks/Audience管理/CLI 2.0など包括的なツール群"
+      reason: 直感的で美麗な管理画面UIと、Webhooks/Audience管理/CLI 2.0など包括的なツール群
   minus_points:
     - point: 0
-      reason: "特筆すべき構造的欠点はないが、管理画面・公式ドキュメントは英語中心で、高度なエンタープライズ機能（SSOや固定IP等）は追加費用が必要"
-  summary: "洗練されたDXとReact Email統合を武器に、次世代MTAとAIエージェント連携まで網羅するモダン開発スタックの標準メール配信プラットフォーム"
+      reason: 特筆すべき構造的欠点はないが、管理画面・公式ドキュメントは英語中心で、高度なエンタープライズ機能（SSOや固定IP等）は追加費用が必要
+  summary: 洗練されたDXとReact Email統合を武器に、次世代MTAとAIエージェント連携まで網羅するモダン開発スタックの標準メール配信プラットフォーム
 links:
-  github: "https://github.com/resend/resend-node"
-  documentation: "https://resend.com/docs"
+  github: https://github.com/resend/resend-node
+  documentation: https://resend.com/docs
 relationships:
   related_tools:
-    - "Clerk"
-    - "Supabase"
+    - Clerk
+    - Supabase
 ---
 
 # **Resend 調査レポート**
