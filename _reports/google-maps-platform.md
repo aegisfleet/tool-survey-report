@@ -46,6 +46,7 @@ links:
 relationships:
   related_tools:
     - Google Cloud
+    - Project PLATEAU
 ---
 
 # **Google Maps Platform 調査レポート**
