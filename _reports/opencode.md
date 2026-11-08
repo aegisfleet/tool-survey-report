@@ -43,6 +43,8 @@ links:
   deepwiki: https://deepwiki.com/anomalyco/opencode
   documentation: https://opencode.ai/docs
 relationships:
+  children:
+    - OpenCode Browse
   related_tools:
     - OpenHands
     - Devin

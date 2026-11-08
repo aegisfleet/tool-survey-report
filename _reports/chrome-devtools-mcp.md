@@ -46,6 +46,7 @@ links:
 relationships:
   parent: Model Context Protocol
   related_tools:
+    - OpenCode Browse
     - Browserbase
     - Playwright CLI
     - Playwright
