@@ -49,6 +49,7 @@ relationships:
     - NocoDB
     - Cloudflare Workers
     - Pinecone
+    - Resend
 ---
 
 # **Supabase 調査レポート**
