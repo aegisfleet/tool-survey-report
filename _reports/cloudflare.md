@@ -49,6 +49,7 @@ relationships:
     - Vercel
     - Google Cloud
     - Caddy
+    - Namecheap
 ---
 
 # **Cloudflare 調査レポート**
