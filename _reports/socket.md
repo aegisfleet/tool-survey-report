@@ -2,13 +2,14 @@
 title: Socket 調査レポート
 tool_name: Socket
 tool_reading: ソケット
-category: セキュリティ/脆弱性診断
+category: SCA/OSS依存関係管理
 developer: Socket Inc
 official_site: https://socket.dev/
 date: '2026-06-22'
 last_updated: '2026-06-22'
 tags:
   - セキュリティ
+  - SCA
   - 開発者ツール
   - CI/CD
   - SaaS
