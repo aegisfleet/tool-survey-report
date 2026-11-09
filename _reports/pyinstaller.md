@@ -48,6 +48,7 @@ links:
 relationships:
   related_tools:
     - Docker
+    - winapp CLI
 ---
 # **PyInstaller 調査レポート**
 
