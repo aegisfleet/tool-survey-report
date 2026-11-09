@@ -42,6 +42,7 @@ links:
 relationships:
   children:
     - Muse Code
+    - Muse Gadget SDK
   related_tools:
     - ChatGPT
     - Claude

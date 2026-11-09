@@ -52,6 +52,7 @@ relationships:
     - Claude Code
     - Cursor
     - GitHub Copilot CLI
+    - Muse Gadget SDK
 ---
 
 # **Muse Code 調査レポート**
