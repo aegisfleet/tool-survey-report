@@ -54,6 +54,7 @@ relationships:
     - Affinity
     - GIMP
     - OpenPencil
+    - Astryx
 ---
 
 # **Figma 調査レポート**
