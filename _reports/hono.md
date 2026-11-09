@@ -49,6 +49,7 @@ relationships:
     - Bun
     - Cloudflare Workers
     - Vercel
+    - FxEmbed
 ---
 
 # **Hono 調査レポート**
