@@ -1,65 +1,57 @@
 ---
-# === フロントマター ===
-# 【必須項目】
-title: "Astryx 調査レポート"
-tool_name: "Astryx"
-tool_reading: "アスタリスクス / アストリクス"
-category: "UI/UX/作図"
-developer: "Meta Platforms, Inc."
-official_site: "https://astryx.atmeta.com/"
-date: "2026-11-09"
-last_updated: "2026-11-09"
+title: Astryx 調査レポート
+tool_name: Astryx
+tool_reading: アスタリスクス / アストリクス
+category: UI/UX/作図
+developer: Meta Platforms, Inc.
+official_site: https://astryx.atmeta.com/
+date: '2026-11-09'
+last_updated: '2026-11-09'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "エージェント"
-  - "デザインツール"
-  - "CLI"
-  - "TypeScript"
-description: "Meta社内13,000アプリの運用実績を基盤に、人間とAIコーディングエージェント双方のために再設計されたReact 19対応オープンソースデザインシステム。"
-
-# 【クイックサマリー】ホーム画面のカード表示用
+  - オープンソース
+  - 開発者ツール
+  - エージェント
+  - デザインツール
+  - CLI
+  - TypeScript
+description: Meta社内13,000アプリの運用実績を基盤に、人間とAIコーディングエージェント双方のために再設計されたReact 19対応オープンソースデザインシステム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンドエンジニア"
-    - "AIエージェント開発者"
-    - "プロダクトデザイナー"
-  latest_highlight: "2026年11月にPopoverのアニメーション刷新やTimestampのSSRハイドレーション改善を含むv0.7.11をリリース"
-  update_frequency: "高"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - フロントエンドエンジニア
+    - AIエージェント開発者
+    - プロダクトデザイナー
+  latest_highlight: 2026年11月にPopoverのアニメーション刷新やTimestampのSSRハイドレーション改善を含むv0.7.11をリリース
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 6
-      reason: "Meta社内13,000アプリで8年間鍛えられた150以上の高品質・アクセシブルなコンポーネント群"
+      reason: Meta社内13,000アプリで8年間鍛えられた150以上の高品質・アクセシブルなコンポーネント群
     - point: 5
-      reason: "CLIがSingle Source of TruthとなりAIエージェントが正確なコードを即座に生成可能な設計"
+      reason: CLIがSingle Source of TruthとなりAIエージェントが正確なコードを即座に生成可能な設計
     - point: 4
-      reason: "MITライセンスの完全無料OSSかつ段階的カスタマイズ（Swizzle対応）で特定技術にロックインされない"
+      reason: MITライセンスの完全無料OSSかつ段階的カスタマイズ（Swizzle対応）で特定技術にロックインされない
     - point: 3
-      reason: "StyleXとネイティブWeb標準の活用により軽量でTailwind等とも容易に共存可能"
+      reason: StyleXとネイティブWeb標準の活用により軽量でTailwind等とも容易に共存可能
   minus_points:
     - point: -3
-      reason: "React 19および最新ブラウザ（CSS Anchor Positioning等）が前提でレガシー環境への導入ハードルが高い"
+      reason: React 19および最新ブラウザ（CSS Anchor Positioning等）が前提でレガシー環境への導入ハードルが高い
     - point: -2
-      reason: "現在ベータ版でありドキュメントやUIの日本語ローカライズが未整備"
-  summary: "Meta社内8年の実績とAIエージェント時代の最新設計を融合した、高い完成度と拡張性を誇る次世代デザインシステム"
-
-# 【任意項目】該当するもののみ記載
+      reason: 現在ベータ版でありドキュメントやUIの日本語ローカライズが未整備
+  summary: Meta社内8年の実績とAIエージェント時代の最新設計を融合した、高い完成度と拡張性を誇る次世代デザインシステム
 links:
-  github: "https://github.com/meta/astryx"
-  deepwiki: "https://deepwiki.com/meta/astryx"
-  codewiki: "https://codewiki.google/github.com/meta/astryx"
-  documentation: "https://astryx.atmeta.com"
+  github: https://github.com/meta/astryx
+  deepwiki: https://deepwiki.com/meta/astryx
+  codewiki: https://codewiki.google/github.com/meta/astryx
+  documentation: https://astryx.atmeta.com
 relationships:
-  parent: "React"
+  parent: React
   related_tools:
-    - "Figma"
+    - Figma
 ---
 
 # **Astryx 調査レポート**
