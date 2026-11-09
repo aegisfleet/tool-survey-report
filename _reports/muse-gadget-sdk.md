@@ -1,53 +1,53 @@
 ---
-title: "Muse Gadget SDK 調査レポート"
-tool_name: "Muse Gadget SDK"
-tool_reading: "ミューズ ガジェット エスディーケー"
-category: "エージェント開発プラットフォーム"
-developer: "Meta"
-official_site: "https://gadgets.muse.ai"
-date: "2026-11-09"
-last_updated: "2026-11-09"
+title: Muse Gadget SDK 調査レポート
+tool_name: Muse Gadget SDK
+tool_reading: ミューズ ガジェット エスディーケー
+category: エージェント開発プラットフォーム
+developer: Meta
+official_site: https://gadgets.muse.ai
+date: '2026-11-09'
+last_updated: '2026-11-09'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "エージェント"
-  - "AI"
-  - "自律型"
-description: "MetaのパーソナルAIエージェント『Muse』を自作ハードウェア（ESP32やRaspberry Pi）と接続するためのオープンソースSDK。Web Flasher、47種以上のスマートホーム連携スキル、暗号化トンネルを提供。"
+  - オープンソース
+  - 開発者ツール
+  - エージェント
+  - AI
+  - 自律型
+description: MetaのパーソナルAIエージェント『Muse』を自作ハードウェア（ESP32やRaspberry Pi）と接続するためのオープンソースSDK。Web Flasher、47種以上のスマートホーム連携スキル、暗号化トンネルを提供。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "電子工作愛好家・メイカー"
-    - "IoT・スマートホーム開発者"
-    - "AIハードウェア開発者"
-  latest_highlight: "2026年11月にWeb Flasherの日本語対応およびDevice Settings機能、VIEWE SmartRing-Plusボード対応を追加"
-  update_frequency: "高"
+    - 電子工作愛好家・メイカー
+    - IoT・スマートホーム開発者
+    - AIハードウェア開発者
+  latest_highlight: 2026年11月にWeb Flasherの日本語対応およびDevice Settings機能、VIEWE SmartRing-Plusボード対応を追加
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "35種以上の市販ESP32ボードおよびLinux環境をサポートする包括的なオープンソース実装（Apache-2.0）"
+      reason: 35種以上の市販ESP32ボードおよびLinux環境をサポートする包括的なオープンソース実装（Apache-2.0）
     - point: 5
-      reason: "Web Serialによるブラウザ完結のファームウェア書き込み（Web Flasher）と完全な日本語UI対応"
+      reason: Web Serialによるブラウザ完結のファームウェア書き込み（Web Flasher）と完全な日本語UI対応
     - point: 4
-      reason: "47種類以上のスマートホーム機器・プロトコルに対応した充実のスキルカタログとE2EE暗号化トンネル"
+      reason: 47種類以上のスマートホーム機器・プロトコルに対応した充実のスキルカタログとE2EE暗号化トンネル
     - point: 3
-      reason: "Muse Codeなどの自律型コーディングエージェントによる自然言語でのビルド・UI改修支援"
+      reason: Muse Codeなどの自律型コーディングエージェントによる自然言語でのビルド・UI改修支援
   minus_points:
     - point: -2
-      reason: "Museサービス自体の提供地域（US先行）やSDKトークン発行要件による初期利用ハードル"
-  summary: "Metaの自律型AIを低コストな市販マイコンやRaspberry Piと直結できる画期的なDIYハードウェアSDK。Web Flasherの日本語化や豊富なスマートホームスキルにより実用性も極めて高い。"
+      reason: Museサービス自体の提供地域（US先行）やSDKトークン発行要件による初期利用ハードル
+  summary: Metaの自律型AIを低コストな市販マイコンやRaspberry Piと直結できる画期的なDIYハードウェアSDK。Web Flasherの日本語化や豊富なスマートホームスキルにより実用性も極めて高い。
 links:
-  github: "https://github.com/facebookincubator/muse-gadget-sdk"
-  documentation: "https://gadgets.muse.ai/settings/sdk-tokens"
+  github: https://github.com/facebookincubator/muse-gadget-sdk
+  documentation: https://gadgets.muse.ai/settings/sdk-tokens
 relationships:
-  parent: "Muse"
+  parent: Muse
   children: []
   related_tools:
-    - "Muse Code"
+    - Muse Code
 ---
 
 # **Muse Gadget SDK 調査レポート**
