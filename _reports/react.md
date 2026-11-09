@@ -45,6 +45,7 @@ links:
 relationships:
   children:
     - Remotion
+    - Astryx
   related_tools:
     - Flutter
     - Astro
