@@ -139,8 +139,17 @@
             background: var(--color-bg-content);
             color: var(--color-text);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition:
+                transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
             user-select: none;
+
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
 
             @include media-breakpoint-down(sm) {
                 padding: 0.45rem 0.8rem;
@@ -387,6 +396,10 @@
         color: var(--color-bluesky-btn-text);
         cursor: pointer;
 
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
         &:hover {
             transform: translateY(-2px);
             background: rgba($white, 0.2);
@@ -543,9 +556,15 @@
         background: var(--color-bg-content);
         color: var(--color-text);
         outline: none;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
         box-sizing: border-box;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
 
         &::placeholder {
             color: var(--color-text-muted);
@@ -676,9 +695,16 @@
         border: 1px solid rgba($primary-color, 0.15);
         cursor: pointer;
         user-select: none;
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         white-space: nowrap;
         z-index: 2;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
 
         &:hover {
             transform: translateY(-50%) scale(1.05);
@@ -740,6 +766,10 @@
             color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
             box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         white-space: nowrap;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
 
         &:hover {
             transform: translateY(-2px);
@@ -818,8 +848,14 @@
         font-size: 0.9375rem;
         font-weight: 600;
         border: 1px solid rgba($primary-color, 0.2);
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 2px 4px rgba($primary-color, 0.05);
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
 
         &.hidden {
             opacity: 0;
@@ -850,7 +886,13 @@
     justify-content: center;
     gap: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    transition: all 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 
     &:hover {
         border-color: var(--color-primary);
@@ -859,6 +901,10 @@
 
     svg {
         transition: transform 0.2s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
 
     &[aria-expanded="true"] svg {
@@ -905,8 +951,15 @@
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     box-shadow: 0 4px 12px rgba(255, 119, 51, 0.25);
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 
     &:hover {
         background: #e6601f;
@@ -1014,8 +1067,17 @@
     height: 40px;
     padding: 0 map-get($spacers, 3);
     cursor: pointer;
-    transition: all 0.25s ease;
+    transition:
+        border-color 0.25s ease,
+        color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     box-sizing: border-box;
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 
     &:hover {
         border-color: $primary-color;
@@ -1087,6 +1149,10 @@
             color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
             box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
         &:hover {
             border-color: $primary-color;
             color: $primary-color;
@@ -1132,6 +1198,10 @@
     border-left: 4px solid transparent;
     position: relative;
 
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+
     @include media-breakpoint-down(sm) {
         border-left: none;
         padding: map-get($spacers, 3);
@@ -1154,6 +1224,10 @@
         background: $gradient-primary;
         transform: scaleX(0);
         transition: transform 0.3s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
 
     &:hover::after {
@@ -1243,6 +1317,10 @@
         pointer-events: none;
         text-align: left;
 
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
         .popover-header {
             display: flex;
             align-items: center;
@@ -1292,11 +1370,16 @@
                     display: inline-block;
                     padding: 0 0.3rem;
                     border-radius: 4px;
-                    background: rgba($success-color, 0.12);
-                    color: $success-color;
+                    background: #ecfdf5;
+                    color: #065f46;
                     font-weight: $font-weight-bold;
                     font-size: 0.7rem;
                     flex-shrink: 0;
+
+                    [data-theme="dark"] & {
+                        background: #064e3b;
+                        color: #d1fae5;
+                    }
                 }
             }
         }
@@ -1412,35 +1495,38 @@
         max-width: 100%;
 
         &.spec-oss {
-            background: rgba(#667eea, 0.12);
-            color: #5a67d8;
-            border-color: rgba(#667eea, 0.25);
+            background: #eef2ff;
+            color: #312e81;
+            border-color: #c7d2fe;
 
             [data-theme="dark"] & {
-                background: rgba(#667eea, 0.2);
-                color: #a3bffa;
+                background: #1e1b4b;
+                color: #e0e7ff;
+                border-color: #3730a3;
             }
         }
 
         &.spec-free {
-            background: rgba($success-color, 0.1);
-            color: $success-color;
-            border-color: rgba($success-color, 0.25);
+            background: #ecfdf5;
+            color: #065f46;
+            border-color: #a7f3d0;
 
             [data-theme="dark"] & {
-                background: rgba(#38ef7d, 0.15);
-                color: #68d391;
+                background: #064e3b;
+                color: #d1fae5;
+                border-color: #047857;
             }
         }
 
         &.spec-price {
-            background: rgba($warning-color, 0.1);
-            color: darken($warning-color, 12%);
-            border-color: rgba($warning-color, 0.25);
+            background: #fffbeb;
+            color: #78350f;
+            border-color: #fde68a;
 
             [data-theme="dark"] & {
-                background: rgba($warning-color, 0.18);
-                color: #f6e05e;
+                background: #451a03;
+                color: #fef3c7;
+                border-color: #92400e;
             }
         }
 
@@ -1774,11 +1860,23 @@
     border-radius: $border-radius-xl;
     padding: 12px 36px;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition:
+        border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba($primary-color, 0.05);
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 
     svg {
         transition: transform 0.3s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
 
     &:hover {

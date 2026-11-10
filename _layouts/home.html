@@ -93,13 +93,15 @@ layout: default
         </button>
         <div class="reports-controls" id="reports-controls">
           <div class="filter-container">
-            <select id="tag-filter" class="tag-filter" aria-label="すべてのタグ（タグで絞り込み）">
+            <label for="tag-filter" class="screen-reader-text">タグで絞り込み</label>
+            <select id="tag-filter" class="tag-filter">
               <option value="">すべてのタグ</option>
             </select>
             <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
           </div>
           <div class="filter-container">
-            <select id="category-filter" class="category-filter" aria-label="すべてのカテゴリ（カテゴリで絞り込み）">
+            <label for="category-filter" class="screen-reader-text">カテゴリで絞り込み</label>
+            <select id="category-filter" class="category-filter">
               <option value="">すべてのカテゴリ</option>
               {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
               {%- for category in all_categories -%}
@@ -112,7 +114,8 @@ layout: default
             <button type="button" class="filter-clear" id="category-filter-clear" aria-label="カテゴリフィルタをクリア">×</button>
           </div>
           <div class="sort-container">
-            <select id="sort-select" class="sort-select" aria-label="新しい順（並び替え）">
+            <label for="sort-select" class="screen-reader-text">並び替え</label>
+            <select id="sort-select" class="sort-select">
               <option value="date-desc" selected>新しい順</option>
               <option value="date-asc">古い順</option>
               <option value="title-asc">ツール名順</option>
@@ -187,7 +190,7 @@ layout: default
               </time>
               {%- if report.evaluation.score -%}
               <div class="score-badge-wrapper">
-                <button type="button" class="card-score-badge" aria-label="総合評価 {{ report.evaluation.score }}点">★ {{ report.evaluation.score }}点</button>
+                <button type="button" class="card-score-badge"><span class="screen-reader-text">総合評価 </span>★ {{ report.evaluation.score }}点</button>
                 {%- if report.evaluation.summary or report.evaluation.plus_points -%}
                 <div class="score-preview-popover" role="tooltip">
                   <div class="popover-header">
