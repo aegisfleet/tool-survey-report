@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
   const tagElements = document.querySelectorAll('.tag');
   const categoryElements = document.querySelectorAll('.clickable-category');
+  const categoryPills = Array.from(document.querySelectorAll('.category-pill'));
 
   // 表示件数の制御用変数
   const INITIAL_SHOW_COUNT = 12;
@@ -73,12 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = categoryEl.textContent.trim();
       const emoji = getEmojiForCategory(category);
 
-      // タイトルへの絵文字付与
+      // タイトルへの絵文字付与（新レイアウトでファビコン・専用テキスト要素がある場合はDOM構造を保持）
       const titleLink = card.querySelector('.report-title a');
       if (titleLink) {
-        // 既存の絵文字や特殊マーク、先頭スペースを一度すべて除去して再付与（べき等性を確保）
-        const currentTitle = stripEmoji(titleLink.textContent);
-        titleLink.textContent = `${emoji} ${currentTitle}`;
+        const titleTextEl = titleLink.querySelector ? titleLink.querySelector('.tool-title-text') : null;
+        if (!titleTextEl) {
+          // 既存の絵文字や特殊マーク、先頭スペースを一度すべて除去して再付与（べき等性を確保）
+          const currentTitle = stripEmoji(titleLink.textContent);
+          titleLink.textContent = `${emoji} ${currentTitle}`;
+        }
       }
     });
   }
@@ -147,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Update category visual states
   function updateCategoryStates() {
     const selectedCategory = categoryFilter.value;
+    const currentSort = sortSelect ? sortSelect.value : 'date-desc';
 
     categoryElements.forEach((el) => {
       const categoryValue = el.dataset.category;
@@ -154,6 +159,32 @@ document.addEventListener('DOMContentLoaded', () => {
         el.classList.add('active');
       } else {
         el.classList.remove('active');
+      }
+    });
+
+    // Update quick bar pills
+    categoryPills.forEach((pill) => {
+      const type = pill.dataset.quickType;
+      const val = pill.dataset.quickValue || '';
+      if (type === 'all') {
+        const isDefaultSort = currentSort !== 'oss' && currentSort !== 'free' && currentSort !== 'score-desc';
+        if (selectedCategory === '' && isDefaultSort) {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      } else if (type === 'category') {
+        if (selectedCategory === val && val !== '') {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
+      } else if (type === 'sort') {
+        if (currentSort === val && selectedCategory === '') {
+          pill.classList.add('active');
+        } else {
+          pill.classList.remove('active');
+        }
       }
     });
   }
@@ -208,6 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const highlightMatch =
           card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm);
         const devMatch = card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm);
+        const targetMatch =
+          card.dataset.targetUsers && toHiragana(card.dataset.targetUsers.toLowerCase()).includes(hTerm);
 
         // Tag matching: avoid partial matches for short terms in tags to prevent false positives (like "a" matching "tag1")
         const tagsMatch = card.dataset.tags?.split(',').some((tag) => {
@@ -234,6 +267,7 @@ document.addEventListener('DOMContentLoaded', () => {
           descMatch ||
           highlightMatch ||
           devMatch ||
+          targetMatch ||
           tagsMatch ||
           linksMatch
         );
@@ -410,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
       url.searchParams.delete('sort');
     }
 
-    history.replaceState(null, '', url.toString());
+    window.history?.replaceState(null, '', url.toString());
   }
 
   // URLからフィルタ・検索状態を復元する関数
@@ -582,6 +616,40 @@ document.addEventListener('DOMContentLoaded', () => {
   categoryFilterClear.addEventListener('click', () => {
     categoryFilter.value = '';
     filterAndSort();
+  });
+
+  // Quick Category & Sort Pills
+  categoryPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const type = pill.dataset.quickType;
+      const val = pill.dataset.quickValue || '';
+
+      if (type === 'all') {
+        if (categoryFilter) categoryFilter.value = '';
+        if (
+          sortSelect &&
+          (sortSelect.value === 'oss' || sortSelect.value === 'free' || sortSelect.value === 'score-desc')
+        ) {
+          sortSelect.value = 'date-desc';
+        }
+      } else if (type === 'category' && categoryFilter) {
+        if (categoryFilter.value === val) {
+          categoryFilter.value = '';
+        } else {
+          categoryFilter.value = val;
+        }
+      } else if (type === 'sort' && sortSelect) {
+        if (categoryFilter) categoryFilter.value = '';
+        if (sortSelect.value === val) {
+          sortSelect.value = 'date-desc';
+        } else {
+          sortSelect.value = val;
+        }
+      }
+
+      filterAndSort();
+      pill.blur();
+    });
   });
 
   // Filter Reset All

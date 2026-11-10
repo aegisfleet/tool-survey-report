@@ -17,21 +17,372 @@ layout: default
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35" />
           </svg>
-          <span>検索</span>
+          <span>ツール検索</span>
+        </a>
+        <a href="#reports-section" class="hero-shortcut-btn hero-shortcut-reports">
+          <span class="hero-shortcut-emoji">📑</span>
+          <span>レポート一覧 ({{ site.reports.size }})</span>
         </a>
         <a href="#daily-trends" class="hero-shortcut-btn hero-shortcut-trends">
           <span class="hero-shortcut-emoji">📈</span>
           <span>最新トレンド</span>
         </a>
-        <a href="#reports-section" class="hero-shortcut-btn hero-shortcut-reports">
-          <span class="hero-shortcut-emoji">📑</span>
-          <span>最新レポート</span>
+        <a href="#bluesky-section" class="hero-shortcut-btn hero-shortcut-bluesky">
+          <span class="hero-shortcut-emoji">🦋</span>
+          <span>Bluesky</span>
         </a>
       </div>
     </div>
   </section>
 
   <main class="home-content">
+
+    <section class="hero-search" id="hero-search" aria-labelledby="hero-search-title">
+      <div class="hero-search-inner">
+        <div class="hero-search-heading">
+          <h2 id="hero-search-title">
+            <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            気になるツールを検索
+          </h2>
+          <p class="hero-search-desc">ツール名・用途・カテゴリ・タグ・GitHub URLから、目的の調査レポートを素早く見つけられます</p>
+        </div>
+        <div class="hero-search-box">
+          <svg class="hero-search-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          <input type="text" id="hero-search-input" class="hero-search-input" placeholder="例: AIエージェント, CLI, Claude, メール配信 ..."
+            autocomplete="off" aria-label="レポートを検索">
+          <span id="hero-search-count-badge" class="hero-search-count-badge" style="display: none;" role="button" tabindex="0" aria-label="検索結果へスクロール"></span>
+          <button type="button" class="hero-search-clear" id="hero-search-clear" aria-label="検索をクリア">×</button>
+          <div class="hero-search-shortcuts" aria-hidden="true">
+            <kbd class="hero-search-shortcut">⌘K</kbd>
+            <span class="hero-search-shortcut-sep">or</span>
+            <kbd class="hero-search-shortcut">/</kbd>
+          </div>
+        </div>
+        <div class="hero-search-hints">
+          <span class="hero-search-hints-label">人気のキーワード:</span>
+          <button type="button" class="hero-search-chip" data-search-term="AIエージェント">AIエージェント</button>
+          <button type="button" class="hero-search-chip" data-search-term="CLI">CLI</button>
+          <button type="button" class="hero-search-chip" data-search-term="Claude">Claude</button>
+          <button type="button" class="hero-search-chip" data-search-term="MCP">MCP</button>
+          <button type="button" class="hero-search-chip" data-search-term="自動化">自動化</button>
+          <button type="button" class="hero-search-chip" data-search-term="テスト">テスト</button>
+          <button type="button" class="hero-search-chip" data-search-term="セキュリティ">セキュリティ</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="reports-section" id="reports-section">
+      <div class="reports-header">
+        <div class="reports-title-container">
+          <h2>ツール調査レポート一覧</h2>
+          <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
+        </div>
+        <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+          <span>絞り込み・並び替え</span>
+        </button>
+        <div class="reports-controls" id="reports-controls">
+          <div class="filter-container">
+            <select id="tag-filter" class="tag-filter" aria-label="タグで絞り込み">
+              <option value="">すべてのタグ</option>
+            </select>
+            <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
+          </div>
+          <div class="filter-container">
+            <select id="category-filter" class="category-filter" aria-label="カテゴリで絞り込み">
+              <option value="">すべてのカテゴリ</option>
+              {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
+              {%- for category in all_categories -%}
+              {%- if category and category != '' -%}
+              <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category
+                }}</option>
+              {%- endif -%}
+              {%- endfor -%}
+            </select>
+            <button type="button" class="filter-clear" id="category-filter-clear" aria-label="カテゴリフィルタをクリア">×</button>
+          </div>
+          <div class="sort-container">
+            <select id="sort-select" class="sort-select" aria-label="並び替え">
+              <option value="date-desc" selected>新しい順</option>
+              <option value="date-asc">古い順</option>
+              <option value="title-asc">ツール名順</option>
+              <option value="score-desc">総合評価順</option>
+              <option value="oss">OSS順</option>
+              <option value="free">無料順</option>
+            </select>
+          </div>
+          <button type="button" id="filter-reset-all" class="filter-reset-all-btn" title="すべてのフィルタをクリア">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
+              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+              <path d="M21 3v5h-5" />
+              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+              <path d="M3 21v-5h5" />
+            </svg>
+            条件をクリア
+          </button>
+        </div>
+      </div>
+
+      <!-- 主要カテゴリ・用途クイックバー -->
+      <div class="category-quick-bar" id="category-quick-bar" role="toolbar" aria-label="主要カテゴリ・提供形態でクイック絞り込み">
+        <button type="button" class="category-pill active" data-quick-type="all">すべて</button>
+        <button type="button" class="category-pill" data-quick-type="sort" data-quick-value="oss">📦 OSSのみ</button>
+        <button type="button" class="category-pill" data-quick-type="sort" data-quick-value="free">💚 無料枠あり</button>
+        <button type="button" class="category-pill" data-quick-type="sort" data-quick-value="score-desc">★ 高評価順</button>
+        <span class="category-pill-divider" aria-hidden="true"></span>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="自律型コーディングエージェント">💻 コーディングエージェント</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ai開発ワークフロー">🤖 AI開発ワークフロー</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="aiコーディング支援">⌨️ AIコーディング支援</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="エージェントエコシステム/基盤">🧩 エージェント基盤</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="mcpサーバー">🧩 MCPサーバー</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ai検索/ブラウザ拡張">🔍 AI検索/ブラウザ拡張</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="セキュリティ">🛡️ セキュリティ</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ui/ux/作図">🖌️ UI/UX/作図</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="パッケージ管理">📦 パッケージ管理</button>
+        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ナレッジベース/wiki">📚 ナレッジ/Wiki</button>
+      </div>
+
+      <div class="reports-grid" id="reports-grid">
+        {%- assign sorted_reports = site.reports | sort: 'last_updated' | reverse -%}
+        {%- for report in sorted_reports -%}
+        {%- capture all_links -%}{{ report.official_site }} {{ report.links.github }} {{ report.links.documentation }} {{ report.links.deepwiki }} {{ report.links.codewiki }}{%- endcapture -%}
+        <article class="report-card" data-tags="{{ report.tags | join: ',' }}"
+          data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
+          data-tool-reading="{{ report.tool_reading | default: '' }}"
+          data-description="{{ report.description | downcase }}"
+          data-latest-highlight="{{ report.quick_summary.latest_highlight | downcase }}"
+          data-links="{{ all_links | strip | downcase }}"
+          data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
+          data-developer="{{ report.developer | downcase }}"
+          data-target-users="{{ report.quick_summary.target_users | join: ',' | downcase }}"
+          data-is-oss="{{ report.quick_summary.is_oss | default: false }}"
+          data-has-free-plan="{{ report.quick_summary.has_free_plan | default: false }}"
+          data-score="{{ report.evaluation.score | default: 0 }}">
+
+          <!-- 1. 最上段：カテゴリバッジ（左）＋ 更新日・スコア＆3秒プレビュー（右） -->
+          <div class="report-card-eyebrow">
+            {%- if report.category and report.category != '' and report.category != '不明' -%}
+            <span class="meta-item category clickable-category" data-category="{{ report.category | downcase }}"
+              role="button" tabindex="0" title="カテゴリ「{{ report.category }}」で絞り込む">
+              {{ site.data.categories[report.category] | default: '🔹' }} {{ report.category }}
+            </span>
+            {%- else -%}
+            <span class="meta-item category">🔹 未分類</span>
+            {%- endif -%}
+
+            <div class="report-header-meta">
+              <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}" title="最終更新日">
+                {{ report.last_updated | date: "%Y.%m.%d" }}
+              </time>
+              {%- if report.evaluation.score -%}
+              <div class="score-badge-wrapper" tabindex="0" aria-label="総合評価 {{ report.evaluation.score }}点">
+                <span class="card-score-badge">★ {{ report.evaluation.score }}点</span>
+                {%- if report.evaluation.summary or report.evaluation.plus_points -%}
+                <div class="score-preview-popover" role="tooltip">
+                  <div class="popover-header">
+                    <span class="popover-score">★ {{ report.evaluation.score }}点</span>
+                    <span class="popover-title">評価サマリー</span>
+                  </div>
+                  {%- if report.evaluation.summary -%}
+                  <p class="popover-summary">{{ report.evaluation.summary }}</p>
+                  {%- endif -%}
+                  {%- if report.evaluation.plus_points and report.evaluation.plus_points.size > 0 -%}
+                  <ul class="popover-points">
+                    {%- for pt in report.evaluation.plus_points limit: 2 -%}
+                    {%- if pt.reason and pt.reason != '特になし' and pt.reason != 'なし' -%}
+                    <li><span class="point-plus">+{{ pt.point }}</span> {{ pt.reason }}</li>
+                    {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                  {%- endif -%}
+                </div>
+                {%- endif -%}
+              </div>
+              {%- endif -%}
+            </div>
+          </div>
+
+          <!-- 2. タイトル行：ファビコン ＋ ツール名 ＋ 読み仮名 -->
+          <div class="report-card-header">
+            {%- assign raw_domain_url = report.official_site | default: report.links.github | default: '' -%}
+            {%- assign tool_domain = raw_domain_url | remove: 'https://' | remove: 'http://' | split: '/' | first -%}
+            <h3 class="report-title">
+              <a href="{{ report.url | relative_url }}">
+                {%- if tool_domain and tool_domain != '' -%}
+                <img src="https://www.google.com/s2/favicons?domain={{ tool_domain }}&sz=64" alt="" class="tool-favicon" width="22" height="22" loading="lazy" onerror="this.style.display='none'">
+                {%- endif -%}
+                <span class="tool-title-text">{{ report.tool_name | default: report.title }}</span>
+              </a>
+            </h3>
+            {%- if report.tool_reading and report.tool_reading != '' and report.tool_reading != '不明' -%}
+            <span class="report-tool-reading">{{ report.tool_reading }}</span>
+            {%- endif -%}
+          </div>
+
+          <!-- 3. スペックバー：提供・料金形態 / 想定利用者 / 開発元 -->
+          <div class="report-quick-specs">
+            {%- if report.quick_summary.is_oss -%}
+            <span class="spec-chip spec-oss card-oss-badge">📦 OSS</span>
+            {%- elsif report.quick_summary.has_free_plan -%}
+            <span class="spec-chip spec-free card-free-badge">💚 無料枠あり</span>
+            {%- endif -%}
+
+            {%- assign show_price = false -%}
+            {%- if report.quick_summary.starting_price and report.quick_summary.starting_price != '' and report.quick_summary.starting_price != '不明' -%}
+              {%- if report.quick_summary.starting_price != '無料' -%}
+                {%- assign show_price = true -%}
+              {%- elsif report.quick_summary.is_oss != true and report.quick_summary.has_free_plan != true -%}
+                {%- assign show_price = true -%}
+              {%- endif -%}
+            {%- endif -%}
+            {%- if show_price -%}
+            <span class="spec-chip spec-price" title="最低価格: {{ report.quick_summary.starting_price | escape }}">💰 {{ report.quick_summary.starting_price | truncate: 18 }}</span>
+            {%- endif -%}
+
+            {%- if report.quick_summary.target_users and report.quick_summary.target_users.size > 0 -%}
+              {%- assign first_target = report.quick_summary.target_users | first -%}
+              {%- if first_target and first_target != '' and first_target != '不明' -%}
+              <span class="spec-chip spec-target" title="想定利用者: {{ report.quick_summary.target_users | join: ' / ' | escape }}">🎯 {{ first_target | truncate: 18 }}</span>
+              {%- endif -%}
+            {%- endif -%}
+
+            {%- if report.developer and report.developer != '' and report.developer != '不明' -%}
+            <span class="spec-chip spec-developer meta-item developer" title="開発元: {{ report.developer | escape }}">🏢 {{ report.developer | truncate: 18 }}</span>
+            {%- endif -%}
+          </div>
+
+          <!-- 4. ツールの概要（1文目を強調し、最大3行でクランプ） -->
+          {%- if report.description -%}
+          {%- assign desc_parts = report.description | split: '。' -%}
+          <p class="report-description">
+            <strong class="desc-lead">{{ desc_parts[0] }}{%- if report.description contains '。' -%}。{%- endif -%}</strong>
+            {%- if desc_parts.size > 1 -%}
+            <span class="desc-rest">{{ report.description | remove_first: desc_parts[0] | remove_first: '。' }}</span>
+            {%- endif -%}
+          </p>
+          {%- endif -%}
+
+          <!-- 5. 最新ハイライト（1行コンパクト表示）＆ タグ（最大4件＋残り件数） -->
+          {%- if report.quick_summary.latest_highlight and report.quick_summary.latest_highlight != '' and report.quick_summary.latest_highlight != '不明' and report.quick_summary.latest_highlight != 'なし' and report.quick_summary.latest_highlight != '特になし' -%}
+          <div class="report-latest-highlight" title="最新情報: {{ report.quick_summary.latest_highlight | escape }}">
+            <span class="highlight-icon" aria-hidden="true">📢</span>
+            <span class="highlight-content">{{ report.quick_summary.latest_highlight }}</span>
+          </div>
+          {%- endif -%}
+
+          {%- if report.tags and report.tags.size > 0 -%}
+          <div class="report-tags">
+            {%- for tag in report.tags limit: 4 -%}
+            <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
+            {%- endfor -%}
+            {%- if report.tags.size > 4 -%}
+            <span class="tag-more" title="その他のタグ: {{ report.tags | slice: 4, 20 | join: ', ' | escape }}">+{{ report.tags.size | minus: 4 }}</span>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+
+          <!-- 6. フッター：外部リンクアイコンボタン群（左）＋ レポート詳細リンク（右） -->
+          <div class="report-card-footer">
+            <div class="report-card-links">
+              {%- if report.official_site -%}
+              <a href="{{ report.official_site }}" target="_blank" rel="noopener" class="card-link-btn" title="公式サイト"
+                aria-label="公式サイト">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm.312-5.5h2.49a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
+                </svg>
+                <span>公式</span>
+              </a>
+              {%- endif -%}
+              {%- if report.links.documentation -%}
+              <a href="{{ report.links.documentation }}" target="_blank" rel="noopener"
+                class="card-link-btn card-link-docs" title="ドキュメント" aria-label="ドキュメント">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                  <path
+                    d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z" />
+                </svg>
+                <span>Docs</span>
+              </a>
+              {%- endif -%}
+              {%- if report.links.github -%}
+              <a href="{{ report.links.github }}" target="_blank" rel="noopener" class="card-link-btn card-link-github"
+                title="GitHub" aria-label="GitHub">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              {%- endif -%}
+              {%- if report.links.deepwiki -%}
+              <a href="{{ report.links.deepwiki }}" target="_blank" rel="noopener"
+                class="card-link-btn card-link-deepwiki" title="DeepWiki" aria-label="DeepWiki">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+                <span>DeepWiki</span>
+              </a>
+              {%- endif -%}
+              {%- if report.links.codewiki -%}
+              <a href="{{ report.links.codewiki }}" target="_blank" rel="noopener"
+                class="card-link-btn card-link-codewiki" title="CodeWiki" aria-label="CodeWiki">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+                <span>CodeWiki</span>
+              </a>
+              {%- endif -%}
+            </div>
+            <a href="{{ report.url | relative_url }}" class="read-more">レポートを読む →</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- もっと見るボタン -->
+      <div class="load-more-container" id="load-more-container" style="display: none;">
+        <button type="button" id="load-more-btn" class="load-more-btn">
+          もっと見る
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m6 9 6 6 6-6"/>
+          </svg>
+        </button>
+      </div>
+
+      {% if site.reports.size == 0 %}
+      <div class="no-reports">
+        <p>まだレポートがありません。</p>
+      </div>
+      {% endif %}
+
+      <div class="no-results" id="no-results" style="display: none;">
+        <p>検索条件に一致するレポートが見つかりませんでした。</p>
+        <button type="button" id="no-results-reset" class="no-results-reset-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
+            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
+            <path d="M21 3v5h-5" />
+            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
+            <path d="M3 21v-5h5" />
+          </svg>
+          すべての条件をクリア
+        </button>
+      </div>
+    </section>
 
     <!-- トレンドレポート -->
     <section class="daily-trends" id="daily-trends" style="margin-bottom: 2.5rem;">
@@ -92,7 +443,7 @@ layout: default
     </section>
 
     <!-- Bluesky タイムライン -->
-    <section class="bluesky-widget-section" aria-labelledby="bluesky-title">
+    <section class="bluesky-widget-section" id="bluesky-section" aria-labelledby="bluesky-title">
       <div class="bluesky-header">
         <div>
           <h2 id="bluesky-title">🦋 Bluesky トレンド</h2>
@@ -141,274 +492,6 @@ layout: default
       </div>
       <div class="bluesky-widget-grid" id="bluesky-widget-container">
         <!-- Widgets will be injected by JS -->
-      </div>
-    </section>
-
-    <section class="hero-search" id="hero-search" aria-labelledby="hero-search-title">
-      <div class="hero-search-inner">
-        <div class="hero-search-heading">
-          <h2 id="hero-search-title">
-            <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8" />
-              <path d="m21 21-4.35-4.35" />
-            </svg>
-            気になるツールを検索
-          </h2>
-          <p class="hero-search-desc">ツール名・キーワード・タグで検索して、気になるレポートを見つけましょう</p>
-        </div>
-        <div class="hero-search-box">
-          <svg class="hero-search-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
-          <input type="text" id="hero-search-input" class="hero-search-input" placeholder="例: AIエージェント, CLI, Claude ..."
-            autocomplete="off" aria-label="レポートを検索">
-          <span id="hero-search-count-badge" class="hero-search-count-badge" style="display: none;" role="button" tabindex="0" aria-label="検索結果へスクロール"></span>
-          <button type="button" class="hero-search-clear" id="hero-search-clear" aria-label="検索をクリア">×</button>
-          <div class="hero-search-shortcuts" aria-hidden="true">
-            <kbd class="hero-search-shortcut">⌘K</kbd>
-            <span class="hero-search-shortcut-sep">or</span>
-            <kbd class="hero-search-shortcut">/</kbd>
-          </div>
-        </div>
-        <div class="hero-search-hints">
-          <span class="hero-search-hints-label">人気のキーワード:</span>
-          <button type="button" class="hero-search-chip" data-search-term="AIエージェント">AIエージェント</button>
-          <button type="button" class="hero-search-chip" data-search-term="CLI">CLI</button>
-          <button type="button" class="hero-search-chip" data-search-term="Claude">Claude</button>
-          <button type="button" class="hero-search-chip" data-search-term="自動化">自動化</button>
-          <button type="button" class="hero-search-chip" data-search-term="テスト">テスト</button>
-          <button type="button" class="hero-search-chip" data-search-term="セキュリティ">セキュリティ</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="reports-section" id="reports-section">
-      <div class="reports-header">
-        <div class="reports-title-container">
-          <h2>最新のレポート</h2>
-          <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
-        </div>
-        <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-          </svg>
-          <span>絞り込み・検索条件</span>
-        </button>
-        <div class="reports-controls" id="reports-controls">
-          <div class="filter-container">
-            <select id="tag-filter" class="tag-filter">
-              <option value="">すべてのタグ</option>
-            </select>
-            <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
-          </div>
-          <div class="filter-container">
-            <select id="category-filter" class="category-filter">
-              <option value="">すべてのカテゴリ</option>
-              {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
-              {%- for category in all_categories -%}
-              {%- if category and category != '' -%}
-              <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category
-                }}</option>
-              {%- endif -%}
-              {%- endfor -%}
-            </select>
-            <button type="button" class="filter-clear" id="category-filter-clear" aria-label="カテゴリフィルタをクリア">×</button>
-          </div>
-          <div class="sort-container">
-            <select id="sort-select" class="sort-select">
-              <option value="date-desc" selected>新しい順</option>
-              <option value="date-asc">古い順</option>
-              <option value="title-asc">ツール名順</option>
-              <option value="score-desc">総合評価順</option>
-              <option value="oss">OSS順</option>
-              <option value="free">無料順</option>
-            </select>
-          </div>
-          <button type="button" id="filter-reset-all" class="filter-reset-all-btn" title="すべてのフィルタをクリア">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
-              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-              <path d="M21 3v5h-5" />
-              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-              <path d="M3 21v-5h5" />
-            </svg>
-            条件をクリア
-          </button>
-        </div>
-      </div>
-
-      <div class="reports-grid" id="reports-grid">
-        {%- assign sorted_reports = site.reports | sort: 'last_updated' | reverse -%}
-        {%- for report in sorted_reports -%}
-        {%- capture all_links -%}{{ report.official_site }} {{ report.links.github }} {{ report.links.documentation }} {{ report.links.deepwiki }} {{ report.links.codewiki }}{%- endcapture -%}
-        <article class="report-card" data-tags="{{ report.tags | join: ',' }}"
-          data-title="{{ report.title | downcase }}" data-tool-name="{{ report.tool_name | downcase }}"
-          data-tool-reading="{{ report.tool_reading | default: '' }}"
-          data-description="{{ report.description | downcase }}"
-          data-latest-highlight="{{ report.quick_summary.latest_highlight | downcase }}"
-          data-links="{{ all_links | strip | downcase }}"
-          data-date="{{ report.last_updated | date: '%Y-%m-%d' }}" data-category="{{ report.category | downcase }}"
-          data-developer="{{ report.developer | downcase }}"
-          data-is-oss="{{ report.quick_summary.is_oss | default: false }}"
-          data-has-free-plan="{{ report.quick_summary.has_free_plan | default: false }}"
-          data-score="{{ report.evaluation.score | default: 0 }}">
-
-          <div class="report-card-header">
-            <h3 class="report-title">
-              <a href="{{ report.url | relative_url }}">{{ report.tool_name | default: report.title }}</a>
-            </h3>
-            <div class="report-header-meta">
-              <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}">
-                {{ report.last_updated | date: "%Y年%m月%d日" }}
-              </time>
-              {%- if report.quick_summary.is_oss -%}
-              <span class="card-oss-badge">OSS</span>
-              {%- elsif report.quick_summary.has_free_plan -%}
-              <span class="card-free-badge">💚 無料プランあり</span>
-              {%- endif -%}
-              {%- if report.evaluation.score -%}
-              <span class="card-score-badge">{{ report.evaluation.score }}点</span>
-              {%- endif -%}
-            </div>
-          </div>
-
-          {% if report.description %}
-          <p class="report-description">{{ report.description }}</p>
-          {% endif %}
-
-          {% if report.quick_summary.latest_highlight %}
-          <div class="report-latest-highlight">
-            <span class="highlight-label">最新情報</span>
-            <p class="highlight-content">📢 {{ report.quick_summary.latest_highlight }}</p>
-          </div>
-          {% endif %}
-
-          <div class="report-meta">
-            {% if report.developer %}
-            <span class="meta-item developer">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
-                <path d="M3 3h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
-              </svg>
-              {{ report.developer }}
-            </span>
-            {% endif %}
-            {% if report.category %}
-            <span class="meta-item category clickable-category" data-category="{{ report.category | downcase }}"
-              role="button" tabindex="0">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              {{ site.data.categories[report.category] | default: '🔹' }} {{ report.category }}
-            </span>
-            {% endif %}
-          </div>
-
-          {%- if report.tags and report.tags.size > 0 -%}
-          <div class="report-tags">
-            {%- for tag in report.tags -%}
-            <span class="tag" data-tag="{{ tag }}">{{ tag }}</span>
-            {%- endfor -%}
-          </div>
-          {%- endif -%}
-
-          {%- if report.official_site or report.links.documentation or report.links.github or report.links.deepwiki or
-          report.links.codewiki -%}
-          <div class="report-card-links">
-            {%- if report.official_site -%}
-            <a href="{{ report.official_site }}" target="_blank" rel="noopener" class="card-link-btn" title="公式サイト"
-              aria-label="公式サイト">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm.312-5.5h2.49a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
-              </svg>
-              公式サイト
-            </a>
-            {%- endif -%}
-            {%- if report.links.documentation -%}
-            <a href="{{ report.links.documentation }}" target="_blank" rel="noopener"
-              class="card-link-btn card-link-docs" title="ドキュメント" aria-label="ドキュメント">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
-                <path
-                  d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z" />
-              </svg>
-              Docs
-            </a>
-            {%- endif -%}
-            {%- if report.links.github -%}
-            <a href="{{ report.links.github }}" target="_blank" rel="noopener" class="card-link-btn card-link-github"
-              title="GitHub" aria-label="GitHub">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-              </svg>
-              GitHub
-            </a>
-            {%- endif -%}
-            {%- if report.links.deepwiki -%}
-            <a href="{{ report.links.deepwiki }}" target="_blank" rel="noopener"
-              class="card-link-btn card-link-deepwiki" title="DeepWiki" aria-label="DeepWiki">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              DeepWiki
-            </a>
-            {%- endif -%}
-            {%- if report.links.codewiki -%}
-            <a href="{{ report.links.codewiki }}" target="_blank" rel="noopener"
-              class="card-link-btn card-link-codewiki" title="CodeWiki" aria-label="CodeWiki">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
-                <path
-                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-              </svg>
-              CodeWiki
-            </a>
-            {%- endif -%}
-          </div>
-          {%- endif -%}
-
-          <div class="report-card-footer">
-            <a href="{{ report.url | relative_url }}" class="read-more">続きを読む →</a>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-
-      <!-- もっと見るボタン -->
-      <div class="load-more-container" id="load-more-container" style="display: none;">
-        <button type="button" id="load-more-btn" class="load-more-btn">
-          もっと見る
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m6 9 6 6 6-6"/>
-          </svg>
-        </button>
-      </div>
-
-      {% if site.reports.size == 0 %}
-      <div class="no-reports">
-        <p>まだレポートがありません。</p>
-      </div>
-      {% endif %}
-
-      <div class="no-results" id="no-results" style="display: none;">
-        <p>検索条件に一致するレポートが見つかりませんでした。</p>
-        <button type="button" id="no-results-reset" class="no-results-reset-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
-            <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-            <path d="M21 3v5h-5" />
-            <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-            <path d="M3 21v-5h5" />
-          </svg>
-          すべての条件をクリア
-        </button>
       </div>
     </section>
 

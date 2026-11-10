@@ -18,6 +18,8 @@ permalink: /reports-summary.json
     "official_site": {{ report.official_site | jsonify }},
     "links": {{ report.links | jsonify }},
     "score": {{ report.evaluation.score | default: null | jsonify }},
+    "evaluation_summary": {{ report.evaluation.summary | default: null | jsonify }},
+    "target_users": {{ report.quick_summary.target_users | default: null | jsonify }},
     "pricing": {
       "has_free_plan": {{ report.quick_summary.has_free_plan | jsonify }},
       "is_oss": {{ report.quick_summary.is_oss | jsonify }},

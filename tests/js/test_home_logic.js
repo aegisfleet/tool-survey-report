@@ -145,6 +145,7 @@ global.window = {
 };
 
 global.sessionStorage = global.window.sessionStorage;
+global.history = global.window.history;
 global.crypto = global.window.crypto;
 
 global.URL = class {
@@ -256,8 +257,17 @@ const card1 = createReportCard(
   '80',
   'https://github.com/microsoft/WSL',
 );
+card1.dataset.targetUsers = 'インフラエンジニア,sre';
 const card2 = createReportCard('Tool B', ['tag2', 'tag3'], 'Design', '2023-02-01', '90');
 const card3 = createReportCard('Tool C', ['tag1'], 'Development', '2023-03-01', '70');
+
+const quickPillAll = new HTMLElement('button');
+quickPillAll.className = 'category-pill active';
+quickPillAll.dataset = { quickType: 'all' };
+
+const quickPillDesign = new HTMLElement('button');
+quickPillDesign.className = 'category-pill';
+quickPillDesign.dataset = { quickType: 'category', quickValue: 'Design' };
 
 reportsGrid.appendChild(card1);
 reportsGrid.appendChild(card2);
@@ -310,6 +320,7 @@ global.document = {
     }
     if (selector === '.tag') return [];
     if (selector === '.clickable-category') return [];
+    if (selector === '.category-pill') return [quickPillAll, quickPillDesign];
     return [];
   },
   addEventListener: (event, callback) => {
@@ -519,6 +530,40 @@ try {
   // Reset search
   searchInput.value = '';
   window.filterAndSort(false, true);
+
+  // Test 12: Target users search via input
+  searchInput.value = 'インフラエンジニア';
+  window.filterAndSort(false, true);
+  const visibleCardsTargetSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsTargetSearch.length !== 1 || visibleCardsTargetSearch[0].dataset.toolName !== 'ToolA') {
+    console.error(
+      `Test 12 Failed: Target users search failed. Expected 1 card (ToolA), got ${visibleCardsTargetSearch.length}`,
+    );
+    passed = false;
+  } else {
+    console.log('Test 12 Passed: Target users search via input correct.');
+  }
+
+  searchInput.value = '';
+  window.filterAndSort(false, true);
+
+  // Test 13: Quick category pill click
+  if (quickPillDesign.listeners.click) {
+    quickPillDesign.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+  const visibleCardsQuickPill = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (
+    visibleCardsQuickPill.length !== 1 ||
+    visibleCardsQuickPill[0].dataset.toolName !== 'Tool B' ||
+    !quickPillDesign.classList.contains('active')
+  ) {
+    console.error('Test 13 Failed: Quick category pill filter failed.');
+    passed = false;
+  } else {
+    console.log('Test 13 Passed: Quick category pill filter correct.');
+  }
 
   if (passed) {
     console.log('All tests passed!');
