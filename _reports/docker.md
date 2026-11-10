@@ -46,6 +46,9 @@ links:
   deepwiki: https://deepwiki.com/docker/cli
   documentation: https://docs.docker.com/
 relationships:
+  children:
+    - Gordon
+    - Docker Sandboxes
   related_tools:
     - Podman
     - Kubernetes

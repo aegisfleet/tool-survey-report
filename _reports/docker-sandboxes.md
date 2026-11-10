@@ -43,6 +43,7 @@ relationships:
     - Claude Code
     - GitHub Copilot
     - Cursor
+    - Gordon
 ---
 # **Docker Sandboxes 調査レポート**
 
