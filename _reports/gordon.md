@@ -1,55 +1,55 @@
 ---
-title: "Docker Gordon 調査レポート"
-tool_name: "Gordon"
-tool_reading: "ゴードン"
-category: "エージェント実行環境/ランタイム"
-developer: "Docker Inc."
-official_site: "https://www.docker.com/products/gordon/"
-date: "2026-05-29"
-last_updated: "2026-11-10"
+title: Docker Gordon 調査レポート
+tool_name: Gordon
+tool_reading: ゴードン
+category: エージェント実行環境/ランタイム
+developer: Docker Inc.
+official_site: https://www.docker.com/products/gordon/
+date: '2026-05-29'
+last_updated: '2026-11-10'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "コンテナ"
-  - "開発者ツール"
-  - "DevOps"
-  - "Docker"
-description: "Docker環境のコンテキストを直接認識し、コンテナのデバッグ、Dockerfile/Compose最適化、環境操作を支援する承認ファーストのAIエージェント。"
+  - AI
+  - エージェント
+  - 自律型
+  - コンテナ
+  - 開発者ツール
+  - DevOps
+  - Docker
+description: Docker環境のコンテキストを直接認識し、コンテナのデバッグ、Dockerfile/Compose最適化、環境操作を支援する承認ファーストのAIエージェント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "DevOpsエンジニア"
-    - "インフラエンジニア"
-  latest_highlight: "Docker Desktop 4.74+でGA提供され、MCP統合や多段階料金プラン（Base/Plus/Max/Ultra）が整備"
-  update_frequency: "高"
+    - 開発者
+    - DevOpsエンジニア
+    - インフラエンジニア
+  latest_highlight: Docker Desktop 4.74+でGA提供され、MCP統合や多段階料金プラン（Base/Plus/Max/Ultra）が整備
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "Docker DesktopおよびCLI（docker ai）に完全統合され、ローカルのコンテナ・ログ・構成を直接把握して安全に操作可能"
+      reason: Docker DesktopおよびCLI（docker ai）に完全統合され、ローカルのコンテナ・ログ・構成を直接把握して安全に操作可能
     - point: 5
-      reason: "Gordon Base（無料枠）が全Dockerアカウントに提供され、即座に試用できる"
+      reason: Gordon Base（無料枠）が全Dockerアカウントに提供され、即座に試用できる
     - point: 3
-      reason: "MCP（Model Context Protocol）クライアントとして動作し、Docker MCP CatalogやToolkitと連携して外部ツール拡張が可能"
+      reason: MCP（Model Context Protocol）クライアントとして動作し、Docker MCP CatalogやToolkitと連携して外部ツール拡張が可能
     - point: 2
-      reason: "人間介入を前提とする承認ファースト設計により、安全かつ自律的なコンテナ操作とトラブルシューティングを両立"
+      reason: 人間介入を前提とする承認ファースト設計により、安全かつ自律的なコンテナ操作とトラブルシューティングを両立
   minus_points:
     - point: 0
-      reason: "大規模な利用や高度なクエリ実行にはPlus/Max/Ultraなどの有料クレジット契約が必要"
-  summary: "ローカルのDocker環境状態を直接把握し、承認ファーストで安全にコンテナ管理や障害対応を行えるDockerネイティブのAIエージェント。"
+      reason: 大規模な利用や高度なクエリ実行にはPlus/Max/Ultraなどの有料クレジット契約が必要
+  summary: ローカルのDocker環境状態を直接把握し、承認ファーストで安全にコンテナ管理や障害対応を行えるDockerネイティブのAIエージェント。
 links:
-  documentation: "https://docs.docker.com/ai/gordon/"
+  documentation: https://docs.docker.com/ai/gordon/
 relationships:
-  parent: "Docker"
+  parent: Docker
   related_tools:
-    - "Docker Sandboxes"
-    - "GitHub Copilot"
-    - "Cursor"
+    - Docker Sandboxes
+    - GitHub Copilot
+    - Cursor
 ---
 
 # **Docker Gordon 調査レポート**
