@@ -1,61 +1,61 @@
 ---
-title: "Craft Anything 調査レポート"
-tool_name: "Craft Anything"
-tool_reading: "クラフト エニシング"
-category: "自律型コーディングエージェント"
-developer: "ArtCraft Team"
-official_site: "https://getartcraft.com/apps/craft-anything"
-date: "2026-11-11"
-last_updated: "2026-11-11"
+title: Craft Anything 調査レポート
+tool_name: Craft Anything
+tool_reading: クラフト エニシング
+category: 自律型コーディングエージェント
+developer: ArtCraft Team
+official_site: https://getartcraft.com/apps/craft-anything
+date: '2026-11-11'
+last_updated: '2026-11-11'
 tags:
-  - "オープンソース"
-  - "自律型"
-  - "エージェント"
-  - "開発者ツール"
-  - "コーディング支援"
-  - "AI"
-description: "Webサイトやアプリ、ゲームを調査・解析し、AIコーディングエージェントと連携してクリーンルーム手法で自律再構築するPure Rust製エンジン。"
+  - オープンソース
+  - 自律型
+  - エージェント
+  - 開発者ツール
+  - コーディング支援
+  - AI
+description: Webサイトやアプリ、ゲームを調査・解析し、AIコーディングエージェントと連携してクリーンルーム手法で自律再構築するPure Rust製エンジン。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェア開発者"
-    - "リバースエンジニア"
-    - "プロダクトデザイナー"
-  latest_highlight: "2026年11月にv0.6.0をリリースし、Grok Build連携やアクション別承認制御、Unityバンドル解析を強化"
-  update_frequency: "高"
+    - ソフトウェア開発者
+    - リバースエンジニア
+    - プロダクトデザイナー
+  latest_highlight: 2026年11月にv0.6.0をリリースし、Grok Build連携やアクション別承認制御、Unityバンドル解析を強化
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 5
-      reason: "100% Rust製で高速かつ安全（unsafe禁止）、デスクトップ/CLI/WebAssemblyに対応"
+      reason: 100% Rust製で高速かつ安全（unsafe禁止）、デスクトップ/CLI/WebAssemblyに対応
     - point: 4
-      reason: "クリーンルーム（外から観察）とディープ解析の2段構えによる知財・コンプライアンス配慮"
+      reason: クリーンルーム（外から観察）とディープ解析の2段構えによる知財・コンプライアンス配慮
     - point: 5
-      reason: "300超のMCPツールを備え、Claude CodeやOpenCodeなど主要エージェントと柔軟に連携"
+      reason: 300超のMCPツールを備え、Claude CodeやOpenCodeなど主要エージェントと柔軟に連携
     - point: 4
-      reason: "初心者向けのSimpleモードと研究者向けのegui高度ワークベンチを両立"
+      reason: 初心者向けのSimpleモードと研究者向けのegui高度ワークベンチを両立
     - point: 4
-      reason: "複数解像度での自動比較検証（Checks）による自律改善・自己修復ループ"
+      reason: 複数解像度での自動比較検証（Checks）による自律改善・自己修復ループ
   minus_points:
     - point: -3
-      reason: "初期アルファ版（v0.6.0）であり、一部の動的挙動検証やAPI連携が開発途上"
+      reason: 初期アルファ版（v0.6.0）であり、一部の動的挙動検証やAPI連携が開発途上
     - point: -3
-      reason: "Claude Code等の外部エージェント環境やRustツールチェーンのセットアップ負担"
+      reason: Claude Code等の外部エージェント環境やRustツールチェーンのセットアップ負担
     - point: -2
-      reason: "ディープ解析時における対象ソフトウェアの利用規約や著作権遵守のリテラシーが必要"
-  summary: "既存ソフトウェアの調査からAIによる自律再実装までをPure Rustで統合した革新的エンジン。クリーンルーム設計と豊富なMCPツールを備えるが、アルファ版ゆえの環境整備と法的リテラシーが求められる。"
+      reason: ディープ解析時における対象ソフトウェアの利用規約や著作権遵守のリテラシーが必要
+  summary: 既存ソフトウェアの調査からAIによる自律再実装までをPure Rustで統合した革新的エンジン。クリーンルーム設計と豊富なMCPツールを備えるが、アルファ版ゆえの環境整備と法的リテラシーが求められる。
 links:
-  github: "https://github.com/storytold/craft-anything"
-  documentation: "https://getartcraft.com/apps/craft-anything"
+  github: https://github.com/storytold/craft-anything
+  documentation: https://getartcraft.com/apps/craft-anything
 relationships:
   related_tools:
-    - "Claude Code"
-    - "OpenCode"
-    - "GitReverse"
-    - "Antigravity CLI"
+    - Claude Code
+    - OpenCode
+    - GitReverse
+    - Antigravity CLI
 ---
 
 # **Craft Anything 調査レポート**
