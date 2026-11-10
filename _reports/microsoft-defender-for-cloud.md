@@ -48,6 +48,7 @@ relationships:
   related_tools:
     - Amazon GuardDuty
     - AWS Security Hub
+    - Google AI Threat Defense
 ---
 
 # **Microsoft Defender for Cloud 調査レポート**
