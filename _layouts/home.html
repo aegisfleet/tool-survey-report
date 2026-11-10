@@ -58,7 +58,7 @@ layout: default
           </svg>
           <input type="text" id="hero-search-input" class="hero-search-input" placeholder="例: AIエージェント, CLI, Claude, メール配信 ..."
             autocomplete="off" aria-label="レポートを検索">
-          <span id="hero-search-count-badge" class="hero-search-count-badge" style="display: none;" role="button" tabindex="0" aria-label="検索結果へスクロール"></span>
+          <button type="button" id="hero-search-count-badge" class="hero-search-count-badge" style="display: none;" aria-label="検索結果へスクロール"></button>
           <button type="button" class="hero-search-clear" id="hero-search-clear" aria-label="検索をクリア">×</button>
           <div class="hero-search-shortcuts" aria-hidden="true">
             <kbd class="hero-search-shortcut">⌘K</kbd>
@@ -93,13 +93,13 @@ layout: default
         </button>
         <div class="reports-controls" id="reports-controls">
           <div class="filter-container">
-            <select id="tag-filter" class="tag-filter" aria-label="タグで絞り込み">
+            <select id="tag-filter" class="tag-filter" aria-label="すべてのタグ（タグで絞り込み）">
               <option value="">すべてのタグ</option>
             </select>
             <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
           </div>
           <div class="filter-container">
-            <select id="category-filter" class="category-filter" aria-label="カテゴリで絞り込み">
+            <select id="category-filter" class="category-filter" aria-label="すべてのカテゴリ（カテゴリで絞り込み）">
               <option value="">すべてのカテゴリ</option>
               {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
               {%- for category in all_categories -%}
@@ -112,7 +112,7 @@ layout: default
             <button type="button" class="filter-clear" id="category-filter-clear" aria-label="カテゴリフィルタをクリア">×</button>
           </div>
           <div class="sort-container">
-            <select id="sort-select" class="sort-select" aria-label="並び替え">
+            <select id="sort-select" class="sort-select" aria-label="新しい順（並び替え）">
               <option value="date-desc" selected>新しい順</option>
               <option value="date-asc">古い順</option>
               <option value="title-asc">ツール名順</option>
@@ -173,10 +173,10 @@ layout: default
           <!-- 1. 最上段：カテゴリバッジ（左）＋ 更新日・スコア＆3秒プレビュー（右） -->
           <div class="report-card-eyebrow">
             {%- if report.category and report.category != '' and report.category != '不明' -%}
-            <span class="meta-item category clickable-category" data-category="{{ report.category | downcase }}"
-              role="button" tabindex="0" title="カテゴリ「{{ report.category }}」で絞り込む">
+            <button type="button" class="meta-item category clickable-category" data-category="{{ report.category | downcase }}"
+              title="カテゴリ「{{ report.category }}」で絞り込む">
               {{ site.data.categories[report.category] | default: '🔹' }} {{ report.category }}
-            </span>
+            </button>
             {%- else -%}
             <span class="meta-item category">🔹 未分類</span>
             {%- endif -%}
@@ -186,8 +186,8 @@ layout: default
                 {{ report.last_updated | date: "%Y.%m.%d" }}
               </time>
               {%- if report.evaluation.score -%}
-              <div class="score-badge-wrapper" tabindex="0" aria-label="総合評価 {{ report.evaluation.score }}点">
-                <span class="card-score-badge">★ {{ report.evaluation.score }}点</span>
+              <div class="score-badge-wrapper">
+                <button type="button" class="card-score-badge" aria-label="総合評価 {{ report.evaluation.score }}点">★ {{ report.evaluation.score }}点</button>
                 {%- if report.evaluation.summary or report.evaluation.plus_points -%}
                 <div class="score-preview-popover" role="tooltip">
                   <div class="popover-header">
@@ -220,7 +220,7 @@ layout: default
             <h3 class="report-title">
               <a href="{{ report.url | relative_url }}">
                 {%- if tool_domain and tool_domain != '' -%}
-                <img src="https://www.google.com/s2/favicons?domain={{ tool_domain }}&sz=64" alt="" class="tool-favicon" width="22" height="22" loading="lazy" onerror="this.style.display='none'">
+                <img src="https://www.google.com/s2/favicons?domain={{ tool_domain }}&sz=64" alt="" class="tool-favicon" width="22" height="22" loading="lazy">
                 {%- endif -%}
                 <span class="tool-title-text">{{ report.tool_name | default: report.title }}</span>
               </a>

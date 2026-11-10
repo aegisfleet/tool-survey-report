@@ -3,7 +3,7 @@
 .home-container {
     @include make-container;
     @include make-container-max-widths;
-    background-color: transparent !important;
+    background-color: transparent;
     padding: map-get($spacers, 4) 0;
     margin: 0 auto;
 
@@ -13,7 +13,7 @@
 }
 
 .home-content {
-    background-color: transparent !important;
+    background-color: transparent;
 
     // Direct content in home-content should be in white cards
     >h2,
@@ -150,6 +150,10 @@
             .hero-shortcut-icon {
                 flex-shrink: 0;
                 transition: transform 0.2s ease;
+
+                @media (prefers-reduced-motion: reduce) {
+                    transition: none;
+                }
             }
 
             .hero-shortcut-emoji {
@@ -373,7 +377,12 @@
         font-weight: $font-weight-medium;
         text-decoration: none;
         border: 2px solid var(--color-bluesky-btn-border);
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         background: rgba($white, 0.1);
         color: var(--color-bluesky-btn-text);
         cursor: pointer;
@@ -646,9 +655,9 @@
         white-space: nowrap;
 
         [data-theme="dark"] & {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.75);
+            background: #1e293b;
+            border-color: #334155;
+            color: #f8fafc;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
     }
@@ -724,7 +733,12 @@
         font-size: $font-size-sm;
         font-weight: $font-weight-medium;
         cursor: pointer;
-        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         white-space: nowrap;
 
         &:hover {
@@ -1066,7 +1080,12 @@
         white-space: nowrap;
         cursor: pointer;
         flex-shrink: 0;
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover {
             border-color: $primary-color;
@@ -1105,13 +1124,13 @@
     @include card(map-get($spacers, 4));
     display: flex;
     flex-direction: column;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition:
+        transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        border-left-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border-left: 4px solid transparent;
     position: relative;
-
-    &[style*="display: block"] {
-        display: flex !important;
-    }
 
     @include media-breakpoint-down(sm) {
         border-left: none;
@@ -1155,6 +1174,7 @@
         display: inline-flex;
         align-items: center;
         gap: 0.3rem;
+        font-family: inherit;
         font-size: 0.78rem;
         font-weight: $font-weight-bold;
         color: var(--color-secondary);
@@ -1177,7 +1197,7 @@
             &.active {
                 background: $secondary-color;
                 border-color: $secondary-color;
-                color: $white !important;
+                color: $white;
             }
         }
     }
@@ -1201,8 +1221,6 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    cursor: help;
-    outline: none;
 
     .score-preview-popover {
         position: absolute;
@@ -1218,7 +1236,10 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(4px);
-        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+            opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+            transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
         text-align: left;
 
@@ -1296,11 +1317,14 @@
     justify-content: center;
     background: $gradient-primary;
     color: $white;
+    font-family: inherit;
     font-weight: $font-weight-bold;
     font-size: 0.75rem;
     padding: 0.18rem 0.55rem;
+    border: none;
     border-radius: $border-radius-xl;
     letter-spacing: 0.02em;
+    cursor: help;
 }
 
 // 2. Title Row: Favicon + Tool Name + Reading
@@ -1721,12 +1745,12 @@
 
 // Ensure home container has transparent background with high specificity
 #main-content .home-container {
-    background-color: transparent !important;
+    background-color: transparent;
 }
 
 // Ensure content wrapper also has transparent background
 #main-content .content-wrapper {
-    background-color: transparent !important;
+    background-color: transparent;
 }
 
 // Load more button styles

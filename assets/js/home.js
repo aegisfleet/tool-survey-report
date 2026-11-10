@@ -28,8 +28,8 @@ function stripEmoji(text) {
 function toHiragana(str) {
   if (!str) return '';
   return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
-    const chr = match.charCodeAt(0) - 0x60;
-    return String.fromCharCode(chr);
+    const chr = match.codePointAt(0) - 0x60;
+    return String.fromCodePoint(chr);
   });
 }
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   Array.from(allTags)
-    .sort()
+    .sort((a, b) => a.localeCompare(b))
     .forEach((tag) => {
       const option = document.createElement('option');
       option.value = tag;
@@ -134,17 +134,37 @@ document.addEventListener('DOMContentLoaded', () => {
       tagFilter.appendChild(option);
     });
 
+  function setActiveState(el, isActive) {
+    if (isActive) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  }
+
+  function isCategoryPillActive(pill, selectedCategory, currentSort) {
+    const type = pill.dataset.quickType;
+    const val = pill.dataset.quickValue || '';
+    if (type === 'all') {
+      const isSpecialSort = currentSort === 'oss' || currentSort === 'free' || currentSort === 'score-desc';
+      return selectedCategory === '' && !isSpecialSort;
+    }
+    if (type === 'category') {
+      return val !== '' && selectedCategory === val;
+    }
+    if (type === 'sort') {
+      return selectedCategory === '' && currentSort === val;
+    }
+    return false;
+  }
+
   // Update tag visual states
   function updateTagStates() {
     const selectedTag = tagFilter.value;
 
     tagElements.forEach((tagElement) => {
       const tagValue = tagElement.dataset.tag;
-      if (tagValue === selectedTag && selectedTag !== '') {
-        tagElement.classList.add('active');
-      } else {
-        tagElement.classList.remove('active');
-      }
+      setActiveState(tagElement, tagValue === selectedTag && selectedTag !== '');
     });
   }
 
@@ -155,37 +175,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     categoryElements.forEach((el) => {
       const categoryValue = el.dataset.category;
-      if (categoryValue === selectedCategory && selectedCategory !== '') {
-        el.classList.add('active');
-      } else {
-        el.classList.remove('active');
-      }
+      setActiveState(el, categoryValue === selectedCategory && selectedCategory !== '');
     });
 
     // Update quick bar pills
     categoryPills.forEach((pill) => {
-      const type = pill.dataset.quickType;
-      const val = pill.dataset.quickValue || '';
-      if (type === 'all') {
-        const isDefaultSort = currentSort !== 'oss' && currentSort !== 'free' && currentSort !== 'score-desc';
-        if (selectedCategory === '' && isDefaultSort) {
-          pill.classList.add('active');
-        } else {
-          pill.classList.remove('active');
-        }
-      } else if (type === 'category') {
-        if (selectedCategory === val && val !== '') {
-          pill.classList.add('active');
-        } else {
-          pill.classList.remove('active');
-        }
-      } else if (type === 'sort') {
-        if (currentSort === val && selectedCategory === '') {
-          pill.classList.add('active');
-        } else {
-          pill.classList.remove('active');
-        }
-      }
+      setActiveState(pill, isCategoryPillActive(pill, selectedCategory, currentSort));
     });
   }
 
@@ -208,6 +203,107 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
   }
 
+  const TEXT_SEARCH_KEYS = [
+    'toolName',
+    'title',
+    'category',
+    'toolReading',
+    'description',
+    'latestHighlight',
+    'developer',
+    'targetUsers',
+  ];
+
+  function cardMatchesFields(card, term, allowPartialTags = true) {
+    const lowerTerm = term.toLowerCase();
+    const hTerm = toHiragana(lowerTerm);
+    const hasTextMatch = TEXT_SEARCH_KEYS.some(
+      (key) => card.dataset[key] && toHiragana(card.dataset[key].toLowerCase()).includes(hTerm),
+    );
+    if (hasTextMatch) return true;
+
+    // Tag matching: avoid partial matches for short terms in tags to prevent false positives (like "a" matching "tag1")
+    const hasTagMatch = Boolean(
+      card.dataset.tags?.split(',').some((tag) => {
+        const hTag = toHiragana(tag.trim().toLowerCase());
+        if (hTerm.length <= 1) return hTag === hTerm;
+        return allowPartialTags ? hTag.includes(hTerm) : hTag === hTerm;
+      }),
+    );
+    if (hasTagMatch) return true;
+
+    // Link matching: match URL, scheme-stripped URL, or repository paths
+    const cleanTerm = lowerTerm.replace(/^https?:\/\//, '').replace(/\/+$/, '');
+    const links = card.dataset.links;
+    return Boolean(links) && (links.includes(lowerTerm) || (cleanTerm.length >= 3 && links.includes(cleanTerm)));
+  }
+
+  function cardMatchesSearchGroup(card, group) {
+    if (cardMatchesFields(card, group)) return true;
+    const andTerms = group.split(/\s+/).filter(Boolean);
+    if (andTerms.length <= 1) return false;
+    return andTerms.every((term) => cardMatchesFields(card, term, false));
+  }
+
+  function cardMatchesSortFilter(card, sortBy) {
+    if (sortBy === 'oss') return card.dataset.isOss === 'true';
+    if (sortBy === 'free') return card.dataset.isOss !== 'true' && card.dataset.hasFreePlan === 'true';
+    return true;
+  }
+
+  function cardMatchesAllCriteria(card, orGroups, selectedTag, selectedCategory, sortBy) {
+    const matchesSearch = orGroups.length === 0 || orGroups.some((group) => cardMatchesSearchGroup(card, group));
+    if (!matchesSearch) return false;
+
+    const matchesTag =
+      !selectedTag ||
+      card.dataset.tags
+        .split(',')
+        .map((t) => t.trim())
+        .includes(selectedTag);
+    const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
+    return matchesTag && matchesCategory && cardMatchesSortFilter(card, sortBy);
+  }
+
+  function compareReportCards(a, b, sortBy) {
+    switch (sortBy) {
+      case 'date-desc':
+        return b._timestamp - a._timestamp;
+      case 'date-asc':
+        return a._timestamp - b._timestamp;
+      case 'title-asc':
+        return a.dataset.toolName.localeCompare(b.dataset.toolName);
+      case 'score-desc':
+        return b._score - a._score;
+      case 'oss': {
+        const priorityDiff = (b.dataset.isOss === 'true' ? 1 : 0) - (a.dataset.isOss === 'true' ? 1 : 0);
+        return priorityDiff !== 0 ? priorityDiff : b._score - a._score;
+      }
+      case 'free': {
+        const getFreePriority = (c) => (c.dataset.hasFreePlan === 'true' && c.dataset.isOss !== 'true' ? 1 : 0);
+        const priorityDiff = getFreePriority(b) - getFreePriority(a);
+        return priorityDiff !== 0 ? priorityDiff : b._score - a._score;
+      }
+      default:
+        return 0;
+    }
+  }
+
+  function updateSearchCountBadge(count, searchTerm) {
+    if (!heroSearchCountBadge) return;
+    if (searchTerm === '') {
+      heroSearchCountBadge.style.display = 'none';
+      return;
+    }
+    heroSearchCountBadge.textContent = count > 0 ? `${count}件` : '0件';
+    heroSearchCountBadge.style.display = 'inline-block';
+    if (count === 0) {
+      heroSearchCountBadge.classList.add('no-matches');
+    } else {
+      heroSearchCountBadge.classList.remove('no-matches');
+    }
+  }
+
   // Filter and sort function
   const filterAndSort = (shouldSave = true, resetCount = true) => {
     if (resetCount) {
@@ -219,123 +315,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectedTag = tagFilter?.value || '';
     const selectedCategory = categoryFilter?.value || '';
     const sortBy = sortSelect?.value || 'date-desc';
+    const orGroups = searchTerm
+      .split(/\||\sOR\s/i)
+      .map((t) => t.trim())
+      .filter(Boolean);
 
-    const filteredCards = reportCards.filter((card) => {
-      const orGroups = searchTerm
-        .split(/\||\sOR\s/i)
-        .map((t) => t.trim())
-        .filter((t) => t);
+    const filteredCards = reportCards.filter((card) =>
+      cardMatchesAllCriteria(card, orGroups, selectedTag, selectedCategory, sortBy),
+    );
 
-      // Helper for field matching (localized to filter function)
-      const matchesFields = (term, allowPartialTags = true) => {
-        const hTerm = toHiragana(term.toLowerCase());
-        const nameMatch = card.dataset.toolName && toHiragana(card.dataset.toolName.toLowerCase()).includes(hTerm);
-        const titleMatch = card.dataset.title && toHiragana(card.dataset.title.toLowerCase()).includes(hTerm);
-        const categoryMatch = card.dataset.category && toHiragana(card.dataset.category.toLowerCase()).includes(hTerm);
-        const readingMatch =
-          card.dataset.toolReading && toHiragana(card.dataset.toolReading.toLowerCase()).includes(hTerm);
-        const descMatch =
-          card.dataset.description && toHiragana(card.dataset.description.toLowerCase()).includes(hTerm);
-        const highlightMatch =
-          card.dataset.latestHighlight && toHiragana(card.dataset.latestHighlight.toLowerCase()).includes(hTerm);
-        const devMatch = card.dataset.developer && toHiragana(card.dataset.developer.toLowerCase()).includes(hTerm);
-        const targetMatch =
-          card.dataset.targetUsers && toHiragana(card.dataset.targetUsers.toLowerCase()).includes(hTerm);
-
-        // Tag matching: avoid partial matches for short terms in tags to prevent false positives (like "a" matching "tag1")
-        const tagsMatch = card.dataset.tags?.split(',').some((tag) => {
-          const hTag = toHiragana(tag.trim().toLowerCase());
-          if (hTerm.length <= 1) return hTag === hTerm; // Single char must be exact
-          return allowPartialTags ? hTag.includes(hTerm) : hTag === hTerm;
-        });
-
-        // Link matching: match URL, scheme-stripped URL, or repository paths
-        const cleanTerm = term
-          .toLowerCase()
-          .replace(/^https?:\/\//, '')
-          .replace(/\/+$/, '');
-        const linksMatch =
-          Boolean(card.dataset.links) &&
-          (card.dataset.links.includes(term.toLowerCase()) ||
-            (cleanTerm.length >= 3 && card.dataset.links.includes(cleanTerm)));
-
-        return (
-          nameMatch ||
-          titleMatch ||
-          categoryMatch ||
-          readingMatch ||
-          descMatch ||
-          highlightMatch ||
-          devMatch ||
-          targetMatch ||
-          tagsMatch ||
-          linksMatch
-        );
-      };
-
-      const matchesSearch =
-        orGroups.length === 0 ||
-        orGroups.some((group) => {
-          // 1. Try whole phrase match first
-          if (matchesFields(group)) return true;
-
-          // 2. Fallback to AND terms if multiple words
-          const andTerms = group.split(/\s+/).filter((t) => t);
-          if (andTerms.length <= 1) return false;
-
-          return andTerms.every((term) => matchesFields(term, false)); // Stricter tag match for individual terms
-        });
-
-      const matchesTag =
-        !selectedTag ||
-        card.dataset.tags
-          .split(',')
-          .map((t) => t.trim())
-          .includes(selectedTag);
-      const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
-
-      // ソート条件に基づくフィルタリング（分離の徹底）
-      let matchesSortFilter = true;
-      if (sortBy === 'oss') {
-        matchesSortFilter = card.dataset.isOss === 'true';
-      } else if (sortBy === 'free') {
-        matchesSortFilter = card.dataset.isOss !== 'true' && card.dataset.hasFreePlan === 'true';
-      }
-
-      return matchesSearch && matchesTag && matchesCategory && matchesSortFilter;
-    });
-
-    // Sort cards
-    filteredCards.sort((a, b) => {
-      switch (sortBy) {
-        case 'date-desc':
-          return b._timestamp - a._timestamp;
-        case 'date-asc':
-          return a._timestamp - b._timestamp;
-        case 'title-asc':
-          return a.dataset.toolName.localeCompare(b.dataset.toolName);
-        case 'score-desc': {
-          // スコアが高い順でソート
-          return b._score - a._score;
-        }
-        case 'oss': {
-          // OSSを優先し、同じ場合はスコア順でソート
-          const getPriority = (card) => (card.dataset.isOss === 'true' ? 1 : 0);
-          const priorityDiff = getPriority(b) - getPriority(a);
-          if (priorityDiff !== 0) return priorityDiff;
-          return b._score - a._score;
-        }
-        case 'free': {
-          // 無料プランあり（非OSS）を優先し、同じ場合はスコア順でソート
-          const getPriority = (card) => (card.dataset.hasFreePlan === 'true' && card.dataset.isOss !== 'true' ? 1 : 0);
-          const priorityDiff = getPriority(b) - getPriority(a);
-          if (priorityDiff !== 0) return priorityDiff;
-          return b._score - a._score;
-        }
-        default:
-          return 0;
-      }
-    });
+    filteredCards.sort((a, b) => compareReportCards(a, b, sortBy));
 
     // フィルタがアクティブかどうか判定（表示数が減少する可能性のあるソート条件もフィルタとみなす）
     const isFilterActive =
@@ -349,11 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show filtered and sorted cards
     if (filteredCards.length > 0) {
       filteredCards.forEach((card, index) => {
-        if (isFilterActive || index < currentShowCount) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = isFilterActive || index < currentShowCount ? 'flex' : 'none';
         reportsGrid.appendChild(card); // Re-append to maintain order
       });
       noResults.style.display = 'none';
@@ -364,33 +349,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // もっと見るボタンの制御
     const loadMoreContainer = document.getElementById('load-more-container');
     if (loadMoreContainer) {
-      if (!isFilterActive && filteredCards.length > currentShowCount) {
-        loadMoreContainer.style.display = 'flex';
-      } else {
-        loadMoreContainer.style.display = 'none';
-      }
+      loadMoreContainer.style.display = !isFilterActive && filteredCards.length > currentShowCount ? 'flex' : 'none';
     }
 
     // 件数表示を更新
     const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
     updateReportsCount(visibleCount, filteredCards.length, isFilterActive);
-
-    // 検索窓の中の件数バッジを更新
-    if (heroSearchCountBadge) {
-      if (searchTerm === '') {
-        heroSearchCountBadge.style.display = 'none';
-      } else {
-        const count = filteredCards.length;
-        heroSearchCountBadge.textContent = count > 0 ? `${count}件` : '0件';
-        heroSearchCountBadge.style.display = 'inline-block';
-
-        if (count === 0) {
-          heroSearchCountBadge.classList.add('no-matches');
-        } else {
-          heroSearchCountBadge.classList.remove('no-matches');
-        }
-      }
-    }
+    updateSearchCountBadge(filteredCards.length, searchTerm);
 
     // Update visual states immediately
     updateTagStates();
@@ -619,38 +584,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Quick Category & Sort Pills
+  function applyQuickPillSelection(type, val) {
+    if (type === 'all') {
+      if (categoryFilter) categoryFilter.value = '';
+      const isSpecialSort =
+        sortSelect && (sortSelect.value === 'oss' || sortSelect.value === 'free' || sortSelect.value === 'score-desc');
+      if (isSpecialSort) {
+        sortSelect.value = 'date-desc';
+      }
+      return;
+    }
+    if (type === 'category' && categoryFilter) {
+      categoryFilter.value = categoryFilter.value === val ? '' : val;
+      return;
+    }
+    if (type === 'sort' && sortSelect) {
+      if (categoryFilter) categoryFilter.value = '';
+      sortSelect.value = sortSelect.value === val ? 'date-desc' : val;
+    }
+  }
+
   categoryPills.forEach((pill) => {
     pill.addEventListener('click', () => {
-      const type = pill.dataset.quickType;
-      const val = pill.dataset.quickValue || '';
-
-      if (type === 'all') {
-        if (categoryFilter) categoryFilter.value = '';
-        if (
-          sortSelect &&
-          (sortSelect.value === 'oss' || sortSelect.value === 'free' || sortSelect.value === 'score-desc')
-        ) {
-          sortSelect.value = 'date-desc';
-        }
-      } else if (type === 'category' && categoryFilter) {
-        if (categoryFilter.value === val) {
-          categoryFilter.value = '';
-        } else {
-          categoryFilter.value = val;
-        }
-      } else if (type === 'sort' && sortSelect) {
-        if (categoryFilter) categoryFilter.value = '';
-        if (sortSelect.value === val) {
-          sortSelect.value = 'date-desc';
-        } else {
-          sortSelect.value = val;
-        }
-      }
-
+      applyQuickPillSelection(pill.dataset.quickType, pill.dataset.quickValue || '');
       filterAndSort();
       pill.blur();
     });
   });
+
+  // Hide broken favicons gracefully without inline HTML event handlers
+  if (reportsGrid) {
+    reportsGrid.addEventListener(
+      'error',
+      (e) => {
+        if (e.target?.classList?.contains('tool-favicon')) {
+          e.target.style.display = 'none';
+        }
+      },
+      true,
+    );
+  }
 
   // Filter Reset All
   const filterResetAll = document.getElementById('filter-reset-all');
@@ -827,7 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // テーマに応じたウィジェットテーマを返す
     function getBlueskyTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const currentTheme = document.documentElement.dataset.theme;
       return currentTheme === 'light' ? 'light' : 'gray';
     }
 
@@ -877,16 +850,16 @@ document.addEventListener('DOMContentLoaded', () => {
       safeHandles.forEach((handle) => {
         console.log('Appending widget for handle:', handle);
         const widget = document.createElement('bst-widget');
-        widget.setAttribute('data-handle', handle);
-        widget.setAttribute('data-theme', theme);
-        widget.setAttribute('data-width', '100%');
-        widget.setAttribute('data-height', height);
-        widget.setAttribute('data-lang', 'ja');
-        widget.setAttribute('data-ui', '1');
-        widget.setAttribute('data-pin', '0');
-        widget.setAttribute('data-rp', '0');
-        widget.setAttribute('data-thread', '0');
-        widget.setAttribute('data-prof', '0');
+        widget.dataset.handle = handle;
+        widget.dataset.theme = theme;
+        widget.dataset.width = '100%';
+        widget.dataset.height = height;
+        widget.dataset.lang = 'ja';
+        widget.dataset.ui = '1';
+        widget.dataset.pin = '0';
+        widget.dataset.rp = '0';
+        widget.dataset.thread = '0';
+        widget.dataset.prof = '0';
         container.appendChild(widget);
       });
 
@@ -900,12 +873,12 @@ document.addEventListener('DOMContentLoaded', () => {
       script.src = `https://blueskytimeline.com/v2/timeline.js?t=${Date.now()}`;
       script.type = 'module';
       script.defer = true;
-      script.setAttribute('data-bluesky-timeline', 'true');
+      script.dataset.blueskyTimeline = 'true';
       document.body.appendChild(script);
 
       // ボタンのアクティブ状態を更新
       buttons.forEach((btn) => {
-        const handle = btn.getAttribute('data-handle');
+        const handle = btn.dataset.handle;
         if (activeList.includes(handle)) {
           btn.classList.add('active');
         } else {
@@ -929,7 +902,7 @@ document.addEventListener('DOMContentLoaded', () => {
     blueskyAccountBtns.forEach((btn) => {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
-        const handle = this.getAttribute('data-handle');
+        const handle = this.dataset.handle;
         if (!handle) return;
 
         // すでに表示中なら何もしない（外部リンクはそのまま開かれる設計にしたいが
