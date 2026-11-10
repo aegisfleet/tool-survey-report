@@ -55,6 +55,26 @@
 - **Python環境の実行**: Pythonスクリプトやツールを実行する際は、一貫した仮想環境を使用するため、`uv run python3` または `.venv/bin/` 以下の実行ファイルを直接使用すること。
 - **堅牢な引数設計（注意点）**: スクリプト内で引数を追加・変更した際、テスト側のモック（`argparse.Namespace`）で属性エラーが発生するのを防ぐため、スクリプト内での引数へのアクセスは `getattr(self.args, 'name', default)` などを用いて安全に行うことを推奨する。
 
+## フロントエンド実装規約・静的解析（Biome / SonarLint）
+
+HTML（`_layouts/`, `_includes/`）、SCSS（`_sass/`, `assets/css/`）、JavaScript（`assets/js/`）を変更する際は、SonarQube（SonarLint）およびアクセシビリティ規約（WCAG 2.1 AA）に準拠するため、以下のルールを厳守し、変更後に必ず `pnpm run check` および `pnpm run lint` を実行すること。
+
+1. **HTML / アクセシビリティ規約**:
+   - クリックやキーボード操作を受け付けるインタラクティブ要素には、`<span>` や `<div>` に `role="button"` や `tabindex="0"` を付与するのではなく、ネイティブの `<button type="button">` を使用すること（`Web:S6819`, `Web:S6848`, `Web:S6845`）。
+   - `<img>` や `<div>` などの非インタラクティブ要素にインラインイベント属性（`onerror`, `onclick` 等）を記述せず、JavaScriptのイベントリスナーで処理すること（`Web:S6847`）。
+   - `aria-label` を指定する場合は、要素の可視テキスト（Visible Label）が `aria-label` の文字列内に含まれるようにすること（WCAG 2.5.3 Label in Name / `Web:S6841`）。
+2. **SCSS / スタイル規約**:
+   - `!important` の使用は避け、セレクタの詳細度（Specificity）で解決すること（`css:S4656`）。
+   - `transition: all` や `$transition-base`（`all` を含む変数）の直接使用は避け、アニメーションさせるプロパティ（`transform`, `opacity`, `background-color` 等）を明示的に列挙すること（`css:S7924`）。
+   - `transform` 等を伴うアニメーション・トランジションには、同一セレクタ内に `@media (prefers-reduced-motion: reduce) { transition: none; }`（または `animation: none;`）を併記すること（`css:S7924`）。
+   - バッジやチップ等の文字色と背景色は、ライトモード・ダークモード双方で WCAG AA のコントラスト比（通常テキスト 4.5:1 以上）を満たすこと（`css:S7924`）。
+   - `_sass/*.scss` のパーシャルを変更した際、Jekyllの `--incremental` モードで `assets/css/main.scss` の再ビルドがスキップされるのを防ぐため、`pnpm run lint:frontend`（または `pnpm run lint`）を実行して `assets/css/main.scss` のタイムスタンプ同期と `.sass-cache` のクリアを行うこと。
+3. **JavaScript 規約**:
+   - 関数の認知的複雑度（Cognitive Complexity）は **15以下** に抑えること（`biome.json` の `noExcessiveCognitiveComplexity` で強制 / `javascript:S3776`）。
+   - `data-*` 属性の読み書きには `getAttribute`/`setAttribute` ではなく `element.dataset` を使用すること（`javascript:S6653`）。
+   - 文字コード操作には `charCodeAt`/`String.fromCharCode` ではなく `codePointAt`/`String.fromCodePoint` を使用すること（`javascript:S6643`）。
+   - 配列のTruthyフィルタには `.filter((x) => x)` ではなく `.filter(Boolean)` を使用し、`.sort()` には必ず比較関数を指定すること（`javascript:S6645`, `javascript:S2871`）。
+
 ## コードレビュー設定
 
 - レビュー対象外：`_reports/**` （レポートファイルは自動生成または特定フォーマットのため、通常のコードレビューからは除外する）

@@ -13,16 +13,16 @@
   function toHiragana(str) {
     if (!str) return '';
     return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
-      const chr = match.charCodeAt(0) - 0x60;
-      return String.fromCharCode(chr);
+      const chr = match.codePointAt(0) - 0x60;
+      return String.fromCodePoint(chr);
     });
   }
 
   function toKatakana(str) {
     if (!str) return '';
     return str.replace(HIRAGANA_KATAKANA_RE, (match) => {
-      const chr = match.charCodeAt(0) + 0x60;
-      return String.fromCharCode(chr);
+      const chr = match.codePointAt(0) + 0x60;
+      return String.fromCodePoint(chr);
     });
   }
 
@@ -144,6 +144,43 @@
     return true;
   }
 
+  function extractLinkList(item) {
+    const linkList = [];
+    if (item.official_site) linkList.push(item.official_site);
+    if (item.links && typeof item.links === 'object') {
+      Object.values(item.links).forEach((v) => {
+        if (typeof v === 'string') linkList.push(v);
+      });
+    }
+    return linkList.map((u) => normalizeUrl(u)).filter(Boolean);
+  }
+
+  function buildNormalizedReportItem(item) {
+    return {
+      ...item,
+      _normName: normalizeText(item.tool_name),
+      _normReading: normalizeText(item.tool_reading),
+      _normCat: normalizeText(item.category),
+      _normTags: Array.isArray(item.tags) ? item.tags.map((t) => normalizeText(t)).join(' ') : '',
+      _normDesc: normalizeText(item.description),
+      _normSlug: normalizeText(item.slug),
+      _normDev: normalizeText(item.developer),
+      _normLinks: extractLinkList(item),
+      _normGithub: item.links?.github ? normalizeUrl(item.links.github) : '',
+      _scoreNum: typeof item.score === 'number' ? item.score : 0,
+    };
+  }
+
+  function finishLoadingState() {
+    isLoading = false;
+    if (loadingEl) loadingEl.style.display = 'none';
+    if (input && input.value.trim().length > 0) {
+      executeSearch(input.value);
+    } else if (initialEl) {
+      initialEl.style.display = 'block';
+    }
+  }
+
   // Fetch search data once
   async function loadData() {
     if (reportsData !== null || isLoading) return;
@@ -153,7 +190,6 @@
     if (initialEl) initialEl.style.display = 'none';
 
     try {
-      // Endpoint is at /reports-summary.json with baseUrl consideration
       const baseUrl = window.__SITE_BASEURL__ || '/tool-survey-report';
       const endpoint = `${baseUrl.replace(/\/+$/, '')}/reports-summary.json`;
 
@@ -162,69 +198,74 @@
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-
-      // Pre-compute normalized search indices for maximum performance
-      reportsData = (Array.isArray(data) ? data : []).map((item) => {
-        const normName = normalizeText(item.tool_name);
-        const normReading = normalizeText(item.tool_reading);
-        const normCat = normalizeText(item.category);
-        const normTags = Array.isArray(item.tags) ? item.tags.map((t) => normalizeText(t)).join(' ') : '';
-        const normDesc = normalizeText(item.description);
-        const normSlug = normalizeText(item.slug);
-        const normDev = normalizeText(item.developer);
-
-        const linkList = [];
-        if (item.official_site) linkList.push(item.official_site);
-        if (item.links && typeof item.links === 'object') {
-          Object.values(item.links).forEach((v) => {
-            if (typeof v === 'string') linkList.push(v);
-          });
-        }
-        const normLinks = linkList.map((u) => normalizeUrl(u)).filter(Boolean);
-        const normGithub = item.links?.github ? normalizeUrl(item.links.github) : '';
-
-        return {
-          ...item,
-          _normName: normName,
-          _normReading: normReading,
-          _normCat: normCat,
-          _normTags: normTags,
-          _normDesc: normDesc,
-          _normSlug: normSlug,
-          _normDev: normDev,
-          _normLinks: normLinks,
-          _normGithub: normGithub,
-          _scoreNum: typeof item.score === 'number' ? item.score : 0,
-        };
-      });
+      const rawItems = Array.isArray(data) ? data : [];
+      reportsData = rawItems.map(buildNormalizedReportItem);
     } catch (err) {
       console.error('Failed to load search index:', err);
       reportsData = [];
     } finally {
-      isLoading = false;
-      if (loadingEl) loadingEl.style.display = 'none';
-      if (input && input.value.trim().length > 0) {
-        executeSearch(input.value);
-      } else if (initialEl) {
-        initialEl.style.display = 'block';
-      }
+      finishLoadingState();
     }
+  }
+
+  function scoreTextMatch(fieldText, token) {
+    if (!fieldText) return 0;
+    if (fieldText === token) return 200;
+    if (fieldText.startsWith(token)) return 120;
+    if (fieldText.includes(token)) return 80;
+    return 0;
+  }
+
+  function scoreLinkMatch(item, normToken) {
+    if (!normToken) return 0;
+    const isGithubMatch =
+      item._normGithub &&
+      (item._normGithub === normToken || (normToken.length > 3 && item._normGithub.endsWith(`/${normToken}`)));
+    if (isGithubMatch) return 250;
+    if (item._normLinks?.includes(normToken)) return 200;
+    if (normToken.length >= 3 && item._normLinks?.some((l) => l.includes(normToken))) return 70;
+    return 0;
+  }
+
+  function scoreTokenForItem(item, token) {
+    let score = scoreTextMatch(item._normName, token) + scoreTextMatch(item._normReading, token);
+    if (item._normSlug.includes(token)) score += 60;
+    if (item._normTags.includes(token)) score += 50;
+    if (item._normCat.includes(token)) score += 30;
+    if (item._normDev?.includes(token)) score += 30;
+    if (item._normDesc.includes(token)) score += 10;
+    score += scoreLinkMatch(item, normalizeUrl(token));
+    return score;
+  }
+
+  function scoreItemAgainstTokens(item, tokens) {
+    let relevance = 0;
+    for (const token of tokens) {
+      const tokenScore = scoreTokenForItem(item, token);
+      if (tokenScore === 0) return -1;
+      relevance += tokenScore;
+    }
+    return relevance + item._scoreNum * 0.1;
+  }
+
+  function resetEmptyQueryView() {
+    currentResults = [];
+    selectedIndex = -1;
+    if (initialEl) initialEl.style.display = 'block';
+    if (resultsList) {
+      resultsList.style.display = 'none';
+      resultsList.innerHTML = '';
+    }
+    if (emptyEl) emptyEl.style.display = 'none';
+    if (countEl) countEl.textContent = '';
+    if (clearBtn) clearBtn.style.display = 'none';
   }
 
   // Perform filtering & scoring
   function executeSearch(query) {
     const rawQuery = query.trim();
     if (!rawQuery) {
-      currentResults = [];
-      selectedIndex = -1;
-      if (initialEl) initialEl.style.display = 'block';
-      if (resultsList) {
-        resultsList.style.display = 'none';
-        resultsList.innerHTML = '';
-      }
-      if (emptyEl) emptyEl.style.display = 'none';
-      if (countEl) countEl.textContent = '';
-      if (clearBtn) clearBtn.style.display = 'none';
+      resetEmptyQueryView();
       return;
     }
 
@@ -236,116 +277,83 @@
       return;
     }
 
-    // Split into tokens
     const tokens = rawQuery
       .split(/\s+/)
       .map((t) => normalizeText(t))
       .filter((t) => t.length > 0);
 
     const scoredItems = [];
-
-    for (let i = 0; i < reportsData.length; i++) {
-      const item = reportsData[i];
-      let matchesAll = true;
-      let relevance = 0;
-
-      for (let j = 0; j < tokens.length; j++) {
-        const token = tokens[j];
-        let tokenMatch = false;
-
-        // Exact / prefix match on name
-        if (item._normName === token) {
-          relevance += 200;
-          tokenMatch = true;
-        } else if (item._normName.startsWith(token)) {
-          relevance += 120;
-          tokenMatch = true;
-        } else if (item._normName.includes(token)) {
-          relevance += 80;
-          tokenMatch = true;
-        }
-
-        // Match on tool reading (phonetic Katakana / Hiragana reading)
-        if (item._normReading) {
-          if (item._normReading === token) {
-            relevance += 200;
-            tokenMatch = true;
-          } else if (item._normReading.startsWith(token)) {
-            relevance += 120;
-            tokenMatch = true;
-          } else if (item._normReading.includes(token)) {
-            relevance += 80;
-            tokenMatch = true;
-          }
-        }
-
-        // Match on slug
-        if (item._normSlug.includes(token)) {
-          relevance += 60;
-          tokenMatch = true;
-        }
-
-        // Match on tags
-        if (item._normTags.includes(token)) {
-          relevance += 50;
-          tokenMatch = true;
-        }
-
-        // Match on category
-        if (item._normCat.includes(token)) {
-          relevance += 30;
-          tokenMatch = true;
-        }
-
-        // Match on developer
-        if (item._normDev?.includes(token)) {
-          relevance += 30;
-          tokenMatch = true;
-        }
-
-        // Match on description
-        if (item._normDesc.includes(token)) {
-          relevance += 10;
-          tokenMatch = true;
-        }
-
-        // Match on GitHub URL / Links
-        const normToken = normalizeUrl(token);
-        if (
-          item._normGithub &&
-          (item._normGithub === normToken || (normToken.length > 3 && item._normGithub.endsWith(`/${normToken}`)))
-        ) {
-          relevance += 250;
-          tokenMatch = true;
-        } else if (item._normLinks?.some((l) => l === normToken)) {
-          relevance += 200;
-          tokenMatch = true;
-        } else if (normToken.length >= 3 && item._normLinks?.some((l) => l.includes(normToken))) {
-          relevance += 70;
-          tokenMatch = true;
-        }
-
-        if (!tokenMatch) {
-          matchesAll = false;
-          break;
-        }
-      }
-
-      if (matchesAll) {
-        // Boost slightly by evaluation score
-        const totalScore = relevance + item._scoreNum * 0.1;
+    for (const item of reportsData) {
+      const totalScore = scoreItemAgainstTokens(item, tokens);
+      if (totalScore >= 0) {
         scoredItems.push({ item, score: totalScore });
       }
     }
 
-    // Sort by relevance desc
     scoredItems.sort((a, b) => b.score - a.score);
-
-    // Limit to top 25 results
     currentResults = scoredItems.slice(0, 25).map((x) => x.item);
     selectedIndex = currentResults.length > 0 ? 0 : -1;
 
     renderResults(rawQuery);
+  }
+
+  function buildResultItemElement(tool, index, queryTokens) {
+    const li = document.createElement('li');
+    li.setAttribute('role', 'option');
+    li.setAttribute('id', `search-result-${index}`);
+    li.className = index === selectedIndex ? 'search-modal-item is-selected' : 'search-modal-item';
+    li.dataset.index = String(index);
+
+    const emoji = getCategoryEmoji(tool.category);
+    const url = resolveUrl(tool.url);
+    const highlightedName = highlightMatches(tool.tool_name, queryTokens);
+    const highlightedDesc = highlightMatches(tool.description, queryTokens);
+
+    const hasDistinctReading =
+      Boolean(tool.tool_reading?.trim()) && normalizeText(tool.tool_reading) !== normalizeText(tool.tool_name);
+    const readingHtml = hasDistinctReading
+      ? `<span class="search-modal-item-reading">(${highlightMatches(tool.tool_reading, queryTokens)})</span>`
+      : '';
+
+    const tagsHtml = Array.isArray(tool.tags)
+      ? tool.tags
+          .slice(0, 3)
+          .map((tag) => `<span class="search-modal-item-tag">${highlightMatches(tag, queryTokens)}</span>`)
+          .join('')
+      : '';
+
+    const scoreHtml =
+      typeof tool.score === 'number' ? `<span class="search-modal-item-score">★ ${tool.score}</span>` : '';
+    const descHtml = tool.description ? `<p class="search-modal-item-desc">${highlightedDesc}</p>` : '';
+    const tagsBlockHtml = tagsHtml ? `<div class="search-modal-item-tags">${tagsHtml}</div>` : '';
+
+    li.innerHTML = `
+        <span class="search-modal-item-emoji">${emoji}</span>
+        <div class="search-modal-item-content">
+          <div class="search-modal-item-header">
+            <h4 class="search-modal-item-title">${highlightedName}${readingHtml}</h4>
+            <span class="search-modal-item-category">${escapeHtml(tool.category || '')}</span>
+            ${scoreHtml}
+          </div>
+          ${descHtml}
+          ${tagsBlockHtml}
+        </div>
+        <span class="search-modal-item-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </span>
+      `;
+
+    li.addEventListener('click', () => {
+      window.location.href = url;
+    });
+
+    li.addEventListener('mouseenter', () => {
+      updateSelectedIndex(index);
+    });
+
+    return li;
   }
 
   // Render search results
@@ -370,64 +378,8 @@
       .filter((t) => t.length > 0);
 
     const fragment = document.createDocumentFragment();
-
     currentResults.forEach((tool, index) => {
-      const li = document.createElement('li');
-      li.setAttribute('role', 'option');
-      li.setAttribute('id', `search-result-${index}`);
-      li.className = `search-modal-item ${index === selectedIndex ? 'is-selected' : ''}`;
-      li.dataset.index = String(index);
-
-      const emoji = getCategoryEmoji(tool.category);
-      const url = resolveUrl(tool.url);
-      const highlightedName = highlightMatches(tool.tool_name, queryTokens);
-      const highlightedDesc = highlightMatches(tool.description, queryTokens);
-
-      const hasDistinctReading =
-        tool.tool_reading?.trim() && normalizeText(tool.tool_reading) !== normalizeText(tool.tool_name);
-      const readingHtml = hasDistinctReading
-        ? `<span class="search-modal-item-reading">(${highlightMatches(tool.tool_reading, queryTokens)})</span>`
-        : '';
-
-      const tagsHtml = Array.isArray(tool.tags)
-        ? tool.tags
-            .slice(0, 3)
-            .map((tag) => `<span class="search-modal-item-tag">${highlightMatches(tag, queryTokens)}</span>`)
-            .join('')
-        : '';
-
-      const scoreHtml =
-        typeof tool.score === 'number' ? `<span class="search-modal-item-score">★ ${tool.score}</span>` : '';
-
-      li.innerHTML = `
-        <span class="search-modal-item-emoji">${emoji}</span>
-        <div class="search-modal-item-content">
-          <div class="search-modal-item-header">
-            <h4 class="search-modal-item-title">${highlightedName}${readingHtml}</h4>
-            <span class="search-modal-item-category">${escapeHtml(tool.category || '')}</span>
-            ${scoreHtml}
-          </div>
-          ${tool.description ? `<p class="search-modal-item-desc">${highlightedDesc}</p>` : ''}
-          ${tagsHtml ? `<div class="search-modal-item-tags">${tagsHtml}</div>` : ''}
-        </div>
-        <span class="search-modal-item-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </span>
-      `;
-
-      // Click to navigate
-      li.addEventListener('click', () => {
-        window.location.href = url;
-      });
-
-      // Hover to select
-      li.addEventListener('mouseenter', () => {
-        updateSelectedIndex(index);
-      });
-
-      fragment.appendChild(li);
+      fragment.appendChild(buildResultItemElement(tool, index, queryTokens));
     });
 
     resultsList.innerHTML = '';
@@ -504,6 +456,90 @@
     }, 200);
   }
 
+  function stepSelectedIndex(delta) {
+    const count = currentResults.length;
+    if (count > 0) {
+      updateSelectedIndex((selectedIndex + delta + count) % count);
+    }
+  }
+
+  function activateSelectedResult() {
+    const count = currentResults.length;
+    const isValid = selectedIndex >= 0 && selectedIndex < count;
+    const target = isValid ? currentResults[selectedIndex] : currentResults[0];
+    if (target) {
+      window.location.href = resolveUrl(target.url);
+    }
+  }
+
+  function handleInputKeydown(e) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      stepSelectedIndex(1);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      stepSelectedIndex(-1);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      activateSelectedResult();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      closeModal();
+    }
+  }
+
+  function handleModalTabTrap(e) {
+    if (!container) return;
+    const focusable = container.querySelectorAll(
+      'input, button:not([style*="display: none"]), [tabindex]:not([tabindex="-1"])',
+    );
+    const visible = Array.from(focusable).filter((el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el === input);
+    if (visible.length === 0) return;
+
+    const first = visible[0];
+    const last = visible[visible.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  function isEditableElement(el) {
+    if (!el) return false;
+    const tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || Boolean(el.isContentEditable);
+  }
+
+  function isShortcutKey(e) {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') return true;
+    return e.key === '/' && !isEditableElement(document.activeElement);
+  }
+
+  function toggleModal() {
+    if (isOpen) {
+      closeModal();
+    } else {
+      openModal();
+    }
+  }
+
+  function handleGlobalKeydown(e) {
+    if (isOpen && e.key === 'Escape') {
+      closeModal();
+      return;
+    }
+    if (isOpen && e.key === 'Tab') {
+      handleModalTabTrap(e);
+    }
+    if (isShortcutKey(e)) {
+      e.preventDefault();
+      toggleModal();
+    }
+  }
+
   function setupEventListeners() {
     if (!initElements()) return;
 
@@ -545,33 +581,7 @@
       input.addEventListener('input', (e) => {
         executeSearch(e.target.value);
       });
-
-      input.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowDown') {
-          e.preventDefault();
-          if (currentResults.length > 0) {
-            const next = (selectedIndex + 1) % currentResults.length;
-            updateSelectedIndex(next);
-          }
-        } else if (e.key === 'ArrowUp') {
-          e.preventDefault();
-          if (currentResults.length > 0) {
-            const prev = (selectedIndex - 1 + currentResults.length) % currentResults.length;
-            updateSelectedIndex(prev);
-          }
-        } else if (e.key === 'Enter') {
-          e.preventDefault();
-          if (selectedIndex >= 0 && selectedIndex < currentResults.length) {
-            const target = currentResults[selectedIndex];
-            window.location.href = resolveUrl(target.url);
-          } else if (currentResults.length > 0) {
-            window.location.href = resolveUrl(currentResults[0].url);
-          }
-        } else if (e.key === 'Escape') {
-          e.preventDefault();
-          closeModal();
-        }
-      });
+      input.addEventListener('keydown', handleInputKeydown);
     }
 
     // Quick tag chips in initial view
@@ -588,59 +598,7 @@
     }
 
     // Global keyboard shortcuts: Cmd+K / Ctrl+K / '/' and focus trap
-    document.addEventListener('keydown', (e) => {
-      // If modal is open, handle Escape and Tab trap
-      if (isOpen) {
-        if (e.key === 'Escape') {
-          closeModal();
-          return;
-        }
-
-        if (e.key === 'Tab' && container) {
-          const focusable = container.querySelectorAll(
-            'input, button:not([style*="display: none"]), [tabindex]:not([tabindex="-1"])',
-          );
-          const visible = Array.from(focusable).filter(
-            (el) => el.offsetWidth > 0 || el.offsetHeight > 0 || el === input,
-          );
-          if (visible.length > 0) {
-            const first = visible[0];
-            const last = visible[visible.length - 1];
-            if (e.shiftKey && document.activeElement === first) {
-              e.preventDefault();
-              last.focus();
-              return;
-            } else if (!e.shiftKey && document.activeElement === last) {
-              e.preventDefault();
-              first.focus();
-              return;
-            }
-          }
-        }
-      }
-
-      // Check if user is typing in form element
-      const activeEl = document.activeElement;
-      const isInputFocused =
-        activeEl &&
-        (activeEl.tagName === 'INPUT' ||
-          activeEl.tagName === 'TEXTAREA' ||
-          activeEl.tagName === 'SELECT' ||
-          activeEl.isContentEditable);
-
-      const isCmdK = (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
-      const isSlash = e.key === '/' && !isInputFocused;
-
-      if (isCmdK || isSlash) {
-        // Prevent default browser/page behavior
-        e.preventDefault();
-        if (isOpen) {
-          closeModal();
-        } else {
-          openModal();
-        }
-      }
-    });
+    document.addEventListener('keydown', handleGlobalKeydown);
   }
 
   // Initialize on DOM ready

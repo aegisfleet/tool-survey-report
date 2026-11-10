@@ -25,8 +25,8 @@ function stripEmoji(text) {
 function toHiragana(str) {
   if (!str) return '';
   return str.replace(KATAKANA_HIRAGANA_RE, (match) => {
-    const chr = match.charCodeAt(0) - 0x60;
-    return String.fromCharCode(chr);
+    const chr = match.codePointAt(0) - 0x60;
+    return String.fromCodePoint(chr);
   });
 }
 
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const orGroups = searchTerm
         .split(/\||\sOR\s/i)
         .map((t) => t.trim())
-        .filter((t) => t);
+        .filter(Boolean);
 
       // Helper for field matching
       const matchesFields = (term, allowPartialTags = true) => {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (matchesFields(group)) return true;
 
           // 2. Fallback to AND terms if multiple words
-          const andTerms = group.split(/\s+/).filter((t) => t);
+          const andTerms = group.split(/\s+/).filter(Boolean);
           if (andTerms.length <= 1) return false;
 
           return andTerms.every((term) => matchesFields(term, false)); // Stricter tag match for individual terms

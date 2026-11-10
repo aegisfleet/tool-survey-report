@@ -98,22 +98,24 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state));
   }
 
+  function applyRestoredState(state) {
+    if (state.search && heroSearchInput) heroSearchInput.value = state.search;
+    if (state.tag) tagFilter.value = state.tag;
+    if (state.category) categoryFilter.value = state.category;
+    if (state.sort) sortSelect.value = state.sort;
+  }
+
   // フィルタ状態を復元する関数
   function restoreFilterState() {
     const savedState = sessionStorage.getItem(FILTER_STATE_KEY);
-    if (savedState) {
-      try {
-        const state = JSON.parse(savedState);
-        if (state.search && heroSearchInput) heroSearchInput.value = state.search;
-        if (state.tag) tagFilter.value = state.tag;
-        if (state.category) categoryFilter.value = state.category;
-        if (state.sort) sortSelect.value = state.sort;
-        return true;
-      } catch (e) {
-        console.warn('Failed to restore filter state:', e);
-      }
+    if (!savedState) return false;
+    try {
+      applyRestoredState(JSON.parse(savedState));
+      return true;
+    } catch (e) {
+      console.warn('Failed to restore filter state:', e);
+      return false;
     }
-    return false;
   }
 
   // Populate tag filter options
@@ -304,6 +306,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function isAnyFilterActive(searchTerm, selectedTag, selectedCategory, sortBy) {
+    return searchTerm !== '' || selectedTag !== '' || selectedCategory !== '' || sortBy === 'oss' || sortBy === 'free';
+  }
+
+  function renderCardVisibility(filteredCards, isFilterActive) {
+    reportCards.forEach((card) => {
+      card.style.display = 'none';
+    });
+
+    if (filteredCards.length > 0) {
+      filteredCards.forEach((card, index) => {
+        card.style.display = isFilterActive || index < currentShowCount ? 'flex' : 'none';
+        reportsGrid.appendChild(card);
+      });
+      noResults.style.display = 'none';
+    } else {
+      noResults.style.display = 'block';
+    }
+
+    const loadMoreContainer = document.getElementById('load-more-container');
+    if (loadMoreContainer) {
+      loadMoreContainer.style.display = !isFilterActive && filteredCards.length > currentShowCount ? 'flex' : 'none';
+    }
+  }
+
   // Filter and sort function
   const filterAndSort = (shouldSave = true, resetCount = true) => {
     if (resetCount) {
@@ -326,31 +353,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filteredCards.sort((a, b) => compareReportCards(a, b, sortBy));
 
-    // フィルタがアクティブかどうか判定（表示数が減少する可能性のあるソート条件もフィルタとみなす）
-    const isFilterActive =
-      searchTerm !== '' || selectedTag !== '' || selectedCategory !== '' || sortBy === 'oss' || sortBy === 'free';
-
-    // Hide all cards first
-    reportCards.forEach((card) => {
-      card.style.display = 'none';
-    });
-
-    // Show filtered and sorted cards
-    if (filteredCards.length > 0) {
-      filteredCards.forEach((card, index) => {
-        card.style.display = isFilterActive || index < currentShowCount ? 'flex' : 'none';
-        reportsGrid.appendChild(card); // Re-append to maintain order
-      });
-      noResults.style.display = 'none';
-    } else {
-      noResults.style.display = 'block';
-    }
-
-    // もっと見るボタンの制御
-    const loadMoreContainer = document.getElementById('load-more-container');
-    if (loadMoreContainer) {
-      loadMoreContainer.style.display = !isFilterActive && filteredCards.length > currentShowCount ? 'flex' : 'none';
-    }
+    const isFilterActive = isAnyFilterActive(searchTerm, selectedTag, selectedCategory, sortBy);
+    renderCardVisibility(filteredCards, isFilterActive);
 
     // 件数表示を更新
     const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
@@ -369,6 +373,19 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   window.filterAndSort = filterAndSort;
 
+  function setOrDeleteUrlParam(url, key, val) {
+    if (val) {
+      url.searchParams.set(key, val);
+    } else {
+      url.searchParams.delete(key);
+    }
+  }
+
+  function resolveCategoryDisplayName(category) {
+    const categoryOption = categoryFilter?.querySelector(`option[value="${category}"]`);
+    return categoryOption ? stripEmoji(categoryOption.textContent) : category;
+  }
+
   // URLを更新する関数（全検索・フィルタ状態を反映）
   const siteName = homeContainer?.dataset.siteTitle || document.title;
   function updateURL() {
@@ -378,24 +395,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const category = categoryFilter?.value || '';
     const sort = sortSelect?.value || 'date-desc';
 
-    if (searchTerm) {
-      url.searchParams.set('q', searchTerm);
-    } else {
-      url.searchParams.delete('q');
-    }
-
-    if (tag) {
-      url.searchParams.set('tag', tag);
-    } else {
-      url.searchParams.delete('tag');
-    }
+    setOrDeleteUrlParam(url, 'q', searchTerm);
+    setOrDeleteUrlParam(url, 'tag', tag);
 
     if (category) {
-      const categoryOption = categoryFilter?.querySelector(`option[value="${category}"]`);
-      let originalCategoryName = category;
-      if (categoryOption) {
-        originalCategoryName = stripEmoji(categoryOption.textContent);
-      }
+      const originalCategoryName = resolveCategoryDisplayName(category);
       url.searchParams.set('category', originalCategoryName);
       document.title = `${originalCategoryName} | ${siteName}`;
     } else {
@@ -403,12 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.title = siteName;
     }
 
-    if (sort && sort !== 'date-desc') {
-      url.searchParams.set('sort', sort);
-    } else {
-      url.searchParams.delete('sort');
-    }
-
+    setOrDeleteUrlParam(url, 'sort', sort !== 'date-desc' ? sort : '');
     window.history?.replaceState(null, '', url.toString());
   }
 
@@ -584,23 +583,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Quick Category & Sort Pills
+  function resetSpecialSortIfNeeded() {
+    if (!sortSelect) return;
+    const val = sortSelect.value;
+    if (val === 'oss' || val === 'free' || val === 'score-desc') {
+      sortSelect.value = 'date-desc';
+    }
+  }
+
+  function toggleSelectValue(selectEl, targetVal, defaultVal) {
+    if (!selectEl) return;
+    selectEl.value = selectEl.value === targetVal ? defaultVal : targetVal;
+  }
+
   function applyQuickPillSelection(type, val) {
     if (type === 'all') {
       if (categoryFilter) categoryFilter.value = '';
-      const isSpecialSort =
-        sortSelect && (sortSelect.value === 'oss' || sortSelect.value === 'free' || sortSelect.value === 'score-desc');
-      if (isSpecialSort) {
-        sortSelect.value = 'date-desc';
-      }
+      resetSpecialSortIfNeeded();
       return;
     }
-    if (type === 'category' && categoryFilter) {
-      categoryFilter.value = categoryFilter.value === val ? '' : val;
+    if (type === 'category') {
+      toggleSelectValue(categoryFilter, val, '');
       return;
     }
-    if (type === 'sort' && sortSelect) {
+    if (type === 'sort') {
       if (categoryFilter) categoryFilter.value = '';
-      sortSelect.value = sortSelect.value === val ? 'date-desc' : val;
+      toggleSelectValue(sortSelect, val, 'date-desc');
     }
   }
 
@@ -625,55 +633,48 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
-  // Filter Reset All
-  const filterResetAll = document.getElementById('filter-reset-all');
-  if (filterResetAll) {
-    filterResetAll.addEventListener('click', () => {
-      if (heroSearchInput) heroSearchInput.value = '';
-      if (tagFilter) tagFilter.value = '';
-      if (categoryFilter) categoryFilter.value = '';
-      if (sortSelect) sortSelect.value = 'date-desc';
+  function resetAllFilters() {
+    if (heroSearchInput) heroSearchInput.value = '';
+    if (tagFilter) tagFilter.value = '';
+    if (categoryFilter) categoryFilter.value = '';
+    if (sortSelect) sortSelect.value = 'date-desc';
 
-      updateHeroSearchClear();
-      updateHeroSearchChipStates();
-      filterAndSort();
-    });
+    updateHeroSearchClear();
+    updateHeroSearchChipStates();
+    filterAndSort();
   }
 
-  // No Results Reset Button
-  const noResultsReset = document.getElementById('no-results-reset');
-  if (noResultsReset) {
-    noResultsReset.addEventListener('click', () => {
-      if (heroSearchInput) heroSearchInput.value = '';
-      if (tagFilter) tagFilter.value = '';
-      if (categoryFilter) categoryFilter.value = '';
-      if (sortSelect) sortSelect.value = 'date-desc';
+  function setupActionButtons() {
+    const filterResetAll = document.getElementById('filter-reset-all');
+    if (filterResetAll) {
+      filterResetAll.addEventListener('click', resetAllFilters);
+    }
 
-      updateHeroSearchClear();
-      updateHeroSearchChipStates();
-      filterAndSort();
-    });
+    const noResultsReset = document.getElementById('no-results-reset');
+    if (noResultsReset) {
+      noResultsReset.addEventListener('click', resetAllFilters);
+    }
+
+    const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+    const reportsControls = document.getElementById('reports-controls');
+    if (mobileFilterToggle && reportsControls) {
+      mobileFilterToggle.addEventListener('click', () => {
+        const isExpanded = mobileFilterToggle.getAttribute('aria-expanded') === 'true';
+        mobileFilterToggle.setAttribute('aria-expanded', !isExpanded);
+        reportsControls.classList.toggle('active');
+      });
+    }
+
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        currentShowCount += LOAD_MORE_COUNT;
+        filterAndSort(false, false);
+      });
+    }
   }
 
-  // Mobile Filter Toggle Button
-  const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
-  const reportsControls = document.getElementById('reports-controls');
-  if (mobileFilterToggle && reportsControls) {
-    mobileFilterToggle.addEventListener('click', () => {
-      const isExpanded = mobileFilterToggle.getAttribute('aria-expanded') === 'true';
-      mobileFilterToggle.setAttribute('aria-expanded', !isExpanded);
-      reportsControls.classList.toggle('active');
-    });
-  }
-
-  // もっと見るボタンのクリックイベント
-  const loadMoreBtn = document.getElementById('load-more-btn');
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', () => {
-      currentShowCount += LOAD_MORE_COUNT;
-      filterAndSort(false, false); // 保存せず、カウントもリセットしない
-    });
-  }
+  setupActionButtons();
 
   // URLパラメータがある場合にレポートセクションへスクロールする関数
   function scrollToReports() {
@@ -687,25 +688,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Handle URL parameters or SessionStorage
-  const hasURLParams = restoreFromURL();
-  if (hasURLParams) {
-    updateHeroSearchClear();
-    updateHeroSearchChipStates();
-    filterAndSort(false);
-    scrollToReports();
-  } else {
-    // URLパラメータがない場合はsessionStorageから復元を試みる
-    const restored = restoreFilterState();
-    if (restored) {
+  function initFilterState() {
+    if (restoreFromURL()) {
       updateHeroSearchClear();
       updateHeroSearchChipStates();
-      filterAndSort(false); // 復元時は保存しない
-    } else {
-      // 初期状態でも状態を更新して初期表示を行う
       filterAndSort(false);
+      scrollToReports();
+      return;
     }
+    if (restoreFilterState()) {
+      updateHeroSearchClear();
+      updateHeroSearchChipStates();
+    }
+    filterAndSort(false);
   }
+
+  initFilterState();
 
   // ブラウザバック/フォワード時にフィルタ状態を復元
   window.addEventListener('pageshow', (event) => {

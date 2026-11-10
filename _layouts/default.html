@@ -63,7 +63,7 @@
   </script>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
   <!-- RSS Feed -->
   {% feed_meta %}
@@ -93,8 +93,8 @@
   {% include search-modal.html %}
 
   <!-- JavaScript -->
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-  <script src="{{ '/assets/js/search-modal.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  <script src="{{ '/assets/js/search-modal.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 
 </html>

@@ -6,7 +6,13 @@
     "rules": {
       "preset": "recommended",
       "complexity": {
-        "noForEach": "off"
+        "noForEach": "off",
+        "noExcessiveCognitiveComplexity": {
+          "level": "error",
+          "options": {
+            "maxAllowedComplexity": 15
+          }
+        }
       },
       "correctness": {
         "noUnusedVariables": "warn"
@@ -71,6 +77,7 @@
     "includes": [
       "**/assets/js/**/*.js",
       "**/tests/**/*.js",
+      "scripts/check_frontend_quality.js",
       "!**/.venv",
       "!**/node_modules",
       "!**/_site",

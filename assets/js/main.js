@@ -308,7 +308,7 @@ function showSearchSuggestions(searchTerm, inputElement) {
     exampleSuggestions.forEach((suggestion) => {
       const item = document.createElement('div');
       item.className = 'search-suggestion-item';
-      item.setAttribute('data-value', suggestion);
+      item.dataset.value = suggestion;
       item.textContent = suggestion;
       fragment.appendChild(item);
     });
@@ -694,39 +694,37 @@ function enhanceTablesResponsiveness() {
     }
   });
 
-  tables.forEach((table) => {
-    // 1. セルの内容をdata-label属性にセット（カード表示用）
+  function applyTableCellLabels(table) {
     const thead = table.querySelector('thead');
-    if (thead) {
-      const headers = Array.from(thead.querySelectorAll('th')).map((th) => th.textContent.trim());
-      const rows = table.querySelectorAll('tbody tr');
-      rows.forEach((row) => {
-        const cells = row.querySelectorAll('td');
-        cells.forEach((cell, index) => {
-          if (headers[index]) {
-            cell.setAttribute('data-label', headers[index]);
-          }
-        });
+    if (!thead) return;
+    const headers = Array.from(thead.querySelectorAll('th')).map((th) => th.textContent.trim());
+    const rows = table.querySelectorAll('tbody tr');
+    rows.forEach((row) => {
+      row.querySelectorAll('td').forEach((cell, index) => {
+        if (headers[index]) {
+          cell.dataset.label = headers[index];
+        }
       });
-    }
+    });
+  }
 
-    // 2. 特定のキーワード（料金、比較など）が見つかった場合にカード形式クラスを付与
-    let shouldBeCards = false;
+  function shouldRenderTableAsCards(table) {
     const keywords = ['料金', 'プラン', '比較', '価格'];
-
-    // 直前の見出しを確認
     let prev = table.previousElementSibling;
     while (prev && !['H2', 'H3', 'H4'].includes(prev.tagName)) {
       prev = prev.previousElementSibling;
     }
+    if (!prev) return false;
+    const headingText = prev.textContent;
+    return keywords.some((k) => headingText.includes(k));
+  }
 
-    if (prev) {
-      const headingText = prev.textContent;
-      if (keywords.some((k) => headingText.includes(k))) {
-        shouldBeCards = true;
-      }
-    }
+  tables.forEach((table) => {
+    // 1. セルの内容をdata-label属性にセット（カード表示用）
+    applyTableCellLabels(table);
 
+    // 2. 特定のキーワード（料金、比較など）が見つかった場合にカード形式クラスを付与
+    const shouldBeCards = shouldRenderTableAsCards(table);
     if (shouldBeCards) {
       table.classList.add('table-as-cards');
     }
@@ -783,21 +781,71 @@ function markExternalLinks() {
   });
 }
 
+function syncDesktopTocScroll(desktopToc, desktopList) {
+  const activeLink = desktopList.querySelector('a.active');
+  if (!activeLink || desktopList.classList.contains('collapsed') || !desktopToc.getClientRects().length) {
+    return;
+  }
+  const tocBounds = desktopToc.getBoundingClientRect();
+  const linkBounds = activeLink.getBoundingClientRect();
+  let nextScrollTop = desktopToc.scrollTop;
+
+  if (linkBounds.bottom > tocBounds.bottom) {
+    nextScrollTop += linkBounds.bottom - tocBounds.bottom;
+  } else if (linkBounds.top < tocBounds.top) {
+    nextScrollTop -= tocBounds.top - linkBounds.top;
+  }
+
+  if (nextScrollTop !== desktopToc.scrollTop) {
+    desktopToc.scrollTo({ top: nextScrollTop, behavior: 'smooth' });
+  }
+}
+
+function insertTocIntoReport(reportContent, toc, desktopToc, mobileToc, floatingWrapper) {
+  const firstH2 = reportContent.querySelector('h2');
+  const firstH1 = reportContent.querySelector('h1');
+  if (firstH2) {
+    firstH2.parentElement.insertBefore(toc, firstH2);
+  } else if (firstH1?.nextSibling) {
+    firstH1.parentElement.insertBefore(toc, firstH1.nextSibling);
+  } else {
+    reportContent.insertBefore(toc, reportContent.firstChild);
+  }
+
+  const reportLayout = document.querySelector('.report-page-layout');
+  if (reportLayout) {
+    reportLayout.appendChild(desktopToc);
+    document.body.appendChild(mobileToc);
+  } else {
+    document.body.appendChild(floatingWrapper);
+  }
+}
+
+function bindTocToggleButton(btn, listEl) {
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !isExpanded);
+    btn.setAttribute('aria-label', isExpanded ? '目次を展開する' : '目次を折りたたむ');
+    listEl.classList.toggle('collapsed', isExpanded);
+  });
+}
+
 function generateTableOfContents() {
   const reportContent = document.querySelector('.report-content');
   const headings = reportContent ? reportContent.querySelectorAll('h2, h3, h4') : [];
+  if (headings.length <= 3) return;
 
-  if (headings.length > 3) {
-    // --------------------------------------------------
-    // 1. インライン目次の生成
-    // --------------------------------------------------
-    const toc = document.createElement('nav');
-    toc.className = 'table-of-contents';
-    toc.setAttribute('aria-label', '目次');
+  // --------------------------------------------------
+  // 1. インライン目次の生成
+  // --------------------------------------------------
+  const toc = document.createElement('nav');
+  toc.className = 'table-of-contents';
+  toc.setAttribute('aria-label', '目次');
 
-    const tocHeader = document.createElement('div');
-    tocHeader.className = 'toc-header';
-    tocHeader.innerHTML = `
+  const tocHeader = document.createElement('div');
+  tocHeader.className = 'toc-header';
+  tocHeader.innerHTML = `
       <h3 class="toc-title">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: text-bottom;">
           <line x1="8" y1="6" x2="21" y2="6"></line>
@@ -816,20 +864,20 @@ function generateTableOfContents() {
       </button>
     `;
 
-    const tocList = document.createElement('ul');
-    tocList.className = 'toc-list';
+  const tocList = document.createElement('ul');
+  tocList.className = 'toc-list';
 
-    // --------------------------------------------------
-    // 2. フローティング目次のHTML構造生成
-    // --------------------------------------------------
-    const floatingWrapper = document.createElement('div');
-    floatingWrapper.className = 'floating-toc-wrapper';
+  // --------------------------------------------------
+  // 2. フローティング目次のHTML構造生成
+  // --------------------------------------------------
+  const floatingWrapper = document.createElement('div');
+  floatingWrapper.className = 'floating-toc-wrapper';
 
-    // PC用追従サイドパネル
-    const desktopToc = document.createElement('nav');
-    desktopToc.className = 'floating-toc-desktop';
-    desktopToc.setAttribute('aria-label', 'フローティング目次 (デスクトップ)');
-    desktopToc.innerHTML = `
+  // PC用追従サイドパネル
+  const desktopToc = document.createElement('nav');
+  desktopToc.className = 'floating-toc-desktop';
+  desktopToc.setAttribute('aria-label', 'フローティング目次 (デスクトップ)');
+  desktopToc.innerHTML = `
       <div class="floating-toc-header">
         <span class="floating-toc-title">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -849,20 +897,20 @@ function generateTableOfContents() {
         </button>
       </div>
     `;
-    const desktopList = document.createElement('ul');
-    desktopList.className = 'floating-toc-list';
-    desktopToc.appendChild(desktopList);
+  const desktopList = document.createElement('ul');
+  desktopList.className = 'floating-toc-list';
+  desktopToc.appendChild(desktopList);
 
-    // モバイル用FAB & ドロワー
-    const mobileToc = document.createElement('div');
-    mobileToc.className = 'floating-toc-mobile';
+  // モバイル用FAB & ドロワー
+  const mobileToc = document.createElement('div');
+  mobileToc.className = 'floating-toc-mobile';
 
-    const fabBtn = document.createElement('button');
-    fabBtn.type = 'button';
-    fabBtn.className = 'floating-toc-fab';
-    fabBtn.setAttribute('aria-label', '目次を開く');
-    fabBtn.setAttribute('aria-expanded', 'false');
-    fabBtn.innerHTML = `
+  const fabBtn = document.createElement('button');
+  fabBtn.type = 'button';
+  fabBtn.className = 'floating-toc-fab';
+  fabBtn.setAttribute('aria-label', '目次を開く');
+  fabBtn.setAttribute('aria-expanded', 'false');
+  fabBtn.innerHTML = `
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="8" y1="6" x2="21" y2="6"></line>
         <line x1="8" y1="12" x2="21" y2="12"></line>
@@ -874,13 +922,13 @@ function generateTableOfContents() {
       <span>目次</span>
     `;
 
-    const overlay = document.createElement('div');
-    overlay.className = 'floating-toc-overlay';
+  const overlay = document.createElement('div');
+  overlay.className = 'floating-toc-overlay';
 
-    const drawer = document.createElement('nav');
-    drawer.className = 'floating-toc-drawer';
-    drawer.setAttribute('aria-label', '目次 (モバイル)');
-    drawer.innerHTML = `
+  const drawer = document.createElement('nav');
+  drawer.className = 'floating-toc-drawer';
+  drawer.setAttribute('aria-label', '目次 (モバイル)');
+  drawer.innerHTML = `
       <div class="drawer-header">
         <span class="drawer-title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -901,232 +949,145 @@ function generateTableOfContents() {
         </button>
       </div>
     `;
-    const mobileList = document.createElement('ul');
-    mobileList.className = 'drawer-toc-list';
-    drawer.appendChild(mobileList);
+  const mobileList = document.createElement('ul');
+  mobileList.className = 'drawer-toc-list';
+  drawer.appendChild(mobileList);
 
-    mobileToc.appendChild(fabBtn);
-    mobileToc.appendChild(overlay);
-    mobileToc.appendChild(drawer);
+  mobileToc.appendChild(fabBtn);
+  mobileToc.appendChild(overlay);
+  mobileToc.appendChild(drawer);
 
-    floatingWrapper.appendChild(desktopToc);
-    floatingWrapper.appendChild(mobileToc);
+  floatingWrapper.appendChild(desktopToc);
+  floatingWrapper.appendChild(mobileToc);
 
-    // スムーズスクロール共通ハンドラ
-    const createScrollHandler =
-      (targetId, closeMobileDrawer = false) =>
-      (e) => {
-        e.preventDefault();
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
-          const targetPosition = targetElement.offsetTop - headerHeight - 20;
+  const openDrawer = () => {
+    mobileToc.classList.add('is-open');
+    fabBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  };
 
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth',
-          });
+  const closeDrawer = () => {
+    mobileToc.classList.remove('is-open');
+    fabBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
 
-          history.pushState(null, null, `#${targetId}`);
-
-          if (closeMobileDrawer) {
-            closeDrawer();
-          }
-        }
-      };
-
-    // --------------------------------------------------
-    // 3. 見出し要素のループ処理とリスト構築
-    // --------------------------------------------------
-    headings.forEach((heading, index) => {
-      if (!heading.id) {
-        heading.id = `heading-${index}`;
-      }
-      const id = heading.id;
-      const tagLower = heading.tagName.toLowerCase();
-
-      // クローンテキストの生成
-      const clone = heading.cloneNode(true);
-      const anchorEl = clone.querySelector('.heading-anchor');
-      if (anchorEl) anchorEl.remove();
-      const titleText = clone.textContent.trim();
-
-      // A) インライン目次項目
-      const listItem = document.createElement('li');
-      listItem.className = `toc-item toc-level-${tagLower}`;
-      const link = document.createElement('a');
-      link.href = `#${id}`;
-      link.textContent = titleText;
-      link.addEventListener('click', createScrollHandler(id));
-      listItem.appendChild(link);
-      tocList.appendChild(listItem);
-
-      // B) デスクトップ用フローティング目次項目
-      const dtItem = document.createElement('li');
-      dtItem.className = `floating-toc-item toc-level-${tagLower}`;
-      const dtLink = document.createElement('a');
-      dtLink.href = `#${id}`;
-      dtLink.textContent = titleText;
-      dtLink.addEventListener('click', createScrollHandler(id));
-      dtItem.appendChild(dtLink);
-      desktopList.appendChild(dtItem);
-
-      // C) モバイル用ドロワー目次項目
-      const mobItem = document.createElement('li');
-      mobItem.className = `drawer-toc-item toc-level-${tagLower}`;
-      const mobLink = document.createElement('a');
-      mobLink.href = `#${id}`;
-      mobLink.textContent = titleText;
-      mobLink.addEventListener('click', createScrollHandler(id, true));
-      mobItem.appendChild(mobLink);
-      mobileList.appendChild(mobItem);
-    });
-
-    toc.appendChild(tocHeader);
-    toc.appendChild(tocList);
-
-    // --------------------------------------------------
-    // 4. イベントハンドラ & モバイルドロワー開閉制御
-    // --------------------------------------------------
-    // インライン目次のトグルボタン処理
-    const toggleBtn = tocHeader.querySelector('.toc-toggle-btn');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-        toggleBtn.setAttribute('aria-expanded', !isExpanded);
-        toggleBtn.setAttribute('aria-label', isExpanded ? '目次を展開する' : '目次を折りたたむ');
-        tocList.classList.toggle('collapsed', isExpanded);
-      });
-    }
-
-    // デスクトップフローティング目次のトグルボタン処理
-    const desktopToggleBtn = desktopToc.querySelector('.floating-toc-toggle-btn');
-    if (desktopToggleBtn) {
-      desktopToggleBtn.addEventListener('click', () => {
-        const isExpanded = desktopToggleBtn.getAttribute('aria-expanded') === 'true';
-        desktopToggleBtn.setAttribute('aria-expanded', !isExpanded);
-        desktopToggleBtn.setAttribute('aria-label', isExpanded ? '目次を展開する' : '目次を折りたたむ');
-        desktopList.classList.toggle('collapsed', isExpanded);
-      });
-    }
-
-    // モバイルドロワー開閉関数
-    const openDrawer = () => {
-      mobileToc.classList.add('is-open');
-      fabBtn.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    };
-
-    const closeDrawer = () => {
-      mobileToc.classList.remove('is-open');
-      fabBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    };
-
-    fabBtn.addEventListener('click', () => {
-      if (mobileToc.classList.contains('is-open')) {
-        closeDrawer();
-      } else {
-        openDrawer();
-      }
-    });
-
-    overlay.addEventListener('click', closeDrawer);
-    const closeBtn = drawer.querySelector('.drawer-close-btn');
-    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileToc.classList.contains('is-open')) {
-        closeDrawer();
-      }
-    });
-
-    // --------------------------------------------------
-    // 5. ScrollSpy & 表示タイミング制御
-    // --------------------------------------------------
-    const allTocLinks = [
-      ...tocList.querySelectorAll('a'),
-      ...desktopList.querySelectorAll('a'),
-      ...mobileList.querySelectorAll('a'),
-    ];
-    let activeHeadingId = '';
-
-    ScrollManager.register((scrollTop) => {
+  // スムーズスクロール共通ハンドラ
+  const createScrollHandler =
+    (targetId, closeMobileDrawer = false) =>
+    (e) => {
+      e.preventDefault();
+      const targetElement = document.getElementById(targetId);
+      if (!targetElement) return;
       const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
-      let currentId = '';
+      const targetPosition = targetElement.offsetTop - headerHeight - 20;
 
-      headings.forEach((heading) => {
-        const top = heading.offsetTop - headerHeight - 40;
-        if (scrollTop >= top) {
-          currentId = heading.id;
-        }
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
       });
-
-      allTocLinks.forEach((link) => {
-        if (currentId && link.getAttribute('href') === `#${currentId}`) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-
-      if (currentId && currentId !== activeHeadingId) {
-        activeHeadingId = currentId;
-        const activeLink = desktopList.querySelector('a.active');
-        if (activeLink && !desktopList.classList.contains('collapsed') && desktopToc.getClientRects().length) {
-          const tocBounds = desktopToc.getBoundingClientRect();
-          const linkBounds = activeLink.getBoundingClientRect();
-          let scrollTop = desktopToc.scrollTop;
-
-          if (linkBounds.bottom > tocBounds.bottom) {
-            scrollTop += linkBounds.bottom - tocBounds.bottom;
-          } else if (linkBounds.top < tocBounds.top) {
-            scrollTop -= tocBounds.top - linkBounds.top;
-          }
-
-          if (scrollTop !== desktopToc.scrollTop) {
-            desktopToc.scrollTo({ top: scrollTop, behavior: 'smooth' });
-          }
-        }
+      history.pushState(null, null, `#${targetId}`);
+      if (closeMobileDrawer) {
+        closeDrawer();
       }
+    };
 
-      // モバイル用FAB等の表示タイミング制御（一定位置スクロールで表示）
-      const inlineToc = document.querySelector('.table-of-contents');
-      const triggerThreshold = inlineToc ? inlineToc.offsetTop + inlineToc.offsetHeight : 300;
-      if (scrollTop > triggerThreshold) {
-        floatingWrapper.classList.add('is-visible');
-        mobileToc.classList.add('is-visible');
-      } else {
-        floatingWrapper.classList.remove('is-visible');
-        mobileToc.classList.remove('is-visible');
+  // --------------------------------------------------
+  // 3. 見出し要素のループ処理とリスト構築
+  // --------------------------------------------------
+  headings.forEach((heading, index) => {
+    if (!heading.id) {
+      heading.id = `heading-${index}`;
+    }
+    const id = heading.id;
+    const tagLower = heading.tagName.toLowerCase();
+
+    const clone = heading.cloneNode(true);
+    clone.querySelector('.heading-anchor')?.remove();
+    const titleText = clone.textContent.trim();
+
+    const appendTocEntry = (targetList, itemClass, shouldCloseDrawer) => {
+      const li = document.createElement('li');
+      li.className = `${itemClass} toc-level-${tagLower}`;
+      const a = document.createElement('a');
+      a.href = `#${id}`;
+      a.textContent = titleText;
+      a.addEventListener('click', createScrollHandler(id, shouldCloseDrawer));
+      li.appendChild(a);
+      targetList.appendChild(li);
+    };
+
+    appendTocEntry(tocList, 'toc-item', false);
+    appendTocEntry(desktopList, 'floating-toc-item', false);
+    appendTocEntry(mobileList, 'drawer-toc-item', true);
+  });
+
+  toc.appendChild(tocHeader);
+  toc.appendChild(tocList);
+
+  // --------------------------------------------------
+  // 4. イベントハンドラ & モバイルドロワー開閉制御
+  // --------------------------------------------------
+  bindTocToggleButton(tocHeader.querySelector('.toc-toggle-btn'), tocList);
+  bindTocToggleButton(desktopToc.querySelector('.floating-toc-toggle-btn'), desktopList);
+
+  fabBtn.addEventListener('click', () => {
+    if (mobileToc.classList.contains('is-open')) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
+  });
+
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelector('.drawer-close-btn')?.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileToc.classList.contains('is-open')) {
+      closeDrawer();
+    }
+  });
+
+  // --------------------------------------------------
+  // 5. ScrollSpy & 表示タイミング制御
+  // --------------------------------------------------
+  const allTocLinks = [
+    ...tocList.querySelectorAll('a'),
+    ...desktopList.querySelectorAll('a'),
+    ...mobileList.querySelectorAll('a'),
+  ];
+  let activeHeadingId = '';
+
+  ScrollManager.register((scrollTop) => {
+    const headerHeight = document.querySelector('.site-header')?.offsetHeight || 80;
+    let currentId = '';
+
+    headings.forEach((heading) => {
+      if (scrollTop >= heading.offsetTop - headerHeight - 40) {
+        currentId = heading.id;
       }
     });
 
-    // --------------------------------------------------
-    // 6. DOM要素への挿入
-    // --------------------------------------------------
-    // インライン目次の挿入
-    const firstH2 = reportContent.querySelector('h2');
-    if (firstH2) {
-      firstH2.parentElement.insertBefore(toc, firstH2);
-    } else {
-      const firstH1 = reportContent.querySelector('h1');
-      if (firstH1?.nextSibling) {
-        firstH1.parentElement.insertBefore(toc, firstH1.nextSibling);
-      } else {
-        reportContent.insertBefore(toc, reportContent.firstChild);
-      }
+    allTocLinks.forEach((link) => {
+      link.classList.toggle('active', Boolean(currentId && link.getAttribute('href') === `#${currentId}`));
+    });
+
+    if (currentId && currentId !== activeHeadingId) {
+      activeHeadingId = currentId;
+      syncDesktopTocScroll(desktopToc, desktopList);
     }
 
-    // デスクトップ用目次は .report-page-layout 内に配置（2カラム Sticky レイアウト用）
-    const reportLayout = document.querySelector('.report-page-layout');
-    if (reportLayout) {
-      reportLayout.appendChild(desktopToc);
-      document.body.appendChild(mobileToc);
-    } else {
-      document.body.appendChild(floatingWrapper);
-    }
-  }
+    const inlineToc = document.querySelector('.table-of-contents');
+    const triggerThreshold = inlineToc ? inlineToc.offsetTop + inlineToc.offsetHeight : 300;
+    const isFloatingVisible = scrollTop > triggerThreshold;
+    floatingWrapper.classList.toggle('is-visible', isFloatingVisible);
+    mobileToc.classList.toggle('is-visible', isFloatingVisible);
+  });
+
+  // --------------------------------------------------
+  // 6. DOM要素への挿入
+  // --------------------------------------------------
+  insertTocIntoReport(reportContent, toc, desktopToc, mobileToc, floatingWrapper);
 }
 
 // Announce page changes for screen readers
@@ -1182,40 +1143,27 @@ function enhanceFormAccessibility() {
   });
 }
 
+function focusAndAnnounce(element, message) {
+  if (!element) return;
+  element.focus();
+  announceToScreenReader(message);
+}
+
 // Keyboard shortcuts for better navigation
 function initKeyboardShortcuts() {
   document.addEventListener('keydown', (e) => {
-    // Alt + M: Focus main content
-    if (e.altKey && e.key === 'm') {
-      e.preventDefault();
-      const mainContent = document.getElementById('main-content');
-      if (mainContent) {
-        mainContent.focus();
-        announceToScreenReader('メインコンテンツにフォーカスしました');
-      }
-    }
+    if (!e.altKey) return;
 
-    // Alt + N: Focus navigation
-    if (e.altKey && e.key === 'n') {
+    if (e.key === 'm') {
       e.preventDefault();
-      const navigation = document.querySelector('.main-navigation');
-      if (navigation) {
-        const firstLink = navigation.querySelector('a, button');
-        if (firstLink) {
-          firstLink.focus();
-          announceToScreenReader('ナビゲーションにフォーカスしました');
-        }
-      }
-    }
-
-    // Alt + S: Focus search
-    if (e.altKey && e.key === 's') {
+      focusAndAnnounce(document.getElementById('main-content'), 'メインコンテンツにフォーカスしました');
+    } else if (e.key === 'n') {
       e.preventDefault();
-      const searchInput = document.querySelector('.search-input, #search-input');
-      if (searchInput) {
-        searchInput.focus();
-        announceToScreenReader('検索フィールドにフォーカスしました');
-      }
+      const firstLink = document.querySelector('.main-navigation')?.querySelector('a, button');
+      focusAndAnnounce(firstLink, 'ナビゲーションにフォーカスしました');
+    } else if (e.key === 's') {
+      e.preventDefault();
+      focusAndAnnounce(document.querySelector('.search-input, #search-input'), '検索フィールドにフォーカスしました');
     }
   });
 }
@@ -1262,6 +1210,19 @@ function updateBackToTopButtonVisibility(backToTopButton, scrollTop) {
   }
 }
 
+function finishScrollToTop(header) {
+  isScrollingToTop = false;
+  if (header) header.style.transition = '';
+  if (activeScrollInterval) {
+    clearInterval(activeScrollInterval);
+    activeScrollInterval = null;
+  }
+  if (activeScrollTimeout) {
+    clearTimeout(activeScrollTimeout);
+    activeScrollTimeout = null;
+  }
+}
+
 /**
  * ページトップまでスムーズにスクロールする
  */
@@ -1290,8 +1251,7 @@ function scrollToTop() {
 
   if (prefersReducedMotion) {
     window.scrollTo(0, 0);
-    isScrollingToTop = false;
-    if (header) header.style.transition = '';
+    finishScrollToTop(header);
   } else {
     // DOM更新が確実に適用されてからスクロール開始
     requestAnimationFrame(() => {
@@ -1303,30 +1263,14 @@ function scrollToTop() {
 
     // Safety check & Cleanup
     activeScrollInterval = setInterval(() => {
-      // トップに到達したかチェック
       if ((window.scrollY || document.documentElement.scrollTop) < 1) {
-        isScrollingToTop = false;
-        if (header) header.style.transition = '';
-        if (activeScrollInterval) {
-          clearInterval(activeScrollInterval);
-          activeScrollInterval = null;
-        }
-        if (activeScrollTimeout) {
-          clearTimeout(activeScrollTimeout);
-          activeScrollTimeout = null;
-        }
+        finishScrollToTop(header);
       }
     }, 100);
 
     // Force reset after 2 seconds
     activeScrollTimeout = setTimeout(() => {
-      isScrollingToTop = false;
-      if (header) header.style.transition = '';
-      if (activeScrollInterval) {
-        clearInterval(activeScrollInterval);
-        activeScrollInterval = null;
-      }
-      activeScrollTimeout = null;
+      finishScrollToTop(header);
     }, 2000);
   }
 
@@ -1350,6 +1294,33 @@ function scrollToTop() {
     window.announceToScreenReader('ページの先頭に戻りました');
   }
 }
+
+function handleHomeFilterResetClick(e, filterStateKey) {
+  sessionStorage.removeItem(filterStateKey);
+
+  const searchInput = document.getElementById('report-search');
+  const tagFilter = document.getElementById('tag-filter');
+  const categoryFilter = document.getElementById('category-filter');
+  const sortSelect = document.getElementById('sort-select');
+
+  const isOnHomePage = Boolean(searchInput || tagFilter || categoryFilter || sortSelect);
+  if (!isOnHomePage) return;
+
+  if (searchInput) searchInput.value = '';
+  if (tagFilter) tagFilter.value = '';
+  if (categoryFilter) categoryFilter.value = '';
+  if (sortSelect) sortSelect.value = 'date-desc';
+
+  if (typeof window.filterAndSort !== 'function') return;
+
+  if (window.location.search) {
+    e.preventDefault();
+    window.location.href = window.location.pathname;
+    return;
+  }
+  window.filterAndSort(false);
+}
+
 /**
  * サイトタイトルやホームボタンをクリックした際にフィルタをリセットする
  */
@@ -1358,36 +1329,7 @@ function initFilterReset() {
   const FILTER_STATE_KEY = 'homeFilterState';
 
   resetLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      // フィルタ状態を保存しているsessionStorageをクリア
-      sessionStorage.removeItem(FILTER_STATE_KEY);
-
-      const searchInput = document.getElementById('report-search');
-      const tagFilter = document.getElementById('tag-filter');
-      const categoryFilter = document.getElementById('category-filter');
-      const sortSelect = document.getElementById('sort-select');
-
-      // ホーム画面にいる場合
-      if (searchInput || tagFilter || categoryFilter || sortSelect) {
-        // UI上の値をすべて初期値にリセット
-        if (searchInput) searchInput.value = '';
-        if (tagFilter) tagFilter.value = '';
-        if (categoryFilter) categoryFilter.value = '';
-        if (sortSelect) sortSelect.value = 'date-desc'; // 初期値（新しい順）
-
-        // assets/js/home.js 内で定義されている filterAndSort 関数があれば実行（画面更新）
-        if (typeof window.filterAndSort === 'function') {
-          // sessionStorageのクリアを反映させるため、URLパラメータの影響も排除
-          if (window.location.search) {
-            // URLにパラメータがある場合は、クリーンな状態でリダイレクト
-            e.preventDefault();
-            window.location.href = window.location.pathname;
-            return;
-          }
-          window.filterAndSort(false);
-        }
-      }
-    });
+    link.addEventListener('click', (e) => handleHomeFilterResetClick(e, FILTER_STATE_KEY));
   });
 }
 

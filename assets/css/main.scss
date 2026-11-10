@@ -208,7 +208,12 @@ body:not(.keyboard-navigation) {
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition: all 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
   z-index: 99999 !important;
 
   &:hover {

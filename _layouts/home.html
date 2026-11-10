@@ -517,4 +517,4 @@ layout: default
 <script>
   window.CATEGORY_EMOJIS = JSON.parse('{{ site.data.categories | jsonify }}');
 </script>
-<script src="{{ '/assets/js/home.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/home.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

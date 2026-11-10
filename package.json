@@ -6,10 +6,13 @@
     "js-yaml": "^5.5.0"
   },
   "scripts": {
+    "predev": "node scripts/check_frontend_quality.js",
     "dev": "bundle exec jekyll serve --incremental --port 4000 --host 127.0.0.1",
+    "predev:fast": "node scripts/check_frontend_quality.js",
     "dev:fast": "bundle exec jekyll serve --config _config.yml,_config.dev.yml --incremental --port 4000 --host 127.0.0.1",
-    "lint": "biome lint . && pnpm lint:yaml",
+    "lint": "biome lint . && pnpm lint:yaml && pnpm lint:frontend",
     "lint:yaml": "node scripts/check_frontmatter.js",
+    "lint:frontend": "node scripts/check_frontend_quality.js",
     "format:check": "biome format --check .",
     "check": "biome ci .",
     "verify-report": "PYTHONPATH=. uv run scripts/run_checks.py",
