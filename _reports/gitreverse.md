@@ -48,6 +48,7 @@ relationships:
     - Repomix
     - Cursor
     - Claude Code
+    - Craft Anything
 ---
 
 # **GitReverse 調査レポート**

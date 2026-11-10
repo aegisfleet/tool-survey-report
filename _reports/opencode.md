@@ -51,6 +51,7 @@ relationships:
     - Cline
     - GitHub Copilot
     - Playwright Test Agents
+    - Craft Anything
     - TAKT
 ---
 # **OpenCode 調査レポート**
