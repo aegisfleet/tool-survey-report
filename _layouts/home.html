@@ -388,58 +388,37 @@ layout: default
     </section>
 
     <!-- トレンドレポート -->
-    <section class="daily-trends" id="daily-trends" style="margin-bottom: 2.5rem;">
-      <div class="trends-header"
-        style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+    <section class="daily-trends" id="daily-trends">
+      <div class="trends-header">
         <div>
-          <h2 style="margin-bottom: 0.25rem;">📈 最新トレンド情報</h2>
-          <p class="trends-desc" style="margin: 0; color: var(--text-muted); font-size: 0.95rem;">
-            AI・開発ツール業界の日々の動向とセキュリティ情報</p>
+          <h2>📈 最新トレンド情報</h2>
+          <p class="trends-desc">AI・開発ツール業界の日々の動向とセキュリティ情報</p>
         </div>
-        <a href="{{ '/trending/' | relative_url }}" class="trends-link"
-          style="color: var(--link-color); font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.5rem 1rem; border: 1px solid var(--link-color); border-radius: 20px; transition: all 0.2s; font-size: 0.9rem;">
-          すべてのトレンドを見る
+        <a href="{{ '/trending/' | relative_url }}" class="trends-link">
+          <span>すべてのトレンドを見る</span>
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
       </div>
-      <div class="trends-grid"
-        style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));">
+      <div class="trends-grid">
         {% assign recent_trends = site.trending | sort: 'date' | reverse | slice: 0, 3 %}
         {% for trend in recent_trends %}
-        <a href="{{ trend.url | relative_url }}" class="trend-card"
-          style="display: flex; flex-direction: column; padding: 1.5rem; background: var(--color-bg-content); border: 1px solid var(--color-border); border-radius: 12px; text-decoration: none; color: inherit; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); height: 100%; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
+        <a href="{{ trend.url | relative_url }}" class="trend-card">
           {% if forloop.first %}
-          <div
-            style="position: absolute; top: 0; right: 0; background: var(--color-primary); color: white; padding: 2px 10px; font-size: 0.7rem; font-weight: bold; border-bottom-left-radius: 8px;">
-            NEW</div>
+          <div class="trend-badge-new">NEW</div>
           {% endif %}
-          <div
-            style="font-size: 0.85rem; font-weight: bold; color: var(--color-primary); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
-            <span style="background: rgba(255, 119, 51, 0.1); padding: 2px 8px; border-radius: 4px;">{{ trend.date |
-              date: "%Y.%m.%d" }}</span>
+          <div class="trend-date-wrapper">
+            <span class="trend-date">{{ trend.date | date: "%Y.%m.%d" }}</span>
           </div>
-          <h3
-            style="margin: 0 0 0.75rem 0; font-size: 1.15rem; color: var(--color-text); line-height: 1.4; font-weight: 700;">
-            {{ trend.title }}</h3>
-          <p
-            style="margin: 0; font-size: 0.9rem; color: var(--color-text-muted); display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.6; flex-grow: 1;">
-            {{ trend.description }}</p>
-          <div
-            style="margin-top: 1rem; font-size: 0.8rem; font-weight: bold; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
-            レポートを読む
+          <h3 class="trend-title">{{ trend.title }}</h3>
+          <p class="trend-desc">{{ trend.description }}</p>
+          <div class="trend-read-more">
+            <span>レポートを読む</span>
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </div>
-          <style>
-            .trend-card:hover {
-              transform: translateY(-4px);
-              box-shadow: 0 12px 24px rgba(255, 119, 51, 0.15);
-              border-color: var(--color-primary);
-            }
-          </style>
         </a>
         {% endfor %}
       </div>
