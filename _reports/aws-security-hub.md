@@ -44,6 +44,7 @@ relationships:
   related_tools:
     - Amazon GuardDuty
     - Microsoft Defender for Cloud
+    - Google AI Threat Defense
     - Datadog
     - Trivy
 ---
