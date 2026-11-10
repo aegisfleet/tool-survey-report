@@ -1105,19 +1105,24 @@
     padding: 0.25rem 0.125rem 0.75rem;
     margin-bottom: map-get($spacers, 4);
     scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
     -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
-        height: 5px;
+        height: 6px;
     }
 
     &::-webkit-scrollbar-track {
-        background: transparent;
+        background: var(--color-scrollbar-track);
     }
 
     &::-webkit-scrollbar-thumb {
-        background: var(--color-border);
+        background: var(--color-scrollbar-thumb);
         border-radius: 4px;
+
+        &:hover {
+            background: var(--color-scrollbar-thumb-hover);
+        }
     }
 
     .category-pill-divider {

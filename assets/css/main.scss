@@ -155,6 +155,7 @@
 // Smooth scrolling
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
 }
 
 @media (prefers-reduced-motion: reduce) {

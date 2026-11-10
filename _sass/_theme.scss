@@ -5,6 +5,13 @@
 // Light Theme (Default)
 // ========================================
 :root {
+    color-scheme: light;
+
+    // Scrollbar colors
+    --color-scrollbar-thumb: rgba(0, 0, 0, 0.2);
+    --color-scrollbar-thumb-hover: rgba(0, 0, 0, 0.35);
+    --color-scrollbar-track: transparent;
+
     // Background colors
     --color-bg-body: #{$body-bg};
     --color-bg-content: #{$content-bg};
@@ -72,6 +79,13 @@
 // ========================================
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
+        color-scheme: dark;
+
+        // Scrollbar colors
+        --color-scrollbar-thumb: rgba(255, 255, 255, 0.25);
+        --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+        --color-scrollbar-track: transparent;
+
         --color-bg-body: #{$dark-body-bg};
         --color-bg-content: #{$dark-content-bg};
         --color-bg-sidebar: #{$dark-sidebar-bg};
@@ -129,6 +143,13 @@
 // Dark Theme - Manual Override
 // ========================================
 [data-theme="dark"] {
+    color-scheme: dark;
+
+    // Scrollbar colors
+    --color-scrollbar-thumb: rgba(255, 255, 255, 0.25);
+    --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+    --color-scrollbar-track: transparent;
+
     --color-bg-body: #{$dark-body-bg};
     --color-bg-content: #{$dark-content-bg};
     --color-bg-sidebar: #{$dark-sidebar-bg};
@@ -185,6 +206,10 @@
 // Light Theme - Manual Override
 // ========================================
 [data-theme="light"] {
+    color-scheme: light;
+    --color-scrollbar-thumb: rgba(0, 0, 0, 0.2);
+    --color-scrollbar-thumb-hover: rgba(0, 0, 0, 0.35);
+    --color-scrollbar-track: transparent;
     --theme-icon-light-display: none;
     --theme-icon-dark-display: block;
 }
