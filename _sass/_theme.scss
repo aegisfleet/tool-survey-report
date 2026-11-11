@@ -60,6 +60,17 @@
     --color-border-table: #{$border-color};
     --color-border-table-inner: #{$border-light};
 
+    // Callout and secondary background colors
+    --color-bg-secondary: #{$light-gray};
+    --color-callout-danger-bg: rgba(220, 38, 38, 0.06);
+    --color-callout-danger-border: #dc2626;
+    --color-callout-info-bg: rgba(2, 132, 199, 0.06);
+    --color-callout-info-border: #0284c7;
+    --color-callout-tip-bg: rgba(22, 163, 74, 0.06);
+    --color-callout-tip-border: #16a34a;
+    --color-callout-warning-bg: rgba(217, 119, 6, 0.06);
+    --color-callout-warning-border: #d97706;
+
 
     // bluesky-widget section colors
     --color-bluesky-bg: linear-gradient(135deg, #{lighten(#1185fe, 43%)} 0%, #{lighten(#339dff, 43%)} 100%);
@@ -125,6 +136,17 @@
         --color-border-table: #808080;
         --color-border-table-inner: #505050;
 
+        // Callout and secondary background colors
+        --color-bg-secondary: #1e232a;
+        --color-callout-danger-bg: rgba(239, 68, 68, 0.12);
+        --color-callout-danger-border: #f87171;
+        --color-callout-info-bg: rgba(56, 189, 248, 0.12);
+        --color-callout-info-border: #38bdf8;
+        --color-callout-tip-bg: rgba(74, 222, 128, 0.12);
+        --color-callout-tip-border: #4ade80;
+        --color-callout-warning-bg: rgba(251, 191, 36, 0.12);
+        --color-callout-warning-border: #fbbf24;
+
 
         // bluesky-widget section colors
         --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
@@ -188,6 +210,17 @@
     --color-text-blockquote: #ffffff;
     --color-border-table: #808080;
     --color-border-table-inner: #505050;
+
+    // Callout and secondary background colors
+    --color-bg-secondary: #1e232a;
+    --color-callout-danger-bg: rgba(239, 68, 68, 0.12);
+    --color-callout-danger-border: #f87171;
+    --color-callout-info-bg: rgba(56, 189, 248, 0.12);
+    --color-callout-info-border: #38bdf8;
+    --color-callout-tip-bg: rgba(74, 222, 128, 0.12);
+    --color-callout-tip-border: #4ade80;
+    --color-callout-warning-bg: rgba(251, 191, 36, 0.12);
+    --color-callout-warning-border: #fbbf24;
 
 
     // bluesky-widget section colors

@@ -1,4 +1,4 @@
-// Trending list page styles
+// Trending list and article page styles
 
 .trending-card {
     display: flex;
@@ -17,7 +17,7 @@
         a {
             color: var(--color-text);
             text-decoration: none;
-            transition: $transition-base;
+            transition: color 0.2s ease;
 
             &:hover {
                 color: var(--color-link);
@@ -49,6 +49,222 @@
 
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+// ========================================
+// Trending Article Custom Markdown Styles
+// ========================================
+
+// Callouts (Kramdown IAL: {: .callout-...})
+.report-content {
+    blockquote {
+        &.callout-danger,
+        &.callout-info,
+        &.callout-tip,
+        &.callout-warning,
+        &.callout-summary {
+            font-style: normal;
+            padding: map-get($spacers, 4);
+            margin: map-get($spacers, 4) 0;
+            border-radius: $border-radius;
+            border-width: 1px 1px 1px 5px;
+            border-style: solid;
+            box-shadow: var(--shadow-sm);
+
+            &::before,
+            &::after {
+                content: none;
+            }
+
+            p {
+                color: var(--color-text);
+                font-style: normal;
+                margin-bottom: map-get($spacers, 2);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            ul,
+            ol {
+                margin: map-get($spacers, 2) 0 map-get($spacers, 2) map-get($spacers, 4);
+                color: var(--color-text);
+
+                li {
+                    margin-bottom: map-get($spacers, 2);
+                }
+            }
+        }
+
+        &.callout-danger {
+            background-color: var(--color-callout-danger-bg);
+            border-color: var(--color-border-light) var(--color-border-light) var(--color-border-light) var(--color-callout-danger-border);
+        }
+
+        &.callout-info {
+            background-color: var(--color-callout-info-bg);
+            border-color: var(--color-border-light) var(--color-border-light) var(--color-border-light) var(--color-callout-info-border);
+        }
+
+        &.callout-tip {
+            background-color: var(--color-callout-tip-bg);
+            border-color: var(--color-border-light) var(--color-border-light) var(--color-border-light) var(--color-callout-tip-border);
+        }
+
+        &.callout-warning {
+            background-color: var(--color-callout-warning-bg);
+            border-color: var(--color-border-light) var(--color-border-light) var(--color-border-light) var(--color-callout-warning-border);
+        }
+
+        &.callout-summary {
+            background-color: var(--color-bg-secondary);
+            border-color: var(--color-border-light) var(--color-border-light) var(--color-border-light) var(--color-primary);
+        }
+    }
+
+    // Details / Summary Accordion
+    details {
+        margin: map-get($spacers, 4) 0;
+        border: 1px solid var(--color-border);
+        border-radius: $border-radius;
+        background-color: var(--color-bg-content);
+        overflow: hidden;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
+        summary {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: map-get($spacers, 3) map-get($spacers, 4);
+            background-color: var(--color-bg-secondary);
+            color: var(--color-text);
+            font-size: 0.98rem;
+            font-weight: $font-weight-semibold;
+            cursor: pointer;
+            user-select: none;
+            list-style: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+
+            @media (prefers-reduced-motion: reduce) {
+                transition: none;
+            }
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &::before {
+                content: "▸";
+                display: inline-block;
+                font-size: 0.95rem;
+                color: var(--color-text-muted);
+                transition: transform 0.2s ease;
+
+                @media (prefers-reduced-motion: reduce) {
+                    transition: none;
+                }
+            }
+
+            &:hover {
+                background-color: var(--color-border-light);
+                color: var(--color-primary);
+            }
+
+            &:focus-visible {
+                outline: 2px solid var(--color-primary);
+                outline-offset: -2px;
+            }
+        }
+
+        &[open] {
+            border-color: var(--color-border-dark);
+            box-shadow: var(--shadow-sm);
+
+            > summary {
+                border-bottom: 1px solid var(--color-border-light);
+                background-color: var(--color-bg-secondary);
+
+                &::before {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        // Inner content padding
+        > *:not(summary) {
+            margin-left: map-get($spacers, 4);
+            margin-right: map-get($spacers, 4);
+        }
+
+        > summary + * {
+            margin-top: map-get($spacers, 4);
+        }
+
+        > *:last-child {
+            margin-bottom: map-get($spacers, 4);
+        }
+
+        pre {
+            margin-top: map-get($spacers, 2);
+            margin-bottom: map-get($spacers, 3);
+        }
+    }
+
+    // Abbreviation tooltips (Kramdown *[abbr]: definition)
+    abbr[title] {
+        text-decoration: underline dotted var(--color-secondary);
+        text-underline-offset: 3px;
+        cursor: help;
+        transition: color 0.2s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    // Tables in trending reports (Auto horizontal scroll & subtle header styling)
+    table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: map-get($spacers, 4) 0;
+        border: 1px solid var(--color-border);
+        border-radius: $border-radius;
+        background-color: var(--color-bg-content);
+
+        th {
+            background-color: var(--color-bg-secondary);
+            color: var(--color-text);
+            font-weight: $font-weight-bold;
+            white-space: nowrap;
+            padding: map-get($spacers, 2) map-get($spacers, 3);
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        td {
+            padding: map-get($spacers, 2) map-get($spacers, 3);
+            border-bottom: 1px solid var(--color-border-light);
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background-color: var(--color-bg-table-stripe);
         }
     }
 }
