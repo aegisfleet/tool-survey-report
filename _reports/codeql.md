@@ -52,6 +52,7 @@ relationships:
     - Dependabot
     - Snyk Code
     - Semgrep
+    - security-audit-skill
 ---
 
 # **CodeQL 調査レポート**
