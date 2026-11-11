@@ -45,6 +45,7 @@ links:
 relationships:
   children:
     - Cloudflare Workers
+    - security-audit-skill
   related_tools:
     - Vercel
     - Google Cloud
