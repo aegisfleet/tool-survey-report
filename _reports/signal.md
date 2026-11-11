@@ -37,6 +37,9 @@ evaluation:
 links:
   github: https://github.com/signalapp
   documentation: https://support.signal.org/
+relationships:
+  related_tools:
+    - Beeper
 ---
 
 # **Signal 調査レポート**
