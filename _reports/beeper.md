@@ -1,55 +1,52 @@
 ---
-title: "Beeper 調査レポート"
-tool_name: "Beeper"
-tool_reading: "ビーパー"
-category: "コラボレーション/生産性"
-developer: "Automattic Inc."
-official_site: "https://www.beeper.com/"
-date: "2026-11-11"
-last_updated: "2026-11-11"
+title: Beeper 調査レポート
+tool_name: Beeper
+tool_reading: ビーパー
+category: コラボレーション/生産性
+developer: Automattic Inc.
+official_site: https://www.beeper.com/
+date: '2026-11-11'
+last_updated: '2026-11-11'
 tags:
-  - "SaaS"
-  - "オープンソース"
-  - "開発者ツール"
-  - "セキュリティ"
-  - "MCP"
-description: "WhatsAppやSignal、Slack、Discordなど15以上のチャットを1つの受信箱に統合し、ローカル完結のOn-Device接続とMCPによるAI連携を備えたユニバーサルメッセージングプラットフォーム。"
-
+  - SaaS
+  - オープンソース
+  - 開発者ツール
+  - セキュリティ
+  - MCP
+description: WhatsAppやSignal、Slack、Discordなど15以上のチャットを1つの受信箱に統合し、ローカル完結のOn-Device接続とMCPによるAI連携を備えたユニバーサルメッセージングプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "複数のチャットを併用するナレッジワーカー"
-    - "メッセージ管理を効率化したいビジネスパーソン"
-    - "AIエージェントとチャットを連携させたい開発者"
-  latest_highlight: "2026年10月にViber連携と日本語UI対応、MCPサーバー連携を大幅強化"
-  update_frequency: "高"
-
+    - 複数のチャットを併用するナレッジワーカー
+    - メッセージ管理を効率化したいビジネスパーソン
+    - AIエージェントとチャットを連携させたい開発者
+  latest_highlight: 2026年10月にViber連携と日本語UI対応、MCPサーバー連携を大幅強化
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 5
-      reason: "WhatsApp、Signal、Slack、Discordなど15以上の主要チャットを単一受信箱に統合可能"
+      reason: WhatsApp、Signal、Slack、Discordなど15以上の主要チャットを単一受信箱に統合可能
     - point: 4
-      reason: "On-Device ConnectionsアーキテクチャによりE2EEを損なわないプライバシー設計"
+      reason: On-Device ConnectionsアーキテクチャによりE2EEを損なわないプライバシー設計
     - point: 3
-      reason: "デスクトップAPIおよびMCP（Model Context Protocol）対応によるAI連携基盤の提供"
+      reason: デスクトップAPIおよびMCP（Model Context Protocol）対応によるAI連携基盤の提供
     - point: 3
-      reason: "日本語UI対応や送信予約・リマインダー・既読非表示などパワーユーザー向け機能が充実"
+      reason: 日本語UI対応や送信予約・リマインダー・既読非表示などパワーユーザー向け機能が充実
   minus_points:
     - point: -2
-      reason: "無料プランでは接続アカウント数が最大5件に制限され、複数アカウント利用には有料プランが必要"
-  summary: "主要メッセージングを1つのセキュアな受信箱に集約し、MCPによるAI連携まで実現した次世代チャット統合プラットフォーム"
-
+      reason: 無料プランでは接続アカウント数が最大5件に制限され、複数アカウント利用には有料プランが必要
+  summary: 主要メッセージングを1つのセキュアな受信箱に集約し、MCPによるAI連携まで実現した次世代チャット統合プラットフォーム
 links:
-  github: "https://github.com/beeper"
-  documentation: "https://help.beeper.com/"
+  github: https://github.com/beeper
+  documentation: https://help.beeper.com/
 relationships:
   related_tools:
-    - "Element"
-    - "Signal"
+    - Element
+    - Signal
 ---
 
 # **Beeper 調査レポート**

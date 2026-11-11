@@ -44,7 +44,7 @@ links:
   deepwiki: https://deepwiki.com/element-hq/element-web
 relationships:
   related_tools:
-    - "Beeper"
+    - Beeper
 ---
 # **Element 調査レポート**
 

@@ -39,7 +39,7 @@ links:
   documentation: https://support.signal.org/
 relationships:
   related_tools:
-    - "Beeper"
+    - Beeper
 ---
 
 # **Signal 調査レポート**
