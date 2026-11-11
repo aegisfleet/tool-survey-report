@@ -45,6 +45,7 @@ links:
 relationships:
   parent: Gemini
   related_tools:
+    - Gemini Notebook API
     - Google Learning
     - Google Illuminate
     - Perplexity
