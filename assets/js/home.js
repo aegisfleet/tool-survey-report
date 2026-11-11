@@ -369,7 +369,18 @@ document.addEventListener('DOMContentLoaded', () => {
     chip.type = 'button';
     chip.className = 'active-filter-chip';
     chip.dataset.filterType = type;
-    chip.innerHTML = `${labelText} <span class="chip-remove" aria-hidden="true">✕</span>`;
+
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'chip-label';
+    labelSpan.textContent = labelText;
+    chip.appendChild(labelSpan);
+
+    const removeSpan = document.createElement('span');
+    removeSpan.className = 'chip-remove';
+    removeSpan.setAttribute('aria-hidden', 'true');
+    removeSpan.textContent = '✕';
+    chip.appendChild(removeSpan);
+
     return chip;
   }
 

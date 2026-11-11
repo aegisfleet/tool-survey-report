@@ -54,12 +54,28 @@
   }
 
   function resolveUrl(itemUrl) {
-    if (!itemUrl) return '#';
+    if (!itemUrl || typeof itemUrl !== 'string') return '#';
     try {
       const parsed = new URL(itemUrl, window.location.origin);
-      return parsed.pathname;
+      if (parsed.origin === window.location.origin) {
+        return parsed.pathname + parsed.search + parsed.hash;
+      }
+      if (parsed.protocol === 'http:' || parsed.protocol === 'https:') {
+        return parsed.href;
+      }
+      return '#';
     } catch {
-      return itemUrl;
+      if (itemUrl.startsWith('/') && !itemUrl.startsWith('//')) {
+        return itemUrl;
+      }
+      return '#';
+    }
+  }
+
+  function safeNavigate(rawUrl) {
+    const url = resolveUrl(rawUrl);
+    if (url && url !== '#') {
+      window.location.assign(url);
     }
   }
 
@@ -73,14 +89,9 @@
       .replace(/'/g, '&#39;');
   }
 
-  function highlightMatches(text, queryTokens) {
-    if (!text) return '';
-    const escaped = escapeHtml(text);
-    if (!queryTokens || queryTokens.length === 0) return escaped;
-
-    // Collect query token variants (original, hiragana, katakana)
+  function buildTokenVariants(tokens) {
     const tokenSet = new Set();
-    queryTokens.forEach((t) => {
+    tokens.forEach((t) => {
       const trimmed = t.trim();
       if (!trimmed) return;
       tokenSet.add(trimmed);
@@ -89,19 +100,43 @@
       const kata = toKatakana(trimmed);
       if (kata) tokenSet.add(kata);
     });
+    return Array.from(tokenSet)
+      .filter((t) => t.length > 0)
+      .sort((a, b) => b.length - a.length);
+  }
 
-    const validTokens = Array.from(tokenSet).filter((t) => t.length > 0);
-    if (validTokens.length === 0) return escaped;
+  function highlightWithRegex(text, regex) {
+    let lastIndex = 0;
+    let result = '';
+    let match = regex.exec(text);
 
-    // Sort descending by length so longer sequences match first
-    validTokens.sort((a, b) => b.length - a.length);
+    while (match !== null) {
+      if (match.index > lastIndex) {
+        result += escapeHtml(text.slice(lastIndex, match.index));
+      }
+      result += `<mark>${escapeHtml(match[0])}</mark>`;
+      lastIndex = regex.lastIndex;
+      match = regex.exec(text);
+    }
+    if (lastIndex < text.length) {
+      result += escapeHtml(text.slice(lastIndex));
+    }
+    return result;
+  }
+
+  function highlightMatches(text, queryTokens) {
+    if (!text) return '';
+    if (!queryTokens || queryTokens.length === 0) return escapeHtml(text);
+
+    const validTokens = buildTokenVariants(queryTokens);
+    if (validTokens.length === 0) return escapeHtml(text);
 
     try {
       const pattern = validTokens.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|');
       const regex = new RegExp(`(${pattern})`, 'gi');
-      return escaped.replace(regex, '<mark>$1</mark>');
+      return highlightWithRegex(text, regex);
     } catch {
-      return escaped;
+      return escapeHtml(text);
     }
   }
 
@@ -346,7 +381,7 @@
       `;
 
     li.addEventListener('click', () => {
-      window.location.href = url;
+      safeNavigate(url);
     });
 
     li.addEventListener('mouseenter', () => {
@@ -468,7 +503,7 @@
     const isValid = selectedIndex >= 0 && selectedIndex < count;
     const target = isValid ? currentResults[selectedIndex] : currentResults[0];
     if (target) {
-      window.location.href = resolveUrl(target.url);
+      safeNavigate(target.url);
     }
   }
 
