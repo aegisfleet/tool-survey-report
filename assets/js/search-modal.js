@@ -515,6 +515,7 @@
 
   function isShortcutKey(e) {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') return true;
+    if (document.getElementById('hero-search-input')) return false;
     return e.key === '/' && !isEditableElement(document.activeElement);
   }
 

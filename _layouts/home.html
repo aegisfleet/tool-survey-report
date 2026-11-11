@@ -37,123 +37,95 @@ layout: default
 
   <main class="home-content">
 
-    <section class="hero-search" id="hero-search" aria-labelledby="hero-search-title">
-      <div class="hero-search-inner">
-        <div class="hero-search-heading">
-          <h2 id="hero-search-title">
-            <svg class="hero-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round">
+    <section class="reports-section" id="reports-section">
+      <div class="unified-filter-console" id="hero-search" role="search" aria-label="ツールの検索と絞り込み">
+        <div class="console-header">
+          <div class="reports-title-container">
+            <h2 class="reports-title">
+              <span class="title-icon" aria-hidden="true">📊</span>
+              ツール調査レポート一覧
+              <span class="reports-count reports-count-badge" id="reports-count" aria-live="polite">{{ site.reports.size }}件</span>
+            </h2>
+          </div>
+          <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+            </svg>
+            <span>絞り込み・並び替え</span>
+            <span id="active-filter-badge" class="active-filter-badge" hidden>0</span>
+          </button>
+        </div>
+
+        <!-- 1段目: キーワード検索 + カテゴリ・タグ・並び替えを1エリアに集約 -->
+        <div class="console-main-row">
+          <div class="hero-search-box">
+            <svg class="hero-search-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.35-4.35" />
             </svg>
-            気になるツールを検索
-          </h2>
-          <p class="hero-search-desc">ツール名・用途・カテゴリ・タグ・GitHub URLから、目的の調査レポートを素早く見つけられます</p>
-        </div>
-        <div class="hero-search-box">
-          <svg class="hero-search-box-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
-          <input type="text" id="hero-search-input" class="hero-search-input" placeholder="例: AIエージェント, CLI, Claude, メール配信 ..."
-            autocomplete="off" aria-label="レポートを検索">
-          <button type="button" id="hero-search-count-badge" class="hero-search-count-badge" style="display: none;" aria-label="検索結果へスクロール"></button>
-          <button type="button" class="hero-search-clear" id="hero-search-clear" aria-label="検索をクリア">×</button>
-          <div class="hero-search-shortcuts" aria-hidden="true">
-            <kbd class="hero-search-shortcut">⌘K</kbd>
-            <span class="hero-search-shortcut-sep">or</span>
-            <kbd class="hero-search-shortcut">/</kbd>
+            <label for="hero-search-input" class="screen-reader-text">ツール名・機能・課題で検索</label>
+            <input type="text" id="hero-search-input" class="hero-search-input" placeholder="ツール名・機能・課題で検索 (例: MCP, ブラウザ自動化, CLI)..."
+              autocomplete="off" aria-label="ツール名・機能・課題で検索">
+            <button type="button" id="hero-search-clear" class="hero-search-clear" aria-label="検索クリア" title="クリア" hidden>✕</button>
+            <span class="hero-search-shortcut" id="hero-search-shortcut" aria-hidden="true"><kbd>/</kbd></span>
           </div>
-        </div>
-        <div class="hero-search-hints">
-          <span class="hero-search-hints-label">人気のキーワード:</span>
-          <button type="button" class="hero-search-chip" data-search-term="AIエージェント">AIエージェント</button>
-          <button type="button" class="hero-search-chip" data-search-term="CLI">CLI</button>
-          <button type="button" class="hero-search-chip" data-search-term="Claude">Claude</button>
-          <button type="button" class="hero-search-chip" data-search-term="MCP">MCP</button>
-          <button type="button" class="hero-search-chip" data-search-term="自動化">自動化</button>
-          <button type="button" class="hero-search-chip" data-search-term="テスト">テスト</button>
-          <button type="button" class="hero-search-chip" data-search-term="セキュリティ">セキュリティ</button>
-        </div>
-      </div>
-    </section>
 
-    <section class="reports-section" id="reports-section">
-      <div class="reports-header">
-        <div class="reports-title-container">
-          <h2>ツール調査レポート一覧</h2>
-          <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
+          <div class="reports-controls" id="reports-controls">
+            <div class="filter-group filter-container">
+              <label for="category-filter" class="screen-reader-text">カテゴリで絞り込み</label>
+              <select id="category-filter" class="filter-select category-filter">
+                <option value="">すべてのカテゴリ</option>
+                {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
+                {%- for category in all_categories -%}
+                {%- if category and category != '' -%}
+                <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category }}</option>
+                {%- endif -%}
+                {%- endfor -%}
+              </select>
+            </div>
+            <div class="filter-group filter-container">
+              <label for="tag-filter" class="screen-reader-text">タグで絞り込み</label>
+              <select id="tag-filter" class="filter-select tag-filter">
+                <option value="">すべてのタグ</option>
+              </select>
+            </div>
+            <div class="filter-group sort-container">
+              <label for="sort-select" class="screen-reader-text">並び替え</label>
+              <select id="sort-select" class="filter-select sort-select">
+                <option value="date-desc" selected>新しい順</option>
+                <option value="score-desc">★ 総合評価順</option>
+                <option value="title-asc">ツール名順</option>
+                <option value="date-asc">古い順</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-          </svg>
-          <span>絞り込み・並び替え</span>
-        </button>
-        <div class="reports-controls" id="reports-controls">
-          <div class="filter-container">
-            <label for="tag-filter" class="screen-reader-text">タグで絞り込み</label>
-            <select id="tag-filter" class="tag-filter">
-              <option value="">すべてのタグ</option>
-            </select>
-            <button type="button" class="filter-clear" id="tag-filter-clear" aria-label="タグフィルタをクリア">×</button>
-          </div>
-          <div class="filter-container">
-            <label for="category-filter" class="screen-reader-text">カテゴリで絞り込み</label>
-            <select id="category-filter" class="category-filter">
-              <option value="">すべてのカテゴリ</option>
-              {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
-              {%- for category in all_categories -%}
-              {%- if category and category != '' -%}
-              <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category
-                }}</option>
-              {%- endif -%}
-              {%- endfor -%}
-            </select>
-            <button type="button" class="filter-clear" id="category-filter-clear" aria-label="カテゴリフィルタをクリア">×</button>
-          </div>
-          <div class="sort-container">
-            <label for="sort-select" class="screen-reader-text">並び替え</label>
-            <select id="sort-select" class="sort-select">
-              <option value="date-desc" selected>新しい順</option>
-              <option value="date-asc">古い順</option>
-              <option value="title-asc">ツール名順</option>
-              <option value="score-desc">総合評価順</option>
-              <option value="oss">OSS順</option>
-              <option value="free">無料順</option>
-            </select>
-          </div>
-          <button type="button" id="filter-reset-all" class="filter-reset-all-btn" title="すべてのフィルタをクリア">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
-              <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
-              <path d="M21 3v5h-5" />
-              <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
-              <path d="M3 21v-5h5" />
-            </svg>
-            条件をクリア
-          </button>
-        </div>
-      </div>
 
-      <!-- 主要カテゴリ・用途クイックバー -->
-      <div class="category-quick-bar" id="category-quick-bar" role="toolbar" aria-label="主要カテゴリ・提供形態でクイック絞り込み">
-        <button type="button" class="category-pill active" data-quick-type="all">すべて</button>
-        <button type="button" class="category-pill" data-quick-type="sort" data-quick-value="oss">📦 OSSのみ</button>
-        <button type="button" class="category-pill" data-quick-type="sort" data-quick-value="free">💚 無料枠あり</button>
-        <button type="button" class="category-pill" data-quick-type="sort" data-quick-value="score-desc">★ 高評価順</button>
-        <span class="category-pill-divider" aria-hidden="true"></span>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="自律型コーディングエージェント">💻 コーディングエージェント</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ai開発ワークフロー">🤖 AI開発ワークフロー</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="aiコーディング支援">⌨️ AIコーディング支援</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="エージェントエコシステム/基盤">🧩 エージェント基盤</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="mcpサーバー">🧩 MCPサーバー</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ai検索/ブラウザ拡張">🔍 AI検索/ブラウザ拡張</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="セキュリティ">🛡️ セキュリティ</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ui/ux/作図">🖌️ UI/UX/作図</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="パッケージ管理">📦 パッケージ管理</button>
-        <button type="button" class="category-pill" data-quick-type="category" data-quick-value="ナレッジベース/wiki">📚 ナレッジ/Wiki</button>
+        <!-- 2段目: 提供形態トグル(AND条件) + 主要カテゴリピルを一本化 -->
+        <div class="category-quick-bar" id="category-quick-bar" role="toolbar" aria-label="主要カテゴリ・提供形態でクイック絞り込み">
+          <button type="button" class="quick-pill category-pill filter-flag-pill" data-filter-flag="oss" aria-pressed="false">📦 OSSのみ</button>
+          <button type="button" class="quick-pill category-pill filter-flag-pill" data-filter-flag="free" aria-pressed="false">💚 無料枠あり</button>
+          <span class="quick-pill-divider category-pill-divider" aria-hidden="true"></span>
+          <button type="button" class="quick-pill category-pill active" data-quick-category="" data-quick-type="all">すべて</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="自律型コーディングエージェント" data-quick-type="category" data-quick-value="自律型コーディングエージェント">💻 コーディングエージェント</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="ai開発ワークフロー" data-quick-type="category" data-quick-value="ai開発ワークフロー">🤖 AI開発ワークフロー</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="aiコーディング支援" data-quick-type="category" data-quick-value="aiコーディング支援">⌨️ AIコーディング支援</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="エージェントエコシステム/基盤" data-quick-type="category" data-quick-value="エージェントエコシステム/基盤">🧩 エージェント基盤</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="mcpサーバー" data-quick-type="category" data-quick-value="mcpサーバー">🧩 MCPサーバー</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="ai検索/ブラウザ拡張" data-quick-type="category" data-quick-value="ai検索/ブラウザ拡張">🔍 AI検索/ブラウザ拡張</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="セキュリティ" data-quick-type="category" data-quick-value="セキュリティ">🛡️ セキュリティ</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="ui/ux/作図" data-quick-type="category" data-quick-value="ui/ux/作図">🖌️ UI/UX/作図</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="パッケージ管理" data-quick-type="category" data-quick-value="パッケージ管理">📦 パッケージ管理</button>
+          <button type="button" class="quick-pill category-pill" data-quick-category="ナレッジベース/wiki" data-quick-type="category" data-quick-value="ナレッジベース/wiki">📚 ナレッジ/Wiki</button>
+        </div>
+
+        <!-- 3段目: フィルタ適用中のみ表示されるアクティブフィルタバー -->
+        <div class="active-filters-bar" id="active-filters-bar" aria-live="polite" hidden>
+          <span class="active-filters-label" id="active-filters-summary">絞り込み中:</span>
+          <div class="active-filters-list" id="active-filters-list"></div>
+          <button type="button" id="filter-reset-all" class="filter-reset-btn">✕ すべてクリア</button>
+        </div>
       </div>
 
       <div class="reports-grid" id="reports-grid">

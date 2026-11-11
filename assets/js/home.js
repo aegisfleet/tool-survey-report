@@ -46,12 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroSearchCountBadge = document.getElementById('hero-search-count-badge');
   const heroSearchChips = Array.from(document.querySelectorAll('.hero-search-chip'));
   const reportsGrid = document.getElementById('reports-grid');
-  const reportsCountContainer = document.getElementById('reports-count-container');
+  const reportsCountContainer =
+    document.getElementById('reports-count') || document.getElementById('reports-count-container');
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
   const tagElements = document.querySelectorAll('.tag');
   const categoryElements = document.querySelectorAll('.clickable-category');
   const categoryPills = Array.from(document.querySelectorAll('.category-pill'));
+  const flagPills = Array.from(document.querySelectorAll('.filter-flag-pill'));
+  const activeFiltersBar = document.getElementById('active-filters-bar');
+  const activeFiltersSummary = document.getElementById('active-filters-summary');
+  const activeFiltersList = document.getElementById('active-filters-list');
+  const activeFilterBadge = document.getElementById('active-filter-badge');
+
+  // Filter flags (OSS / Free)
+  const filterFlags = {
+    oss: false,
+    free: false,
+  };
 
   // 表示件数の制御用変数
   const INITIAL_SHOW_COUNT = 12;
@@ -66,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
-    // レポートカード
     reportCards.forEach((card) => {
       const categoryEl = card.querySelector('.meta-item.category');
       if (!categoryEl) return;
@@ -74,12 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = categoryEl.textContent.trim();
       const emoji = getEmojiForCategory(category);
 
-      // タイトルへの絵文字付与（新レイアウトでファビコン・専用テキスト要素がある場合はDOM構造を保持）
       const titleLink = card.querySelector('.report-title a');
       if (titleLink) {
         const titleTextEl = titleLink.querySelector ? titleLink.querySelector('.tool-title-text') : null;
         if (!titleTextEl) {
-          // 既存の絵文字や特殊マーク、先頭スペースを一度すべて除去して再付与（べき等性を確保）
           const currentTitle = stripEmoji(titleLink.textContent);
           titleLink.textContent = `${emoji} ${currentTitle}`;
         }
@@ -87,22 +96,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function updateFlagPillStates() {
+    flagPills.forEach((pill) => {
+      const flag = pill.dataset.filterFlag;
+      const isActive = Boolean(filterFlags[flag]);
+      pill.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      setActiveState(pill, isActive);
+    });
+  }
+
   // フィルタ状態を保存する関数
   function saveFilterState() {
     const state = {
       search: heroSearchInput ? heroSearchInput.value : '',
-      tag: tagFilter.value,
-      category: categoryFilter.value,
-      sort: sortSelect.value,
+      tag: tagFilter ? tagFilter.value : '',
+      category: categoryFilter ? categoryFilter.value : '',
+      sort: sortSelect ? sortSelect.value : 'date-desc',
+      oss: filterFlags.oss,
+      free: filterFlags.free,
     };
     sessionStorage.setItem(FILTER_STATE_KEY, JSON.stringify(state));
   }
 
+  function setValIfPresent(el, val) {
+    if (el && val !== undefined && val !== null) el.value = val;
+  }
+
   function applyRestoredState(state) {
-    if (state.search && heroSearchInput) heroSearchInput.value = state.search;
-    if (state.tag) tagFilter.value = state.tag;
-    if (state.category) categoryFilter.value = state.category;
-    if (state.sort) sortSelect.value = state.sort;
+    setValIfPresent(heroSearchInput, state.search);
+    setValIfPresent(tagFilter, state.tag);
+    setValIfPresent(categoryFilter, state.category);
+    setValIfPresent(sortSelect, state.sort);
+    filterFlags.oss = Boolean(state.oss);
+    filterFlags.free = Boolean(state.free);
+    updateFlagPillStates();
   }
 
   // フィルタ状態を復元する関数
@@ -118,24 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Populate tag filter options
-  const allTags = new Set();
-  reportCards.forEach((card) => {
-    const tags = card.dataset.tags.split(',').filter((tag) => tag.trim());
-    tags.forEach((tag) => {
-      allTags.add(tag.trim());
-    });
-  });
-
-  Array.from(allTags)
-    .sort((a, b) => a.localeCompare(b))
-    .forEach((tag) => {
-      const option = document.createElement('option');
-      option.value = tag;
-      option.textContent = tag;
-      tagFilter.appendChild(option);
-    });
-
   function setActiveState(el, isActive) {
     if (isActive) {
       el.classList.add('active');
@@ -144,25 +153,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function isCategoryPillActive(pill, selectedCategory, currentSort) {
+  function isCategoryPillActive(pill, selectedCategory) {
+    const catVal =
+      pill.dataset.quickCategory !== undefined
+        ? pill.dataset.quickCategory.toLowerCase()
+        : (pill.dataset.quickValue || '').toLowerCase();
     const type = pill.dataset.quickType;
-    const val = pill.dataset.quickValue || '';
-    if (type === 'all') {
-      const isSpecialSort = currentSort === 'oss' || currentSort === 'free' || currentSort === 'score-desc';
-      return selectedCategory === '' && !isSpecialSort;
+    if (type === 'all' || catVal === '') {
+      return selectedCategory === '';
     }
-    if (type === 'category') {
-      return val !== '' && selectedCategory === val;
-    }
-    if (type === 'sort') {
-      return selectedCategory === '' && currentSort === val;
-    }
-    return false;
+    return selectedCategory !== '' && catVal === selectedCategory.toLowerCase();
   }
 
   // Update tag visual states
   function updateTagStates() {
-    const selectedTag = tagFilter.value;
+    const selectedTag = tagFilter ? tagFilter.value : '';
 
     tagElements.forEach((tagElement) => {
       const tagValue = tagElement.dataset.tag;
@@ -172,25 +177,70 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update category visual states
   function updateCategoryStates() {
-    const selectedCategory = categoryFilter.value;
-    const currentSort = sortSelect ? sortSelect.value : 'date-desc';
+    const selectedCategory = categoryFilter ? categoryFilter.value : '';
 
     categoryElements.forEach((el) => {
       const categoryValue = el.dataset.category;
       setActiveState(el, categoryValue === selectedCategory && selectedCategory !== '');
     });
 
-    // Update quick bar pills
+    // Update quick bar category pills (excluding flag pills)
     categoryPills.forEach((pill) => {
-      setActiveState(pill, isCategoryPillActive(pill, selectedCategory, currentSort));
+      if (pill.dataset.filterFlag) return;
+      setActiveState(pill, isCategoryPillActive(pill, selectedCategory));
     });
+  }
+
+  // Facet tag collection and option reconstruction
+  function getFacetTagCounts(candidateCards) {
+    const counts = new Map();
+    candidateCards.forEach((card) => {
+      const tags = card.dataset.tags ? card.dataset.tags.split(',').filter(Boolean) : [];
+      tags.forEach((rawTag) => {
+        const tag = rawTag.trim();
+        if (!tag) return;
+        counts.set(tag, (counts.get(tag) || 0) + 1);
+      });
+    });
+    return counts;
+  }
+
+  function updateTagFilterOptions(candidateCards, currentSelectedTag) {
+    if (!tagFilter) return currentSelectedTag;
+    const tagCounts = getFacetTagCounts(candidateCards);
+    const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => {
+      if (b[1] !== a[1]) return b[1] - a[1];
+      return a[0].localeCompare(b[0]);
+    });
+
+    const isSelectedStillValid = Boolean(currentSelectedTag && tagCounts.has(currentSelectedTag));
+    const effectiveSelectedTag = isSelectedStillValid ? currentSelectedTag : '';
+
+    // Rebuild options in tagFilter
+    tagFilter.innerHTML = '';
+    const defaultOpt = document.createElement('option');
+    defaultOpt.value = '';
+    defaultOpt.textContent = 'すべてのタグ';
+    tagFilter.appendChild(defaultOpt);
+
+    sortedTags.forEach(([tag, count]) => {
+      const opt = document.createElement('option');
+      opt.value = tag;
+      opt.textContent = `${tag} (${count})`;
+      if (tag === effectiveSelectedTag) {
+        opt.selected = true;
+      }
+      tagFilter.appendChild(opt);
+    });
+
+    tagFilter.value = effectiveSelectedTag;
+    return effectiveSelectedTag;
   }
 
   // レポート件数を更新する関数
   function updateReportsCount(visibleCount, totalCount, isFilterActive) {
     if (!reportsCountContainer) return;
 
-    // アニメーションのために一度要素を隠す（オプションだが、プレミアム感のため）
     reportsCountContainer.style.opacity = '0';
     reportsCountContainer.style.transform = 'translateY(5px)';
 
@@ -224,7 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     if (hasTextMatch) return true;
 
-    // Tag matching: avoid partial matches for short terms in tags to prevent false positives (like "a" matching "tag1")
     const hasTagMatch = Boolean(
       card.dataset.tags?.split(',').some((tag) => {
         const hTag = toHiragana(tag.trim().toLowerCase());
@@ -234,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     if (hasTagMatch) return true;
 
-    // Link matching: match URL, scheme-stripped URL, or repository paths
     const cleanTerm = lowerTerm.replace(/^https?:\/\//, '').replace(/\/+$/, '');
     const links = card.dataset.links;
     return Boolean(links) && (links.includes(lowerTerm) || (cleanTerm.length >= 3 && links.includes(cleanTerm)));
@@ -247,24 +295,27 @@ document.addEventListener('DOMContentLoaded', () => {
     return andTerms.every((term) => cardMatchesFields(card, term, false));
   }
 
-  function cardMatchesSortFilter(card, sortBy) {
-    if (sortBy === 'oss') return card.dataset.isOss === 'true';
-    if (sortBy === 'free') return card.dataset.isOss !== 'true' && card.dataset.hasFreePlan === 'true';
+  function cardMatchesFlags(card, flags) {
+    if (flags.oss && card.dataset.isOss !== 'true') return false;
+    if (flags.free && card.dataset.hasFreePlan !== 'true') return false;
     return true;
   }
 
-  function cardMatchesAllCriteria(card, orGroups, selectedTag, selectedCategory, sortBy) {
+  function cardMatchesTag(card, selectedTag) {
+    if (!selectedTag) return true;
+    return Boolean(
+      card.dataset.tags
+        ?.split(',')
+        .map((t) => t.trim())
+        .includes(selectedTag),
+    );
+  }
+
+  function cardMatchesCandidateCriteria(card, orGroups, selectedCategory, flags) {
+    if (!cardMatchesFlags(card, flags)) return false;
     const matchesSearch = orGroups.length === 0 || orGroups.some((group) => cardMatchesSearchGroup(card, group));
     if (!matchesSearch) return false;
-
-    const matchesTag =
-      !selectedTag ||
-      card.dataset.tags
-        .split(',')
-        .map((t) => t.trim())
-        .includes(selectedTag);
-    const matchesCategory = !selectedCategory || card.dataset.category === selectedCategory;
-    return matchesTag && matchesCategory && cardMatchesSortFilter(card, sortBy);
+    return !selectedCategory || card.dataset.category === selectedCategory;
   }
 
   function compareReportCards(a, b, sortBy) {
@@ -274,6 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'date-asc':
         return a._timestamp - b._timestamp;
       case 'title-asc':
+      case 'name-asc':
         return a.dataset.toolName.localeCompare(b.dataset.toolName);
       case 'score-desc':
         return b._score - a._score;
@@ -306,8 +358,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function isAnyFilterActive(searchTerm, selectedTag, selectedCategory, sortBy) {
-    return searchTerm !== '' || selectedTag !== '' || selectedCategory !== '' || sortBy === 'oss' || sortBy === 'free';
+  function isAnyFilterActive(searchTerm, selectedTag, selectedCategory, flags) {
+    return (
+      searchTerm !== '' || selectedTag !== '' || selectedCategory !== '' || Boolean(flags.oss) || Boolean(flags.free)
+    );
+  }
+
+  function createActiveFilterChip(type, labelText) {
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'active-filter-chip';
+    chip.dataset.filterType = type;
+    chip.innerHTML = `${labelText} <span class="chip-remove" aria-hidden="true">✕</span>`;
+    return chip;
+  }
+
+  function appendChipIfActive(listEl, condition, type, label) {
+    if (!condition) return 0;
+    listEl.appendChild(createActiveFilterChip(type, label));
+    return 1;
+  }
+
+  function renderActiveChips(listEl, activeState) {
+    listEl.innerHTML = '';
+    const displayName = activeState.category ? resolveCategoryDisplayName(activeState.category) : '';
+    let count = 0;
+    count += appendChipIfActive(listEl, activeState.search, 'search', `キーワード: "${activeState.search}"`);
+    count += appendChipIfActive(listEl, activeState.category, 'category', `カテゴリ: ${displayName}`);
+    count += appendChipIfActive(listEl, activeState.tag, 'tag', `タグ: ${activeState.tag}`);
+    count += appendChipIfActive(listEl, activeState.oss, 'flag-oss', '📦 OSSのみ');
+    count += appendChipIfActive(listEl, activeState.free, 'flag-free', '💚 無料枠あり');
+    return count;
+  }
+
+  function updateActiveFiltersBar(filteredCount, isFilterActive, activeState) {
+    if (!activeFiltersBar) return;
+
+    if (!isFilterActive) {
+      activeFiltersBar.hidden = true;
+      if (activeFilterBadge) activeFilterBadge.hidden = true;
+      return;
+    }
+
+    activeFiltersBar.hidden = false;
+    if (activeFiltersSummary) {
+      activeFiltersSummary.textContent = `絞り込み結果: ${filteredCount}件`;
+    }
+
+    if (activeFiltersList) {
+      const activeCount = renderActiveChips(activeFiltersList, activeState);
+      if (activeFilterBadge) {
+        activeFilterBadge.hidden = activeCount === 0;
+        activeFilterBadge.textContent = String(activeCount);
+      }
+    }
   }
 
   function renderCardVisibility(filteredCards, isFilterActive) {
@@ -339,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const rawSearchTerm = (heroSearchInput?.value || '').toLowerCase().trim();
     const searchTerm = toHiragana(rawSearchTerm);
-    const selectedTag = tagFilter?.value || '';
+    let selectedTag = tagFilter?.value || '';
     const selectedCategory = categoryFilter?.value || '';
     const sortBy = sortSelect?.value || 'date-desc';
     const orGroups = searchTerm
@@ -347,13 +451,20 @@ document.addEventListener('DOMContentLoaded', () => {
       .map((t) => t.trim())
       .filter(Boolean);
 
-    const filteredCards = reportCards.filter((card) =>
-      cardMatchesAllCriteria(card, orGroups, selectedTag, selectedCategory, sortBy),
+    // Candidates for tag facet: search + category + flags (without tag itself)
+    const candidateCardsForTags = reportCards.filter((card) =>
+      cardMatchesCandidateCriteria(card, orGroups, selectedCategory, filterFlags),
     );
+
+    // Rebuild tag options based on current facet
+    selectedTag = updateTagFilterOptions(candidateCardsForTags, selectedTag);
+
+    // Filter cards matching all criteria (including tag)
+    const filteredCards = candidateCardsForTags.filter((card) => cardMatchesTag(card, selectedTag));
 
     filteredCards.sort((a, b) => compareReportCards(a, b, sortBy));
 
-    const isFilterActive = isAnyFilterActive(searchTerm, selectedTag, selectedCategory, sortBy);
+    const isFilterActive = isAnyFilterActive(searchTerm, selectedTag, selectedCategory, filterFlags);
     renderCardVisibility(filteredCards, isFilterActive);
 
     // 件数表示を更新
@@ -361,9 +472,19 @@ document.addEventListener('DOMContentLoaded', () => {
     updateReportsCount(visibleCount, filteredCards.length, isFilterActive);
     updateSearchCountBadge(filteredCards.length, searchTerm);
 
+    // Update active filters bar
+    updateActiveFiltersBar(filteredCards.length, isFilterActive, {
+      search: (heroSearchInput?.value || '').trim(),
+      category: selectedCategory,
+      tag: selectedTag,
+      oss: filterFlags.oss,
+      free: filterFlags.free,
+    });
+
     // Update visual states immediately
     updateTagStates();
     updateCategoryStates();
+    updateFlagPillStates();
 
     // フィルタ状態を保存
     if (shouldSave) {
@@ -397,6 +518,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setOrDeleteUrlParam(url, 'q', searchTerm);
     setOrDeleteUrlParam(url, 'tag', tag);
+    setOrDeleteUrlParam(url, 'oss', filterFlags.oss ? '1' : '');
+    setOrDeleteUrlParam(url, 'free', filterFlags.free ? '1' : '');
 
     if (category) {
       const originalCategoryName = resolveCategoryDisplayName(category);
@@ -414,30 +537,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // URLからフィルタ・検索状態を復元する関数
   function restoreFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    const searchParam = urlParams.get('q');
-    const tagParam = urlParams.get('tag');
-    const categoryParam = urlParams.get('category');
-    const sortParam = urlParams.get('sort');
-
     let isParamSet = false;
 
-    if (searchParam !== null) {
-      if (heroSearchInput) heroSearchInput.value = searchParam;
+    const assignParam = (el, paramKey, isLower = false) => {
+      const val = urlParams.get(paramKey);
+      if (val !== null && el) {
+        el.value = isLower ? val.toLowerCase() : val;
+        isParamSet = true;
+      }
+    };
+
+    assignParam(heroSearchInput, 'q');
+    assignParam(tagFilter, 'tag');
+    assignParam(categoryFilter, 'category', true);
+    assignParam(sortSelect, 'sort');
+
+    const ossParam = urlParams.get('oss');
+    if (ossParam !== null) {
+      filterFlags.oss = ossParam === '1' || ossParam === 'true';
       isParamSet = true;
     }
-    if (tagParam !== null && tagFilter) {
-      tagFilter.value = tagParam;
-      isParamSet = true;
-    }
-    if (categoryParam !== null && categoryFilter) {
-      categoryFilter.value = categoryParam.toLowerCase();
-      isParamSet = true;
-    }
-    if (sortParam !== null && sortSelect) {
-      sortSelect.value = sortParam;
+    const freeParam = urlParams.get('free');
+    if (freeParam !== null) {
+      filterFlags.free = freeParam === '1' || freeParam === 'true';
       isParamSet = true;
     }
 
+    updateFlagPillStates();
     return isParamSet;
   }
 
@@ -457,8 +583,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateHeroSearchClear() {
     if (!heroSearchClear) return;
     if (heroSearchInput && heroSearchInput.value.length > 0) {
+      heroSearchClear.hidden = false;
       heroSearchClear.classList.add('visible');
     } else {
+      heroSearchClear.hidden = true;
       heroSearchClear.classList.remove('visible');
     }
   }
@@ -517,12 +645,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Hero search chips (popular keywords)
+  // Hero search chips (popular keywords if present)
   heroSearchChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       const term = chip.dataset.searchTerm || '';
       if (heroSearchInput) {
-        // If same term already active, clear it (toggle behavior)
         if (heroSearchInput.value.trim() === term) {
           heroSearchInput.value = '';
         } else {
@@ -530,7 +657,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
       handleSearchChange(true);
-      // Scroll to reports section for immediate results visibility
       const reportsSection = document.querySelector('.reports-section');
       if (reportsSection) {
         reportsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -543,81 +669,98 @@ document.addEventListener('DOMContentLoaded', () => {
   if (heroShortcutSearch && heroSearchInput) {
     heroShortcutSearch.addEventListener('click', (e) => {
       e.preventDefault();
-      const heroSearchSection = document.getElementById('hero-search');
-      if (heroSearchSection) {
-        heroSearchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      const heroSearchSection = document.getElementById('hero-search') || heroSearchInput;
+      heroSearchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setTimeout(() => {
         heroSearchInput.focus();
       }, 350);
     });
   }
 
-  // Keyboard shortcut: Escape blurs heroSearchInput; global search modal handles "/" and "Cmd+K"
+  // Keyboard shortcut: "/" focuses heroSearchInput; Escape blurs it
+  function isEditableElement(el) {
+    if (!el) return false;
+    const tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || Boolean(el.isContentEditable);
+  }
+
   document.addEventListener('keydown', (e) => {
-    const activeEl = document.activeElement;
-    if (activeEl === heroSearchInput && e.key === 'Escape') {
-      heroSearchInput.blur();
-    }
-  });
-
-  // Event listeners
-  tagFilter.addEventListener('change', () => {
-    filterAndSort();
-  });
-  categoryFilter.addEventListener('change', () => {
-    filterAndSort();
-  });
-  sortSelect.addEventListener('change', () => {
-    filterAndSort();
-  });
-
-  tagFilterClear.addEventListener('click', () => {
-    tagFilter.value = '';
-    filterAndSort();
-  });
-
-  categoryFilterClear.addEventListener('click', () => {
-    categoryFilter.value = '';
-    filterAndSort();
-  });
-
-  // Quick Category & Sort Pills
-  function resetSpecialSortIfNeeded() {
-    if (!sortSelect) return;
-    const val = sortSelect.value;
-    if (val === 'oss' || val === 'free' || val === 'score-desc') {
-      sortSelect.value = 'date-desc';
-    }
-  }
-
-  function toggleSelectValue(selectEl, targetVal, defaultVal) {
-    if (!selectEl) return;
-    selectEl.value = selectEl.value === targetVal ? defaultVal : targetVal;
-  }
-
-  function applyQuickPillSelection(type, val) {
-    if (type === 'all') {
-      if (categoryFilter) categoryFilter.value = '';
-      resetSpecialSortIfNeeded();
+    if (e.key === 'Escape') {
+      if (document.activeElement === heroSearchInput) {
+        heroSearchInput.blur();
+      }
       return;
     }
-    if (type === 'category') {
-      toggleSelectValue(categoryFilter, val, '');
-      return;
+    if (e.key === '/' && !isEditableElement(document.activeElement)) {
+      if (heroSearchInput && document.activeElement !== heroSearchInput) {
+        e.preventDefault();
+        heroSearchInput.focus();
+        heroSearchInput.select();
+      }
     }
-    if (type === 'sort') {
+  });
+
+  // Event listeners for select boxes
+  if (tagFilter) {
+    tagFilter.addEventListener('change', () => {
+      filterAndSort();
+    });
+  }
+  if (categoryFilter) {
+    categoryFilter.addEventListener('change', () => {
+      filterAndSort();
+    });
+  }
+  if (sortSelect) {
+    sortSelect.addEventListener('change', () => {
+      filterAndSort();
+    });
+  }
+
+  if (tagFilterClear) {
+    tagFilterClear.addEventListener('click', () => {
+      tagFilter.value = '';
+      filterAndSort();
+    });
+  }
+
+  if (categoryFilterClear) {
+    categoryFilterClear.addEventListener('click', () => {
+      categoryFilter.value = '';
+      filterAndSort();
+    });
+  }
+
+  // Quick Category & Flag Pills
+  flagPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const flag = pill.dataset.filterFlag;
+      if (flag && Object.hasOwn(filterFlags, flag)) {
+        filterFlags[flag] = !filterFlags[flag];
+        updateFlagPillStates();
+        filterAndSort();
+        pill.blur();
+      }
+    });
+  });
+
+  function handleCategoryPillClick(pill) {
+    const val = pill.dataset.quickCategory !== undefined ? pill.dataset.quickCategory : pill.dataset.quickValue || '';
+    const isAll = pill.dataset.quickType === 'all' || val === '';
+
+    if (isAll) {
       if (categoryFilter) categoryFilter.value = '';
-      toggleSelectValue(sortSelect, val, 'date-desc');
+    } else if (categoryFilter) {
+      const isSame = categoryFilter.value.toLowerCase() === val.toLowerCase();
+      categoryFilter.value = isSame ? '' : val;
     }
+    filterAndSort();
+    pill.blur();
   }
 
   categoryPills.forEach((pill) => {
-    pill.addEventListener('click', () => {
-      applyQuickPillSelection(pill.dataset.quickType, pill.dataset.quickValue || '');
-      filterAndSort();
-      pill.blur();
-    });
+    if (pill.dataset.filterFlag) return;
+    pill.addEventListener('click', () => handleCategoryPillClick(pill));
   });
 
   // Hide broken favicons gracefully without inline HTML event handlers
@@ -638,10 +781,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tagFilter) tagFilter.value = '';
     if (categoryFilter) categoryFilter.value = '';
     if (sortSelect) sortSelect.value = 'date-desc';
+    filterFlags.oss = false;
+    filterFlags.free = false;
 
+    updateFlagPillStates();
     updateHeroSearchClear();
     updateHeroSearchChipStates();
     filterAndSort();
+  }
+
+  function handleFilterChipRemoval(type) {
+    switch (type) {
+      case 'search':
+        if (heroSearchInput) heroSearchInput.value = '';
+        handleSearchChange(true);
+        break;
+      case 'category':
+        if (categoryFilter) categoryFilter.value = '';
+        filterAndSort();
+        break;
+      case 'tag':
+        if (tagFilter) tagFilter.value = '';
+        filterAndSort();
+        break;
+      case 'flag-oss':
+        filterFlags.oss = false;
+        updateFlagPillStates();
+        filterAndSort();
+        break;
+      case 'flag-free':
+        filterFlags.free = false;
+        updateFlagPillStates();
+        filterAndSort();
+        break;
+      default:
+        break;
+    }
   }
 
   function setupActionButtons() {
@@ -653,6 +828,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const noResultsReset = document.getElementById('no-results-reset');
     if (noResultsReset) {
       noResultsReset.addEventListener('click', resetAllFilters);
+    }
+
+    if (activeFiltersList) {
+      activeFiltersList.addEventListener('click', (e) => {
+        const chip = e.target.closest('.active-filter-chip');
+        if (chip?.dataset.filterType) {
+          handleFilterChipRemoval(chip.dataset.filterType);
+        }
+      });
     }
 
     const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
@@ -780,6 +964,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========================================
   // Bluesky Widget
   // ========================================
+  initBlueskySection();
+});
+
+function initBlueskySection() {
   const blueskyAccounts = [
     'dailyqiitatrends.bsky.social',
     'dailyzenntrends.bsky.social',
@@ -791,189 +979,159 @@ document.addEventListener('DOMContentLoaded', () => {
   const blueskyAccountBtns = document.querySelectorAll('.bluesky-account-btn');
   const blueskyShuffleBtn = document.getElementById('bluesky-shuffle');
 
-  if (blueskyContainer && blueskyAccountBtns.length > 0) {
-    console.log('Bluesky init start');
-    // 現在表示中のアカウントハンドル配列
-    const activeHandles = [];
+  if (!blueskyContainer || blueskyAccountBtns.length === 0) return;
 
-    // テーマに応じたウィジェットテーマを返す
-    function getBlueskyTheme() {
-      const currentTheme = document.documentElement.dataset.theme;
-      return currentTheme === 'light' ? 'light' : 'gray';
+  const activeHandles = [];
+
+  function getBlueskyTheme() {
+    const currentTheme = document.documentElement.dataset.theme;
+    return currentTheme === 'light' ? 'light' : 'gray';
+  }
+
+  function getSlotCount() {
+    const width = window.innerWidth;
+    if (width >= 992) return 3;
+    if (width >= 768) return 2;
+    return 1;
+  }
+
+  function getWidgetHeight() {
+    return window.innerWidth < 768 ? '400px' : '500px';
+  }
+
+  function shuffleArray(arr) {
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const array = new Uint32Array(1);
+      window.crypto.getRandomValues(array);
+      const j = array[0] % (i + 1);
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
+    return shuffled;
+  }
 
-    // 画面幅に応じたスロット数を返す
-    function getSlotCount() {
-      const width = window.innerWidth;
-      if (width >= 992) return 3;
-      if (width >= 768) return 2;
-      return 1;
-    }
+  function pickRandomHandles(accounts, count) {
+    return shuffleArray(accounts).slice(0, count);
+  }
 
-    // ウィジェットの高さを返す
-    function getWidgetHeight() {
-      return window.innerWidth < 768 ? '400px' : '500px';
-    }
+  function renderBlueskyWidgets(container, buttons, activeList, handles) {
+    const safeHandles = [...handles];
+    activeList.length = 0;
+    activeList.push(...safeHandles);
+    container.innerHTML = '';
 
-    // 配列をシャッフルする（Fisher-Yates）
-    function shuffleArray(arr) {
-      console.log('shuffleArray called with', arr);
-      const shuffled = [...arr];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const array = new Uint32Array(1);
-        window.crypto.getRandomValues(array);
-        const j = array[0] % (i + 1);
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      return shuffled;
-    }
+    const theme = getBlueskyTheme();
+    const height = getWidgetHeight();
 
-    // ランダムにN個のアカウントを選択
-    function pickRandomHandles(accounts, count) {
-      console.log('pickRandomHandles called, count:', count);
-      return shuffleArray(accounts).slice(0, count);
-    }
-
-    // 全ウィジェットを描画
-    function renderBlueskyWidgets(container, buttons, activeList, handles) {
-      console.log('renderBlueskyWidgets called with handles:', handles);
-      const safeHandles = [...handles];
-      activeList.length = 0;
-      activeList.push(...safeHandles);
-      container.innerHTML = '';
-
-      const theme = getBlueskyTheme();
-      const height = getWidgetHeight();
-
-      safeHandles.forEach((handle) => {
-        console.log('Appending widget for handle:', handle);
-        const widget = document.createElement('bst-widget');
-        widget.dataset.handle = handle;
-        widget.dataset.theme = theme;
-        widget.dataset.width = '100%';
-        widget.dataset.height = height;
-        widget.dataset.lang = 'ja';
-        widget.dataset.ui = '1';
-        widget.dataset.pin = '0';
-        widget.dataset.rp = '0';
-        widget.dataset.thread = '0';
-        widget.dataset.prof = '0';
-        container.appendChild(widget);
-      });
-
-      // スクリプトを再読み込み
-      const existingScripts = document.querySelectorAll('script[data-bluesky-timeline]');
-      existingScripts.forEach((s) => {
-        s.remove();
-      });
-
-      const script = document.createElement('script');
-      script.src = `https://blueskytimeline.com/v2/timeline.js?t=${Date.now()}`;
-      script.type = 'module';
-      script.defer = true;
-      script.dataset.blueskyTimeline = 'true';
-      document.body.appendChild(script);
-
-      // ボタンのアクティブ状態を更新
-      buttons.forEach((btn) => {
-        const handle = btn.dataset.handle;
-        if (activeList.includes(handle)) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-      console.log('renderBlueskyWidgets finished');
-    }
-
-    // 初期表示：スロット数に応じてランダム選択
-    const initialCount = getSlotCount();
-    console.log('Calling initial render, count:', initialCount);
-    renderBlueskyWidgets(
-      blueskyContainer,
-      blueskyAccountBtns,
-      activeHandles,
-      pickRandomHandles(blueskyAccounts, initialCount),
-    );
-
-    // ボタンクリック：非表示のアカウントをクリックでスワップ
-    blueskyAccountBtns.forEach((btn) => {
-      btn.addEventListener('click', function (e) {
-        e.preventDefault();
-        const handle = this.dataset.handle;
-        if (!handle) return;
-
-        // すでに表示中なら何もしない（外部リンクはそのまま開かれる設計にしたいが
-        // preventDefaultしているので、アクティブなら新しいタブで開く）
-        if (activeHandles.includes(handle)) {
-          window.open(this.href, '_blank');
-          return;
-        }
-
-        // 非表示のアカウント → 表示中の最後の1つと入れ替え
-        const newHandles = [...activeHandles];
-        // 最も古い（先頭の）スロットを入れ替え
-        newHandles.shift();
-        newHandles.push(handle);
-        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, newHandles);
-      });
+    safeHandles.forEach((handle) => {
+      const widget = document.createElement('bst-widget');
+      widget.dataset.handle = handle;
+      widget.dataset.theme = theme;
+      widget.dataset.width = '100%';
+      widget.dataset.height = height;
+      widget.dataset.lang = 'ja';
+      widget.dataset.ui = '1';
+      widget.dataset.pin = '0';
+      widget.dataset.rp = '0';
+      widget.dataset.thread = '0';
+      widget.dataset.prof = '0';
+      container.appendChild(widget);
     });
 
-    // シャッフルボタン
-    if (blueskyShuffleBtn) {
-      blueskyShuffleBtn.addEventListener('click', function () {
-        const count = getSlotCount();
-        renderBlueskyWidgets(
-          blueskyContainer,
-          blueskyAccountBtns,
-          activeHandles,
-          pickRandomHandles(blueskyAccounts, count),
-        );
-        // アニメーション
-        this.style.transform = 'scale(1.1) rotate(180deg)';
-        setTimeout(() => {
-          this.style.transform = '';
-        }, 300);
-      });
-    }
+    const existingScripts = document.querySelectorAll('script[data-bluesky-timeline]');
+    existingScripts.forEach((s) => {
+      s.remove();
+    });
 
-    // テーマ変更を監視して再描画
-    const themeObserver = new MutationObserver((mutations) => {
-      for (const mutation of mutations) {
-        if (mutation.attributeName === 'data-theme') {
-          renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, activeHandles);
-          break;
-        }
+    const script = document.createElement('script');
+    script.src = `https://blueskytimeline.com/v2/timeline.js?t=${Date.now()}`;
+    script.type = 'module';
+    script.defer = true;
+    script.dataset.blueskyTimeline = 'true';
+    document.body.appendChild(script);
+
+    buttons.forEach((btn) => {
+      const handle = btn.dataset.handle;
+      if (activeList.includes(handle)) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
       }
     });
+  }
 
-    themeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['data-theme'],
+  const initialCount = getSlotCount();
+  renderBlueskyWidgets(
+    blueskyContainer,
+    blueskyAccountBtns,
+    activeHandles,
+    pickRandomHandles(blueskyAccounts, initialCount),
+  );
+
+  blueskyAccountBtns.forEach((btn) => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const handle = this.dataset.handle;
+      if (!handle) return;
+
+      if (activeHandles.includes(handle)) {
+        window.open(this.href, '_blank');
+        return;
+      }
+
+      const newHandles = [...activeHandles];
+      newHandles.shift();
+      newHandles.push(handle);
+      renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, newHandles);
     });
+  });
 
-    // ウィンドウリサイズ時にスロット数が変わったら再描画（デバウンス）
-    let resizeTimer;
-    let prevSlotCount = initialCount;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        const newCount = getSlotCount();
-        if (newCount !== prevSlotCount) {
-          prevSlotCount = newCount;
-          // スロット数が増えたら追加、減ったらトリム
-          if (newCount > activeHandles.length) {
-            const inactiveHandles = blueskyAccounts.filter((h) => !activeHandles.includes(h));
-            const additional = shuffleArray(inactiveHandles).slice(0, newCount - activeHandles.length);
-            renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, [
-              ...activeHandles,
-              ...additional,
-            ]);
-          } else if (newCount < activeHandles.length) {
-            renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, activeHandles.slice(0, newCount));
-          }
-        }
+  if (blueskyShuffleBtn) {
+    blueskyShuffleBtn.addEventListener('click', function () {
+      const count = getSlotCount();
+      renderBlueskyWidgets(
+        blueskyContainer,
+        blueskyAccountBtns,
+        activeHandles,
+        pickRandomHandles(blueskyAccounts, count),
+      );
+      this.style.transform = 'scale(1.1) rotate(180deg)';
+      setTimeout(() => {
+        this.style.transform = '';
       }, 300);
     });
   }
-});
+
+  const themeObserver = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.attributeName === 'data-theme') {
+        renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, activeHandles);
+        break;
+      }
+    }
+  });
+
+  themeObserver.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme'],
+  });
+
+  let resizeTimer;
+  let prevSlotCount = initialCount;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      const newCount = getSlotCount();
+      if (newCount !== prevSlotCount) {
+        prevSlotCount = newCount;
+        if (newCount > activeHandles.length) {
+          const inactiveHandles = blueskyAccounts.filter((h) => !activeHandles.includes(h));
+          const additional = shuffleArray(inactiveHandles).slice(0, newCount - activeHandles.length);
+          renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, [...activeHandles, ...additional]);
+        } else if (newCount < activeHandles.length) {
+          renderBlueskyWidgets(blueskyContainer, blueskyAccountBtns, activeHandles, activeHandles.slice(0, newCount));
+        }
+      }
+    }, 300);
+  });
+}

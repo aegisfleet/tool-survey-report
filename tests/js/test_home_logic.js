@@ -34,6 +34,9 @@ class HTMLElement {
   }
   set innerHTML(val) {
     this._innerHTML = val;
+    if (val === '') {
+      this.children = [];
+    }
   }
   get textContent() {
     return this._innerHTML.replace(/[<>]/g, '');
@@ -81,8 +84,8 @@ class HTMLElement {
   }
 
   querySelectorAll(selector) {
-    if (selector === 'option') {
-      return this.children.filter((c) => c.tagName === 'OPTION');
+    if (selector.toLowerCase() === 'option') {
+      return this.children.filter((c) => c.tagName && c.tagName.toLowerCase() === 'option');
     }
     if (selector === '.report-card') {
       // Search recursively
@@ -258,8 +261,14 @@ const card1 = createReportCard(
   'https://github.com/microsoft/WSL',
 );
 card1.dataset.targetUsers = 'インフラエンジニア,sre';
+card1.dataset.isOss = 'true';
+card1.dataset.hasFreePlan = 'true';
 const card2 = createReportCard('Tool B', ['tag2', 'tag3'], 'Design', '2023-02-01', '90');
+card2.dataset.isOss = 'false';
+card2.dataset.hasFreePlan = 'true';
 const card3 = createReportCard('Tool C', ['tag1'], 'Development', '2023-03-01', '70');
+card3.dataset.isOss = 'true';
+card3.dataset.hasFreePlan = 'false';
 
 const quickPillAll = new HTMLElement('button');
 quickPillAll.className = 'category-pill active';
@@ -268,6 +277,33 @@ quickPillAll.dataset = { quickType: 'all' };
 const quickPillDesign = new HTMLElement('button');
 quickPillDesign.className = 'category-pill';
 quickPillDesign.dataset = { quickType: 'category', quickValue: 'Design' };
+
+const flagPillOss = new HTMLElement('button');
+flagPillOss.className = 'filter-flag-pill';
+flagPillOss.dataset = { filterFlag: 'oss' };
+
+const flagPillFree = new HTMLElement('button');
+flagPillFree.className = 'filter-flag-pill';
+flagPillFree.dataset = { filterFlag: 'free' };
+
+const activeFiltersBar = new HTMLElement('div');
+activeFiltersBar.attributes.id = 'active-filters-bar';
+activeFiltersBar.hidden = true;
+
+const activeFiltersSummary = new HTMLElement('div');
+activeFiltersSummary.attributes.id = 'active-filters-summary';
+
+const activeFiltersList = new HTMLElement('div');
+activeFiltersList.attributes.id = 'active-filters-list';
+
+const activeFilterBadge = new HTMLElement('span');
+activeFilterBadge.attributes.id = 'active-filter-badge';
+
+const filterResetAll = new HTMLElement('button');
+filterResetAll.attributes.id = 'filter-reset-all';
+
+const noResultsReset = new HTMLElement('button');
+noResultsReset.attributes.id = 'no-results-reset';
 
 reportsGrid.appendChild(card1);
 reportsGrid.appendChild(card2);
@@ -293,21 +329,30 @@ loadMoreContainer.attributes.id = 'load-more-container';
 const reportsCountContainer = new HTMLElement('span');
 reportsCountContainer.attributes.id = 'reports-count-container';
 
+const mockElementsById = {
+  'hero-search-input': searchInput,
+  'report-search': searchInput,
+  'tag-filter': tagFilter,
+  'category-filter': categoryFilter,
+  'sort-select': sortSelect,
+  'reports-grid': reportsGrid,
+  'no-results': noResults,
+  'load-more-btn': loadMoreBtn,
+  'load-more-container': loadMoreContainer,
+  'reports-count-container': reportsCountContainer,
+  'active-filters-bar': activeFiltersBar,
+  'active-filters-summary': activeFiltersSummary,
+  'active-filters-list': activeFiltersList,
+  'active-filter-badge': activeFilterBadge,
+  'filter-reset-all': filterResetAll,
+  'no-results-reset': noResultsReset,
+};
+
 // Mock document
 global.document = {
   getElementById: (id) => {
-    if (id === 'hero-search-input' || id === 'report-search') return searchInput;
-    if (id === 'tag-filter') return tagFilter;
-    if (id === 'category-filter') return categoryFilter;
-    if (id === 'sort-select') return sortSelect;
-    if (id === 'reports-grid') return reportsGrid;
-    if (id === 'no-results') return noResults;
-    if (id === 'load-more-btn') return loadMoreBtn;
-    if (id === 'load-more-container') return loadMoreContainer;
-    if (id === 'reports-count-container') return reportsCountContainer;
-    if (id === 'hero-search-clear' || id === 'search-clear') return new HTMLElement('button');
-    if (id === 'tag-filter-clear') return new HTMLElement('button');
-    if (id === 'category-filter-clear') return new HTMLElement('button');
+    if (mockElementsById[id]) return mockElementsById[id];
+    if (id.endsWith('-clear')) return new HTMLElement('button');
     return null;
   },
   querySelector: (selector) => {
@@ -321,6 +366,7 @@ global.document = {
     if (selector === '.tag') return [];
     if (selector === '.clickable-category') return [];
     if (selector === '.category-pill') return [quickPillAll, quickPillDesign];
+    if (selector === '.filter-flag-pill') return [flagPillOss, flagPillFree];
     return [];
   },
   addEventListener: (event, callback) => {
@@ -563,6 +609,145 @@ try {
     passed = false;
   } else {
     console.log('Test 13 Passed: Quick category pill filter correct.');
+  }
+
+  // Test 14: OSS flag filter toggle
+  // Reset category first
+  categoryFilter.value = '';
+  window.filterAndSort(false, true);
+
+  if (flagPillOss.listeners.click) {
+    flagPillOss.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+
+  const visibleCardsOss = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (
+    visibleCardsOss.length !== 2 ||
+    !flagPillOss.classList.contains('active') ||
+    flagPillOss.getAttribute('aria-pressed') !== 'true'
+  ) {
+    console.error(`Test 14 Failed: OSS filter toggle failed. Visible count: ${visibleCardsOss.length}`);
+    passed = false;
+  } else if (activeFiltersBar.hidden !== false) {
+    console.error('Test 14 Failed: Active filters bar should be visible when OSS flag is active.');
+    passed = false;
+  } else {
+    console.log('Test 14 Passed: OSS flag filter toggle and active state correct.');
+  }
+
+  // Test 15: Compound AND filter (OSS + Free + Category)
+  if (flagPillFree.listeners.click) {
+    flagPillFree.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+
+  const visibleCardsCompound = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsCompound.length !== 1 || visibleCardsCompound[0].dataset.toolName !== 'ToolA') {
+    console.error(`Test 15 Failed: Compound OSS+Free filter failed. Visible count: ${visibleCardsCompound.length}`);
+    passed = false;
+  } else {
+    console.log('Test 15 Passed: Compound AND filtering (OSS + Free) correct.');
+  }
+
+  // Test 15b: Compound AND filter yielding 0 results
+  categoryFilter.value = 'Design';
+  window.filterAndSort(false, true);
+  const visibleCardsDesignCompound = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsDesignCompound.length !== 0 || noResults.style.display !== 'block') {
+    console.error(
+      `Test 15b Failed: Category + OSS + Free should yield 0 results for Design, got ${visibleCardsDesignCompound.length}`,
+    );
+    passed = false;
+  } else {
+    console.log('Test 15b Passed: Compound AND filtering with no matching results displays noResults correctly.');
+  }
+
+  // Test 16: Dynamic facet tag updating in #tag-filter
+  // Toggle off OSS and Free flags, set category to Development
+  if (flagPillOss.listeners.click) {
+    flagPillOss.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+  if (flagPillFree.listeners.click) {
+    flagPillFree.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+  categoryFilter.value = 'Development';
+  window.filterAndSort(false, true);
+
+  const tagOptions = tagFilter.querySelectorAll('option');
+  const optionTexts = tagOptions.map((opt) => opt.textContent);
+  const hasTag1Facet = optionTexts.some((txt) => txt.includes('tag1 (14)'));
+  const hasTag2Facet = optionTexts.some((txt) => txt.includes('tag2 (1)'));
+  const hasTag3Facet = optionTexts.some((txt) => txt.includes('tag3'));
+
+  if (!hasTag1Facet || !hasTag2Facet || hasTag3Facet) {
+    console.error('Test 16 Failed: Dynamic facet tag options incorrect.', optionTexts);
+    passed = false;
+  } else {
+    console.log('Test 16 Passed: Dynamic facet tag updating in #tag-filter correct.');
+  }
+
+  // Test 17: Active filters bar chip rendering and individual chip removal
+  searchInput.value = 'ToolA';
+  window.filterAndSort(false, true);
+
+  const chips = activeFiltersList.children;
+  if (activeFiltersBar.hidden || chips.length < 2) {
+    console.error(
+      `Test 17 Failed: Expected active filters bar with at least 2 chips, found ${chips.length} chips, hidden=${activeFiltersBar.hidden}`,
+    );
+    passed = false;
+  } else {
+    const searchChip = chips.find((c) => c.dataset?.filterType === 'search');
+    if (!searchChip) {
+      console.error('Test 17 Failed: Search chip not found in activeFiltersList.');
+      passed = false;
+    } else {
+      if (activeFiltersList.listeners.click) {
+        activeFiltersList.listeners.click.forEach((cb) => {
+          cb({ target: searchChip });
+        });
+      }
+      if (searchInput.value !== '') {
+        console.error(`Test 17 Failed: Search input should be cleared after chip removal, got: ${searchInput.value}`);
+        passed = false;
+      } else {
+        console.log('Test 17 Passed: Active filters bar chip rendering and individual chip removal correct.');
+      }
+    }
+  }
+
+  // Test 18: Reset all filters button
+  // Toggle OSS on to have a flag active as well
+  if (flagPillOss.listeners.click) {
+    flagPillOss.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+  if (filterResetAll.listeners.click) {
+    filterResetAll.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+
+  if (
+    searchInput.value !== '' ||
+    categoryFilter.value !== '' ||
+    tagFilter.value !== '' ||
+    sortSelect.value !== 'date-desc' ||
+    flagPillOss.classList.contains('active') ||
+    activeFiltersBar.hidden !== true
+  ) {
+    console.error('Test 18 Failed: Reset all filters did not reset all states.');
+    passed = false;
+  } else {
+    console.log('Test 18 Passed: Reset all filters button clears all filters and hides active bar.');
   }
 
   if (passed) {
