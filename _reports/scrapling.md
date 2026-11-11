@@ -45,6 +45,7 @@ links:
 relationships:
   related_tools:
     - Playwright
+    - Parallel
 ---
 # **Scrapling 調査レポート**
 

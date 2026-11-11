@@ -49,6 +49,7 @@ relationships:
     - NotebookLM
     - Google Disco
     - RustXNG
+    - Parallel
 ---
 # **Perplexity 調査レポート**
 
