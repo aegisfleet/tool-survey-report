@@ -45,6 +45,7 @@ evaluation:
 links:
   documentation: https://learn.microsoft.com/ja-jp/azure/defender-for-cloud/
 relationships:
+  parent: Microsoft Azure
   related_tools:
     - Amazon GuardDuty
     - AWS Security Hub
