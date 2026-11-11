@@ -43,6 +43,7 @@ relationships:
   children:
     - Qwen
   related_tools:
+    - Microsoft Azure
     - Google Cloud
 ---
 

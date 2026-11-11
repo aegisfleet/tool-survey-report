@@ -50,11 +50,11 @@ relationships:
     - Data Studio
     - Spanner Omni
   related_tools:
+    - Microsoft Azure
     - Google Learning
     - Terraform
     - Google Workspace CLI (gws)
     - Cloudflare
-    - Render
     - Google 広告
     - Google Maps Platform
 ---
