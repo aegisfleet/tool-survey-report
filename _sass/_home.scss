@@ -1738,19 +1738,36 @@
     }
 }
 
-// 1. Eyebrow: Category badge (left) + Date & Score (right)
+// 1. Eyebrow: Date & Score (row 1) + Category badge (row 2)
 .report-card-eyebrow {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: map-get($spacers, 2);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
     margin-bottom: 0.65rem;
-    flex-wrap: wrap;
+
+    .report-header-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .report-date {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        font-variant-numeric: tabular-nums;
+    }
+
+    .score-badge-wrapper {
+        margin-left: auto;
+    }
 
     .meta-item.category {
         appearance: none;
         display: inline-flex;
         align-items: center;
+        align-self: flex-start;
         gap: 0.3rem;
         font-family: inherit;
         font-size: 0.78rem;
@@ -1786,19 +1803,6 @@
                 color: $white;
             }
         }
-    }
-
-    .report-header-meta {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin-left: auto;
-    }
-
-    .report-date {
-        font-size: 0.75rem;
-        color: var(--color-text-muted);
-        font-variant-numeric: tabular-nums;
     }
 }
 

@@ -145,17 +145,8 @@ layout: default
           data-has-free-plan="{{ report.quick_summary.has_free_plan | default: false }}"
           data-score="{{ report.evaluation.score | default: 0 }}">
 
-          <!-- 1. 最上段：カテゴリバッジ（左）＋ 更新日・スコア＆3秒プレビュー（右） -->
+          <!-- 1. 最上段：更新日・スコア（1行目）＋ カテゴリバッジ（2行目） -->
           <div class="report-card-eyebrow">
-            {%- if report.category and report.category != '' and report.category != '不明' -%}
-            <button type="button" class="meta-item category clickable-category" data-category="{{ report.category | downcase }}"
-              title="カテゴリ「{{ report.category }}」で絞り込む">
-              {{ site.data.categories[report.category] | default: '🔹' }} {{ report.category }}
-            </button>
-            {%- else -%}
-            <span class="meta-item category">🔹 未分類</span>
-            {%- endif -%}
-
             <div class="report-header-meta">
               <time class="report-date" datetime="{{ report.last_updated | date: '%Y-%m-%d' }}" title="最終更新日">
                 {{ report.last_updated | date: "%Y.%m.%d" }}
@@ -186,6 +177,15 @@ layout: default
               </div>
               {%- endif -%}
             </div>
+
+            {%- if report.category and report.category != '' and report.category != '不明' -%}
+            <button type="button" class="meta-item category clickable-category" data-category="{{ report.category | downcase }}"
+              title="カテゴリ「{{ report.category }}」で絞り込む">
+              {{ site.data.categories[report.category] | default: '🔹' }} {{ report.category }}
+            </button>
+            {%- else -%}
+            <span class="meta-item category">🔹 未分類</span>
+            {%- endif -%}
           </div>
 
           <!-- 2. タイトル行：ファビコン ＋ ツール名 ＋ 読み仮名 -->
