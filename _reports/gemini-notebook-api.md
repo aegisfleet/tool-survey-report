@@ -1,58 +1,55 @@
 ---
-title: "Gemini Notebook API 調査レポート"
-tool_name: "Gemini Notebook API"
-tool_reading: "ジェミニ ノートブック エーピーアイ"
-category: "AIアプリ開発基盤"
-developer: "Google"
-official_site: "https://developers.google.com/notebook/docs"
-date: "2026-11-11"
-last_updated: "2026-11-11"
+title: Gemini Notebook API 調査レポート
+tool_name: Gemini Notebook API
+tool_reading: ジェミニ ノートブック エーピーアイ
+category: AIアプリ開発基盤
+developer: Google
+official_site: https://developers.google.com/notebook/docs
+date: '2026-11-11'
+last_updated: '2026-11-11'
 tags:
-  - "AI"
-  - "API"
-  - "MCP"
-  - "大規模言語モデル"
-  - "エージェント"
-  - "開発者ツール"
-  - "クラウド"
-description: "Gemini Notebookの永続ノートブックや情報ソースをプログラムから作成・管理し、リモートMCPサーバー経由でAIエージェントと直結できるGoogle公式API基盤。"
-
+  - AI
+  - API
+  - MCP
+  - 大規模言語モデル
+  - エージェント
+  - 開発者ツール
+  - クラウド
+description: Gemini Notebookの永続ノートブックや情報ソースをプログラムから作成・管理し、リモートMCPサーバー経由でAIエージェントと直結できるGoogle公式API基盤。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "ナレッジ基盤エンジニア"
-    - "Claude Code / Cursor利用者"
-  latest_highlight: "2026年10月にPublic Preview公開およびリモートMCPサーバー（Streamable HTTP）対応"
-  update_frequency: "高"
-
+    - AIエージェント開発者
+    - ナレッジ基盤エンジニア
+    - Claude Code / Cursor利用者
+  latest_highlight: 2026年10月にPublic Preview公開およびリモートMCPサーバー（Streamable HTTP）対応
+  update_frequency: 高
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 5
-      reason: "公式リモートMCPサーバーを提供し、Claude CodeやCursorから即座にノートブック作成・情報投入が可能"
+      reason: 公式リモートMCPサーバーを提供し、Claude CodeやCursorから即座にノートブック作成・情報投入が可能
     - point: 4
-      reason: "Webページ、YouTube動画、長文テキスト（最大50万語）の自動パース・永続インジェストをAPI1本で実行可能"
+      reason: Webページ、YouTube動画、長文テキスト（最大50万語）の自動パース・永続インジェストをAPI1本で実行可能
     - point: 3
-      reason: "Public Preview期間中は無料で利用でき、Googleアカウントの既存NotebookLM環境とシームレスに同期"
+      reason: Public Preview期間中は無料で利用でき、Googleアカウントの既存NotebookLM環境とシームレスに同期
   minus_points:
     - point: -2
-      reason: "プレビュー時点ではパーソナルGoogleアカウント限定でありGoogle Workspace組織アカウントに未対応"
+      reason: プレビュー時点ではパーソナルGoogleアカウント限定でありGoogle Workspace組織アカウントに未対応
     - point: -1
-      reason: "現状はノートブック・ソースの削除（Delete）やノートブックからの直接情報取得・アーティファクト生成がロードマップ段階"
-  summary: "AIコーディングエージェントからのナレッジ蓄積を自動化する公式API基盤。削除やQ&A機能のロードマップ実装による完全体への進化が期待される。"
-
+      reason: 現状はノートブック・ソースの削除（Delete）やノートブックからの直接情報取得・アーティファクト生成がロードマップ段階
+  summary: AIコーディングエージェントからのナレッジ蓄積を自動化する公式API基盤。削除やQ&A機能のロードマップ実装による完全体への進化が期待される。
 links:
-  documentation: "https://developers.google.com/notebook/docs"
+  documentation: https://developers.google.com/notebook/docs
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "NotebookLM"
-    - "Gemini API CLI"
-    - "Chrome DevTools for agents"
+    - NotebookLM
+    - Gemini API CLI
+    - Chrome DevTools for agents
 ---
 
 # **Gemini Notebook API 調査レポート**
