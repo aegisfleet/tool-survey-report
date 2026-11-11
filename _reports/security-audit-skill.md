@@ -1,56 +1,56 @@
 ---
-title: "security-audit-skill 調査レポート"
-tool_name: "security-audit-skill"
-tool_reading: "セキュリティ オーディット スキル"
-category: "セキュリティ/脆弱性診断"
-developer: "Cloudflare"
-official_site: "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
-date: "2026-11-12"
-last_updated: "2026-11-12"
+title: security-audit-skill 調査レポート
+tool_name: security-audit-skill
+tool_reading: セキュリティ オーディット スキル
+category: セキュリティ/脆弱性診断
+developer: Cloudflare
+official_site: https://blog.cloudflare.com/build-your-own-vulnerability-harness
+date: '2026-11-12'
+last_updated: '2026-11-12'
 tags:
-  - "オープンソース"
-  - "エージェント"
-  - "セキュリティ"
-  - "開発者ツール"
-  - "大規模言語モデル"
-  - "自動化"
-description: "Cloudflareの脆弱性発見ハーネスから誕生した、自律型コーディングエージェント向け多段階セキュリティ監査・敵対的検証スキル"
+  - オープンソース
+  - エージェント
+  - セキュリティ
+  - 開発者ツール
+  - 大規模言語モデル
+  - 自動化
+description: Cloudflareの脆弱性発見ハーネスから誕生した、自律型コーディングエージェント向け多段階セキュリティ監査・敵対的検証スキル
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "セキュリティエンジニア"
-    - "DevSecOpsエンジニア"
-    - "AIエージェント開発者"
-  latest_highlight: "2026年9月にガイダンスモード/フル監査モードの分離とカバレッジ台帳の検証機構が強化"
-  update_frequency: "中"
+    - セキュリティエンジニア
+    - DevSecOpsエンジニア
+    - AIエージェント開発者
+  latest_highlight: 2026年9月にガイダンスモード/フル監査モードの分離とカバレッジ台帳の検証機構が強化
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 6
-      reason: "敵対的検証ループと機械検証可能な台帳によりLLM特有のハルシネーションや誤検知を構造的に排除"
+      reason: 敵対的検証ループと機械検証可能な台帳によりLLM特有のハルシネーションや誤検知を構造的に排除
     - point: 5
-      reason: "AI/LLM、メモリ安全性、Web認証プロトコルなど10種以上のドメイン別攻撃クラス体系を完備"
+      reason: AI/LLM、メモリ安全性、Web認証プロトコルなど10種以上のドメイン別攻撃クラス体系を完備
     - point: 4
-      reason: "外部ネットワーク遮断やscratchディレクトリ隔離など標的コード実行時の安全管理が極めて徹底"
+      reason: 外部ネットワーク遮断やscratchディレクトリ隔離など標的コード実行時の安全管理が極めて徹底
     - point: 2
-      reason: "Skills CLI規格に準拠し主要コーディングエージェント（Claude Code、Codex等）にワンコマンドで導入可能"
+      reason: Skills CLI規格に準拠し主要コーディングエージェント（Claude Code、Codex等）にワンコマンドで導入可能
   minus_points:
     - point: -3
-      reason: "多段階エージェント並列実行と敵対的レビューによりLLMのAPIトークン消費量が大きくなりやすい"
+      reason: 多段階エージェント並列実行と敵対的レビューによりLLMのAPIトークン消費量が大きくなりやすい
     - point: -2
-      reason: "ローカル実行検証にはOS強制サンドボックス環境の準備が必要であり運用難易度がやや高い"
-  summary: "AIの誤検知問題を規律あるパイプライン設計で克服した先進的セキュリティスキルだが、実行環境の整備とAPIコスト管理が重要"
+      reason: ローカル実行検証にはOS強制サンドボックス環境の準備が必要であり運用難易度がやや高い
+  summary: AIの誤検知問題を規律あるパイプライン設計で克服した先進的セキュリティスキルだが、実行環境の整備とAPIコスト管理が重要
 links:
-  github: "https://github.com/cloudflare/security-audit-skill"
-  documentation: "https://blog.cloudflare.com/build-your-own-vulnerability-harness"
+  github: https://github.com/cloudflare/security-audit-skill
+  documentation: https://blog.cloudflare.com/build-your-own-vulnerability-harness
 relationships:
-  parent: "Cloudflare"
+  parent: Cloudflare
   related_tools:
-    - "Agent Skills"
-    - "CodeQL"
+    - Agent Skills
+    - CodeQL
 ---
 
 # **security-audit-skill 調査レポート**
