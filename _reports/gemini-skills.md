@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - Vercel Agent Skills
     - Google Opal
+    - Modern Web Guidance
 ---
 
 # **Gemini Skills 調査レポート**

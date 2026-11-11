@@ -45,6 +45,7 @@ relationships:
     - Android Skills
     - Waza
     - Agent Plugins
+    - Modern Web Guidance
 ---
 
 # **Agent Skills 調査レポート**
