@@ -1,56 +1,56 @@
 ---
-title: "Parallel 調査レポート"
-tool_name: "Parallel"
-tool_reading: "パラレル"
-category: "エージェントエコシステム/基盤"
-developer: "Parallel Web Systems Inc."
-official_site: "https://parallel.ai/"
-date: "2026-11-11"
-last_updated: "2026-11-11"
+title: Parallel 調査レポート
+tool_name: Parallel
+tool_reading: パラレル
+category: エージェントエコシステム/基盤
+developer: Parallel Web Systems Inc.
+official_site: https://parallel.ai/
+date: '2026-11-11'
+last_updated: '2026-11-11'
 tags:
-  - "AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "SaaS"
-  - "API"
-  - "大規模言語モデル"
-  - "MCP"
-description: "AIエージェントやLLM向けに特化設計された、Web検索・抽出・多段リサーチ・判定を高速かつ高密度に提供するWebデータインフラプラットフォーム"
+  - AI
+  - エージェント
+  - 開発者ツール
+  - SaaS
+  - API
+  - 大規模言語モデル
+  - MCP
+description: AIエージェントやLLM向けに特化設計された、Web検索・抽出・多段リサーチ・判定を高速かつ高密度に提供するWebデータインフラプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "LLMエンジニア"
-    - "データアナリスト"
-  latest_highlight: "2026年11月にParallel MCP 2.0およびUsage Data APIを公開"
-  update_frequency: "高"
+    - AIエージェント開発者
+    - LLMエンジニア
+    - データアナリスト
+  latest_highlight: 2026年11月にParallel MCP 2.0およびUsage Data APIを公開
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 6
-      reason: "LLMのコンテキストウィンドウに最適化された高密度抜粋とBasis（引用根拠・信頼度）により、ハルシネーションとトークン消費を抑制"
+      reason: LLMのコンテキストウィンドウに最適化された高密度抜粋とBasis（引用根拠・信頼度）により、ハルシネーションとトークン消費を抑制
     - point: 5
-      reason: "超低遅延検索（Turbo/Fast）から多段階の自律リサーチ（Task）、閉質問判定（Decisions）まで多様な推論パイプラインを網羅"
+      reason: 超低遅延検索（Turbo/Fast）から多段階の自律リサーチ（Task）、閉質問判定（Decisions）まで多様な推論パイプラインを網羅
     - point: 4
-      reason: "Parallel MCP 2.0によりClaudeやCursor等からAPIキー不要・完全無料で即座に利用可能"
+      reason: Parallel MCP 2.0によりClaudeやCursor等からAPIキー不要・完全無料で即座に利用可能
     - point: 3
-      reason: "元Twitter CEOのParag Agrawal氏らが創業し、累計2.3億ドル調達の強固な開発体制とインフラ基盤"
+      reason: 元Twitter CEOのParag Agrawal氏らが創業し、累計2.3億ドル調達の強固な開発体制とインフラ基盤
   minus_points:
     - point: -3
-      reason: "ドキュメントおよび管理画面が英語のみで、日本語ローカル情報に対する最適化は限定的"
+      reason: ドキュメントおよび管理画面が英語のみで、日本語ローカル情報に対する最適化は限定的
     - point: -2
-      reason: "長時間の自律リサーチ（Task API Ultraプロセッサ群）では従量課金コストの綿密な管理が必要"
-  summary: "AIエージェントがWebデータを活用する上で、高速検索から深層推論・判定・検証までを一元化する最先端のWebインフラストラクチャ"
+      reason: 長時間の自律リサーチ（Task API Ultraプロセッサ群）では従量課金コストの綿密な管理が必要
+  summary: AIエージェントがWebデータを活用する上で、高速検索から深層推論・判定・検証までを一元化する最先端のWebインフラストラクチャ
 links:
-  documentation: "https://docs.parallel.ai/"
+  documentation: https://docs.parallel.ai/
 relationships:
   related_tools:
-    - "Composio"
-    - "Scrapling"
-    - "Perplexity"
+    - Composio
+    - Scrapling
+    - Perplexity
 ---
 
 # **Parallel 調査レポート**
