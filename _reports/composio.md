@@ -40,6 +40,9 @@ links:
   github: https://github.com/composiohq/composio
   deepwiki: https://deepwiki.com/composiohq/composio
   documentation: https://docs.composio.dev/
+relationships:
+  related_tools:
+    - Parallel
 ---
 
 # **Composio 調査レポート**
