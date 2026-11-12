@@ -48,6 +48,7 @@ relationships:
     - zizmor
     - act
     - pinact
+    - Google Shell Style Guide
 ---
 
 # **actionlint 調査レポート**
