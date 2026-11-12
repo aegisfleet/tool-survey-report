@@ -1,56 +1,56 @@
 ---
-title: "Gemini Decision 1 調査レポート"
-tool_name: "Gemini Decision 1"
-tool_reading: "ジェミニ デシジョン ワン"
-category: "AIアプリ開発基盤"
-developer: "Google"
-official_site: "https://aistudio.google.com/docs/models/gemini-decision-1"
-date: "2026-11-12"
-last_updated: "2026-11-12"
+title: Gemini Decision 1 調査レポート
+tool_name: Gemini Decision 1
+tool_reading: ジェミニ デシジョン ワン
+category: AIアプリ開発基盤
+developer: Google
+official_site: https://aistudio.google.com/docs/models/gemini-decision-1
+date: '2026-11-12'
+last_updated: '2026-11-12'
 tags:
-  - "AI"
-  - "大規模言語モデル"
-  - "生成AI"
-  - "エージェント"
-  - "開発者ツール"
-  - "API"
-  - "自動化"
-description: "Google DeepMindが開発した、テキスト・画像・音声・動画・PDFに対して最大1,000件の真偽・分類・ルーブリック判定をゼロ出力トークンかつ低遅延（150〜250ms）で評価する意思決定特化型モデル。"
+  - AI
+  - 大規模言語モデル
+  - 生成AI
+  - エージェント
+  - 開発者ツール
+  - API
+  - 自動化
+description: Google DeepMindが開発した、テキスト・画像・音声・動画・PDFに対して最大1,000件の真偽・分類・ルーブリック判定をゼロ出力トークンかつ低遅延（150〜250ms）で評価する意思決定特化型モデル。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "バックエンドエンジニア"
-    - "データサイエンティスト"
-  latest_highlight: "2026年11月11日にGemini Decisions APIおよびgemini-decision-1が正式リリース"
-  update_frequency: "高"
+    - AIエージェント開発者
+    - バックエンドエンジニア
+    - データサイエンティスト
+  latest_highlight: 2026年11月11日にGemini Decisions APIおよびgemini-decision-1が正式リリース
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "テキスト生成を行わず確率分布を直接出力するため、150〜250msの超低遅延と$0の出力トークンコストを実現"
+      reason: テキスト生成を行わず確率分布を直接出力するため、150〜250msの超低遅延と$0の出力トークンコストを実現
     - point: 5
-      reason: "単一リクエストで最大1,000問の真偽・多肢選択・ルーブリックスコアリングを単一パスで同時評価可能"
+      reason: 単一リクエストで最大1,000問の真偽・多肢選択・ルーブリックスコアリングを単一パスで同時評価可能
     - point: 3
-      reason: "256Kトークンのコンテキストで画像・音声・動画・PDFを含むマルチモーダル入力をネイティブ処理"
+      reason: 256Kトークンのコンテキストで画像・音声・動画・PDFを含むマルチモーダル入力をネイティブ処理
     - point: 2
-      reason: "Google AI StudioのDecisions Playgroundによる直感的なプロトタイピング環境"
+      reason: Google AI StudioのDecisions Playgroundによる直感的なプロトタイピング環境
   minus_points:
     - point: 0
-      reason: "特筆すべき大幅な減点はないが、用途が決定・分類に限定され自由文の生成には使えない"
-  summary: "エージェントの動的ルーティングやガードレール、マルチモーダル属性抽出をゼロ出力トークンと超低遅延で実現する意思決定特化モデル。"
+      reason: 特筆すべき大幅な減点はないが、用途が決定・分類に限定され自由文の生成には使えない
+  summary: エージェントの動的ルーティングやガードレール、マルチモーダル属性抽出をゼロ出力トークンと超低遅延で実現する意思決定特化モデル。
 links:
-  documentation: "https://ai.google.dev/gemini-api/docs/decisions"
+  documentation: https://ai.google.dev/gemini-api/docs/decisions
 relationships:
-  parent: "Gemini"
+  parent: Gemini
   related_tools:
-    - "Gemini Enterprise Agent Platform"
-    - "Gemini Skills"
-    - "Claude"
-    - "ChatGPT"
+    - Gemini Enterprise Agent Platform
+    - Gemini Skills
+    - Claude
+    - ChatGPT
 ---
 
 # **Gemini Decision 1 調査レポート**
