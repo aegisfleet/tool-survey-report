@@ -42,6 +42,7 @@ relationships:
   related_tools:
     - A2A Protocol
     - Agent Governance Toolkit
+    - Agent Lightning
     - LangChain
 ---
 
