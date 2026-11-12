@@ -1,54 +1,54 @@
 ---
-title: "Anthropic Agent Skills 調査レポート"
-tool_name: "Anthropic Agent Skills"
-tool_reading: "アンスロピック エージェント スキルズ / エージェント スキルズ"
-category: "エージェントエコシステム/基盤"
-developer: "Anthropic"
-official_site: "https://agentskills.io"
-date: "2026-11-13"
-last_updated: "2026-11-13"
+title: Anthropic Agent Skills 調査レポート
+tool_name: Anthropic Agent Skills
+tool_reading: アンスロピック エージェント スキルズ / エージェント スキルズ
+category: エージェントエコシステム/基盤
+developer: Anthropic
+official_site: https://agentskills.io
+date: '2026-11-13'
+last_updated: '2026-11-13'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "開発者ツール"
-  - "大規模言語モデル"
-description: "ClaudeなどのAIエージェントに専門タスクや高精度ワークフローを動的付与するオープン仕様と公式スキルリポジトリ"
+  - AI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+  - 大規模言語モデル
+description: ClaudeなどのAIエージェントに専門タスクや高精度ワークフローを動的付与するオープン仕様と公式スキルリポジトリ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "ソフトウェアエンジニア"
-    - "企業のプロンプト/AI推進担当"
-  latest_highlight: "2026年11月にOffice関連スキル（docx/pdf/pptx/xlsx）をApache 2.0ライセンスへ完全移行"
-  update_frequency: "高"
+    - AIエージェント開発者
+    - ソフトウェアエンジニア
+    - 企業のプロンプト/AI推進担当
+  latest_highlight: 2026年11月にOffice関連スキル（docx/pdf/pptx/xlsx）をApache 2.0ライセンスへ完全移行
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 5
-      reason: "段階的開示（Progressive Disclosure）による圧倒的なコンテキストトークン節約"
+      reason: 段階的開示（Progressive Disclosure）による圧倒的なコンテキストトークン節約
     - point: 5
-      reason: "Officeドキュメント生成など本番レベルの高品質スキル群がApache 2.0で完全公開"
+      reason: Officeドキュメント生成など本番レベルの高品質スキル群がApache 2.0で完全公開
     - point: 4
-      reason: "GitHubスター19万超の広範な普及度とClaude Code連携の利便性"
+      reason: GitHubスター19万超の広範な普及度とClaude Code連携の利便性
   minus_points:
     - point: -3
-      reason: "スキルの発火精度がdescriptionの英文記述に強く依存し、日本語プロンプトでの調整に工夫を要する"
+      reason: スキルの発火精度がdescriptionの英文記述に強く依存し、日本語プロンプトでの調整に工夫を要する
     - point: -2
-      reason: "一部スキルでローカル環境のCLIツールや特定ランタイムに依存する"
-  summary: "エージェントのコンテキスト浪費を防ぎつつ高度な専門タスクを実行可能にするデファクトスタンダード基盤"
+      reason: 一部スキルでローカル環境のCLIツールや特定ランタイムに依存する
+  summary: エージェントのコンテキスト浪費を防ぎつつ高度な専門タスクを実行可能にするデファクトスタンダード基盤
 links:
-  github: "https://github.com/anthropics/skills"
-  documentation: "https://docs.claude.com/en/api/skills-guide"
+  github: https://github.com/anthropics/skills
+  documentation: https://docs.claude.com/en/api/skills-guide
 relationships:
-  parent: "Agent Skills"
+  parent: Agent Skills
   related_tools:
-    - "Claude Code"
-    - "Claude"
-    - "Vercel Agent Skills"
+    - Claude Code
+    - Claude
+    - Vercel Agent Skills
 ---
 
 # **Anthropic Agent Skills 調査レポート**
