@@ -51,6 +51,7 @@ relationships:
     - Google Cloud
     - Caddy
     - Namecheap
+    - Let's Encrypt
 ---
 
 # **Cloudflare 調査レポート**
