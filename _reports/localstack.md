@@ -51,8 +51,8 @@ relationships:
     - AWS CloudFormation
     - OpenTofu
     - fakecloud
-    - Floci
     - Moto
+    - AWS Emulator
 ---
 # **LocalStack 調査レポート**
 
