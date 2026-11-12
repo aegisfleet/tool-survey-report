@@ -49,6 +49,7 @@ relationships:
     - AWS MCP Servers
     - AWS Security Hub
     - Google Cloud CLI
+    - AWS Emulator
 ---
 
 # **AWS CLI 調査レポート**
