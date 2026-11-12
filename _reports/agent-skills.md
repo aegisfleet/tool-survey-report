@@ -38,6 +38,8 @@ links:
   deepwiki: https://deepwiki.com/agentskills/agentskills
   documentation: https://agentskills.io/what-are-skills
 relationships:
+  children:
+    - Anthropic Agent Skills
   related_tools:
     - Model Context Protocol
     - MCP Apps
