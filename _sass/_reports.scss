@@ -1495,6 +1495,11 @@ h3:hover .heading-anchor {
     width: 100%;
     margin: 0;
   }
+
+  // 目次を右へ格納したら、空いたスペースまで記事を広げる
+  &.is-toc-collapsed .report-article {
+    max-width: 100%;
+  }
 }
 
 // --------------------------------------------------
@@ -1516,7 +1521,7 @@ h3:hover .heading-anchor {
   }
 }
 
-.floating-toc-desktop,
+.floating-toc-inner,
 .floating-toc-drawer {
   scrollbar-width: thin;
   scrollbar-color: var(--color-border-dark) var(--color-bg-content);
@@ -1540,28 +1545,71 @@ h3:hover .heading-anchor {
 }
 
 // PC用 デスクトップサイドバー目次 (1200px以上)
+// 目次パネルは固定表示にして、レイアウト上の幅はスペーサーで確保する
+.floating-toc-slot {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .floating-toc-slot {
+    display: block;
+    width: 280px;
+    flex-shrink: 0;
+    transition: width 0.3s ease, margin-right 0.3s ease;
+  }
+
+  // 目次を格納したらスペーサーを畳み、フレックスのギャップも打ち消す
+  .report-page-layout.is-toc-collapsed .floating-toc-slot {
+    width: 0;
+    margin-right: -2rem;
+  }
+}
+
 .floating-toc-desktop {
   display: none;
 
   @media (min-width: 1200px) {
     display: block;
-    position: sticky;
+    position: fixed;
     top: 90px;
+    right: 1.5rem;
     width: 280px;
-    flex-shrink: 0;
-    max-height: calc(100vh - 110px);
-    overflow-y: auto;
+
+    @media (min-width: 1380px) {
+      right: calc((100% - 1380px) / 2 + 1.5rem);
+    }
+
     z-index: 100;
-    background: var(--color-bg-content);
-    border: 1px solid var(--color-border);
     border-radius: 12px;
-    padding: 1rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: all 0.3s ease;
     opacity: 1;
     pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+    transition: transform 0.35s cubic-bezier(0, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0s;
+
+    // パネル本体。高さが収まらない場合はここでスクロールする
+    .floating-toc-inner {
+      width: 280px;
+      max-height: calc(100vh - 110px);
+      overflow-y: auto;
+      background: var(--color-bg-content);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 1rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    // 目次をページ右外へスライドさせて格納する
+    &.is-collapsed {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transform: translateX(calc(100% + 2rem));
+      transition: transform 0.35s cubic-bezier(0.4, 0, 1, 1), opacity 0.25s ease 0.1s,
+        visibility 0s linear 0.35s;
+    }
 
     .floating-toc-header {
       display: flex;
@@ -1606,14 +1654,6 @@ h3:hover .heading-anchor {
       list-style: none;
       padding: 0;
       margin: 0;
-      max-height: 800px;
-      overflow: hidden;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
-
-      &.collapsed {
-        max-height: 0;
-        opacity: 0;
-      }
 
       .floating-toc-item {
         margin-bottom: 0.3rem;
@@ -1645,7 +1685,7 @@ h3:hover .heading-anchor {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          transition: all 0.2s ease;
+          transition: color 0.2s ease, background-color 0.2s ease, border-left-color 0.2s ease;
 
           &:hover {
             color: var(--color-primary);
@@ -1661,6 +1701,90 @@ h3:hover .heading-anchor {
         }
       }
     }
+  }
+}
+
+// 目次を右へ格納した際に表示する再展開タブ (1200px以上)
+.floating-toc-reopen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background: var(--color-bg-content);
+  color: var(--color-text);
+  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+
+  svg {
+    flex-shrink: 0;
+    color: var(--color-primary);
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-bg-main);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes floating-toc-tab-appear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .report-page-layout.is-toc-collapsed .floating-toc-reopen {
+    display: flex;
+    position: fixed;
+    top: 90px;
+    right: 0;
+    z-index: 100;
+    animation: floating-toc-tab-appear 0.2s ease 0.3s both;
+  }
+
+  .report-page-layout.is-toc-collapsed .floating-toc-reopen:hover,
+  .report-page-layout.is-toc-collapsed .floating-toc-reopen:focus-visible {
+    transform: translateX(-4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-toc-slot,
+  .floating-toc-desktop,
+  .floating-toc-desktop.is-collapsed,
+  .floating-toc-reopen {
+    transition: none;
+  }
+
+  .report-page-layout.is-toc-collapsed .floating-toc-reopen {
+    animation: none;
+  }
+
+  .report-page-layout.is-toc-collapsed .floating-toc-reopen:hover,
+  .report-page-layout.is-toc-collapsed .floating-toc-reopen:focus-visible {
+    transform: none;
   }
 }
 

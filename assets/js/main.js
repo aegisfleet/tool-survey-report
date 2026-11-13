@@ -783,7 +783,12 @@ function markExternalLinks() {
 
 function syncDesktopTocScroll(desktopToc, desktopList) {
   const activeLink = desktopList.querySelector('a.active');
-  if (!activeLink || desktopList.classList.contains('collapsed') || !desktopToc.getClientRects().length) {
+  if (
+    !activeLink ||
+    desktopToc.classList.contains('is-collapsed') ||
+    desktopList.classList.contains('collapsed') ||
+    !desktopToc.getClientRects().length
+  ) {
     return;
   }
   const tocBounds = desktopToc.getBoundingClientRect();
@@ -801,7 +806,7 @@ function syncDesktopTocScroll(desktopToc, desktopList) {
   }
 }
 
-function insertTocIntoReport(reportContent, toc, desktopToc, mobileToc, floatingWrapper) {
+function insertTocIntoReport(reportContent, toc, desktopSlot, desktopReopenBtn, mobileToc, floatingWrapper) {
   const firstH2 = reportContent.querySelector('h2');
   const firstH1 = reportContent.querySelector('h1');
   if (firstH2) {
@@ -814,7 +819,8 @@ function insertTocIntoReport(reportContent, toc, desktopToc, mobileToc, floating
 
   const reportLayout = document.querySelector('.report-page-layout');
   if (reportLayout) {
-    reportLayout.appendChild(desktopToc);
+    reportLayout.appendChild(desktopSlot);
+    reportLayout.appendChild(desktopReopenBtn);
     document.body.appendChild(mobileToc);
   } else {
     document.body.appendChild(floatingWrapper);
@@ -828,6 +834,39 @@ function bindTocToggleButton(btn, listEl) {
     btn.setAttribute('aria-expanded', !isExpanded);
     btn.setAttribute('aria-label', isExpanded ? '目次を展開する' : '目次を折りたたむ');
     listEl.classList.toggle('collapsed', isExpanded);
+  });
+}
+
+/**
+ * デスクトップ用フローティング目次を右方向へスライドさせて格納する。
+ * 格納中は右端の「目次」タブから再展開できる。
+ */
+function bindDesktopTocToggle(desktopToc, toggleBtn, reopenBtn) {
+  const reportLayout = document.querySelector('.report-page-layout');
+  if (!reportLayout || !toggleBtn || !reopenBtn) return;
+
+  const setCollapsed = (collapsed, focusTarget) => {
+    reportLayout.classList.toggle('is-toc-collapsed', collapsed);
+    desktopToc.classList.toggle('is-collapsed', collapsed);
+    desktopToc.toggleAttribute('inert', collapsed);
+    toggleBtn.setAttribute('aria-expanded', String(!collapsed));
+    toggleBtn.setAttribute('aria-label', collapsed ? '目次を展開する' : '目次を折りたたむ');
+    reopenBtn.setAttribute('aria-expanded', String(!collapsed));
+
+    if (focusTarget) {
+      focusTarget.focus({ preventScroll: true });
+    }
+  };
+
+  toggleBtn.setAttribute('aria-controls', desktopToc.id);
+  reopenBtn.setAttribute('aria-controls', desktopToc.id);
+
+  toggleBtn.addEventListener('click', (event) => {
+    setCollapsed(true, event.detail === 0 ? reopenBtn : null);
+  });
+
+  reopenBtn.addEventListener('click', (event) => {
+    setCollapsed(false, event.detail === 0 ? toggleBtn : null);
   });
 }
 
@@ -875,9 +914,13 @@ function generateTableOfContents() {
 
   // PC用追従サイドパネル
   const desktopToc = document.createElement('nav');
+  desktopToc.id = 'floating-toc-desktop';
   desktopToc.className = 'floating-toc-desktop';
   desktopToc.setAttribute('aria-label', 'フローティング目次 (デスクトップ)');
-  desktopToc.innerHTML = `
+
+  const desktopInner = document.createElement('div');
+  desktopInner.className = 'floating-toc-inner';
+  desktopInner.innerHTML = `
       <div class="floating-toc-header">
         <span class="floating-toc-title">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -890,7 +933,7 @@ function generateTableOfContents() {
           </svg>
           目次
         </span>
-        <button type="button" class="floating-toc-toggle-btn" aria-expanded="true" aria-label="フローティング目次を折りたたむ">
+        <button type="button" class="floating-toc-toggle-btn" aria-expanded="true" aria-label="目次を折りたたむ">
           <svg class="toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
@@ -899,7 +942,31 @@ function generateTableOfContents() {
     `;
   const desktopList = document.createElement('ul');
   desktopList.className = 'floating-toc-list';
-  desktopToc.appendChild(desktopList);
+  desktopInner.appendChild(desktopList);
+  desktopToc.appendChild(desktopInner);
+
+  // 固定表示の目次がレイアウト上で占める幅を確保するスペーサー
+  const desktopSlot = document.createElement('div');
+  desktopSlot.className = 'floating-toc-slot';
+  desktopSlot.appendChild(desktopToc);
+
+  // 目次を右へ格納した際に表示する再展開タブ
+  const desktopReopenBtn = document.createElement('button');
+  desktopReopenBtn.type = 'button';
+  desktopReopenBtn.className = 'floating-toc-reopen';
+  desktopReopenBtn.setAttribute('aria-expanded', 'false');
+  desktopReopenBtn.setAttribute('aria-label', '目次を展開する');
+  desktopReopenBtn.innerHTML = `
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="8" y1="6" x2="21" y2="6"></line>
+        <line x1="8" y1="12" x2="21" y2="12"></line>
+        <line x1="8" y1="18" x2="21" y2="18"></line>
+        <line x1="3" y1="6" x2="3.01" y2="6"></line>
+        <line x1="3" y1="12" x2="3.01" y2="12"></line>
+        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+      </svg>
+      <span>目次</span>
+    `;
 
   // モバイル用FAB & ドロワー
   const mobileToc = document.createElement('div');
@@ -957,7 +1024,7 @@ function generateTableOfContents() {
   mobileToc.appendChild(overlay);
   mobileToc.appendChild(drawer);
 
-  floatingWrapper.appendChild(desktopToc);
+  floatingWrapper.appendChild(desktopSlot);
   floatingWrapper.appendChild(mobileToc);
 
   const openDrawer = () => {
@@ -1029,7 +1096,7 @@ function generateTableOfContents() {
   // 4. イベントハンドラ & モバイルドロワー開閉制御
   // --------------------------------------------------
   bindTocToggleButton(tocHeader.querySelector('.toc-toggle-btn'), tocList);
-  bindTocToggleButton(desktopToc.querySelector('.floating-toc-toggle-btn'), desktopList);
+  bindDesktopTocToggle(desktopToc, desktopToc.querySelector('.floating-toc-toggle-btn'), desktopReopenBtn);
 
   fabBtn.addEventListener('click', () => {
     if (mobileToc.classList.contains('is-open')) {
@@ -1087,7 +1154,7 @@ function generateTableOfContents() {
   // --------------------------------------------------
   // 6. DOM要素への挿入
   // --------------------------------------------------
-  insertTocIntoReport(reportContent, toc, desktopToc, mobileToc, floatingWrapper);
+  insertTocIntoReport(reportContent, toc, desktopSlot, desktopReopenBtn, mobileToc, floatingWrapper);
 }
 
 // Announce page changes for screen readers
