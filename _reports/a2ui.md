@@ -2,7 +2,7 @@
 title: A2UI 調査レポート
 tool_name: A2UI
 tool_reading: エーツーユーアイ
-category: エージェントエコシステム/基盤
+category: エージェントスキル/標準仕様
 developer: Google
 official_site: https://a2ui.org/
 date: '2026-04-18'

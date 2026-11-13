@@ -2,7 +2,7 @@
 title: SkillsMP 調査レポート
 tool_name: SkillsMP
 tool_reading: スキルズエムピー / スキルズマーケットプレイス
-category: エージェントエコシステム/基盤
+category: エージェントスキル/標準仕様
 developer: SkillsMP
 official_site: https://skillsmp.com
 date: '2026-01-25'

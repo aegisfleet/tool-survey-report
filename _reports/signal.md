@@ -2,7 +2,7 @@
 title: Signal 調査レポート
 tool_name: Signal
 tool_reading: シグナル
-category: コラボレーション/生産性
+category: チャット/メッセージング
 developer: Signal Technology Foundation
 official_site: https://signal.org/
 date: '2026-08-11'

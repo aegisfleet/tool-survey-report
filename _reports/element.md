@@ -2,7 +2,7 @@
 title: Element 調査レポート
 tool_name: Element
 tool_reading: エレメント
-category: コラボレーション/生産性
+category: チャット/メッセージング
 developer: Element Creations Ltd
 official_site: https://element.io/
 date: '2026-08-11'
