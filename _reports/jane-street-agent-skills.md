@@ -1,58 +1,55 @@
 ---
-title: "Jane Street Agent Skills 調査レポート"
-tool_name: "Jane Street Agent Skills"
-tool_reading: "ジェーン ストリート エージェント スキルズ"
-category: "エージェントスキル/標準仕様"
-developer: "Jane Street"
-official_site: "https://github.com/janestreet/agent_skills"
-date: "2026-11-14"
-last_updated: "2026-11-14"
+title: Jane Street Agent Skills 調査レポート
+tool_name: Jane Street Agent Skills
+tool_reading: ジェーン ストリート エージェント スキルズ
+category: エージェントスキル/標準仕様
+developer: Jane Street
+official_site: https://github.com/janestreet/agent_skills
+date: '2026-11-14'
+last_updated: '2026-11-14'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "大規模言語モデル"
-  - "開発者ツール"
-description: "クオンツ取引大手Jane Streetが公開した、AIエージェントやチャットボット向けのオープンソーススキル集（socratic-tutor等）"
-
+  - AI
+  - エージェント
+  - オープンソース
+  - 大規模言語モデル
+  - 開発者ツール
+description: クオンツ取引大手Jane Streetが公開した、AIエージェントやチャットボット向けのオープンソーススキル集（socratic-tutor等）
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェアエンジニア"
-    - "AIエージェント利用者"
-    - "独学者・教育者"
-  latest_highlight: "2026年11月にJane StreetがMITライセンスでリポジトリを公開し、ソクラテス式指導スキル「socratic-tutor」を提供"
-  update_frequency: "不定期"
-
+    - ソフトウェアエンジニア
+    - AIエージェント利用者
+    - 独学者・教育者
+  latest_highlight: 2026年11月にJane StreetがMITライセンスでリポジトリを公開し、ソクラテス式指導スキル「socratic-tutor」を提供
+  update_frequency: 不定期
 evaluation:
   score: 77
   base_score: 70
   plus_points:
     - point: 5
-      reason: "汎用性の高いSKILL.md形式に準拠し、コーディングエージェントから通常のチャットボットまで幅広く動作"
+      reason: 汎用性の高いSKILL.md形式に準拠し、コーディングエージェントから通常のチャットボットまで幅広く動作
     - point: 5
-      reason: "診断テスト・0〜5のスキルマップ・間隔反復復習を組み合わせた厳格かつ体系的な指導設計"
+      reason: 診断テスト・0〜5のスキルマップ・間隔反復復習を組み合わせた厳格かつ体系的な指導設計
     - point: 3
-      reason: "MITライセンスの完全オープンソースで、外部依存や追加コストなしに即座に導入可能"
+      reason: MITライセンスの完全オープンソースで、外部依存や追加コストなしに即座に導入可能
   minus_points:
     - point: -3
-      reason: "2026年11月公開時点では収録スキルがsocratic-tutorの1種類のみでバリエーションが限定的"
+      reason: 2026年11月公開時点では収録スキルがsocratic-tutorの1種類のみでバリエーションが限定的
     - point: -3
-      reason: "スキル定義やトリガーフレーズが英語前提であり、日本語利用にはプロンプト調整が必要"
-  summary: "単なる回答生成ではなく思考を促す高品質なエージェントスキルを、依存ゼロの軽量構成で提供する注目リポジトリ"
-
+      reason: スキル定義やトリガーフレーズが英語前提であり、日本語利用にはプロンプト調整が必要
+  summary: 単なる回答生成ではなく思考を促す高品質なエージェントスキルを、依存ゼロの軽量構成で提供する注目リポジトリ
 links:
-  github: "https://github.com/janestreet/agent_skills"
+  github: https://github.com/janestreet/agent_skills
 relationships:
-  parent: "Agent Skills"
+  parent: Agent Skills
   related_tools:
-    - "Anthropic Agent Skills"
-    - "Vercel Agent Skills"
-    - "Gemini Skills"
-    - "Claude Code"
-    - "OpenAI Codex CLI"
+    - Anthropic Agent Skills
+    - Vercel Agent Skills
+    - Gemini Skills
+    - Claude Code
+    - OpenAI Codex CLI
 ---
 
 # **Jane Street Agent Skills 調査レポート**
