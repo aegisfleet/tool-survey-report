@@ -2,7 +2,7 @@
 title: Agent Plugins 調査レポート
 tool_name: Agent Plugins
 tool_reading: エージェントプラグインズ
-category: エージェントエコシステム/基盤
+category: エージェントスキル/標準仕様
 developer: Agent Plugins Project (Open Source)
 official_site: https://agent-plugins.org/
 date: '2026-08-16'

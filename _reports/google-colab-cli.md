@@ -2,7 +2,7 @@
 title: Google Colab CLI 調査レポート
 tool_name: Google Colab CLI
 tool_reading: グーグル コラボ シーエルアイ
-category: AI開発ワークフロー
+category: クラウドサービス
 developer: Google
 official_site: https://colab.research.google.com/
 date: '2026-11-08'

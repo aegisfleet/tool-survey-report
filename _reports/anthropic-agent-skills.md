@@ -2,7 +2,7 @@
 title: Anthropic Agent Skills 調査レポート
 tool_name: Anthropic Agent Skills
 tool_reading: アンスロピック エージェント スキルズ / エージェント スキルズ
-category: エージェントエコシステム/基盤
+category: エージェントスキル/標準仕様
 developer: Anthropic
 official_site: https://agentskills.io
 date: '2026-11-13'

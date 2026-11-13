@@ -2,7 +2,7 @@
 title: Beeper 調査レポート
 tool_name: Beeper
 tool_reading: ビーパー
-category: コラボレーション/生産性
+category: チャット/メッセージング
 developer: Automattic Inc.
 official_site: https://www.beeper.com/
 date: '2026-11-11'

@@ -2,7 +2,7 @@
 title: SkyPhone 調査レポート
 tool_name: SkyPhone
 tool_reading: スカイフォン
-category: コラボレーション/生産性
+category: チャット/メッセージング
 developer: 株式会社クアッドシステム (QuadSystem Co., Ltd.)
 official_site: https://www.skyphone.jp/
 date: '2026-07-23'

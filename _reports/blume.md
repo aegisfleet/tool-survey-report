@@ -2,7 +2,7 @@
 title: Blume 調査レポート
 tool_name: Blume
 tool_reading: ブルーム
-category: AI開発ワークフロー
+category: ドキュメント生成
 developer: Hayden Bleasel (オープンソース)
 official_site: https://useblume.dev/
 date: '2026-07-15'

@@ -2,7 +2,7 @@
 title: AsyncReview 調査レポート
 tool_name: AsyncReview
 tool_reading: アシンクレビュー
-category: コード品質/静的解析
+category: AIコードレビュー
 developer: AsyncFuncAI
 official_site: https://github.com/AsyncFuncAI/AsyncReview
 date: '2026-10-17'
