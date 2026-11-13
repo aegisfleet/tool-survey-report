@@ -40,6 +40,7 @@ links:
 relationships:
   children:
     - Anthropic Agent Skills
+    - Jane Street Agent Skills
   related_tools:
     - Model Context Protocol
     - MCP Apps
