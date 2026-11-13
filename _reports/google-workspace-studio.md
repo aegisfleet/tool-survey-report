@@ -31,6 +31,9 @@ evaluation:
     - point: -0.0
       reason: 特になし
   summary: Google Workspaceエコシステム内で完結する自動化において非常に強力
+relationships:
+  related_tools:
+    - Make
 ---
 
 # **Google Workspace Studio 調査レポート**
