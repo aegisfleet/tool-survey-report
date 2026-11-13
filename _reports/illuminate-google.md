@@ -41,6 +41,7 @@ links:
 relationships:
   related_tools:
     - NotebookLM
+    - Google Learning
 ---
 # **Google Illuminate 調査レポート**
 
