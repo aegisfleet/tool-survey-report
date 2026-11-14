@@ -850,7 +850,8 @@ function bindDesktopTocToggle(desktopToc, toggleBtn, reopenBtn) {
     desktopToc.classList.toggle('is-collapsed', collapsed);
     desktopToc.toggleAttribute('inert', collapsed);
     toggleBtn.setAttribute('aria-expanded', String(!collapsed));
-    toggleBtn.setAttribute('aria-label', collapsed ? '目次を展開する' : '目次を折りたたむ');
+    toggleBtn.setAttribute('aria-label', collapsed ? '目次を表示する' : '目次を右に格納する');
+    toggleBtn.setAttribute('title', collapsed ? '目次を表示する' : '目次を右に格納する');
     reopenBtn.setAttribute('aria-expanded', String(!collapsed));
 
     if (focusTarget) {
@@ -933,9 +934,10 @@ function generateTableOfContents() {
           </svg>
           目次
         </span>
-        <button type="button" class="floating-toc-toggle-btn" aria-expanded="true" aria-label="目次を折りたたむ">
-          <svg class="toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
+        <button type="button" class="floating-toc-toggle-btn" aria-expanded="true" aria-label="目次を右に格納する" title="目次を右に格納する">
+          <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="5 7 10 12 5 17"></polyline>
+            <polyline points="12 7 17 12 12 17"></polyline>
           </svg>
         </button>
       </div>
@@ -955,15 +957,11 @@ function generateTableOfContents() {
   desktopReopenBtn.type = 'button';
   desktopReopenBtn.className = 'floating-toc-reopen';
   desktopReopenBtn.setAttribute('aria-expanded', 'false');
-  desktopReopenBtn.setAttribute('aria-label', '目次を展開する');
+  desktopReopenBtn.setAttribute('aria-label', '目次を表示する');
+  desktopReopenBtn.setAttribute('title', '目次を表示する');
   desktopReopenBtn.innerHTML = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="8" y1="6" x2="21" y2="6"></line>
-        <line x1="8" y1="12" x2="21" y2="12"></line>
-        <line x1="8" y1="18" x2="21" y2="18"></line>
-        <line x1="3" y1="6" x2="3.01" y2="6"></line>
-        <line x1="3" y1="12" x2="3.01" y2="12"></line>
-        <line x1="3" y1="18" x2="3.01" y2="18"></line>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="14 7 9 12 14 17"></polyline>
       </svg>
       <span>目次</span>
     `;

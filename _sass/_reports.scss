@@ -1586,7 +1586,8 @@ h3:hover .heading-anchor {
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0);
-    transition: transform 0.35s cubic-bezier(0, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0s;
+    transition: transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.18s ease 0.08s,
+      visibility 0s linear 0s;
 
     // パネル本体。高さが収まらない場合はここでスクロールする
     .floating-toc-inner {
@@ -1602,13 +1603,14 @@ h3:hover .heading-anchor {
     }
 
     // 目次をページ右外へスライドさせて格納する
+    // 透明化は移動の終盤に寄せ、右へ抜けていく動きが見えるようにする
     &.is-collapsed {
       opacity: 0;
       pointer-events: none;
       visibility: hidden;
       transform: translateX(calc(100% + 2rem));
-      transition: transform 0.35s cubic-bezier(0.4, 0, 1, 1), opacity 0.25s ease 0.1s,
-        visibility 0s linear 0.35s;
+      transition: transform 0.42s cubic-bezier(0.4, 0, 0.7, 1), opacity 0.14s ease 0.28s,
+        visibility 0s linear 0.42s;
     }
 
     .floating-toc-header {
@@ -1637,15 +1639,24 @@ h3:hover .heading-anchor {
         border-radius: 4px;
         display: flex;
         align-items: center;
-        transition: background-color 0.2s, transform 0.2s;
+        // 右向きの二重矢印で「右へ格納される」ことを示す
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        .toggle-icon {
+          transition: transform 0.2s ease;
+        }
 
         &:hover {
           background: rgba(0, 0, 0, 0.05);
           color: var(--color-primary);
+
+          .toggle-icon {
+            transform: translateX(3px);
+          }
         }
 
         &[aria-expanded="false"] .toggle-icon {
-          transform: rotate(-90deg);
+          transform: rotate(180deg);
         }
       }
     }
@@ -1709,11 +1720,11 @@ h3:hover .heading-anchor {
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 12px 8px;
+  gap: 8px;
+  padding: 16px 9px;
   border: 1px solid var(--color-border);
   border-right: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 12px 0 0 12px;
   background: var(--color-bg-content);
   color: var(--color-text);
   box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.08);
@@ -1723,6 +1734,7 @@ h3:hover .heading-anchor {
   svg {
     flex-shrink: 0;
     color: var(--color-primary);
+    transition: transform 0.2s ease;
   }
 
   span {
@@ -1738,19 +1750,27 @@ h3:hover .heading-anchor {
     background: var(--color-bg-main);
   }
 
+  // 左向き矢印を左へ寄せ、「手前に引き出せる」ことを示す
+  &:hover svg {
+    transform: translateX(-2px);
+  }
+
   &:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
 }
 
-@keyframes floating-toc-tab-appear {
+// 格納された目次パネルが右端から現れる動きを再現する
+@keyframes floating-toc-tab-slide-in {
   from {
     opacity: 0;
+    transform: translateX(110%);
   }
 
   to {
     opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -1761,7 +1781,7 @@ h3:hover .heading-anchor {
     top: 90px;
     right: 0;
     z-index: 100;
-    animation: floating-toc-tab-appear 0.2s ease 0.3s both;
+    animation: floating-toc-tab-slide-in 0.26s cubic-bezier(0, 0, 0.2, 1) 0.26s backwards;
   }
 
   .report-page-layout.is-toc-collapsed .floating-toc-reopen:hover,
@@ -1774,8 +1794,16 @@ h3:hover .heading-anchor {
   .floating-toc-slot,
   .floating-toc-desktop,
   .floating-toc-desktop.is-collapsed,
-  .floating-toc-reopen {
+  .floating-toc-reopen,
+  .floating-toc-desktop .floating-toc-header .floating-toc-toggle-btn .toggle-icon,
+  .floating-toc-reopen svg {
     transition: none;
+  }
+
+  .floating-toc-desktop .floating-toc-header .floating-toc-toggle-btn:hover .toggle-icon,
+  .floating-toc-reopen:hover svg,
+  .floating-toc-reopen:focus-visible svg {
+    transform: none;
   }
 
   .report-page-layout.is-toc-collapsed .floating-toc-reopen {
