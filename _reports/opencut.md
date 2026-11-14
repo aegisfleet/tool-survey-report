@@ -50,6 +50,7 @@ relationships:
     - DaVinci Resolve
     - AviUtl
     - Apple Creator Studio
+    - Remotion
 ---
 
 # **OpenCut 調査レポート**

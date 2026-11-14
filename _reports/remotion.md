@@ -6,15 +6,16 @@ category: 動画編集
 developer: Remotion AG
 official_site: https://www.remotion.dev/
 date: '2026-02-23'
-last_updated: '2026-06-02'
+last_updated: '2026-11-14'
 tags:
   - 動画編集
   - React
   - TypeScript
-  - プログラマブルビデオ
   - 動画生成
   - 開発者ツール
-description: Reactを使用して動画をプログラムで作成できるフレームワーク。Web技術を活用し、動的でデータ駆動型の動画コンテンツを生成・自動化可能。
+  - 自動化
+  - AIエージェント
+description: Reactを使用して動画をプログラムで作成できるフレームワーク。Web技術とWebGPU/FFmpegを活用し、動的でデータ駆動型の動画コンテンツ生成・自動化やAIエージェント連携を実現。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -23,7 +24,7 @@ quick_summary:
     - Web開発者
     - スタートアップ
     - SaaS企業
-  latest_highlight: 2026年5月にエフェクトシステム（@remotion/effects）やHtmlInCanvasコンポーネントを追加
+  latest_highlight: 2026年11月に全エフェクトのWebGPU対応（v4.0.540）、Lambdaストリーミング出力やOpenTimelineIOインポート（v4.0.542）、Studioオーディオレベルメーター（v4.0.543）を追加
   update_frequency: 高
 evaluation:
   score: 88
@@ -32,15 +33,15 @@ evaluation:
     - point: 5
       reason: React/TypeScriptの知識をそのまま活かして高品質な動画を作成できる
     - point: 5
-      reason: Gitによるバージョン管理やCI/CDとの統合が可能で、動画制作の自動化に最適
+      reason: Gitによるバージョン管理やCI/CD、AIエージェント（Agent Skills/WebMCP）との統合が可能で動画制作の自動化に最適
     - point: 5
-      reason: Web RendererやLambdaを活用した、サーバーサイドおよびクライアントサイドでの動的生成が可能
+      reason: Web RendererやWebGPUエフェクト、AWS Lambdaを活用したクライアント・サーバー双方での高速な動的生成が可能
     - point: 3
-      reason: 個人や小規模チーム（3人以下）は商用利用を含めて無料で利用可能
+      reason: 個人や小規模チーム（3人以下）、非営利団体は商用利用を含めて無料で利用可能
   minus_points:
     - point: 0
       reason: ''
-  summary: React開発者にとって最強の動画生成ツール。動的な動画生成や自動化において圧倒的な強みを持つ。
+  summary: React開発者やAIエージェント連携による動画自動生成において圧倒的な強みを持つプログラマブル動画フレームワーク。
 links:
   github: https://github.com/remotion-dev/remotion
   deepwiki: https://deepwiki.com/remotion-dev/remotion
@@ -50,16 +51,11 @@ relationships:
   related_tools:
     - DaVinci Resolve
     - AviUtl
+    - OpenCut
 ---
 # **Remotion 調査レポート**
 
 ## **1. 基本情報**
-
-<!--
-【ガイドライン】
-- 必須: ツール名、開発元、公式サイト、カテゴリ、概要
-- 概要は2-3文で簡潔に記述
--->
 
 * **ツール名**: Remotion
 * **ツールの読み方**: リモーション
@@ -67,317 +63,281 @@ relationships:
 * **公式サイト**: [https://www.remotion.dev/](https://www.remotion.dev/)
 * **関連リンク**:
   * GitHub: [https://github.com/remotion-dev/remotion](https://github.com/remotion-dev/remotion)
+  * DeepWiki: [https://deepwiki.com/remotion-dev/remotion](https://deepwiki.com/remotion-dev/remotion)
   * ドキュメント: [https://www.remotion.dev/docs/](https://www.remotion.dev/docs/)
-  * レビューサイト: [Product Hunt](https://www.producthunt.com/products/remotion)
-* **カテゴリ**: 動画/メディア
-* **概要**: Remotionは、Reactを使用してMP4動画をプログラムで作成できるライブラリです。HTML、CSS、SVGなどの標準的なWeb技術を使用して動画の各フレームをレンダリングし、FFmpegを使用して動画ファイルとして出力します。データに基づいた動的な動画生成や、Webアプリケーションへの動画編集機能の組み込みに特化しています。
+  * レビューサイト: [Product Hunt](https://www.producthunt.com/products/remotion) | [G2](https://www.g2.com/products/remotion/reviews)
+* **カテゴリ**: 動画編集
+* **概要**: Remotionは、Reactを使用してMP4やProRes等の動画をプログラムで作成できるフレームワークです。HTML、CSS、SVG、WebGPUなどの標準的なWeb技術で各フレームを描画し、FFmpegやMediabunnyを用いて動画ファイルとして出力します。データ駆動型の動的動画生成や、ブラウザ上のインタラクティブなプレビュー編集（Remotion Studio）、AIコーディングエージェントとの連携に特化しています。
 
 ## **2. 目的と主な利用シーン**
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 想定利用者を具体的に記載
--->
-
-* **解決する課題**: 従来の手動による動画編集作業をコード化することで、バージョン管理を可能にし、テンプレート化による再利用性や、データに基づいた大量生成（Personalized Video）を実現します。
-* **想定利用者**: React/Web開発者、動画自動生成システムを構築したい企業
+* **解決する課題**: 従来の手動による動画編集作業をコード化（Video as Code）することで、Gitによるバージョン管理、テンプレート化による再利用性、外部データに基づく大量自動生成（Personalized Video）を実現します。
+* **想定利用者**: React/Web開発者、AIエージェントを活用して動画を生成したいクリエイター・開発チーム、動画自動生成システムを構築したいSaaS企業
 * **利用シーン**:
-  * ユーザーごとのデータに基づいた「Year in Review」のようなパーソナライズド動画の生成
-  * SNS向けのマーケティング動画の自動生成・量産
-  * Webアプリケーション内での動的プレビュー機能（Remotion Player）の実装
-  * コードの説明動画や技術チュートリアルの作成
+  * ユーザーごとのデータに基づいた「Year in Review」のようなパーソナライズド動画の大量生成
+  * SNS・プロダクトデモ向けのマーケティング動画の自動生成（Agent Skillsを活用したプロンプトからの生成を含む）
+  * Webアプリケーション内での動的プレビュー・編集機能（Remotion Player / `@remotion/web-renderer`）の実装
+  * コードの説明動画や技術チュートリアル、データ可視化アニメーションの作成
+
+### **2.1 代表的な利用フロー**
+
+```mermaid
+swimlane-beta TB
+  subgraph Developer["開発者・AIエージェント"]
+    A["Reactコンポーネント・プロンプト作成"]
+    E["Studio上で直感的に微調整・コード反映"]
+  end
+  subgraph Studio["Remotion Studio / CLI"]
+    B["フレーム単位のプレビュー・WebMCP連携"]
+    C["レンダリングジョブの起動"]
+  end
+  subgraph Renderer["Chrome / WebGPU / FFmpeg"]
+    D["各フレーム描画と動画エンコード"]
+  end
+  subgraph Cloud["AWS Lambda / Vercel"]
+    F["並列分散レンダリングとMP4出力"]
+  end
+  A --> B
+  B --> E
+  E --> C
+  C -->|"ローカル出力"| D
+  C -->|"クラウド並列出力"| F
+```
+
+* **代表的な流れ**: 開発者（またはAgent Skillsを組み込んだAIエージェント）がReactで動画コンポジションを作成すると、Remotion Studioがリアルタイムにプレビューし、キャンバス上の直接操作やWebMCPを通じたコード修正が可能です。完成したプロジェクトはローカルのChrome＋FFmpegでエンコードするか、AWS Lambda等のサーバーレス環境でチャンク並列レンダリングしてMP4等に出力します。
 
 ## **3. 主要機能**
 
-<!--
-【ガイドライン】
-- 5-10項目の主要機能を箇条書きで記述
-- 各機能は1-2文で概要を説明
--->
+* **Reactによる動画構成**: コンポーネントベースで動画のシーンや要素を管理し、`useCurrentFrame()` 等のフックでフレーム単位のアニメーションと再利用可能なテンプレートを構築可能。
+* **インタラクティブな Remotion Studio**: ブラウザベースのプレビュー環境に加え、2026年6月以降はキャンバス上での要素選択・ドラッグ・リサイズ・クロップ等の操作を直接コードへ書き戻すインタラクティブ編集に対応。オーディオレベルメーターやOpenTimelineIOインポートも備えます。
+* **Browser Studio (`remotion.new`)**: Rspack Browser APIを活用したブラウザ完結型Studioにより、ローカル環境構築なしで仮想ファイルシステム上の編集やRemotion Elementsの試用が可能。
+* **Agent Skills & WebMCP連携**: Claude Code、Cursor、Codex等のAIエージェント向けに公式スキル群（`remotion-dev/skills`）およびStudioを操作・エラー取得できるWebMCPツールを提供。
+* **Remotion Elements & 拡張パッケージ群**: インストール可能なUI/モーショングラフィックス集（Remotion Elements）に加え、`@remotion/effects`（全エフェクトWebGPU/WebGL2対応）、`@remotion/gsap`、`@remotion/whisper-webgpu`（ローカル音声文字起こし）、`@remotion/video-matting` などを提供。
+* **Remotion Player & クライアントサイドレンダリング**: 生成した動画をReactアプリ内で再生・操作できるPlayerと、ブラウザ上で直接書き出す `@remotion/web-renderer`（Mediabunny採用）を搭載。
+* **Remotion Lambda / Vercel**: AWS Lambdaで動画をチャンク分割・並列レンダリングし、ストリーミング出力（`renderMediaOnLambdaAndStream()`）にも対応するサーバーレス基盤。
 
-* **Reactによる動画構成**: コンポーネントベースで動画のシーンや要素を管理し、再利用可能なテンプレートを作成可能。
-* **Remotion Player**: 生成した動画をReactアプリケーション内で直接再生・操作できるプレイヤーコンポーネントを提供。
-* **Remotion Lambda**: AWS Lambdaを使用して、サーバーレスで高速・並列に動画をレンダリングする機能。
-* **Remotion Studio**: ブラウザベースのプレビュー環境で、タイムラインを確認しながら効率的に開発・デバッグが可能。
-* **パラメータ化**: JSONなどの外部データを受け取り、コンテンツを動的に変化させる動画テンプレートを作成可能。
-* **Web Renderer**: ブラウザ上で直接動画をレンダリングする機能（クライアントサイドレンダリング）。
-* **Remotion on Vercel**: Vercel Functionsを使用して動画をレンダリングするための公式パッケージ（v4.0.426で強化）。
-* **エフェクトシステム**: `@remotion/effects`により、ブラーや波形などの視覚効果を容易に追加可能。
-* **HtmlInCanvas**: キャンバス内でのHTML要素の描画サポート。
+## **4. 動作原理・システム構成**
 
-## **4. 開始手順・セットアップ**
+* **アーキテクチャ**: ローカル実行およびサーバーレス（AWS Lambda / Google Cloud Run / Vercel）の双方で動作する「ヘッドレスブラウザ駆動型レンダリングパイプライン」と、ブラウザ内で完結する「クライアントサイドレンダリング（WebCodecs / Mediabunny）」のハイブリッド構成を採用しています。
+* **主要コンポーネントとデータフロー**:
+  * **バンドラー層（Webpack / Rspack 2.3）**: React/TypeScriptコードをバンドルし、StudioのFast Refreshやレンダリング用バンドルを生成します。
+  * **描画・メディア層（Headless Chrome / WebGPU / `@remotion/media`）**: 指定フレーム時刻ごとにHeadless ChromeでHTML/CSS/SVG/WebGL/WebGPUを描画し、`<OffthreadVideo>` やMediabunnyベースの `@remotion/media` で映像・音声フレームを正確に同期・抽出します。
+  * **エンコード層（Shared Memory Capture + FFmpeg）**: Chromeから取得したフレームデータを共有メモリ（Shared Memory Capture）経由でFFmpegへ並列受け渡しし、MP4（H.264/H.265）やProRes等にエンコードします。
 
-<!--
-【ガイドライン】
-- アカウント作成から「Hello World」的な最初の動作確認までの手順
-- 主要なコマンドや設定項目を記載
--->
+```mermaid
+flowchart TD
+  subgraph Input_Layer["入力・開発層"]
+    ReactCode["React / TypeScript コンポジション"]
+    PropsData["外部JSONデータ / Input Props"]
+    Bundler["Rspack / Webpack バンドラー"]
+  end
+  subgraph Render_Engine["描画・フレーム処理層"]
+    Chrome["Headless Chrome (フレーム単位シーク)"]
+    WebGPU["WebGPU / WebGL2 (@remotion/effects)"]
+    Media["@remotion/media (Mediabunny)"]
+  end
+  subgraph Encode_Output["エンコード・出力層"]
+    Shm["共有メモリキャプチャ (バックプレッシャー制御)"]
+    FFmpeg["FFmpeg (並列エンコード)"]
+    Output["MP4 / WebM / ProRes / 画像シーケンス"]
+  end
+  ReactCode --> Bundler
+  PropsData --> Bundler
+  Bundler --> Chrome
+  Chrome --> WebGPU
+  Media --> Chrome
+  Chrome --> Shm
+  Shm --> FFmpeg
+  FFmpeg --> Output
+```
+
+* **特筆すべき要素技術**:
+  * **フレーム同期と `premountFor`**: 非同期リソース読み込みによるフレーム落ちを防ぐ `delayRender()` 機構と、コンポーネントを事前にマウントしてメディアを準備する `premountFor`（2026年10月よりStudioでデフォルト2秒）を採用。
+  * **WebGPU & 共有メモリ最適化**: 全エフェクトのWebGPUバックエンド化とChrome–FFmpeg間の共有メモリ転送・バックプレッシャー制御により、高解像度レンダリングのメモリ効率と速度を高めています。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Node.js (最新のLTS推奨)
-  * FFmpeg (Remotionが自動的にダウンロード・管理可能)
+  * Node.js（最新のLTS推奨）
+  * FFmpeg（未導入の場合はRemotionが自動でバイナリを取得・管理可能）
+  * アカウント登録・クレジットカード登録は不要（Free License対象の場合）
 * **インストール/導入**:
 
   ```bash
   # 新規プロジェクトの作成
+  npx create-video@latest
+  # または
   npm init video
   ```
 
 * **初期設定**:
-  * `remotion.config.ts` で解像度やFPS、出力設定などを構成。
+  * `remotion.config.ts` で解像度、FPS、Rspackの有効化、並列度などを構成します。
+  * AIコーディングエージェントと併用する場合は、公式Agent Skillsを追加できます。
+
+  ```bash
+  # Agent Skillsのインストール（任意）
+  npx -y skills@latest add remotion-dev/skills
+  ```
+
 * **クイックスタート**:
 
   ```bash
-  # プレビューサーバーの起動 (Studio)
+  # プレビューサーバーの起動 (Remotion Studio)
   npm start
 
-  # 動画のレンダリング
-  npm run build
+  # 動画のレンダリング (MP4出力)
+  npx remotion render
   ```
 
-## **5. 特徴・強み (Pros)**
+  * 環境構築を行わずに試したい場合は、ブラウザ上で動作する `https://remotion.new`（Browser Studio）から即座にプロトタイピングが可能です。
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 競合との差別化ポイントを明確に
--->
+## **6. 特徴・強み (Pros)**
 
-* **Web技術のフル活用**: CSS Flexbox/Gridによるレイアウトや、SVGアニメーションなど、Web開発の知識をそのまま動画制作に応用できます。
-* **バージョン管理とCI/CD**: 動画プロジェクトがコード（テキスト）であるため、Gitによるバージョン管理や、GitHub Actions等での自動レンダリングが容易です。
-* **動的生成能力**: APIから取得したデータやユーザー入力に基づいて、リアルタイムに内容が変わる動画を生成できます。
-* **エコシステム**: Reactのエコシステム（ライブラリやツール）を活用でき、Three.jsなどの3Dライブラリや、Zodなどのバリデーションライブラリと連携可能です。
+* **Web技術のフル活用**: CSS Flexbox/Gridによるレイアウト、SVG、Three.js（`<ThreeWebGPUCanvas>`）、GSAP（`@remotion/gsap`）など、Web開発の資産をそのまま動画制作に応用できます。
+* **バージョン管理・CI/CD・AI親和性**: 動画プロジェクトがテキスト（TSX/JSON）であるため、Gitによる差分管理やGitHub Actionsでの自動レンダリングに加え、AIエージェントによるコード生成・修正との相性が極めて良好です。
+* **コードとGUIの両立**: 従来のコード専用ツールと異なり、Remotion Studio上で要素のドラッグ配置やカラーカーブ調整を行い、結果をソースコードへ反映できます。
+* **スケーラブルな出力基盤**: ローカルでの単発出力から、AWS Lambdaを用いた数千〜数万本の並列バッチ生成、ブラウザ上のクライアントサイド書き出しまで同一コードで対応できます。
 
-## **6. 弱み・注意点 (Cons)**
+## **7. 弱み・注意点 (Cons)**
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 日本語対応の状況は必ず含める
--->
+* **学習コストとエンジニア前提の設計**: ReactやTypeScriptの知識が前提となるため、非エンジニアの動画編集者には導入ハードルが高めです。
+* **レンダリングリソース消費**: 複雑な動画や長時間の動画ではHeadless ChromeとFFmpegがCPU・メモリを多く消費するため、大量生成時はLambda等の外部計算資源の設計が必要です。
+* **高度な3D/VFXの表現限界**: 映画レベルの高度なコンポジットや物理シミュレーションは、After EffectsやDaVinci Resolve Fusionなどの専用DCCツールに譲る面があります。
+* **日本語対応の状況**: 公式ドキュメントやRemotion StudioのUIは基本的に英語で提供されています（動画内の日本語フォント描画や日本語字幕処理自体はUTF-8/Webフォントで問題なく対応可能）。
 
-* **レンダリングリソース**: 複雑な動画や長時間の動画のレンダリングには、計算リソース（メモリやCPU）を多く消費します。
-* **学習コスト**: 動画編集の知識に加えて、ReactやTypeScriptの知識が必須となるため、非エンジニアにはハードルが高いです。
-* **リアルタイム性の制限**: 高度なエフェクトや物理シミュレーションは、専用の動画編集ソフト（After Effects等）やゲームエンジンに比べるとパフォーマンスや表現力で劣る場合があります。
-
-## **7. 料金プラン**
-
-<!--
-【ガイドライン】
-- 表形式で整理することを推奨
-- 最新の料金情報であることを確認
-- 価格は通貨を明記（例: $10/月、¥1,000/月）
--->
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Free License** | 無料 | 個人、または3人以下の小規模チーム向け。動画生成数無制限、商用利用可。 |
-| **Company License** | $25/月/席<br>または<br>$100/月〜 | 4人以上のチーム向け。「Creators（座席課金）」と「Automators（レンダリング課金）」の2プランあり。 |
-| **Enterprise License** | お問い合わせ | カスタム契約、請求書払い、コンプライアンス対応、Slack/Discordでのプライベートサポート。 |
+| **Free License** | 無料 | 個人（商用・非商用問わず）、3人以下の営利法人、すべての非営利団体、評価目的の利用。全機能利用可・生成数無制限。 |
+| **Company License (Creators)** | $25/月/席 | 4人以上の営利企業向け。StudioやAIエージェントを用いた手動・少部数制作向けの座席課金プラン。 |
+| **Company License (Automators)** | $0.01/レンダー<br>（最低$100/月） | 4人以上の営利企業向け。バッチ処理、Prompt-to-Videoアプリ、Remotion Player組み込み等の自動生成プロダクト向け従量課金。 |
+| **Enterprise License** | $500/月〜 | カスタム契約・請求書払い、専用Slack/Discord/Teamsサポート、コンプライアンス文書対応、月次コンサルティング、Editor Starter付属。 |
 
-* **課金体系**:
-  * **Remotion for Creators**: 開発者の人数に応じた座席課金（$25/月/人）。
-  * **Remotion for Automators**: レンダリング数に応じた従量課金（$0.01/レンダー、最低$100/月）。
-* **無料トライアル**: Free Licenseが無期限で利用可能（条件を満たす場合）。
+* **課金体系**: 企業規模（4人以上の営利組織か否か）と利用形態（Creators：制作者席数単位 / Automators：レンダリング実行回数単位）によるハイブリッドライセンス体系です。2026年11月に旧ライセンスポータル（`remotion.pro`）は廃止され、公式サイトの料金ページ（`https://www.remotion.dev/pricing`）へ統合されました。
+* **無料トライアル**: 評価目的での利用は期間制限なくFree Licenseで検証可能です。
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
-<!--
-【ガイドライン】
-- 具体的な企業名を3-5社挙げる
-- 導入事例がない場合は「公開事例なし。ただし、〜の分野での利用が報告されている」等
--->
-
-* **導入企業**: GitHub, Spotify, Meta, Googleなど、大手テック企業での活用事例や、多くのスタートアップでの採用実績があります。
+* **導入企業**: GitHub, Spotify, Meta, Google, Vercel など大手テック企業や多数のSaaSスタートアップで採用されています。
 * **導入事例**:
-  * **GitHub**: GitHub Unwrappedなどのキャンペーン動画生成に活用。
-  * **Spotify**: Spotify Wrappedのようなパーソナライズド体験のプロトタイピングや生成。
-* **対象業界**: SaaS、マーケティングテック、エンターテインメント、Eラーニングなど。
+  * **GitHub**: 「GitHub Unwrapped」などの開発者向けパーソナライズド振り返り動画キャンペーンの大量生成に活用。
+  * **Spotify**: パーソナライズド体験のプロトタイピングや動的メディア生成に活用。
+* **対象業界**: SaaS、マーケティングテック、デベロッパーツール、エンターテインメント、Eラーニングなど。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
-<!--
-【ガイドライン】
-- ドキュメント、コミュニティ、公式サポートの3項目を必ず含める
-- URLがあれば記載
--->
+* **ドキュメント**: 公式ドキュメント（[remotion.dev/docs](https://www.remotion.dev/docs/)）は非常に充実しており、APIリファレンス、チュートリアル、Elementライブラリ、AIエージェント連携ガイドが整備されています。
+* **コミュニティ**: 公式Discordコミュニティ（6,000人以上が参加）やGitHub Discussionsが活発に運営されています。
+* **公式サポート**: Companyプラン以上で商用サポートの対象となり、Enterpriseプラン（$500/月〜）ではプライベートなSlack/Discord/Microsoft Teamsチャンネルでの優先サポートや月次コンサルティングが提供されます。
 
-* **ドキュメント**: 公式ドキュメントは非常に充実しており、チュートリアル、APIリファレンス、サンプル集が整備されています。
-* **コミュニティ**: Discordコミュニティが非常に活発で、6000人以上のメンバーが参加しています。
-* **公式サポート**: Companyプラン以上で優先サポートが提供されます。
+## **11. エコシステムと連携**
 
-## **10. エコシステムと連携**
+### **11.1 API・外部サービス連携**
 
-<!--
-【ガイドライン】
-- API、外部連携、技術スタックとの相性を包括的に記述
--->
-
-### **10.1 API・外部サービス連携**
-
-<!--
-【ガイドライン】
-- APIの有無と公開状況を明記
-- 主要連携サービスを5-10個リストアップ
--->
-
-* **API**: Node.js APIを提供しており、バックエンドシステムからレンダリングをトリガーできます。
+* **API**: `@remotion/renderer`（Node.js API）および `@remotion/lambda-client` / `@remotion/serverless-client` を提供しており、バックエンドやCLIからレンダリング・ストリーミング出力を制御できます。GoやPHP向けのLambda SDKも用意されています。
 * **外部サービス連携**:
-  * **AWS Lambda**: サーバーレスレンダリングのための公式パッケージを提供。
-  * **Vercel**: Vercel Functionsでのレンダリングをサポート（v4.0.426〜）。
-  * **Google Cloud Run**: コンテナベースのレンダリングに対応。
-  * **ElevenLabs**: テキスト読み上げとキャプション生成用の専用パッケージ `@remotion/elevenlabs` を提供。
+  * **AWS Lambda**: `@remotion/lambda` によりサーバーレス並列レンダリングとS3/R2出力に対応。
+  * **Vercel**: `@remotion/vercel` によりVercel Functions / Vercel Sandboxでのレンダリングに対応。
+  * **Google Cloud Run**: `@remotion/cloudrun` によりコンテナベースのサーバーレスレンダリングに対応。
+  * **ElevenLabs**: `@remotion/elevenlabs` による音声合成・キャプション生成連携。
+  * **AIエージェント（Claude Code / Cursor / Codex）**: `remotion-dev/skills` およびWebMCPによる開発・編集自動化。
+  * **OpenTimelineIO / Figma**: タイムラインデータのインポートやデザインアセットの取り込みに対応。
 
-### **10.2 技術スタックとの相性**
-
-<!--
-【ガイドライン】
-- 主要なフレームワークや言語との相性を表形式で整理
-- 相性: ◎ (非常に良い), ◯ (良い), △ (工夫が必要/一部非対応), × (非推奨)
--->
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Next.js** | ◎ | 公式テンプレートあり、SSRとの親和性が高い | 特になし |
-| **React** | ◎ | ベース技術であるため相性抜群 | 特になし |
-| **TypeScript** | ◎ | デフォルトでTypeScriptを推奨、型安全な開発が可能 | 型定義の学習が必要 |
-| **Tailwind CSS** | ◯ | 使用可能だが、動画特有のスタイリングが必要な場合も | 設定が多少必要 |
+| **React / Next.js** | ◎ | ベース技術であり公式テンプレートやPlayer統合が完備 | Next.jsのSSR環境ではクライアント境界の切り分けが必要 |
+| **TypeScript** | ◎ | デフォルト推奨でZodスキーマ等と連携し型安全に構成可能 | 型定義の学習コストがある |
+| **Tailwind CSS** | ◯ | 公式サポートがあり高速にレイアウト構築可能 | 動画特有の絶対配置やフレームアニメーションとの併用設計が必要 |
+| **Three.js / GSAP** | ◎ | `@remotion/three`（WebGPU対応）や `@remotion/gsap` が公式提供 | 3Dシーンはレンダリング負荷が高くなりやすい |
+| **Python / Go / PHP** | △ | Lambda SDK（Go/PHP等）やCLI呼び出しで連携可能 | コンポジション定義自体はNode.js/React記述が必須 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-<!--
-【ガイドライン】
-- 認証、データ管理、準拠規格の3項目を必ず調査
-- 情報が見つからない場合は「公式サイトで公開されていない。問い合わせが必要。」と記載
-- 「不明」「見つからず」のみの記載は避ける
--->
+* **認証**: 商用利用時のライセンスキー認証およびEnterprise向けの利用レポート機能を備えています（v5.0に向けてAutomators向けテレメトリ/ライセンス管理の強化が予告されています）。
+* **データ管理**: レンダリング処理はユーザー自身のインフラ（ローカルPC、自社AWS Lambda、Cloud Run等）で完結するため、動画素材や顧客データがRemotion社のサーバーに送信・保存されることはありません（Browser Studio利用時やライセンス検証通信を除く）。
+* **準拠規格**: セルフホスト型の実行モデルのため、ユーザー企業のAWS/GCP環境におけるSOC2、ISO27001、GDPR等のコンプライアンス要件に準拠した運用が可能です。Enterpriseプランではベンダーセキュリティチェックシートやカスタム契約にも対応します。
 
-* **認証**: ライセンスキーによる認証システムがあります（商用利用時）。
-* **データ管理**: レンダリングは自身のインフラ（ローカル、AWS、GCP等）で行うため、データは自社管理下に置かれます。Remotion側のサーバーに動画データが送信されることはありません（ライセンス検証を除く）。
-* **準拠規格**: ユーザー自身のインフラで運用するため、自社のセキュリティ基準に準拠させることが可能です。
+## **13. 操作性 (UI/UX) と学習コスト**
 
-## **12. 操作性 (UI/UX) と学習コスト**
+* **UI/UX**: Remotion Studioはタイムライン、インスペクター、アセットブラウザーを備えた本格的な動画エディタに近い操作感へ進化しています。2026年のアップデートにより、キャンバス上でのスナップ付きドラッグ配置、カラーカーブのGUI編集、音声レベルメーター、コンポジションのタブ切り替え、ハイコントラストモードが実装され、コードとビジュアル編集をシームレスに行き来できます。
+* **学習コスト**: ReactとTypeScriptの経験者であれば数時間で基礎を習得できますが、フレームベースの時間軸制御（`useCurrentFrame` / `interpolate` / `spring`）や動画レンダリング特有の非同期処理制御には一定の慣れが必要です。
 
-<!--
-【ガイドライン】
-- 実際の使用感や、類似ツールとの比較を含める
--->
-
-* **UI/UX**: Remotion Studio（プレビュー画面）は洗練されており、タイムライン操作やプロパティ変更が直感的に行えます。ホットリロードに対応しているため、コードの変更が即座に反映されます。
-* **学習コスト**: React経験者であれば数時間で基本を習得できますが、動画特有の概念（フレームレート、シークエンス、合成）の理解には時間がかかる場合があります。
-
-## **13. ベストプラクティス**
-
-<!--
-【ガイドライン】
-- ツールを効果的に活用するための推奨事項や、避けるべきアンチパターンを記述
-- 公式ドキュメントのBest Practicesや、熟練エンジニアの知見を参考にする
--->
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * **コンポーネントの再利用**: 動画の各パーツをReactコンポーネントとして分割し、再利用性を高める。
-  * **絶対配置の活用**: Web制作とは異なり、動画では絶対配置（Absolute Positioning）を多用してレイアウトを固定することが一般的。
-  * **Remotion Lambdaの利用**: 大量生成や高速化が必要な場合は、ローカルレンダリングではなくLambdaを活用する。
+  * **フレーム購読の局所化と `premountFor` の活用**: `useCurrentFrame()` の呼び出しを末端コンポーネントに局所化して不要な再レンダリングを防ぎ、`premountFor` で動画・音声要素を事前マウントしてシークや再生を滑らかにする。
+  * **Remotion Lambdaでのチャンク並列レンダリング**: 長尺や大量生成時はローカルではなくLambdaの並列処理・ストリーミングAPIを活用する。
+  * **Agent Skillsの併用**: `remotion-dev/skills` を導入し、AIエージェントにベストプラクティスに沿ったコンポジションやアニメーションを生成させる。
 * **陥りやすい罠 (Antipatterns)**:
-  * **重い処理**: `useEffect`などの副作用や非同期処理をレンダリング中に行うと、フレーム落ちや不整合の原因になるため注意が必要（`delayRender`を使用する）。
+  * **非同期処理の未制御**: データ取得やフォント読み込みに `delayRender()` を使わずに `useEffect` 等で処理すると、描画未完了のままフレームがキャプチャされる原因になる。
+  * **Web向けCSSトランジションの使用**: CSSの `transition` や `animation` はブラウザの実時間に依存するため、フレーム単位でシークするRemotionのレンダリングでは正しく動作しない（必ず `useCurrentFrame()` と `interpolate()` 等で駆動する）。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-<!--
-【ガイドライン】
-- 必須調査サイト: G2, Capterra, ITreview（日本語レビュー）のうち該当するもの
-- 追加調査サイト: App Store, Google Play, X(Twitter), Reddit等
-- 総合評価スコアがあれば必ず記載
-- ポジティブ・ネガティブ各3項目以上
--->
-
-* **調査対象**: Product Hunt, Twitter(X), GitHub Discussions
-* **総合評価**: 非常に高い評価を得ており、特に開発者からの支持が厚いです。
+* **調査対象**: Product Hunt、G2、Reddit、X（Twitter）
+* **総合評価**: 約 5.0 / 5.0（Product Hunt・約70件のレビュー基準）など、特に開発者コミュニティから極めて高い評価を獲得しています。
 * **ポジティブな評価**:
-  * 「Reactを知っていれば動画が作れるのは魔法のよう。」
-  * 「バージョン管理ができるので、チームでの動画制作フローが革命的に良くなった。」
-  * 「データに基づいた大量生成ができる唯一無二のツール。」
+  * 「Reactの知識だけでフレーム単位の精密な動画が作れる体験は唯一無二。」
+  * 「コードベースなのでGitでレビューやバージョン管理ができ、チームでの動画制作パイプラインが劇的に改善した。」
+  * 「Claude CodeなどのAIコーディングエージェントと組み合わせると、プロンプトだけで高品質なモーション動画が生成できる。」
 * **ネガティブな評価 / 改善要望**:
-  * 「WebのCSSアニメーションと動画のタイムライン制御の考え方の違いに慣れるまで時間がかかる。」
-  * 「レンダリング速度はマシンスペックに依存するため、大規模な動画では工夫が必要。」
+  * 「CSSアニメーションとフレーム駆動アニメーションの考え方の違いに慣れるまで戸惑う。」
+  * 「非エンジニアが単体で使いこなすのは難しく、GUI専用ソフトのような直感的なVFX編集には向かない。」
+  * 「4人以上のチームで自動生成を行う場合のライセンス費用や、AWS Lambda等のインフラ構築・保守コストの考慮が必要。」
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-<!--
-【ガイドライン】
-- 日付の降順（新しいものが上）
-- 3-10項目をリストアップ
-- 各項目に日付と概要を含める
-- 情報源のURLを記載
--->
-
+* **2026-11-11 (v4.0.543)**: Studioにオーディオレベルメーターを追加。CLIに `open-timeline import` / `canvas-capture import` を追加し、`remotion.pro` を廃止して `remotion.dev/pricing` へ統合。`@remotion/skills` でStudioインタラクティブ編集をデフォルト化。
+* **2026-11-09 (v4.0.542)**: `@remotion/lambda-client` にストリーミング出力API（`renderMediaOnLambdaAndStream()` 等）とチャンク指定（`chunks`）を追加。StudioのOpenTimelineIOインポートや `@remotion/effects` の `magnify()` / `lightning()` を追加。
+* **2026-11-02 (v4.0.540)**: `@remotion/effects` の全エフェクトがWebGPU（およびWebGL2）バックエンドに対応。Chrome 158、Rspack 2.3、Mediabunny 1.64.0へアップデート。
+* **2026-10-26 (v4.0.539)**: `@remotion/effects` に `curves()` とStudio上のグラフィカルなカラーカーブ操作UIを追加。3D破片アニメーション `shatter()` を実装。
+* **2026-10-12 (v4.0.535)**: Studioでコンポーネントのデフォルト事前マウント（`premountFor` 2秒）を有効化。`@remotion/lambda-client` に画像シーケンス出力 `renderFramesOnLambda()` を追加。
+* **2026-10-07 (v4.0.534)**: Chromium 157へ更新し、ChromeとFFmpeg間の共有メモリキャプチャ（Shared Memory Capture）および並列エンコードの適用範囲を拡大。SSR時のネストされたHTML-in-canvasに対応。
+* **2026-08-26 (v4.0.518)**: ローカルWebGPU文字起こしパッケージ `@remotion/whisper-webgpu` をリリース。`@remotion/studio` にAIエージェント連携用のWebMCPツールを追加。
+* **2026-08-25 (v4.0.517)**: GSAP連携用公式パッケージ `@remotion/gsap` をリリース。
+* **2026-08-04 (v4.0.506)**: インストール可能な動画要素ギャラリー「Remotion Elements」を公開。
+* **2026-07-18 (v4.0.491)**: ブラウザ完結のクライアントサイドレンダリング（`@remotion/web-renderer`）とMediabunnyベースの `@remotion/media` を安定版として推奨化。
+* **2026-06-10 (v4.0.475)**: Remotion Studioのインタラクティブ編集機能をリリースし、キャンバス操作からのコード直接更新に対応。
 * **2026-05-22 (v4.0.465)**: 専用のエフェクトシステム `@remotion/effects` をリリースし、ブラー等の視覚効果が追加しやすくなった。
 * **2026-05-01 (v4.0.455)**: `<HtmlInCanvas>` コンポーネントを追加し、キャンバス内でのHTML要素の描画をサポート。
 * **2026-03-31 (v4.0.443)**: ElevenLabsの出力をキャプションに変換する専用パッケージ `@remotion/elevenlabs` を追加。
 * **2026-02-20 (v4.0.427)**: 音声スケジューリングの修正とStudioでの無限ループバグの修正により、安定性が向上。
-* **2026-02-20 (v4.0.426)**: Web Renderer向けに新しいVercelパッケージ`@remotion/vercel`を追加し、Vercel Sandboxでのレンダリングをサポート。Zod v4スキーマのサポートを追加。
-* **2026-02-13 (v4.0.422)**: ElevenLabs TTSを使用したナレーション生成スキルを追加。
-* **2026-02-09 (v4.0.420)**: Amazon Linux 2023 (x64) 用のブラウザバイナリサポートを追加。
-* **2026-02-05 (v4.0.418)**: Linux ARM64向けのカスタムChromeバイナリサポートを追加（プロプライエタリコーデック対応）。
+* **2026-02-20 (v4.0.426)**: Web Renderer向けに新しいVercelパッケージ `@remotion/vercel` を追加し、Vercel Sandboxでのレンダリングをサポート。Zod v4スキーマのサポートを追加。
 
 (出典: [Remotion Releases](https://github.com/remotion-dev/remotion/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-<!--
-【ガイドライン】
-- 3-5個の類似ツールと比較
-- **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
--->
+### **17.1 機能比較表 (星取表)**
 
-### **16.1 機能比較表 (星取表)**
-
-<!--
-【記載ルール】
-- 記号の意味:
-  - ◎: 非常に優れている / カタログスペック以上の機能 / 独自強み
-  - ◯: 対応している / 標準的な機能
-  - △: 一部対応 / 制限あり / アドオンが必要
-  - ×: 非対応
-  - -: 不明 / 該当なし
-- 中立性を保つため、比較対象のツールが得意とする機能も平等にリストアップすること
--->
-
-| 機能カテゴリ | 機能項目 | Remotion | Adobe After Effects | Motion Canvas | FFmpeg |
+| 機能カテゴリ | 機能項目 | Remotion | DaVinci Resolve | AviUtl (ExEdit2) | OpenCut |
 |:---:|:---|:---:|:---:|:---:|:---:|
-| **制作手法** | アプローチ | コード (React) | GUI | コード (Canvas) | CLI / Script |
-| **動的生成** | パラメータ化 | ◎<br><small>得意領域</small> | △<br><small>スクリプトで可</small> | ◯<br><small>可能</small> | ◯<br><small>フィルタで可</small> |
-| **表現力** | 視覚効果 | ◎<br><small>独自エフェクト</small> | ◎<br><small>業界標準</small> | ◯<br><small>描画API依存</small> | △<br><small>基本的</small> |
-| **開発体験** | バージョン管理 | ◎<br><small>Git管理可</small> | ×<br><small>バイナリ</small> | ◎<br><small>Git管理可</small> | ◯<br><small>コマンド管理</small> |
-| **学習コスト** | 難易度 | 中<br><small>React必須</small> | 高<br><small>専門知識</small> | 中<br><small>TS必須</small> | 高<br><small>コマンド複雑</small> |
+| **制作手法** | アプローチ | コード (React) + GUI | プロ向けGUI (NLE) | 軽量GUI + スクリプト | Web/デスクトップGUI |
+| **動的生成** | データ駆動・大量生成 | ◎<br><small>API/Lambdaで自動化</small> | △<br><small>Python/Lua連携</small> | ×<br><small>手動編集中心</small> | ×<br><small>手動編集中心</small> |
+| **AI連携** | エージェント/AI自動編集 | ◎<br><small>Agent Skills / WebMCP</small> | ◎<br><small>AIアシスタント/IntelliSearch</small> | ×<br><small>標準機能なし</small> | △<br><small>開発中</small> |
+| **表現力** | カラー/VFX | ◯<br><small>WebGPUエフェクト</small> | ◎<br><small>業界最高峰Fusion</small> | ◯<br><small>豊富なプラグイン</small> | △<br><small>基本機能中心</small> |
+| **開発体験** | Git管理・CI/CD | ◎<br><small>完全テキスト管理</small> | ×<br><small>プロジェクトDB</small> | ×<br><small>独自バイナリ</small> | ×<br><small>プロジェクト形式</small> |
+| **コスト** | 個人/小規模無料枠 | ◎<br><small>3人以下・個人無料</small> | ◎<br><small>無料版が高機能</small> | ◎<br><small>完全無料</small> | ◎<br><small>完全無料(OSS)</small> |
 
-### **16.2 詳細比較**
-
-<!--
-【ガイドライン】
-- 定性的な違いや、どのようなユーザーに向いているかを記述
--->
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---|---|---|---|---|
-| **Remotion** | Reactベースの動画生成フレームワーク。 | Reactのエコシステム活用、データ駆動、Web技術でのレイアウト。 | 高度なVFXや3Dは苦手。非プログラマーには難しい。 | Web開発者が動画生成アプリを作る場合や、動的な動画を大量生成する場合。 |
-| **Adobe After Effects** | プロフェッショナル向け動画編集ソフトの業界標準。 | 圧倒的な表現力、豊富なプラグイン、GUIによる直感的な調整。 | 自動化が難しい、バイナリファイルで差分管理不可、高価。 | ハイクオリティなCMや映画制作、手作業での細かな調整が必要な場合。 |
-| **Motion Canvas** | Canvas APIを使用したプロシージャルなアニメーションツール。 | 描画処理の細かな制御が可能、教育系動画（解説動画）に特化。 | DOM要素（HTML/CSS）が使えないため、Web UIのような表現は手間。 | アルゴリズムの可視化や、図形を多用する解説動画を作る場合。 |
+| **Remotion** | Reactベースの動画生成フレームワーク。 | Web技術とReactエコシステム活用、AIエージェント連携、サーバーレス大量自動生成。 | 高度なVFX・映画級カラーグレーディングは苦手。React知識が必須。 | Web開発者が動画生成アプリを作る場合や、データ駆動で動画を大量生成する場合。 |
+| **DaVinci Resolve** | 編集・カラー・VFX・音声を統合したプロ向け環境。 | 圧倒的なカラーグレーディング・VFX表現力、無料版の充実、対話型AI連携（v21）。 | Gitでのテキスト差分管理やWebアプリ組み込み型の自動量産には不向き。 | 高品質な実写・映像作品を手動で仕上げたいクリエイターやスタジオ。 |
+| **AviUtl** | 64bit化された国産無料動画編集ソフト（ExEdit2）。 | 完全無料・商用可、軽量動作、長年のコミュニティによるスクリプト・プラグイン資産。 | Windows専用で、サーバーサイドでの自動バッチ生成やクラウド連携には不向き。 | Windows環境で手軽に実況・解説・MAD動画などを無料制作したい場合。 |
+| **OpenCut** | Rust/WASMコアを採用したOSS動画編集ソフト。 | 完全無料・OSS、クライアントサイド処理による高いプライバシー性、直感的なUI。 | 開発途上の機能があり、プログラムによる動画量産パイプライン用途ではない。 | プライバシーを重視しつつブラウザやデスクトップで手軽に手動編集したい場合。 |
 
-## **17. 総評**
-
-<!--
-【ガイドライン】
-- 総合評価、推奨チーム、選択ポイントの3項目を必ず含める
-- 客観的で中立的な評価を心がける
--->
+## **18. 総評**
 
 * **総合的な評価**:
-  Remotionは、「動画をコードで書く」というパラダイムをReactのエコシステム上で見事に実現した革新的なツールです。特に、Webサービスの一部として動画生成機能を組み込む場合や、ユーザーデータに基づいたパーソナライズド動画を生成する場合において、他のツールの追随を許さない強力なソリューションとなります。
+  Remotionは、「動画をコードで書く（Video as Code）」というパラダイムをReactエコシステム上で確立しただけでなく、2026年に入りインタラクティブStudio、Browser Studio、WebGPUエフェクト、そしてAgent Skills / WebMCPによるAIエージェント連携へと大きく進化しました。データ駆動の大量動画生成やWebサービスへの動画生成機能組み込みにおいて、他のツールの追随を許さない存在です。
 * **推奨されるチームやプロジェクト**:
-  * Reactを採用している開発チーム。
-  * 動画生成の自動化や効率化を目指すマーケティングチーム（エンジニアとの協業）。
-  * Webアプリ上で動画プレビューや編集機能を提供したいSaaS企業。
+  * React / TypeScriptを採用しており、動画生成をプロダクトやCI/CDに組み込みたい開発チーム。
+  * AIコーディングエージェントを活用して、プロモーション動画や解説動画を効率的に生成したいスタートアップ。
+  * パーソナライズド動画の大量生成基盤を構築したいSaaS・マーケティング企業。
 * **選択時のポイント**:
-  * 「1つの高品質な作品を手作りする」ならAfter Effects、「テンプレート化して1000本の動画を自動生成する」ならRemotionという使い分けが重要です。React開発者がチームにいるかどうかも重要な選定基準となります。
+  * 「1本の映画・CMレベルの映像美を手動で作り込む」ならDaVinci Resolve、「テンプレート化やAIエージェント連携で動画を自動生成・Web統合する」ならRemotionという棲み分けが明確です。開発チームにReactの知見があるか、4人以上の営利企業におけるライセンス条件（Creators / Automators）に適合するかを確認した上で導入を検討するのが最適です。
