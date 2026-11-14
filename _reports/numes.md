@@ -1,62 +1,55 @@
 ---
-# === フロントマター ===
-title: "Numes 調査レポート"
-tool_name: "Numes"
-tool_reading: "ニュームス / ヌームス"
-category: "AIゲートウェイ"
-developer: "Floating Point Systems, Inc."
-official_site: "https://numes.ai/"
-date: "2026-11-14"
-last_updated: "2026-11-14"
+title: Numes 調査レポート
+tool_name: Numes
+tool_reading: ニュームス / ヌームス
+category: AIゲートウェイ
+developer: Floating Point Systems, Inc.
+official_site: https://numes.ai/
+date: '2026-11-14'
+last_updated: '2026-11-14'
 tags:
-  - "AI"
-  - "大規模言語モデル"
-  - "SaaS"
-  - "開発者ツール"
-  - "API"
-description: "独立系プロバイダーが提供するフロンティアモデルやOSSモデルを単一のOpenAI互換APIで呼び出せるAI推論マーケットプレイス。USD（クレジットカード）とBitcoin（Lightning/オンチェーン）による従量課金、E2EE推論、プロバイダー自動検証を特徴とする。"
-
-# 【クイックサマリー】
+  - AI
+  - 大規模言語モデル
+  - SaaS
+  - 開発者ツール
+  - API
+description: 独立系プロバイダーが提供するフロンティアモデルやOSSモデルを単一のOpenAI互換APIで呼び出せるAI推論マーケットプレイス。USD（クレジットカード）とBitcoin（Lightning/オンチェーン）による従量課金、E2EE推論、プロバイダー自動検証を特徴とする。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "従量課金（プリペイド残高制・無料プランなし）"
+  starting_price: 従量課金（プリペイド残高制・無料プランなし）
   target_users:
-    - "AIアプリ開発者"
-    - "推論プロバイダー・GPU運用者"
-    - "プライバシー重視のエンジニア"
-  latest_highlight: "2026年10月にプライバシーポリシー・法的通知を更新し、Tinfoil等のE2EE推論やClaude Code連携を含むマーケットプレイス機能を提供"
-  update_frequency: "不定期"
-
-# 【ツール評価】100点満点、基準点70点からの加減算方式
+    - AIアプリ開発者
+    - 推論プロバイダー・GPU運用者
+    - プライバシー重視のエンジニア
+  latest_highlight: 2026年10月にプライバシーポリシー・法的通知を更新し、Tinfoil等のE2EE推論やClaude Code連携を含むマーケットプレイス機能を提供
+  update_frequency: 不定期
 evaluation:
   score: 70
   base_score: 70
   plus_points:
     - point: 5
-      reason: "OpenAI/OpenRouter互換APIに加え、Tinfoil等のE2EE推論（:e2ee）や自動プロバイダー検証・不定期行動チェックなど独自機能を備える"
+      reason: OpenAI/OpenRouter互換APIに加え、Tinfoil等のE2EE推論（:e2ee）や自動プロバイダー検証・不定期行動チェックなど独自機能を備える
     - point: 4
-      reason: "USD（クレジットカード）とBitcoin（Lightning/オンチェーン）の2通貨決済および独立プロバイダーとしての収益化に対応"
+      reason: USD（クレジットカード）とBitcoin（Lightning/オンチェーン）の2通貨決済および独立プロバイダーとしての収益化に対応
     - point: 3
-      reason: "本番環境でのプロンプト・レスポンス非保存（ゼロリテンション）やOpenAPI 3.1仕様の公開などプライバシーと開発者体験に配慮"
+      reason: 本番環境でのプロンプト・レスポンス非保存（ゼロリテンション）やOpenAPI 3.1仕様の公開などプライバシーと開発者体験に配慮
   minus_points:
     - point: -5
-      reason: "UI・ドキュメント・サポートともに日本語非対応（英語のみ）"
+      reason: UI・ドキュメント・サポートともに日本語非対応（英語のみ）
     - point: -4
-      reason: "新興サービスでありG2/Capterra等の主要レビューサイトに実績がなく、Reddit等でプロモーションや信頼性に対する警戒の声がある"
+      reason: 新興サービスでありG2/Capterra等の主要レビューサイトに実績がなく、Reddit等でプロモーションや信頼性に対する警戒の声がある
     - point: -3
-      reason: "無料プランがなく、クレジット購入時にプラットフォーム手数料（カード2.1%+決済手数料、BTC 5%）が加算される"
-  summary: "E2EE推論やBitcoin決済、プロバイダー参入機能を備えた意欲的なAI推論マーケットプレイスだが、新興ゆえの実績不足とコミュニティ上の警戒意見を踏まえた慎重な検証が必要"
-
-# 【任意項目】
+      reason: 無料プランがなく、クレジット購入時にプラットフォーム手数料（カード2.1%+決済手数料、BTC 5%）が加算される
+  summary: E2EE推論やBitcoin決済、プロバイダー参入機能を備えた意欲的なAI推論マーケットプレイスだが、新興ゆえの実績不足とコミュニティ上の警戒意見を踏まえた慎重な検証が必要
 links:
-  documentation: "https://numes.ai/docs"
+  documentation: https://numes.ai/docs
 relationships:
   related_tools:
-    - "LiteLLM"
-    - "Portkey"
-    - "9router"
-    - "Fireworks AI"
+    - LiteLLM
+    - Portkey
+    - 9router
+    - Fireworks AI
 ---
 
 # **Numes 調査レポート**
