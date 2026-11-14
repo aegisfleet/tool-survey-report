@@ -48,6 +48,7 @@ relationships:
     - Renovate
     - FOSSology
     - FOSSA
+    - yamory
 ---
 
 # **Snyk Open Source 調査レポート**
