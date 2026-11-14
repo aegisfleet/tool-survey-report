@@ -51,6 +51,7 @@ relationships:
     - LiteLLM
     - Cloudflare
     - Kong AI Gateway
+    - Numes
 ---
 
 # **Portkey 調査レポート**
