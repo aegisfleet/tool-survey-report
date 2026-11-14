@@ -53,6 +53,7 @@ relationships:
     - Amazon Bedrock
     - TensorFlow
     - UI-TARS Desktop
+    - AMD TokenLab
 ---
 
 # **Hugging Face 調査レポート**
