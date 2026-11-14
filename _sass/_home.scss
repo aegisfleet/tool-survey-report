@@ -2469,7 +2469,8 @@
     .trends-grid {
         display: grid;
         gap: 1rem;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+        // 表示は3件固定のため、空のトラックを残さず行いっぱいに広げる
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 
         @include media-breakpoint-down(sm) {
             grid-template-columns: minmax(0, 1fr);
