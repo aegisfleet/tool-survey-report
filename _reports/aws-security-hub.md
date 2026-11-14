@@ -47,6 +47,7 @@ relationships:
     - Google AI Threat Defense
     - Datadog
     - Trivy
+    - yamory
 ---
 # **AWS Security Hub 調査レポート**
 
