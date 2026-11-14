@@ -1,57 +1,54 @@
 ---
-title: "AMD TokenLab 調査レポート"
-tool_name: "AMD TokenLab"
-tool_reading: "エーエムディー トークンラボ"
-category: "LLMプラットフォーム"
-developer: "AMD (Advanced Micro Devices, Inc.)"
-official_site: "https://notebooks.amd.com/tokenlab"
-date: "2026-11-14"
-last_updated: "2026-11-14"
+title: AMD TokenLab 調査レポート
+tool_name: AMD TokenLab
+tool_reading: エーエムディー トークンラボ
+category: LLMプラットフォーム
+developer: AMD (Advanced Micro Devices, Inc.)
+official_site: https://notebooks.amd.com/tokenlab
+date: '2026-11-14'
+last_updated: '2026-11-14'
 tags:
-  - "AI"
-  - "大規模言語モデル"
-  - "開発者ツール"
-  - "クラウド"
-  - "API"
-description: "AMD AI Developer Program会員向けに提供される、AMD Instinct/Radeon GPUおよびROCm基盤上のオープンウェイトLLMをOpenAI互換APIで無料検証できる開発者向けプラットフォーム。"
-
+  - AI
+  - 大規模言語モデル
+  - 開発者ツール
+  - クラウド
+  - API
+description: AMD AI Developer Program会員向けに提供される、AMD Instinct/Radeon GPUおよびROCm基盤上のオープンウェイトLLMをOpenAI互換APIで無料検証できる開発者向けプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料 (AMD AI Developer Program)"
+  starting_price: 無料 (AMD AI Developer Program)
   target_users:
-    - "AI開発者"
-    - "MLエンジニア"
-    - "ハッカソン参加者"
-  latest_highlight: "2026年にAMD AI Developer Program特典としてGemma 4・Qwen・DeepSeek等のオープンモデル向け無料OpenAI互換APIとROCm搭載JupyterLabポータルを提供"
-  update_frequency: "中"
-
+    - AI開発者
+    - MLエンジニア
+    - ハッカソン参加者
+  latest_highlight: 2026年にAMD AI Developer Program特典としてGemma 4・Qwen・DeepSeek等のオープンモデル向け無料OpenAI互換APIとROCm搭載JupyterLabポータルを提供
+  update_frequency: 中
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 6
-      reason: "AMD AI Developer Program登録のみでクレジットカード不要の無料ポイント枠・即時APIアクセスを提供"
+      reason: AMD AI Developer Program登録のみでクレジットカード不要の無料ポイント枠・即時APIアクセスを提供
     - point: 5
-      reason: "OpenAI互換API（api.tokenlab.amd.com/v1）によりOpenAI/Anthropic SDKやLangChain等とシームレスに連携可能"
+      reason: OpenAI互換API（api.tokenlab.amd.com/v1）によりOpenAI/Anthropic SDKやLangChain等とシームレスに連携可能
     - point: 4
-      reason: "AMD Instinct / Radeon GPUおよびROCm環境（AMD AI Notebooks）と統合されており、最新オープンモデルの検証が容易"
+      reason: AMD Instinct / Radeon GPUおよびROCm環境（AMD AI Notebooks）と統合されており、最新オープンモデルの検証が容易
   minus_points:
     - point: -4
-      reason: "UI・ドキュメントともに英語中心で日本語サポートが限定的"
+      reason: UI・ドキュメントともに英語中心で日本語サポートが限定的
     - point: -3
-      reason: "ポイント制・レート制限（20リクエスト/分など）および利用期間制限（30日サイクル等）があり、本番環境の大規模運用には不向き"
+      reason: ポイント制・レート制限（20リクエスト/分など）および利用期間制限（30日サイクル等）があり、本番環境の大規模運用には不向き
     - point: -2
-      reason: "開発者向け特典サービスのため、商用SLAやSOC2・ISO27001等の個別コンプライアンス詳細が公開されていない"
-  summary: "クレジットカード不要でAMD GPU上の最新オープンモデルをOpenAI互換APIとして無料検証できる優れた開発者向けプラットフォームだが、本番運用よりもプロトタイピングや学習用途に適している。"
-
+      reason: 開発者向け特典サービスのため、商用SLAやSOC2・ISO27001等の個別コンプライアンス詳細が公開されていない
+  summary: クレジットカード不要でAMD GPU上の最新オープンモデルをOpenAI互換APIとして無料検証できる優れた開発者向けプラットフォームだが、本番運用よりもプロトタイピングや学習用途に適している。
 links:
-  documentation: "https://developer.amd.com"
+  documentation: https://developer.amd.com
 relationships:
   related_tools:
-    - "Fireworks AI"
-    - "Hugging Face"
-    - "LiteLLM"
+    - Fireworks AI
+    - Hugging Face
+    - LiteLLM
 ---
 
 # **AMD TokenLab 調査レポート**
