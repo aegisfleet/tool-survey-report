@@ -43,6 +43,7 @@ links:
 relationships:
   related_tools:
     - NotebookLM
+    - Google Illuminate
 ---
 # **LilysAI 調査レポート**
 
