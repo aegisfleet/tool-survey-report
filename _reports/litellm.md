@@ -52,6 +52,7 @@ relationships:
     - Kong AI Gateway
     - LangChain
     - AMD TokenLab
+    - Numes
 ---
 
 # **LiteLLM 調査レポート**

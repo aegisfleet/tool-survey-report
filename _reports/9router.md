@@ -38,6 +38,9 @@ evaluation:
 links:
   github: https://github.com/decolua/9router
   deepwiki: https://deepwiki.com/decolua/9router
+relationships:
+  related_tools:
+    - Numes
 ---
 # **9router 調査レポート**
 
