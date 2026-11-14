@@ -46,6 +46,7 @@ relationships:
     - OpenAI Frontier
     - Claude
     - DeepSeek
+    - AMD TokenLab
 ---
 
 # **Fireworks AI 調査レポート**
