@@ -1,436 +1,966 @@
-// Report article layout
-.report-article {
-  @include make-container;
-  @include make-container-max-widths;
-  @include card;
-  max-width: 1050px;
-  margin: map-get($spacers, 4) auto;
-  overflow: hidden; // ヘッダーの角丸を適用するため
+// ==================================================
+// Report Detail Page - Modern Developer Documentation Design
+// ==================================================
+
+$font-mono-report: "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+// Top Scroll Progress Bar
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--report-primary), var(--report-secondary));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+// ==================================================
+// Sub-Header: Breadcrumb Track & Quick Actions Bar
+// ==================================================
+.report-subbar {
+  background-color: var(--report-surface-lowest);
+  border-bottom: 1px solid var(--report-border-crisp);
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+  padding: 0.55rem 1rem;
+  margin-top: -#{map-get($spacers, 5)};
+  margin-bottom: 1.5rem;
 
   @include media-breakpoint-down(md) {
-    margin: map-get($spacers, 3) auto;
-  }
-
-  @include media-breakpoint-down(sm) {
-    margin: map-get($spacers, 2);
-    width: auto;
-    padding-left: 0;
-    padding-right: 0;
+    margin-top: -#{map-get($spacers, 4)};
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
   }
 }
 
-.report-header {
-  margin-bottom: map-get($spacers, 6);
-  padding: map-get($spacers, 4);
-  padding-bottom: map-get($spacers, 4);
-  background-color: var(--color-bg-content);
-  border-radius: $border-radius $border-radius 0 0;
-  border-bottom: 1px solid var(--color-border);
-
-  @include media-breakpoint-down(sm) {
-    padding: map-get($spacers, 3);
-  }
-}
-
-.report-title {
-  margin-bottom: map-get($spacers, 4);
-  font-size: 2.5rem;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-sm;
-  color: $primary-color;
-
-  @include media-breakpoint-down(md) {
-    font-size: 2rem;
-  }
-
-  @include media-breakpoint-down(sm) {
-    font-size: 1.75rem;
-  }
-}
-
-.report-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: map-get($spacers, 4);
-  margin-bottom: map-get($spacers, 4);
-
-  @include media-breakpoint-down(sm) {
-    flex-direction: column;
-    gap: map-get($spacers, 2);
-  }
-}
-
-.report-date,
-.report-author,
-.report-developer,
-.report-category {
+.report-subbar-inner {
+  max-width: 1340px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: map-get($spacers, 2);
-  font-size: $font-size-sm;
-  color: $text-muted;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
 
-  svg {
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-  }
+.report-subbar .report-breadcrumb {
+  margin-bottom: 0;
+  min-width: 0;
+  overflow-x: auto;
 
-  a {
-    color: inherit;
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.75rem;
+    white-space: nowrap;
 
-    &:hover,
-    &:focus {
-      color: $link-color;
+    li {
+      margin: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      &::after {
+        content: none;
+      }
+
+      &:not(:first-child):not(:last-child)::after {
+        content: ">";
+        color: var(--report-text-muted);
+        margin-left: 0.25rem;
+      }
+    }
+
+    .breadcrumb-track-label {
+      color: var(--report-text-muted);
+      font-weight: 600;
+      margin-right: 0.15rem;
+    }
+
+    a {
+      color: var(--report-text-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease, background-color 0.15s ease;
+
+      &:hover,
+      &:focus-visible {
+        color: var(--report-primary);
+      }
+    }
+
+    .breadcrumb-category-pill {
+      padding: 0.15rem 0.5rem;
+      border-radius: 0.25rem;
+      background-color: var(--report-surface-subtle);
+      color: var(--report-secondary);
+      border: 1px solid var(--report-border-crisp);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--report-text-primary);
+        background-color: var(--report-surface-high);
+      }
+    }
+
+    li[aria-current="page"] {
+      color: var(--report-text-primary);
+      font-weight: 600;
     }
   }
 }
 
-// Hero link buttons (Official Site, GitHub, DeepWiki)
+.report-subbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+// Reading Time Badge
+.report-reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-secondary);
+  background-color: var(--report-surface-subtle);
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--report-border-crisp);
+
+  svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    color: var(--report-positive);
+  }
+}
+
+// Quick Action Hero Links
 .report-hero-links {
   display: flex;
   flex-wrap: wrap;
-  gap: map-get($spacers, 3);
-  width: 100%;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .hero-link-btn {
   display: inline-flex;
   align-items: center;
-  gap: map-get($spacers, 1);
-  padding: map-get($spacers, 2) map-get($spacers, 3);
-  border-radius: $border-radius;
-  font-size: $font-size-sm;
-  font-weight: $font-weight-bold;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 0.25rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  font-weight: 500;
   text-decoration: none;
-  color: $white;
-  background: $gradient-primary;
-  border: none;
-  transition: $transition-base;
+  color: var(--report-text-secondary);
+  background-color: var(--report-surface-subtle);
+  border: 1px solid var(--report-border-crisp);
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 
   svg {
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     text-decoration: none;
-    transform: translateY(-1px);
-    box-shadow: $box-shadow-sm;
-    opacity: 0.9;
-    color: $white;
+    color: var(--report-primary);
+    background-color: var(--report-surface-high);
+    border-color: var(--report-primary-border);
   }
 
-  &.hero-link-docs {
-    background: $gradient-success;
-  }
+  &.hero-link-official {
+    background-color: var(--report-primary-bg);
+    border-color: var(--report-primary-border);
+    color: var(--report-primary);
+    font-weight: 600;
 
-  &.hero-link-github {
-    background: linear-gradient(135deg, #24292e 0%, #40464d 100%);
-  }
-
-  &.hero-link-deepwiki {
-    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
-  }
-
-  &.hero-link-codewiki {
-    background: $gradient-secondary;
-  }
-
-  &.hero-link-markdown {
-    background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+    &:hover,
+    &:focus-visible {
+      background-color: var(--report-surface-high);
+      color: var(--report-text-primary);
+    }
   }
 }
 
-.report-tags {
+// ==================================================
+// 2-Column Main Container Layout
+// ==================================================
+.report-page-layout {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
-  gap: map-get($spacers, 2);
+  gap: 2rem;
+  max-width: 1340px;
+  margin: 0 auto 2rem;
+  padding: 0 1.25rem;
+  font-family: $font-sans-report;
 
-  svg {
-    flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    color: $text-muted;
+  @media (max-width: 1199.98px) {
+    display: block;
+    max-width: 1020px;
+    padding: 0 1rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0 0.65rem;
+  }
+
+  .report-article {
+    flex: 1;
+    min-width: 0;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    overflow: visible;
+  }
+
+  &.is-toc-collapsed .report-article {
+    max-width: 100%;
   }
 }
 
-.tag-list {
-  @extend %list-reset;
+// ==================================================
+// Card 1: Evaluation Brief Header Card (.report-brief-card)
+// ==================================================
+.report-header {
+  background-color: var(--report-surface-card);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.75rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.brief-meta-strip {
   display: flex;
   flex-wrap: wrap;
-  gap: map-get($spacers, 2);
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+  border-bottom: 1px solid var(--report-border-crisp);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
 
-  li {
-    margin-bottom: 0;
+.brief-meta-pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.brief-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.25rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  text-decoration: none;
+  background-color: var(--report-surface-high);
+  color: var(--report-text-secondary);
+  border: 1px solid transparent;
+
+  &.brief-pill-badge {
+    background-color: var(--report-primary-bg);
+    color: var(--report-primary);
+    border-color: var(--report-primary-border);
+    font-weight: 600;
+  }
+
+  &.brief-pill-category {
+    color: var(--report-secondary);
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-primary);
+      border-color: var(--report-primary-border);
+      text-decoration: none;
+    }
   }
 }
 
-.tag-link {
-  @extend %tag-interactive;
+.brief-meta-dates {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  color: var(--report-text-muted);
+
+  .date-val {
+    font-family: $font-sans-report;
+    color: var(--report-text-primary);
+    font-weight: 600;
+
+    &.is-updated {
+      color: var(--report-secondary);
+    }
+  }
+}
+
+// Title & Score Row
+.brief-title-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.brief-title-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.brief-eyebrow {
+  display: block;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.report-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--report-text-primary);
+  letter-spacing: -0.02em;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.25rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 1.5rem;
+  }
+
+  .report-title-reading {
+    font-family: $font-mono-report;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--report-text-secondary);
+    margin-left: 0.5rem;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+      margin-left: 0;
+      margin-top: 0.25rem;
+      font-size: 0.875rem;
+    }
+  }
 }
 
 .report-description {
-  padding: map-get($spacers, 4);
-  background-color: rgba($secondary-color, 0.05);
-  border-radius: $border-radius;
-  border-left: 4px solid $secondary-color;
-  margin: map-get($spacers, 3) 0;
+  margin-top: 0.65rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  max-width: 46rem;
 
   p {
-    margin-bottom: 0;
-    font-size: $font-size-lg;
-    color: var(--color-text);
-    line-height: $line-height-lg;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--report-text-secondary);
+  }
+}
+
+// Score Badge Card
+.score-badge-card {
+  flex-shrink: 0;
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 136px;
+  text-align: center;
+
+  .score-eyebrow {
+    font-family: $font-mono-report;
+    font-size: 0.6875rem;
+    color: var(--report-text-muted);
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
+  }
+
+  .score-number-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    margin: 0.2rem 0 0.35rem;
+  }
+
+  .score-value {
+    font-family: $font-mono-report;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--report-primary);
+    letter-spacing: -0.03em;
+  }
+
+  .score-max {
+    font-family: $font-mono-report;
+    font-size: 0.75rem;
+    color: var(--report-text-muted);
+  }
+
+  .score-base-badge {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--report-secondary-bg);
+    color: var(--report-secondary);
+    border: 1px solid var(--report-secondary-border);
+    font-family: $font-mono-report;
+    font-size: 0.6875rem;
+    margin-top: 0;
+  }
+}
+
+// Score Breakdown (加点・減点リスト)
+.evaluation-details {
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.5rem;
+  padding: 1rem 1.15rem;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+
+  .evaluation-title {
+    display: block;
+    font-family: $font-mono-report;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--report-text-muted);
+    margin: 0 0 0.6rem 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.evaluation-points-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 1rem;
+  font-family: $font-mono-report;
+  font-size: 0.78rem;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.eval-point-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  line-height: 1.45;
+
+  .eval-icon {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+  }
+
+  .eval-reason {
+    color: inherit;
+  }
+
+  .eval-point {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  &.is-plus {
+    color: var(--report-positive);
+  }
+
+  &.is-minus {
+    color: var(--report-negative);
+  }
+
+  &.is-neutral,
+  &.is-none {
+    color: var(--report-text-muted);
+  }
+}
+
+.evaluation-summary {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--report-border-muted);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--report-on-surface);
+  background: transparent;
+  border-left: none;
+  border-radius: 0;
+
+  strong {
+    font-family: $font-mono-report;
+    color: var(--report-primary);
+    margin-right: 0.35rem;
+  }
+}
+
+// Tags Row
+.report-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+
+  .tags-prefix {
+    color: var(--report-text-muted);
+    margin-right: 0.25rem;
+  }
+
+  .tag-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+
+    li {
+      margin: 0;
+    }
+  }
+
+  .tag-link {
+    display: inline-block;
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.25rem;
+    background-color: var(--report-surface-subtle);
+    color: var(--report-text-primary);
+    border: 1px solid var(--report-border-crisp);
+    font-family: $font-mono-report;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--report-primary-bg);
+      color: var(--report-primary);
+      border-color: var(--report-primary-border);
+      text-decoration: none;
+    }
+  }
+}
+
+// Quick Matrix (フロントマター要約一覧)
+.quick-summary-section {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.quick-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .summary-card {
+    background-color: var(--report-surface-lowest);
+    border: 1px solid var(--report-border-crisp);
+    border-radius: 0.375rem;
+    padding: 0.625rem 0.75rem;
+    display: block;
+    box-shadow: none;
+    min-width: 0;
+  }
+
+  .summary-label {
+    display: block;
+    font-family: $font-mono-report;
+    font-size: 0.6875rem;
+    color: var(--report-text-muted);
+    margin-bottom: 0.2rem;
+  }
+
+  .summary-value {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--report-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.is-positive {
+      color: var(--report-positive);
+    }
+
+    &.is-secondary {
+      color: var(--report-secondary);
+    }
+
+    &.is-primary {
+      color: var(--report-primary);
+    }
+  }
+}
+
+.latest-highlight {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-left: 3px solid var(--report-primary);
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+
+  .highlight-label {
+    font-family: $font-mono-report;
+    font-weight: 600;
+    color: var(--report-primary);
+    margin-right: 0.4rem;
+  }
+
+  .highlight-text {
+    color: var(--report-on-surface);
+  }
+}
+
+// ==================================================
+// Card 2: Main Content Body Card (.report-body-card & .report-content)
+// ==================================================
+.report-body-card {
+  background-color: var(--report-surface-card);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.75rem;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+
+  @include media-breakpoint-down(md) {
+    padding: 1.5rem 1.25rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.25rem 1rem;
   }
 }
 
 .report-content {
-  margin-bottom: map-get($spacers, 6);
-  padding: 0 map-get($spacers, 4) map-get($spacers, 4);
-  line-height: $line-height-lg;
-  font-size: 1.1rem;
-  background-color: var(--color-bg-content);
+  background-color: var(--report-surface-card);
+  color: var(--report-on-surface);
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  padding: 0;
+  margin: 0;
 
-  @include media-breakpoint-down(md) {
-    padding: 0 map-get($spacers, 3) map-get($spacers, 3);
+  // Hide duplicate first H1 in report body because Evaluation Brief card already shows H1
+  > h1:first-child {
+    display: none;
   }
 
-  @include media-breakpoint-down(sm) {
-    padding: 0 map-get($spacers, 2) map-get($spacers, 2);
-  }
-
-  // Typography in content
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    margin-top: map-get($spacers, 6); // セクション間の余白を拡大
-    margin-bottom: map-get($spacers, 3);
-    scroll-margin-top: 100px; // スティッキーヘッダーの高さを考慮
-    font-weight: $font-weight-bold;
-    line-height: $line-height-sm;
-
-    &:first-child {
-      margin-top: 0;
-    }
+    scroll-margin-top: 5.5rem;
+    line-height: 1.35;
+    color: var(--report-text-primary);
   }
 
   h2 {
-    padding-bottom: map-get($spacers, 2);
-    border-bottom: 3px solid $secondary-color;
-    color: $primary-color;
-    font-size: 1.75rem;
-  }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--report-border-muted);
+    padding-bottom: 0.6rem;
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--report-text-primary);
+    letter-spacing: -0.015em;
 
-  h3 {
-    color: $secondary-color;
-    font-size: 1.5rem;
-    position: relative;
-    padding-left: map-get($spacers, 4);
+    &:first-child,
+    h1:first-child + & {
+      margin-top: 0;
+    }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.2em;
-      bottom: 0.2em;
-      width: 4px;
-      background-color: $secondary-color;
-      border-radius: 2px;
+    .heading-num {
+      font-family: $font-mono-report;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--report-primary);
+    }
+
+    &.is-pros-heading .heading-num {
+      color: var(--report-positive);
+    }
+
+    &.is-cons-heading .heading-num {
+      color: var(--report-negative);
     }
   }
 
-  // Paragraphs and text
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.85rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--report-on-surface);
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--report-secondary);
+  }
+
+  h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--report-primary);
+  }
+
   p {
-    margin-bottom: map-get($spacers, 4);
-    text-align: left; // justifyは隙間が不規則になるためleftに変更
-    line-height: $line-height-lg;
+    margin-bottom: 1.15rem;
+    line-height: 1.75;
+    color: var(--report-on-surface);
+    font-size: 0.9375rem;
   }
 
-  // Emphasis
   strong {
-    font-weight: $font-weight-bold;
-    color: $primary-color;
-    // マーカー風のハイライト（薄い黄色）
-    background: linear-gradient(transparent 60%, rgba($secondary-color, 0.2) 60%);
-    padding: 0 2px;
+    font-weight: 600;
+    color: var(--report-text-primary);
   }
 
-  // Lists
   ul,
   ol {
-    margin: map-get($spacers, 4) 0 map-get($spacers, 5) map-get($spacers, 4);
-    padding-left: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
 
     li {
-      margin-bottom: map-get($spacers, 3); // 行間の余白を拡大
-      line-height: $line-height-lg;
-      position: relative;
+      margin-bottom: 0.45rem;
+      line-height: 1.65;
+      color: var(--report-on-surface);
+      font-size: 0.9375rem;
     }
   }
 
   ul:not(.toc-list):not(.floating-toc-list):not(.drawer-toc-list) {
-    list-style: none;
-
-    li::before {
-      content: "";
-      display: inline-block;
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-left: -1.5rem;
-      margin-right: 0.25rem;
-      vertical-align: middle;
-      background-color: $secondary-color;
-      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
-      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z' clip-rule='evenodd' /%3E%3C/svg%3E");
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: contain;
-      mask-size: contain;
-    }
+    list-style: disc;
   }
 
   ol {
-    counter-reset: item;
-    list-style: none;
-
-    li {
-      counter-increment: item;
-      padding-left: 0.5em;
-
-      &::before {
-        content: counter(item) ".";
-        color: $secondary-color;
-        font-weight: $font-weight-bold;
-        display: inline-block;
-        width: 1.5em;
-        margin-left: -1.5em;
-        text-align: right;
-        margin-right: 0.5em;
-      }
-    }
+    list-style: decimal;
   }
 
   // Links
   a {
-    color: $link-color;
-    font-weight: $font-weight-medium;
-    word-break: break-all;
-    overflow-wrap: break-word;
+    color: var(--report-primary);
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-word;
 
     &:hover,
-    &:focus {
-      color: $link-hover;
-    }
-
-    // External links
-    &[href^="http"]:not([href*="{{ site.url }}"]) {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.2rem;
-
-      &::after {
-        content: "";
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        background-color: currentColor;
-        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' /%3E%3C/svg%3E");
-        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14' /%3E%3C/svg%3E");
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        opacity: 0.6;
-      }
+    &:focus-visible {
+      color: var(--report-secondary);
     }
   }
 
-  // Images
-  img {
-    display: block;
-    margin: map-get($spacers, 5) auto;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow-sm;
+  // Inline code
+  code:not(pre code) {
+    font-family: $font-mono-report;
+    font-size: 0.85em;
+    padding: 0.15em 0.38em;
+    background-color: var(--report-surface-lowest);
+    border: 1px solid var(--report-border-crisp);
+    border-radius: 0.25rem;
+    color: var(--report-primary);
+  }
 
-    @include media-breakpoint-down(sm) {
-      margin: map-get($spacers, 4) auto;
+  // Code Blocks with Terminal Header
+  pre {
+    margin: 1.25rem 0;
+    padding: 0;
+    background-color: var(--report-surface-lowest);
+    color: var(--report-text-primary);
+    border: 1px solid var(--report-border-crisp);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+
+    .code-block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0.9rem;
+      background-color: var(--report-surface-subtle);
+      border-bottom: 1px solid var(--report-border-crisp);
+      font-family: $font-mono-report;
+      font-size: 0.75rem;
+      color: var(--report-text-secondary);
     }
+
+    .code-block-lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      svg {
+        color: var(--report-primary);
+      }
+    }
+
+    .copy-code-btn {
+      padding: 0.15rem 0.55rem;
+      border-radius: 0.25rem;
+      background-color: var(--report-surface-card);
+      color: var(--report-primary);
+      border: 1px solid var(--report-border-crisp);
+      font-family: $font-mono-report;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.15s ease, color 0.15s ease;
+
+      &:hover,
+      &:focus-visible {
+        background-color: var(--report-surface-high);
+        color: var(--report-text-primary);
+      }
+    }
+
+    code {
+      display: block;
+      padding: 1rem;
+      font-family: $font-mono-report;
+      font-size: 0.8125rem;
+      line-height: 1.65;
+      color: var(--report-text-primary);
+      background: transparent;
+      border: none;
+      overflow-x: auto;
+    }
+  }
+
+  .highlighter-rouge,
+  .highlight {
+    background: transparent;
   }
 
   // Tables
-  table {
-    width: 100%;
-    margin: map-get($spacers, 5) 0;
-    border: 1px solid var(--color-border-table);
-    border-radius: $border-radius;
-    overflow: hidden;
-    box-shadow: $box-shadow-sm;
-    border-collapse: separate; // border-radiusを適用するため
-
-    @include media-breakpoint-down(sm) {
-      font-size: $font-size-sm;
-    }
-  }
-
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    margin: map-get($spacers, 4) 0;
-    border-radius: $border-radius;
-    position: relative;
-    box-shadow: $box-shadow-sm;
-
-    // スクロールヒントの影
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 30px;
-      background: linear-gradient(to right, transparent, rgba($black, 0.05));
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    &.has-scroll::after {
-      opacity: 1;
-    }
-
-    // カード形式の場合は影とラッパーのシャドウ、スクロールヒントを無効化
-    &.responsive-cards-wrapper {
-      box-shadow: none;
-      padding: 0;
-      margin: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    table {
-      margin: 0;
-      box-shadow: none;
-    }
+    margin: 1.25rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid var(--report-border-crisp);
+    background-color: var(--report-surface-lowest);
   }
 
-  // 料金プランなどで使用するカード形式表示
+  table {
+    width: 100%;
+    margin: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.85rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: var(--report-surface-low);
+    color: var(--report-text-secondary);
+    font-weight: 600;
+    font-family: $font-mono-report;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--report-border-crisp);
+  }
+
+  td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid var(--report-border-muted);
+    color: var(--report-on-surface);
+    line-height: 1.6;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:hover td {
+    background-color: rgba(128, 128, 128, 0.04);
+  }
+
+  // Mobile Card Layout for Pricing/Comparison Tables
   .table-as-cards {
     @include media-breakpoint-down(sm) {
       display: block;
-      border: none;
-      box-shadow: none;
-      background: transparent;
 
       thead {
-        display: none; // ヘッダーを隠す
+        display: none;
       }
 
       tbody {
@@ -439,32 +969,35 @@
 
       tr {
         display: block;
-        @include card(map-get($spacers, 3));
-        margin-bottom: map-get($spacers, 3);
-        border: 1px solid $border-color;
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+        background-color: var(--report-surface-card);
+        border-bottom: 1px solid var(--report-border-crisp);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       td {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: map-get($spacers, 2) 0;
-        border: none !important; // 縦の線を確実に取り除く
-        padding: map-get($spacers, 2) 0;
-        border: none !important; // 縦の線を確実に取り除く
-        border-bottom: 1px solid var(--color-border-table-inner) !important;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid var(--report-border-muted);
 
         &:last-child {
           border-bottom: none;
         }
 
-        // データのラベルを表示するための擬似要素
         &::before {
           content: attr(data-label);
-          font-weight: $font-weight-bold;
-          color: $primary-color;
-          margin-right: map-get($spacers, 2);
-          font-size: $font-size-xs;
+          font-family: $font-mono-report;
+          font-weight: 600;
+          color: var(--report-primary);
+          font-size: 0.75rem;
+          flex-shrink: 0;
         }
 
         &:not([data-label])::before {
@@ -474,194 +1007,109 @@
     }
   }
 
-  th {
-    background-color: $primary-color;
-    color: $white;
-    font-weight: $font-weight-semibold;
-  }
-
-  td {
-    border-bottom: 1px solid var(--color-border-table-inner);
-
-    &:not(:last-child) {
-      border-right: 1px solid var(--color-border-table-inner);
-    }
-  }
-
-  tr:nth-child(even) td {
-    background-color: var(--color-bg-table-stripe);
-  }
-
-  // Code blocks
-  pre {
-    margin: map-get($spacers, 5) 0;
-    padding: map-get($spacers, 6) map-get($spacers, 4) map-get($spacers, 4); // 上部パディングを増やして飾り分のスペースを確保
-    background-color: var(--color-bg-pre);
-    color: var(--color-text-pre);
-    border-radius: $border-radius;
-    overflow-x: auto;
-    box-shadow: $box-shadow-sm;
-    position: relative; // デザイン線（装飾）の上に表示するため
-    z-index: 5;
-    background-image: none; // ベーススタイルのhighlightクラスの影響を除外
-
-    // macOS window decoration (Traffic lights)
-    &::before {
-      content: "";
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #ff5f56; // Red button
-      box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f; // Yellow and Green buttons
-    }
-
-    code {
-      background-color: transparent;
-      color: inherit;
-      padding: 0;
-    }
-  }
-
-  // Code block wrappers
-  .highlighter-rouge,
-  .highlight {
-    position: relative;
-    z-index: 5;
-    background-image: none; // ベーススタイルのhighlightクラスの影響を除外
-  }
-
-  // Inline code
-  code {
-    padding: 0.2em 0.4em;
-    background-color: rgba($secondary-color, 0.1);
-    color: $secondary-color;
-    border-radius: $border-radius-sm;
-    font-size: 0.9em;
-  }
-
   // Blockquotes
   blockquote {
-    margin: map-get($spacers, 6) 0;
-    padding: map-get($spacers, 4) map-get($spacers, 5);
-    background-color: var(--color-bg-blockquote);
-    border-left: 4px solid $secondary-color;
-    border-radius: $border-radius-sm;
-    position: relative;
-    font-style: italic;
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    background-color: var(--report-surface-lowest);
+    border-left: 3px solid var(--report-primary);
+    border-radius: 0.375rem;
+    color: var(--report-on-surface);
 
-    &::before {
-      content: "“";
-      position: absolute;
-      top: 0;
-      left: 10px;
-      font-size: 3rem;
-      color: rgba($secondary-color, 0.1);
-      font-family: serif;
-      line-height: 1;
-    }
-
-    &::after {
-      content: "💡";
-      position: absolute;
-      bottom: 10px;
-      right: 15px;
-      font-size: 1.5rem;
-      opacity: 0.2;
-      font-style: normal;
-    }
-
-    p {
-      position: relative;
-      z-index: 1;
-      color: var(--color-text-blockquote);
-      margin-bottom: map-get($spacers, 3);
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    cite {
-      display: block;
-      margin-top: map-get($spacers, 2);
-      font-size: $font-size-sm;
-      color: $text-muted;
-      font-style: normal;
-      text-align: right;
-
-      &::before {
-        content: "— ";
-      }
+    p:last-child {
+      margin-bottom: 0;
     }
   }
 
-  // Horizontal rules
   hr {
-    margin: map-get($spacers, 6) 0;
+    margin: 2rem 0;
     border: none;
     height: 1px;
-    background-color: var(--color-border);
-    position: relative;
-    overflow: visible;
-
-    &::after {
-      content: "•••";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: var(--color-bg-content);
-      padding: 0 map-get($spacers, 3);
-      color: var(--color-border);
-      font-size: 0.8rem;
-      letter-spacing: 4px;
-    }
-  }
-
-  // Definition lists
-  dl {
-    margin-bottom: map-get($spacers, 4);
-  }
-
-  dt {
-    font-weight: $font-weight-semibold;
-    color: $primary-color;
-    margin-bottom: map-get($spacers, 1);
-  }
-
-  dd {
-    margin-bottom: map-get($spacers, 3);
-    margin-left: map-get($spacers, 4);
-
-    @include media-breakpoint-down(sm) {
-      margin-left: map-get($spacers, 2);
-    }
+    background-color: var(--report-border-crisp);
   }
 }
 
-// Mermaid diagrams rendered by Pele
+.report-audit-footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--report-border-crisp);
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  .audit-score {
+    color: var(--report-primary);
+    font-weight: 700;
+  }
+}
+
+// ==================================================
+// Mermaid Diagram Card & Pele Interactive Viewer
+// ==================================================
+.mermaid-card {
+  margin: 1.25rem 0;
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.mermaid-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+  border-bottom: 1px solid var(--report-border-crisp);
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.75rem;
+
+  .mermaid-card-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    svg {
+      color: var(--report-secondary);
+    }
+  }
+
+  .mermaid-card-badge {
+    padding: 0.12rem 0.45rem;
+    border-radius: 0.25rem;
+    background-color: var(--report-surface-subtle);
+    font-size: 0.65rem;
+    color: var(--report-text-secondary);
+  }
+}
+
 .report-content .mermaid-diagram {
-  --pele-bg: var(--color-bg-content);
-  --pele-fg: var(--color-text);
-  --pele-muted: var(--color-text-muted);
-  --pele-line: var(--color-border);
-  --pele-border: var(--color-border);
-  --pele-surface: var(--color-bg-main);
-  --pele-surface-alt: var(--color-light-gray);
-  --pele-accent: var(--color-link);
+  --pele-bg: var(--report-surface-card);
+  --pele-fg: var(--report-text-primary);
+  --pele-muted: var(--report-text-secondary);
+  --pele-line: var(--report-border-crisp);
+  --pele-border: var(--report-border-crisp);
+  --pele-surface: var(--report-surface-lowest);
+  --pele-surface-alt: var(--report-surface-subtle);
+  --pele-accent: var(--report-primary);
 
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  margin: map-get($spacers, 4) 0;
+  margin: 0;
+  border-radius: 0.375rem;
   user-select: none;
   -webkit-user-select: none;
 
   .pele-cluster-label {
-    fill: var(--color-text);
+    fill: var(--report-text-primary);
     font-weight: 600;
   }
 
@@ -674,74 +1122,104 @@
     margin: 0;
     padding: 0;
     border: 0;
-    border-radius: calc(var(--pele-radius, 4px) - 1px);
+    border-radius: 3px;
     background: transparent;
     color: inherit;
     font: inherit;
     cursor: pointer;
 
     &:hover {
-      background: var(--color-bg-main);
-    }
-  }
-
-  // Fullscreen overlay mode
-  &.is-fullscreen {
-    position: fixed !important;
-    inset: 16px !important;
-    top: 16px !important;
-    left: 16px !important;
-    width: calc(100vw - 32px) !important;
-    height: calc(100vh - 32px) !important;
-    max-width: none !important;
-    max-height: none !important;
-    transform: none !important;
-    z-index: 100050 !important; // Above floating action buttons (100000) and headers
-    background: var(--color-bg-content) !important;
-    border: 1px solid var(--color-border) !important;
-    border-radius: var(--pele-radius, 8px) !important;
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-
-    svg {
-      width: 100% !important;
-      height: 100% !important;
-      max-width: none !important;
-      max-height: none !important;
-      display: block !important;
-    }
-
-    .pele-zoom {
-      top: map-get($spacers, 3);
-      right: map-get($spacers, 3);
-      z-index: 100060;
-    }
-  }
-
-  @include media-breakpoint-down(sm) {
-    margin: map-get($spacers, 3) 0;
-
-    &.is-fullscreen {
-      inset: 0 !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100vw !important;
-      height: 100vh !important;
-      border: none !important;
-      border-radius: 0 !important;
-
-      .pele-zoom {
-        top: 8px;
-        right: 8px;
-      }
+      background: var(--report-surface-subtle);
     }
   }
 }
 
-// Fullscreen background backdrop
+// High-specificity fullscreen selector without !important
+body .report-article .report-content .mermaid-diagram.is-fullscreen {
+  position: fixed;
+  inset: 16px;
+  top: 16px;
+  left: 16px;
+  width: calc(100vw - 32px);
+  height: calc(100vh - 32px);
+  max-width: none;
+  max-height: none;
+  transform: none;
+  z-index: 100050;
+  background: var(--report-surface-card);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.5rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    display: block;
+  }
+
+  .pele-zoom {
+    top: 1rem;
+    right: 1rem;
+    z-index: 100060;
+  }
+}
+
+.mermaid-raw-details {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--report-border-muted);
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+
+  .mermaid-raw-summary {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    user-select: none;
+    color: var(--report-text-secondary);
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--report-text-primary);
+    }
+
+    .raw-arrow {
+      transition: transform 0.15s ease;
+
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+
+  &[open] .mermaid-raw-summary .raw-arrow {
+    transform: rotate(90deg);
+  }
+
+  .mermaid-raw-pre {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 0.75rem;
+    background-color: var(--report-surface-card);
+    border: 1px solid var(--report-border-crisp);
+    border-radius: 0.375rem;
+
+    code {
+      padding: 0;
+      font-size: 0.7rem;
+      color: var(--report-text-secondary);
+    }
+  }
+}
+
 .mermaid-backdrop {
   position: fixed;
   inset: 0;
@@ -758,654 +1236,56 @@
   }
 }
 
-// Prevent body scroll when diagram is in fullscreen overlay
 body.mermaid-fullscreen-active {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
-// Report footer
-.report-footer {
-  border-top: 1px solid var(--color-border);
-  padding: map-get($spacers, 5) map-get($spacers, 4) map-get($spacers, 4);
-  background-color: var(--color-bg-content);
-  border-radius: 0 0 $border-radius $border-radius;
-
-  @include media-breakpoint-down(md) {
-    padding: map-get($spacers, 4) map-get($spacers, 3) map-get($spacers, 3);
-  }
-}
-
-.report-navigation {
-  margin-bottom: map-get($spacers, 6);
-}
-
-.nav-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: map-get($spacers, 4);
-  margin-bottom: map-get($spacers, 5);
-
-  @include media-breakpoint-down(md) {
-    grid-template-columns: 1fr;
-    gap: map-get($spacers, 3);
-  }
-}
-
-.nav-previous,
-.nav-next {
-  @include card(map-get($spacers, 4));
-  @include hover-lift;
-
-  a {
-    @include link-reset;
-    display: block;
-
-    &:hover,
-    &:focus {
-      .nav-title {
-        color: $secondary-color;
-      }
-    }
-  }
-}
-
-.nav-previous {
-  text-align: left;
-
-  @include media-breakpoint-down(md) {
-    order: 2;
-  }
-}
-
-.nav-next {
-  text-align: right;
-
-  @include media-breakpoint-down(md) {
-    order: 1;
-    text-align: left;
-  }
-}
-
-.nav-label {
-  display: block;
-  font-size: $font-size-sm;
-  color: var(--color-text-muted);
-  margin-bottom: map-get($spacers, 1);
-}
-
-.nav-title {
-  display: block;
-  font-weight: $font-weight-semibold;
-  color: var(--color-text);
-  transition: $transition-base;
-  @include text-truncate;
-}
-
-.back-to-index {
-  text-align: center;
-
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: map-get($spacers, 2);
-    padding: map-get($spacers, 3) map-get($spacers, 4);
-    background-color: var(--color-light-gray);
-    color: var(--color-text);
-    border-radius: $border-radius;
-    transition: $transition-base;
-
-    &:hover,
-    &:focus {
-      background-color: $secondary-color;
-      color: $white;
-      text-decoration: none;
-    }
-
-    svg {
-      width: 16px;
-      height: 16px;
-    }
-  }
-}
-
-// Related tools section
-.related-tools-section {
-  margin: map-get($spacers, 6) 0;
-  padding: map-get($spacers, 4);
-  border: 1px solid var(--color-border);
-  border-radius: $border-radius;
-  background-color: var(--color-bg-content);
-
-  h3 {
-    margin-top: 0;
-    margin-bottom: map-get($spacers, 4);
-    color: $primary-color;
-    font-size: 1.25rem;
-    border-bottom: 2px solid $secondary-color;
-    padding-bottom: map-get($spacers, 2);
-  }
-
-  .parent-tool,
-  .child-tools,
-  .sibling-tools {
-    margin: map-get($spacers, 4) 0;
-
-    h4 {
-      font-size: 1rem;
-      color: var(--color-text);
-      margin-bottom: map-get($spacers, 2);
-      font-weight: $font-weight-semibold;
-    }
-
-    ul {
-      @extend %list-reset;
-
-      li {
-        margin: map-get($spacers, 2) 0;
-
-        a {
-          color: var(--color-link);
-          font-weight: $font-weight-medium;
-
-          &:hover,
-          &:focus {
-            color: var(--color-link-hover);
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
-
-  .parent-tool {
-    border-left: 4px solid $success-color;
-    padding-left: map-get($spacers, 3);
-    background-color: rgba($success-color, 0.05);
-  }
-
-  .child-tools {
-    border-left: 4px solid $warning-color;
-    padding-left: map-get($spacers, 3);
-    background-color: rgba($warning-color, 0.05);
-  }
-
-  .sibling-tools {
-    border-left: 4px solid #9f7aea;
-    padding-left: map-get($spacers, 3);
-    background-color: rgba(159, 122, 234, 0.05);
-  }
-
-  .tool-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: map-get($spacers, 1);
-    margin-top: map-get($spacers, 1);
-  }
-}
-
-// Related reports
-.related-reports {
-  h3 {
-    margin-bottom: map-get($spacers, 4);
-    color: $primary-color;
-    font-size: 1.25rem;
-  }
-}
-
-.related-list {
-  @extend %list-reset;
-
-  li {
-    margin-bottom: map-get($spacers, 3);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  a {
-    @include card(map-get($spacers, 3));
-    @include link-reset;
-    display: block;
-    transition: $transition-base;
-
-    &:hover,
-    &:focus {
-      box-shadow: $box-shadow;
-      transform: translateY(-1px);
-
-      .related-title {
-        color: $secondary-color;
-      }
-    }
-  }
-}
-
-.related-title {
-  display: block;
-  font-weight: $font-weight-semibold;
-  color: var(--color-text);
-  margin-bottom: map-get($spacers, 1);
-  transition: $transition-base;
-}
-
-.related-date {
-  font-size: $font-size-sm;
-  color: var(--color-text-muted);
-}
-
-// Related reports badges and meta
-.related-item {
-  margin-bottom: map-get($spacers, 3);
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.related-link {
-  @include card(map-get($spacers, 3));
-  @include link-reset;
-  display: block;
-  transition: $transition-base;
-
-  &:hover,
-  &:focus {
-    box-shadow: $box-shadow;
-    transform: translateY(-1px);
-
-    .related-title {
-      color: $secondary-color;
-    }
-  }
-}
-
-.related-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: map-get($spacers, 1);
-  margin-bottom: map-get($spacers, 2);
-}
-
-.related-oss-badge {
-  display: inline-flex;
-  align-items: center;
-  background: $gradient-secondary;
-  color: $white;
-  font-size: $font-size-xs;
-  font-weight: $font-weight-bold;
-  padding: map-get($spacers, 1) map-get($spacers, 2);
-  border-radius: $border-radius;
-}
-
-.related-free-badge {
-  display: inline-flex;
-  align-items: center;
-  background: $gradient-success;
-  color: $white;
-  font-size: $font-size-xs;
-  font-weight: $font-weight-bold;
-  padding: map-get($spacers, 1) map-get($spacers, 2);
-  border-radius: $border-radius;
-}
-
-.related-score-badge {
-  display: inline-flex;
-  align-items: center;
-  background: $gradient-primary;
-  color: $white;
-  font-size: $font-size-xs;
-  font-weight: $font-weight-bold;
-  padding: map-get($spacers, 1) map-get($spacers, 2);
-  border-radius: $border-radius-xl;
-}
-
-.related-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: map-get($spacers, 2);
-  margin-top: map-get($spacers, 2);
-}
-
-.match-info {
-  font-size: 0.8em;
-  color: $text-muted;
-}
-
-// Quick Summary Section
-.quick-summary-section {
-  margin: 0 map-get($spacers, 4) map-get($spacers, 5);
-  padding: map-get($spacers, 4);
-  background: linear-gradient(135deg, rgba($primary-color, 0.05) 0%, rgba($secondary-color, 0.05) 100%);
-  border-radius: $border-radius-lg;
-  border: 1px solid rgba($primary-color, 0.1);
-
-  @include media-breakpoint-down(md) {
-    margin: 0 map-get($spacers, 3) map-get($spacers, 4);
-    padding: map-get($spacers, 3);
-  }
-
-  @include media-breakpoint-down(sm) {
-    margin: 0 map-get($spacers, 2) map-get($spacers, 4);
-    padding: map-get($spacers, 2);
-  }
-}
-
-.quick-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: map-get($spacers, 3);
-  margin-bottom: map-get($spacers, 3);
-
-  @include media-breakpoint-down(md) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include media-breakpoint-down(sm) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.summary-card {
-  background: var(--color-bg-content);
-  padding: map-get($spacers, 3);
-  border-radius: $border-radius;
-  box-shadow: $box-shadow-sm;
-  display: flex;
-  align-items: center; // flex-startからcenterに変更
-  gap: map-get($spacers, 3);
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-
-  &.score-card {
-    background: $gradient-primary;
-    color: $white;
-
-    .summary-icon {
-      background: rgba($white, 0.2);
-      color: $white;
-    }
-
-    .summary-label,
-    .summary-note {
-      color: rgba($white, 0.9);
-    }
-
-    .summary-value {
-      color: $white;
-    }
-  }
-}
-
-.summary-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba($secondary-color, 0.1);
-  color: $secondary-color;
-  border-radius: 50%;
-  flex-shrink: 0;
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-.summary-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.summary-label {
-  font-size: $font-size-xs;
-  color: var(--color-text-muted);
-  font-weight: $font-weight-medium;
-  margin-bottom: map-get($spacers, 1);
-}
-
-.summary-value {
-  font-size: 1.1rem;
-  font-weight: $font-weight-bold;
-  color: var(--color-text);
-
-  &.score-value {
-    font-size: 1.5rem;
-  }
-
-  &.target-users {
-    display: flex;
-    flex-wrap: wrap;
-    gap: map-get($spacers, 1);
-  }
-}
-
-.summary-note {
-  font-size: $font-size-xs;
-  color: var(--color-text-muted);
-  margin-top: map-get($spacers, 1);
-}
-
-.target-user-tag {
-  display: inline-block;
-  background: rgba($secondary-color, 0.1);
-  color: $secondary-color;
-  padding: 2px 8px;
-  border-radius: $border-radius;
-  font-size: $font-size-xs;
-  font-weight: $font-weight-medium;
-}
-
-.latest-highlight {
-  padding: map-get($spacers, 3);
-  background: rgba($info-color, 0.1);
-  border-radius: $border-radius;
-  border-left: 4px solid $info-color;
-  margin-bottom: map-get($spacers, 4);
-
-  .highlight-label {
-    font-weight: $font-weight-bold;
-    color: $primary-color;
-    margin-right: map-get($spacers, 2);
-  }
-
-  .highlight-text {
-    color: var(--color-text);
-  }
-}
-
-// Evaluation Details
-.evaluation-details {
-  background: var(--color-bg-content);
-  padding: map-get($spacers, 4);
-  border-radius: $border-radius;
-  box-shadow: $box-shadow-sm;
-}
-
-.evaluation-title {
-  margin: 0 0 map-get($spacers, 3) 0 !important;
-  font-size: 1.25rem !important;
-  color: $primary-color;
-  padding-bottom: map-get($spacers, 2);
-  border-bottom: 2px solid var(--color-border);
-}
-
-.evaluation-group {
-  margin-bottom: map-get($spacers, 4);
-
-  h4 {
-    margin: 0 0 map-get($spacers, 2) 0;
-    font-size: 1rem;
-    color: var(--color-text);
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    display: flex;
-    align-items: flex-start;
-    gap: map-get($spacers, 2);
-    padding: map-get($spacers, 2) 0;
-    border-bottom: 1px solid var(--color-border-light);
-
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-}
-
-.eval-point {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 45px;
-  padding: map-get($spacers, 1) map-get($spacers, 2);
-  border-radius: $border-radius;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-sm;
-  flex-shrink: 0;
-
-  &.plus {
-    background: rgba($success-color, 0.1);
-    color: $success-color;
-  }
-
-  &.minus {
-    background: rgba(#e53e3e, 0.1);
-    color: #e53e3e;
-  }
-}
-
-.eval-reason {
-  color: var(--color-text);
-  line-height: $line-height-base;
-}
-
-.evaluation-summary {
-  padding: map-get($spacers, 3);
-  background: rgba($secondary-color, 0.05);
-  border-radius: $border-radius;
-  border-left: 4px solid $secondary-color;
-  color: var(--color-text);
-
-  strong {
-    color: $secondary-color;
-  }
-}
-
-// スクロールプログレスバー
-.scroll-progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: linear-gradient(90deg, #ff7733, #ffaa00);
-  z-index: 9999;
-  transition: width 0.1s ease-out;
-}
-
-// 読了時間バッジ
-.report-reading-time {
-  display: inline-flex;
-  align-items: center;
-  gap: map-get($spacers, 2);
-  font-size: $font-size-sm;
-  color: var(--color-text-muted);
-  background: rgba(255, 119, 51, 0.08);
-  padding: 2px 10px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 119, 51, 0.2);
-
-  svg {
-    flex-shrink: 0;
-    width: 14px;
-    height: 14px;
-    color: var(--color-primary);
-  }
-}
-
-// 見出しアンカーリンク
-.heading-anchor {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 0.5rem;
-  color: var(--color-text-muted);
-  opacity: 0;
-  text-decoration: none;
-  transition: opacity 0.2s ease, color 0.2s ease;
-  vertical-align: middle;
-
-  &:hover,
-  &:focus-visible {
-    color: var(--color-primary);
-    opacity: 1;
-  }
-}
-
-h2:hover .heading-anchor,
-h3:hover .heading-anchor {
-  opacity: 0.7;
-}
-
-// 目次 (TOC) スタイル
+// ==================================================
+// Inline Table of Contents (Visible on <1200px or when sidebar collapsed)
+// ==================================================
 .table-of-contents {
-  background: var(--color-bg-content);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-primary);
-  border-radius: 8px;
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-left: 3px solid var(--report-primary);
+  border-radius: 0.5rem;
   padding: 1rem 1.25rem;
-  margin: 2rem 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
+  margin: 1.5rem 0;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+
+  .report-page-layout.is-toc-collapsed & {
+    display: block;
+  }
 
   .toc-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.65rem;
 
     .toc-title {
-      margin: 0 !important;
-      font-size: 1.1rem !important;
+      margin: 0;
+      font-family: $font-mono-report;
+      font-size: 0.9rem;
       font-weight: 700;
-      color: var(--color-text);
+      color: var(--report-text-primary);
       display: flex;
       align-items: center;
-      border: none !important;
-      padding: 0 !important;
+      border: none;
+      padding: 0;
     }
 
     .toc-toggle-btn {
       background: none;
       border: none;
-      color: var(--color-text-muted);
+      color: var(--report-text-muted);
       cursor: pointer;
       padding: 4px;
       border-radius: 4px;
       display: flex;
       align-items: center;
-      transition: background-color 0.2s, transform 0.2s;
-
-      &:hover {
-        background: rgba(0, 0, 0, 0.05);
-        color: var(--color-primary);
-      }
-
-      &[aria-expanded="false"] .toc-toggle-icon {
-        transform: rotate(-90deg);
-      }
     }
   }
 
@@ -1413,155 +1293,76 @@ h3:hover .heading-anchor {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 1000px;
-    overflow: hidden;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    font-family: $font-mono-report;
+    font-size: 0.8125rem;
 
     &.collapsed {
-      max-height: 0;
-      opacity: 0;
-      margin: 0;
+      display: none;
     }
 
     .toc-item {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.35rem;
       line-height: 1.4;
 
-      &::before {
-        content: none;
-        display: none;
-      }
-
       &.toc-level-h3 {
-        padding-left: 1.2rem;
-        font-size: 0.92rem;
+        margin-left: 0.75rem;
+        padding-left: 0.65rem;
+        border-left: 1px solid var(--report-border-crisp);
       }
 
       &.toc-level-h4 {
-        padding-left: 2.2rem;
-        font-size: 0.85rem;
+        margin-left: 1.5rem;
+        padding-left: 0.65rem;
+        border-left: 1px solid var(--report-border-crisp);
       }
 
       a {
-        color: var(--color-text-muted);
+        color: var(--report-text-secondary);
         text-decoration: none;
-        transition: color 0.2s, padding-left 0.2s;
-        display: inline-block;
-        border-left: 2px solid transparent;
-        padding-left: 6px;
+        transition: color 0.15s ease;
 
         &:hover {
-          color: var(--color-primary);
+          color: var(--report-primary);
         }
 
-        &.active {
-          color: var(--color-primary);
-          font-weight: bold;
-          border-left-color: var(--color-primary);
-          background: rgba(255, 119, 51, 0.06);
-          border-radius: 0 4px 4px 0;
+        &.is-pros-link {
+          color: var(--report-positive);
+        }
+
+        &.is-cons-link {
+          color: var(--report-negative);
+        }
+
+        &.is-conclusion-link {
+          color: var(--report-primary);
+          font-weight: 700;
         }
       }
     }
   }
 }
 
-// --------------------------------------------------
-// レポートページ 2カラムレイアウト (ワイド表示対応)
-// --------------------------------------------------
-// --------------------------------------------------
-// レポートページ 2カラムレイアウト (ワイド表示対応)
-// --------------------------------------------------
-.report-page-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  max-width: 1380px;
-  margin: map-get($spacers, 4) auto;
-  padding: 0 1.5rem;
-
-  @media (max-width: 1199.98px) {
-    display: block;
-    max-width: 1050px;
-    padding: 0;
-    margin: map-get($spacers, 4) auto;
-  }
-
-  .report-article {
-    flex: 1;
-    min-width: 0; // テーブル等の溢れ防止
-    max-width: 1050px;
-    width: 100%;
-    margin: 0;
-  }
-
-  // 目次を右へ格納したら、空いたスペースまで記事を広げる
-  &.is-toc-collapsed .report-article {
-    max-width: 100%;
-  }
-}
-
-// --------------------------------------------------
-// フローティング目次 (Floating TOC) スタイル
-// --------------------------------------------------
-.floating-toc-wrapper {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-
-  &.is-visible {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  @media (min-width: 1200px) {
-    opacity: 1;
-    pointer-events: auto;
-  }
-}
-
-.floating-toc-inner,
-.floating-toc-drawer {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-border-dark) var(--color-bg-content);
-
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--color-bg-content);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--color-border-dark);
-    border-radius: 4px;
-
-    &:hover {
-      background: var(--color-text-muted);
-    }
-  }
-}
-
-// PC用 デスクトップサイドバー目次 (1200px以上)
-// 目次パネルは固定表示にして、レイアウト上の幅はスペーサーで確保する
+// ==================================================
+// Right Sticky Sidebar (Desktop TOC + Related Tools)
+// ==================================================
 .floating-toc-slot {
   display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    width: 300px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 5rem;
+    transition: width 0.25s ease, margin-right 0.25s ease;
+  }
 }
 
 @media (min-width: 1200px) {
-  .floating-toc-slot {
-    display: block;
-    width: 280px;
-    flex-shrink: 0;
-    transition: width 0.3s ease, margin-right 0.3s ease;
-  }
-
-  // 目次を格納したらスペーサーを畳み、フレックスのギャップも打ち消す
   .report-page-layout.is-toc-collapsed .floating-toc-slot {
     width: 0;
     margin-right: -2rem;
+    overflow: hidden;
   }
 }
 
@@ -1570,93 +1371,69 @@ h3:hover .heading-anchor {
 
   @media (min-width: 1200px) {
     display: block;
-    position: fixed;
-    top: 90px;
-    right: 1.5rem;
-    width: 280px;
+    width: 300px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
 
-    @media (min-width: 1380px) {
-      right: calc((100% - 1380px) / 2 + 1.5rem);
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
 
-    z-index: 100;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-    transition: transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.18s ease 0.08s,
-      visibility 0s linear 0s;
-
-    // パネル本体。高さが収まらない場合はここでスクロールする
-    .floating-toc-inner {
-      width: 280px;
-      max-height: calc(100vh - 110px);
-      overflow-y: auto;
-      background: var(--color-bg-content);
-      border: 1px solid var(--color-border);
-      border-radius: 12px;
-      padding: 1rem;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-
-    // 目次をページ右外へスライドさせて格納する
-    // 透明化は移動の終盤に寄せ、右へ抜けていく動きが見えるようにする
     &.is-collapsed {
       opacity: 0;
       pointer-events: none;
-      visibility: hidden;
-      transform: translateX(calc(100% + 2rem));
-      transition: transform 0.42s cubic-bezier(0.4, 0, 0.7, 1), opacity 0.14s ease 0.28s,
-        visibility 0s linear 0.42s;
+      transform: translateX(100%);
+    }
+
+    .floating-toc-inner {
+      width: 300px;
+      max-height: calc(100vh - 6rem);
+      overflow-y: auto;
+      background-color: var(--report-surface-card);
+      border: 1px solid var(--report-border-crisp);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      scrollbar-width: thin;
     }
 
     .floating-toc-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 0.75rem;
       margin-bottom: 0.75rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--report-border-crisp);
+      font-family: $font-mono-report;
+      font-size: 0.75rem;
 
       .floating-toc-title {
-        font-size: 0.95rem;
         font-weight: 700;
-        color: var(--color-text);
+        color: var(--report-text-muted);
+        text-transform: uppercase;
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 0.4rem;
+
+        svg {
+          color: var(--report-primary);
+        }
       }
 
       .floating-toc-toggle-btn {
         background: none;
         border: none;
-        color: var(--color-text-muted);
+        color: var(--report-text-muted);
         cursor: pointer;
         padding: 4px;
         border-radius: 4px;
         display: flex;
         align-items: center;
-        // 右向きの二重矢印で「右へ格納される」ことを示す
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: color 0.15s ease, background-color 0.15s ease;
 
-        .toggle-icon {
-          transition: transform 0.2s ease;
-        }
-
-        &:hover {
-          background: rgba(0, 0, 0, 0.05);
-          color: var(--color-primary);
-
-          .toggle-icon {
-            transform: translateX(3px);
-          }
-        }
-
-        &[aria-expanded="false"] .toggle-icon {
-          transform: rotate(180deg);
+        &:hover,
+        &:focus-visible {
+          color: var(--report-primary);
+          background-color: var(--report-surface-subtle);
         }
       }
     }
@@ -1665,49 +1442,61 @@ h3:hover .heading-anchor {
       list-style: none;
       padding: 0;
       margin: 0;
+      font-family: $font-mono-report;
+      font-size: 0.78rem;
 
       .floating-toc-item {
-        margin-bottom: 0.3rem;
-        line-height: 1.35;
-
-        &::before {
-          content: none;
-          display: none;
-        }
+        margin: 0.32rem 0;
+        line-height: 1.4;
 
         &.toc-level-h3 {
-          padding-left: 0.9rem;
-          font-size: 0.85rem;
+          margin-left: 0.75rem;
+          padding-left: 0.65rem;
+          border-left: 1px solid var(--report-border-crisp);
         }
 
         &.toc-level-h4 {
-          padding-left: 1.6rem;
-          font-size: 0.8rem;
+          margin-left: 1.4rem;
+          padding-left: 0.65rem;
+          border-left: 1px solid var(--report-border-crisp);
         }
 
         a {
-          color: var(--color-text-muted);
+          color: var(--report-text-secondary);
           text-decoration: none;
-          font-size: 0.88rem;
           display: block;
-          padding: 4px 8px;
-          border-radius: 6px;
+          padding: 0.2rem 0.4rem;
+          border-radius: 0.25rem;
           border-left: 2px solid transparent;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          transition: color 0.2s ease, background-color 0.2s ease, border-left-color 0.2s ease;
+          transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 
-          &:hover {
-            color: var(--color-primary);
-            background: rgba(0, 0, 0, 0.03);
+          &:hover,
+          &:focus-visible {
+            color: var(--report-primary);
+            background-color: var(--report-surface-lowest);
+          }
+
+          &.is-pros-link {
+            color: var(--report-positive);
+          }
+
+          &.is-cons-link {
+            color: var(--report-negative);
+          }
+
+          &.is-conclusion-link {
+            color: var(--report-primary);
+            font-weight: 700;
           }
 
           &.active {
-            color: var(--color-primary);
+            color: var(--report-primary);
             font-weight: 600;
-            border-left-color: var(--color-primary);
-            background: rgba(255, 119, 51, 0.08);
+            border-left-color: var(--report-primary);
+            background-color: var(--report-primary-bg);
           }
         }
       }
@@ -1715,62 +1504,107 @@ h3:hover .heading-anchor {
   }
 }
 
-// 目次を右へ格納した際に表示する再展開タブ (1200px以上)
+// Sidebar Extra Footer (Related Tools & Back-to-top)
+.floating-toc-footer {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--report-border-crisp);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+
+  .sidebar-related-heading {
+    display: block;
+    font-size: 0.6875rem;
+    color: var(--report-text-muted);
+    margin-bottom: 0.35rem;
+  }
+
+  .sidebar-related-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .sidebar-related-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    color: var(--report-text-secondary);
+    text-decoration: none;
+    padding: 0.2rem 0.35rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--report-primary);
+      background-color: var(--report-surface-lowest);
+    }
+
+    .sidebar-related-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-related-score {
+      font-size: 0.6875rem;
+      color: var(--report-secondary);
+      flex-shrink: 0;
+    }
+  }
+
+  .sidebar-scroll-top-btn {
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    background-color: var(--report-surface-subtle);
+    border: 1px solid var(--report-border-crisp);
+    color: var(--report-text-secondary);
+    font-family: $font-mono-report;
+    font-size: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--report-surface-high);
+      color: var(--report-text-primary);
+    }
+  }
+}
+
+// Reopen Tab when Desktop TOC is collapsed
 .floating-toc-reopen {
   display: none;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  padding: 16px 9px;
-  border: 1px solid var(--color-border);
+  padding: 14px 9px;
+  border: 1px solid var(--report-border-crisp);
   border-right: none;
-  border-radius: 12px 0 0 12px;
-  background: var(--color-bg-content);
-  color: var(--color-text);
-  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px 0 0 10px;
+  background-color: var(--report-surface-card);
+  color: var(--report-text-primary);
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
 
   svg {
-    flex-shrink: 0;
-    color: var(--color-primary);
-    transition: transform 0.2s ease;
+    color: var(--report-primary);
   }
 
   span {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.08em;
     writing-mode: vertical-rl;
-    text-orientation: mixed;
-  }
-
-  &:hover,
-  &:focus-visible {
-    background: var(--color-bg-main);
-  }
-
-  // 左向き矢印を左へ寄せ、「手前に引き出せる」ことを示す
-  &:hover svg {
-    transform: translateX(-2px);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-  }
-}
-
-// 格納された目次パネルが右端から現れる動きを再現する
-@keyframes floating-toc-tab-slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(110%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -1781,47 +1615,14 @@ h3:hover .heading-anchor {
     top: 90px;
     right: 0;
     z-index: 100;
-    animation: floating-toc-tab-slide-in 0.26s cubic-bezier(0, 0, 0.2, 1) 0.26s backwards;
-  }
-
-  .report-page-layout.is-toc-collapsed .floating-toc-reopen:hover,
-  .report-page-layout.is-toc-collapsed .floating-toc-reopen:focus-visible {
-    transform: translateX(-4px);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .floating-toc-slot,
-  .floating-toc-desktop,
-  .floating-toc-desktop.is-collapsed,
-  .floating-toc-reopen,
-  .floating-toc-desktop .floating-toc-header .floating-toc-toggle-btn .toggle-icon,
-  .floating-toc-reopen svg {
-    transition: none;
-  }
-
-  .floating-toc-desktop .floating-toc-header .floating-toc-toggle-btn:hover .toggle-icon,
-  .floating-toc-reopen:hover svg,
-  .floating-toc-reopen:focus-visible svg {
-    transform: none;
-  }
-
-  .report-page-layout.is-toc-collapsed .floating-toc-reopen {
-    animation: none;
-  }
-
-  .report-page-layout.is-toc-collapsed .floating-toc-reopen:hover,
-  .report-page-layout.is-toc-collapsed .floating-toc-reopen:focus-visible {
-    transform: none;
-  }
-}
-
-// 1200px未満の画面サイズ (FAB & ドロワー)
-// トップに戻るボタン(.back-to-top)と目次ボタン(FAB)の重なり防止スタック
+// Mobile TOC FAB & Bottom Drawer (< 1200px)
 @media (max-width: 1199.98px) {
-  .back-to-top {
-    bottom: 76px !important;
-    right: 20px !important;
+  body .back-to-top {
+    bottom: 76px;
+    right: 20px;
   }
 }
 
@@ -1834,55 +1635,36 @@ h3:hover .heading-anchor {
     display: none;
   }
 
-  // FAB (Floating Action Button)
   .floating-toc-fab {
     position: fixed;
     bottom: 24px;
     right: 20px;
-    z-index: 99998 !important;
+    z-index: 99998;
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 10px 18px;
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     color: #ffffff;
     border: none;
     border-radius: 30px;
     font-size: 0.9rem;
     font-weight: 600;
-    box-shadow: 0 4px 16px rgba(255, 119, 51, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-
-    svg {
-      flex-shrink: 0;
-    }
-
-    &:hover,
-    &:focus-visible {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 119, 51, 0.5);
-    }
-
-    &:active {
-      transform: translateY(0);
-    }
   }
 
-  // 背景暗転オーバーレイ
   .floating-toc-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 100000 !important;
+    z-index: 100000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.25s ease;
   }
 
-  // ボトムドロワー
   .floating-toc-drawer {
     position: fixed;
     bottom: 0;
@@ -1890,13 +1672,17 @@ h3:hover .heading-anchor {
     right: 0;
     max-height: 75vh;
     overflow-y: auto;
-    background: var(--color-bg-content);
-    border-radius: 20px 20px 0 0;
-    z-index: 100001 !important;
+    background-color: var(--report-surface-card);
+    border-top: 1px solid var(--report-border-crisp);
+    border-radius: 16px 16px 0 0;
+    z-index: 100001;
     transform: translateY(100%);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    padding: 1.25rem 1.5rem 2rem 1.5rem;
-    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+    transition: transform 0.28s ease;
+    padding: 1.25rem 1.5rem 2rem;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
 
     .drawer-header {
       display: flex;
@@ -1904,12 +1690,12 @@ h3:hover .heading-anchor {
       justify-content: space-between;
       padding-bottom: 0.75rem;
       margin-bottom: 1rem;
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--report-border-crisp);
 
       .drawer-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 700;
-        color: var(--color-text);
+        color: var(--report-text-primary);
         display: flex;
         align-items: center;
         gap: 8px;
@@ -1918,19 +1704,10 @@ h3:hover .heading-anchor {
       .drawer-close-btn {
         background: none;
         border: none;
-        color: var(--color-text-muted);
+        color: var(--report-text-muted);
         cursor: pointer;
         padding: 6px;
         border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s;
-
-        &:hover {
-          background: rgba(0, 0, 0, 0.06);
-          color: var(--color-text);
-        }
       }
     }
 
@@ -1940,48 +1717,34 @@ h3:hover .heading-anchor {
       margin: 0;
 
       .drawer-toc-item {
-        margin-bottom: 0.5rem;
-        line-height: 1.4;
-
-        &::before {
-          content: none;
-          display: none;
-        }
+        margin-bottom: 0.45rem;
 
         &.toc-level-h3 {
-          padding-left: 1.2rem;
+          padding-left: 1.1rem;
         }
 
         &.toc-level-h4 {
-          padding-left: 2.2rem;
+          padding-left: 2rem;
         }
 
         a {
-          color: var(--color-text);
+          color: var(--report-on-surface);
           text-decoration: none;
-          font-size: 0.95rem;
+          font-size: 0.9rem;
           display: block;
-          padding: 8px 10px;
-          border-radius: 8px;
-          transition: background-color 0.2s, color 0.2s;
-
-          &:hover,
-          &:focus {
-            background: rgba(0, 0, 0, 0.04);
-            color: var(--color-primary);
-          }
+          padding: 6px 8px;
+          border-radius: 6px;
 
           &.active {
-            color: var(--color-primary);
+            color: var(--report-primary);
             font-weight: 700;
-            background: rgba(255, 119, 51, 0.1);
+            background-color: var(--report-primary-bg);
           }
         }
       }
     }
   }
 
-  // ドロワーオープン時
   &.is-open {
     .floating-toc-overlay {
       opacity: 1;
@@ -1992,4 +1755,312 @@ h3:hover .heading-anchor {
       transform: translateY(0);
     }
   }
+}
+
+// ==================================================
+// Related Tools Section & Report Footer
+// ==================================================
+.related-tools-section {
+  margin: 0 0 2rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.75rem;
+  background-color: var(--report-surface-card);
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.25rem 1rem;
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--report-text-primary);
+    font-size: 1.15rem;
+    border-bottom: 1px solid var(--report-border-crisp);
+    padding-bottom: 0.5rem;
+  }
+
+  .parent-tool,
+  .child-tools,
+  .sibling-tools {
+    margin: 1rem 0;
+    padding: 0.85rem 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--report-surface-lowest);
+    border: 1px solid var(--report-border-crisp);
+
+    h4 {
+      font-family: $font-mono-report;
+      font-size: 0.85rem;
+      color: var(--report-text-secondary);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0.5rem 0;
+      }
+    }
+
+    .tool-link {
+      display: block;
+      text-decoration: none;
+      color: var(--report-text-primary);
+
+      &:hover .tool-title {
+        color: var(--report-primary);
+      }
+    }
+
+    .tool-title {
+      font-weight: 600;
+      color: var(--report-primary);
+      margin-right: 0.5rem;
+    }
+
+    .tool-description {
+      display: block;
+      font-size: 0.8125rem;
+      color: var(--report-text-secondary);
+      margin-top: 0.2rem;
+    }
+  }
+
+  .parent-tool {
+    border-left: 3px solid var(--report-positive);
+  }
+
+  .child-tools {
+    border-left: 3px solid var(--report-tertiary);
+  }
+
+  .sibling-tools {
+    border-left: 3px solid var(--report-secondary);
+  }
+
+  .tool-badges {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    vertical-align: middle;
+  }
+}
+
+.report-footer {
+  background-color: var(--report-surface-card);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.75rem;
+  padding: 1.75rem 2rem;
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.report-navigation {
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.nav-previous,
+.nav-next {
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    border-color: var(--report-primary-border);
+    background-color: var(--report-surface-subtle);
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.nav-next {
+  text-align: right;
+
+  @include media-breakpoint-down(md) {
+    text-align: left;
+  }
+}
+
+.nav-label {
+  display: block;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.nav-title {
+  display: block;
+  font-weight: 600;
+  color: var(--report-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.back-to-index {
+  text-align: center;
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background-color: var(--report-surface-subtle);
+    border: 1px solid var(--report-border-crisp);
+    color: var(--report-text-primary);
+    border-radius: 0.375rem;
+    font-family: $font-mono-report;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--report-primary-bg);
+      border-color: var(--report-primary-border);
+      color: var(--report-primary);
+      text-decoration: none;
+    }
+  }
+}
+
+.related-reports {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--report-text-primary);
+    font-size: 1.1rem;
+  }
+}
+
+.related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+
+.related-link {
+  display: block;
+  padding: 0.85rem 1rem;
+  background-color: var(--report-surface-lowest);
+  border: 1px solid var(--report-border-crisp);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--report-primary-border);
+    background-color: var(--report-surface-subtle);
+    text-decoration: none;
+  }
+}
+
+.related-title {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--report-text-primary);
+  margin-right: 0.5rem;
+}
+
+.related-badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  vertical-align: middle;
+}
+
+.related-oss-badge,
+.related-free-badge,
+.related-score-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: $font-mono-report;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.12rem 0.45rem;
+  border-radius: 0.25rem;
+}
+
+.related-oss-badge {
+  background-color: var(--report-secondary-bg);
+  color: var(--report-secondary);
+  border: 1px solid var(--report-secondary-border);
+}
+
+.related-free-badge {
+  background-color: var(--report-positive-bg);
+  color: var(--report-positive);
+  border: 1px solid var(--report-positive-border);
+}
+
+.related-score-badge {
+  background-color: var(--report-primary-bg);
+  color: var(--report-primary);
+  border: 1px solid var(--report-primary-border);
+}
+
+.related-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.35rem;
+  font-family: $font-mono-report;
+  font-size: 0.75rem;
+  color: var(--report-text-muted);
+}
+
+// Heading Permalink Anchor
+.heading-anchor {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.35rem;
+  color: var(--report-text-muted);
+  opacity: 0;
+  text-decoration: none;
+  transition: opacity 0.15s ease, color 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--report-primary);
+    opacity: 1;
+  }
+}
+
+h2:hover .heading-anchor,
+h3:hover .heading-anchor {
+  opacity: 0.75;
 }

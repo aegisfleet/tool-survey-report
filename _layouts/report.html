@@ -4,310 +4,218 @@ layout: default
 
 <div id="scroll-progress-bar" class="scroll-progress-bar" aria-hidden="true"></div>
 
-<div class="report-page-layout">
-<article class="report-article" itemscope itemtype="http://schema.org/Article">
-  <header class="report-header">
+<!-- Sub-Header: Breadcrumb Track & Quick Actions -->
+<div class="report-subbar">
+  <div class="report-subbar-inner">
     <div class="report-breadcrumb">
       <nav aria-label="パンくずリスト">
         <ol class="breadcrumb">
+          <li class="breadcrumb-track-label" aria-hidden="true">TRACK:</li>
           <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
           {%- if page.category -%}
-          <li><a href="{{ '/' | relative_url }}?category={{ page.category | url_encode }}">{{
-              site.data.categories[page.category] | default: '🔹' }} {{ page.category }}</a></li>
+          <li>
+            <a href="{{ '/' | relative_url }}?category={{ page.category | url_encode }}" class="breadcrumb-category-pill">
+              {{ site.data.categories[page.category] | default: '🔹' }} {{ page.category }}
+            </a>
+          </li>
           {%- endif -%}
           <li aria-current="page">{{ page.tool_name | default: page.title }}</li>
         </ol>
       </nav>
     </div>
 
-    <h1 class="report-title" itemprop="headline">{{ page.title }}</h1>
-
-    <div class="report-meta">
-      {%- if page.last_updated -%}
-      <div class="report-date">
-        <time datetime="{{ page.last_updated | date_to_xmlschema }}" itemprop="datePublished">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
-          </svg>
-          {{ page.last_updated | date: "%Y年%m月%d日" }}
-        </time>
-      </div>
-      {%- endif -%}
-
+    <div class="report-subbar-actions">
       <div class="report-reading-time" id="report-reading-time" style="display: none;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/>
           <polyline points="12 6 12 12 16 14"/>
         </svg>
         <span class="reading-time-text"></span>
       </div>
 
-      {%- if page.developer -%}
-      <div class="report-developer">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path
-            d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z" />
-          <path d="M3 3h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
-        </svg>
-        開発元: {{ page.developer }}
-      </div>
-      {%- elsif page.author -%}
-      <div class="report-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path
-            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-        </svg>
-        <span itemprop="name">{{ page.author }}</span>
-      </div>
-      {%- endif -%}
-
-      {%- if page.category -%}
-      <div class="report-category">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path
-            d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
-        </svg>
-        カテゴリ: {{ site.data.categories[page.category] | default: '🔹' }} {{ page.category }}
-      </div>
-      {%- endif -%}
-
-      {%- if page.official_site or page.links.documentation or page.links.github or page.links.deepwiki or
-      page.links.codewiki -%}
+      {%- if page.official_site or page.links.documentation or page.links.github or page.links.deepwiki or page.links.codewiki or page.path -%}
       <div class="report-hero-links">
-        {%- if page.official_site -%}
-        <a href="{{ page.official_site }}" target="_blank" rel="noopener" class="hero-link-btn" title="公式サイト">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm.312-5.5h2.49a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z" />
-          </svg>
-          公式サイト
-        </a>
-        {%- endif -%}
         {%- if page.links.documentation -%}
-        <a href="{{ page.links.documentation }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-docs"
-          title="ドキュメント">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
-            <path
-              d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z" />
+        <a href="{{ page.links.documentation }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-docs" title="公式ドキュメント">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+            <path d="M4.5 10.5A.5.5 0 0 1 5 10h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm0-2A.5.5 0 0 1 5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5z" />
           </svg>
-          Docs
+          <span>Docs</span>
         </a>
         {%- endif -%}
         {%- if page.links.github -%}
-        <a href="{{ page.links.github }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-github"
-          title="GitHub">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+        <a href="{{ page.links.github }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-github" title="GitHub リポジトリ">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
           </svg>
-          GitHub
+          <span>GitHub</span>
         </a>
         {%- endif -%}
         {%- if page.links.deepwiki -%}
-        <a href="{{ page.links.deepwiki }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-deepwiki"
-          title="DeepWiki">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+        <a href="{{ page.links.deepwiki }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-deepwiki" title="DeepWiki">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
           </svg>
-          DeepWiki
+          <span>DeepWiki</span>
         </a>
         {%- endif -%}
         {%- if page.links.codewiki -%}
-        <a href="{{ page.links.codewiki }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-codewiki"
-          title="CodeWiki">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+        <a href="{{ page.links.codewiki }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-codewiki" title="CodeWiki">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
           </svg>
-          CodeWiki
+          <span>CodeWiki</span>
         </a>
         {%- endif -%}
         {%- if page.path -%}
-        <a href="https://raw.githubusercontent.com/aegisfleet/tool-survey-report/main/{{ page.path }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-markdown"
-          title="Raw Markdown（AI / エージェント用）">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-            <path
-              d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
-            <path
-              d="M4.5 9h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1zm0 2h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1zm0-4h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1 0-1z" />
+        <a href="https://raw.githubusercontent.com/aegisfleet/tool-survey-report/main/{{ page.path }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-markdown" title="Raw Markdown（AI / エージェント用）">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
           </svg>
-          Markdown
+          <span>Raw MD</span>
+        </a>
+        {%- endif -%}
+        {%- if page.official_site -%}
+        <a href="{{ page.official_site }}" target="_blank" rel="noopener" class="hero-link-btn hero-link-official" title="公式サイトを開く">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>公式サイト</span>
         </a>
         {%- endif -%}
       </div>
       {%- endif -%}
+    </div>
+  </div>
+</div>
 
-      {%- if page.tags and page.tags.size > 0 -%}
-      <div class="report-tags">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path
-            d="M2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586V2zm3.5 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-        </svg>
-        <ul class="tag-list">
-          {%- for tag in page.tags -%}
-          <li>
-            <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link" rel="tag">
-              {{ tag }}
-            </a>
-          </li>
-          {%- endfor -%}
-        </ul>
+<div class="report-page-layout">
+<article class="report-article" itemscope itemtype="http://schema.org/Article">
+  <!-- Evaluation Brief Header Card -->
+  <header class="report-header report-brief-card">
+    <div class="report-meta brief-meta-strip">
+      <div class="brief-meta-pills">
+        <span class="brief-pill brief-pill-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+          <span>Report Brief</span>
+        </span>
+        {%- if page.category -%}
+        <a href="{{ '/' | relative_url }}?category={{ page.category | url_encode }}" class="report-category brief-pill brief-pill-category">
+          <span>category: {{ site.data.categories[page.category] | default: '🔹' }} {{ page.category }}</span>
+        </a>
+        {%- endif -%}
+        {%- if page.developer -%}
+        <div class="report-developer brief-pill brief-pill-dev">
+          <span>developer: {{ page.developer }}</span>
+        </div>
+        {%- elsif page.author -%}
+        <div class="report-author brief-pill brief-pill-dev" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span>author: <span itemprop="name">{{ page.author }}</span></span>
+        </div>
+        {%- endif -%}
       </div>
-      {%- endif -%}
+
+      <div class="brief-meta-dates">
+        {%- if page.date -%}
+        <div class="report-date-initial">
+          <span>調査日: <strong class="date-val"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time></strong></span>
+        </div>
+        {%- endif -%}
+        {%- if page.date and page.last_updated -%}
+        <span class="meta-sep" aria-hidden="true">•</span>
+        {%- endif -%}
+        {%- if page.last_updated -%}
+        <div class="report-date">
+          <span>更新日: <strong class="date-val is-updated"><time datetime="{{ page.last_updated | date_to_xmlschema }}" itemprop="datePublished">{{ page.last_updated | date: "%Y-%m-%d" }}</time></strong></span>
+        </div>
+        {%- endif -%}
+      </div>
     </div>
 
-    {% if page.description %}
-    <div class="report-description" itemprop="description">
-      <p>{{ page.description }}</p>
-    </div>
-    {% endif %}
-  </header>
-
-  <!-- クイックサマリーカード -->
-  {% if page.quick_summary or page.evaluation %}
-  <section class="quick-summary-section">
-    <div class="quick-summary-grid">
+    <!-- Title & Score Grid -->
+    <div class="brief-title-grid">
+      <div class="brief-title-col">
+        <span class="brief-eyebrow">EVALUATION BRIEF</span>
+        <h1 class="report-title" itemprop="headline">
+          {{ page.title }}
+          {%- if page.tool_reading -%}
+          <span class="report-title-reading">/ {{ page.tool_reading }}</span>
+          {%- endif -%}
+        </h1>
+        {%- if page.description -%}
+        <div class="report-description" itemprop="description">
+          <p>{{ page.description }}</p>
+        </div>
+        {%- endif -%}
+      </div>
 
       {%- if page.evaluation.score -%}
-      <div class="summary-card score-card">
-        <div class="summary-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-          </svg>
+      <div class="summary-card score-card score-badge-card">
+        <span class="summary-label score-eyebrow">OVERALL SCORE</span>
+        <div class="score-number-row">
+          <span class="summary-value score-value">{{ page.evaluation.score }}</span>
+          <span class="score-max">/100</span>
         </div>
-        <div class="summary-content">
-          <div class="summary-label">総合評価</div>
-          <div class="summary-value score-value">{{ page.evaluation.score }}点</div>
-          <div class="summary-note">基準点70点からの評価</div>
-        </div>
+        <span class="summary-note score-base-badge">基準点 {{ page.evaluation.base_score | default: 70 }}pt</span>
       </div>
       {%- endif -%}
-
-      {%- if page.quick_summary.is_oss != nil -%}
-      <div class="summary-card">
-        <div class="summary-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 2a10 10 0 1010 10 10 10 0 00-10-10zm0 4a6 6 0 11-6 6 6 6 0 016-6zm0 2a4 4 0 00-4 4h8a4 4 0 00-4-4z" />
-          </svg>
-        </div>
-        <div class="summary-content">
-          <div class="summary-label">オープンソース</div>
-          <div class="summary-value">{% if page.quick_summary.is_oss %}OSS{% else %}非公式・商用{% endif %}</div>
-        </div>
-      </div>
-      {%- endif -%}
-
-      {%- if page.quick_summary.has_free_plan != nil -%}
-      <div class="summary-card">
-        <div class="summary-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-          </svg>
-        </div>
-        <div class="summary-content">
-          <div class="summary-label">無料プラン</div>
-          <div class="summary-value">{% if page.quick_summary.has_free_plan %}あり{% else %}なし{% endif %}</div>
-        </div>
-      </div>
-      {%- endif -%}
-
-      {%- if page.quick_summary.starting_price -%}
-      <div class="summary-card">
-        <div class="summary-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <div class="summary-content">
-          <div class="summary-label">最低価格</div>
-          <div class="summary-value">{{ page.quick_summary.starting_price }}</div>
-        </div>
-      </div>
-      {%- endif -%}
-
-      {%- if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 -%}
-      <div class="summary-card">
-        <div class="summary-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-        </div>
-        <div class="summary-content">
-          <div class="summary-label">対象ユーザー</div>
-          <div class="summary-value target-users">
-            {%- for user in page.quick_summary.target_users -%}
-            <span class="target-user-tag">{{ user }}</span>
-            {%- endfor -%}
-          </div>
-        </div>
-      </div>
-      {%- endif -%}
-
-      {% if page.quick_summary.update_frequency %}
-      <div class="summary-card">
-        <div class="summary-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-          </svg>
-        </div>
-        <div class="summary-content">
-          <div class="summary-label">更新頻度</div>
-          <div class="summary-value">{{ page.quick_summary.update_frequency }}</div>
-        </div>
-      </div>
-      {% endif %}
-
     </div>
 
-    {%- if page.quick_summary.latest_highlight -%}
-    <div class="latest-highlight">
-      <span class="highlight-label">🆕 最新情報:</span>
-      <span class="highlight-text">{{ page.quick_summary.latest_highlight }}</span>
-    </div>
-    {%- endif -%}
-
-    <!-- 評価の詳細 -->
+    <!-- Score Breakdown (加点・減点リスト) -->
     {%- if page.evaluation.plus_points or page.evaluation.minus_points or page.evaluation.summary -%}
     <div class="evaluation-details">
-      <h3 class="evaluation-title">📋 評価の詳細</h3>
+      <span class="evaluation-title">【スコア算定根拠（加点・減点詳細）】</span>
+      <div class="evaluation-points-grid">
+        {%- if page.evaluation.plus_points and page.evaluation.plus_points.size > 0 -%}
+        {%- for item in page.evaluation.plus_points -%}
+        {%- if item.reason and item.reason != "" -%}
+        <div class="eval-point-item is-plus">
+          <svg class="eval-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="16"></line>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+          <span class="eval-reason">{{ item.reason }}</span>
+          <span class="eval-point plus">(+{{ item.point }}pt)</span>
+        </div>
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endif -%}
 
-      {%- if page.evaluation.plus_points and page.evaluation.plus_points.size > 0 -%}
-      <div class="evaluation-group plus-points">
-        <h4>👍 加点項目</h4>
-        <ul>
-          {%- for item in page.evaluation.plus_points -%}
-          <li>
-            <span class="eval-point plus">+{{ item.point }}</span>
-            <span class="eval-reason">{{ item.reason }}</span>
-          </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-      {%- endif -%}
+        {%- assign has_minus_reason = false -%}
+        {%- if page.evaluation.minus_points and page.evaluation.minus_points.size > 0 -%}
+        {%- for item in page.evaluation.minus_points -%}
+        {%- if item.reason and item.reason != "" -%}
+        {%- assign has_minus_reason = true -%}
+        <div class="eval-point-item {% if item.point == 0 %}is-neutral{% else %}is-minus{% endif %}">
+          <svg class="eval-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="8" y1="12" x2="16" y2="12"></line>
+          </svg>
+          <span class="eval-reason">{{ item.reason }}</span>
+          <span class="eval-point minus">({% if item.point > 0 %}-{% endif %}{{ item.point }}pt)</span>
+        </div>
+        {%- endif -%}
+        {%- endfor -%}
+        {%- endif -%}
 
-      {%- if page.evaluation.minus_points and page.evaluation.minus_points.size > 0 -%}
-      <div class="evaluation-group minus-points">
-        <h4>👎 減点項目</h4>
-        <ul>
-          {%- for item in page.evaluation.minus_points -%}
-          <li>
-            <span class="eval-point minus">{{ item.point }}</span>
-            <span class="eval-reason">{{ item.reason }}</span>
-          </li>
-          {%- endfor -%}
-        </ul>
+        {%- unless has_minus_reason -%}
+        <div class="eval-point-item is-none">
+          <svg class="eval-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span class="eval-reason">減点対象なし (0pt)</span>
+        </div>
+        {%- endunless -%}
       </div>
-      {%- endif -%}
 
       {%- if page.evaluation.summary -%}
       <div class="evaluation-summary">
@@ -316,13 +224,93 @@ layout: default
       {%- endif -%}
     </div>
     {%- endif -%}
-  </section>
-  {%- endif -%}
-  {%- include related-tools.html -%}
 
-  <div class="report-content" itemprop="articleBody">
-    {{ content }}
+    <!-- Tags -->
+    {%- if page.tags and page.tags.size > 0 -%}
+    <div class="report-tags">
+      <span class="tags-prefix">TAGS:</span>
+      <ul class="tag-list">
+        {%- for tag in page.tags -%}
+        <li>
+          <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}" class="tag-link" rel="tag">#{{ tag }}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endif -%}
+
+    <!-- Quick Matrix (フロントマター要約一覧) -->
+    {%- if page.quick_summary -%}
+    <section class="quick-summary-section" aria-label="クイックサマリー">
+      <div class="quick-summary-grid">
+        {%- if page.quick_summary.is_oss != nil -%}
+        <div class="summary-card">
+          <span class="summary-label">ライセンス</span>
+          <span class="summary-value">{% if page.quick_summary.is_oss %}OSS (公開){% else %}商用 / 独自{% endif %}</span>
+        </div>
+        {%- endif -%}
+
+        {%- if page.quick_summary.has_free_plan != nil -%}
+        <div class="summary-card">
+          <span class="summary-label">無料枠</span>
+          <span class="summary-value {% if page.quick_summary.has_free_plan %}is-positive{% endif %}">{% if page.quick_summary.has_free_plan %}あり{% else %}なし{% endif %}</span>
+        </div>
+        {%- endif -%}
+
+        {%- if page.quick_summary.starting_price -%}
+        <div class="summary-card">
+          <span class="summary-label">価格帯</span>
+          <span class="summary-value is-secondary" title="{{ page.quick_summary.starting_price | escape }}">{{ page.quick_summary.starting_price }}</span>
+        </div>
+        {%- endif -%}
+
+        {%- if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 -%}
+        <div class="summary-card">
+          <span class="summary-label">想定ユーザー</span>
+          <span class="summary-value target-users" title="{{ page.quick_summary.target_users | join: ' / ' | escape }}">{{ page.quick_summary.target_users | join: '・' }}</span>
+        </div>
+        {%- endif -%}
+
+        {%- if page.quick_summary.update_frequency -%}
+        <div class="summary-card">
+          <span class="summary-label">更新頻度</span>
+          <span class="summary-value is-primary">{{ page.quick_summary.update_frequency }}</span>
+        </div>
+        {%- endif -%}
+
+        {%- if page.quick_summary.latest_highlight -%}
+        <div class="summary-card">
+          <span class="summary-label">ハイライト</span>
+          <span class="summary-value" title="{{ page.quick_summary.latest_highlight | escape }}">{{ page.quick_summary.latest_highlight }}</span>
+        </div>
+        {%- endif -%}
+      </div>
+
+      {%- if page.quick_summary.latest_highlight -%}
+      <div class="latest-highlight">
+        <span class="highlight-label">🆕 最新情報:</span>
+        <span class="highlight-text">{{ page.quick_summary.latest_highlight }}</span>
+      </div>
+      {%- endif -%}
+    </section>
+    {%- endif -%}
+  </header>
+
+  <!-- Main Markdown Content Card -->
+  <div class="report-body-card">
+    <div class="report-content" itemprop="articleBody">
+      {{ content }}
+    </div>
+
+    <div class="report-audit-footer">
+      <span>AUDIT VERIFIED: {{ page.developer | default: page.tool_name | default: page.title }}{% if page.last_updated %} ({{ page.last_updated | date: "%Y-%m-%d" }}){% endif %}</span>
+      {%- if page.evaluation.score -%}
+      <span class="audit-score">OVERALL SCORE: {{ page.evaluation.score }} / 100</span>
+      {%- endif -%}
+    </div>
   </div>
+
+  {%- include related-tools.html -%}
 
   {% include ad-unit.html slot="9707725702" %}
 
@@ -346,31 +334,32 @@ layout: default
         {% assign next_report = reports[next_index] %}
         <div class="nav-previous">
           <a href="{{ next_report.url | relative_url }}" rel="prev">
-            <span class="nav-label">前のレポート</span>
+            <span class="nav-label">← 前のレポート</span>
             <span class="nav-title">{{ next_report.tool_name | default: next_report.title }}</span>
           </a>
         </div>
         {% endif %}
 
-        {% if prev_index < reports.size %} {% assign prev_report=reports[prev_index] %} <div class="nav-next">
+        {% if prev_index < reports.size %}
+        {% assign prev_report = reports[prev_index] %}
+        <div class="nav-next">
           <a href="{{ prev_report.url | relative_url }}" rel="next">
-            <span class="nav-label">次のレポート</span>
+            <span class="nav-label">次のレポート →</span>
             <span class="nav-title">{{ prev_report.tool_name | default: prev_report.title }}</span>
           </a>
+        </div>
+        {% endif %}
       </div>
       {% endif %}
-    </div>
-    {% endif %}
 
-    <div class="back-to-index">
-      <a href="{{ '/' | relative_url }}" class="back-link">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-          <path fill-rule="evenodd"
-            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
-        </svg>
-        ホームに戻る
-      </a>
-    </div>
+      <div class="back-to-index">
+        <a href="{{ '/' | relative_url }}" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+          </svg>
+          <span>ホームに戻る</span>
+        </a>
+      </div>
     </div>
 
     {% if page.tags and page.tags.size > 0 %}
@@ -392,72 +381,106 @@ layout: default
       {% assign is_oss = report.quick_summary.is_oss | default: false %}
       {% assign has_free_plan = report.quick_summary.has_free_plan | default: false %}
       {% assign score = report.evaluation.score | default: "" %}
-      {% assign report_with_score = report.tool_name | default: report.title | append: "|" | append: match_ratio |
-      append: "|" | append:
-      common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated | append: "|" |
-      append: is_oss | append: "|" | append: has_free_plan | append: "|" | append: score %}
+      {% assign report_with_score = report.tool_name | default: report.title | append: "|" | append: match_ratio | append: "|" | append: common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated | append: "|" | append: is_oss | append: "|" | append: has_free_plan | append: "|" | append: score %}
       {% assign related_with_scores = related_with_scores | push: report_with_score %}
       {% endif %}
       {% endif %}
       {% endfor %}
 
-      {% comment %} Sort by match ratio (descending), then by common count (descending) {% endcomment %}
       {% assign sorted_related = "" | split: "" %}
       {% for score_item in related_with_scores %}
       {% assign parts = score_item | split: "|" %}
       {% assign ratio = parts[1] | plus: 0 %}
       {% assign count = parts[2] | plus: 0 %}
-      {% if ratio < 10 %} {% assign padded_ratio="0" | append: ratio %} {% else %} {% assign padded_ratio=ratio %} {%
-        endif %} {% assign sort_key=padded_ratio | append: "." | append: count | append: "." | append: parts[0] %} {%
-        assign sorted_item=sort_key | append: "###" | append: score_item %} {% assign sorted_related=sorted_related |
-        push: sorted_item %} {% endfor %} {% assign sorted_related=sorted_related | sort | reverse %} {% assign
-        top_related=sorted_related | slice: 0, 5 %} {% if top_related.size> 0 %}
-        <ul class="related-list">
-          {% for item in top_related %}
-          {% assign sort_parts = item | split: "###" %}
-          {% assign original_item = sort_parts[1] %}
-          {% assign parts = original_item | split: "|" %}
-          {% assign report_title = parts[0] %}
-          {% assign match_ratio = parts[1] %}
-          {% assign common_count = parts[2] %}
-          {% assign report_url = parts[3] %}
-          {% assign report_date = parts[4] %}
-          {% assign is_oss = parts[5] %}
-          {% assign has_free_plan = parts[6] %}
-          {% assign eval_score = parts[7] %}
-          <li class="related-item">
-            <a href="{{ report_url | relative_url }}" class="related-link">
-              <span class="related-title">{{ report_title }}</span>
-              <span class="related-badges">
-                {% if is_oss == "true" %}
-                <span class="related-oss-badge">OSS</span>
-                {% elsif has_free_plan == "true" %}
-                <span class="related-free-badge">💚 無料プランあり</span>
-                {% endif %}
-                {% if eval_score and eval_score != "" and eval_score != "nil" and eval_score != "false" %}
-                <span class="related-score-badge">{{ eval_score }}点</span>
-                {% endif %}
-              </span>
-              <span class="related-meta">
-                {% if report_date %}
-                <span class="related-date">{{ report_date | date: "%Y年%m月%d日" }}</span>
-                {% endif %}
-                <span class="match-info">
-                  (共通タグ: {{ common_count }}個, 一致率: {{ match_ratio }}%)
-                </span>
-              </span>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% else %}
-        <p>タグが一致するレポートはありません。</p>
-        {% endif %}
+      {% if ratio < 10 %}
+      {% assign padded_ratio = "0" | append: ratio %}
+      {% else %}
+      {% assign padded_ratio = ratio %}
+      {% endif %}
+      {% assign sort_key = padded_ratio | append: "." | append: count | append: "." | append: parts[0] %}
+      {% assign sorted_item = sort_key | append: "###" | append: score_item %}
+      {% assign sorted_related = sorted_related | push: sorted_item %}
+      {% endfor %}
+      {% assign sorted_related = sorted_related | sort | reverse %}
+      {% assign top_related = sorted_related | slice: 0, 5 %}
+      {% if top_related.size > 0 %}
+      <ul class="related-list">
+        {% for item in top_related %}
+        {% assign sort_parts = item | split: "###" %}
+        {% assign original_item = sort_parts[1] %}
+        {% assign parts = original_item | split: "|" %}
+        {% assign report_title = parts[0] %}
+        {% assign match_ratio = parts[1] %}
+        {% assign common_count = parts[2] %}
+        {% assign report_url = parts[3] %}
+        {% assign report_date = parts[4] %}
+        {% assign is_oss = parts[5] %}
+        {% assign has_free_plan = parts[6] %}
+        {% assign eval_score = parts[7] %}
+        <li class="related-item">
+          <a href="{{ report_url | relative_url }}" class="related-link">
+            <span class="related-title">{{ report_title }}</span>
+            <span class="related-badges">
+              {% if is_oss == "true" %}
+              <span class="related-oss-badge">OSS</span>
+              {% elsif has_free_plan == "true" %}
+              <span class="related-free-badge">💚 無料プランあり</span>
+              {% endif %}
+              {% if eval_score and eval_score != "" and eval_score != "nil" and eval_score != "false" %}
+              <span class="related-score-badge">{{ eval_score }}pt</span>
+              {% endif %}
+            </span>
+            <span class="related-meta">
+              {% if report_date %}
+              <span class="related-date">{{ report_date | date: "%Y-%m-%d" }}</span>
+              {% endif %}
+              <span class="match-info">(共通タグ: {{ common_count }}個, 一致率: {{ match_ratio }}%)</span>
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>タグが一致するレポートはありません。</p>
+      {% endif %}
     </div>
     {% endif %}
   </footer>
 </article>
 </div>
+
+<!-- Template for Sticky Sidebar Footer (Related Tools & Back-to-top) -->
+<template id="report-sidebar-extra-template">
+  <div class="floating-toc-footer">
+    {%- if top_related and top_related.size > 0 -%}
+    <div class="sidebar-related-group">
+      <span class="sidebar-related-heading">関連レポート (Compared):</span>
+      <div class="sidebar-related-list">
+        {%- for item in top_related limit: 4 -%}
+        {%- assign sort_parts = item | split: "###" -%}
+        {%- assign parts = sort_parts[1] | split: "|" -%}
+        {%- assign r_title = parts[0] -%}
+        {%- assign r_url = parts[3] -%}
+        {%- assign r_score = parts[7] -%}
+        <a href="{{ r_url | relative_url }}" class="sidebar-related-item">
+          <span class="sidebar-related-name">{{ r_title }}</span>
+          {%- if r_score and r_score != "" and r_score != "nil" and r_score != "false" -%}
+          <span class="sidebar-related-score">{{ r_score }}pt</span>
+          {%- endif -%}
+        </a>
+        {%- endfor -%}
+      </div>
+    </div>
+    {%- endif -%}
+    <button type="button" class="sidebar-scroll-top-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+      <span>ページトップへ</span>
+    </button>
+  </div>
+</template>
 
 <script type="module">
   import { mount } from 'https://cdn.jsdelivr.net/npm/pele@1.12.0/dist/pele.js';
@@ -471,9 +494,58 @@ layout: default
     if (!pre) return;
 
     const source = codeBlock.textContent;
+    const firstLine = (source.trim().split(/\r?\n/)[0] || '').toLowerCase();
+    let diagramBadge = 'DIAGRAM';
+    if (firstLine.startsWith('swimlane')) diagramBadge = 'SWIMLANE';
+    else if (firstLine.startsWith('flowchart') || firstLine.startsWith('graph')) diagramBadge = 'FLOWCHART';
+    else if (firstLine.startsWith('sequencediagram')) diagramBadge = 'SEQUENCE';
+
+    const card = document.createElement('div');
+    card.className = 'mermaid-card';
+
+    const header = document.createElement('div');
+    header.className = 'mermaid-card-header';
+    header.innerHTML = `
+      <span class="mermaid-card-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="18" cy="5" r="3"></circle>
+          <circle cx="6" cy="12" r="3"></circle>
+          <circle cx="18" cy="19" r="3"></circle>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        <span>Architecture &amp; Flow Diagram</span>
+      </span>
+      <span class="mermaid-card-badge">${diagramBadge}</span>
+    `;
+
     const container = document.createElement('div');
     container.className = 'mermaid-diagram';
-    pre.replaceWith(container);
+
+    const details = document.createElement('details');
+    details.className = 'mermaid-raw-details';
+    const summary = document.createElement('summary');
+    summary.className = 'mermaid-raw-summary';
+    summary.innerHTML = `
+      <svg class="raw-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+      <span>Raw Mermaid AST Code</span>
+    `;
+    const rawPre = document.createElement('pre');
+    rawPre.className = 'mermaid-raw-pre';
+    const rawCode = document.createElement('code');
+    rawCode.textContent = source.trim();
+    rawPre.appendChild(rawCode);
+    details.appendChild(summary);
+    details.appendChild(rawPre);
+
+    card.appendChild(header);
+    card.appendChild(container);
+    card.appendChild(details);
+
+    const replaceTarget = pre.closest('.language-mermaid.highlighter-rouge') || pre;
+    replaceTarget.replaceWith(card);
 
     let baseVb = null;
     let curVb = null;

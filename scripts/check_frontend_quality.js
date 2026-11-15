@@ -159,7 +159,9 @@ function main() {
 
   const errors = [];
   checkHtmlQuality('_layouts/home.html', errors);
+  checkHtmlQuality('_layouts/report.html', errors);
   checkScssQuality('_sass/_home.scss', errors);
+  checkScssQuality('_sass/_reports.scss', errors);
 
   const jsDir = path.join(ROOT_DIR, 'assets', 'js');
   if (fs.existsSync(jsDir)) {

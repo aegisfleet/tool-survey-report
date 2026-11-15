@@ -537,15 +537,38 @@ function addAnchorLinksToHeadings() {
   });
 }
 
+function classifyNumberedHeading(h, num, rest) {
+  h.dataset.tocTitle = `${num}. ${rest}`;
+  if (rest.includes('特徴・強み') || rest.includes('Pros')) {
+    h.classList.add('is-pros-heading');
+    h.dataset.tocStyle = 'pros';
+  } else if (rest.includes('弱み・注意点') || rest.includes('Cons')) {
+    h.classList.add('is-cons-heading');
+    h.dataset.tocStyle = 'cons';
+  } else if (rest.includes('総評') || rest.includes('Conclusion')) {
+    h.classList.add('is-conclusion-heading');
+    h.dataset.tocStyle = 'conclusion';
+  }
+
+  h.textContent = '';
+  const numSpan = document.createElement('span');
+  numSpan.className = 'heading-num';
+  numSpan.textContent = `#${num}`;
+  const textSpan = document.createElement('span');
+  textSpan.className = 'heading-text';
+  textSpan.textContent = rest;
+  h.appendChild(numSpan);
+  h.appendChild(textSpan);
+}
+
 /**
- * レポートの主要セクション見出しに絵文字を動的に付加する
+ * レポートの主要セクション見出しに番号バッジまたは絵文字を動的に付加する
  */
 function applyEmojisToHeadings() {
   const reportContent = document.querySelector('.report-content');
   if (!reportContent) return;
 
   const emojiMap = {
-    // 主要セクション
     基本情報: '📋',
     目的と主な利用シーン: '🎯',
     主要機能: '🛠️',
@@ -576,11 +599,15 @@ function applyEmojisToHeadings() {
 
   const headings = reportContent.querySelectorAll('h2');
   headings.forEach((h) => {
-    const text = h.textContent;
+    const text = (h.textContent || '').trim();
+    const numMatch = text.match(/^(\d+)\.\s*(.+)$/);
+    if (numMatch) {
+      classifyNumberedHeading(h, numMatch[1], numMatch[2]);
+      return;
+    }
+
     for (const [key, emoji] of Object.entries(emojiMap)) {
-      // 絵文字がまだ付いておらず、キーワードが含まれる場合に付与
       if (text.includes(key) && !text.includes(emoji)) {
-        // テキストの先頭（番号の前後など）ではなく、見出し全体の先頭に挿入
         h.innerHTML = `${emoji} ${h.innerHTML}`;
         break;
       }
@@ -588,57 +615,61 @@ function applyEmojisToHeadings() {
   });
 }
 
+function detectCodeLanguage(codeBlock, pre) {
+  const targetClass = `${codeBlock.className} ${pre.parentElement?.className || ''} ${pre.parentElement?.parentElement?.className || ''}`;
+  const langMatch = targetClass.match(/language-([a-zA-Z0-9_-]+)/);
+  return langMatch ? langMatch[1] : 'terminal';
+}
+
 function addCopyButtonsToCodeBlocks() {
   const codeBlocks = document.querySelectorAll('pre code');
 
   codeBlocks.forEach((codeBlock) => {
+    if (codeBlock.classList.contains('language-mermaid') || codeBlock.closest('.mermaid-raw-pre')) return;
     const pre = codeBlock.parentElement;
-    const button = document.createElement('button');
-    button.className = 'copy-code-btn';
-    button.textContent = 'コピー';
-    button.style.cssText = `
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-      padding: 0.25rem 0.5rem;
-      background: rgba(0, 0, 0, 0.7);
-      color: white;
-      border: none;
-      border-radius: 0.25rem;
-      font-size: 0.75rem;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.2s;
+    if (!pre || pre.querySelector('.code-block-header')) return;
+
+    const lang = detectCodeLanguage(codeBlock, pre);
+    const header = document.createElement('div');
+    header.className = 'code-block-header';
+
+    const label = document.createElement('span');
+    label.className = 'code-block-lang';
+    label.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="4 17 10 11 4 5"></polyline>
+        <line x1="12" y1="19" x2="20" y2="19"></line>
+      </svg>
     `;
+    const langText = document.createElement('span');
+    langText.textContent = lang;
+    label.appendChild(langText);
 
-    pre.style.position = 'relative';
-
-    pre.addEventListener('mouseenter', () => {
-      button.style.opacity = '1';
-    });
-
-    pre.addEventListener('mouseleave', () => {
-      button.style.opacity = '0';
-    });
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'copy-code-btn';
+    button.textContent = 'COPY';
 
     button.addEventListener('click', () => {
       navigator.clipboard
         .writeText(codeBlock.textContent)
         .then(() => {
-          button.textContent = 'コピー済み!';
+          button.textContent = 'COPIED!';
           setTimeout(() => {
-            button.textContent = 'コピー';
+            button.textContent = 'COPY';
           }, 2000);
         })
         .catch(() => {
-          button.textContent = 'コピーに失敗しました';
+          button.textContent = 'FAILED';
           setTimeout(() => {
-            button.textContent = 'コピー';
+            button.textContent = 'COPY';
           }, 2000);
         });
     });
 
-    pre.appendChild(button);
+    header.appendChild(label);
+    header.appendChild(button);
+    pre.insertBefore(header, codeBlock);
   });
 }
 
@@ -841,6 +872,25 @@ function bindTocToggleButton(btn, listEl) {
  * デスクトップ用フローティング目次を右方向へスライドさせて格納する。
  * 格納中は右端の「目次」タブから再展開できる。
  */
+function appendSidebarExtra(desktopInner) {
+  const extraTpl = document.getElementById('report-sidebar-extra-template');
+  if (!extraTpl || !('content' in extraTpl)) return;
+  const clone = extraTpl.content.cloneNode(true);
+  const topBtn = clone.querySelector('.sidebar-scroll-top-btn');
+  if (topBtn) {
+    topBtn.addEventListener('click', scrollToTop);
+  }
+  desktopInner.appendChild(clone);
+}
+
+function getTocLinkStyleClass(heading) {
+  const style = heading.dataset.tocStyle;
+  if (style === 'pros') return 'is-pros-link';
+  if (style === 'cons') return 'is-cons-link';
+  if (style === 'conclusion') return 'is-conclusion-link';
+  return '';
+}
+
 function bindDesktopTocToggle(desktopToc, toggleBtn, reopenBtn) {
   const reportLayout = document.querySelector('.report-page-layout');
   if (!reportLayout || !toggleBtn || !reopenBtn) return;
@@ -924,7 +974,7 @@ function generateTableOfContents() {
   desktopInner.innerHTML = `
       <div class="floating-toc-header">
         <span class="floating-toc-title">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <line x1="8" y1="6" x2="21" y2="6"></line>
             <line x1="8" y1="12" x2="21" y2="12"></line>
             <line x1="8" y1="18" x2="21" y2="18"></line>
@@ -932,7 +982,7 @@ function generateTableOfContents() {
             <line x1="3" y1="12" x2="3.01" y2="12"></line>
             <line x1="3" y1="18" x2="3.01" y2="18"></line>
           </svg>
-          目次
+          <span>Table of Contents</span>
         </span>
         <button type="button" class="floating-toc-toggle-btn" aria-expanded="true" aria-label="目次を右に格納する" title="目次を右に格納する">
           <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -945,6 +995,7 @@ function generateTableOfContents() {
   const desktopList = document.createElement('ul');
   desktopList.className = 'floating-toc-list';
   desktopInner.appendChild(desktopList);
+  appendSidebarExtra(desktopInner);
   desktopToc.appendChild(desktopInner);
 
   // 固定表示の目次がレイアウト上で占める幅を確保するスペーサー
@@ -1069,13 +1120,17 @@ function generateTableOfContents() {
 
     const clone = heading.cloneNode(true);
     clone.querySelector('.heading-anchor')?.remove();
-    const titleText = clone.textContent.trim();
+    const titleText = heading.dataset.tocTitle || clone.textContent.trim();
+    const linkStyleClass = getTocLinkStyleClass(heading);
 
     const appendTocEntry = (targetList, itemClass, shouldCloseDrawer) => {
       const li = document.createElement('li');
       li.className = `${itemClass} toc-level-${tagLower}`;
       const a = document.createElement('a');
       a.href = `#${id}`;
+      if (linkStyleClass) {
+        a.classList.add(linkStyleClass);
+      }
       a.textContent = titleText;
       a.addEventListener('click', createScrollHandler(id, shouldCloseDrawer));
       li.appendChild(a);

@@ -83,6 +83,33 @@
     // Theme icon visibility
     --theme-icon-light-display: none;
     --theme-icon-dark-display: block;
+
+    // Report Detail Design Tokens (Light Theme)
+    --report-surface-base: #f3f6fa;
+    --report-surface-card: #ffffff;
+    --report-surface-lowest: #f6f8fb;
+    --report-surface-low: #eef2f7;
+    --report-surface-subtle: #eaeff5;
+    --report-surface-high: #dde5ef;
+    --report-border-crisp: #d0d7de;
+    --report-border-muted: #e2e8f0;
+    --report-text-primary: #0f172a;
+    --report-on-surface: #1e293b;
+    --report-text-secondary: #475569;
+    --report-text-muted: #526071;
+    --report-primary: #026aa2;
+    --report-primary-bg: rgba(2, 106, 162, 0.08);
+    --report-primary-border: rgba(2, 106, 162, 0.28);
+    --report-secondary: #0d6e66;
+    --report-secondary-bg: rgba(13, 110, 102, 0.08);
+    --report-secondary-border: rgba(13, 110, 102, 0.28);
+    --report-tertiary: #9a4406;
+    --report-positive: #157347;
+    --report-positive-bg: rgba(21, 115, 71, 0.09);
+    --report-positive-border: rgba(21, 115, 71, 0.3);
+    --report-negative: #b91c1c;
+    --report-negative-bg: rgba(185, 28, 28, 0.09);
+    --report-negative-border: rgba(185, 28, 28, 0.3);
 }
 
 // ========================================
@@ -158,6 +185,33 @@
 
         --theme-icon-light-display: block;
         --theme-icon-dark-display: none;
+
+        // Report Detail Design Tokens (Dark Theme)
+        --report-surface-base: #0d1117;
+        --report-surface-card: #161b22;
+        --report-surface-lowest: #0a0e14;
+        --report-surface-low: #181c22;
+        --report-surface-subtle: #21262d;
+        --report-surface-high: #262a31;
+        --report-border-crisp: #30363d;
+        --report-border-muted: #21262d;
+        --report-text-primary: #f0f6fc;
+        --report-on-surface: #dfe2eb;
+        --report-text-secondary: #949ea8;
+        --report-text-muted: #8b949e;
+        --report-primary: #8ed5ff;
+        --report-primary-bg: rgba(142, 213, 255, 0.1);
+        --report-primary-border: rgba(142, 213, 255, 0.28);
+        --report-secondary: #44e2cd;
+        --report-secondary-bg: rgba(68, 226, 205, 0.1);
+        --report-secondary-border: rgba(68, 226, 205, 0.28);
+        --report-tertiary: #ffbf9e;
+        --report-positive: #3fb950;
+        --report-positive-bg: rgba(63, 185, 80, 0.12);
+        --report-positive-border: rgba(63, 185, 80, 0.3);
+        --report-negative: #ff7b72;
+        --report-negative-bg: rgba(255, 123, 114, 0.12);
+        --report-negative-border: rgba(255, 123, 114, 0.3);
     }
 }
 
@@ -233,6 +287,33 @@
 
     --theme-icon-light-display: block;
     --theme-icon-dark-display: none;
+
+    // Report Detail Design Tokens (Dark Theme)
+    --report-surface-base: #0d1117;
+    --report-surface-card: #161b22;
+    --report-surface-lowest: #0a0e14;
+    --report-surface-low: #181c22;
+    --report-surface-subtle: #21262d;
+    --report-surface-high: #262a31;
+    --report-border-crisp: #30363d;
+    --report-border-muted: #21262d;
+    --report-text-primary: #f0f6fc;
+    --report-on-surface: #dfe2eb;
+    --report-text-secondary: #949ea8;
+    --report-text-muted: #8b949e;
+    --report-primary: #8ed5ff;
+    --report-primary-bg: rgba(142, 213, 255, 0.1);
+    --report-primary-border: rgba(142, 213, 255, 0.28);
+    --report-secondary: #44e2cd;
+    --report-secondary-bg: rgba(68, 226, 205, 0.1);
+    --report-secondary-border: rgba(68, 226, 205, 0.28);
+    --report-tertiary: #ffbf9e;
+    --report-positive: #3fb950;
+    --report-positive-bg: rgba(63, 185, 80, 0.12);
+    --report-positive-border: rgba(63, 185, 80, 0.3);
+    --report-negative: #ff7b72;
+    --report-negative-bg: rgba(255, 123, 114, 0.12);
+    --report-negative-border: rgba(255, 123, 114, 0.3);
 }
 
 // ========================================
