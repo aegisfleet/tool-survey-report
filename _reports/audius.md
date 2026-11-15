@@ -1,53 +1,50 @@
 ---
-title: "Audius 調査レポート"
-tool_name: "Audius"
-tool_reading: "オーディウス / アウディウス"
-category: "メディアクライアント"
-developer: "Audius, Inc. / Open Audio Foundation"
-official_site: "https://audius.co/"
-date: "2026-11-15"
-last_updated: "2026-11-15"
+title: Audius 調査レポート
+tool_name: Audius
+tool_reading: オーディウス / アウディウス
+category: メディアクライアント
+developer: Audius, Inc. / Open Audio Foundation
+official_site: https://audius.co/
+date: '2026-11-15'
+last_updated: '2026-11-15'
 tags:
-  - "オープンソース"
-  - "API"
-  - "音楽ストリーミング"
-  - "Web3"
-  - "分散型プラットフォーム"
-description: "ブロックチェーンと分散型ノード（Open Audio Protocol）を基盤とし、アーティストとリスナーを直接つなぐオープンソースの音楽ストリーミングプラットフォーム。"
-
+  - オープンソース
+  - API
+  - 音楽ストリーミング
+  - Web3
+  - 分散型プラットフォーム
+description: ブロックチェーンと分散型ノード（Open Audio Protocol）を基盤とし、アーティストとリスナーを直接つなぐオープンソースの音楽ストリーミングプラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "インディペンデントアーティスト"
-    - "音楽リスナー"
-    - "Web3・音楽アプリ開発者"
-  latest_highlight: "2026年9月に@audius/sdk v17.0.0をリリースし、バリデータノードによるオンチェーンCID証明に対応"
-  update_frequency: "高"
-
+    - インディペンデントアーティスト
+    - 音楽リスナー
+    - Web3・音楽アプリ開発者
+  latest_highlight: 2026年9月に@audius/sdk v17.0.0をリリースし、バリデータノードによるオンチェーンCID証明に対応
+  update_frequency: 高
 evaluation:
   score: 74
   base_score: 70
   plus_points:
     - point: 6
-      reason: "リスナー・アーティストともに基本機能（320kbps高音質ストリーミング、無制限アップロード）が完全無料で広告なし"
+      reason: リスナー・アーティストともに基本機能（320kbps高音質ストリーミング、無制限アップロード）が完全無料で広告なし
     - point: 5
-      reason: "USDC直接販売（アーティスト90%還元）、Artist Coins、トークンゲートコンテンツ、オープンなAPI/SDKを提供"
+      reason: USDC直接販売（アーティスト90%還元）、Artist Coins、トークンゲートコンテンツ、オープンなAPI/SDKを提供
     - point: 4
-      reason: "Apache-2.0で公開され、2026年11月時点でも毎日コミットが行われる活発なOSS開発体制"
+      reason: Apache-2.0で公開され、2026年11月時点でも毎日コミットが行われる活発なOSS開発体制
   minus_points:
     - point: -5
-      reason: "Web・モバイルアプリのUIおよび公式サポートが英語のみで、日本語ローカライズに未対応"
+      reason: Web・モバイルアプリのUIおよび公式サポートが英語のみで、日本語ローカライズに未対応
     - point: -3
-      reason: "モバイルアプリの再生不安定さや、スパムボットによるリポスト通知の多さがレビューで指摘されている"
+      reason: モバイルアプリの再生不安定さや、スパムボットによるリポスト通知の多さがレビューで指摘されている
     - point: -3
-      reason: "インディペンデント中心のため、メジャーレーベルの商業楽曲カタログが限定的"
-  summary: "完全無料・高音質・オープンソースの分散型音楽基盤として高い独自性を持つ一方、UIの英語限定やモバイルアプリの安定性・カタログ網羅性に課題が残る。"
-
+      reason: インディペンデント中心のため、メジャーレーベルの商業楽曲カタログが限定的
+  summary: 完全無料・高音質・オープンソースの分散型音楽基盤として高い独自性を持つ一方、UIの英語限定やモバイルアプリの安定性・カタログ網羅性に課題が残る。
 links:
-  github: "https://github.com/AudiusProject/apps"
-  documentation: "https://docs.audius.co/"
+  github: https://github.com/AudiusProject/apps
+  documentation: https://docs.audius.co/
 ---
 
 # **Audius 調査レポート**
