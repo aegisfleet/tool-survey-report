@@ -41,6 +41,8 @@ links:
   codewiki: https://codewiki.google/github.com/NousResearch/hermes-agent
   documentation: https://hermes-agent.nousresearch.com/docs/
 relationships:
+  children:
+    - Hermes WebUI
   related_tools:
     - OpenHands
     - Phone Harness
