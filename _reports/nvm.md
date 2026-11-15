@@ -2,7 +2,7 @@
 title: nvm 調査レポート
 tool_name: nvm
 tool_reading: エヌブイエム
-category: パッケージ管理
+category: 言語ランタイム/実行環境
 developer: OpenJS Foundation
 official_site: https://github.com/nvm-sh/nvm
 date: '2026-04-13'

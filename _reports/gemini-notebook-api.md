@@ -2,7 +2,7 @@
 title: Gemini Notebook API 調査レポート
 tool_name: Gemini Notebook API
 tool_reading: ジェミニ ノートブック エーピーアイ
-category: AIアプリ開発基盤
+category: MCP基盤
 developer: Google
 official_site: https://developers.google.com/notebook/docs
 date: '2026-11-11'
@@ -11,10 +11,8 @@ tags:
   - AI
   - API
   - MCP
-  - 大規模言語モデル
   - エージェント
   - 開発者ツール
-  - クラウド
 description: Gemini Notebookの永続ノートブックや情報ソースをプログラムから作成・管理し、リモートMCPサーバー経由でAIエージェントと直結できるGoogle公式API基盤。
 quick_summary:
   has_free_plan: true

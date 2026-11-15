@@ -2,7 +2,7 @@
 title: AWS Frontier Agents 調査レポート
 tool_name: AWS Frontier Agents
 tool_reading: エーダブリューエス フロンティア エージェンツ
-category: AI開発ワークフロー
+category: エンタープライズマルチエージェント
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/ai/frontier-agents/
 date: '2026-01-28'
