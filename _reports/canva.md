@@ -55,6 +55,7 @@ relationships:
     - Gamma
     - Speaker Deck
     - Qwen-Image-Layered
+    - Felo
 ---
 # **Canva 調査レポート**
 
