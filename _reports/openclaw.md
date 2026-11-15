@@ -51,6 +51,7 @@ relationships:
   related_tools:
     - AutoGPT
     - Claude Code
+    - Hermes WebUI
 ---
 
 # **OpenClaw 調査レポート**
