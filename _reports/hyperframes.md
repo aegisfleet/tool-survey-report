@@ -38,6 +38,7 @@ links:
   github: https://github.com/heygen-com/hyperframes
   deepwiki: https://deepwiki.com/heygen-com/hyperframes
 relationships:
+  parent: HeyGen
   related_tools:
     - Remotion
 ---
