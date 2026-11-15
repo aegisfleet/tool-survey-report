@@ -546,8 +546,39 @@ layout: default
     let btnIn = null;
     let btnOut = null;
     let btnReset = null;
+    let baseSvgStyle = null;
 
     const getSvg = () => container.querySelector(':scope > svg') || container.querySelector('svg');
+
+    const isFullscreen = () => container.classList.contains('is-fullscreen');
+
+    // 全画面時のみSVGをコンテナ全体に広げ、通常時はPeleが付与した元のサイズ指定へ戻す。
+    // （SVG要素のstyle属性はPeleの再描画で置き換わるため、描画のたびに適用し直す）
+    const applySvgFit = (svg) => {
+      if (!svg) return;
+      if (isFullscreen()) {
+        svg.style.width = '100%';
+        svg.style.height = '100%';
+        svg.style.maxWidth = 'none';
+        svg.style.maxHeight = 'none';
+        svg.style.display = 'block';
+        return;
+      }
+      if (baseSvgStyle === null) {
+        baseSvgStyle = svg.getAttribute('style');
+        return;
+      }
+      svg.setAttribute('style', baseSvgStyle);
+    };
+
+    const readVb = (svg) => {
+      const raw = svg ? svg.getAttribute('viewBox') : null;
+      if (!raw) return null;
+      const parts = raw.trim().split(/[\s,]+/).map(Number);
+      if (parts.length !== 4 || parts.some((value) => !Number.isFinite(value))) return null;
+      if (!(parts[2] > 0) || !(parts[3] > 0)) return null;
+      return { x: parts[0], y: parts[1], width: parts[2], height: parts[3] };
+    };
 
     const updateControls = () => {
       const svg = getSvg();
@@ -575,20 +606,29 @@ layout: default
       updateControls();
     };
 
-    const initVb = (force = false) => {
+    // Peleの再描画ではSVGのviewBoxが基準値に戻るため、描画のたびに基準を同期する
+    const syncViewBox = (force = false) => {
       const svg = getSvg();
-      if (!svg) return;
-      const raw = svg.getAttribute('viewBox');
-      if (raw) {
-        const parts = raw.split(/\s+/).map(Number);
-        if (parts.length === 4 && parts[2] > 0 && parts[3] > 0) {
-          if (!baseVb || force) {
-            baseVb = { x: parts[0], y: parts[1], width: parts[2], height: parts[3] };
-            curVb = { ...baseVb };
-          }
-        }
+      if (!svg) {
+        updateControls();
+        return;
       }
-      updateControls();
+      applySvgFit(svg);
+
+      const next = readVb(svg);
+      if (!next) {
+        updateControls();
+        return;
+      }
+
+      const sizeChanged = !baseVb || !curVb
+        || Math.abs(next.width - baseVb.width) > 0.5
+        || Math.abs(next.height - baseVb.height) > 0.5;
+      if (force || sizeChanged) {
+        baseVb = next;
+        curVb = { ...next };
+      }
+      applyVb();
     };
 
     const instance = mount(container, source, {
@@ -605,7 +645,7 @@ layout: default
         if (zoomControls && zoomControls.parentNode !== container) {
           container.appendChild(zoomControls);
         }
-        initVb();
+        syncViewBox();
       }
     });
 
@@ -616,9 +656,6 @@ layout: default
       instance.zoom.resized = () => {};
       instance.zoom.refresh = () => {};
     }
-    if (getComputedStyle(container).position === 'static') {
-      container.style.position = 'relative';
-    }
     if (zoomControls) {
       container.appendChild(zoomControls);
       btnIn = zoomControls.querySelector('.pele-zoom-in');
@@ -626,17 +663,29 @@ layout: default
       btnReset = zoomControls.querySelector('.pele-zoom-reset');
     }
 
-    initVb();
+    syncViewBox(true);
+
+    // 画面上のクライアント座標をSVGのユーザー座標へ変換する
+    // （preserveAspectRatioによるレターボックスがあっても正確な位置を求めるため）
+    const clientToUser = (svg, clientX, clientY) => {
+      const ctm = svg.getScreenCTM();
+      if (!ctm) return null;
+      const point = svg.createSVGPoint();
+      point.x = clientX;
+      point.y = clientY;
+      return point.matrixTransform(ctm.inverse());
+    };
 
     const zoomAt = (factor, clientX, clientY) => {
       const svg = getSvg();
       if (!svg) return;
-      if (!curVb) initVb();
+      if (!curVb) syncViewBox(true);
       if (!curVb) return;
 
-      const rect = svg.getBoundingClientRect();
-      const rx = clientX !== undefined && rect.width > 0 ? (clientX - rect.left) / rect.width : 0.5;
-      const ry = clientY !== undefined && rect.height > 0 ? (clientY - rect.top) / rect.height : 0.5;
+      const hasAnchor = clientX !== undefined && clientY !== undefined;
+      const anchor = hasAnchor ? clientToUser(svg, clientX, clientY) : null;
+      const fx = anchor ? (anchor.x - curVb.x) / curVb.width : 0.5;
+      const fy = anchor ? (anchor.y - curVb.y) / curVb.height : 0.5;
 
       const newW = curVb.width * factor;
       const newH = curVb.height * factor;
@@ -646,23 +695,22 @@ layout: default
         if (scale < 0.2 || scale > 20) return;
       }
 
-      curVb.x += (curVb.width - newW) * rx;
-      curVb.y += (curVb.height - newH) * ry;
+      curVb.x += (curVb.width - newW) * fx;
+      curVb.y += (curVb.height - newH) * fy;
       curVb.width = newW;
       curVb.height = newH;
       applyVb();
     };
 
     const resetZoom = () => {
-      const svg = getSvg();
-      if (!svg) return;
-      initVb();
+      if (!baseVb) syncViewBox(true);
       if (!baseVb) return;
       curVb = { ...baseVb };
       applyVb();
     };
     container._resetZoom = resetZoom;
-    container._initVb = initVb;
+    container._syncViewBox = syncViewBox;
+    container._refreshDiagram = () => instance?.refresh?.();
 
     // 拡大・縮小ボタンのステップ倍率（約1.15倍の滑らかなズーム）
     if (btnIn) {
@@ -723,7 +771,7 @@ layout: default
     container.addEventListener('pointerdown', (e) => {
       if (e.target.closest('.pele-zoom')) return;
       if (e.pointerType === 'mouse' && e.button !== 0) return;
-      if (!curVb) initVb();
+      if (!curVb) syncViewBox(true);
       if (!curVb) return;
 
       activePointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
@@ -759,9 +807,10 @@ layout: default
         const newCenter = { x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2 };
 
         if (lastPinchDist > 0 && newDist > 0 && lastPinchCenter) {
-          const rect = svg.getBoundingClientRect();
-          if (rect.width > 0 && rect.height > 0) {
-            const factor = lastPinchDist / newDist;
+          const from = clientToUser(svg, lastPinchCenter.x, lastPinchCenter.y);
+          const to = clientToUser(svg, newCenter.x, newCenter.y);
+          if (from && to) {
+            let factor = lastPinchDist / newDist;
             let newW = curVb.width * factor;
             let newH = curVb.height * factor;
 
@@ -776,13 +825,9 @@ layout: default
               }
             }
 
-            const rx0 = (lastPinchCenter.x - rect.left) / rect.width;
-            const ry0 = (lastPinchCenter.y - rect.top) / rect.height;
-            const rx1 = (newCenter.x - rect.left) / rect.width;
-            const ry1 = (newCenter.y - rect.top) / rect.height;
-
-            curVb.x = curVb.x + curVb.width * rx0 - newW * rx1;
-            curVb.y = curVb.y + curVb.height * ry0 - newH * ry1;
+            factor = newW / curVb.width;
+            curVb.x = from.x - (to.x - curVb.x) * factor;
+            curVb.y = from.y - (to.y - curVb.y) * factor;
             curVb.width = newW;
             curVb.height = newH;
             applyVb();
@@ -811,14 +856,11 @@ layout: default
         if (hasMoved) {
           const svg = getSvg();
           if (!svg) return;
-          const rect = svg.getBoundingClientRect();
-          if (rect.width > 0 && rect.height > 0) {
-            const scaleX = curVb.width / rect.width;
-            const scaleY = curVb.height / rect.height;
-            curVb.x = startVbX - dx * scaleX;
-            curVb.y = startVbY - dy * scaleY;
-            applyVb();
-          }
+          const ctm = svg.getScreenCTM();
+          if (!ctm || !(ctm.a > 0) || !(ctm.d > 0)) return;
+          curVb.x = startVbX - dx / ctm.a;
+          curVb.y = startVbY - dy / ctm.d;
+          applyVb();
         }
       }
     });
@@ -886,9 +928,15 @@ layout: default
 
   const openFullscreen = (container, btn) => {
     container.classList.add('is-fullscreen');
-    if (typeof container._initVb === 'function') {
-      setTimeout(() => container._initVb(true), 50);
+    // 全画面サイズでの再描画と、それに伴うSVGサイズ・viewBoxの変化を反映する
+    if (typeof container._refreshDiagram === 'function') {
+      container._refreshDiagram();
     }
+    requestAnimationFrame(() => {
+      if (container.classList.contains('is-fullscreen') && typeof container._syncViewBox === 'function') {
+        container._syncViewBox(true);
+      }
+    });
     btn.innerHTML = iconMinimize;
     btn.title = '全画面を閉じる (Esc)';
     btn.setAttribute('aria-label', '全画面を閉じる (Esc)');
@@ -900,7 +948,15 @@ layout: default
     const active = document.querySelector('.mermaid-diagram.is-fullscreen');
     if (!active) return;
     active.classList.remove('is-fullscreen');
-    if (typeof active._resetZoom === 'function') active._resetZoom();
+    if (typeof active._refreshDiagram === 'function') {
+      active._refreshDiagram();
+    }
+    requestAnimationFrame(() => {
+      if (active.classList.contains('is-fullscreen')) return;
+      if (typeof active._syncViewBox === 'function') {
+        active._syncViewBox(true);
+      }
+    });
     const btn = active.querySelector('.pele-zoom-fullscreen');
     if (btn) {
       btn.innerHTML = iconMaximize;
