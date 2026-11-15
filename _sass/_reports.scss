@@ -237,6 +237,11 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   &.is-toc-collapsed .report-article {
     max-width: 100%;
   }
+
+  strong {
+    background: none;
+    padding: 0;
+  }
 }
 
 // ==================================================
@@ -487,9 +492,8 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
 .evaluation-points-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem 1rem;
-  font-family: $font-mono-report;
-  font-size: 0.78rem;
+  gap: 0.55rem 1.25rem;
+  font-size: 0.8125rem;
 
   @include media-breakpoint-up(sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -499,34 +503,50 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
 .eval-point-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.4rem;
-  line-height: 1.45;
+  gap: 0.45rem;
+  line-height: 1.5;
+  color: var(--report-on-surface);
 
   .eval-icon {
     flex-shrink: 0;
-    margin-top: 0.15rem;
+    margin-top: 0.18rem;
   }
 
   .eval-reason {
-    color: inherit;
+    color: var(--report-on-surface);
+    font-family: $font-sans-report;
   }
 
   .eval-point {
-    font-weight: 600;
+    font-family: $font-mono-report;
+    font-weight: 700;
     white-space: nowrap;
+    margin-left: 0.2rem;
   }
 
   &.is-plus {
-    color: var(--report-positive);
+    .eval-icon,
+    .eval-point {
+      color: var(--report-positive);
+    }
   }
 
   &.is-minus {
-    color: var(--report-negative);
+    .eval-icon,
+    .eval-point {
+      color: var(--report-negative);
+    }
   }
 
   &.is-neutral,
   &.is-none {
     color: var(--report-text-muted);
+
+    .eval-icon,
+    .eval-reason,
+    .eval-point {
+      color: var(--report-text-muted);
+    }
   }
 }
 
@@ -703,6 +723,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   }
 }
 
+.report-body-card .report-content,
 .report-content {
   background-color: var(--report-surface-card);
   color: var(--report-on-surface);
@@ -790,6 +811,8 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   strong {
     font-weight: 600;
     color: var(--report-text-primary);
+    background: none;
+    padding: 0;
   }
 
   ul,
@@ -825,6 +848,17 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     &:hover,
     &:focus-visible {
       color: var(--report-secondary);
+    }
+
+    &[href*="/reports/"] {
+      color: var(--report-text-primary);
+      text-decoration-color: var(--report-text-muted);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--report-text-primary);
+        text-decoration-color: var(--report-text-primary);
+      }
     }
   }
 
@@ -909,22 +943,28 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     background: transparent;
   }
 
-  // Tables
+  // Tables (borderless outer container, full-width table with clean row dividers)
   .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin: 1.25rem 0;
-    border-radius: 0.5rem;
-    border: 1px solid var(--report-border-crisp);
-    background-color: var(--report-surface-lowest);
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
   }
 
   table {
+    display: table;
     width: 100%;
+    max-width: 100%;
     margin: 0;
-    border-collapse: separate;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border-collapse: collapse;
     border-spacing: 0;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     text-align: left;
   }
 
@@ -933,25 +973,29 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     color: var(--report-text-secondary);
     font-weight: 600;
     font-family: $font-mono-report;
-    font-size: 0.75rem;
-    text-transform: uppercase;
+    font-size: 0.78rem;
+    white-space: nowrap;
     padding: 0.75rem 1rem;
-    border-bottom: 1px solid var(--report-border-crisp);
+    border: none;
+    border-bottom: 2px solid var(--report-border-crisp);
   }
 
   td {
     padding: 0.8rem 1rem;
-    border-bottom: 1px solid var(--report-border-muted);
+    border: none;
+    border-bottom: 1px solid var(--report-border-crisp);
     color: var(--report-on-surface);
     line-height: 1.6;
+    vertical-align: top;
+    background: transparent;
   }
 
-  tr:last-child td {
-    border-bottom: none;
+  tr:nth-child(even) td {
+    background: transparent;
   }
 
   tr:hover td {
-    background-color: rgba(128, 128, 128, 0.04);
+    background-color: var(--report-surface-lowest);
   }
 
   // Mobile Card Layout for Pricing/Comparison Tables
@@ -1533,16 +1577,17 @@ body.mermaid-fullscreen-active {
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    color: var(--report-text-secondary);
+    color: var(--report-on-surface);
     text-decoration: none;
-    padding: 0.2rem 0.35rem;
+    padding: 0.25rem 0.4rem;
     border-radius: 0.25rem;
     transition: color 0.15s ease, background-color 0.15s ease;
 
     &:hover,
     &:focus-visible {
-      color: var(--report-primary);
-      background-color: var(--report-surface-lowest);
+      color: var(--report-text-primary);
+      background-color: var(--report-surface-subtle);
+      text-decoration: none;
     }
 
     .sidebar-related-name {
@@ -1553,7 +1598,7 @@ body.mermaid-fullscreen-active {
 
     .sidebar-related-score {
       font-size: 0.6875rem;
-      color: var(--report-secondary);
+      color: var(--report-text-muted);
       flex-shrink: 0;
     }
   }
@@ -1760,6 +1805,7 @@ body.mermaid-fullscreen-active {
 // ==================================================
 // Related Tools Section & Report Footer
 // ==================================================
+.report-page-layout .related-tools-section,
 .related-tools-section {
   margin: 0 0 2rem;
   padding: 1.5rem 2rem;
@@ -1812,18 +1858,37 @@ body.mermaid-fullscreen-active {
 
     .tool-link {
       display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 0.375rem;
+      background-color: var(--report-surface-card);
+      border: 1px solid var(--report-border-crisp);
       text-decoration: none;
       color: var(--report-text-primary);
+      transition: background-color 0.15s ease, border-color 0.15s ease;
 
-      &:hover .tool-title {
-        color: var(--report-primary);
+      &:hover,
+      &:focus-visible {
+        background-color: var(--report-surface-subtle);
+        border-color: var(--report-text-muted);
+        color: var(--report-text-primary);
+        text-decoration: none;
+        transform: none;
+        box-shadow: none;
+      }
+
+      &:hover .tool-title,
+      &:focus-visible .tool-title {
+        color: var(--report-text-primary);
+        text-decoration: underline;
       }
     }
 
     .tool-title {
+      display: inline-block;
       font-weight: 600;
-      color: var(--report-primary);
+      color: var(--report-text-primary);
       margin-right: 0.5rem;
+      margin-bottom: 0;
     }
 
     .tool-description {
@@ -1889,13 +1954,14 @@ body.mermaid-fullscreen-active {
   transition: border-color 0.15s ease, background-color 0.15s ease;
 
   &:hover {
-    border-color: var(--report-primary-border);
+    border-color: var(--report-text-muted);
     background-color: var(--report-surface-subtle);
   }
 
   a {
     display: block;
     text-decoration: none;
+    color: var(--report-text-primary);
   }
 }
 
@@ -1944,9 +2010,9 @@ body.mermaid-fullscreen-active {
 
     &:hover,
     &:focus-visible {
-      background-color: var(--report-primary-bg);
-      border-color: var(--report-primary-border);
-      color: var(--report-primary);
+      background-color: var(--report-surface-high);
+      border-color: var(--report-text-muted);
+      color: var(--report-text-primary);
       text-decoration: none;
     }
   }
@@ -1977,12 +2043,14 @@ body.mermaid-fullscreen-active {
   border: 1px solid var(--report-border-crisp);
   border-radius: 0.5rem;
   text-decoration: none;
+  color: var(--report-text-primary);
   transition: border-color 0.15s ease, background-color 0.15s ease;
 
   &:hover,
   &:focus-visible {
-    border-color: var(--report-primary-border);
+    border-color: var(--report-text-muted);
     background-color: var(--report-surface-subtle);
+    color: var(--report-text-primary);
     text-decoration: none;
   }
 }
@@ -2014,9 +2082,9 @@ body.mermaid-fullscreen-active {
 }
 
 .related-oss-badge {
-  background-color: var(--report-secondary-bg);
-  color: var(--report-secondary);
-  border: 1px solid var(--report-secondary-border);
+  background-color: var(--report-surface-subtle);
+  color: var(--report-text-secondary);
+  border: 1px solid var(--report-border-crisp);
 }
 
 .related-free-badge {
@@ -2026,9 +2094,9 @@ body.mermaid-fullscreen-active {
 }
 
 .related-score-badge {
-  background-color: var(--report-primary-bg);
-  color: var(--report-primary);
-  border: 1px solid var(--report-primary-border);
+  background-color: var(--report-surface-subtle);
+  color: var(--report-text-secondary);
+  border: 1px solid var(--report-border-crisp);
 }
 
 .related-meta {

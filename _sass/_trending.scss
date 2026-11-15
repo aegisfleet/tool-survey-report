@@ -126,7 +126,7 @@
     }
 
     // Details / Summary Accordion
-    details {
+    details:not(.mermaid-raw-details) {
         margin: map-get($spacers, 4) 0;
         border: 1px solid var(--color-border);
         border-radius: $border-radius;
