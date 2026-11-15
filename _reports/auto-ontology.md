@@ -1,57 +1,54 @@
 ---
-title: "Auto Ontology 調査レポート"
-tool_name: "Auto Ontology"
-tool_reading: "オート・オントロジー"
-category: "データ分析"
-developer: "NVIDIA"
-official_site: "https://github.com/NVIDIA/auto-ontology"
-date: "2026-11-16"
-last_updated: "2026-11-16"
+title: Auto Ontology 調査レポート
+tool_name: Auto Ontology
+tool_reading: オート・オントロジー
+category: データ分析
+developer: NVIDIA
+official_site: https://github.com/NVIDIA/auto-ontology
+date: '2026-11-16'
+last_updated: '2026-11-16'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "大規模言語モデル"
-  - "Python"
-description: "エンタープライズデータベースのスキーマやメタデータからグラフベースの意味層（オントロジー）を自動構築し、LLMやAIエージェントの決定論的なクエリ生成（Text-to-SQL）と説明可能性を実現するNVIDIA製のオープンソースフレームワーク。"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - 大規模言語モデル
+  - Python
+description: エンタープライズデータベースのスキーマやメタデータからグラフベースの意味層（オントロジー）を自動構築し、LLMやAIエージェントの決定論的なクエリ生成（Text-to-SQL）と説明可能性を実現するNVIDIA製のオープンソースフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "データエンジニア"
-    - "AIエージェント開発者"
-    - "データアナリスト"
-  latest_highlight: "2026年11月に自己参照型セマンティック外部キー対応、PostgreSQLクロススキーマ外部キー解決、非ASCIIテーブル名・ラベル保持機能を追加"
-  update_frequency: "高"
-
+    - データエンジニア
+    - AIエージェント開発者
+    - データアナリスト
+  latest_highlight: 2026年11月に自己参照型セマンティック外部キー対応、PostgreSQLクロススキーマ外部キー解決、非ASCIIテーブル名・ラベル保持機能を追加
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 5
-      reason: "メタデータからのオントロジー自動生成と人間による認証（Human-in-the-Loop）を組み合わせ、Text-to-SQLのハルシネーションを抑制"
+      reason: メタデータからのオントロジー自動生成と人間による認証（Human-in-the-Loop）を組み合わせ、Text-to-SQLのハルシネーションを抑制
     - point: 5
-      reason: "MCP（Model Context Protocol）サーバー、REST API、Web UIを標準装備し、CursorやClaude Desktop等の各種エージェントと容易に連携可能"
+      reason: MCP（Model Context Protocol）サーバー、REST API、Web UIを標準装備し、CursorやClaude Desktop等の各種エージェントと容易に連携可能
     - point: 4
-      reason: "Apache 2.0ライセンスの完全オープンソースであり、Docker ComposeやHelm Chart、NGCイメージで柔軟にセルフホスト可能"
+      reason: Apache 2.0ライセンスの完全オープンソースであり、Docker ComposeやHelm Chart、NGCイメージで柔軟にセルフホスト可能
     - point: 3
-      reason: "GitHub上で開発が極めて活発（スター数13,000超、日次レベルでのコミット・機能改善）"
+      reason: GitHub上で開発が極めて活発（スター数13,000超、日次レベルでのコミット・機能改善）
   minus_points:
     - point: -3
-      reason: "Next.js・FastAPI×2・Postgres/pgvectorを組み合わせたマルチコンテナ構成のため、導入・運用コストがやや高い"
+      reason: Next.js・FastAPI×2・Postgres/pgvectorを組み合わせたマルチコンテナ構成のため、導入・運用コストがやや高い
     - point: -2
-      reason: "Web UIおよび公式ドキュメントは英語中心であり、日本語サポートが限定的"
-  summary: "企業のデータ基盤に信頼性の高い意味層を自動構築し、MCP経由でAIエージェントへ安全に公開できる強力なOSSフレームワーク。マルチサービス構成の運用負荷はあるが、精度と説明可能性を求める組織に最適。"
-
+      reason: Web UIおよび公式ドキュメントは英語中心であり、日本語サポートが限定的
+  summary: 企業のデータ基盤に信頼性の高い意味層を自動構築し、MCP経由でAIエージェントへ安全に公開できる強力なOSSフレームワーク。マルチサービス構成の運用負荷はあるが、精度と説明可能性を求める組織に最適。
 links:
-  github: "https://github.com/NVIDIA/auto-ontology"
+  github: https://github.com/NVIDIA/auto-ontology
 relationships:
   related_tools:
-    - "Snowflake"
-    - "Open Knowledge Format"
-    - "NemoClaw"
+    - Snowflake
+    - Open Knowledge Format
+    - NemoClaw
 ---
 
 # **Auto Ontology 調査レポート**
