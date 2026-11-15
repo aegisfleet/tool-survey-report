@@ -43,6 +43,9 @@ links:
   github: https://github.com/slidevjs/slidev
   deepwiki: https://deepwiki.com/slidevjs/slidev
   documentation: https://ja.sli.dev/guide/
+relationships:
+  related_tools:
+    - Docswell
 ---
 
 # **Slidev 調査レポート**
