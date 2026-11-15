@@ -277,13 +277,6 @@ layout: default
           <span class="summary-value is-primary">{{ page.quick_summary.update_frequency }}</span>
         </div>
         {%- endif -%}
-
-        {%- if page.quick_summary.latest_highlight -%}
-        <div class="summary-card">
-          <span class="summary-label">ハイライト</span>
-          <span class="summary-value" title="{{ page.quick_summary.latest_highlight | escape }}">{{ page.quick_summary.latest_highlight }}</span>
-        </div>
-        {%- endif -%}
       </div>
 
       {%- if page.quick_summary.latest_highlight -%}
