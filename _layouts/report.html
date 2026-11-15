@@ -264,17 +264,17 @@ layout: default
         </div>
         {%- endif -%}
 
-        {%- if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 -%}
-        <div class="summary-card">
-          <span class="summary-label">想定ユーザー</span>
-          <span class="summary-value target-users" title="{{ page.quick_summary.target_users | join: ' / ' | escape }}">{{ page.quick_summary.target_users | join: '・' }}</span>
-        </div>
-        {%- endif -%}
-
         {%- if page.quick_summary.update_frequency -%}
         <div class="summary-card">
           <span class="summary-label">更新頻度</span>
           <span class="summary-value is-primary">{{ page.quick_summary.update_frequency }}</span>
+        </div>
+        {%- endif -%}
+
+        {%- if page.quick_summary.target_users and page.quick_summary.target_users.size > 0 -%}
+        <div class="summary-card summary-card-target-users">
+          <span class="summary-label">想定ユーザー</span>
+          <span class="summary-value target-users" title="{{ page.quick_summary.target_users | join: ' / ' | escape }}">{{ page.quick_summary.target_users | join: '・' }}</span>
         </div>
         {%- endif -%}
       </div>

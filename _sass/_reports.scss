@@ -630,17 +630,9 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
 }
 
 .quick-summary-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-
-  @include media-breakpoint-up(sm) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include media-breakpoint-up(lg) {
-    grid-template-columns: repeat(5, 1fr);
-  }
 
   .summary-card {
     background-color: var(--report-surface-lowest);
@@ -650,6 +642,24 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     display: block;
     box-shadow: none;
     min-width: 0;
+    flex: 0 0 calc(50% - 0.25rem); // 2 per row
+  }
+
+  @include media-breakpoint-up(sm) {
+    .summary-card {
+      flex-basis: calc(33.333% - 0.3334rem); // 3 per row
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .summary-card {
+      flex-basis: calc(20% - 0.4rem); // 5 per row
+    }
+  }
+
+  // Let the last metric card fill the remaining space on its row
+  .summary-card-target-users {
+    flex-grow: 1;
   }
 
   .summary-label {
