@@ -2,7 +2,7 @@
 title: Hunchly 調査レポート
 tool_name: Hunchly
 tool_reading: ハンチリー
-category: AI検索/ブラウザ拡張
+category: セキュリティ/脅威インテリジェンス
 developer: Maltego Technologies
 official_site: https://hunch.ly/
 date: '2026-10-22'
