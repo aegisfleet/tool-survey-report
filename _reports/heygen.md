@@ -1,56 +1,53 @@
 ---
-title: "HeyGen 調査レポート"
-tool_name: "HeyGen"
-tool_reading: "ヘイジェン"
-category: "AI動画生成プラットフォーム"
-developer: "HeyGen Inc."
-official_site: "https://www.heygen.com/"
-date: "2026-11-15"
-last_updated: "2026-11-15"
+title: HeyGen 調査レポート
+tool_name: HeyGen
+tool_reading: ヘイジェン
+category: AI動画生成プラットフォーム
+developer: HeyGen Inc.
+official_site: https://www.heygen.com/
+date: '2026-11-15'
+last_updated: '2026-11-15'
 tags:
-  - "AI"
-  - "生成AI"
-  - "SaaS"
-  - "AI動画生成"
-  - "API"
-description: "テキストや音声からリアルなAIアバター動画を生成し、177以上の言語への自然なリップシンク翻訳とリアルタイム対話アバターを提供するクラウド型AI動画生成プラットフォーム。"
-
+  - AI
+  - 生成AI
+  - SaaS
+  - AI動画生成
+  - API
+description: テキストや音声からリアルなAIアバター動画を生成し、177以上の言語への自然なリップシンク翻訳とリアルタイム対話アバターを提供するクラウド型AI動画生成プラットフォーム。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$29/月"
+  starting_price: $29/月
   target_users:
-    - "マーケター"
-    - "動画クリエイター"
-    - "エンタープライズ"
-  latest_highlight: "2026年10月〜11月にHeyGen Voice（IPA発音辞書・WebSocketストリーミング）およびHyperFrames Studio・MCP連携を拡充"
-  update_frequency: "高"
-
+    - マーケター
+    - 動画クリエイター
+    - エンタープライズ
+  latest_highlight: 2026年10月〜11月にHeyGen Voice（IPA発音辞書・WebSocketストリーミング）およびHyperFrames Studio・MCP連携を拡充
+  update_frequency: 高
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 10
-      reason: "Avatar VやHeyGen Voiceによる業界最高水準のアバター表現力・リップシンク・音声合成品質"
+      reason: Avatar VやHeyGen Voiceによる業界最高水準のアバター表現力・リップシンク・音声合成品質
     - point: 5
-      reason: "177以上の言語・方言に対応した高精度な動画翻訳（ボイスクローニング保持）とMCP/APIエコシステム"
+      reason: 177以上の言語・方言に対応した高精度な動画翻訳（ボイスクローニング保持）とMCP/APIエコシステム
     - point: 5
-      reason: "SOC 2 Type II・GDPR・HIPAA（Enterprise）準拠や同意検証などのエンタープライズセキュリティ"
+      reason: SOC 2 Type II・GDPR・HIPAA（Enterprise）準拠や同意検証などのエンタープライズセキュリティ
   minus_points:
     - point: -5
-      reason: "クレジット消費型の料金体系であり、微修正の再生成でもクレジットが消費され高頻度利用ではコストが膨らみやすい"
+      reason: クレジット消費型の料金体系であり、微修正の再生成でもクレジットが消費され高頻度利用ではコストが膨らみやすい
     - point: -3
-      reason: "管理画面・スタジオの一部モジュールで英語中心のUIが残っており、完全な日本語UI対応が発展途上"
-  summary: "圧倒的なアバター表現力と多言語動画翻訳を備え、マーケティングやグローバル研修を劇的に高速化する一方、クレジット消費コストの設計には注意が必要なプラットフォーム。"
-
+      reason: 管理画面・スタジオの一部モジュールで英語中心のUIが残っており、完全な日本語UI対応が発展途上
+  summary: 圧倒的なアバター表現力と多言語動画翻訳を備え、マーケティングやグローバル研修を劇的に高速化する一方、クレジット消費コストの設計には注意が必要なプラットフォーム。
 links:
-  documentation: "https://developers.heygen.com/"
+  documentation: https://developers.heygen.com/
 relationships:
   children:
-    - "HyperFrames"
+    - HyperFrames
   related_tools:
-    - "ElevenLabs"
-    - "Dreamina"
+    - ElevenLabs
+    - Dreamina
 ---
 
 # **HeyGen 調査レポート**
