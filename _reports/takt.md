@@ -47,6 +47,7 @@ relationships:
     - Cursor
     - OpenCode
     - GitHub Copilot CLI
+    - Plannotator
 ---
 
 # **TAKT 調査レポート**
