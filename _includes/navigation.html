@@ -37,16 +37,13 @@
           <span>カテゴリを選択</span>
           <a href="{{ '/categories/' | relative_url }}">すべて見る</a>
         </div>
-        {% assign all_categories = site.reports | map: 'category' | uniq | sort %}
+        {%- assign all_categories = site.data.categories_index -%}
         {% for category in all_categories %}
-        {% if category and category != '' %}
-        {% assign category_reports = site.reports | where: "category", category %}
-        <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}" class="nav-dropdown-item"
+        <a href="{{ '/' | relative_url }}?category={{ category.name | url_encode }}" class="nav-dropdown-item"
           role="menuitem">
-          {{ site.data.categories[category] | default: '🔹' }} {{ category }}
-          <span class="dropdown-count">{{ category_reports.size }}</span>
+          {{ site.data.categories[category.name] | default: '🔹' }} {{ category.name }}
+          <span class="dropdown-count">{{ category.count }}</span>
         </a>
-        {% endif %}
         {% endfor %}
       </div>
     </li>

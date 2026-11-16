@@ -93,13 +93,17 @@
     border-radius: $border-radius-lg;
     padding: map-get($spacers, 4);
     box-shadow: $box-shadow-sm;
-    transition: $transition-base;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
     height: fit-content;
 
     &:hover {
         box-shadow: $box-shadow;
         transform: translateY(-2px);
         border-color: rgba($primary-color, 0.3);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
     }
 }
 
@@ -187,7 +191,7 @@
         text-decoration: none;
         border: 1px solid $primary-color;
         border-radius: $border-radius;
-        transition: all 0.2s ease;
+        transition: background-color 0.2s ease, color 0.2s ease;
 
         &:hover {
             background: $primary-color;

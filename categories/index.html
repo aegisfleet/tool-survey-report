@@ -4,6 +4,9 @@ title: "カテゴリ一覧"
 description: "カテゴリ別にレポートを閲覧できます"
 ---
 
+{%- assign categories_index = site.data.categories_index -%}
+{%- assign category_count = categories_index | size -%}
+
 <div class="categories-index-container">
     <header class="page-header">
         <h1>カテゴリ一覧</h1>
@@ -12,8 +15,6 @@ description: "カテゴリ別にレポートを閲覧できます"
 
     <div class="categories-overview">
         <div class="categories-stats">
-            {% assign all_categories = site.reports | map: 'category' | uniq | sort %}
-            {% assign category_count = all_categories | size %}
             <span class="stat-item">
                 <strong>{{ category_count }}</strong> 個のカテゴリ
             </span>
@@ -23,42 +24,45 @@ description: "カテゴリ別にレポートを閲覧できます"
         </div>
     </div>
 
+    <div class="category-search-bar" role="search">
+        <label for="category-search-input" class="screen-reader-text">カテゴリを検索</label>
+        <input type="search" id="category-search-input" class="category-search-input"
+            placeholder="カテゴリ名で絞り込み (例: セキュリティ, パッケージ管理)" autocomplete="off"
+            aria-describedby="category-search-count">
+        <span class="category-search-count" id="category-search-count" aria-live="polite">{{ category_count }} 個のカテゴリ</span>
+    </div>
+
     <div class="categories-grid">
-        {% for category in all_categories %}
-        {% if category and category != '' %}
-        {% assign category_reports = site.reports | where: "category", category %}
-        {% assign report_count = category_reports | size %}
-        <div class="category-card">
+        {% for category in categories_index %}
+        <div class="category-card" data-category-name="{{ category.name | downcase }}">
             <div class="category-header">
                 <h2 class="category-name">
-                    <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}">{{ category }}</a>
+                    <a href="{{ '/' | relative_url }}?category={{ category.name | url_encode }}">{{ category.name }}</a>
                 </h2>
-                <span class="category-count">{{ report_count }} 件</span>
+                <span class="category-count">{{ category.count }} 件</span>
             </div>
 
             <div class="category-reports">
-                {% assign recent_reports = category_reports | sort: 'last_updated' | reverse %}
-                {% for report in recent_reports limit: 3 %}
+                {% for recent in category.recent %}
                 <div class="category-report-item">
-                    <a href="{{ report.url | relative_url }}" class="report-link">
-                        {{ report.tool_name | default: report.title }}
+                    <a href="{{ recent.url | relative_url }}" class="report-link">
+                        {{ recent.tool_name }}
                     </a>
-                    <time class="report-date">{{ report.last_updated | date: "%Y/%m/%d" }}</time>
+                    <time class="report-date">{{ recent.last_updated | date: "%Y/%m/%d" }}</time>
                 </div>
                 {% endfor %}
             </div>
 
             <div class="category-view-all">
-                <a href="{{ '/' | relative_url }}?category={{ category | url_encode }}" class="view-all-link">
+                <a href="{{ '/' | relative_url }}?category={{ category.name | url_encode }}" class="view-all-link">
                     すべて見る →
                 </a>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 
-    {% if all_categories.size == 0 %}
+    {% if category_count == 0 %}
     <div class="no-categories">
         <p>まだカテゴリが設定されたレポートがありません。</p>
     </div>
@@ -70,3 +74,7 @@ description: "カテゴリ別にレポートを閲覧できます"
         <a href="{{ '/' | relative_url }}" class="back-link">← ホームに戻る</a>
     </div>
 </div>
+
+{%- assign asset_version = site.data.asset_version -%}
+{%- unless asset_version -%}{%- assign asset_version = site.time | date: '%s' -%}{%- endunless -%}
+<script src="{{ '/assets/js/categories.js' | relative_url }}?v={{ asset_version }}" defer></script>

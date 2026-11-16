@@ -499,7 +499,12 @@ document.addEventListener('DOMContentLoaded', () => {
     return count;
   }
 
-  function updateActiveFiltersBar(filteredCount, isFilterActive, activeState) {
+  function formatActiveFiltersSummary(isPending, filteredCount) {
+    if (isPending) return '絞り込み結果を読み込み中…';
+    return `絞り込み結果: ${filteredCount}件`;
+  }
+
+  function updateActiveFiltersBar(filteredCount, isFilterActive, activeState, isPending = false) {
     if (!activeFiltersBar) return;
 
     if (!isFilterActive) {
@@ -510,7 +515,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     activeFiltersBar.hidden = false;
     if (activeFiltersSummary) {
-      activeFiltersSummary.textContent = `絞り込み結果: ${filteredCount}件`;
+      activeFiltersSummary.textContent = formatActiveFiltersSummary(isPending, filteredCount);
     }
 
     if (activeFiltersList) {
@@ -532,7 +537,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 表示対象のカードのみ DOM へ実体化して配置する
-  function renderCardVisibility(filteredCards, isFilterActive) {
+  function renderCardVisibility(filteredCards, isFilterActive, isHydrating = false) {
     // すでにグリッド内にあるカードだけを非表示にする（未挿入の仮想カードは対象外）
     reportCards.forEach((card) => {
       if (card._inGrid !== false) {
@@ -541,7 +546,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (filteredCards.length === 0) {
-      if (noResults) noResults.style.display = 'block';
+      // 13件目以降の読み込み中は、未読込カードが該当する可能性があるため
+      // 「0件」表示はハイドレーション完了まで出さない
+      if (noResults) noResults.style.display = isHydrating ? 'none' : 'block';
       updateLoadMoreVisibility(isFilterActive, 0);
       return;
     }
@@ -559,6 +566,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (noResults) noResults.style.display = 'none';
     updateLoadMoreVisibility(isFilterActive, filteredCards.length);
+  }
+
+  // 件数バッジ・絞り込みサマリを更新する。
+  // 13件目以降の読み込み中に0件になっても、未読込カードが該当し得るため確定表示しない。
+  function updateResultCounts(filteredCards, isFilterActive, isHydrating, searchTerm, activeState) {
+    const isPendingZeroResults = isHydrating && isFilterActive && filteredCards.length === 0;
+    const totalReportCount = getReportTotalCount();
+    const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
+
+    if (!isPendingZeroResults) {
+      updateReportsCount(visibleCount, isFilterActive ? filteredCards.length : totalReportCount, isFilterActive);
+      updateSearchCountBadge(filteredCards.length, searchTerm);
+    }
+
+    updateActiveFiltersBar(filteredCards.length, isFilterActive, activeState, isPendingZeroResults);
   }
 
   // ============================================
@@ -1108,14 +1130,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadRemainingReports() {
     if (!hasRemainingReports()) return 0;
-    const data = await fetchReportsSummary();
-    const added = addVirtualCards(data);
-    // 読み込み後は総件数を実データに合わせ、保留中のタグ選択を確定させる
-    if (reportsGrid) reportsGrid.dataset.totalReports = String(reportCards.length);
-    if (added > 0) {
+    try {
+      const data = await fetchReportsSummary();
+      const added = addVirtualCards(data);
+      // 読み込み後は総件数を実データに合わせ、保留中のタグ選択を確定させる
+      if (reportsGrid) reportsGrid.dataset.totalReports = String(reportCards.length);
       filterAndSort(false, false);
+      return added;
+    } catch (error) {
+      // 取得に失敗しても、実際にDOMにあるカード数へ総件数を合わせてUIの整合性を保つ
+      if (reportsGrid) reportsGrid.dataset.totalReports = String(reportCards.length);
+      filterAndSort(false, false);
+      throw error;
     }
-    return added;
   }
 
   // Filter and sort function
@@ -1151,16 +1178,11 @@ document.addEventListener('DOMContentLoaded', () => {
     filteredCards.sort((a, b) => compareReportCards(a, b, sortBy));
 
     const isFilterActive = isAnyFilterActive(searchTerm, tagState.applied, selectedCategory, filterFlags);
-    renderCardVisibility(filteredCards, isFilterActive);
+    const isHydrating = hasRemainingReports();
+    renderCardVisibility(filteredCards, isFilterActive, isHydrating);
 
     // 件数表示を更新（読み込み中は総件数を先に確定させることでチラつきを防ぐ）
-    const totalReportCount = getReportTotalCount();
-    const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
-    updateReportsCount(visibleCount, isFilterActive ? filteredCards.length : totalReportCount, isFilterActive);
-    updateSearchCountBadge(filteredCards.length, searchTerm);
-
-    // Update active filters bar
-    updateActiveFiltersBar(filteredCards.length, isFilterActive, {
+    updateResultCounts(filteredCards, isFilterActive, isHydrating, searchTerm, {
       search: (heroSearchInput?.value || '').trim(),
       category: selectedCategory,
       tag: tagState.applied,

@@ -4,13 +4,18 @@ title: "AI/開発ツール トレンド一覧"
 description: "日々の業界動向、セキュリティ情報、注目のトレンドツールをまとめたレポート一覧"
 ---
 
+{%- assign initial_trending_count = 12 -%}
+{%- if site.trending.size < initial_trending_count -%}
+  {%- assign initial_trending_count = site.trending.size -%}
+{%- endif -%}
+
 <div class="home-container">
   <header class="reports-header" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
     <div>
       <h1 style="font-size: 2.25rem; margin-bottom: 0.5rem; color: var(--color-primary);">📈 {{ page.title }}</h1>
       <p style="color: var(--color-text-muted); font-size: 1.1rem;">{{ page.description }}</p>
     </div>
-    <span id="reports-count-container" class="reports-count-badge" aria-live="polite"></span>
+    <span id="reports-count-container" class="reports-count-badge" aria-live="polite">{{ initial_trending_count }} / {{ site.trending.size }}件のトレンドを表示中</span>
   </header>
 
   <!-- 検索ボックス -->
@@ -63,7 +68,8 @@ description: "日々の業界動向、セキュリティ情報、注目のトレ
       data-description="{{ report.description | downcase }}"
       data-date="{{ report.date | date: '%Y-%m-%d' }}"
       data-tags="{{ report.tags | join: ',' | downcase }}"
-      data-category="{{ report.categories | first | downcase }}">
+      data-category="{{ report.categories | first | downcase }}"
+      {% if forloop.index > 12 %}style="display: none;"{% endif %}>
       <div class="report-card-header">
         <h2 class="report-title">
           <a href="{{ report.url | relative_url }}">{{ report.title }}</a>

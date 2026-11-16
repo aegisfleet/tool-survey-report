@@ -1,11 +1,13 @@
 # frozen_string_literal: true
 
-# レポート一覧から「タグ索引」「関連レポート索引」「類似レポート索引」を1回だけ構築する。
+# レポート一覧から「タグ索引」「カテゴリ索引」「関連レポート索引」
+# 「類似レポート索引」「前後レポート索引」を1回だけ構築する。
 #
-# これまで tags/index.html ではタグごとに site.reports を全走査し、
-# _includes/related-tools.html と _layouts/report.html ではレポートページごとに
-# site.reports を全走査していた（O(N^2) の Liquid ループ）。ビルド時に Ruby 側で
-# 索引を作ることで、ページ数・レポート数が増えてもビルド時間が急増しないようにする。
+# これまで tags/index.html・categories/index.html・navigation.html では
+# 一覧生成のたびに site.reports を全走査し、_includes/related-tools.html と
+# _layouts/report.html ではレポートページごとに site.reports を全走査していた
+# （O(N^2) の Liquid ループ）。ビルド時に Ruby 側で索引を作ることで、
+# ページ数・レポート数が増えてもビルド時間が急増しないようにする。
 module SiteIndexes
   module_function
 
@@ -35,6 +37,46 @@ module SiteIndexes
 
       { "name" => entry["name"], "count" => entry["count"], "recent" => recent }
     end.sort_by { |entry| entry["name"] }
+  end
+
+  # { "カテゴリ名" => 件数・最新3件 } の索引を作る（ナビゲーション・カテゴリ一覧用）
+  def build_categories_index(reports)
+    categories = {}
+
+    reports.each do |doc|
+      name = doc.data["category"].to_s
+      next if name.empty?
+
+      entry = categories[name] ||= { "name" => name, "count" => 0, "recent" => [] }
+      entry["count"] += 1
+      entry["recent"] << doc
+    end
+
+    categories.values.map do |entry|
+      recent = entry["recent"]
+               .sort_by { |doc| doc.data["last_updated"].to_s }
+               .reverse
+               .first(3)
+               .map { |doc| report_summary(doc) }
+
+      { "name" => entry["name"], "count" => entry["count"], "recent" => recent }
+    end.sort_by { |entry| entry["name"] }
+  end
+
+  # 各レポートページの「前のレポート / 次のレポート」を事前計算する。
+  # これまで _layouts/report.html がページごとに site.reports をソート・線形探索していた。
+  def build_report_neighbors_index(reports)
+    ordered = reports.sort_by { |doc| doc.data["last_updated"].to_s }.reverse
+    index = {}
+
+    ordered.each_with_index do |doc, i|
+      index[doc.url.to_s] = {
+        "prev" => i.positive? ? report_summary(ordered[i - 1]) : nil,
+        "next" => i + 1 < ordered.length ? report_summary(ordered[i + 1]) : nil,
+      }
+    end
+
+    index
   end
 
   # { "tool_name" => { parent:, children:, siblings: } } を構築する
@@ -121,17 +163,16 @@ module SiteIndexes
         common = (page_tags & other_tags).size
         next if common.zero?
 
-        ratio = common * 100 / page_tags.size
         summary = summarize(other)
-        summary["match_ratio"] = ratio
+        summary["match_ratio"] = common * 100 / page_tags.size
         summary["common_count"] = common
-
-        # 元の Liquid 実装と同じソートキー（一致率2桁ゼロ詰め + 共通タグ数 + ツール名）
-        padded_ratio = ratio < 10 ? "0#{ratio}" : ratio.to_s
-        scored << ["#{padded_ratio}.#{common}.#{summary['tool_name']}", summary]
+        scored << summary
       end
 
-      index[doc.url.to_s] = scored.sort_by(&:first).reverse.first(5).map(&:last)
+      # 一致率・共通タグ数は数値で比較する（文字列ソートだと 100% が 10% 台に沈む）
+      index[doc.url.to_s] = scored
+                            .sort_by { |s| [-s["match_ratio"], -s["common_count"], s["tool_name"].to_s] }
+                            .first(5)
     end
 
     index
@@ -188,6 +229,8 @@ end
 Jekyll::Hooks.register :site, :post_read do |site|
   reports = SiteIndexes.report_docs(site)
   site.data["tags_index"] = SiteIndexes.build_tags_index(reports)
+  site.data["categories_index"] = SiteIndexes.build_categories_index(reports)
   site.data["related_tools_index"] = SiteIndexes.build_related_tools_index(reports)
   site.data["similar_reports_index"] = SiteIndexes.build_similar_reports_index(reports)
+  site.data["report_neighbors_index"] = SiteIndexes.build_report_neighbors_index(reports)
 end

@@ -309,36 +309,24 @@ layout: default
 
   <footer class="report-footer">
     <div class="report-navigation">
-      {% assign reports = site.reports | sort: 'last_updated' | reverse %}
-      {% assign current_index = nil %}
-      {% for report in reports %}
-      {% if report.url == page.url %}
-      {% assign current_index = forloop.index0 %}
-      {% break %}
-      {% endif %}
-      {% endfor %}
+      {%- assign report_neighbors = site.data.report_neighbors_index[page.url] -%}
 
-      {% if current_index %}
+      {% if report_neighbors.prev or report_neighbors.next %}
       <div class="nav-links">
-        {% assign prev_index = current_index | plus: 1 %}
-        {% assign next_index = current_index | minus: 1 %}
-
-        {% if next_index >= 0 %}
-        {% assign next_report = reports[next_index] %}
+        {% if report_neighbors.prev %}
         <div class="nav-previous">
-          <a href="{{ next_report.url | relative_url }}" rel="prev">
+          <a href="{{ report_neighbors.prev.url | relative_url }}" rel="prev">
             <span class="nav-label">← 前のレポート</span>
-            <span class="nav-title">{{ next_report.tool_name | default: next_report.title }}</span>
+            <span class="nav-title">{{ report_neighbors.prev.tool_name }}</span>
           </a>
         </div>
         {% endif %}
 
-        {% if prev_index < reports.size %}
-        {% assign prev_report = reports[prev_index] %}
+        {% if report_neighbors.next %}
         <div class="nav-next">
-          <a href="{{ prev_report.url | relative_url }}" rel="next">
+          <a href="{{ report_neighbors.next.url | relative_url }}" rel="next">
             <span class="nav-label">次のレポート →</span>
-            <span class="nav-title">{{ prev_report.tool_name | default: prev_report.title }}</span>
+            <span class="nav-title">{{ report_neighbors.next.tool_name }}</span>
           </a>
         </div>
         {% endif %}

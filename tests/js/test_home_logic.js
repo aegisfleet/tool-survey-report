@@ -943,17 +943,101 @@ try {
     console.log('Test 22 Passed: 同名でも slug が異なるレポートは両方読み込まれます。');
   }
 
-  delete reportsGrid.dataset.totalReports;
+  // Test 23: 13件目以降の読み込み中は、絞り込み0件でも #no-results を出さない
+  window.HomeReports.restoreTag('');
   searchInput.value = '';
-  window.filterAndSort(false, true);
+  tagFilter.value = '';
+  sortSelect.value = 'date-desc';
+  categoryFilter.value = '存在しないカテゴリ';
+  reportsGrid.dataset.totalReports = String(window.HomeReports.getCards().length + 10);
 
-  if (passed) {
-    console.log('All tests passed!');
-    process.exit(0);
-  } else {
-    console.error('Some tests failed.');
-    process.exit(1);
+  global.setTimeout = (fn, _ms, ...args) => fn(...args);
+  try {
+    window.filterAndSort(false, true);
+  } finally {
+    global.setTimeout = realSetTimeout;
   }
+
+  const visibleWhileHydrating = reportsGrid.children.filter((c) => c.style.display !== 'none').length;
+  const noResultsWhileHydrating = noResults.style.display;
+  const summaryWhileHydrating = activeFiltersSummary.textContent;
+  const countWhileHydrating = reportsCountContainer.textContent;
+
+  if (visibleWhileHydrating !== 0 || noResultsWhileHydrating === 'block') {
+    console.error(
+      `Test 23 Failed: 読み込み中に0件表示がフラッシュしています (visible=${visibleWhileHydrating}, noResults=${noResultsWhileHydrating})`,
+    );
+    passed = false;
+  } else if (!summaryWhileHydrating.includes('読み込み中')) {
+    console.error(
+      `Test 23 Failed: 読み込み中の絞り込み結果が保留表示になっていません (summary="${summaryWhileHydrating}")`,
+    );
+    passed = false;
+  } else if (countWhileHydrating.includes('0件のレポートがヒット')) {
+    console.error(`Test 23 Failed: 読み込み中に件数バッジが0件を表示しています (count="${countWhileHydrating}")`);
+    passed = false;
+  } else {
+    // ハイドレーション完了相当（総件数を実カード数へ確定）にすると0件表示に切り替わる
+    delete reportsGrid.dataset.totalReports;
+    global.setTimeout = (fn, _ms, ...args) => fn(...args);
+    try {
+      window.filterAndSort(false, true);
+    } finally {
+      global.setTimeout = realSetTimeout;
+    }
+
+    if (noResults.style.display !== 'block') {
+      console.error('Test 23 Failed: 読み込み完了後も0件表示が出ていません。');
+      passed = false;
+    } else {
+      console.log('Test 23 Passed: 読み込み中は0件表示を抑止し、完了後に正しく表示されます。');
+    }
+  }
+
+  categoryFilter.value = '';
+
+  // Test 24: reports-summary.json の取得失敗時は、既存カード数に総件数を揃える
+  const collectedCardsBeforeFailure = window.HomeReports.getCards().length;
+  reportsGrid.dataset.totalReports = String(collectedCardsBeforeFailure + 10);
+  window.__REPORTS_SUMMARY_PROMISE__ = null;
+
+  const realFetch = global.fetch;
+  const failingFetch = () => Promise.reject(new Error('simulated network failure'));
+  global.fetch = failingFetch;
+  global.window.fetch = failingFetch;
+
+  window.HomeReports.loadRemainingReports()
+    .then(() => {
+      console.error('Test 24 Failed: 取得失敗時に loadRemainingReports が成功扱いになっています。');
+      passed = false;
+    })
+    .catch(() => {
+      // 想定どおりの失敗。フォールバック後の状態を検証する
+      const totalAfterFailure = reportsGrid.dataset.totalReports;
+      const expectedTotal = String(window.HomeReports.getCards().length);
+
+      if (totalAfterFailure !== expectedTotal) {
+        console.error(
+          `Test 24 Failed: 取得失敗後の総件数が実カード数に揃っていません (expected=${expectedTotal}, got=${totalAfterFailure})`,
+        );
+        passed = false;
+      } else {
+        console.log('Test 24 Passed: reports-summary.json 取得失敗時に総件数が実カード数へ補正されました。');
+      }
+    })
+    .finally(() => {
+      global.fetch = realFetch;
+      global.window.fetch = undefined;
+      window.__REPORTS_SUMMARY_PROMISE__ = null;
+
+      if (passed) {
+        console.log('All tests passed!');
+        process.exit(0);
+      } else {
+        console.error('Some tests failed.');
+        process.exit(1);
+      }
+    });
 } catch (e) {
   console.error('Error executing script:', e);
   process.exit(1);

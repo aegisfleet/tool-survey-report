@@ -39,18 +39,58 @@
     }
 }
 
+.category-search-bar {
+    display: flex;
+    align-items: center;
+    gap: map-get($spacers, 3);
+    flex-wrap: wrap;
+    margin-bottom: map-get($spacers, 4);
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.category-search-input {
+    flex: 1 1 280px;
+    width: 100%;
+    padding: map-get($spacers, 2) map-get($spacers, 3);
+    border: 1px solid var(--color-border-light);
+    border-radius: $border-radius;
+    background: var(--color-bg-content);
+    color: var(--color-text);
+    font-size: $font-size-base;
+
+    &:focus {
+        outline: 2px solid rgba($primary-color, 0.5);
+        outline-offset: 1px;
+        border-color: $primary-color;
+    }
+}
+
+.category-search-count {
+    color: $text-muted;
+    font-size: $font-size-sm;
+    white-space: nowrap;
+}
+
 .category-card {
     background: var(--color-bg-content);
     border: 1px solid var(--color-border-light);
     border-radius: $border-radius-lg;
     padding: map-get($spacers, 4);
     box-shadow: $box-shadow-sm;
-    transition: $transition-base;
+    transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 
     &:hover {
         box-shadow: $box-shadow;
         transform: translateY(-2px);
         border-color: rgba($primary-color, 0.3);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
     }
 }
 
@@ -137,7 +177,7 @@
         text-decoration: none;
         border: 1px solid $primary-color;
         border-radius: $border-radius;
-        transition: all 0.2s ease;
+        transition: background-color 0.2s ease, color 0.2s ease;
 
         &:hover {
             background: $primary-color;
@@ -178,7 +218,7 @@
     background: transparent;
     border: none;
     padding: 0.5rem 1rem; // nav-linkと同じパディングを確保
-    transition: $transition-base;
+    transition: color 0.2s ease;
 
     &:hover {
         color: var(--color-link-hover);
@@ -188,6 +228,10 @@
         width: 12px;
         height: 12px;
         transition: transform 0.2s ease;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
     }
 
     &[aria-expanded="true"] .dropdown-arrow {
@@ -213,6 +257,10 @@
         visibility: hidden;
         transform: translateY(10px);
         transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
+        }
 
         // Scrollbar styling
         &::-webkit-scrollbar {
@@ -254,7 +302,7 @@
     padding: map-get($spacers, 2) map-get($spacers, 4);
     color: var(--color-text);
     text-decoration: none;
-    transition: all 0.15s ease;
+    transition: background-color 0.15s ease, color 0.15s ease, border-left-color 0.15s ease;
     border-left: 3px solid transparent;
 
     &:hover {

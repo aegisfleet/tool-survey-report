@@ -95,11 +95,8 @@ layout: default
               <label for="category-filter" class="screen-reader-text">カテゴリで絞り込み</label>
               <select id="category-filter" class="filter-select category-filter">
                 <option value="">すべてのカテゴリ</option>
-                {%- assign all_categories = site.reports | map: 'category' | uniq | sort -%}
-                {%- for category in all_categories -%}
-                {%- if category and category != '' -%}
-                <option value="{{ category | downcase }}">{{ site.data.categories[category] | default: '🔹' }} {{ category }}</option>
-                {%- endif -%}
+                {%- for category in site.data.categories_index -%}
+                <option value="{{ category.name | downcase }}">{{ site.data.categories[category.name] | default: '🔹' }} {{ category.name }}</option>
                 {%- endfor -%}
               </select>
             </div>

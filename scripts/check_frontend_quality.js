@@ -160,8 +160,14 @@ function main() {
   const errors = [];
   checkHtmlQuality('_layouts/home.html', errors);
   checkHtmlQuality('_layouts/report.html', errors);
+  checkHtmlQuality('tags/index.html', errors);
+  checkHtmlQuality('categories/index.html', errors);
+  checkHtmlQuality('trending/index.html', errors);
   checkScssQuality('_sass/_home.scss', errors);
   checkScssQuality('_sass/_reports.scss', errors);
+  checkScssQuality('_sass/_tags.scss', errors);
+  checkScssQuality('_sass/_categories.scss', errors);
+  checkScssQuality('_sass/_trending.scss', errors);
 
   const jsDir = path.join(ROOT_DIR, 'assets', 'js');
   if (fs.existsSync(jsDir)) {
