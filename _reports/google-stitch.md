@@ -50,6 +50,7 @@ relationships:
   parent: Gemini
   children:
     - design.md
+    - Stitch Skills
   related_tools:
     - Figma
 ---
