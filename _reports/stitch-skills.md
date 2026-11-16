@@ -1,60 +1,57 @@
 ---
-title: "Stitch Skills 調査レポート"
-tool_name: "Stitch Skills"
-tool_reading: "スティッチ スキルズ"
-category: "エージェントスキル/標準仕様"
-developer: "Google Labs"
-official_site: "https://github.com/google-labs-code/stitch-skills"
-date: "2026-11-16"
-last_updated: "2026-11-16"
+title: Stitch Skills 調査レポート
+tool_name: Stitch Skills
+tool_reading: スティッチ スキルズ
+category: エージェントスキル/標準仕様
+developer: Google Labs
+official_site: https://github.com/google-labs-code/stitch-skills
+date: '2026-11-16'
+last_updated: '2026-11-16'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-  - "コーディング支援"
-description: "Google StitchのMCPサーバーと連携し、UIデザイン生成からReact/React Native実装・デザインシステム管理までを自動化するAgent Skills標準準拠の公式スキル＆プラグイン集"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - 開発者ツール
+  - コーディング支援
+description: Google StitchのMCPサーバーと連携し、UIデザイン生成からReact/React Native実装・デザインシステム管理までを自動化するAgent Skills標準準拠の公式スキル＆プラグイン集
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンド開発者"
-    - "UI/UXデザイナー"
-    - "AIエージェント利用者"
-  latest_highlight: "2026年8月にサイト憲法を生成するsite-mdスキルを追加、7月にAngular・認証保護ページ抽出およびOpenCode対応を拡充"
-  update_frequency: "中"
-
+    - フロントエンド開発者
+    - UI/UXデザイナー
+    - AIエージェント利用者
+  latest_highlight: 2026年8月にサイト憲法を生成するsite-mdスキルを追加、7月にAngular・認証保護ページ抽出およびOpenCode対応を拡充
+  update_frequency: 中
 evaluation:
   score: 79
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Agent Skillsオープン標準に準拠し、Antigravity・Claude Code・Cursor・Codex・Gemini CLI等マルチエージェントで利用可能"
+      reason: Agent Skillsオープン標準に準拠し、Antigravity・Claude Code・Cursor・Codex・Gemini CLI等マルチエージェントで利用可能
     - point: 5
-      reason: "Google Stitch MCPと連携し、デザイン生成からAST検証付きReact/React Native変換・自律ループ構築まで一貫自動化"
+      reason: Google Stitch MCPと連携し、デザイン生成からAST検証付きReact/React Native変換・自律ループ構築まで一貫自動化
     - point: 4
-      reason: "Apache-2.0ライセンスの完全オープンソースであり、DESIGN.md / SITE.mdによるデザインの一貫性維持が強力"
+      reason: Apache-2.0ライセンスの完全オープンソースであり、DESIGN.md / SITE.mdによるデザインの一貫性維持が強力
   minus_points:
     - point: -3
-      reason: "利用にはGoogle Stitch MCPサーバーの事前設定とAPIキーまたはGoogle Cloud認証が必須"
+      reason: 利用にはGoogle Stitch MCPサーバーの事前設定とAPIキーまたはGoogle Cloud認証が必須
     - point: -2
-      reason: "公式ドキュメント・スキル指示文（SKILL.md）が英語主体であり、日本語プロンプト最適化の情報は限定的"
-  summary: "Google Stitchのデザイン生成能力を主要AIコーディングエージェントへ直結させ、AST検証付きコード変換とデザインシステム統制を実現する実用性の高い公式スキル集"
-
+      reason: 公式ドキュメント・スキル指示文（SKILL.md）が英語主体であり、日本語プロンプト最適化の情報は限定的
+  summary: Google Stitchのデザイン生成能力を主要AIコーディングエージェントへ直結させ、AST検証付きコード変換とデザインシステム統制を実現する実用性の高い公式スキル集
 links:
-  github: "https://github.com/google-labs-code/stitch-skills"
-  documentation: "https://stitch.withgoogle.com/docs/mcp/setup/"
+  github: https://github.com/google-labs-code/stitch-skills
+  documentation: https://stitch.withgoogle.com/docs/mcp/setup/
 relationships:
-  parent: "Google Stitch"
+  parent: Google Stitch
   related_tools:
-    - "Agent Skills"
-    - "design.md"
-    - "Gemini Skills"
-    - "Android Skills"
-    - "Anthropic Agent Skills"
-    - "Vercel Agent Skills"
+    - Agent Skills
+    - design.md
+    - Gemini Skills
+    - Android Skills
+    - Anthropic Agent Skills
+    - Vercel Agent Skills
 ---
 
 # **Stitch Skills 調査レポート**
