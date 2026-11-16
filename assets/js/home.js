@@ -50,8 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('reports-count') || document.getElementById('reports-count-container');
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
-  const tagElements = document.querySelectorAll('.tag');
-  const categoryElements = document.querySelectorAll('.clickable-category');
   const categoryPills = Array.from(document.querySelectorAll('.category-pill'));
   const flagPills = Array.from(document.querySelectorAll('.filter-flag-pill'));
   const activeFiltersBar = document.getElementById('active-filters-bar');
@@ -70,10 +68,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const LOAD_MORE_COUNT = 12;
   let currentShowCount = INITIAL_SHOW_COUNT;
 
-  // Pre-calculate sort values to improve performance
+  // 検索対象となる dataset キー（順序は従来どおり）
+  const TEXT_SEARCH_KEYS = [
+    'toolName',
+    'title',
+    'category',
+    'toolReading',
+    'description',
+    'latestHighlight',
+    'developer',
+    'targetUsers',
+  ];
+
+  // 初期SSRカードのメタデータ（ソートキー・検索インデックス）を事前計算
   reportCards.forEach((card) => {
-    card._timestamp = card.dataset.date ? new Date(card.dataset.date).getTime() : 0;
-    card._score = Number.parseFloat(card.dataset.score) || 0;
+    initCardMetadata(card);
+    card._isMaterialized = true;
+    card._inGrid = true;
   });
 
   // カテゴリ要素およびタイトルに絵文字を適用する関数
@@ -165,11 +176,23 @@ document.addEventListener('DOMContentLoaded', () => {
     return selectedCategory !== '' && catVal === selectedCategory.toLowerCase();
   }
 
+  // 表示中（実体化済み）のタグ要素を取得する
+  function getTagElements() {
+    if (!reportsGrid) return [];
+    return reportsGrid.querySelectorAll('.tag');
+  }
+
+  // 表示中（実体化済み）のカテゴリ要素を取得する
+  function getCategoryElements() {
+    if (!reportsGrid) return [];
+    return reportsGrid.querySelectorAll('.clickable-category');
+  }
+
   // Update tag visual states
   function updateTagStates() {
     const selectedTag = tagFilter ? tagFilter.value : '';
 
-    tagElements.forEach((tagElement) => {
+    getTagElements().forEach((tagElement) => {
       const tagValue = tagElement.dataset.tag;
       setActiveState(tagElement, tagValue === selectedTag && selectedTag !== '');
     });
@@ -179,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateCategoryStates() {
     const selectedCategory = categoryFilter ? categoryFilter.value : '';
 
-    categoryElements.forEach((el) => {
+    getCategoryElements().forEach((el) => {
       const categoryValue = el.dataset.category;
       setActiveState(el, categoryValue === selectedCategory && selectedCategory !== '');
     });
@@ -255,23 +278,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 100);
   }
 
-  const TEXT_SEARCH_KEYS = [
-    'toolName',
-    'title',
-    'category',
-    'toolReading',
-    'description',
-    'latestHighlight',
-    'developer',
-    'targetUsers',
-  ];
+  // dataset の値を検索用に正規化（小文字化＋ひらがな化）する
+  function normalizeFieldValue(raw) {
+    if (raw === undefined || raw === null) return '';
+    return toHiragana(String(raw).toLowerCase());
+  }
+
+  // カード1枚分の検索用正規化テキストを生成する
+  function buildNormSearchText(card) {
+    return TEXT_SEARCH_KEYS.map((key) => normalizeFieldValue(card.dataset[key]))
+      .filter(Boolean)
+      .join(' ');
+  }
+
+  // カードのメタデータ（ソートキー・検索インデックス）を初期化する
+  function initCardMetadata(card) {
+    card._timestamp = card.dataset.date ? new Date(card.dataset.date).getTime() : 0;
+    card._score = Number.parseFloat(card.dataset.score) || 0;
+    card._normSearchText = buildNormSearchText(card);
+    card._normFieldCache = new Map();
+  }
+
+  // dataset の値は後から書き換えられる可能性があるため、
+  // 生の値が一致する場合のみキャッシュを再利用する（不一致なら再計算）
+  function getNormalizedField(card, key) {
+    const raw = card.dataset[key];
+    if (!card._normFieldCache) card._normFieldCache = new Map();
+    const cached = card._normFieldCache.get(key);
+    if (cached && cached.raw === raw) return cached.value;
+    const value = raw ? normalizeFieldValue(raw) : '';
+    card._normFieldCache.set(key, { raw, value });
+    return value;
+  }
+
+  // 静的データ（JSON由来で書き換わらないカード）は事前計算済みテキストを利用する
+  function getCardSearchText(card) {
+    if (card._normSearchTextStatic === true) return card._normSearchText || '';
+    return TEXT_SEARCH_KEYS.map((key) => getNormalizedField(card, key))
+      .filter(Boolean)
+      .join(' ');
+  }
 
   function cardMatchesFields(card, term, allowPartialTags = true) {
     const lowerTerm = term.toLowerCase();
     const hTerm = toHiragana(lowerTerm);
-    const hasTextMatch = TEXT_SEARCH_KEYS.some(
-      (key) => card.dataset[key] && toHiragana(card.dataset[key].toLowerCase()).includes(hTerm),
-    );
+    const searchText = getCardSearchText(card);
+    const hasTextMatch = searchText !== '' && searchText.includes(hTerm);
     if (hasTextMatch) return true;
 
     const hasTagMatch = Boolean(
@@ -425,25 +477,593 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // 「もっと見る」ボタンの表示状態を更新する
+  function updateLoadMoreVisibility(isFilterActive, filteredCount) {
+    const loadMoreContainer = document.getElementById('load-more-container');
+    if (!loadMoreContainer) return;
+    loadMoreContainer.style.display = !isFilterActive && filteredCount > currentShowCount ? 'flex' : 'none';
+  }
+
+  // 表示対象のカードのみ DOM へ実体化して配置する
   function renderCardVisibility(filteredCards, isFilterActive) {
+    // すでにグリッド内にあるカードだけを非表示にする（未挿入の仮想カードは対象外）
     reportCards.forEach((card) => {
-      card.style.display = 'none';
+      if (card._inGrid !== false) {
+        card.style.display = 'none';
+      }
     });
 
-    if (filteredCards.length > 0) {
-      filteredCards.forEach((card, index) => {
-        card.style.display = isFilterActive || index < currentShowCount ? 'flex' : 'none';
-        reportsGrid.appendChild(card);
-      });
-      noResults.style.display = 'none';
-    } else {
-      noResults.style.display = 'block';
+    if (filteredCards.length === 0) {
+      if (noResults) noResults.style.display = 'block';
+      updateLoadMoreVisibility(isFilterActive, 0);
+      return;
     }
 
-    const loadMoreContainer = document.getElementById('load-more-container');
-    if (loadMoreContainer) {
-      loadMoreContainer.style.display = !isFilterActive && filteredCards.length > currentShowCount ? 'flex' : 'none';
+    const visibleCards = isFilterActive ? filteredCards : filteredCards.slice(0, currentShowCount);
+
+    visibleCards.forEach((card) => {
+      if (card._isMaterialized === false) {
+        materializeReportCard(card);
+      }
+      card.style.display = 'flex';
+      reportsGrid.appendChild(card);
+      card._inGrid = true;
+    });
+
+    if (noResults) noResults.style.display = 'none';
+    updateLoadMoreVisibility(isFilterActive, filteredCards.length);
+  }
+
+  // ============================================
+  // オンデマンドDOM生成（Materialization）
+  // ============================================
+
+  const MAX_CARD_TAGS = 4;
+  const CARD_TEXT_TRUNCATE = 18;
+  const SAFE_URL_RE = /^(?:https?:\/\/[^\s]+|\/(?!\/)[^\s]*)$/i;
+
+  // http(s) またはルート相対パスのみ許可する（javascript: 等の不正スキームを排除）
+  function sanitizeUrl(raw) {
+    const value = typeof raw === 'string' ? raw.trim() : '';
+    return SAFE_URL_RE.test(value) ? value : '';
+  }
+
+  // Liquid の truncate フィルタ相当
+  function truncateText(text, length) {
+    const value = String(text ?? '');
+    if (value.length <= length) return value;
+    return `${value.slice(0, Math.max(0, length - 3))}...`;
+  }
+
+  function createEl(tagName, className) {
+    const el = document.createElement(tagName);
+    if (className) el.className = className;
+    return el;
+  }
+
+  function toLowerString(value) {
+    if (value === undefined || value === null) return '';
+    return String(value).toLowerCase();
+  }
+
+  // 検索用のリンク文字列（SSRの data-links と同等）
+  function buildLinksSearchText(item) {
+    const links = item.links && typeof item.links === 'object' ? item.links : {};
+    return [item.official_site, links.github, links.documentation, links.deepwiki, links.codewiki]
+      .filter((value) => typeof value === 'string' && value !== '')
+      .join(' ')
+      .trim()
+      .toLowerCase();
+  }
+
+  function createTextNode(text) {
+    return document.createTextNode(text);
+  }
+
+  // 2026-09-01 → 2026.09.01
+  function formatCardDate(rawDate) {
+    const value = String(rawDate ?? '');
+    const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(value);
+    if (!match) return value;
+    return `${match[1]}.${match[2]}.${match[3]}`;
+  }
+
+  function extractCardDomain(item) {
+    const source = sanitizeUrl(item.official_site) || sanitizeUrl(item.links?.github);
+    if (!source) return '';
+    return source
+      .replace(/^https?:\/\//i, '')
+      .split('/')[0]
+      .split('?')[0];
+  }
+
+  function buildScorePopover(item) {
+    const summary = String(item.evaluation_summary ?? '').trim();
+    const points = (Array.isArray(item.plus_points) ? item.plus_points : [])
+      .filter((pt) => pt?.reason)
+      .map((pt) => ({ point: pt.point, reason: String(pt.reason).trim() }))
+      .filter((pt) => pt.reason !== '' && pt.reason !== '特になし' && pt.reason !== 'なし')
+      .slice(0, 2);
+
+    if (!summary && points.length === 0) return null;
+
+    const popover = createEl('div', 'score-preview-popover');
+    popover.setAttribute('role', 'tooltip');
+
+    const header = createEl('div', 'popover-header');
+    const scoreEl = createEl('span', 'popover-score');
+    scoreEl.textContent = `★ ${item.score}点`;
+    const titleEl = createEl('span', 'popover-title');
+    titleEl.textContent = '評価サマリー';
+    header.appendChild(scoreEl);
+    header.appendChild(titleEl);
+    popover.appendChild(header);
+
+    if (summary) {
+      const summaryEl = createEl('p', 'popover-summary');
+      summaryEl.textContent = summary;
+      popover.appendChild(summaryEl);
     }
+
+    if (points.length > 0) {
+      const list = createEl('ul', 'popover-points');
+      points.forEach((pt) => {
+        const li = createEl('li');
+        const pointEl = createEl('span', 'point-plus');
+        pointEl.textContent = `+${pt.point}`;
+        li.appendChild(pointEl);
+        li.appendChild(createTextNode(` ${pt.reason}`));
+        list.appendChild(li);
+      });
+      popover.appendChild(list);
+    }
+
+    return popover;
+  }
+
+  function buildScoreBadge(item) {
+    const rawScore = item.score;
+    const score = Number(rawScore);
+    const hasScore = rawScore !== null && rawScore !== undefined && rawScore !== '' && Number.isFinite(score);
+    if (!hasScore) return null;
+
+    const wrapper = createEl('div', 'score-badge-wrapper');
+    const badge = createEl('button', 'card-score-badge');
+    badge.type = 'button';
+    const srLabel = createEl('span', 'screen-reader-text');
+    srLabel.textContent = '総合評価 ';
+    badge.appendChild(srLabel);
+    badge.appendChild(createTextNode(`★ ${score}点`));
+    wrapper.appendChild(badge);
+
+    const popover = buildScorePopover(item);
+    if (popover) wrapper.appendChild(popover);
+
+    return wrapper;
+  }
+
+  function buildCategoryBadge(item) {
+    const category = String(item.category ?? '').trim();
+    if (!category || category === '不明') {
+      const fallback = createEl('span', 'meta-item category');
+      fallback.textContent = '🔹 未分類';
+      return fallback;
+    }
+
+    const button = createEl('button', 'meta-item category clickable-category');
+    button.type = 'button';
+    button.dataset.category = category.toLowerCase();
+    button.title = `カテゴリ「${category}」で絞り込む`;
+    button.textContent = `${getEmojiForCategory(category)} ${category}`;
+    return button;
+  }
+
+  function buildCardEyebrow(item) {
+    const eyebrow = createEl('div', 'report-card-eyebrow');
+    const meta = createEl('div', 'report-header-meta');
+
+    const dateEl = createEl('time', 'report-date');
+    dateEl.setAttribute('datetime', String(item.last_updated ?? ''));
+    dateEl.title = '最終更新日';
+    dateEl.textContent = formatCardDate(item.last_updated);
+    meta.appendChild(dateEl);
+
+    const scoreBadge = buildScoreBadge(item);
+    if (scoreBadge) meta.appendChild(scoreBadge);
+
+    eyebrow.appendChild(meta);
+    eyebrow.appendChild(buildCategoryBadge(item));
+    return eyebrow;
+  }
+
+  function buildCardHeader(item) {
+    const header = createEl('div', 'report-card-header');
+    const titleEl = createEl('h3', 'report-title');
+    const link = createEl('a');
+    link.href = sanitizeUrl(item.url) || '#';
+
+    const domain = extractCardDomain(item);
+    if (domain) {
+      const favicon = createEl('img', 'tool-favicon');
+      favicon.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=64`;
+      favicon.alt = '';
+      favicon.width = 22;
+      favicon.height = 22;
+      favicon.loading = 'lazy';
+      link.appendChild(favicon);
+    }
+
+    const titleText = createEl('span', 'tool-title-text');
+    titleText.textContent = String(item.tool_name || item.title || '');
+    link.appendChild(titleText);
+    titleEl.appendChild(link);
+    header.appendChild(titleEl);
+
+    const reading = String(item.tool_reading ?? '').trim();
+    if (reading && reading !== '不明') {
+      const readingEl = createEl('span', 'report-tool-reading');
+      readingEl.textContent = reading;
+      header.appendChild(readingEl);
+    }
+
+    return header;
+  }
+
+  function createSpecChip(className, label, title) {
+    const chip = createEl('span', className);
+    chip.textContent = label;
+    if (title) chip.title = title;
+    return chip;
+  }
+
+  function appendAvailabilityChip(specs, isOss, hasFreePlan) {
+    if (isOss) {
+      specs.appendChild(createSpecChip('spec-chip spec-oss card-oss-badge', '📦 OSS'));
+    } else if (hasFreePlan) {
+      specs.appendChild(createSpecChip('spec-chip spec-free card-free-badge', '💚 無料枠あり'));
+    }
+  }
+
+  function appendPriceChip(specs, pricing, isOss, hasFreePlan) {
+    const price = String(pricing.starting_price ?? '').trim();
+    if (!price || price === '不明') return;
+    if (price === '無料' && (isOss || hasFreePlan)) return;
+
+    specs.appendChild(
+      createSpecChip('spec-chip spec-price', `💰 ${truncateText(price, CARD_TEXT_TRUNCATE)}`, `最低価格: ${price}`),
+    );
+  }
+
+  function appendTargetChip(specs, targetUsers) {
+    const firstTarget = String(targetUsers[0] ?? '').trim();
+    if (!firstTarget || firstTarget === '不明') return;
+
+    specs.appendChild(
+      createSpecChip(
+        'spec-chip spec-target',
+        `🎯 ${truncateText(firstTarget, CARD_TEXT_TRUNCATE)}`,
+        `想定利用者: ${targetUsers.join(' / ')}`,
+      ),
+    );
+  }
+
+  function appendDeveloperChip(specs, rawDeveloper) {
+    const developer = String(rawDeveloper ?? '').trim();
+    if (!developer || developer === '不明') return;
+
+    specs.appendChild(
+      createSpecChip(
+        'spec-chip spec-developer meta-item developer',
+        `🏢 ${truncateText(developer, CARD_TEXT_TRUNCATE)}`,
+        `開発元: ${developer}`,
+      ),
+    );
+  }
+
+  function buildQuickSpecs(item) {
+    const specs = createEl('div', 'report-quick-specs');
+    const pricing = item.pricing && typeof item.pricing === 'object' ? item.pricing : {};
+    const isOss = pricing.is_oss === true;
+    const hasFreePlan = pricing.has_free_plan === true;
+
+    appendAvailabilityChip(specs, isOss, hasFreePlan);
+    appendPriceChip(specs, pricing, isOss, hasFreePlan);
+    appendTargetChip(specs, Array.isArray(item.target_users) ? item.target_users : []);
+    appendDeveloperChip(specs, item.developer);
+
+    return specs;
+  }
+
+  function buildCardDescription(item) {
+    const description = String(item.description ?? '');
+    if (!description) return null;
+
+    const paragraph = createEl('p', 'report-description');
+    const lead = createEl('strong', 'desc-lead');
+    const periodIndex = description.indexOf('。');
+    if (periodIndex < 0) {
+      lead.textContent = description;
+      paragraph.appendChild(lead);
+      return paragraph;
+    }
+
+    lead.textContent = description.slice(0, periodIndex + 1);
+    paragraph.appendChild(lead);
+
+    const rest = description.slice(periodIndex + 1);
+    if (rest) {
+      const restEl = createEl('span', 'desc-rest');
+      restEl.textContent = rest;
+      paragraph.appendChild(restEl);
+    }
+
+    return paragraph;
+  }
+
+  function buildCardHighlight(item) {
+    const highlight = String(item.latest_highlight ?? '').trim();
+    const ignored = ['', '不明', 'なし', '特になし'];
+    if (ignored.includes(highlight)) return null;
+
+    const wrapper = createEl('div', 'report-latest-highlight');
+    wrapper.title = `最新情報: ${highlight}`;
+    const icon = createEl('span', 'highlight-icon');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.textContent = '📢';
+    const content = createEl('span', 'highlight-content');
+    content.textContent = highlight;
+    wrapper.appendChild(icon);
+    wrapper.appendChild(content);
+    return wrapper;
+  }
+
+  function buildCardTags(item) {
+    const tags = (Array.isArray(item.tags) ? item.tags : []).filter(
+      (tag) => typeof tag === 'string' && tag.trim() !== '',
+    );
+    if (tags.length === 0) return null;
+
+    const wrapper = createEl('div', 'report-tags');
+    tags.slice(0, MAX_CARD_TAGS).forEach((tag) => {
+      const tagEl = createEl('span', 'tag');
+      tagEl.dataset.tag = tag;
+      tagEl.textContent = tag;
+      wrapper.appendChild(tagEl);
+    });
+
+    if (tags.length > MAX_CARD_TAGS) {
+      const more = createEl('span', 'tag-more');
+      more.textContent = `+${tags.length - MAX_CARD_TAGS}`;
+      more.title = `その他のタグ: ${tags.slice(MAX_CARD_TAGS, MAX_CARD_TAGS + 20).join(', ')}`;
+      wrapper.appendChild(more);
+    }
+
+    return wrapper;
+  }
+
+  // symbol スプライトは静的文字列のみで構築する（外部入力は含めない）
+  const CARD_ICON_MARKUP = {
+    official:
+      '<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-card-official"></use></svg>',
+    docs: '<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-card-docs"></use></svg>',
+    github:
+      '<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-card-github"></use></svg>',
+    wiki: '<svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><use href="#icon-card-wiki"></use></svg>',
+  };
+
+  const CARD_LINK_DEFS = [
+    {
+      key: 'official',
+      className: 'card-link-btn',
+      label: '公式',
+      title: '公式サイト',
+      icon: 'official',
+      url: (item) => item.official_site,
+    },
+    {
+      key: 'docs',
+      className: 'card-link-btn card-link-docs',
+      label: 'Docs',
+      title: 'ドキュメント',
+      icon: 'docs',
+      url: (item) => item.links?.documentation,
+    },
+    {
+      key: 'github',
+      className: 'card-link-btn card-link-github',
+      label: 'GitHub',
+      title: 'GitHub',
+      icon: 'github',
+      url: (item) => item.links?.github,
+    },
+    {
+      key: 'deepwiki',
+      className: 'card-link-btn card-link-deepwiki',
+      label: 'DeepWiki',
+      title: 'DeepWiki',
+      icon: 'wiki',
+      url: (item) => item.links?.deepwiki,
+    },
+    {
+      key: 'codewiki',
+      className: 'card-link-btn card-link-codewiki',
+      label: 'CodeWiki',
+      title: 'CodeWiki',
+      icon: 'wiki',
+      url: (item) => item.links?.codewiki,
+    },
+  ];
+
+  function buildCardLink(def, url) {
+    const link = createEl('a', def.className);
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.title = def.title;
+    link.setAttribute('aria-label', def.title);
+    link.innerHTML = CARD_ICON_MARKUP[def.icon];
+    const label = createEl('span');
+    label.textContent = def.label;
+    link.appendChild(label);
+    return link;
+  }
+
+  function buildCardFooter(item) {
+    const footer = createEl('div', 'report-card-footer');
+    const linksWrap = createEl('div', 'report-card-links');
+
+    CARD_LINK_DEFS.forEach((def) => {
+      const url = sanitizeUrl(def.url(item));
+      if (!url) return;
+      linksWrap.appendChild(buildCardLink(def, url));
+    });
+
+    footer.appendChild(linksWrap);
+
+    const readMore = createEl('a', 'read-more');
+    readMore.href = sanitizeUrl(item.url) || '#';
+    readMore.textContent = 'レポートを読む →';
+    footer.appendChild(readMore);
+
+    return footer;
+  }
+
+  // JSON 1レコードから、子要素を持たない軽量なカードシェルを生成する
+  function createVirtualCardShell(item) {
+    const pricing = item.pricing && typeof item.pricing === 'object' ? item.pricing : {};
+    const targetUsers = Array.isArray(item.target_users) ? item.target_users : [];
+
+    const card = document.createElement('article');
+    card.className = 'report-card';
+    card.dataset.slug = toLowerString(item.slug);
+    card.dataset.tags = Array.isArray(item.tags) ? item.tags.join(',') : '';
+    card.dataset.title = toLowerString(item.title || item.tool_name || '');
+    card.dataset.toolName = toLowerString(item.tool_name);
+    card.dataset.toolReading = String(item.tool_reading ?? '');
+    card.dataset.description = toLowerString(item.description);
+    card.dataset.latestHighlight = toLowerString(item.latest_highlight);
+    card.dataset.links = buildLinksSearchText(item);
+    card.dataset.date = String(item.last_updated ?? '');
+    card.dataset.category = toLowerString(item.category);
+    card.dataset.developer = toLowerString(item.developer);
+    card.dataset.targetUsers = toLowerString(targetUsers.join(','));
+    card.dataset.isOss = String(pricing.is_oss === true);
+    card.dataset.hasFreePlan = String(pricing.has_free_plan === true);
+    card.dataset.score = String(item.score ?? 0);
+
+    card._rawReport = item;
+    card._isMaterialized = false;
+    card._inGrid = false;
+    card.style.display = 'none';
+
+    initCardMetadata(card);
+    // JSON由来のデータは書き換わらないため、検索テキストを静的にキャッシュする
+    card._normSearchTextStatic = true;
+    card._normFieldCache = null;
+
+    return card;
+  }
+
+  // 未実体化カードを、SSRカードと同一構造のDOMへ展開する
+  function materializeReportCard(card) {
+    if (card._isMaterialized !== false) return;
+    const item = card._rawReport && typeof card._rawReport === 'object' ? card._rawReport : {};
+
+    card.innerHTML = '';
+    card.appendChild(buildCardEyebrow(item));
+    card.appendChild(buildCardHeader(item));
+    card.appendChild(buildQuickSpecs(item));
+
+    const description = buildCardDescription(item);
+    if (description) card.appendChild(description);
+
+    const highlight = buildCardHighlight(item);
+    if (highlight) card.appendChild(highlight);
+
+    const tags = buildCardTags(item);
+    if (tags) card.appendChild(tags);
+
+    card.appendChild(buildCardFooter(item));
+    card._isMaterialized = true;
+  }
+
+  const SUMMARY_ENDPOINT = `${(window.__SITE_BASEURL__ || '').replace(/\/+$/, '')}/reports-summary.json`;
+
+  // reports-summary.json の取得（search-modal.js と Promise を共有する）
+  function fetchReportsSummary() {
+    if (window.__REPORTS_SUMMARY_PROMISE__) return window.__REPORTS_SUMMARY_PROMISE__;
+
+    const fetcher = typeof fetch === 'function' ? fetch : window.fetch;
+    if (typeof fetcher !== 'function') return Promise.reject(new Error('fetch is unavailable'));
+
+    const promise = fetcher(SUMMARY_ENDPOINT)
+      .then((response) => {
+        if (response?.ok !== true) {
+          throw new Error(`Failed to load reports-summary.json: ${response?.status ?? 'unknown'}`);
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        window.__REPORTS_SUMMARY_PROMISE__ = null;
+        throw error;
+      });
+
+    window.__REPORTS_SUMMARY_PROMISE__ = promise;
+    return promise;
+  }
+
+  function collectKnownReportKeys() {
+    const known = new Set();
+    reportCards.forEach((card) => {
+      const slug = toLowerString(card.dataset.slug);
+      const name = toLowerString(card.dataset.toolName);
+      if (slug) known.add(slug);
+      if (name) known.add(name);
+    });
+    return known;
+  }
+
+  function isKnownReport(item, known) {
+    const slug = toLowerString(item?.slug);
+    const name = toLowerString(item?.tool_name);
+    return Boolean((slug && known.has(slug)) || (name && known.has(name)));
+  }
+
+  // JSONレコードのうち未登録のものを軽量シェルとして登録する
+  function addVirtualCards(items) {
+    if (!Array.isArray(items)) return 0;
+    const known = collectKnownReportKeys();
+    let added = 0;
+
+    items.forEach((item) => {
+      if (!item || typeof item !== 'object' || isKnownReport(item, known)) return;
+
+      const shell = createVirtualCardShell(item);
+      const slug = toLowerString(item.slug);
+      const name = toLowerString(item.tool_name);
+      if (slug) known.add(slug);
+      if (name) known.add(name);
+      reportCards.push(shell);
+      added += 1;
+    });
+
+    return added;
+  }
+
+  function hasRemainingReports() {
+    const total = Number.parseInt(reportsGrid?.dataset.totalReports || '', 10);
+    if (!Number.isFinite(total)) return false;
+    return total > reportCards.length;
+  }
+
+  async function loadRemainingReports() {
+    if (!hasRemainingReports()) return 0;
+    const data = await fetchReportsSummary();
+    const added = addVirtualCards(data);
+    if (added > 0) {
+      filterAndSort(false, false);
+    }
+    return added;
   }
 
   // Filter and sort function
@@ -504,6 +1124,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
   window.filterAndSort = filterAndSort;
+
+  // オンデマンド実体化API（テスト・デバッグ用のフック）
+  window.HomeReports = {
+    addReports(items) {
+      const added = addVirtualCards(items);
+      if (added > 0) {
+        filterAndSort(false, false);
+      }
+      return added;
+    },
+    loadRemainingReports,
+    getCards: () => reportCards,
+  };
 
   function setOrDeleteUrlParam(url, key, val) {
     if (val) {
@@ -900,6 +1533,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initFilterState();
 
+  // 13件目以降をJSONから軽量シェルとして読み込み、表示分のみ実体化する
+  loadRemainingReports().catch((error) => {
+    console.warn('Failed to hydrate report cards:', error);
+  });
+
   // ブラウザバック/フォワード時にフィルタ状態を復元
   window.addEventListener('pageshow', (event) => {
     // bfcacheから復元された場合（event.persisted === true）
@@ -912,17 +1550,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Tag/Category click functionality
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('tag')) {
-      e.preventDefault(); // タップ時のデフォルト動作を防ぐ
-      handleTagClick(e.target);
-    } else if (e.target.closest('.clickable-category')) {
-      const categoryElement = e.target.closest('.clickable-category');
-      e.preventDefault();
-      e.stopPropagation(); // pick-cardのリンク遷移を防ぐ
-      handleCategoryClick(categoryElement);
-    }
-  });
+  // 動的に実体化されたカード内の要素も拾えるよう、グリッドへイベント委譲する
+  if (reportsGrid) {
+    reportsGrid.addEventListener('click', (e) => {
+      const tagElement = e.target.closest?.('.tag');
+      if (tagElement) {
+        e.preventDefault(); // タップ時のデフォルト動作を防ぐ
+        handleTagClick(tagElement);
+        return;
+      }
+
+      const categoryElement = e.target.closest?.('.clickable-category');
+      if (categoryElement) {
+        e.preventDefault();
+        e.stopPropagation(); // pick-cardのリンク遷移を防ぐ
+        handleCategoryClick(categoryElement);
+      }
+    });
+  }
 
   // カテゴリクリック処理
   function handleCategoryClick(categoryElement) {
@@ -978,7 +1623,30 @@ document.addEventListener('DOMContentLoaded', () => {
   initBlueskySection();
 });
 
+// IntersectionObserver でスクロール接近時まで Bluesky ウィジェットの初期化を遅延する
 function initBlueskySection() {
+  const section = document.getElementById('bluesky-section');
+  const canObserve = section && typeof IntersectionObserver === 'function';
+
+  if (!canObserve) {
+    setupBlueskySection();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const isApproaching = entries.some((entry) => entry.isIntersecting);
+      if (!isApproaching) return;
+      observer.disconnect();
+      setupBlueskySection();
+    },
+    { rootMargin: '400px 0px' },
+  );
+
+  observer.observe(section);
+}
+
+function setupBlueskySection() {
   const blueskyAccounts = [
     'dailyqiitatrends.bsky.social',
     'dailyzenntrends.bsky.social',

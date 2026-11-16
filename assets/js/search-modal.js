@@ -216,6 +216,29 @@
     }
   }
 
+  // reports-summary.json の取得（home.js と Promise を共有して重複通信を防ぐ）
+  function loadReportsSummary() {
+    if (window.__REPORTS_SUMMARY_PROMISE__) return window.__REPORTS_SUMMARY_PROMISE__;
+
+    const baseUrl = window.__SITE_BASEURL__ || '/tool-survey-report';
+    const endpoint = `${baseUrl.replace(/\/+$/, '')}/reports-summary.json`;
+
+    const promise = fetch(endpoint)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .catch((error) => {
+        window.__REPORTS_SUMMARY_PROMISE__ = null;
+        throw error;
+      });
+
+    window.__REPORTS_SUMMARY_PROMISE__ = promise;
+    return promise;
+  }
+
   // Fetch search data once
   async function loadData() {
     if (reportsData !== null || isLoading) return;
@@ -225,14 +248,7 @@
     if (initialEl) initialEl.style.display = 'none';
 
     try {
-      const baseUrl = window.__SITE_BASEURL__ || '/tool-survey-report';
-      const endpoint = `${baseUrl.replace(/\/+$/, '')}/reports-summary.json`;
-
-      const response = await fetch(endpoint);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
+      const data = await loadReportsSummary();
       const rawItems = Array.isArray(data) ? data : [];
       reportsData = rawItems.map(buildNormalizedReportItem);
     } catch (err) {

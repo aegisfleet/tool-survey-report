@@ -7,6 +7,7 @@ permalink: /reports-summary.json
   {%- for report in sorted_reports -%}
   {
     "tool_name": {{ report.tool_name | default: report.title | jsonify }},
+    "title": {{ report.title | default: report.tool_name | jsonify }},
     "tool_reading": {{ report.tool_reading | default: "" | jsonify }},
     "slug": {{ report.slug | jsonify }},
     "url": {{ report.url | absolute_url | jsonify }},
@@ -14,11 +15,13 @@ permalink: /reports-summary.json
     "category": {{ report.category | jsonify }},
     "tags": {{ report.tags | jsonify }},
     "description": {{ report.description | jsonify }},
+    "latest_highlight": {{ report.quick_summary.latest_highlight | default: null | jsonify }},
     "developer": {{ report.developer | jsonify }},
     "official_site": {{ report.official_site | jsonify }},
     "links": {{ report.links | jsonify }},
     "score": {{ report.evaluation.score | default: null | jsonify }},
     "evaluation_summary": {{ report.evaluation.summary | default: null | jsonify }},
+    "plus_points": {{ report.evaluation.plus_points | slice: 0, 2 | jsonify }},
     "target_users": {{ report.quick_summary.target_users | default: null | jsonify }},
     "pricing": {
       "has_free_plan": {{ report.quick_summary.has_free_plan | jsonify }},

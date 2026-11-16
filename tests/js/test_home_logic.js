@@ -374,6 +374,11 @@ global.document = {
     documentListeners[event].push(callback);
   },
   createElement: (tag) => new HTMLElement(tag),
+  createTextNode: (text) => {
+    const node = new HTMLElement('#text');
+    node.textContent = text;
+    return node;
+  },
   title: 'Test Site',
 };
 
@@ -749,6 +754,69 @@ try {
   } else {
     console.log('Test 18 Passed: Reset all filters button clears all filters and hides active bar.');
   }
+
+  // Test 19: reports-summary.json 相当の未実体化カードのオンデマンド実体化
+  searchInput.value = '';
+  categoryFilter.value = '';
+  tagFilter.value = '';
+  sortSelect.value = 'date-desc';
+  window.filterAndSort(false, true);
+
+  const virtualReport = {
+    tool_name: 'VirtualTool',
+    title: 'VirtualTool 調査レポート',
+    tool_reading: 'ばーちゃるつーる',
+    slug: 'virtualtool',
+    url: '/tool-survey-report/reports/virtualtool/',
+    category: 'Development',
+    tags: ['tag1', 'virtual'],
+    description: '仮想カードの説明文。2文目はここに入る。',
+    latest_highlight: '仮想カードの最新情報',
+    developer: 'Virtual Inc.',
+    official_site: 'https://example.com/virtualtool',
+    links: { github: 'https://github.com/example/virtualtool' },
+    score: 85,
+    evaluation_summary: 'テスト用の評価サマリー',
+    plus_points: [{ point: 5, reason: 'テスト加点' }],
+    target_users: ['開発者'],
+    pricing: { has_free_plan: true, is_oss: true, starting_price: '無料' },
+    last_updated: '2020-01-01',
+  };
+
+  const addedVirtual = window.HomeReports.addReports([virtualReport]);
+  const virtualCard = window.HomeReports.getCards().find((c) => c.dataset.slug === 'virtualtool');
+
+  if (addedVirtual !== 1 || !virtualCard) {
+    console.error('Test 19 Failed: 仮想カードが reports-summary.json 相当のデータから登録されていません。');
+    passed = false;
+  } else if (virtualCard._isMaterialized !== false || virtualCard._inGrid !== false) {
+    console.error('Test 19 Failed: 非表示の仮想カードが初期状態で実体化・DOM挿入されています。');
+    passed = false;
+  } else if (reportsGrid.children.includes(virtualCard)) {
+    console.error('Test 19 Failed: 非表示の仮想カードが #reports-grid に挿入されています。');
+    passed = false;
+  } else {
+    // 読み仮名（ひらがな）で検索ヒットさせ、オンデマンド実体化を検証する
+    searchInput.value = 'ばーちゃるつーる';
+    window.filterAndSort(false, true);
+
+    const materialized = virtualCard._isMaterialized === true;
+    const inGrid = reportsGrid.children.includes(virtualCard);
+    const displayed = virtualCard.style.display === 'flex';
+    const hasChildren = virtualCard.children.length > 0;
+
+    if (!materialized || !inGrid || !displayed || !hasChildren) {
+      console.error(
+        `Test 19 Failed: 検索ヒット時に仮想カードが実体化されていません (materialized=${materialized}, inGrid=${inGrid}, displayed=${displayed}, hasChildren=${hasChildren})`,
+      );
+      passed = false;
+    } else {
+      console.log('Test 19 Passed: 仮想カードが検索ヒット時にオンデマンド実体化されました。');
+    }
+  }
+
+  searchInput.value = '';
+  window.filterAndSort(false, true);
 
   if (passed) {
     console.log('All tests passed!');
