@@ -2,7 +2,7 @@
 title: Casement 調査レポート
 tool_name: Casement
 tool_reading: ケースメント
-category: デスクトップ/環境操作
+category: 画面共有/リモート操作
 developer: POPOPO 株式会社 (MIRO / 岩城 進之介)
 official_site: https://casement.win/
 date: '2026-10-30'
