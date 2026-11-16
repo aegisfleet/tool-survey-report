@@ -1,56 +1,53 @@
 ---
-title: "ApkStart 調査レポート"
-tool_name: "ApkStart"
-tool_reading: "エーピーケースタート / アプケスタート"
-category: "デスクトップ/環境操作"
-developer: "RoutineMiku"
-official_site: "https://github.com/RoutineMiku/apkstart"
-date: "2026-11-16"
-last_updated: "2026-11-16"
+title: ApkStart 調査レポート
+tool_name: ApkStart
+tool_reading: エーピーケースタート / アプケスタート
+category: デスクトップ/環境操作
+developer: RoutineMiku
+official_site: https://github.com/RoutineMiku/apkstart
+date: '2026-11-16'
+last_updated: '2026-11-16'
 tags:
-  - "オープンソース"
-  - "Android"
-  - "Windows"
-  - "開発者ツール"
-  - "自動化"
-description: "Windows上でAPKファイルをダブルクリックするだけでインストールし、独立したウィンドウとデスクトップアイコンでAndroidアプリをネイティブソフトのように実行できるオープンソースのAndroidアプリランナー。"
-
+  - オープンソース
+  - Android
+  - Windows
+  - 開発者ツール
+  - 自動化
+description: Windows上でAPKファイルをダブルクリックするだけでインストールし、独立したウィンドウとデスクトップアイコンでAndroidアプリをネイティブソフトのように実行できるオープンソースのAndroidアプリランナー。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Windowsユーザー"
-    - "Androidアプリ開発者"
-    - "パワーユーザー"
-  latest_highlight: "2026年11月にv0.5.0-fixをリリース。物理パネルサイズ変更による横画面・全画面の正立表示や、マウスフック最適化によるシステム全体の遅延解消を実現。"
-  update_frequency: "高"
-
+    - Windowsユーザー
+    - Androidアプリ開発者
+    - パワーユーザー
+  latest_highlight: 2026年11月にv0.5.0-fixをリリース。物理パネルサイズ変更による横画面・全画面の正立表示や、マウスフック最適化によるシステム全体の遅延解消を実現。
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ダブルクリックでのAPKインストールと独立ウィンドウ・デスクトップアイコン化によるネイティブに近いUX"
+      reason: ダブルクリックでのAPKインストールと独立ウィンドウ・デスクトップアイコン化によるネイティブに近いUX
     - point: 5
-      reason: "完全無料・広告なしのMITライセンスOSSであり、自己完結型QEMUランタイムでサードパーティ製エミュレータ不要"
+      reason: 完全無料・広告なしのMITライセンスOSSであり、自己完結型QEMUランタイムでサードパーティ製エミュレータ不要
     - point: 5
-      reason: "ゼロ外部依存の手書きAPK/AXML/ARSC/ICOパーサーによる軽量なシェル実装とQuickbootスナップショットによる高速起動"
+      reason: ゼロ外部依存の手書きAPK/AXML/ARSC/ICOパーサーによる軽量なシェル実装とQuickbootスナップショットによる高速起動
     - point: 4
-      reason: "極めて活発な開発ペース（2026年10月末の公開から短期間で5,100超のGitHubスターと頻繁なリリース）"
+      reason: 極めて活発な開発ペース（2026年10月末の公開から短期間で5,100超のGitHubスターと頻繁なリリース）
   minus_points:
     - point: -5
-      reason: "UI・ドキュメントが主に中国語中心であり、日本語の公式ドキュメントやローカライズが未整備"
+      reason: UI・ドキュメントが主に中国語中心であり、日本語の公式ドキュメントやローカライズが未整備
     - point: -4
-      reason: "Windows 10/11 (x64) 専用であり、macOSやLinuxでは動作しない（またQEMU仮想化のため相応のRAM容量が必要）"
-  summary: "従来の重いAndroidエミュレータや終了したWSAの代替として、Windows上でAndroidアプリを軽量かつネイティブに近い操作感で動かせる革新的なOSSランナー。"
-
+      reason: Windows 10/11 (x64) 専用であり、macOSやLinuxでは動作しない（またQEMU仮想化のため相応のRAM容量が必要）
+  summary: 従来の重いAndroidエミュレータや終了したWSAの代替として、Windows上でAndroidアプリを軽量かつネイティブに近い操作感で動かせる革新的なOSSランナー。
 links:
-  github: "https://github.com/RoutineMiku/apkstart"
+  github: https://github.com/RoutineMiku/apkstart
 relationships:
   related_tools:
-    - "scrcpy"
-    - "Android Studio"
+    - scrcpy
+    - Android Studio
 ---
 
 # **ApkStart 調査レポート**
