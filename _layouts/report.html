@@ -355,79 +355,31 @@ layout: default
       </div>
     </div>
 
+    {%- assign similar_reports = site.data.similar_reports_index[page.url] -%}
     {% if page.tags and page.tags.size > 0 %}
     <div class="related-reports">
       <h3>一致するタグが多いレポート</h3>
-      {% assign related_reports = site.reports | where_exp: "report", "report.url != page.url" %}
-      {% assign related_with_scores = "" | split: "" %}
-
-      {% for report in related_reports %}
-      {% if report.tags and report.tags.size > 0 %}
-      {% assign common_count = 0 %}
-      {% for page_tag in page.tags %}
-      {% if report.tags contains page_tag %}
-      {% assign common_count = common_count | plus: 1 %}
-      {% endif %}
-      {% endfor %}
-      {% if common_count > 0 %}
-      {% assign match_ratio = common_count | times: 100 | divided_by: page.tags.size %}
-      {% assign is_oss = report.quick_summary.is_oss | default: false %}
-      {% assign has_free_plan = report.quick_summary.has_free_plan | default: false %}
-      {% assign score = report.evaluation.score | default: "" %}
-      {% assign report_with_score = report.tool_name | default: report.title | append: "|" | append: match_ratio | append: "|" | append: common_count | append: "|" | append: report.url | append: "|" | append: report.last_updated | append: "|" | append: is_oss | append: "|" | append: has_free_plan | append: "|" | append: score %}
-      {% assign related_with_scores = related_with_scores | push: report_with_score %}
-      {% endif %}
-      {% endif %}
-      {% endfor %}
-
-      {% assign sorted_related = "" | split: "" %}
-      {% for score_item in related_with_scores %}
-      {% assign parts = score_item | split: "|" %}
-      {% assign ratio = parts[1] | plus: 0 %}
-      {% assign count = parts[2] | plus: 0 %}
-      {% if ratio < 10 %}
-      {% assign padded_ratio = "0" | append: ratio %}
-      {% else %}
-      {% assign padded_ratio = ratio %}
-      {% endif %}
-      {% assign sort_key = padded_ratio | append: "." | append: count | append: "." | append: parts[0] %}
-      {% assign sorted_item = sort_key | append: "###" | append: score_item %}
-      {% assign sorted_related = sorted_related | push: sorted_item %}
-      {% endfor %}
-      {% assign sorted_related = sorted_related | sort | reverse %}
-      {% assign top_related = sorted_related | slice: 0, 5 %}
-      {% if top_related.size > 0 %}
+      {% if similar_reports and similar_reports.size > 0 %}
       <ul class="related-list">
-        {% for item in top_related %}
-        {% assign sort_parts = item | split: "###" %}
-        {% assign original_item = sort_parts[1] %}
-        {% assign parts = original_item | split: "|" %}
-        {% assign report_title = parts[0] %}
-        {% assign match_ratio = parts[1] %}
-        {% assign common_count = parts[2] %}
-        {% assign report_url = parts[3] %}
-        {% assign report_date = parts[4] %}
-        {% assign is_oss = parts[5] %}
-        {% assign has_free_plan = parts[6] %}
-        {% assign eval_score = parts[7] %}
+        {% for item in similar_reports %}
         <li class="related-item">
-          <a href="{{ report_url | relative_url }}" class="related-link">
-            <span class="related-title">{{ report_title }}</span>
+          <a href="{{ item.url | relative_url }}" class="related-link">
+            <span class="related-title">{{ item.tool_name }}</span>
             <span class="related-badges">
-              {% if is_oss == "true" %}
+              {% if item.is_oss %}
               <span class="related-oss-badge">OSS</span>
-              {% elsif has_free_plan == "true" %}
+              {% elsif item.has_free_plan %}
               <span class="related-free-badge">💚 無料プランあり</span>
               {% endif %}
-              {% if eval_score and eval_score != "" and eval_score != "nil" and eval_score != "false" %}
-              <span class="related-score-badge">{{ eval_score }}pt</span>
+              {% if item.score %}
+              <span class="related-score-badge">{{ item.score }}pt</span>
               {% endif %}
             </span>
             <span class="related-meta">
-              {% if report_date %}
-              <span class="related-date">{{ report_date | date: "%Y-%m-%d" }}</span>
+              {% if item.last_updated != "" %}
+              <span class="related-date">{{ item.last_updated | date: "%Y-%m-%d" }}</span>
               {% endif %}
-              <span class="match-info">(共通タグ: {{ common_count }}個, 一致率: {{ match_ratio }}%)</span>
+              <span class="match-info">(共通タグ: {{ item.common_count }}個, 一致率: {{ item.match_ratio }}%)</span>
             </span>
           </a>
         </li>
@@ -445,20 +397,15 @@ layout: default
 <!-- Template for Sticky Sidebar Footer (Related Tools & Back-to-top) -->
 <template id="report-sidebar-extra-template">
   <div class="floating-toc-footer">
-    {%- if top_related and top_related.size > 0 -%}
+    {%- if similar_reports and similar_reports.size > 0 -%}
     <div class="sidebar-related-group">
       <span class="sidebar-related-heading">関連レポート (Compared):</span>
       <div class="sidebar-related-list">
-        {%- for item in top_related limit: 4 -%}
-        {%- assign sort_parts = item | split: "###" -%}
-        {%- assign parts = sort_parts[1] | split: "|" -%}
-        {%- assign r_title = parts[0] -%}
-        {%- assign r_url = parts[3] -%}
-        {%- assign r_score = parts[7] -%}
-        <a href="{{ r_url | relative_url }}" class="sidebar-related-item">
-          <span class="sidebar-related-name">{{ r_title }}</span>
-          {%- if r_score and r_score != "" and r_score != "nil" and r_score != "false" -%}
-          <span class="sidebar-related-score">{{ r_score }}pt</span>
+        {%- for item in similar_reports limit: 4 -%}
+        <a href="{{ item.url | relative_url }}" class="sidebar-related-item">
+          <span class="sidebar-related-name">{{ item.tool_name }}</span>
+          {%- if item.score -%}
+          <span class="sidebar-related-score">{{ item.score }}pt</span>
           {%- endif -%}
         </a>
         {%- endfor -%}

@@ -1,112 +1,27 @@
 {% comment %}
 Related Tools Component
-Processes relationship metadata from front matter and displays parent, child, and sibling tools
+Displays parent, child, and sibling tools using the precomputed index
+(site.data.related_tools_index) built by _plugins/build_indexes.rb.
+
+The index is computed once per build, so this include no longer scans
+site.reports for every report page (previously O(N^2)).
 {% endcomment %}
 
-{%- comment -%} Build tool lookup map for efficient tool_name to report resolution {%- endcomment -%}
-{%- assign tool_lookup = "" | split: "" -%}
-{%- for report in site.reports -%}
-{%- if report.tool_name -%}
-{%- assign lookup_entry = report.tool_name | append: ":" | append: forloop.index0 -%}
-{%- assign tool_lookup = tool_lookup | push: lookup_entry -%}
+{%- assign related = nil -%}
+{%- assign related_index = site.data.related_tools_index -%}
+{%- if related_index and page.tool_name -%}
+{%- assign related = related_index[page.tool_name] -%}
 {%- endif -%}
-{%- endfor -%}
 
-{%- comment -%} Helper function to find report by tool_name {%- endcomment -%}
 {%- assign parent_tool = nil -%}
 {%- assign child_tools = "" | split: "" -%}
 {%- assign sibling_tools = "" | split: "" -%}
 
-{% comment %} Process parent relationship {% endcomment %}
-{%- if page.relationships.parent -%}
-{%- for lookup in tool_lookup -%}
-{%- assign parts = lookup | split: ":" -%}
-{%- if parts[0] == page.relationships.parent -%}
-{%- assign parent_index = parts[1] | plus: 0 -%}
-{%- assign parent_tool = site.reports[parent_index] -%}
-{%- break -%}
+{%- if related -%}
+{%- assign parent_tool = related.parent -%}
+{%- assign child_tools = related.children -%}
+{%- assign sibling_tools = related.siblings -%}
 {%- endif -%}
-{%- endfor -%}
-{%- endif -%}
-
-{% comment %} Process children relationships {% endcomment %}
-{%- if page.relationships.children -%}
-{%- for child_name in page.relationships.children -%}
-{%- for lookup in tool_lookup -%}
-{%- assign parts = lookup | split: ":" -%}
-{%- if parts[0] == child_name -%}
-{%- assign child_index = parts[1] | plus: 0 -%}
-{%- assign child_tools = child_tools | push: site.reports[child_index] -%}
-{%- break -%}
-{%- endif -%}
-{%- endfor -%}
-{%- endfor -%}
-{%- endif -%}
-
-{%- comment -%} Process sibling/related tools relationships {%- endcomment -%}
-{%- if page.relationships.related_tools -%}
-{%- for sibling_name in page.relationships.related_tools -%}
-{%- for lookup in tool_lookup -%}
-{%- assign parts = lookup | split: ":" -%}
-{%- if parts[0] == sibling_name -%}
-{%- assign sibling_index = parts[1] | plus: 0 -%}
-{%- assign sibling_tools = sibling_tools | push: site.reports[sibling_index] -%}
-{%- break -%}
-{%- endif -%}
-{%- endfor -%}
-{%- endfor -%}
-{%- endif -%}
-
-{%- comment -%} Auto-discover bidirectional relationships {%- endcomment -%}
-{%- comment -%} Find tools that list this tool as parent (children) {%- endcomment -%}
-{%- for report in site.reports -%}
-{%- if report.relationships.parent == page.tool_name and report.url != page.url -%}
-{%- assign child_tools = child_tools | push: report -%}
-{%- endif -%}
-{%- endfor -%}
-{%- comment -%} Find tools that list this tool as child (parents) {%- endcomment -%}
-{%- if page.relationships.children == nil and parent_tool == nil -%}
-{%- for report in site.reports -%}
-{%- if report.relationships.children -%}
-{%- for child_name in report.relationships.children -%}
-{%- if child_name == page.tool_name -%}
-{%- assign parent_tool = report -%}
-{%- break -%}
-{%- endif -%}
-{%- endfor -%}
-{%- endif -%}
-{%- endfor -%}
-{%- endif -%}
-
-{%- comment -%} Remove duplicates from arrays {%- endcomment -%}
-{%- assign unique_children = "" | split: "" -%}
-{%- for child in child_tools -%}
-{%- assign found = false -%}
-{%- for unique_child in unique_children -%}
-{%- if unique_child.url == child.url -%}
-{%- assign found = true -%}
-{%- break -%}
-{%- endif -%}
-{%- endfor -%}
-{%- unless found -%}
-{%- assign unique_children = unique_children | push: child -%}
-{%- endunless -%}
-{%- endfor -%}
-{%- assign child_tools = unique_children -%}
-{%- assign unique_siblings = "" | split: "" -%}
-{%- for sibling in sibling_tools -%}
-{%- assign found = false -%}
-{%- for unique_sibling in unique_siblings -%}
-{%- if unique_sibling.url == sibling.url -%}
-{%- assign found = true -%}
-{%- break -%}
-{%- endif -%}
-{%- endfor -%}
-{%- unless found -%}
-{%- assign unique_siblings = unique_siblings | push: sibling -%}
-{%- endunless -%}
-{%- endfor -%}
-{%- assign sibling_tools = unique_siblings -%}
 
 {% comment %} Render the related tools section if any relationships exist {% endcomment %}
 {%- if parent_tool or child_tools.size > 0 or sibling_tools.size > 0 -%}
@@ -123,15 +38,15 @@ Processes relationship metadata from front matter and displays parent, child, an
       親レポート
     </h4>
     <a href="{{ parent_tool.url | relative_url }}" class="tool-link">
-      <span class="tool-title">{{ parent_tool.tool_name | default: parent_tool.title }}</span>
+      <span class="tool-title">{{ parent_tool.tool_name }}</span>
       <span class="tool-badges">
-        {%- if parent_tool.quick_summary.is_oss -%}
+        {%- if parent_tool.is_oss -%}
         <span class="related-oss-badge">OSS</span>
-        {%- elsif parent_tool.quick_summary.has_free_plan -%}
+        {%- elsif parent_tool.has_free_plan -%}
         <span class="related-free-badge">💚 無料プランあり</span>
         {%- endif -%}
-        {%- if parent_tool.evaluation.score -%}
-        <span class="related-score-badge">{{ parent_tool.evaluation.score }}点</span>
+        {%- if parent_tool.score -%}
+        <span class="related-score-badge">{{ parent_tool.score }}点</span>
         {%- endif -%}
       </span>
       {%- if parent_tool.description -%}
@@ -154,15 +69,15 @@ Processes relationship metadata from front matter and displays parent, child, an
       {% for child in child_tools %}
       <li>
         <a href="{{ child.url | relative_url }}" class="tool-link">
-          <span class="tool-title">{{ child.tool_name | default: child.title }}</span>
+          <span class="tool-title">{{ child.tool_name }}</span>
           <span class="tool-badges">
-            {% if child.quick_summary.is_oss %}
+            {% if child.is_oss %}
             <span class="related-oss-badge">OSS</span>
-            {% elsif child.quick_summary.has_free_plan %}
+            {% elsif child.has_free_plan %}
             <span class="related-free-badge">💚 無料プランあり</span>
             {% endif %}
-            {% if child.evaluation.score %}
-            <span class="related-score-badge">{{ child.evaluation.score }}点</span>
+            {% if child.score %}
+            <span class="related-score-badge">{{ child.score }}点</span>
             {% endif %}
           </span>
           {% if child.description %}
@@ -188,15 +103,15 @@ Processes relationship metadata from front matter and displays parent, child, an
       {% for sibling in sibling_tools %}
       <li>
         <a href="{{ sibling.url | relative_url }}" class="tool-link">
-          <span class="tool-title">{{ sibling.tool_name | default: sibling.title }}</span>
+          <span class="tool-title">{{ sibling.tool_name }}</span>
           <span class="tool-badges">
-            {% if sibling.quick_summary.is_oss %}
+            {% if sibling.is_oss %}
             <span class="related-oss-badge">OSS</span>
-            {% elsif sibling.quick_summary.has_free_plan %}
+            {% elsif sibling.has_free_plan %}
             <span class="related-free-badge">💚 無料プランあり</span>
             {% endif %}
-            {% if sibling.evaluation.score %}
-            <span class="related-score-badge">{{ sibling.evaluation.score }}点</span>
+            {% if sibling.score %}
+            <span class="related-score-badge">{{ sibling.score }}点</span>
             {% endif %}
           </span>
           {% if sibling.description %}

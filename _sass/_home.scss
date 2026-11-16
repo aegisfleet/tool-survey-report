@@ -1714,6 +1714,9 @@
         background 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border-left: 4px solid transparent;
     position: relative;
+    // 画面外カードのレイアウト・描画をブラウザ側でスキップし、大量ヒット時の負荷を抑える
+    content-visibility: auto;
+    contain-intrinsic-size: auto 340px;
 
     @media (prefers-reduced-motion: reduce) {
         transition: none;

@@ -4,6 +4,9 @@ title: "タグ一覧"
 description: "タグ別にレポートを閲覧できます"
 ---
 
+{%- assign tags_index = site.data.tags_index -%}
+{%- assign tag_count = tags_index | size -%}
+
 <div class="tags-index-container">
   <header class="page-header">
     <h1>タグ一覧</h1>
@@ -12,8 +15,6 @@ description: "タグ別にレポートを閲覧できます"
 
   <div class="tags-overview">
     <div class="tags-stats">
-      {% assign all_tags = site.reports | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
-      {% assign tag_count = all_tags | size %}
       <span class="stat-item">
         <strong>{{ tag_count }}</strong> 個のタグ
       </span>
@@ -23,42 +24,44 @@ description: "タグ別にレポートを閲覧できます"
     </div>
   </div>
 
+  <div class="tag-search-bar" role="search">
+    <label for="tag-search-input" class="screen-reader-text">タグを検索</label>
+    <input type="search" id="tag-search-input" class="tag-search-input" placeholder="タグ名で絞り込み (例: セキュリティ, AI)"
+      autocomplete="off" aria-describedby="tag-search-count">
+    <span class="tag-search-count" id="tag-search-count" aria-live="polite">{{ tag_count }} 個のタグ</span>
+  </div>
+
   <div class="tags-grid">
-    {% for tag in all_tags %}
-    {% if tag != '' %}
-    {% assign tagged_reports = site.reports | where_exp: "report", "report.tags contains tag" %}
-    {% assign report_count = tagged_reports | size %}
-    <div class="tag-card">
+    {% for tag in tags_index %}
+    <div class="tag-card" data-tag-name="{{ tag.name | downcase }}">
       <div class="tag-header">
         <h2 class="tag-name">
-          <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>
+          <a href="{{ '/' | relative_url }}?tag={{ tag.name | url_encode }}">{{ tag.name }}</a>
         </h2>
-        <span class="tag-count">{{ report_count }} 件</span>
+        <span class="tag-count">{{ tag.count }} 件</span>
       </div>
 
       <div class="tag-reports">
-        {% assign recent_reports = tagged_reports | sort: 'last_updated' | reverse %}
-        {% for report in recent_reports limit: 3 %}
+        {% for recent in tag.recent %}
         <div class="tag-report-item">
-          <a href="{{ report.url | relative_url }}" class="report-link">
-            {{ report.tool_name | default: report.title }}
+          <a href="{{ recent.url | relative_url }}" class="report-link">
+            {{ recent.tool_name }}
           </a>
-          <time class="report-date">{{ report.last_updated | date: "%Y/%m/%d" }}</time>
+          <time class="report-date">{{ recent.last_updated | date: "%Y/%m/%d" }}</time>
         </div>
         {% endfor %}
       </div>
 
       <div class="tag-view-all">
-        <a href="{{ '/' | relative_url }}?tag={{ tag | url_encode }}" class="view-all-link">
+        <a href="{{ '/' | relative_url }}?tag={{ tag.name | url_encode }}" class="view-all-link">
           すべて見る →
         </a>
       </div>
     </div>
-    {% endif %}
     {% endfor %}
   </div>
 
-  {% if all_tags.size == 0 %}
+  {% if tag_count == 0 %}
   <div class="no-tags">
     <p>まだタグが設定されたレポートがありません。</p>
   </div>
@@ -79,7 +82,10 @@ description: "タグ別にレポートを閲覧できます"
 
     if (tagParam) {
       // If a tag parameter is present, redirect to home page with tag filter
-      window.location.href = '/?tag=' + encodeURIComponent(tagParam);
+      window.location.href = '{{ '/' | relative_url }}?tag=' + encodeURIComponent(tagParam);
     }
   });
 </script>
+{%- assign asset_version = site.data.asset_version -%}
+{%- unless asset_version -%}{%- assign asset_version = site.time | date: '%s' -%}{%- endunless -%}
+<script src="{{ '/assets/js/tags.js' | relative_url }}?v={{ asset_version }}" defer></script>

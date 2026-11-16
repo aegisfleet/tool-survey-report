@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'ja' }}">
 
+{%- assign asset_version = site.data.asset_version -%}
+{%- unless asset_version -%}{%- assign asset_version = site.time | date: '%s' -%}{%- endunless -%}
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,7 +65,12 @@
   </script>
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ asset_version }}">
+
+  {%- if page.layout == 'home' %}
+  <!-- 13件目以降のカードをハイドレートするJSONを先行取得する -->
+  <link rel="preload" href="{{ '/reports-summary.json' | relative_url }}" as="fetch" crossorigin="anonymous">
+  {%- endif %}
 
   <!-- RSS Feed -->
   {% feed_meta %}
@@ -93,8 +100,8 @@
   {% include search-modal.html %}
 
   <!-- JavaScript -->
-  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
-  <script src="{{ '/assets/js/search-modal.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ asset_version }}" defer></script>
+  <script src="{{ '/assets/js/search-modal.js' | relative_url }}?v={{ asset_version }}" defer></script>
 </body>
 
 </html>

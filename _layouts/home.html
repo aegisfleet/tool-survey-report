@@ -63,7 +63,7 @@ layout: default
             <h2 class="reports-title">
               <span class="title-icon" aria-hidden="true">📊</span>
               ツール調査レポート一覧
-              <span class="reports-count reports-count-badge" id="reports-count" aria-live="polite">{{ site.reports.size }}件</span>
+              <span class="reports-count reports-count-badge" id="reports-count" aria-live="polite">{% if site.reports.size > 12 %}12{% else %}{{ site.reports.size }}{% endif %} / {{ site.reports.size }}件のレポートを表示中</span>
             </h2>
           </div>
           <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
@@ -483,4 +483,6 @@ layout: default
 <script>
   window.CATEGORY_EMOJIS = JSON.parse('{{ site.data.categories | jsonify }}');
 </script>
-<script src="{{ '/assets/js/home.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+{%- assign asset_version = site.data.asset_version -%}
+{%- unless asset_version -%}{%- assign asset_version = site.time | date: '%s' -%}{%- endunless -%}
+<script src="{{ '/assets/js/home.js' | relative_url }}?v={{ asset_version }}" defer></script>

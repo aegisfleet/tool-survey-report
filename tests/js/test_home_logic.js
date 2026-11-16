@@ -815,6 +815,135 @@ try {
     }
   }
 
+  // Test 20: 13件目以降の読み込み前でも、復元したタグ選択が消えない
+  searchInput.value = '';
+  categoryFilter.value = '';
+  tagFilter.value = '';
+  sortSelect.value = 'date-desc';
+  reportsGrid.dataset.totalReports = String(window.HomeReports.getCards().length + 1);
+
+  window.HomeReports.restoreTag('late-tag');
+  window.filterAndSort(false, true);
+
+  const pendingTagOption = tagFilter.querySelectorAll('option').find((option) => option.value === 'late-tag');
+  const visibleBeforeLateLoad = reportsGrid.children.filter((c) => c.style.display !== 'none').length;
+
+  if (tagFilter.value !== 'late-tag' || !pendingTagOption) {
+    console.error(
+      `Test 20 Failed: 読み込み前のタグ選択が保持されていません (value=${tagFilter.value}, option=${Boolean(pendingTagOption)})`,
+    );
+    passed = false;
+  } else if (visibleBeforeLateLoad !== 12 || noResults.style.display === 'block') {
+    console.error(
+      `Test 20 Failed: 未読込タグで0件表示になっています (visible=${visibleBeforeLateLoad}, noResults=${noResults.style.display})`,
+    );
+    passed = false;
+  } else {
+    // 13件目以降に該当タグを持つレポートが到着したら、保留していた選択が適用される
+    const lateReport = {
+      tool_name: 'LateTool',
+      title: 'LateTool 調査レポート',
+      tool_reading: 'れいとつーる',
+      slug: 'latetool',
+      url: '/tool-survey-report/reports/latetool/',
+      category: 'Development',
+      tags: ['late-tag'],
+      description: '13件目以降に読み込まれるレポート。',
+      latest_highlight: '遅延読み込みの検証用',
+      developer: 'Late Inc.',
+      official_site: 'https://example.com/latetool',
+      links: { github: 'https://github.com/example/latetool' },
+      score: 80,
+      evaluation_summary: '遅延読み込みテスト用の評価サマリー',
+      plus_points: [{ point: 4, reason: 'テスト加点' }],
+      target_users: ['開発者'],
+      pricing: { has_free_plan: true, is_oss: true, starting_price: '無料' },
+      last_updated: '2020-01-02',
+    };
+
+    window.HomeReports.addReports([lateReport]);
+
+    const lateCard = window.HomeReports.getCards().find((c) => c.dataset.slug === 'latetool');
+    const lateCardVisible = Boolean(lateCard) && lateCard.style.display === 'flex';
+    const visibleAfterLateLoad = reportsGrid.children.filter((c) => c.style.display !== 'none').length;
+
+    if (tagFilter.value !== 'late-tag' || !lateCardVisible || visibleAfterLateLoad !== 1) {
+      console.error(
+        `Test 20 Failed: 読み込み後に保留タグが適用されていません (value=${tagFilter.value}, lateCardVisible=${lateCardVisible}, visible=${visibleAfterLateLoad})`,
+      );
+      passed = false;
+    } else {
+      console.log('Test 20 Passed: 未読込タグの選択が保持され、読み込み後に適用されました。');
+    }
+  }
+
+  // Test 21: 読み込み中に件数バッジと「もっと見る」がチラつかない
+  window.HomeReports.restoreTag('');
+  searchInput.value = '';
+  tagFilter.value = '';
+  categoryFilter.value = '';
+  sortSelect.value = 'date-desc';
+
+  const totalWithRemaining = window.HomeReports.getCards().length + 57;
+  reportsGrid.dataset.totalReports = String(totalWithRemaining);
+
+  // updateReportsCount は 100ms 後に描画するため、テストでは即時実行に差し替える
+  const realSetTimeout = global.setTimeout;
+  global.setTimeout = (fn, _ms, ...args) => fn(...args);
+  try {
+    window.filterAndSort(false, true);
+  } finally {
+    global.setTimeout = realSetTimeout;
+  }
+
+  const countTextWhileLoading = reportsCountContainer.textContent;
+  const expectedCountText = `/ ${totalWithRemaining}件のレポートを表示中`;
+
+  if (!countTextWhileLoading.includes(expectedCountText)) {
+    console.error(
+      `Test 21 Failed: 読み込み中の件数表示が総件数になっていません (expected="${expectedCountText}", got="${countTextWhileLoading}")`,
+    );
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error(
+      `Test 21 Failed: 読み込み中に「もっと見る」が非表示になっています (display=${loadMoreContainer.style.display})`,
+    );
+    passed = false;
+  } else {
+    console.log('Test 21 Passed: 読み込み中も総件数表示と「もっと見る」が維持されています。');
+  }
+
+  // Test 22: tool_name が同じでも slug が異なるレポートは両方読み込む
+  const buildDupeReport = (slug) => ({
+    tool_name: 'DupeTool',
+    title: `DupeTool ${slug} 調査レポート`,
+    tool_reading: 'でゅーぷつーる',
+    slug,
+    url: `/tool-survey-report/reports/${slug}/`,
+    category: 'Development',
+    tags: ['dupe-tag'],
+    description: '同名・別 slug のレポート。',
+    latest_highlight: '重複判定の検証用',
+    developer: 'Dupe Inc.',
+    official_site: 'https://example.com/dupetool',
+    links: { github: 'https://github.com/example/dupetool' },
+    score: 70,
+    evaluation_summary: '重複判定テスト用の評価サマリー',
+    plus_points: [{ point: 3, reason: 'テスト加点' }],
+    target_users: ['開発者'],
+    pricing: { has_free_plan: true, is_oss: true, starting_price: '無料' },
+    last_updated: '2020-01-03',
+  });
+
+  const addedDupes = window.HomeReports.addReports([buildDupeReport('dupetool-a'), buildDupeReport('dupetool-b')]);
+  if (addedDupes !== 2) {
+    console.error(`Test 22 Failed: 同名・別 slug のレポートが ${addedDupes} 件しか読み込まれていません。`);
+    passed = false;
+  } else {
+    console.log('Test 22 Passed: 同名でも slug が異なるレポートは両方読み込まれます。');
+  }
+
+  delete reportsGrid.dataset.totalReports;
   searchInput.value = '';
   window.filterAndSort(false, true);
 

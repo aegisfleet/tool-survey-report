@@ -38,6 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const reportsCountContainer = document.getElementById('reports-count-container');
   const noResults = document.getElementById('no-results');
   const reportCards = Array.from(document.querySelectorAll('.report-card'));
+  const loadMoreContainer = document.getElementById('load-more-container');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+
+  // 一覧の段階表示（初期12件 + もっと見る）
+  const INITIAL_SHOW_COUNT = 12;
+  const LOAD_MORE_COUNT = 12;
+  let currentShowCount = INITIAL_SHOW_COUNT;
 
   // カテゴリ要素およびタイトルに絵文字を適用する関数
   function applyEmojisToCategories() {
@@ -59,22 +66,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // レポート件数を更新する関数
-  function updateReportsCount(count, isFilterActive) {
+  let reportsCountTimer = null;
+  function updateReportsCount(visibleCount, totalCount, isFilterActive) {
     if (!reportsCountContainer) return;
 
     // アニメーションのために一度要素を隠す
+    clearTimeout(reportsCountTimer);
     reportsCountContainer.style.opacity = '0';
     reportsCountContainer.style.transform = 'translateY(5px)';
 
-    setTimeout(() => {
+    reportsCountTimer = setTimeout(() => {
       if (isFilterActive) {
-        reportsCountContainer.textContent = `${count}件のトレンドがヒット`;
+        reportsCountContainer.textContent = `${totalCount}件のトレンドがヒット`;
       } else {
-        reportsCountContainer.textContent = `全 ${count}件のトレンドを表示中`;
+        reportsCountContainer.textContent = `${visibleCount} / ${totalCount}件のトレンドを表示中`;
       }
       reportsCountContainer.style.opacity = '1';
       reportsCountContainer.style.transform = 'translateY(0)';
     }, 100);
+  }
+
+  // 「もっと見る」ボタンの表示状態を更新する
+  function updateLoadMoreVisibility(isFilterActive, filteredCount) {
+    if (!loadMoreContainer) return;
+    loadMoreContainer.style.display = !isFilterActive && filteredCount > currentShowCount ? 'flex' : 'none';
   }
 
   // Filter function
@@ -125,25 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const isFilterActive = searchTerm !== '';
+    const visibleCards = isFilterActive ? filteredCards : filteredCards.slice(0, currentShowCount);
+    const visibleSet = new Set(visibleCards);
 
     // Hide/Show cards
     reportCards.forEach((card) => {
-      if (filteredCards.includes(card)) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      // .trending-card は display: flex のため、表示時は flex を明示する
+      card.style.display = visibleSet.has(card) ? 'flex' : 'none';
     });
 
     // Toggle no results message
-    if (filteredCards.length > 0) {
-      if (noResults) noResults.style.display = 'none';
-    } else {
-      if (noResults) noResults.style.display = 'block';
-    }
+    if (noResults) noResults.style.display = filteredCards.length > 0 ? 'none' : 'block';
 
     // 件数表示を更新
-    updateReportsCount(filteredCards.length, isFilterActive);
+    updateReportsCount(visibleCards.length, filteredCards.length, isFilterActive);
+    updateLoadMoreVisibility(isFilterActive, filteredCards.length);
   };
 
   // ============================================
@@ -237,6 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Initial state setup
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      currentShowCount += LOAD_MORE_COUNT;
+      filterReports();
+    });
+  }
+
   applyEmojisToCategories();
   filterReports();
 });

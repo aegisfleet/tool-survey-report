@@ -68,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const LOAD_MORE_COUNT = 12;
   let currentShowCount = INITIAL_SHOW_COUNT;
 
+  // 13件目以降の読み込み前は <option> が存在しないため、復元したタグを保留する
+  let pendingTagSelection = '';
+
   // 検索対象となる dataset キー（順序は従来どおり）
   const TEXT_SEARCH_KEYS = [
     'toolName',
@@ -120,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function saveFilterState() {
     const state = {
       search: heroSearchInput ? heroSearchInput.value : '',
-      tag: tagFilter ? tagFilter.value : '',
+      tag: getSelectedTagValue(),
       category: categoryFilter ? categoryFilter.value : '',
       sort: sortSelect ? sortSelect.value : 'date-desc',
       oss: filterFlags.oss,
@@ -133,9 +136,34 @@ document.addEventListener('DOMContentLoaded', () => {
     if (el && val !== undefined && val !== null) el.value = val;
   }
 
+  // タグ選択肢が存在するか確認する（13件目以降の読み込み前は存在しない）
+  function hasTagOption(value) {
+    if (!tagFilter || !value) return false;
+    const options = tagFilter.options
+      ? Array.from(tagFilter.options)
+      : Array.from(tagFilter.querySelectorAll('option'));
+    return options.some((option) => option.value === value);
+  }
+
+  // 復元したタグを選択状態にする。選択肢が無い場合は読み込み後に適用する
+  function setRestoredTag(value) {
+    if (!tagFilter) return;
+    const tag = value === undefined || value === null ? '' : String(value);
+    if (tag === '' || hasTagOption(tag)) {
+      tagFilter.value = tag;
+      pendingTagSelection = '';
+      return;
+    }
+    pendingTagSelection = tag;
+  }
+
+  function getSelectedTagValue() {
+    return tagFilter?.value || pendingTagSelection || '';
+  }
+
   function applyRestoredState(state) {
     setValIfPresent(heroSearchInput, state.search);
-    setValIfPresent(tagFilter, state.tag);
+    setRestoredTag(state.tag);
     setValIfPresent(categoryFilter, state.category);
     setValIfPresent(sortSelect, state.sort);
     filterFlags.oss = Boolean(state.oss);
@@ -228,16 +256,16 @@ document.addEventListener('DOMContentLoaded', () => {
     return counts;
   }
 
-  function updateTagFilterOptions(candidateCards, currentSelectedTag) {
-    if (!tagFilter) return currentSelectedTag;
+  function updateTagFilterOptions(candidateCards, currentSelectedTag, keepMissingSelection = false) {
+    if (!tagFilter) return { selected: currentSelectedTag, applied: currentSelectedTag };
     const tagCounts = getFacetTagCounts(candidateCards);
     const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => {
       if (b[1] !== a[1]) return b[1] - a[1];
       return a[0].localeCompare(b[0]);
     });
 
-    const isSelectedStillValid = Boolean(currentSelectedTag && tagCounts.has(currentSelectedTag));
-    const effectiveSelectedTag = isSelectedStillValid ? currentSelectedTag : '';
+    const isAvailable = Boolean(currentSelectedTag && tagCounts.has(currentSelectedTag));
+    const effectiveSelectedTag = isAvailable || keepMissingSelection ? currentSelectedTag : '';
 
     // Rebuild options in tagFilter
     tagFilter.innerHTML = '';
@@ -256,18 +284,29 @@ document.addEventListener('DOMContentLoaded', () => {
       tagFilter.appendChild(opt);
     });
 
+    // 13件目以降を読み込む前でも、復元したタグを選択状態として保持する
+    if (effectiveSelectedTag && !isAvailable) {
+      const pendingOpt = document.createElement('option');
+      pendingOpt.value = effectiveSelectedTag;
+      pendingOpt.textContent = effectiveSelectedTag;
+      pendingOpt.selected = true;
+      tagFilter.appendChild(pendingOpt);
+    }
+
     tagFilter.value = effectiveSelectedTag;
-    return effectiveSelectedTag;
+    return { selected: effectiveSelectedTag, applied: isAvailable ? effectiveSelectedTag : '' };
   }
 
   // レポート件数を更新する関数
+  let reportsCountTimer = null;
   function updateReportsCount(visibleCount, totalCount, isFilterActive) {
     if (!reportsCountContainer) return;
 
+    clearTimeout(reportsCountTimer);
     reportsCountContainer.style.opacity = '0';
     reportsCountContainer.style.transform = 'translateY(5px)';
 
-    setTimeout(() => {
+    reportsCountTimer = setTimeout(() => {
       if (isFilterActive) {
         reportsCountContainer.textContent = `${totalCount}件のレポートがヒット`;
       } else {
@@ -276,6 +315,12 @@ document.addEventListener('DOMContentLoaded', () => {
       reportsCountContainer.style.opacity = '1';
       reportsCountContainer.style.transform = 'translateY(0)';
     }, 100);
+  }
+
+  // 13件目以降の読み込み中も含めた総レポート件数
+  function getReportTotalCount() {
+    const total = Number.parseInt(reportsGrid?.dataset.totalReports || '', 10);
+    return Number.isFinite(total) ? Math.max(total, reportCards.length) : reportCards.length;
   }
 
   // dataset の値を検索用に正規化（小文字化＋ひらがな化）する
@@ -481,7 +526,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateLoadMoreVisibility(isFilterActive, filteredCount) {
     const loadMoreContainer = document.getElementById('load-more-container');
     if (!loadMoreContainer) return;
-    loadMoreContainer.style.display = !isFilterActive && filteredCount > currentShowCount ? 'flex' : 'none';
+    // 13件目以降の読み込み中は data-total-reports を母数にして、一瞬消えないようにする
+    const totalCount = Math.max(filteredCount, getReportTotalCount());
+    loadMoreContainer.style.display = !isFilterActive && totalCount > currentShowCount ? 'flex' : 'none';
   }
 
   // 表示対象のカードのみ DOM へ実体化して配置する
@@ -1013,20 +1060,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function collectKnownReportKeys() {
-    const known = new Set();
+    const slugs = new Set();
+    const names = new Set();
     reportCards.forEach((card) => {
       const slug = toLowerString(card.dataset.slug);
       const name = toLowerString(card.dataset.toolName);
-      if (slug) known.add(slug);
-      if (name) known.add(name);
+      if (slug) slugs.add(slug);
+      if (name) names.add(name);
     });
-    return known;
+    return { slugs, names };
   }
 
+  // slug があれば slug で同一性を判定する（同名の別レポートを取りこぼさない）
   function isKnownReport(item, known) {
     const slug = toLowerString(item?.slug);
+    if (slug) return known.slugs.has(slug);
     const name = toLowerString(item?.tool_name);
-    return Boolean((slug && known.has(slug)) || (name && known.has(name)));
+    return Boolean(name && known.names.has(name));
   }
 
   // JSONレコードのうち未登録のものを軽量シェルとして登録する
@@ -1041,8 +1091,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const shell = createVirtualCardShell(item);
       const slug = toLowerString(item.slug);
       const name = toLowerString(item.tool_name);
-      if (slug) known.add(slug);
-      if (name) known.add(name);
+      if (slug) known.slugs.add(slug);
+      if (name) known.names.add(name);
       reportCards.push(shell);
       added += 1;
     });
@@ -1060,6 +1110,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!hasRemainingReports()) return 0;
     const data = await fetchReportsSummary();
     const added = addVirtualCards(data);
+    // 読み込み後は総件数を実データに合わせ、保留中のタグ選択を確定させる
+    if (reportsGrid) reportsGrid.dataset.totalReports = String(reportCards.length);
     if (added > 0) {
       filterAndSort(false, false);
     }
@@ -1074,7 +1126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const rawSearchTerm = (heroSearchInput?.value || '').toLowerCase().trim();
     const searchTerm = toHiragana(rawSearchTerm);
-    let selectedTag = tagFilter?.value || '';
+    const selectedTagValue = getSelectedTagValue();
     const selectedCategory = categoryFilter?.value || '';
     const sortBy = sortSelect?.value || 'date-desc';
     const orGroups = searchTerm
@@ -1087,27 +1139,31 @@ document.addEventListener('DOMContentLoaded', () => {
       cardMatchesCandidateCriteria(card, orGroups, selectedCategory, filterFlags),
     );
 
-    // Rebuild tag options based on current facet
-    selectedTag = updateTagFilterOptions(candidateCardsForTags, selectedTag);
+    // Rebuild tag options based on current facet.
+    // 13件目以降の読み込み中は、復元したタグがまだ候補に無くても選択状態を保持する
+    const keepMissingTag = Boolean(pendingTagSelection) && hasRemainingReports();
+    const tagState = updateTagFilterOptions(candidateCardsForTags, selectedTagValue, keepMissingTag);
+    pendingTagSelection = tagState.applied ? '' : tagState.selected;
 
     // Filter cards matching all criteria (including tag)
-    const filteredCards = candidateCardsForTags.filter((card) => cardMatchesTag(card, selectedTag));
+    const filteredCards = candidateCardsForTags.filter((card) => cardMatchesTag(card, tagState.applied));
 
     filteredCards.sort((a, b) => compareReportCards(a, b, sortBy));
 
-    const isFilterActive = isAnyFilterActive(searchTerm, selectedTag, selectedCategory, filterFlags);
+    const isFilterActive = isAnyFilterActive(searchTerm, tagState.applied, selectedCategory, filterFlags);
     renderCardVisibility(filteredCards, isFilterActive);
 
-    // 件数表示を更新
+    // 件数表示を更新（読み込み中は総件数を先に確定させることでチラつきを防ぐ）
+    const totalReportCount = getReportTotalCount();
     const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
-    updateReportsCount(visibleCount, filteredCards.length, isFilterActive);
+    updateReportsCount(visibleCount, isFilterActive ? filteredCards.length : totalReportCount, isFilterActive);
     updateSearchCountBadge(filteredCards.length, searchTerm);
 
     // Update active filters bar
     updateActiveFiltersBar(filteredCards.length, isFilterActive, {
       search: (heroSearchInput?.value || '').trim(),
       category: selectedCategory,
-      tag: selectedTag,
+      tag: tagState.applied,
       oss: filterFlags.oss,
       free: filterFlags.free,
     });
@@ -1136,6 +1192,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     loadRemainingReports,
     getCards: () => reportCards,
+    // テスト用: URL/sessionStorage から復元したタグの適用処理
+    restoreTag: setRestoredTag,
   };
 
   function setOrDeleteUrlParam(url, key, val) {
@@ -1156,7 +1214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateURL() {
     const url = new URL(window.location);
     const searchTerm = (heroSearchInput?.value || '').trim();
-    const tag = tagFilter?.value || '';
+    const tag = getSelectedTagValue();
     const category = categoryFilter?.value || '';
     const sort = sortSelect?.value || 'date-desc';
 
@@ -1192,9 +1250,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     assignParam(heroSearchInput, 'q');
-    assignParam(tagFilter, 'tag');
     assignParam(categoryFilter, 'category', true);
     assignParam(sortSelect, 'sort');
+
+    // タグは <option> が未生成の場合があるため専用の復元処理を使う
+    const tagParam = urlParams.get('tag');
+    if (tagParam !== null) {
+      setRestoredTag(tagParam);
+      isParamSet = true;
+    }
 
     const ossParam = urlParams.get('oss');
     if (ossParam !== null) {
@@ -1347,6 +1411,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Event listeners for select boxes
   if (tagFilter) {
     tagFilter.addEventListener('change', () => {
+      pendingTagSelection = '';
       filterAndSort();
     });
   }
@@ -1364,6 +1429,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tagFilterClear) {
     tagFilterClear.addEventListener('click', () => {
       tagFilter.value = '';
+      pendingTagSelection = '';
       filterAndSort();
     });
   }
@@ -1423,6 +1489,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function resetAllFilters() {
     if (heroSearchInput) heroSearchInput.value = '';
     if (tagFilter) tagFilter.value = '';
+    pendingTagSelection = '';
     if (categoryFilter) categoryFilter.value = '';
     if (sortSelect) sortSelect.value = 'date-desc';
     filterFlags.oss = false;
@@ -1446,6 +1513,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       case 'tag':
         if (tagFilter) tagFilter.value = '';
+        pendingTagSelection = '';
         filterAndSort();
         break;
       case 'flag-oss':
@@ -1593,6 +1661,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       tagFilter.value = tagValue;
     }
+    pendingTagSelection = '';
 
     filterAndSort();
 
