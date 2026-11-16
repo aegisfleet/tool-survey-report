@@ -47,6 +47,7 @@ relationships:
     - Microsoft Work IQ
     - Copilot Cowork
     - Microsoft Copilot Studio
+    - Microsoft Scout
   related_tools:
     - 天才くん
     - ChatGPT

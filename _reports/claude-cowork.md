@@ -49,6 +49,7 @@ relationships:
   related_tools:
     - Claude Code
     - Claude for Chrome
+    - Microsoft Scout
 ---
 
 # **Claude Cowork 調査レポート**

@@ -42,6 +42,7 @@ relationships:
   related_tools:
     - GitHub Copilot
     - Model Context Protocol
+    - Microsoft Scout
 ---
 
 # **Microsoft Work IQ 調査レポート**
