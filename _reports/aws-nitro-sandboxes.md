@@ -1,58 +1,54 @@
 ---
-title: "AWS Nitro Sandboxes 調査レポート"
-tool_name: "AWS Nitro Sandboxes"
-tool_reading: "エーダブリューエス ニトロ サンドボックス"
-category: "コンテナ/仮想化"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-ec2-nitro-sandboxes.html"
-date: "2026-11-16"
-last_updated: "2026-11-16"
+title: AWS Nitro Sandboxes 調査レポート
+tool_name: AWS Nitro Sandboxes
+tool_reading: エーダブリューエス ニトロ サンドボックス
+category: コンテナ/仮想化
+developer: Amazon Web Services (AWS)
+official_site: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-ec2-nitro-sandboxes.html
+date: '2026-11-16'
+last_updated: '2026-11-16'
 tags:
-  - "AWS"
-  - "クラウド"
-  - "コンテナ"
-  - "セキュリティ"
-  - "仮想化"
-description: "AWS Nitro SystemとFirecrackerを活用し、Amazon EKS Pod・ECSタスク・EC2ワークロードを専用の軽量VMでハードウェア隔離するセキュリティ機能。"
-
+  - AWS
+  - クラウド
+  - コンテナ
+  - セキュリティ
+  - 仮想化
+description: AWS Nitro SystemとFirecrackerを活用し、Amazon EKS Pod・ECSタスク・EC2ワークロードを専用の軽量VMでハードウェア隔離するセキュリティ機能。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "追加料金なし（EC2標準料金のみ）"
+  starting_price: 追加料金なし（EC2標準料金のみ）
   target_users:
-    - "インフラエンジニア"
-    - "セキュリティエンジニア"
-    - "AIエンジニア"
-  latest_highlight: "2026年11月9日にAmazon EKS、Amazon ECS、Amazon EC2向けに正式リリース"
-  update_frequency: "高"
-
+    - インフラエンジニア
+    - セキュリティエンジニア
+    - AIエンジニア
+  latest_highlight: 2026年11月9日にAmazon EKS、Amazon ECS、Amazon EC2向けに正式リリース
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 8
-      reason: "AWS Nitro Systemによるハードウェア隔離と、Confidentialモードでの暗号学的アテステーション（AWS KMS連携）を提供"
+      reason: AWS Nitro Systemによるハードウェア隔離と、Confidentialモードでの暗号学的アテステーション（AWS KMS連携）を提供
     - point: 5
-      reason: "機能自体の追加料金がなく、EKS/ECSから1行の設定変更で既存のAWSネイティブ機能（VPC CNI・Pod Identity・CloudWatch等）と併用可能"
+      reason: 機能自体の追加料金がなく、EKS/ECSから1行の設定変更で既存のAWSネイティブ機能（VPC CNI・Pod Identity・CloudWatch等）と併用可能
     - point: 4
-      reason: "日本語の公式ドキュメントが整備されており、AWSのエンタープライズコンプライアンス基盤を活用可能"
+      reason: 日本語の公式ドキュメントが整備されており、AWSのエンタープライズコンプライアンス基盤を活用可能
   minus_points:
     - point: -3
-      reason: "GPUパススルー・ライブマイグレーション・スナップショット非対応で、EC2直接利用時はメモリプール予約やIMDSアクセス遮断等の運用設計が必要"
-  summary: "AIエージェントのコード実行やマルチテナントSaaS向けに、EC2インスタンスの集約効率を保ちつつVM級のハードウェア隔離を追加料金なしで実現する強力な基盤。"
-
+      reason: GPUパススルー・ライブマイグレーション・スナップショット非対応で、EC2直接利用時はメモリプール予約やIMDSアクセス遮断等の運用設計が必要
+  summary: AIエージェントのコード実行やマルチテナントSaaS向けに、EC2インスタンスの集約効率を保ちつつVM級のハードウェア隔離を追加料金なしで実現する強力な基盤。
 links:
-  documentation: "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-ec2-nitro-sandboxes.html"
-
+  documentation: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/amazon-ec2-nitro-sandboxes.html
 relationships:
   related_tools:
-    - "Kubernetes"
-    - "Docker"
-    - "Docker Sandboxes"
-    - "Apple Container"
-    - "LiteBox"
-    - "Amazon Bedrock AgentCore Runtime"
-    - "AWS CLI"
+    - Kubernetes
+    - Docker
+    - Docker Sandboxes
+    - Apple Container
+    - LiteBox
+    - Amazon Bedrock AgentCore Runtime
+    - AWS CLI
 ---
 
 # **AWS Nitro Sandboxes 調査レポート**
