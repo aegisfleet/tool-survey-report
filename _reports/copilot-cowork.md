@@ -42,6 +42,8 @@ links:
   documentation: https://www.microsoft.com/en-us/microsoft-365/blog/tag/copilot-cowork/
 relationships:
   parent: Microsoft 365 Copilot
+  related_tools:
+    - Microsoft Scout
 ---
 # **Copilot Cowork 調査レポート**
 
