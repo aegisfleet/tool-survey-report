@@ -1,57 +1,54 @@
 ---
-title: "PyYAML 調査レポート"
-tool_name: "PyYAML"
-tool_reading: "パイヤムル / ピーワイヤムル"
-category: "データ抽出/変換"
-developer: "Kirill Simonov / YAML Organization (OSSコミュニティ)"
-official_site: "https://pyyaml.org/"
-date: "2026-11-16"
-last_updated: "2026-11-16"
+title: PyYAML 調査レポート
+tool_name: PyYAML
+tool_reading: パイヤムル / ピーワイヤムル
+category: データ抽出/変換
+developer: Kirill Simonov / YAML Organization (OSSコミュニティ)
+official_site: https://pyyaml.org/
+date: '2026-11-16'
+last_updated: '2026-11-16'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "Python"
-  - "構成管理"
-description: "Python向けの事実上の標準YAMLパーサーおよびエミッターライブラリ。Pure Python実装に加え、LibYAMLによる高速なC拡張バインディングを提供する。"
-
+  - オープンソース
+  - 開発者ツール
+  - Python
+  - 構成管理
+description: Python向けの事実上の標準YAMLパーサーおよびエミッターライブラリ。Pure Python実装に加え、LibYAMLによる高速なC拡張バインディングを提供する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Python開発者"
-    - "DevOpsエンジニア"
-    - "MLOps/データサイエンティスト"
-  latest_highlight: "2026年10月にPython 3.15向けCI対応を更新、6月にマージキーDoS対策をマージ（最新安定版は6.0.3）"
-  update_frequency: "中"
-
+    - Python開発者
+    - DevOpsエンジニア
+    - MLOps/データサイエンティスト
+  latest_highlight: 2026年10月にPython 3.15向けCI対応を更新、6月にマージキーDoS対策をマージ（最新安定版は6.0.3）
+  update_frequency: 中
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 8
-      reason: "PythonエコシステムにおけるYAML処理の事実上の標準ライブラリであり、圧倒的な普及率と安定性を誇る"
+      reason: PythonエコシステムにおけるYAML処理の事実上の標準ライブラリであり、圧倒的な普及率と安定性を誇る
     - point: 5
-      reason: "MITライセンスの完全無料OSSであり、商用・非商用を問わず自由に利用・組み込み可能"
+      reason: MITライセンスの完全無料OSSであり、商用・非商用を問わず自由に利用・組み込み可能
     - point: 5
-      reason: "LibYAMLによるC拡張（CSafeLoader / CDumper）を備え、大規模YAMLでも高速に処理可能"
+      reason: LibYAMLによるC拡張（CSafeLoader / CDumper）を備え、大規模YAMLでも高速に処理可能
     - point: 2
-      reason: "2025年〜2026年にかけてもPython 3.14/3.15対応やセキュリティ修正（DoS対策）などのメンテナンスが継続"
+      reason: 2025年〜2026年にかけてもPython 3.14/3.15対応やセキュリティ修正（DoS対策）などのメンテナンスが継続
   minus_points:
     - point: -4
-      reason: "YAML 1.1仕様準拠のため「Norway問題（noがFalseになる等）」の暗黙的型変換が発生する"
+      reason: YAML 1.1仕様準拠のため「Norway問題（noがFalseになる等）」の暗黙的型変換が発生する
     - point: -3
-      reason: "ラウンドトリップ（コメントや書式・インデントの保持）に非対応で、ダンプ時にコメントが失われる"
+      reason: ラウンドトリップ（コメントや書式・インデントの保持）に非対応で、ダンプ時にコメントが失われる
     - point: -3
-      reason: "歴史的にyaml.load()の安全でないデフォルト挙動に起因するセキュリティリスク（RCE）への注意が必要"
-  summary: "PythonにおけるYAML処理の事実上の標準ライブラリ。LibYAMLによる高速性と高い互換性が強みだが、YAML 1.1の型変換の癖やコメント非保持、safe_load使用の徹底に留意が必要。"
-
+      reason: 歴史的にyaml.load()の安全でないデフォルト挙動に起因するセキュリティリスク（RCE）への注意が必要
+  summary: PythonにおけるYAML処理の事実上の標準ライブラリ。LibYAMLによる高速性と高い互換性が強みだが、YAML 1.1の型変換の癖やコメント非保持、safe_load使用の徹底に留意が必要。
 links:
-  github: "https://github.com/yaml/pyyaml"
-  documentation: "https://pyyaml.org/wiki/PyYAMLDocumentation"
+  github: https://github.com/yaml/pyyaml
+  documentation: https://pyyaml.org/wiki/PyYAMLDocumentation
 relationships:
   related_tools:
-    - "Ansible"
+    - Ansible
 ---
 
 # **PyYAML 調査レポート**
