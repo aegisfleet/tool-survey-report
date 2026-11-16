@@ -48,6 +48,7 @@ relationships:
     - Cursor
     - Devin Desktop
     - GitHub Copilot
+    - Plannotator
 ---
 
 # **cc-sdd 調査レポート**

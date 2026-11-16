@@ -49,6 +49,7 @@ relationships:
     - SonarQube
     - Qodo
     - Open Code Review
+    - Plannotator
 ---
 
 # **CodeRabbit 調査レポート**
