@@ -1,60 +1,57 @@
 ---
-title: "Plannotator 調査レポート"
-tool_name: "Plannotator"
-tool_reading: "プラノテーター"
-category: "AI開発ワークフロー"
-developer: "backnotprop"
-official_site: "https://plannotator.ai"
-date: "2026-11-17"
-last_updated: "2026-11-17"
+title: Plannotator 調査レポート
+tool_name: Plannotator
+tool_reading: プラノテーター
+category: AI開発ワークフロー
+developer: backnotprop
+official_site: https://plannotator.ai
+date: '2026-11-17'
+last_updated: '2026-11-17'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "コーディング支援"
-  - "AI"
-  - "エージェント"
-description: "AIコーディングエージェントが生成する実装計画書・仕様書・HTML・コード差分をローカルブラウザ上で視覚的にレビュー・注釈付けし、ワンクリックで構造化フィードバックを返せるオープンソースのワークスペース。"
-
+  - オープンソース
+  - 開発者ツール
+  - コーディング支援
+  - AI
+  - エージェント
+description: AIコーディングエージェントが生成する実装計画書・仕様書・HTML・コード差分をローカルブラウザ上で視覚的にレビュー・注釈付けし、ワンクリックで構造化フィードバックを返せるオープンソースのワークスペース。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "テックリード"
-    - "AIエージェント活用チーム"
-  latest_highlight: "2026年11月にv0.28.66をリリースし、Tailscale経由のアカウント限定アクセスやInboxでの返信取り消し、T3 Code連携を強化"
-  update_frequency: "高"
-
+    - 開発者
+    - テックリード
+    - AIエージェント活用チーム
+  latest_highlight: 2026年11月にv0.28.66をリリースし、Tailscale経由のアカウント限定アクセスやInboxでの返信取り消し、T3 Code連携を強化
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "計画書・仕様書・HTML・コード差分をブラウザ上で視覚的に赤入れ・注釈付けし、ワンクリックでエージェントへ構造化フィードバックを返せる独自のUX"
+      reason: 計画書・仕様書・HTML・コード差分をブラウザ上で視覚的に赤入れ・注釈付けし、ワンクリックでエージェントへ構造化フィードバックを返せる独自のUX
     - point: 6
-      reason: "完全オープンソース（MIT / Apache-2.0デュアルライセンス）かつローカルファースト設計で、無料で全主要機能を利用可能"
+      reason: 完全オープンソース（MIT / Apache-2.0デュアルライセンス）かつローカルファースト設計で、無料で全主要機能を利用可能
     - point: 5
-      reason: "Claude Code、Codex、OpenCode、Copilot CLI、Gemini CLI、Pi、Droid、Kiroなど幅広いAIエージェント・VCS（Git/jj/p4）への高い対応力"
+      reason: Claude Code、Codex、OpenCode、Copilot CLI、Gemini CLI、Pi、Droid、Kiroなど幅広いAIエージェント・VCS（Git/jj/p4）への高い対応力
     - point: 4
-      reason: "GitHub Releasesでほぼ毎日〜数日おきにリリースが続く極めて活発な開発ペース（v0.28.66、スター数12,500超）"
+      reason: GitHub Releasesでほぼ毎日〜数日おきにリリースが続く極めて活発な開発ペース（v0.28.66、スター数12,500超）
   minus_points:
     - point: -3
-      reason: "公式UI・ドキュメントが英語中心であり、日本語の公式サポートや日本語UIローカライズが限定的"
+      reason: 公式UI・ドキュメントが英語中心であり、日本語の公式サポートや日本語UIローカライズが限定的
     - point: -2
-      reason: "チーム向けホスティング機能（Plannotator Workspaces）はプライベートベータ/ウェイトリスト段階であり、組織向けの権限管理やSaaS料金体系が未確定"
-  summary: "AIコーディングエージェント時代のレビューボトルネックを解消する強力なローカルファースト・オープンソースワークスペースであり、導入コストの低さと対応エコシステムの広さが高く評価できる。"
-
+      reason: チーム向けホスティング機能（Plannotator Workspaces）はプライベートベータ/ウェイトリスト段階であり、組織向けの権限管理やSaaS料金体系が未確定
+  summary: AIコーディングエージェント時代のレビューボトルネックを解消する強力なローカルファースト・オープンソースワークスペースであり、導入コストの低さと対応エコシステムの広さが高く評価できる。
 links:
-  github: "https://github.com/backnotprop/plannotator"
-  documentation: "https://docs.plannotator.ai"
+  github: https://github.com/backnotprop/plannotator
+  documentation: https://docs.plannotator.ai
 relationships:
   related_tools:
-    - "Claude Code"
-    - "OpenCode"
-    - "CodeRabbit"
-    - "cc-sdd"
-    - "TAKT"
+    - Claude Code
+    - OpenCode
+    - CodeRabbit
+    - cc-sdd
+    - TAKT
 ---
 
 # **Plannotator 調査レポート**
