@@ -47,6 +47,7 @@ relationships:
     - Google Learning
     - LilysAI
     - ChatGPT
+    - TextFX
 ---
 # **Google Illuminate 調査レポート**
 

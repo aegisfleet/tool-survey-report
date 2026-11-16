@@ -42,6 +42,7 @@ relationships:
   children: []
   related_tools:
     - Vertex AI Studio
+    - TextFX
 ---
 
 # **Google Labs Playground 調査レポート**
