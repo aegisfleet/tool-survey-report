@@ -531,9 +531,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateLoadMoreVisibility(isFilterActive, filteredCount) {
     const loadMoreContainer = document.getElementById('load-more-container');
     if (!loadMoreContainer) return;
-    // 13件目以降の読み込み中は data-total-reports を母数にして、一瞬消えないようにする
-    const totalCount = Math.max(filteredCount, getReportTotalCount());
-    loadMoreContainer.style.display = !isFilterActive && totalCount > currentShowCount ? 'flex' : 'none';
+    // 絞り込み中は実際のヒット件数、非絞り込み時は 13件目以降の読み込み中でも
+    // 一瞬消えないよう data-total-reports を母数にする
+    const totalCount = isFilterActive ? filteredCount : Math.max(filteredCount, getReportTotalCount());
+    loadMoreContainer.style.display = totalCount > currentShowCount ? 'flex' : 'none';
   }
 
   // 表示対象のカードのみ DOM へ実体化して配置する
@@ -553,7 +554,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const visibleCards = isFilterActive ? filteredCards : filteredCards.slice(0, currentShowCount);
+    // 絞り込み中でも 12 件ずつ段階的に実体化する（大量ヒット時の一括DOM挿入を防ぐ）
+    const visibleCards = filteredCards.slice(0, currentShowCount);
 
     visibleCards.forEach((card) => {
       if (card._isMaterialized === false) {
@@ -569,18 +571,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 件数バッジ・絞り込みサマリを更新する。
-  // 13件目以降の読み込み中に0件になっても、未読込カードが該当し得るため確定表示しない。
+  // 13件目以降の読み込み中は、未読込カードが該当し得るため件数を確定表示しない
+  // （部分ヒット時に「2件」→「35件」と数値がジャンプするのを防ぐ）。
   function updateResultCounts(filteredCards, isFilterActive, isHydrating, searchTerm, activeState) {
-    const isPendingZeroResults = isHydrating && isFilterActive && filteredCards.length === 0;
+    const isPendingFilterCount = isHydrating && isFilterActive;
     const totalReportCount = getReportTotalCount();
-    const visibleCount = isFilterActive ? filteredCards.length : Math.min(currentShowCount, filteredCards.length);
+    const visibleCount = Math.min(currentShowCount, filteredCards.length);
 
-    if (!isPendingZeroResults) {
+    if (!isPendingFilterCount) {
       updateReportsCount(visibleCount, isFilterActive ? filteredCards.length : totalReportCount, isFilterActive);
       updateSearchCountBadge(filteredCards.length, searchTerm);
     }
 
-    updateActiveFiltersBar(filteredCards.length, isFilterActive, activeState, isPendingZeroResults);
+    updateActiveFiltersBar(filteredCards.length, isFilterActive, activeState, isPendingFilterCount);
   }
 
   // ============================================
@@ -1216,6 +1219,8 @@ document.addEventListener('DOMContentLoaded', () => {
     getCards: () => reportCards,
     // テスト用: URL/sessionStorage から復元したタグの適用処理
     restoreTag: setRestoredTag,
+    // ヘッダーのサイトタイトルクリック時など、外部から全フィルタを解除するためのAPI
+    resetAllFilters,
   };
 
   function setOrDeleteUrlParam(url, key, val) {
