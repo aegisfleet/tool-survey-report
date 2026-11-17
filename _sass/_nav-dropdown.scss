@@ -89,7 +89,6 @@
 
     @include media-breakpoint-down(lg) {
         display: none;
-        padding-left: map-get($spacers, 3);
         background: rgba($light-gray, 0.1);
         margin: 0 (- map-get($spacers, 3));
         padding: map-get($spacers, 2) map-get($spacers, 4);
