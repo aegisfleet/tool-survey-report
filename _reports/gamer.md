@@ -1,61 +1,57 @@
 ---
-title: "Gamer 調査レポート"
-tool_name: "Gamer"
-tool_reading: "ゲーマー"
-category: "デスクトップ/GUIエージェント"
-developer: "miHoYo Honkai AI R&D Team"
-official_site: "https://mihoyo-gamer.github.io/"
-date: "2026-11-17"
-last_updated: "2026-11-17"
+title: Gamer 調査レポート
+tool_name: Gamer
+tool_reading: ゲーマー
+category: デスクトップ/GUIエージェント
+developer: miHoYo Honkai AI R&D Team
+official_site: https://mihoyo-gamer.github.io/
+date: '2026-11-17'
+last_updated: '2026-11-17'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "自律型"
-  - "大規模言語モデル"
-description: "miHoYo Honkai AI R&D Teamが開発した、画面入力とキーボード・マウス操作のみで2D/3Dゲームを長時間リアルタイムにプレイできる汎用Vision-Language-Action（VLA）基盤モデルおよびフレームワーク。"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - 自律型
+  - 大規模言語モデル
+description: miHoYo Honkai AI R&D Teamが開発した、画面入力とキーボード・マウス操作のみで2D/3Dゲームを長時間リアルタイムにプレイできる汎用Vision-Language-Action（VLA）基盤モデルおよびフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AI研究者"
-    - "ゲーム開発者"
-    - "自動化エンジニア"
-  latest_highlight: "2026年11月にarXiv論文（2611.18397）およびGitHubリポジトリを公開し、Streaming-vLLMやTA-GRPOによるリアルタイムゲームエージェント基盤を発表"
-  update_frequency: "高"
-
+    - AI研究者
+    - ゲーム開発者
+    - 自動化エンジニア
+  latest_highlight: 2026年11月にarXiv論文（2611.18397）およびGitHubリポジトリを公開し、Streaming-vLLMやTA-GRPOによるリアルタイムゲームエージェント基盤を発表
+  update_frequency: 高
 evaluation:
   score: 76
   base_score: 70
   plus_points:
     - point: 6
-      reason: "画面入力（5Hz）とネイティブのキーボード・マウス操作（200ms/6ステップ）のみで2D/3Dゲームを横断的に操作可能"
+      reason: 画面入力（5Hz）とネイティブのキーボード・マウス操作（200ms/6ステップ）のみで2D/3Dゲームを横断的に操作可能
     - point: 5
-      reason: "Sparse Reasoning（疎推論）と永続メモリ要約、TA-GRPOによる長期間（1時間超）タスクの一貫した遂行能力"
+      reason: Sparse Reasoning（疎推論）と永続メモリ要約、TA-GRPOによる長期間（1時間超）タスクの一貫した遂行能力
     - point: 4
-      reason: "Streaming-vLLMによる65.12msの低遅延推論（20.1倍高速化）とApache-2.0でのオープン化"
+      reason: Streaming-vLLMによる65.12msの低遅延推論（20.1倍高速化）とApache-2.0でのオープン化
   minus_points:
     - point: -4
-      reason: "本番向けのStreaming-vLLM実装が「Coming soon」であり、崩壊：スターレイル等のファインチューニング済みチェックポイントも非公開"
+      reason: 本番向けのStreaming-vLLM実装が「Coming soon」であり、崩壊：スターレイル等のファインチューニング済みチェックポイントも非公開
     - point: -3
-      reason: "H200等の高性能GPU環境を前提とした設計であり、一般ユーザーの手元環境での再現・運用ハードルが高い"
+      reason: H200等の高性能GPU環境を前提とした設計であり、一般ユーザーの手元環境での再現・運用ハードルが高い
     - point: -2
-      reason: "UIやドキュメントは英語中心で日本語公式サポートがなく、研究用途の色合いが強い"
-  summary: "人間と同じ視覚・操作インターフェースで長時間リアルタイム制御を実現する革新的なVLAゲームエージェント基盤だが、公開コードの拡充と実行環境のハードルが課題。"
-
+      reason: UIやドキュメントは英語中心で日本語公式サポートがなく、研究用途の色合いが強い
+  summary: 人間と同じ視覚・操作インターフェースで長時間リアルタイム制御を実現する革新的なVLAゲームエージェント基盤だが、公開コードの拡充と実行環境のハードルが課題。
 links:
-  github: "https://github.com/RainBowLuoCS/Gamer"
-  documentation: "https://arxiv.org/abs/2611.18397"
-
+  github: https://github.com/RainBowLuoCS/Gamer
+  documentation: https://arxiv.org/abs/2611.18397
 relationships:
   related_tools:
-    - "UI-TARS Desktop"
-    - "Computer use（Gemini）"
-    - "Microsoft Scout"
-    - "OpenMausBot"
-    - "Qwen"
+    - UI-TARS Desktop
+    - Computer use（Gemini）
+    - Microsoft Scout
+    - OpenMausBot
+    - Qwen
 ---
 
 # **Gamer 調査レポート**
