@@ -51,6 +51,7 @@ relationships:
   related_tools:
     - Agent Skills
     - CodeQL
+    - Claude-BugHunter
 ---
 
 # **security-audit-skill 調査レポート**
