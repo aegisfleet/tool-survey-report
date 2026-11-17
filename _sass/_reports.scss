@@ -749,6 +749,13 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     display: none;
   }
 
+  // 非表示にした先頭 H1 の直後の H2（基本情報など）は上マージンを持たない。
+  // main.js は先頭 H2 の直前に目次 NAV を挿入するため、その場合も対象にする。
+  > h1:first-child + h2,
+  > h1:first-child + .table-of-contents + h2 {
+    margin-top: 0;
+  }
+
   h1,
   h2,
   h3,
@@ -774,8 +781,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     color: var(--report-text-primary);
     letter-spacing: -0.015em;
 
-    &:first-child,
-    h1:first-child + & {
+    &:first-child {
       margin-top: 0;
     }
 
