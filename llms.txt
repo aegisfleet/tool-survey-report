@@ -13,7 +13,6 @@ AIアシスタント（ChatGPT, Claude, Perplexity, Gemini等）や自律型コ�
 - [全ツール軽量インデックス (JSON)]({{ '/reports-summary.json' | absolute_url }}): AIエージェント・スクリプト用の軽量インデックス。全ツールの名前、カテゴリ、タグ、評価スコア、料金体系、概要、代替ツール一覧、レポートURLを収録。
 - [全ツール詳細リスト (LLMs Full)]({{ '/llms-full.txt' | absolute_url }}): 全カテゴリおよび全ツールの詳細一覧（Markdown形式）。
 - [日刊トレンドレポート一覧]({{ '/trending/' | absolute_url }}): GitHub TrendingやHacker News等で注目された最新ツール・AI動向を日次で分析したレポート一覧。
-- [タグ一覧]({{ '/tags/' | absolute_url }}): 正規化された技術タグごとの分類一覧。
 - [サイトマップ (XML)]({{ '/sitemap.xml' | absolute_url }}): サイト全体のURL構造および最新更新日を示すサイトマップ。
 
 ## URL構造規則
@@ -24,7 +23,7 @@ AIアシスタント（ChatGPT, Claude, Perplexity, Gemini等）や自律型コ�
 - 日刊トレンドレポート: `{{ site.url }}{{ site.baseurl }}/trending/{YYYY-MM-DD}/`
   - 例: `{{ site.url }}{{ site.baseurl }}/trending/2026-09-18/`
 - カテゴリ別一覧: `{{ site.url }}{{ site.baseurl }}/?category={カテゴリ名}`
-- タグ別一覧: `{{ site.url }}{{ site.baseurl }}/tags/?tag={タグ名}`
+- タグ別一覧: `{{ site.url }}{{ site.baseurl }}/?tag={タグ名}`
 
 ## 主要カテゴリ
 {% assign grouped_categories = site.reports | group_by: "category" | sort: "name" %}
