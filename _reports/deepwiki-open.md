@@ -51,6 +51,7 @@ relationships:
     - DeepWiki
     - Code Wiki
     - AsyncReview
+    - Grok-Wiki
 ---
 
 # **DeepWiki-Open 調査レポート**

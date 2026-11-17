@@ -48,6 +48,7 @@ relationships:
     - Claude Code
     - Cline
     - OpenAI Codex CLI
+    - Grok-Wiki
 ---
 
 # **Grok CLI 調査レポート**

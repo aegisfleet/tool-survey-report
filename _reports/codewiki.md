@@ -46,6 +46,7 @@ relationships:
     - DeepWiki-Open
     - Notion
     - GitHub Copilot
+    - Grok-Wiki
 ---
 
 # **Code Wiki 調査レポート**
