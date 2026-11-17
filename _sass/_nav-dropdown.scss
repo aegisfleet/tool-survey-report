@@ -48,7 +48,7 @@
     @include media-breakpoint-up(lg) {
         position: absolute;
         top: 100%;
-        left: 0;
+        right: 0; // 右端のナビ項目からはみ出さないよう右揃えにする
         min-width: 280px;
         max-height: 400px;
         overflow-y: auto;
@@ -144,16 +144,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    a {
-        font-size: $font-size-xs;
-        color: $primary-color;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 
     @include media-breakpoint-down(lg) {
         background: rgba($primary-color, 0.1);

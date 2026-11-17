@@ -244,6 +244,11 @@
   transition: all 0.2s ease;
   font-size: 0.875rem;
 
+  // デスクトップでは検索フィールドらしく幅を確保する
+  @include media-breakpoint-up(lg) {
+    min-width: 240px;
+  }
+
   &:hover,
   &:focus {
     color: var(--color-text);
@@ -275,7 +280,7 @@
     border: 1px solid var(--color-border);
     border-radius: 4px;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
-    margin-left: 0.25rem;
+    margin-left: auto;
   }
 
   @include media-breakpoint-down(lg) {
