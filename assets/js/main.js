@@ -1415,16 +1415,27 @@ function scrollToTop() {
   }
 }
 
+/**
+ * フィルタ解除後の遷移先 URL を組み立てる。
+ * リンク先のフラグメント（#reports-section など）は維持し、検索クエリのみ破棄する。
+ */
+function buildFilterResetUrl(link) {
+  const href = link?.getAttribute('href') || window.location.pathname;
+  const url = new URL(href, window.location.origin);
+  url.search = '';
+  return url.toString();
+}
+
 function handleHomeFilterResetClick(e, filterStateKey) {
   sessionStorage.removeItem(filterStateKey);
 
   const homeReports = window.HomeReports;
   if (typeof homeReports?.resetAllFilters !== 'function') return;
 
-  // URL に検索条件が残っている場合は、URL ごと初期化するため通常遷移させる
+  // URL に検索条件が残っている場合は、条件を破棄した URL へ遷移する
   if (window.location.search) {
     e.preventDefault();
-    window.location.href = window.location.pathname;
+    window.location.href = buildFilterResetUrl(e.currentTarget);
     return;
   }
   homeReports.resetAllFilters();

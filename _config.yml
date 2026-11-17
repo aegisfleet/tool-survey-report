@@ -86,8 +86,6 @@ twitter:
 navigation:
   - title: "ホーム"
     url: "/"
-  - title: "タグ"
-    url: "/tags/"
 
 # Site configuration
 show_excerpts: true

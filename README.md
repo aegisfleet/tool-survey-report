@@ -52,7 +52,6 @@ AIエージェントを用いてツールの情報を収集して公開するサ
 │   ├── js/              # JavaScript
 │   └── images/          # 画像ファイル
 ├── reports/             # レポート一覧ページ
-├── tags/                # タグ一覧ページ
 ├── templates/           # テンプレートファイル
 │   └── template.md      # レポート作成用テンプレート
 ├── .gitignore           # Git無視ファイル

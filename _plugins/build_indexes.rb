@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-# レポート一覧から「タグ索引」「カテゴリ索引」「関連レポート索引」
+# レポート一覧から「カテゴリ索引」「関連レポート索引」
 # 「類似レポート索引」「前後レポート索引」を1回だけ構築する。
 #
-# これまで tags/index.html・categories/index.html・navigation.html では
+# これまで navigation.html では
 # 一覧生成のたびに site.reports を全走査し、_includes/related-tools.html と
 # _layouts/report.html ではレポートページごとに site.reports を全走査していた
 # （O(N^2) の Liquid ループ）。ビルド時に Ruby 側で索引を作ることで、
@@ -16,30 +16,7 @@ module SiteIndexes
     collection ? collection.docs : []
   end
 
-  # { "タグ名" => [doc, ...] } を1パスで作り、タグ別の表示用データに変換する
-  def build_tags_index(reports)
-    tags = {}
-
-    reports.each do |doc|
-      tag_names(doc).each do |name|
-        entry = tags[name] ||= { "name" => name, "count" => 0, "recent" => [] }
-        entry["count"] += 1
-        entry["recent"] << doc
-      end
-    end
-
-    tags.values.map do |entry|
-      recent = entry["recent"]
-               .sort_by { |doc| doc.data["last_updated"].to_s }
-               .reverse
-               .first(3)
-               .map { |doc| report_summary(doc) }
-
-      { "name" => entry["name"], "count" => entry["count"], "recent" => recent }
-    end.sort_by { |entry| entry["name"] }
-  end
-
-  # { "カテゴリ名" => 件数・最新3件 } の索引を作る（ナビゲーション・カテゴリ一覧用）
+  # { "カテゴリ名" => 件数 } の索引を作る（ナビゲーション・ホーム画面の絞り込み用）
   def build_categories_index(reports)
     categories = {}
 
@@ -47,20 +24,11 @@ module SiteIndexes
       name = doc.data["category"].to_s
       next if name.empty?
 
-      entry = categories[name] ||= { "name" => name, "count" => 0, "recent" => [] }
-      entry["count"] += 1
-      entry["recent"] << doc
+      categories[name] = (categories[name] || 0) + 1
     end
 
-    categories.values.map do |entry|
-      recent = entry["recent"]
-               .sort_by { |doc| doc.data["last_updated"].to_s }
-               .reverse
-               .first(3)
-               .map { |doc| report_summary(doc) }
-
-      { "name" => entry["name"], "count" => entry["count"], "recent" => recent }
-    end.sort_by { |entry| entry["name"] }
+    categories.map { |name, count| { "name" => name, "count" => count } }
+              .sort_by { |entry| entry["name"] }
   end
 
   # 各レポートページの「前のレポート / 次のレポート」を事前計算する。
@@ -228,7 +196,6 @@ end
 
 Jekyll::Hooks.register :site, :post_read do |site|
   reports = SiteIndexes.report_docs(site)
-  site.data["tags_index"] = SiteIndexes.build_tags_index(reports)
   site.data["categories_index"] = SiteIndexes.build_categories_index(reports)
   site.data["related_tools_index"] = SiteIndexes.build_related_tools_index(reports)
   site.data["similar_reports_index"] = SiteIndexes.build_similar_reports_index(reports)

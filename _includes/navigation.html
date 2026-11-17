@@ -35,7 +35,7 @@
       <div class="nav-dropdown" role="menu">
         <div class="nav-dropdown-header">
           <span>カテゴリを選択</span>
-          <a href="{{ '/categories/' | relative_url }}">すべて見る</a>
+          <a href="{{ '/' | relative_url }}#reports-section" class="reset-filter-link">すべて見る</a>
         </div>
         {%- assign all_categories = site.data.categories_index -%}
         {% for category in all_categories %}
@@ -47,13 +47,6 @@
         {% endfor %}
       </div>
     </li>
-
-    <li class="nav-item">
-      <a href="{{ '/tags/' | relative_url }}" class="nav-link {% if page.url contains '/tags/' %}current{% endif %}">
-        タグ一覧
-      </a>
-    </li>
-
 
     {%- if site.data.navigation.main_links -%}
     {%- for link in site.data.navigation.main_links -%}
