@@ -1,60 +1,60 @@
 ---
-title: "Claude-BugHunter 調査レポート"
-tool_name: "Claude-BugHunter"
-tool_reading: "クロード バグハンター / クロード・バグハンター"
-category: "セキュリティ/脆弱性診断"
-developer: "Sachin Sharma (elementalsouls)"
-official_site: "https://elementalsouls.github.io/Claude-BugHunter/"
-date: "2026-11-18"
-last_updated: "2026-11-18"
+title: Claude-BugHunter 調査レポート
+tool_name: Claude-BugHunter
+tool_reading: クロード バグハンター / クロード・バグハンター
+category: セキュリティ/脆弱性診断
+developer: Sachin Sharma (elementalsouls)
+official_site: https://elementalsouls.github.io/Claude-BugHunter/
+date: '2026-11-18'
+last_updated: '2026-11-18'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "セキュリティ"
-  - "ペネトレーションテスト"
-  - "開発者ツール"
-description: "Claude Code等のAIコーディングエージェントをバグバウンティ・外部レッドチーム運用に特化させる、83のスキルと681の公開脆弱性パターンを備えたオープンソースのスキルバンドル＆CLI"
+  - AI
+  - オープンソース
+  - エージェント
+  - セキュリティ
+  - ペネトレーションテスト
+  - 開発者ツール
+description: Claude Code等のAIコーディングエージェントをバグバウンティ・外部レッドチーム運用に特化させる、83のスキルと681の公開脆弱性パターンを備えたオープンソースのスキルバンドル＆CLI
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "セキュリティエンジニア"
-    - "バグバウンティハンター"
-    - "ペネトレーションテスター"
-  latest_highlight: "2026年11月にエンゲージメント実行エンジンや偵察・検証ロジックの堅牢化を実施（マルチハーネス対応や681パターンの検証済み知識を収録）"
-  update_frequency: "高"
+    - セキュリティエンジニア
+    - バグバウンティハンター
+    - ペネトレーションテスター
+  latest_highlight: 2026年11月にエンゲージメント実行エンジンや偵察・検証ロジックの堅牢化を実施（マルチハーネス対応や681パターンの検証済み知識を収録）
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 6
-      reason: "83の専門スキルと681の公開レポートパターン（うち433件は個別出典検証済み）による体系的な脆弱性知識ベース"
+      reason: 83の専門スキルと681の公開レポートパターン（うち433件は個別出典検証済み）による体系的な脆弱性知識ベース
     - point: 5
-      reason: "7-Question Gateと4つの誤検知防止ガードによりLLM特有の誤検知やスコープ外テストを抑止"
+      reason: 7-Question Gateと4つの誤検知防止ガードによりLLM特有の誤検知やスコープ外テストを抑止
     - point: 4
-      reason: "Claude CodeだけでなくOpenAI Codex CLI、OpenCode、Hermes Agent、Google AntiGravityにも対応するマルチハーネス設計"
+      reason: Claude CodeだけでなくOpenAI Codex CLI、OpenCode、Hermes Agent、Google AntiGravityにも対応するマルチハーネス設計
     - point: 3
-      reason: "Burp Suite MCP連携および単体CLI（cbh）により対話型と決定的自動処理の両立が可能"
+      reason: Burp Suite MCP連携および単体CLI（cbh）により対話型と決定的自動処理の両立が可能
   minus_points:
     - point: -3
-      reason: "UI・スキル定義・ドキュメントが英語中心であり、日本語のネイティブサポートはない"
+      reason: UI・スキル定義・ドキュメントが英語中心であり、日本語のネイティブサポートはない
     - point: -3
-      reason: "LLM推論のトークン消費量が多く、実際の利用にはClaude Code等の外部AI基盤コストが発生する"
+      reason: LLM推論のトークン消費量が多く、実際の利用にはClaude Code等の外部AI基盤コストが発生する
     - point: -2
-      reason: "既知パターンの自動適用に頼ると重複報告（Duplicate）になりやすく、人間の検証が不可欠"
-  summary: "AIエージェントに実戦的なバグハンティング手法と厳格な検証規律を与える優れたOSSバンドルだが、誤検知や重複を防ぐ人間の判断とAI利用コストの管理が求められる"
+      reason: 既知パターンの自動適用に頼ると重複報告（Duplicate）になりやすく、人間の検証が不可欠
+  summary: AIエージェントに実戦的なバグハンティング手法と厳格な検証規律を与える優れたOSSバンドルだが、誤検知や重複を防ぐ人間の判断とAI利用コストの管理が求められる
 links:
-  github: "https://github.com/elementalsouls/Claude-BugHunter"
-  documentation: "https://elementalsouls.github.io/Claude-BugHunter/"
+  github: https://github.com/elementalsouls/Claude-BugHunter
+  documentation: https://elementalsouls.github.io/Claude-BugHunter/
 relationships:
-  parent: "Claude Code"
+  parent: Claude Code
   related_tools:
-    - "security-audit-skill"
-    - "Agent Skills"
-    - "Burp Suite"
-    - "Tsunami Security Scanner"
+    - security-audit-skill
+    - Agent Skills
+    - Burp Suite
+    - Tsunami Security Scanner
 ---
 
 # **Claude-BugHunter 調査レポート**
