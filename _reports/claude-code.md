@@ -45,6 +45,7 @@ relationships:
   parent: Claude
   children:
     - Opcode
+    - Claude-BugHunter
   related_tools:
     - Cursor
     - GitHub Copilot CLI
