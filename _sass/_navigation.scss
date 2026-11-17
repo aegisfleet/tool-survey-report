@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  gap: map-get($spacers, 2); // 検索ボックスとメニューの間に余白を確保
 
   @include media-breakpoint-down(lg) {
     order: 2;
