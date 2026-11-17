@@ -82,7 +82,7 @@ description: "タグ別にレポートを閲覧できます"
 
     if (tagParam) {
       // If a tag parameter is present, redirect to home page with tag filter
-      window.location.href = '{{ '/' | relative_url }}?tag=' + encodeURIComponent(tagParam);
+      window.location.href = "{{ '/' | relative_url }}?tag=" + encodeURIComponent(tagParam);
     }
   });
 </script>

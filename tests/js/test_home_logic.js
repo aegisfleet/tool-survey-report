@@ -901,7 +901,7 @@ try {
 
   if (!countTextWhileLoading.includes(expectedCountText)) {
     console.error(
-      `Test 21 Failed: 読み込み中の件数表示が総件数になっていません (expected="${expectedCountText}", got="${countTextWhileLoading}")`,
+      `Test 21 Failed: 読み込み中の件数表示が総件数になっていません (expected=${JSON.stringify(expectedCountText)}, got=${JSON.stringify(countTextWhileLoading)})`,
     );
     passed = false;
   } else if (loadMoreContainer.style.display !== 'flex') {
@@ -970,11 +970,13 @@ try {
     passed = false;
   } else if (!summaryWhileHydrating.includes('読み込み中')) {
     console.error(
-      `Test 23 Failed: 読み込み中の絞り込み結果が保留表示になっていません (summary="${summaryWhileHydrating}")`,
+      `Test 23 Failed: 読み込み中の絞り込み結果が保留表示になっていません (summary=${JSON.stringify(summaryWhileHydrating)})`,
     );
     passed = false;
   } else if (countWhileHydrating.includes('0件のレポートがヒット')) {
-    console.error(`Test 23 Failed: 読み込み中に件数バッジが0件を表示しています (count="${countWhileHydrating}")`);
+    console.error(
+      `Test 23 Failed: 読み込み中に件数バッジが0件を表示しています (count=${JSON.stringify(countWhileHydrating)})`,
+    );
     passed = false;
   } else {
     // ハイドレーション完了相当（総件数を実カード数へ確定）にすると0件表示に切り替わる
