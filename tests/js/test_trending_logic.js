@@ -134,6 +134,12 @@ noResults.style.display = 'none';
 const reportsCountContainer = new HTMLElement('span');
 reportsCountContainer.attributes.id = 'reports-count-container';
 
+const loadMoreContainer = new HTMLElement('div');
+loadMoreContainer.attributes.id = 'load-more-container';
+
+const loadMoreBtn = new HTMLElement('button');
+loadMoreBtn.attributes.id = 'load-more-btn';
+
 const clearBtn = new HTMLElement('button');
 clearBtn.attributes.id = 'hero-search-clear';
 
@@ -209,6 +215,19 @@ reportsGrid.appendChild(card1);
 reportsGrid.appendChild(card2);
 reportsGrid.appendChild(card3);
 
+// 13件目以降の段階表示（もっと見る）を検証するため、合計15件にする
+for (let i = 0; i < 12; i++) {
+  reportsGrid.appendChild(
+    createTrendingCard(
+      `Extra Trend ${i}`,
+      ['Git', 'CLI'],
+      'Daily Topics',
+      `2026-05-${i + 1 < 10 ? `0${i + 1}` : i + 1}`,
+      `Additional trending report ${i}.`,
+    ),
+  );
+}
+
 // Mock document
 global.document = {
   getElementById: (id) => {
@@ -216,6 +235,8 @@ global.document = {
     if (id === 'reports-grid') return reportsGrid;
     if (id === 'no-results') return noResults;
     if (id === 'reports-count-container') return reportsCountContainer;
+    if (id === 'load-more-container') return loadMoreContainer;
+    if (id === 'load-more-btn') return loadMoreBtn;
     if (id === 'hero-search-clear') return clearBtn;
     return null;
   },
@@ -257,13 +278,19 @@ try {
   console.log('Running trending logic verification tests...');
   let passed = true;
 
-  // Test 1: Initial state (all cards visible)
+  // Test 1: Initial state (13件目以降は「もっと見る」で段階表示される)
   const visibleCardsInit = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsInit.length !== 3) {
-    console.error(`Test 1 Failed: Expected 3 visible cards, got ${visibleCardsInit.length}`);
+  const hiddenCardsInit = reportsGrid.children.filter((c) => c.style.display === 'none');
+  if (visibleCardsInit.length !== 12 || hiddenCardsInit.length !== 3) {
+    console.error(
+      `Test 1 Failed: Expected 12 visible and 3 hidden cards initially, got ${visibleCardsInit.length} visible and ${hiddenCardsInit.length} hidden`,
+    );
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error('Test 1 Failed: Load More container is not displayed.');
     passed = false;
   } else {
-    console.log('Test 1 Passed: Initial state verified.');
+    console.log('Test 1 Passed: Initial state (12 visible + load more) verified.');
   }
 
   // Test 2: Search by title (should show only 1 matching card)
@@ -309,8 +336,10 @@ try {
     });
   }
   const visibleCardsClear = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsClear.length !== 3) {
-    console.error(`Test 4 Failed: Expected 3 cards after clear, got ${visibleCardsClear.length}`);
+  if (visibleCardsClear.length !== 12 || loadMoreContainer.style.display !== 'flex') {
+    console.error(
+      `Test 4 Failed: Expected 12 cards and load more after clear, got ${visibleCardsClear.length} (display=${loadMoreContainer.style.display})`,
+    );
     passed = false;
   } else {
     console.log('Test 4 Passed: Clear button verified.');
@@ -345,6 +374,35 @@ try {
     passed = false;
   } else {
     console.log('Test 6 Passed: No results verified.');
+  }
+
+  // Test 7: 13件目以降の段階表示（「もっと見る」で残りを表示する）
+  if (clearBtn.listeners.click) {
+    clearBtn.listeners.click.forEach((cb) => {
+      cb();
+    });
+  }
+
+  if (loadMoreBtn.listeners.click) {
+    loadMoreBtn.listeners.click.forEach((cb) => {
+      cb();
+    });
+  } else {
+    console.error('Test 7 Failed: Load More button has no click listener.');
+    passed = false;
+  }
+
+  const visibleCardsLoadMore = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsLoadMore.length !== reportsGrid.children.length) {
+    console.error(
+      `Test 7 Failed: Load More did not reveal all cards. Visible: ${visibleCardsLoadMore.length} / ${reportsGrid.children.length}`,
+    );
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'none') {
+    console.error('Test 7 Failed: Load More container should be hidden after revealing all cards.');
+    passed = false;
+  } else {
+    console.log('Test 7 Passed: Load More reveals the remaining cards and hides the button.');
   }
 
   if (passed) {

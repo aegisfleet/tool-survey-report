@@ -451,20 +451,20 @@ try {
     console.log('Test 3 Passed: Tag filter correct.');
   }
 
-  // Test 4: Category filter (Development category has 14 cards, should show all 14, no load more button)
+  // Test 4: Category filter (Development category has 14 cards, 12件ずつ段階表示する)
   tagFilter.value = '';
   categoryFilter.value = 'Development';
   window.filterAndSort(false, true);
 
   const visibleCardsCat = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsCat.length !== 14) {
-    console.error(`Test 4 Failed: Category filter failed. Expected 14 cards, got ${visibleCardsCat.length}`);
+  if (visibleCardsCat.length !== 12) {
+    console.error(`Test 4 Failed: Category filter failed. Expected 12 cards, got ${visibleCardsCat.length}`);
     passed = false;
-  } else if (loadMoreContainer.style.display !== 'none') {
-    console.error('Test 4 Failed: Load More button should be hidden during filtering.');
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error('Test 4 Failed: Load More button should be displayed when filtered results exceed 12.');
     passed = false;
   } else {
-    console.log('Test 4 Passed: Category filter correct.');
+    console.log('Test 4 Passed: Category filter shows the first 12 cards and load more.');
   }
 
   // Test 5: Sorting (Date Desc) - Default
@@ -526,19 +526,19 @@ try {
     console.log('Test 7 Passed: Load More click loaded all cards and hid the button.');
   }
 
-  // Test 8: Filter activation and button suppression
+  // Test 8: Filter activation and paged rendering
   searchInput.value = 'Extra Tool';
   window.filterAndSort(false, true);
 
   const visibleCards8 = reportsGrid.children.filter((c) => c.style.display !== 'none');
   if (visibleCards8.length !== 12) {
-    console.error(`Test 8 Failed: Filter did not show all matching cards. Visible: ${visibleCards8.length}`);
+    console.error(`Test 8 Failed: Filter did not show the first 12 matching cards. Visible: ${visibleCards8.length}`);
     passed = false;
   } else if (loadMoreContainer.style.display !== 'none') {
-    console.error('Test 8 Failed: Load More container should be hidden when filter is active.');
+    console.error('Test 8 Failed: Load More container should be hidden when exactly 12 cards match.');
     passed = false;
   } else {
-    console.log('Test 8 Passed: Filter shows all matching cards and hides button.');
+    console.log('Test 8 Passed: Filter shows up to 12 matching cards in pages.');
   }
 
   // Test 9: Category search via search input
@@ -558,13 +558,16 @@ try {
   searchInput.value = '調査レポート';
   window.filterAndSort(false, true);
   const visibleCardsTitleSearch = reportsGrid.children.filter((c) => c.style.display !== 'none');
-  if (visibleCardsTitleSearch.length !== 15) {
+  if (visibleCardsTitleSearch.length !== 12) {
     console.error(
-      `Test 10 Failed: Title search failed. Expected 15 cards matching '調査レポート', got ${visibleCardsTitleSearch.length}`,
+      `Test 10 Failed: Title search failed. Expected the first 12 of 15 matching cards, got ${visibleCardsTitleSearch.length}`,
     );
     passed = false;
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error('Test 10 Failed: Load More button should be displayed for 15 matching cards.');
+    passed = false;
   } else {
-    console.log('Test 10 Passed: Title search via input correct.');
+    console.log('Test 10 Passed: Title search via input correct (paged).');
   }
 
   // Test 11: GitHub URL search via input
@@ -998,7 +1001,67 @@ try {
 
   categoryFilter.value = '';
 
-  // Test 24: reports-summary.json の取得失敗時は、既存カード数に総件数を揃える
+  // Test 24: 絞り込み中も12件ずつ実体化し、「もっと見る」で追加表示する
+  searchInput.value = '';
+  tagFilter.value = '';
+  sortSelect.value = 'date-desc';
+  categoryFilter.value = 'Development';
+  window.filterAndSort(false, true);
+
+  const visibleCardsPagedFilter = reportsGrid.children.filter((c) => c.style.display !== 'none');
+  if (visibleCardsPagedFilter.length !== 12) {
+    console.error(`Test 24 Failed: 絞り込み中は12件まで表示されるべきです (visible=${visibleCardsPagedFilter.length})`);
+    passed = false;
+  } else if (loadMoreContainer.style.display !== 'flex') {
+    console.error('Test 24 Failed: 絞り込み結果が12件を超える場合は「もっと見る」を表示する必要があります。');
+    passed = false;
+  } else {
+    loadMoreBtn.listeners.click?.forEach((cb) => {
+      cb();
+    });
+
+    const visibleCardsPagedFilterMore = reportsGrid.children.filter((c) => c.style.display !== 'none');
+    if (visibleCardsPagedFilterMore.length <= 12) {
+      console.error(
+        `Test 24 Failed: 「もっと見る」で追加表示されていません (visible=${visibleCardsPagedFilterMore.length})`,
+      );
+      passed = false;
+    } else if (loadMoreContainer.style.display !== 'none') {
+      console.error('Test 24 Failed: 全件表示後も「もっと見る」が残っています。');
+      passed = false;
+    } else {
+      console.log('Test 24 Passed: 絞り込み中も12件ずつ段階的に実体化され、「もっと見る」で追加表示されます。');
+    }
+  }
+
+  // Test 25: HomeReports.resetAllFilters が検索・フラグ・チップ状態をまとめて解除する
+  categoryFilter.value = '';
+  searchInput.value = 'ToolA';
+  window.filterAndSort(false, true);
+
+  flagPillOss.listeners.click?.forEach((cb) => {
+    cb();
+  });
+
+  window.HomeReports.resetAllFilters();
+
+  if (
+    searchInput.value !== '' ||
+    tagFilter.value !== '' ||
+    categoryFilter.value !== '' ||
+    sortSelect.value !== 'date-desc' ||
+    flagPillOss.classList.contains('active') ||
+    activeFiltersBar.hidden !== true
+  ) {
+    console.error(
+      `Test 25 Failed: resetAllFilters が全フィルタを解除していません (search=${JSON.stringify(searchInput.value)}, oss=${flagPillOss.classList.contains('active')})`,
+    );
+    passed = false;
+  } else {
+    console.log('Test 25 Passed: HomeReports.resetAllFilters が検索・フラグをまとめて解除します。');
+  }
+
+  // Test 26: reports-summary.json の取得失敗時は、既存カード数に総件数を揃える
   const collectedCardsBeforeFailure = window.HomeReports.getCards().length;
   reportsGrid.dataset.totalReports = String(collectedCardsBeforeFailure + 10);
   window.__REPORTS_SUMMARY_PROMISE__ = null;
@@ -1010,7 +1073,7 @@ try {
 
   window.HomeReports.loadRemainingReports()
     .then(() => {
-      console.error('Test 24 Failed: 取得失敗時に loadRemainingReports が成功扱いになっています。');
+      console.error('Test 26 Failed: 取得失敗時に loadRemainingReports が成功扱いになっています。');
       passed = false;
     })
     .catch(() => {
@@ -1020,11 +1083,11 @@ try {
 
       if (totalAfterFailure !== expectedTotal) {
         console.error(
-          `Test 24 Failed: 取得失敗後の総件数が実カード数に揃っていません (expected=${expectedTotal}, got=${totalAfterFailure})`,
+          `Test 26 Failed: 取得失敗後の総件数が実カード数に揃っていません (expected=${expectedTotal}, got=${totalAfterFailure})`,
         );
         passed = false;
       } else {
-        console.log('Test 24 Passed: reports-summary.json 取得失敗時に総件数が実カード数へ補正されました。');
+        console.log('Test 26 Passed: reports-summary.json 取得失敗時に総件数が実カード数へ補正されました。');
       }
     })
     .finally(() => {

@@ -6,6 +6,24 @@
 
 const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
 
+// ?tag= 付きでタグ一覧ページへ来た場合はホームのタグ絞り込みへ誘導する
+// （同一オリジンのホームURLのみを組み立てるため、オープンリダイレクトにはならない）
+function redirectTagQueryToHome() {
+  const tagParam = new URLSearchParams(window.location.search).get('tag');
+  if (!tagParam) return false;
+
+  const baseUrl = (window.__SITE_BASEURL__ || '').replace(/\/+$/, '');
+  const homeUrl = new URL(`${baseUrl}/`, window.location.origin);
+  homeUrl.searchParams.set('tag', tagParam);
+
+  if (homeUrl.origin !== window.location.origin) return false;
+
+  window.location.replace(homeUrl.toString());
+  return true;
+}
+
+redirectTagQueryToHome();
+
 // カタカナをひらがなへ変換する（検索用）
 function toHiragana(str) {
   if (!str) return '';

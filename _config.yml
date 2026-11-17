@@ -63,6 +63,7 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
+  - scripts/
 
 # GitHub Pages compatibility
 github: [metadata]

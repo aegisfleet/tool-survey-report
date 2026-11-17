@@ -74,18 +74,6 @@ description: "タグ別にレポートを閲覧できます"
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    // Handle URL parameters for tag filtering
-    const urlParams = new URLSearchParams(window.location.search);
-    const tagParam = urlParams.get('tag');
-
-    if (tagParam) {
-      // If a tag parameter is present, redirect to home page with tag filter
-      window.location.href = "{{ '/' | relative_url }}?tag=" + encodeURIComponent(tagParam);
-    }
-  });
-</script>
 {%- assign asset_version = site.data.asset_version -%}
 {%- unless asset_version -%}{%- assign asset_version = site.time | date: '%s' -%}{%- endunless -%}
 <script src="{{ '/assets/js/tags.js' | relative_url }}?v={{ asset_version }}" defer></script>

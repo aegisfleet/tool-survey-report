@@ -9,6 +9,13 @@ on:
       - 'scripts/**'
       - 'tests/**'
       - 'assets/js/**'
+      - 'assets/css/**'
+      - '_sass/**'
+      - '_layouts/**'
+      - '_includes/**'
+      - 'tags/**'
+      - 'categories/**'
+      - 'trending/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
       - 'pyproject.toml'
@@ -20,6 +27,13 @@ on:
       - 'scripts/**'
       - 'tests/**'
       - 'assets/js/**'
+      - 'assets/css/**'
+      - '_sass/**'
+      - '_layouts/**'
+      - '_includes/**'
+      - 'tags/**'
+      - 'categories/**'
+      - 'trending/**'
       - 'package.json'
       - 'pnpm-lock.yaml'
       - 'pyproject.toml'
@@ -76,4 +90,10 @@ jobs:
         run: |
           node tests/js/test_emoji_logic.js
           node tests/js/test_home_logic.js
+          node tests/js/test_search_modal.js
+          node tests/js/test_strip_emoji.js
+          node tests/js/test_trending_logic.js
           node tests/js/test_workflow_security.js
+
+      - name: Run frontend quality checks
+        run: pnpm run lint:frontend

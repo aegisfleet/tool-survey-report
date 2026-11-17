@@ -1418,27 +1418,16 @@ function scrollToTop() {
 function handleHomeFilterResetClick(e, filterStateKey) {
   sessionStorage.removeItem(filterStateKey);
 
-  const searchInput = document.getElementById('report-search');
-  const tagFilter = document.getElementById('tag-filter');
-  const categoryFilter = document.getElementById('category-filter');
-  const sortSelect = document.getElementById('sort-select');
+  const homeReports = window.HomeReports;
+  if (typeof homeReports?.resetAllFilters !== 'function') return;
 
-  const isOnHomePage = Boolean(searchInput || tagFilter || categoryFilter || sortSelect);
-  if (!isOnHomePage) return;
-
-  if (searchInput) searchInput.value = '';
-  if (tagFilter) tagFilter.value = '';
-  if (categoryFilter) categoryFilter.value = '';
-  if (sortSelect) sortSelect.value = 'date-desc';
-
-  if (typeof window.filterAndSort !== 'function') return;
-
+  // URL に検索条件が残っている場合は、URL ごと初期化するため通常遷移させる
   if (window.location.search) {
     e.preventDefault();
     window.location.href = window.location.pathname;
     return;
   }
-  window.filterAndSort(false);
+  homeReports.resetAllFilters();
 }
 
 /**
