@@ -1,16 +1,16 @@
 <nav class="main-navigation" role="navigation" aria-label="メインナビゲーション">
   <div class="nav-search-wrapper">
-    <button type="button" class="nav-search-trigger" id="global-search-trigger" aria-label="サイト内検索を開く" title="ツールを検索 (⌘K または /)">
+    <button type="button" class="nav-search-trigger" id="global-search-trigger" aria-label="ツール名、機能、キーワードを検索..." title="ツールを検索 (⌘K または /)">
       <svg class="nav-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <circle cx="11" cy="11" r="8"></circle>
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
-      <span class="nav-search-text">検索...</span>
+      <span class="nav-search-text">ツール名、機能、キーワードを検索...</span>
       <kbd class="nav-search-shortcut">⌘K</kbd>
     </button>
   </div>
 
-  <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="メニューを開く">
+  <button type="button" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="メニューを開く">
     <span class="nav-toggle-icon">
       <span></span>
       <span></span>
@@ -26,9 +26,9 @@
     </li>
 
     <li class="nav-item nav-item-dropdown">
-      <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-        カテゴリ
-        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <button type="button" class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+        <span>カテゴリ</span>
+        <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <path d="M6 9l6 6 6-6" />
         </svg>
       </button>
@@ -40,7 +40,7 @@
         {% for category in all_categories %}
         <a href="{{ '/' | relative_url }}?category={{ category.name | url_encode }}" class="nav-dropdown-item"
           role="menuitem">
-          {{ site.data.categories[category.name] | default: '🔹' }} {{ category.name }}
+          <span>{{ site.data.categories[category.name] | default: '🔹' }} {{ category.name }}</span>
           <span class="dropdown-count">{{ category.count }}</span>
         </a>
         {% endfor %}
@@ -57,11 +57,13 @@
     {%- endfor -%}
     {%- endif -%}
 
+    <li class="nav-item nav-item-divider" aria-hidden="true"></li>
+
     <li class="nav-item nav-item-theme">
-      <button class="nav-link theme-toggle" aria-label="テーマを切り替える" title="ダーク/ライトモード切替">
+      <button type="button" class="nav-link theme-toggle" aria-label="テーマを切り替える" title="ダーク/ライトモード切替">
         <!-- Sun icon (show in dark mode) -->
         <svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="5" />
           <line x1="12" y1="1" x2="12" y2="3" />
           <line x1="12" y1="21" x2="12" y2="23" />
@@ -74,7 +76,7 @@
         </svg>
         <!-- Moon icon (show in light mode) -->
         <svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
       </button>

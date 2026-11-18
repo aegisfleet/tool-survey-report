@@ -180,13 +180,13 @@ body:not(.keyboard-navigation) {
 
 // Selection styles with new color scheme
 ::selection {
-  background-color: rgba($primary-color, 0.3);
-  color: $text-color;
+  background-color: $primary-color;
+  color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: rgba($primary-color, 0.3);
-  color: $text-color;
+  background-color: $primary-color;
+  color: #ffffff;
 }
 
 // トップに戻るボタンのスタイル

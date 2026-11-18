@@ -1,8 +1,11 @@
 <footer class="site-footer" role="contentinfo">
   <div class="footer-container">
     <div class="footer-content">
-      <div class="footer-section">
-        <h3>{{ site.title | default: "調査レポートサイト" }}</h3>
+      <div class="footer-section footer-brand-section">
+        <div class="footer-brand-heading">
+          <img src="{{ '/assets/images/pochi-mascot.png' | relative_url }}" alt="" class="footer-mascot-icon" width="32" height="32" loading="lazy">
+          <h3>{{ site.title | default: "調査レポートサイト" }}</h3>
+        </div>
         <p>{{ site.description | default: "調査レポートを公開・共有するためのサイトです。" }}</p>
       </div>
 
@@ -10,6 +13,7 @@
         <h4>ナビゲーション</h4>
         <ul class="footer-nav">
           <li><a href="{{ '/' | relative_url }}">ホーム</a></li>
+          <li><a href="{{ '/trending/' | relative_url }}">最新トレンド一覧</a></li>
           {%- if site.data.navigation.footer_links -%}
           {%- for link in site.data.navigation.footer_links -%}
           <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
@@ -32,11 +36,24 @@
         </ul>
       </div>
     </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; {{ site.time | date: "%Y" }} {{ site.title | default: "調査レポートサイト" }}. AI-generated tool reports repository.
+      </p>
+      <div class="footer-bottom-links">
+        <a href="{{ '/reports-summary.json' | relative_url }}">JSON Index</a>
+        <a href="{{ '/llms.txt' | relative_url }}">llms.txt</a>
+        {%- if site.author.twitter_url -%}
+        <a href="{{ site.author.twitter_url }}" target="_blank" rel="noopener">フィードバック</a>
+        {%- endif -%}
+      </div>
+    </div>
   </div>
 </footer>
 
 <!-- トップに戻るボタン -->
-<button id="back-to-top" class="back-to-top" aria-label="ページの先頭に戻る" title="ページの先頭に戻る">
+<button type="button" id="back-to-top" class="back-to-top" aria-label="ページの先頭に戻る" title="ページの先頭に戻る">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
       stroke-linejoin="round" />

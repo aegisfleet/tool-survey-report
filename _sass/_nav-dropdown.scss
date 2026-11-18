@@ -15,23 +15,28 @@
 }
 
 .nav-dropdown-toggle {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.35rem;
     cursor: pointer;
-    color: var(--color-text);
+    color: var(--color-text-muted);
     background: transparent;
-    border: none;
-    padding: 0.5rem 1rem; // nav-linkと同じパディングを確保
-    transition: color 0.2s ease;
+    border: 1px solid transparent;
+    padding: 0.45rem 0.85rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: $font-weight-medium;
+    transition: color 0.2s ease, background-color 0.2s ease;
 
-    &:hover {
-        color: var(--color-link-hover);
+    &:hover,
+    &:focus {
+        color: var(--color-text);
+        background-color: var(--nav-hover-bg);
     }
 
     .dropdown-arrow {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         transition: transform 0.2s ease;
 
         @media (prefers-reduced-motion: reduce) {
@@ -42,25 +47,33 @@
     &[aria-expanded="true"] .dropdown-arrow {
         transform: rotate(180deg);
     }
+
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0.85rem 1rem;
+        font-size: 1rem;
+        color: var(--color-text);
+    }
 }
 
 .nav-dropdown {
     @include media-breakpoint-up(lg) {
         position: absolute;
-        top: 100%;
+        top: calc(100% + 6px);
         right: 0; // 右端のナビ項目からはみ出さないよう右揃えにする
         min-width: 280px;
-        max-height: 400px;
+        max-height: 420px;
         overflow-y: auto;
         background: var(--color-bg-content);
-        border: 1px solid var(--color-border-light);
-        border-radius: $border-radius-lg;
-        box-shadow: $box-shadow-lg;
-        padding: map-get($spacers, 2) 0;
+        border: 1px solid var(--home-glass-border);
+        border-radius: 14px;
+        box-shadow: var(--shadow-lg);
+        padding: 0.35rem 0;
         z-index: $zindex-dropdown;
         opacity: 0;
         visibility: hidden;
-        transform: translateY(10px);
+        transform: translateY(8px);
         transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
 
         @media (prefers-reduced-motion: reduce) {
@@ -69,29 +82,29 @@
 
         // Scrollbar styling
         &::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
 
         &::-webkit-scrollbar-track {
-            background: var(--color-light-gray);
-            border-radius: 4px;
+            background: transparent;
         }
 
         &::-webkit-scrollbar-thumb {
-            background: rgba($primary-color, 0.3);
+            background: var(--color-scrollbar-thumb);
             border-radius: 4px;
 
             &:hover {
-                background: rgba($primary-color, 0.5);
+                background: var(--color-scrollbar-thumb-hover);
             }
         }
     }
 
     @include media-breakpoint-down(lg) {
         display: none;
-        background: rgba($light-gray, 0.1);
-        margin: 0 (- map-get($spacers, 3));
-        padding: map-get($spacers, 2) map-get($spacers, 4);
+        background: var(--nav-hover-bg);
+        border-radius: 10px;
+        margin: 0.25rem 0 0.5rem;
+        padding: 0.35rem 0.5rem;
 
         &.active {
             display: block;
@@ -103,49 +116,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: map-get($spacers, 2) map-get($spacers, 4);
+    padding: 0.5rem 1rem;
     color: var(--color-text);
+    font-size: 0.85rem;
     text-decoration: none;
     transition: background-color 0.15s ease, color 0.15s ease, border-left-color 0.15s ease;
     border-left: 3px solid transparent;
 
-    &:hover {
-        background: rgba($primary-color, 0.05);
-        color: $primary-color;
+    &:hover,
+    &:focus {
+        background: var(--nav-active-bg);
+        color: var(--home-accent-text);
         border-left-color: $primary-color;
+        text-decoration: none;
     }
 
     .dropdown-count {
         font-size: $font-size-xs;
+        font-family: $font-family-monospace;
         color: var(--color-text-muted);
-        background: var(--color-light-gray);
-        padding: 2px 8px;
-        border-radius: 10px;
+        background: var(--home-tag-bg);
+        border: 1px solid var(--home-tag-border);
+        padding: 1px 8px;
+        border-radius: 999px;
     }
 
     @include media-breakpoint-down(lg) {
-        padding: map-get($spacers, 2) map-get($spacers, 3);
+        padding: 0.55rem 0.75rem;
         font-size: $font-size-sm;
-        border-bottom: 1px solid rgba($border-light, 0.5);
-
-        &:last-child {
-            border-bottom: none;
-        }
+        border-radius: 8px;
+        border-left: none;
     }
 }
 
 .nav-dropdown-header {
-    padding: map-get($spacers, 2) map-get($spacers, 4);
-    font-size: $font-size-sm;
+    padding: 0.5rem 1rem;
+    font-size: $font-size-xs;
     font-weight: $font-weight-bold;
+    letter-spacing: 0.04em;
     color: var(--color-text-muted);
-    background: var(--color-bg-header);
-    border-bottom: 1px solid var(--color-border-light);
+    border-bottom: 1px solid var(--home-divider);
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include media-breakpoint-down(lg) {
-        background: rgba($primary-color, 0.1);
+        display: none;
     }
 }

@@ -3,39 +3,67 @@ layout: default
 ---
 
 <div class="home-container" data-site-title="{{ site.title | escape }}">
-  <section class="home-hero">
-    <div class="hero-image">
-      <img src="{{ '/assets/images/default-ogp.png' | relative_url }}" alt="{{ site.title }}" class="ogp-image">
-    </div>
-    <div class="hero-content">
-      <div class="hero-text">
-        {{ content }}
+  <section class="home-hero" aria-labelledby="hero-brand-heading">
+    <div class="hero-glow hero-glow-primary" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-secondary" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-mascot-col">
+        <div class="hero-mascot-wrap">
+          <div class="hero-mascot-aura" aria-hidden="true"></div>
+          <div class="hero-mascot-frame">
+            <img src="{{ '/assets/images/pochi-mascot.png' | relative_url }}" alt="ポち店長" class="hero-mascot-img" width="156" height="156">
+            <span class="hero-mascot-badge">ポち店長</span>
+          </div>
+        </div>
+        <h1 id="hero-brand-heading" class="hero-brand-heading">
+          ポちの<span class="hero-brand-accent">ツール情報収集サイト</span>
+        </h1>
       </div>
-      <div class="hero-shortcuts" aria-label="クイックアクセス">
-        <a href="#hero-search" class="hero-shortcut-btn hero-shortcut-search" id="hero-shortcut-search">
-          <svg class="hero-shortcut-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
-          <span>ツール検索</span>
-        </a>
-        <a href="#reports-section" class="hero-shortcut-btn hero-shortcut-reports">
-          <span class="hero-shortcut-emoji">📑</span>
-          <span>レポート一覧 ({{ site.reports.size }})</span>
-        </a>
-        <a href="#daily-trends" class="hero-shortcut-btn hero-shortcut-trends">
-          <span class="hero-shortcut-emoji">📈</span>
-          <span>最新トレンド</span>
-        </a>
-        <a href="#bluesky-section" class="hero-shortcut-btn hero-shortcut-bluesky">
-          <span class="hero-shortcut-emoji">🦋</span>
-          <span>Bluesky</span>
-        </a>
+
+      <div class="hero-content">
+        <div class="hero-status-pill">
+          <span class="hero-status-dot" aria-hidden="true"></span>
+          <span>ツール調査レポート随時更新中</span>
+        </div>
+
+        <div class="hero-text">
+          {%- assign stripped_content = content | strip -%}
+          {%- if stripped_content != '' and stripped_content != '<!-- ホーム画面のコンテンツはhome.htmlレイアウトで処理されます -->' -%}
+            {{ content }}
+          {%- else -%}
+            <p class="hero-lead">このサイトでは、<span class="hero-lead-highlight">AIエージェントが作成した各種ツールの調査レポート</span>を閲覧できます。各ツールの機能、特徴、使用方法を把握し、目的に応じた最適なツールの比較検討にお役立てください。</p>
+            <p class="hero-disclaimer"><span class="hero-disclaimer-mark" aria-hidden="true">※</span> なお、AIエージェントの調査が間違っている可能性があることに留意してください。</p>
+          {%- endif -%}
+        </div>
+
+        <div class="hero-shortcuts" aria-label="クイックアクセス">
+          <a href="#hero-search" class="hero-shortcut-btn hero-shortcut-search" id="hero-shortcut-search">
+            <svg class="hero-shortcut-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <span>ツール検索</span>
+          </a>
+          <a href="#reports-section" class="hero-shortcut-btn hero-shortcut-reports">
+            <span class="hero-shortcut-emoji" aria-hidden="true">📄</span>
+            <span>レポート一覧</span>
+            <span class="hero-shortcut-count">{{ site.reports.size }}</span>
+          </a>
+          <a href="#daily-trends" class="hero-shortcut-btn hero-shortcut-trends">
+            <span class="hero-shortcut-emoji" aria-hidden="true">📈</span>
+            <span>最新トレンド</span>
+          </a>
+          <a href="#bluesky-section" class="hero-shortcut-btn hero-shortcut-bluesky">
+            <span class="hero-shortcut-emoji" aria-hidden="true">🦋</span>
+            <span>Bluesky</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <main class="home-content">
+  <div class="home-content">
 
     <!-- カードフッター用の共通SVGスプライト（重複インラインSVGの削減） -->
     <svg aria-hidden="true" focusable="false" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden;">
@@ -57,24 +85,26 @@ layout: default
     </svg>
 
     <section class="reports-section" id="reports-section">
-      <div class="unified-filter-console" id="hero-search" role="search" aria-label="ツールの検索と絞り込み">
-        <div class="console-header">
-          <div class="reports-title-container">
+      <div class="reports-section-header">
+        <div class="reports-title-container">
+          <div class="reports-section-icon" aria-hidden="true">📊</div>
+          <div class="reports-title-group">
             <h2 class="reports-title">
-              <span class="title-icon" aria-hidden="true">📊</span>
-              ツール調査レポート一覧
+              <span>ツール調査レポート一覧</span>
               <span class="reports-count reports-count-badge" id="reports-count" aria-live="polite">{% if site.reports.size > 12 %}12{% else %}{{ site.reports.size }}{% endif %} / {{ site.reports.size }}件のレポートを表示中</span>
             </h2>
+            <p class="reports-subtitle">AIエージェントによる検証済み最新ツールインデックス</p>
           </div>
-          <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
-            </svg>
-            <span>絞り込み・並び替え</span>
-            <span id="active-filter-badge" class="active-filter-badge" hidden>0</span>
-          </button>
         </div>
+        <button type="button" id="header-filter-reset" class="header-filter-reset-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span>フィルタをクリア</span>
+        </button>
+      </div>
 
+      <div class="unified-filter-console" id="hero-search" role="search" aria-label="ツールの検索と絞り込み">
         <!-- 1段目: キーワード検索 + カテゴリ・タグ・並び替えを1エリアに集約 -->
         <div class="console-main-row">
           <div class="hero-search-box">
@@ -84,11 +114,27 @@ layout: default
               <path d="m21 21-4.35-4.35" />
             </svg>
             <label for="hero-search-input" class="screen-reader-text">ツール名・機能・課題で検索</label>
-            <input type="text" id="hero-search-input" class="hero-search-input" placeholder="ツール名・機能・課題で検索 (例: MCP, ブラウザ自動化, CLI)..."
+            <input type="text" id="hero-search-input" class="hero-search-input" placeholder="ツール名・機能・課題で検索 (例: MCP, ブラウザ自動化, CLI)"
               autocomplete="off" aria-label="ツール名・機能・課題で検索">
             <button type="button" id="hero-search-clear" class="hero-search-clear" aria-label="検索クリア" title="クリア" hidden>✕</button>
             <span class="hero-search-shortcut" id="hero-search-shortcut" aria-hidden="true"><kbd>/</kbd></span>
           </div>
+
+          <button type="button" id="mobile-filter-toggle" class="mobile-filter-toggle" aria-expanded="false" aria-controls="reports-controls">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <span>絞り込み・並び替え</span>
+            <span id="active-filter-badge" class="active-filter-badge" hidden>0</span>
+          </button>
 
           <div class="reports-controls" id="reports-controls">
             <div class="filter-group filter-container">
@@ -118,12 +164,12 @@ layout: default
           </div>
         </div>
 
-        <!-- 2段目: 提供形態トグル(AND条件) + 主要カテゴリピルを一本化 -->
+        <!-- 2段目: すべて + 提供形態トグル(AND条件) + 主要カテゴリピルを一本化 -->
         <div class="category-quick-bar" id="category-quick-bar" role="toolbar" aria-label="主要カテゴリ・提供形態でクイック絞り込み">
+          <button type="button" class="quick-pill category-pill active" data-quick-category="" data-quick-type="all">すべて</button>
           <button type="button" class="quick-pill category-pill filter-flag-pill" data-filter-flag="oss" aria-pressed="false">📦 OSSのみ</button>
           <button type="button" class="quick-pill category-pill filter-flag-pill" data-filter-flag="free" aria-pressed="false">💚 無料枠あり</button>
           <span class="quick-pill-divider category-pill-divider" aria-hidden="true"></span>
-          <button type="button" class="quick-pill category-pill active" data-quick-category="" data-quick-type="all">すべて</button>
           <button type="button" class="quick-pill category-pill" data-quick-category="自律型コーディングエージェント" data-quick-type="category" data-quick-value="自律型コーディングエージェント">💻 コーディングエージェント</button>
           <button type="button" class="quick-pill category-pill" data-quick-category="ai開発ワークフロー" data-quick-type="category" data-quick-value="ai開発ワークフロー">🤖 AI開発ワークフロー</button>
           <button type="button" class="quick-pill category-pill" data-quick-category="aiコーディング支援" data-quick-type="category" data-quick-value="aiコーディング支援">⌨️ AIコーディング支援</button>
@@ -342,8 +388,8 @@ layout: default
       <div class="load-more-container" id="load-more-container"
         style="{% if site.reports.size > 12 %}display: flex;{% else %}display: none;{% endif %}">
         <button type="button" id="load-more-btn" class="load-more-btn">
-          もっと見る
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <span class="load-more-label">さらにレポートを読み込む{% if site.reports.size > 12 %} (残り{{ site.reports.size | minus: 12 }}件){% endif %}</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="m6 9 6 6 6-6"/>
           </svg>
         </button>
@@ -358,13 +404,13 @@ layout: default
       <div class="no-results" id="no-results" style="display: none;">
         <p>検索条件に一致するレポートが見つかりませんでした。</p>
         <button type="button" id="no-results-reset" class="no-results-reset-btn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; vertical-align: middle;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" />
             <path d="M21 3v5h-5" />
             <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" />
             <path d="M3 21v-5h5" />
           </svg>
-          すべての条件をクリア
+          <span>すべての条件をクリア</span>
         </button>
       </div>
     </section>
@@ -372,13 +418,16 @@ layout: default
     <!-- トレンドレポート -->
     <section class="daily-trends" id="daily-trends">
       <div class="trends-header">
-        <div>
-          <h2>📈 最新トレンド情報</h2>
-          <p class="trends-desc">AI・開発ツール業界の日々の動向とセキュリティ情報</p>
+        <div class="section-heading-with-icon">
+          <div class="section-icon-box" aria-hidden="true">📈</div>
+          <div>
+            <h2>最新トレンド情報</h2>
+            <p class="trends-desc">AI・開発ツール業界の日々の動向とセキュリティ情報</p>
+          </div>
         </div>
         <a href="{{ '/trending/' | relative_url }}" class="trends-link">
           <span>すべてのトレンドを見る</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
@@ -397,7 +446,7 @@ layout: default
           <p class="trend-desc">{{ trend.description }}</p>
           <div class="trend-read-more">
             <span>レポートを読む</span>
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
               <path d="M9 18l6-6-6-6" />
             </svg>
           </div>
@@ -409,21 +458,24 @@ layout: default
     <!-- Bluesky タイムライン -->
     <section class="bluesky-widget-section" id="bluesky-section" aria-labelledby="bluesky-title">
       <div class="bluesky-header">
-        <div>
-          <h2 id="bluesky-title">🦋 Bluesky トレンド</h2>
-          <p class="bluesky-desc">各分野の最新トレンド情報をBlueskyからお届け</p>
+        <div class="section-heading-with-icon">
+          <div class="section-icon-box section-icon-bluesky" aria-hidden="true">🦋</div>
+          <div>
+            <h2 id="bluesky-title">Bluesky トレンド</h2>
+            <p class="bluesky-desc">各分野の最新トレンド情報をBlueskyからお届け</p>
+          </div>
         </div>
-        <button type="button" class="bluesky-shuffle-btn" id="bluesky-shuffle" aria-label="別のアカウントを表示">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button type="button" class="bluesky-shuffle-btn" id="bluesky-shuffle" aria-label="シャッフル（別のアカウントを表示）">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
             <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
           </svg>
-          シャッフル
+          <span>シャッフル</span>
         </button>
       </div>
       <div class="bluesky-account-links">
         <a href="https://bsky.app/profile/dailyqiitatrends.bsky.social" target="_blank" rel="noopener"
           class="bluesky-account-btn" data-handle="dailyqiitatrends.bsky.social" title="Qiita Trends">
-          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
           </svg>
@@ -431,7 +483,7 @@ layout: default
         </a>
         <a href="https://bsky.app/profile/dailyzenntrends.bsky.social" target="_blank" rel="noopener"
           class="bluesky-account-btn" data-handle="dailyzenntrends.bsky.social" title="Zenn Trends">
-          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
           </svg>
@@ -439,7 +491,7 @@ layout: default
         </a>
         <a href="https://bsky.app/profile/dailygithubtrends.bsky.social" target="_blank" rel="noopener"
           class="bluesky-account-btn" data-handle="dailygithubtrends.bsky.social" title="GitHub Trends">
-          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
           </svg>
@@ -447,7 +499,7 @@ layout: default
         </a>
         <a href="https://bsky.app/profile/dailygenaitrends.bsky.social" target="_blank" rel="noopener"
           class="bluesky-account-btn" data-handle="dailygenaitrends.bsky.social" title="GenAI Trends">
-          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <svg class="bluesky-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
             <path
               d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
           </svg>
@@ -461,7 +513,7 @@ layout: default
 
     {% include ad-unit.html slot="5913940027" %}
 
-    <section class="stats-section">
+    <section class="stats-section" aria-label="サイト統計">
       <div class="stats-grid">
         <div class="stat-item">
           <span class="stat-number">{{ site.reports.size }}</span>
@@ -474,7 +526,7 @@ layout: default
         </div>
       </div>
     </section>
-  </main>
+  </div>
 </div>
 
 <script>
