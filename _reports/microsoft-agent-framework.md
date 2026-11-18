@@ -44,6 +44,7 @@ relationships:
     - Agent Governance Toolkit
     - Agent Lightning
     - LangChain
+    - Microsoft Copilot Studio
 ---
 
 # **Microsoft Agent Framework 調査レポート**
