@@ -52,6 +52,7 @@ links:
   documentation: https://github.com/googlecolab/google-colab-cli/tree/main/docs
 relationships:
   related_tools:
+    - Google Colab MCP
     - Google Cloud CLI
     - Google Workspace CLI (gws)
 ---
