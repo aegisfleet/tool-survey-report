@@ -1,62 +1,58 @@
 ---
-title: "Cloudflare CLI (cf) 調査レポート"
-tool_name: "Cloudflare CLI"
-tool_reading: "クラウドフレア シーエルアイ / シーエフ"
-category: "クラウドサービス"
-developer: "Cloudflare, Inc."
-official_site: "https://developers.cloudflare.com/cf/"
-date: "2026-11-18"
-last_updated: "2026-11-18"
+title: Cloudflare CLI (cf) 調査レポート
+tool_name: Cloudflare CLI
+tool_reading: クラウドフレア シーエルアイ / シーエフ
+category: クラウドサービス
+developer: Cloudflare, Inc.
+official_site: https://developers.cloudflare.com/cf/
+date: '2026-11-18'
+last_updated: '2026-11-18'
 tags:
-  - "CLI"
-  - "開発者ツール"
-  - "クラウド"
-  - "オープンソース"
-  - "自動化"
-  - "エージェント"
-description: "CloudflareのパブリックAPI全体（3,000以上の操作）とWorkers開発を統合的に扱える、人間およびAIコーディングエージェント向けに設計された次世代公式CLIツール。"
-
+  - CLI
+  - 開発者ツール
+  - クラウド
+  - オープンソース
+  - 自動化
+  - エージェント
+description: CloudflareのパブリックAPI全体（3,000以上の操作）とWorkers開発を統合的に扱える、人間およびAIコーディングエージェント向けに設計された次世代公式CLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント"
-    - "SRE / DevOpsエンジニア"
-  latest_highlight: "2026年11月に1.0.0-rc.1を公開し、cloudflare.config.tsやビルド出力形式(.cloudflare/output/v1/)を安定化"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエージェント
+    - SRE / DevOpsエンジニア
+  latest_highlight: 2026年11月に1.0.0-rc.1を公開し、cloudflare.config.tsやビルド出力形式(.cloudflare/output/v1/)を安定化
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "OpenAPIスキーマ自動生成（Forge）によりCloudflareのパブリックAPI全体（3,000以上の操作）を単一CLIで網羅"
+      reason: OpenAPIスキーマ自動生成（Forge）によりCloudflareのパブリックAPI全体（3,000以上の操作）を単一CLIで網羅
     - point: 6
-      reason: "cf cli search / cf docs searchやコンテキスト節約型JSON出力など、AIエージェント連携に最適化された先進的設計"
+      reason: cf cli search / cf docs searchやコンテキスト節約型JSON出力など、AIエージェント連携に最適化された先進的設計
     - point: 5
-      reason: "cloudflare.config.tsによるTypeScript型安全な設定とViteベースの高速なローカル開発体験"
+      reason: cloudflare.config.tsによるTypeScript型安全な設定とViteベースの高速なローカル開発体験
     - point: 3
-      reason: "Apache-2.0 / MITデュアルライセンスのOSSであり、無料かつ活発に開発されている"
+      reason: Apache-2.0 / MITデュアルライセンスのOSSであり、無料かつ活発に開発されている
   minus_points:
     - point: -2
-      reason: "Node.js 22.18以上が必須であり、Bunランタイムでのcloudflare.config.ts読み込みに非対応"
+      reason: Node.js 22.18以上が必須であり、Bunランタイムでのcloudflare.config.ts読み込みに非対応
     - point: -2
-      reason: "2026年9月公開の新規ツール（1.0 RC段階）であり、エコシステムや権限診断機能などは成熟途上"
-  summary: "AIエージェント時代を見据えた設計とCloudflare全APIの網羅性を両立した次世代CLIだが、Node.js 22.18+要件やRC段階の仕様変化には留意が必要。"
-
+      reason: 2026年9月公開の新規ツール（1.0 RC段階）であり、エコシステムや権限診断機能などは成熟途上
+  summary: AIエージェント時代を見据えた設計とCloudflare全APIの網羅性を両立した次世代CLIだが、Node.js 22.18+要件やRC段階の仕様変化には留意が必要。
 links:
-  github: "https://github.com/cloudflare/cf"
-  documentation: "https://developers.cloudflare.com/cf/"
-
+  github: https://github.com/cloudflare/cf
+  documentation: https://developers.cloudflare.com/cf/
 relationships:
-  parent: "Cloudflare"
+  parent: Cloudflare
   related_tools:
-    - "Cloudflare Workers"
-    - "AWS CLI"
-    - "Google Cloud CLI"
-    - "Firebase CLI"
+    - Cloudflare Workers
+    - AWS CLI
+    - Google Cloud CLI
+    - Firebase CLI
 ---
 
 # **Cloudflare CLI (cf) 調査レポート**
