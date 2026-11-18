@@ -44,6 +44,7 @@ relationships:
   parent: Microsoft 365 Copilot
   related_tools:
     - Microsoft Scout
+    - Microsoft Copilot Studio
 ---
 # **Copilot Cowork 調査レポート**
 

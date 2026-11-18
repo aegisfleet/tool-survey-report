@@ -50,6 +50,7 @@ relationships:
     - LangChain
     - Microsoft Agent Framework
     - Google Opal
+    - Microsoft Copilot Studio
 ---
 # **Dify 調査レポート**
 
