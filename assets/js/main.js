@@ -850,7 +850,13 @@ function insertTocIntoReport(reportContent, toc, desktopSlot, desktopReopenBtn, 
 
   const reportLayout = document.querySelector('.report-page-layout');
   if (reportLayout) {
-    reportLayout.appendChild(desktopSlot);
+    // レイアウト側に事前配置されたスペーサーがあればそこへ差し込み、初期表示時のレイアウトずれを防ぐ
+    const reservedSlot = reportLayout.querySelector('.floating-toc-slot');
+    if (reservedSlot) {
+      reservedSlot.appendChild(desktopSlot.firstElementChild);
+    } else {
+      reportLayout.appendChild(desktopSlot);
+    }
     reportLayout.appendChild(desktopReopenBtn);
     document.body.appendChild(mobileToc);
   } else {
@@ -924,7 +930,11 @@ function bindDesktopTocToggle(desktopToc, toggleBtn, reopenBtn) {
 function generateTableOfContents() {
   const reportContent = document.querySelector('.report-content');
   const headings = reportContent ? reportContent.querySelectorAll('h2, h3, h4') : [];
-  if (headings.length <= 3) return;
+  if (headings.length <= 3) {
+    // 目次を生成しないページでは事前配置されたサイドバー用スペーサーを除去する
+    document.querySelector('.report-page-layout > .floating-toc-slot')?.remove();
+    return;
+  }
 
   // --------------------------------------------------
   // 1. インライン目次の生成
