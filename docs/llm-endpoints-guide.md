@@ -31,7 +31,7 @@
 ## 2. 各ファイルの仕様と注意点
 
 ### 2.1. `llms.txt`
-* **ファイル**: [llms.txt](file:///home/poti/work/tool-survey-report/llms.txt)
+* **ファイル**: [llms.txt](../llms.txt)
 * **公開URL**: `https://aegisfleet.github.io/tool-survey-report/llms.txt`
 * **仕様**:
   * H1: サイトタイトル
@@ -43,14 +43,14 @@
   * AI向け案内・引用ガイド: ユーザーへの回答時に提示すべきレポートURLの形式をAIに指示
 
 ### 2.2. `llms-full.txt`
-* **ファイル**: [llms-full.txt](file:///home/poti/work/tool-survey-report/llms-full.txt)
+* **ファイル**: [llms-full.txt](../llms-full.txt)
 * **公開URL**: `https://aegisfleet.github.io/tool-survey-report/llms-full.txt`
 * **仕様**:
   * 全カテゴリと各カテゴリに属する全ツールの完全一覧。
   * ツール名、詳細URL、1行概要、開発元、スコア、料金体系（無料プラン有無・開始価格）を出力。
 
 ### 2.3. `reports-summary.json`
-* **ファイル**: [reports-summary.json](file:///home/poti/work/tool-survey-report/reports-summary.json)
+* **ファイル**: [reports-summary.json](../reports-summary.json)
 * **公開URL**: `https://aegisfleet.github.io/tool-survey-report/reports-summary.json`
 * **仕様**:
   * JSON配列形式。各要素は以下のスキーマを持ちます：
@@ -79,7 +79,7 @@
 * **注意点**: Frontmatterのスキーマ（`quick_summary` や `evaluation.score`）を変更した場合は、このテンプレート内のキー指定も同期して修正してください。
 
 ### 2.4. Raw Markdown連携
-* **ファイル**: [_layouts/report.html](file:///home/poti/work/tool-survey-report/_layouts/report.html), [_layouts/default.html](file:///home/poti/work/tool-survey-report/_layouts/default.html)
+* **ファイル**: [_layouts/report.html](../_layouts/report.html), [_layouts/default.html](../_layouts/default.html)
 * **仕様**:
   * 各レポートヘッダーの「Markdown」ボタンから、GitHub上の元Markdownファイル（`https://raw.githubusercontent.com/aegisfleet/tool-survey-report/main/{{ page.path }}`）を直接開くことができます。
   * HTMLの `<head>` にも `<link rel="alternate" type="text/markdown" href="...">` を出力し、AIエージェントのヘッドレスブラウジング時に検知可能にしています。
@@ -92,6 +92,7 @@
 
 1. **Jekyllビルド確認**:
    * `bundle exec jekyll build` または `pnpm dev:fast` を実行し、構文エラーが発生しないこと。
+   * ※Windows環境で `bundle exec jekyll` が `wdm` gem のネイティブビルド失敗により動かない場合は、Gemfile のない別ディレクトリをカレントにして `jekyll build -s <リポジトリパス> -d <出力先> --config <configパス>` を実行する（詳細は AGENTS.md の「開発環境・ツール」を参照）。
 2. **JSON形式の妥当性**:
    * `reports-summary.json` を変更した場合は、ビルド成果物（`_site/reports-summary.json`）が正しいJSON形式としてパースできること。
 3. **改行・フォーマットの崩れ防止**:

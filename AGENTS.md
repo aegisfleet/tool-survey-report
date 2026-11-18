@@ -51,6 +51,13 @@
   - **Jekyllサーバーの起動**:
     - 通常起動: `pnpm run dev` または `pnpm dev`
     - 高速起動（開発・デバッグ用）: `pnpm run dev:fast` または `pnpm dev:fast` （レポートの大半のビルドをスキップし、1.5秒程度で起動します）
+  - **ビルドのみ実行する場合（Windows環境の注意）**: `bundle exec jekyll build` は `wdm` gem のネイティブ拡張ビルドに失敗することがある（Ruby 3.1 環境で `rb_thread_call_without_gvl` 未定義エラー）。この場合は Gemfile のない別ディレクトリをカレントにして実行すると Bundler を経由せずビルドできる：
+    ```bash
+    # リポジトリ外の空ディレクトリへ移動してから実行
+    cd "$(mktemp -d)"
+    jekyll build -s "<リポジトリの絶対パス>" -d "<リポジトリの絶対パス>/_site_test" \
+      --config "<リポジトリの絶対パス>/_config.yml,<リポジトリの絶対パス>/_config.dev.yml"
+    ```
 - **バイナリ実行**: `npx` の代わりに `pnpm dlx` を使用すること。
 - **Python環境の実行**: Pythonスクリプトやツールを実行する際は、一貫した仮想環境を使用するため、`uv run python3` または `.venv/bin/` 以下の実行ファイルを直接使用すること。
 - **堅牢な引数設計（注意点）**: スクリプト内で引数を追加・変更した際、テスト側のモック（`argparse.Namespace`）で属性エラーが発生するのを防ぐため、スクリプト内での引数へのアクセスは `getattr(self.args, 'name', default)` などを用いて安全に行うことを推奨する。
