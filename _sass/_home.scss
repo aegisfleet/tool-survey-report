@@ -104,13 +104,13 @@
         }
     }
 
-    // Left Column: Mascot Avatar + Brand Heading
-    .hero-mascot-col {
+    // Left Column: Brand OGP Image
+    .hero-brand-col {
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-width: 248px;
+        min-width: 288px;
 
         @include media-breakpoint-down(lg) {
             min-width: 0;
@@ -118,116 +118,24 @@
         }
     }
 
-    .hero-mascot-wrap {
-        position: relative;
-        display: inline-flex;
-
-        &:hover {
-            .hero-mascot-aura {
-                opacity: 0.72;
-            }
-
-            .hero-mascot-img {
-                transform: scale(1.06);
-            }
-        }
-    }
-
-    .hero-mascot-aura {
-        position: absolute;
-        inset: -6px;
-        border-radius: 24px;
-        background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
-        filter: blur(14px);
-        opacity: 0.36;
-        transition: opacity 0.35s ease;
-        pointer-events: none;
-    }
-
-    .hero-mascot-frame {
-        position: relative;
-        width: 176px;
-        height: 176px;
-        border-radius: 20px;
-        background: var(--home-mascot-bg);
-        border: 2px solid var(--home-mascot-border);
-        padding: 10px 10px 14px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 18px 36px -14px rgba(15, 23, 42, 0.45);
-        overflow: hidden;
-
-        @include media-breakpoint-down(md) {
-            width: 120px;
-            height: 120px;
-            border-radius: 16px;
-            padding: 8px 8px 12px;
-        }
-    }
-
-    .hero-mascot-img {
-        width: 130px;
-        height: 130px;
-        object-fit: contain;
-        user-select: none;
-        display: block;
-        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-
-        @media (prefers-reduced-motion: reduce) {
-            transition: none;
-        }
-
-        @include media-breakpoint-down(md) {
-            width: 88px;
-            height: 88px;
-        }
-    }
-
-    .hero-mascot-badge {
-        position: absolute;
-        bottom: 8px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: inline-flex;
-        align-items: center;
-        padding: 2px 10px;
-        border-radius: 999px;
-        font-size: 0.7rem;
-        font-weight: 700;
-        white-space: nowrap;
-        background: var(--home-mascot-badge-bg);
-        color: var(--home-mascot-badge-text);
-        border: 1px solid var(--home-mascot-badge-border);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-
-        @include media-breakpoint-down(md) {
-            bottom: 5px;
-            padding: 1px 8px;
-            font-size: 0.65rem;
-        }
-    }
-
     .hero-brand-heading {
-        margin: 0.85rem 0 0;
-        font-size: 1.05rem;
-        font-weight: 800;
-        letter-spacing: 0.01em;
-        line-height: 1.35;
-        color: var(--color-text);
+        margin: 0;
         text-align: center;
-        white-space: nowrap;
-
-        @include media-breakpoint-down(md) {
-            margin-top: 0.7rem;
-            font-size: 1.15rem;
-            white-space: normal;
-        }
     }
 
-    .hero-brand-accent {
-        color: var(--home-accent-text);
+    .hero-brand-ogp {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 14px;
+        box-shadow: 0 10px 24px -10px rgba(15, 23, 42, 0.35);
+
+        @include media-breakpoint-down(md) {
+            max-width: 240px;
+            border-radius: 12px;
+        }
     }
 
     // Right Column: Status + Copy + Quick Actions
