@@ -2080,6 +2080,17 @@
     }
 }
 
+// Blueskyセクションと統計セクションの間にある広告スロットの余白を詰める
+.bluesky-widget-section + .ad-slot {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+// .home-content の flex gap と重複する上マージンをリセット（components側の margin-top: 3rem を上書き）
+.home-content > .stats-section {
+    margin-top: 0;
+}
+
 // ========================================
 // Stats Summary Section
 // ========================================
