@@ -10,7 +10,8 @@ layout: default
     <div class="hero-inner">
       <div class="hero-brand-col">
         <h1 id="hero-brand-heading" class="hero-brand-heading">
-          <img src="{{ '/assets/images/default-ogp.png' | relative_url }}" alt="ポちのツール情報収集サイト" class="hero-brand-ogp" width="240" height="135">
+          <span class="sr-only">ポちのツール情報収集サイト</span>
+          <img src="{{ '/assets/images/default-ogp.png' | relative_url }}" alt="" class="hero-brand-ogp" width="240" height="135">
         </h1>
       </div>
 
@@ -378,8 +379,7 @@ layout: default
       </div>
 
       <!-- もっと見るボタン -->
-      <div class="load-more-container" id="load-more-container"
-        style="{% if site.reports.size > 12 %}display: flex;{% else %}display: none;{% endif %}">
+      <div class="load-more-container" id="load-more-container"{% if site.reports.size <= 12 %} style="display: none;"{% endif %}>
         <button type="button" id="load-more-btn" class="load-more-btn">
           <span class="load-more-label">さらにレポートを読み込む{% if site.reports.size > 12 %} (残り{{ site.reports.size | minus: 12 }}件){% endif %}</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
