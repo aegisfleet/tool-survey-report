@@ -534,7 +534,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // 絞り込み中は実際のヒット件数、非絞り込み時は 13件目以降の読み込み中でも
     // 一瞬消えないよう data-total-reports を母数にする
     const totalCount = isFilterActive ? filteredCount : Math.max(filteredCount, getReportTotalCount());
-    loadMoreContainer.style.display = totalCount > currentShowCount ? 'flex' : 'none';
+    const remaining = Math.max(0, totalCount - currentShowCount);
+    loadMoreContainer.style.display = remaining > 0 ? 'flex' : 'none';
+    const labelEl = loadMoreContainer.querySelector?.('.load-more-label');
+    if (labelEl && remaining > 0) {
+      labelEl.textContent = `さらにレポートを読み込む (残り${remaining}件)`;
+    }
   }
 
   // 表示対象のカードのみ DOM へ実体化して配置する
@@ -1562,6 +1567,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterResetAll = document.getElementById('filter-reset-all');
     if (filterResetAll) {
       filterResetAll.addEventListener('click', resetAllFilters);
+    }
+
+    const headerFilterReset = document.getElementById('header-filter-reset');
+    if (headerFilterReset) {
+      headerFilterReset.addEventListener('click', resetAllFilters);
     }
 
     const noResultsReset = document.getElementById('no-results-reset');

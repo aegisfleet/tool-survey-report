@@ -84,8 +84,96 @@
     --theme-icon-light-display: none;
     --theme-icon-dark-display: block;
 
+    // Header & Glassmorphism Home Design Tokens (Light Theme)
+    --header-bg-glass: rgba(255, 255, 255, 0.84);
+    --header-border: rgba(15, 23, 42, 0.08);
+    --nav-hover-bg: rgba(15, 23, 42, 0.05);
+    --nav-active-bg: rgba(249, 115, 22, 0.1);
+    --nav-active-border: rgba(249, 115, 22, 0.25);
+    --nav-active-text: #c2410c;
+    --nav-search-bg: rgba(241, 245, 249, 0.9);
+    --nav-search-border: rgba(15, 23, 42, 0.12);
+    --nav-search-kbd-bg: #ffffff;
+    --brand-title-gradient: linear-gradient(90deg, #0f172a 0%, #1e293b 70%, #c2410c 100%);
+    --brand-avatar-inner: #fff7ed;
+
+    --home-bg-mesh:
+        radial-gradient(at 15% 8%, rgba(249, 115, 22, 0.08) 0px, transparent 48%),
+        radial-gradient(at 85% 18%, rgba(234, 88, 12, 0.05) 0px, transparent 42%),
+        radial-gradient(at 50% 60%, rgba(245, 158, 11, 0.04) 0px, transparent 58%);
+    --home-hero-bg: linear-gradient(135deg, #ffffff 0%, #fffaf5 55%, #ffffff 100%);
+    --home-hero-border: rgba(249, 115, 22, 0.18);
+    --home-hero-shadow: 0 20px 50px -20px rgba(15, 23, 42, 0.12), 0 4px 16px -4px rgba(249, 115, 22, 0.08);
+    --home-mascot-bg: linear-gradient(180deg, #fff7ed 0%, #ffedd5 100%);
+    --home-mascot-border: rgba(249, 115, 22, 0.35);
+    --home-mascot-badge-bg: #c2410c;
+    --home-mascot-badge-text: #ffffff;
+    --home-mascot-badge-border: rgba(255, 255, 255, 0.25);
+    --home-accent-text: #c2410c;
+    --home-status-bg: rgba(249, 115, 22, 0.1);
+    --home-status-border: rgba(249, 115, 22, 0.25);
+    --home-status-text: #c2410c;
+    --home-desc-box-bg: rgba(248, 250, 252, 0.85);
+    --home-desc-box-border: rgba(15, 23, 42, 0.07);
+
+    --home-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.92) 100%);
+    --home-glass-border: rgba(15, 23, 42, 0.09);
+    --home-glass-shadow: 0 4px 20px -6px rgba(15, 23, 42, 0.07);
+    --home-glass-hover-border: rgba(249, 115, 22, 0.45);
+    --home-glass-hover-shadow: 0 14px 32px -12px rgba(249, 115, 22, 0.18), 0 4px 12px -4px rgba(15, 23, 42, 0.06);
+
+    --home-input-bg: #f8fafc;
+    --home-input-border: rgba(15, 23, 42, 0.14);
+    --home-input-hover-border: rgba(15, 23, 42, 0.28);
+    --home-btn-surface: #f1f5f9;
+    --home-btn-surface-hover: #e2e8f0;
+    --home-btn-border: rgba(15, 23, 42, 0.12);
+    --home-chip-bg: #ffffff;
+    --home-chip-border: rgba(15, 23, 42, 0.12);
+    --home-chip-text: #334155;
+    --home-chip-hover-bg: #fff7ed;
+    --home-divider: rgba(15, 23, 42, 0.08);
+
+    --home-score-bg: rgba(245, 158, 11, 0.14);
+    --home-score-text: #92400e;
+    --home-score-border: rgba(217, 119, 6, 0.32);
+
+    --home-cat-bg: rgba(249, 115, 22, 0.1);
+    --home-cat-text: #9a3412;
+    --home-cat-border: rgba(249, 115, 22, 0.25);
+
+    --home-highlight-bg: rgba(249, 115, 22, 0.07);
+    --home-highlight-border: rgba(249, 115, 22, 0.22);
+    --home-highlight-text: #9a3412;
+
+    --home-tag-bg: #f1f5f9;
+    --home-tag-text: #475569;
+    --home-tag-border: rgba(15, 23, 42, 0.08);
+
+    --home-favicon-bg: #f8fafc;
+    --home-favicon-border: rgba(15, 23, 42, 0.1);
+
+    --home-spec-oss-bg: #eef2ff;
+    --home-spec-oss-text: #3730a3;
+    --home-spec-oss-border: #c7d2fe;
+    --home-spec-free-bg: #ecfdf5;
+    --home-spec-free-text: #065f46;
+    --home-spec-free-border: #a7f3d0;
+    --home-spec-price-bg: #fffbeb;
+    --home-spec-price-text: #92400e;
+    --home-spec-price-border: #fde68a;
+    --home-spec-target-bg: #fff1f2;
+    --home-spec-target-text: #9f1239;
+    --home-spec-target-border: #fecdd3;
+    --home-spec-dev-bg: #f0f9ff;
+    --home-spec-dev-text: #075985;
+    --home-spec-dev-border: #bae6fd;
+
+    --home-bluesky-card-bg: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    --home-bluesky-card-border: rgba(14, 165, 233, 0.22);
+
     // Report Detail Design Tokens (Light Theme - Orange Accent)
-    --report-surface-base: #f8f9fa;
+    --report-surface-base: #f8fafc;
     --report-surface-card: #ffffff;
     --report-surface-lowest: #faf8f6;
     --report-surface-low: #f4f1ed;
@@ -98,8 +186,8 @@
     --report-text-secondary: #57534e;
     --report-text-muted: #68625d;
     --report-primary: #c2410c;
-    --report-primary-bg: rgba(255, 119, 51, 0.1);
-    --report-primary-border: rgba(255, 119, 51, 0.35);
+    --report-primary-bg: rgba(249, 115, 22, 0.1);
+    --report-primary-border: rgba(249, 115, 22, 0.35);
     --report-secondary: #b45309;
     --report-secondary-bg: rgba(217, 119, 6, 0.1);
     --report-secondary-border: rgba(217, 119, 6, 0.32);
@@ -120,8 +208,8 @@
         color-scheme: dark;
 
         // Scrollbar colors
-        --color-scrollbar-thumb: rgba(255, 255, 255, 0.25);
-        --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+        --color-scrollbar-thumb: rgba(255, 255, 255, 0.22);
+        --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.4);
         --color-scrollbar-track: transparent;
 
         --color-bg-body: #{$dark-body-bg};
@@ -131,8 +219,8 @@
         --color-bg-footer: #{$dark-footer-bg};
         --color-bg-main: #{$dark-main-bg};
 
-        // Primary & Brand colors (keeping Sass variables as base or adjusting for dark)
-        --color-primary: #{$primary-color}; // Or use a dark-specific primary if exists
+        // Primary & Brand colors
+        --color-primary: #{$primary-color};
         --color-secondary: #{$dark-link-color};
         --color-accent: #{$accent-color};
 
@@ -150,21 +238,21 @@
         --color-light-gray: #{$dark-light-gray};
         --color-gray: #{$dark-gray};
 
-        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-        --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+        --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+        --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
 
         --color-code-bg: #{$dark-light-gray};
-        --color-bg-pre: #252526;
-        --color-text-pre: #ffffff;
-        --color-bg-table-stripe: rgba(255, 255, 255, 0.05);
-        --color-bg-blockquote: #151515;
-        --color-text-blockquote: #ffffff;
-        --color-border-table: #808080;
-        --color-border-table-inner: #505050;
+        --color-bg-pre: #151821;
+        --color-text-pre: #f8fafc;
+        --color-bg-table-stripe: rgba(255, 255, 255, 0.04);
+        --color-bg-blockquote: #151821;
+        --color-text-blockquote: #f8fafc;
+        --color-border-table: #475569;
+        --color-border-table-inner: #2d3345;
 
         // Callout and secondary background colors
-        --color-bg-secondary: #1e232a;
+        --color-bg-secondary: #151821;
         --color-callout-danger-bg: rgba(239, 68, 68, 0.12);
         --color-callout-danger-border: #f87171;
         --color-callout-info-bg: rgba(56, 189, 248, 0.12);
@@ -174,38 +262,125 @@
         --color-callout-warning-bg: rgba(251, 191, 36, 0.12);
         --color-callout-warning-border: #fbbf24;
 
-
         // bluesky-widget section colors
-        --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
-        --color-bluesky-text: #{$white};
-        --color-bluesky-desc: rgba(#{$white}, 0.9);
-        --color-bluesky-btn-bg: rgba(#{$white}, 0.2);
-        --color-bluesky-btn-border: rgba(#{$white}, 0.5);
-        --color-bluesky-btn-text: #{$white};
+        --color-bluesky-bg: linear-gradient(135deg, rgba(14, 165, 233, 0.14) 0%, rgba(15, 17, 23, 0.92) 100%);
+        --color-bluesky-text: #f8fafc;
+        --color-bluesky-desc: #94a3b8;
+        --color-bluesky-btn-bg: rgba(255, 255, 255, 0.06);
+        --color-bluesky-btn-border: rgba(56, 189, 248, 0.3);
+        --color-bluesky-btn-text: #e2e8f0;
 
         --theme-icon-light-display: block;
         --theme-icon-dark-display: none;
 
+        // Header & Glassmorphism Home Design Tokens (Dark Theme)
+        --header-bg-glass: rgba(9, 10, 15, 0.82);
+        --header-border: rgba(255, 255, 255, 0.08);
+        --nav-hover-bg: rgba(255, 255, 255, 0.06);
+        --nav-active-bg: rgba(249, 115, 22, 0.12);
+        --nav-active-border: rgba(249, 115, 22, 0.26);
+        --nav-active-text: #fb923c;
+        --nav-search-bg: rgba(15, 17, 23, 0.92);
+        --nav-search-border: rgba(255, 255, 255, 0.11);
+        --nav-search-kbd-bg: #1b1f2b;
+        --brand-title-gradient: linear-gradient(90deg, #ffffff 0%, #f1f5f9 65%, #ffd8b0 100%);
+        --brand-avatar-inner: #0f1117;
+
+        --home-bg-mesh:
+            radial-gradient(at 15% 10%, rgba(249, 115, 22, 0.09) 0px, transparent 50%),
+            radial-gradient(at 85% 20%, rgba(234, 88, 12, 0.06) 0px, transparent 42%),
+            radial-gradient(at 50% 60%, rgba(245, 158, 11, 0.04) 0px, transparent 60%);
+        --home-hero-bg: linear-gradient(135deg, #0f1117 0%, #151821 50%, #0f1117 100%);
+        --home-hero-border: rgba(255, 255, 255, 0.08);
+        --home-hero-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+        --home-mascot-bg: linear-gradient(180deg, #1b1f2b 0%, #12151f 100%);
+        --home-mascot-border: rgba(249, 115, 22, 0.42);
+        --home-mascot-badge-bg: rgba(120, 53, 15, 0.88);
+        --home-mascot-badge-text: #fde68a;
+        --home-mascot-badge-border: rgba(245, 158, 11, 0.35);
+        --home-accent-text: #fb923c;
+        --home-status-bg: rgba(249, 115, 22, 0.11);
+        --home-status-border: rgba(249, 115, 22, 0.28);
+        --home-status-text: #fdba74;
+        --home-desc-box-bg: rgba(0, 0, 0, 0.28);
+        --home-desc-box-border: rgba(255, 255, 255, 0.06);
+
+        --home-glass-bg: linear-gradient(135deg, rgba(27, 31, 43, 0.72) 0%, rgba(15, 17, 23, 0.88) 100%);
+        --home-glass-border: rgba(255, 255, 255, 0.08);
+        --home-glass-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.4);
+        --home-glass-hover-border: rgba(249, 115, 22, 0.4);
+        --home-glass-hover-shadow: 0 14px 32px -10px rgba(249, 115, 22, 0.16), 0 8px 20px -8px rgba(0, 0, 0, 0.45);
+
+        --home-input-bg: rgba(9, 10, 15, 0.75);
+        --home-input-border: rgba(255, 255, 255, 0.11);
+        --home-input-hover-border: rgba(255, 255, 255, 0.22);
+        --home-btn-surface: #1b1f2b;
+        --home-btn-surface-hover: #232838;
+        --home-btn-border: rgba(255, 255, 255, 0.1);
+        --home-chip-bg: #0f1117;
+        --home-chip-border: rgba(255, 255, 255, 0.1);
+        --home-chip-text: #cbd5e1;
+        --home-chip-hover-bg: #1b1f2b;
+        --home-divider: rgba(255, 255, 255, 0.07);
+
+        --home-score-bg: rgba(245, 158, 11, 0.15);
+        --home-score-text: #fcd34d;
+        --home-score-border: rgba(245, 158, 11, 0.32);
+
+        --home-cat-bg: rgba(249, 115, 22, 0.12);
+        --home-cat-text: #fdba74;
+        --home-cat-border: rgba(249, 115, 22, 0.24);
+
+        --home-highlight-bg: rgba(249, 115, 22, 0.09);
+        --home-highlight-border: rgba(249, 115, 22, 0.22);
+        --home-highlight-text: #fdba74;
+
+        --home-tag-bg: #0f1117;
+        --home-tag-text: #94a3b8;
+        --home-tag-border: rgba(255, 255, 255, 0.07);
+
+        --home-favicon-bg: #1b1f2b;
+        --home-favicon-border: rgba(255, 255, 255, 0.11);
+
+        --home-spec-oss-bg: rgba(99, 102, 241, 0.16);
+        --home-spec-oss-text: #c7d2fe;
+        --home-spec-oss-border: rgba(99, 102, 241, 0.32);
+        --home-spec-free-bg: rgba(16, 185, 129, 0.15);
+        --home-spec-free-text: #a7f3d0;
+        --home-spec-free-border: rgba(16, 185, 129, 0.32);
+        --home-spec-price-bg: rgba(245, 158, 11, 0.15);
+        --home-spec-price-text: #fde68a;
+        --home-spec-price-border: rgba(245, 158, 11, 0.32);
+        --home-spec-target-bg: rgba(244, 63, 94, 0.16);
+        --home-spec-target-text: #fecdd3;
+        --home-spec-target-border: rgba(244, 63, 94, 0.32);
+        --home-spec-dev-bg: rgba(14, 165, 233, 0.16);
+        --home-spec-dev-text: #bae6fd;
+        --home-spec-dev-border: rgba(14, 165, 233, 0.32);
+
+        --home-bluesky-card-bg: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(15, 17, 23, 0.9) 100%);
+        --home-bluesky-card-border: rgba(56, 189, 248, 0.2);
+
         // Report Detail Design Tokens (Dark Theme - Orange Accent)
-        --report-surface-base: #121212;
-        --report-surface-card: #1b1a19;
-        --report-surface-lowest: #141312;
-        --report-surface-low: #201e1c;
-        --report-surface-subtle: #262321;
-        --report-surface-high: #2e2b28;
-        --report-border-crisp: #38332f;
-        --report-border-muted: #292522;
-        --report-text-primary: #faf8f5;
-        --report-on-surface: #e7e2dd;
-        --report-text-secondary: #a8a099;
-        --report-text-muted: #968e86;
-        --report-primary: #ff944d;
-        --report-primary-bg: rgba(255, 119, 51, 0.14);
-        --report-primary-border: rgba(255, 148, 77, 0.35);
-        --report-secondary: #ffb366;
-        --report-secondary-bg: rgba(255, 179, 102, 0.12);
-        --report-secondary-border: rgba(255, 179, 102, 0.3);
-        --report-tertiary: #fdba74;
+        --report-surface-base: #090a0f;
+        --report-surface-card: #151821;
+        --report-surface-lowest: #0f1117;
+        --report-surface-low: #1b1f2b;
+        --report-surface-subtle: #232838;
+        --report-surface-high: #2d3345;
+        --report-border-crisp: #2d3345;
+        --report-border-muted: #232838;
+        --report-text-primary: #f8fafc;
+        --report-on-surface: #e2e8f0;
+        --report-text-secondary: #94a3b8;
+        --report-text-muted: #94a3b8;
+        --report-primary: #fb923c;
+        --report-primary-bg: rgba(249, 115, 22, 0.14);
+        --report-primary-border: rgba(251, 146, 60, 0.35);
+        --report-secondary: #fdba74;
+        --report-secondary-bg: rgba(251, 146, 60, 0.12);
+        --report-secondary-border: rgba(251, 146, 60, 0.3);
+        --report-tertiary: #fed7aa;
         --report-positive: #3fb950;
         --report-positive-bg: rgba(63, 185, 80, 0.12);
         --report-positive-border: rgba(63, 185, 80, 0.3);
@@ -222,8 +397,8 @@
     color-scheme: dark;
 
     // Scrollbar colors
-    --color-scrollbar-thumb: rgba(255, 255, 255, 0.25);
-    --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.45);
+    --color-scrollbar-thumb: rgba(255, 255, 255, 0.22);
+    --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.4);
     --color-scrollbar-track: transparent;
 
     --color-bg-body: #{$dark-body-bg};
@@ -252,21 +427,21 @@
     --color-light-gray: #{$dark-light-gray};
     --color-gray: #{$dark-gray};
 
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
 
     --color-code-bg: #{$dark-light-gray};
-    --color-bg-pre: #252526;
-    --color-text-pre: #ffffff;
-    --color-bg-table-stripe: rgba(255, 255, 255, 0.05);
-    --color-bg-blockquote: #151515;
-    --color-text-blockquote: #ffffff;
-    --color-border-table: #808080;
-    --color-border-table-inner: #505050;
+    --color-bg-pre: #151821;
+    --color-text-pre: #f8fafc;
+    --color-bg-table-stripe: rgba(255, 255, 255, 0.04);
+    --color-bg-blockquote: #151821;
+    --color-text-blockquote: #f8fafc;
+    --color-border-table: #475569;
+    --color-border-table-inner: #2d3345;
 
     // Callout and secondary background colors
-    --color-bg-secondary: #1e232a;
+    --color-bg-secondary: #151821;
     --color-callout-danger-bg: rgba(239, 68, 68, 0.12);
     --color-callout-danger-border: #f87171;
     --color-callout-info-bg: rgba(56, 189, 248, 0.12);
@@ -276,38 +451,125 @@
     --color-callout-warning-bg: rgba(251, 191, 36, 0.12);
     --color-callout-warning-border: #fbbf24;
 
-
     // bluesky-widget section colors
-    --color-bluesky-bg: linear-gradient(135deg, #{darken(#1185fe, 35%)} 0%, #{darken(#339dff, 35%)} 100%);
-    --color-bluesky-text: #{$white};
-    --color-bluesky-desc: rgba(#{$white}, 0.9);
-    --color-bluesky-btn-bg: rgba(#{$white}, 0.2);
-    --color-bluesky-btn-border: rgba(#{$white}, 0.5);
-    --color-bluesky-btn-text: #{$white};
+    --color-bluesky-bg: linear-gradient(135deg, rgba(14, 165, 233, 0.14) 0%, rgba(15, 17, 23, 0.92) 100%);
+    --color-bluesky-text: #f8fafc;
+    --color-bluesky-desc: #94a3b8;
+    --color-bluesky-btn-bg: rgba(255, 255, 255, 0.06);
+    --color-bluesky-btn-border: rgba(56, 189, 248, 0.3);
+    --color-bluesky-btn-text: #e2e8f0;
 
     --theme-icon-light-display: block;
     --theme-icon-dark-display: none;
 
+    // Header & Glassmorphism Home Design Tokens (Dark Theme)
+    --header-bg-glass: rgba(9, 10, 15, 0.82);
+    --header-border: rgba(255, 255, 255, 0.08);
+    --nav-hover-bg: rgba(255, 255, 255, 0.06);
+    --nav-active-bg: rgba(249, 115, 22, 0.12);
+    --nav-active-border: rgba(249, 115, 22, 0.26);
+    --nav-active-text: #fb923c;
+    --nav-search-bg: rgba(15, 17, 23, 0.92);
+    --nav-search-border: rgba(255, 255, 255, 0.11);
+    --nav-search-kbd-bg: #1b1f2b;
+    --brand-title-gradient: linear-gradient(90deg, #ffffff 0%, #f1f5f9 65%, #ffd8b0 100%);
+    --brand-avatar-inner: #0f1117;
+
+    --home-bg-mesh:
+        radial-gradient(at 15% 10%, rgba(249, 115, 22, 0.09) 0px, transparent 50%),
+        radial-gradient(at 85% 20%, rgba(234, 88, 12, 0.06) 0px, transparent 42%),
+        radial-gradient(at 50% 60%, rgba(245, 158, 11, 0.04) 0px, transparent 60%);
+    --home-hero-bg: linear-gradient(135deg, #0f1117 0%, #151821 50%, #0f1117 100%);
+    --home-hero-border: rgba(255, 255, 255, 0.08);
+    --home-hero-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+    --home-mascot-bg: linear-gradient(180deg, #1b1f2b 0%, #12151f 100%);
+    --home-mascot-border: rgba(249, 115, 22, 0.42);
+    --home-mascot-badge-bg: rgba(120, 53, 15, 0.88);
+    --home-mascot-badge-text: #fde68a;
+    --home-mascot-badge-border: rgba(245, 158, 11, 0.35);
+    --home-accent-text: #fb923c;
+    --home-status-bg: rgba(249, 115, 22, 0.11);
+    --home-status-border: rgba(249, 115, 22, 0.28);
+    --home-status-text: #fdba74;
+    --home-desc-box-bg: rgba(0, 0, 0, 0.28);
+    --home-desc-box-border: rgba(255, 255, 255, 0.06);
+
+    --home-glass-bg: linear-gradient(135deg, rgba(27, 31, 43, 0.72) 0%, rgba(15, 17, 23, 0.88) 100%);
+    --home-glass-border: rgba(255, 255, 255, 0.08);
+    --home-glass-shadow: 0 8px 24px -10px rgba(0, 0, 0, 0.4);
+    --home-glass-hover-border: rgba(249, 115, 22, 0.4);
+    --home-glass-hover-shadow: 0 14px 32px -10px rgba(249, 115, 22, 0.16), 0 8px 20px -8px rgba(0, 0, 0, 0.45);
+
+    --home-input-bg: rgba(9, 10, 15, 0.75);
+    --home-input-border: rgba(255, 255, 255, 0.11);
+    --home-input-hover-border: rgba(255, 255, 255, 0.22);
+    --home-btn-surface: #1b1f2b;
+    --home-btn-surface-hover: #232838;
+    --home-btn-border: rgba(255, 255, 255, 0.1);
+    --home-chip-bg: #0f1117;
+    --home-chip-border: rgba(255, 255, 255, 0.1);
+    --home-chip-text: #cbd5e1;
+    --home-chip-hover-bg: #1b1f2b;
+    --home-divider: rgba(255, 255, 255, 0.07);
+
+    --home-score-bg: rgba(245, 158, 11, 0.15);
+    --home-score-text: #fcd34d;
+    --home-score-border: rgba(245, 158, 11, 0.32);
+
+    --home-cat-bg: rgba(249, 115, 22, 0.12);
+    --home-cat-text: #fdba74;
+    --home-cat-border: rgba(249, 115, 22, 0.24);
+
+    --home-highlight-bg: rgba(249, 115, 22, 0.09);
+    --home-highlight-border: rgba(249, 115, 22, 0.22);
+    --home-highlight-text: #fdba74;
+
+    --home-tag-bg: #0f1117;
+    --home-tag-text: #94a3b8;
+    --home-tag-border: rgba(255, 255, 255, 0.07);
+
+    --home-favicon-bg: #1b1f2b;
+    --home-favicon-border: rgba(255, 255, 255, 0.11);
+
+    --home-spec-oss-bg: rgba(99, 102, 241, 0.16);
+    --home-spec-oss-text: #c7d2fe;
+    --home-spec-oss-border: rgba(99, 102, 241, 0.32);
+    --home-spec-free-bg: rgba(16, 185, 129, 0.15);
+    --home-spec-free-text: #a7f3d0;
+    --home-spec-free-border: rgba(16, 185, 129, 0.32);
+    --home-spec-price-bg: rgba(245, 158, 11, 0.15);
+    --home-spec-price-text: #fde68a;
+    --home-spec-price-border: rgba(245, 158, 11, 0.32);
+    --home-spec-target-bg: rgba(244, 63, 94, 0.16);
+    --home-spec-target-text: #fecdd3;
+    --home-spec-target-border: rgba(244, 63, 94, 0.32);
+    --home-spec-dev-bg: rgba(14, 165, 233, 0.16);
+    --home-spec-dev-text: #bae6fd;
+    --home-spec-dev-border: rgba(14, 165, 233, 0.32);
+
+    --home-bluesky-card-bg: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(15, 17, 23, 0.9) 100%);
+    --home-bluesky-card-border: rgba(56, 189, 248, 0.2);
+
     // Report Detail Design Tokens (Dark Theme - Orange Accent)
-    --report-surface-base: #121212;
-    --report-surface-card: #1b1a19;
-    --report-surface-lowest: #141312;
-    --report-surface-low: #201e1c;
-    --report-surface-subtle: #262321;
-    --report-surface-high: #2e2b28;
-    --report-border-crisp: #38332f;
-    --report-border-muted: #292522;
-    --report-text-primary: #faf8f5;
-    --report-on-surface: #e7e2dd;
-    --report-text-secondary: #a8a099;
-    --report-text-muted: #968e86;
-    --report-primary: #ff944d;
-    --report-primary-bg: rgba(255, 119, 51, 0.14);
-    --report-primary-border: rgba(255, 148, 77, 0.35);
-    --report-secondary: #ffb366;
-    --report-secondary-bg: rgba(255, 179, 102, 0.12);
-    --report-secondary-border: rgba(255, 179, 102, 0.3);
-    --report-tertiary: #fdba74;
+    --report-surface-base: #090a0f;
+    --report-surface-card: #151821;
+    --report-surface-lowest: #0f1117;
+    --report-surface-low: #1b1f2b;
+    --report-surface-subtle: #232838;
+    --report-surface-high: #2d3345;
+    --report-border-crisp: #2d3345;
+    --report-border-muted: #232838;
+    --report-text-primary: #f8fafc;
+    --report-on-surface: #e2e8f0;
+    --report-text-secondary: #94a3b8;
+    --report-text-muted: #94a3b8;
+    --report-primary: #fb923c;
+    --report-primary-bg: rgba(249, 115, 22, 0.14);
+    --report-primary-border: rgba(251, 146, 60, 0.35);
+    --report-secondary: #fdba74;
+    --report-secondary-bg: rgba(251, 146, 60, 0.12);
+    --report-secondary-border: rgba(251, 146, 60, 0.3);
+    --report-tertiary: #fed7aa;
     --report-positive: #3fb950;
     --report-positive-bg: rgba(63, 185, 80, 0.12);
     --report-positive-border: rgba(63, 185, 80, 0.3);
@@ -335,20 +597,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     padding: 0;
     background: transparent;
-    border: none;
-    border-radius: $border-radius;
+    border: 1px solid transparent;
+    border-radius: 10px;
     cursor: pointer;
-    transition: $transition-base;
-    color: var(--color-text);
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    color: var(--color-text-muted);
 
     &:hover,
     &:focus {
-        background-color: rgba($primary-color, 0.1);
-        color: $primary-color;
+        background-color: var(--nav-hover-bg);
+        color: var(--home-accent-text);
     }
 
     &:focus {
@@ -358,8 +620,8 @@
 }
 
 .theme-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 
     &-light {
         display: var(--theme-icon-light-display);

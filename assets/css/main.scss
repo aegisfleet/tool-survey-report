@@ -178,15 +178,15 @@ body:not(.keyboard-navigation) {
   }
 }
 
-// Selection styles with new color scheme
+// Selection styles with WCAG AA compliant contrast (#ffffff on #c2410c >= 4.5:1)
 ::selection {
-  background-color: rgba($primary-color, 0.3);
-  color: $text-color;
+  background-color: $link-color;
+  color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: rgba($primary-color, 0.3);
-  color: $text-color;
+  background-color: $link-color;
+  color: #ffffff;
 }
 
 // トップに戻るボタンのスタイル

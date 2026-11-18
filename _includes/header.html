@@ -1,10 +1,17 @@
 <header class="site-header" role="banner">
   <div class="header-container">
     <div class="site-branding">
-      <h1 class="site-title">
-        <a href="{{ '/' | relative_url }}" rel="home" class="reset-filter-link">{{ site.title | default: "調査レポートサイト"
-          }}</a>
-      </h1>
+      <a href="{{ '/' | relative_url }}" rel="home" class="site-brand-link reset-filter-link">
+        <span class="site-brand-avatar" aria-hidden="true">
+          <span class="site-brand-avatar-inner">
+            <img src="{{ '/assets/images/pochi-mascot.png' | relative_url }}" alt="" width="34" height="34">
+          </span>
+        </span>
+        <span class="site-brand-text">
+          <span class="site-title">{{ site.title | default: "調査レポートサイト" }}</span>
+          <span class="site-subtitle">AI AGENT TOOL DATABASE</span>
+        </span>
+      </a>
     </div>
 
     {% include navigation.html %}
