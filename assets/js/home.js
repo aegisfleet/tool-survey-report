@@ -11,6 +11,15 @@ const FILTER_STATE_KEY = 'homeFilterState';
 const STRIP_EMOJI_RE = /^[\p{Extended_Pictographic}\uFE00-\uFE0F\u200D\u200C\s]+/u;
 const KATAKANA_HIRAGANA_RE = /[\u30a1-\u30f6]/g;
 
+// カテゴリバッジへ配色トーンクラスを適用する（再実行時は既存トーンを除去してから付与）
+function applyCategoryTone(categoryEl, category) {
+  CATEGORY_TONE_CLASSES.forEach((toneClass) => {
+    categoryEl.classList.remove(toneClass);
+  });
+  const toneClass = getCategoryToneClass(category);
+  if (toneClass) categoryEl.classList.add(toneClass);
+}
+
 // カテゴリに対応する絵文字を取得するヘルパー関数
 function getEmojiForCategory(category) {
   if (!category || !window.CATEGORY_EMOJIS) return '🔹';
@@ -31,6 +40,22 @@ function toHiragana(str) {
     const chr = match.codePointAt(0) - 0x60;
     return String.fromCodePoint(chr);
   });
+}
+
+// カテゴリバッジの配色トーン数（0 は既定のオレンジでクラスを付与しない）
+const CATEGORY_TONE_COUNT = 6;
+const CATEGORY_TONE_CLASSES = ['cat-tone-1', 'cat-tone-2', 'cat-tone-3', 'cat-tone-4', 'cat-tone-5'];
+
+// カテゴリ名から決定論的に配色トーンクラスを求める（SSR/実体化カードで同一結果）
+function getCategoryToneClass(category) {
+  const key = toHiragana(stripEmoji(String(category || '')).toLowerCase());
+  if (!key) return '';
+  let hash = 0;
+  for (let i = 0; i < key.length; i += 1) {
+    hash = (hash * 31 + key.codePointAt(i)) >>> 0;
+  }
+  const tone = hash % CATEGORY_TONE_COUNT;
+  return tone === 0 ? '' : CATEGORY_TONE_CLASSES[tone - 1];
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -98,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const category = categoryEl.textContent.trim();
       const emoji = getEmojiForCategory(category);
+      applyCategoryTone(categoryEl, category);
 
       const titleLink = card.querySelector('.report-title a');
       if (titleLink) {
@@ -732,6 +758,8 @@ document.addEventListener('DOMContentLoaded', () => {
     button.dataset.category = category.toLowerCase();
     button.title = `カテゴリ「${category}」で絞り込む`;
     button.textContent = `${getEmojiForCategory(category)} ${category}`;
+    const toneClass = getCategoryToneClass(category);
+    if (toneClass) button.classList.add(toneClass);
     return button;
   }
 
@@ -1054,13 +1082,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const description = buildCardDescription(item);
     if (description) card.appendChild(description);
 
+    const bottom = createEl('div', 'report-card-bottom');
     const highlight = buildCardHighlight(item);
-    if (highlight) card.appendChild(highlight);
+    if (highlight) bottom.appendChild(highlight);
 
     const tags = buildCardTags(item);
-    if (tags) card.appendChild(tags);
+    if (tags) bottom.appendChild(tags);
 
-    card.appendChild(buildCardFooter(item));
+    bottom.appendChild(buildCardFooter(item));
+    card.appendChild(bottom);
     card._isMaterialized = true;
   }
 

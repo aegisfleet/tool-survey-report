@@ -304,7 +304,8 @@ layout: default
           </p>
           {%- endif -%}
 
-          <!-- 5. 最新ハイライト（1行コンパクト表示）＆ タグ（最大4件＋残り件数） -->
+          <!-- 5. カード下部：最新ハイライト ＆ タグ ＆ フッター（外部リンク＋詳細リンク） -->
+          <div class="report-card-bottom">
           {%- if report.quick_summary.latest_highlight and report.quick_summary.latest_highlight != '' and report.quick_summary.latest_highlight != '不明' and report.quick_summary.latest_highlight != 'なし' and report.quick_summary.latest_highlight != '特になし' -%}
           <div class="report-latest-highlight" title="最新情報: {{ report.quick_summary.latest_highlight | escape }}">
             <span class="highlight-icon" aria-hidden="true">📢</span>
@@ -373,6 +374,7 @@ layout: default
               {%- endif -%}
             </div>
             <a href="{{ report.url | relative_url }}" class="read-more">レポートを読む →</a>
+          </div>
           </div>
         </article>
         {% endfor %}

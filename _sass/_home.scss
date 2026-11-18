@@ -1204,6 +1204,38 @@
                 color: #ffffff;
             }
         }
+
+        // カテゴリ別の配色トーン（デザイン案のカラフルなカテゴリバッジ）
+        // cat-tone-0 は既定のオレンジ（--home-cat-*）のためクラスを付与しない
+        &.cat-tone-1 {
+            background: var(--home-spec-dev-bg);
+            color: var(--home-spec-dev-text);
+            border-color: var(--home-spec-dev-border);
+        }
+
+        &.cat-tone-2 {
+            background: var(--home-catviolet-bg);
+            color: var(--home-catviolet-text);
+            border-color: var(--home-catviolet-border);
+        }
+
+        &.cat-tone-3 {
+            background: var(--home-spec-free-bg);
+            color: var(--home-spec-free-text);
+            border-color: var(--home-spec-free-border);
+        }
+
+        &.cat-tone-4 {
+            background: var(--home-spec-target-bg);
+            color: var(--home-spec-target-text);
+            border-color: var(--home-spec-target-border);
+        }
+
+        &.cat-tone-5 {
+            background: var(--home-spec-oss-bg);
+            color: var(--home-spec-oss-text);
+            border-color: var(--home-spec-oss-border);
+        }
     }
 }
 
@@ -1433,7 +1465,7 @@
 
 // 4. Description: First sentence bold + 3-line clamp
 .report-card .report-description {
-    margin: 0 0 0.85rem 0;
+    margin: 0 0 0.6rem 0;
     padding: 0;
     background: transparent;
     border: none;
@@ -1464,7 +1496,7 @@
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0;
     padding: 0.4rem 0.65rem;
     background: var(--home-highlight-bg);
     border: 1px solid var(--home-highlight-border);
@@ -1490,7 +1522,7 @@
 }
 
 .report-card .report-tags {
-    margin-bottom: 0.85rem;
+    margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1529,11 +1561,17 @@
     cursor: help;
 }
 
-// 6. Integrated 1-Row Footer: External link buttons (left) + Read more CTA (right)
-.report-card .report-card-footer {
+// 6. Bottom meta block: highlight notice + tags + footer, pinned to card bottom
+.report-card .report-card-bottom {
     margin-top: auto;
-    padding-top: 0.75rem;
+    padding-top: 0.8rem;
     border-top: 1px solid var(--home-divider);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.report-card .report-card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
