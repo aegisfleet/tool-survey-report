@@ -2,6 +2,7 @@
 _site/
 _site_test/
 _site_dev/
+_serve/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata

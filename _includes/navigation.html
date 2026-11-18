@@ -47,6 +47,12 @@
       </div>
     </li>
 
+    <li class="nav-item">
+      <a href="{{ '/trending/' | relative_url }}" class="nav-link {% if page.url contains '/trending' %}current{% endif %}">
+        トレンド一覧
+      </a>
+    </li>
+
     {%- if site.data.navigation.main_links -%}
     {%- for link in site.data.navigation.main_links -%}
     <li class="nav-item">
