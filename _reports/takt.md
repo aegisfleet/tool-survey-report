@@ -48,6 +48,7 @@ relationships:
     - OpenCode
     - GitHub Copilot CLI
     - Plannotator
+    - Superpowers
 ---
 
 # **TAKT 調査レポート**
