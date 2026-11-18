@@ -51,6 +51,7 @@ relationships:
     - GitHub Copilot
     - Manus
     - DeepSeek Harness
+    - Hermes Agent
 ---
 
 # **OpenHands 調査レポート**

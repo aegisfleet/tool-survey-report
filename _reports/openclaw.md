@@ -52,6 +52,7 @@ relationships:
     - AutoGPT
     - Claude Code
     - Hermes WebUI
+    - Hermes Agent
 ---
 
 # **OpenClaw 調査レポート**
