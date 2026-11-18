@@ -47,6 +47,7 @@ relationships:
     - Claude Code
     - Cursor
     - GitHub Copilot CLI
+    - TokenEconomizer
 ---
 
 # **Headroom 調査レポート**

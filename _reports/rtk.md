@@ -47,6 +47,7 @@ relationships:
     - Devin Desktop
     - Cline
     - GitHub Copilot CLI
+    - TokenEconomizer
 ---
 
 # **RTK 調査レポート**
