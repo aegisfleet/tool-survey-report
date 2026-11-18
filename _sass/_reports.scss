@@ -212,6 +212,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   margin: 0 auto 2rem;
   padding: 0 1.25rem;
   font-family: $font-sans-report;
+  overflow-x: clip;
 
   @media (max-width: 1199.98px) {
     display: block;
@@ -508,6 +509,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   gap: 0.45rem;
   line-height: 1.5;
   color: var(--report-on-surface);
+  min-width: 0;
 
   .eval-icon {
     flex-shrink: 0;
@@ -517,6 +519,8 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   .eval-reason {
     color: var(--report-on-surface);
     font-family: $font-sans-report;
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
   .eval-point {
@@ -725,6 +729,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   padding: 2rem 2.5rem;
   margin-bottom: 2rem;
   box-shadow: var(--shadow-sm);
+  overflow-x: clip;
 
   @include media-breakpoint-down(md) {
     padding: 1.5rem 1.25rem;
@@ -743,6 +748,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   line-height: 1.75;
   padding: 0;
   margin: 0;
+  overflow-wrap: break-word;
 
   // Hide duplicate first H1 in report body because Evaluation Brief card already shows H1
   > h1:first-child {
@@ -889,6 +895,8 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     border: 1px solid var(--report-border-crisp);
     border-radius: 0.25rem;
     color: var(--report-primary);
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   // Code Blocks with Terminal Header
@@ -964,6 +972,7 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
   // Tables (borderless outer container, full-width table with clean row dividers)
   .table-responsive {
     overflow-x: auto;
+    max-width: 100%;
     -webkit-overflow-scrolling: touch;
     margin: 1.25rem 0;
     border: none;
