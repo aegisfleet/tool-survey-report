@@ -2,7 +2,7 @@
 title: security-audit-skill 調査レポート
 tool_name: security-audit-skill
 tool_reading: セキュリティ オーディット スキル
-category: セキュリティ/脆弱性診断
+category: AIペネトレーションテスト
 developer: Cloudflare
 official_site: https://blog.cloudflare.com/build-your-own-vulnerability-harness
 date: '2026-11-12'

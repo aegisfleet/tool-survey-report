@@ -2,7 +2,7 @@
 title: Claude-BugHunter 調査レポート
 tool_name: Claude-BugHunter
 tool_reading: クロード バグハンター / クロード・バグハンター
-category: セキュリティ/脆弱性診断
+category: AIペネトレーションテスト
 developer: Sachin Sharma (elementalsouls)
 official_site: https://elementalsouls.github.io/Claude-BugHunter/
 date: '2026-11-18'
