@@ -1,58 +1,58 @@
 ---
-title: "Superpowers 調査レポート"
-tool_name: "Superpowers"
-tool_reading: "スーパーパワーズ"
-category: "AI開発ワークフロー"
-developer: "Prime Radiant (Jesse Vincent / obra)"
-official_site: "https://github.com/obra/superpowers"
-date: "2026-11-19"
-last_updated: "2026-11-19"
+title: Superpowers 調査レポート
+tool_name: Superpowers
+tool_reading: スーパーパワーズ
+category: AI開発ワークフロー
+developer: Prime Radiant (Jesse Vincent / obra)
+official_site: https://github.com/obra/superpowers
+date: '2026-11-19'
+last_updated: '2026-11-19'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "開発者ツール"
-  - "コーディング支援"
-description: "AIコーディングエージェントにブレインストーミング、設計合意、Git worktree隔離、厳格なTDD、サブエージェント主導開発・レビューを強制するオープンソースのスキルフレームワーク兼開発手法"
+  - AI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+  - コーディング支援
+description: AIコーディングエージェントにブレインストーミング、設計合意、Git worktree隔離、厳格なTDD、サブエージェント主導開発・レビューを強制するオープンソースのスキルフレームワーク兼開発手法
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ソフトウェアエンジニア"
-    - "AIコーディングエージェント利用者"
-    - "開発チーム"
-  latest_highlight: "2026年11月にv7.0.2をリリースし、brainstormingの対話精度改善と6ハーネスでのブートストラップ問題を修正"
-  update_frequency: "高"
+    - ソフトウェアエンジニア
+    - AIコーディングエージェント利用者
+    - 開発チーム
+  latest_highlight: 2026年11月にv7.0.2をリリースし、brainstormingの対話精度改善と6ハーネスでのブートストラップ問題を修正
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 6
-      reason: "ブレインストーミング→設計書→計画→TDD→サブエージェント実行→2段階レビューという一貫したSDLC規律を15種のスキルで強制し、AIの暴走を抑制"
+      reason: ブレインストーミング→設計書→計画→TDD→サブエージェント実行→2段階レビューという一貫したSDLC規律を15種のスキルで強制し、AIの暴走を抑制
     - point: 5
-      reason: "Claude Code、Antigravity、Codex、Cursor、Devin CLI、Gemini CLI、GitHub Copilot CLI、OpenCodeなど16種の主要ハーネスに幅広く対応"
+      reason: Claude Code、Antigravity、Codex、Cursor、Devin CLI、Gemini CLI、GitHub Copilot CLI、OpenCodeなど16種の主要ハーネスに幅広く対応
     - point: 4
-      reason: "MITライセンスの完全無料OSSとして提供され、GitHubスター32万超・eval駆動の継続的な品質改善を実現"
+      reason: MITライセンスの完全無料OSSとして提供され、GitHubスター32万超・eval駆動の継続的な品質改善を実現
     - point: 3
-      reason: "Git worktreeによる作業領域の自動隔離やセッション診断スキル（diagnosing-superpowers）など実運用を支える仕組みが充実"
+      reason: Git worktreeによる作業領域の自動隔離やセッション診断スキル（diagnosing-superpowers）など実運用を支える仕組みが充実
   minus_points:
     - point: -2
-      reason: "厳格な工程（計画・サブエージェント・レビュー）を経るため、軽微な修正ではトークン消費と実行時間が増加しやすい"
+      reason: 厳格な工程（計画・サブエージェント・レビュー）を経るため、軽微な修正ではトークン消費と実行時間が増加しやすい
     - point: -2
-      reason: "スキル定義・プロンプト・ドキュメントが英語中心であり、日本語環境での公式ローカライズは未提供"
-  summary: "AIコーディングエージェントに規律あるソフトウェア工学プロセスを定着させる、完成度と汎用性に優れたオープンソース・ワークフロー基盤"
+      reason: スキル定義・プロンプト・ドキュメントが英語中心であり、日本語環境での公式ローカライズは未提供
+  summary: AIコーディングエージェントに規律あるソフトウェア工学プロセスを定着させる、完成度と汎用性に優れたオープンソース・ワークフロー基盤
 links:
-  github: "https://github.com/obra/superpowers"
+  github: https://github.com/obra/superpowers
 relationships:
   related_tools:
-    - "Claude Code"
-    - "Matt Pocock Skills"
-    - "TAKT"
-    - "cc-sdd"
-    - "Spec Kit"
-    - "Agent Skills"
-    - "Cursor"
+    - Claude Code
+    - Matt Pocock Skills
+    - TAKT
+    - cc-sdd
+    - Spec Kit
+    - Agent Skills
+    - Cursor
 ---
 
 # **Superpowers 調査レポート**
