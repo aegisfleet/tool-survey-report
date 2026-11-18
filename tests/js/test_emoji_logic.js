@@ -8,6 +8,15 @@ class HTMLElement {
     this.children = [];
     this._innerHTML = '';
     this.className = '';
+    this.classList = {
+      add: (c) => {
+        if (!this.className.includes(c)) this.className += ` ${c}`;
+      },
+      remove: (c) => {
+        this.className = this.className.replace(new RegExp(`\\b${c}\\b`, 'g'), '').trim();
+      },
+      contains: (c) => this.className.includes(c),
+    };
     this.attributes = {};
     this.dataset = {};
     this.style = {};
