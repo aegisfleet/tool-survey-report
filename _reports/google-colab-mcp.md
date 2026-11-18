@@ -1,60 +1,60 @@
 ---
-title: "Google Colab MCP 調査レポート"
-tool_name: "Google Colab MCP"
-tool_reading: "グーグル コラボ エムシーピー"
-category: "MCPサーバー"
-developer: "Google"
-official_site: "https://developers.google.com/colab/api/reference/mcp"
-date: "2026-11-18"
-last_updated: "2026-11-18"
+title: Google Colab MCP 調査レポート
+tool_name: Google Colab MCP
+tool_reading: グーグル コラボ エムシーピー
+category: MCPサーバー
+developer: Google
+official_site: https://developers.google.com/colab/api/reference/mcp
+date: '2026-11-18'
+last_updated: '2026-11-18'
 tags:
-  - "AI"
-  - "MCP"
-  - "エージェント"
-  - "クラウド"
-  - "開発者ツール"
-  - "Python"
-  - "大規模言語モデル"
-description: "Google Colabのクラウドランタイム（CPU/GPU/TPU）の生成・管理とステートフルなPythonコード実行を、標準化されたリモートMCPサーバー経由でAIエージェントに提供するGoogle公式エンドポイント。"
+  - AI
+  - MCP
+  - エージェント
+  - クラウド
+  - 開発者ツール
+  - Python
+  - 大規模言語モデル
+description: Google Colabのクラウドランタイム（CPU/GPU/TPU）の生成・管理とステートフルなPythonコード実行を、標準化されたリモートMCPサーバー経由でAIエージェントに提供するGoogle公式エンドポイント。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "機械学習エンジニア"
-    - "データサイエンティスト"
-  latest_highlight: "2026年9月にMCP仕様2026-07-28対応、11月にColab Enterprise連携ランタイムのPython 3.13対応"
-  update_frequency: "高"
+    - AIエージェント開発者
+    - 機械学習エンジニア
+    - データサイエンティスト
+  latest_highlight: 2026年9月にMCP仕様2026-07-28対応、11月にColab Enterprise連携ランタイムのPython 3.13対応
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 5
-      reason: "ローカル環境構築不要のマネージドリモートMCPサーバー（Streamable HTTP）で即座にGPU/TPU計算資源を利用可能"
+      reason: ローカル環境構築不要のマネージドリモートMCPサーバー（Streamable HTTP）で即座にGPU/TPU計算資源を利用可能
     - point: 4
-      reason: "Google Cloud IAM（roles/mcp.toolUser）およびtool.name属性によるきめ細かいアクセス制御・監査ログ・Model Armorに対応"
+      reason: Google Cloud IAM（roles/mcp.toolUser）およびtool.name属性によるきめ細かいアクセス制御・監査ログ・Model Armorに対応
     - point: 4
-      reason: "executionIdを用いた600秒超の長時間実行再アタッチやJupyterカーネルのステートフルなセッション管理を備える"
+      reason: executionIdを用いた600秒超の長時間実行再アタッチやJupyterカーネルのステートフルなセッション管理を備える
     - point: 3
-      reason: "無料プランからColab Pro/Pro+・Colab Enterpriseまで既存の契約ティアとクォータをシームレスに継承"
+      reason: 無料プランからColab Pro/Pro+・Colab Enterpriseまで既存の契約ティアとクォータをシームレスに継承
   minus_points:
     - point: -3
-      reason: "execute_codeはテキスト出力（stdout/stderr/result）のみ返却し、画像やグラフの直接返却に非対応"
+      reason: execute_codeはテキスト出力（stdout/stderr/result）のみ返却し、画像やグラフの直接返却に非対応
     - point: -2
-      reason: "Google CloudプロジェクトでのAPI有効化・OAuth 2.0設定・IAMロール付与など初期認証セットアップが必要"
+      reason: Google CloudプロジェクトでのAPI有効化・OAuth 2.0設定・IAMロール付与など初期認証セットアップが必要
     - point: -2
-      reason: "Colab側のアクセラレータ空き状況・クォータ制限に依存し、混雑時はFAILED_PRECONDITIONが発生する"
-  summary: "AIエージェントに安全なクラウドGPU/TPUサンドボックスを標準プロトコルで提供するGoogle公式MCPサーバー。エンタープライズ統制と手軽さを両立する。"
+      reason: Colab側のアクセラレータ空き状況・クォータ制限に依存し、混雑時はFAILED_PRECONDITIONが発生する
+  summary: AIエージェントに安全なクラウドGPU/TPUサンドボックスを標準プロトコルで提供するGoogle公式MCPサーバー。エンタープライズ統制と手軽さを両立する。
 links:
-  documentation: "https://docs.cloud.google.com/mcp/overview"
+  documentation: https://docs.cloud.google.com/mcp/overview
 relationships:
-  parent: "Model Context Protocol"
+  parent: Model Context Protocol
   related_tools:
-    - "Google Colab CLI"
-    - "Gemini Notebook API"
-    - "AWS MCP Servers"
-    - "Chrome DevTools for agents"
+    - Google Colab CLI
+    - Gemini Notebook API
+    - AWS MCP Servers
+    - Chrome DevTools for agents
 ---
 
 # **Google Colab MCP 調査レポート**
