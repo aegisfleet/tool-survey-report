@@ -52,6 +52,7 @@ relationships:
     - Spec Kit
     - OpenSpec
     - Claude Code
+    - Superpowers
 ---
 
 # **Matt Pocock Skills 調査レポート**
