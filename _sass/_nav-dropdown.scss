@@ -60,7 +60,7 @@
 .nav-dropdown {
     @include media-breakpoint-up(lg) {
         position: absolute;
-        top: calc(100% + 6px);
+        top: 100%;
         right: 0; // 右端のナビ項目からはみ出さないよう右揃えにする
         min-width: 280px;
         max-height: 420px;

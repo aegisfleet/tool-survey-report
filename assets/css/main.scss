@@ -178,14 +178,14 @@ body:not(.keyboard-navigation) {
   }
 }
 
-// Selection styles with new color scheme
+// Selection styles with WCAG AA compliant contrast (#ffffff on #c2410c >= 4.5:1)
 ::selection {
-  background-color: $primary-color;
+  background-color: $link-color;
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: $primary-color;
+  background-color: $link-color;
   color: #ffffff;
 }
 
