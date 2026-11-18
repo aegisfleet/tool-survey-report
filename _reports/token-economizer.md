@@ -1,59 +1,59 @@
 ---
-title: "TokenEconomizer 調査レポート"
-tool_name: "TokenEconomizer"
-tool_reading: "トークンエコノマイザー"
-category: "AIモデル拡張/プラグイン"
-developer: "Microsoft (Microsoft Research / Microsoft Security) & UC Berkeley"
-official_site: "https://tokeneconomizer.github.io/"
-date: "2026-11-18"
-last_updated: "2026-11-18"
+title: TokenEconomizer 調査レポート
+tool_name: TokenEconomizer
+tool_reading: トークンエコノマイザー
+category: AIモデル拡張/プラグイン
+developer: Microsoft (Microsoft Research / Microsoft Security) & UC Berkeley
+official_site: https://tokeneconomizer.github.io/
+date: '2026-11-18'
+last_updated: '2026-11-18'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "エージェント"
-  - "大規模言語モデル"
-  - "開発者ツール"
-description: "過去のセッション履歴からリポジトリ固有の知識・不要ツール・失敗ループを学習し、AIコーディングエージェントのトークン消費と推論コストを18.4〜30.9%削減するオープンソースのブラックボックス型コスト制御プラグイン"
+  - オープンソース
+  - AI
+  - エージェント
+  - 大規模言語モデル
+  - 開発者ツール
+description: 過去のセッション履歴からリポジトリ固有の知識・不要ツール・失敗ループを学習し、AIコーディングエージェントのトークン消費と推論コストを18.4〜30.9%削減するオープンソースのブラックボックス型コスト制御プラグイン
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "AIエージェント利用者"
-    - "ソフトウェア開発チーム"
-  latest_highlight: "2026年11月18日時点でv0.1.0公開後も活発に更新され、VS Code Copilot・Antigravity CLI・Factory Droid・Cursor Agent等の実験的サポートや推論トークン計測を強化"
-  update_frequency: "高"
+    - 開発者
+    - AIエージェント利用者
+    - ソフトウェア開発チーム
+  latest_highlight: 2026年11月18日時点でv0.1.0公開後も活発に更新され、VS Code Copilot・Antigravity CLI・Factory Droid・Cursor Agent等の実験的サポートや推論トークン計測を強化
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 6
-      reason: "Micro-skills・Tool Pruning・Failure-Loop Guardの3機構により、SWE-Benchタスクで平均18.4〜30.9%のコスト削減をタスク成功率維持・向上とともに実証"
+      reason: Micro-skills・Tool Pruning・Failure-Loop Guardの3機構により、SWE-Benchタスクで平均18.4〜30.9%のコスト削減をタスク成功率維持・向上とともに実証
     - point: 5
-      reason: "MITライセンスの完全オープンソースであり、Python標準ライブラリのみで動作しローカル完結でコードのプライバシーを保護"
+      reason: MITライセンスの完全オープンソースであり、Python標準ライブラリのみで動作しローカル完結でコードのプライバシーを保護
     - point: 4
-      reason: "Claude Code・Codex・GitHub Copilot CLI・Piをはじめ10種類のエージェントにプラグインとして非侵襲的に導入可能"
+      reason: Claude Code・Codex・GitHub Copilot CLI・Piをはじめ10種類のエージェントにプラグインとして非侵襲的に導入可能
     - point: 3
-      reason: "2026年10月の公開以降、ほぼ毎日PRマージが行われる非常に活発な開発体制"
+      reason: 2026年10月の公開以降、ほぼ毎日PRマージが行われる非常に活発な開発体制
   minus_points:
     - point: -3
-      reason: "公式ドキュメント・UI・メッセージが英語のみであり、日本語対応は未実施"
+      reason: 公式ドキュメント・UI・メッセージが英語のみであり、日本語対応は未実施
     - point: -2
-      reason: "リポジトリごとの履歴学習が必要なためコールドスタート期間（最初の数タスク）は削減効果が出にくい"
-  summary: "エージェント本体やモデル重みを変更せず、過去のセッション経験から多角的にトークン浪費を抑える革新的なOSSプラグインだが、英語中心かつローカル学習型の運用特性を理解して導入する必要がある。"
+      reason: リポジトリごとの履歴学習が必要なためコールドスタート期間（最初の数タスク）は削減効果が出にくい
+  summary: エージェント本体やモデル重みを変更せず、過去のセッション経験から多角的にトークン浪費を抑える革新的なOSSプラグインだが、英語中心かつローカル学習型の運用特性を理解して導入する必要がある。
 links:
-  github: "https://github.com/microsoft/TokenEconomizer"
-  documentation: "https://github.com/microsoft/TokenEconomizer/blob/main/plugin/README.md"
+  github: https://github.com/microsoft/TokenEconomizer
+  documentation: https://github.com/microsoft/TokenEconomizer/blob/main/plugin/README.md
 relationships:
   related_tools:
-    - "RTK"
-    - "Headroom"
-    - "Claude Code"
-    - "OpenAI Codex CLI"
-    - "GitHub Copilot CLI"
-    - "Pi"
-    - "Antigravity CLI"
+    - RTK
+    - Headroom
+    - Claude Code
+    - OpenAI Codex CLI
+    - GitHub Copilot CLI
+    - Pi
+    - Antigravity CLI
 ---
 
 # **TokenEconomizer 調査レポート**
