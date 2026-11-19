@@ -45,6 +45,7 @@ relationships:
   related_tools:
     - dockur/windows
     - Wine
+    - wslc-compose-go
 ---
 
 # **WSL (Windows Subsystem for Linux) 調査レポート**
