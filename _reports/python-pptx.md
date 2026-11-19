@@ -1,59 +1,59 @@
 ---
-title: "python-pptx 調査レポート"
-tool_name: "python-pptx"
-tool_reading: "パイソン ピーピーティーエックス"
-category: "スライド/プレゼンテーション"
-developer: "Steve Canny (scanny)"
-official_site: "https://python-pptx.readthedocs.io/en/latest/"
-date: "2026-11-19"
-last_updated: "2026-11-19"
+title: python-pptx 調査レポート
+tool_name: python-pptx
+tool_reading: パイソン ピーピーティーエックス
+category: スライド/プレゼンテーション
+developer: Steve Canny (scanny)
+official_site: https://python-pptx.readthedocs.io/en/latest/
+date: '2026-11-19'
+last_updated: '2026-11-19'
 tags:
-  - "Python"
-  - "オープンソース"
-  - "自動化"
-  - "開発者ツール"
-  - "プレゼンテーション"
-description: "Microsoft Officeをインストールすることなく、PythonからPowerPoint（.pptx）ファイルを生成・読み取り・編集できるOpen XML操作ライブラリ"
+  - Python
+  - オープンソース
+  - 自動化
+  - 開発者ツール
+  - プレゼンテーション
+description: Microsoft Officeをインストールすることなく、PythonからPowerPoint（.pptx）ファイルを生成・読み取り・編集できるOpen XML操作ライブラリ
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Python開発者"
-    - "データエンジニア"
-    - "AIエンジニア"
-  latest_highlight: "v1.0.2（2024-08-07）で型アノテーション（py.typed）対応とread-only Enum修正を実施後、安定稼働中"
-  update_frequency: "低"
+    - Python開発者
+    - データエンジニア
+    - AIエンジニア
+  latest_highlight: v1.0.2（2024-08-07）で型アノテーション（py.typed）対応とread-only Enum修正を実施後、安定稼働中
+  update_frequency: 低
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 8
-      reason: "Microsoft Office不要・クロスプラットフォームで.pptxを完全オフラインで読み書き・編集できる高い実用性と実績"
+      reason: Microsoft Office不要・クロスプラットフォームで.pptxを完全オフラインで読み書き・編集できる高い実用性と実績
     - point: 5
-      reason: "MITライセンスの完全無料OSSであり、既存テンプレート（スライドマスター・レイアウト）を保持した自動帳票生成が可能"
+      reason: MITライセンスの完全無料OSSであり、既存テンプレート（スライドマスター・レイアウト）を保持した自動帳票生成が可能
     - point: 4
-      reason: "lxml・XlsxWriter・Pillowを活用した堅牢なOPC/OpenXML操作と、v1.0.0以降の型アノテーション（py.typed）対応"
+      reason: lxml・XlsxWriter・Pillowを活用した堅牢なOPC/OpenXML操作と、v1.0.0以降の型アノテーション（py.typed）対応
     - point: 3
-      reason: "豊富なコミュニティ知見と、MarkItDownやLangChain/UnstructuredなどAI・RAGパイプラインでの幅広い採用実績"
+      reason: 豊富なコミュニティ知見と、MarkItDownやLangChain/UnstructuredなどAI・RAGパイプラインでの幅広い採用実績
   minus_points:
     - point: -4
-      reason: "フォントレンダリングエンジンを持たないため、テキストの自動折り返し・溢れ判定やPDF/画像への直接変換が単体では不可"
+      reason: フォントレンダリングエンジンを持たないため、テキストの自動折り返し・溢れ判定やPDF/画像への直接変換が単体では不可
     - point: -3
-      reason: "公式のメンテナンス更新頻度が低く（2024年8月のv1.0.2以降リリースなし）、SmartArtや複合グラフ等は生XML操作が必要"
+      reason: 公式のメンテナンス更新頻度が低く（2024年8月のv1.0.2以降リリースなし）、SmartArtや複合グラフ等は生XML操作が必要
     - point: -2
-      reason: "公式ドキュメントは英語のみで、日本語特有の組版（縦書きや禁則処理の微調整など）のサポートが限定的"
-  summary: "サーバーサイドでのPowerPoint自動生成・抽出におけるPythonのデファクトスタンダードだが、レイアウトの動的計算や高度な装飾には工夫が必要"
+      reason: 公式ドキュメントは英語のみで、日本語特有の組版（縦書きや禁則処理の微調整など）のサポートが限定的
+  summary: サーバーサイドでのPowerPoint自動生成・抽出におけるPythonのデファクトスタンダードだが、レイアウトの動的計算や高度な装飾には工夫が必要
 links:
-  github: "https://github.com/scanny/python-pptx"
-  documentation: "https://python-pptx.readthedocs.io/en/latest/"
+  github: https://github.com/scanny/python-pptx
+  documentation: https://python-pptx.readthedocs.io/en/latest/
 relationships:
   related_tools:
-    - "Google Slides API"
-    - "Presenton"
-    - "Slidev"
-    - "MarkItDown"
-    - "OfficeCLI"
+    - Google Slides API
+    - Presenton
+    - Slidev
+    - MarkItDown
+    - OfficeCLI
 ---
 
 # **python-pptx 調査レポート**
