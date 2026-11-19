@@ -1,63 +1,60 @@
 ---
-title: "Google Slides API 調査レポート"
-tool_name: "Google Slides API"
-tool_reading: "グーグル スライズ エーピーアイ"
-category: "スライド/プレゼンテーション"
-developer: "Google"
-official_site: "https://developers.google.com/workspace/slides/api/reference/rest"
-date: "2026-11-19"
-last_updated: "2026-11-19"
+title: Google Slides API 調査レポート
+tool_name: Google Slides API
+tool_reading: グーグル スライズ エーピーアイ
+category: スライド/プレゼンテーション
+developer: Google
+official_site: https://developers.google.com/workspace/slides/api/reference/rest
+date: '2026-11-19'
+last_updated: '2026-11-19'
 tags:
-  - "API"
-  - "クラウド"
-  - "自動化"
-  - "開発者ツール"
-  - "プレゼンテーション"
-description: "Google スライドのプレゼンテーションをプログラムから作成・読み取り・一括更新し、帳票生成やAIエージェント連携を実現するGoogle Workspaceの公式REST API"
-
+  - API
+  - クラウド
+  - 自動化
+  - 開発者ツール
+  - プレゼンテーション
+description: Google スライドのプレゼンテーションをプログラムから作成・読み取り・一括更新し、帳票生成やAIエージェント連携を実現するGoogle Workspaceの公式REST API
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "システム管理者"
-    - "AIエージェント"
-  latest_highlight: "2026年10月にGoogle Slides MCPサーバーのOAuthエージェント設定必須化とコメント管理（Developer Preview）およびAPIのコメント管理GAを発表"
-  update_frequency: "中"
-
+    - 開発者
+    - システム管理者
+    - AIエージェント
+  latest_highlight: 2026年10月にGoogle Slides MCPサーバーのOAuthエージェント設定必須化とコメント管理（Developer Preview）およびAPIのコメント管理GAを発表
+  update_frequency: 中
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 5
-      reason: "Google Workspaceエコシステム（Drive・Sheets・Apps Script）とのシームレスな統合とリアルタイム共同編集基盤"
+      reason: Google Workspaceエコシステム（Drive・Sheets・Apps Script）とのシームレスな統合とリアルタイム共同編集基盤
     - point: 5
-      reason: "batchUpdateによる原子的（トランザクション的）な一括更新とEMU・アフィン変換による精密なレイアウト制御"
+      reason: batchUpdateによる原子的（トランザクション的）な一括更新とEMU・アフィン変換による精密なレイアウト制御
     - point: 4
-      reason: "標準クォータ内での無料利用と、Python・Node.js・Java等の主要言語向け公式クライアントライブラリの充実"
+      reason: 標準クォータ内での無料利用と、Python・Node.js・Java等の主要言語向け公式クライアントライブラリの充実
     - point: 3
-      reason: "2026年のコメント管理API正式対応およびModel Context Protocol (MCP) サーバーによるAIエージェント連携"
+      reason: 2026年のコメント管理API正式対応およびModel Context Protocol (MCP) サーバーによるAIエージェント連携
     - point: 3
-      reason: "ISO/IEC 27001、SOC 2 Type II、GDPR、ISMAPなどエンタープライズ水準のセキュリティ・コンプライアンス"
+      reason: ISO/IEC 27001、SOC 2 Type II、GDPR、ISMAPなどエンタープライズ水準のセキュリティ・コンプライアンス
   minus_points:
     - point: -4
-      reason: "複雑なネスト構造を持つJSONペイロードやEMU単位・アフィン変換の記述が必要で、レイアウト構築の学習コストが高い"
+      reason: 複雑なネスト構造を持つJSONペイロードやEMU単位・アフィン変換の記述が必要で、レイアウト構築の学習コストが高い
     - point: -3
-      reason: "書き込みリクエスト等のレート制限（プロジェクト単位・ユーザー単位）が厳格で、大量バッチ生成時は指数バックオフ実装が必須"
+      reason: 書き込みリクエスト等のレート制限（プロジェクト単位・ユーザー単位）が厳格で、大量バッチ生成時は指数バックオフ実装が必須
     - point: -2
-      reason: "外部公開アプリで広範なOAuthスコープを利用する場合、GoogleのOAuth審査・検証プロセスに時間と手間がかかる"
-  summary: "Google Workspace上で自動レポート生成やAIエージェント連携を構築するための堅牢な公式APIだが、精密なJSONペイロード設計とクォータ管理が求められる"
-
+      reason: 外部公開アプリで広範なOAuthスコープを利用する場合、GoogleのOAuth審査・検証プロセスに時間と手間がかかる
+  summary: Google Workspace上で自動レポート生成やAIエージェント連携を構築するための堅牢な公式APIだが、精密なJSONペイロード設計とクォータ管理が求められる
 links:
-  documentation: "https://developers.google.com/workspace/slides/api/guides/overview"
+  documentation: https://developers.google.com/workspace/slides/api/guides/overview
 relationships:
   related_tools:
-    - "Google Workspace CLI (gws)"
-    - "Google Cloud"
-    - "Presenton"
-    - "Gamma"
-    - "Slidev"
+    - Google Workspace CLI (gws)
+    - Google Cloud
+    - Presenton
+    - Gamma
+    - Slidev
 ---
 
 # **Google Slides API 調査レポート**
