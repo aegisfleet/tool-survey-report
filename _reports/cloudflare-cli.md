@@ -2,7 +2,7 @@
 title: Cloudflare CLI (cf) 調査レポート
 tool_name: Cloudflare CLI
 tool_reading: クラウドフレア シーエルアイ / シーエフ
-category: クラウドサービス
+category: クラウドCLI
 developer: Cloudflare, Inc.
 official_site: https://developers.cloudflare.com/cf/
 date: '2026-11-18'
