@@ -725,47 +725,16 @@ function enhanceTablesResponsiveness() {
     }
   });
 
-  function applyTableCellLabels(table) {
-    const thead = table.querySelector('thead');
-    if (!thead) return;
-    const headers = Array.from(thead.querySelectorAll('th')).map((th) => th.textContent.trim());
-    const rows = table.querySelectorAll('tbody tr');
-    rows.forEach((row) => {
-      row.querySelectorAll('td').forEach((cell, index) => {
-        if (headers[index]) {
-          cell.dataset.label = headers[index];
-        }
-      });
-    });
-  }
-
-  function shouldRenderTableAsCards(table) {
-    const keywords = ['料金', 'プラン', '比較', '価格'];
-    let prev = table.previousElementSibling;
-    while (prev && !['H2', 'H3', 'H4'].includes(prev.tagName)) {
-      prev = prev.previousElementSibling;
-    }
-    if (!prev) return false;
-    const headingText = prev.textContent;
-    return keywords.some((k) => headingText.includes(k));
-  }
-
   tables.forEach((table) => {
-    // 1. セルの内容をdata-label属性にセット（カード表示用）
-    applyTableCellLabels(table);
-
-    // 2. 特定のキーワード（料金、比較など）が見つかった場合にカード形式クラスを付与
-    const shouldBeCards = shouldRenderTableAsCards(table);
-    if (shouldBeCards) {
-      table.classList.add('table-as-cards');
-    }
-
-    // 3. レスポンシブラッパーでラップ
+    // 狭い画面ではカード化せず、表の列幅を保ったまま横スクロールさせる
     if (!table.parentElement.classList.contains('table-responsive')) {
       const wrapper = document.createElement('div');
       wrapper.className = 'table-responsive';
-      if (shouldBeCards) {
-        wrapper.classList.add('responsive-cards-wrapper');
+
+      // 4列以上の表は1列あたりの最小幅を確保する（CSS側で min-width を適用）
+      const columnCount = table.querySelector('tr')?.children.length ?? 0;
+      if (columnCount >= 4) {
+        table.classList.add('table-wide');
       }
 
       table.parentElement.insertBefore(wrapper, table);

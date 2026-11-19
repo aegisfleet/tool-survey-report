@@ -979,12 +979,16 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     border-radius: 0;
     background: transparent;
     padding: 0;
+
+    // Right-edge shadow hints that more columns can be scrolled into view
+    &.has-scroll {
+      box-shadow: inset -1.5rem 0 1rem -1.25rem rgba(0, 0, 0, 0.35);
+    }
   }
 
   table {
     display: table;
     width: 100%;
-    max-width: 100%;
     margin: 0;
     border: none;
     border-radius: 0;
@@ -1025,55 +1029,22 @@ $font-sans-report: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Robot
     background-color: var(--report-surface-lowest);
   }
 
-  // Mobile Card Layout for Pricing/Comparison Tables
-  .table-as-cards {
-    @include media-breakpoint-down(sm) {
-      display: block;
+  // Narrow screens: keep every column readable and let the wrapper scroll
+  // horizontally instead of squeezing cell contents into unusable widths.
+  @include media-breakpoint-down(md) {
+    th,
+    td {
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
+    }
 
-      thead {
-        display: none;
-      }
-
-      tbody {
-        display: block;
-      }
-
-      tr {
-        display: block;
-        padding: 0.75rem;
-        margin-bottom: 0.75rem;
-        background-color: var(--report-surface-card);
-        border-bottom: 1px solid var(--report-border-crisp);
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-
+    // 2-3 column tables fit on small screens. Only wide comparison tables
+    // need a fixed minimum width per column; the rest size themselves.
+    .table-wide {
+      th,
       td {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 0.75rem;
-        padding: 0.45rem 0;
-        border-bottom: 1px solid var(--report-border-muted);
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        &::before {
-          content: attr(data-label);
-          font-family: $font-mono-report;
-          font-weight: 600;
-          color: var(--report-primary);
-          font-size: 0.75rem;
-          flex-shrink: 0;
-        }
-
-        &:not([data-label])::before {
-          display: none;
-        }
+        // 160px per column keeps cell text readable while the wrapper scrolls.
+        min-width: 10rem;
       }
     }
   }
