@@ -41,6 +41,9 @@ links:
   github: https://github.com/usestrix/strix
   codewiki: https://codewiki.google/github.com/usestrix/strix
   documentation: https://docs.strix.ai
+relationships:
+  related_tools:
+    - ARTEX
 ---
 
 # **Strix 調査レポート**

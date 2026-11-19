@@ -55,6 +55,7 @@ relationships:
     - Agent Skills
     - Burp Suite
     - Tsunami Security Scanner
+    - ARTEX
 ---
 
 # **Claude-BugHunter 調査レポート**
