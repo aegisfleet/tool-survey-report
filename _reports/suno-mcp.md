@@ -1,61 +1,57 @@
 ---
-title: "Suno MCP 調査レポート"
-tool_name: "Suno MCP"
-tool_reading: "スノ エムシーピー"
-category: "MCPサーバー"
-developer: "Suno, Inc."
-official_site: "https://suno.com/mcp"
-date: "2026-11-19"
-last_updated: "2026-11-19"
+title: Suno MCP 調査レポート
+tool_name: Suno MCP
+tool_reading: スノ エムシーピー
+category: MCPサーバー
+developer: Suno, Inc.
+official_site: https://suno.com/mcp
+date: '2026-11-19'
+last_updated: '2026-11-19'
 tags:
-  - "AI"
-  - "生成AI"
-  - "SaaS"
-  - "MCP"
-  - "AI音楽生成"
-description: "ClaudeやChatGPT、CursorなどのAIアシスタントから、OAuth認証のみでSunoの楽曲生成・リミックス・ビジュアル制作・ライブラリ管理を直接実行できるSuno公式のリモートMCPサーバー。"
-
+  - AI
+  - 生成AI
+  - SaaS
+  - MCP
+  - AI音楽生成
+description: ClaudeやChatGPT、CursorなどのAIアシスタントから、OAuth認証のみでSunoの楽曲生成・リミックス・ビジュアル制作・ライブラリ管理を直接実行できるSuno公式のリモートMCPサーバー。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "動画クリエイター"
-    - "ミュージシャン・作曲家"
-    - "AIエージェント活用開発者"
-  latest_highlight: "2026年10月に公式リモートMCPサーバー（https://api.suno.com/mcp）を発表・β提供開始"
-  update_frequency: "高"
-
+    - 動画クリエイター
+    - ミュージシャン・作曲家
+    - AIエージェント活用開発者
+  latest_highlight: 2026年10月に公式リモートMCPサーバー（https://api.suno.com/mcp）を発表・β提供開始
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 6
-      reason: "APIキー不要のOAuth認証とリモートHTTPエンドポイントにより、Claude・ChatGPT・Gemini・Cursor等へ数分で接続可能"
+      reason: APIキー不要のOAuth認証とリモートHTTPエンドポイントにより、Claude・ChatGPT・Gemini・Cursor等へ数分で接続可能
     - point: 5
-      reason: "チャット文脈（歌詞・動画構成・企画書）をそのまま楽曲生成・リミックス・Suno Visuals制作に引き継げる高いワークフロー統合性"
+      reason: チャット文脈（歌詞・動画構成・企画書）をそのまま楽曲生成・リミックス・Suno Visuals制作に引き継げる高いワークフロー統合性
     - point: 4
-      reason: "Freeプランを含む全Sunoプランで利用でき、既存のクレジットプールとライブラリへシームレスに同期"
+      reason: Freeプランを含む全Sunoプランで利用でき、既存のクレジットプールとライブラリへシームレスに同期
     - point: 3
-      reason: "v6モデル群の自然言語編集・音声アップロードからの楽曲化・BPMや歌詞タイミング等のクリップ解析に対応"
+      reason: v6モデル群の自然言語編集・音声アップロードからの楽曲化・BPMや歌詞タイミング等のクリップ解析に対応
   minus_points:
     - point: -3
-      reason: "不正パラメータ（廃止モデル名や範囲外タイムスタンプ等）の事前検証が不十分なケースがあり、意図せずクレジットを消費する懸念"
+      reason: 不正パラメータ（廃止モデル名や範囲外タイムスタンプ等）の事前検証が不十分なケースがあり、意図せずクレジットを消費する懸念
     - point: -3
-      reason: "AIクライアント側の仕様やプランによりインラインプレーヤー表示やカスタムMCPコネクタ利用が制限される場合がある"
+      reason: AIクライアント側の仕様やプランによりインラインプレーヤー表示やカスタムMCPコネクタ利用が制限される場合がある
     - point: -2
-      reason: "セットアップガイドや公式ドキュメントが英語中心であり、エンタープライズ向けのSOC 2やDPA等の公開情報が限定的"
-  summary: "APIキー不要で主要AIツールとSunoを直結し、対話文脈を活かした音楽・ビジュアル制作を実現する強力な公式MCPサーバーだが、パラメータ検証やクライアント依存の表示制限には留意が必要。"
-
+      reason: セットアップガイドや公式ドキュメントが英語中心であり、エンタープライズ向けのSOC 2やDPA等の公開情報が限定的
+  summary: APIキー不要で主要AIツールとSunoを直結し、対話文脈を活かした音楽・ビジュアル制作を実現する強力な公式MCPサーバーだが、パラメータ検証やクライアント依存の表示制限には留意が必要。
 links:
-  documentation: "https://help.suno.com/"
-
+  documentation: https://help.suno.com/
 relationships:
-  parent: "Suno"
+  parent: Suno
   related_tools:
-    - "Audio Studio MCP"
-    - "ElevenLabs"
-    - "ProducerAI"
+    - Audio Studio MCP
+    - ElevenLabs
+    - ProducerAI
 ---
 
 # **Suno MCP 調査レポート**
