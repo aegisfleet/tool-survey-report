@@ -45,6 +45,7 @@ relationships:
   related_tools:
     - ZAP
     - Mimikatz
+    - ARTEX
 ---
 # **Burp Suite 調査レポート**
 

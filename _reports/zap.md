@@ -45,6 +45,7 @@ links:
 relationships:
   related_tools:
     - Burp Suite
+    - ARTEX
 ---
 
 # **ZAP 調査レポート**
