@@ -51,6 +51,7 @@ relationships:
     - Gamma
     - ChatGPT
     - Ollama
+    - Google Slides API
 ---
 
 # **Presenton 調査レポート**

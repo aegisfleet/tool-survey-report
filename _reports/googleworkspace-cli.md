@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - Google Cloud
     - Google Colab CLI
+    - Google Slides API
 ---
 
 # **Google Workspace CLI (gws) 調査レポート**
