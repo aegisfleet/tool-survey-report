@@ -1,59 +1,59 @@
 ---
-title: "Google Workspace Studio 調査レポート"
-tool_name: "Google Workspace Studio"
-tool_reading: "グーグル ワークスペース スタジオ"
-category: "ワークフローエンジン"
-developer: "Google"
-official_site: "https://workspace.google.com/studio/"
-date: "2026-01-25"
-last_updated: "2026-11-19"
+title: Google Workspace Studio 調査レポート
+tool_name: Google Workspace Studio
+tool_reading: グーグル ワークスペース スタジオ
+category: ワークフローエンジン
+developer: Google
+official_site: https://workspace.google.com/studio/
+date: '2026-01-25'
+last_updated: '2026-11-19'
 tags:
-  - "AI"
-  - "生成AI"
-  - "エージェント"
-  - "ノーコード"
-  - "自動化"
-  - "SaaS"
-description: "Gemini AIを活用し、自然言語でGoogle Workspace内の業務プロセスや外部連携ワークフローを自動化するノーコードAIエージェントプラットフォーム（旧称・関連名: Google Workspace Flows / Gemini Flows）。"
+  - AI
+  - 生成AI
+  - エージェント
+  - ノーコード
+  - 自動化
+  - SaaS
+description: 'Gemini AIを活用し、自然言語でGoogle Workspace内の業務プロセスや外部連携ワークフローを自動化するノーコードAIエージェントプラットフォーム（旧称・関連名: Google Workspace Flows / Gemini Flows）。'
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "追加料金なし（要Google Workspace対象プラン）"
+  starting_price: 追加料金なし（要Google Workspace対象プラン）
   target_users:
-    - "Google Workspaceユーザー"
-    - "ビジネスユーザー"
-    - "DX推進担当者"
-  latest_highlight: "2026年11月にフローを一時停止する「Wait until」ステップと再利用可能な「Skills」対応を追加、9月〜10月にはサードパーティ統合・Webhook・ネスト条件分岐も実装"
-  update_frequency: "高"
+    - Google Workspaceユーザー
+    - ビジネスユーザー
+    - DX推進担当者
+  latest_highlight: 2026年11月にフローを一時停止する「Wait until」ステップと再利用可能な「Skills」対応を追加、9月〜10月にはサードパーティ統合・Webhook・ネスト条件分岐も実装
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 7
-      reason: "Google Workspaceアプリ（Gmail, Drive, Sheets, Chat, Meet等）とのネイティブな統合と高いセキュリティ・管理者ガバナンス"
+      reason: Google Workspaceアプリ（Gmail, Drive, Sheets, Chat, Meet等）とのネイティブな統合と高いセキュリティ・管理者ガバナンス
     - point: 6
-      reason: "Gemini（Gemini 3等）による自然言語でのフロー構築・AI判断（Ask Gemini, Decide, Extract等）とSkills対応"
+      reason: Gemini（Gemini 3等）による自然言語でのフロー構築・AI判断（Ask Gemini, Decide, Extract等）とSkills対応
     - point: 4
-      reason: "日本語UI・日本語プロンプト対応および主要Google Workspaceプランへの追加費用なしでの標準搭載"
+      reason: 日本語UI・日本語プロンプト対応および主要Google Workspaceプランへの追加費用なしでの標準搭載
     - point: 3
-      reason: "2026年9月〜11月の急速な機能拡充（3P統合Beta、Webhook、Apps Scriptカスタムステップ、ループ・Wait until制御）"
+      reason: 2026年9月〜11月の急速な機能拡充（3P統合Beta、Webhook、Apps Scriptカスタムステップ、ループ・Wait until制御）
   minus_points:
     - point: -4
-      reason: "フロー数上限（1人25フロー・1フロー20ステップ）および2026年11月施行の日次AI利用制限（数値非公開）"
+      reason: フロー数上限（1人25フロー・1フロー20ステップ）および2026年11月施行の日次AI利用制限（数値非公開）
     - point: -3
-      reason: "フロー所有権が個人アカウントに紐づくため、退職やOU無効化時の事業継続性管理が別途必要"
+      reason: フロー所有権が個人アカウントに紐づくため、退職やOU無効化時の事業継続性管理が別途必要
     - point: -3
-      reason: "AI判断ステップの非決定性や実行トレース（観測性）の制約により、厳密なトランザクション処理には不向き"
-  summary: "Google Workspaceエコシステム内で完結する業務自動化において極めて強力かつ手軽だが、フロー数・日次実行上限や個人所有モデル、非決定性を踏まえたガバナンス設計が重要。"
+      reason: AI判断ステップの非決定性や実行トレース（観測性）の制約により、厳密なトランザクション処理には不向き
+  summary: Google Workspaceエコシステム内で完結する業務自動化において極めて強力かつ手軽だが、フロー数・日次実行上限や個人所有モデル、非決定性を踏まえたガバナンス設計が重要。
 links:
-  documentation: "https://developers.google.com/workspace/add-ons/studio"
+  documentation: https://developers.google.com/workspace/add-ons/studio
 relationships:
   related_tools:
-    - "Make"
-    - "Zapier"
-    - "n8n"
-    - "Microsoft Power Automate"
-    - "Microsoft Copilot Studio"
+    - Make
+    - Zapier
+    - n8n
+    - Microsoft Power Automate
+    - Microsoft Copilot Studio
 ---
 
 # **Google Workspace Studio 調査レポート**

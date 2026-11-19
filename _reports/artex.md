@@ -1,61 +1,57 @@
 ---
-title: "ARTEX 調査レポート"
-tool_name: "ARTEX"
-tool_reading: "アーテックス"
-category: "AIペネトレーションテスト"
-developer: "BaaRai（コミュニティ継承版 / 原作: Autumn-27）"
-official_site: "https://github.com/BaaRai/ARTEX"
-date: "2026-11-20"
-last_updated: "2026-11-20"
+title: ARTEX 調査レポート
+tool_name: ARTEX
+tool_reading: アーテックス
+category: AIペネトレーションテスト
+developer: 'BaaRai（コミュニティ継承版 / 原作: Autumn-27）'
+official_site: https://github.com/BaaRai/ARTEX
+date: '2026-11-20'
+last_updated: '2026-11-20'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "セキュリティ"
-  - "ペネトレーションテスト"
-description: "探索グラフと資産グラフのデュアルグラフ構造および録画型MITMプロキシを備え、検証可能なHTTP証跡付きで脆弱性を自動探索するセルフホスト型AI自律ペネトレーションテストシステム。"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - セキュリティ
+  - ペネトレーションテスト
+description: 探索グラフと資産グラフのデュアルグラフ構造および録画型MITMプロキシを備え、検証可能なHTTP証跡付きで脆弱性を自動探索するセルフホスト型AI自律ペネトレーションテストシステム。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "ペネトレーションテスター"
-    - "セキュリティエンジニア"
-    - "レッドチーム運用者"
-  latest_highlight: "2026年11月にv0.6.0（POEレベル・証跡引用の機械検証、argvインターセプト、ターゲットノイズガバナー等）をリリース"
-  update_frequency: "高"
-
+    - ペネトレーションテスター
+    - セキュリティエンジニア
+    - レッドチーム運用者
+  latest_highlight: 2026年11月にv0.6.0（POEレベル・証跡引用の機械検証、argvインターセプト、ターゲットノイズガバナー等）をリリース
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 6
-      reason: "探索グラフと資産グラフのデュアルグラフ構造により、攻撃経路・事実・資産カバレッジを一貫して追跡できる"
+      reason: 探索グラフと資産グラフのデュアルグラフ構造により、攻撃経路・事実・資産カバレッジを一貫して追跡できる
     - point: 5
-      reason: "録画型MITMプロキシとブラウザ拡張により、発見した脆弱性を実際のHTTPトラフィック証跡（POE検証）へ機械的に紐づけ可能"
+      reason: 録画型MITMプロキシとブラウザ拡張により、発見した脆弱性を実際のHTTPトラフィック証跡（POE検証）へ機械的に紐づけ可能
     - point: 4
-      reason: "argvプレフィックス規則、Human-in-the-loop承認ゲート、ノイズガバナー、プロンプトインジェクション境界など制御機構が充実"
+      reason: argvプレフィックス規則、Human-in-the-loop承認ゲート、ノイズガバナー、プロンプトインジェクション境界など制御機構が充実
     - point: 3
-      reason: "Go製単一バイナリ（Next.js UI埋め込み）＋PostgreSQLでセルフホスト可能、AGPL-3.0のOSSとしてマルチLLMローテーションに対応"
+      reason: Go製単一バイナリ（Next.js UI埋め込み）＋PostgreSQLでセルフホスト可能、AGPL-3.0のOSSとしてマルチLLMローテーションに対応
   minus_points:
     - point: -3
-      reason: "Web UI・ドキュメントともに英語中心で日本語のネイティブサポートがない"
+      reason: Web UI・ドキュメントともに英語中心で日本語のネイティブサポートがない
     - point: -3
-      reason: "プランナーと複数ワーカーの自律ループによりLLMトークン消費が大きくなりやすく、外部APIまたはローカルLLM基盤のコストが必要"
+      reason: プランナーと複数ワーカーの自律ループによりLLMトークン消費が大きくなりやすく、外部APIまたはローカルLLM基盤のコストが必要
     - point: -2
-      reason: "実ツールを自律実行する攻撃的セキュリティツールの性質上、厳格なスコープ設定・承認運用・法令遵守の徹底が不可欠"
-  summary: "デュアルグラフと実トラフィック証跡により自律ペネトレーションテストの再現性と説明責任を高めた先進的なOSSだが、英語UIと厳格な安全運用体制が求められる。"
-
+      reason: 実ツールを自律実行する攻撃的セキュリティツールの性質上、厳格なスコープ設定・承認運用・法令遵守の徹底が不可欠
+  summary: デュアルグラフと実トラフィック証跡により自律ペネトレーションテストの再現性と説明責任を高めた先進的なOSSだが、英語UIと厳格な安全運用体制が求められる。
 links:
-  github: "https://github.com/BaaRai/ARTEX"
-
+  github: https://github.com/BaaRai/ARTEX
 relationships:
   related_tools:
-    - "Strix"
-    - "Claude-BugHunter"
-    - "Burp Suite"
-    - "ZAP"
+    - Strix
+    - Claude-BugHunter
+    - Burp Suite
+    - ZAP
 ---
 
 # **ARTEX 調査レポート**
