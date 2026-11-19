@@ -97,6 +97,15 @@
     --brand-title-gradient: linear-gradient(90deg, #0f172a 0%, #1e293b 70%, #c2410c 100%);
     --brand-avatar-inner: #fff7ed;
 
+    // Footer design tokens (Light Theme)
+    --footer-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    --footer-border: #e2e8f0;
+    --footer-heading: #0f172a;
+    --footer-text: #475569;
+    --footer-link: #334155;
+    --footer-link-hover: #c2410c;
+    --footer-mascot-bg: #fff7ed;
+
     --home-bg-mesh:
         radial-gradient(at 15% 8%, rgba(249, 115, 22, 0.08) 0px, transparent 48%),
         radial-gradient(at 85% 18%, rgba(234, 88, 12, 0.05) 0px, transparent 42%),
@@ -285,6 +294,15 @@
         --brand-title-gradient: linear-gradient(90deg, #ffffff 0%, #f1f5f9 65%, #ffd8b0 100%);
         --brand-avatar-inner: #0f1117;
 
+        // Footer design tokens (Dark Theme)
+        --footer-bg: linear-gradient(180deg, #0f1117 0%, #090a0f 100%);
+        --footer-border: rgba(255, 255, 255, 0.08);
+        --footer-heading: #ffffff;
+        --footer-text: #94a3b8;
+        --footer-link: #cbd5e1;
+        --footer-link-hover: #fb923c;
+        --footer-mascot-bg: #1b1f2b;
+
         --home-bg-mesh:
             radial-gradient(at 15% 10%, rgba(249, 115, 22, 0.09) 0px, transparent 50%),
             radial-gradient(at 85% 20%, rgba(234, 88, 12, 0.06) 0px, transparent 42%),
@@ -472,6 +490,15 @@
     --nav-search-kbd-bg: #1b1f2b;
     --brand-title-gradient: linear-gradient(90deg, #ffffff 0%, #f1f5f9 65%, #ffd8b0 100%);
     --brand-avatar-inner: #0f1117;
+
+    // Footer design tokens (Dark Theme)
+    --footer-bg: linear-gradient(180deg, #0f1117 0%, #090a0f 100%);
+    --footer-border: rgba(255, 255, 255, 0.08);
+    --footer-heading: #ffffff;
+    --footer-text: #94a3b8;
+    --footer-link: #cbd5e1;
+    --footer-link-hover: #fb923c;
+    --footer-mascot-bg: #1b1f2b;
 
     --home-bg-mesh:
         radial-gradient(at 15% 10%, rgba(249, 115, 22, 0.09) 0px, transparent 50%),

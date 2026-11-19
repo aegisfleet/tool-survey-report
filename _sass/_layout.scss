@@ -247,11 +247,11 @@ body.layout-home {
 }
 
 .site-footer {
-  background: linear-gradient(180deg, #0f1117 0%, #090a0f 100%);
-  color: #e2e8f0;
+  background: var(--footer-bg);
+  color: var(--footer-text);
   margin-top: auto;
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--footer-border);
 
   &::before {
     content: "";
@@ -299,7 +299,7 @@ body.layout-home {
     width: 34px;
     height: 34px;
     border-radius: 10px;
-    background: #1b1f2b;
+    background: var(--footer-mascot-bg);
     border: 1px solid rgba($primary-color, 0.35);
     padding: 2px;
     object-fit: contain;
@@ -308,7 +308,7 @@ body.layout-home {
 
   h3 {
     margin: 0;
-    color: #ffffff;
+    color: var(--footer-heading);
     font-size: 1.05rem;
     font-weight: 700;
   }
@@ -317,7 +317,7 @@ body.layout-home {
 .footer-section {
   h3,
   h4 {
-    color: #ffffff;
+    color: var(--footer-heading);
     margin-bottom: map-get($spacers, 3);
     font-size: 0.95rem;
     font-weight: 700;
@@ -325,7 +325,7 @@ body.layout-home {
   }
 
   p {
-    color: #94a3b8;
+    color: var(--footer-text);
     font-size: 0.875rem;
     line-height: 1.7;
     margin: 0;
@@ -339,17 +339,17 @@ body.layout-home {
   li {
     margin-bottom: 0.55rem;
     font-size: 0.875rem;
-    color: #94a3b8;
+    color: var(--footer-text);
   }
 
   a {
-    color: #cbd5e1;
+    color: var(--footer-link);
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover,
     &:focus {
-      color: #fb923c;
+      color: var(--footer-link-hover);
       text-decoration: none;
     }
   }
@@ -357,7 +357,7 @@ body.layout-home {
 
 .footer-bottom {
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--footer-border);
   @include flex-between;
   flex-wrap: wrap;
   gap: 1rem;
@@ -377,13 +377,13 @@ body.layout-home {
   font-size: 0.8rem;
 
   a {
-    color: #94a3b8;
+    color: var(--footer-text);
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover,
     &:focus {
-      color: #fb923c;
+      color: var(--footer-link-hover);
     }
   }
 }
@@ -392,14 +392,14 @@ body.layout-home {
 .powered-by {
   margin: 0;
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: var(--footer-text);
 
   a {
-    color: #cbd5e1;
+    color: var(--footer-link);
 
     &:hover,
     &:focus {
-      color: #fb923c;
+      color: var(--footer-link-hover);
     }
   }
 }
