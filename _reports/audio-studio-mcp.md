@@ -42,6 +42,7 @@ relationships:
   related_tools:
     - Claude Code
     - Cursor
+    - Suno MCP
 ---
 
 # **Audio Studio MCP 調査レポート**
