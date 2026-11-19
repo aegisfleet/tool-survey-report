@@ -46,7 +46,6 @@ relationships:
   parent: Gemini
   related_tools:
     - Vercel Agent Skills
-    - Google Opal
     - Modern Web Guidance
 ---
 

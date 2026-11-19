@@ -53,7 +53,6 @@ relationships:
     - MoneyPrinterV2
     - Microsoft Power Automate
     - Workato
-    - Google Opal
 ---
 # **n8n 調査レポート**
 

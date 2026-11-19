@@ -53,7 +53,6 @@ relationships:
     - MoneyPrinterV2
     - n8n
     - Workato
-    - Google Opal
 ---
 # **Zapier 調査レポート**
 
