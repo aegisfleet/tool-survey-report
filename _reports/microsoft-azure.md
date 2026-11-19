@@ -53,6 +53,7 @@ relationships:
     - Microsoft Copilot Studio
     - Microsoft Agent Framework
     - Microsoft Dataverse
+    - Microsoft Discovery
   related_tools:
     - Google Cloud
     - Alibaba Cloud

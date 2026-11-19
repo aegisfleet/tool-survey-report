@@ -56,6 +56,7 @@ relationships:
     - ChatGPT
     - Copilot Cowork
     - Microsoft Agent Framework
+    - Microsoft Discovery
 ---
 
 # **Microsoft Copilot Studio 調査レポート**
