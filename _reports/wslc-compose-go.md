@@ -1,57 +1,54 @@
 ---
-title: "wslc-compose-go 調査レポート"
-tool_name: "wslc-compose-go"
-tool_reading: "ダブリューエスエルシーコンポーズゴー / ダブリューエスエルシーコンポーズ"
-category: "コンテナ/仮想化"
-developer: "DawnMagnet"
-official_site: "https://github.com/DawnMagnet/wslc-compose-go"
-date: "2026-11-19"
-last_updated: "2026-11-19"
+title: wslc-compose-go 調査レポート
+tool_name: wslc-compose-go
+tool_reading: ダブリューエスエルシーコンポーズゴー / ダブリューエスエルシーコンポーズ
+category: コンテナ/仮想化
+developer: DawnMagnet
+official_site: https://github.com/DawnMagnet/wslc-compose-go
+date: '2026-11-19'
+last_updated: '2026-11-19'
 tags:
-  - "オープンソース"
-  - "コンテナ"
-  - "開発者ツール"
-  - "開発環境"
-  - "Go"
-description: "MicrosoftのWSL Containers (wslc) 上で標準Docker Composeファイルを解析・実行するGo製のデーモンレスComposeラッパーCLI"
-
+  - オープンソース
+  - コンテナ
+  - 開発者ツール
+  - 開発環境
+  - Go
+description: MicrosoftのWSL Containers (wslc) 上で標準Docker Composeファイルを解析・実行するGo製のデーモンレスComposeラッパーCLI
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "Windows開発者"
-    - "DevOpsエンジニア"
-    - "インフラエンジニア"
-  latest_highlight: "2026年11月にv0.2.1をリリースし、wslc 3.0.3.0のhost-gatewayクリーンアップ時のERROR_INVALID_HANDLEリカバリや複数ネットワーク・シークレット対応を強化"
-  update_frequency: "高"
-
+    - Windows開発者
+    - DevOpsエンジニア
+    - インフラエンジニア
+  latest_highlight: 2026年11月にv0.2.1をリリースし、wslc 3.0.3.0のhost-gatewayクリーンアップ時のERROR_INVALID_HANDLEリカバリや複数ネットワーク・シークレット対応を強化
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 5
-      reason: "公式compose-go v2パーサー採用とデーモンレス・単一バイナリの軽量アーキテクチャ"
+      reason: 公式compose-go v2パーサー採用とデーモンレス・単一バイナリの軽量アーキテクチャ
     - point: 4
-      reason: "MITライセンスの完全無料OSSで、--dry-runや--strictなど実務向け設計が充実"
+      reason: MITライセンスの完全無料OSSで、--dry-runや--strictなど実務向け設計が充実
     - point: 4
-      reason: "wslc 3.0.3.0の複数ネットワーク・静的IP・secrets/configs・host-gateway・GPUに迅速に対応"
+      reason: wslc 3.0.3.0の複数ネットワーク・静的IP・secrets/configs・host-gateway・GPUに迅速に対応
     - point: 3
-      reason: "ゴールデンテスト・ユニットテストによる高い検証品質と活発なリリース頻度"
+      reason: ゴールデンテスト・ユニットテストによる高い検証品質と活発なリリース頻度
   minus_points:
     - point: -3
-      reason: "プレビュー段階（v0.2系）であり、基盤となるwslcの制約（restartやprivileged非対応等）を受ける"
+      reason: プレビュー段階（v0.2系）であり、基盤となるwslcの制約（restartやprivileged非対応等）を受ける
     - point: -2
-      reason: "公式の日本語UI・日本語ドキュメントがなく、利用者はWindows 11 + WSL 2.9.3+環境が必須"
-  summary: "WSL Containers（wslc）環境でDocker Desktop不要のマルチコンテナ開発を実現する実用性の高いGo製Composeツール"
-
+      reason: 公式の日本語UI・日本語ドキュメントがなく、利用者はWindows 11 + WSL 2.9.3+環境が必須
+  summary: WSL Containers（wslc）環境でDocker Desktop不要のマルチコンテナ開発を実現する実用性の高いGo製Composeツール
 links:
-  github: "https://github.com/DawnMagnet/wslc-compose-go"
+  github: https://github.com/DawnMagnet/wslc-compose-go
 relationships:
   related_tools:
-    - "WSL"
-    - "Docker"
-    - "Podman"
+    - WSL
+    - Docker
+    - Podman
 ---
 
 # **wslc-compose-go 調査レポート**
