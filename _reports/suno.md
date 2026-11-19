@@ -40,6 +40,8 @@ evaluation:
       reason: クレジット消費が激しく、ヘビーユーザーにはコストがかさむ
   summary: ボーカル生成品質は業界最高水準だが、著作権の懸念とクレジット消費には注意が必要。
 relationships:
+  children:
+    - Suno MCP
   related_tools:
     - ElevenLabs
     - ProducerAI
