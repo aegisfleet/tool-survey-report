@@ -12,6 +12,11 @@ readonly CATEGORIES_FILE="_data/categories.yml"
 
 # Antigravity CLI default parameters
 readonly AGY_DEFAULT_MODEL="gemini-4-hydrogen-medium"
+# Fallback model used when the primary model is unavailable (e.g. model
+# retired, quota exhausted, or the subscription tier no longer includes it).
+# Gemini Flash stays available on the free tier, so pipelines degrade to a
+# slower lane instead of failing outright.
+readonly AGY_FALLBACK_MODEL="gemini-3.8-flash-medium"
 readonly AGY_DEFAULT_EFFORT="medium"
 readonly AGY_DEFAULT_TIMEOUT="40m"
 
@@ -78,7 +83,35 @@ extract_tool_name() {
 }
 
 #######################################
+# Invokes Antigravity CLI (agy) once with the given model.
+# Arguments:
+#   model: Model name to pass to agy
+#   prompt: The prompt text to pass to agy
+#   output_log: Path to write raw JSON output
+# Returns:
+#   0 on success, non-zero on failure
+#######################################
+_run_agy_with_model() {
+  local -r model="$1"
+  local -r prompt="$2"
+  local -r output_log="$3"
+
+  export SSH_CONNECTION="dummy 1 2 3"
+  log_info "Invoking Antigravity CLI (model: ${model}, effort: ${AGY_DEFAULT_EFFORT}, timeout: ${AGY_DEFAULT_TIMEOUT})..."
+
+  agy -p "${prompt}" \
+    --model "${model}" \
+    --effort "${AGY_DEFAULT_EFFORT}" \
+    --dangerously-skip-permissions \
+    --print-timeout "${AGY_DEFAULT_TIMEOUT}" \
+    --output-format json < /dev/null | tee "${output_log}"
+}
+
+#######################################
 # Invokes Antigravity CLI (agy) in headless mode with standard configurations.
+# When the primary model fails (e.g. retired, quota exhausted, or no longer
+# included in the current subscription tier), retries once with
+# AGY_FALLBACK_MODEL so the pipeline degrades instead of failing outright.
 # Arguments:
 #   prompt: The prompt text to pass to agy
 #   output_log: Path to write raw JSON output (default: agy_output.json)
@@ -89,15 +122,12 @@ run_agy() {
   local -r prompt="$1"
   local -r output_log="${2:-agy_output.json}"
 
-  export SSH_CONNECTION="dummy 1 2 3"
-  log_info "Invoking Antigravity CLI (model: ${AGY_DEFAULT_MODEL}, effort: ${AGY_DEFAULT_EFFORT}, timeout: ${AGY_DEFAULT_TIMEOUT})..."
+  if _run_agy_with_model "${AGY_DEFAULT_MODEL}" "${prompt}" "${output_log}"; then
+    return 0
+  fi
 
-  agy -p "${prompt}" \
-    --model "${AGY_DEFAULT_MODEL}" \
-    --effort "${AGY_DEFAULT_EFFORT}" \
-    --dangerously-skip-permissions \
-    --print-timeout "${AGY_DEFAULT_TIMEOUT}" \
-    --output-format json < /dev/null | tee "${output_log}"
+  log_warn "Antigravity CLI failed with model ${AGY_DEFAULT_MODEL}; retrying once with fallback model ${AGY_FALLBACK_MODEL}..."
+  _run_agy_with_model "${AGY_FALLBACK_MODEL}" "${prompt}" "${output_log}"
 }
 
 #######################################
