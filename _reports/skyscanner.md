@@ -1,51 +1,48 @@
 ---
-title: "Skyscanner 調査レポート"
-tool_name: "Skyscanner"
-tool_reading: "スカイスキャナー"
-category: "ライフスタイル/生活サービス"
-developer: "Skyscanner Limited（親会社: Trip.com Group）"
-official_site: "https://www.skyscanner.jp/"
-date: "2026-11-20"
-last_updated: "2026-11-20"
+title: Skyscanner 調査レポート
+tool_name: Skyscanner
+tool_reading: スカイスキャナー
+category: ライフスタイル/生活サービス
+developer: 'Skyscanner Limited（親会社: Trip.com Group）'
+official_site: https://www.skyscanner.jp/
+date: '2026-11-20'
+last_updated: '2026-11-20'
 tags:
-  - "SaaS"
-  - "AI"
-  - "API"
-  - "クラウド"
-description: "世界中の1,200社以上の航空会社・旅行代理店・宿泊施設・レンタカーを一括比較できる、世界最大級の旅行メタサーチプラットフォーム"
-
+  - SaaS
+  - AI
+  - API
+  - クラウド
+description: 世界中の1,200社以上の航空会社・旅行代理店・宿泊施設・レンタカーを一括比較できる、世界最大級の旅行メタサーチプラットフォーム
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料（一般ユーザー）"
+  starting_price: 無料（一般ユーザー）
   target_users:
-    - "一般旅行者・出張者"
-    - "旅行関連事業者・OTA"
-    - "開発者・アフィリエイトパートナー"
-  latest_highlight: "2026年7月に自然言語で目的地を探せる「Explore with AI」や「Road Trip Planner」などのAI機能群を公開"
-  update_frequency: "高"
-
+    - 一般旅行者・出張者
+    - 旅行関連事業者・OTA
+    - 開発者・アフィリエイトパートナー
+  latest_highlight: 2026年7月に自然言語で目的地を探せる「Explore with AI」や「Road Trip Planner」などのAI機能群を公開
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 6
-      reason: "世界中の1,200社以上の航空会社（LCC含む）やOTAを横断比較でき、「すべての場所」検索など独自の柔軟な検索機能が充実"
+      reason: 世界中の1,200社以上の航空会社（LCC含む）やOTAを横断比較でき、「すべての場所」検索など独自の柔軟な検索機能が充実
     - point: 5
-      reason: "Web・モバイルアプリともに完全な日本語UIに対応し、一般ユーザーは手数料無料で全機能を利用可能"
+      reason: Web・モバイルアプリともに完全な日本語UIに対応し、一般ユーザーは手数料無料で全機能を利用可能
     - point: 5
-      reason: "2026年の「Explore with AI」や「Stays」刷新、ChatGPT連携などAIを活用した新機能開発が活発"
+      reason: 2026年の「Explore with AI」や「Stays」刷新、ChatGPT連携などAIを活用した新機能開発が活発
     - point: 3
-      reason: "App Store・Google Play・Trustpilotなど主要レビュープラットフォームで平均4.4〜4.5/5.0の高評価を獲得"
+      reason: App Store・Google Play・Trustpilotなど主要レビュープラットフォームで平均4.4〜4.5/5.0の高評価を獲得
   minus_points:
     - point: -3
-      reason: "メタサーチ型のため予約・キャンセル対応は遷移先の航空会社や海外OTAに依存し、サポート品質にばらつきがある"
+      reason: メタサーチ型のため予約・キャンセル対応は遷移先の航空会社や海外OTAに依存し、サポート品質にばらつきがある
     - point: -2
-      reason: "リアルタイム空席の同期タイムラグにより、遷移先の予約画面で表示価格の変動や売り切れが発生する場合がある"
-  summary: "圧倒的な網羅性と柔軟なAI・価格検索機能を備えた無料メタサーチとして最高水準だが、予約後のサポートは遷移先事業者に依存する点に留意が必要"
-
+      reason: リアルタイム空席の同期タイムラグにより、遷移先の予約画面で表示価格の変動や売り切れが発生する場合がある
+  summary: 圧倒的な網羅性と柔軟なAI・価格検索機能を備えた無料メタサーチとして最高水準だが、予約後のサポートは遷移先事業者に依存する点に留意が必要
 links:
-  documentation: "https://developers.skyscanner.net/"
+  documentation: https://developers.skyscanner.net/
 ---
 
 # **Skyscanner 調査レポート**
