@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - AutoGPT
     - LangChain
+    - Claude-Mem
 ---
 
 # **Letta 調査レポート**

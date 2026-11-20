@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - Cursor
     - Claude Code
+    - Claude-Mem
 ---
 # **Context7 調査レポート**
 
