@@ -48,6 +48,7 @@ relationships:
     - Cursor
     - GitHub Copilot CLI
     - TokenEconomizer
+    - RTK
 ---
 
 # **Headroom 調査レポート**
