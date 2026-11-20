@@ -1,63 +1,59 @@
 ---
-title: "Claude-Mem 調査レポート"
-tool_name: "Claude-Mem"
-tool_reading: "クロード メム"
-category: "AIモデル拡張/プラグイン"
-developer: "Alex Newman (thedotmack)"
-official_site: "https://claude-mem.ai/"
-date: "2026-11-21"
-last_updated: "2026-11-21"
+title: Claude-Mem 調査レポート
+tool_name: Claude-Mem
+tool_reading: クロード メム
+category: AIモデル拡張/プラグイン
+developer: Alex Newman (thedotmack)
+official_site: https://claude-mem.ai/
+date: '2026-11-21'
+last_updated: '2026-11-21'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-  - "コーディング支援"
-description: "AIコーディングエージェントのセッション間の記憶喪失を解消し、作業履歴の自動記録・AI圧縮・次期セッションへの文脈注入を行うオープンソースの永続メモリエンジン。"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - 開発者ツール
+  - コーディング支援
+description: AIコーディングエージェントのセッション間の記憶喪失を解消し、作業履歴の自動記録・AI圧縮・次期セッションへの文脈注入を行うオープンソースの永続メモリエンジン。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（OSS版） / $30/月（CMEM Pro）"
+  starting_price: 無料（OSS版） / $30/月（CMEM Pro）
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-    - "ソフトウェア開発チーム"
-  latest_highlight: "2026年11月にv16.0.0〜v16.0.2をリリースし、My Work UIの全面刷新や自動更新時のセッション保護修正を実施"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+    - ソフトウェア開発チーム
+  latest_highlight: 2026年11月にv16.0.0〜v16.0.2をリリースし、My Work UIの全面刷新や自動更新時のセッション保護修正を実施
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "セッションを跨ぐ自動コンテキスト記録・AI圧縮・段階的開示（Progressive Disclosure）による高いトークン効率"
+      reason: セッションを跨ぐ自動コンテキスト記録・AI圧縮・段階的開示（Progressive Disclosure）による高いトークン効率
     - point: 5
-      reason: "Claude Codeに加え、OpenCode・Cursor・Codex・Gemini CLI・OpenClawなど多様なエージェント/IDEへの広範な対応"
+      reason: Claude Codeに加え、OpenCode・Cursor・Codex・Gemini CLI・OpenClawなど多様なエージェント/IDEへの広範な対応
     - point: 4
-      reason: "Apache 2.0のローカルファースト設計（SQLite + FTS5 + Chroma）と<private>タグ等のプライバシー配慮"
+      reason: Apache 2.0のローカルファースト設計（SQLite + FTS5 + Chroma）と<private>タグ等のプライバシー配慮
     - point: 5
-      reason: "GitHubスター11.8万超・ほぼ連日のリリース（v16系）による極めて活発な開発コミュニティ"
+      reason: GitHubスター11.8万超・ほぼ連日のリリース（v16系）による極めて活発な開発コミュニティ
   minus_points:
     - point: -2
-      reason: "バックグラウンドワーカー（Bun）やフック機構への依存により、環境依存（PATH・Windows PowerShell・ネットワーク）のトラブルが起きる場合がある"
+      reason: バックグラウンドワーカー（Bun）やフック機構への依存により、環境依存（PATH・Windows PowerShell・ネットワーク）のトラブルが起きる場合がある
     - point: -2
-      reason: "UIやドキュメントの主要言語は英語中心（観測データの日本語生成モード code--ja には対応）"
-  summary: "Claude Code等のAIコーディングエージェントにおける『セッション間の文脈断絶』をローカルファーストかつ低トークンコストで解決する、事実上の標準メモリ拡張プラグイン。"
-
+      reason: UIやドキュメントの主要言語は英語中心（観測データの日本語生成モード code--ja には対応）
+  summary: Claude Code等のAIコーディングエージェントにおける『セッション間の文脈断絶』をローカルファーストかつ低トークンコストで解決する、事実上の標準メモリ拡張プラグイン。
 links:
-  github: "https://github.com/thedotmack/claude-mem"
-  documentation: "https://docs.claude-mem.ai/"
-
+  github: https://github.com/thedotmack/claude-mem
+  documentation: https://docs.claude-mem.ai/
 relationships:
   related_tools:
-    - "Claude Code"
-    - "Letta"
-    - "Context7"
-    - "Model Context Protocol"
-    - "OpenClaw"
-    - "Cursor"
-    - "OpenCode"
+    - Claude Code
+    - Letta
+    - Context7
+    - Model Context Protocol
+    - OpenClaw
+    - Cursor
+    - OpenCode
 ---
 
 # **Claude-Mem 調査レポート**
