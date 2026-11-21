@@ -1,61 +1,58 @@
 ---
-title: "AG-UI 調査レポート"
-tool_name: "AG-UI"
-tool_reading: "エージーユーアイ"
-category: "エージェントスキル/標準仕様"
-developer: "CopilotKit (Tawkit, Inc.) / AG-UI Community"
-official_site: "https://ag-ui.com"
-date: "2026-11-22"
-last_updated: "2026-11-22"
+title: AG-UI 調査レポート
+tool_name: AG-UI
+tool_reading: エージーユーアイ
+category: エージェントスキル/標準仕様
+developer: CopilotKit (Tawkit, Inc.) / AG-UI Community
+official_site: https://ag-ui.com
+date: '2026-11-22'
+last_updated: '2026-11-22'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "生成AI"
-  - "エージェント"
-  - "開発者ツール"
-description: "AIエージェントとフロントエンドアプリケーションを双方向イベントストリームで接続する、軽量・オープンソースの標準プロトコル（Agent-User Interaction Protocol）。"
-
+  - AI
+  - オープンソース
+  - 生成AI
+  - エージェント
+  - 開発者ツール
+description: AIエージェントとフロントエンドアプリケーションを双方向イベントストリームで接続する、軽量・オープンソースの標準プロトコル（Agent-User Interaction Protocol）。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "AIエージェント開発者"
-    - "フロントエンドエンジニア"
-    - "プラットフォームエンジニア"
-  latest_highlight: "2026年9月にAG-UI 1.0仕様を確定し、2026年11月もLangGraph/A2UI連携やコアSDK（v1.0.5）を継続アップデート中"
-  update_frequency: "高"
-
+    - AIエージェント開発者
+    - フロントエンドエンジニア
+    - プラットフォームエンジニア
+  latest_highlight: 2026年9月にAG-UI 1.0仕様を確定し、2026年11月もLangGraph/A2UI連携やコアSDK（v1.0.5）を継続アップデート中
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 6
-      reason: "多様なエージェントフレームワークとUIクライアントを繋ぐフレームワーク非依存の標準仕様"
+      reason: 多様なエージェントフレームワークとUIクライアントを繋ぐフレームワーク非依存の標準仕様
     - point: 5
-      reason: "Google、Microsoft、AWS、Oracleなど主要プレイヤーによる広範な採用と公式SDK提供"
+      reason: Google、Microsoft、AWS、Oracleなど主要プレイヤーによる広範な採用と公式SDK提供
     - point: 4
-      reason: "MITライセンスのオープンソースで、活発な開発・リリースサイクルを維持"
+      reason: MITライセンスのオープンソースで、活発な開発・リリースサイクルを維持
     - point: 4
-      reason: "双方向状態同期、Human-in-the-Loop、Subagents、Protobuf等を備えた実用的な1.0仕様"
+      reason: 双方向状態同期、Human-in-the-Loop、Subagents、Protobuf等を備えた実用的な1.0仕様
   minus_points:
     - point: -2
-      reason: "公式ドキュメントおよびコミュニティは英語中心で、日本語の公式リソースが限定的"
+      reason: 公式ドキュメントおよびコミュニティは英語中心で、日本語の公式リソースが限定的
     - point: -2
-      reason: "仕様の理解と独自アダプター実装にはイベント駆動・ストリーミング設計の学習コストが必要"
-  summary: "AIエージェントとUI間の接続を標準化し、主要クラウド・フレームワークの採用も進む事実上の標準候補プロトコル。"
-
+      reason: 仕様の理解と独自アダプター実装にはイベント駆動・ストリーミング設計の学習コストが必要
+  summary: AIエージェントとUI間の接続を標準化し、主要クラウド・フレームワークの採用も進む事実上の標準候補プロトコル。
 links:
-  github: "https://github.com/ag-ui-protocol/ag-ui"
-  deepwiki: "https://deepwiki.com/ag-ui-protocol/ag-ui"
-  documentation: "https://docs.ag-ui.com"
+  github: https://github.com/ag-ui-protocol/ag-ui
+  deepwiki: https://deepwiki.com/ag-ui-protocol/ag-ui
+  documentation: https://docs.ag-ui.com
 relationships:
   related_tools:
-    - "CopilotKit"
-    - "A2UI"
-    - "A2A Protocol"
-    - "MCP Apps"
-    - "Model Context Protocol"
+    - CopilotKit
+    - A2UI
+    - A2A Protocol
+    - MCP Apps
+    - Model Context Protocol
 ---
 
 # **AG-UI 調査レポート**
