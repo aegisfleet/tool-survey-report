@@ -6,14 +6,14 @@ category: 基盤モデル/LLMチャット
 developer: Anthropic
 official_site: https://claude.ai/
 date: '2025-10-18'
-last_updated: '2026-06-05'
+last_updated: '2026-11-21'
 tags:
   - AI
   - エージェント
   - コーディング支援
   - 大規模言語モデル
   - 生成AI
-description: Anthropicが開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。Claude 4.8 / 4.5シリーズを搭載し、高い推論能力と安全性、そして自律的なエージェント機能（Claude Code）を提供します。
+description: Anthropicが開発した最先端の大規模言語モデル（LLM）およびAIアシスタント。Claude 5.5シリーズやFable 5.2 / Mythos 5.2を搭載し、高い推論能力と安全性、Claude CodeやMCPによる自律的エージェント機能、協業スイートを提供します。
 quick_summary:
   has_free_plan: true
   is_oss: false
@@ -22,22 +22,22 @@ quick_summary:
     - 開発者
     - データサイエンティスト
     - 一般ユーザー
-  latest_highlight: 2026年5月にClaude Opus 4.8がリリースされ、1Mトークンのコンテキストウィンドウをサポート
+  latest_highlight: 2026年11月にClaude Fable 5.2 / Mythos 5.2およびClaude Sheets・Whiteboards・Meetingsをリリース
   update_frequency: 高
 evaluation:
-  score: 85
+  score: 86
   base_score: 70
   plus_points:
     - point: 8
-      reason: Claude Opus 4.8/Sonnetによる高い推論能力と長文脈理解
+      reason: Claude Fable 5.2・Opus 5.5/Sonnet 5.5による卓越した推論能力と1Mトークン長文脈理解
+    - point: 6
+      reason: Claude Code・Claude Cowork・Managed Agentsによる強力な自律型エージェント機能
     - point: 5
-      reason: Claude Codeによる自律的なコーディングエージェント機能が強力
-    - point: 5
-      reason: Model Context Protocol (MCP) による高い拡張性とエコシステム
+      reason: Model Context Protocol (MCP) やClaude Sheets/Whiteboards/Meetingsによる高い拡張性と業務統合
   minus_points:
     - point: -3
-      reason: Web検索機能がChatGPTやGeminiと比較して限定的
-  summary: 推論能力とコーディング支援において卓越しており、開発者にとって最強のアシスタントとなるが、汎用的な検索用途では競合に譲る。
+      reason: ネイティブの画像生成機能を持たない点や、ヘビーユース時の使用量制限
+  summary: 推論・コーディング能力とエージェント基盤（Claude Code/MCP）において業界最高水準を誇るが、ネイティブ画像生成には非対応。
 links:
   documentation: https://docs.anthropic.com/
 relationships:
@@ -58,12 +58,6 @@ relationships:
 
 ## **1. 基本情報**
 
-<!--
-【ガイドライン】
-- 必須: ツール名、開発元、公式サイト、カテゴリ、概要
-- 概要は2-3文で簡潔に記述
--->
-
 * **ツール名**: Claude
 * **ツールの読み方**: クロード
 * **開発元**: Anthropic
@@ -71,249 +65,251 @@ relationships:
 * **関連リンク**:
   * ドキュメント: [https://docs.anthropic.com/](https://docs.anthropic.com/)
   * APIドキュメント: [https://docs.anthropic.com/en/api/getting-started](https://docs.anthropic.com/en/api/getting-started)
-* **カテゴリ**: 生成AI
-* **概要**: Anthropic社が開発した、安全性と信頼性を重視した最先端の大規模言語モデル（LLM）。最新のClaudeモデルファミリー（Opus/Sonnet/Haiku）を搭載し、卓越した推論能力、長大なコンテキスト処理、そして自律的なタスク実行能力（エージェント機能）を提供する。特にコーディングや複雑な文書作成において高い評価を得ている。
+  * リリースノート: [https://docs.anthropic.com/en/release-notes/overview](https://docs.anthropic.com/en/release-notes/overview)
+  * セキュリティ / Trust Center: [https://trust.anthropic.com/](https://trust.anthropic.com/)
+* **カテゴリ**: 基盤モデル/LLMチャット
+* **概要**: Anthropic社が開発した、安全性（Constitutional AI）と高い推論能力を重視した最先端の大規模言語モデル（LLM）およびAIプラットフォーム。最新のClaude 5.5ファミリー（Opus / Sonnet / Haiku）およびFable 5.2 / Mythos 5.2を搭載し、1Mトークンの長大なコンテキスト処理とAdaptive Thinkingを提供する。チャットやArtifactsに加え、自律型コーディングエージェント「Claude Code」、ローカル業務自動化「Claude Cowork」、さらにはClaude Sheets・Whiteboards・Meetingsといったチーム協業スイートまで幅広く展開している。
 
 ## **2. 目的と主な利用シーン**
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 想定利用者を具体的に記載
--->
-
-* **解決する課題**: 複雑な情報の分析・要約、高品質なコード生成、論理的な文章作成、および自律的なタスク実行による業務効率化。
-* **想定利用者**: ソフトウェアエンジニア、研究者、コンテンツ制作者、ビジネスアナリスト。
+* **解決する課題**: 複雑なソフトウェア開発や大規模コードベースの保守、長文ドキュメントの分析・要約、および自律型エージェントやチーム協業ツールによる知識労働の効率化。
+* **想定利用者**: ソフトウェアエンジニア、研究者、データサイエンティスト、ビジネスアナリスト、コンテンツ制作者、エンタープライズチーム。
 * **利用シーン**:
-  * **コーディング支援**: 自律エージェント「Claude Code」を用いた、機能実装、デバッグ、リファクタリングの自動化。
-  * **ドキュメント分析**: 論文、契約書、財務レポートなどの長文ドキュメントを読み込ませた要約・分析。
-  * **クリエイティブワーク**: 自然でニュアンス豊かな文章の作成、ブログ記事やメールの執筆。
-  * **データ処理**: CSVやJSONデータを分析し、インサイトを抽出・可視化する。
+  * **自律的コーディング支援**: 「Claude Code」やIDE・CLI連携により、機能実装、大規模マイグレーション、デバッグ、リファクタリングを自動化。
+  * **オフィス業務・チーム協業**: 「Claude Sheets」「Claude Whiteboards」「Claude Meetings」「Claude Data」を活用し、スプレッドシート編集、ブレスト整理、Google Meetでのリアルタイム議事録・成果物作成を実施。
+  * **ドキュメント・データ分析**: 論文、契約書、財務レポートなど最大1Mトークン規模の長文資料やCSV/JSONデータを読み込み、構造化・可視化を実行。
+  * **エンタープライズ自動化**: Model Context Protocol (MCP) やManaged Agentsを通じ、社内システム・クラウド環境と連携した自律タスクを実行。
+
+### **2.1 代表的な利用フロー**
+
+```mermaid
+swimlane-beta TB
+  subgraph User["ユーザー"]
+    A["目的・プロンプト・ファイルを入力"]
+    F["Artifacts・成果物を確認・承認"]
+  end
+  subgraph Claude_UI["Claude (Web / Desktop)"]
+    B["コンテキスト・Projects・メモリ読込"]
+    E["回答・Artifacts・Sheets等を生成"]
+  end
+  subgraph Agent_Sandbox["推論・サンドボックス実行環境"]
+    C["Adaptive Thinkingで推論・コード実行"]
+  end
+  subgraph External_Tools["外部サービス・MCPサーバー"]
+    D["Web検索・GitHub・社内データを取得"]
+  end
+  A --> B
+  B --> C
+  C -->|"MCP / Dynamic Filtering"| D
+  D -->|"構造化結果を返却"| C
+  C --> E
+  E --> F
+```
+
+* **代表的な流れ**: ユーザーがWebまたはDesktopアプリからタスクを指示すると、ClaudeがProjectsやメモリを参照しつつ推論エンジン（Adaptive Thinking）を起動し、必要に応じてサンドボックス内でのコード実行やMCP経由の外部ツール連携（Dynamic FilteringによるWeb検索含む）を行ってArtifactsや協業ドキュメントとして出力する。
 
 ## **3. 主要機能**
 
-<!--
-【ガイドライン】
-- 5-10項目の主要機能を箇条書きで記述
-- 各機能は1-2文で概要を説明
--->
+* **Claude 5.5 / 5.2 モデルファミリー**:
+  * **Claude Fable 5.2 / Mythos 5.2**: 複雑なコーディング、科学・数学的推論、長期エージェントタスク向けの最新最上位モデル（Mythos 5.2はCyber/Life Sciences Verification Program向け）。
+  * **Claude Opus 5.5**: 常時Adaptive Thinkingを備え、高度な企業知識労働やエージェント型開発に対応するフラッグシップモデル。
+  * **Claude Sonnet 5.5**: 高い実行速度と深い推論のバランスに優れた主力モデル。
+  * **Claude Haiku 5.5**: 低遅延・低コストで分類、データ抽出、サブエージェント実行に適した高速モデル。
+* **1Mトークン長文コンテキスト・Adaptive Thinking**: 統一された1Mトークン入力・最大128K出力トークンに対応し、問題の難易度に応じて思考トークン量を動的に調整するAdaptive Thinkingを搭載。
+* **Artifacts & インタラクティブコネクタ**: 生成したコード、React UI、SVG図表などを別ペインで即時プレビュー・編集可能。Adobe、Atlassian、HubSpotなどのパートナーアプリをClaude画面内で直接操作できるネイティブ埋め込みにも対応。
+* **協業スイート (Sheets / Whiteboards / Meetings / Data)**: 自然言語で数式生成やセル編集を行うスプレッドシート、リアルタイム共有キャンバス、Google Meetに参加し議事録や成果物を更新する会議エージェント、ライブデータ可視化機能を提供。
+* **Dynamic Filtering Web検索 & コード実行**: セキュアなサンドボックス内でコードを実行し、Web検索結果やHTMLを動的にフィルタリングしてからコンテキストに取り込むことで精度とトークン効率を両立。
+* **Projects & クロスセッションメモリ**: 関連資料やSystem PromptをまとめるProjects機能に加え、チャット・Claude Code・Coworkを横断してユーザーの好みや文脈を保持するメモリ機能を搭載。
+* **エージェント機能 (Claude Code / Cowork / Computer Use)**: ターミナル向け「Claude Code」、ローカルファイル自動処理「Claude Cowork」、画面操作を行う「Computer Use (Beta)」により、自律的な実務遂行を実現。
 
-* **Claude 4.8 / 4.5 モデルファミリー**:
-  * **Claude Opus 4.8**: 最も高性能なモデル。複雑な推論、高度な数学・科学タスク、大規模なコーディングに最適。
-  * **Claude 4.5 Sonnet**: 性能と速度のバランスに優れたモデル。日常的なタスクから開発まで幅広く対応。
-  * **Claude 4.5 Haiku**: 最も高速かつ低コストなモデル。リアルタイム応答や大量の単純タスク処理向け。
-* **Artifacts**: 生成されたコード、ドキュメント、図表をチャットとは別のウィンドウでプレビュー・編集できる機能。Reactコンポーネントの即時レンダリングなどが可能。
-* **Projects**: 関連するドキュメントやコード、独自の指示（System Prompt）をまとめた「プロジェクト」を作成し、コンテキストを共有しながら作業できる。
-* **Claude Code連携**: ターミナルやIDEで動作する自律型コーディングエージェント「Claude Code」と連携し、開発タスクを完遂する。
-* **Computer Use (Beta)**: AIが画面を見て、カーソル操作やキーボード入力を行い、人間のようにPCを操作してタスクを実行する機能（API経由など）。
-* **長文コンテキスト**: 最大200Kトークン（モデルにより拡張）の入力に対応し、書籍1冊分以上の情報を一度に処理可能。
+## **4. 動作原理・システム構成**
 
-## **4. 開始手順・セットアップ**
+* **アーキテクチャ**: Anthropicのクラウドインフラ上で稼働するマルチテナントSaaS（Web / iOS・Android / Claude Desktop）を中核としつつ、開発者・エンタープライズ向けにREST API（およびAWS Bedrock / Google Vertex AI）、ローカルCLI/デスクトップ実行環境（Claude Code / Cowork）、自社ホスト可能なサンドボックス（Managed Agents）を組み合わせたハイブリッド構成を採用している。
+* **主要コンポーネントとデータフロー**:
 
-<!--
-【ガイドライン】
-- アカウント作成から「Hello World」的な最初の動作確認までの手順
-- 主要なコマンドや設定項目を記載
--->
+```mermaid
+flowchart TB
+  subgraph Client_Layer["クライアント層"]
+    WebApp["Web / Mobile UI"]
+    Desktop["Claude Desktop (Cowork / Channels)"]
+    CLI["Claude Code CLI / ant CLI"]
+    SDK["公式 SDK (Python / TypeScript v2.0+)"]
+  end
+  subgraph Cloud_Core["Anthropic クラウド基盤"]
+    Gateway["API ゲートウェイ (Bearer認証 / v2026-10-21)"]
+    Inference["モデル推論基盤 (5.5 / 5.2 + Adaptive Thinking)"]
+    Memory["Projects・コンテキスト・Prompt Cache"]
+    Policy["Constitutional AI / 安全性・Compliance API"]
+  end
+  subgraph Sandbox_Ext["実行サンドボックス・外部連携"]
+    CodeExec["コード実行サンドボックス (REPL / Dynamic Filtering)"]
+    MCP["Model Context Protocol (MCP) サーバー群"]
+    Managed["Managed Agents (クラウド / 自社ホスト)"]
+  end
+  WebApp --> Gateway
+  Desktop --> Gateway
+  CLI --> Gateway
+  SDK --> Gateway
+  Gateway --> Policy
+  Policy --> Inference
+  Inference --> Memory
+  Inference --> CodeExec
+  Inference -->|"MCP プロトコル"| MCP
+  Inference --> Managed
+```
+
+* **特筆すべき要素技術**:
+  * **Constitutional AI（憲法AI）**: 明文化された原則に基づきモデル自身が有害出力を評価・抑制するアライメント手法。
+  * **Dynamic Filtering（動的フィルタリング）**: Web検索やフェッチ結果を直接コンテキストに流し込まず、コード実行サンドボックス内のスクリプトで必要な情報のみを抽出する仕組み。
+  * **Model Context Protocol (MCP)**: 外部データソースや業務アプリとClaudeを標準化されたJSON-RPCベースのインターフェースで安全に接続するオープンプロトコル。
+  * **Prompt Caching & Batch API**: 繰り返しの多いシステムプロンプトや大規模資料をキャッシュ（5分/1時間保持）し、非同期バッチ処理と合わせてAPIコストを大幅に削減。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * メールアドレス（Googleアカウント等でのログイン可）
-  * (API利用の場合) 電話番号認証が必要な場合がある
+  * メールアドレスまたはGoogleアカウント（Web / Desktop / モバイル利用時）
+  * API利用時はAnthropic Consoleアカウントと課金設定（Python 3.10+ または Node.js 18+ 推奨）
 * **インストール/導入**:
-  * Web版はブラウザからアクセスのみ。
-  * iOS/Androidアプリも提供されている。
-  * 開発者は `pip install anthropic` でSDKをインストール。
+  * Web版はブラウザから `claude.ai` へアクセス。iOS / Android / macOS / Windowsアプリ（Desktop版は `Stable` と `Latest` のリリースチャネル切替に対応）を提供。
+  * 開発者向けSDK（v2.0以降、Apache 2.0ライセンス）およびCLIの導入例:
+
+  ```bash
+  # Python SDK のインストール
+  pip install anthropic
+
+  # TypeScript / Node.js SDK のインストール
+  npm install @anthropic-ai/sdk
+  ```
+
 * **初期設定**:
-  * アカウント作成後、利用規約に同意。
-  * Proプラン（有料）へのアップグレードは任意。
+  * 環境変数にAPIキーを設定（APIバージョン `2026-10-21` 以降のSDKでは標準の `Authorization: Bearer` ヘッダーを使用）。
+
+  ```bash
+  export ANTHROPIC_API_KEY="<YOUR_API_KEY>"
+  ```
+
 * **クイックスタート**:
   1. [claude.ai](https://claude.ai/) にアクセスしログイン。
   2. 入力欄に「ReactでToDoリストアプリのコードを書いて」と入力。
-  3. Artifactsウィンドウで動作するアプリがプレビューされるのを確認する。
+  3. Artifactsウィンドウで動作するアプリが即座にプレビューされることを確認する。
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 競合との差別化ポイントを明確に
--->
+* **業界最高水準の推論・コーディング能力**: Claude Fable 5.2やOpus 5.5 / Sonnet 5.5は、複雑なロジック実装、大規模リファクタリング、科学・数学的推論において高い精度と指示従順性を誇る。
+* **自然で高品質な日本語表現**: 日本語のニュアンスや文脈を的確に捉え、ビジネス文書から技術解説まで自然で違和感のない文章を生成する。
+* **充実したエージェントと協業エコシステム**: Claude Code、Claude Cowork、MCP、さらにSheets / Whiteboards / Meetings / Dataの統合により、単なるチャットを超えた実務のエンドツーエンド自動化が可能。
+* **高い安全性とエンタープライズガバナンス**: Constitutional AIによる安全性に加え、SOC 2 Type II、ISO 27001、ISO 42001、Compliance API、Zero Data Retention (ZDR) など企業導入要件を満たす。
 
-* **自然で人間らしい文章生成**: 機械的さが少なく、日本語のニュアンスも正確に捉えた自然な文章を生成する能力に定評がある。
-* **強力なコーディング能力**: 特にClaude Opus 4.8/Sonnetは、複雑なロジックの実装やバグ修正において非常に高い信頼性を誇る。
-* **Artifactsによる作業効率化**: コードやドキュメントをチャットの流れから切り離して確認・編集できるため、成果物の作成プロセスがスムーズ。
-* **安全性と倫理観**: Anthropicの「Constitution AI（憲法AI）」アプローチにより、有害な出力やバイアスを抑制する設計がなされている。
+## **7. 弱み・注意点 (Cons)**
 
-## **6. 弱み・注意点 (Cons)**
+* **ネイティブの画像生成機能がない**: ChatGPTやGeminiのようなテキストからのネイティブ画像生成（写真・イラスト生成）は非対応であり、SVG/HTML描画や外部ツール連携での対応が必要となる。
+* **使用量制限（レートリミット）**: FreeプランやProプランでは5時間ごとのローリング制限や週間上限があり、長文コンテキストやエージェント機能を連続使用すると上限に達しやすい（ヘビーユーザーはMax / Ultraプランが必要）。
+* **動画・音声のネイティブ処理**: 画像認識（1メッセージ最大20枚）には優れるが、長尺動画や音声ファイルの直接アップロード・解析はGeminiに一歩譲る。
+* **日本語対応**: Web / DesktopのUIは日本語化されており実用上問題ないが、新機能（MeetingsやFable 5.2の最新ドキュメント等）の公開や一部ベータ機能は英語が先行する傾向がある。
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 日本語対応の状況は必ず含める
--->
+## **8. 料金プラン**
 
-* **Web検索機能の弱さ**: ChatGPT (Search) やGemini (Google検索) と比較して、リアルタイムのWeb情報を取得する機能は限定的である（検索機能はあるが、統合度合いで劣る場合がある）。
-* **画像生成機能なし**: DALL-E (ChatGPT) やImagen (Gemini) のような画像生成機能は持っていない。
-* **マルチモーダル入力の制限**: 画像の認識は可能だが、動画や音声ファイルのネイティブアップロード・解析はGeminiほど得意ではない。
-* **日本語対応**: UIも日本語化されており問題ないが、最新機能のドキュメント等は英語が先行する場合がある。
-
-## **7. 料金プラン**
-
-<!--
-【ガイドライン】
-- 表形式で整理することを推奨
-- 最新の料金情報であることを確認
-- 価格は通貨を明記（例: $10/月、¥1,000/月）
--->
+### **コンシューマー / チーム / エンタープライズプラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
-| **Free** | 無料 | Claude 4.5 Sonnetへの限定アクセス（使用回数制限あり）。 |
-| **Pro** | $20/月 | Claude Opus 4.8/Haikuを含む全モデルへのアクセス。使用回数上限の緩和。Projects機能。 |
-| **Team** | $25/ユーザー/月 | 5名から。Proの全機能に加え、より高い使用上限、管理機能。 |
-| **Enterprise** | 要問い合わせ | SSO、高度なセキュリティ、専用サポート、大規模なコンテキスト。 |
+| **Free** | 無料 | 基本チャット、Web検索、コード実行、Artifacts、メモリ（5時間/週間制限あり、Projects最大5件）。 |
+| **Pro** | $20/月<br>($200/年) | Freeの約5倍の利用枠。Opusモデル、無制限Projects、Claude Code、Sheets/Whiteboards (Beta)、Chrome連携。 |
+| **Max** | $100/月 | Proの約5倍の利用枠。ピーク時の優先アクセス、拡張出力上限（月額課金のみ）。 |
+| **Ultra** | $200/月 | Proの約10倍の週間利用枠。認証済みアカウントでの5時間スロットリング緩和、追加APIクレジット枠。 |
+| **Team** | Standard: $25/名/月 ($20年払)<br>Premium: $125/名/月 ($100年払) | 2〜150名向け。一括請求、管理コンソール、SSO、Claude Code / Cowork / Meetings (Beta)。Premiumは5倍の利用枠。 |
+| **Enterprise** | $20/名/月 (年払・20名〜)<br>＋ API従量課金 | SCIM、監査ログ、Compliance API、カスタムデータ保持ポリシー、RBAC、HIPAA対応（BAA）。 |
 
-* **課金体系**: ユーザー単位（Web版）、トークン単位（API版）。
+### **API従量課金（100万トークンあたり）**
+
+| モデル | 入力料金 | 出力料金 | キャッシュ読込 |
+|---------|---------|---------|-------------|
+| **Claude Haiku 5.5** *(100Kトークン以下)* | $0.10 | $0.50 | $0.01 |
+| **Claude Sonnet 5.5** | $2.00 | $10.00 | $0.10 |
+| **Claude Opus 5.5** | $4.00 | $20.00 | $0.20 |
+| **Claude Fable 5.2** | $8.00 | $40.00 | $0.20 |
+
+* **課金体系**: Web版はユーザー/シート単位（Enterpriseは基本料＋API従量）、API版はトークン単位。Batch API利用時は入力・出力ともに50%割引、Prompt Caching書込は保持時間により1.25倍（5分）または2倍（1時間）。
 * **無料トライアル**: なし（Freeプランが利用可能）。
 
-## **8. 導入実績・事例**
-
-<!--
-【ガイドライン】
-- 具体的な企業名を3-5社挙げる
-- 導入事例がない場合は「公開事例なし。ただし、〜の分野での利用が報告されている」等
--->
+## **9. 導入実績・事例**
 
 * **導入企業**: **GitLab**, **Notion**, **Quora**, **DuckDuckGo**, **Bridgewater Associates**
 * **導入事例**:
-  * **GitLab**: 開発プラットフォーム内でのコード提案やチャット機能にClaudeを採用。
-  * **Notion**: Notion AIのバックエンドの一つとしてClaudeを活用し、文章作成支援を提供。
-  * **Quora**: AIチャットアプリ「Poe」において、主要なモデルとしてClaudeを提供。
-* **対象業界**: ソフトウェア開発、知識管理、金融、教育など。
+  * **GitLab**: 開発プラットフォーム内でのコード提案やチャット・セキュリティ支援機能にClaudeを採用。
+  * **Notion**: Notion AIのバックエンドの一つとしてClaudeを活用し、ドキュメント要約や文章作成支援を提供。
+  * **Quora**: AIチャットプラットフォーム「Poe」において、主要モデルとしてClaudeシリーズを提供。
+* **対象業界**: ソフトウェア開発、ナレッジ管理、金融、ライフサイエンス、法務、教育など。
 
-## **9. サポート体制**
+## **10. サポート体制**
 
-<!--
-【ガイドライン】
-- ドキュメント、コミュニティ、公式サポートの3項目を必ず含める
-- URLがあれば記載
--->
+* **ドキュメント**: [Anthropic Docs](https://docs.anthropic.com/) および [Release Notes](https://docs.anthropic.com/en/release-notes/overview) にて、API仕様、SDK v2移行ガイド、プロンプトエンジニアリング、クックブックを公開。
+* **コミュニティ**: 公式DiscordサーバーやGitHubリポジトリ（SDK・MCP関連）にて開発者同士の知見共有が活発。
+* **公式サポート**: ヘルプセンター（チャット/メール）を提供。Team/Enterpriseプランでは優先サポート、専任アカウントマネージャー、Compliance APIによる監査支援が利用可能。
 
-* **ドキュメント**: [Anthropic Docs](https://docs.anthropic.com/) にて、API仕様、プロンプトエンジニアリングガイド、クックブックなどが充実している。
-* **コミュニティ**: 公式Discordサーバーがあり、開発者同士の知見共有が活発に行われている。
-* **公式サポート**: ヘルプセンター（メール対応）があり、Team/Enterpriseプランでは優先サポートが提供される。
+## **11. エコシステムと連携**
 
-## **10. エコシステムと連携**
+### **11.1 API・外部サービス連携**
 
-<!--
-【ガイドライン】
-- API、外部連携、技術スタックとの相性を包括的に記述
--->
+* **API**: REST API（最新バージョン `2026-10-21`、`Authorization: Bearer` 認証）に加え、AWS BedrockおよびGoogle Cloud Vertex AI経由で提供。なお、`2026-10-21` 以降のAPIでは `temperature`、`top_p`、`top_k` などの従来サンプリングパラメータが廃止され、システム側の適応制御へ統一されている。
+* **Model Context Protocol (MCP)**: GitHub、Slack、Google Drive、PostgreSQLなど多様な外部データソースやローカルツールと安全に双方向接続できるオープン標準。
+* **外部サービス連携**: Google Workspace、Microsoft 365、Google Meet（Claude Meetings）、Adobe・Atlassian・HubSpot（ネイティブアプリ埋め込みコネクタ）、Enterprise向けCompliance API連携。
 
-### **10.1 API・外部サービス連携**
-
-<!--
-【ガイドライン】
-- APIの有無と公開状況を明記
-- 主要連携サービスを5-10個リストアップ
--->
-
-* **API**: REST APIおよびAWS Bedrock, Google Vertex AI経由でモデルを利用可能。
-* **Model Context Protocol (MCP)**: Anthropicが推進するオープン標準。Google Drive, Slack, GitHubなどの外部データソースとClaudeを安全に接続するためのプロトコル。
-* **外部サービス連携**: Notion, Slack, Zoom, Google Workspaceなど、MCPサーバーを介して多様なツールと連携可能。
-
-### **10.2 技術スタックとの相性**
-
-<!--
-【ガイドライン】
-- 主要なフレームワークや言語との相性を表形式で整理
-- 相性: ◎ (非常に良い), ◯ (良い), △ (工夫が必要/一部非対応), × (非推奨)
--->
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Python** | ◎ | 公式SDK (`anthropic`) があり、LangChain等のライブラリでも第一級のサポート。 | 特になし。 |
-| **TypeScript / Node.js** | ◎ | 公式SDK (`@anthropic-ai/sdk`) があり、Webアプリ開発に最適。 | 特になし。 |
-| **AWS (Bedrock)** | ◎ | AWSのマネージドサービスとしてClaudeを利用でき、セキュリティやスケーラビリティが高い。 | 最新モデルの反映に若干のタイムラグがある場合がある。 |
-| **Google Cloud (Vertex AI)** | ◎ | Vertex AI Model Gardenから利用可能。Geminiと併用しやすい。 | 同上。 |
+| **Python** | ◎ | 公式SDK (`anthropic` v2.0+) がApache 2.0で提供され、型安全性と非同期処理に優れる。 | SDK v2.0 / API `2026-10-21` では `temperature` 等の廃止に伴う移行対応が必要。 |
+| **TypeScript / Node.js** | ◎ | 公式SDK (`@anthropic-ai/sdk` v2.0+) によりWebアプリやMCPサーバー開発が容易。 | 同上（最新APIヘッダー仕様への追従が必要）。 |
+| **AWS (Bedrock)** | ◎ | VPC内閉域利用やIAM連携、クロスリージョン推論が利用可能。 | Anthropic直販APIより最新モデルの反映に数日〜数週間の差が出る場合がある。 |
+| **Google Cloud (Vertex AI)** | ◎ | Vertex AI Model Gardenから利用でき、マルチリージョン高速モードにも対応。 | 同上。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-<!--
-【ガイドライン】
-- 認証、データ管理、準拠規格の3項目を必ず調査
-- 情報が見つからない場合は「公式サイトで公開されていない。問い合わせが必要。」と記載
-- 「不明」「見つからず」のみの記載は避ける
--->
+* **認証**: Team / EnterpriseプランでSAML SSO、2要素認証、SCIMプロビジョニング、ロールベースアクセス制御（RBAC）に対応。
+* **データ管理**: APIおよび商用プラン（Team / Enterprise）のデータはデフォルトでモデルの学習に使用されない。Enterpriseではカスタムデータ保持ポリシーやZero Data Retention (ZDR) の構成が可能。
+* **準拠規格**: **SOC 2 Type I / Type II**、**ISO/IEC 27001:2022**、**ISO/IEC 42001:2023**（AIマネジメントシステム）、**HIPAA**（Enterprise/APIの適格構成でBAA締結可）。詳細は [Anthropic Trust Center](https://trust.anthropic.com/) で公開。
 
-* **認証**: Team/EnterpriseプランでSSOに対応。
-* **データ管理**: デフォルトでは、API経由のデータはモデルの学習に使用されない。Web版でも設定によりオプトアウト可能。商用利用におけるデータプライバシーを重視。
-* **準拠規格**: **SOC 2 Type II**, **HIPAA** 対応（条件あり）。
+## **13. 操作性 (UI/UX) と学習コスト**
 
-## **12. 操作性 (UI/UX) と学習コスト**
+* **UI/UX**: Artifactsにより会話と成果物を分離してプレビューでき、さらにClaude SheetsやWhiteboardsの統合により、ブラウザ上で直接表計算や図解の共同編集が行える。Claude Desktopでは安定版と最新版のリリースチャネル切替も可能。
+* **学習コスト**: 基本的なチャット利用は直感的で学習コストが低い。一方、Projectsのコンテキスト設計、MCPサーバーの構築、Claude Codeの高度な自動化ワークフローを使いこなすには一定の技術的理解が必要となる。
 
-<!--
-【ガイドライン】
-- 実際の使用感や、類似ツールとの比較を含める
--->
-
-* **UI/UX**: Artifacts機能により、チャットと成果物が分離され、非常に見やすく作業しやすい。Projects機能により、コンテキストの切り替えもスムーズ。
-* **学習コスト**: チャット自体の利用は直感的。ArtifactsやProjects、MCPなどの高度な機能を使いこなすには、ある程度の慣れとドキュメント参照が必要。
-
-## **13. ベストプラクティス**
-
-<!--
-【ガイドライン】
-- ツールを効果的に活用するための推奨事項や、避けるべきアンチパターンを記述
-- 公式ドキュメントのBest Practicesや、熟練エンジニアの知見を参考にする
--->
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * **XMLタグの活用**: 入力データを `<data>` タグなどで囲むことで、Claudeが構造を理解しやすくなり、回答精度が向上する。
-  * **役割の付与 (Role Prompting)**: 「あなたは熟練したPythonエンジニアです」のように役割を与えることで、回答のトーンや質を制御する。
-  * **Artifactsの利用**: コード生成やドキュメント作成時は、Artifactsに出力させることで、後から編集や共有がしやすくなる。
+  * **Adaptive Thinkingの活用**: 複雑な設計やデバッグ時はOpus 5.5 / Fable 5.2の適応的推論に委ね、不要な `temperature` 指定（API v2.0ではエラー）を避ける。
+  * **Prompt Cachingによるコスト最適化**: 巨大なコードベースやシステム指示をキャッシュし、反復呼び出しのコストとレイテンシを削減する。
+  * **XMLタグとProjectsの併用**: 入力データをXMLタグで構造化し、Projectsに必要な資料のみを厳選して登録する。
 * **陥りやすい罠 (Antipatterns)**:
-  * **複雑すぎる一度の指示**: 複数の複雑なタスクを一度に依頼すると混乱することがある。「思考の連鎖 (Chain of Thought)」を促すか、タスクを分割する。
-  * **コンテキストの詰め込みすぎ**: 大量の無関係なドキュメントをProjectに入れると、注意力が散漫になる可能性がある。必要な情報に絞る。
+  * **旧APIパラメータの残存**: `2026-10-21` APIへの移行時に `temperature` や `top_p` をリクエストに残したままにすると400エラーとなるため注意が必要。
+  * **スコープ無制限のメモリ・MCP連携**: エージェントに過剰な権限や無関係なメモリを読み込ませると、コンテキスト汚染や意図しない操作リスクが高まる。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-<!--
-【ガイドライン】
-- 必須調査サイト: G2, Capterra, ITreview（日本語レビュー）のうち該当するもの
-- 追加調査サイト: App Store, Google Play, X(Twitter), Reddit等
-- 総合評価スコアがあれば必ず記載
-- ポジティブ・ネガティブ各3項目以上
--->
-
-* **調査対象**: G2, Twitter (X), 開発者ブログ
-* **総合評価**: 4.6/5.0 (推定: G2等の公式スコアはまだ限定的だが、高評価傾向)
+* **調査対象**: G2, Capterra, X (Twitter)
+* **総合評価**: **4.6〜4.7 / 5.0** (G2)、**4.6 / 5.0** (Capterra・750件以上のレビュー、肯定的評価86%以上)
 * **ポジティブな評価**:
-  * 「コーディングの提案精度がChatGPTより高いと感じる。バグが少ない。」
-  * 「Artifacts機能が革命的。コードをプレビューしながら開発できるのが最高。」
-  * 「日本語の文章が非常に自然で、ビジネスメールの作成に重宝している。」
+  * 「深い推論能力と長文コンテキスト（1Mトークン）の読解精度が高く、大規模なコードベースや資料の分析に最適。（G2 / Capterraより要約）」
+  * 「Claude CodeやArtifactsを使った開発・プロトタイピングの生産性が圧倒的に高い。（G2 / Capterraより要約）」
+  * 「日本語の文章作成において不自然な翻訳調が少なく、実務の文書作成にそのまま使える。」
 * **ネガティブな評価 / 改善要望**:
-  * 「Web検索ができない（または弱い）ので、最新情報の調査には向かない。」
-  * 「使用回数制限（特にFreeプランや混雑時のProプラン）が厳しく、すぐに制限にかかる。」
-  * 「画像生成機能がないので、別途ツールが必要になる。」
+  * 「ヘビーな開発作業やピーク時間帯に、5時間制限や週間メッセージ上限に引っかかりやすい。（G2 / Capterraより要約）」
+  * 「ネイティブの画像生成機能がないため、クリエイティブ用途では他ツールを併用する必要がある。」
+  * 「複数ステップの長時間タスクでは、まれにコンテキストの追跡にばらつきが出ることがある。（Capterraより要約）」
 * **特徴的なユースケース**:
-  * 開発者がArtifactsを使って、簡単なWebアプリやゲームを数分でプロトタイピングする。
-  * ライターが、構成案から記事の執筆、校正までをClaude上のProjectで行う。
+  * エンジニアがClaude CodeとMCPを組み合わせ、リポジトリ解析からテスト修正・PR作成までを半自動化。
+  * ビジネスチームがClaude MeetingsでGoogle Meetの議論をリアルタイムにまとめ、Claude WhiteboardsやSheetsへ即座に構造化。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-<!--
-【ガイドライン】
-- 日付の降順（新しいものが上）
-- 3-10項目をリストアップ
-- 各項目に日付と概要を含める
-- **情報源の優先順位**:
-  1. GitHubリポジトリの `CHANGELOG.md`
-  2. GitHub Releases
-  3. 公式ブログ / ニュース
-- 情報源のURLを記載
--->
-
+* **2026-11-17**: **Claude Desktop リリースチャネル導入**: 安定重視の「Stable」と日次で新機能を試せる「Latest」チャネルの切り替えに対応。
+* **2026-11-12**: **Claude Meetings (Beta) およびオフィス協業ツール群を展開**: Team/Enterprise向けにGoogle Meetへ参加して議事録・成果物をリアルタイム作成する「Claude Meetings」を公開。11月にかけて「Claude Sheets」「Claude Whiteboards」(Beta)、「Claude Data」(GA)、パートナーアプリのネイティブ埋め込みコネクタを順次ロールアウト。
+* **2026-11-09**: **Claude Fable 5.2 / Claude Mythos 5.2 リリース**: 複雑な技術・科学・コーディング課題向けの最新モデルを公開（5.1比で生成速度最大30%向上）。Mythos 5.2はCyber/Life Sciences Verification Program向けに提供。
+* **2026-10-21**: **APIバージョン `2026-10-21` および SDK v2.0 リリース**: `Authorization: Bearer` 認証への移行、`temperature` 等サンプリングパラメータの廃止、クライアントSDK・CLIのApache 2.0ライセンス化を実施。
+* **2026-10-07**: **Claude Haiku 5.5 リリース**: サブエージェントや分類・データ抽出など低遅延・大量処理向けの高速モデルを公開。
+* **2026-09-28**: **Claude Sonnet 5.5 リリース**: 従来比30%以上の高速化とコスト削減を実現した主力モデルを公開。
+* **2026-09-22**: **Claude Opus 5.5 リリース**: 常時Adaptive Thinkingを搭載し、従来Opusよりコスト効率を高めた（入力$4/出力$20 per 1Mトークン）フラッグシップモデルを公開。
 * **2026-05-28**: **Claude Opus 4.8 リリース**: 1Mトークンのコンテキストウィンドウをサポートし、Adaptive thinkingによるトークン効率が向上した最高性能モデルが登場。
 * **2026-05-19**: **Claude Managed Agents 自社ホスト機能追加**: Anthropicのインフラに加え、自社ホスト環境でのエージェントの安全な実行（Self-hosted sandboxes）が可能になった。
 * **2026-04-16**: **Claude Opus 4.7 リリース**: 複雑な推論やエージェンティックコーディングに優れたモデルが登場。
@@ -324,53 +320,39 @@ relationships:
 * **2025-10-XX**: **Claude Computer Use (Beta) 公開**: AIが画面操作を行う機能がAPI経由で利用可能になった。
 * **2025-09-XX**: **Claude Code (Beta) 公開**: 開発者向けの自律型コーディングエージェントの提供を開始。
 
-(出典: [Anthropic Release Notes](https://docs.anthropic.com/en/release-notes/overview))
+(出典: [Anthropic Release Notes](https://docs.anthropic.com/en/release-notes/overview) / [Anthropic News](https://www.anthropic.com/news))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-<!--
-【ガイドライン】
-- 3-5個の類似ツールと比較
-- **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
--->
+### **17.1 機能比較表 (星取表)**
 
-### **16.1 機能比較表 (星取表)**
+| 機能カテゴリ | 機能項目 | 本ツール (Claude) | ChatGPT | Gemini | Grok | DeepSeek |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **モデル性能** | 推論・論理的思考 | ◎<br><small>Fable 5.2 / Opus 5.5</small> | ◎<br><small>GPT-5.4 Thinking</small> | ◎<br><small>Gemini 4 Argon</small> | ◎<br><small>Grok 4.5</small> | ◎<br><small>DeepSeek-V4-Pro</small> |
+| **開発支援** | 自律エージェント・コーディング | ◎<br><small>Claude Code / MCP</small> | ◯<br><small>Codex CLI / Canvas</small> | ◯<br><small>Antigravity / Skills</small> | ◯<br><small>Grok Build / CLI</small> | ◯<br><small>Agentic Coding</small> |
+| **UI/UX・協業** | プレビュー・共同作業 | ◎<br><small>Artifacts / Sheets</small> | ◎<br><small>Canvas / Excel連携</small> | ◯<br><small>Workspace連携</small> | △<br><small>標準チャット中心</small> | △<br><small>標準チャット中心</small> |
+| **検索・情報** | リアルタイム検索 | ◯<br><small>Dynamic Filtering</small> | ◎<br><small>ChatGPT Search</small> | ◎<br><small>Google検索統合</small> | ◎<br><small>Xリアルタイム情報</small> | ◯<br><small>Web検索対応</small> |
+| **マルチモーダル** | 画像・動画生成 | ×<br><small>非対応（SVG可）</small> | ◎<br><small>画像生成対応</small> | ◎<br><small>Imagen / 動画理解</small> | ◎<br><small>画像生成対応</small> | ×<br><small>テキスト/コード中心</small> |
+| **コスト** | APIコスト効率 | ◯<br><small>Haiku 5.5等で最適化</small> | ◯<br><small>GPT-5.5 Instant等</small> | ◯<br><small>Flash系で低価格</small> | ◯<br><small>中価格帯</small> | ◎<br><small>圧倒的低価格・OSS</small> |
 
-| 機能カテゴリ | 機能項目 | 本ツール (Claude) | ChatGPT | Gemini |
-|:---:|:---|:---:|:---:|:---:|
-| **モデル性能** | 推論・論理的思考 | ◎<br><small>Opus 4.8</small> | ◎<br><small>GPT-5.4 Thinking</small> | ◎<br><small>3.1 Pro</small> |
-| **UI/UX** | プレビュー機能 | ◎<br><small>Artifacts</small> | ◎<br><small>Canvas</small> | △<br><small>なし</small> |
-| **開発支援** | 自律エージェント | ◎<br><small>Claude Code</small> | ◯<br><small>GPTs</small> | ◯<br><small>Agent Mode</small> |
-| **検索・情報** | リアルタイム検索 | △<br><small>弱い</small> | ◎<br><small>Search</small> | ◎<br><small>Google検索</small> |
-| **マルチモーダル** | 画像生成 | ×<br><small>なし</small> | ◎<br><small>DALL-E 3</small> | ◎<br><small>Imagen 3</small> |
-
-### **16.2 詳細比較**
-
-<!--
-【ガイドライン】
-- 定性的な違いや、どのようなユーザーに向いているかを記述
--->
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **本ツール (Claude)** | 「安全性」と「推論能力」に特化。ArtifactsやClaude Codeなど開発者向け機能が充実。 | 自然な文章生成、コーディング支援の信頼性、開発ワークフローへの統合（MCP）。 | 画像生成やWeb検索などの「何でも屋」的な機能は持たない。 | コーディング、複雑なドキュメント作成、開発者のパートナーとして利用する場合。 |
-| **ChatGPT** | 圧倒的な知名度と総合力。o1による推論、DALL-Eによる画像生成、Searchによる検索を1つでカバー。 | 多機能性、o1モデルの数学・科学的推論能力、Canvasによる共同作業。 | 特になし（バランスが良い）。 | あらゆるタスクを1つのツールで完結させたい場合。 |
-| **Gemini** | Googleエコシステムとの統合。ネイティブマルチモーダルと巨大なコンテキストウィンドウ。 | 長時間の動画や大量のドキュメントを一度に処理できる。Google Workspace連携。 | 指示従順性やコーディングの微細な制御でClaudeに劣る場合がある。 | Google Workspaceユーザー、動画や大量データの分析が必要な場合。 |
+| **本ツール (Claude)** | 「安全性」と「推論・コーディング」に強み。Claude Code・MCP・Sheets/Meetingsなど実務統合が充実。 | 高精度なコード生成、自然な日本語、Artifactsと協業スイート、1Mコンテキスト。 | ネイティブ画像生成や動画入力に非対応、ヘビー利用時のレート制限。 | ソフトウェア開発、複雑な文書・データ分析、MCPを活用した業務自動化を重視する場合。 |
+| **ChatGPT** | 圧倒的な汎用性とマルチモーダル対応。GPT-5.5 InstantとGPT-5.4 Thinkingを搭載。 | Search、画像生成、Canvas、Excel/Sheets統合などオールインワンの完成度。 | 高度な推論モードは上位プランに限定される場合がある。 | 検索・画像生成・対話・業務連携を1つのツールで幅広く完結させたい場合。 |
+| **Gemini** | Googleエコシステムとの深い統合とネイティブマルチモーダル性能（Gemini 4 Argon / 3.8）。 | 動画・音声を含む長大コンテキスト処理、Google Workspaceとのシームレスな連携。 | 微細なコーディング制御や開発者向けエージェント体験ではClaudeに譲る場面がある。 | Google Workspace中心の業務、動画・音声解析、GCP連携を重視する場合。 |
+| **Grok** | xAIによる開発でX（旧Twitter）のリアルタイムデータへの直接アクセスが最大の特徴（Grok 4.5）。 | 最新トレンドの即時把握、推論労力（Low/Medium/High）の制御。 | オフィス協業スイートやエンタープライズ向けSaaSエコシステムは発展途上。 | SNS上のリアルタイム情報分析や、OpenAI互換APIでの迅速な組み込みを求める場合。 |
+| **DeepSeek** | オープンウェイトと圧倒的な低価格APIを実現する高性能モデル群（DeepSeek-V4シリーズ）。 | 1Mコンテキスト標準対応ながら極めて低いAPI単価、セルフホストの選択肢。 | データ保管場所（地政学的リスク）への懸念、日本語ニュアンスのばらつき。 | コスト最優先の大量バッチ処理や、自社環境でのオープンモデル運用を行う場合。 |
 
-## **17. 総評**
-
-<!--
-【ガイドライン】
-- 総合評価、推奨チーム、選択ポイントの3項目を必ず含める
-- 客観的で中立的な評価を心がける
--->
+## **18. 総評**
 
 * **総合的な評価**:
-  Claudeは、特に「開発者」と「ナレッジワーカー」にとって最高のパートナーとなるAIである。Claude 4.8 / 4.5による高い知能に加え、ArtifactsやClaude Codeといった機能は、チャットボットの枠を超えて実際の作業を代行・支援する「エージェント」へと進化している。汎用的な検索やエンターテインメント用途よりも、実務における生産性向上に特化したツールと言える。
+  Claudeは2026年後半に入り、Claude 5.5ファミリーおよびFable 5.2 / Mythos 5.2の投入によって推論・コーディング性能をさらに引き上げるとともに、Claude Code・Cowork・MCP・協業スイート（Sheets / Whiteboards / Meetings / Data）を統合した総合的な「実務エージェント基盤」へと進化した。ネイティブ画像生成を持たない点やプランごとの利用上限には留意が必要だが、知識労働とソフトウェア開発の生産性向上においては極めて高い完成度を誇る。
 * **推奨されるチームやプロジェクト**:
-  * ソフトウェア開発チーム（コード生成、レビュー、リファクタリング）。
-  * 複雑なドキュメント作成や分析を行うリサーチ・法務・コンサルティングチーム。
-  * 高品質な日本語コンテンツを作成するマーケティングチーム。
+  * ソフトウェア開発チーム（Claude CodeやMCPを用いた設計・実装・大規模リファクタリング）。
+  * リサーチ、法務、金融、コンサルティングなど長文資料の精密な分析・作成を要するチーム。
+  * 高品質な日本語コンテンツ作成や、Sheets/Whiteboards/Meetingsを活用した協業ワークフローを構築したい組織。
 * **選択時のポイント**:
-  * 「コーディング支援」と「文章の質」を最優先するならClaude一択である。
-  * 「検索」や「画像生成」も含めたオールインワンの便利さを求めるならChatGPT、Google環境での連携や大量データ処理を重視するならGeminiを選ぶべきである。
+  * 「コーディング支援」「文章・分析の質」「エージェント連携（MCP）」を最優先するならClaudeが最有力候補となる。
+  * 画像生成を含めた汎用的なオールインワン体験を求めるならChatGPT、Google Workspaceや動画・音声解析を重視するならGemini、APIコストやOSS運用を最優先するならDeepSeekとの比較検討が有効である。
