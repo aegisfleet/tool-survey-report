@@ -45,6 +45,7 @@ relationships:
   related_tools:
     - Vercel
     - CopilotKit
+    - AG-UI
 ---
 # **A2UI 調査レポート**
 
