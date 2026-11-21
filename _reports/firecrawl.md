@@ -1,62 +1,59 @@
 ---
-title: "Firecrawl 調査レポート"
-tool_name: "Firecrawl"
-tool_reading: "ファイヤークロール / ファイアクロール"
-category: "データ抽出/変換"
-developer: "Firecrawl (Mendable)"
-official_site: "https://www.firecrawl.dev/"
-date: "2026-11-21"
-last_updated: "2026-11-21"
+title: Firecrawl 調査レポート
+tool_name: Firecrawl
+tool_reading: ファイヤークロール / ファイアクロール
+category: データ抽出/変換
+developer: Firecrawl (Mendable)
+official_site: https://www.firecrawl.dev/
+date: '2026-11-21'
+last_updated: '2026-11-21'
 tags:
-  - "Webスクレイピング"
-  - "オープンソース"
-  - "AI"
-  - "API"
-  - "エージェント"
-description: "Webサイト全体をクロール・スクレイピングし、LLMやAIエージェントが扱いやすいクリーンなMarkdownや構造化JSONへ変換するオープンソースのWebデータインフラ。"
-
+  - Webスクレイピング
+  - オープンソース
+  - AI
+  - API
+  - エージェント
+description: Webサイト全体をクロール・スクレイピングし、LLMやAIエージェントが扱いやすいクリーンなMarkdownや構造化JSONへ変換するオープンソースのWebデータインフラ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（有料 $19/月〜）"
+  starting_price: 無料（有料 $19/月〜）
   target_users:
-    - "開発者"
-    - "AIエージェントビルダー"
-    - "データエンジニア"
-  latest_highlight: "2026年11月にFirecrawl Local・MCP v3・UltraSearch・Alexandria拡張を相次いでリリース"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエージェントビルダー
+    - データエンジニア
+  latest_highlight: 2026年11月にFirecrawl Local・MCP v3・UltraSearch・Alexandria拡張を相次いでリリース
+  update_frequency: 高
 evaluation:
   score: 90
   base_score: 70
   plus_points:
     - point: 7
-      reason: "動的SPA・アンチボット回避・PDF解析まで一気通貫でLLM向けMarkdown/JSONに変換できる充実した機能群（/scrape, /crawl, /map, /search, /interact, /parse）"
+      reason: 動的SPA・アンチボット回避・PDF解析まで一気通貫でLLM向けMarkdown/JSONに変換できる充実した機能群（/scrape, /crawl, /map, /search, /interact, /parse）
     - point: 5
-      reason: "1,000クレジット/月の無料プランに加え、AGPL-3.0 OSS版や単一バイナリ「Firecrawl Local」でローカル無料実行も可能"
+      reason: 1,000クレジット/月の無料プランに加え、AGPL-3.0 OSS版や単一バイナリ「Firecrawl Local」でローカル無料実行も可能
     - point: 5
-      reason: "SOC 2 Type II準拠やZero Data Retention（ZDR）、PII自動マスキングなどエンタープライズ向けセキュリティが充実"
+      reason: SOC 2 Type II準拠やZero Data Retention（ZDR）、PII自動マスキングなどエンタープライズ向けセキュリティが充実
     - point: 5
-      reason: "GitHub 20万スター超の活発なコミュニティと、高頻度な機能アップデート（MCP v3、Alexandria等）"
+      reason: GitHub 20万スター超の活発なコミュニティと、高頻度な機能アップデート（MCP v3、Alexandria等）
     - point: 3
-      reason: "G2で4.6〜4.7/5.0の高評価を獲得しており、AI/RAG開発基盤として高い信頼性"
+      reason: G2で4.6〜4.7/5.0の高評価を獲得しており、AI/RAG開発基盤として高い信頼性
   minus_points:
     - point: -3
-      reason: "公式サイト・ドキュメント・サポートは英語中心で、日本語の公式サポートやUIローカライズが不足"
+      reason: 公式サイト・ドキュメント・サポートは英語中心で、日本語の公式サポートやUIローカライズが不足
     - point: -2
-      reason: "大規模クロール時にクレジット消費が急速に増えコストが嵩みやすい点、およびAGPL-3.0ライセンスによる商用セルフホスト時の制約"
-  summary: "AIエージェントやRAG向けのWebデータ抽出基盤として機能・開発速度・セキュリティの全てが高水準だが、大規模利用時のクレジット消費と英語中心のドキュメントには留意が必要"
-
+      reason: 大規模クロール時にクレジット消費が急速に増えコストが嵩みやすい点、およびAGPL-3.0ライセンスによる商用セルフホスト時の制約
+  summary: AIエージェントやRAG向けのWebデータ抽出基盤として機能・開発速度・セキュリティの全てが高水準だが、大規模利用時のクレジット消費と英語中心のドキュメントには留意が必要
 links:
-  github: "https://github.com/firecrawl/firecrawl"
-  deepwiki: "https://deepwiki.com/firecrawl/firecrawl"
-  documentation: "https://docs.firecrawl.dev/"
+  github: https://github.com/firecrawl/firecrawl
+  deepwiki: https://deepwiki.com/firecrawl/firecrawl
+  documentation: https://docs.firecrawl.dev/
 relationships:
   related_tools:
-    - "Scrapling"
-    - "ScraperAPI"
-    - "Browserbase"
-    - "MarkItDown"
+    - Scrapling
+    - ScraperAPI
+    - Browserbase
+    - MarkItDown
 ---
 
 # **Firecrawl 調査レポート**
