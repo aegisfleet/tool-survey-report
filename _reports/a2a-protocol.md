@@ -36,6 +36,7 @@ quick_summary:
 relationships:
   related_tools:
     - Microsoft Agent Framework
+    - AG-UI
 tags:
   - エージェント
   - オープンソース

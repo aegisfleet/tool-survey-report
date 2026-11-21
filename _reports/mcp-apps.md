@@ -47,6 +47,7 @@ relationships:
     - Visual Studio Code
     - Claude Code
     - Agent Skills
+    - AG-UI
 ---
 # **MCP Apps 調査レポート**
 

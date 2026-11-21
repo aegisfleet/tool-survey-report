@@ -45,6 +45,7 @@ links:
 relationships:
   related_tools:
     - A2UI
+    - AG-UI
 ---
 
 # **CopilotKit 調査レポート**
