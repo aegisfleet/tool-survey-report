@@ -235,7 +235,7 @@ relationships:
 | **開発連携** | Jira同期 | ◎<br><small>双方向・強力</small> | ◯<br><small>ウィジェットで対応</small> | ×<br><small>非対応</small> | ◯<br><small>Jira連携アドオンあり</small> |
 | **デザイン** | プロトタイプ | ◎<br><small>Miro Prototypes</small> | ◎<br><small>強力なプロトタイピング</small> | ◯<br><small>簡易的な画面遷移</small> | ×<br><small>非対応</small> |
 | **Web構築** | サイト公開 | ×<br><small>非対応</small> | ◯<br><small>Figma Sites (Beta)</small> | ◯<br><small>Webサイト作成機能</small> | ×<br><small>非対応</small> |
-| **AI機能** | AI支援/エージェント | ◎<br><small>Miro AI/Sidekicks/Flows</small> | ◎<br><small>Figma Agent (Beta)</small> | ◎<br><small>全機能に統合</small> | ×<br><small>非対応</small> |
+| **AI機能** | AI支援/エージェント | ◎<br><small>Miro AI/Sidekicks/Flows</small> | ◎<br><small>Figma Agent (Beta)</small> | ◎<br><small>全機能に統合</small> | ◯<br><small>AI Generate/MCP対応</small> |
 | **非機能要件** | 日本語対応 | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> | ◎<br><small>完全対応</small> |
 
 ### **16.2 詳細比較**
