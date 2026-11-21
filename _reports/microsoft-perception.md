@@ -1,58 +1,55 @@
 ---
-title: "Microsoft Perception 調査レポート"
-tool_name: "Microsoft Perception"
-tool_reading: "マイクロソフト パーセプション"
-category: "セキュリティ"
-developer: "Microsoft"
-official_site: "https://www.microsoft.com/ja-jp/security/business/microsoft-perception-agentic-system"
-date: "2026-11-21"
-last_updated: "2026-11-21"
+title: Microsoft Perception 調査レポート
+tool_name: Microsoft Perception
+tool_reading: マイクロソフト パーセプション
+category: セキュリティ
+developer: Microsoft
+official_site: https://www.microsoft.com/ja-jp/security/business/microsoft-perception-agentic-system
+date: '2026-11-21'
+last_updated: '2026-11-21'
 tags:
-  - "AI"
-  - "セキュリティ"
-  - "エージェント"
-  - "クラウド"
-  - "自動化"
-description: "Red・Blue・Greenの専門AIエージェントがプレイブックを通じて協調し、攻撃シミュレーションから脅威検知・調査、修復・防御強化までをマシン・スピードで自律実行するエンタープライズ向けエージェンティックセキュリティシステム。"
-
+  - AI
+  - セキュリティ
+  - エージェント
+  - クラウド
+  - 自動化
+description: Red・Blue・Greenの専門AIエージェントがプレイブックを通じて協調し、攻撃シミュレーションから脅威検知・調査、修復・防御強化までをマシン・スピードで自律実行するエンタープライズ向けエージェンティックセキュリティシステム。
 quick_summary:
   has_free_plan: false
   is_oss: false
-  starting_price: "従量課金 (Pay-As-You-Go) / 要問い合わせ"
+  starting_price: 従量課金 (Pay-As-You-Go) / 要問い合わせ
   target_users:
-    - "SecOps・SOCアナリスト"
-    - "CISO・セキュリティ管理者"
-    - "クラウドセキュリティエンジニア"
-  latest_highlight: "2026年11月17日のMicrosoft Ignite 2026にて一般提供（GA）を開始し、Red/Blue/Greenエージェントの協調運用を実現"
-  update_frequency: "高"
-
+    - SecOps・SOCアナリスト
+    - CISO・セキュリティ管理者
+    - クラウドセキュリティエンジニア
+  latest_highlight: 2026年11月17日のMicrosoft Ignite 2026にて一般提供（GA）を開始し、Red/Blue/Greenエージェントの協調運用を実現
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 6
-      reason: "Red（攻撃検証）・Blue（検知・調査）・Green（修復・強化）の3チーム協調による閉ループ型自律防御"
+      reason: Red（攻撃検証）・Blue（検知・調査）・Green（修復・強化）の3チーム協調による閉ループ型自律防御
     - point: 5
-      reason: "Microsoft Defender、Sentinel、Entra、Intune、Purviewおよびマルチクラウド（AWS/GCP等）との包括的な統合"
+      reason: Microsoft Defender、Sentinel、Entra、Intune、Purviewおよびマルチクラウド（AWS/GCP等）との包括的な統合
     - point: 4
-      reason: "サイバー特化型モデル（MAI-Cyber-Flash系列）とオーケストレーションハーネスによる処理効率とコスト最適化"
+      reason: サイバー特化型モデル（MAI-Cyber-Flash系列）とオーケストレーションハーネスによる処理効率とコスト最適化
     - point: 3
-      reason: "Entra IDベースの最小権限・承認フローと全操作の監査ログ記録による高いガバナンス性"
+      reason: Entra IDベースの最小権限・承認フローと全操作の監査ログ記録による高いガバナンス性
   minus_points:
     - point: -3
-      reason: "一般提供（GA）開始直後（2026年11月）のため一部機能がプレビュー段階であり、第三者レビューの蓄積が少ない"
+      reason: 一般提供（GA）開始直後（2026年11月）のため一部機能がプレビュー段階であり、第三者レビューの蓄積が少ない
     - point: -2
-      reason: "効果を最大化するにはMicrosoft Securityエコシステムとの連携設計およびガードレール・プレイブック整備の学習コストが必要"
-  summary: "Red/Blue/Greenエージェントの協調とMicrosoft Securityエコシステム統合により、マシン・スピードの自律防御と人間のガバナンスを両立する次世代セキュリティ基盤。"
-
+      reason: 効果を最大化するにはMicrosoft Securityエコシステムとの連携設計およびガードレール・プレイブック整備の学習コストが必要
+  summary: Red/Blue/Greenエージェントの協調とMicrosoft Securityエコシステム統合により、マシン・スピードの自律防御と人間のガバナンスを両立する次世代セキュリティ基盤。
 links:
-  documentation: "https://learn.microsoft.com/ja-jp/security/"
+  documentation: https://learn.microsoft.com/ja-jp/security/
 relationships:
   related_tools:
-    - "Microsoft Defender for Cloud"
-    - "Google AI Threat Defense"
-    - "AWS Security Hub"
-    - "Strix"
+    - Microsoft Defender for Cloud
+    - Google AI Threat Defense
+    - AWS Security Hub
+    - Strix
 ---
 
 # **Microsoft Perception 調査レポート**
