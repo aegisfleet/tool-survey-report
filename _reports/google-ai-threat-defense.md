@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - AWS Security Hub
     - Microsoft Defender for Cloud
+    - Microsoft Perception
 ---
 
 # **Google AI Threat Defense 調査レポート**

@@ -50,6 +50,7 @@ relationships:
     - Amazon GuardDuty
     - AWS Security Hub
     - Google AI Threat Defense
+    - Microsoft Perception
 ---
 
 # **Microsoft Defender for Cloud 調査レポート**
