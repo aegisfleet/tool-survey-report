@@ -2,7 +2,7 @@
 title: AWS Quick 調査レポート
 tool_name: AWS Quick
 tool_reading: エーダブリューエス クイック
-category: 自律型AIエージェント
+category: エンタープライズマルチエージェント
 developer: Amazon Web Services (AWS)
 official_site: https://aws.amazon.com/jp/quick/
 date: '2026-11-22'

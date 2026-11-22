@@ -2,7 +2,7 @@
 title: OpenDots 調査レポート
 tool_name: OpenDots
 tool_reading: オープンドッツ
-category: 自律型AIエージェント
+category: 汎用パーソナルアシスタント
 developer: CopilotKit
 official_site: https://www.copilotkit.ai/opendots
 date: '2026-10-02'
