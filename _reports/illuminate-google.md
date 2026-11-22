@@ -48,6 +48,7 @@ relationships:
     - LilysAI
     - ChatGPT
     - TextFX
+    - Dreambeans
 ---
 # **Google Illuminate 調査レポート**
 
