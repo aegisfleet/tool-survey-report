@@ -1,59 +1,59 @@
 ---
-title: "PaperOrchestra 調査レポート"
-tool_name: "PaperOrchestra"
-tool_reading: "ペーパーオーケストラ"
-category: "マルチエージェントフレームワーク"
-developer: "Google Cloud AI Research (Google Research)"
-official_site: "https://github.com/google-research/paper-orchestra"
-date: "2026-11-23"
-last_updated: "2026-11-23"
+title: PaperOrchestra 調査レポート
+tool_name: PaperOrchestra
+tool_reading: ペーパーオーケストラ
+category: マルチエージェントフレームワーク
+developer: Google Cloud AI Research (Google Research)
+official_site: https://github.com/google-research/paper-orchestra
+date: '2026-11-23'
+last_updated: '2026-11-23'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "生成AI"
-  - "大規模言語モデル"
-  - "自動化"
-  - "Python"
-description: "粗い研究アイデアや実験ログなどの未構造化資料から、文献調査・図表生成・模擬査読を経て投稿可能なLaTeX論文を自動生成するマルチエージェントフレームワーク。"
+  - AI
+  - オープンソース
+  - エージェント
+  - 生成AI
+  - 大規模言語モデル
+  - 自動化
+  - Python
+description: 粗い研究アイデアや実験ログなどの未構造化資料から、文献調査・図表生成・模擬査読を経て投稿可能なLaTeX論文を自動生成するマルチエージェントフレームワーク。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（OSS・API従量課金のみ）"
+  starting_price: 無料（OSS・API従量課金のみ）
   target_users:
-    - "AI研究者・大学院生"
-    - "研究開発エンジニア"
-    - "論文執筆ワークフロー自動化開発者"
-  latest_highlight: "2026年11月15日にプロバイダー別APIキーの任意化（使用モデルのみ必須化）、依存関係の補完、LaTeXプロンプトのエスケープ修正を実施。"
-  update_frequency: "中"
+    - AI研究者・大学院生
+    - 研究開発エンジニア
+    - 論文執筆ワークフロー自動化開発者
+  latest_highlight: 2026年11月15日にプロバイダー別APIキーの任意化（使用モデルのみ必須化）、依存関係の補完、LaTeXプロンプトのエスケープ修正を実施。
+  update_frequency: 中
 evaluation:
   score: 82
   base_score: 70
   plus_points:
     - point: 6
-      reason: "アウトライン作成・文献検索・図表生成（PaperBanana統合）・模擬査読ループを統合した高度なマルチエージェントパイプライン"
+      reason: アウトライン作成・文献検索・図表生成（PaperBanana統合）・模擬査読ループを統合した高度なマルチエージェントパイプライン
     - point: 5
-      reason: "Apache-2.0ライセンスの完全オープンソースであり、Streamlit UIとCLIの両方を提供"
+      reason: Apache-2.0ライセンスの完全オープンソースであり、Streamlit UIとCLIの両方を提供
     - point: 4
-      reason: "Semantic Scholar APIとWeb検索のハイブリッド文献調査により、ハルシネーションを抑制した正確な引用を実現"
+      reason: Semantic Scholar APIとWeb検索のハイブリッド文献調査により、ハルシネーションを抑制した正確な引用を実現
     - point: 3
-      reason: "GeminiおよびOpenAIモデルの両方をバックエンドとして選択可能"
+      reason: GeminiおよびOpenAIモデルの両方をバックエンドとして選択可能
   minus_points:
     - point: -3
-      reason: "日本語UIおよび日本語学会テンプレートが未整備であり、英語論文（CVPR/ICLR等）が前提"
+      reason: 日本語UIおよび日本語学会テンプレートが未整備であり、英語論文（CVPR/ICLR等）が前提
     - point: -3
-      reason: "Googleの公式サポート対象外の研究プロジェクトであり、環境構築（LaTeX・APIキー設定）や外部APIコストが自己負担"
-  summary: "研究の実験フェーズと切り離して『論文執筆・図表作成・査読改善』に特化した高性能OSSマルチエージェント基盤だが、英語学会向けかつ研究段階のツールである点に留意が必要。"
+      reason: Googleの公式サポート対象外の研究プロジェクトであり、環境構築（LaTeX・APIキー設定）や外部APIコストが自己負担
+  summary: 研究の実験フェーズと切り離して『論文執筆・図表作成・査読改善』に特化した高性能OSSマルチエージェント基盤だが、英語学会向けかつ研究段階のツールである点に留意が必要。
 links:
-  github: "https://github.com/google-research/paper-orchestra"
-  documentation: "https://yiwen-song.github.io/paper_orchestra/"
+  github: https://github.com/google-research/paper-orchestra
+  documentation: https://yiwen-song.github.io/paper_orchestra/
 relationships:
   related_tools:
-    - "ChatDev"
-    - "CrewAI"
-    - "Deep Agents"
-    - "Google Illuminate"
-    - "NotebookLM"
+    - ChatDev
+    - CrewAI
+    - Deep Agents
+    - Google Illuminate
+    - NotebookLM
 ---
 
 # **PaperOrchestra 調査レポート**
