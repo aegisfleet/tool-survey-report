@@ -2,7 +2,7 @@
 title: Microsoft Perception 調査レポート
 tool_name: Microsoft Perception
 tool_reading: マイクロソフト パーセプション
-category: セキュリティ
+category: セキュリティ/脅威インテリジェンス
 developer: Microsoft
 official_site: https://www.microsoft.com/ja-jp/security/business/microsoft-perception-agentic-system
 date: '2026-11-21'

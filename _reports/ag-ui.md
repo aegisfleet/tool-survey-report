@@ -2,7 +2,7 @@
 title: AG-UI 調査レポート
 tool_name: AG-UI
 tool_reading: エージーユーアイ
-category: エージェントスキル/標準仕様
+category: エージェントプロトコル
 developer: CopilotKit (Tawkit, Inc.) / AG-UI Community
 official_site: https://ag-ui.com
 date: '2026-11-22'

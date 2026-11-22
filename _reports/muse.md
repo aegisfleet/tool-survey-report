@@ -2,7 +2,7 @@
 title: Muse 調査レポート
 tool_name: Muse
 tool_reading: ミューズ
-category: 自律型AIエージェント
+category: 汎用パーソナルアシスタント
 developer: Meta
 official_site: https://muse.ai/
 date: '2026-10-24'
