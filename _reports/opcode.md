@@ -47,6 +47,7 @@ relationships:
   related_tools:
     - OpenHands
     - Devin
+    - Roola
 ---
 # **Opcode 調査レポート**
 
