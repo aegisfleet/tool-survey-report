@@ -42,6 +42,7 @@ links:
   documentation: https://docs.aws.amazon.com/quicksuite/latest/userguide/
 relationships:
   related_tools:
+    - AWS Quick
     - Amazon QuickSight
     - Microsoft 365 Copilot
 ---

@@ -48,6 +48,7 @@ relationships:
     - Tableau
     - Data Studio
     - Amazon Quick
+    - AWS Quick
 ---
 
 # **Amazon QuickSight 調査レポート**
