@@ -228,11 +228,6 @@
 // Home page ambient mesh background
 body.layout-home {
   background-image: var(--home-bg-mesh);
-  background-attachment: fixed;
-
-  @include media-breakpoint-down(md) {
-    background-attachment: scroll;
-  }
 
   .main-content {
     background-color: transparent;

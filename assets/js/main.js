@@ -947,6 +947,7 @@ function generateTableOfContents() {
   desktopToc.id = 'floating-toc-desktop';
   desktopToc.className = 'floating-toc-desktop';
   desktopToc.setAttribute('aria-label', 'フローティング目次 (デスクトップ)');
+  desktopToc.setAttribute('google-side-rail-overlap', 'false');
 
   const desktopInner = document.createElement('div');
   desktopInner.className = 'floating-toc-inner';
@@ -980,6 +981,7 @@ function generateTableOfContents() {
   // 固定表示の目次がレイアウト上で占める幅を確保するスペーサー
   const desktopSlot = document.createElement('div');
   desktopSlot.className = 'floating-toc-slot';
+  desktopSlot.setAttribute('google-side-rail-overlap', 'false');
   desktopSlot.appendChild(desktopToc);
 
   // 目次を右へ格納した際に表示する再展開タブ
@@ -989,6 +991,7 @@ function generateTableOfContents() {
   desktopReopenBtn.setAttribute('aria-expanded', 'false');
   desktopReopenBtn.setAttribute('aria-label', '目次を表示する');
   desktopReopenBtn.setAttribute('title', '目次を表示する');
+  desktopReopenBtn.setAttribute('google-side-rail-overlap', 'false');
   desktopReopenBtn.innerHTML = `
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <polyline points="14 7 9 12 14 17"></polyline>
