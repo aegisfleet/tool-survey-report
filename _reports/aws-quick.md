@@ -1,57 +1,54 @@
 ---
-title: "AWS Quick 調査レポート"
-tool_name: "AWS Quick"
-tool_reading: "エーダブリューエス クイック"
-category: "自律型AIエージェント"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://aws.amazon.com/jp/quick/"
-date: "2026-11-22"
-last_updated: "2026-11-22"
+title: AWS Quick 調査レポート
+tool_name: AWS Quick
+tool_reading: エーダブリューエス クイック
+category: 自律型AIエージェント
+developer: Amazon Web Services (AWS)
+official_site: https://aws.amazon.com/jp/quick/
+date: '2026-11-22'
+last_updated: '2026-11-22'
 tags:
-  - "AI"
-  - "エージェント"
-  - "自律型"
-  - "生成AI"
-  - "SaaS"
-description: "自律型AIエージェント、高度リサーチ、ワークフロー自動化、BI（QuickSight）を統合したAWSのエンタープライズ向けAIワークスペース。"
-
+  - AI
+  - エージェント
+  - 自律型
+  - 生成AI
+  - SaaS
+description: 自律型AIエージェント、高度リサーチ、ワークフロー自動化、BI（QuickSight）を統合したAWSのエンタープライズ向けAIワークスペース。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "無料（有料プラン $3/月〜）"
+  starting_price: 無料（有料プラン $3/月〜）
   target_users:
-    - "ビジネスアナリスト・営業"
-    - "開発者・IT管理者"
-    - "エンタープライズ企業"
-  latest_highlight: "2026年11月にAmazon QuickからAWS Quickへリブランドし、プラグイン機能や日本語ネイティブ対応を追加"
-  update_frequency: "高"
-
+    - ビジネスアナリスト・営業
+    - 開発者・IT管理者
+    - エンタープライズ企業
+  latest_highlight: 2026年11月にAmazon QuickからAWS Quickへリブランドし、プラグイン機能や日本語ネイティブ対応を追加
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "BI（QuickSight）と自律型AIエージェント（Flows/Automate）、リサーチ機能を単一ワークスペースに統合"
+      reason: BI（QuickSight）と自律型AIエージェント（Flows/Automate）、リサーチ機能を単一ワークスペースに統合
     - point: 5
-      reason: "SOC 2・ISO 27001・FedRAMP・HIPAA等の厳格なコンプライアンスとKMS/IAM Identity Centerによる企業ガバナンス"
+      reason: SOC 2・ISO 27001・FedRAMP・HIPAA等の厳格なコンプライアンスとKMS/IAM Identity Centerによる企業ガバナンス
     - point: 4
-      reason: "2026年11月のアップデートで日本語ネイティブ対応やMCPコネクタ、プラグイン機能が拡充"
+      reason: 2026年11月のアップデートで日本語ネイティブ対応やMCPコネクタ、プラグイン機能が拡充
     - point: 3
-      reason: "個人向け無料プラン（Free）から組織向け段階的プラン（Essentials/Professional）まで柔軟な料金体系"
+      reason: 個人向け無料プラン（Free）から組織向け段階的プラン（Essentials/Professional）まで柔軟な料金体系
   minus_points:
     - point: -2
-      reason: "組織向けProfessionalプラン利用時にアカウントあたり月額$250のインフラストラクチャ基本料金が発生する"
-  summary: "データ可視化から深層リサーチ、MCP連携による業務自動化までを一貫してセキュアに実現する強力なエンタープライズAI基盤。"
-
+      reason: 組織向けProfessionalプラン利用時にアカウントあたり月額$250のインフラストラクチャ基本料金が発生する
+  summary: データ可視化から深層リサーチ、MCP連携による業務自動化までを一貫してセキュアに実現する強力なエンタープライズAI基盤。
 links:
-  documentation: "https://docs.aws.amazon.com/quicksuite/"
+  documentation: https://docs.aws.amazon.com/quicksuite/
 relationships:
   related_tools:
-    - "Amazon Quick"
-    - "Amazon QuickSight"
-    - "Microsoft 365 Copilot"
-    - "ChatGPT for Work"
-    - "Tableau"
+    - Amazon Quick
+    - Amazon QuickSight
+    - Microsoft 365 Copilot
+    - ChatGPT for Work
+    - Tableau
 ---
 
 # **AWS Quick 調査レポート**
