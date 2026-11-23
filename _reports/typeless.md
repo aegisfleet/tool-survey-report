@@ -42,6 +42,7 @@ relationships:
   related_tools:
     - OpenHinoVoice
     - Aqua Voice
+    - Hex
 ---
 
 # **Typeless 調査レポート**

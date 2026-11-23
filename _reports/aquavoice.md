@@ -44,6 +44,7 @@ relationships:
     - VibeVoice
     - Notely Voice
     - OpenHinoVoice
+    - Hex
 ---
 
 # **Aqua Voice 調査レポート**

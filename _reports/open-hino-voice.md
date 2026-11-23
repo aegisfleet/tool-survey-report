@@ -46,6 +46,7 @@ relationships:
     - Aqua Voice
     - Typeless
     - Meltype
+    - Hex
 ---
 
 # **OpenHinoVoice 調査レポート**
