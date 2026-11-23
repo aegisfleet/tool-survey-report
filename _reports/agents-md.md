@@ -2,7 +2,7 @@
 title: AGENTS.md 調査レポート
 tool_name: AGENTS.md
 tool_reading: エージェンツ ドット エムディー
-category: AI開発ワークフロー
+category: エージェントスキル/標準仕様
 developer: LF Projects, LLC
 official_site: https://agents.md/
 date: '2026-02-03'
