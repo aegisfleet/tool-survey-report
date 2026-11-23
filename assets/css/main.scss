@@ -265,3 +265,26 @@ body:not(.keyboard-navigation) {
     }
   }
 }
+
+// Side-rail ad scroll stability: reserve lazy-loaded Bluesky iframe height
+// to avoid mid-scroll layout shifts, and keep scroll progress bar non-interactive.
+.bluesky-widget-section .bluesky-widget-grid {
+  min-height: 500px;
+
+  @include media-breakpoint-down(md) {
+    min-height: 400px;
+  }
+}
+
+.scroll-progress-bar {
+  pointer-events: none;
+}
+
+// Offset scrollIntoView targets (#reports-grid on trending/home) below the pinned desktop header
+#reports-grid {
+  scroll-margin-top: 84px;
+
+  @include media-breakpoint-down(sm) {
+    scroll-margin-top: 70px;
+  }
+}
