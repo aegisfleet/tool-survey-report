@@ -16,6 +16,12 @@
 
   &.header-hidden {
     transform: translateY(-100%);
+
+    // Keep sticky header stationary on desktop (>= 992px) so Google AdSense
+    // side rail ads do not jump vertically when scrolling.
+    @include media-breakpoint-up(lg) {
+      transform: none;
+    }
   }
 }
 
