@@ -48,6 +48,7 @@ relationships:
     - PraisonAI
     - Microsoft Agent Framework
     - ChatDev
+    - CopilotKit
 ---
 # **CrewAI 調査レポート**
 
