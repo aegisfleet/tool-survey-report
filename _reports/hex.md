@@ -1,59 +1,56 @@
 ---
-title: "Hex 調査レポート"
-tool_name: "Hex"
-tool_reading: "ヘックス"
-category: "デスクトップ/環境操作"
-developer: "Anomaly (Kit Langton)"
-official_site: "https://anoma.ly/hex"
-date: "2026-11-24"
-last_updated: "2026-11-24"
+title: Hex 調査レポート
+tool_name: Hex
+tool_reading: ヘックス
+category: デスクトップ/環境操作
+developer: Anomaly (Kit Langton)
+official_site: https://anoma.ly/hex
+date: '2026-11-24'
+last_updated: '2026-11-24'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "音声入力"
-  - "ローカルAI"
-  - "開発者ツール"
-description: "macOS・Windows・Linuxに対応したRust製のオープンソース・ローカルファースト音声ディクテーション（音声入力）アプリ。オンデバイス推論により音声データを外部に送信せず、高速かつ高精度な文字起こしとカスタム変換を実現する。"
-
+  - AI
+  - オープンソース
+  - 音声入力
+  - ローカルAI
+  - 開発者ツール
+description: macOS・Windows・Linuxに対応したRust製のオープンソース・ローカルファースト音声ディクテーション（音声入力）アプリ。オンデバイス推論により音声データを外部に送信せず、高速かつ高精度な文字起こしとカスタム変換を実現する。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "開発者"
-    - "プライバシー重視ユーザー"
-    - "マルチOS利用者"
-  latest_highlight: "2026年11月にv3.4.0をリリースし、Orukeet等の新モデル追加や画面録画・注釈・会議録音機能を強化"
-  update_frequency: "高"
-
+    - 開発者
+    - プライバシー重視ユーザー
+    - マルチOS利用者
+  latest_highlight: 2026年11月にv3.4.0をリリースし、Orukeet等の新モデル追加や画面録画・注釈・会議録音機能を強化
+  update_frequency: 高
 evaluation:
   score: 86
   base_score: 70
   plus_points:
     - point: 6
-      reason: "完全ローカル推論・クロスプラットフォーム（macOS/Windows/Linux）対応・CLI/ローカルAPI/SDKを備えた高い完成度"
+      reason: 完全ローカル推論・クロスプラットフォーム（macOS/Windows/Linux）対応・CLI/ローカルAPI/SDKを備えた高い完成度
     - point: 5
-      reason: "MITライセンスの完全無料OSSであり、サブスクリプション費用が不要"
+      reason: MITライセンスの完全無料OSSであり、サブスクリプション費用が不要
     - point: 5
-      reason: "ほぼ毎日レベルの極めて活発な開発・アップデート頻度と豊富な音声モデル選択"
+      reason: ほぼ毎日レベルの極めて活発な開発・アップデート頻度と豊富な音声モデル選択
     - point: 4
-      reason: "コミュニティ（Hacker NewsやReddit等）で動作の軽快さと導入の容易さが高く評価されている"
+      reason: コミュニティ（Hacker NewsやReddit等）で動作の軽快さと導入の容易さが高く評価されている
   minus_points:
     - point: -2
-      reason: "UIの日本語ローカライズに未対応（音声認識自体はWhisperやQwen3-ASR等で日本語に対応）"
+      reason: UIの日本語ローカライズに未対応（音声認識自体はWhisperやQwen3-ASR等で日本語に対応）
     - point: -2
-      reason: "Windows・Linux版やLabs機能の一部がベータ段階であり、OS間で機能差や学習コストがある"
-  summary: "完全無料・ローカル完結で動作する極めて完成度の高い音声入力ツールであり、特に開発者やプライバシー重視のユーザーにとって最有力候補となる。"
-
+      reason: Windows・Linux版やLabs機能の一部がベータ段階であり、OS間で機能差や学習コストがある
+  summary: 完全無料・ローカル完結で動作する極めて完成度の高い音声入力ツールであり、特に開発者やプライバシー重視のユーザーにとって最有力候補となる。
 links:
-  github: "https://github.com/anomalyco/hex"
-  documentation: "https://github.com/anomalyco/hex/tree/dev/docs"
+  github: https://github.com/anomalyco/hex
+  documentation: https://github.com/anomalyco/hex/tree/dev/docs
 relationships:
   related_tools:
-    - "OpenCode"
-    - "Aqua Voice"
-    - "Typeless"
-    - "OpenHinoVoice"
+    - OpenCode
+    - Aqua Voice
+    - Typeless
+    - OpenHinoVoice
 ---
 
 # **Hex 調査レポート**
