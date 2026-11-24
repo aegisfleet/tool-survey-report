@@ -1,64 +1,60 @@
 ---
-title: "Hallmark 調査レポート"
-tool_name: "Hallmark"
-tool_reading: "ホールマーク"
-category: "エージェントスキル/標準仕様"
-developer: "Nutlope (Hassan El Mghari) / Together AI"
-official_site: "https://www.usehallmark.com/"
-date: "2026-11-25"
-last_updated: "2026-11-25"
+title: Hallmark 調査レポート
+tool_name: Hallmark
+tool_reading: ホールマーク
+category: エージェントスキル/標準仕様
+developer: Nutlope (Hassan El Mghari) / Together AI
+official_site: https://www.usehallmark.com/
+date: '2026-11-25'
+last_updated: '2026-11-25'
 tags:
-  - "AI"
-  - "エージェント"
-  - "オープンソース"
-  - "開発者ツール"
-  - "コーディング支援"
-description: "AIコーディングエージェントが生成する画一的なUI（AI Slop）を排除し、約50種のマテリアルテーマと3層品質ゲート・実ブラウザ検証で洗練されたWebページを構築・リデザインするOSSデザインスキル"
-
+  - AI
+  - エージェント
+  - オープンソース
+  - 開発者ツール
+  - コーディング支援
+description: AIコーディングエージェントが生成する画一的なUI（AI Slop）を排除し、約50種のマテリアルテーマと3層品質ゲート・実ブラウザ検証で洗練されたWebページを構築・リデザインするOSSデザインスキル
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "フロントエンド開発者"
-    - "AIコーディングエージェント利用者"
-    - "UI/UXデザイナー"
-  latest_highlight: "2026年11月にv2系のCI統合・貢献ガイド整備やWindows環境・複数ルート撮影の不具合修正を実施"
-  update_frequency: "高"
-
+    - フロントエンド開発者
+    - AIコーディングエージェント利用者
+    - UI/UXデザイナー
+  latest_highlight: 2026年11月にv2系のCI統合・貢献ガイド整備やWindows環境・複数ルート撮影の不具合修正を実施
+  update_frequency: 高
 evaluation:
   score: 81
   base_score: 70
   plus_points:
     - point: 6
-      reason: "Floor・Reflex・Finishの3層ゲートとゼロ依存リンター（sloplint.mjs）により、AI特有の画一的なデザイン（AI Slop）を機械的かつ構造的に防止できる"
+      reason: Floor・Reflex・Finishの3層ゲートとゼロ依存リンター（sloplint.mjs）により、AI特有の画一的なデザイン（AI Slop）を機械的かつ構造的に防止できる
     - point: 5
-      reason: "約50種のマテリアルベーステーマ・21種のマクロ構造・755枚のオープンライセンス写真カタログを備え、連続生成でもデザインが重複しない"
+      reason: 約50種のマテリアルベーステーマ・21種のマクロ構造・755枚のオープンライセンス写真カタログを備え、連続生成でもデザインが重複しない
     - point: 4
-      reason: "MITライセンスの完全無料OSSとして提供され、Claude Code・Codex CLI・Cursor・OpenCodeなど主要ハーネスに幅広く対応している"
+      reason: MITライセンスの完全無料OSSとして提供され、Claude Code・Codex CLI・Cursor・OpenCodeなど主要ハーネスに幅広く対応している
     - point: 3
-      reason: "既存ページのコンテンツと配線を保持したまま刷新するredesignや、コードを変更せず診断するauditなど実務向けのコマンド体系が充実している"
+      reason: 既存ページのコンテンツと配線を保持したまま刷新するredesignや、コードを変更せず診断するauditなど実務向けのコマンド体系が充実している
   minus_points:
     - point: -3
-      reason: "Pre-flight・ヒーロー単体レビュー・実ブラウザ検証など多段階の工程を経るため、通常のプロンプト生成よりトークン消費と実行時間が増加しやすい"
+      reason: Pre-flight・ヒーロー単体レビュー・実ブラウザ検証など多段階の工程を経るため、通常のプロンプト生成よりトークン消費と実行時間が増加しやすい
     - point: -2
-      reason: "実ブラウザによるレンダリング検証（sloplint --render）やスクリーンショット取得にはpuppeteer-coreとChromeの別途導入が必要"
+      reason: 実ブラウザによるレンダリング検証（sloplint --render）やスクリーンショット取得にはpuppeteer-coreとChromeの別途導入が必要
     - point: -2
-      reason: "スキル定義やドキュメントが英語主体であり、日本語タイポグラフィや日本語コピーライティング向けの最適化情報は限定的"
-  summary: "AIコーディングエージェントにデザインの規律と審美眼を強制し、量産型UIを脱却させる完成度の高いオープンソース・デザインスキル"
-
+      reason: スキル定義やドキュメントが英語主体であり、日本語タイポグラフィや日本語コピーライティング向けの最適化情報は限定的
+  summary: AIコーディングエージェントにデザインの規律と審美眼を強制し、量産型UIを脱却させる完成度の高いオープンソース・デザインスキル
 links:
-  github: "https://github.com/Nutlope/hallmark"
-
+  github: https://github.com/Nutlope/hallmark
 relationships:
   related_tools:
-    - "Agent Skills"
-    - "Stitch Skills"
-    - "Superpowers"
-    - "design.md"
-    - "Claude Code"
-    - "Cursor"
-    - "OpenCode"
+    - Agent Skills
+    - Stitch Skills
+    - Superpowers
+    - design.md
+    - Claude Code
+    - Cursor
+    - OpenCode
 ---
 
 # **Hallmark 調査レポート**
