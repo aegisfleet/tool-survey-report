@@ -41,6 +41,8 @@ evaluation:
 links:
   github: https://github.com/genspark-ai/genoffice
   deepwiki: https://deepwiki.com/genspark-ai/genoffice
+relationships:
+  parent: Genspark
 ---
 
 # **GenOffice 調査レポート**
