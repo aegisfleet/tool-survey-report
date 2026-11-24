@@ -45,6 +45,7 @@ links:
   documentation: https://docs.coderabbit.ai/
 relationships:
   related_tools:
+    - GitHub
     - GitHub Copilot
     - SonarQube
     - Qodo
