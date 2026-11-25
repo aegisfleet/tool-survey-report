@@ -1,56 +1,56 @@
 ---
-title: "DeepTutor 調査レポート"
-tool_name: "DeepTutor"
-tool_reading: "ディープチューター"
-category: "特定用途AIアシスタント"
-developer: "HKUDS (香港大学 Data Intelligence Lab)"
-official_site: "https://deeptutor.info/"
-date: "2026-11-26"
-last_updated: "2026-11-26"
+title: DeepTutor 調査レポート
+tool_name: DeepTutor
+tool_reading: ディープチューター
+category: 特定用途AIアシスタント
+developer: HKUDS (香港大学 Data Intelligence Lab)
+official_site: https://deeptutor.info/
+date: '2026-11-26'
+last_updated: '2026-11-26'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "大規模言語モデル"
-  - "生成AI"
-  - "ローカルAI"
-description: "香港大学HKUDSが開発した、マルチエージェント・マルチエンジンRAG・3層メモリを統合し、個別指導・調査・演習を一貫して支援するオープンソースのAI学習ワークスペース。"
+  - AI
+  - オープンソース
+  - エージェント
+  - 大規模言語モデル
+  - 生成AI
+  - ローカルAI
+description: 香港大学HKUDSが開発した、マルチエージェント・マルチエンジンRAG・3層メモリを統合し、個別指導・調査・演習を一貫して支援するオープンソースのAI学習ワークスペース。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料 (API利用料は別途)"
+  starting_price: 無料 (API利用料は別途)
   target_users:
-    - "学生・学習者"
-    - "研究者"
-    - "開発者"
-  latest_highlight: "2026年11月にv1.7.3（PDFズーム・書籍差分編集・ACP連携）およびv1.7.4（デスクトップ署名鍵更新）をリリース"
-  update_frequency: "高"
+    - 学生・学習者
+    - 研究者
+    - 開発者
+  latest_highlight: 2026年11月にv1.7.3（PDFズーム・書籍差分編集・ACP連携）およびv1.7.4（デスクトップ署名鍵更新）をリリース
+  update_frequency: 高
 evaluation:
   score: 88
   base_score: 70
   plus_points:
     - point: 8
-      reason: "LlamaIndex・LightRAG・GraphRAG・PageIndex等を選べるマルチエンジンRAGと、L1/L2/L3の検査可能な3層メモリによる高度なパーソナライズ学習"
+      reason: LlamaIndex・LightRAG・GraphRAG・PageIndex等を選べるマルチエンジンRAGと、L1/L2/L3の検査可能な3層メモリによる高度なパーソナライズ学習
     - point: 5
-      reason: "Apache 2.0の完全オープンソースで無料利用でき、Docker・PyPI・デスクトップアプリ・CLI（NDJSON出力対応）と提供形態が豊富"
+      reason: Apache 2.0の完全オープンソースで無料利用でき、Docker・PyPI・デスクトップアプリ・CLI（NDJSON出力対応）と提供形態が豊富
     - point: 4
-      reason: "UI・ドキュメント（README日本語版含む）・音声読み上げなど多言語・日本語対応が充実"
+      reason: UI・ドキュメント（README日本語版含む）・音声読み上げなど多言語・日本語対応が充実
     - point: 4
-      reason: "週次ペースの極めて活発な開発・アップデートと6万超のGitHubスターを誇るコミュニティ"
+      reason: 週次ペースの極めて活発な開発・アップデートと6万超のGitHubスターを誇るコミュニティ
   minus_points:
     - point: -3
-      reason: "多機能かつモジュール構成が複雑なため、ローカル構築や高度なモデル設定には一定の技術的知識と学習コストを要する"
-  summary: "単なるチャットラッパーを超えたエージェントネイティブな学習基盤として極めて完成度が高く、自己ホストやプライバシー重視の学習・研究環境において有力な選択肢。"
+      reason: 多機能かつモジュール構成が複雑なため、ローカル構築や高度なモデル設定には一定の技術的知識と学習コストを要する
+  summary: 単なるチャットラッパーを超えたエージェントネイティブな学習基盤として極めて完成度が高く、自己ホストやプライバシー重視の学習・研究環境において有力な選択肢。
 links:
-  github: "https://github.com/HKUDS/DeepTutor"
-  documentation: "https://docs.deeptutor.info/"
+  github: https://github.com/HKUDS/DeepTutor
+  documentation: https://docs.deeptutor.info/
 relationships:
   related_tools:
-    - "NotebookLM"
-    - "Obsidian"
-    - "OpenClaw"
-    - "Claude Code"
-    - "abceed"
+    - NotebookLM
+    - Obsidian
+    - OpenClaw
+    - Claude Code
+    - abceed
 ---
 
 # **DeepTutor 調査レポート**
