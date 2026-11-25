@@ -50,6 +50,7 @@ relationships:
     - GitHub Copilot
     - GitLab Duo
     - Amazon Q Developer
+    - Open Code Review
 ---
 
 # **Qodo 調査レポート**
