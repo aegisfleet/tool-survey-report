@@ -1,58 +1,55 @@
 ---
-title: "Codemany 調査レポート"
-tool_name: "Codemany"
-tool_reading: "コードメニー"
-category: "CI/CD周辺ツール"
-developer: "Rainbow Labs Inc."
-official_site: "https://codemany.com/"
-date: "2026-11-25"
-last_updated: "2026-11-25"
+title: Codemany 調査レポート
+tool_name: Codemany
+tool_reading: コードメニー
+category: CI/CD周辺ツール
+developer: Rainbow Labs Inc.
+official_site: https://codemany.com/
+date: '2026-11-25'
+last_updated: '2026-11-25'
 tags:
-  - "CI/CD"
-  - "GitHub Actions"
-  - "自動化"
-  - "開発者ツール"
-  - "SaaS"
-description: "手持ちのApple Silicon MacやLinuxマシンを、ジョブごとに破棄・再作成される使い捨て（Just-in-Time）のGitHub Actionsセルフホストランナーに変換するオーケストレーションツール。"
-
+  - CI/CD
+  - GitHub Actions
+  - 自動化
+  - 開発者ツール
+  - SaaS
+description: 手持ちのApple Silicon MacやLinuxマシンを、ジョブごとに破棄・再作成される使い捨て（Just-in-Time）のGitHub Actionsセルフホストランナーに変換するオーケストレーションツール。
 quick_summary:
   has_free_plan: true
   is_oss: false
-  starting_price: "$20/月（2台まで・14日間無料トライアル）"
+  starting_price: $20/月（2台まで・14日間無料トライアル）
   target_users:
-    - "ソフトウェアエンジニア"
-    - "モバイル（iOS/macOS）開発チーム"
-    - "AIコーディングエージェントを活用する開発者・スタートアップ"
-  latest_highlight: "2026年11月24日にv1.9.0をリリース（v1.8.0のフリート耐障害性強化・自己監視・ワンクリックSSH改善に続く安定化）"
-  update_frequency: "高"
-
+    - ソフトウェアエンジニア
+    - モバイル（iOS/macOS）開発チーム
+    - AIコーディングエージェントを活用する開発者・スタートアップ
+  latest_highlight: 2026年11月24日にv1.9.0をリリース（v1.8.0のフリート耐障害性強化・自己監視・ワンクリックSSH改善に続く安定化）
+  update_frequency: 高
 evaluation:
   score: 75
   base_score: 70
   plus_points:
     - point: 5
-      reason: "手持ちのMac/Linuxを1行変更で使い捨てセルフホストランナー化し、分単位課金を月額固定費へ置き換えられる"
+      reason: 手持ちのMac/Linuxを1行変更で使い捨てセルフホストランナー化し、分単位課金を月額固定費へ置き換えられる
     - point: 5
-      reason: "ローカルツールキャッシュ、各種ミラー、KVM VM分離（Linux）、ワンクリックSSHなど実用的な機能が豊富"
+      reason: ローカルツールキャッシュ、各種ミラー、KVM VM分離（Linux）、ワンクリックSSHなど実用的な機能が豊富
     - point: 3
-      reason: "2026年11月の公開以降、ほぼ毎日アップデートされる極めて活発な開発体制"
+      reason: 2026年11月の公開以降、ほぼ毎日アップデートされる極めて活発な開発体制
   minus_points:
     - point: -3
-      reason: "UI・公式ドキュメント・サポートともに日本語非対応（英語のみ）"
+      reason: UI・公式ドキュメント・サポートともに日本語非対応（英語のみ）
     - point: -3
-      reason: "WindowsおよびIntel Macに非対応（Apple Silicon macOS 14+ または 64-bit Linux systemd環境が必要）"
+      reason: WindowsおよびIntel Macに非対応（Apple Silicon macOS 14+ または 64-bit Linux systemd環境が必要）
     - point: -2
-      reason: "2026年11月公開の新興ツールのため、エンタープライズ向け第三者認証（SOC2等）や大規模導入事例が未整備"
-  summary: "AIコーディングエージェント時代で増加するGitHub Actionsのコストと待ち時間を、所有ハードウェアの活用によって大幅に削減できる有望なCI/CD周辺ツール。"
-
+      reason: 2026年11月公開の新興ツールのため、エンタープライズ向け第三者認証（SOC2等）や大規模導入事例が未整備
+  summary: AIコーディングエージェント時代で増加するGitHub Actionsのコストと待ち時間を、所有ハードウェアの活用によって大幅に削減できる有望なCI/CD周辺ツール。
 links:
-  documentation: "https://codemany.com/docs"
+  documentation: https://codemany.com/docs
 relationships:
-  parent: "GitHub Actions"
+  parent: GitHub Actions
   related_tools:
-    - "act"
-    - "actionlint"
-    - "Docker"
+    - act
+    - actionlint
+    - Docker
 ---
 
 # **Codemany 調査レポート**
