@@ -47,6 +47,7 @@ relationships:
     - LocalStack
     - Floci
     - fakecloud
+    - ExtendDB
 ---
 # **Moto 調査レポート**
 
