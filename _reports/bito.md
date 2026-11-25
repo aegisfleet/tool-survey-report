@@ -42,6 +42,7 @@ relationships:
     - CodeRabbit
     - Cursor
     - GitHub Copilot
+    - Open Code Review
 ---
 
 # **Bito 調査レポート**
