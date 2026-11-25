@@ -1,57 +1,53 @@
 ---
-title: "ExtendDB 調査レポート"
-tool_name: "ExtendDB"
-tool_reading: "エクステンドディービー"
-category: "データベース/データストレージ"
-developer: "Amazon Web Services (AWS)"
-official_site: "https://extenddb.org/"
-date: "2026-11-25"
-last_updated: "2026-11-25"
+title: ExtendDB 調査レポート
+tool_name: ExtendDB
+tool_reading: エクステンドディービー
+category: データベース/データストレージ
+developer: Amazon Web Services (AWS)
+official_site: https://extenddb.org/
+date: '2026-11-25'
+last_updated: '2026-11-25'
 tags:
-  - "オープンソース"
-  - "開発者ツール"
-  - "AWS"
-  - "データベース"
-  - "テスト自動化"
-description: "Rust製のオープンソースAmazon DynamoDB互換APIアダプター。既存のAWS SDKやコードを書き換えることなく、PostgreSQL・SQLite・MongoDB・Cassandraをバックエンドとしてローカル、オンプレミス、エッジ環境でDynamoDBワークロードを実行可能にする。"
-
+  - オープンソース
+  - 開発者ツール
+  - AWS
+  - データベース
+  - テスト自動化
+description: Rust製のオープンソースAmazon DynamoDB互換APIアダプター。既存のAWS SDKやコードを書き換えることなく、PostgreSQL・SQLite・MongoDB・Cassandraをバックエンドとしてローカル、オンプレミス、エッジ環境でDynamoDBワークロードを実行可能にする。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（Apache 2.0 OSS）"
+  starting_price: 無料（Apache 2.0 OSS）
   target_users:
-    - "AWS/バックエンド開発者"
-    - "インフラ/DevOpsエンジニア"
-    - "エッジ・オンプレミス環境運用者"
-  latest_highlight: "2026年11月18日に初の安定版メジャーリリースとなるv1.0.0を公開。認証鍵のKEKラッピングやCassandraのLOCAL_QUORUM対応などを実装。"
-  update_frequency: "高"
-
+    - AWS/バックエンド開発者
+    - インフラ/DevOpsエンジニア
+    - エッジ・オンプレミス環境運用者
+  latest_highlight: 2026年11月18日に初の安定版メジャーリリースとなるv1.0.0を公開。認証鍵のKEKラッピングやCassandraのLOCAL_QUORUM対応などを実装。
+  update_frequency: 高
 evaluation:
   score: 84
   base_score: 70
   plus_points:
     - point: 6
-      reason: "AWS公式メンテナンスによる高いDynamoDB API・エラーコード互換性（PartiQL、トランザクション、Streams、ベクトル検索対応）"
+      reason: AWS公式メンテナンスによる高いDynamoDB API・エラーコード互換性（PartiQL、トランザクション、Streams、ベクトル検索対応）
     - point: 4
-      reason: "プラガブルなストレージ設計により、PostgreSQL・SQLite・MongoDB・Cassandraを用途別に選択可能"
+      reason: プラガブルなストレージ設計により、PostgreSQL・SQLite・MongoDB・Cassandraを用途別に選択可能
     - point: 3
-      reason: "Apache 2.0ライセンスで完全無料、Rust製単一バイナリおよびWebAssembly対応による軽量・高速動作"
+      reason: Apache 2.0ライセンスで完全無料、Rust製単一バイナリおよびWebAssembly対応による軽量・高速動作
     - point: 4
-      reason: "開発・CI向けの軽量モード（@extenddb/dev、extenddb-dev）と本番向けの堅牢なTLS・SigV4/IAM認証を両立"
+      reason: 開発・CI向けの軽量モード（@extenddb/dev、extenddb-dev）と本番向けの堅牢なTLS・SigV4/IAM認証を両立
   minus_points:
     - point: -3
-      reason: "ドキュメント・UIともに英語のみであり、日本語の公式サポートや資料が未整備"
-  summary: "DynamoDBのプログラミングモデルをAWSクラウド外（ローカル・オンプレミス・エッジ）へ持ち出せる画期的なOSSアダプター。v1.0.0の公開により本番運用にも耐えうる互換性と堅牢性を備えている。"
-
+      reason: ドキュメント・UIともに英語のみであり、日本語の公式サポートや資料が未整備
+  summary: DynamoDBのプログラミングモデルをAWSクラウド外（ローカル・オンプレミス・エッジ）へ持ち出せる画期的なOSSアダプター。v1.0.0の公開により本番運用にも耐えうる互換性と堅牢性を備えている。
 links:
-  github: "https://github.com/ExtendDB/extenddb"
-  documentation: "https://github.com/ExtendDB/extenddb/tree/main/docs"
-
+  github: https://github.com/ExtendDB/extenddb
+  documentation: https://github.com/ExtendDB/extenddb/tree/main/docs
 relationships:
   related_tools:
-    - "LocalStack"
-    - "Moto"
-    - "AWS CLI"
+    - LocalStack
+    - Moto
+    - AWS CLI
 ---
 
 # **ExtendDB 調査レポート**
