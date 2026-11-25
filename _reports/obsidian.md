@@ -48,6 +48,7 @@ relationships:
     - Notion
     - AFFiNE
     - Visual Studio Code
+    - DeepTutor
 ---
 
 # **Obsidian 調査レポート**

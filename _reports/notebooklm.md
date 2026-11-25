@@ -50,6 +50,7 @@ relationships:
     - Google Illuminate
     - Perplexity
     - LilysAI
+    - DeepTutor
 ---
 # **NotebookLM 調査レポート**
 
