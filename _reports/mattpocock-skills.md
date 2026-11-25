@@ -2,7 +2,7 @@
 title: Matt Pocock Skills 調査レポート
 tool_name: Matt Pocock Skills
 tool_reading: マット ポコック スキルズ
-category: エージェントスキル/標準仕様
+category: エージェントスキル集
 developer: Matt Pocock
 official_site: https://www.aihero.dev/skills
 date: '2026-11-15'

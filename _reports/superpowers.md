@@ -2,7 +2,7 @@
 title: Superpowers 調査レポート
 tool_name: Superpowers
 tool_reading: スーパーパワーズ
-category: エージェントスキル/標準仕様
+category: エージェントスキル集
 developer: Prime Radiant (Jesse Vincent / obra)
 official_site: https://github.com/obra/superpowers
 date: '2026-11-19'
