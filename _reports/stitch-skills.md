@@ -2,7 +2,7 @@
 title: Stitch Skills 調査レポート
 tool_name: Stitch Skills
 tool_reading: スティッチ スキルズ
-category: エージェントスキル/標準仕様
+category: エージェントスキル集
 developer: Google Labs
 official_site: https://github.com/google-labs-code/stitch-skills
 date: '2026-11-16'

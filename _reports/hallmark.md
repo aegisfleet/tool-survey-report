@@ -2,7 +2,7 @@
 title: Hallmark 調査レポート
 tool_name: Hallmark
 tool_reading: ホールマーク
-category: エージェントスキル/標準仕様
+category: エージェントスキル集
 developer: Nutlope (Hassan El Mghari) / Together AI
 official_site: https://www.usehallmark.com/
 date: '2026-11-25'

@@ -2,7 +2,7 @@
 title: Jane Street Agent Skills 調査レポート
 tool_name: Jane Street Agent Skills
 tool_reading: ジェーン ストリート エージェント スキルズ
-category: エージェントスキル/標準仕様
+category: エージェントスキル集
 developer: Jane Street
 official_site: https://github.com/janestreet/agent_skills
 date: '2026-11-14'
