@@ -50,6 +50,7 @@ relationships:
     - act
     - actionlint
     - Agentic Workflows
+    - Codemany
   related_tools:
     - Jenkins
     - GitLab CI/CD
