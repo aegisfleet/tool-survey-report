@@ -1,57 +1,54 @@
 ---
-title: "AutoClip 調査レポート"
-tool_name: "AutoClip"
-tool_reading: "オートクリップ"
-category: "動画編集"
-developer: "zhouxiaoka"
-official_site: "https://zhouxiaoka.github.io/autoclip_intro/"
-date: "2026-11-27"
-last_updated: "2026-11-27"
+title: AutoClip 調査レポート
+tool_name: AutoClip
+tool_reading: オートクリップ
+category: 動画編集
+developer: zhouxiaoka
+official_site: https://zhouxiaoka.github.io/autoclip_intro/
+date: '2026-11-27'
+last_updated: '2026-11-27'
 tags:
-  - "オープンソース"
-  - "AI"
-  - "大規模言語モデル"
-  - "自動化"
-  - "ローカルAI"
-description: "長尺動画やライブ配信アーカイブからAIがハイライトを抽出し、縦型ショート動画・焼き込み字幕・サムネイル・投稿文をローカル完結で自動生成するOSS動画編集ツール。"
-
+  - オープンソース
+  - AI
+  - 大規模言語モデル
+  - 自動化
+  - ローカルAI
+description: 長尺動画やライブ配信アーカイブからAIがハイライトを抽出し、縦型ショート動画・焼き込み字幕・サムネイル・投稿文をローカル完結で自動生成するOSS動画編集ツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料"
+  starting_price: 無料
   target_users:
-    - "動画クリエイター"
-    - "ストリーマー・配信者"
-    - "AIエージェント開発者"
-  latest_highlight: "2026年11月にv1.6系（OBS・Twitch・YouTube等のライブ配信リプレイ対応、レンダリング再開機能、新テンプレート）をリリース"
-  update_frequency: "高"
-
+    - 動画クリエイター
+    - ストリーマー・配信者
+    - AIエージェント開発者
+  latest_highlight: 2026年11月にv1.6系（OBS・Twitch・YouTube等のライブ配信リプレイ対応、レンダリング再開機能、新テンプレート）をリリース
+  update_frequency: 高
 evaluation:
   score: 80
   base_score: 70
   plus_points:
     - point: 8
-      reason: "ローカル完結・MITライセンスでサブスクリプション不要、BYOKおよびOllama/LM Studio+Whisperでの完全オフライン実行に対応"
+      reason: ローカル完結・MITライセンスでサブスクリプション不要、BYOKおよびOllama/LM Studio+Whisperでの完全オフライン実行に対応
     - point: 5
-      reason: "13言語UI対応（日本語含む）およびBuilt-in MCPサーバー・Agent SkillによるAIエージェント連携"
+      reason: 13言語UI対応（日本語含む）およびBuilt-in MCPサーバー・Agent SkillによるAIエージェント連携
     - point: 4
-      reason: "開発が非常に活発（GitHub Stars 16,900超、高頻度リリースでv1.6系にてライブ配信リプレイやゲームハイライトにも対応）"
+      reason: 開発が非常に活発（GitHub Stars 16,900超、高頻度リリースでv1.6系にてライブ配信リプレイやゲームハイライトにも対応）
   minus_points:
     - point: -4
-      reason: "Windows/macOSのデスクトップインストーラーがコード署名・公証未対応（SmartScreen/Gatekeeperの警告が出る）"
+      reason: Windows/macOSのデスクトップインストーラーがコード署名・公証未対応（SmartScreen/Gatekeeperの警告が出る）
     - point: -3
-      reason: "動画編集の細かなタイムライン調整は専用NLEに及ばず、Intel MacやLinuxはデスクトップ版非対応（Docker/CLI利用）"
-  summary: "サブスク不要のローカルファースト設計とMCP対応を兼ね備えた有力なOSSのOpusClip代替ツールだが、デスクトップ版のコード署名未対応に留意が必要"
-
+      reason: 動画編集の細かなタイムライン調整は専用NLEに及ばず、Intel MacやLinuxはデスクトップ版非対応（Docker/CLI利用）
+  summary: サブスク不要のローカルファースト設計とMCP対応を兼ね備えた有力なOSSのOpusClip代替ツールだが、デスクトップ版のコード署名未対応に留意が必要
 links:
-  github: "https://github.com/zhouxiaoka/autoclip"
+  github: https://github.com/zhouxiaoka/autoclip
 relationships:
   related_tools:
-    - "video-use"
-    - "OpenCut"
-    - "OBS Studio"
-    - "Ollama"
-    - "LM Studio"
+    - video-use
+    - OpenCut
+    - OBS Studio
+    - Ollama
+    - LM Studio
 ---
 
 # **AutoClip 調査レポート**
