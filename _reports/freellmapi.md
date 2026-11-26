@@ -1,61 +1,58 @@
 ---
-title: "FreeLLMAPI 調査レポート"
-tool_name: "FreeLLMAPI"
-tool_reading: "フリーエルエルエムエーピーアイ"
-category: "AIゲートウェイ"
-developer: "Tashfeen Ahmed"
-official_site: "https://freellmapi.co/"
-date: "2026-11-27"
-last_updated: "2026-11-27"
+title: FreeLLMAPI 調査レポート
+tool_name: FreeLLMAPI
+tool_reading: フリーエルエルエムエーピーアイ
+category: AIゲートウェイ
+developer: Tashfeen Ahmed
+official_site: https://freellmapi.co/
+date: '2026-11-27'
+last_updated: '2026-11-27'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "大規模言語モデル"
-  - "開発者ツール"
-  - "API"
-  - "ローカルAI"
-description: "87の無料LLMプロバイダー・1,313以上のエンドポイントを単一のOpenAI互換/v1エンドポイントに集約し、スマートルーティングと自動フェイルオーバーを提供するローカルファーストのオープンソースAIゲートウェイ。"
-
+  - AI
+  - オープンソース
+  - 大規模言語モデル
+  - 開発者ツール
+  - API
+  - ローカルAI
+description: 87の無料LLMプロバイダー・1,313以上のエンドポイントを単一のOpenAI互換/v1エンドポイントに集約し、スマートルーティングと自動フェイルオーバーを提供するローカルファーストのオープンソースAIゲートウェイ。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（OSS版） / プレミアム年額 $19"
+  starting_price: 無料（OSS版） / プレミアム年額 $19
   target_users:
-    - "個人開発者・AIエンジニア"
-    - "プロトタイピング・実験用途のユーザー"
-    - "AIコーディングエージェント利用者"
-  latest_highlight: "2026年11月26日にv0.16.46をリリース。OpenCode設定の競合解消やPuterチャットルート拡張、Nutrient/Tanod/LLM.kiwi/TokenReply等の新プロバイダー対応を連日追加"
-  update_frequency: "高"
-
+    - 個人開発者・AIエンジニア
+    - プロトタイピング・実験用途のユーザー
+    - AIコーディングエージェント利用者
+  latest_highlight: 2026年11月26日にv0.16.46をリリース。OpenCode設定の競合解消やPuterチャットルート拡張、Nutrient/Tanod/LLM.kiwi/TokenReply等の新プロバイダー対応を連日追加
+  update_frequency: 高
 evaluation:
   score: 83
   base_score: 70
   plus_points:
     - point: 8
-      reason: "87の無料プロバイダー・1,313以上のエンドポイントを単一/v1 APIに集約し、Thompsonサンプリング等のスマートルーティングや自動フェイルオーバー、Fusion機能を提供"
+      reason: 87の無料プロバイダー・1,313以上のエンドポイントを単一/v1 APIに集約し、Thompsonサンプリング等のスマートルーティングや自動フェイルオーバー、Fusion機能を提供
     - point: 4
-      reason: "MITライセンスのOSSとして完全無料でセルフホストでき、AES-256-GCMによるローカル鍵暗号化などプライバシー配慮が高い"
+      reason: MITライセンスのOSSとして完全無料でセルフホストでき、AES-256-GCMによるローカル鍵暗号化などプライバシー配慮が高い
     - point: 4
-      reason: "60言語（日本語含む）対応のReactダッシュボードに加え、Docker、macOS/Windowsデスクトップアプリ、CLI、MCPサーバーなど導入手段が豊富"
+      reason: 60言語（日本語含む）対応のReactダッシュボードに加え、Docker、macOS/Windowsデスクトップアプリ、CLI、MCPサーバーなど導入手段が豊富
     - point: 3
-      reason: "GitHubスター5.8万超の注目度と、連日のリリース・署名付きカタログ自動更新による極めて活発な開発ペース"
+      reason: GitHubスター5.8万超の注目度と、連日のリリース・署名付きカタログ自動更新による極めて活発な開発ペース
   minus_points:
     - point: -4
-      reason: "無料枠APIに依存するため日中のクォータ枯渇による品質低下やレート制限変動があり、本番・商用バックエンドには不向き（SLAなし）"
+      reason: 無料枠APIに依存するため日中のクォータ枯渇による品質低下やレート制限変動があり、本番・商用バックエンドには不向き（SLAなし）
     - point: -2
-      reason: "署名付きカタログの当日同期にはプレミアムプラン（年額$19または買い切り$49）が必要で、無料版は30日遅れの月次スナップショット配信となる"
-  summary: "無料枠LLMの煩雑な管理を単一エンドポイントへ統合し、個人開発やコーディングエージェントの実験コストを劇的に下げる非常に強力なローカルファーストAIゲートウェイ。"
-
+      reason: 署名付きカタログの当日同期にはプレミアムプラン（年額$19または買い切り$49）が必要で、無料版は30日遅れの月次スナップショット配信となる
+  summary: 無料枠LLMの煩雑な管理を単一エンドポイントへ統合し、個人開発やコーディングエージェントの実験コストを劇的に下げる非常に強力なローカルファーストAIゲートウェイ。
 links:
-  github: "https://github.com/tashfeenahmed/freellmapi"
-  documentation: "https://github.com/tashfeenahmed/freellmapi/blob/main/docs/en/README.md"
+  github: https://github.com/tashfeenahmed/freellmapi
+  documentation: https://github.com/tashfeenahmed/freellmapi/blob/main/docs/en/README.md
 relationships:
   related_tools:
-    - "LiteLLM"
-    - "Portkey"
-    - "9router"
-    - "Kong AI Gateway"
-    - "Numes"
+    - LiteLLM
+    - Portkey
+    - 9router
+    - Kong AI Gateway
+    - Numes
 ---
 
 # **FreeLLMAPI 調査レポート**
