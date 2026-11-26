@@ -52,6 +52,7 @@ relationships:
     - Devin Desktop
     - Devin
     - Cline
+    - Roo Code
     - OpenClaw
     - Grok Build
 ---

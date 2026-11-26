@@ -51,6 +51,7 @@ relationships:
     - IntelliJ IDEA
     - Devin Desktop
     - Cline
+    - Roo Code
     - GitLens
     - Edit
     - Delphi
