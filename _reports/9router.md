@@ -41,6 +41,7 @@ links:
 relationships:
   related_tools:
     - Numes
+    - FreeLLMAPI
 ---
 # **9router 調査レポート**
 

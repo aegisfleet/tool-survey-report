@@ -53,6 +53,7 @@ relationships:
     - LangChain
     - AMD TokenLab
     - Numes
+    - FreeLLMAPI
 ---
 
 # **LiteLLM 調査レポート**

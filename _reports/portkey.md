@@ -52,6 +52,7 @@ relationships:
     - Cloudflare
     - Kong AI Gateway
     - Numes
+    - FreeLLMAPI
 ---
 
 # **Portkey 調査レポート**
