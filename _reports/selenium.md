@@ -46,6 +46,7 @@ links:
 relationships:
   related_tools:
     - Playwright
+    - Playwright CLI
     - Cypress
     - Appium
     - MagicPod

@@ -55,6 +55,7 @@ relationships:
     - Roo Code
     - OpenClaw
     - Grok Build
+    - Playwright CLI
 ---
 
 # **Claude Code 調査レポート**

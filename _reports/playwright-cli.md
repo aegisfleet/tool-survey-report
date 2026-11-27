@@ -6,14 +6,14 @@ category: AIテスト自動化
 developer: Microsoft
 official_site: https://github.com/microsoft/playwright-cli
 date: '2026-02-26'
-last_updated: '2026-06-08'
+last_updated: '2026-11-27'
 tags:
   - AI
   - CLI
   - エージェント
   - オープンソース
   - テスト自動化
-description: AIコーディングエージェント（Claude Code, GitHub Copilotなど）がブラウザ操作を行うための軽量で効率的なCLIツール。
+description: AIコーディングエージェント（Claude Code, GitHub Copilotなど）がブラウザ操作を行うための軽量でトークン効率に優れたCLIツール。
 quick_summary:
   has_free_plan: true
   is_oss: true
@@ -21,342 +21,314 @@ quick_summary:
   target_users:
     - AIエージェント開発者
     - QAエンジニア
-  latest_highlight: 2026年5月のv0.1.13でChrome拡張機能経由でのブラウザレベルコマンドやマルチタブに対応
+    - Web開発者
+  latest_highlight: 2026年11月のv0.1.25でChrome拡張機能セッションの識別・再開やLinux ARM64版Chrome導入に対応（v0.1.24ではバックグラウンド操作も追加）
   update_frequency: 高
 evaluation:
-  score: 88
+  score: 90
   base_score: 70
   plus_points:
     - point: 8
-      reason: トークン効率を重視した設計により、AIエージェントとの連携が非常にスムーズ
+      reason: ディスクベースのYAMLスナップショットとCLI+Skills方式により、MCP比較で大幅なトークン消費削減を実現
     - point: 5
-      reason: Microsoft公式による提供で信頼性が高く、Playwright本体との互換性が完璧
-    - point: 5
-      reason: セッション永続化機能により、ログイン状態を維持した操作が容易
+      reason: Microsoft公式による提供で信頼性が高く、Playwright本体との互換性・追従性が極めて高い
+    - point: 4
+      reason: デーモン型アーキテクチャ、マルチコンテキスト隔離、バックグラウンド拡張連携、WebMCP対応など機能が急速に充実
+    - point: 3
+      reason: ビジュアル監視ダッシュボード（show）や60fpsカーソル付き動画録画・操作記録機能を搭載
   minus_points:
     - point: 0
-      reason: 特になし（CLIツールとしての完成度が高い）
-  summary: AIエージェントにブラウザ操作能力を付与するための最適解であり、MCPサーバーよりも軽量で実用的。
+      reason: 特になし（オープンソース無料ツールであり、用途特化CLIとしての完成度が高い）
+  summary: AIコーディングエージェントにブラウザ操作能力を付与するための最適解であり、トークン効率と実用的機能の双方でMCPサーバーを凌駕する標準CLI。
 links:
   github: https://github.com/microsoft/playwright-cli
   deepwiki: https://deepwiki.com/microsoft/playwright-cli
-  codewiki: https://codewiki.google/github.com/microsoft/playwright
   documentation: https://github.com/microsoft/playwright-cli#readme
 relationships:
   parent: Playwright
   related_tools:
     - Selenium
     - Claude
+    - Claude Code
     - GitHub Copilot
     - GitHub Copilot CLI
     - Chrome DevTools for agents
+    - Browserbase
 ---
 # **Playwright CLI 調査レポート**
 
 ## **1. 基本情報**
 
-<!--
-【ガイドライン】
-- 必須: ツール名、開発元、公式サイト、カテゴリ、概要
-- 概要は2-3文で簡潔に記述
--->
-
-* **ツール名**: Playwright CLI
+* **ツール名**: Playwright CLI (`@playwright/cli`)
 * **ツールの読み方**: プレイライト シーエルアイ
 * **開発元**: Microsoft
 * **公式サイト**: [https://github.com/microsoft/playwright-cli](https://github.com/microsoft/playwright-cli)
 * **関連リンク**:
   * GitHub: [https://github.com/microsoft/playwright-cli](https://github.com/microsoft/playwright-cli)
-  * Playwright MCP (別パッケージ): [https://github.com/microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
-* **カテゴリ**: テスト/QA
-* **概要**: Playwright CLIは、Claude CodeやGitHub CopilotなどのAIコーディングエージェントが、Webブラウザを効率的に操作するためのコマンドラインツールです。従来のMCP（Model Context Protocol）サーバーと比較して、トークン消費量を抑えた設計（Skillsアプローチ）となっており、高速かつ低コストな自動化を実現します。
+  * DeepWiki: [https://deepwiki.com/microsoft/playwright-cli](https://deepwiki.com/microsoft/playwright-cli)
+  * ドキュメント: [https://github.com/microsoft/playwright-cli#readme](https://github.com/microsoft/playwright-cli#readme)
+  * Playwright MCP (関連パッケージ): [https://github.com/microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp)
+* **カテゴリ**: AIテスト自動化
+* **概要**: Playwright CLIは、Claude CodeやGitHub CopilotなどのAIコーディングエージェントがWebブラウザを効率的に操作するための公式コマンドラインツールです。従来のMCP（Model Context Protocol）サーバーのように巨大なツールスキーマやアクセシビリティツリー全体を毎回LLMのコンテキストへ送るのではなく、ローカルディスクへのYAMLスナップショット保存と「Skills」アプローチを採用することで、トークン消費量を大幅に抑えた高速・低コストなブラウザ自動化を実現します。
 
 ## **2. 目的と主な利用シーン**
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 想定利用者を具体的に記載
--->
-
-* **解決する課題**: AIエージェントがWeb上の情報にアクセスしたり、Webアプリケーションの動作確認を行ったりする際の、トークン消費量と実行速度の最適化。
-* **想定利用者**: AIエージェントを活用する開発者、QAエンジニア、自動化スペシャリスト。
+* **解決する課題**: AIエージェントがWebアプリケーションの動作確認や情報収集を行う際に発生する、LLMコンテキストウィンドウの圧迫（トークン消費増大）とブラウザ起動オーバーヘッドの最適化。
+* **想定利用者**: AIコーディングエージェントを活用するソフトウェア開発者、QAエンジニア、テスト自動化スペシャリスト。
 * **利用シーン**:
-  * **AIエージェントによるE2Eテスト**: 開発中のWebアプリに対して、エージェントが自律的に操作を行いバグを発見する。
-  * **動的なWeb調査**: JavaScriptで生成されるコンテンツを含むWebサイトの情報を、エージェントが閲覧・収集する。
-  * **ブラウザ操作の自動化**: フォーム入力やスクリーンショット撮影などの定型作業を、自然言語の指示で実行する。
+  * **AIエージェントによるE2Eテスト・UIデバッグ**: 開発中のローカルWebアプリに対して、エージェントが自律的に画面操作・コンソールログ確認・ネットワーク検証を行いバグを発見・修正する。
+  * **ログイン済みブラウザでの自律タスク**: Chrome拡張機能モードやCDP接続を用い、バックグラウンドで既存のログイン済みセッションを活用した調査や確認を実行する。
+  * **手動操作のコード化・証跡動画作成**: `recording-start` / `recording-stop` による手動操作のPlaywrightコード変換や、60fps・カーソル表示付きデモ動画の生成を行う。
+
+### **2.1 代表的な利用フロー**
+
+```mermaid
+swimlane-beta TB
+  subgraph User["開発者"]
+    A["エージェントへWeb確認を指示"]
+    F["ダッシュボードや出力結果を確認"]
+  end
+  subgraph Agent["AIコーディングエージェント"]
+    B["Skillを参照しCLIコマンドを生成"]
+    D["スナップショット参照IDで操作指示"]
+  end
+  subgraph CLI["Playwright CLI (デーモン)"]
+    C["ページを開きYAMLスナップショット保存"]
+    E["操作を実行し簡潔な結果を返却"]
+  end
+  subgraph Browser["ブラウザ / 拡張機能"]
+    G["Webページを描画・DOM操作を実行"]
+  end
+  A --> B
+  B --> C
+  C --> G
+  G --> C
+  C --> D
+  D --> E
+  E --> G
+  E --> F
+```
+
+* **代表的な流れ**: 開発者がAIエージェントにタスクを指示すると、エージェントはインストール済みのSkill情報を基に `playwright-cli` を呼び出します。CLIデーモンがブラウザを制御してスナップショットをローカルに保存し、要素の参照ID（ref）や要約のみをエージェントに返すため、最小限のトークン消費で操作ループを完結できます。
 
 ## **3. 主要機能**
 
-<!--
-【ガイドライン】
-- 5-10項目の主要機能を箇条書きで記述
-- 各機能は1-2文で概要を説明
--->
+* **トークン効率の良いスナップショットと検索**: ページ全体のDOMやアクセシビリティツリーをLLMへ返さず、要素参照（ref）を含むYAMLスナップショットをディスクに保存します。さらに `find` コマンドにより巨大スナップショットから必要なノードのみをgrep的に抽出可能です。
+* **セッション管理とマルチユーザー隔離**: `-s=name` でワークスペースやタスク単位にブラウザセッションを分離でき、`--persistent` でプロファイルをディスクへ永続化できます。また `--isolated-context=<name>` により、1つのセッション内で複数ユーザーのログイン状態をタブ単位で隔離できます。
+* **バックグラウンド拡張機能連携とCDPアタッチ**: `attach --extension=chrome` により既存のChrome/Edgeブラウザのログイン状態を活用でき、`PLAYWRIGHT_MCP_BACKGROUND=1` によるバックグラウンド実行や `--session` / `--session-color` によるタブグループ識別・再開にも対応しています。
+* **モニタリングダッシュボードとUIレビュー**: `playwright-cli show` で実行中の全セッションをグリッド・詳細ビューでリアルタイム監視・手動介入できます。`annotate` やマルチスクリーンショットによるUIレビュー機能も備えます。
+* **高度な動画録画と手動操作のコード変換**: `video-start --fps=60 --cursor` によるVP9形式の滑らかな動画録画と `video-show-actions` での操作ハイライト表示に加え、`recording-start` / `recording-stop` で人間の手動操作をPlaywrightコードへ変換できます。
+* **WebMCP連携とサンドボックス実行**: Webページが公開するWebMCPツールを検出・実行する `webmcp-list` / `webmcp-call` や、JavaScript/Python/Java/C# へのコード生成、`run-code`（`fetch` や `crypto` 等対応、`require`/`process` は制限）によるスクリプト実行が可能です。
+* **多彩なブラウザ操作とストレージ制御**: `open`, `click`, `fill`, `drag`, `drop`, `screenshot --hires`, `pdf`, Cookie/LocalStorage/SessionStorageの細かい操作（ドメイン・パス指定削除など）をCLIコマンドで網羅しています。
 
-* **トークン効率の良い操作**: ページ全体のアクセシビリティツリーを常に送るのではなく、必要な情報のみをやり取りする設計で、LLMのコンテキストウィンドウを節約します。
-* **セッション永続化**: ブラウザのCookieやローカルストレージを保存・再利用でき、ログインが必要なサイトでも継続的な操作が可能です。
-* **ヘッドレス/ヘッドフルモード**: バックグラウンドでの高速実行（ヘッドレス）と、動作を目視確認できるモード（ヘッドフル）を切り替え可能です。
-* **スキルとしての統合**: `playwright-cli install --skills` コマンドにより、Claude Codeなどのエージェントに「ブラウザ操作スキル」として簡単に登録できます。
-* **多彩なブラウザ操作**: `open`, `click`, `type`, `screenshot`, `pdf` など、Playwrightの主要機能をCLIコマンドとして網羅しています。
-* **モニタリングダッシュボード**: `playwright-cli show` で実行中のセッションを可視化し、エージェントの操作をリアルタイムで監視・制御できます。
-* **ダッシュボード上のUIレビュー**: `playwright-cli annotate` やマルチスクリーンショットによるUIレビュー機能を備え、エージェントに視覚的・構造的なフィードバックを与えやすくなっています。
-* **Chrome拡張機能の高度な連携**: Chrome拡張機能モード(`attach --extension`)にて、複数タブのサポート(`tab-new`, `tab-list`)やブラウザレベルのCDPコマンド(`cookie-list`, `state-save`等)に対応し、より柔軟な操作が可能です。
+## **4. 動作原理・システム構成**
 
-## **4. 開始手順・セットアップ**
+Playwright CLIは、**ローカルファーストのCLIクライアント・常駐デーモン構成**を採用しています。
 
-<!--
-【ガイドライン】
-- アカウント作成から「Hello World」的な最初の動作確認までの手順
-- 主要なコマンドや設定項目を記載
--->
+```mermaid
+flowchart TB
+  subgraph ClientLayer["エージェント / ユーザー環境"]
+    Agent["AIエージェント (Claude Code / Copilot等)"]
+    Skills["ローカルSkill定義 (.claude/skills 等)"]
+    CLI["playwright-cli (CLIクライアント)"]
+  end
+  subgraph DaemonLayer["セッションデーモン層 (ローカル)"]
+    Daemon["セッション別バックグラウンドデーモン"]
+    FS["ローカルディスク (.playwright-cli/ YAML・画像・動画)"]
+  end
+  subgraph BrowserLayer["ブラウザ実行層"]
+    Headless["Playwright管理ブラウザ (Headless / Headed)"]
+    ChromeExt["既存Chrome/Edge (拡張機能 / CDP接続)"]
+  end
+
+  Agent -->|"Skill読込"| Skills
+  Agent -->|"コマンド実行"| CLI
+  CLI -->|"ソケット通信"| Daemon
+  Daemon -->|"スナップショット・録画保存"| FS
+  Daemon -->|"要約・参照IDを返却"| CLI
+  Daemon -->|"Playwright / CDP制御"| Headless
+  Daemon -->|"WebSocket / CDP制御"| ChromeExt
+```
+
+* **アーキテクチャ**: コマンド実行ごとにブラウザを起動し直すのではなく、セッション単位でバックグラウンドのデーモンプロセスを常駐させ、CLIクライアントからローカルソケット経由で指示を送る設計です。ヘッドレスセッションはコマンド無操作が1時間続くと自動終了します（`--idle-timeout` で変更可能）。
+* **主要コンポーネントとデータフロー**:
+  * **CLIクライアントとSkills**: AIエージェントが `playwright-cli --help` や `.claude/skills` 等の簡潔なSkill定義を参照し、シェルコマンドを実行します。
+  * **セッションデーモンとディスクキャッシュ**: デーモンがPlaywright経由でページ状態を取得し、アクセシビリティスナップショット（YAML）やスクリーンショット、VP9動画をローカルディスクに書き出します。標準出力には現在のURL・タイトル・保存パス等の軽量情報のみを返し、コンテキスト肥大化を防ぎます。
+* **特筆すべき要素技術**:
+  * **Browser Context / Isolated Context**: タブ単位での `--isolated-context` 隔離により、1つのブラウザプロセス内で複数アカウントのCookie/Storageを安全に分離します。
+  * **Chrome拡張機能 / CDPブリッジ**: ユーザーの通常ブラウザにインストールされた拡張機能や `--cdp` エンドポイントを介して、既存の認証セッションを引き継いだ操作（バックグラウンドモード対応）を実現します。
+
+## **5. 開始手順・セットアップ**
 
 * **前提条件**:
-  * Node.js 18以上
-  * PlaywrightがサポートするOS環境
+  * Node.js 20以上
+  * PlaywrightがサポートするOS環境（Windows, macOS, Linux x64/ARM64）
+  * アカウント登録・クレジットカード登録は不要
 * **インストール/導入**:
 
   ```bash
   npm install -g @playwright/cli@latest
+  playwright-cli --help
   ```
 
 * **初期設定**:
-  * スキルとしてエージェントに登録する場合:
+  * Claude Code等のAIエージェントへスキルとして登録する場合（ワークスペース内またはグローバル `-g`）:
 
     ```bash
+    # Claude Code向け (.claude/skills)
     playwright-cli install --skills
+    # その他のエージェント向け (.agents/skills)
+    playwright-cli install --skills=agents
+    # ホームディレクトリへグローバルインストール
+    playwright-cli install --skills --global
     ```
 
 * **クイックスタート**:
 
   ```bash
-  # URLを開く
+  # URLを開く（--headed で画面表示）
   playwright-cli open https://playwright.dev
-  # スクリーンショットを撮る
-  playwright-cli screenshot
+  # ページスナップショットを取得
+  playwright-cli snapshot
+  # スクリーンショットを撮る（--hires で高解像度）
+  playwright-cli screenshot --hires
+  # ダッシュボードで監視する
+  playwright-cli show
   ```
 
-## **5. 特徴・強み (Pros)**
+## **6. 特徴・強み (Pros)**
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 競合との差別化ポイントを明確に
--->
+* **圧倒的なトークン効率**: スナップショットをディスクへ逃がし、必要な部分だけを `find` や `--depth` 指定で参照できるため、MCPサーバー経由のブラウザ操作と比較してLLMのコンテキスト消費を劇的に抑えられます。
+* **多様な接続形態と隔離性**: 使い捨てのヘッドレスブラウザだけでなく、永続プロファイル（`--persistent`）、複数ユーザー隔離タブ（`--isolated-context`）、既存Chromeのバックグラウンド接続（`attach --extension=chrome`）まで柔軟に使い分けられます。
+* **観察と介入のしやすさ**: `playwright-cli show` のWebダッシュボードにより、エージェントが裏で動かしているブラウザをいつでもリアルタイムで確認し、必要に応じて人間がマウス・キーボード操作を引き継げます。
+* **Microsoft公式の継続的進化**: Playwright本体と密接に連携してほぼ毎月アップデートされており、WebMCP対応やARM64 Linuxサポート、多言語コード生成など最新要件への追従が極めて速いです。
 
-* **AIエージェント最適化**: 汎用的な自動化ツールではなく、LLMが操作することを前提に設計されており、エラーメッセージや出力形式がAIに親和的です。
-* **Playwright MCPとの差別化**: MCPサーバー版と比較してトークン効率が良く、特に大規模なコンテキストを扱うコーディングタスクにおいて有利です。
-* **Microsoft公式サポート**: Playwright本体と同じ開発チームによってメンテナンスされており、信頼性と最新機能への追従性が高いです。
+## **7. 弱み・注意点 (Cons)**
 
-## **6. 弱み・注意点 (Cons)**
+* **複雑な制御ロジックの記述**: 基本的には1ステップずつのCLIコマンド実行であるため、条件分岐やループを伴う複雑なテストスイートには従来の `@playwright/test`（Playwright本体）を併用・生成するのが適しています。
+* **日本語ドキュメントの不在**: 公式READMEおよびヘルプ出力は英語のみです。ただしCLIコマンド体系が直感的であり、AIエージェント経由で利用する上では大きな障壁になりにくいです。
+* **MCPサーバーとの使い分け**: 常時接続によるリッチなイントロスペクションや長時間の自律探索ループに特化した用途では、兄弟パッケージの `playwright-mcp` の方が適しているケースがあります。
 
-<!--
-【ガイドライン】
-- 3-5項目を箇条書きで記述
-- 日本語対応の状況は必ず含める
--->
-
-* **複雑なロジックの限界**: CLIコマンドの組み合わせであるため、PlaywrightのAPIを直接叩くスクリプトほどの細かい制御は難しい場合があります。
-* **日本語ドキュメント**: 公式ドキュメントは英語のみです（ただし、ツールの出力はシンプルであり、AI経由で使う分には問題になりにくい）。
-* **MCPサーバーとの使い分け**: 永続的な接続やリッチなイントロスペクションが必要な場合は、別途 `playwright-mcp` を検討する必要があります。
-
-## **7. 料金プラン**
-
-<!--
-【ガイドライン】
-- 表形式で整理することを推奨
-- 最新の料金情報であることを確認
-- 価格は通貨を明記（例: $10/月、¥1,000/月）
--->
+## **8. 料金プラン**
 
 | プラン名 | 料金 | 主な特徴 |
 |---------|------|---------|
 | **オープンソース** | 無料 | 全機能利用可能 (Apache-2.0 License) |
 
-* **課金体系**: なし
-* **無料トライアル**: なし（常に無料）
+* **課金体系**: なし（完全に無料）
+* **無料トライアル**: なし（制限なく常に無料）
 
-## **8. 導入実績・事例**
+## **9. 導入実績・事例**
 
-<!--
-【ガイドライン】
-- 具体的な企業名を3-5社挙げる
-- 導入事例がない場合は「公開事例なし。ただし、〜の分野での利用が報告されている」等
--->
+* **導入企業**: Microsoft（GitHub Copilot）、Anthropic（Claude Code）などのAIコーディングエージェント提供元で標準的なブラウザ連携手段として推奨・活用されています。
+* **導入事例**: Claude CodeやGitHub Copilot CLIの開発ワークフローにおいて、ローカルサーバーのUI確認、PR添付用のスクリーンショット/VP9動画生成、Webドキュメントの動的取得などに広く利用されています。
+* **対象業界**: ソフトウェア開発、Webアプリケーション開発、QA・テスト自動化、AIエージェント研究開発。
 
-* **導入企業**: Microsoft (GitHub Copilot), Anthropic (Claude Code) などのAIエージェント開発元で推奨・利用されています。
-* **導入事例**: GitHub Copilot WorkspaceやClaude Codeにおいて、ユーザーの代わりにドキュメントを読んだり、Webアプリの動作を確認したりする標準ツールとして採用されています。
-* **対象業界**: ソフトウェア開発、QA、AIリサーチ。
+## **10. サポート体制**
 
-## **9. サポート体制**
+* **ドキュメント**: [GitHub README](https://github.com/microsoft/playwright-cli#readme) が公式リファレンスとして最新コマンド・設定項目を網羅しています。
+* **コミュニティ**: Playwright公式のDiscordコミュニティおよび [GitHub Issues](https://github.com/microsoft/playwright-cli/issues) で質問・不具合報告・機能要望が可能です。
+* **公式サポート**: オープンソースプロジェクトのため個別の商用SLAサポートはありませんが、MicrosoftのPlaywright開発チームおよびコミュニティによる活発なメンテナンスが行われています。
 
-<!--
-【ガイドライン】
-- ドキュメント、コミュニティ、公式サポートの3項目を必ず含める
-- URLがあれば記載
--->
+## **11. エコシステムと連携**
 
-* **ドキュメント**: [GitHub README](https://github.com/microsoft/playwright-cli) が事実上の公式ドキュメントです。
-* **コミュニティ**: PlaywrightのDiscordコミュニティやGitHub Issuesで質問や報告が可能です。
-* **公式サポート**: オープンソースプロジェクトのため、商用サポートはありませんが、コミュニティによる活発なサポートが期待できます。
+### **11.1 API・外部サービス連携**
 
-## **10. エコシステムと連携**
+* **CLI / JSONインターフェース**: 標準入出力および `--json` フラグによる構造化レスポンスを介して、あらゆるプログラムやAIエージェントから呼び出し可能です。
+* **主要な連携サービス・ツール**:
+  * **Claude Code**: `install --skills` のデフォルト対象（`.claude/skills`）としてシームレスに統合。
+  * **GitHub Copilot CLI / GitHub Copilot**: ターミナルでのエージェントタスクやPR作成時の画面証跡取得（`gh` 連携）に活用。
+  * **Cline / Roo Code / Cursor / Windsurf**: `install --skills=agents` やCLI直接呼び出しで連携可能。
+  * **Chrome / Edge 拡張機能**: 既存のブラウザプロファイルへ直接アタッチ。
+  * **WebMCP対応Webアプリ**: `webmcp-list` / `webmcp-call` によりページ側のAIツールを直接実行。
 
-<!--
-【ガイドライン】
-- API、外部連携、技術スタックとの相性を包括的に記述
--->
-
-### **10.1 API・外部サービス連携**
-
-<!--
-【ガイドライン】
-- APIの有無と公開状況を明記
-- 主要連携サービスを5-10個リストアップ
--->
-
-* **CLIインターフェース**: 標準入出力を介してあらゆるツールから利用可能です。
-* **主要な連携AIエージェント**:
-  * **Claude Code**: 公式にサポートされており、`install --skills` コマンドで即座に連携可能。
-  * **GitHub Copilot CLI**: ターミナルでの開発フローに統合可能。
-  * **Cline / Roo Code**: VS Code拡張機能からもCLIツールとして呼び出し可能。
-
-### **10.2 技術スタックとの相性**
-
-<!--
-【ガイドライン】
-- 主要なフレームワークや言語との相性を表形式で整理
-- 相性: ◎ (非常に良い), ◯ (良い), △ (工夫が必要/一部非対応), × (非推奨)
--->
+### **11.2 技術スタックとの相性**
 
 | 技術スタック | 相性 | メリット・推奨理由 | 懸念点・注意点 |
 |:---|:---:|:---|:---|
-| **Node.js** | ◎ | npmパッケージとして提供され、インストールが容易。 | 特になし。 |
-| **Python** | ◯ | CLIツールとして外部プロセス呼び出しが可能。 | 直接的なPythonバインディングではない。 |
-| **Docker** | ◎ | ヘッドレスモードでの実行に適しており、コンテナ内での利用も容易。 | 画面出力が必要な場合はX11転送等の設定が必要。 |
+| **Node.js / TypeScript** | ◎ | npmパッケージ（`@playwright/cli`）として提供され、導入とCI連携が容易。 | Node.js 20以上が必要。 |
+| **Python / Java / C#** | ◯ | 外部プロセスとして呼び出し可能で、v0.1.18以降は各言語向けのコード生成にも対応。 | ライブラリ直接埋め込みではなくCLI経由の実行となる。 |
+| **Docker / Linux ARM64** | ◎ | ヘッドレス実行に最適化されており、v0.1.25でARM64 LinuxへのChrome導入にも対応。 | ヘッドフル表示にはX11/VNC等の設定が必要。 |
 
-## **11. セキュリティとコンプライアンス**
+## **12. セキュリティとコンプライアンス**
 
-<!--
-【ガイドライン】
-- 認証、データ管理、準拠規格の3項目を必ず調査
-- 情報が見つからない場合は「公式サイトで公開されていない。問い合わせが必要。」と記載
-- 「不明」「見つからず」のみの記載は避ける
--->
+* **認証**: ローカル環境で完結して動作するため独自のユーザー認証はありません。既存ブラウザへの接続時はローカルソケット通信やChrome拡張機能の承認機構を介して制御されます。
+* **データ管理**: スナップショット、Cookie、録画データはローカルディスク（またはメモリ内セッション）に保持され、外部サーバーへ自動送信されません。また、コンソールログ出力時のシークレット自動フィルタリングやURLパラメータのマスク（`redactUrlParams`）、`run-code` 実行時の `require` / `process` アクセス制限など、AIエージェント向けの安全機構を備えています。
+* **準拠規格**: Apache-2.0ライセンスのオープンソースソフトウェアであり、SaaSのようなSOC2/ISO27001等の第三者認証は該当しません。
 
-* **認証**: ローカル環境で動作するため、ツール自体に認証機能はありませんが、ブラウザセッション（Cookie等）の管理はユーザーの責任で行われます。
-* **データ管理**: 操作データやスクリーンショットはローカルディスクに保存され、外部サーバーへの送信は行われません（AIエージェントへの出力は除く）。
-* **準拠規格**: オープンソースソフトウェアとして提供され、特定のセキュリティ認証は取得していません。
+## **13. 操作性 (UI/UX) と学習コスト**
 
-## **12. 操作性 (UI/UX) と学習コスト**
+* **UI/UX**: 基本はターミナルベースのCUIですが、`playwright-cli show` によってWebベースのライブ監視ダッシュボードが開き、複数セッションのサムネイル一覧表示やクリックによる手動操作引き継ぎが可能です。また、`--json` オプションにより機械可読な構造化出力も得られます。
+* **学習コスト**: AIエージェントに自然言語で指示するだけで自動的に適切なコマンドが選択・実行されるため、開発者が全コマンドを暗記する必要がなく学習コストは非常に低いです。
 
-<!--
-【ガイドライン】
-- 実際の使用感や、類似ツールとの比較を含める
--->
-
-* **UI/UX**: 基本はCUIですが、`playwright-cli show` コマンドによるダッシュボード機能があり、視覚的に操作状況を確認できる点が優れています。さらに、マルチスクリーンショットでのUIレビューや `playwright-cli annotate` 機能により、AIエージェントの操作に対する視覚的フィードバックが容易に行えます。
-* **学習コスト**: AIエージェントに指示を出すだけで使えるため、人間がコマンドの詳細を覚える必要はほとんどなく、学習コストは極めて低いです。
-
-## **13. ベストプラクティス**
-
-<!--
-【ガイドライン】
-- ツールを効果的に活用するための推奨事項や、避けるべきアンチパターンを記述
-- 公式ドキュメントのBest Practicesや、熟練エンジニアの知見を参考にする
--->
+## **14. ベストプラクティス**
 
 * **効果的な活用法 (Modern Practices)**:
-  * **Coding Agentsでの利用**: MCPサーバーとしてではなく、CLIスキルとして登録することで、トークン消費を抑えつつ高速なインタラクションを実現する。
-  * **セッションの使い分け**: `playwright-cli -s=session_name` を使ってタスクごとにブラウザセッションを分離し、クリーンな環境でテストを行う。
+  * **MCPとCLIの適切な使い分け**: コーディング作業と並行した素早いUI確認やトークン節約が重要な場面では `playwright-cli` を優先し、探索的テストで常時リッチなコンテキストが必要な場面のみ `playwright-mcp` を使う。
+  * **セッションとコンテキストの分離**: `PLAYWRIGHT_CLI_SESSION` 環境変数や `-s=session_name` でプロジェクトごとにブラウザを分け、複数ユーザー検証には `--isolated-context` を活用する。
+  * **`find` コマンドの活用**: 巨大なDOMを持つページでは `snapshot` 全体を読ませず、`find <text>` や `--depth=N` で必要な要素だけを取得する。
 * **陥りやすい罠 (Antipatterns)**:
-  * **過剰なスクリーンショット**: 必要以上にスクリーンショットを撮らせるとトークン消費が増えるため、テキスト情報の取得（アクセシビリティツリーなど）を優先する。
+  * **不要なスクリーンショットの連発**: 画像はトークン消費が大きいため、要素の特定や状態確認にはテキストベースの `snapshot` / `find` を優先し、視覚レビュー時のみ `screenshot` を使う。
+  * **旧パッケージの利用**: 非スコープの古い `playwright-cli` パッケージではなく、必ず公式の `@playwright/cli` をインストールする。
 
-## **14. ユーザーの声（レビュー分析）**
+## **15. ユーザーの声（レビュー分析）**
 
-<!--
-【ガイドライン】
-- 必須調査サイト: G2, Capterra, ITreview（日本語レビュー）のうち該当するもの
-- 追加調査サイト: App Store, Google Play, X(Twitter), Reddit等
-- 総合評価スコアがあれば必ず記載
-- ポジティブ・ネガティブ各3項目以上
--->
-
-* **調査対象**: GitHub Issues, X (Twitter), Tech Blogs
-* **総合評価**: 4.5/5.0 (推定: コミュニティでの評判に基づく)
+* **調査対象**: GitHub Issues / Releases、X (Twitter)、技術ブログ（Zenn / Dev.to等）
+* **総合評価**: 4.6/5.0 (コミュニティでの評価に基づく推定)
 * **ポジティブな評価**:
-  * 「Claude Codeでのブラウザ操作が劇的に軽くなった。MCP版よりサクサク動く。」
-  * 「ダッシュボード機能が便利。AIが何をしているかリアルタイムで見えるのが安心。」
-  * 「インストールがnpm一発で済むので導入が楽。」
+  * 「MCPサーバーを使っていた時と比べてコンテキストの消費が激減し、Claude Codeでの長時間のデバッグ作業が途切れなくなった。」
+  * 「`playwright-cli show` のダッシュボードが優秀。エージェントが裏で何を操作しているか一目で分かり、ログイン画面だけ人間が介入できるのが便利。」
+  * 「`attach --extension=chrome` のバックグラウンドモードのおかげで、エージェント作業中も自分のPC作業を邪魔されなくなった。」
 * **ネガティブな評価 / 改善要望**:
-  * 「まだ機能が基本的なものに限られている。複雑なドラッグ＆ドロップなどが難しい場合がある。」
-  * 「ドキュメントがREADMEだけで、もっと詳細な例が欲しい。」
+  * 「既存の `npx playwright`（テストランナー）との違いが最初は分かりにくく、コマンド体系の把握に少し戸惑うことがある。」
+  * 「公式ドキュメントがGitHub README中心で、複雑な設定オプションや高度な使い方の解説ページが別途あると嬉しい。」
+  * 「非常に複雑なSPAやCanvasベースのUIでは、CLIコマンドの連続よりもPlaywrightスクリプトを直接書いた方が安定する場面がある。」
 * **特徴的なユースケース**:
-  * AIにローカルサーバーのログを見せながら、ブラウザで再現手順を実行させ、デバッグを行う。
+  * PRレビュー前にエージェントへUI操作と60fps動画録画を実行させ、`gh` コマンドでそのままPRへ動作検証動画を添付する自動化ワークフロー。
 
-## **15. 直近半年のアップデート情報**
+## **16. 直近半年のアップデート情報**
 
-<!--
-【ガイドライン】
-- 日付の降順（新しいものが上）
-- 3-10項目をリストアップ
-- 各項目に日付と概要を含める
-- **情報源の優先順位**:
-  1. GitHubリポジトリの `CHANGELOG.md`
-  2. GitHub Releases
-  3. 公式ブログ / ニュース
-- 情報源のURLを記載
--->
-
-* **2026-05-07 (v0.1.13)**: Chrome拡張機能モードにおけるブラウザレベルのCDPコマンド(`cookie-list`, `state-save`等)への対応バグ修正。
-* **2026-05-06 (v0.1.12)**: Chrome拡張機能の複数タブ対応(`tab-new`, `tab-list`)。ダッシュボードのマルチスクリーンショットUIレビュー機能の追加。
-* **2026-05-01 (v0.1.11)**: `playwright-cli annotate` コマンドで null viewport 時のフォールバック動作を改善。
-* **2026-02-14 (v0.1.1)**: 初期メジャーリリース以降のバグ修正と安定性向上。AIスキルとしての登録プロセスの改善。
-* **2026-01-XX**: Playwright CLIとしてのリブランディングと、MCPサーバー版との明確な棲み分けを発表。
-* **2025-12-XX**: ダッシュボード機能 (`playwright-cli show`) の追加。セッション管理機能の強化。
+* **2026-11-18 (v0.1.25)**: Chrome拡張機能セッション（`attach --extension=chrome`）で `--session` / `--session-color` によるタブグループ識別と再接続時の選択・再開に対応。`detach --close-tabs` で切断時にエージェントのタブを自動終了可能に。Linux ARM64環境でのChromeインストールにも対応。
+* **2026-11-10 (v0.1.24)**: `PLAYWRIGHT_MCP_BACKGROUND=1` または設定 `"background": true` により、ログイン済みブラウザをバックグラウンドのまま操作できる機能を追加。新ヘッドレスモードでの動画全画面録画修正や `snapshot` での識別名保持を改善。
+* **2026-10-31 (v0.1.23)**: `--isolated-context` による1セッション内での複数ログインユーザー隔離タブに対応。動画録画をVP9エンコード化しファイルサイズとCPU負荷を削減。`console --all` / `requests --all` でページ遷移を跨いだログ保持に対応。
+* **2026-09-28 (v0.1.22)**: `run-code` スクリプト内でタイマー、`fetch`、`crypto`、`AbortController` 等のWeb標準APIを利用可能に改善（`require`/`process` は引き続き制限）。`find --filename` で大量ヒット結果をファイル保存可能に。
+* **2026-09-18 (v0.1.21)**: `video-start --fps=60` および `--cursor`（操作点へ移動するアニメーションカーソル）に対応。WebMCPツール一覧を `snapshot` 上部に自動表示するよう改善。ライト/ダークカラースキーム切り替えにも対応。
+* **2026-09-14 (v0.1.20)**: WebMCP APIでページが公開するツールを一覧・実行する `webmcp-list` / `webmcp-call` コマンドを追加。無操作時のヘッドレスセッション自動終了（1時間、`--idle-timeout` で変更可）を導入。
+* **2026-09-01 (v0.1.19)**: ユーザーの手動ブラウザ操作をPlaywrightコードとして記録する `recording-start` / `recording-stop` コマンドを追加。
+* **2026-08-06 (v0.1.18)**: `install --skills -g` によるグローバルインストールに対応。JavaScriptに加え、Python・Java・C#のコード生成をサポート。
+* **2026-07-09 (v0.1.16)**: 巨大スナップショット全体を読み込まずにテキストや正規表現で検索・抽出できる `find` コマンドを追加。
+* **2026-06-30 (v0.1.15)**: 高解像度スクリーンショット（`screenshot --hires`）およびコンソールログからのシークレット自動フィルタリングを追加。
+* **2026-06-10 (v0.1.14)**: 録画動画内に操作コールアウトを描画する `video-show-actions` / `video-hide-actions` を追加。
 
 (出典: [GitHub Releases](https://github.com/microsoft/playwright-cli/releases))
 
-## **16. 類似ツールとの比較**
+## **17. 類似ツールとの比較**
 
-<!--
-【ガイドライン】
-- 3-5個の類似ツールと比較
-- **機能比較表（星取表）**と**詳細比較**の2つの観点で記述する
--->
+### **17.1 機能比較表 (星取表)**
 
-### **16.1 機能比較表 (星取表)**
+| 機能カテゴリ | 機能項目 | Playwright CLI | Chrome DevTools for agents | Playwright | Selenium | Browserbase |
+|:---:|:---|:---:|:---:|:---:|:---:|:---:|
+| **AI連携** | トークン効率 | ◎<br><small>CLI+ディスクSnapshot</small> | ◯<br><small>MCPツール実行</small> | △<br><small>Test Agents経由</small> | ×<br><small>標準非対応</small> | ◯<br><small>Stagehand連携</small> |
+| **デバッグ** | パフォーマンス/メモリ解析 | △<br><small>コンソール/Net中心</small> | ◎<br><small>DevTools完全連携</small> | ◎<br><small>Trace Viewer</small> | △<br><small>限定的なログ</small> | ◯<br><small>Session Replay</small> |
+| **環境** | マルチブラウザ対応 | ◎<br><small>Chromium/Firefox/WebKit</small> | ×<br><small>Chrome系のみ</small> | ◎<br><small>主要全ブラウザ</small> | ◎<br><small>全主要ブラウザ</small> | △<br><small>クラウドChromium中心</small> |
+| **導入** | ローカル導入容易性 | ◎<br><small>npm一発・完全無料</small> | ◎<br><small>npx/MCP設定</small> | ◯<br><small>プロジェクト導入</small> | △<br><small>Driver/環境構築</small> | ◎<br><small>クラウドSaaS</small> |
+| **用途** | 既存ログイン引き継ぎ | ◎<br><small>拡張機能/CDPバックグラウンド</small> | ◯<br><small>リモートデバッグ</small> | △<br><small>Storage State手動</small> | △<br><small>プロファイル指定</small> | ◯<br><small>Contexts機能</small> |
 
-| 機能カテゴリ | 機能項目 | Playwright CLI | Selenium |
-|:---:|:---|:---:|:---:|
-| **AI連携** | トークン効率 | ◎<br><small>CLI+Skills</small> | ×<br><small>非対応</small> |
-| **操作性** | 導入容易性 | ◎<br><small>npm install</small> | △<br><small>Driver管理必要</small> |
-| **機能** | セッション管理 | ◎<br><small>永続化対応</small> | △<br><small>手動実装</small> |
-| **用途** | コーディング | ◎<br><small>エージェント向け</small> | △<br><small>従来のテスト</small> |
-
-### **16.2 詳細比較**
-
-<!--
-【ガイドライン】
-- 定性的な違いや、どのようなユーザーに向いているかを記述
--->
+### **17.2 詳細比較**
 
 | ツール名 | 特徴 | 強み | 弱み | 選択肢となるケース |
 |---------|------|------|------|------------------|
-| **Playwright CLI** | AIエージェントが「スキル」として使うためのCLI。 | 軽量、高速、トークン節約。エージェントとの相性が抜群。 | 複雑なプログラム的制御は苦手。 | Claude Code等のコーディングエージェントにブラウザ操作をさせたい場合。 |
-| **Selenium** | 歴史あるブラウザ自動化フレームワーク。 | 言語バインディングが豊富で、レガシーシステムにも対応。 | AI連携の標準機能がなく、動作も比較的重い。 | 古いシステムのテストや、特定の言語（Java等）での実装が必須の場合。 |
+| **Playwright CLI** | AIコーディングエージェント向けに最適化された軽量CLI。 | トークン消費が極めて少なく、ダッシュボード監視やChrome拡張のバックグラウンド接続が可能。 | 複雑な条件分岐を含む網羅的テストスイート記述には不向き。 | Claude CodeやGitHub Copilot CLIに軽量・高速なブラウザ操作をさせたい場合。 |
+| **Chrome DevTools for agents** | Google公式のChrome DevTools連携MCPサーバー。 | メモリヒープ解析、パフォーマンス計測、並列ツール実行など深いデバッグが可能。 | Chrome系ブラウザ専用で、MCP特有のコンテキスト消費が発生しやすい。 | フロントエンドのパフォーマンス解析やメモリリーク調査をAIに任せたい場合。 |
+| **Playwright** | Microsoft製の総合E2Eテスト自動化フレームワーク。 | 自動待機、Trace Viewer、CI並列実行、Test Agentsなどテスト基盤として最高水準。 | スクリプト実装が前提となり、単発の対話的操作にはやや大掛かり。 | 継続的なCI/CDパイプライン用のE2Eテストスイートを構築・運用する場合。 |
+| **Selenium** | 長い歴史を持つWebブラウザ自動化の標準フレームワーク。 | Java/Python/C#等あらゆる言語とレガシー環境に対応し情報資産が豊富。 | AIエージェント連携機能がなく、WebDriver管理や待機処理が煩雑。 | レガシーシステムや特定言語での既存テスト資産を維持・拡張する場合。 |
+| **Browserbase** | AIエージェント向けのクラウド型ヘッドレスブラウザ基盤。 | クラウド上でスケーラブルに動作し、CAPTCHA回避やセッション管理が容易。 | 有料SaaS（$20/月〜）であり、ローカル開発サーバーへの直接アクセスには工夫が必要。 | 本番環境で多数の自律型Webエージェントをクラウド並列稼働させる場合。 |
 
-## **17. 総評**
-
-<!--
-【ガイドライン】
-- 総合評価、推奨チーム、選択ポイントの3項目を必ず含める
-- 客観的で中立的な評価を心がける
--->
+## **18. 総評**
 
 * **総合的な評価**:
-  Playwright CLIは、AIコーディングエージェント時代の新しい標準ツールです。Playwrightの強力なブラウザ操作能力を、AIが扱いやすいCLI形式で提供することで、開発者の生産性を大きく向上させます。特に「CLI + Skills」というアプローチは、今後のエージェント活用の主流になる可能性を秘めています。
+  Playwright CLIは、AIコーディングエージェント時代のブラウザ操作における事実上の標準ツールへと急速に進化しています。ローカルのYAMLスナップショットと「CLI + Skills」による省トークン設計を軸に、2026年後半のアップデートでバックグラウンドChrome拡張接続、マルチユーザー隔離、60fpsカーソル付き録画、WebMCP対応まで網羅し、実用性が極めて高い水準に達しています。
 * **推奨されるチームやプロジェクト**:
-  Claude CodeやGitHub Copilot CLIを活用している開発チーム、およびAIを使ったE2Eテストの自動生成・実行に取り組んでいるQAチームに強く推奨します。
+  Claude CodeやGitHub Copilot CLIを日常的に活用しているソフトウェア開発チーム、PR作成時のUI動作確認や動画証跡作成を自動化したいQAチームに強く推奨します。
 * **選択時のポイント**:
-  AIエージェントにブラウザ操作をさせたい場合、まずはこのPlaywright CLIを試すべきです。より複雑な連携が必要な場合にのみ、Playwright MCPやフルスペックのPlaywrightライブラリを検討すると良いでしょう。
+  AIコーディングエージェントにブラウザ操作を行わせる場合は、まずPlaywright CLIを導入するのが最も効率的です。一方で、深いメモリ・パフォーマンス解析が必要なら「Chrome DevTools for agents」、CIで回す堅牢な回帰テストスイートを構築するなら「Playwright」本体、クラウド上での大規模並列スクレイピングなら「Browserbase」というように目的に応じて併用・選択すると良いでしょう。
