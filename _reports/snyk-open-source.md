@@ -49,6 +49,7 @@ relationships:
     - FOSSology
     - FOSSA
     - yamory
+    - OSV-Scanner
 ---
 
 # **Snyk Open Source 調査レポート**
