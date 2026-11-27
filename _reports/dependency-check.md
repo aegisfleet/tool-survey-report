@@ -46,6 +46,7 @@ relationships:
     - Dependabot
     - Trivy
     - FOSSology
+    - OSV-Scanner
 ---
 
 # **Dependency-Check 調査レポート**
