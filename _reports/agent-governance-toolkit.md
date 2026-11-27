@@ -53,6 +53,7 @@ relationships:
     - LangChain
     - CrewAI
     - Claude Code
+    - Beacon
 ---
 
 # **Agent Governance Toolkit 調査レポート**

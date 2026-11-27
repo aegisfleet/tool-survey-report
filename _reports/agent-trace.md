@@ -43,6 +43,7 @@ relationships:
     - Cursor
     - Cline
     - OpenCode
+    - Beacon
 ---
 
 # **Agent Trace 調査レポート**
