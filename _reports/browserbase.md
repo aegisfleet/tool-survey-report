@@ -47,6 +47,7 @@ relationships:
     - Selenium
     - CrewAI
     - Chrome DevTools for agents
+    - Playwright CLI
 ---
 
 # **Browserbase 調査レポート**
