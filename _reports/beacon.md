@@ -1,61 +1,58 @@
 ---
-title: "Beacon 調査レポート"
-tool_name: "Beacon"
-tool_reading: "ビーコン"
-category: "エージェントエコシステム/基盤"
-developer: "Asymptote Labs"
-official_site: "https://beacon.sh/"
-date: "2026-11-28"
-last_updated: "2026-11-28"
+title: Beacon 調査レポート
+tool_name: Beacon
+tool_reading: ビーコン
+category: エージェントエコシステム/基盤
+developer: Asymptote Labs
+official_site: https://beacon.sh/
+date: '2026-11-28'
+last_updated: '2026-11-28'
 tags:
-  - "AI"
-  - "オープンソース"
-  - "エージェント"
-  - "開発者ツール"
-  - "コーディング支援"
-description: "Claude CodeやCursor、Codexなど20以上のAIコーディングエージェントのセッション履歴をローカルファーストで収集・正規化し、再利用可能なスキルやメモリへと蒸留するオープンソースのクロスハーネス・メモリ＆テレメトリ基盤。"
-
+  - AI
+  - オープンソース
+  - エージェント
+  - 開発者ツール
+  - コーディング支援
+description: Claude CodeやCursor、Codexなど20以上のAIコーディングエージェントのセッション履歴をローカルファーストで収集・正規化し、再利用可能なスキルやメモリへと蒸留するオープンソースのクロスハーネス・メモリ＆テレメトリ基盤。
 quick_summary:
   has_free_plan: true
   is_oss: true
-  starting_price: "無料（OSS / Beacon Cloud $0〜）"
+  starting_price: 無料（OSS / Beacon Cloud $0〜）
   target_users:
-    - "開発者"
-    - "AIエンジニア"
-    - "セキュリティエンジニア"
-  latest_highlight: "2026年11月にv1.3.60〜v1.3.67を連続リリースし、Windows向けBeacon Cloud転送・エンタープライズ強制機能、Linux/ユーザーモードでのポリシー強制、MDM経由のMCP配信、Antigravity CLI記録に対応"
-  update_frequency: "高"
-
+    - 開発者
+    - AIエンジニア
+    - セキュリティエンジニア
+  latest_highlight: 2026年11月にv1.3.60〜v1.3.67を連続リリースし、Windows向けBeacon Cloud転送・エンタープライズ強制機能、Linux/ユーザーモードでのポリシー強制、MDM経由のMCP配信、Antigravity CLI記録に対応
+  update_frequency: 高
 evaluation:
   score: 85
   base_score: 70
   plus_points:
     - point: 6
-      reason: "20以上のコーディングエージェント・IDE・ブラウザチャット・LLMゲートウェイを横断するOpenTelemetry準拠の統合トレース＆自己改善メモリ層"
+      reason: 20以上のコーディングエージェント・IDE・ブラウザチャット・LLMゲートウェイを横断するOpenTelemetry準拠の統合トレース＆自己改善メモリ層
     - point: 5
-      reason: "MITライセンスの完全ローカルファースト設計（JSONL保存）と、SOC 2 Type II準拠・RBAC・SSO・ポリシー強制を備えたエンタープライズ基盤の両立"
+      reason: MITライセンスの完全ローカルファースト設計（JSONL保存）と、SOC 2 Type II準拠・RBAC・SSO・ポリシー強制を備えたエンタープライズ基盤の両立
     - point: 5
-      reason: "ほぼ毎日の高速なリリースサイクル（v1.3.67到達）とGitHubスター3,600超・Product Hunt週間1位の活発なコミュニティ"
+      reason: ほぼ毎日の高速なリリースサイクル（v1.3.67到達）とGitHubスター3,600超・Product Hunt週間1位の活発なコミュニティ
     - point: 4
-      reason: "無料OSS版および無料枠（50 Findings・5ポリシー）を含むBeacon Cloud $0プランによる高い導入しやすさ"
+      reason: 無料OSS版および無料枠（50 Findings・5ポリシー）を含むBeacon Cloud $0プランによる高い導入しやすさ
   minus_points:
     - point: -3
-      reason: "UI・ドキュメント・サポートが英語中心で、日本語ローカライズが未整備"
+      reason: UI・ドキュメント・サポートが英語中心で、日本語ローカライズが未整備
     - point: -2
-      reason: "OTLPポート競合やWindowsユーザーモードでのサービス永続化制約など、環境依存の初期セットアップ課題"
-  summary: "複数AIコーディングエージェント間の記憶断絶と可視性・ガバナンス不足を、ローカルファーストかつオープンソースで解決する実用性の高いメモリ＆テレメトリ基盤。"
-
+      reason: OTLPポート競合やWindowsユーザーモードでのサービス永続化制約など、環境依存の初期セットアップ課題
+  summary: 複数AIコーディングエージェント間の記憶断絶と可視性・ガバナンス不足を、ローカルファーストかつオープンソースで解決する実用性の高いメモリ＆テレメトリ基盤。
 links:
-  github: "https://github.com/asymptote-labs/agent-beacon"
-  documentation: "https://docs.beacon.sh/"
+  github: https://github.com/asymptote-labs/agent-beacon
+  documentation: https://docs.beacon.sh/
 relationships:
   related_tools:
-    - "Claude-Mem"
-    - "Agent Trace"
-    - "Agent Skills"
-    - "Agent Governance Toolkit"
-    - "Letta"
-    - "Context7"
+    - Claude-Mem
+    - Agent Trace
+    - Agent Skills
+    - Agent Governance Toolkit
+    - Letta
+    - Context7
 ---
 
 # **Beacon 調査レポート**
