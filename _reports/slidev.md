@@ -46,6 +46,7 @@ links:
 relationships:
   related_tools:
     - Docswell
+    - Speaker Deck
 ---
 
 # **Slidev 調査レポート**
