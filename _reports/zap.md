@@ -46,6 +46,7 @@ relationships:
   related_tools:
     - Burp Suite
     - ARTEX
+    - Tsunami Security Scanner
 ---
 
 # **ZAP 調査レポート**
