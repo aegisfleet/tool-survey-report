@@ -2,7 +2,7 @@
 title: LilysAI 調査レポート
 tool_name: LilysAI
 tool_reading: リリスAI
-category: 特定用途AIアシスタント
+category: AI学習・教育支援
 developer: TeamLilys
 official_site: https://lilys.ai/
 date: '2026-02-21'

@@ -2,7 +2,7 @@
 title: AutoClip 調査レポート
 tool_name: AutoClip
 tool_reading: オートクリップ
-category: 動画編集
+category: AI動画編集
 developer: zhouxiaoka
 official_site: https://zhouxiaoka.github.io/autoclip_intro/
 date: '2026-11-27'

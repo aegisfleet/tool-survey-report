@@ -2,7 +2,7 @@
 title: AKARI Video 調査レポート
 tool_name: AKARI Video
 tool_reading: アカリビデオ
-category: 動画編集
+category: AI動画編集
 developer: Akari Labs
 official_site: https://akari.video/
 date: '2026-10-03'

@@ -2,7 +2,7 @@
 title: abceed 調査レポート
 tool_name: abceed
 tool_reading: エービーシード
-category: 特定用途AIアシスタント
+category: AI学習・教育支援
 developer: 株式会社Globee
 official_site: https://www.abceed.com/
 date: '2026-07-24'
