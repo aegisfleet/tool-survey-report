@@ -2,7 +2,7 @@
 title: DeepTutor 調査レポート
 tool_name: DeepTutor
 tool_reading: ディープチューター
-category: 特定用途AIアシスタント
+category: AI学習・教育支援
 developer: HKUDS (香港大学 Data Intelligence Lab)
 official_site: https://deeptutor.info/
 date: '2026-11-26'
